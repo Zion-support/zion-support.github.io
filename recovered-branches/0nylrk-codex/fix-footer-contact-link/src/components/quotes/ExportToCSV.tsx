@@ -5,6 +5,7 @@ import type { QuoteRequest } from '@/types/quotes';
 interface ExportToCSVProps {
   quotes: QuoteRequest[];
   filename?: string;
+}
 
 export const ExportToCSV = ({
   quotes,

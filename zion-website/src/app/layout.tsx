@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
+}
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
@@ -50,6 +51,7 @@ export const metadata: Metadata = {
   viewport: 'width=device-width, initial-scale=1',
   themeColor: '#000000',
 };
+}
 
 export default function RootLayout({
   children,

@@ -1,4 +1,4 @@
- proposals[index] = next;
+proposals[index] = next;
 saveProposals (proposals);
 return next 
 }

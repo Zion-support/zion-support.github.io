@@ -75,6 +75,7 @@ const categories = [
   { name: 'Database', count: guides.filter(g => g.category === 'Database').length },
   { name: 'DevOps', count: guides.filter(g => g.category === 'DevOps').length }
 ];
+}
 
 export default function GuidesPage() {
   return (

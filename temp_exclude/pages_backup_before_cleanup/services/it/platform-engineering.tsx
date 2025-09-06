@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default function PlatformEngineering() {; return (; <Article; title=\"Platform Engineering\"; subtitle=\"Golden paths,IDPs,and paved roads to accelerate delivery\"; price=\"from $18k/project\"; bullets={[
     ; \'Backstage or Internal Developer Portal setup with scorecards\',; \'Paved road templates for services,infra,and CI/CD\',; \'Secure supply \"chain\": \'SBOM\',SLSA,provenance,signing\',,
     \'Developer experience \"metrics\": \'DORA\',lead time,MTTR\'
@@ -17,6 +13,8 @@ import React from 'react';
 interface PlatformengineeringProps {
   // Add props here as needed
 }
+}
+
 export default function Platformengineering({ }: PlatformengineeringProps) {
   return (
     <div>
@@ -25,5 +23,3 @@ export default function Platformengineering({ }: PlatformengineeringProps) {
     </div>
   );
 }
-=======
-=======

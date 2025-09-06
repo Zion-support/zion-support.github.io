@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';
@@ -79,7 +78,10 @@ distributionBreakdown ;
 };
 if (processedDistData.length > 0) {;
   apiPayload.distributionData = processedDistData ;
-}const {;
+}
+}
+
+const {;
   data, error: funcError ';
 }= await supabase.functions.invoke ('generate-whitepaper', {;
   body: apiPayload ;
@@ -323,8 +325,9 @@ const WhitepaperGeneratorPage: React.FC = () => {
       if (processedDistData.length > 0) {
         apiPayload.distributionData = processedDistData;
       }
+}
 
-      const { data, error: funcError } = await supabase.functions.invoke(
+const { data, error: funcError } = await supabase.functions.invoke(
         'generate-whitepaper',
         {
           body: apiPayload,
@@ -362,22 +365,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
       )
     );
   };
-=======
-
-<<<<<<< HEAD
-    { id: crypto.randomUUID(), name: 'Public Sale Allocation', percentage: '10' }]),
-
-<<<<<<< HEAD
-
-
-  const removeDistributionItem = (id: string) => {
-    setDistributionData(prev => prev.filter(item => item.id !== id))
-  };
-
-
-<<<<<<< HEAD
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
   const assembleMarkdownContent = (): string => {
     let mdContent = `# ${tokenName} - Whitepaper\n\n`;
@@ -385,7 +372,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
 
     sections.forEach(section => {
       mdContent += `## ${section.title}\n\n${section.content}\n\n`;
-<<<<<<< HEAD
       if (section.title.toLowerCase().includes('token distribution')) {
         if (distributionChartData.length > 0) {
           mdContent += `### Distribution Details\n\n`;
@@ -1068,35 +1054,8 @@ const WhitepaperGeneratorPage: React.FC = () => {
     </div>
   );
 };
+}
+}
+
 export default WhitepaperGeneratorPage;
 '"
-=======
-
-<<<<<<< HEAD
-      const html2canvas = html2canvasModule.default;
-      const { default: jsPDF } = await import('jspdf'),
-
-
-
-<<<<<<< HEAD
-    const newPublicStatus = !currentSharedWhitepaperIsPublic;
-
-    // For optimistic update: // setCurrentSharedWhitepaperIsPublic(newPublicStatus),
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-        if (currentSharedWhitepaperIsPublic === false) {
-<<<<<<< HEAD
-
-        if (notifyError) throw new Error(`Failed to notify counsel: ${notifyError.message}`),
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-export default WhitepaperGeneratorPage;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

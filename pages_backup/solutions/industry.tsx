@@ -8,7 +8,6 @@ import { motion } from 'framer-motion';
 import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
-
 const industries = [;
   {}
     name: 'Healthcare,',
@@ -69,6 +68,7 @@ const stats = [;
   { number: '100%, label: 'Compliance Rate' },',
   { number: '500+, label: 'Industry Projects' }',
 ;];
+}
 
 export default function IndustrySolutionsPage() {
   return (;

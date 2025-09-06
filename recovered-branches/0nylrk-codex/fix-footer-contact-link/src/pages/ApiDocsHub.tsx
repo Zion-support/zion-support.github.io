@@ -9,6 +9,7 @@ import {
   Zap,;
 } from 'lucide-react';
 import ApiDocsLayout from '@/components/developers/ApiDocsLayout';
+}
 
 export function ApiDocsHub() {
   const sections = [
@@ -104,5 +105,6 @@ export function ApiDocsHub() {
       </div>
     </ApiDocsLayout>
   );
+}
 
 export default ApiDocsHub;

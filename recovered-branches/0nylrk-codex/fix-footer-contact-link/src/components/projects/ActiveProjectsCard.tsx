@@ -13,6 +13,7 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { useProjects } from '@/hooks/useProjects';
 import { Project } from '@/types/projects';
+}
 
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();

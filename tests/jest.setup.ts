@@ -23,7 +23,6 @@ process.env.NEXT PUBLIC SUPABASE ANON KEY = 'test anon key';
   subscription: {
   unsubscribe: jest.fn () 
 
-
 }) );
 //Add any other specific methods from supabase.auth if they get called 
 };

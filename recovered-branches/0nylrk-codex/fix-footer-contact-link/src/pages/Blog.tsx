@@ -247,6 +247,7 @@ const CATEGORIES = [
   'Recruitment',
   'Infrastructure',
 ];
+}
 
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -465,6 +466,8 @@ export default function Blog() {
 "Ethics";
 "Recruitment";
 "Infrastructure" ];
+}
+
 export default function Blog () {
   const [searchQuery, setSearchQuery] = useState ("");
 const [selectedCategory, setSelectedCategory] = useState ("All Categories");

@@ -251,6 +251,7 @@ const categories = [
   { name: 'Manufacturing', count: caseStudies.filter(cs => cs.industry === 'Manufacturing').length },
   { name: 'Retail', count: caseStudies.filter(cs => cs.industry === 'Retail').length }
 ];
+}
 
 export default function CaseStudiesPage() {
   const [selectedIndustry, setSelectedIndustry] = React.useState('All');

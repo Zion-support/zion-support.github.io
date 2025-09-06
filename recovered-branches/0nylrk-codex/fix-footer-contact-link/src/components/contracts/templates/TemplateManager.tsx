@@ -18,6 +18,7 @@ interface TemplateManagerProps {
   onClose: () => void;
   onSelectTemplate: (template: ContractFormValues) => void;
   currentValues?: ContractFormValues;
+}
 
 export function TemplateManager({
   isOpen,

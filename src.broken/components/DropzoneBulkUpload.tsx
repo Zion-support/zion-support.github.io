@@ -5,6 +5,9 @@
 interface UploadReport {
   created: number;
   errors: UploadError[];
+}
+}
+}
 
 export function DropzoneBulkUpload() {
   const [file, setFile] = useState<File | null>(null);

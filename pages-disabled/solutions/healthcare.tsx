@@ -151,6 +151,7 @@ const processSteps = [
     description: 'Comprehensive training and ongoing support'
   }
 ];
+}
 
 export default function HealthcareSolutionsPage() {
   

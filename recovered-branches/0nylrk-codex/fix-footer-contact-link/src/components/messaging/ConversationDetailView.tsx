@@ -8,6 +8,7 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { useAuth } from '@/hooks/useAuth';
 import { MessageBubble } from './MessageBubble';
 import { DateDivider } from './DateDivider';
+}
 
 export function ConversationDetailView() {
   const { user } = useAuth();

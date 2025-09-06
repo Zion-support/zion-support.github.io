@@ -1,6 +1,7 @@
 import React from 'react';
 interface ServicesShowcaseProps {
   // Add props here as needed
+}
 
 export default function ServicesShowcase({ }: ServicesShowcaseProps) {
   return (

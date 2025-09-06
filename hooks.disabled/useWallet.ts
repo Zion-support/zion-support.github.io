@@ -2,6 +2,7 @@ import React from 'react';
 
 interface UseWalletProps {
   // Add props here as needed
+}
 
 export default function UseWallet({ }: UseWalletProps) {
   return (
@@ -10,6 +11,4 @@ export default function UseWallet({ }: UseWalletProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
 

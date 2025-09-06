@@ -66,7 +66,8 @@ const getRelativeTime = () => {
 }else {
   return `Starts in $ {
   formatDistanceToNow (interviewDate) 
-}` 
+}`
+}
 
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   const { user } = useAuth();

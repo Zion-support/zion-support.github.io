@@ -6,6 +6,7 @@ interface FirstInputEntry extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
   target?: Element;
+}
 
 export function Analytics() {
   useEffect(() => {

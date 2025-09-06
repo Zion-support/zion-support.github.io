@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react";
 
@@ -27,6 +26,7 @@ const features = [
     title: "Global Access",
     description: "Connect with talent across multiple regions with localized interfaces.",
     icon: Globe}],
+}
 
 export function EnterpriseFeatures() {
   return (

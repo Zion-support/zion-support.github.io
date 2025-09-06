@@ -231,9 +231,9 @@ const values = [
   "Work-life balance",
   "Diversity and inclusion",
 
-
   "Client success focus"
 ];
+}
 
 export default function TalentPage() {
   

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -13,6 +12,7 @@ required?: boolean ;
   method: string;
   path: string;
   params?: Param[];
+}
 
 export function ApiPlayground({
   method,
@@ -133,6 +133,7 @@ export function ApiPlayground({
       {response && <CodeBlock code={response} language='json' />}
     </div>
   );
+}
 
 export default ApiPlayground;
   const val = paramValues[p.name];
@@ -162,15 +163,3 @@ if (contentType?.includes ('application/json') ) {;
 }</div>) ;
 }export default ApiPlayground;
 '"
-=======
-
-<<<<<<< HEAD
-    let url = `${baseUrl}${path}`;
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-export default ApiPlayground;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,12 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 
 const dataPath = path.join(process.cwd(), 'data', 'learn', 'courses.json');
-=======
-const dataPath = path.join(process.cwd(), 'datalearncourses.json');
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -20,7 +17,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (level && c.level !== level) return false;
       if (typeof isFree !== 'undefined') {
         const freeVal = isFree === 'true' || isFree === true;
-<<<<<<< HEAD
         if (c.isFree !== freeVal) return false;
       }
       return true;
@@ -30,15 +26,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
   }
-=======
-        if (c.isFree !== freeVal) return false
-      }
-      return true
-    });
-
-    res.status(200).json({ courses: filtered })
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message ?? 'Failed to load courses' })
-  }
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

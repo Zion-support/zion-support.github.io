@@ -19,16 +19,31 @@ declare module 'vitest/config' {
 
 declare module '@vitejs/plugin-react-swc' {
   import { Plugin } from 'vite';
-  export default function reactSWC(): Plugin;
+}
+}
+
+export default function reactSWC(): Plugin;
 
 declare module 'path' {
-  export function resolve(...paths: string[]): string;
-  export function join(...paths: string[]): string;
-  export function dirname(path: string): string;
+}
+}
+
+export function resolve(...paths: string[]): string;
+}
+}
+
+export function join(...paths: string[]): string;
+}
+}
+
+export function dirname(path: string): string;
 
 declare module 'lovable-tagger' {
   import { Plugin } from 'vite';
-  export function componentTagger(): Plugin;
+}
+}
+
+export function componentTagger(): Plugin;
 
 // Add Node.js globals
 declare var __dirname: string;
@@ -48,8 +63,10 @@ declare module '@/components/ui/badge' {
     children?: React.ReactNode;
     key?: string | number;
   }
+}
+}
 
-  export const Badge: React.FC<BadgeProps>;
+export const Badge: React.FC<BadgeProps>;
 
 // FeatureCard type fixes
 declare module '@/components/FeatureCard' {
@@ -77,8 +94,10 @@ declare module '@/components/ListingScoreCard' {
     key?: string | number;
     variant?: string;
   }
+}
+}
 
-  export const ListingScoreCard: React.FC<ListingScoreCardProps>;
+export const ListingScoreCard: React.FC<ListingScoreCardProps>;
 
 // ChatMessage type fixes
 declare module '@/components/ChatAssistant/ChatMessage' {
@@ -97,8 +116,10 @@ declare module '@/components/ProductListingCard' {
     onRequestQuote: (listingId: string) => void;
     key?: string | number;
   }
+}
+}
 
-  export const ProductListingCard: React.FC<ProductListingCardProps>;
+export const ProductListingCard: React.FC<ProductListingCardProps>;
 
 // Removed custom lucide-react stub
 // Create a replacement stub for LiveKit components
@@ -110,9 +131,13 @@ declare module '@livekit/components-react' {
     onDisconnect?: () => void;
     className?: string;
   }
+}
 
-  export const VideoCall: React.FC<VideoCallProps>;
-  export const LiveKitRoom: React.FC<any>;
+export const VideoCall: React.FC<VideoCallProps>;
+}
+}
+
+export const LiveKitRoom: React.FC<any>;
 
 declare module '@livekit/components-styles' {
   // Empty stub for the styles

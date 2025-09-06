@@ -33,8 +33,9 @@ const validateRequest = (data: unknown): AnalyzeRequest => {
   if (!data || typeof data !== 'object') {
     throw new Error("Invalid request body")
   }
-  
-  const request = data as AnalyzeRequest;
+}
+
+const request = data as AnalyzeRequest;
   
   if (!request.content) {
     throw new Error("No content provided for analysis")

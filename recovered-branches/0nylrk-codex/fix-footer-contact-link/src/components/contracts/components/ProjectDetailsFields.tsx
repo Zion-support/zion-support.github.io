@@ -22,6 +22,7 @@ import { ContractFormValues } from './ContractForm';
 
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>;
+}
 
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
   return (

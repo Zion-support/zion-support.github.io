@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
@@ -18,6 +17,8 @@ interface CertificationsFormProps {
   certifications: Certification[],
   onComplete: () => void,
   onBack: () => void
+}
+}
 }
 
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {

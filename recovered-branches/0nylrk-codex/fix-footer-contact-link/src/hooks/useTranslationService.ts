@@ -7,6 +7,7 @@ type ContentType = 'job' | 'profile' | 'service' | 'general';
 interface TranslationResponse {
   translations: Record<SupportedLanguage, string>;
   error?: string;
+}
 
 export function useTranslationService() {
   const [isTranslating, setIsTranslating] = useState(false);

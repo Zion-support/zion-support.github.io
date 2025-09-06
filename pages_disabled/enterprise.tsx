@@ -122,6 +122,7 @@ const benefits = [
     value: '3x'
   }
 ];
+}
 
 export default function EnterpriseSolutionsPage() {
   return (

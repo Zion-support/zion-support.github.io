@@ -272,6 +272,7 @@ Constraints:
   } catch (error) {
     return null;
   }
+}
 
 export async function generateClientBudgetSuggestion(
   input: ClientBudgetRequest

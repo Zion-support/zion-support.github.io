@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { 
@@ -20,6 +19,8 @@ interface TabDefinition {
   id: string,
   label: string,
   icon: LucideIcon
+}
+}
 }
 
 export function DeveloperPortal() {
@@ -77,6 +78,8 @@ export function DeveloperPortal() {
       </div>
     </div>
   )
+}
+}
 }
 
 export default function ProtectedDeveloperPortal() {

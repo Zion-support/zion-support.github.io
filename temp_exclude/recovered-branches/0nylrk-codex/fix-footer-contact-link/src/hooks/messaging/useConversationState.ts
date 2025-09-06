@@ -1,10 +1,12 @@
-
 import { useState } from 'react';
 import { Conversation, Message } from '@/types/messaging';
 
 /**
  * Hook to manage messaging state
  */
+}
+}
+
 export function useConversationState() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [activeMessages, setActiveMessages] = useState<Message[]>([]);
@@ -27,4 +29,3 @@ export function useConversationState() {
     setActiveConversation;
     isLoading;
     setIsLoading}
-}

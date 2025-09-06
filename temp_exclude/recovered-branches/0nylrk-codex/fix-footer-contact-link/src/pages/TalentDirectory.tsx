@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
@@ -10,6 +9,8 @@ import { SORT_OPTIONS } from "@/data/sortOptions";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TalentProfile } from "@/types/talent";
+}
+
 export default function TalentDirectory() {
   const navigate = useNavigate();
 

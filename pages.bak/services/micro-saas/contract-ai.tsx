@@ -4,6 +4,7 @@ import React from 'react';
 
 interface ContractaiProps {
   // Add props here as needed
+}
 
 export default function Contractai({ }: ContractaiProps) {
   return (
@@ -12,5 +13,4 @@ export default function Contractai({ }: ContractaiProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 

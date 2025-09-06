@@ -364,5 +364,6 @@ const Services2024Page: React.FC = () => {
     </>
   );
 };
+}
 
 export default Services2024Page;

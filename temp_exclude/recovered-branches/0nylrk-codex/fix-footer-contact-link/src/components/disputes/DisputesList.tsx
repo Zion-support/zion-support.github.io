@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Dispute, DisputeStatus } from "@/types/disputes";
 import { Button } from "@/components/ui/button";
@@ -18,6 +17,7 @@ type DisputesListProps = {
   disputes: Dispute[],
   isLoading: boolean
 };
+}
 
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");

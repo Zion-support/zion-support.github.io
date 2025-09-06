@@ -153,6 +153,7 @@ const processSteps = [
     description: 'Continuous monitoring and optimization'
   }
 ];
+}
 
 export default function EducationSolutionsPage() {
   

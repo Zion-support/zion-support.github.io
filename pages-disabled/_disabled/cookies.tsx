@@ -75,6 +75,7 @@ const cookieDetails = [
     type: "Marketing"
   }
 ];
+}
 
 export default function CookiesPage() {
   

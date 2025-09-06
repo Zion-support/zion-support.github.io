@@ -280,6 +280,8 @@ export class PerformanceMonitorService {
   }
 
 // Pricing tiers for the Performance Monitor
+}
+
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
     name: 'Starter',
@@ -345,7 +347,6 @@ trends: {
   loadTime: loadTimes, performanceScore: performanceScores, dates 
 };
 recommendations: [ 'Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold contentMinimize render-blocking resourcesUse a CDN for static assetsEnable compression for text-based resources' ] 
-
 
 }return data 
 }private generateMockAlerts (url?: string) : PerformanceAlert[] {

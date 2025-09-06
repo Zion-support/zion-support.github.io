@@ -1397,6 +1397,7 @@ const itServices = [
   },
   {
 ];
+}
 
 export default function ITServicesPage() {},
   {

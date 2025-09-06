@@ -126,6 +126,7 @@ const caseStudies = [
     results: "300% increase in vendor participation, 200% revenue growth, 99.9% uptime""
   }]
 ];
+}
 
 export default function IndustrySolutionsPage() {
   

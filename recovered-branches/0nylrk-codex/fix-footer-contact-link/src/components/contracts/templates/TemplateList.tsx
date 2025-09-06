@@ -21,6 +21,7 @@ interface TemplateListProps {
   isLoading: boolean;
   onSelect: (template: ContractTemplate) => void;
   onEdit: (template: ContractTemplate) => void;
+}
 
 export function TemplateList({
   templates,

@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { useAppDispatch } from '@/store/hooks';
 import { addToWishlist, getApiUrl } from '@/store/wishlistSlice';
+}
 
 export default function ServiceCard({ service, onSelect }) {
   const navigate = useNavigate();

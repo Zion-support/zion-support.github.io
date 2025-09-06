@@ -1,4 +1,8 @@
- export const SidebarTrigger = React.forwardRef< React.ElementRef<typeof Button>;
+
+}
+}
+
+export const SidebarTrigger = React.forwardRef< React.ElementRef<typeof Button>;
 React.ComponentProps<typeof Button> > ( (props, ref) => {
   const {
   toggleSidebar 

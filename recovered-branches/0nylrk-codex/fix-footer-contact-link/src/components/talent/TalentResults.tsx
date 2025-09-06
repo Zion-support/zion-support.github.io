@@ -25,6 +25,7 @@ interface TalentResultsProps {
     setExperienceRange: (range: [number, number]) => void;
     clearFilters: () => void;
   };
+}
 
 export function TalentResults({
   filteredTalents,

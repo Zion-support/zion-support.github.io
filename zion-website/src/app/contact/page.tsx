@@ -76,6 +76,7 @@ const faqs = [
       'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.',
   },
 ];
+}
 
 export default function ContactPage() {
   return (

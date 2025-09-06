@@ -19,4 +19,6 @@
 // Main execution;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const optimizer = new PerformanceOptimizer(); optimizer.run().catch(console.error)};
 ;
+}
+
 export default PerformanceOptimizer;

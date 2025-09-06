@@ -29,6 +29,7 @@ import { HireConfirmationModal } from './HireConfirmationModal';
 interface CandidateCardProps {
   application: JobApplication;
   index: number;
+}
 
 export function CandidateCard({ application, index }: CandidateCardProps) {
   const [showNotes, setShowNotes] = useState(false);

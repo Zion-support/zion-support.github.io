@@ -6,6 +6,8 @@ import { GeneratedDescriptionDisplay } from '@/components/services/GeneratedDesc
 import { SEO } from '@/components/SEO';
 import { useAuth } from '@/hooks/useAuth';
 import { Navigate } from 'react-router-dom';
+}
+}
 
 export default function ServiceDescriptionGenerator() {
   const { isAuthenticated, isLoading } = useAuth();
@@ -28,8 +30,9 @@ export default function ServiceDescriptionGenerator() {
       />
     );
   }
+}
 
-  const handleDescriptionSave = (editedDescription: string) => {
+const handleDescriptionSave = (editedDescription: string) => {
     setGeneratedDescription(editedDescription);
     // Here you could also save to database if needed
   };

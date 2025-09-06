@@ -12,6 +12,7 @@ import z from 'zod';
 import { ChatAssistant } from '@/components/ChatAssistant';
 import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react';
 import { AppLayout } from '@/layout/AppLayout';
+}
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -359,7 +360,6 @@ export default function Contact() {
   toast ({
   title: "Form Validation Error";
 description: error.errors[0].message;
-
 
 };
 //Handle sending messages to the AI chat assistant 

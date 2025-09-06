@@ -70,6 +70,7 @@ const benefits = [
     icon: Cloud
   }
 ];
+}
 
 export default function IndustriesPage() {
   return (

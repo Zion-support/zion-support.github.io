@@ -1,4 +1,5 @@
 'use client';
+}
 
 export default function BlockchainWeb3Page() {
   return (

@@ -1,4 +1,4 @@
- /** * Formats a date for display in the referral system * @param date Date or string to format * @returns Formatted date string */ 
+/** * Formats a date for display in the referral system * @param date Date or string to format * @returns Formatted date string */ 
 }
 }/** * Stores referral code in localStorage when detected in window.URL */ 
 }return safeStorage.getItem ('referral code') 

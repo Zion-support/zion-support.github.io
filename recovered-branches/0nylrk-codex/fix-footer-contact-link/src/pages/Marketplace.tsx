@@ -17,6 +17,7 @@ import { toast } from '@/hooks/use-toast';
 import { useNavigate } from 'react-router-dom';
 import { SearchSuggestion } from '@/types/search';
 import { AppLayout } from '@/layout/AppLayout';
+}
 
 export default function Marketplace() {
   const navigate = useNavigate();
@@ -281,7 +282,6 @@ specificItem: {
 title: listing.title;
 category: listing.category;
 image: listing.images?.[0] 
-
 
 }) 
 

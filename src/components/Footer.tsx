@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { FooterNewsletter } from '@/components/FooterNewsletter';
 import {
   Twitter,
@@ -37,6 +36,7 @@ const GITHUB_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_GITHUB_URL,
   'https://github.com/ZionTechGroup'
 );
+}
 
 export function Footer() {
   return (
@@ -302,9 +302,3 @@ export function Footer() {
       </div>
     </footer>
   );
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

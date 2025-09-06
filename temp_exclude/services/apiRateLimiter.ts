@@ -20,7 +20,6 @@ export interface RateLimitStats {
     minute: number, hour: number,
     day: number
   }
-}
 
 export interface APIKey {
   id: string, name: string,
@@ -359,6 +358,9 @@ export class APIRateLimiterService {
 }
 
 // Pricing tiers for the API Rate Limiter service
+}
+}
+
 export const API_RATE_LIMITER_PRICING = {
   starter: {
       

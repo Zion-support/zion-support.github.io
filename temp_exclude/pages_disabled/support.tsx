@@ -98,6 +98,7 @@ const resources = [
     href: '/status'
   }
 ];
+}
 
 export default function SupportPage() {
   return (

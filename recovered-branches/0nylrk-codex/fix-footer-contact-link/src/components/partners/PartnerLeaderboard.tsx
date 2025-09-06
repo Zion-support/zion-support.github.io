@@ -17,6 +17,7 @@ interface LeaderboardEntry {
   referrals: number;
   earnings: number;
   badges: string[];
+}
 
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -31,7 +30,7 @@ interface OptimizedImageProps {
   loading?: 'lazy' | 'eager';
   style?: React.CSSProperties;
   objectPosition?: string;
-
+}
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
@@ -220,7 +219,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     );
 
     if (placeholder === 'color') {
-      
+
         />
       );
     }
@@ -240,7 +239,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     height: height ? `${height}px` : undefined,
   };
 
-  
     >
       <AnimatePresence>
         {/* Placeholder */}
@@ -305,7 +303,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     </div>
   );
 };
-//Container styles 
+//Container styles
 }> <AnimatePresence> {;
   /* Placeholder */ ;
 }{;
@@ -341,6 +339,7 @@ isLoading ? 'opacity-0' : 'opacity-100') ;
 }initial= {;
   {;
   opacity: 0 ;
+}
 
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
   images,
@@ -408,6 +407,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
   gridTemplateColumns: `repeat ($ {;
   columns ;
 }, 1fr) ` ;
+}
 
 export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
   src,
@@ -432,7 +432,6 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
       .toUpperCase()
       .slice(0, 2);
 
-  
     >
       {src ? (
         <OptimizedImage
@@ -454,20 +453,3 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
     </div>
   );
 };
-=======
-
-<<<<<<< HEAD
-
-          if (entry.name === src && entry.entryType === 'resource') {
-            const resourceEntry = entry as PerformanceResourceTiming;
-            const fileSize = resourceEntry.transferSize || resourceEntry.encodedBodySize || 0;
-            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
-            
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  );
-},
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

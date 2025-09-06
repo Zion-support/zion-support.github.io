@@ -7,6 +7,7 @@ interface MainNavigationProps {
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
+}
 
 export function MainNavigation({
   isAdmin = false,

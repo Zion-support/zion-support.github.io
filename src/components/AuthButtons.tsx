@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Facebook } from 'lucide-react';
@@ -8,6 +7,7 @@ type Provider = 'google' | 'github' | 'facebook' | 'credentials';
 
 interface AuthButtonsProps {
   providers?: Provider[];
+}
 
 export function AuthButtons({
   providers = ['google', 'github', 'facebook', 'credentials'],
@@ -116,11 +116,3 @@ export function AuthButtons({
       )}
     </div>
   );
-=======
-
-<<<<<<< HEAD
-
-
-  const gridCols = `grid-cols-${providers.length}`;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

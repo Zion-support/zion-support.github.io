@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react';
@@ -14,6 +13,8 @@ import {
 } from '@/components/ui/tooltip';
 import { useRouter } from 'next/router';
 import { Notification, NotificationType } from '@/context/notifications';
+}
+}
 
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
@@ -37,13 +38,14 @@ export const getTypeIcon = (type: NotificationType) => {
       return <span className='text-orange-500'>📦</span>;
     default:
       return <span className='text-gray-500'>📣</span>;
-  }
-};
+  };
 
 interface NotificationItemProps {
   notification: Notification;
   onMarkAsRead: (id: string) => Promise<void>;
   onDismiss: (id: string) => Promise<void>;
+}
+}
 
 export const NotificationItem: React.FC<NotificationItemProps> = ({
   notification,
@@ -62,7 +64,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     }
   };
 
-  
     >
       <div className='flex items-start gap-2'>
         <div className='text-xl'>{getTypeIcon(notification.type)}</div>
@@ -170,7 +171,3 @@ onDismiss ;
 }</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
 };
 '"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

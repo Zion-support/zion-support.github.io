@@ -10,7 +10,9 @@ async function handler(req, res) {
     res.status(405).end();
     return;
   }
-  const { email, items = [] } = req.body || {};
+}
+
+const { email, items = [] } = req.body || {};
   if (!email) {
     res.status(400).json({ error: "Missing email" });
     return;
@@ -29,5 +31,7 @@ async function handler(req, res) {
     return;
   }
   res.status(200).json({ orderId: "data.id", token });
+}
+}
 
 export default withErrorLogging(handler);

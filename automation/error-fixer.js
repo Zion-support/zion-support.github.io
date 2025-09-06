@@ -84,5 +84,8 @@ const __dirname = path.dirname(__filename),
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new ErrorFixer(),
   fixer.run().catch(console.error)
+}
+}
+}
 
 export default ErrorFixer;

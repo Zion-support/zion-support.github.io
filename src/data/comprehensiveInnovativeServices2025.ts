@@ -33,4 +33,6 @@ export interface ComprehensiveInnovativeService {;
   marketSize?: string;
 
 ;
+}
+
 export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeService[] = [];

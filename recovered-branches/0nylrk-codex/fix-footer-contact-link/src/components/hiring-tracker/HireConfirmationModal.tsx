@@ -23,6 +23,7 @@ export interface HireConfirmationModalProps {
   application?: JobApplication;
   onConfirm: () => void;
   isSubmitting?: boolean;
+}
 
 export function HireConfirmationModal({
   isOpen,

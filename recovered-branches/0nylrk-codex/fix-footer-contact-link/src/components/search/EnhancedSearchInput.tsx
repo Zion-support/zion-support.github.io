@@ -9,6 +9,8 @@ interface EnhancedSearchInputProps {
   onChange: (value: string) => void;
   placeholder?: string;
   searchSuggestions: SearchSuggestion[];
+}
+}
 
 export function EnhancedSearchInput({
   value,
@@ -32,8 +34,9 @@ export function EnhancedSearchInput({
       );
       return;
     }
+}
 
-    const filtered = searchSuggestions.filter(suggestion =>
+const filtered = searchSuggestions.filter(suggestion =>
       suggestion.text.toLowerCase().includes(value.toLowerCase())
     );
 

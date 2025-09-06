@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { AppStoreButtons } from './AppStoreButtons';
+}
 
 export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
@@ -55,10 +55,3 @@ export const MobileAppHero: React.FC = () => {
   );
 };
 "
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

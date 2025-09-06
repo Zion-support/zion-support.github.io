@@ -17,6 +17,7 @@ export type IntentResult = {
   intentMatched: boolean;
   matchedArticleIds: string[];
 };
+}
 
 export function matchIntent(
   query: string,

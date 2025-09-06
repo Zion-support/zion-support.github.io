@@ -33,7 +33,10 @@ if (!isAuthenticated) {
   toast ({
   navigate ("/login", {
   state: {
-  from: window.location.pathname 
+  from: window.location.pathname
+}
+}
+}
 
 export function PaymentButton({
   amount,

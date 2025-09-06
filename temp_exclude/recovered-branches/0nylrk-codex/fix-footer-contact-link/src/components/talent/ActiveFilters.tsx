@@ -1,4 +1,3 @@
-
 import React from "react";
 import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { Button } from "@/components/ui/button";
@@ -15,6 +14,8 @@ interface ActiveFiltersProps {
   experienceRange: [number, number];
   setExperienceRange: (range: [number, number]) => void;
   clearFilters: () => void
+}
+}
 }
 
 export function ActiveFilters({

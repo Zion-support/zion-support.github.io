@@ -63,6 +63,7 @@ export type DisputeReason =
   | 'payment'
   | 'contract_terms'
   | 'other';
+}
 
 export const disputeReasonLabels: Record<DisputeReason, string> = {
   milestone_quality: 'Quality of Deliverable',

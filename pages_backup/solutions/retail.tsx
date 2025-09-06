@@ -87,6 +87,8 @@ const solutions = [;
   'Omnichannel Solutions',',
   'Retail Mobile Applications'';
 ;];
+}
+
 export default function RetailSolutionsPage() {
   return (;
     <Layout );
@@ -150,12 +152,15 @@ const benefits = [
   'Streamlined operations',
   'Mobile-first customer engagement'
 ];
+}
+
 export default function RetailSolutions() {
     icon: Smartphone,
     title: 'Mobile Commerce',
     description: 'Mobile-optimized shopping experience'
   }
 ];
+}
 
 export default function RetailSolutionsPage() {
   

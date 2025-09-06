@@ -14,6 +14,7 @@ const talentPositions = [
     description: "Lead the development of cutting-edge AI solutions and machine learning models."
   }
 ];
+}
 
 export default function TalentPage() {
   return (

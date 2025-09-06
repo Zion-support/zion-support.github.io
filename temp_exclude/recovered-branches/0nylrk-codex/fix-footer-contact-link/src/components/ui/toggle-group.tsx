@@ -1,4 +1,4 @@
- const ToggleGroup = React.forwardRef< React.ElementRef<typeof ToggleGroupPrimitive.Root>;
+const ToggleGroup = React.forwardRef< React.ElementRef<typeof ToggleGroupPrimitive.Root>;
 React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> & VariantProps<typeof toggleVariants> > ( ({
   className, variant, size, children, ...props 
 }, ref) => (<ToggleGroupPrimitive.Root > <ToggleGroupContext.Provider value= {

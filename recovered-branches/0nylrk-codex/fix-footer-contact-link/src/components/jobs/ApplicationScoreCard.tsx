@@ -16,6 +16,7 @@ import { JobApplication } from '@/types/jobs';
 interface ApplicationScoreCardProps {
   application: JobApplication;
   onScoreUpdated?: (updatedApplication: JobApplication) => void;
+}
 
 export function ApplicationScoreCard({
   application,

@@ -1,4 +1,6 @@
 // Performance testing utilities
+}
+
 export const measurePerformance = (fn, iterations = 1000) => {
   const times = [];
   

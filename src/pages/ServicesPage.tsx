@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
@@ -203,6 +202,9 @@ const ServicesLoadingGrid = ({ count = 8 }: { count?: number }) => (
 );
 
 // Main component
+}
+}
+
 export default function ServicesPage() {
   const router = useRouter();
   const [sortBy, setSortBy] = useState('newest');
@@ -219,8 +221,9 @@ export default function ServicesPage() {
       if (page === 1) {
         allServices = [...INITIAL_SERVICES];
       }
+}
 
-      const startId =
+const startId =
         INITIAL_SERVICES.length + (page - 1) * limit + totalGenerated;
       const newServices = generateITServices(limit, startId);
       setTotalGenerated(prev => prev + newServices.length);
@@ -588,16 +591,3 @@ export default function ServicesPage() {
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-    allServices = [...allServices, ...newServices];
-    
-    let filteredServices = allServices;
-    
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

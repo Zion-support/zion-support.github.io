@@ -14,6 +14,8 @@ import { Card, CardContent } from "@/components/ui/card";
 interface BasicInfoFieldsProps {
   control: Control<any>
 }
+}
+}
 
 export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => {
   const [minBudget, setMinBudget] = useState<string>("");

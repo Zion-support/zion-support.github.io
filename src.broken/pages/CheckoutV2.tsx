@@ -27,6 +27,7 @@ interface CheckoutForm {
   address: string;
   city: string;
   country: string;
+}
 
 export default function CheckoutV2() {
   const navigate = useNavigate();

@@ -82,6 +82,7 @@ const certificationPaths = []
     courses: 10,
   };
 ];
+}
 
 export default function TrainingPage() {}
   return ()

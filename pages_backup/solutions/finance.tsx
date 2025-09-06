@@ -88,6 +88,8 @@ const solutions = [;
   'Cryptocurrency Solutions',',
   'Financial Mobile Applications'';
 ;];
+}
+
 export default function FinanceSolutionsPage() {
   return (;
     <Layout );
@@ -151,12 +153,15 @@ const benefits = [
   'Reduced operational costs',
   'Faster transaction processing'
 ];
+}
+
 export default function FinanceSolutions() {
     title: 'User Management',
     description: 'Secure user management with role-based access control',
     benefits: ['User provisioning', 'Role management', 'Access control', 'Audit logs']
   }
 ];
+}
 
 export default function FinanceSolutionsPage() {
   

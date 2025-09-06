@@ -62,6 +62,8 @@ const iconMap = {
   FileText,
   Megaphone,
 };
+}
+
 export const ForumCategories = () => {
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
@@ -95,4 +97,6 @@ export const ForumCategories = () => {
     </div>
   );
 };
+}
+
 export default ForumCategories;

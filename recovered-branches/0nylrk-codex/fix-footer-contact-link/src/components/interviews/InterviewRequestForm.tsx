@@ -54,6 +54,7 @@ const formSchema = z.object({
   title: z.string().min(3, 'Please provide a brief title for the interview.'),
   notes: z.string().optional(),
 });
+}
 
 export function InterviewRequestForm({
   talent,

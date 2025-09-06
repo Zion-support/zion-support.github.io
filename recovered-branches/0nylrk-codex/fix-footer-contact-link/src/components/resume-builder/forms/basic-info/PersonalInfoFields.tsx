@@ -11,6 +11,7 @@ import { BasicInfoFormData } from './schema';
 
 interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData>;
+}
 
 export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
   return (

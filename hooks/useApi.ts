@@ -9,6 +9,8 @@ interface UseApiResult<T> {
   data: T | null, loading: boolean,
   error: Error | null, execute: (...args: any[]) => Promise<void>,
 }
+}
+}
 
 export function useApi<T = any>(
   apiFunction: (...args: any[]) => Promise<T>,
@@ -17,6 +19,8 @@ export function useApi<T = any>(
 interface UseApiOptions<T = unknown> {
   immediate?: boolean;
   onSuccess?: (data: T) => void, onError?: (error: Error) => void,
+}
+}
 }
 
 export const useApi = <T = unknown>(
@@ -53,6 +57,8 @@ export const useApi = <T = unknown>(
 
   return { data, loading, error, execute };
 };
+}
+}
 
 export default useApi;
 interface ApiState<T> {
@@ -62,6 +68,8 @@ interface ApiState<T> {
 
 interface UseApiOptions {
   immediate?: boolean;
+}
+}
 }
 
 export function useApi<T>(
@@ -91,7 +99,6 @@ export function useApi<T>(
       fetchData();
     }
   }, [fetchData, options.immediate]);
-
 
     fetchData();
   }, [url, options]);

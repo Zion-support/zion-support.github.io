@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -123,6 +122,8 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     returnPolicy: "21-day return policy for items in original condition"
   }
 };
+}
+}
 
 export default function EquipmentDetail() {
   const { equipmentId } = useParams() as { equipmentId?: string };
@@ -149,8 +150,9 @@ export default function EquipmentDetail() {
       </>
     )
   }
+}
 
-  const handleAddToCart = () => {
+const handleAddToCart = () => {
     setIsAdding(true);
     
     // Simulate API call

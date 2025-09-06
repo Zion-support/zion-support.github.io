@@ -493,8 +493,9 @@ class DeploymentPipeline {
       if (!this.deployment.rollback) {
         throw new Error('No rollback information available');
       }
-      
-      const rollbackInfo = this.deployment.rollback;
+}
+
+const rollbackInfo = this.deployment.rollback;
       
       // Stop current processes
       execSync('pm2 stop all', { cwd: this.projectRoot, stdio: 'pipe' });

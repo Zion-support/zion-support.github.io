@@ -1,4 +1,4 @@
- function Badge ({
+function Badge ({
   className, variant, ...props 
 }: BadgeProps) {
   return (<span className= {

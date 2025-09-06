@@ -25,7 +25,8 @@ try {
 formData.serviceType;
 3);
 }finally {
-  setIsMatching (false) 
+  setIsMatching (false)
+}
 
 export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
   const [isMatching, setIsMatching] = useState(false);

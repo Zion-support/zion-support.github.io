@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -22,6 +21,7 @@ interface CountryTabsProps {
   onQuote?: (country: CountryPricing) => void;
   searchQuery: string;
   setSearchQuery: (query: string) => void;
+}
 
 export function CountryTabs({
   popularCountries,
@@ -151,10 +151,3 @@ export function CountryTabs({
       </TabsContent>
     </Tabs>
   );
-=======
-
-<<<<<<< HEAD
-  const countriesPerPage = 50;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

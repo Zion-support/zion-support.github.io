@@ -1,4 +1,5 @@
 import { z } from 'zod';
+}
 
 export const basicInfoSchema = z.object({
   fullName: z.string().min(1, 'Full name is required'),

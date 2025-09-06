@@ -2,6 +2,7 @@ import React from 'react';
 
 interface AdvancedInnovativeServicesShowcase2025Props {
   // Add props here as needed
+}
 
 export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInnovativeServicesShowcase2025Props) {
   return (
@@ -10,6 +11,4 @@ export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInno
       <p>This component is currently under development.</p>
     </div>
   );
-
-
 

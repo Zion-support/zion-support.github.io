@@ -51,6 +51,8 @@ export async function fetchOnboardingProgress(
     console.warn('Supabase onboarding fetch exception:', (e as Error).message);
     return null;
   }
+}
+}
 
 export function fallbackTalentProgress(): TalentOnboarding {
   return {
@@ -59,6 +61,8 @@ export function fallbackTalentProgress(): TalentOnboarding {
     availability_set: false,
     first_job_applied: false,
   };
+}
+}
 
 export function fallbackClientProgress(): ClientOnboarding {
   return {

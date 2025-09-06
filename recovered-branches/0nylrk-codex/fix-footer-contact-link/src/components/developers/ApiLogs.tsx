@@ -20,6 +20,7 @@ import {
   SelectValue,;
 } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
+}
 
 export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();

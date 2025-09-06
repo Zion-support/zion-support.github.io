@@ -13,8 +13,9 @@ serve(async (req) => {
     if (!openAIApiKey) {
       throw new Error("OpenAI API key is not set in environment variables")
     }
+}
 
-    const { modelId, jobId } = await req.json();
+const { modelId, jobId } = await req.json();
     
     if (!modelId && !jobId) {
       throw new Error("Either modelId or jobId is required")

@@ -45,6 +45,7 @@ interface DeploymentNotificationProps {
   updates: DeploymentUpdate[];
   onDismiss?: (id: string) => void;
   onAction?: (id: string, action: string) => void;
+}
 
 export default function DeploymentNotification({
   updates,
@@ -249,6 +250,8 @@ export default function DeploymentNotification({
   );
 
 // Example usage with mock data
+}
+
 export function DeploymentNotificationExample() {
   const [updates, setUpdates] = useState<DeploymentUpdate[]>([
     {

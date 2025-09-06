@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useMessaging } from '@/context/MessagingContext';
 import Link from 'next/link';
@@ -17,6 +16,7 @@ import { useSelector } from 'react-redux';
 import type { RootState } from '@/store';
 import { cn } from '@/lib/utils'; // Import cn utility
 import { useRouter } from 'next/router';
+}
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -175,10 +175,3 @@ export function AppHeader() {
   setLoginOpen ;
 }/> </>) ;'";
 }'"'"
-=======
-
-<<<<<<< HEAD
-  const showTagline = router.pathname === '/';
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -8,6 +8,7 @@ export interface MessageTabProps {
   setMessage: (message: string) => void;
   proposalLink: string;
   setProposalLink: (link: string) => void;
+}
 
 export function MessageTab({
   message,

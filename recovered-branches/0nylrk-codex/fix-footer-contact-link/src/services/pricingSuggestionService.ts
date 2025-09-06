@@ -229,4 +229,3 @@ export async function trackPricingSuggestion(data: {
     console.error('Error tracking pricing suggestion:', error);
     return false;
   }
-

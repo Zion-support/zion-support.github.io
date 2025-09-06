@@ -81,4 +81,3 @@ export async function findMatches(
     console.error('Error in matchmaking:', error);
     return [];
   }
-

@@ -1,4 +1,4 @@
- const onDrop = useCallback ( (accepted: File[]) => {
+const onDrop = useCallback ( (accepted: File[]) => {
   if (accepted.length) {
   
 }

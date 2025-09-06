@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 
 interface ContractHeaderProps {
   onCreateClick: () => void;
+}
 
 export function ContractHeader({ onCreateClick }: ContractHeaderProps) {
   return (

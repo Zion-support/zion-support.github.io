@@ -1,7 +1,6 @@
  
 }export type IpfsClientChoice = 'web3.storage' | 'pinata' | 'local-ipfs';
 
-
 function env(name: string): string | undefined {
   return process.env[name] || process.env[name.toLowerCase()];
 
@@ -126,6 +125,8 @@ export async function publishManifesto(
   } catch {
     return false;
   }
+}
+}
 
 export const OFFWORLD_TOPICS = {
   manifesto: 'zion.manifesto.broadcast',

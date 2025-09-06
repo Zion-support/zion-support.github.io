@@ -78,5 +78,6 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
   );
 
 };
+}
 
 export default InteractiveNavigation;

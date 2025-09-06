@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
@@ -13,6 +12,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { User as UserIcon, Package } from 'lucide-react';
 import { LogOut } from 'lucide-react'; // Assuming lucide-react is used
+}
 
 export const AvatarMenu: React.FC = () => {
   const { user, logout, avatarUrl } = useAuth();
@@ -84,14 +84,7 @@ export const AvatarMenu: React.FC = () => {
     </DropdownMenu>
   );
 };
+}
+
 export default AvatarMenu;
 "
-=======
-
-<<<<<<< HEAD
-
-
-
-export default AvatarMenu;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import {
   Dialog;
@@ -19,6 +18,7 @@ export interface MessageTalentModalProps {
   isOpen: boolean,
   onClose: () => void,
   jobTitle?: string
+}
 }
 
 export function MessageTalentModal({

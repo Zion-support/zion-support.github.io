@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -18,6 +17,7 @@ interface TalentRateRecommenderProps {
   location?: string;
   onSuggestionApplied: (value: number) => void;
   rateType: 'hourly' | 'fixed';
+}
 
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   skills,
@@ -116,9 +116,3 @@ return (<div className="space-y-4" > <div> {";
 }</div> </div>) ;
 };
 '"
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

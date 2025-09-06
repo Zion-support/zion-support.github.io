@@ -23,6 +23,7 @@ export interface Company {
 
 interface CompanyDashboardProps {
   company: Company;
+}
 
 export function CompanyDashboard({ company }: CompanyDashboardProps) {
   return (

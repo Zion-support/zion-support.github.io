@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { BadgeDollarSign } from 'lucide-react';
+}
 
 export default function WalletPage() {
   const { wallet, transactions, loading } = useWallet();

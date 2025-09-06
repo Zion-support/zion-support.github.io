@@ -89,6 +89,7 @@ const benefits = [
     icon: Database
   }
 ];
+}
 
 export default function HealthcarePage() {
   

@@ -86,6 +86,8 @@ import { ;
   CloudSleetRainWind';
 } from 'lucide-react';
 ;
+}
+
 export default function Events() {;
   const upcomingEvents = [;
     {;

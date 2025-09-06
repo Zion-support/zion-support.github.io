@@ -25,6 +25,8 @@ interface VideoCallRoomProps {
   onToggleScreenShare?: (isSharing: boolean) => void,
   className?: string
 }
+}
+}
 
 export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ 
   roomId;

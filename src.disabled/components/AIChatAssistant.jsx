@@ -1,6 +1,7 @@
 import React from 'react';
 interface AIChatAssistantProps {
   // Add props here as needed
+}
 
 export default function AIChatAssistant({ }: AIChatAssistantProps) {
   return (

@@ -5,6 +5,7 @@ import { useUpdateMilestone } from './useUpdateMilestone';
 import { useDeleteMilestone } from './useDeleteMilestone';
 import { useUploadDeliverable } from './useUploadDeliverable';
 import { MilestoneStatus } from './types';
+}
 
 export const useMilestones = (projectId?: string) => {
   const { milestones, activities, isLoading, error, refetch } =

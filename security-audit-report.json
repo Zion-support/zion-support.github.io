@@ -1,40 +1,11 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-09-06T00:32:21.706Z",
-  "vulnerabilities": 11,
+  "timestamp": "2025-09-06T08:43:09.350Z",
+  "vulnerabilities": 21,
   "recommendations": [
-<<<<<<< HEAD
-    {
-      "type": "file_permissions",
-      "message": "package.json is world-readable",
-      "severity": "medium"
-    },
-    {
-      "type": "file_permissions",
-      "message": "package-lock.json is world-readable",
-      "severity": "medium"
-    }
-  ],
-  "summary": {
-    "totalVulnerabilities": 0,
-    "totalRecommendations": 2,
-    "securityScore": 90,
-    "status": "good"
-  }
-}
-=======
-=======
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "Run \"npm audit fix\" to resolve dependency vulnerabilities",
     "Review and remove any hardcoded secrets",
     "Update outdated dependencies",
     "Implement proper environment variable management",
     "Add security headers to Next.js configuration"
-<<<<<<< HEAD
   ]
 }
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-=======
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

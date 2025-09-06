@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { 
@@ -10,6 +9,7 @@ import {
   MessageSquare, 
   Smartphone 
 } from "lucide-react";
+}
 
 export function QuickAccess() {
   const quickLinks = [

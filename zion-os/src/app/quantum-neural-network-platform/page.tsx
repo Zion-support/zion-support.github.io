@@ -1,4 +1,5 @@
 import Link from 'next/link';
+}
 
 export const metadata = {
   title: 'Quantum Neural Network Platform - Zion Tech Group',
@@ -7,6 +8,7 @@ export const metadata = {
   keywords:
     'quantum neural networks, quantum computing, AI, machine learning, quantum machine learning, Zion Tech Group',
 };
+}
 
 export default function QuantumNeuralNetworkPlatformPage() {
   return (

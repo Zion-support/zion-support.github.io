@@ -9,6 +9,8 @@ interface ProductListingCardProps {
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void
 }
+}
+}
 
 export function ProductListingCard({ 
   listing, 

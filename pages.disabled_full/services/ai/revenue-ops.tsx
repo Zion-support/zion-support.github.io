@@ -3,6 +3,7 @@ module.exports = default function RevenueOpsAI() { return; }; return null} } ; f
 import React from 'react';
 interface RevenueopsProps {
   // Add props here as needed
+}
 
 export default function Revenueops({ }: RevenueopsProps) {
   return (

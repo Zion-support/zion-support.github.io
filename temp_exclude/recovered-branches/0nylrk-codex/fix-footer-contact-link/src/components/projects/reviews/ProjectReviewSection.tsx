@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,6 +9,8 @@ import { Project } from "@/types/projects";
 import { useAuth } from "@/hooks/useAuth";
 interface ProjectReviewSectionProps {
   project: Project
+}
+}
 }
 
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {

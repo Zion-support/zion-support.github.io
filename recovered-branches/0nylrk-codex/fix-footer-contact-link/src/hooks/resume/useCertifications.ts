@@ -7,6 +7,7 @@ import {
   handleResumeError,
   showSuccessToast,;
 } from './useResumeUtils';
+}
 
 export function useCertifications() {
   const { user } = useAuth();

@@ -2,6 +2,7 @@ import React from 'react';
 
 interface AIAutonomousVentureCapitalistProps {
   // Add props here as needed
+}
 
 export default function AIAutonomousVentureCapitalist({ }: AIAutonomousVentureCapitalistProps) {
   return (
@@ -10,6 +11,4 @@ export default function AIAutonomousVentureCapitalist({ }: AIAutonomousVentureCa
       <p>This component is currently under development.</p>
     </div>
   );
-
-
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+}
 
 export default function ElasticSearchSearch() {
   const [query, setQuery] = useState('');

@@ -1,4 +1,4 @@
- useEffect ( () => {
+useEffect ( () => {
   if (!toAddress || !toAddress.address || !toAddress.city || !toAddress.country) if (!toAddress) return null;
 return (<span> {
   `$ {

@@ -129,6 +129,8 @@ const benefits = [
     icon: Database;
   }
 ;];
+}
+
 export default function RetailPage() {
   return (;
     <Layout );
@@ -176,6 +178,8 @@ export default function RetailPage() {
           </div>;
         </section>;
 ];
+}
+
 export default function RetailPage() {
   
     >

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -9,6 +8,8 @@ import { Check, Pencil } from "lucide-react";
 interface GeneratedDescriptionDisplayProps {
   description: string,
   onSave: (editedDescription: string) => void
+}
+}
 }
 
 export function GeneratedDescriptionDisplay({ 

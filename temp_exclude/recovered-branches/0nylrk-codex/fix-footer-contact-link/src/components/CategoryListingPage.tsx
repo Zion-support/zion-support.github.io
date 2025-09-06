@@ -33,6 +33,8 @@ interface CategoryListingPageProps {
   sortOptions?: { label: string, value: string }[],
   filterOptions?: { label: string, value: string }[]
 }
+}
+}
 
 export function CategoryListingPage({ 
   title, 

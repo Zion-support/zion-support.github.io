@@ -100,6 +100,7 @@ const features: Feature[] = [
     ],
   },
 ];
+}
 
 export function FeatureShowcase() {
   const [activeFeature, setActiveFeature] = useState<string | null>(null);

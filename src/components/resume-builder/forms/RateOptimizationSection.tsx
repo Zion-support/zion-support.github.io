@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Control, UseFormSetValue } from 'react-hook-form';
 import {
@@ -20,6 +19,7 @@ interface RateOptimizationSectionProps {
   yearsExperience: number;
   location?: string;
   rateType: 'hourly' | 'fixed';
+}
 
 export const RateOptimizationSection: React.FC<
   RateOptimizationSectionProps
@@ -64,10 +64,3 @@ export const RateOptimizationSection: React.FC<
   );
 };
 "
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

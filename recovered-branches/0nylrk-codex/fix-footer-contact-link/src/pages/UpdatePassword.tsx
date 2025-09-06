@@ -36,6 +36,7 @@ const updatePasswordSchema = z
   });
 
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
+}
 
 export default function UpdatePassword() {
   const [isLoading, setIsLoading] = useState(false);

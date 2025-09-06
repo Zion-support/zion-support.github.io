@@ -12,6 +12,7 @@ export interface AxiosInstance {
     config?: { params?: Record<string, any> } & RequestInit
   ): Promise<any>;
   post(url: string, data?: any, config?: RequestInit): Promise<any>;
+}
 
 export function create(
   config: { baseURL?: string; withCredentials?: boolean } = {}
@@ -84,4 +85,6 @@ export function create(
   return instance;
 
 // Export the function instead of calling it immediately to avoid temporal dead zone issues
+}
+
 export default createAxiosInstance;

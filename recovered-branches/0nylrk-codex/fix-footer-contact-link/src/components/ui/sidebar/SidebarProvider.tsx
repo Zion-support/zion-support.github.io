@@ -20,12 +20,14 @@ const SidebarContext = createContext<SidebarContextType>({
   open: () => {},
   close: () => {},
 });
+}
 
 export const useSidebar = (): SidebarContextType => useContext(SidebarContext);
 
 interface SidebarProviderProps {
   children: React.ReactNode;
   defaultOpen?: boolean;
+}
 
 export function SidebarProvider({
   children,

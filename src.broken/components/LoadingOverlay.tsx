@@ -3,6 +3,7 @@ import { Loader2 } from 'lucide-react';
 
 export interface LoadingOverlayProps {
   visible?: boolean;
+}
 
 export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
   visible = false,
@@ -14,5 +15,6 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
     </div>
   );
 };
+}
 
 export default LoadingOverlay;

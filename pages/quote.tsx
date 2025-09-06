@@ -33,6 +33,7 @@ const projectSizes = [
   { id: 'large', name: 'Large Project', description: '3-6 months', price: '$50,000 - $150,000' },
   { id: 'enterprise', name: 'Enterprise', description: '6+ months', price: '$150,000+' }
 ];
+}
 
 export default function QuotePage() {
   const [selectedServices, setSelectedServices] = useState([]);

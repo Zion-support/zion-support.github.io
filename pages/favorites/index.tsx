@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import EmptyState from '../../components/ui/EmptyState';
+}
 
 export default function FavoritesPage() {
   const [favorites, setFavorites] = useState<string[]>([]);

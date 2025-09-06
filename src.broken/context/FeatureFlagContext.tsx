@@ -18,6 +18,7 @@ interface FeatureFlagContextValue {
 const FeatureFlagContext = createContext<FeatureFlagContextValue | undefined>(
   undefined
 );
+}
 
 export function FeatureFlagProvider({
   children,
@@ -62,6 +63,7 @@ export function FeatureFlagProvider({
       {children}
     </FeatureFlagContext.Provider>
   );
+}
 
 export function useFeatureFlags() {
   const ctx = useContext(FeatureFlagContext);

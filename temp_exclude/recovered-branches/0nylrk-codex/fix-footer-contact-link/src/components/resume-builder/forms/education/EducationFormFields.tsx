@@ -1,4 +1,3 @@
-
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -31,6 +30,7 @@ const educationSchema = z.object({
   location: z.string().optional()}),
 
 type EducationFormValues = z.infer<typeof educationSchema>;
+}
 
 export function EducationFormFields({ 
   isEditing, 

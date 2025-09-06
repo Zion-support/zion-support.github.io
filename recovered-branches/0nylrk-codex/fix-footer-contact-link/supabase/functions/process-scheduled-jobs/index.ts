@@ -255,8 +255,6 @@ async function processOnboardingReminder (supabase, userId, milestone, role) {
     console.error(`Error processing ${contentType} generation:`, error);
   }
 
-
-
 }async function processContentGeneration (supabase, contentType) {
   try {
   //Call the content generation function const response = await fetch (`$ {

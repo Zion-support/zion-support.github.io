@@ -78,6 +78,8 @@ export class ErrorBoundary extends Component<
   }
 
 // Loading spinner component
+}
+
 export function LoadingSpinner({
   size = 'md',
   className = '',
@@ -96,6 +98,8 @@ export function LoadingSpinner({
   );
 
 // Skeleton loading component
+}
+
 export function Skeleton({
   className = '',
   lines = 1,
@@ -116,6 +120,8 @@ export function Skeleton({
   );
 
 // Performance monitoring hook
+}
+
 export function usePerformanceMonitor(componentName: string) {
   const startTime = performance.now();
 
@@ -140,6 +146,8 @@ export function usePerformanceMonitor(componentName: string) {
   };
 
 // Intersection observer hook for lazy loading
+}
+
 export function useIntersectionObserver(
   ref: React.RefObject<HTMLElement>,
   options: IntersectionObserverInit = {}
@@ -162,6 +170,8 @@ export function useIntersectionObserver(
   return isIntersecting;
 
 // Debounced search hook for better performance
+}
+
 export function useDebounce<T>(value: T, delay: number): T {
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
 

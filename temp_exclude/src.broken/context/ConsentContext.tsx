@@ -1,4 +1,4 @@
- const ConsentContext = createContext<ConsentContextValue> ({
+const ConsentContext = createContext<ConsentContextValue> ({
   consent: defaultState, acceptAll: () => {
   
 };

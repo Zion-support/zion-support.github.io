@@ -1,4 +1,7 @@
-import _React,{ useState } from 'react'; import { Link } from 'react-router-dom'; import { Search,Star,ShoppingCart,Heart,Eye,Users,Brain,Shield,Globe,Network,Cloud,Smartphone,CheckCircle } from 'lucide-react'; export default function Marketplace() {; const [searchTerm,setSearchTerm] = useState(''); const [selectedCategory,setSelectedCategory] = useState('all'); const [selectedPriceRange,setSelectedPriceRange] = useState('all'); const [sortBy,setSortBy] = useState('featured'); const categories = [
+import _React,{ useState } from 'react'; import { Link } from 'react-router-dom'; import { Search,Star,ShoppingCart,Heart,Eye,Users,Brain,Shield,Globe,Network,Cloud,Smartphone,CheckCircle } from 'lucide-react';
+}
+
+export default function Marketplace() {; const [searchTerm,setSearchTerm] = useState(''); const [selectedCategory,setSelectedCategory] = useState('all'); const [selectedPriceRange,setSelectedPriceRange] = useState('all'); const [sortBy,setSortBy] = useState('featured'); const categories = [
     ; { "id": 'all',"name": 'All Products',"icon": 'Globe',"count": '24' },; { "id": 'ai-solutions',"name": 'AI Solutions',"icon": 'Brain',"count": '8' },; { "id": 'cybersecurity',"name": 'Cybersecurity',"icon": 'Shield',"count": '6' },; { "id": 'cloud-infrastructure',"name": 'Cloud & Infrastructure',"icon": 'Cloud',"count": '5' },; { "id": 'blockchain',"name": 'Blockchain & Web3',"icon": 'Network',"count": '3' },,
     { "id": 'iot-platforms',"name": 'IoT Platforms',"icon": 'Smartphone',"count": '2' }
   ]; const priceRanges = [

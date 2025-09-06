@@ -14,6 +14,7 @@ interface AIMatchingResultsProps {
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;
+}
 
 export function AIMatchingResults({
   matches,

@@ -56,6 +56,7 @@ const iconMap = {
   FileText;
   Megaphone
 };
+}
 
 export const ForumCategories = () => {
   const { user } = useAuth();
@@ -88,5 +89,6 @@ export const ForumCategories = () => {
     </div>
   )
 };
+}
 
 export default ForumCategories;

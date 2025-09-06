@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -24,6 +23,7 @@ interface RaiseDisputeButtonProps {
     | 'link';
   size?: 'default' | 'sm' | 'lg' | 'icon';
   className?: string;
+}
 
 export function RaiseDisputeButton({
   projectId,
@@ -72,10 +72,3 @@ export function RaiseDisputeButton({
       </Dialog>
     </>
   );
-=======
-
-<<<<<<< HEAD
-  milestoneId, 
-  variant = "outline", 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

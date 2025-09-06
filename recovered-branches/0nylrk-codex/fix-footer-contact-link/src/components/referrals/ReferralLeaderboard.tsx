@@ -11,6 +11,7 @@ interface LeaderboardEntry {
   rank: number;
   name: string;
   referrals: number;
+}
 
 export function ReferralLeaderboard() {
   // This would typically be fetched from the server

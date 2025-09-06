@@ -28,6 +28,7 @@ interface BrowseCardsProps {
   items: BrowseItem[];
   type: 'jobs' | 'talents';
   onViewDetails: (id: string) => void;
+}
 
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]>([]);

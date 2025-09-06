@@ -1,4 +1,3 @@
-
 import React from "react";
 import { SearchSuggestion, SearchHighlight } from "@/types/search";
 
@@ -29,6 +28,8 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
     after: text.substring(index + searchTerm.length)
   }
 };
+}
+}
 
 export function AutocompleteSuggestions({ 
   suggestions, 

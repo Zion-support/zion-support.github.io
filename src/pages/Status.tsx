@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { SEO } from '@/components/SEO';
 import { useState, useEffect } from 'react';
 import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react';
@@ -42,6 +41,8 @@ status: "operational";";
 description: "AI talent profiles and matching";
 lastChecked: new Date () .toISOString () ;
 }];
+}
+
 export default function Status () {;
   //Try to load external status page, fallback after timeout const timeout = setTimeout ( () => {;
   if (!externalStatusLoaded) {;
@@ -78,6 +79,7 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
     lastChecked: new Date().toISOString(),
   },
 ];
+}
 
 export default function Status() {
   const [externalStatusLoaded, setExternalStatusLoaded] = useState(false);
@@ -357,11 +359,3 @@ default: return (<> <SEO title="API Status" description="View real-time service 
 }</CardContent> </Card> </div> <div className="text-center" > <p className="text-zion-slate-light mb-4" > For detailed incident history and real-time updates: </p> <Button variant="outline" asChild className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10" > <a > <ExternalLink className="h-4 w-4" /> Visit Full Status Page </Link> </Button> </div> </>) '";
 }<div className="mt-12 text-center" > <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle className="text-white" >Need Help?</CardTitle> </CardHeader> <CardContent className="space-y-4" > <p className="text-zion-slate-light" > If you're experiencing issues not reflected here, please contact our support team. </p> <Button variant="outline" asChild className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10" > <Link href="/contact" >Contact Support</Link> </Button> <Button variant="outline" asChild className="text-zion-purple border-zion-purple hover:bg-zion-purple/10" > <a href="https://twitter.com/ZionTechGroup" target="blank" rel="noopener noreferrer" > @ZionTechGroup </Link> </Button> </div> </CardContent> </Card> </div> </div> </main> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-        return <CheckCircle className="h-5 w-5 text-green-500" />;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

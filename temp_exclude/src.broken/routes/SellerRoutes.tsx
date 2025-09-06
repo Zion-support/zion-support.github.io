@@ -1,4 +1,4 @@
- <Routes> <Route path="/dashboard" element= {
+<Routes> <Route path="/dashboard" element= {
   <ProtectedRoute> <SellerDashboard /> </ProtectedRoute> 
 }/> </Routes>) 
 }

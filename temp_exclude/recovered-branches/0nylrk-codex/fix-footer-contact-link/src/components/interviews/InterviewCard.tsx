@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -15,6 +14,8 @@ import { InterviewResponseForm } from "./InterviewResponseForm";
 interface InterviewCardProps {
   interview: Interview,
   onRefresh: () => Promise<void>
+}
+}
 }
 
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {

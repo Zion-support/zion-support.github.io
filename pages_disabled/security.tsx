@@ -50,6 +50,7 @@ const complianceFrameworks = [
   { name: 'HIPAA', status: 'Compliant', description: 'Health Insurance Portability and Accountability Act' },
   { name: 'PCI DSS', status: 'Compliant', description: 'Payment Card Industry Data Security Standard' }
 ];
+}
 
 export default function SecurityPage() {
   return (

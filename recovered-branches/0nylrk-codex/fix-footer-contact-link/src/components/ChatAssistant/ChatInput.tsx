@@ -16,7 +16,8 @@ disabled?: boolean
 }: ChatInputProps) {
   const [message, setMessage] = useState ('');
 const inputRef = useRef<HTMLTextAreaElement> (null);
-//Focus input when component mounts 
+//Focus input when component mounts
+}
 
 export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
   const [message, setMessage] = useState('');

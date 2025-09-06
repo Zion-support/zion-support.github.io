@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -13,6 +12,8 @@ interface SmartContractDeploymentProps {
   solidityCode: string,
   onDeploy: (options: DeploymentOptions) => Promise<void>,
   isDeploying: boolean
+}
+}
 }
 
 export function SmartContractDeployment({ 

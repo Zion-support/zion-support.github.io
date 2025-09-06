@@ -3,6 +3,7 @@ import { Clock } from 'lucide-react';
 
 interface TalentCardAvailabilityProps {
   availabilityType: string;
+}
 
 export function TalentCardAvailability({
   availabilityType,

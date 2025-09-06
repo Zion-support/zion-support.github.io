@@ -35,7 +35,10 @@ interface ServiceQuoteModalProps {
   open: boolean;
 onOpenChange: (open: boolean) => void;
 service: ProductListing | null 
-}const BUDGET RANGES = [ export function ServiceQuoteModal ({
+}const BUDGET RANGES = [
+}
+
+export function ServiceQuoteModal ({
   open, onOpenChange, service 
 }: ServiceQuoteModalProps) {
   const [formData, setFormData] = useState ({
@@ -82,6 +85,7 @@ const TIMELINE_OPTIONS = [
   { label: '3-6 months', value: '3-6months' },
   { label: '6+ months', value: '6+months' },
 ];
+}
 
 export function ServiceQuoteModal({
   open,

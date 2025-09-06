@@ -7,6 +7,7 @@ import {
   CardTitle,;
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+}
 
 export function RecentActivity() {
   // Mock activity data

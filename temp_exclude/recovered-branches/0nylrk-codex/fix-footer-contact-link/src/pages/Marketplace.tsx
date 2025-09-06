@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -14,6 +13,8 @@ import { toast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 import { SearchSuggestion } from "@/types/search";
 import { AppLayout } from "@/layout/AppLayout";
+}
+
 export default function Marketplace() {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");

@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/dialog';
 import { ApplyForm } from './ApplyForm';
 import { ApplyToJobModalProps } from './types';
+}
 
 export function ApplyToJobModal({
   job,

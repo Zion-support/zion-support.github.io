@@ -10,7 +10,9 @@
 }`;
 {
   headers: {
-  'Content-Type': 'application/json' 
+  'Content-Type': 'application/json'
+}
+}
 
 export function useWhitelabelTenant(externalSubdomain?: string) {
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
@@ -95,6 +97,9 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
   return { tenant, isLoading, error };
 
 // Hook to check if current user is a tenant admin
+}
+}
+
 export function useTenantAdminStatus(tenantId?: string) {
   const [isAdmin, setIsAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -114,8 +119,9 @@ export function useTenantAdminStatus(tenantId?: string) {
           setIsAdmin(false);
           return;
         }
+}
 
-        const userId = sessionData.session.user.id;
+const userId = sessionData.session.user.id;
         const { data, error } = await supabase
           .from('tenant_administrators')
           .select('*')

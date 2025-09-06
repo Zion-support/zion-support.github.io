@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
@@ -146,6 +145,7 @@ interface PageErrorBoundaryProps {
   children: React.ReactNode;
   pageName?: string;
   fallback?: React.ComponentType<FallbackProps>;
+}
 
 export default function PageErrorBoundary({
   children,
@@ -176,7 +176,6 @@ export default function PageErrorBoundary({
       <PageErrorFallback {...props} pageName={pageName} />
     ));
 
-  
       onReset={() => {
         // Reset any application state if needed
         logInfo(`Resetting error boundary for ${pageName || 'page'}`);
@@ -185,7 +184,3 @@ export default function PageErrorBoundary({
       {children}
     </ErrorBoundary>
   );
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

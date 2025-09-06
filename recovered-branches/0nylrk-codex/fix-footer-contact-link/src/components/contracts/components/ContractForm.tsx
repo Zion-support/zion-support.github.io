@@ -40,7 +40,8 @@ export type ContractFormValues = z.infer<typeof formSchema>;
   Object.keys (initialValues) .forEach ( (key) => {
   const typedKey = key as keyof ContractFormValues;
 form.setValue (typedKey, initialValues[typedKey]) 
-}) 
+})
+}
 
 export function ContractForm({
   talent,

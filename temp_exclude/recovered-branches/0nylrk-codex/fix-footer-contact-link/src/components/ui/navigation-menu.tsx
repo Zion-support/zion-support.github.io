@@ -1,4 +1,4 @@
- const NavigationMenu = React.forwardRef< React.ElementRef<typeof NavigationMenuPrimitive.Root>;
+const NavigationMenu = React.forwardRef< React.ElementRef<typeof NavigationMenuPrimitive.Root>;
 React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root> > ( ({
   className, children, ...props 
 }, ref) => (<NavigationMenuPrimitive.Root) 

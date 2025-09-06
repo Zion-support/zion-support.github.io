@@ -128,6 +128,7 @@ const technologies = []
   { name: "Stripe", description: "Payment processing" },
   { name: "SendGrid", description: "Email services" }];
 ];
+}
 
 export default function StartupSolutionsPage() {
   

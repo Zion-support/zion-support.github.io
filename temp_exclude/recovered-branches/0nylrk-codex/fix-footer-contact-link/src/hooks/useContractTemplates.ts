@@ -5,6 +5,9 @@ import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { ContractTemplate } from "@/types/contracts";
 import { ContractFormValues } from "@/components/contracts/components/ContractForm";
+}
+}
+
 export function useContractTemplates() {
   const { user, isAuthenticated } = useAuth();
   const queryClient = useQueryClient();
@@ -22,8 +25,9 @@ export function useContractTemplates() {
       if (!isAuthenticated || !user) {
         return []
       }
+}
 
-      const { data, error } = await supabase
+const { data, error } = await supabase
         .from('contract_templates')
         .select('*')
         .order('is_default', { ascending: false })

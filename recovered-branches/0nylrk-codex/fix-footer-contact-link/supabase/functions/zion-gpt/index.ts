@@ -18,8 +18,9 @@ serve(async req => {
     if (!openAIApiKey) {
       throw new Error('OpenAI API key is not set in environment variables');
     }
+}
 
-    const {
+const {
       prompt,
       modelId,
       maxTokens = 500,

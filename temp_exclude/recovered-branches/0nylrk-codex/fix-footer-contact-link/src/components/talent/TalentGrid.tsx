@@ -1,4 +1,3 @@
-
 import { TalentCard } from "@/components/talent/TalentCard";
 import { TalentProfile } from "@/types/talent";
 export interface TalentGridProps {
@@ -11,6 +10,7 @@ export interface TalentGridProps {
   viewProfile?: (id: string) => void,
   clearFilters?: () => void;
   handleRequestHire?: (talent: TalentProfile) => void
+}
 }
 
 export function TalentGrid({ 

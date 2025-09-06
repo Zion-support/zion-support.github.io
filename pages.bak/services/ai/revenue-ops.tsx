@@ -4,6 +4,7 @@ import React from 'react';
 
 interface RevenueopsProps {
   // Add props here as needed
+}
 
 export default function Revenueops({ }: RevenueopsProps) {
   return (
@@ -12,5 +13,4 @@ export default function Revenueops({ }: RevenueopsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 

@@ -1,8 +1,9 @@
-
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import type { Wallet, TokenTransaction } from '@/types/tokens';
+}
+}
 
 export function useWallet() {
   const { user } = useAuth();

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -18,6 +17,8 @@ interface EmptyStateProps {
     onClick?: () => void
   };
   className?: string
+}
+}
 }
 
 export function EmptyState({

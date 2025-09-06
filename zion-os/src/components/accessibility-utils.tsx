@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from 'react';
 
 // Skip link component for keyboard navigation
+}
+
 export function SkipLink({
   targetId,
   children,
@@ -17,6 +19,8 @@ export function SkipLink({
   );
 
 // Live region for screen reader announcements
+}
+
 export function LiveRegion({
   message,
   role = 'status',
@@ -33,6 +37,8 @@ export function LiveRegion({
   );
 
 // Focus trap for modals and dialogs
+}
+
 export function useFocusTrap(enabled: boolean = true) {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -71,6 +77,8 @@ export function useFocusTrap(enabled: boolean = true) {
   return containerRef;
 
 // Keyboard navigation hook
+}
+
 export function useKeyboardNavigation(
   items: any[],
   onSelect: (item: any) => void
@@ -108,6 +116,8 @@ export function useKeyboardNavigation(
   return { selectedIndex, setSelectedIndex };
 
 // Announcement component for screen readers
+}
+
 export function Announcement({
   message,
   priority = 'polite',
@@ -139,6 +149,8 @@ export function Announcement({
   );
 
 // Progress indicator component
+}
+
 export function ProgressIndicator({
   value,
   max,
@@ -171,6 +183,8 @@ export function ProgressIndicator({
   );
 
 // Collapsible section component
+}
+
 export function CollapsibleSection({
   title,
   children,
@@ -209,6 +223,8 @@ export function CollapsibleSection({
   );
 
 // Tooltip component with proper accessibility
+}
+
 export function Tooltip({
   children,
   content,

@@ -4,6 +4,7 @@ import { Calendar, Clock, Check } from 'lucide-react';
 
 interface ProfileAvailabilityProps {
   availability: Availability;
+}
 
 export function ProfileAvailability({
   availability,

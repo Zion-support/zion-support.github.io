@@ -22,6 +22,7 @@ const POPULAR_SKILLS = [
   'DevOps',
   'Security',
 ];
+}
 
 export function SkillsFilter({
   selectedSkills,

@@ -1,9 +1,9 @@
-
-
 interface PerformanceMetrics {
   loadTime: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
+}
+}
 }
 
 export function usePerformanceMonitor() {
@@ -84,4 +84,3 @@ export function usePerformanceMonitor() {
 
   return { metrics, isSupported };
 }
-

@@ -29,7 +29,9 @@ declare module 'react' {
   }
 
   // Common hooks we rely on.
-  export function useMemo<T>(factory: () => T, deps: readonly unknown[]): T;
+}
+
+export function useMemo<T>(factory: () => T, deps: readonly unknown[]): T;
 
   export type Key = string | number;
 
@@ -38,8 +40,9 @@ declare module 'react' {
   const React: {;
     useMemo: typeof useMemo;
   } & Record<string, unknown>;
+}
 
-  export default React;
+export default React;
 
 declare namespace React {
   // Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements"

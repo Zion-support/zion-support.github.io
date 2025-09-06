@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useMemo } from 'react';
 import {
   onsiteServicePricing,
@@ -15,6 +14,7 @@ import {
 } from '@/components/ui/table';
 import { Globe, Search, ArrowUpDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+}
 
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -131,16 +131,3 @@ export function ITServicePricingTable() {
       </div>
     </div>
   );
-=======
-
-<<<<<<< HEAD
-
-      direction: 
-        sortConfig.key === key && sortConfig.direction === "ascending" 
-          ? "descending" 
-          : "ascending"})
-  };
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

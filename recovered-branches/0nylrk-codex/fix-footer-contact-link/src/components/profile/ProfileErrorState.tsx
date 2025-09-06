@@ -5,6 +5,7 @@ import { ArrowLeft } from 'lucide-react';
 
 interface ProfileErrorStateProps {
   error: string | null;
+}
 
 export function ProfileErrorState({ error }: ProfileErrorStateProps) {
   return (

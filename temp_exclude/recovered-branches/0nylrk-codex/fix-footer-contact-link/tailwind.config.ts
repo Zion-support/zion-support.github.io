@@ -93,5 +93,6 @@ const config: Config = {
           textAlign: 'left'}};
       addUtilities(newUtilities)
     })]};
+}
 
 export default config;

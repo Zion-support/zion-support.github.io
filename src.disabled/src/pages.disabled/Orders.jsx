@@ -1,6 +1,7 @@
 import React from 'react';
 interface OrdersProps {
   // Add props here as needed
+}
 
 export default function Orders({ }: OrdersProps) {
   return (

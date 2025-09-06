@@ -13,6 +13,7 @@ import {
 } from '@/components/ui/select';
 import { toast } from '@/hooks/use-toast';
 import { MatchResult } from '@/lib/ai-matchmaking';
+}
 
 export default function AIMatcherPage() {
   const navigate = useNavigate();

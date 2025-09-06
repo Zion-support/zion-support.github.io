@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import {
   Card,
@@ -22,6 +21,7 @@ import {
   SelectValue,;
 } from '@/components/ui/select';
 import { toast } from 'sonner';
+}
 
 export function WebhookManager() {
   const {
@@ -411,13 +411,3 @@ newWebhook.secret || undefined);";
 }</pre> </div> </div> </CardContent> </Card>) ;
 }</div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-  
-<<<<<<< HEAD
-
-  
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

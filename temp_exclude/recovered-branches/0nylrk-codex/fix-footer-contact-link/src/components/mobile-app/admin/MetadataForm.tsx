@@ -11,6 +11,8 @@ import { X } from "lucide-react";
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
+}
+}
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const { control, register, watch, setValue } = form;

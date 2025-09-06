@@ -2,6 +2,8 @@ import React from 'react';
 interface FeaturesGuideSectionProps {
   // Add props here as needed
 }
+}
+
 export default function FeaturesGuideSection({ }: FeaturesGuideSectionProps) {
   return (
     <div>

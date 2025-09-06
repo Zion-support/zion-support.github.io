@@ -182,5 +182,6 @@ const SearchBar: React.FC = () => {
     </div>
   );
 };
+}
 
 export default SearchBar;

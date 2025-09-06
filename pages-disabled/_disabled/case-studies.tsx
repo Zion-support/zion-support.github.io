@@ -40,6 +40,7 @@ const caseStudies = [
     roi: "300%"
   }
 ];
+}
 
 export default function CaseStudiesPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");

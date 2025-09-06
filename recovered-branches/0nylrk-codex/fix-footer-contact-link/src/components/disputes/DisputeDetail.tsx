@@ -32,6 +32,8 @@ import {
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from 'sonner';
+}
+}
 
 export function DisputeDetail() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -104,8 +106,9 @@ export function DisputeDetail() {
       toast.error('Please provide a resolution summary');
       return;
     }
+}
 
-    const success = await resolveDispute(disputeId, resolution);
+const success = await resolveDispute(disputeId, resolution);
     if (success && dispute) {
       setDispute({
         ...dispute,
@@ -770,7 +773,6 @@ formatDistanceToNow (new Date (dispute.created at), {
 }{
   !messages.some (msg => msg.is admin note) && (<p className="text-sm text-muted-foreground italic">No admin notes yet</p>) 
 }</div> <div className="mt-4 space-y-4" > <Textarea 
-
 
 }> Add Admin Note </Button> </div> </div> </CardContent> </Card> </TabsContent>) 
 }</Tabs> </div> <div className="space-y-6" > <Card> <CardHeader> <CardTitle>Parties Involved</CardTitle> </CardHeader> </p> </div> </div> <div className="flex justify-center" > <ArrowDown className="h-6 w-6 text-muted-foreground" /> </div> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> </div> </CardContent> </Card> </div> </div> </div>) 

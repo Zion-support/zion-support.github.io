@@ -11,6 +11,7 @@ interface ActiveFiltersBarProps {
   onRemoveFilter: (filterType: string, value: string) => void;
   onRemoveRating: () => void;
   onClearSearch: () => void;
+}
 
 export function ActiveFiltersBar({
   selectedProductTypes,

@@ -19,6 +19,7 @@ import { AppLayout } from '@/layout/AppLayout';
 
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from '@/data/blog-posts';
+}
 
 export default function BlogPost() {
   const { slug } = useParams() as { slug: string };

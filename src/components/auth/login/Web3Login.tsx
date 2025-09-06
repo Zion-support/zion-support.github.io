@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/useAuth';
@@ -6,6 +5,7 @@ import { useWallet as useAppWallet } from '../../../context/WalletContext.tsx'; 
 import { Wallet } from 'lucide-react';
 import { toast } from 'sonner';
 import { logErrorToProduction } from '@/utils/productionLogger';
+}
 
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth();
@@ -92,7 +92,6 @@ export function Web3Login() {
     );
   }
 
-  
     >
       {buttonContent}
     </Button>
@@ -105,19 +104,8 @@ export function Web3Login() {
 };
 const buttonDisabled = isLoading || !isWalletSystemAvailable;
 const buttonTitle = !isWalletSystemAvailable ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured." : "";";
->Sign in with Web3</span> </> 
+>Sign in with Web3</span> </>
 }//Ensure title is not an empty string if not needed > {;
   buttonContent ;
 }</Button>) ;
 }"
-=======
-
-<<<<<<< HEAD
-
-
-  const buttonDisabled = isLoading || !isWalletSystemAvailable;
-  const buttonTitle = !isWalletSystemAvailable
-    ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
-    : "";
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import {
   Card,
@@ -19,6 +18,7 @@ interface JobMatchCardProps {
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
   showApplied?: boolean;
+}
 
 export function JobMatchesCard({
   match,
@@ -117,7 +117,3 @@ export function JobMatchesCard({
       </CardFooter>
     </Card>
   );
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -21,6 +21,7 @@ interface AIEnhancementButtonProps {
     | 'link';
   size?: 'default' | 'sm' | 'lg' | 'icon';
   contentLength?: number;
+}
 
 export function AIEnhancementButton({
   options,
@@ -129,7 +130,6 @@ export function AIEnhancementButton({
       <span className='text-xs'>{buttonText}</span>
     </Button>
   );
-
 
 };
 <Button type="button" variant="ghost" size="sm" onClick= {

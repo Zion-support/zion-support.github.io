@@ -27,8 +27,10 @@ export type DocsContent = {
   team: WikiSection;
   publicRoadmap: WikiSection;
 };
+}
 
 export const operatorPrompt = `Write a Wikipedia-style article about Zion OS — the world’s first decentralized AI protocol for trust, work, and talent. Include use cases, launch history, modules, and governance model.`;
+}
 
 export function generateZionWiki(): WikiContent {
   const title = 'Zion OS';
@@ -110,6 +112,7 @@ export function generateZionWiki(): WikiContent {
   ];
 
   return { title, intro, infobox, sections, references };
+}
 
 export function generateZionDocs(): DocsContent {
   const wiki = generateZionWiki();
@@ -160,6 +163,7 @@ export function generateZionDocs(): DocsContent {
       ],
     },
   };
+}
 
 export function buildMarkdownFromWiki(wiki: WikiContent): string {
   const infobox = `| | |
@@ -186,6 +190,7 @@ export function buildMarkdownFromWiki(wiki: WikiContent): string {
     wiki.references.forEach((r, i) => lines.push(`${i + 1}. ${r}`));
   }
   return lines.join('\n');
+}
 
 export function buildWikitextFromWiki(wiki: WikiContent): string {
   const lines: string[] = [];
@@ -209,6 +214,7 @@ export function buildWikitextFromWiki(wiki: WikiContent): string {
     wiki.references.forEach(r => lines.push(`* ${r}`));
   }
   return lines.join('\n');
+}
 
 export function buildNotionMarkdownFromDocs(docs: DocsContent): string {
   const sections = [
@@ -227,6 +233,7 @@ export function buildNotionMarkdownFromDocs(docs: DocsContent): string {
     lines.push('');
   }
   return lines.join('\n');
+}
 
 export function slugify(input: string): string {
   return input

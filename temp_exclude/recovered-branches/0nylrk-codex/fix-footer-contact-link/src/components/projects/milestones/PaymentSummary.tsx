@@ -7,6 +7,8 @@ interface PaymentSummaryProps {
   milestones: Milestone[],
   paymentTerms: string | null
 }
+}
+}
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
   const totalPayment = milestones.reduce(

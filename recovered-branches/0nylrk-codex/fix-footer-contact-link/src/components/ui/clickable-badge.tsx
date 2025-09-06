@@ -7,6 +7,7 @@ export interface ClickableBadgeProps
   extends React.HTMLAttributes<HTMLDivElement> {
   onRemove?: () => void;
   variant?: 'default' | 'secondary' | 'destructive' | 'outline';
+}
 
 export function ClickableBadge({
   children,

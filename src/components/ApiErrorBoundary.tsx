@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react';
 import { QueryClient } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
@@ -225,6 +224,8 @@ export class ApiErrorBoundary extends Component<
   }
 
 // Hook for accessing query client in function components
+}
+
 export const useApiErrorHandler = () => {
   const handleApiError = (error: Error) => {
     Sentry.withScope(scope => {
@@ -236,7 +237,3 @@ export const useApiErrorHandler = () => {
 
   return { handleApiError };
 };
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

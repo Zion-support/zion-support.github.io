@@ -111,6 +111,7 @@ const TALENT_FILTERS = [
   { label: 'Security', value: 'security' },
   { label: 'Development', value: 'development' },
   { label: 'Consulting', value: 'consulting' }],
+}
 
 export default function TalentsPage() {
   return (

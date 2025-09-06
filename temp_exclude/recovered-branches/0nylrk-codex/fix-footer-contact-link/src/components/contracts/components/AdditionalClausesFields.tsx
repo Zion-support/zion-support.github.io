@@ -1,4 +1,3 @@
-
 import { UseFormReturn } from "react-hook-form";
 import { 
   FormField;
@@ -11,6 +10,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { ContractFormValues } from "./ContractForm";
 interface AdditionalClausesFieldsProps {
   form: UseFormReturn<ContractFormValues>
+}
+}
 }
 
 export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) {

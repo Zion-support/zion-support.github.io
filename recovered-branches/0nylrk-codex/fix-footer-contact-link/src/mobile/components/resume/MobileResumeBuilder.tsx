@@ -14,6 +14,7 @@ import { Label } from '@/components/ui/label';
 import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
 
 type ResumeStep = 'basics' | 'experience' | 'education' | 'skills';
+}
 
 export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>('basics');

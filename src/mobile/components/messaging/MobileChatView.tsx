@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
@@ -34,6 +33,7 @@ interface MobileChatViewProps {
   messages: Message[];
   onBack: () => void;
   onSendMessage: (content: string) => void;
+}
 
 export function MobileChatView({
   contact,
@@ -197,11 +197,3 @@ export function MobileChatView({
       </div>
     </div>
   );
-=======
-
-<<<<<<< HEAD
-
-    
-<<<<<<< HEAD
-    
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

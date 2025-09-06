@@ -12,6 +12,7 @@ interface ConversionAnalysisProps {
   data: Array<Record<string, any>>;
   timeRange: string;
   onTimeRangeChange: (range: string) => void;
+}
 
 export function ConversionAnalysisChart({
   data,

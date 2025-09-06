@@ -1,6 +1,7 @@
 import React from 'react';
 interface ResetPasswordProps {
   // Add props here as needed
+}
 
 export default function ResetPassword({ }: ResetPasswordProps) {
   return (

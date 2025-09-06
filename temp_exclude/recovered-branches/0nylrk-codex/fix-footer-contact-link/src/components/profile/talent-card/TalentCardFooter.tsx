@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -12,6 +11,8 @@ interface TalentCardFooterProps {
   profile: TalentProfile,
   onViewProfile: (id: string) => void,
   onRequestHire?: (profile: TalentProfile) => void
+}
+}
 }
 
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {

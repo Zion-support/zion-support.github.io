@@ -1,4 +1,3 @@
-
 import { GradientHeading } from "./GradientHeading";
 import { useState } from "react";
 // Real company logos for trusted partners - with more reliable image URLs
@@ -104,6 +103,7 @@ const trustedCompanies = [
     alt: "Thomson Reuters logo"
   }
 ];
+}
 
 export function TrustedBySection() {
   // Use state to track logos that failed to load

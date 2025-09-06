@@ -1,6 +1,7 @@
 import './globals.css';
 import type { ReactNode } from 'react';
 import { Metadata } from 'next';
+}
 
 export const metadata = {
   title: 'Zion OS - Launch Sovereign AI-Powered Digital Economies',
@@ -9,6 +10,7 @@ export const metadata = {
   keywords:
     'AI, blockchain, digital economy, marketplace, governance, deployment, Zion',
 };
+}
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (

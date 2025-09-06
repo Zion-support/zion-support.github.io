@@ -1,6 +1,7 @@
 import React from 'react';
 interface SecurityComplianceSectionProps {
   // Add props here as needed
+}
 
 export default function SecurityComplianceSection({ }: SecurityComplianceSectionProps) {
   return (

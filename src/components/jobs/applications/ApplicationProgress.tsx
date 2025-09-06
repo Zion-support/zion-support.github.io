@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ApplicationStatus } from '@/types/jobs';
 import { Progress } from '@/components/ui/progress';
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
@@ -12,6 +11,8 @@ className?: string ;
   //Define the progress value based on status const getProgressValue = () => {;
   switch (status) {;
   ;
+}
+}
 
 export function ApplicationProgress({
   status,
@@ -100,11 +101,3 @@ function StatusIcon({
   }
 
 }"
-=======
-<<<<<<< HEAD
-
-
-  const currentRank = statusRank[current],
-  const statusRank_ = statusRank[status];
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

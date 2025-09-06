@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useContractTemplates } from "@/hooks/useContractTemplates";
 import { ContractTemplate } from "@/types/contracts";
@@ -13,6 +12,8 @@ interface TemplateManagerProps {
   onClose: () => void,
   onSelectTemplate: (template: ContractFormValues) => void,
   currentValues?: ContractFormValues
+}
+}
 }
 
 export function TemplateManager({

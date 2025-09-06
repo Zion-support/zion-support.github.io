@@ -158,6 +158,7 @@ const topContributors = [
     avatar: 'EW'
   }
 ];
+}
 
 export default function Community() {
   const [activeTab, setActiveTab] = useState('discussions');

@@ -14,6 +14,8 @@ import {
   ProjectActions,
   ProjectHeader,;
 } from './components';
+}
+}
 
 export function ProjectMilestonesContent() {
   const { projectId } = useParams() as { projectId?: string };
@@ -78,8 +80,9 @@ export function ProjectMilestonesContent() {
       </div>
     );
   }
+}
 
-  const handleMilestoneSubmit = async (data: any) => {
+const handleMilestoneSubmit = async (data: any) => {
     if (!projectId) return;
 
     // Ensure all required fields are present
@@ -165,7 +168,10 @@ refetch ()
 }, [projectId, getProjectById, refetch]);
 if (isLoading || !project) {
   return (<div className="container mx-auto py-8 px-4" > <div className="flex justify-center items-center h-64" > <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary" ></div> </div> </div>) 
-}const handleMilestoneSubmit = async (data: any) => {
+}
+}
+
+const handleMilestoneSubmit = async (data: any) => {
   if (!projectId) return;
 //Ensure all required fields are present const milestoneData = {
   project id: projectId;

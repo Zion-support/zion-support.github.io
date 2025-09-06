@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import {
   Table,
@@ -18,6 +17,7 @@ import {
   TooltipProvider,
   TooltipTrigger,;
 } from '@/components/ui/tooltip';
+}
 
 export function RoleManagement() {
   // Mock team members data
@@ -283,7 +283,3 @@ export function RoleManagement() {
       </div>
     </div>
   );
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

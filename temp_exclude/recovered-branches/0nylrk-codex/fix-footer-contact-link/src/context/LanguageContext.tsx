@@ -26,6 +26,8 @@ const defaultLanguageContext: LanguageContextType = {
 };
 
 const LanguageContext = createContext(defaultLanguageContext);
+}
+}
 
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
 
@@ -35,6 +37,8 @@ interface LanguageProviderProps {
     isAuthenticated: boolean,
     user: { id?: string } | null
   }
+}
+}
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 

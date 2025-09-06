@@ -36,7 +36,8 @@ categorySlug;
 listings: allListings;
 categoryFilters;
 initialPrice = {
-  min: 0, max: 10000 
+  min: 0, max: 10000
+}
 
 export function DynamicListingPage({
   title,

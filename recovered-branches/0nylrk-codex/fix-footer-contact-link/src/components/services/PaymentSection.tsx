@@ -5,6 +5,7 @@ import { toast } from '@/hooks/use-toast';
 
 interface PaymentSectionProps {
   selectedCountry: CountryPricing;
+}
 
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment

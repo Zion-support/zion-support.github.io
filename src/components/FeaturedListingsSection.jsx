@@ -120,6 +120,8 @@ const featuredListings = [;
 const categories = [";
     "All", "Web Development", "Mobile Development", "Cloud & DevOps", "AI & Machine Learning", "IoT Solutions", "Data Analytics";
 ];
+}
+
 export function FeaturedListingsSection() {";
     const [selectedCategory, setSelectedCategory] = useState("All");
     const [hoveredListing,  setHoveredListing] = useState(null);

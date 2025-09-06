@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { formatDistanceToNow } from "date-fns";
 import { JobApplication } from "@/types/jobs";
@@ -11,6 +10,8 @@ import { ApplicationProgress } from "./ApplicationProgress";
 import { toast } from "sonner";
 interface ApplicationCardProps {
   application: JobApplication
+}
+}
 }
 
 export function ApplicationCard({ application }: ApplicationCardProps) {

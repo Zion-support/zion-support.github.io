@@ -1,4 +1,6 @@
 // Input validation utilities,
+}
+
 export const sanitizeInput = (input) => {,
   if (typeof input !== 'string) return input,
 ,
@@ -9,16 +11,22 @@ export const sanitizeInput = (input) => {,
     .trim()
 };
 ,
+}
+
 export const validateEmail = (email) => {,
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
   return emailRegex.test(email)
 };
 ,
+}
+
 export const validatePhone = (phone) => {,
   const phoneRegex = /^[+]?[1-9]\d{0,15}$/,
   return phoneRegex.test(phone.replace(/[\s\-()]/g, ''))
 };
 ,
+}
+
 export const validateUrl = (url) => {,
   try {,
     new URL(url),
@@ -28,6 +36,8 @@ export const validateUrl = (url) => {,
   };
 };
 ,
+}
+
 export const sanitizeHtml = (html) => {,
   if (typeof html !== string') return html,
 ,

@@ -8,7 +8,6 @@ import { motion } from 'framer-motion';
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
-
 const features = [;
   {}
     title: 'Tailored Solutions,',
@@ -59,6 +58,7 @@ const stats = [;
   { number: 'On Time, label: 'Delivery Rate' },',
   { number: '5+, label: 'Years Experience' }',
 ;];
+}
 
 export default function CustomDevelopmentPage() {
   return (;

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -26,6 +25,7 @@ const formSchema = z.object({
   cta: z.string().min(2, { message: 'CTA text must be at least 2 characters' })}),
 
 type FormValues = z.infer<typeof formSchema>;
+}
 
 export function WhitelabelRequestForm() {
   const form = useForm<FormValues>({

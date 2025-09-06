@@ -23,6 +23,8 @@ interface AIMilestoneGeneratorProps {
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
   onAddMilestone: (milestone: GeneratedMilestone) => void;
+}
+}
 
 export function AIMilestoneGenerator({
   scope,
@@ -46,8 +48,9 @@ export function AIMilestoneGenerator({
     if (!scope || !startDate || !projectType) {
       return;
     }
+}
 
-    const input: MilestoneInput = {
+const input: MilestoneInput = {
       scope,
       startDate,
       endDate,

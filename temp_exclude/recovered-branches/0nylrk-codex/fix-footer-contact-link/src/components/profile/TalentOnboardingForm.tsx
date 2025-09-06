@@ -57,6 +57,7 @@ const talentSchema = z.object({
     cv: z.any().optional()})}),
 
 type TalentFormValues = z.infer<typeof talentSchema>;
+}
 
 export function TalentOnboardingForm() {
   const { user } = useAuth();

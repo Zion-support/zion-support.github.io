@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Shield, Lock, Eye, Database, Mail, Phone, MapPin } from 'lucide-react';
 import Layout from './components/Layout';
+}
 
 export default function PrivacyPage() {
   

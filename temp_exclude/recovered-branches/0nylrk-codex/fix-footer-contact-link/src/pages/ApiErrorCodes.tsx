@@ -2,6 +2,9 @@
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
+}
+}
+
 export function ApiErrorCodes() {
   const errorExample = `{
   "error": "validation_error";
@@ -244,6 +247,8 @@ export function ApiErrorCodes() {
       </div>
     </ApiDocsLayout>
   )
+}
+}
 }
 
 export default ApiErrorCodes;

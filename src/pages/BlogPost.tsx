@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -26,6 +25,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 import { BLOG_POSTS } from '@/data/blog-posts';
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
+}
 
 export default function BlogPost() {
   const router = useRouter();
@@ -114,22 +114,11 @@ export default function BlogPost() {
 
     switch (platform) {
       case 'facebook':
-=======
-
-<<<<<<< HEAD
-        logErrorToProduction('Failed to fetch blog post', { data: err }),
-        setError('Failed to load article');
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
       case 'twitter':
         return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
       case 'linkedin':
         return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
-<<<<<<< HEAD
       default:
         return '#';
     }
@@ -380,7 +369,3 @@ outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-b
 }</div> </div>) ";
 }<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>) ;
 }'"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

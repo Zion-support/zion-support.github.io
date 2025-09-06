@@ -17,6 +17,8 @@ const iconMap = {
   Star,
   MessageSquare,
 };
+}
+
 export const UserBadges = ({
   badges 
 }: UserBadgesProps) => {
@@ -58,4 +60,6 @@ export const UserBadges = ({
     </div>
   );
 };
+}
+
 export default UserBadges;

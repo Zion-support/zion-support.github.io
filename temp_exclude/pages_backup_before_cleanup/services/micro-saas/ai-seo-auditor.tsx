@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default function AISEOAuditor() {; return (; <Article; title=\"AI SEO Auditor\"; subtitle=\"Automated technical SEO and content insights with prioritized fixes\"; price=\"from $199/mo\"; bullets={[
     ; \'Crawls site maps and pages; flags Core Web Vitals and indexability issues\',; \'NLP-driven content gap analysis vs. competitors with keyword clusters\',; \'One-click Github PRs for meta,schema,and sitemap fixes\',,
     \'Weekly executive report and anomaly alerts via Slack/Email\'
@@ -17,6 +13,8 @@ import React from 'react';
 interface AiseoauditorProps {
   // Add props here as needed
 }
+}
+
 export default function Aiseoauditor({ }: AiseoauditorProps) {
   return (
     <div>
@@ -25,5 +23,3 @@ export default function Aiseoauditor({ }: AiseoauditorProps) {
     </div>
   );
 }
-=======
-=======

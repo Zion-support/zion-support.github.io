@@ -13,6 +13,8 @@ interface ResumeStepContentProps {
   onNextStep: () => void,
   onPrevStep: () => void
 }
+}
+}
 
 export const ResumeStepContent = ({ 
   activeTab;

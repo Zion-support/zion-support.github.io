@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -9,6 +8,8 @@ interface ProfileContactProps {
   email?: string;
   profileName: string,
   profileType: 'service' | 'talent'
+}
+}
 }
 
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {

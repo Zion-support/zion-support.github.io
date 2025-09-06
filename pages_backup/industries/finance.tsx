@@ -131,6 +131,8 @@ const benefits = [
     icon: FileText;
   }
 ;];
+}
+
 export default function FinancePage() {
   return (;
     <Layout );
@@ -178,6 +180,8 @@ export default function FinancePage() {
           </div>;
         </section>;
 ];
+}
+
 export default function FinancePage() {
   
     >

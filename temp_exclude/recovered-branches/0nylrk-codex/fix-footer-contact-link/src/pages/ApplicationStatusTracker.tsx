@@ -1,4 +1,3 @@
-
 import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
 import { ApplicationsTracker } from "@/components/jobs/applications";
@@ -39,6 +38,8 @@ function ApplicationStatusTrackerContent() {
       </div>
     </>
   )
+}
+}
 }
 
 export default function ApplicationStatusTracker() {

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -9,6 +8,8 @@ import { UserBehaviorStats } from "@/components/analytics/UserBehaviorStats";
 import { PageViewsChart } from "@/components/analytics/PageViewsChart";
 import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart";
 import { ExportPanel } from "@/components/analytics/ExportPanel";
+}
+
 export default function Analytics() {
   const [timeRange, setTimeRange] = useState('30d');
   

@@ -1,6 +1,7 @@
 import OpenAI from 'openai';
 
 type OpenAIClient = OpenAI;
+}
 
 export function createOpenAIClient(apiKey: string): OpenAIClient {
   return new OpenAI({ apiKey });

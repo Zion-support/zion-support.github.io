@@ -16,6 +16,7 @@ defaultLocale: 'en';
 domainLocales: [];
 isPreview: false 
 });
+}
 
 export const createMockProps = (overrides = {}) => ({
   ...overrides,

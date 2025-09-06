@@ -54,6 +54,7 @@ const searchResults = [
 
 const categories = ['All', 'AI Services', 'IT Services', 'Micro SaaS', 'Products', 'Services'];
 const types = ['All', 'Product', 'Service'];
+}
 
 export default function SearchPage() {
   const router = useRouter();

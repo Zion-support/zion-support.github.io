@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
+}
 
 export function TokenDisplay() {
   const { wallet, loading } = useWallet();

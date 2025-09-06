@@ -83,6 +83,7 @@ import {
   UserVoice2,
   ShoppingCart
 } from 'lucide-react';
+}
 
 export default function AIContentCreation() {
   const features = [

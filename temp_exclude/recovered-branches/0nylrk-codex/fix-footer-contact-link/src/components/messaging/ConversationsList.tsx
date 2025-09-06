@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { User } from 'lucide-react';
 import { Conversation } from '@/types/messaging';
@@ -8,6 +7,8 @@ interface ConversationsListProps {
   activeConversation: Conversation | null,
   setActiveConversation: (conversation: Conversation) => void,
   markAsRead: (conversationId: string) => Promise<void>
+}
+}
 }
 
 export function ConversationsList({ 

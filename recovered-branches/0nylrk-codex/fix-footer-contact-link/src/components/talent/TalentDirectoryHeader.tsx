@@ -3,6 +3,7 @@ import React from 'react';
 interface TalentDirectoryHeaderProps {
   title: string;
   description: string;
+}
 
 export function TalentDirectoryHeader({
   title,

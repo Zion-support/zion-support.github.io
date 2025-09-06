@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useHireRequestForm, FormValues } from "./useHireRequestForm";
 import { Button } from "@/components/ui/button";
@@ -20,6 +19,8 @@ export interface HireRequestFormProps {
     id?: string
   };
   onSubmitSuccess?: () => void
+}
+}
 }
 
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {

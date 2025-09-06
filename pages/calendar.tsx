@@ -91,6 +91,7 @@ const teamMembers = [
     available: true
   }
 ];
+}
 
 export default function CalendarPage() {
   return (

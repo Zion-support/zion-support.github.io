@@ -2,6 +2,8 @@ import React from 'react';
 interface EquipmentDetailProps {
   // Add props here as needed
 }
+}
+
 export default function EquipmentDetail({ }: EquipmentDetailProps) {
   return (
     <div>

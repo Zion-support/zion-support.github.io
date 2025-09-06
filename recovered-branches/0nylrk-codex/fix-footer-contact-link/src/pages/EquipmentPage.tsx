@@ -17,5 +17,6 @@ const EquipmentPage = () => {
     </div>
   );
 };
+}
 
 export default EquipmentPage;

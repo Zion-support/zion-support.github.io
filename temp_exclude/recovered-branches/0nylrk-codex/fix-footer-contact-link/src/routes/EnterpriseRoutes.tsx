@@ -21,5 +21,6 @@ const EnterpriseRoutes = () => {
     </Routes>
   )
 };
+}
 
 export default EnterpriseRoutes;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -54,6 +53,8 @@ const productSchema = z.object({
 
 // Type for our form values
 type ProductFormValues = z.infer<typeof productSchema>;
+}
+}
 
 export function ProductSubmissionForm() {
   const { user } = useAuth();
@@ -158,8 +159,9 @@ export function ProductSubmissionForm() {
       if (productError) {
         throw new Error(productError.message);
       }
+}
 
-      let imagePublicUrl: string | undefined;
+let imagePublicUrl: string | undefined;
 
       // If we have an image, upload it
       if (values.image) {
@@ -201,8 +203,9 @@ export function ProductSubmissionForm() {
         if (uploadError) {
           throw new Error(uploadError.message);
         }
+}
 
-        const { data: publicUrlData } = supabase.storage
+const { data: publicUrlData } = supabase.storage
           .from('products')
           .getPublicUrl(videoPath);
 
@@ -226,8 +229,9 @@ export function ProductSubmissionForm() {
         if (uploadError) {
           throw new Error(uploadError.message);
         }
+}
 
-        const { data: publicUrlData } = supabase.storage
+const { data: publicUrlData } = supabase.storage
           .from('products')
           .getPublicUrl(modelPath);
 
@@ -630,19 +634,3 @@ const {;
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
 }/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-type ProductFormValues = z.infer<typeof productSchema>;
-
-<<<<<<< HEAD
-        
-<<<<<<< HEAD
-        imagePublicUrl = publicUrlData.publicUrl;
-          
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

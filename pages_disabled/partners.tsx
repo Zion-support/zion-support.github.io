@@ -114,6 +114,7 @@ const stats = [
   { number: '200+', label: 'Joint Projects' },
   { number: '99%', label: 'Client Satisfaction' }
 ];
+}
 
 export default function PartnersPage() {
   

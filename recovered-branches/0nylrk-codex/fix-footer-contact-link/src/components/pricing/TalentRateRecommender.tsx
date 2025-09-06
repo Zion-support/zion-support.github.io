@@ -16,6 +16,7 @@ interface TalentRateRecommenderProps {
   location?: string;
   onSuggestionApplied: (value: number) => void;
   rateType: 'hourly' | 'fixed';
+}
 
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   skills,

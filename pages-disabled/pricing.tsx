@@ -113,6 +113,7 @@ const faqs = []
     answer: "Yes, we offer a 14-day free trial for all plans. No credit card required to get started."
   }];
 ];
+}
 
 export default function PricingPage() {}
   const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'yearly'>('monthly');'

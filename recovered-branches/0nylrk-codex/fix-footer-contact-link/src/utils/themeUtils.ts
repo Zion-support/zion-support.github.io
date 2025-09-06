@@ -9,6 +9,8 @@ export interface ThemeColors {
   cardBackground: string;
 
 // Define theme presets
+}
+
 export function getThemeColors(
   preset: ThemePreset,
   primaryColor: string
@@ -63,6 +65,8 @@ export function getThemeColors(
   }
 
 // Apply theme colors to document CSS variables
+}
+
 export function applyThemeColors(colors: ThemeColors) {
   const root = document.documentElement;
   root.style.setProperty('--primary-color', colors.primaryColor);

@@ -35,5 +35,6 @@ const MobileLaunchPage: React.FC = () => {
     </AppLayout>
   );
 };
+}
 
 export default MobileLaunchPage;

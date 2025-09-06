@@ -484,5 +484,7 @@ class AICustomerSupportService {
     return this.analytics
   }
 }
+}
+}
 
 export const aiCustomerSupportService = new AICustomerSupportService();

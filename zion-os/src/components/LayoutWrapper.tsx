@@ -3,6 +3,7 @@
 import { useWalkthroughTarget } from './OnboardingWalkthrough';
 import { useAuth } from '@/contexts/AuthContext';
 import Link from 'next/link';
+}
 
 export function LayoutWrapper({ children }: { children: React.ReactNode }) {
   const { user, isAuthenticated, logout } = useAuth();

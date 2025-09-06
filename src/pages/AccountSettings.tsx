@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useLocalStorage } from '@/hooks';
 import { Header } from '@/components/Header';
@@ -19,6 +18,7 @@ import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+}
 
 export default function AccountSettings() {
   const { user } = useAuth();
@@ -298,13 +298,3 @@ export default function AccountSettings() {
       </main>
     </>
   );
-=======
-
-<<<<<<< HEAD
-
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
-      const address = accounts[0];
-      
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

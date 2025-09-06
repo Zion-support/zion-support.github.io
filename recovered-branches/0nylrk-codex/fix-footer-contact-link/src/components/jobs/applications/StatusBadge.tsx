@@ -3,6 +3,7 @@ import { Badge } from '@/components/ui/badge';
 
 interface StatusBadgeProps {
   status: ApplicationStatus;
+}
 
 export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
@@ -21,4 +22,3 @@ export function StatusBadge({ status }: StatusBadgeProps) {
     default:
       return <Badge variant='outline'>{status}</Badge>;
   }
-

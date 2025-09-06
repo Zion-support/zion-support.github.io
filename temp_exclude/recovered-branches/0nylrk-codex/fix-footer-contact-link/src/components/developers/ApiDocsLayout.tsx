@@ -7,6 +7,8 @@ import { cn } from "@/lib/utils";
 interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
+}
+}
 
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   const location = useLocation();
@@ -67,6 +69,8 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
       </div>
     </div>
   )
+}
+}
 }
 
 export default ApiDocsLayout;

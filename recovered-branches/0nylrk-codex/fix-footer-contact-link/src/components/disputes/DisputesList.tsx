@@ -19,6 +19,7 @@ type DisputesListProps = {
   disputes: Dispute[];
 isLoading: boolean 
 };
+}
 
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | 'all'>(

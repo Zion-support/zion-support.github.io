@@ -136,8 +136,9 @@ serve(async req => {
     if (adminError) {
       console.error('Error fetching admin users:', adminError);
     }
+}
 
-    let adminId: string | undefined = undefined;
+let adminId: string | undefined = undefined;
 
     // Create notification for admin (if any found)
     if (adminUsers && adminUsers.length > 0) {

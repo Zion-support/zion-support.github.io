@@ -5,6 +5,9 @@ import { AnalysisResult } from './types';
 /**
  * Analyzes text content for suspicious patterns
  */
+}
+}
+
 export const analyzeContent = (content: string): AnalysisResult => {
   const contentLower = content.toLowerCase();
   const reasons: string[] = [];

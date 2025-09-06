@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
 import React from 'react';
@@ -34,28 +30,22 @@ const features = [;
     icon: Package,
     title: 'Supply Chain Optimization,',
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'',
-<<<<<<< HEAD
-=======
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  ShoppingCart, 
-  Users, 
-  BarChart3, 
-  Smartphone, 
-  CheckCircle, 
-  ArrowRight 
+import {
+  ShoppingCart,
+  Users,
+  BarChart3,
+  Smartphone,
+  CheckCircle,
+  ArrowRight
 } from 'lucide-react';
 
 const features = [
   {
     icon: ShoppingCart,
-<<<<<<< HEAD
-=======
     title: 'E-commerce Platform',
     description: 'Complete online shopping experience with advanced features'
   },
@@ -80,10 +70,6 @@ const features = [
     description: 'Real-time inventory tracking and automated reordering'
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     icon: ArrowRight,
     title: 'Omnichannel',
     description: 'Seamless integration across all sales channels'
@@ -101,9 +87,10 @@ const solutions = [
   'Personalization Engines',',
   'Omnichannel Solutions',',
   'Retail Mobile Applications'',
-    
 
   ];
+}
+
 export default function RetailSolutionsPage() {
   return (;
     <Layout );
@@ -121,7 +108,7 @@ export default function RetailSolutionsPage() {
                 </span>;
               </h1>;
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";
-                Revolutionize retail operations with our comprehensive technology solutions. 
+                Revolutionize retail operations with our comprehensive technology solutions.
                 From e-commerce platforms to inventory management, we help retailers deliver;
                 exceptional customer experiences and optimize business operations.;
               </p>;
@@ -143,7 +130,7 @@ export default function RetailSolutionsPage() {
                 Comprehensive Retail Technology Solutions;
               </h2>;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
-                Our retail solutions are designed to enhance customer experience, 
+                Our retail solutions are designed to enhance customer experience,
                 optimize operations, and drive business growth across all channels.,
               </p>;
             </div>;
@@ -164,20 +151,17 @@ const benefits = [
   'Streamlined operations',
   'Mobile-first customer engagement'
 ];
+}
+
 export default function RetailSolutions() {
-<<<<<<< HEAD
-=======
-=======
-=======
     icon: Smartphone,
     title: 'Mobile Commerce',
     description: 'Mobile-optimized shopping experience'
   }
 ];
+}
 
 export default function RetailSolutionsPage() {
-<<<<<<< HEAD
-=======
   return (
     <Layout
       title="Retail Solutions - Zion Tech Group"
@@ -218,18 +202,12 @@ export default function RetailSolutionsPage() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive solutions designed to enhance every aspect of your retail business.
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -237,10 +215,6 @@ export default function RetailSolutionsPage() {
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -362,16 +336,10 @@ export default function RetailSolutionsPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-<<<<<<< HEAD
-=======
-=======
-=======
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
               ))}
-<<<<<<< HEAD
-=======
             </div>
           </div>
         </section>
@@ -397,15 +365,9 @@ export default function RetailSolutionsPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Layout>
-=======
-<<<<<<< HEAD
     </Layout>
-=======
     </>
-=======
     </>
   );
 }

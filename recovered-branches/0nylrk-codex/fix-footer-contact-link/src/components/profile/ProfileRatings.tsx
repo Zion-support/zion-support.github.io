@@ -26,7 +26,10 @@ const [ratingDistribution, setRatingDistribution] = useState<Record<number numbe
 };
 reviews.forEach ( (review) => {
   if (review.rating >= 1 && review.rating <= 5) {
-  distribution[review.rating] = (distribution[review.rating] || 0) + 1 
+  distribution[review.rating] = (distribution[review.rating] || 0) + 1
+}
+}
+}
 
 export function ProfileRatings({
   userId,

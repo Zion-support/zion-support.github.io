@@ -135,8 +135,9 @@ status: ReviewStatus
       </div>
     );
   }
+}
 
-  const handleApprove = (reviewId: string) => {
+const handleApprove = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: 'approved' });
   };
 

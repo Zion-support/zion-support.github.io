@@ -190,6 +190,7 @@ const faqs = {}
     }];
   ];
 };
+}
 
 export default function FAQPage() {}
   const [activeCategory, setActiveCategory] = useState('general');'

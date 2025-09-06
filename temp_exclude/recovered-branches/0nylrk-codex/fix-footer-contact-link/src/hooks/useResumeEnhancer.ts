@@ -1,7 +1,8 @@
-
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
+}
+}
 
 export function useResumeEnhancer() {
   const [isEnhancing, setIsEnhancing] = useState(false);

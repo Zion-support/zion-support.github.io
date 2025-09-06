@@ -18,6 +18,7 @@ type QuoteRequestCardProps = {
   onMarkAsResponded?: (id: string) => void,
   onToggleArchive: (id: string, isArchived: boolean) => void
 };
+}
 
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   quote;

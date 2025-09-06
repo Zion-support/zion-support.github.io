@@ -14,6 +14,8 @@ export type ServiceItem = {,;
 	pricing: ServiceTier[] | { model: string,  from?: string, notes?: string },;
   links: { landing: string,  docs?: string, contact?: string }};';
 ',;
+}
+
 export const contact = {,';
 	phone: +1 302 464 0950',';
 	email: 'kleber@ziontechgroup.com, ';
@@ -21,6 +23,8 @@ export const contact = {,';
 	website: https://ziontechgroup.com';
 };
 ,';
+}
+
 export const addedServices: ServiceItem[] = [',;
 	{,';
 		slug: ai-customer-support-copilot',';

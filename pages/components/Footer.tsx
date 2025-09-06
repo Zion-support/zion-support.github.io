@@ -157,6 +157,7 @@ const itServiceCategories = [
   { title: 'Network Security', icon: Lock, count: 18 },
   { title: 'Infrastructure', icon: Building, count: 22 }
 ];
+}
 
 export default function Footer() {
   return (

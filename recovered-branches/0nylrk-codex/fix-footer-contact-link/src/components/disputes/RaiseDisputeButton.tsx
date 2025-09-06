@@ -24,6 +24,7 @@ interface RaiseDisputeButtonProps {
     | 'link';
   size?: 'default' | 'sm' | 'lg' | 'icon';
   className?: string;
+}
 
 export function RaiseDisputeButton({
   projectId,

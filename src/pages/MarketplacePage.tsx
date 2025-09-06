@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -752,11 +751,3 @@ return (<> <NextSeo /> <div className="container py-8"> <motion.div initial= {;
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div> </>) ;
 }// Main export '"
-=======
-
-<<<<<<< HEAD
-
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -12,6 +12,7 @@ interface NotificationListProps {
   onMarkAsRead: (id: string) => Promise<void>;
   onDismiss: (id: string) => Promise<void>;
   onRetry: () => void;
+}
 
 export const NotificationList: React.FC<NotificationListProps> = ({
   loading,

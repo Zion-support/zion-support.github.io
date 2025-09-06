@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Search, Sliders } from 'lucide-react';
@@ -8,6 +7,7 @@ interface MobileFilterBarProps {
   searchTerm: string;
   setSearchTerm: (value: string) => void;
   setIsMobileFilterOpen: (isOpen: boolean) => void;
+}
 
 export function MobileFilterBar({
   searchTerm,
@@ -44,7 +44,3 @@ export function MobileFilterBar({
       </div>
     </div>
   );
-=======
-<<<<<<< HEAD
-  setSearchTerm, 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

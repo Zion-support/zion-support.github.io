@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -14,6 +13,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
 import { useTranslationService } from '@/hooks/useTranslationService';
 import { logErrorToProduction } from '@/utils/productionLogger';
+}
 
 export default function TranslationManager() {
   const { t, i18n } = useTranslation();
@@ -563,19 +563,3 @@ const getMissingLanguages = (key: string) : SupportedLanguage[] => {;
 }</div>) ;
 }</div> </div> </CardContent> </Card> </main> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-    let sourceText = '';
-    
-    for (const lang of supportedLanguages.map(l => l.code)) {
-<<<<<<< HEAD
-
-  
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

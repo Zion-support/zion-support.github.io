@@ -16,4 +16,7 @@ cleanCode: true, // Clean up language codes nonExplicitSupportedLngs: false, // 
 });
 // Add this check at the beginning of the relevant section // If user is authenticated, save language preference to profile // This will be implemented in the LanguageContext 
 });
+}
+}
+
 export default i18n;

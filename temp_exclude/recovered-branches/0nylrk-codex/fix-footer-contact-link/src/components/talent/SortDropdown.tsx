@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { SORT_OPTIONS } from "@/data/sortOptions";
@@ -12,6 +11,8 @@ import {
 interface SortDropdownProps {
   sortOption: string,
   setSortOption: (option: string) => void
+}
+}
 }
 
 export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {

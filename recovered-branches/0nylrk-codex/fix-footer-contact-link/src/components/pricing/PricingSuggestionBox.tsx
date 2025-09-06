@@ -16,6 +16,8 @@ interface PricingSuggestionBoxProps {
   isLoading: boolean;
   onApplySuggestion: () => void;
   rateType: 'hourly' | 'fixed';
+}
+}
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion,
@@ -41,8 +43,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   if (!suggestion) {
     return null;
   }
+}
 
-  const confidenceColor = {
+const confidenceColor = {
     High: 'bg-green-100 text-green-800',
     Medium: 'bg-yellow-100 text-yellow-800',
     Low: 'bg-red-100 text-red-800',

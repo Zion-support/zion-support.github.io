@@ -3,6 +3,7 @@ import { useTheme } from '@/hooks/useTheme';
 
 interface MobileThemeProviderProps {
   children: React.ReactNode;
+}
 
 export function MobileThemeProvider({ children }: MobileThemeProviderProps) {
   const { theme } = useTheme();

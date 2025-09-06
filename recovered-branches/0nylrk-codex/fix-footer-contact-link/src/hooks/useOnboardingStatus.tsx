@@ -38,7 +38,8 @@ matchReceived: data.match received || false;
 jobPosted: data.job posted || false;
 inviteSent: data.talent invited || false;
 responseReceived: data.quote received || false 
-}) 
+})
+}
 
 export function useOnboardingStatus() {
   const { user } = useAuth();

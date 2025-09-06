@@ -19,6 +19,7 @@ export type QuoteRequestSteps =
   | 'timeline'
   | 'budget'
   | 'summary';
+}
 
 export function QuoteRequestForm() {
   const navigate = useNavigate();

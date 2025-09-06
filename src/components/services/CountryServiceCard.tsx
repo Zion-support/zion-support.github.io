@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   Card,
   CardContent,
@@ -16,6 +15,7 @@ interface CountryServiceCardProps {
   onSelect: (country: CountryPricing) => void;
   onQuote?: (country: CountryPricing) => void;
   isPopular?: boolean;
+}
 
 export function CountryServiceCard({
   country,
@@ -81,7 +81,6 @@ export function CountryServiceCard({
     }
   };
 
-  
     >
       <CardHeader className='pb-2'>
         <div className='flex items-center justify-between'>
@@ -154,11 +153,3 @@ export function CountryServiceCard({
       </CardFooter>
     </Card>
   );
-=======
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-    
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -40,6 +40,7 @@ const tutorialCategories = [
     tutorials: 10
   }
 ];
+}
 
 export default function TutorialsPage() {
   return (

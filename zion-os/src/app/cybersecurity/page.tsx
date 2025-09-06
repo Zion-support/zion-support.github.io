@@ -1,4 +1,5 @@
 import Link from 'next/link';
+}
 
 export const metadata = {
   title:
@@ -8,6 +9,7 @@ export const metadata = {
   keywords:
     'cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection',
 };
+}
 
 export default function CybersecurityPage() {
   return (

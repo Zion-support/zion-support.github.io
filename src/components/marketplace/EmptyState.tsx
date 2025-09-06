@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from 'react';
 import {
   RefreshCw,
@@ -81,6 +80,7 @@ const defaultContent = {
       "We're fetching the latest data for you. This should only take a moment.",
   },
 };
+}
 
 export function EmptyState({
   type,
@@ -90,16 +90,11 @@ export function EmptyState({
   icon,
 }: EmptyStateProps) {
   const { t } = useTranslation();
-=======
-
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   const content = defaultContent[type];
   const displayTitle = title || content.title;
   const displayDescription = description || content.description;
   const displayIcon = icon || content.icon;
 
-<<<<<<< HEAD
   return (
     <div className='flex flex-col items-center justify-center py-12 px-6 text-center'>
       <div className='mb-4'>{displayIcon}</div>
@@ -144,6 +139,8 @@ export function EmptyState({
   );
 
 // Specific empty state variants for quick use
+}
+
 export function ProductsEmptyState({
   onRetry,
   onAddProduct,
@@ -166,39 +163,41 @@ export function ProductsEmptyState({
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
 
-  
     />
   );
+}
 
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
-  
+
     />
   );
+}
 
 export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
-  
+
     />
   );
+}
 
 export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
-  
+
     />
   );
+}
 
 export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
-  
+
     />
   );
+}
 
 export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
-  
+
     />
   );
+}
 
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
-  
+
     />
   );
-=======
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

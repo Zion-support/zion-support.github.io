@@ -15,6 +15,7 @@ interface ReferralLinkProps {
   referralLink: string;
   onCopy: () => void;
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
+}
 
 export function ReferralLink({
   referralLink,

@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 interface ApplicationProgressProps {
   status: ApplicationStatus;
   className?: string;
+}
 
 export function ApplicationProgress({
   status,
@@ -92,5 +93,3 @@ function StatusIcon({
     // This step is upcoming
     return <Circle className='h-4 w-4 text-muted-foreground/50' />;
   }
-
-

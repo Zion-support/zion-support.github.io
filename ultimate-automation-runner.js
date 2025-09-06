@@ -61,6 +61,8 @@ const nextConfig = {
     return config;
   },
 };
+}
+}
 
 export default nextConfig;`,
     
@@ -87,17 +89,26 @@ export class PerformanceMonitor {
   getMetrics() {
     return Object.fromEntries(this.metrics);
   }
+}
+}
 
 export const performanceMonitor = new PerformanceMonitor();`,
     
     'app-optimizer.js': `// App optimization utilities
+}
+}
+
 export const optimizeImages = (src, width, height) => {
   return \`/api/optimize-image?src=\${encodeURIComponent(src)}&w=\${width}&h=\${height}\`;
 };
+}
+}
 
 export const lazyLoadComponent = (importFunc) => {
   return React.lazy(importFunc);
 };
+}
+}
 
 export const memoize = (fn) => {
   const cache = new Map();
@@ -125,6 +136,9 @@ function createSecurityEnhancements() {
   
   const securityFiles = {
     'security-headers.js': `// Security headers configuration
+}
+}
+
 export const securityHeaders = [
   {
     key: 'X-DNS-Prefetch-Control',
@@ -153,6 +167,9 @@ export const securityHeaders = [
 ];`,
     
     'csp-config.js': `// Content Security Policy configuration
+}
+}
+
 export const cspConfig = {
   directives: {
     defaultSrc: ["'self'"],
@@ -166,8 +183,7 @@ export const cspConfig = {
     baseUri: ["'self'"],
     formAction: ["'self'"],
     upgradeInsecureRequests: []
-  }
-};
+  };
   };
 
   Object.entries(securityFiles).forEach(([filename, content]) => {
@@ -184,6 +200,8 @@ function createTestingUtilities() {
     'test-utils.js': `// Testing utilities
 import { render } from '@testing-library/react';
 import { ThemeProvider } from 'next-themes';
+}
+}
 
 export const renderWithProviders = (ui, options = {}) => {
   const { theme = 'light', ...renderOptions } = options;
@@ -197,6 +215,8 @@ export const renderWithProviders = (ui, options = {}) => {
   return render(ui, { wrapper: Wrapper, ...renderOptions }
 });
 };
+}
+}
 
 export const mockNextRouter = () => ({
   push: jest.fn(),
@@ -208,6 +228,8 @@ export const mockNextRouter = () => ({
   asPath: '/',
 
 });
+}
+}
 
 export const createMockProps = (overrides = {}) => ({
   ...overrides
@@ -215,6 +237,9 @@ export const createMockProps = (overrides = {}) => ({
 });`,
     
     'performance-test.js': `// Performance testing utilities
+}
+}
+
 export const measurePerformance = (fn, iterations = 1000) => {
   const times = [];
   

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -18,6 +17,7 @@ interface ListingScoreCardProps {
   rating?: number;
   reviewCount?: number;
   className?: string;
+}
 
 export function ListingScoreCard({
   title,
@@ -35,7 +35,6 @@ export function ListingScoreCard({
   const [mainImageError, setMainImageError] = useState(false);
   const [authorImageError, setAuthorImageError] = useState(false);
 
-  
     >
       {image && !mainImageError && (
         <div className='h-48 w-full overflow-hidden relative'>
@@ -149,13 +148,3 @@ export function ListingScoreCard({
       </div>
     </div>
   );
-=======
-
-<<<<<<< HEAD
-    <div className={cn(
-      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-300 group",
-<<<<<<< HEAD
-                  key={star}
-                  className={cn("h-4 w-4", star <= Math.round(rating) 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -56,6 +56,7 @@ const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' }
 ];
+}
 
 export default function SolutionsPage() {
   

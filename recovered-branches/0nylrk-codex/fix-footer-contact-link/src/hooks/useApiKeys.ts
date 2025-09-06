@@ -33,7 +33,9 @@ try {
 
 });
 }finally {
-  setLoading (false) 
+  setLoading (false)
+}
+}
 
 export function useApiKeys() {
   const { user } = useAuth();
@@ -69,8 +71,9 @@ export function useApiKeys() {
         setError('Authentication required');
         return;
       }
+}
 
-      const response = await fetch(`${getApiUrl()}/keys`, {
+const response = await fetch(`${getApiUrl()}/keys`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${session.access_token}`,
@@ -121,8 +124,9 @@ export function useApiKeys() {
         setError('Authentication required');
         return;
       }
+}
 
-      const response = await fetch(`${getApiUrl()}/create`, {
+const response = await fetch(`${getApiUrl()}/create`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${session.access_token}`,
@@ -186,8 +190,9 @@ export function useApiKeys() {
         setError('Authentication required');
         return;
       }
+}
 
-      const response = await fetch(`${getApiUrl()}/regenerate`, {
+const response = await fetch(`${getApiUrl()}/regenerate`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${session.access_token}`,
@@ -250,8 +255,9 @@ export function useApiKeys() {
         setError('Authentication required');
         return;
       }
+}
 
-      const response = await fetch(`${getApiUrl()}/revoke`, {
+const response = await fetch(`${getApiUrl()}/revoke`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${session.access_token}`,
@@ -308,8 +314,9 @@ export function useApiKeys() {
         setError('Authentication required');
         return;
       }
+}
 
-      const response = await fetch(
+const response = await fetch(
         `${getApiUrl()}/logs?limit=${limit}&offset=${offset}`,
         {
           method: 'GET',

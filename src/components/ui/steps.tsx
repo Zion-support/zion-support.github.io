@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { CheckIcon } from 'lucide-react';
@@ -8,9 +7,10 @@ interface StepProps {
   label: string;
   description?: string;
   className?: string;
+}
 
 export function Step({ status, label, description, className }: StepProps) {
-  
+
     >
       <div
         className={cn(
@@ -51,6 +51,7 @@ interface StepsProps {
   currentStep: number;
   className?: string;
   children: React.ReactNode;
+}
 
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children);
@@ -86,11 +87,3 @@ export function Steps({ currentStep, className, children }: StepsProps) {
 
 }/> </div> </div> </div>) ;
 }"
-=======
-
-<<<<<<< HEAD
-          if (index < currentStep) status = "complete";
-          if (index === currentStep) status = "current";
-          
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -17,6 +16,7 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import { useTheme } from '@/components/ThemeProvider';
 import { logIssue } from '@/utils/logIssue';
 import { useEffect, useState } from 'react';
+}
 
 export function ModeToggle() {
   const { theme, toggleTheme } = useTheme();
@@ -40,18 +40,10 @@ export function ModeToggle() {
   })();
 
   const isDarkMode = resolvedTheme === 'dark';
-=======
-
-<<<<<<< HEAD
-
-
-  const isDarkMode = resolvedTheme === "dark";
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
   const handleToggle = () => {
     try {
       // Determine the new theme we are switching TO
-<<<<<<< HEAD
       const newTheme = isDarkMode ? 'light' : 'dark';
 
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`);
@@ -100,7 +92,7 @@ export function ModeToggle() {
 
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
-    
+
       >
         <div className='h-5 w-5 bg-muted rounded animate-pulse' />{' '}
         {/* Changed to bg-muted for theme consistency */}
@@ -177,10 +169,3 @@ if (!isClient) {";
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>) ;
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>) ;
 }'"
-=======
-      const newTheme = isDarkMode ? "light" : "dark";
-
-      logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

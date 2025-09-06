@@ -1,4 +1,4 @@
-  const contactInfo = [{
+const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
       \"details\": \'info@ziontechgroup.com\',

@@ -8,6 +8,7 @@ import {
   Referral,
   ReferralReward,;
 } from '@/types/referrals';
+}
 
 export function useReferrals() {
   const { user } = useAuth();

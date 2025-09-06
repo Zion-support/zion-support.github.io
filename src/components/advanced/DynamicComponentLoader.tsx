@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import React, {
@@ -142,6 +141,8 @@ const useNetworkStatus = () => {
 };
 
 // Advanced Dynamic Component Loader
+}
+
 export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   importFn,
   fallback,
@@ -245,7 +246,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       return React.createElement(loadingComponent);
     }
 
-    
       >
         <EnhancedLoading
           progress={progress}
@@ -265,7 +265,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       });
     }
 
-    
       >
         <EnhancedError
           error={loadingState.error}
@@ -301,6 +300,8 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
 };
 
 // HOC for creating dynamic components easily
+}
+
 export const createDynamicComponent = <T extends ComponentType<any>>(
   importFn: () => Promise<{ default: T }>,
   options?: Omit<DynamicLoaderProps, 'importFn' | 'children'>
@@ -317,7 +318,10 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
 
-// export const DynamicChartComponent = createDynamicComponent(
+//
+}
+
+export const DynamicChartComponent = createDynamicComponent(
 //   () => import('recharts').then(module => ({ default: module.LineChart })),
 //   {
 //     loadingComponent: () => (
@@ -329,7 +333,10 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 //   }
 // )
 
-// export const DynamicThreeComponent = createDynamicComponent(
+//
+}
+
+export const DynamicThreeComponent = createDynamicComponent(
 //   () => import('three').then(module => ({ default: module.WebGLRenderer })),
 //   {
 //     loadingComponent: () => (
@@ -339,12 +346,6 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 //     )
 //   }
 // )
+}
 
 export default DynamicComponentLoader;
-=======
-
-<<<<<<< HEAD
-      setLoadingState(prev => ({
-        ...prev;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

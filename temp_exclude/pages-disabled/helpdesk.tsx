@@ -57,6 +57,7 @@ const faqItems = [
   },
   {
 ];
+}
 
 export default function HelpdeskPage() {},
   {

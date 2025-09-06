@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 interface Contract {
   id: string,
@@ -12,6 +11,8 @@ interface Contract {
 interface RecentContractsTableProps {
   contracts: Contract[],
   onViewContract: (contractId: string) => void
+}
+}
 }
 
 export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {

@@ -11,6 +11,7 @@ import { CertificationFormValues } from './types';
 
 interface CertificationFormFieldsProps {
   form: UseFormReturn<CertificationFormValues>;
+}
 
 export function CertificationFormFields({
   form,

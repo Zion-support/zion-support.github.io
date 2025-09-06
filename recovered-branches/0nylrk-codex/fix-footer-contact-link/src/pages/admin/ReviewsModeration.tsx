@@ -110,6 +110,7 @@ function ReviewsModerationContent() {
       <Footer />
     </>
   );
+}
 
 export default function ReviewsModeration() {
   return (

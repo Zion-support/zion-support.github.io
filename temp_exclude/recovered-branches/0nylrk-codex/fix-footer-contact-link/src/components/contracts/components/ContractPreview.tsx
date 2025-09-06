@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -14,6 +13,8 @@ interface ContractPreviewProps {
   onClose?: () => void;
   deployStatus?: string;
   deploymentInfo?: SmartContractInfo | null
+}
+}
 }
 
 export function ContractPreview({ 

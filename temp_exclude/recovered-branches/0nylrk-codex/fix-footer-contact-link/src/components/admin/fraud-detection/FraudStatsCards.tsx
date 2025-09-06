@@ -6,6 +6,8 @@ import { FraudStats } from "@/types/fraud";
 interface FraudStatsCardsProps {
   stats: FraudStats
 }
+}
+}
 
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
   return (

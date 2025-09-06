@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useMemo } from 'react';
 import { User } from 'lucide-react';
 import { Conversation } from '@/types/messaging';
@@ -10,6 +9,7 @@ interface ConversationsListProps {
   activeConversation: Conversation | null;
   setActiveConversation: (conversation: Conversation) => void;
   markAsRead: (conversationId: string) => Promise<void>;
+}
 
 export function ConversationsList({
   conversations,
@@ -70,7 +70,3 @@ export function ConversationsList({
       )}
     </div>
   );
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

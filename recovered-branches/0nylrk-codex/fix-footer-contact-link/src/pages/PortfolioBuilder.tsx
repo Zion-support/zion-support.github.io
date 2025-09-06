@@ -52,6 +52,7 @@ function PortfolioBuilderContent() {
       <Footer />
     </>
   );
+}
 
 export default function PortfolioBuilder() {
   return (

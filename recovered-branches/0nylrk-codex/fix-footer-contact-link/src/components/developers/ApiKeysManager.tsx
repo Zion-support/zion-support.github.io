@@ -48,6 +48,7 @@ import {
 } from '@/components/ui/alert-dialog';
 
 import CodeBlock from './CodeBlock';
+}
 
 export function ApiKeysManager() {
   const {

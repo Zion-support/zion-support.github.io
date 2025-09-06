@@ -7,6 +7,7 @@ interface TalentCardContentProps {
   bio: string;
   timezone: string | undefined;
   skills: string[] | undefined;
+}
 
 export function TalentCardContent({
   summary,

@@ -5,6 +5,7 @@ interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   children?: React.ReactNode;
   active?: boolean;
+}
 
 export function SidebarItem({
   className,

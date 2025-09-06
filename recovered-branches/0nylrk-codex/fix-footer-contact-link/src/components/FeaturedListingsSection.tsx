@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 interface FeaturedListingsSectionProps {
   showTitle?: boolean;
+}
 
 export function FeaturedListingsSection({
   showTitle = true,

@@ -22,6 +22,7 @@ const defaultContext: NotificationContextType = {
 const NotificationContext = createContext(
   defaultContext as NotificationContextType
 );
+}
 
 export const useNotifications = (): NotificationContextType => {
   const context = useContext(NotificationContext) as NotificationContextType;
@@ -30,6 +31,7 @@ export const useNotifications = (): NotificationContextType => {
   }
   return context
 };
+}
 
 export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
   const { user } = useAuth();

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -24,6 +23,7 @@ initialValues?: {;
 category?: string;
 keyFeatures?: string;
 targetAudience?: string ;
+}
 
 export function AIListingGenerator({
   onApplyGenerated,
@@ -192,13 +192,3 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 }/>) ;
 }</div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

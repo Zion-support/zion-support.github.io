@@ -1,4 +1,3 @@
-
 import { UserProfile, UserDetails } from '@/types/auth';
 import { supabase } from '@/integrations/supabase/client';
 import { Message, Conversation } from '@/types/messaging';
@@ -9,6 +8,9 @@ type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle message operations
  */
+}
+}
+
 export function useMessages(
   user: UserWithProfile, activeConversation: Conversation | null,
   activeMessages: Message[], setActiveMessages: (updater: (prev: Message[]) => Message[]) => void,

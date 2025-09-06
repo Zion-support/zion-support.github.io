@@ -34,6 +34,7 @@ const defaultValues: AppMetadataValues = {
   version: '1.0.0',
   platform: 'ios',
 };
+}
 
 export const MetadataManager: React.FC = () => {
   const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>('ios');

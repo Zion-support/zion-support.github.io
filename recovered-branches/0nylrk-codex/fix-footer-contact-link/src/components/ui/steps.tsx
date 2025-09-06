@@ -7,6 +7,7 @@ interface StepProps {
   label: string;
   description?: string;
   className?: string;
+}
 
 export function Step({ status, label, description, className }: StepProps) {
   
@@ -50,6 +51,7 @@ interface StepsProps {
   currentStep: number;
   className?: string;
   children: React.ReactNode;
+}
 
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children);

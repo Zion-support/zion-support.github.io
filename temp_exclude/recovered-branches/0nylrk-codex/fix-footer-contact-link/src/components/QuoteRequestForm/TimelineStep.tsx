@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { format } from "date-fns";
 import { Calendar } from "@/components/ui/calendar";
@@ -11,6 +10,8 @@ import { QuoteFormData } from "@/types/quotes";
 interface TimelineStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
+}
+}
 }
 
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {

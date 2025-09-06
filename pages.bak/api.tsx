@@ -3,6 +3,7 @@ import React from 'react';
 
 interface ApiProps {
   // Add props here as needed
+}
 
 export default function Api({ }: ApiProps) {
   return (
@@ -11,5 +12,4 @@ export default function Api({ }: ApiProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 

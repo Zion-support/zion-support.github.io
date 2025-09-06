@@ -13,6 +13,7 @@ import { useAuth } from '@/hooks/useAuth';
 
 interface MobileBottomNavProps {
   unreadCount?: number;
+}
 
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const location = useLocation();

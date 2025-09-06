@@ -1,2 +1,2 @@
- // Add basic type definitions for Node.js globals used in the project 
+// Add basic type definitions for Node.js globals used in the project 
 }

@@ -12,6 +12,7 @@ interface HelpCategoryListProps {
   categories: HelpCategory[];
   onCategorySelect: (categoryId: string) => void;
   searchQuery: string;
+}
 
 export function HelpCategoryList({
   categories,

@@ -11,6 +11,7 @@ import {
 
 interface JobApplicationsTableProps {
   jobId: string;
+}
 
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
   const {

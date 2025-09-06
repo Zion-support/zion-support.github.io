@@ -346,5 +346,6 @@ const AICustomerChurnPredictor: React.FC = () => {
     </div>
   );
 };
+}
 
 export default AICustomerChurnPredictor;

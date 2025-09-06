@@ -2,16 +2,12 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import UseTokensButton from '../../components/tokens/UseTokensButton';
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 const CustomerSupportChatbot: NextPage = () => {
   return (
     <div>
       <Head>
         <title>CustomerSupportChatbot - Zion Tech Solutions</title>
-<<<<<<< HEAD
         <meta name='description' content='CustomerSupportChatbot service' />
       </Head>
 
@@ -27,21 +23,6 @@ const CustomerSupportChatbot: NextPage = () => {
     </div>
   );
 };
+}
 
 export default CustomerSupportChatbot;
-=======
-        <meta name="description" content="CustomerSupportChatbot service" />
-      </Head>
-      
-      <main className="space-y-4">
-        <h1>CustomerSupportChatbot</h1>
-        <p>Service details coming soon...</p>
-        <UseTokensButton serviceId="customer-support-chatbot" defaultType="premium_support" />
-        <Link href="/services">Back to Services</Link>
-      </main>
-    </div>
-  )
-};
-
-export default CustomerSupportChatbot;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery
  * Handles automatic retry, cache clearing, and graceful degradation
@@ -220,7 +219,7 @@ class ChunkErrorHandler {
       <div style="text-align: center; padding: 2rem; max-width: 500px;">
         <h2 style="margin-bottom: 1rem;">Connection Issue</h2>
         <p style="margin-bottom: 1.5rem; line-height: 1.5;">
-          We're having trouble loading some parts of the application. 
+          We're having trouble loading some parts of the application.
           This might be due to a poor network connection or a temporary server issue.
         </p>
         <button onclick="window.location.reload()" style="
@@ -232,39 +231,10 @@ class ChunkErrorHandler {
           font-size: 1rem;
           cursor: pointer;
           margin-right: 1rem;
-=======
-
-<<<<<<< HEAD
-
-    const errorName = error.name || '';
-    
-    const chunkErrorPatterns = [
-      'ChunkLoadErrorLoading chunkFailed to fetch dynamically imported moduleFailed to importchunk-vendors-'
-    ];
-
-
-      case 2:
-        // Second attempt: Clear caches and retry
-<<<<<<< HEAD
-        
-      case 3:
-        // Third attempt: Hard refresh with cache bypass
-<<<<<<< HEAD
-
-          cacheNames.map(cacheName => caches.delete(cacheName))
-        );
-<<<<<<< HEAD
-        <button onclick="window.location.reload()" style="
-          background: #0070f3, color: white,
-          border: none, padding: 0.75rem 1.5rem,
-          border-radius: 0.5rem, font-size: 1rem,
-          cursor: pointer, margin-right: 1rem,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         ">
           Try Again
         </button>
         <button onclick="window.location.href='/'" style="
-<<<<<<< HEAD
           background: #666;
           color: white;
           border: none;
@@ -322,13 +292,11 @@ class ChunkErrorHandler {
   }
 
 // Create and export singleton instance
+}
+
 export const chunkErrorHandler = new ChunkErrorHandler();
 
 // Export for manual usage
+}
+
 export default chunkErrorHandler;
-=======
-          background: #666, color: white,
-          border: none, padding: 0.75rem 1.5rem,
-          border-radius: 0.5rem, font-size: 1rem,
-          cursor: pointer,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import {
   Card,
@@ -68,6 +67,7 @@ const getRelativeTime = () => {;
   return `Starts in $ {;
   formatDistanceToNow (interviewDate) ;
 }` ;
+}
 
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   const { user } = useAuth();
@@ -168,7 +168,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
       case 'completed':
         return <Badge className='bg-green-700'>Completed</Badge>;
       case 'cancelled':
-        
+
           >
             Cancelled
           </Badge>
@@ -384,14 +384,3 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   isLoading ;
 }/> </DialogContent> </Dialog> </Card>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-  
-  const isClient = user?.id === interview.client_id;
-  const isTalent = user?.id === interview.talent_id;
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

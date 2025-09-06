@@ -85,6 +85,7 @@ const companiesById: Record<string, CompanyRecord> = {
 const companiesBySlug: Record<string, CompanyRecord> = {
   [seedCompany.slug]: seedCompany,
 };
+}
 
 export const store = {
   getCompanyBySlug(slug: string) {

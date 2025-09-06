@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useNotifications } from '@/context/notifications/NotificationContext';
 import {
@@ -106,7 +105,6 @@ const NotificationCard: React.FC<{
     }
   };
 
-  
     >
       <div className='flex items-start gap-4'>
         <div className='mt-1'>
@@ -176,6 +174,8 @@ const NotificationCard: React.FC<{
     </div>
   );
 };
+}
+}
 
 export default function NotificationsPage() {
   const {
@@ -294,7 +294,7 @@ onDismiss: (id: string) => Promise<void> ;
 }) => {;
   const router = useRouter ();
 if (!notification.read) {;
-  
+
 }</span> {;
   !notification.read && (<Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs" > New </Badge>) ;
 }</div> </div> onClick={;
@@ -331,11 +331,3 @@ return (<> <SEO title="Notifications | Zion AI Marketplace" description="View an
 }</div>) ;
 }</TabsContent> </Tabs> </div> </main> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-      return <Badge className="bg-blue-500">Message</Badge>;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -9,6 +9,8 @@ interface AppStoreButtonsProps {
   onAppStoreClick?: () => void;
   onGooglePlayClick?: () => void
 }
+}
+}
 
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
   className;

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
 import { useJobApplications } from "@/hooks/useJobApplications";
@@ -12,6 +11,8 @@ import {
 
 interface JobApplicationsTableProps {
   jobId: string
+}
+}
 }
 
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -11,6 +10,7 @@ import { ResumePreviewCard } from './ResumePreviewCard';
 import { UploadSection } from './UploadSection';
 import { SelectResumeSection } from './SelectResumeSection';
 import { ResumeOption, ResumeSelectorProps } from './types';
+}
 
 export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent');

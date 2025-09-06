@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Draggable } from "react-beautiful-dnd";
 import { formatDistanceToNow } from "date-fns";
@@ -28,6 +27,8 @@ import { HireConfirmationModal } from "./HireConfirmationModal";
 interface CandidateCardProps {
   application: JobApplication,
   index: number
+}
+}
 }
 
 export function CandidateCard({ application, index }: CandidateCardProps) {

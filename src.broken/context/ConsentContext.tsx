@@ -44,6 +44,7 @@ function loadAds() {
   s.async = true;
   s.id = 'ads-script';
   document.body.appendChild(s);
+}
 
 export function ConsentProvider({ children }: { children: ReactNode }) {
   const [consent, setConsent] = useState<ConsentState>(() => {
@@ -71,5 +72,6 @@ export function ConsentProvider({ children }: { children: ReactNode }) {
       {children}
     </ConsentContext.Provider>
   );
+}
 
 export const useConsent = () => useContext(ConsentContext);

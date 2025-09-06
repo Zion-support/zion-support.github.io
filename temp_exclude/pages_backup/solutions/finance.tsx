@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { DollarSign, Shield, TrendingUp, Users, Database } from 'lucide-react';
 import React from 'react';
@@ -33,26 +29,20 @@ const features = [;
     title: 'Fraud Detection,',
     description: 'Real-time fraud detection and prevention systems using advanced analytics.'', import Layout from '../../components/Layout',
 import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  DollarSign, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Database, 
-  CheckCircle, 
-  ArrowRight 
+import {
+  DollarSign,
+  Shield,
+  TrendingUp,
+  Users,
+  Database,
+  CheckCircle,
+  ArrowRight
 } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const features = [
   {
     icon: DollarSign,
@@ -71,10 +61,6 @@ const features = [
   },
   {
     icon: Users,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     title: 'Customer Portal',
     description: 'Secure customer-facing applications and services'
   },
@@ -101,9 +87,10 @@ const solutions = [
   'Insurance Technology',',
   'Cryptocurrency Solutions',',
   'Financial Mobile Applications'',
-    
 
   ];
+}
+
 export default function FinanceSolutionsPage() {
   return (;
     <Layout );
@@ -121,7 +108,7 @@ export default function FinanceSolutionsPage() {
                 </span>;
               </h1>;
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";
-                Revolutionize financial services with our secure, compliant technology solutions. 
+                Revolutionize financial services with our secure, compliant technology solutions.
                 From digital banking to fraud detection, we help financial institutions deliver;
                 exceptional customer experiences while maintaining regulatory compliance.;
               </p>;
@@ -143,7 +130,7 @@ export default function FinanceSolutionsPage() {
                 Comprehensive Financial Technology Solutions;
               </h2>;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
-                Our financial services solutions are designed to enhance security, 
+                Our financial services solutions are designed to enhance security,
                 improve efficiency, and ensure compliance with financial regulations.,
               </p>;
             </div>;
@@ -164,20 +151,17 @@ const benefits = [
   'Reduced operational costs',
   'Faster transaction processing'
 ];
+}
+
 export default function FinanceSolutions() {
-<<<<<<< HEAD
-=======
-=======
-=======
     title: 'User Management',
     description: 'Secure user management with role-based access control',
     benefits: ['User provisioning', 'Role management', 'Access control', 'Audit logs']
   }
 ];
+}
 
 export default function FinanceSolutionsPage() {
-<<<<<<< HEAD
-=======
   return (
     <Layout
       title="Finance Solutions - Zion Tech Group"
@@ -218,18 +202,12 @@ export default function FinanceSolutionsPage() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Built for financial institutions with security, compliance, and performance as top priorities.
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -237,10 +215,6 @@ export default function FinanceSolutionsPage() {
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -279,7 +253,7 @@ export default function FinanceSolutionsPage() {
                   Regulatory Compliant & Secure;
                 </h2>;
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
-                  All our financial solutions are built with security and compliance in mind, 
+                  All our financial solutions are built with security and compliance in mind,
                   ensuring your financial data is protected and your organization meets regulatory requirements.;
                 </p>;
               </div>;
@@ -362,10 +336,6 @@ export default function FinanceSolutionsPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-<<<<<<< HEAD
-=======
-=======
-=======
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -378,8 +348,6 @@ export default function FinanceSolutionsPage() {
                   </div>
                 </motion.div>
               ))}
-<<<<<<< HEAD
-=======
             </div>
           </div>
         </section>
@@ -405,15 +373,9 @@ export default function FinanceSolutionsPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Layout>
-=======
-<<<<<<< HEAD
     </Layout>
-=======
     </>
-=======
     </>
   );
 }

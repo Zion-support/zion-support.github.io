@@ -17,6 +17,7 @@ import {
   SidebarGroupLabel,
   SidebarGroupContent,;
 } from '@/components/ui/sidebar';
+}
 
 export function AppSidebar() {
   return (

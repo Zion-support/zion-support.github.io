@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -24,6 +23,8 @@ interface AIMilestoneGeneratorProps {
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
   onAddMilestone: (milestone: GeneratedMilestone) => void;
+}
+}
 
 export function AIMilestoneGenerator({
   scope,
@@ -47,8 +48,9 @@ export function AIMilestoneGenerator({
     if (!scope || !startDate || !projectType) {
       return;
     }
+}
 
-    const input: MilestoneInput = {
+const input: MilestoneInput = {
       scope,
       startDate,
       endDate,
@@ -196,12 +198,3 @@ export function AIMilestoneGenerator({
       )}
     </div>
   );
-=======
-
-<<<<<<< HEAD
-
-    setSelectedMilestones(prev => ({
-      ...prev;
-<<<<<<< HEAD
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

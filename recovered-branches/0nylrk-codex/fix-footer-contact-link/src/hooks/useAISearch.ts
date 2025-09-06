@@ -46,6 +46,7 @@ if (!filters.type || filters.type === "talent" || filters.type === "all") {
   TALENT PROFILES.forEach ( (t) => {
   
 });
+}
 
 export function useAISearch() {
   const [results, setResults] = useState<SearchResult[]>([]);

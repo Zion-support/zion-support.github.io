@@ -56,6 +56,7 @@ function passesRls(
   const level = visibility || 'public';
   const order: AccessLevel[] = ['public', 'member', 'admin'];
   return order.indexOf(access) >= order.indexOf(level);
+}
 
 export function searchAll(
   filters: ParsedFilters,
@@ -124,6 +125,7 @@ export function searchAll(
     (a, b) => b.relevance - a.relevance
   );
   return { all, talent, jobs, projects };
+}
 
 export function suggestDidYouMean(query: string): string | null {
   // naive suggestion: if user says devops latam -> normalize to "DevOps jobs in LATAM"

@@ -17,6 +17,7 @@ import { ResumeStepContent } from './ResumeStepContent';
 import { useResumeProgress } from './useResumeProgress';
 import { ResumeVersionSelector } from './ResumeVersionSelector';
 import { RESUME_STEPS } from './constants';
+}
 
 export function ResumeWizard() {
   const { user } = useAuth();

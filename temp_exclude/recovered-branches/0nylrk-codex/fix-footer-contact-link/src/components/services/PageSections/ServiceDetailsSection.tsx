@@ -1,9 +1,10 @@
-
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceSelector } from "../CountryServiceSelector";
 interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null,
   setSelectedCountry: (country: CountryPricing | null) => void
+}
+}
 }
 
 export function ServiceDetailsSection({ selectedCountry, setSelectedCountry }: ServiceDetailsSectionProps) {

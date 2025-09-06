@@ -4,6 +4,8 @@ import type { UserProfile } from '@/types/auth';
 import { toast } from '@/hooks/use-toast';
 import { trackReferral, checkUrlForReferralCode } from '@/utils/referralUtils';
 import { cleanupAuthState } from '@/utils/authUtils';
+}
+}
 
 export function useAuthOperations(
   setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>,
@@ -174,8 +176,9 @@ export function useAuthOperations(
       if (!profileData || !profileData.id) {
         throw new Error('Profile data or user ID is missing.');
       }
+}
 
-      const { error } = await supabase
+const { error } = await supabase
         .from('profiles')
         .update({
           display_name: profileData.displayName,
@@ -288,7 +291,9 @@ export function useAuthOperations(
       if (!ethereum) {
         throw new Error('Web3 wallet not found');
       }
-      const accounts = await ethereum.request({
+}
+
+const accounts = await ethereum.request({
         method: 'eth_requestAccounts',
       });
       const address = accounts[0];
@@ -349,7 +354,6 @@ const {
   email, password, options: {
   data: {
   display name: display name 
-
 
 });
 }//Add this after successful signup if (data?.user) {
@@ -412,7 +416,10 @@ const updateProfile = async (profileData: Partial<UserProfile>) => {
 try {
   if (!profileData || !profileData.id) {
   
-}const {
+}
+}
+
+const {
   error 
 }= await supabase .from ("profiles") .update ({
   display name: profileData.displayName;
@@ -473,7 +480,10 @@ try {
   const ethereum = (window as any) .ethereum;
 if (!ethereum) {
   
-}const accounts = await ethereum.request ({
+}
+}
+
+const accounts = await ethereum.request ({
   method: 'eth requestAccounts' 
 });
 const address = accounts[0];

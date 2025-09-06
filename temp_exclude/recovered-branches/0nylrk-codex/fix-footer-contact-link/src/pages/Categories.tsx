@@ -1,8 +1,9 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { GradientHeading } from "@/components/GradientHeading";
+}
+
 export default function Categories() {
   return (
     <>

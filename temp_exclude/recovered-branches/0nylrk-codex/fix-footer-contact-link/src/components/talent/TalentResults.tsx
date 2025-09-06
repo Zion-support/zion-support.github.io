@@ -1,4 +1,3 @@
-
 import React from "react";
 import { TalentProfile } from "@/types/talent";
 import { ActiveFilters } from "@/components/talent/ActiveFilters";
@@ -25,6 +24,8 @@ interface TalentResultsProps {
     setExperienceRange: (range: [number, number]) => void;
     clearFilters: () => void
   }
+}
+}
 }
 
 export function TalentResults({

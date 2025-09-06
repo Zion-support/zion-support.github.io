@@ -3,6 +3,7 @@ module.exports = default function ManagedCybersecurity() { return; }; return nul
 import React from 'react';
 interface CybersecurityProps {
   // Add props here as needed
+}
 
 export default function Cybersecurity({ }: CybersecurityProps) {
   return (

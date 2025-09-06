@@ -8,6 +8,7 @@ import { toast } from 'sonner';
 interface ExportPanelProps {
   platform: AppPlatform;
   metadata: AppMetadataValues;
+}
 
 export const ExportPanel: React.FC<ExportPanelProps> = ({
   platform,

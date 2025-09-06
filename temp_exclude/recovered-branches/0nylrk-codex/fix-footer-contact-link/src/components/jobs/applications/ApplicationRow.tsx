@@ -1,4 +1,3 @@
-
 import { formatDistanceToNow } from "date-fns";
 import { Link } from "react-router-dom";
 import { Calendar, User, FileText, BarChart } from "lucide-react";
@@ -15,6 +14,8 @@ interface ApplicationRowProps {
   onViewApplication: (applicationId: string) => Promise<void>,
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,
   onViewScore: (application: JobApplication) => void
+}
+}
 }
 
 export function ApplicationRow({

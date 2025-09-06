@@ -149,6 +149,7 @@ const stats = [
   { number: '100+', label: 'Hours of Content' },
   { number: '4.8', label: 'Average Rating' }
 ];
+}
 
 export default function TutorialsPage() {
   

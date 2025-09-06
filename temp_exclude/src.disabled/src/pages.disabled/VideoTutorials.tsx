@@ -84,6 +84,7 @@ import {
   CloudHailRainWind,
   CloudSleetRainWind
 } from 'lucide-react';
+}
 
 export default function VideoTutorials() {
   const tutorialCategories = [

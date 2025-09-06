@@ -8,6 +8,7 @@ import { JobMatchCard } from './JobMatchCard';
 interface SuggestedTalentsProps {
   jobId: string;
   jobTitle?: string;
+}
 
 export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   const [talents, setTalents] = useState([]);

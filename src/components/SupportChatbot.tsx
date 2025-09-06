@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -18,6 +17,7 @@ const FALLBACK_RESPONSES = [
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",
   'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.',
 ];
+}
 
 export function SupportChatbot() {
   const [open, setOpen] = useState(false);
@@ -173,7 +173,7 @@ export function SupportChatbot() {
   };
 
   if (!open) {
-    
+
         onClick={() => setOpen(true)}
         size='icon'
         variant='outline'
@@ -227,7 +227,6 @@ export function SupportChatbot() {
 }';
 }buffer = lines[lines.length - 1] || '' ;
 
-
 }catch (err) {';
   logErrorToProduction ('Chatbot error:', {;
   data: err ;
@@ -260,11 +259,3 @@ setTyping (false) ;
   endRef ;
 }/> </div> </div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-        if (!res.ok) throw new Error(`API error: ${res.status}`),
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

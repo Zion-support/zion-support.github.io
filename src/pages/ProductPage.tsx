@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router'; // Changed from useParams
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
@@ -8,6 +7,8 @@ import { useCart } from '@/context/CartContext';
 import { toast } from '@/hooks/use-toast';
 import { SEO } from '@/components/SEO';
 import { logErrorToProduction } from '@/utils/productionLogger';
+}
+}
 
 export default function ProductPage() {
   const router = useRouter();
@@ -56,8 +57,9 @@ export default function ProductPage() {
   if (!product) {
     return <div className='p-6 text-white'>Product not found</div>;
   }
+}
 
-  const inCart = items.some(i => i.id === product.id);
+const inCart = items.some(i => i.id === product.id);
 
   const handleAdd = () => {
     if (inCart) return;
@@ -125,11 +127,3 @@ product.title ;
   product.images?.[0] ;
 }/> </Button> </div> </>) ;
 }'
-=======
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card } from "@/components/ui/card";
 import {
@@ -52,6 +51,7 @@ const syncLogs = [
     details: "Updated candidate status to 'Interview Scheduled'"
   }
 ];
+}
 
 export function IntegrationsSyncLog() {
   const getStatusBadge = (status: string) => {

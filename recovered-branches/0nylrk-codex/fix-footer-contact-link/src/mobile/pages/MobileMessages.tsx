@@ -88,6 +88,7 @@ const mockMessages: Message[] = [
     status: 'read',
   },
 ];
+}
 
 export function MobileMessages() {
   const [activeConversation, setActiveConversation] = useState<string | null>(
@@ -152,6 +153,8 @@ export function MobileMessages() {
 content: string;
 timestamp: string;
 isMe: boolean;
+}
+
 export function MobileMessages () {
   const [activeConversation, setActiveConversation] = useState<string | null> (null);
 const [messages, setMessages] = useState<Message[]> (mockMessages);

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useProjects } from '@/hooks/useProjects';
@@ -14,6 +13,8 @@ import {
   ProjectActions;
   ProjectHeader
 } from './components';
+}
+}
 
 export function ProjectMilestonesContent() {
   const { projectId } = useParams() as { projectId?: string };
@@ -78,8 +79,9 @@ export function ProjectMilestonesContent() {
       </div>
     )
   }
+}
 
-  const handleMilestoneSubmit = async (data: any) => {
+const handleMilestoneSubmit = async (data: any) => {
     if (!projectId) return;
     
     // Ensure all required fields are present

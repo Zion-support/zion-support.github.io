@@ -11,11 +11,13 @@ export interface WishlistState {
 const initialState: WishlistState = {
   items: [],
 };
+}
 
 export const getApiUrl = () => {
   const env = (import.meta as any)?.env ?? process.env;
   return env.VITE_API_URL || env.API_URL || '';
 };
+}
 
 export const loadWishlistFromDB = createAsyncThunk<WishlistItem[], string>(
   'wishlist/loadFromDB',
@@ -47,6 +49,9 @@ const wishlistSlice = createSlice({
     });
   },
 });
+}
 
 export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions;
+}
+
 export default wishlistSlice.reducer;

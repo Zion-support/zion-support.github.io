@@ -103,6 +103,7 @@ const testimonials = [
     rating: 5,
   }]
 ];
+}
 
 export default function EnterpriseSolutionsPage() {
   

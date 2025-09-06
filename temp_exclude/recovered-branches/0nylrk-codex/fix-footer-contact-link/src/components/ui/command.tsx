@@ -1,4 +1,4 @@
- const Command = React.forwardRef< React.ElementRef<typeof CommandPrimitive>;
+const Command = React.forwardRef< React.ElementRef<typeof CommandPrimitive>;
 React.ComponentPropsWithoutRef<typeof CommandPrimitive> > ( ({
   className, ...props 
 }, ref) => (<CommandPrimitive) 

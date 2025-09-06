@@ -53,6 +53,7 @@ export interface AnalyticsContextType {
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
 );
+}
 
 export function AnalyticsProvider({ children }: { children: ReactNode }) {
   const [pageViews, setPageViews] = useState(0);

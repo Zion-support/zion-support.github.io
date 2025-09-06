@@ -34,6 +34,7 @@ const testimonials = [
     image: '/placeholder.svg',
   },
 ];
+}
 
 export function EnterpriseTestimonials() {
   return (

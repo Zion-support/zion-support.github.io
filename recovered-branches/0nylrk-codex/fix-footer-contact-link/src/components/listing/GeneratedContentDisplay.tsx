@@ -21,6 +21,7 @@ keyPoints: string[]
 }interface GeneratedContentDisplayProps {
   content: GeneratedContent;
   onApply: () => void;
+}
 
 export function GeneratedContentDisplay({
   content,

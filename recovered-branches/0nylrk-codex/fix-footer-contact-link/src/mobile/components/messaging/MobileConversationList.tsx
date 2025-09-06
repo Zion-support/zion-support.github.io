@@ -18,6 +18,7 @@ isTyping?: boolean
   conversations: Conversation[];
   activeConversation?: string;
   onSelectConversation: (id: string) => void;
+}
 
 export function MobileConversationList({
   conversations,

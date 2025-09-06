@@ -79,5 +79,6 @@ const App = () => {
     </WhitelabelProvider>
   )
 };
+}
 
 export default App;

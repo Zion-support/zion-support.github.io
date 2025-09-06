@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
@@ -34,6 +33,7 @@ const mockPost: ForumPost = {
   isAnswered: true,
   isFeatured: true
 };
+}
 
 export default function EditPostPage() {
   const { postId } = useParams() as { postId?: string };

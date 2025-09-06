@@ -65,6 +65,7 @@ const categories = [
     ]
   }
 ];
+}
 
 export default function DocsPage() {
   return (

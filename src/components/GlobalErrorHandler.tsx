@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {
   createContext,
   useContext,
@@ -20,6 +19,7 @@ interface ErrorContextType {
   clearAllErrors: () => void;
 
 }, []);
+}
 
 export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
@@ -121,6 +121,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
       {children}
     </ErrorContext.Provider>
   );
+}
 
 export function useGlobalErrorHandler(): ErrorContextType {
   const context = useContext(ErrorContext);
@@ -175,6 +176,8 @@ function getErrorMessage(error: Error): string {
   return 'An unexpected error occurred. Please try again.';
 
 // Utility hook for common error scenarios
+}
+
 export function useErrorHandler() {
   const { reportError, showRetryableError, showNetworkError, showAuthError } =
     useGlobalErrorHandler();
@@ -232,17 +235,3 @@ export function useErrorHandler() {
     handleApiError,
     handleAsyncOperation,
   };
-=======
-
-<<<<<<< HEAD
-
-    const errorKey = error.message;
-    const currentRetryCount = retryCount[errorKey] || 0;
-
-    reportError(error, { retryCount: currentRetryCount }),
-
-
-<<<<<<< HEAD
-      
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

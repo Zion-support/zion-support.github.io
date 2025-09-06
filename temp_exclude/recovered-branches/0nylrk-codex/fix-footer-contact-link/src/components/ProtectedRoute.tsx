@@ -10,6 +10,7 @@ export interface ProtectedRouteProps {
   tenantAdminAllowed?: boolean;
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
 }
+}
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
   children;
@@ -51,5 +52,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 
   return <>{children}</>
 };
+}
+}
 
 export default ProtectedRoute;

@@ -1,4 +1,4 @@
- const ToastProvider = ToastPrimitives.Provider const ToastViewport = React.forwardRef< React.ElementRef<typeof ToastPrimitives.Viewport>;
+const ToastProvider = ToastPrimitives.Provider const ToastViewport = React.forwardRef< React.ElementRef<typeof ToastPrimitives.Viewport>;
 React.ComponentPropsWithoutRef<typeof ToastPrimitives.Viewport> > ( ({
   className, ...props 
 }, ref) => (<ToastPrimitives.Viewport) 
@@ -43,9 +43,12 @@ React.ComponentPropsWithoutRef<typeof ToastPrimitives.Description> > ( ({
   className, ...props 
 }, ref) => (<ToastPrimitives.Description />) ) ToastDescription.displayName = ToastPrimitives.Description.displayName type ToastProps = React.ComponentPropsWithoutRef<typeof Toast> //Older React type definitions may not support generics on `ReactElement`. //Using the base `ReactElement` type here avoids compilation errors while //still representing a valid React element returned by `ToastAction`. type ToastActionElement = React.ReactElement export {
   type ToastProps, type ToastActionElement, ToastProvider, ToastViewport, Toast, ToastTitle, ToastDescription, ToastClose, ToastAction 
-}//Add useToast hook export export function useToast () {
+}//Add useToast hook export
+}
+}
+
+export function useToast () {
   return {
   // Accept a loosely typed props object to allow custom fields like `description` 
-}
 }
 }

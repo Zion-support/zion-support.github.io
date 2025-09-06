@@ -139,6 +139,7 @@ const caseStudies = [
     technologies: ["React", "Node.js", "InfluxDB", "MQTT"]"
   }
 ];
+}
 
 export default function CustomSolutionsPage() {
   return (

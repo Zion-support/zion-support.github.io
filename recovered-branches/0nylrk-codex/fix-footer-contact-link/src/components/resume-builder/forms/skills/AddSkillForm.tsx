@@ -15,6 +15,7 @@ import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhance
 interface AddSkillFormProps {
   resumeId: string;
   onAddSkill: (skill: Skill) => Promise<boolean>;
+}
 
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
   const [skillName, setSkillName] = useState('');

@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TrustedBySection } from "@/components/TrustedBySection";
@@ -29,6 +28,7 @@ import {
   BarChart3;
   Smartphone
 } from "lucide-react";
+}
 
 export default function Index() {
   const { t } = useTranslation();

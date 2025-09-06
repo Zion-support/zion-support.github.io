@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
@@ -7,6 +6,8 @@ interface MainNavigationProps {
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string
+}
+}
 }
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {

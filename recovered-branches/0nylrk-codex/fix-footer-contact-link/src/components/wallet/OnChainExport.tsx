@@ -16,6 +16,7 @@ import {
 } from '@/components/ui/tooltip';
 import { useToast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
+}
 
 export function OnChainExport() {
   const [isConnected, setIsConnected] = useState(false);

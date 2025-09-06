@@ -14,6 +14,7 @@ import {
   Zap,
   BarChart3,;
 } from 'lucide-react';
+}
 
 export default function EmailValidatorPage() {
   const [emails, setEmails] = useState('');

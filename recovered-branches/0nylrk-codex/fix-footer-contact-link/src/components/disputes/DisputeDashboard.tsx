@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ShieldAlert } from 'lucide-react';
+}
 
 export function DisputeDashboard() {
   const { disputes, isLoading, refetch } = useDisputes();

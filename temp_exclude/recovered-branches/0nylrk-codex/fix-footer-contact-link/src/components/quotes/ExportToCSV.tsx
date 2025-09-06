@@ -6,6 +6,8 @@ interface ExportToCSVProps {
   quotes: QuoteRequest[],
   filename?: string
 }
+}
+}
 
 export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {
   const handleExport = () => {

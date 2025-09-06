@@ -1,8 +1,9 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+}
+
 export function BackToDirectoryButton() {
   return (
     <div className="container mx-auto px-4 md: px-6 mb-12">

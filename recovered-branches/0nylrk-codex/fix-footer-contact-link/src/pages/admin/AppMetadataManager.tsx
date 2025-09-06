@@ -22,4 +22,6 @@ const AppMetadataManager: React.FC = () => {
     </AppLayout>
   );
 };
+}
+
 export default AppMetadataManager;

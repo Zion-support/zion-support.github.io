@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
@@ -32,6 +31,7 @@ import { useWishlist } from '@/hooks/useWishlist';
 import { toast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+}
 
 export default function CartPage() {
   const { t } = useTranslation();
@@ -442,19 +442,3 @@ toast ({;
   (details) => handleCheckout (details) ;
 }/> </div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-        shipping_address: details?.address}),
-
-      const sessionId = data.sessionId as string | undefined;
-<<<<<<< HEAD
-  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0;
-
-  const total = subtotal + tax + shipping;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

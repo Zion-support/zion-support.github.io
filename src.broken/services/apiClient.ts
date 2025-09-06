@@ -11,6 +11,8 @@ axios.defaults.baseURL =
 // Global interceptor for all axios instances
 
 // Define the global error handler (exported for testing purposes)
+}
+
 export const globalAxiosErrorHandler = (error: unknown) => {
   const contentType =
     typeof error === 'object' &&
@@ -155,6 +157,7 @@ const apiClient = axios.create({
   baseURL: import.meta.env.VITE_API_URL || '/api',
   withCredentials: true,
 });
+}
 
 export function setAuthToken(token: string) {
   (apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`;
@@ -188,5 +191,6 @@ apiClient.interceptors.response.use(
     return Promise.reject(error);
   }
 );
+}
 
 export default apiClient;

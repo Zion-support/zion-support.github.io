@@ -10,6 +10,7 @@ interface ProjectActionsProps {
   disputeId?: string;
   isTalent: boolean;
   onAddMilestone: () => void;
+}
 
 export function ProjectActions({
   projectId,

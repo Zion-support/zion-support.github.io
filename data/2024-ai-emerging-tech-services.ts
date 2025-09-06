@@ -41,6 +41,8 @@ export interface AIEmergingTechService {,
   rating: number,
   reviews: number
 };
+}
+
 export const aiEmergingTechServices: AIEmergingTechService[] = [,";
   {,'
     id: "ai-video-generation-platform",

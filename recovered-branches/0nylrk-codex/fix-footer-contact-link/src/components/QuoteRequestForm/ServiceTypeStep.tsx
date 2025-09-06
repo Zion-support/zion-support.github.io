@@ -54,6 +54,7 @@ const SAMPLE_LISTINGS: ListingItem[] = [
       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format',
   },
 ];
+}
 
 export function ServiceTypeStep({
   formData,

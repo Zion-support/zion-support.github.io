@@ -5,6 +5,7 @@ export interface AuthResult {
   ok: boolean;
   error?: string;
   tenantId?: string;
+}
 
 export function authenticateRequest(
   req: NextApiRequest,

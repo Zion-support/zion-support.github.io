@@ -141,6 +141,7 @@ const processSteps = []
     description: "Launch your solution with full support and training"
   };
 ];
+}
 
 export default function ServicesPage() {}
   return ()

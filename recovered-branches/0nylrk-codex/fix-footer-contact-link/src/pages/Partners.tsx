@@ -16,6 +16,7 @@ import { PartnerLeaderboard } from '@/components/partners/PartnerLeaderboard';
 import { PartnerResources } from '@/components/partners/PartnerResources';
 import { useAuth } from '@/hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
+}
 
 export default function Partners() {
   const [activeTab, setActiveTab] = useState('overview');

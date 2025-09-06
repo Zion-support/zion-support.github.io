@@ -8,6 +8,8 @@ import { supabase } from '@/integrations/supabase/client';
 import { TalentProfile } from '@/types/talent';
 import { toast } from '@/components/ui/use-toast';
 import { useNavigate } from 'react-router-dom';
+}
+}
 
 export default function SavedTalentsPage() {
   const { user } = useAuth();
@@ -23,8 +25,9 @@ export default function SavedTalentsPage() {
           console.warn('User not authenticated.');
           return;
         }
+}
 
-        const { data, error } = await supabase
+const { data, error } = await supabase
           .from('saved_talents')
           .select(
             `
@@ -220,6 +223,5 @@ if (error) {
 }data: talentData, error: talentError 
 }= await supabase .from ('talent profiles') .select ('*') .eq ('id', talentId) .single ();
 return;
-
 
 };

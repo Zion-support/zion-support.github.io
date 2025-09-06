@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { completeSitemap, dynamicPaths } from '@/config/sitemap';
 import Link from 'next/link';
@@ -27,6 +26,7 @@ const pathMap: Record<string, string> = {
 };
 
 const resolvePath = (path: string): string => pathMap[path] ?? path;
+}
 
 export const SitemapPage: React.FC = () => {
   return (
@@ -200,7 +200,3 @@ export const SitemapPage: React.FC = () => {
   );
 };
 '"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

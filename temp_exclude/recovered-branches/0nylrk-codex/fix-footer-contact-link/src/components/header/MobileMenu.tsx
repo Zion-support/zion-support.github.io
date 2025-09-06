@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react";
@@ -8,6 +7,7 @@ import { Button } from "@/components/ui/button";
 export interface MobileMenuProps {
   unreadCount?: number;
   onClose: () => void
+}
 }
 
 export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {

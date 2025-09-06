@@ -57,6 +57,8 @@ function ensureDataFiles(): void {
   } catch {
     // In serverless environments, filesystem may be read-only; ignore errors gracefully
   }
+}
+}
 
 export function detectIntent(text: string): RouterResult {
   const lower = (text || '').toLowerCase();
@@ -96,6 +98,8 @@ export async function routeToChain(
 ): Promise<{ routed: boolean; message: string }> {
   // Placeholder for real chain invocations
   return { routed: true, message: `Routed to ${intent}` };
+}
+}
 
 export function evaluateReflexes(metrics: ReflexMetrics): ReflexTrigger[] {
   const baselineSignups = metrics.baselineSignups ?? 20;
@@ -196,6 +200,8 @@ function heuristicTighten(text: string, userIntent?: string): string {
     .replace(/really\s+/gi, '');
   const withConstraints = `${withoutFillers}\n\nConstraints: respond in under 6 bullets; include only actionable steps; max 120 words; avoid repetition.${userIntent ? ` Intent: ${userIntent}.` : ''}`;
   return withConstraints;
+}
+}
 
 export function readLogs(): { entries: LogEntry[] } {
   ensureDataFiles();
@@ -205,6 +211,8 @@ export function readLogs(): { entries: LogEntry[] } {
   } catch {
     return { entries: [] };
   }
+}
+}
 
 export function appendLog(entry: Omit<LogEntry, 'id' | 'timestamp'>): void {
   ensureDataFiles();
@@ -220,6 +228,8 @@ export function appendLog(entry: Omit<LogEntry, 'id' | 'timestamp'>): void {
   } catch {
     // ignore
   }
+}
+}
 
 export function readState<T = unknown>(): T {
   ensureDataFiles();
@@ -229,6 +239,8 @@ export function readState<T = unknown>(): T {
   } catch {
     return {} as unknown as T;
   }
+}
+}
 
 export function writeState<T = unknown>(state: T): void {
   ensureDataFiles();

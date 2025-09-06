@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -9,6 +8,8 @@ interface TalentCardSaveButtonProps {
   isSaved: boolean,
   onToggleSave?: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean
+}
+}
 }
 
 export function TalentCardSaveButton({ 

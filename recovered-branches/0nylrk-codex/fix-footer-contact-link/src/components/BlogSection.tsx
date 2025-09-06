@@ -12,6 +12,7 @@ const recentPosts = [...BLOG_POSTS]
     );
   })
   .slice(0, 3);
+}
 
 export function BlogSection() {
   return (

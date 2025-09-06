@@ -16,6 +16,7 @@ export interface BasicInfoFormProps {
   skills?: string[];
   yearsExperience?: number;
   onComplete?: () => void;
+}
 
 export function BasicInfoForm({
   resumeId,

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+}
 
 export const metadata = {
   title:
@@ -8,6 +9,7 @@ export const metadata = {
   keywords:
     'quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services',
 };
+}
 
 export default function QuantumServicesPage() {
   return (

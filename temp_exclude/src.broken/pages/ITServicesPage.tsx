@@ -1,4 +1,6 @@
- export default function ITServicesPage () {
+}
+
+export default function ITServicesPage () {
   const itServices = [ {
   benefits: [ "Reduced infrastructure costs", "Improved scalability",
 "Enhanced security posture";

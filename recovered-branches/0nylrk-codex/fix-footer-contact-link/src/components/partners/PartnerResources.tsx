@@ -24,6 +24,7 @@ interface ResourceItem {
   type: 'image' | 'video' | 'document' | 'link';
   icon: JSX.Element;
   url: string;
+}
 
 export function PartnerResources() {
   const resources: ResourceItem[] = [

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from useParams, useNavigate
 import { Header } from '@/components/Header';
@@ -33,6 +32,7 @@ interface Job {
   created_at: string;
   category: string;
   deadline?: string;
+}
 
 export default function JobDetails() {
   const router = useRouter(); // Init router
@@ -272,14 +272,3 @@ const isOwnJob = user?.id === job.client id;
   />) ;
 }</>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-
-
-  const isOwnJob = user?.id === job.client_id;
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

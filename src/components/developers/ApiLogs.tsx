@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import { List, RefreshCw } from 'lucide-react';
@@ -21,6 +20,7 @@ import {
 } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
 import { ApiLogsChart } from './ApiLogsChart';
+}
 
 export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
@@ -248,13 +248,3 @@ bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescript
 }</tbody> </table> </div> </div> <div className=" flex space-x-2" > <Button > Previous </Button> <Button > Next </Button> </div> </div>) ;
 }</CardContent> </Card>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-  
-<<<<<<< HEAD
-  const hasNextPage = currentPage < totalPages - 1;
-  const hasPrevPage = currentPage > 0;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

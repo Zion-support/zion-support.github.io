@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   Dialog;
@@ -14,6 +13,8 @@ interface AIEnhancementDialogProps {
   onApply: (content: string) => void,
   defaultOptions: AIEnhancementOptions,
   initialContent?: string
+}
+}
 }
 
 export function AIEnhancementDialog({

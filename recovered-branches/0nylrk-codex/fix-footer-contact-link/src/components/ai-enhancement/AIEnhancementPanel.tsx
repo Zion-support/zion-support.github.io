@@ -22,6 +22,7 @@ interface AIEnhancementPanelProps {
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string;
+}
 
 export function AIEnhancementPanel({
   title,

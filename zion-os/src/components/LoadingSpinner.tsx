@@ -3,6 +3,7 @@
 interface LoadingSpinnerProps {
   size?: 'small' | 'medium' | 'large';
   className?: string;
+}
 
 export function LoadingSpinner({
   size = 'medium',

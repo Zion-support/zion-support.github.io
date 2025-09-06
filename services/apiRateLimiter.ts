@@ -451,6 +451,8 @@ export class APIRateLimiterService {
   }
 
 // Pricing tiers for the API Rate Limiter service
+}
+
 export const API_RATE_LIMITER_PRICING = {
   starter: {
     name: 'Starter',
@@ -504,7 +506,6 @@ body: JSON.stringify (rule)
 }`;
 createdAt: new Date ();
 updatedAt: new Date () 
-
 
 }return [ {
   id: 'rule 1', name: 'API Endpoints', pattern: '/api/**', method: 'ALL', config: {
@@ -568,7 +569,6 @@ rateLimit;
 createdAt: new Date ();
 lastUsed: new Date ();
 isActive: true 
-
 
 }createdAt: new Date ();
 lastUsed: new Date ();

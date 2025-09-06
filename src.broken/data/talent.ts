@@ -1,4 +1,5 @@
 import type { TalentProfile } from '@/utils/types/talent';
+}
 
 export const TALENT_PROFILES: TalentProfile[] = [
   {

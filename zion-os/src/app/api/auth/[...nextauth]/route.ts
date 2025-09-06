@@ -17,8 +17,9 @@ const handler = NextAuth({
         if (!credentials?.email || !credentials?.password) {
           return null;
         }
+}
 
-        const user = await prisma.user.findUnique({
+const user = await prisma.user.findUnique({
           where: {
             email: credentials.email,
           },
@@ -27,8 +28,9 @@ const handler = NextAuth({
         if (!user || !user.password) {
           return null;
         }
+}
 
-        const isPasswordValid = await bcrypt.compare(
+const isPasswordValid = await bcrypt.compare(
           credentials.password,
           user.password
         );

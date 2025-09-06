@@ -133,6 +133,7 @@ const stats = [
   { number: '25+', label: 'Product Launches' },
   { number: '100+', label: 'Partnerships' }
 ];
+}
 
 export default function NewsPage() {
   return (

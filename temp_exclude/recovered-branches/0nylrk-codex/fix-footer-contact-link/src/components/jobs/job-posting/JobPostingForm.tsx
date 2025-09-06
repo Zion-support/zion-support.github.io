@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from "sonner";
@@ -15,6 +14,8 @@ import { JobSchemaType } from './validation';
 interface JobPostingFormProps {
   jobId?: string;
   onSuccess?: () => void
+}
+}
 }
 
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {

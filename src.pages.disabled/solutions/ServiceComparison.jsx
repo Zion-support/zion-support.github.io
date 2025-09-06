@@ -2,6 +2,7 @@ import React from 'react';
 
 interface ServiceComparison.jsProps {
   // Add props here as needed
+}
 
 export default function ServiceComparison.js({ }: ServiceComparison.jsProps) {
   return (

@@ -6,4 +6,6 @@ case 500: // Server errors - only for user-initiated actions case 502: case 503:
 };
 // Apply the global interceptor axios.interceptors.response.use ( (response: AxiosResponse) => response, globalAxiosErrorHandler),
 });
+}
+
 export default apiClient;

@@ -4,6 +4,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { toast } from 'sonner';
 import { Milestone } from './types';
 import { useRecordActivity } from './useRecordActivity';
+}
 
 export const useCreateMilestone = (projectId?: string) => {
   const { user } = useAuth();

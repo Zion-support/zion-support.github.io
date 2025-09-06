@@ -29,6 +29,7 @@ interface MilestonesListProps {
   isSubmitting: boolean;
   onApprove?: (id: string) => Promise<void>;
   onReject?: (id: string) => Promise<void>;
+}
 
 export const MilestonesList: React.FC<MilestonesListProps> = ({
   milestones,

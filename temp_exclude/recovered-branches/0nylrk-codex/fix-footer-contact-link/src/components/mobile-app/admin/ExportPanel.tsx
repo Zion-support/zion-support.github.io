@@ -9,6 +9,8 @@ interface ExportPanelProps {
   platform: AppPlatform,
   metadata: AppMetadataValues
 }
+}
+}
 
 export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) => {
   const handleExport = (format: 'json' | 'csv') => {

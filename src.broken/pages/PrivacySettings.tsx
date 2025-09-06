@@ -5,6 +5,7 @@ import { SEO } from '@/components/SEO';
 import { Switch } from '@/components/ui/switch';
 import { Button } from '@/components/ui/button';
 import { useConsent } from '@/context/ConsentContext';
+}
 
 export default function PrivacySettings() {
   const { consent, updateConsent } = useConsent();

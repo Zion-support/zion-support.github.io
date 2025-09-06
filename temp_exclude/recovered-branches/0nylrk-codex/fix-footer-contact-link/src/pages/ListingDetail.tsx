@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +11,8 @@ import { PaymentButton } from "@/components/transactions/PaymentButton";
 import { AppLayout } from "@/layout/AppLayout";
 import { ProfileContact } from "@/components/profile/ProfileContact";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+}
+}
 
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -41,8 +42,9 @@ export default function ListingDetail() {
       </AppLayout>
     )
   }
+}
 
-  const handleContact = () => {
+const handleContact = () => {
     setIsContactDialogOpen(true)
   };
 

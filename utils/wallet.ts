@@ -1,4 +1,6 @@
 export type WalletProvider = any;
+}
+}
 
 export function getEthereumProvider(): WalletProvider | null {
   if (typeof window === 'undefined') return null;
@@ -17,6 +19,7 @@ export async function connectMetaMask(): Promise<string[] | null> {
   } catch (e) {
     return null;
   }
+}
 
 export async function getAccounts(): Promise<string[] | null> {
   const provider = getEthereumProvider();

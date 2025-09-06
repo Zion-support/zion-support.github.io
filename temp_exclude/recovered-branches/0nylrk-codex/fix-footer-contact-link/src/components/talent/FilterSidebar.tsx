@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Filter } from "lucide-react";
@@ -10,6 +9,8 @@ import { RegionFilter } from "./filters/RegionFilter";
 import { ExperienceFilter } from "./filters/ExperienceFilter";
 import { PriceFilter } from "./filters/PriceFilter";
 import { FilterSidebarProps } from "@/types/filters";
+}
+
 export function FilterSidebar({
   searchTerm;
   setSearchTerm;

@@ -18,6 +18,7 @@ interface ApplicationActionsProps {
     applicationId: string,
     newStatus: ApplicationStatus
   ) => Promise<void>;
+}
 
 export function ApplicationActions({
   application,

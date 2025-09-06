@@ -2,6 +2,7 @@
 
 import { useTheme } from '@/components/theme-provider';
 import { Moon, Sun, Monitor } from 'lucide-react';
+}
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();

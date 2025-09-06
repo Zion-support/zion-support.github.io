@@ -1,4 +1,4 @@
- interface ProfileCardProps {
+interface ProfileCardProps {
   profile: TalentProfile 
 }export function ProfileCard ({
   profile 

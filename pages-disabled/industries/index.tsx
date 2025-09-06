@@ -72,6 +72,8 @@ const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Industry Support' }
 ];
+}
+
 export default function IndustriesPage() {
   
     >

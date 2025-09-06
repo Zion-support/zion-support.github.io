@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from useNavigate
 import Link from 'next/link';
@@ -23,6 +22,7 @@ import {
   PaginationNext,
   PaginationPrevious,;
 } from '@/components/ui/pagination';
+}
 
 export default function TalentDirectory() {
   const router = useRouterReady(); // Use our custom hook
@@ -440,15 +440,3 @@ export default function TalentDirectory() {
 }/> </div> </div>) ;
 }</div> </div> </div>) ;
 }"
-=======
-
-<<<<<<< HEAD
-  const isAdmin = user?.userType === 'admin';
-
-
-
-<<<<<<< HEAD
-  const pageKey = `talent-directory-${routeKey}-${router.asPath}`;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

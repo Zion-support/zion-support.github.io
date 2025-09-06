@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
@@ -14,6 +13,8 @@ interface AIEnhancementPanelProps {
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string
+}
+}
 }
 
 export function AIEnhancementPanel({

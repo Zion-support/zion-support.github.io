@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
@@ -12,6 +11,8 @@ import { Link } from "react-router-dom";
 interface JobsListProps {
   filter?: JobStatus;
   onSelectJob?: (jobId: string, jobTitle: string) => void
+}
+}
 }
 
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
@@ -33,8 +34,9 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         if (filter) {
           query = query.eq("status", filter)
         }
+}
 
-        const { data, error } = await query;
+const { data, error } = await query;
 
         if (error) throw error;
         setJobs(data as Job[])

@@ -22,6 +22,7 @@ import { toast } from 'sonner';
 interface ApplyToJobFormProps {
   job: Job;
   onSuccess?: () => void;
+}
 
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const { user } = useAuth();

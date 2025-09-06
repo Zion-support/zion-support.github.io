@@ -102,6 +102,8 @@ const mockReplies: ForumReply[] = [
     downvotes: 0,
   },
 ];
+}
+}
 
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
@@ -132,8 +134,9 @@ export default function ForumPostPage() {
       </AppLayout>
     );
   }
+}
 
-  const handleUpvote = () => {
+const handleUpvote = () => {
     if (!user) {
       toast({
         title: 'Authentication required',

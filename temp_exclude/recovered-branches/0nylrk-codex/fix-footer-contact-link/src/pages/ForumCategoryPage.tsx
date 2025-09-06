@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -230,6 +229,8 @@ const iconMap = {
   "FileText": FileText;
   "Megaphone": Megaphone
 };
+}
+}
 
 export default function ForumCategoryPage() {
   // useParams is typed as `any` in this environment due to missing type
@@ -250,8 +251,9 @@ export default function ForumCategoryPage() {
       </AppLayout>
     )
   }
-  
-  const category = categoriesInfo[categoryId];
+}
+
+const category = categoriesInfo[categoryId];
   const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare;
   const posts = postsByCategory[categoryId] || [];
   

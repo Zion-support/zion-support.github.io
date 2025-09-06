@@ -2,6 +2,8 @@ import React from 'react';
 interface ProfileHeroProps {
   // Add props here as needed
 }
+}
+
 export default function ProfileHero({ }: ProfileHeroProps) {
   return (
     <div>

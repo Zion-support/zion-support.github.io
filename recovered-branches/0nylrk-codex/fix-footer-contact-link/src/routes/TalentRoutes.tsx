@@ -34,5 +34,6 @@ const TalentRoutes = () => {
     </Routes>
   );
 };
+}
 
 export default TalentRoutes;

@@ -232,8 +232,9 @@ function ProjectDetailsContent() {
     navigate('/unauthorized');
     return null;
   }
+}
 
-  const isOfferPending = project.status === 'offer_sent';
+const isOfferPending = project.status === 'offer_sent';
   const isOfferAccepted = [
     'offer_accepted',
     'in_progress',
@@ -757,7 +758,6 @@ status: newStatus
 //If offer was accepted, show a special toast if (newStatus === "offer accepted") {
   toast ({
   
-
 
 };
 case "offer accepted": return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;

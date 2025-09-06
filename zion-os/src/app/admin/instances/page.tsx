@@ -17,6 +17,7 @@ interface Instance {
   };
   region: string;
   version: string;
+}
 
 export default function InstancesPage() {
   const [instances, setInstances] = useState<Instance[]>([]);

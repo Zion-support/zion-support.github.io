@@ -9,6 +9,7 @@ import {
   DropdownMenuTrigger,;
 } from '@/components/ui/dropdown-menu';
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
+}
 
 export function LanguageSelector() {
   const { t } = useTranslation();

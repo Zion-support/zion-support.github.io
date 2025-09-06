@@ -9,6 +9,7 @@ const UnitContext = createContext<UnitContextState>({
   setUnit: () => {},
   toggleUnit: () => {},
 });
+}
 
 export function UnitProvider({ children }: { children: ReactNode }) {
   const [unit, setUnit] = useLocalStorage<UnitSystem>(
@@ -21,5 +22,6 @@ export function UnitProvider({ children }: { children: ReactNode }) {
       {children}
     </UnitContext.Provider>
   );
+}
 
 export const useUnitSystem = () => useContext(UnitContext);

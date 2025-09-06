@@ -7,6 +7,8 @@ import { HELP_CATEGORIES } from './help-content';
 
 interface HelpArticleViewProps {
   articleId: string;
+}
+}
 
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<
@@ -21,8 +23,9 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   if (!article) {
     return <div>Article not found</div>;
   }
+}
 
-  const handleFeedback = (type: 'helpful' | 'not-helpful') => {
+const handleFeedback = (type: 'helpful' | 'not-helpful') => {
     setFeedbackGiven(type);
 
     // In a real implementation, this would send feedback to the server

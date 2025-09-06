@@ -1,4 +1,3 @@
-
 export type ProjectStatus = 
   | 'offer_sent'
   | 'offer_accepted'
@@ -36,4 +35,3 @@ export interface ProjectNote {
     display_name: string,
     avatar_url?: string
   }
-}

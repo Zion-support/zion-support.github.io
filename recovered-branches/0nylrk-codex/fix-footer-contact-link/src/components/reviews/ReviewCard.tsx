@@ -19,6 +19,7 @@ import { Textarea } from '@/components/ui/textarea';
 interface ReviewCardProps {
   review: Review;
   onReport: (reviewId: string, reason: string) => Promise<boolean>;
+}
 
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
   const [reportReason, setReportReason] = useState('');

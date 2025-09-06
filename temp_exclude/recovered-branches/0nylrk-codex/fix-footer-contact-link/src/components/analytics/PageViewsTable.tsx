@@ -1,4 +1,3 @@
-
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -14,6 +13,8 @@ const timeRangeToInterval = {
   '90d': { days: 90, interval: 'week' },
   '365d': { days: 365, interval: 'month' }
 };
+}
+}
 
 export function PageViewsTable() {
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');

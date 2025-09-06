@@ -30,6 +30,8 @@ function resolveHref(href: Href): string {
   if (typeof href === 'string') return href;
   return href?.pathname || (href as { href?: string })?.href || '#';
 }
+}
+}
 
 export default function Link({ href, children, className, ...rest }: LinkProps) {
   const resolved = resolveHref(href);

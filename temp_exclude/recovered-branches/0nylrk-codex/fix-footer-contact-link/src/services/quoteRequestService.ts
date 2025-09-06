@@ -1,6 +1,8 @@
 
 import { supabase } from "@/integrations/supabase/client";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+}
+}
 
 export const quoteRequestService = {
   // Get all quote requests (for admin)

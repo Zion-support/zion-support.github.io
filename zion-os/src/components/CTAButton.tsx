@@ -10,6 +10,7 @@ interface CTAButtonProps {
   children: ReactNode;
   className?: string;
   onClick?: () => void;
+}
 
 export function CTAButton({
   href,

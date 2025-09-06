@@ -1,4 +1,5 @@
 import Link from 'next/link';
+}
 
 export const metadata = {
   title: 'Documentation - Zion Tech Group | Technical Guides & Resources',
@@ -7,6 +8,7 @@ export const metadata = {
   keywords:
     'documentation, technical guides, API docs, tutorials, Zion Tech Group, developer resources, technical resources',
 };
+}
 
 export default function DocumentationPage() {
   return (

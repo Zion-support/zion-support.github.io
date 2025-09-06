@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   Table;
@@ -12,6 +11,8 @@ import { Badge } from "@/components/ui/badge";
 import { Download, FileText, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
+}
+
 export function InvoiceHistory() {
   // Mock invoice data
   const invoices = [

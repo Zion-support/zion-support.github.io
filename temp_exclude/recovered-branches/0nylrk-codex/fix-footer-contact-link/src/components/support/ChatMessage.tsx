@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
@@ -8,6 +7,8 @@ interface ChatMessageProps {
   message: string,
   isUser: boolean,
   timestamp: Date
+}
+}
 }
 
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {

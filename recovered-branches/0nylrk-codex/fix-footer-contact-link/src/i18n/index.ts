@@ -51,5 +51,6 @@ i18n.on('languageChanged', lng => {
   // If user is authenticated, save language preference to profile
   // This will be implemented in the LanguageContext
 });
+}
 
 export default i18n;

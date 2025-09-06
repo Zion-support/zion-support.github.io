@@ -96,12 +96,16 @@ const industries = [
   { name: 'Education', icon: BookOpen, description: 'Digital learning platforms and student management' },
   { name: 'Government', icon: Building, description: 'Citizen services and administrative efficiency' }
 ];
+}
+
 export default function DigitalTransformation() {
 import React from 'react';
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Rocket, RefreshCw, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+}
+
 export default function DigitalTransformationPage() {
   const transformationServices = [;
     {}

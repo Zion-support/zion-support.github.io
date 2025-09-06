@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useResume } from '@/hooks/useResume';
@@ -18,6 +17,7 @@ import { ResumeStepContent } from './ResumeStepContent';
 import { useResumeProgress } from './useResumeProgress';
 import { ResumeVersionSelector } from './ResumeVersionSelector';
 import { RESUME_STEPS } from './constants';
+}
 
 export function ResumeWizard() {
   const { user } = useAuth();
@@ -92,7 +92,7 @@ export function ResumeWizard() {
   }
 
   if (showNewResumeForm) {
-    
+
         onCancel={() => setShowNewResumeForm(false)}
         isLoading={isLoading}
       />
@@ -160,7 +160,7 @@ export function ResumeWizard() {
 }</AlertDescription> </Alert>) ;
 
 }if (showNewResumeForm) {;
-  
+
   () => setShowNewResumeForm (false) ;
 }isLoading= {;
   isLoading ;
@@ -187,9 +187,3 @@ export function ResumeWizard() {
 }/>) ;
 }</Tabs> </CardContent> </Card> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

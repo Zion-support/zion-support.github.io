@@ -5,6 +5,8 @@ interface ReputationDisplayProps {
   reputation: number,
   size?: 'sm' | 'md' | 'lg'
 }
+}
+}
 
 export const ReputationDisplay = ({ 
   reputation;
@@ -50,5 +52,7 @@ export const ReputationDisplay = ({
     </div>
   )
 };
+}
+}
 
 export default ReputationDisplay;

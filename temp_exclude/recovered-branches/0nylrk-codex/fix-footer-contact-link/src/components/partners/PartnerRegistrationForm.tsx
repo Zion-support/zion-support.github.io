@@ -24,6 +24,7 @@ const partnerFormSchema = z.object({
   bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),
 
 type PartnerFormValues = z.infer<typeof partnerFormSchema>;
+}
 
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);

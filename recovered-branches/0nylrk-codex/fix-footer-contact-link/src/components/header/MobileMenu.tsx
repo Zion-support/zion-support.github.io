@@ -16,6 +16,7 @@ import { Button } from '@/components/ui/button';
 export interface MobileMenuProps {
   unreadCount?: number;
   onClose: () => void;
+}
 
 export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
   const location = useLocation();

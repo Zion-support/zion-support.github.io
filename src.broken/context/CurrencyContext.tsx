@@ -17,6 +17,7 @@ function readCookie(name: string): string | null {
 
 function writeCookie(name: string, value: string) {
   document.cookie = `${name}=${encodeURIComponent(value)}; path=/; max-age=${60 * 60 * 24 * 30}`;
+}
 
 export const CurrencyProvider: React.FC<{ children: React.ReactNode }> = ({
   children,

@@ -2,6 +2,7 @@ import React from 'react';
 
 interface ServiceRecommendations.jsProps {
   // Add props here as needed
+}
 
 export default function ServiceRecommendations.js({ }: ServiceRecommendations.jsProps) {
   return (

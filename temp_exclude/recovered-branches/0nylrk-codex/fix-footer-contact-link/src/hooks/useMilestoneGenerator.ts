@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
@@ -12,6 +11,7 @@ export interface GeneratedMilestone {
   title: string, description: string,
   dueDate: string, estimatedHours: number,
   isAiGenerated: boolean
+}
 }
 
 export function useMilestoneGenerator() {

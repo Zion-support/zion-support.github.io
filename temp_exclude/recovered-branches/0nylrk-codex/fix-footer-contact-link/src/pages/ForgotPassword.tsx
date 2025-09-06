@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm, type UseFormReturn } from "react-hook-form";
@@ -22,6 +21,7 @@ const forgotPasswordSchema = z.object({
   email: z.string().email("Please enter a valid email")}),
 
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
+}
 
 export default function ForgotPassword() {
   const { resetPassword, isLoading } = useAuth();

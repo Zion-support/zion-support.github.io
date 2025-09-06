@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -12,6 +11,8 @@ import { HeroSection } from "@/components/HeroSection";
 import { QuickAccess } from "@/components/home/QuickAccess";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">

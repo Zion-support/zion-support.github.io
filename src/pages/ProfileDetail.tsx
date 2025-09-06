@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { supabase } from '@/integrations/supabase/client';
@@ -28,6 +27,8 @@ import {
   Globe,;
 } from 'lucide-react';
 import { HireNowCTA } from '@/components/profile/HireNowCTA';
+}
+}
 
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
@@ -47,8 +48,9 @@ export default function ProfileDetail() {
           setError('Profile ID is missing.');
           return;
         }
+}
 
-        const { data, error } = await supabase
+const { data, error } = await supabase
           .from('talent_profiles')
           .select('*')
           .eq('id', profileId)
@@ -399,9 +401,3 @@ export default function ProfileDetail() {
 }target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="LinkedIn" title="LinkedIn" > <Linkedin className="h-4 w-4" /> LinkedIn </Link>) ;
 }</div> </div> </div> </div> </div> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

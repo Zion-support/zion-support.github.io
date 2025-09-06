@@ -1,4 +1,3 @@
-
 import React from "react";
 import { WorkspaceHeader } from "./WorkspaceHeader";
 import { SharedInbox } from "./SharedInbox";
@@ -24,6 +23,8 @@ export interface Company {
 
 interface CompanyDashboardProps {
   company: Company
+}
+}
 }
 
 export function CompanyDashboard({ company }: CompanyDashboardProps) {

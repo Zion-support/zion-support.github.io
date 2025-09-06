@@ -7,6 +7,7 @@ interface StickyActionProps {
   children: React.ReactNode;
   showAfterScroll?: number;
   position?: 'bottom' | 'top';
+}
 
 export function StickyAction({
   className,

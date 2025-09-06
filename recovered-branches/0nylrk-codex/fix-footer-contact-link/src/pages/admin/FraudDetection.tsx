@@ -15,6 +15,7 @@ import {
   FraudFlagsTable,
   FraudTabContent,;
 } from '@/components/admin/fraud-detection';
+}
 
 export default function FraudDetection() {
   const [flags, setFlags] = useState<FraudFlag[]>([]);

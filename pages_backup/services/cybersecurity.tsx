@@ -3,6 +3,8 @@ import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Eye, Shield, Lock, AlertTriangle } from 'lucide-react';
+}
+
 export default function CybersecurityPage() {
   const securityServices = [;
     {}
@@ -162,9 +164,13 @@ const benefits = [
   'Lower insurance costs and liability',
   'Peace of mind with 24/7 monitoring'
 ];
+}
+
 export default function CybersecurityServices() {
+}
 
 export default function CybersecurityPage() {
+}
 
 export default function CybersecurityPage() {
   
@@ -271,7 +277,6 @@ export default function CybersecurityPage() {
             </div>
           </div>
         </section>
-
 
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">

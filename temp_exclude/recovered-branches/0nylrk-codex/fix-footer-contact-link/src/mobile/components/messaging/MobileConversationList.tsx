@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -20,6 +19,8 @@ interface MobileConversationListProps {
   conversations: Conversation[],
   activeConversation?: string;
   onSelectConversation: (id: string) => void
+}
+}
 }
 
 export function MobileConversationList({

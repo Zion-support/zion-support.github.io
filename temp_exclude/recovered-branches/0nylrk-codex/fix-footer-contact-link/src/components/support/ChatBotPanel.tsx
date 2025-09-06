@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -22,6 +21,7 @@ type Message = {
   sender: "user" | "bot",
   timestamp: Date
 };
+}
 
 export function ChatBotPanel() {
   const [messages, setMessages] = useState<Message[]>([

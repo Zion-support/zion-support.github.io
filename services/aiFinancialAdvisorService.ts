@@ -451,6 +451,8 @@ export class AIFinancialAdvisorService {
       throw error;
     }
   }
+}
+}
 
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(
   process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key'

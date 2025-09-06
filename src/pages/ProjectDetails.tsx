@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -238,8 +237,9 @@ function ProjectDetailsContent() {
     router.push('/unauthorized');
     return null;
   }
+}
 
-  const isOfferPending = project.status === 'offer_sent';
+const isOfferPending = project.status === 'offer_sent';
   const isOfferAccepted = [
     'offer_accepted',
     'in_progress',
@@ -774,7 +774,6 @@ status: newStatus ;
   toast ({;
   ;
 
-
 };";
 case "offer accepted": return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;";
 case "changes requested": return <Badge variant="secondary">Changes Requested</Badge>;";
@@ -839,23 +838,3 @@ default: return <Badge variant="outline"> {;
 }</Card> </div> </div> </main> </>) ;
 }export default function ProjectDetails () {;
   return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute> '"
-=======
-
-<<<<<<< HEAD
-
-        .order("created_at", { ascending: false }),
-      
-
-<<<<<<< HEAD
-
-      
-
-    if (!project) return;
-    
-<<<<<<< HEAD
-
-        ...project;
-        status: newStatus}),
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -6,6 +6,7 @@ type EnhancementType =
   | 'work-description'
   | 'skill-categorization'
   | 'general';
+}
 
 export function useResumeEnhancer() {
   const [isEnhancing, setIsEnhancing] = useState(false);

@@ -10,6 +10,8 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
+}
+}
 
 export default function MessagingInbox() {
   const {
@@ -43,8 +45,9 @@ export default function MessagingInbox() {
       toast.error('Please select a conversation first');
       return;
     }
+}
 
-    const roomId = `msg-${activeConversation.id}`;
+const roomId = `msg-${activeConversation.id}`;
     setActiveCall(roomId);
 
     // Show toast notification

@@ -125,7 +125,7 @@ const stats = [;
   { number: '99.9%, label: 'Uptime Guarantee' },',
   { number: '24/7, label: 'Industry Support' }',
 ;];
-
+}
 
 export default function IndustriesPage() {
   return (;
@@ -181,6 +181,7 @@ const industries = [
     features: ['Citizen Services', 'Data Security', 'Digital Transformation']
   }
 ]
+}
 
 export default function Industries() {
   
@@ -200,7 +201,6 @@ export default function Industries() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";
           </div>;
-
 
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
@@ -315,7 +315,6 @@ export default function Industries() {
               </p>
             </motion.div>
 
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {industries.map((industry, index) => {}
                 const IconComponent = industry.icon;
@@ -429,7 +428,6 @@ export default function Industries() {
             <motion.div
               className="text-center mb-16"
 
-
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
             <motion.div;
@@ -454,7 +452,6 @@ export default function Industries() {
                 We combine deep industry knowledge with cutting-edge technology to deliver solutions that truly understand your business.;
               </p>;
             </motion.div>;
-
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
@@ -506,7 +503,6 @@ export default function Industries() {
                   maintain the highest security standards.;
                 </p>;
               </motion.div>;
-
 
               <motion.div
                 className="text-center p-8"

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react";
 import { format } from "date-fns";
@@ -16,6 +15,8 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 
 import CodeBlock from "./CodeBlock";
+}
+
 export function ApiKeysManager() {
   const { 
     keys;

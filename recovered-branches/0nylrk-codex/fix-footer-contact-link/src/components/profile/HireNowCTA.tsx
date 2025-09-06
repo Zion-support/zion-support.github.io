@@ -10,6 +10,7 @@ interface HireNowCTAProps {
     professional_title?: string;
     hourly_rate?: number;
   };
+}
 
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
   const [modalOpen, setModalOpen] = useState(false);

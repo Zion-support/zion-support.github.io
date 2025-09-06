@@ -15,8 +15,9 @@ serve(async (req) => {
     if (!openAIApiKey) {
       throw new Error("OpenAI API key is not set in environment variables")
     }
+}
 
-    const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json();
+const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json();
     
     if (!prompt) {
       throw new Error("Prompt is required")

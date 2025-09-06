@@ -31,5 +31,7 @@ export class HealthChecker {
       timestamp: new Date().toISOString()
     };
   }
+}
+}
 
 export const healthChecker = new HealthChecker();

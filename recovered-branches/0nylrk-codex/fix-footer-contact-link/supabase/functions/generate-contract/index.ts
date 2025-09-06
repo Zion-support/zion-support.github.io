@@ -157,8 +157,9 @@ serve(async req => {
     if (!response.ok) {
       throw new Error(data.error?.message || 'Failed to generate contract');
     }
+}
 
-    const contract = data.choices[0].message.content.trim();
+const contract = data.choices[0].message.content.trim();
 
     return new Response(
       JSON.stringify({

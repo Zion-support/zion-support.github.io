@@ -35,8 +35,9 @@ serve(async (req) => {
     if (!openAIApiKey) {
       throw new Error("OpenAI API key is not set in environment variables")
     }
+}
 
-    const { contentType, prompt, topic, autoPublish, includeImage } = await req.json() as ContentGenerationRequest;
+const { contentType, prompt, topic, autoPublish, includeImage } = await req.json() as ContentGenerationRequest;
     
     // Default topic if none provided
     const contentTopic = topic || "AI freelancing marketplace trends";
@@ -121,8 +122,9 @@ serve(async (req) => {
       if (!supabaseUrl || !supabaseKey) {
         throw new Error("Supabase credentials are not set in environment variables")
       }
-      
-      const supabase = createClient(supabaseUrl, supabaseKey);
+}
+
+const supabase = createClient(supabaseUrl, supabaseKey);
       
       // Create slug from title
       const slug = generatedContent.title

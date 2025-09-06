@@ -1,4 +1,3 @@
-
 import { JobData, TalentProfile, MatchResult } from "./types.ts";
 
 // Get openAI API key from environment variables
@@ -152,6 +151,9 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
  * @param talents Array of talent profiles
  * @returns Array of matches with scores
  */
+}
+}
+
 export function performBasicSkillMatching(jobDetails: any, talents: TalentProfile[]): MatchResult[] {
   const requiredSkills = jobDetails.skills.map((skill: string) => skill.toLowerCase()),
   return talents.map(talent => {

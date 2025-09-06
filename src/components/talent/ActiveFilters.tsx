@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { ClickableBadge } from '@/components/ui/clickable-badge';
 import { Button } from '@/components/ui/button';
@@ -16,6 +15,7 @@ interface ActiveFiltersProps {
   experienceRange: [number, number];
   setExperienceRange: (range: [number, number]) => void;
   clearFilters: () => void;
+}
 
 export function ActiveFilters({
   selectedSkills,
@@ -113,7 +113,3 @@ export function ActiveFilters({
       </Button>
     </div>
   );
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

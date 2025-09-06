@@ -11,6 +11,7 @@ import { ContractFormValues } from './ContractForm';
 
 interface AdditionalClausesFieldsProps {
   form: UseFormReturn<ContractFormValues>;
+}
 
 export function AdditionalClausesFields({
   form,

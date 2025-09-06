@@ -300,6 +300,7 @@ const itServices: ITService[] = [
     ],
   },
 ];
+}
 
 export default function ITSolutionsPage() {
   return (

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation";
@@ -72,6 +71,7 @@ const mockMessages: Message[] = [
     timestamp: "10:45 AM",
     isMe: false,
     status: "read"}],
+}
 
 export function MobileMessages() {
   const [activeConversation, setActiveConversation] = useState<string | null>(null);

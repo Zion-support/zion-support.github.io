@@ -19,6 +19,7 @@ import {
   Twitter,
   Github,;
 } from 'lucide-react';
+}
 
 export default function AIServicesPage() {
   const aiServices = [

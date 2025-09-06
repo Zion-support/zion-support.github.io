@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -21,6 +20,7 @@ interface FraudFiltersProps {
   contentTypeFilter: string | null;
   setContentTypeFilter: (value: string | null) => void;
   resetFilters: () => void;
+}
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
   searchQuery,
@@ -100,10 +100,3 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   );
 };
 '"
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -32,6 +32,7 @@ isHost?: boolean
   onToggleVideo?: (isEnabled: boolean) => void;
   onToggleScreenShare?: (isSharing: boolean) => void;
   className?: string;
+}
 
 export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   roomId,

@@ -10,4 +10,3 @@ fs.mkdirSync (outDir, {
 if (gen?.slug && gen?.payload) {
   
 
-

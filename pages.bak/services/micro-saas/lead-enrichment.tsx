@@ -4,6 +4,7 @@ import React from 'react';
 
 interface LeadenrichmentProps {
   // Add props here as needed
+}
 
 export default function Leadenrichment({ }: LeadenrichmentProps) {
   return (
@@ -12,5 +13,4 @@ export default function Leadenrichment({ }: LeadenrichmentProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 

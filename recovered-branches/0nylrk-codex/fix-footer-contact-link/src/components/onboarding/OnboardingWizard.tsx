@@ -28,6 +28,7 @@ interface OnboardingWizardProps {
   onComplete: () => void;
   onSkip: () => void;
   className?: string;
+}
 
 export function OnboardingWizard({
   type,

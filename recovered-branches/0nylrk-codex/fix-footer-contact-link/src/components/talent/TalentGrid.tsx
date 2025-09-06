@@ -11,6 +11,7 @@ export interface TalentGridProps {
   viewProfile?: (id: string) => void;
   clearFilters?: () => void;
   handleRequestHire?: (talent: TalentProfile) => void;
+}
 
 export function TalentGrid({
   talents,

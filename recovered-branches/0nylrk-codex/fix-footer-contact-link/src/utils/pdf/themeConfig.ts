@@ -7,6 +7,7 @@ export interface PdfThemeColors {
   heading: string;
   subheading: string;
   accent: string;
+}
 
 export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {
   return theme === 'light'

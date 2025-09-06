@@ -58,6 +58,7 @@ import {
   Microscope,
   Binoculars
 } from 'lucide-react';
+}
 
 export default function AIHealthcarePlatform() {
   const features = [

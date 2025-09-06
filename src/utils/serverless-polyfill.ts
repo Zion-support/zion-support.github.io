@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-this-alias */
@@ -276,6 +275,9 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {
   });
 
 // Export a verification function for testing
+}
+}
+
 export const verifyPolyfills = () => {
   const checks = {
     selfDefined: typeof self !== 'undefined',
@@ -295,18 +297,10 @@ export const verifyPolyfills = () => {
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
   //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
   ;
+}
+}
+}
 
 export default {}; // Ensure this can be imported as a module
   ;
 }, // Ensure this can be imported as a module'"
-=======
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-
-  const originalOnUnhandledRejection = window.onunhandledrejection;
-<<<<<<< HEAD
-    selfDefined: typeof self !== 'undefined', webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),
-    tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -8,6 +8,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 interface PreviewHeaderProps {
   resume: Resume;
   onBack: () => void;
+}
 
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
   const [isPrinting, setIsPrinting] = useState(false);

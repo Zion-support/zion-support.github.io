@@ -1,13 +1,14 @@
-<<<<<<< HEAD
 import { randomUUID } from 'crypto';
 import { tokenStore } from './storage';
 import { TokenTransaction, WalletSummary } from './types';
+}
 
 export function getWalletSummary(userId: string): WalletSummary {
   const wallet = tokenStore.getWallet(userId);
   const transactions = tokenStore.getTransactions(userId);
   const config = tokenStore.getConfig();
   return { wallet, transactions, config };
+}
 
 export function earnTokens(
   userId: string,
@@ -30,6 +31,7 @@ export function earnTokens(
   };
   tokenStore.addTransaction(tx);
   return tx;
+}
 
 export function burnTokens(
   userId: string,
@@ -53,6 +55,7 @@ export function burnTokens(
   };
   tokenStore.addTransaction(tx);
   return tx;
+}
 
 export function issueTokens(
   userId: string,
@@ -62,6 +65,7 @@ export function issueTokens(
   const tx = earnTokens(userId, amount, reason);
   tx.type = 'issue';
   return tx;
+}
 
 export function revokeTokens(
   userId: string,
@@ -71,6 +75,7 @@ export function revokeTokens(
   const tx = burnTokens(userId, amount, reason);
   tx.type = 'revoke';
   return tx;
+}
 
 export function handleAction(
   userId: string,
@@ -81,6 +86,7 @@ export function handleAction(
   const amount = earnRules[action];
   if (!amount) throw new Error('Unknown action');
   return earnTokens(userId, amount, action, metadata);
+}
 
 export function burnForFeature(
   userId: string,
@@ -91,6 +97,7 @@ export function burnForFeature(
   const amount = burnRules[feature];
   if (!amount) throw new Error('Unknown feature');
   return burnTokens(userId, amount, feature, metadata);
+}
 
 export function redeemToCredits(
   userId: string,
@@ -101,114 +108,18 @@ export function redeemToCredits(
   tx.type = 'redeem';
   const usd = parseFloat((amount * usdPerToken).toFixed(2));
   return { tx, usd };
+}
 
 export function getAllTransactions() {
   return tokenStore.getTransactions();
+}
 
 export function getConfig() {
   return tokenStore.getConfig();
+}
 
 export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>
 ): void {
   const current = tokenStore.getConfig();
   tokenStore.setConfig({ ...current, ...partial });
-=======
-// Token service utilities
-export interface TokenConfig {
-  id: string;
-  name: string;
-  symbol: string;
-  decimals: number;
-  totalSupply: string;
-  contractAddress?: string;
-  network: string;
-  isActive: boolean;
-  createdAt: Date;
-  updatedAt: Date;
-}
-
-export interface TokenBalance {
-  address: string;
-  balance: string;
-  tokenId: string;
-  lastUpdated: Date;
-}
-
-// Mock database - in production, this would connect to a real database
-const tokenConfigs: TokenConfig[] = [];
-const tokenBalances: TokenBalance[] = [];
-
-export async function createTokenConfig(config: Omit<TokenConfig, 'id' | 'createdAt' | 'updatedAt'>): Promise<TokenConfig> {
-  const newConfig: TokenConfig = {
-    ...config,
-    id: `token_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  };
-  tokenConfigs.push(newConfig);
-  return newConfig;
-}
-
-export async function getTokenConfig(id: string): Promise<TokenConfig | null> {
-  return tokenConfigs.find(config => config.id === id) || null;
-}
-
-export async function getAllTokenConfigs(): Promise<TokenConfig[]> {
-  return [...tokenConfigs];
-}
-
-export async function updateTokenConfig(id: string, updates: Partial<TokenConfig>): Promise<TokenConfig | null> {
-  const configIndex = tokenConfigs.findIndex(config => config.id === id);
-  if (configIndex === -1) return null;
-  
-  tokenConfigs[configIndex] = {
-    ...tokenConfigs[configIndex],
-    ...updates,
-    updatedAt: new Date(),
-  };
-  return tokenConfigs[configIndex];
-}
-
-export async function deleteTokenConfig(id: string): Promise<boolean> {
-  const configIndex = tokenConfigs.findIndex(config => config.id === id);
-  if (configIndex === -1) return false;
-  
-  tokenConfigs.splice(configIndex, 1);
-  return true;
-}
-
-export async function getTokenBalance(address: string, tokenId: string): Promise<TokenBalance | null> {
-  return tokenBalances.find(balance => 
-    balance.address === address && balance.tokenId === tokenId
-  ) || null;
-}
-
-export async function updateTokenBalance(address: string, tokenId: string, balance: string): Promise<TokenBalance> {
-  const existingIndex = tokenBalances.findIndex(b => 
-    b.address === address && b.tokenId === tokenId
-  );
-  
-  const balanceData: TokenBalance = {
-    address,
-    balance,
-    tokenId,
-    lastUpdated: new Date(),
-  };
-  
-  if (existingIndex >= 0) {
-    tokenBalances[existingIndex] = balanceData;
-  } else {
-    tokenBalances.push(balanceData);
-  }
-  
-  return balanceData;
-}
-
-export async function getAllTokenBalances(address?: string): Promise<TokenBalance[]> {
-  if (address) {
-    return tokenBalances.filter(balance => balance.address === address);
-  }
-  return [...tokenBalances];
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

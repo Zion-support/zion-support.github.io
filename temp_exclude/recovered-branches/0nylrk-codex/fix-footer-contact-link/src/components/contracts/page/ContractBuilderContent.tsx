@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { SmartContractBuilder } from '@/components/contracts/SmartContractBuilder';
 import { ContractBuilder } from '@/components/contracts/ContractBuilder';
@@ -16,6 +15,7 @@ const mockTalent: TalentProfile = {
   hourly_rate: 85,
   profile_picture_url: '',
   skills: ['ReactNode.jsSmart Contracts']},
+}
 
 export function ContractBuilderContent() {
   const { user } = useAuth();

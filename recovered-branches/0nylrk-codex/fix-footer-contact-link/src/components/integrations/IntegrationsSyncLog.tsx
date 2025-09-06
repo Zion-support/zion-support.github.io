@@ -53,6 +53,7 @@ const syncLogs = [
     details: "Updated candidate status to 'Interview Scheduled'",
   },
 ];
+}
 
 export function IntegrationsSyncLog() {
   const getStatusBadge = (status: string) => {

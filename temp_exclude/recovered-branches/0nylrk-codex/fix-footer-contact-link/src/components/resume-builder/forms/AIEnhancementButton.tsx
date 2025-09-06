@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2 } from 'lucide-react';
@@ -10,6 +9,8 @@ interface AIEnhancementButtonProps {
   onEnhanced: (enhancedContent: string) => void,
   buttonText?: string;
   className?: string
+}
+}
 }
 
 export function AIEnhancementButton({

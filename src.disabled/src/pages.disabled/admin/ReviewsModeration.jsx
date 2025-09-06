@@ -1,6 +1,7 @@
 import React from 'react';
 interface ReviewsModerationProps {
   // Add props here as needed
+}
 
 export default function ReviewsModeration({ }: ReviewsModerationProps) {
   return (

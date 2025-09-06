@@ -4,6 +4,7 @@ import React from 'react';
 
 interface RatingStars.testProps {
   // Add props here as needed
+}
 
 export default function RatingStars.test({ }: RatingStars.testProps) {
   return (
@@ -12,5 +13,4 @@ export default function RatingStars.test({ }: RatingStars.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 

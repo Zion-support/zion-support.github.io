@@ -28,6 +28,7 @@ import {
   BarChart3,
   Smartphone,;
 } from 'lucide-react';
+}
 
 export default function Index() {
   const { t } = useTranslation();

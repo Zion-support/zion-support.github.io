@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -33,6 +32,7 @@ const TIMELINE_OPTIONS = [
   { label: "1-3 months", value: "1-3months" },
   { label: "3-6 months", value: "3-6months" },
   { label: "6+ months", value: "6+months" }],
+}
 
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
   const [formData, setFormData] = useState({

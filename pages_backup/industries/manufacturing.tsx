@@ -131,6 +131,8 @@ const benefits = [
     icon: BarChart3;
   }
 ;];
+}
+
 export default function ManufacturingPage() {
   return (;
     <Layout );
@@ -178,6 +180,8 @@ export default function ManufacturingPage() {
           </div>;
         </section>;
 ];
+}
+
 export default function ManufacturingPage() {
   
     >

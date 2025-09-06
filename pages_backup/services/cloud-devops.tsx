@@ -53,6 +53,8 @@ const services = [;
   'Cost Optimization',',
   'Security Hardening'';
 ;];
+}
+
 export default function CloudDevOpsPage() {
   return (;
     <Layout );
@@ -189,6 +191,8 @@ const benefits = [
   'Better disaster recovery capabilities',
   'Faster time-to-market for applications'
 ];
+}
+
 export default function CloudDevOpsServices() {
 
 const tools = [
@@ -201,6 +205,7 @@ const tools = [
   { name: 'Jenkins', description: 'CI/CD automation' },
   { name: 'Prometheus', description: 'Monitoring and alerting' }
 ];
+}
 
 export default function CloudDevOpsPage() {
   

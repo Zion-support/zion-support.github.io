@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { forwardRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -17,7 +16,7 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
     ref
   ) => {
     if (href) {
-      
+
         >
           <div className='flex items-center gap-2'>
             {icon && <span className='text-muted-foreground'>{icon}</span>}
@@ -28,7 +27,6 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
       );
     }
 
-    
       >
         <div className='flex items-center gap-2'>
           {icon && <span className='text-muted-foreground'>{icon}</span>}
@@ -59,19 +57,3 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({
   );
 };
 "
-=======
-
-<<<<<<< HEAD
-    return(<button
-        ref={ref}
-<<<<<<< HEAD
-
-
-SidebarMenuItem.displayName = "SidebarMenuItem";
-
-<<<<<<< HEAD
-
-
-export { SidebarMenuItem, SidebarMenuGroup };
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

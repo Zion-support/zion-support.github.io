@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const \"About\": NextPage = () => {
 import React from 'react';
 import Link from 'next/link';
@@ -9,10 +5,6 @@ import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Users, Target, Award, Globe, Shield, Zap } from 'lucide-react';
 const "About": NextPage = () => {
-<<<<<<< HEAD
-=======
-=======
-=======
   const values = [{
       title: \'Innovation\',
       \"description\": \'We constantly push the boundaries of technology to deliver cutting-edge solutions.\',
@@ -69,15 +61,14 @@ const "About": NextPage = () => {
       \"image\": \'/team/david.jpg\'
     }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
     { \"number\": \'50+\', \"label\": \'Happy Clients\' },
     { \"number\": \'5+\', \"label\": \'Years Experience\' },
     { \"number\": \'24/7\', \"label\": \'Support Available\' }
   ];
+}
+}
+
 export default function AboutPage() {
   return (
   const stats = [{ "number": '150+', "label": 'Projects Completed' },
@@ -85,6 +76,9 @@ export default function AboutPage() {
     { "number": '5+', "label": 'Years Experience' },
     { "number": '24/7', "label": 'Support Available' }
   ];
+}
+}
+
 export default function AboutPage() {
   return (
     <main>
@@ -118,10 +112,6 @@ export default function AboutPage() {
               <div key={v.title} className="bg-white rounded-lg p-8 shadow text-center">
                 <h3 className="text-xl font-semibold mb-3">{v.title}</h3>
                 <p className="text-gray-600">{v.desc}</p>
-<<<<<<< HEAD
-=======
-=======
-=======
     <MainLayout
       title=\"About Us - Zion Tech Group\"
       description=\"Learn about Zion Tech Group\'s mission, values, and the team behind our innovative technology solutions.\"
@@ -132,7 +122,7 @@ export default function AboutPage() {
           <div className=\"text-center\">
             <h1 className=\"text-5xl font-bold mb-6\">About Zion Tech Group</h1>
             <p className=\"text-xl max-w-3xl mx-auto\">
-              We are passionate technologists dedicated to transforming businesses through 
+              We are passionate technologists dedicated to transforming businesses through
               innovative technology solutions and digital excellence.
             </p>
           </div>
@@ -145,24 +135,24 @@ export default function AboutPage() {
             <div>
               <h2 className=\"text-4xl font-bold text-gray-900 mb-6\">Our Mission</h2>
               <p className=\"text-lg text-gray-600 mb-6\">
-                To empower businesses with cutting-edge technology solutions that drive 
-                innovation, efficiency, and growth. We believe that technology should be 
+                To empower businesses with cutting-edge technology solutions that drive
+                innovation, efficiency, and growth. We believe that technology should be
                 an enabler, not a barrier, to business success.
               </p>
               <p className=\"text-lg text-gray-600\">
-                Our team combines deep technical expertise with business acumen to deliver 
+                Our team combines deep technical expertise with business acumen to deliver
                 solutions that not only meet current needs but also scale for future growth.
               </p>
             </div>
             <div>
               <h2 className=\"text-4xl font-bold text-gray-900 mb-6\">Our Vision</h2>
               <p className=\"text-lg text-gray-600 mb-6\">
-                To be the leading technology partner for businesses seeking digital 
-                transformation, known for our innovative solutions, exceptional service, 
+                To be the leading technology partner for businesses seeking digital
+                transformation, known for our innovative solutions, exceptional service,
                 and unwavering commitment to client success.
               </p>
               <p className=\"text-lg text-gray-600\">
-                We envision a future where every business can leverage technology to 
+                We envision a future where every business can leverage technology to
                 achieve its full potential and create lasting value for stakeholders.
               </p>
             </div>
@@ -174,29 +164,17 @@ export default function AboutPage() {
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\">
             {stats.map((stat) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               <div key={stat.label} className=\"text-center\">
                 <div className=\"text-4xl font-bold text-blue-600 mb-2\">{stat.number}</div>
                 <div className=\"text-gray-600\">{stat.label}</div>
               <div key={stat.label} className="text-center">
                 <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
                 <div className="text-gray-600">{stat.label}</div>
-<<<<<<< HEAD
-=======
-=======
-=======
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Work With Us?</h2>
@@ -214,10 +192,6 @@ export default function AboutPage() {
         </div>
       </section>
     </main>
-<<<<<<< HEAD
-=======
-=======
-=======
       {/* Values Section */}
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
@@ -227,16 +201,10 @@ export default function AboutPage() {
               The principles that guide everything we do and shape our company culture
             </p>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-<<<<<<< HEAD
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-=======
             {values.map((value) => (
               <div key={value.title} className=\"text-center\">
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
@@ -259,20 +227,14 @@ export default function AboutPage() {
           <div className=\"text-center mb-16\">
             <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Our Team</h2>
             <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
-              Meet the passionate professionals who make Zion Tech Group a leader in 
+              Meet the passionate professionals who make Zion Tech Group a leader in
               technology solutions
             </p>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
-<<<<<<< HEAD
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
-=======
             {team.map((member) => (
               <div key={member.name} className=\"bg-white rounded-lg shadow-lg overflow-hidden\">
                 <div className=\"h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center\">
@@ -299,19 +261,19 @@ export default function AboutPage() {
             <div>
               <h2 className=\"text-4xl font-bold text-gray-900 mb-6\">Our Story</h2>
               <p className=\"text-lg text-gray-600 mb-6\">
-                Founded in 2019, Zion Tech Group began with a simple \"mission\": to make 
-                advanced technology accessible to businesses of all sizes. What started 
-                as a small team of passionate developers has grown into a comprehensive 
+                Founded in 2019, Zion Tech Group began with a simple \"mission\": to make
+                advanced technology accessible to businesses of all sizes. What started
+                as a small team of passionate developers has grown into a comprehensive
                 technology solutions provider.
               </p>
               <p className=\"text-lg text-gray-600 mb-6\">
-                Over the years, we\'ve helped hundreds of companies transform their 
-                digital presence, streamline operations, and achieve their business goals 
+                Over the years, we\'ve helped hundreds of companies transform their
+                digital presence, streamline operations, and achieve their business goals
                 through innovative technology solutions.
               </p>
               <p className=\"text-lg text-gray-600\">
-                Today, we continue to push the boundaries of what\'s possible with 
-                technology, always keeping our clients\' success at the heart of 
+                Today, we continue to push the boundaries of what\'s possible with
+                technology, always keeping our clients\' success at the heart of
                 everything we do.
               </p>
             </div>
@@ -357,16 +319,10 @@ export default function AboutPage() {
         <meta name=\"keywords\" content=\"about zion tech group, technology company, AI solutions, cybersecurity, cloud services\" />
         <link rel=\"canonical\" href=\""https\": //ziontechgroup.com/about\" />
       </Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-=======
-<<<<<<< HEAD
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-=======
-=======
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
@@ -498,13 +454,7 @@ export default function AboutPage() {
       </div>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
 }
-=======
 }
-=======
 }

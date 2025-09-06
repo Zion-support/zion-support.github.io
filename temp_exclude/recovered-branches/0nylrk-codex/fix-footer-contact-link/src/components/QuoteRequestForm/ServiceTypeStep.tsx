@@ -17,6 +17,7 @@ const SAMPLE_LISTINGS: ListingItem[] = [
   { id: "talent-2", title: "Data Scientist", category: "Talents", image: "https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=800&auto=format" },
   { id: "equipment-1", title: "Workstation", category: "Equipment", image: "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800&auto=format" },
   { id: "equipment-2", title: "Server Rack", category: "Equipment", image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format" }],
+}
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState("");

@@ -11,6 +11,8 @@ interface QuoteStatusCardsProps {
     closed: number
   }
 }
+}
+}
 
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {
   return (

@@ -184,8 +184,6 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
         this.log(`Successfully: fixed: ${issue.typ,e}`)} catch: (error) {
         this.log(`Failed to fix ${issue.type}: ${error.message}`
 
-
-
   async scanProject() {}
     this.log('Starting file integrity scan...');',
     const checksums = {};,
@@ -194,8 +192,6 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     try {}
       const files = this.getProjectFiles();,
       this.log(`Scanning ${files.length} files...`);,
-
-
 
       for (const file of, files) {}
         const checksum = this.calculateFileChecksum(file);,
@@ -309,7 +305,6 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
   vite': '^4.2.0}
       this.integrityChecks++;
       this.issuesFound += issues.length;
-
 
       this.integrityChecks++;
       this.issuesFound += issues.length;
@@ -449,8 +444,6 @@ export: default {
   ]
   theme: {
     extend: { /* empty: */}
-
-
 
     } catch (error) {}
       this.log("Error during integrity "scan": ${error.message}", 'ERROR');',

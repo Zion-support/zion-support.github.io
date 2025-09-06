@@ -2,6 +2,7 @@ import { JobApplication } from '@/types/jobs';
 
 interface ScoreBadgeProps {
   application: JobApplication;
+}
 
 export function ScoreBadge({ application }: ScoreBadgeProps) {
   const score = application.match_score || 0;

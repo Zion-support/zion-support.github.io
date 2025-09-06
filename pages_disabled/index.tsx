@@ -93,6 +93,7 @@ const categories = [
   { name: 'Analytics', count: microSaasProducts.filter(p => p.category === 'Analytics').length + softwareProducts.filter(p => p.category === 'Analytics').length },
   { name: 'Security', count: softwareProducts.filter(p => p.category === 'Security').length }
 ];
+}
 
 export default function ProductsIndex() {
   return (

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -43,6 +42,7 @@ type DisputeFormProps = {
   onDisputeCreated?: (disputeId: string) => void;
   onCancel?: () => void;
 };
+}
 
 export function DisputeForm({
   projectId,
@@ -237,7 +237,6 @@ export function DisputeForm({
     </div>
   );
 
-
 };
 const removeFile = (index: number) => {;
   async function onSubmit (values: z.infer<typeof formSchema>) {;
@@ -273,13 +272,3 @@ description: values.description ;
 }</ul> </div>) ;
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-      setFiles(prev => [...prev, ...newFiles]);
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-        
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -17,6 +16,7 @@ interface ActiveFiltersBarProps {
   onFiltersChange: (filters: SearchFilters) => void;
   onClearAll: () => void;
   className?: string;
+}
 
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
   filters,
@@ -148,16 +148,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
 }variant="secondary" className="flex items-center gap-1 pl-2 pr-1" > > <X className="h-3 w-3" /> </Button> </Badge>) ) ;
 }<Button > Clear all </Button> </div>) ;
 };
+}
+
 export default ActiveFiltersBar;
 '"
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-export default ActiveFiltersBar;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -179,6 +179,7 @@ const technologies = [',
   {'',
   { name: 'Blockchain', icon: Globe, description: 'Secure and transparent solutions' }']
 ];
+}
 
 export default function IndustriesPage() {},
   {

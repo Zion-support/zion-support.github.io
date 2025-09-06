@@ -13,6 +13,7 @@ import { formatDate } from '@/utils/referralUtils';
 interface ReferralTableProps {
   referrals: Referral[];
   isLoading: boolean;
+}
 
 export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
   // Helper function to render status badges

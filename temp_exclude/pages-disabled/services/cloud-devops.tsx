@@ -123,6 +123,7 @@ const processSteps = [
     description: 'Monitor performance and continuously optimize for cost and efficiency'
   }
 ];
+}
 
 export default function CloudDevOpsPage() {
   return (

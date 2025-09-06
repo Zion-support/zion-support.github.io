@@ -8,6 +8,8 @@ interface CodeBlockProps {
   showLineNumbers?: boolean;
   className?: string
 }
+}
+}
 
 export function CodeBlock({ 
   code;
@@ -59,6 +61,8 @@ export function CodeBlock({
       )}
     </div>
   )
+}
+}
 }
 
 export default CodeBlock;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import useSWR from 'swr';
 import { CategoryCard } from '@/components/CategoryCard';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -36,6 +35,8 @@ const fetcher = async (url: string): Promise<CategoryType[]> => {
 
 export interface CategoriesProps {
   categories?: CategoryType[];
+}
+}
 
 export default function Categories({
   categories: initialCategories = [],
@@ -94,7 +95,7 @@ export default function Categories({
               <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
                 {categories.map(category => {
                   // Use default folder icon for all categories to avoid large bundle
-                  
+
                       icon={<Folder className='w-6 h-6' />}
                     />
                   );
@@ -113,19 +114,9 @@ return (<> <NextSeo title="Browse Categories" description="Explore AI service an
 }</p> <p>Please try again later.</p> </div>) ;
 }{;
   categories.map ( (category) => {;
-  //Use default folder icon for all categories to avoid large bundle 
+  //Use default folder icon for all categories to avoid large bundle
 }/>) ;
 }) ;
 }</div>) ;
 }</ErrorBoundary> </div> </div> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-    fallbackData: initialCategories}),
-
-  const categories = data || [],
-  const isLoading = !data && !error;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

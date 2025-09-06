@@ -80,7 +80,9 @@ class LintingAutomation {}
     } catch (error) {
       // Ignore errors;
     }
-    const failureFile = path.join(this.projectRoot, 'automation/logs/linting-failure-report.json');',
+}
+
+const failureFile = path.join(this.projectRoot, 'automation/logs/linting-failure-report.json');',
     fs.writeFileSync(failureFile, JSON.stringify(failureReport, null, 2));,
     this.log('Linting failure reported');';
   }

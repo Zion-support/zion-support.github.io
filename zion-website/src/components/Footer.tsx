@@ -51,6 +51,7 @@ const navigation = {
     },
   ],
 };
+}
 
 export default function Footer() {
   return (

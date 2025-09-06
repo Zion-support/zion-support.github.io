@@ -1,12 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Eye, Shield, Lock, AlertTriangle } from 'lucide-react';
+}
+
 export default function CybersecurityPage() {
   const securityServices = [;
     {}
@@ -52,7 +50,7 @@ export default function CybersecurityPage() {
               <h1 className="text-4xl md: text-6xl font-bold mb-6">", Cybersecurity Services,
               </h1>;
               <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",
-                Protect your business with our comprehensive cybersecurity solutions. 
+                Protect your business with our comprehensive cybersecurity solutions.
                 Stay ahead of threats with advanced security measures and expert support.;
               </p>;
             </motion.div>;
@@ -129,18 +127,12 @@ const features = [
     title: 'Data Protection',
     description: 'Advanced encryption and data protection solutions'
   },
-<<<<<<< HEAD
-=======
-=======
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Eye, Shield, Lock, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 
 const securityServices = [
-<<<<<<< HEAD
-=======
   {
     icon: Eye,
     title: 'Threat Monitoring',
@@ -162,10 +154,6 @@ const securityServices = [
     description: 'Employee security awareness and training programs'
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const benefits = [
   'Protection against cyber threats and attacks',
   'Compliance with industry regulations',
@@ -174,13 +162,13 @@ const benefits = [
   'Lower insurance costs and liability',
   'Peace of mind with 24/7 monitoring'
 ];
+}
+
 export default function CybersecurityServices() {
-<<<<<<< HEAD
-=======
-=======
+}
 
 export default function CybersecurityPage() {
-=======
+}
 
 export default function CybersecurityPage() {
   return (
@@ -212,10 +200,6 @@ export default function CybersecurityPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -233,10 +217,6 @@ export default function CybersecurityPage() {
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-red-600" />
-<<<<<<< HEAD
-=======
-=======
-=======
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -252,8 +232,6 @@ export default function CybersecurityPage() {
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-blue-600" />
-<<<<<<< HEAD
-=======
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -266,10 +244,6 @@ export default function CybersecurityPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -305,11 +279,6 @@ export default function CybersecurityPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-=======
-
-=======
 
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
@@ -332,15 +301,9 @@ export default function CybersecurityPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Layout>
-=======
-<<<<<<< HEAD
     </Layout>
-=======
     </>
-=======
     </>
   );
 }

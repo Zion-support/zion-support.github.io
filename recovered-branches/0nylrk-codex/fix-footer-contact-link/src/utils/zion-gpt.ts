@@ -136,4 +136,3 @@ export async function callZionGPT({
     console.error('Error calling ZionGPT:', error);
     throw error;
   }
-

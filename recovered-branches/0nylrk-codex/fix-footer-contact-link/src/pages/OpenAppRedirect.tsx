@@ -107,4 +107,6 @@ const OpenAppRedirect: React.FC = () => {
 }, [navigate]);
 
 };
+}
+
 export default OpenAppRedirect;

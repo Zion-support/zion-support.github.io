@@ -16,6 +16,7 @@ import { ServiceDetailsSection } from '@/components/services/PageSections/Servic
 import { ServiceProcessSteps } from '@/components/services/PageSections/ServiceProcessSteps';
 import { ServiceIncludes } from '@/components/services/PageSections/ServiceIncludes';
 import { EnterpriseCallToAction } from '@/components/services/PageSections/EnterpriseCallToAction';
+}
 
 export default function ITOnsiteServicesPage() {
   const [searchParams] = useSearchParams();

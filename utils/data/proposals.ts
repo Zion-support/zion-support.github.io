@@ -31,6 +31,8 @@ export type ProposalMeta = {
     signature?: string;
   };
 };
+}
+}
 
 export function createProposal(payload: ProposalPayload): ProposalMeta {
   ensureDirs();
@@ -74,6 +76,8 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {
   fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8');
 
   return meta;
+}
+}
 
 export function updateProposalMeta(
   id: string,
@@ -86,6 +90,8 @@ export function updateProposalMeta(
   const next = updater({ ...current, updatedAt: new Date().toISOString() });
   fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8');
   return next;
+}
+}
 
 export function listProposals(): ProposalMeta[] {
   ensureDirs();
@@ -97,6 +103,8 @@ export function listProposals(): ProposalMeta[] {
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   });
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
+}
+}
 
 export function getProposal(id: string): ProposalMeta | null {
   try {
@@ -106,6 +114,8 @@ export function getProposal(id: string): ProposalMeta | null {
   } catch {
     return null;
   }
+}
+}
 
 export function savePdf(id: string, pdfBytes: Uint8Array): string {
   ensureDirs();
@@ -114,6 +124,8 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));
   return `/proposals/${id}/proposal.pdf`;
+}
+}
 
 export function updateArtifacts(
   id: string,

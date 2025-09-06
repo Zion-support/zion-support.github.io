@@ -15,6 +15,7 @@ import type {
 
 interface UserProfileProps {
   onUserChange?: (user: SupabaseUser | null) => void;
+}
 
 export default function UserProfile({ onUserChange }: UserProfileProps) {
   const [user, setUser] = useState<SupabaseUser | null>(null);

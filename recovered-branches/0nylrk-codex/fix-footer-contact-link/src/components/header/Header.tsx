@@ -17,7 +17,8 @@ customLogo?: string;
 customTheme?: {
   primaryColor: string;
 backgroundColor: string;
-textColor: string 
+textColor: string
+}
 
 export function Header({
   hideLogin = false,

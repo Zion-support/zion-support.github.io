@@ -64,6 +64,7 @@ const serviceProfileSchema = z.object({
 });
 
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
+}
 
 export function ServiceProviderRegistrationForm() {
   const { user } = useAuth();
@@ -861,7 +862,6 @@ reader.readAsDataURL (file)
   providerData: {
   name: formData.name, title: formData.title, bio: formData.bio, services: serviceTags, location: formData.location 
 
-
 });
 }finally {
   setIsGenerating (false) 
@@ -872,7 +872,6 @@ reader.readAsDataURL (file)
   const newServices = generatedContent.services.filter (service => typeof service === 'string' && service && !serviceTags.includes (service) );
 if (newServices.length > 0) {
   
-
 
 };
 //Handle form submission const onSubmit = async (values: ServiceFormValues) => {
@@ -892,7 +891,6 @@ try {
   body: {
   providerData: {
   name: values.name, title: values.title, bio: values.bio, services: serviceTags, location: values.location 
-
 
 });
 //Continue with submission even if enhancement fails 

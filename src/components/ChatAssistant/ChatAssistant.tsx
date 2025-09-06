@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {
   useState,
   useEffect,
@@ -37,6 +36,7 @@ export interface ChatAssistantProps {
   contextHeader?: ReactNode;
   /** Optional canned questions shown when the chat is empty */
   starterQuestions?: string[];
+}
 
 export function ChatAssistant({
   isOpen,
@@ -193,7 +193,6 @@ export function ChatAssistant({
 
   if (!isOpen) return null;
 
-  
     >
       <div className='w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]'>
         {/* Header */}
@@ -347,18 +346,3 @@ return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify
 }</p> <div className="flex justify-end space-x-3" > <Button > Cancel </Button> <Button > Send </Button> </div> </div> </div>) ;
 }</div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-  const isGuest = !auth?.isAuthenticated;
-
-<<<<<<< HEAD
-
-
-  const handleSendMessage = async (messageContent: string) => {
-
-    if (!messageContent.trim()) return,
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

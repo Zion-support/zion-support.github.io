@@ -1,4 +1,3 @@
-
 import { UserProfile, UserDetails } from '@/types/auth';
 import { supabase } from '@/integrations/supabase/client';
 import { Conversation, ConversationContextData } from '@/types/messaging';
@@ -9,6 +8,9 @@ type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle conversation operations
  */
+}
+}
+
 export function useConversations(
   user: UserWithProfile, setConversations: (conversations: Conversation[]) => void,
   setUnreadCount: (count: number) => void,

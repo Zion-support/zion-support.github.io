@@ -42,6 +42,7 @@ const specialServices = [
 
 interface CategoriesSectionProps {
   showTitle?: boolean;
+}
 
 export function CategoriesSection({
   showTitle = true,

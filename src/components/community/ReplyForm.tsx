@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
@@ -18,6 +17,7 @@ interface ReplyFormProps {
 
 interface ReplyFormValues {
   content: string;
+}
 
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -70,13 +70,6 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
     </Card>
   );
 };
-export default ReplyForm;
-=======
-
-<<<<<<< HEAD
-
-
+}
 
 export default ReplyForm;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

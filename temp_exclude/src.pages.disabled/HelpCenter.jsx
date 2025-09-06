@@ -3,6 +3,7 @@ import React from 'react';
 interface HelpCenterProps {
   // Add props here as needed
 }
+}
 
 export default function HelpCenter({ }: HelpCenterProps) {
   return (
@@ -11,13 +12,7 @@ export default function HelpCenter({ }: HelpCenterProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 }
-=======
 }
-=======
 }

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -90,6 +89,7 @@ const MOCK_SUPPORT_REQUESTS = [
     category: "profile"
   }
 ];
+}
 
 export default function SupportRequests() {
   const [searchQuery, setSearchQuery] = useState("");

@@ -4,6 +4,7 @@ import React from 'react';
 
 interface PlatformengineeringProps {
   // Add props here as needed
+}
 
 export default function Platformengineering({ }: PlatformengineeringProps) {
   return (
@@ -12,5 +13,4 @@ export default function Platformengineering({ }: PlatformengineeringProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 

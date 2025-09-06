@@ -27,6 +27,7 @@ const steps = [
     icon: Check,
   },
 ];
+}
 
 export function HowItWorksSection() {
   return (

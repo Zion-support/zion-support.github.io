@@ -2,6 +2,8 @@ import React from 'react';
 interface ListingDetailProps {
   // Add props here as needed
 }
+}
+
 export default function ListingDetail({ }: ListingDetailProps) {
   return (
     <div>

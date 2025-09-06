@@ -241,6 +241,7 @@ const values = [;
     description: "Our success is measured by our clients' success and satisfaction with our solutions."";
   }
 ;];
+}
 
 export default function CareersPage() {
   return (

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import {
   Card,
@@ -63,6 +62,7 @@ const iconMap = {
   FileText,
   Megaphone,
 };
+}
 
 export const ForumCategories = () => {
   const { user } = useAuth();
@@ -110,17 +110,7 @@ export const ForumCategories = () => {
 }) ;
 }</div>) ;
 };
+}
+
 export default ForumCategories;
 "
-=======
-
-<<<<<<< HEAD
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-
-
-<<<<<<< HEAD
-
-
-export default ForumCategories;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

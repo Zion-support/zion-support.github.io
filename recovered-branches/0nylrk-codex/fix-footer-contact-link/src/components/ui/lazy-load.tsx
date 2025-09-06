@@ -8,6 +8,7 @@ interface LazyLoadProps {
   children: ReactNode;
   loadingComponent?: ReactNode;
   className?: string;
+}
 
 export function LazyLoad({
   height = '200px',

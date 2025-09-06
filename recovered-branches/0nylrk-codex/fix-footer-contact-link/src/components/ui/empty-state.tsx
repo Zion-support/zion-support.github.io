@@ -18,6 +18,7 @@ interface EmptyStateProps {
     onClick?: () => void;
   };
   className?: string;
+}
 
 export function EmptyState({
   icon,

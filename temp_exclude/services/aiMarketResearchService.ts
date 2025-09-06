@@ -210,5 +210,7 @@ export class AIMarketResearchService {
     }
   }
 }
+}
+}
 
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');

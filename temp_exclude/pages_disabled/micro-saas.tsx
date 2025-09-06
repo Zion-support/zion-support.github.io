@@ -528,6 +528,7 @@ features: ['Unlimited users',
     popular: false
   }
 ];
+}
 
 export default function MicroSaaSPage() {
   return (

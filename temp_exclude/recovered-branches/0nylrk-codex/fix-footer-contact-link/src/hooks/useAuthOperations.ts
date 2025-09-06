@@ -1,10 +1,12 @@
-
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import type { UserProfile } from "@/types/auth";
 import { toast } from "@/hooks/use-toast";
 import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils";
 import { cleanupAuthState } from "@/utils/authUtils";
+}
+}
+
 export function useAuthOperations(
   setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>,
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
@@ -143,8 +145,9 @@ export function useAuthOperations(
       if (!profileData || !profileData.id) {
         throw new Error("Profile data or user ID is missing.")
       }
+}
 
-      const { error } = await supabase
+const { error } = await supabase
         .from("profiles")
         .update({
           display_name: profileData.displayName, user_type: profileData.userType,
@@ -239,7 +242,9 @@ export function useAuthOperations(
       if (!ethereum) {
         throw new Error("Web3 wallet not found")
       }
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+}
+
+const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
       const address = accounts[0];
       await ethereum.request({
         method: 'personal_sign',

@@ -1,4 +1,7 @@
-#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() {  try { const automation = new CursorInterfaceAutomation();     const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],});   try { await automation.focusCursor(); } catch (error) { :',error.message )} try { await automation.sendText('test'); } catch (error) { :',error.message )}  const sessions = automation.listSessions();  const stats = automation.getStats();  automation.terminateSession('test-session');  const finalStats = automation.getStats();  );     } catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
+#!/usr/bin/env node const CursorInterfaceAutomation = require('./cursor-interface-automation'); async function runTests() {  try { const automation = new CursorInterfaceAutomation();     const testSession = await automation.createSession('test-session',{ name: 'Test Session',interval: 10000,commands: ['proceed','test'],});   try { await automation.focusCursor(); } catch (error) { :',error.message )} try { await automation.sendText('test'); } catch (error) { :',error.message )}
+}
+
+const sessions = automation.listSessions();  const stats = automation.getStats();  automation.terminateSession('test-session');  const finalStats = automation.getStats();  );     } catch (error) { console.error('\n❌ Test failed:',error.message); console.error(error.stack); process.exit(1)} } if (require.main === module) { runTests()} module.exports = { runTests };
 #!/usr/bin/env node
 /**
  * Test Script for Cursor Chat Automation
@@ -146,8 +149,6 @@ const CursorInterfaceAutomation = // // require('./cursor-interface-automation')
       process.exit(1);
     }
   };
-
-
 
 const CursorInterfaceAutomation = require('./cursor-interface-automation');
 async function runTests() {

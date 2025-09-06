@@ -162,6 +162,8 @@ ${request.topic} represents a significant opportunity for organizations looking 
   }
 
 // Pricing tiers for the AI Content Generator
+}
+
 export const AI_CONTENT_PRICING = {
   starter: {
     name: 'Starter',
@@ -228,8 +230,5 @@ body: JSON.stringify (request)
 }can improve efficiency - Point 3: Best practices for $ {
   request.topic 
 }implementation ## Conclusion 
-
-
-
 
 }// Pricing tiers for the AI Content Generator 

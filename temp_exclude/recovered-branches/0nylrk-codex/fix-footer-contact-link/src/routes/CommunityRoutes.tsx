@@ -37,5 +37,6 @@ const CommunityRoutes = () => {
     </Routes>
   )
 };
+}
 
 export default CommunityRoutes;

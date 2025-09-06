@@ -125,6 +125,8 @@ const statuses = []
   "Upcoming",
   "Recorded"];
 ];
+}
+}
 
 export default function WebinarsPage() {}
   const [selectedCategory, setSelectedCategory] = useState("All Webinars");"

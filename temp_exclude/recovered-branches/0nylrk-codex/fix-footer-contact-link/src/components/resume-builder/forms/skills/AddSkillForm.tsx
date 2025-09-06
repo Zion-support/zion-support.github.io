@@ -9,6 +9,8 @@ interface AddSkillFormProps {
   resumeId: string,
   onAddSkill: (skill: Skill) => Promise<boolean>
 }
+}
+}
 
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
   const [skillName, setSkillName] = useState('');

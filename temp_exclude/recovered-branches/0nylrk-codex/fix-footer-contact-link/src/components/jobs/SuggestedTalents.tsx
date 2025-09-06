@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
@@ -8,6 +7,8 @@ import { JobMatchCard } from "./JobMatchCard";
 interface SuggestedTalentsProps {
   jobId: string,
   jobTitle?: string
+}
+}
 }
 
 export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {

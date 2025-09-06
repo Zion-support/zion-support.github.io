@@ -19,6 +19,7 @@ import { useState } from 'react';
 import { AnalyticsChart } from './AnalyticsChart';
 
 type TimeRange = '7d' | '30d' | '90d' | '365d';
+}
 
 export function UserBehaviorStats() {
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');

@@ -6,6 +6,7 @@ import { RolePicker } from '../components/onboarding/RolePicker';
 import { SignUpForm } from '../components/onboarding/SignUpForm';
 
 type OnboardingStep = 'language' | 'role' | 'signup';
+}
 
 export function MobileOnboarding() {
   const [currentStep, setCurrentStep] = useState<OnboardingStep>('language');

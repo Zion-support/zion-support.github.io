@@ -7,6 +7,7 @@ import { SkillsFormProps } from './types';
 import { SkillsList } from './SkillsList';
 import { AddSkillForm } from './AddSkillForm';
 import { BulkAddSkills } from './BulkAddSkills';
+}
 
 export function SkillsForm({
   resumeId,

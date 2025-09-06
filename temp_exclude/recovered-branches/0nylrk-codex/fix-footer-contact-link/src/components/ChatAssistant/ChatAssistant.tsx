@@ -26,6 +26,8 @@ export interface ChatAssistantProps {
   onSendMessage: (message: string, conversationId?: string) => Promise<void>;
   contextHeader?: ReactNode
 }
+}
+}
 
 export function ChatAssistant({
   isOpen;

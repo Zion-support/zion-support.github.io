@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useAuth } from '@/hooks/useAuth';
@@ -13,6 +12,7 @@ interface AuthGuardProps {
   fallback?: React.ReactNode;
   showToast?: boolean;
   allowGuest?: boolean;
+}
 
 export function AuthGuard({
   children,
@@ -141,6 +141,8 @@ export function AuthGuard({
 }privileges. </p> </div> </div>) ;
 
 // Hook for programmatic auth checks
+}
+
 export function useAuthGuard() {
   const { user, isAuthenticated, isLoading } = useAuth();
   const router = useRouter();
@@ -235,15 +237,3 @@ return false;
 }return true;
 };
 }'"
-=======
-
-<<<<<<< HEAD
-
-      const redirectTo = options?.redirectTo || '/login';
-      const returnUrl = options?.returnUrl || router.asPath;
-      
-
-<<<<<<< HEAD
-    
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

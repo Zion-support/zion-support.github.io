@@ -109,6 +109,7 @@ const MOCK_SUPPORT_REQUESTS = [
     category: 'profile',
   },
 ];
+}
 
 export default function SupportRequests() {
   const [searchQuery, setSearchQuery] = useState('');

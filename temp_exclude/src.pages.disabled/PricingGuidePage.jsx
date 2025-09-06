@@ -3,6 +3,7 @@ import React from 'react';
 interface PricingGuidePageProps {
   // Add props here as needed
 }
+}
 
 export default function PricingGuidePage({ }: PricingGuidePageProps) {
   return (
@@ -11,13 +12,7 @@ export default function PricingGuidePage({ }: PricingGuidePageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 }
-=======
 }
-=======
 }

@@ -4,6 +4,7 @@ import React from 'react';
 
 interface AiseoauditorProps {
   // Add props here as needed
+}
 
 export default function Aiseoauditor({ }: AiseoauditorProps) {
   return (
@@ -12,5 +13,4 @@ export default function Aiseoauditor({ }: AiseoauditorProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 

@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
@@ -11,6 +10,7 @@ export interface TalentCardProps {
   isSaved: boolean,
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean
+}
 }
 
 export function TalentCard({

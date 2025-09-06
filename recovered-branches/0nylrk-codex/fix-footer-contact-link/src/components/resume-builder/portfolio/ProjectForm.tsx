@@ -39,6 +39,7 @@ interface ProjectFormProps {
   project?: PortfolioProject;
   onSuccess: () => void;
   onCancel: () => void;
+}
 
 export function ProjectForm({
   project,

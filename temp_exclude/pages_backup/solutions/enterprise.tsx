@@ -45,6 +45,7 @@ const enterpriseSolutions = [
     features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Alerting']
   }
 ];
+}
 
 export default function EnterpriseSolutions() {
   return (

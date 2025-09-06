@@ -8,6 +8,7 @@ import { HelpArticleView } from './HelpArticleView';
 import { HELP_CATEGORIES } from './help-content';
 import { AppLayout } from '@/layout/AppLayout';
 import { Search } from 'lucide-react';
+}
 
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);

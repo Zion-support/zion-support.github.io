@@ -1,4 +1,5 @@
 import type { BookProject } from '../book/bookTypes';
+}
 
 export function buildPrintableHtml(project: BookProject): string {
   const { meta, chapters, visuals } = project;

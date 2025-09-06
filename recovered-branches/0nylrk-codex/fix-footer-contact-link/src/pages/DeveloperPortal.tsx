@@ -20,6 +20,7 @@ interface TabDefinition {
   id: string;
   label: string;
   icon: LucideIcon;
+}
 
 export function DeveloperPortal() {
   const { user } = useAuth();
@@ -70,6 +71,7 @@ export function DeveloperPortal() {
       </div>
     </div>
   );
+}
 
 export default function ProtectedDeveloperPortal() {
   return (

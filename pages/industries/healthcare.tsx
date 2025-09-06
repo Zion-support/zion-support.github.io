@@ -52,6 +52,7 @@ const benefits = [
     icon: CheckCircle
   }
 ];
+}
 
 export default function HealthcarePage() {
   return (

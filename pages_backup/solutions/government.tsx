@@ -88,6 +88,8 @@ const solutions = [;
   'Compliance Management',',
   'Public Sector Cloud Solutions'';
 ;];
+}
+
 export default function GovernmentSolutionsPage() {
   return (;
     <Layout );
@@ -151,6 +153,8 @@ const benefits = [
   'Reduced operational costs',
   'Increased government efficiency'
 ];
+}
+
 export default function GovernmentSolutions() {
     icon: Database,
     title: 'Data Management',
@@ -158,6 +162,7 @@ export default function GovernmentSolutions() {
     benefits: ['Data governance', 'Analytics', 'Reporting', 'Integration']
   }
 ];
+}
 
 export default function GovernmentSolutionsPage() {
   

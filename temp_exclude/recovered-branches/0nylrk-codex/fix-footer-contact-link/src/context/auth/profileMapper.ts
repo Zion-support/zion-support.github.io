@@ -1,4 +1,3 @@
-
 import type { UserProfile } from "@/types/auth";
 // We cannot rely on the Supabase SDK types here because the project
 // declares `@supabase/supabase-js` as an untyped external module. Define
@@ -12,6 +11,9 @@ export interface SupabaseUser {
 /**
  * Maps Supabase profile data to our app's user model
  */
+}
+}
+
 export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile {
   return {
     id: user.id, email: user.email || "",
@@ -22,4 +24,3 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
     avatarUrl: profile.avatar_url || undefined, // Add for compatibility
     role: profile.user_type // Map user_type to role for backward compatibility
   }
-}

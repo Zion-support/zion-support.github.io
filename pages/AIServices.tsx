@@ -50,6 +50,7 @@ const stats = [
   { number: "24/7", label: "AI Monitoring" },
   { number: "48hrs", label: "Average Response Time" }
 ];
+}
 
 export default function AIServices() {
   

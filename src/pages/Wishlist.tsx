@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useFavorites } from '@/hooks/useFavorites';
 import { X } from 'lucide-react';
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
@@ -11,6 +10,8 @@ import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/router'; // Changed from useNavigate
 import { useEffect } from 'react'; // Added useEffect
+}
+}
 
 export default function WishlistPage() {
   const { favorites, loading, toggleFavorite } = useFavorites();
@@ -28,8 +29,9 @@ export default function WishlistPage() {
     // Show loading or null while auth check or redirect happens
     return null; // Or a loading spinner
   }
+}
 
-  const { items, dispatch } = useCart();
+const { items, dispatch } = useCart();
 
   const addToCart = (item: { id: string; title?: string; price?: number }) => {
     if (items.some(i => i.id === item.id)) return;
@@ -154,9 +156,3 @@ export default function WishlistPage() {
 }</div>) ;
 }</div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-    return null, // Or a loading spinner;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

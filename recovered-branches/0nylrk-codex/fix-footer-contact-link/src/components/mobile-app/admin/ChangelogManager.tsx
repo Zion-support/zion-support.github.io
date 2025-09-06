@@ -15,6 +15,7 @@ version: string;
 date: string;
 changes: string 
 };
+}
 
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
   platform,

@@ -419,6 +419,7 @@ const quickLinks = [
   { title: 'Free Consultation', href: '/consultation', icon: Calendar },
   { title: 'Get Quote', href: '/quote', icon: FileText }
 ];
+}
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);

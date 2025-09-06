@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -13,6 +12,7 @@ interface TalentCardFooterProps {
   profile: TalentProfile;
   onViewProfile: (id: string) => void;
   onRequestHire?: (profile: TalentProfile) => void;
+}
 
 export function TalentCardFooter({
   profile,
@@ -139,11 +139,3 @@ profile.id || '' ;
   userProfile ;
 }/> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-    
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

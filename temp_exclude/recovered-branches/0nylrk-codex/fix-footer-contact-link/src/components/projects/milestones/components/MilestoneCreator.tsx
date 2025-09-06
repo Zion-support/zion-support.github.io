@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { AddMilestoneForm } from '../AddMilestoneForm';
 interface MilestoneCreatorProps {
@@ -9,6 +8,8 @@ interface MilestoneCreatorProps {
   projectStartDate?: string;
   projectEndDate?: string | null;
   projectType?: string
+}
+}
 }
 
 export function MilestoneCreator({

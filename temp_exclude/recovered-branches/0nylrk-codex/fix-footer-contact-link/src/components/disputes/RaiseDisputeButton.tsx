@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { 
@@ -18,6 +17,8 @@ interface RaiseDisputeButtonProps {
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   className?: string
+}
+}
 }
 
 export function RaiseDisputeButton({ 

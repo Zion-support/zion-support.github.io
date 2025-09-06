@@ -23,6 +23,7 @@ export interface BadgeMeta {
   color: string,
   bg: string
 }
+}
 
 export const badgeList: BadgeMeta[] = [
   {
@@ -63,6 +64,8 @@ export const badgeList: BadgeMeta[] = [
     color: "#22C55E", // Soft Green
     bg: "#F2FCE2",    // Soft Green
   }];
+}
+}
 
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key);

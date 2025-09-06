@@ -105,6 +105,7 @@ const faqData = {
     }
   ]
 };
+}
 
 export default function FAQ() {
   const [activeCategory, setActiveCategory] = useState('general');

@@ -11,6 +11,7 @@ interface UserTypeOption {
 interface UserTypeSelectionProps {
   onSelect: (userType: 'serviceProvider' | 'talent' | 'client') => void;
   selectedType: string | null;
+}
 
 export function UserTypeSelection({
   onSelect,

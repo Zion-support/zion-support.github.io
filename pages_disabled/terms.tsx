@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { FileText, Shield, AlertCircle, Scale, Mail, Phone, MapPin } from 'lucide-react';
 import Layout from './components/Layout';
+}
 
 export default function TermsPage() {
   

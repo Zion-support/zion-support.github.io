@@ -3,6 +3,7 @@ import React from 'react';
 interface AIAutonomousSystemsProps {
   // Add props here as needed
 }
+}
 
 export default function AIAutonomousSystems({ }: AIAutonomousSystemsProps) {
   return (
@@ -11,13 +12,7 @@ export default function AIAutonomousSystems({ }: AIAutonomousSystemsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 }
-=======
 }
-=======
 }

@@ -83,6 +83,7 @@ const COLUMNS = [
 
 interface KanbanBoardProps {
   jobId?: string;
+}
 
 export function KanbanBoard({ jobId }: KanbanBoardProps) {
   const { applications, isLoading, updateApplicationStatus } =

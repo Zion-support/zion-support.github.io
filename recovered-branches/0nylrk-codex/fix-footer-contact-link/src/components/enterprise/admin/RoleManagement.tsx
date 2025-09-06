@@ -17,6 +17,7 @@ import {
   TooltipProvider,
   TooltipTrigger,;
 } from '@/components/ui/tooltip';
+}
 
 export function RoleManagement() {
   // Mock team members data

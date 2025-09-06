@@ -7,6 +7,7 @@ type UserRole = 'talent' | 'client' | null;
 
 interface RolePickerProps {
   onSelect: (role: UserRole) => void;
+}
 
 export function RolePicker({ onSelect }: RolePickerProps) {
   const [selectedRole, setSelectedRole] = useState<UserRole>(null);

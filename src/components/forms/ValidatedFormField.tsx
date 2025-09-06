@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import {
   FormField,
@@ -50,6 +49,7 @@ interface ValidatedFormFieldProps {
   disabled?: boolean;
   showValidIcon?: boolean;
   debounceMs?: number;
+}
 
 export function ValidatedFormField({
   name,
@@ -266,7 +266,7 @@ export function ValidatedFormField({
   };
 
   if (type === 'checkbox') {
-    
+
         render={() => (
           <FormItem className='flex flex-row items-start space-x-3 space-y-0'>
             <FormControl>{renderField()}</FormControl>
@@ -288,7 +288,6 @@ export function ValidatedFormField({
     );
   }
 
-  
       render={() => (
         <FormItem>
           <FormLabel className='text-sm font-medium'>
@@ -317,6 +316,8 @@ export function ValidatedFormField({
   );
 
 // Validation helpers for common patterns
+}
+
 export const validationPatterns = {
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
   phone: /^[\+]?[1-9][\d]{0,15}$/,
@@ -326,6 +327,8 @@ export const validationPatterns = {
 };
 
 // Pre-configured validation rules
+}
+
 export const commonValidations = {
   required: { required: true },
   email: {
@@ -358,23 +361,3 @@ export const commonValidations = {
     },
   },
 };
-=======
-
-<<<<<<< HEAD
-
-  const fieldError = form.formState.errors[name];
-  const isTouched = form.formState.touchedFields[name];
-
-
-<<<<<<< HEAD
-
-
-      default:
-        return (
-
-<<<<<<< HEAD
-      return null;
-    };
-  }},
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

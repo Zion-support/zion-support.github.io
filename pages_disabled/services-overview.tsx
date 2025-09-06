@@ -80,6 +80,7 @@ const benefits = [
     description: 'Track record of successful implementations and satisfied clients.'
   }
 ];
+}
 
 export default function ServicesOverview() {
   return (

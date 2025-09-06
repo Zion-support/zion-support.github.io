@@ -239,6 +239,7 @@ const categories = [
 ];
 
 const levels = ["All", "Beginner", "Intermediate", "Advanced"];
+}
 
 export default function WebinarsPage() {
   const [selectedCategory, setSelectedCategory] = React.useState("All");
@@ -285,6 +286,7 @@ export default function WebinarsPage() {
   { name: 'SaaS Development', count: pastWebinars.filter(w => w.category === 'SaaS Development').length },
   { name: 'Manufacturing', count: pastWebinars.filter(w => w.category === 'Manufacturing').length }
 ];
+}
 
 export default function WebinarsPage() {
   const [selectedCategory, setSelectedCategory] = React.useState('All');

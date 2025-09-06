@@ -14,6 +14,7 @@ const SUPPORTED: { code: SupportedCurrency; symbol: string }[] = [
   { code: 'EUR', symbol: '€' },
   { code: 'GBP', symbol: '£' },
 ];
+}
 
 export function CurrencySelector() {
   const { currency, setCurrency } = useCurrency();

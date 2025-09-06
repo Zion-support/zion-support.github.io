@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -32,6 +31,7 @@ initialValues?: {;
 category?: string;
 keyFeatures?: string;
 targetAudience?: string ;
+}
 
 export function AIListingGenerator({
   onApplyGenerated,
@@ -352,7 +352,3 @@ toast ({;
 }</ul> </div> </CardContent> <CardFooter> <Button > Apply to My Listing <ArrowRight className="ml-2 h-4 w-4" /> </Button> </CardFooter> </Card>) ;
 }</div>) ;
 }'"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

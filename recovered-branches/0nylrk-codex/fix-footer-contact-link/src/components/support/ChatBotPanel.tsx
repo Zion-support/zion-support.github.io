@@ -23,6 +23,7 @@ type Message = {
   sender: 'user' | 'bot';
   timestamp: Date;
 };
+}
 
 export function ChatBotPanel() {
   const [messages, setMessages] = useState<Message[]>([

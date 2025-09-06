@@ -88,7 +88,8 @@ const processSteps = [
     title: "Deployment",
     description: "Launch your solution with full support and training"
   }
-] 
+]
+}
 
 export default function HomePage() {
   
@@ -176,7 +177,6 @@ export default function HomePage() {
                   </motion.div>
                   </div>
                   </section>
-
 
         {/* Services Section */}
         <section className="py-20 bg-white">

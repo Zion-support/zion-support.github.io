@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { ApplicationCard } from "./ApplicationCard";
@@ -7,6 +6,9 @@ import { EmptyState } from "./EmptyState";
 import { ErrorState } from "./ErrorState";
 import { Button } from "@/components/ui/button";
 import { ApplicationStatus } from "@/types/jobs";
+}
+}
+
 export function ApplicationsTracker() {
   const { applications, isLoading, error } = useJobApplications();
   const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all');
@@ -22,8 +24,9 @@ export function ApplicationsTracker() {
   if (applications.length === 0) {
     return <EmptyState />
   }
-  
-  const filteredApplications = statusFilter === 'all' 
+}
+
+const filteredApplications = statusFilter === 'all' 
     ? applications
     : applications.filter(app => app.status === statusFilter);
   

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDisputes } from "@/hooks/useDisputes";
@@ -15,6 +14,9 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
+}
+}
+
 export function DisputeDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -79,8 +81,9 @@ export function DisputeDetail() {
       toast.error("Please provide a resolution summary");
       return
     }
-    
-    const success = await resolveDispute(disputeId, resolution);
+}
+
+const success = await resolveDispute(disputeId, resolution);
     if (success && dispute) {
       setDispute({ 
         ...dispute, 

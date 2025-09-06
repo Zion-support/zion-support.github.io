@@ -8,7 +8,7 @@ const quantumFields: QuantumField[] = [];
 // Enhanced theme-based color schemes const getThemeColors = () => {
   switch (theme) {
   case 'neon': return {
-  
+}
 
 export default function UltraFuturisticBackground2037({
   intensity = 'medium',
@@ -463,5 +463,6 @@ export default function UltraFuturisticBackground2037({
       {children}
     </div>
   );
+}
 
 export default UltraFuturisticBackground2037;

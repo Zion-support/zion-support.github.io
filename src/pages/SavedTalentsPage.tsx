@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { SEO } from '@/components/SEO';
 import { TalentCard } from '@/components/talent/TalentCard';
@@ -11,6 +10,8 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Heart } from 'lucide-react';
 import { logInfo, logWarn } from '@/utils/productionLogger';
+}
+}
 
 export default function SavedTalentsPage() {
   const { user } = useAuth();
@@ -33,8 +34,9 @@ export default function SavedTalentsPage() {
           logWarn('User not authenticated.');
           return;
         }
+}
 
-        const { data, error } = await supabase
+const { data, error } = await supabase
           .from('saved_talents')
           .select(
             `
@@ -267,8 +269,6 @@ if (error) {;
 }= await supabase .from ('talent profiles') .select ('*') .eq ('id', talentId) .single ();
 return;
 
-
-
 }catch (error) {;
   logErrorToProduction (error instanceof Error ? error.message : String (error),  error instanceof Error ? error : undefined, {';
   message: 'Error toggling saved talent' ;
@@ -291,13 +291,3 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }</div>) ;
 }</div> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

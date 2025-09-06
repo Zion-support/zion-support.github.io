@@ -9,6 +9,7 @@ interface ProfileContactProps {
   email?: string;
   profileName: string;
   profileType: 'service' | 'talent';
+}
 
 export function ProfileContact({
   email,

@@ -4,6 +4,8 @@ import { supabase } from '@/integrations/supabase/client';
  * Checks if the profiles table exists and creates it if it doesn't
  * This is a utility function that can be called when the app starts
  */
+}
+
 export const ensureProfilesTableExists = async () => {
   try {
     // Try to execute a simple query to check if the table exists
@@ -144,6 +146,9 @@ END $$;
   console.error ('Error setting up profiles table:', error) 
 
 };
-// Call this when the app starts to ensure the table exists export const initializeDatabase = async () => {
+// Call this when the app starts to ensure the table exists
+}
+
+export const initializeDatabase = async () => {
   await ensureProfilesTableExists () 
 };

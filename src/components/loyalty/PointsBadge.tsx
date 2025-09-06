@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Gift, RefreshCw } from 'lucide-react';
 import { usePoints } from '@/hooks/usePoints';
@@ -13,6 +12,7 @@ import {
 import { LoginModal } from '@/components/auth/LoginModal';
 import { Button } from '@/components/ui/button';
 import { logErrorToProduction } from '@/utils/productionLogger';
+}
 
 export function PointsBadge() {
   const { isAuthenticated } = useAuth();
@@ -137,13 +137,3 @@ export function PointsBadge() {
       )}
     </TooltipProvider>
   );
-=======
-
-<<<<<<< HEAD
-
-
-  const points = balance;
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

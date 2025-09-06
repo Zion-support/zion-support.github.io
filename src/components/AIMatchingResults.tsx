@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib/ai-matchmaking';
 import { Card, CardContent } from '@/components/ui/card';
@@ -15,6 +14,7 @@ interface AIMatchingResultsProps {
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;
+}
 
 export function AIMatchingResults({
   matches,
@@ -121,7 +121,7 @@ export function AIMatchingResults({
             {items.length > 0 ? (
               items.map(match => {
                 const CategoryIcon = getCategoryIcon(match.category);
-                
+
                     onClick={() => onSelectMatch && onSelectMatch(match)}
                   >
                     <div className='flex'>
@@ -204,9 +204,3 @@ export function AIMatchingResults({
       </Tabs>
     </div>
   );
-=======
-
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

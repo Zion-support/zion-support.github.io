@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -8,6 +7,8 @@ import { HELP_CATEGORIES } from './help-content';
 
 interface HelpArticleViewProps {
   articleId: string;
+}
+}
 
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<
@@ -16,14 +17,15 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
   // Find the article in all categories
   let article;
-  
+
   }
 
   if (!article) {
     return <div>Article not found</div>;
   }
+}
 
-  const handleFeedback = (type: 'helpful' | 'not-helpful') => {
+const handleFeedback = (type: 'helpful' | 'not-helpful') => {
     setFeedbackGiven(type);
 
     // In a real implementation, this would send feedback to the server
@@ -117,11 +119,3 @@ function formatDate(date: string): string {
   });
 
 }'"
-=======
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

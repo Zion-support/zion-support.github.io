@@ -1,4 +1,4 @@
- return (<FeatureFlagContext.Provider value= {
+return (<FeatureFlagContext.Provider value= {
   {
   isEnabled, getVariant, track 
 }

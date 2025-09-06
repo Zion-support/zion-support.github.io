@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { Heart, Shield, Database, Users, Activity } from 'lucide-react';
 import React from 'react';
@@ -33,26 +29,20 @@ const features = [;
     title: 'Health Analytics,',
     description: 'AI-powered analytics for population health management and predictive insights.'', import Layout from '../../components/Layout',
 import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Heart, 
-  Shield, 
-  Database, 
-  Users, 
-  Activity, 
-  CheckCircle, 
-  ArrowRight 
+import {
+  Heart,
+  Shield,
+  Database,
+  Users,
+  Activity,
+  CheckCircle,
+  ArrowRight
 } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const features = [
   {
     icon: Heart,
@@ -71,10 +61,6 @@ const features = [
   },
   {
     icon: Users,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     title: 'Provider Portal',
     description: 'Streamlined workflows for healthcare providers and staff'
   },
@@ -101,9 +87,10 @@ const solutions = [
   'Interoperability Solutions (FHIR)',',
   'Healthcare Cybersecurity',',
   'Population Health Management'',
-    
 
   ];
+}
+
 export default function HealthcareSolutionsPage() {
   return (;
     <Layout );
@@ -121,7 +108,7 @@ export default function HealthcareSolutionsPage() {
                 </span>;
               </h1>;
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";
-                Transform healthcare delivery with our HIPAA-compliant technology solutions. 
+                Transform healthcare delivery with our HIPAA-compliant technology solutions.
                 From EHR systems to telemedicine platforms, we help healthcare organizations;
                 deliver better patient care through innovative technology.;
               </p>;
@@ -143,7 +130,7 @@ export default function HealthcareSolutionsPage() {
                 Comprehensive Healthcare Technology Solutions;
               </h2>;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
-                Our healthcare solutions are designed to improve patient outcomes, 
+                Our healthcare solutions are designed to improve patient outcomes,
                 streamline operations, and ensure compliance with healthcare regulations.,
               </p>;
             </div>;
@@ -164,20 +151,17 @@ const benefits = [
   'Better resource utilization',
   'Real-time health monitoring and alerts'
 ];
+}
+
 export default function HealthcareSolutions() {
-<<<<<<< HEAD
-=======
-=======
-=======
     title: 'Provider Management',
     description: 'Comprehensive provider and staff management solutions',
     benefits: ['Provider profiles', 'Scheduling', 'Communication', 'Performance tracking']
   }
 ];
+}
 
 export default function HealthcareSolutionsPage() {
-<<<<<<< HEAD
-=======
   return (
     <Layout
       title="Healthcare Solutions - Zion Tech Group"
@@ -218,18 +202,12 @@ export default function HealthcareSolutionsPage() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Built specifically for healthcare organizations with compliance, security, and patient care in mind.
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -237,10 +215,6 @@ export default function HealthcareSolutionsPage() {
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-green-600" />
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -279,7 +253,7 @@ export default function HealthcareSolutionsPage() {
                   HIPAA Compliant & Secure;
                 </h2>;
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
-                  All our healthcare solutions are built with security and compliance in mind, 
+                  All our healthcare solutions are built with security and compliance in mind,
                   ensuring your patient data is protected and your organization meets regulatory requirements.;
                 </p>;
               </div>;
@@ -362,10 +336,6 @@ export default function HealthcareSolutionsPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-<<<<<<< HEAD
-=======
-=======
-=======
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -378,8 +348,6 @@ export default function HealthcareSolutionsPage() {
                   </div>
                 </motion.div>
               ))}
-<<<<<<< HEAD
-=======
             </div>
           </div>
         </section>
@@ -405,15 +373,9 @@ export default function HealthcareSolutionsPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Layout>
-=======
-<<<<<<< HEAD
     </Layout>
-=======
     </>
-=======
     </>
   );
 }

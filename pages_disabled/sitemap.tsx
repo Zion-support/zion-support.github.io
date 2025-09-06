@@ -75,6 +75,7 @@ const legalPages = [
   { name: 'Terms of Service', href: '/terms', description: 'Terms and conditions' },
   { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage information' }
 ];
+}
 
 export default function SitemapPage() {
   

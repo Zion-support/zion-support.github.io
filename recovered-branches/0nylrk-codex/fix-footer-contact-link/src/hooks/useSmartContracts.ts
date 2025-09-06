@@ -9,6 +9,7 @@ import {
 } from '@/types/smart-contracts';
 import { TalentProfile } from '@/types/talent';
 import { ContractFormValues } from '@/components/contracts/components/ContractForm';
+}
 
 export function useSmartContracts() {
   const { user } = useAuth();

@@ -39,5 +39,7 @@ export class ErrorTracker {
         .slice(0, 10)
     };
   }
+}
+}
 
 export const errorTracker = new ErrorTracker();

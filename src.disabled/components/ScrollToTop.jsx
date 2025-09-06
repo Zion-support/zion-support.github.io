@@ -1,6 +1,7 @@
 import React from 'react';
 interface ScrollToTopProps {
   // Add props here as needed
+}
 
 export default function ScrollToTop({ }: ScrollToTopProps) {
   return (

@@ -2,6 +2,7 @@ import React from 'react';
 
 interface TokenIntegrationsProps {
   // Add props here as needed
+}
 
 export default function TokenIntegrations({ }: TokenIntegrationsProps) {
   return (
@@ -10,6 +11,4 @@ export default function TokenIntegrations({ }: TokenIntegrationsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
 

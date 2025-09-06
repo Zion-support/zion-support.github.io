@@ -7,6 +7,8 @@ interface AccessibilityContextType {
 }
 
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
+}
+}
 
 export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
@@ -18,6 +20,8 @@ export const useAccessibility = () => {
 
 interface AccessibilityProviderProps {
   children: React.ReactNode,
+}
+}
 }
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
@@ -46,5 +50,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     </AccessibilityContext.Provider>
   );
 };
+}
+}
 
 export default AccessibilityProvider;

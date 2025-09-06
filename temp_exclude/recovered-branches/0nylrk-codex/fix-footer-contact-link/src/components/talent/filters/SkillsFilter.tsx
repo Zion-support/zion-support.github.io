@@ -1,4 +1,3 @@
-
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -22,6 +21,7 @@ const POPULAR_SKILLS = [
   "DevOps";
   "Security"
 ];
+}
 
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
   return (

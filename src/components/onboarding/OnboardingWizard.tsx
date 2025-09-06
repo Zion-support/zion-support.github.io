@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useAuth } from '@/hooks/useAuth';
@@ -35,6 +34,7 @@ interface OnboardingWizardProps {
   onComplete: () => void;
   onSkip: () => void;
   className?: string;
+}
 
 export function OnboardingWizard({
   type,
@@ -148,7 +148,6 @@ export function OnboardingWizard({
     }
   };
 
-  
     >
       <CardHeader>
         <CardTitle className='text-center text-white'>
@@ -209,15 +208,3 @@ export function OnboardingWizard({
       </CardFooter>
     </Card>
   );
-=======
-
-<<<<<<< HEAD
-
-        url: "/profile?tab=skills"
-      };
-<<<<<<< HEAD
-  ];
-  
-  const steps = type === 'client' ? clientSteps : talentSteps;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

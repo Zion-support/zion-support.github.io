@@ -9,6 +9,7 @@ interface ResumePreviewCardProps {
   resume: Resume;
   onDownload: () => void;
   isLoading: boolean;
+}
 
 export function ResumePreviewCard({
   resume,

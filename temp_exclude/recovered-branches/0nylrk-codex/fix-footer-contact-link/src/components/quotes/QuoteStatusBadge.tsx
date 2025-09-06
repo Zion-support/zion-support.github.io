@@ -12,6 +12,8 @@ const statusConfig: Record<QuoteStatus, { label: string, className: string }> = 
 interface QuoteStatusBadgeProps {
   status: QuoteStatus
 }
+}
+}
 
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
   const config = statusConfig[status];

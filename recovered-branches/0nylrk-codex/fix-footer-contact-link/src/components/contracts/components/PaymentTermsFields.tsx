@@ -24,6 +24,7 @@ interface PaymentTermsFieldsProps {
   form: UseFormReturn<ContractFormValues>;
   talent: TalentProfile;
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void;
+}
 
 export function PaymentTermsFields({
   form,

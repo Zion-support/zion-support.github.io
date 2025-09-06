@@ -50,6 +50,8 @@ interface EnhancedProfile {
   summary: string,
   categorizedSkills: CategorizedSkills
 }
+}
+}
 
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly

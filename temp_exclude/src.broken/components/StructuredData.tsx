@@ -1,4 +1,4 @@
- return (<Helmet> <script type="application/ld+json" > {
+return (<Helmet> <script type="application/ld+json" > {
   json 
 }</script> </Helmet>) 
 }

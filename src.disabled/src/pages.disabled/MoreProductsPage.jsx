@@ -1,6 +1,7 @@
 import React from 'react';
 interface MoreProductsPageProps {
   // Add props here as needed
+}
 
 export default function MoreProductsPage({ }: MoreProductsPageProps) {
   return (

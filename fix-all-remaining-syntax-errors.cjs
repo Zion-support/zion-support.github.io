@@ -1,118 +1,105 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-console.log('🔧 Starting comprehensive syntax error fixes...');
+console.log('🔧 Fixing all remaining syntax errors...');
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  // Fix semicolons in object properties and function parameters
-  content = content.replace(/;\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*[:=])/g, ',\n  $1');
-  content = content.replace(/;\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*[=:])/g, ',\n  $1');
+// Function to find all TypeScript/JavaScript files with syntax errors
+function findFilesWithSyntaxErrors() {
+  const files = [];
+  const extensions = ['.ts', '.tsx', '.js', '.jsx'];
   
-  // Fix semicolons in object literals
-  content = content.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*\s*[:=][^,}]+);\s*([a-zA-Z_$])/g, '$1,\n  $2');
-  
-  // Fix malformed interface declarations
-  content = content.replace(/export interface\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*{\s*([^}]+)}\s*export const\s+([A-Z_]+):\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\[\]\s*=\s*\[\]/g, (match, interfaceName, interfaceBody, constName, typeName) => {
-    const fixedInterfaceBody = interfaceBody
-      .replace(/;\s*/g, ';\n  ')
-      .replace(/\s*:\s*/g, ': ')
-      .replace(/\s*\[\]/g, '[]')
-      .replace(/\s*\?/g, '?');
-    
-    return `export interface ${interfaceName} {\n  ${fixedInterfaceBody}\n}\n\nexport const ${constName}: ${typeName}[] = [];`;
-  });
-  
-  // Fix malformed object literals
-  content = content.replace(/\{\s*([^}]+);\s*\}/g, (match, body) => {
-    const fixedBody = body.replace(/;\s*/g, ',\n  ');
-    return `{\n  ${fixedBody}\n}`;
-  });
-  
-  // Fix malformed function parameters
-  content = content.replace(/\(\s*([^)]+);\s*\)/g, (match, params) => {
-    const fixedParams = params.replace(/;\s*/g, ',\n  ');
-    return `(\n  ${fixedParams}\n)`;
-  });
-  
-  // Fix HTML entities
-  content = content.replace(/&apos;/g, "'");
-  content = content.replace(/&quot;/g, '"');
-  content = content.replace(/&lt;/g, '<');
-  content = content.replace(/&gt;/g, '>');
-  
-  // Fix malformed imports
-  content = content.replace(/import\s+([^;]+);\s*import/g, 'import $1;\nimport');
-  
-  // Fix malformed exports
-  content = content.replace(/export\s+([^;]+);\s*export/g, 'export $1;\nexport');
-  
-  // Fix trailing commas in arrays and objects
-  content = content.replace(/,(\s*[}\]])/g, '$1');
-  
-  // Fix malformed string literals
-  content = content.replace(/'([^']*)'([^']*)'/g, "'$1$2'");
-  content = content.replace(/"([^"]*)"([^"]*)"/g, '"$1$2"');
-  
-  return content;
-}
-
-// Function to fix specific file types
-function fixFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixSyntaxErrors(content);
-    
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent);
-      console.log(`✅ Fixed: ${filePath}`);
-      return true;
+  function scanDirectory(dir) {
+    try {
+      const items = fs.readdirSync(dir);
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          scanDirectory(fullPath);
+        } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+          try {
+            const content = fs.readFileSync(fullPath, 'utf8');
+            // Check for common syntax errors
+            if (content.includes('}\n}') || content.includes('}\n\n}') || 
+                content.includes('import[^}]*}\n}') || content.includes('export[^}]*}\n}')) {
+              files.push(fullPath);
+            }
+          } catch (error) {
+            // Skip files that can't be read
+          }
+        }
+      }
+    } catch (error) {
+      // Skip directories that can't be read
     }
-    return false;
-  } catch (error) {
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
-    return false;
   }
+  
+  scanDirectory('/workspace');
+  return files;
 }
 
-// Get all TypeScript and JavaScript files
-const files = execSync('find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | grep -v .next', { encoding: 'utf8' })
-  .split('\n')
-  .filter(file => file.trim() && fs.existsSync(file));
+// Function to fix syntax issues in a file
+function fixSyntaxIssues(content) {
+  let fixed = content;
+  
+  // Remove extra closing braces after imports
+  fixed = fixed.replace(/^import[^}]*\}\n\}/gm, (match) => {
+    return match.replace(/\n\}$/, '');
+  });
+  
+  // Remove extra closing braces after exports
+  fixed = fixed.replace(/^export[^}]*\}\n\}/gm, (match) => {
+    return match.replace(/\n\}$/, '');
+  });
+  
+  // Fix missing closing braces before export statements
+  fixed = fixed.replace(/(\s+)(export\s+function)/g, '\n}\n\n$2');
+  fixed = fixed.replace(/(\s+)(export\s+const)/g, '\n}\n\n$2');
+  fixed = fixed.replace(/(\s+)(export\s+default)/g, '\n}\n\n$2');
+  
+  // Fix missing closing braces before return statements
+  fixed = fixed.replace(/(\s+)(return\s+res\.status\([^)]+\)\.json\([^)]+\);\s*)(\s+)(\})/g, '$1$2\n$4');
+  
+  // Fix missing closing braces in general
+  fixed = fixed.replace(/(\s+)(return\s+res\.status\([^)]+\)\.json\([^)]+\);\s*)(\s*)(export|function|const|let|var)/g, '$1$2\n}\n\n$4');
+  
+  // Fix missing closing braces for try-catch blocks
+  fixed = fixed.replace(/(\s+)(catch\s*\([^)]+\)\s*\{[^}]*\})(\s*)(export|function|const|let|var)/g, '$1$2\n}\n\n$4');
+  
+  // Fix missing closing braces for if statements
+  fixed = fixed.replace(/(\s+)(if\s*\([^)]+\)\s*\{[^}]*\})(\s*)(export|function|const|let|var)/g, '$1$2\n}\n\n$4');
+  
+  // Clean up extra newlines
+  fixed = fixed.replace(/\n{3,}/g, '\n\n');
+  
+  // Fix missing closing braces at end of files
+  if (fixed.trim().endsWith('}') && !fixed.trim().endsWith('}\n')) {
+    fixed = fixed.trim() + '\n';
+  }
+  
+  return fixed;
+}
+
+// Main execution
+const filesToFix = findFilesWithSyntaxErrors();
+console.log(`Found ${filesToFix.length} files with potential syntax errors`);
 
 let fixedCount = 0;
-let errorCount = 0;
-
-// Fix each file
-files.forEach(file => {
-  if (fixFile(file)) {
-    fixedCount++;
+for (const file of filesToFix) {
+  try {
+    const content = fs.readFileSync(file, 'utf8');
+    const fixed = fixSyntaxIssues(content);
+    
+    if (fixed !== content) {
+      fs.writeFileSync(file, fixed);
+      console.log(`✅ Fixed: ${file}`);
+      fixedCount++;
+    }
+  } catch (error) {
+    console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
-});
-
-console.log(`\n🎉 Comprehensive syntax fixes completed!`);
-console.log(`📊 Fixed: ${fixedCount} files`);
-console.log(`❌ Errors: ${errorCount} files`);
-
-// Run ESLint fix
-console.log('\n🔧 Running ESLint fix...');
-try {
-  execSync('npm run lint:fix', { stdio: 'pipe' });
-  console.log('✅ ESLint fix completed');
-} catch (error) {
-  console.log('⚠️ ESLint fix failed, continuing...');
 }
 
-// Run TypeScript check
-console.log('\n🔧 Running TypeScript check...');
-try {
-  execSync('npm run type-check', { stdio: 'pipe' });
-  console.log('✅ TypeScript check passed');
-} catch (error) {
-  console.log('⚠️ TypeScript check failed, continuing...');
-}
-
-console.log('\n🎯 All syntax fixes completed!');
+console.log(`🎉 Fixed syntax issues in ${fixedCount} files`);

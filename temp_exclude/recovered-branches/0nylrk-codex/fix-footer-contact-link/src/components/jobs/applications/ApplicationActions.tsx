@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { 
@@ -16,6 +15,8 @@ interface ApplicationActionsProps {
   processingId: string | null,
   onViewApplication: (applicationId: string) => Promise<void>,
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
+}
+}
 }
 
 export function ApplicationActions({

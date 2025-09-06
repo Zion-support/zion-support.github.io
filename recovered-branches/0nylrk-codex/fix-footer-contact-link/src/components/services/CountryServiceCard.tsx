@@ -13,6 +13,7 @@ interface CountryServiceCardProps {
   country: CountryPricing;
   onSelect: (country: CountryPricing) => void;
   isPopular?: boolean;
+}
 
 export function CountryServiceCard({
   country,

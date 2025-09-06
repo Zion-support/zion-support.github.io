@@ -309,6 +309,7 @@ const stats = [
   { number: "500+", label: "IT Projects Completed" },
   { number: "24/7", label: "Support Available" }
 ];
+}
 
 export default function ITServices() {
   

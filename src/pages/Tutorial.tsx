@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { TUTORIALS } from '@/data/tutorials';
@@ -10,6 +9,7 @@ import type { Tutorial as TutorialType } from '@/types/tutorial';
 
 interface TutorialPageProps {
   tutorial?: TutorialType;
+}
 
 export default function Tutorial({
   tutorial: initialTutorial,
@@ -59,9 +59,3 @@ export default function Tutorial({
       </div>
     </>
   );
-=======
-
-<<<<<<< HEAD
-  const slug = router.query.slug as string | undefined;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

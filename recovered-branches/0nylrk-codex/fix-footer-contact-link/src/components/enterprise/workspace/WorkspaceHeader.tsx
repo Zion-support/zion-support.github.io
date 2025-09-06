@@ -5,6 +5,7 @@ import { Bell, Users, Settings } from 'lucide-react';
 
 interface WorkspaceHeaderProps {
   company: Company;
+}
 
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (

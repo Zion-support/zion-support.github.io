@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useJobApplications } from "@/hooks/useJobApplications";
@@ -16,6 +15,8 @@ import { toast } from "sonner";
 interface ApplyToJobFormProps {
   job: Job,
   onSuccess?: () => void
+}
+}
 }
 
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {

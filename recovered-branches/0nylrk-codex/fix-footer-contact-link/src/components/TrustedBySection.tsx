@@ -104,6 +104,7 @@ const trustedCompanies = [
     alt: 'Thomson Reuters logo',
   },
 ];
+}
 
 export function TrustedBySection() {
   // Use state to track logos that failed to load

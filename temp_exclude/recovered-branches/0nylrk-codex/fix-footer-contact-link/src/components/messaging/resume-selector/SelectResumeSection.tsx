@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FileText } from 'lucide-react';
 import { ResumeOption } from '../resume-selector/types';
@@ -10,6 +9,8 @@ interface SelectResumeSectionProps {
   handleResumeSelect: (resumeId: string) => void,
   handleDownloadResume: () => void,
   isLoading: boolean
+}
+}
 }
 
 export function SelectResumeSection({

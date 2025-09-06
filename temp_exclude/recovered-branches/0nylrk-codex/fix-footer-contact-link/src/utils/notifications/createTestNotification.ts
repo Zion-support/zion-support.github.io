@@ -1,4 +1,3 @@
-
 import { NotificationType } from './types';
 import { createNotification } from './createNotification';
 /**

@@ -16,6 +16,7 @@ interface IntegrationCardProps {
   status?: 'connected' | 'disconnected' | 'pending';
   href?: string;
   onConnect?: () => void;
+}
 
 export function IntegrationCard({
   title,
@@ -79,6 +80,7 @@ export function IntegrationCard({
       </CardFooter>
     </Card>
   );
+}
 
 export function IntegrationCards() {
   return (

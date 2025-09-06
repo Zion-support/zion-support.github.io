@@ -290,5 +290,6 @@ const EnhancedFooter = () => {
     </footer>
   );
 };
+}
 
 export default EnhancedFooter;

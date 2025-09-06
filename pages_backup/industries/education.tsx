@@ -129,6 +129,8 @@ const benefits = [
     icon: BarChart3;
   }
 ;];
+}
+
 export default function EducationPage() {
   return (;
     <Layout );
@@ -176,6 +178,8 @@ export default function EducationPage() {
           </div>;
         </section>;
 ];
+}
+
 export default function EducationPage() {
   
     >

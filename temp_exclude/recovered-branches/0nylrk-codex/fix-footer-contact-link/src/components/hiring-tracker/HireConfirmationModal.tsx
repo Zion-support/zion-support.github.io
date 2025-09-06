@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import {
   Dialog;
@@ -22,6 +21,7 @@ export interface HireConfirmationModalProps {
   application?: JobApplication;
   onConfirm: () => void,
   isSubmitting?: boolean
+}
 }
 
 export function HireConfirmationModal({ 

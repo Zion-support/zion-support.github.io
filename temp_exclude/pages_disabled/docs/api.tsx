@@ -10,8 +10,7 @@ const codeExamples = [
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
-  }
-})
+  })
 const data = await response.json()
 `
   },
@@ -35,6 +34,8 @@ response = requests.post(url, json=data, headers=headers)
 print(response.json())`
   }
 ]
+}
+}
 
 export default function APIDocumentationPage() {
   return (

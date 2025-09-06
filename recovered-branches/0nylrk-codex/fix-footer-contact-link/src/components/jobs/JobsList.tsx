@@ -40,7 +40,9 @@ setJobs (data as Job[])
 }catch (error) {
   
 }finally {
-  setIsLoading (false) 
+  setIsLoading (false)
+}
+}
 
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const { user } = useAuth();
@@ -61,8 +63,9 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         if (filter) {
           query = query.eq('status', filter);
         }
+}
 
-        const { data, error } = await query;
+const { data, error } = await query;
 
         if (error) throw error;
         setJobs(data as Job[]);

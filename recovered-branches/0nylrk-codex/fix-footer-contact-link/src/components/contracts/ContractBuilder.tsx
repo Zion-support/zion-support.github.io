@@ -15,6 +15,7 @@ interface ContractBuilderProps {
   talent: TalentProfile;
   clientName: string;
   onContractGenerated?: (contractContent: string) => void;
+}
 
 export function ContractBuilder({
   isOpen,

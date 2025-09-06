@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 interface NotificationFooterProps {
   onClose: () => void
 }
+}
+}
 
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {
   const navigate = useNavigate();

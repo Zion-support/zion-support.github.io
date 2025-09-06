@@ -2,6 +2,7 @@ export default function LeadEnrichment() {}; return null} } ; function Article({
 import React from 'react';
 interface LeadenrichmentProps {
   // Add props here as needed
+}
 
 export default function Leadenrichment({ }: LeadenrichmentProps) {
   return (

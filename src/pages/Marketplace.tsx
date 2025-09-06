@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
 import ProductCard from '@/components/ProductCard';
@@ -249,6 +248,8 @@ const FilterControls: React.FC<{
  * Uses the auto-feed algorithm to continuously generate IT and AI products
  * Includes intelligent filtering, sorting, and recommendation features
  */
+}
+
 export default function Marketplace() {
   const router = useRouter();
   const { t } = useTranslation();
@@ -809,7 +810,6 @@ case 'newest': ;
 }else {;
   handleApiError (err), //This might show a toast or log to Sentry ;
 
-
 }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, handleApiError, toast]);
 //useInfiniteScrollPagination hook ;
 
@@ -955,7 +955,6 @@ case 'newest': ;
   if (!isAuthenticated) {;
   //though ProductCard will reset its state in .finally () regardless. throw error ;
 
-
 }buyDisabled= {;
   false ;
 }//Still false, ProductCard handles its own disabled state based on auth /> {;
@@ -1031,12 +1030,3 @@ case 'newest': ;
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-        variant: "destructive"}),
-      return;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

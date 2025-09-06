@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import {
   Milestone,
@@ -30,6 +29,7 @@ interface MilestonesListProps {
   isSubmitting: boolean;
   onApprove?: (id: string) => Promise<void>;
   onReject?: (id: string) => Promise<void>;
+}
 
 export const MilestonesList: React.FC<MilestonesListProps> = ({
   milestones,
@@ -68,7 +68,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   }
 
   if (milestones.length === 0 && !showAddForm) {
-    
+
         icon={<span className='text-3xl'>📊</span>}
         title='No Milestones Yet'
         description={
@@ -132,10 +132,3 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   );
 };
 "
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

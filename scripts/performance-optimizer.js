@@ -241,6 +241,8 @@ class PerformanceMonitor {
           "non_interaction": true
         })})}
   }
+}
+}
 
 export default PerformanceMonitor;";
     const scriptPath = path.join(this.srcDir, 'utils', 'PerformanceMonitor.js');

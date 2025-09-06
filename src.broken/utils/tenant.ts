@@ -29,16 +29,20 @@ export interface TenantsFile {
 
 const FILE = 'tenants.json';
 const FALLBACK: TenantsFile = { tenants: [] };
+}
 
 export function getTenants(): Tenant[] {
   const data = readJsonFile<TenantsFile>(FILE, FALLBACK);
   return data.tenants;
+}
 
 export function getTenantById(tenantId: string): Tenant | undefined {
   return getTenants().find(t => t.id === tenantId);
+}
 
 export function getTenantByApiKey(apiKey: string): Tenant | undefined {
   return getTenants().find(t => t.apiKey === apiKey);
+}
 
 export function createTenant(branding: TenantBranding): Tenant {
   const now = new Date().toISOString();
@@ -58,6 +62,7 @@ export function createTenant(branding: TenantBranding): Tenant {
     FALLBACK
   );
   return tenant;
+}
 
 export function updateTenant(
   tenantId: string,
@@ -83,6 +88,7 @@ export function updateTenant(
     FALLBACK
   );
   return result;
+}
 
 export function rotateTenantApiKey(tenantId: string): Tenant | undefined {
   let result: Tenant | undefined = undefined;

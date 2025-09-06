@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -38,6 +37,7 @@ initialPrice?: PriceRange;
   setSelectedCategories (prev => prev.includes (category) ? prev.filter (c => c !== category) : [...prev, category] min: 0;
 max: 10000 ;
 });
+}
 
 export function DynamicListingPage({
   title,
@@ -553,7 +553,6 @@ export function DynamicListingPage({
 if (typeof window !== 'undefined') {';
   sessionStorage.setItem ('quoteRequestData', JSON.stringify (quoteData) ) ;
 
-
 }, 500) ;
 };";
 return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <div className="lg:col-span-1" > <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6" > <h3 className="text-lg font-medium text-white mb-4 flex items-center" > <Filter className="mr-2 h-5 w-5" /> Filters </h3> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Categories </label> > {;
@@ -611,15 +610,3 @@ setSelectedRating (null);
 > Clear All </Button> </div>) ;
 }</div> </div> </div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-    max: 10000}),
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                        logInfo('Rating selected:', { data: rating }),
-                        setSelectedRating(rating);
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

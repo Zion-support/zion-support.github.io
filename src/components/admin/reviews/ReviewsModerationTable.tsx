@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
 import { Check, X, User, Star, MoreHorizontal } from 'lucide-react';
@@ -61,6 +60,8 @@ status: ReviewStatus ;
 }) if (error) throw error;
 return {;
   reviewId, status ;
+}
+}
 
 export function ReviewsModerationTable({
   reviews,
@@ -132,8 +133,9 @@ export function ReviewsModerationTable({
       </div>
     );
   }
+}
 
-  const handleApprove = (reviewId: string) => {
+const handleApprove = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: 'approved' });
   };
 
@@ -515,12 +517,3 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }</DialogFooter> </DialogContent> </Dialog>) ;
 }</>) ;
 }"
-=======
-
-<<<<<<< HEAD
-
-
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

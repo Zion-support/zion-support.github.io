@@ -3,6 +3,7 @@ import React from 'react';
 interface InnovativeServicesOverviewProps {
   // Add props here as needed
 }
+}
 
 export default function InnovativeServicesOverview({ }: InnovativeServicesOverviewProps) {
   return (
@@ -11,13 +12,7 @@ export default function InnovativeServicesOverview({ }: InnovativeServicesOvervi
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 }
-=======
 }
-=======
 }

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -10,6 +9,8 @@ import { JobApplication } from "@/types/jobs";
 interface ApplicationScoreCardProps {
   application: JobApplication,
   onScoreUpdated?: (updatedApplication: JobApplication) => void
+}
+}
 }
 
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {

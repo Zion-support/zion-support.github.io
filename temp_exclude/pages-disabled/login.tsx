@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react';
 import Layout from '../components/Layout';
+}
+}
 
 export default function LoginPage() {}
   const [showPassword, setShowPassword] = useState(false);

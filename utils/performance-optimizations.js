@@ -1,4 +1,6 @@
 // Performance optimization utilities,
+}
+
 export const lazyLoadImages = () => {,
   if (typeof window === 'undefined) return,
   const images = document.querySelectorAll('img[data-src]'),

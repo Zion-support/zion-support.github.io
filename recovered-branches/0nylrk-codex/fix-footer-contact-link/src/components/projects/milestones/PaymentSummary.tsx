@@ -6,6 +6,7 @@ import { CreditCard } from 'lucide-react';
 interface PaymentSummaryProps {
   milestones: Milestone[];
   paymentTerms: string | null;
+}
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
   milestones,

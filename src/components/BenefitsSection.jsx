@@ -63,6 +63,8 @@ const additionalStats = [";
     { icon: <Globe className="w-6 h-6"/>,  value: "100+", label: "Countries Served" },";
     { icon: <Lock className="w-6 h-6"/>,  value: "1000+", label: "Projects Completed" }
 ];
+}
+
 export function BenefitsSection() {;
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const containerVariants = {;

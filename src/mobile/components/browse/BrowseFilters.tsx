@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
@@ -25,6 +24,7 @@ import { Label } from '@/components/ui/label';
 
 interface BrowseFiltersProps {
   type: 'jobs' | 'talents';
+}
 
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
@@ -277,9 +277,3 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
       </div>
     </div>
   );
-=======
-
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

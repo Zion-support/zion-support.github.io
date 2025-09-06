@@ -15,6 +15,7 @@ interface FilterSidebarProps {
   onFilterChange: (filterType: string, value: string) => void;
   onRatingChange: (rating: number | null) => void;
   onClearFilters: () => void;
+}
 
 export function FilterSidebar({
   filters,

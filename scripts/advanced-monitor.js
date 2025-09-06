@@ -24,7 +24,9 @@ class AdvancedMonitor {
       if (err) {
         console.error("PM2 monitoring "error": ", err)
         return}
-      const timestamp = new Date().toISOString()
+}
+
+const timestamp = new Date().toISOString()
       const logEntry = `[${timestamp}] PM2 "processes": ${list.length} running\n`
       fs.appendFileSync(this.logPath, logEntry)})}
   checkDiskSpace() {

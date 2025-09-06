@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 
@@ -52,29 +51,11 @@ const AdminNotesPage: React.FC = () => {
   const [filterTag, setFilterTag] = useState('');
   const [showPrivate, setShowPrivate] = useState(false);
   const [isAdmin, setIsAdmin] = useState(true);
-=======
-import { useEffect, useState } from 'react';
-
-type Note = {
-  id: string,
-  targetType: string,
-  targetId: string,
-  text: string,
-  authorId: string,
-  createdAt: number
-};
-
-export default function AdminNotesConsole() {
-  const [isAdmin, setIsAdmin] = useState(true);
-  const [notes, setNotes] = useState<Note[]>([]);
-  const [loading, setLoading] = useState(false);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
   useEffect(() => {
     async function load() {
       setLoading(true);
       try {
-<<<<<<< HEAD
         const res = await fetch('/api/admin/notes-all', {
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' },
         });
@@ -98,25 +79,6 @@ export default function AdminNotesConsole() {
             checked={isAdmin}
             onChange={e => setIsAdmin(e.target.checked)}
           />
-=======
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } }),
-        if (!res.ok) return;
-        const data = await res.json();
-        setNotes(data.notes || [])
-      } finally {
-        setLoading(false)
-      }
-    }
-    if (isAdmin) load()
-  }, [isAdmin]);
-
-  return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <h1 className="text-xl font-semibold">Admin Notes</h1>
-        <label className="inline-flex items-center gap-2 text-sm">
-          <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
           <span>Admin</span>
         </label>
       </div>
@@ -124,7 +86,6 @@ export default function AdminNotesConsole() {
       {loading ? (
         <div>Loading…</div>
       ) : notes.length === 0 ? (
-<<<<<<< HEAD
         <div className='opacity-70'>No notes found.</div>
       ) : (
         <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
@@ -136,20 +97,10 @@ export default function AdminNotesConsole() {
               <div className='font-medium mb-1'>
                 {n.targetType} • {n.targetId}
               </div>
-=======
-        <div className="opacity-70">No notes found.</div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {notes.map((n) => (
-            <div key={n.id} className="rounded border p-3 text-sm">
-              <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
-              <div className="font-medium mb-1">{n.targetType} • {n.targetId}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               <div>{n.text}</div>
             </div>
           ))}
         </div>
-<<<<<<< HEAD
 
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">
@@ -215,9 +166,9 @@ export default function AdminNotesConsole() {
                     </span>
                   </div>
                 </div>
-                
+
                 <p className="text-gray-700 mb-4">{note.content}</p>
-                
+
                 <div className="flex justify-between items-center">
                   <div className="flex flex-wrap gap-2">
                     {note.tags.map((tag) => (
@@ -230,12 +181,12 @@ export default function AdminNotesConsole() {
                       </span>
                     ))}
                   </div>
-                  
+
                   <div className="text-sm text-gray-500">
                     By {note.author}
                   </div>
                 </div>
-                
+
                 <div className="mt-4 flex gap-2">
                   <button className="text-blue-600 hover:text-blue-800 text-sm">
                     Edit
@@ -254,9 +205,3 @@ export default function AdminNotesConsole() {
       </main>
     </>
   );
-=======
-      )}
-    </div>
-  )
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

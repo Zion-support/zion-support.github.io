@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { HelpCategory } from "./types";
@@ -6,6 +5,8 @@ interface HelpCategoryListProps {
   categories: HelpCategory[],
   onCategorySelect: (categoryId: string) => void,
   searchQuery: string
+}
+}
 }
 
 export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {

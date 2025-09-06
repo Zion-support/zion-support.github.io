@@ -12,6 +12,8 @@ import z from "zod";
 import { ChatAssistant } from "@/components/ChatAssistant";
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
 import { AppLayout } from "@/layout/AppLayout";
+}
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",

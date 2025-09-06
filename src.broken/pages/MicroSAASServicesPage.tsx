@@ -23,6 +23,7 @@ import {
   Smartphone,
   Database,;
 } from 'lucide-react';
+}
 
 export default function MicroSAASServicesPage() {
   const microSAASServices = [

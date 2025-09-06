@@ -6,6 +6,8 @@ interface ResponsiveState {
   isDesktop: boolean, width: number,
   height: number,
 }
+}
+}
 
 export const useResponsive = (): ResponsiveState => {
   const [state, setState] = useState<ResponsiveState>({
@@ -38,6 +40,8 @@ export const useResponsive = (): ResponsiveState => {
 
   return state;
 };
+}
+}
 
 export default useResponsive;
     updateDimensions();
@@ -46,5 +50,8 @@ export default useResponsive;
     return () => window.removeEventListener(;
   'resize', updateDimensions)}, []);
   return state};
+}
+}
+
 export default useResponsive;
 ;

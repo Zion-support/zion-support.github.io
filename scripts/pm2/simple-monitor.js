@@ -92,7 +92,9 @@ class SimpleMonitor {}
 
 // Start the automation if this script is run directly;
 if (require.main === module) {}
-  const monitor = new SimpleMonitor();,
+}
+
+const monitor = new SimpleMonitor();,
   monitor.start().catch(error => {}),
     _console.error('Simple monitor failed to start:', error);',
     process.exit(1);,

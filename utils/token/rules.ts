@@ -1,4 +1,5 @@
 import { TokenConfig } from './types';
+}
 
 export const DEFAULT_TOKEN_CONFIG: TokenConfig = {
   symbol: 'ZION$',

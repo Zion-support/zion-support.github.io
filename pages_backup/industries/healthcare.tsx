@@ -158,6 +158,8 @@ const caseStudies = [
     results: ['15 facilities connected, '80% workflow improvement', '100% data accuracy']',
   }
 ;];
+}
+
 export default function HealthcarePage() {
   return (;
     <Layout );
@@ -205,6 +207,8 @@ export default function HealthcarePage() {
           </div>;
         </section>;
 ];
+}
+
 export default function HealthcarePage() {
   
     >

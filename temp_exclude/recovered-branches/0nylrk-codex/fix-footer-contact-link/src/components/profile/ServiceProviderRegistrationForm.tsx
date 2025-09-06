@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -37,6 +36,7 @@ const serviceProfileSchema = z.object({
   website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()}),
 
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
+}
 
 export function ServiceProviderRegistrationForm() {
   const { user } = useAuth();

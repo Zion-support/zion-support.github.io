@@ -15,6 +15,7 @@ interface ActiveFiltersProps {
   experienceRange: [number, number];
   setExperienceRange: (range: [number, number]) => void;
   clearFilters: () => void;
+}
 
 export function ActiveFilters({
   selectedSkills,

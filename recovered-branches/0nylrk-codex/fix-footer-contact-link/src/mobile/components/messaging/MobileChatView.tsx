@@ -32,6 +32,7 @@ status?: 'sent' | 'delivered' | 'read'
   messages: Message[];
   onBack: () => void;
   onSendMessage: (content: string) => void;
+}
 
 export function MobileChatView({
   contact,

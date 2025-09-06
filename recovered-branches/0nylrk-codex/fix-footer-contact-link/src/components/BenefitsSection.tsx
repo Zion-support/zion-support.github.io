@@ -28,6 +28,7 @@ const benefits = [
     icon: <TrendingDown className='w-8 h-8' />,
   },
 ];
+}
 
 export function BenefitsSection() {
   return (

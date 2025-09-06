@@ -2,6 +2,8 @@ import React from 'react';
 interface FeaturesSectionProps {
   // Add props here as needed
 }
+}
+
 export default function FeaturesSection({ }: FeaturesSectionProps) {
   return (
     <div>

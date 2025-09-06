@@ -14,6 +14,7 @@ interface ProfileHeroProps {
   reviewCount?: number;
   aiScore?: number;
   profileType: 'service' | 'talent';
+}
 
 export function ProfileHero({
   name,

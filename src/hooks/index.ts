@@ -1,4 +1,5 @@
 import { useState } from 'react';
+}
 
 export const useLocalStorage = (key: string, initialValue: unknown) => {
   const [ storedValue, setStoredValue ] = useState(() => {

@@ -14,6 +14,7 @@ const iconMap = {
   Star;
   MessageSquare
 };
+}
 
 export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null;
@@ -51,5 +52,6 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
     </div>
   )
 };
+}
 
 export default UserBadges;

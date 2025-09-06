@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FileText, Plus, Users, Search, Calendar } from 'lucide-react';
+}
 
 export function QuickActions() {
   const actions = [

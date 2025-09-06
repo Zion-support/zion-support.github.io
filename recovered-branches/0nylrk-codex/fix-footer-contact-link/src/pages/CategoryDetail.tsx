@@ -17,6 +17,7 @@ import {
 import { MARKETPLACE_LISTINGS } from '@/data/listingData';
 import { useNavigate } from 'react-router-dom';
 import { toast } from '@/hooks/use-toast';
+}
 
 export default function CategoryDetail() {
   // Cast to specify the expected route param type since useParams may be untyped

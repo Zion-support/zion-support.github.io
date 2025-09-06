@@ -112,5 +112,7 @@ if (typeof document !== 'undefined') {
   styleSheet.textContent = focusStyles;
   document.head.appendChild(styleSheet);
 }
+}
+}
 
 export default AccessibilityEnhancer;

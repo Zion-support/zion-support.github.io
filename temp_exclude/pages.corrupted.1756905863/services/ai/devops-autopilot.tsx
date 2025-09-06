@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export default function DevOpsAutopilot() {; return (; <Article; title=\"DevOps Autopilot\"; subtitle=\"SLO-aware remediation,cost controls,and deployment guardrails\"; price=\"from $15k\"; bullets={[
     ; \'Automated rollback and canary based on error budgets\',; \'Kubernetes policy-as-code with security baselines\',; \'FinOps \"guardrails\": right-sizing and scheduled scale-downs\',,
     \'Observability map with RCA suggestions and runbook generation\'
@@ -11,6 +7,8 @@ import React from 'react';
 interface DevopsautopilotProps {
   // Add props here as needed
 }
+}
+
 export default function Devopsautopilot({ }: DevopsautopilotProps) {
   return (
     <div>
@@ -18,9 +16,5 @@ export default function Devopsautopilot({ }: DevopsautopilotProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 }
-=======
-=======

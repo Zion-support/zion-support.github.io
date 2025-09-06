@@ -23,7 +23,8 @@
   color.split ('-') [1] 
 }-500), var (--$ {
   color.split ('-') [3] 
-}-500) ) ` 
+}-500) ) `
+}
 
 export default function InteractiveCard({
   title,
@@ -94,6 +95,7 @@ export default function InteractiveCard({
       </div>
     </Link>
   );
+}
 
 export function FeatureCard({
   title,
@@ -121,6 +123,7 @@ export function FeatureCard({
       )}
     </InteractiveCard>
   );
+}
 
 export function TestimonialCard({
   quote,

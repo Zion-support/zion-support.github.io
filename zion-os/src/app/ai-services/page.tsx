@@ -1,4 +1,5 @@
 import Link from 'next/link';
+}
 
 export const metadata = {
   title:
@@ -8,6 +9,7 @@ export const metadata = {
   keywords:
     'AI services, artificial intelligence, machine learning, autonomous business, business intelligence, content generation, Zion Tech Group',
 };
+}
 
 export default function AIServicesPage() {
   return (

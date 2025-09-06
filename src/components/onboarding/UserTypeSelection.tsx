@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Briefcase, Star, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -12,6 +11,7 @@ interface UserTypeOption {
 interface UserTypeSelectionProps {
   onSelect: (userType: 'serviceProvider' | 'talent' | 'client') => void;
   selectedType: string | null;
+}
 
 export function UserTypeSelection({
   onSelect,
@@ -52,7 +52,6 @@ export function UserTypeSelection({
           const Icon = type.icon;
           const isSelected = selectedType === type.id;
 
-          
               onClick={() => onSelect(type.id)}
               variant='outline'
               className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
@@ -80,11 +79,3 @@ export function UserTypeSelection({
       </div>
     </div>
   );
-=======
-
-<<<<<<< HEAD
-          const Icon = type.icon;
-          const isSelected = selectedType === type.id;
-          
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

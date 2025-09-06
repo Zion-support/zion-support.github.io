@@ -34,6 +34,7 @@ const mockPost: ForumPost = {
   isAnswered: true,
   isFeatured: true,
 };
+}
 
 export default function EditPostPage() {
   const { postId } = useParams() as { postId?: string };

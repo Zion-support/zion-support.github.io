@@ -22,6 +22,7 @@ interface SmartContractBuilderProps {
   clientName: string;
   onContractGenerated?: (contractContent: string) => void;
   onDeploy?: (contractContent: string) => void;
+}
 
 export function SmartContractBuilder({
   isOpen,

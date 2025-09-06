@@ -11,6 +11,7 @@ type QuoteRequestsListProps = {
   onMarkAsResponded: (id: string) => void,
   onToggleArchive: (id: string, isArchived: boolean) => void
 };
+}
 
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
   quotes;

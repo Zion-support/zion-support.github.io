@@ -7,6 +7,7 @@ interface MobileFilterBarProps {
   searchTerm: string;
   setSearchTerm: (value: string) => void;
   setIsMobileFilterOpen: (isOpen: boolean) => void;
+}
 
 export function MobileFilterBar({
   searchTerm,

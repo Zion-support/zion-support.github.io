@@ -1,4 +1,4 @@
- interface PortfolioItem {
+interface PortfolioItem {
   title: string,
 description: string 
 }interface PortfolioListProps {

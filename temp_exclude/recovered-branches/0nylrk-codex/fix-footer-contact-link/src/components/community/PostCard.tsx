@@ -13,6 +13,8 @@ interface PostCardProps {
   post: ForumPost,
   compact?: boolean
 }
+}
+}
 
 export const PostCard = ({ post, compact = false }: PostCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
@@ -89,5 +91,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
     </Card>
   )
 };
+}
+}
 
 export default PostCard;

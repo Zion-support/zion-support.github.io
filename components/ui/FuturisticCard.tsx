@@ -4,6 +4,7 @@ type Props = {
   description: string,
   cta?: React.ReactNode
 };
+}
 
 export default function FuturisticCard({ title, description, cta }: Props) {
   return (

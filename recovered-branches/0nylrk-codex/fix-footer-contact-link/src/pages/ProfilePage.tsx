@@ -19,6 +19,7 @@ import {
   Linkedin,
   CheckCircle2,;
 } from 'lucide-react';
+}
 
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a

@@ -437,6 +437,7 @@ const categories = [
   'IT Services',
   'E-commerce & Services',
 ];
+}
 
 export default function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');

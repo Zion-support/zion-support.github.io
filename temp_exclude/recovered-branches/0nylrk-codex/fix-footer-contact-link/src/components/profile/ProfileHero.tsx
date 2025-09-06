@@ -1,4 +1,3 @@
-
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Badge } from "@/components/ui/badge";
@@ -14,6 +13,8 @@ interface ProfileHeroProps {
   reviewCount?: number;
   aiScore?: number;
   profileType: 'service' | 'talent'
+}
+}
 }
 
 export function ProfileHero({

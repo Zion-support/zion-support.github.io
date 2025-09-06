@@ -2,6 +2,8 @@ import React from 'react';
 interface FeatureCTAsProps {
   // Add props here as needed
 }
+}
+
 export default function FeatureCTAs({ }: FeatureCTAsProps) {
   return (
     <div>

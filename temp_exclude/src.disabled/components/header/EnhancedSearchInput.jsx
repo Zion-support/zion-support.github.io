@@ -2,6 +2,8 @@ import React from 'react';
 interface EnhancedSearchInputProps {
   // Add props here as needed
 }
+}
+
 export default function EnhancedSearchInput({ }: EnhancedSearchInputProps) {
   return (
     <div>

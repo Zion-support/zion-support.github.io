@@ -1,5 +1,6 @@
 import { GradientHeading } from '@/components/GradientHeading';
 import { EnhancedNewsletterForm } from '@/components/EnhancedNewsletterForm';
+}
 
 export function NewsletterSection() {
   return (

@@ -5,6 +5,7 @@ import { ArrowLeft } from 'lucide-react';
 
 interface ProjectHeaderProps {
   title: string;
+}
 
 export function ProjectHeader({ title }: ProjectHeaderProps) {
   const navigate = useNavigate();

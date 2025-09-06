@@ -2,6 +2,8 @@ import React from 'react';
 interface CommunityPageProps {
   // Add props here as needed
 }
+}
+
 export default function CommunityPage({ }: CommunityPageProps) {
   return (
     <div>

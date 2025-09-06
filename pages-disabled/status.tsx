@@ -109,6 +109,7 @@ const getSeverityColor = (severity: string) => {}
       return 'bg-gray-100 text-gray-800';
   };
 };
+}
 
 export default function StatusPage() {}
   return ()

@@ -25,6 +25,8 @@ const variantClasses = {';
   error: 'border-red-200 border-t-red-600';
 };
 ;
+}
+
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({';
   size = 'md',;
   text,';
@@ -66,4 +68,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({';
   return spinner;
 };
 ;
+}
+
 export default LoadingSpinner;'"

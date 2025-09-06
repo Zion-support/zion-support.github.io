@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
@@ -8,6 +7,7 @@ export interface MessageTabProps {
   setMessage: (message: string) => void,
   proposalLink: string,
   setProposalLink: (link: string) => void
+}
 }
 
 export function MessageTab({ message, setMessage, proposalLink, setProposalLink }: MessageTabProps) {

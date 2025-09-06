@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
 import React from 'react';
@@ -14,26 +10,16 @@ const features = [;
     description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',
 import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const features = [
   {
     icon: Cloud,
     title: 'Cloud Migration',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     description: 'Seamless migration to cloud platforms with zero downtime'
   },
   {}
@@ -67,9 +53,10 @@ const services = [
   'Performance Optimization',',
   'Cost Optimization',',
   'Security Hardening'',
-    
 
   ];
+}
+
 export default function CloudDevOpsPage() {
   return (;
     <Layout );
@@ -87,7 +74,7 @@ export default function CloudDevOpsPage() {
                 </span>;
               </h1>;
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";
-                Accelerate your digital transformation with our comprehensive cloud migration, 
+                Accelerate your digital transformation with our comprehensive cloud migration,
                 infrastructure automation, and DevOps expertise. Build, deploy, and scale with confidence.,
               </p>;
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">",
@@ -151,7 +138,7 @@ export default function CloudDevOpsPage() {
                 Ready to Transform Your Infrastructure?;
               </h2>;
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">";
-                Let our cloud and DevOps experts help you build a scalable, secure, 
+                Let our cloud and DevOps experts help you build a scalable, secure,
                 and efficient infrastructure that grows with your business.;
               </p>;
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">",
@@ -167,12 +154,8 @@ export default function CloudDevOpsPage() {
     </Layout>;
     title: 'Infrastructure as Code',
     description: 'Automated infrastructure provisioning and management'
-<<<<<<< HEAD
-=======
-=======
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
-=======
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
   },
@@ -197,10 +180,6 @@ export default function CloudDevOpsPage() {
     description: '24/7 monitoring and proactive alerting systems'
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const benefits = [
   'Reduced infrastructure costs by up to 50%',
   'Improved deployment speed and reliability',
@@ -209,11 +188,9 @@ const benefits = [
   'Better disaster recovery capabilities',
   'Faster time-to-market for applications'
 ];
+}
+
 export default function CloudDevOpsServices() {
-<<<<<<< HEAD
-=======
-=======
-=======
 
 const tools = [
   { name: 'AWS', description: 'Amazon Web Services cloud platform' },
@@ -225,10 +202,9 @@ const tools = [
   { name: 'Jenkins', description: 'CI/CD automation' },
   { name: 'Prometheus', description: 'Monitoring and alerting' }
 ];
+}
 
 export default function CloudDevOpsPage() {
-<<<<<<< HEAD
-=======
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
@@ -270,15 +246,9 @@ export default function CloudDevOpsPage() {
                 Comprehensive cloud and DevOps services designed to modernize your infrastructure
                 and accelerate your development processes.
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>
-=======
-<<<<<<< HEAD
             </div>
-=======
             </motion.div>
-=======
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -297,10 +267,6 @@ export default function CloudDevOpsPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -333,10 +299,6 @@ export default function CloudDevOpsPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-<<<<<<< HEAD
-=======
-=======
-=======
 
         {/* Tools Section */}
         <section className="py-16 bg-white">
@@ -404,8 +366,6 @@ export default function CloudDevOpsPage() {
                   <p className="text-gray-600">{phase.description}</p>
                 </motion.div>
               ))}
-<<<<<<< HEAD
-=======
             </div>
           </div>
         </section>
@@ -431,15 +391,9 @@ export default function CloudDevOpsPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Layout>
-=======
-<<<<<<< HEAD
     </Layout>
-=======
     </>
-=======
     </>
   );
 }

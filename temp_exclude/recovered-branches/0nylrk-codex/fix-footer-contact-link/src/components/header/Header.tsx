@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
@@ -19,6 +18,7 @@ export interface HeaderProps {
     backgroundColor: string,
     textColor: string
   }
+}
 }
 
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {

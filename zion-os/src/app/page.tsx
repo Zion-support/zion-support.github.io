@@ -1,4 +1,5 @@
 import FeatureCard from './components/FeatureCard';
+}
 
 export default function HomePage() {
   const features = [

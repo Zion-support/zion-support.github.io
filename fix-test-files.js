@@ -3,8 +3,6 @@ import fs from 'fs';';,
 import path from 'path';';
 import { fileURLToPath } from 'url';,
 
-
-
 function fixTestFile(filePath) {}
   try {}
     const content = fs.readFileSync(filePath, 'utf8');',

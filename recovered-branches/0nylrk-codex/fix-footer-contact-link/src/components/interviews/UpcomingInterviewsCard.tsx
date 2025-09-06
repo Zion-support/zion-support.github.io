@@ -7,6 +7,7 @@ import { format, isPast, parseISO } from 'date-fns';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, Video } from 'lucide-react';
 import { Avatar } from '@/components/ui/avatar';
+}
 
 export function UpcomingInterviewsCard() {
   const { fetchInterviews } = useInterviews();

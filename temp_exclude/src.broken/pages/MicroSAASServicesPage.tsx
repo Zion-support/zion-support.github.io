@@ -1,4 +1,6 @@
- export default function MicroSAASServicesPage () {
+}
+
+export default function MicroSAASServicesPage () {
   const microSAASServices = [ {
   benefits: [ "50% cost savings vs competitors", "Easy onboarding and adoption",
 "Scalable as you grow";

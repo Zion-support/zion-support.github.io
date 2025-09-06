@@ -12,6 +12,7 @@ interface PageViewsChartProps {
   data: Array<{ date: string; views: number }>;
   timeRange: string;
   onTimeRangeChange: (range: string) => void;
+}
 
 export function PageViewsChart({
   data,

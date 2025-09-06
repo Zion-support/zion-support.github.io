@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 export interface TalentProfileData {
@@ -16,6 +15,7 @@ export interface CategorizedSkills {
 export interface EnhancedProfile {
   summary: string,
   categorizedSkills: CategorizedSkills
+}
 }
 
 export function useTalentProfileEnhancer() {

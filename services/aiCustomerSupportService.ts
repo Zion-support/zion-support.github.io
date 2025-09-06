@@ -675,5 +675,7 @@ class AICustomerSupportService {
   async getAnalytics(): Promise<SupportAnalytics> {
     return this.analytics;
   }
+}
+}
 
 export const aiCustomerSupportService = new AICustomerSupportService();

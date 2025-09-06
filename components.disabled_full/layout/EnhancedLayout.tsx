@@ -1,5 +1,6 @@
 interface EnhancedLayoutProps {
   \"children\": ReactNode;
+}
 
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   return (

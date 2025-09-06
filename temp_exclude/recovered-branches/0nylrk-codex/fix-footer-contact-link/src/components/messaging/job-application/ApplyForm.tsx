@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
@@ -14,6 +13,8 @@ interface ApplyFormProps {
   job: Job,
   onClose: () => void,
   onApplySuccess?: (jobId: string) => Promise<void>
+}
+}
 }
 
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {

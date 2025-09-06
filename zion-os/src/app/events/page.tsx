@@ -1,4 +1,5 @@
 import Link from 'next/link';
+}
 
 export const metadata = {
   title: 'Events - Zion Tech Group | Conferences, Webinars & Workshops',
@@ -7,6 +8,7 @@ export const metadata = {
   keywords:
     'events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events',
 };
+}
 
 export default function EventsPage() {
   return (

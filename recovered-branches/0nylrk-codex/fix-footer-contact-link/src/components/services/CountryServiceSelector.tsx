@@ -9,6 +9,7 @@ import { ServiceDetails } from './ServiceDetails';
 interface CountryServiceSelectorProps {
   onCountryChange?: (country: CountryPricing | null) => void;
   selectedCountry?: CountryPricing | null;
+}
 
 export function CountryServiceSelector({
   onCountryChange,

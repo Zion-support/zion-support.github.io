@@ -24,6 +24,8 @@ export type SitemapItem = {
 const currentDate = '2025-05-15';
 
 // Public Pages - Accessible to all users
+}
+
 export const publicPages: SitemapItem[] = [
   {
     path: '/',
@@ -125,6 +127,8 @@ export const publicPages: SitemapItem[] = [
 ];
 
 // Authentication Pages
+}
+
 export const authPages: SitemapItem[] = [
   {
     path: '/login',
@@ -171,6 +175,8 @@ export const authPages: SitemapItem[] = [
 ];
 
 // Talent/Creator Routes - Requires authentication and appropriate role
+}
+
 export const talentRoutes: SitemapItem[] = [
   {
     path: '/talent-dashboard',
@@ -215,6 +221,8 @@ export const talentRoutes: SitemapItem[] = [
 ];
 
 // Client/Employer Routes - Requires authentication and appropriate role
+}
+
 export const clientRoutes: SitemapItem[] = [
   {
     path: '/client-dashboard',
@@ -249,6 +257,8 @@ export const clientRoutes: SitemapItem[] = [
 ];
 
 // Shared Routes - Authenticated Users
+}
+
 export const sharedRoutes: SitemapItem[] = [
   {
     path: '/messages',
@@ -289,6 +299,8 @@ export const sharedRoutes: SitemapItem[] = [
 ];
 
 // Admin Routes
+}
+
 export const adminRoutes: SitemapItem[] = [
   {
     path: '/analytics',
@@ -323,6 +335,8 @@ export const adminRoutes: SitemapItem[] = [
 ];
 
 // Dynamic Path Patterns
+}
+
 export const dynamicPaths = {
   talentProfile: '/talent/:id',
   projectDetails: '/project/:projectId',
@@ -334,6 +348,8 @@ export const dynamicPaths = {
 };
 
 // The complete sitemap
+}
+
 export const completeSitemap: SitemapItem[] = [
   ...publicPages,
   ...authPages,
@@ -344,6 +360,8 @@ export const completeSitemap: SitemapItem[] = [
 ];
 
 // Helper function to get appropriate routes based on user role
+}
+
 export const getAccessibleRoutes = (
   isAuthenticated: boolean,
   userType?: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin' | null

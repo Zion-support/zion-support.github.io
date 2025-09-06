@@ -16,6 +16,7 @@ import { useAuth } from '@/hooks/useAuth';
 
 interface ProjectReviewSectionProps {
   project: Project;
+}
 
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth();

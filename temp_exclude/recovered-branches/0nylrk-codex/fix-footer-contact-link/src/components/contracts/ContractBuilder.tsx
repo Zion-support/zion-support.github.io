@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -15,6 +14,8 @@ interface ContractBuilderProps {
   talent: TalentProfile,
   clientName: string,
   onContractGenerated?: (contractContent: string) => void
+}
+}
 }
 
 export function ContractBuilder({

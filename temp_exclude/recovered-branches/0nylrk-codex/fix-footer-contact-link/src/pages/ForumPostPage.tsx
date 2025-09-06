@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
@@ -87,6 +86,8 @@ const mockReplies: ForumReply[] = [
     downvotes: 0
   }
 ];
+}
+}
 
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
@@ -117,8 +118,9 @@ export default function ForumPostPage() {
       </AppLayout>
     )
   }
+}
 
-  const handleUpvote = () => {
+const handleUpvote = () => {
     if (!user) {
       toast({
         title: "Authentication required",

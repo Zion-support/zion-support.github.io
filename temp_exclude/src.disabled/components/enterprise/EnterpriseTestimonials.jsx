@@ -2,6 +2,8 @@ import React from 'react';
 interface EnterpriseTestimonialsProps {
   // Add props here as needed
 }
+}
+
 export default function EnterpriseTestimonials({ }: EnterpriseTestimonialsProps) {
   return (
     <div>

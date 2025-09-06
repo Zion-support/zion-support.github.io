@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -32,6 +31,7 @@ const updatePasswordSchema = z
     path: ["confirmPassword"]}),
 
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
+}
 
 export default function UpdatePassword() {
   const [isLoading, setIsLoading] = useState(false);

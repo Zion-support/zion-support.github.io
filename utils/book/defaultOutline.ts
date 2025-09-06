@@ -1,4 +1,5 @@
 import type { BookChapter } from './bookTypes';
+}
 
 export const defaultChapters: BookChapter[] = [
   { title: "Intro: Founder's Story", content: '' },

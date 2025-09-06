@@ -1,4 +1,3 @@
-
 import React from "react";
 import { AdminHeader } from "./AdminHeader";
 import { TeamManagement } from "./TeamManagement";
@@ -10,6 +9,7 @@ import {
   TabsContent;
   TabsList;
   TabsTrigger} from "@/components/ui/tabs";
+}
 
 export function AdminDashboard() {
   return (

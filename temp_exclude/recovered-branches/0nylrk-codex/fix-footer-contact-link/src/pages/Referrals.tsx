@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useReferrals } from '@/hooks/useReferrals';
@@ -14,6 +13,8 @@ import { Button } from '@/components/ui/button';
 import { toast } from '@/hooks/use-toast';
 import { Share, Users } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+}
+
 export default function ReferralsPage() {
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();

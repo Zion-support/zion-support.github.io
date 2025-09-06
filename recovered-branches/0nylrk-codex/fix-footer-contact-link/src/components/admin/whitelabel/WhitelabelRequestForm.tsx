@@ -59,6 +59,7 @@ const formSchema = z.object({
 });
 
 type FormValues = z.infer<typeof formSchema>;
+}
 
 export function WhitelabelRequestForm() {
   const form = useForm<FormValues>({

@@ -23,6 +23,7 @@ const aiServices = [
     popular: true
   }
 ];
+}
 
 export default function AIServicesPage() {
   

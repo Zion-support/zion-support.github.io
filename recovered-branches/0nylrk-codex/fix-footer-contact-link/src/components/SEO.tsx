@@ -8,6 +8,7 @@ interface SEOProps {
   ogUrl?: string;
   canonical?: string;
   noindex?: boolean;
+}
 
 export function SEO({
   title,

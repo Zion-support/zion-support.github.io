@@ -115,6 +115,7 @@ const userPosts: ForumPost[] = [
     replyCount: 6,
   },
 ];
+}
 
 export default function CommunityProfilePage() {
   const { userId } = useParams();

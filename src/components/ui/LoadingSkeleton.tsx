@@ -41,6 +41,8 @@ const Skeleton: React.FC<SkeletonProps> = ({,';
 };
 ,;
 // Predefined skeleton components,;
+}
+
 export const CardSkeleton: React.FC = () => (,";
   <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">,";
     <div className=flex items-center space-x-4 mb-4">,";
@@ -57,6 +59,8 @@ export const CardSkeleton: React.FC = () => (,";
     </div>,;
   </div>),;
 ,;
+}
+
 export const TableSkeleton: React.FC = () => (,";
   <div className="space-y-3>,;
     {[...Array(5)].map((_,  i) => (,";
@@ -69,6 +73,8 @@ export const TableSkeleton: React.FC = () => (,";
   </div>,;
 ),;
 ,;
+}
+
 export const ListSkeleton: React.FC = () => (,";
   <div className="space-y-3">,;
     {[...Array(6)].map((_,  i) => (,";
@@ -79,6 +85,8 @@ export const ListSkeleton: React.FC = () => (,";
   </div>,;
 ),;
 ,;
+}
+
 export const GridSkeleton: React.FC = () => (,";
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,;
     {[...Array(6)].map((_,  i) => (,;
@@ -86,4 +94,6 @@ export const GridSkeleton: React.FC = () => (,";
   </div>,;
 ),;
 ,;
+}
+
 export default Skeleton,'"

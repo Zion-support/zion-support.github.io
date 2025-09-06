@@ -2,6 +2,7 @@ export default function CloudFinOps() {; return (; <Article; title=\"Cloud FinOp
 import React from 'react';
 interface CloudfinopsProps {
   // Add props here as needed
+}
 
 export default function Cloudfinops({ }: CloudfinopsProps) {
   return (

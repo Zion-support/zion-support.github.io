@@ -11,6 +11,7 @@ import { FormValues } from './useHireRequestForm';
 
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
+}
 
 export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
   return (

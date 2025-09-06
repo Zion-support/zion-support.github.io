@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Star } from 'lucide-react';
 import { useForm } from 'react-hook-form';
@@ -31,6 +30,7 @@ is anonymous?: boolean ;
   onSubmit: (data: any) => Promise<boolean>;
   defaultValues?: Review;
   isSubmitting: boolean;
+}
 
 export function ReviewForm({
   projectId,
@@ -400,11 +400,3 @@ export function ReviewForm({
 }<FormField <FormItem> <div className="flex items-center gap-2" > <FormControl> <Switch /> </FormControl> <FormLabel className="cursor-pointer font-normal"> Submit anonymously </FormLabel> </div> <p className="text-xs text-muted-foreground mt-1" > Anonymous reviews won't display your name but will still be linked to your account. </p> <FormMessage /> </FormItem>) ;
 }/> <Button </Button> </form> </Form>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-  onSubmit: (data: any) => Promise<boolean>, 
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

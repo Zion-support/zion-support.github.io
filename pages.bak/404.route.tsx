@@ -4,6 +4,7 @@ import React from 'react';
 
 interface 404.routeProps {
   // Add props here as needed
+}
 
 export default function 404.route({ }: 404.routeProps) {
   return (
@@ -12,5 +13,4 @@ export default function 404.route({ }: 404.routeProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 

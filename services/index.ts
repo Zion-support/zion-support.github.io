@@ -44,6 +44,8 @@ export type {
 } from './textAnalysisService';
 
 // Service categories for easy discovery
+}
+
 export const SERVICE_CATEGORIES = {
   UTILITIES: {
     name: 'Utility Tools',
@@ -63,6 +65,8 @@ export const SERVICE_CATEGORIES = {
 } as const;
 
 // Service metadata for the application
+}
+
 export const SERVICES_METADATA = {
   urlShortener: {
     name: 'URL Shortener',
@@ -142,6 +146,8 @@ export const SERVICES_METADATA = {
 } as const;
 
 // Service availability and status
+}
+
 export const getServiceStatus = () => {
   return {
     urlShortener: {
@@ -173,6 +179,8 @@ export const getServiceStatus = () => {
 };
 
 // Service usage statistics
+}
+
 export const getServiceStats = () => {
   return {
     totalUsers: 15420,

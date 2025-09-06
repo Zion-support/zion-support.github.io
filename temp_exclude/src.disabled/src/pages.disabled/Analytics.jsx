@@ -2,6 +2,8 @@ import React from 'react';
 interface AnalyticsProps {
   // Add props here as needed
 }
+}
+
 export default function Analytics({ }: AnalyticsProps) {
   return (
     <div>

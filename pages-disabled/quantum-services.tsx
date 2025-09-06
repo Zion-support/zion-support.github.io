@@ -1,6 +1,8 @@
  const QuantumServicesPage: React.FC = () => {
   const quantumServices = [ {
-  export default function QuantumServices () {
+}
+
+export default function QuantumServices () {
   return (<Layout> <SEO /> <main className="relative z-10" > {
   /* Hero Section */ 
 }<section className="min-h-[60vh] flex items-center justify-center px-4 py-20" > <div className="text-center max-w-4xl mx-auto" > <motion.div initial= {
@@ -59,4 +61,6 @@
 
 }> Ready for the Quantum Future? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Join the quantum revolution and solve problems that were previously impossible with classical computing </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Start Your Quantum Journey </Link> <a href="/contact" className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Schedule Consultation </Link> </div> </motion.div> </div> </section> </main> </Layout>) 
 };
+}
+
 export default QuantumServicesPage;

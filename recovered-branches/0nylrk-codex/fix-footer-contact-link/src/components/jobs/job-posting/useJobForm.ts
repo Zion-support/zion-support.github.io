@@ -11,6 +11,7 @@ import { useAuth } from '@/hooks/useAuth';
 export interface JobPostingProps {
   jobId?: string;
   onSuccess?: () => void;
+}
 
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const { user } = useAuth();

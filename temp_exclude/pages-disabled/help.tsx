@@ -142,6 +142,7 @@ const faqs = []
     answer: "Yes, you can cancel your subscription at any time. There are no cancellation fees, and you'll continue to have access to your services until the end of your current billing period.'
   }];
 ];
+}
 
 export default function HelpPage() {}
   const [searchQuery, setSearchQuery] = useState('');'

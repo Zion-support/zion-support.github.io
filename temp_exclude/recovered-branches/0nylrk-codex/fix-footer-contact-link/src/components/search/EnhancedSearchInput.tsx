@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from "react";
 import { Search, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -9,6 +8,8 @@ interface EnhancedSearchInputProps {
   onChange: (value: string) => void,
   placeholder?: string;
   searchSuggestions: SearchSuggestion[]
+}
+}
 }
 
 export function EnhancedSearchInput({ 
@@ -29,8 +30,9 @@ export function EnhancedSearchInput({
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent'));
       return
     }
-    
-    const filtered = searchSuggestions.filter(suggestion => 
+}
+
+const filtered = searchSuggestions.filter(suggestion => 
       suggestion.text.toLowerCase().includes(value.toLowerCase())
     );
     

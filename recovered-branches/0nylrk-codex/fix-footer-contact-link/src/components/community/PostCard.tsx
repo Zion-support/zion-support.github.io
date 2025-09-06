@@ -58,7 +58,8 @@ post.isFeatured && "bg-zion-purple/5")
   post.tags?.map (tag => (<Badge key= {
   tag 
 }variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20" > {
-  tag 
+  tag
+}
 
 export const PostCard = ({ post, compact = false }: PostCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), {
@@ -137,4 +138,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
     </Card>
   );
 };
+}
+
 export default PostCard;

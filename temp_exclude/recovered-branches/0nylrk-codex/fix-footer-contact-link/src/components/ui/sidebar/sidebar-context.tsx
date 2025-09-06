@@ -10,6 +10,8 @@ const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
 
 const SidebarContext = React.createContext<SidebarContextType | null>(null)
+}
+}
 
 export function useSidebar(): SidebarContextType {
   const context = React.useContext(SidebarContext)
@@ -24,6 +26,7 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   defaultOpen?: boolean
   open?: boolean
   onOpenChange?: (open: boolean) => void
+}
 }
 
 export const SidebarProvider = React.forwardRef<

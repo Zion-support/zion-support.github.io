@@ -15,6 +15,7 @@ import { QuoteFormData } from '@/types/quotes';
 interface TimelineStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
+}
 
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (

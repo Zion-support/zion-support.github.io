@@ -41,6 +41,7 @@ type DisputeFormProps = {
   onDisputeCreated?: (disputeId: string) => void;
   onCancel?: () => void;
 };
+}
 
 export function DisputeForm({
   projectId,
@@ -222,7 +223,6 @@ export function DisputeForm({
       </Form>
     </div>
   );
-
 
 };
 const removeFile = (index: number) => {

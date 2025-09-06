@@ -12,6 +12,8 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Badge } from '@/components/ui/badge';
 
 import CodeBlock from './CodeBlock';
+}
+}
 
 export function ApiDocumentation() {
   return (

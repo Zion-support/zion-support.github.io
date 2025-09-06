@@ -6,6 +6,7 @@ import {
   generateFilterOptions,
   MARKETPLACE_LISTINGS,;
 } from '@/data/marketplaceData';
+}
 
 export function useMarketplaceSearch() {
   // Search state

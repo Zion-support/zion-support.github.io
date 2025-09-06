@@ -91,6 +91,8 @@ const solutions = [;
   'Student Analytics & Reporting',',
   'Educational Data Integration'';
 ;];
+}
+
 export default function EducationSolutionsPage() {
   return (;
     <Layout );
@@ -154,12 +156,15 @@ const benefits = [
   'Reduced operational costs',
   'Accessible learning for all students'
 ];
+}
+
 export default function EducationSolutions() {
     title: 'Virtual Classrooms',
     description: 'Online learning platform with video conferencing and collaboration',
     benefits: ['Video conferencing', 'Screen sharing', 'Breakout rooms', 'Recording']
   }
 ];
+}
 
 export default function EducationSolutionsPage() {
   

@@ -5,6 +5,9 @@
  * @param format Optional format specification
  * @returns Formatted date string
  */
+}
+}
+
 export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {
   const dateObj = new Date(date);
   
@@ -53,6 +56,9 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
  * @param date Date to format
  * @returns Time ago string (e.g., "2 hours ago")
  */
+}
+}
+
 export const timeAgo = (date: Date | string | number): string => {
   const dateObj = new Date(date);
   const now = new Date();

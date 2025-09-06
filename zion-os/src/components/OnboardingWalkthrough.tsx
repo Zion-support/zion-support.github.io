@@ -69,6 +69,7 @@ interface WalkthroughStep {
     position: 'top',
   },
 ];
+}
 
 export function OnboardingWalkthrough() {
   const [currentStep, setCurrentStep] = useState(0);
@@ -208,6 +209,8 @@ export function OnboardingWalkthrough() {
   );
 
 // Hook to add data attributes for walkthrough targeting
+}
+
 export function useWalkthroughTarget(id: string) {
   return {
     'data-walkthrough-target': id,

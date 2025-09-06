@@ -33,4 +33,6 @@ export interface ComprehensiveITService {;
   marketSize?: string;
 
 ;
+}
+
 export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [];

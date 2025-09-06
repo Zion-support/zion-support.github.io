@@ -1,4 +1,3 @@
-
 import {
   Carousel;
   CarouselContent;
@@ -33,6 +32,7 @@ const testimonials = [
     role: "Operations Manager, EcoTech Systems";
     avatar: "https://i.pravatar.cc/150?img=67",
     company: "EcoTech"}],
+}
 
 export function TestimonialCarousel() {
   return (

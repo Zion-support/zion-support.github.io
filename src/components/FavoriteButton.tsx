@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -16,6 +15,8 @@ import {
 interface FavoriteButtonProps {
   itemId: string;
   className?: string;
+}
+}
 
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
   const { isWishlisted, toggle } = useWishlist();
@@ -28,8 +29,9 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
       setLoginOpen(true);
       return;
     }
+}
 
-    const wasWishlisted = isWishlisted(itemId);
+const wasWishlisted = isWishlisted(itemId);
     toggle(itemId);
 
     // Provide feedback
@@ -74,9 +76,3 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   );
-=======
-
-<<<<<<< HEAD
-              className={cn(
-                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover: bg-zion-blue-light/30 transition-colors',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

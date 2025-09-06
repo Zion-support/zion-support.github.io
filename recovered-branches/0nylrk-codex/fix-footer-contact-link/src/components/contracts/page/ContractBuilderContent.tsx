@@ -17,6 +17,7 @@ const mockTalent: TalentProfile = {
   profile_picture_url: '',
   skills: ['React', 'Node.js', 'Smart Contracts'],
 };
+}
 
 export function ContractBuilderContent() {
   const { user } = useAuth();

@@ -125,6 +125,7 @@ const resources = [
     href: '/tutorials'
   }
 ];
+}
 
 export default function CommunityPage() {
   const [searchQuery, setSearchQuery] = useState('');

@@ -24,6 +24,7 @@ import { Label } from '@/components/ui/label';
 
 interface BrowseFiltersProps {
   type: 'jobs' | 'talents';
+}
 
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);

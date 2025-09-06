@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string;
+}
 
 export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
   const { open, toggleSidebar } = useSidebar();

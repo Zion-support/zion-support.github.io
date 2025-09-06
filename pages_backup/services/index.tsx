@@ -286,6 +286,7 @@ const services = [
     link: '/services/data-analytics'
   }
 ];
+}
 
 export default function ServicesIndex() {
   return (
@@ -573,7 +574,11 @@ export default function ServicesIndex() {
     </div>
   );
 };
+}
+
 export default ServicesIndex;
+}
+
 export default ServicesIndex;
       </div>
     </>

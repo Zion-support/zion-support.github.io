@@ -3,6 +3,7 @@ import React from 'react';
 
 interface BlockchainsolutionsProps {
   // Add props here as needed
+}
 
 export default function Blockchainsolutions({ }: BlockchainsolutionsProps) {
   return (
@@ -11,5 +12,4 @@ export default function Blockchainsolutions({ }: BlockchainsolutionsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 

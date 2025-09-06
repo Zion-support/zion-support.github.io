@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,6 +7,8 @@ interface StickyActionProps {
   children: React.ReactNode,
   showAfterScroll?: number;
   position?: "bottom" | "top"
+}
+}
 }
 
 export function StickyAction({

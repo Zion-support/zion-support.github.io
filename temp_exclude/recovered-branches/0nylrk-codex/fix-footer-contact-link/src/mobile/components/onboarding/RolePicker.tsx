@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,6 +7,8 @@ type UserRole = "talent" | "client" | null;
 
 interface RolePickerProps {
   onSelect: (role: UserRole) => void
+}
+}
 }
 
 export function RolePicker({ onSelect }: RolePickerProps) {

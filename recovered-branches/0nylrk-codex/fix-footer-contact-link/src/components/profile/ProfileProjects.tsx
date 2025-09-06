@@ -6,6 +6,7 @@ import { FileText } from 'lucide-react';
 
 interface ProfileProjectsProps {
   projects: ProfileProject[];
+}
 
 export function ProfileProjects({ projects }: ProfileProjectsProps) {
   return (

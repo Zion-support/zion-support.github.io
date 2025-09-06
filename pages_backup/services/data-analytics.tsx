@@ -3,6 +3,8 @@ import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { BarChart3, TrendingUp, Database, Brain } from 'lucide-react';
+}
+
 export default function DataAnalyticsPage() {
   const analyticsServices = [;
     {}
@@ -162,9 +164,13 @@ const benefits = [
   'Enhanced competitive advantage',
   'Automated reporting and analytics'
 ];
+}
+
 export default function DataAnalyticsServices() {
+}
 
 export default function DataAnalyticsPage() {
+}
 
 export default function DataAnalyticsPage() {
   
@@ -271,7 +277,6 @@ export default function DataAnalyticsPage() {
             </div>
           </div>
         </section>
-
 
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">

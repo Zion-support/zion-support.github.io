@@ -10,6 +10,7 @@ isSmartContract: boolean
 }interface RecentContractsTableProps {
   contracts: Contract[];
   onViewContract: (contractId: string) => void;
+}
 
 export function RecentContractsTable({
   contracts,

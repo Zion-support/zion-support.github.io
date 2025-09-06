@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -14,6 +13,8 @@ import { AlertTriangle, Check, Globe, Search, Loader2 } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { useTranslationService } from "@/hooks/useTranslationService";
+}
+
 export default function TranslationManager() {
   const { t, i18n } = useTranslation();
   const isMobile = useIsMobile();

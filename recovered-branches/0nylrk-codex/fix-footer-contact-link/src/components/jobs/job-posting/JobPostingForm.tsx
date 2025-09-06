@@ -15,6 +15,8 @@ import { JobSchemaType } from './validation';
 interface JobPostingFormProps {
   jobId?: string;
   onSuccess?: () => void;
+}
+}
 
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
   const navigate = useNavigate();

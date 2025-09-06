@@ -108,6 +108,7 @@ const externalLinks = []
   { name: "YouTube", url: "https://youtube.com/@ziontechgroup", icon: ExternalLink },
   { name: "Facebook", url: "https://facebook.com/ziontechgroup", icon: ExternalLink }];
 ];
+}
 
 export default function SitemapPage() {}
   return ()

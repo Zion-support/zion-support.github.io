@@ -6,6 +6,7 @@ import { format } from 'date-fns';
 import { EducationFormProps } from './types';
 import { EducationList } from './EducationList';
 import { EducationFormFields } from './EducationFormFields';
+}
 
 export function EducationForm({
   resumeId,

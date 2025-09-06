@@ -103,8 +103,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-
-
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
@@ -123,7 +121,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-
 
           {/* Solutions */}
           <div>
@@ -204,5 +201,6 @@ const Footer: React.FC = () => {
   );
 
 };
+}
 
 export default Footer;

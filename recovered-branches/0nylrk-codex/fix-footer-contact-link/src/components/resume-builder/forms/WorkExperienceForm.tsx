@@ -40,6 +40,7 @@ interface WorkExperienceFormProps {
   workExperiences: WorkExperience[];
   onComplete: () => void;
   onBack: () => void;
+}
 
 export function WorkExperienceForm({
   resumeId,

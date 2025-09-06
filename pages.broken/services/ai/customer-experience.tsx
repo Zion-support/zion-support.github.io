@@ -2,6 +2,7 @@ export default function CustomerExperienceAI() { return ( <Article title=\"Custo
 import React from 'react';
 interface CustomerexperienceProps {
   // Add props here as needed
+}
 
 export default function Customerexperience({ }: CustomerexperienceProps) {
   return (

@@ -9,6 +9,7 @@ interface ActionButtonsProps {
     flagId: string,
     action: 'warning' | 'suspension' | 'ban' | 'ignore'
   ) => void;
+}
 
 export const ActionButtons: React.FC<ActionButtonsProps> = ({
   flagId,

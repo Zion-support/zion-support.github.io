@@ -2,6 +2,7 @@ module.exports = interface NextGenAi2026Service { id: string name: string taglin
 import React from 'react';
 interface Nextgenai2026servicesProps {
   // Add props here as needed
+}
 
 export default function Nextgenai2026services({ }: Nextgenai2026servicesProps) {
   return (

@@ -12,6 +12,7 @@ interface FeatureCardProps {
   href: string;
   isActive: boolean;
   onClick: () => void;
+}
 
 export function FeatureCard({
   title,

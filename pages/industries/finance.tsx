@@ -58,6 +58,7 @@ const benefits = [
     icon: CheckCircle
   }
 ];
+}
 
 export default function FinancePage() {
   return (

@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 interface MainNavigationProps {
   className?: string;
+}
 
 export function MainNavigation({ className }: MainNavigationProps) {
   return (

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { ChevronLeft, Bell, Settings } from "lucide-react";
@@ -12,6 +11,8 @@ interface MobileHeaderProps {
   className?: string;
   onNotificationsClick?: () => void;
   onSettingsClick?: () => void
+}
+}
 }
 
 export function MobileHeader({

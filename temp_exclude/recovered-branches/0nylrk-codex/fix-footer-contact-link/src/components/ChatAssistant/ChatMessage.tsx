@@ -7,6 +7,8 @@ interface ChatMessageProps {
   timestamp?: Date;
   key?: string | number
 }
+}
+}
 
 export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
   const isUser = role === 'user';

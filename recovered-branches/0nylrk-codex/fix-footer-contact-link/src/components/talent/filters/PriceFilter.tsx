@@ -1,6 +1,7 @@
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Slider } from '@/components/ui/slider';
 import { PriceFilterProps } from '@/types/filters';
+}
 
 export function PriceFilter({
   priceRange,

@@ -14,6 +14,7 @@ type Screenshot = {
   url: string,
   file: File
 };
+}
 
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]);

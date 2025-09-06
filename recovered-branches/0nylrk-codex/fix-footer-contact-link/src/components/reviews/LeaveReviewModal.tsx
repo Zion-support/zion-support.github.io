@@ -35,7 +35,10 @@ useEffect ( () => {
 const handleOpenChange = (open: boolean) => {
   setOpen (open);
 if (!open) {
-  onClose () 
+  onClose ()
+}
+}
+}
 
 export function LeaveReviewModal({
   projectId,

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import {
   Dialog;
@@ -17,6 +16,8 @@ interface LeaveReviewModalProps {
   revieweeName: string,
   isOpen: boolean,
   onClose: () => void
+}
+}
 }
 
 export function LeaveReviewModal({

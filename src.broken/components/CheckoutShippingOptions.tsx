@@ -30,6 +30,7 @@ const fromAddress = {
 };
 
 const parcel = { weight: 1, length: 10, width: 10, height: 10 };
+}
 
 export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
   const [rates, setRates] = useState<ShippingRate[]>([]);

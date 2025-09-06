@@ -34,6 +34,7 @@ const quantumServices = [
     pricing: "$500 - $1,000/hour"
   }
 ];
+}
 
 export default function QuantumComputingPage() {
   return (

@@ -14,6 +14,8 @@ type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook that combines all messaging operations
  */
+}
+
 export function useMessagingOperations(user: UserWithProfile) {
   // State management
   const {

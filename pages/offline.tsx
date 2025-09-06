@@ -15,6 +15,7 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { logErrorToProduction } from '@/utils/productionLogger';
+}
 
 export default function OfflinePage() {
   const [isOnline, setIsOnline] = useState(false);

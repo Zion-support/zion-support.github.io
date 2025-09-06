@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Header } from '@/components/Header';
@@ -14,6 +13,8 @@ import useJobDetails from '@/hooks/useJobDetails';
 import { ApplyToJobModal } from '@/components/messaging/job-application';
 import { SEO } from '@/components/SEO';
 import { useWhitelabel } from '@/context/WhitelabelContext';
+}
+
 export default function JobDetails() {
   // Cast to specify the expected route param type since useParams may be untyped
   const { jobId } = useParams() as { jobId?: string };

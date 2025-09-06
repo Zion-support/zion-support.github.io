@@ -8,7 +8,8 @@ interface QuoteStatusCardsProps {
 in review: number;
 responded: number;
 accepted: number;
-closed: number 
+closed: number
+}
 
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
   statusCounts,

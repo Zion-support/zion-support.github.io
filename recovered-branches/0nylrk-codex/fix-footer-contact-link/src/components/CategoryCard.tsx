@@ -15,6 +15,7 @@ interface CategoryCardProps {
   color?: string;
   count?: number;
   className?: string;
+}
 
 export function CategoryCard({
   title,

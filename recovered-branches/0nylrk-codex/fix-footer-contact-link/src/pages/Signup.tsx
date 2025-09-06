@@ -42,6 +42,7 @@ const signupSchema = z
   });
 
 type SignupFormValues = z.infer<typeof signupSchema>;
+}
 
 export default function Signup() {
   const {

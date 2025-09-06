@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -13,6 +12,8 @@ import { toast } from "@/components/ui/use-toast";
 interface TranslatableJobFormProps {
   onSubmit: (formData: any) => void,
   isSubmitting?: boolean
+}
+}
 }
 
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {

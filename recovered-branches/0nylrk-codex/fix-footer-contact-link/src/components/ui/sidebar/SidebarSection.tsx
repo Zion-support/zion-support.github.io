@@ -5,6 +5,7 @@ interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   title?: string;
   children?: React.ReactNode;
+}
 
 export function SidebarSection({
   className,

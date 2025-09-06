@@ -1,4 +1,6 @@
- export default function ThemeToggle () : JSX.Element {
+}
+
+export default function ThemeToggle () : JSX.Element {
   const {
   mode, toggleTheme 
 }= useTheme ();

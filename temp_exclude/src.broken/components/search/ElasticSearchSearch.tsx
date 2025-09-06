@@ -1,4 +1,4 @@
- return (<div className="space-y-2" > <input className="border p-2 rounded w-full" value= {
+return (<div className="space-y-2" > <input className="border p-2 rounded w-full" value= {
   query 
 }onChange= {
   (e) => setQuery (e.target.value) 

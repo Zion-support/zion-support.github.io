@@ -26,6 +26,7 @@ interface IntegrationConnectionModalProps {
   isOpen: boolean;
   onClose: () => void;
   integration: Integration;
+}
 
 export function IntegrationConnectionModal({
   isOpen,

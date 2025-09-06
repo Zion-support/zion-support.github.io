@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
@@ -17,6 +16,7 @@ export interface ApiLog {
   method: string, status_code: number,
   created_at: string, ip_address?: string,
   response_time_ms?: number
+}
 }
 
 export function useApiKeys() {
@@ -51,8 +51,9 @@ export function useApiKeys() {
         setError("Authentication required");
         return
       }
+}
 
-      const response = await fetch(`${getApiUrl()}/keys`, {
+const response = await fetch(`${getApiUrl()}/keys`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
@@ -92,8 +93,9 @@ export function useApiKeys() {
         setError("Authentication required");
         return
       }
+}
 
-      const response = await fetch(`${getApiUrl()}/create`, {
+const response = await fetch(`${getApiUrl()}/create`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
@@ -148,8 +150,9 @@ export function useApiKeys() {
         setError("Authentication required");
         return
       }
+}
 
-      const response = await fetch(`${getApiUrl()}/regenerate`, {
+const response = await fetch(`${getApiUrl()}/regenerate`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
@@ -201,8 +204,9 @@ export function useApiKeys() {
         setError("Authentication required");
         return
       }
+}
 
-      const response = await fetch(`${getApiUrl()}/revoke`, {
+const response = await fetch(`${getApiUrl()}/revoke`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
@@ -251,8 +255,9 @@ export function useApiKeys() {
         setError("Authentication required");
         return
       }
+}
 
-      const response = await fetch(
+const response = await fetch(
         `${getApiUrl()}/logs?limit=${limit}&offset=${offset}`, 
         {
           method: 'GET',

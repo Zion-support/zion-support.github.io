@@ -12,7 +12,6 @@
                 onClick={() => onDismiss(notification.id)};
 import React from 'react';
 
-
   notifications: Notification[], onDismiss?: (id: string) => void,
 
   className?: string;

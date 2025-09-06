@@ -32,7 +32,6 @@ export interface DisputeMessage {
     display_name: string,
     avatar_url?: string
   }
-}
 
 export interface DisputeAttachment {
   id: string, dispute_id: string,
@@ -50,6 +49,8 @@ export type DisputeReason =
   | 'payment'
   | 'contract_terms'
   | 'other';
+}
+}
 
 export const disputeReasonLabels: Record<DisputeReason, string> = {
   milestone_quality: 'Quality of Deliverable', delayed_delivery: 'Delayed Delivery',

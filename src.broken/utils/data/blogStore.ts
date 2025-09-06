@@ -12,6 +12,8 @@ function ensureStore(): void {
   if (!fs.existsSync(POSTS_PATH)) {
     fs.writeFileSync(POSTS_PATH, JSON.stringify([], null, 2), 'utf8');
   }
+}
+}
 
 export function readPosts(): BlogPost[] {
   ensureStore();
@@ -21,16 +23,24 @@ export function readPosts(): BlogPost[] {
   } catch (e) {
     return [];
   }
+}
+}
 
 export function writePosts(posts: BlogPost[]): void {
   ensureStore();
   fs.writeFileSync(POSTS_PATH, JSON.stringify(posts, null, 2), 'utf8');
+}
+}
 
 export function findPostBySlug(slug: string): BlogPost | undefined {
   return readPosts().find(p => p.slug === slug);
+}
+}
 
 export function findPostById(id: string): BlogPost | undefined {
   return readPosts().find(p => p.id === id);
+}
+}
 
 export function upsertPost(post: BlogPost): BlogPost {
   const posts = readPosts();
@@ -42,6 +52,8 @@ export function upsertPost(post: BlogPost): BlogPost {
   }
   writePosts(posts);
   return post;
+}
+}
 
 export function listPublishedPosts(): BlogPost[] {
   return readPosts()
@@ -50,6 +62,8 @@ export function listPublishedPosts(): BlogPost[] {
       (a, b) =>
         new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
     );
+}
+}
 
 export function listAllAuthors(): string[] {
   return Array.from(
@@ -59,12 +73,18 @@ export function listAllAuthors(): string[] {
         .filter(Boolean)
     )
   );
+}
+}
 
 export function listAllTopics(): string[] {
   return Array.from(new Set(readPosts().flatMap(p => p.topics || [])));
+}
+}
 
 export function listAllTags(): string[] {
   return Array.from(new Set(readPosts().flatMap(p => p.tags || [])));
+}
+}
 
 export function incrementMetric(
   id: string,

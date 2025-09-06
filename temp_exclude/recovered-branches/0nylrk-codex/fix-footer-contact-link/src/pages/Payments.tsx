@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { TransactionHistory } from "@/components/transactions/TransactionHistory";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+}
 
 export default function Payments() {
   return (

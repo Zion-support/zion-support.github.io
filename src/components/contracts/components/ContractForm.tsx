@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -42,6 +41,7 @@ export type ContractFormValues = z.infer<typeof formSchema>;
   const typedKey = key as keyof ContractFormValues;
 form.setValue (typedKey, initialValues[typedKey]) ;
 }) ;
+}
 
 export function ContractForm({
   talent,
@@ -198,15 +198,3 @@ talent.full name ;
   isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating Contract... </>) : ("Generate Contract") ";
 }</Button> </form> </Form> <DialogFooter className="gap-2 flex-wrap mt-4" > <Button > Reset Form </Button> </DialogFooter> </>) ;
 }"
-=======
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-
-  
-
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

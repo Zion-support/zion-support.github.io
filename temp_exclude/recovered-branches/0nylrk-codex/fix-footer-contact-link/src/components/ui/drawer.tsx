@@ -1,4 +1,4 @@
- const Drawer = ({
+const Drawer = ({
   shouldScaleBackground = true, ...props 
 }: React.ComponentProps<typeof DrawerPrimitive.Root>) => (<DrawerPrimitive.Root shouldScaleBackground= {
   shouldScaleBackground 

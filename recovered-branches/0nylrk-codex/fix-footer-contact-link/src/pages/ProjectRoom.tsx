@@ -23,6 +23,7 @@ import {
 } from 'lucide-react';
 import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { toast } from 'sonner';
+}
 
 export default function ProjectRoom() {
   const { projectId } = useParams() as { projectId: string };

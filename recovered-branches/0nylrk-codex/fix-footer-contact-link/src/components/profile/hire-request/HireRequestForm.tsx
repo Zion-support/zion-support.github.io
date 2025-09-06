@@ -20,6 +20,7 @@ export interface HireRequestFormProps {
     id?: string;
   };
   onSubmitSuccess?: () => void;
+}
 
 export function HireRequestForm({
   talent,

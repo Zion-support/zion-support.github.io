@@ -53,6 +53,8 @@ export interface AuthContextType {
   loginWithWeb3: () => Promise<void>;
 
 // Create a provider component
+}
+
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<UserDetails | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -210,6 +212,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 
 // Custom hook to use the auth context
+}
+
 export function useAuth(): AuthContextType {
   const context = useContext(AuthContext);
   if (context === undefined) {

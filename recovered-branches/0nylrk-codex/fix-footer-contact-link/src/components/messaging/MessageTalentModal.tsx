@@ -20,6 +20,7 @@ export interface MessageTalentModalProps {
   isOpen: boolean;
   onClose: () => void;
   jobTitle?: string;
+}
 
 export function MessageTalentModal({
   talent,

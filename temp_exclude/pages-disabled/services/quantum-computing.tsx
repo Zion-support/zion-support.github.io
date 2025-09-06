@@ -62,6 +62,7 @@ const benefits = []
   "Access to cutting-edge quantum hardware",
   "Expert quantum computing consultants"
 ];
+}
 
 export default function QuantumComputingPage() {},
   {

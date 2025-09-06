@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -11,6 +10,7 @@ const mockScreenshots = [
   { id: 4, alt: 'Messaging screen', src: '/placeholder.svg' },
   { id: 5, alt: 'Profile screen', src: '/placeholder.svg' },
 ];
+}
 
 export const AppScreenshots: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -83,12 +83,3 @@ export const AppScreenshots: React.FC = () => {
   );
 };
 '"
-=======
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

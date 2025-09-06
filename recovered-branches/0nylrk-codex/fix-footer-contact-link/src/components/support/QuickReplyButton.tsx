@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 interface QuickReplyButtonProps {
   text: string;
   onClick: () => void;
+}
 
 export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
   

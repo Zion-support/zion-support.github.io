@@ -129,6 +129,8 @@ Object.entries(iconAliases).forEach(([alias, lucideName]) => {
     iconExports[alias] = createIconComponent(alias, 'HelpCircle');
   }
 });
+}
+}
 
 export const {
   LayoutGrid,

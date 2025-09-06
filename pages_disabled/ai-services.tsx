@@ -24,6 +24,7 @@ const aiServices = [
     category: 'Customer Service'
   }
 ]
+}
 
 export default function AIServicesPage() {
   return (

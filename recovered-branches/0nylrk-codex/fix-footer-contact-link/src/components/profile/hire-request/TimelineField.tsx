@@ -17,6 +17,7 @@ import { FormValues } from './useHireRequestForm';
 
 interface TimelineFieldProps {
   form: UseFormReturn<FormValues>;
+}
 
 export function TimelineField({ form }: TimelineFieldProps) {
   const timelineOptions = [

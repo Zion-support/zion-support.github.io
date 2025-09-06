@@ -8,6 +8,7 @@ import {
   Calendar, 
   Briefcase 
 } from "lucide-react";
+}
 
 export const HELP_CATEGORIES: HelpCategory[] = [
   {

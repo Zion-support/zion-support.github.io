@@ -9,6 +9,8 @@ import { cn } from '@/lib/utils';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { useNavigate } from 'react-router-dom';
 import { Notification, NotificationType } from '@/context/notifications';
+}
+}
 
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
@@ -26,13 +28,14 @@ export const getTypeIcon = (type: NotificationType) => {
       return <span className="text-yellow-500">⚠️</span>;
     default:
       return <span className="text-gray-500">📣</span>
-  }
-};
+  };
 
 interface NotificationItemProps {
   notification: Notification,
   onMarkAsRead: (id: string) => Promise<void>,
   onDismiss: (id: string) => Promise<void>
+}
+}
 }
 
 export const NotificationItem: React.FC<NotificationItemProps> = ({ 

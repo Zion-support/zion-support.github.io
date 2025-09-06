@@ -10,6 +10,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,;
 } from '@/components/ui/dropdown-menu';
+}
 
 export function UserMenu() {
   const { user, logout } = useAuth();

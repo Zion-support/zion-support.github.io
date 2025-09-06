@@ -13,7 +13,6 @@ export interface ContentGenerationResponse {
     title: string, description: string,
     tags: string[]
   }
-}
 
 export interface ContentTemplate {
   id: string, name: string,
@@ -130,6 +129,9 @@ ${request.topic} represents a significant opportunity for organizations looking 
 }
 
 // Pricing tiers for the AI Content Generator
+}
+}
+
 export const AI_CONTENT_PRICING = {
   starter: {
       

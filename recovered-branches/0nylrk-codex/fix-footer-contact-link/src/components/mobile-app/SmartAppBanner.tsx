@@ -9,6 +9,7 @@ interface SmartAppBannerProps {
   appStoreUrl?: string;
   googlePlayUrl?: string;
   delay?: number; // Delay in milliseconds before showing the banner
+}
 
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   appName = 'Zion Marketplace',

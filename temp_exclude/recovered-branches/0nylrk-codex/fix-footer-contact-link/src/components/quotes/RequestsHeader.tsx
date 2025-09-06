@@ -16,6 +16,7 @@ type RequestsHeaderProps = {
   archiveFilter: 'active' | 'archived' | 'all',
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
 };
+}
 
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
   unreadCount;

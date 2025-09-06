@@ -1,4 +1,3 @@
-
 import { UserProfile, UserDetails } from '@/types/auth';
 import { Message, Conversation, ConversationContextData } from '@/types/messaging';
 import { useConversationState } from './useConversationState';
@@ -10,6 +9,9 @@ type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook that combines all messaging operations
  */
+}
+}
+
 export function useMessagingOperations(user: UserWithProfile) {
   // State management
   const {

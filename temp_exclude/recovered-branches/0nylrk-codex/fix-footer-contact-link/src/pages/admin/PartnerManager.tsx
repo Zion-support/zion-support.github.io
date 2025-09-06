@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from "react-router-dom";
@@ -27,6 +26,8 @@ interface PartnerProfile {
   payout_method?: string;
   fraud_flags?: number;
   commission_rate?: number
+}
+}
 }
 
 export default function PartnerManager() {

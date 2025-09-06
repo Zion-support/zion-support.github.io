@@ -2,6 +2,8 @@ import React from 'react';
 interface AppStoreBannerProps {
   // Add props here as needed
 }
+}
+
 export default function AppStoreBanner({ }: AppStoreBannerProps) {
   return (
     <div>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -20,6 +19,8 @@ interface ChunkInfo {
   size: number;
   loadTime: number;
   cached: boolean;
+}
+}
 
 export function BundleAnalyzer() {
   const { user } = useAuth();
@@ -29,8 +30,9 @@ export function BundleAnalyzer() {
   if (!isAllowed) {
     return null;
   }
+}
 
-  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null);
+const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null);
   const [chunks, setChunks] = useState<ChunkInfo[]>([]);
   const [isVisible, setIsVisible] = useState(false);
   const [isCollecting, setIsCollecting] = useState(false);
@@ -70,21 +72,11 @@ export function BundleAnalyzer() {
       let totalSize = 0;
       let totalLoadTime = 0;
       const chunkData: ChunkInfo[] = [];
-=======
-
-<<<<<<< HEAD
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
-
-<<<<<<< HEAD
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
       scriptEntries.forEach(entry => {
         const size = entry.transferSize || entry.encodedBodySize || 0;
         const loadTime = entry.responseEnd - entry.requestStart;
         const cached = entry.transferSize === 0;
-<<<<<<< HEAD
 
         totalSize += size;
         totalLoadTime += loadTime;
@@ -280,8 +272,3 @@ export function BundleAnalyzer() {
       </Card>
     </div>
   );
-=======
-        
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

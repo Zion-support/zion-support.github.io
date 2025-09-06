@@ -3,7 +3,12 @@
   return globalToastManager.showToast ({
   case 'success': type = ToastType.SUCCESS;
 break;
-default: // Enhanced useToast hook with global toast manager integration export const useToast = () => ({
+default: // Enhanced useToast hook with global toast manager integration
+}
+}
+}
+
+export const useToast = () => ({
   toast: toastAdapter, dismiss: (toastId?: string) => {
   if (toastId) {
   

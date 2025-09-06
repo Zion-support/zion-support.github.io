@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -16,6 +15,7 @@ export interface BasicInfoFormProps {
   skills?: string[];
   yearsExperience?: number;
   onComplete?: () => void
+}
 }
 
 export function BasicInfoForm({

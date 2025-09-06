@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { formatDistanceToNow } from "date-fns";
 import { Star, Flag, User } from "lucide-react";
@@ -18,6 +17,8 @@ import { Textarea } from "@/components/ui/textarea";
 interface ReviewCardProps {
   review: Review,
   onReport: (reviewId: string, reason: string) => Promise<boolean>
+}
+}
 }
 
 export function ReviewCard({ review, onReport }: ReviewCardProps) {

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { X } from "lucide-react";
@@ -11,6 +10,8 @@ interface ActiveFiltersBarProps {
   onRemoveFilter: (filterType: string, value: string) => void,
   onRemoveRating: () => void,
   onClearSearch: () => void
+}
+}
 }
 
 export function ActiveFiltersBar({

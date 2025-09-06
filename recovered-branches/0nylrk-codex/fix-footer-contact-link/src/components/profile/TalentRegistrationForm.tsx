@@ -76,6 +76,7 @@ interface CategorizedSkills {
 interface EnhancedProfile {
   summary: string;
   categorizedSkills: CategorizedSkills;
+}
 
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
@@ -907,7 +908,6 @@ reader.readAsDataURL (file)
   talentData: {
   name: formData.name, title: formData.title, bio: formData.bio, skills: skillTags, location: formData.location 
 
-
 });
 setGeneratedContent (data as EnhancedProfile);
 }finally {
@@ -934,7 +934,6 @@ if (Array.isArray (categorySkills) ) {
   new Date () .getFullYear () 
 }Zion Marketplace</p> 
 
-
 };
 if (skillTags.length === 0) {
   toast ({
@@ -950,7 +949,6 @@ try {
   talentData: {
   name: values.name, title: values.title, bio: values.bio, skills: skillTags, location: values.location 
 
-
 });
 //Extract skills from each category and ensure they're strings Object.values (categorizedSkills) .forEach (categorySkills => {
   if (Array.isArray (categorySkills) ) {
@@ -960,7 +958,6 @@ try {
 
 });
 //Create a unique set of skills finalSkills = [...new Set ([...skillTags, ...aiSkills]) ] 
-
 
 }else if (generatedContent) {
   finalSummary = generatedContent.summary 

@@ -164,6 +164,7 @@ const academicPartners = [
     collaboration: 'Robotic learning and human-robot interaction',
   },
 ];
+}
 
 export default function ResearchPage() {
   return (

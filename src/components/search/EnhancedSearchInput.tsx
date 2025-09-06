@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Search, X } from 'lucide-react';
@@ -24,6 +23,8 @@ onChange: (value: string) => void;
   function handleClickOutside (event: MouseEvent) {;
   if (containerRef.current && !containerRef.current.contains (event.target as Node) ) {;
   ;
+}
+}
 
 export function EnhancedSearchInput({
   value,
@@ -95,8 +96,9 @@ export function EnhancedSearchInput({
       setHighlightedIndex(-1);
       return;
     }
+}
 
-    const controller = new AbortController();
+const controller = new AbortController();
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {
       signal: controller.signal,
     })
@@ -219,7 +221,6 @@ export function EnhancedSearchInput({
     }
   };
 
-  
       aria-expanded={isFocused && filteredSuggestions.length > 0}
       aria-haspopup='listbox'
       aria-controls='autocomplete-suggestions-list' // Added aria-controls
@@ -311,9 +312,3 @@ break ;
 }aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
 }</div> <AutocompleteSuggestions /> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-          
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

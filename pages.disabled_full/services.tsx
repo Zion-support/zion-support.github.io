@@ -38,6 +38,7 @@ import {
   Smartphone;
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
+}
 
 export default function Services() {
 	const title = 'Services — Zion Tech Group';

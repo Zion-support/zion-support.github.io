@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import {
@@ -364,6 +363,9 @@ const NoResultsState: React.FC<{
 };
 
 // Main Search Results Page Component
+}
+}
+
 export const AdvancedSearchResults: React.FC = () => {
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState('');
@@ -442,8 +444,9 @@ export const AdvancedSearchResults: React.FC = () => {
       if (searchFilters.sort !== 'relevance') {
         params.append('sort', searchFilters.sort);
       }
+}
 
-      const response = await fetch(`/api/search?${params}`);
+const response = await fetch(`/api/search?${params}`);
       const data: SearchResponse = await response.json();
 
       if (page === 1) {
@@ -692,6 +695,8 @@ export const AdvancedSearchResults: React.FC = () => {
     </div>
   );
 };
+}
+}
 
 export default AdvancedSearchResults;
   suggestion ;
@@ -750,22 +755,8 @@ setHasMore (data.hasMore);
 }</div> </div>) ;
 }</div>) ;
 };
+}
+}
+
 export default AdvancedSearchResults;
 '"
-=======
-
-<<<<<<< HEAD
-
-
-// No Results Component
-const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string) => void }> = ({ 
-  searchTerm,
-  onNewSearch ;
-
-<<<<<<< HEAD
-
-
-
-export default AdvancedSearchResults, 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

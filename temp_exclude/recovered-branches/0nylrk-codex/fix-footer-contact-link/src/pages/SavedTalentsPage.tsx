@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
@@ -9,6 +8,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { TalentProfile } from "@/types/talent";
 import { toast } from "@/components/ui/use-toast";
 import { useNavigate } from "react-router-dom";
+}
+}
+
 export default function SavedTalentsPage() {
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
@@ -23,8 +25,9 @@ export default function SavedTalentsPage() {
           console.warn("User not authenticated.");
           return
         }
+}
 
-        const { data, error } = await supabase
+const { data, error } = await supabase
           .from("saved_talents")
           .select(
             `

@@ -208,6 +208,7 @@ function InterviewsContent() {
       <Footer />
     </>
   );
+}
 
 export default function Interviews() {
   return (

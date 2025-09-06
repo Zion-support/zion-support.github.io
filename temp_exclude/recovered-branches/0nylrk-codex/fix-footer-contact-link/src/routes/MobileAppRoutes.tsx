@@ -13,5 +13,6 @@ const MobileAppRoutes = () => {
     </Routes>
   )
 };
+}
 
 export default MobileAppRoutes;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -19,6 +18,7 @@ import {
 
 interface MobileBottomNavProps {
   unreadCount?: number;
+}
 
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const router = useRouter();
@@ -127,16 +127,3 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       </div>
     </nav>
   );
-=======
-
-<<<<<<< HEAD
-  const isAuthenticated = !!user;
-  const { items: wishlistItems } = useWishlist(), // Renamed to avoid conflict
-  const favoritesCount = wishlistItems.length;
-
-
-  const cartContextValue = useCart(), // Call hook at top level
-  let cartCount = 0;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

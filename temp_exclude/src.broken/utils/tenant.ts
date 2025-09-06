@@ -1,2 +1,2 @@
- export type TenantRole = 'owner' | 'admin' | 'recruiter' | 'viewer';
+export type TenantRole = 'owner' | 'admin' | 'recruiter' | 'viewer';
 }

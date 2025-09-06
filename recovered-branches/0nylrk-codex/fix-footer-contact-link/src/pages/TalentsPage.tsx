@@ -153,6 +153,7 @@ const TALENT_FILTERS = [
   { label: 'Development', value: 'development' },
   { label: 'Consulting', value: 'consulting' },
 ];
+}
 
 export default function TalentsPage() {
   
@@ -161,6 +162,9 @@ export default function TalentsPage() {
 rating: 4.9;
 reviewCount: 21 
 }];
-//Filter options specific to talents export default function TalentsPage () {
+//Filter options specific to talents
+}
+
+export default function TalentsPage () {
   
 }/>) 

@@ -29,6 +29,7 @@ tags: string
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void;
   isEditing?: boolean;
+}
 
 export const PostForm = ({
   initialValues,
@@ -149,4 +150,6 @@ export const PostForm = ({
     </Card>
   );
 };
+}
+
 export default PostForm;

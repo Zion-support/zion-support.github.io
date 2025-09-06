@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -41,6 +40,7 @@ interface ProjectFormProps {
   project?: PortfolioProject;
   onSuccess: () => void;
   onCancel: () => void;
+}
 
 export function ProjectForm({
   project,
@@ -236,20 +236,3 @@ export function ProjectForm({
       </form>
     </Form>
   );
-=======
-
-<<<<<<< HEAD
-  const isEditing = !!project;
-
-  
-
-    if (!user) return;
-    
-<<<<<<< HEAD
-      
-      let success = false;
-      
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

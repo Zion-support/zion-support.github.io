@@ -210,6 +210,7 @@ function TalentDashboardContent() {
       <Footer />
     </>
   );
+}
 
 export default function TalentDashboard() {
   return (

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,6 +7,8 @@ import { Loader2, MessageSquare, ExternalLink } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import { Link } from "react-router-dom";
 import { ApplicationStatus } from "@/types/jobs";
+}
+
 export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications();
   

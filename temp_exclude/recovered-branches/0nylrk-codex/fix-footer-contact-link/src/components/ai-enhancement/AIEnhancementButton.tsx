@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons';
@@ -12,6 +11,8 @@ interface AIEnhancementButtonProps {
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   contentLength?: number
+}
+}
 }
 
 export function AIEnhancementButton({

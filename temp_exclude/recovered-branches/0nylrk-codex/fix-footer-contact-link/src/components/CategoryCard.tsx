@@ -15,6 +15,8 @@ interface CategoryCardProps {
   count?: number;
   className?: string
 }
+}
+}
 
 export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
   // Create a URL-friendly slug from the category title

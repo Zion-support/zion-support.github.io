@@ -6,6 +6,9 @@ import { FlagResult } from './types';
 /**
  * Flag content for review
  */
+}
+}
+
 export const flagContent = async (
   userId: string,
   userEmail: string | undefined,

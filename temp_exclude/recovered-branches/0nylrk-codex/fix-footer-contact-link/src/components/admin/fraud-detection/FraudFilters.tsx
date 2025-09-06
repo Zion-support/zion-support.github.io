@@ -16,6 +16,8 @@ interface FraudFiltersProps {
   setContentTypeFilter: (value: string | null) => void,
   resetFilters: () => void
 }
+}
+}
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
   searchQuery;

@@ -10,6 +10,7 @@ const SUPABASE_ANON_KEY =
   '';
 
 let browserClient: SupabaseClient | undefined;
+}
 
 export function getSupabaseClient(): ZionSupabase {
   try {

@@ -11,6 +11,7 @@ import { BasicInfoFormData } from './schema';
 
 interface ContactFieldsProps {
   control: Control<BasicInfoFormData>;
+}
 
 export function ContactFields({ control }: ContactFieldsProps) {
   return (

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { TALENT_PROFILES } from "@/data/talentData";
 import { JOB_POSTS } from "@/data/jobsData";
@@ -15,6 +14,8 @@ interface SearchFilters {
   location?: string | null;
   budget?: { min: number, max: number } | null;
   availability?: string | null
+}
+}
 }
 
 export function useAISearch() {

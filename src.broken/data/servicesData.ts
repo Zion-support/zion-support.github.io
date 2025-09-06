@@ -4,6 +4,7 @@ import {
   AIService,
   MicroSAAS,;
 } from '@/types/services';
+}
 
 export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
@@ -51,6 +52,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     color: 'bg-gradient-to-r from-sky-500 to-blue-500',
   },
 ];
+}
 
 export const AI_SERVICES: AIService[] = [
   {
@@ -406,6 +408,7 @@ export const AI_SERVICES: AIService[] = [
     realTimeProcessing: true,
   },
 ];
+}
 
 export const IT_SERVICES: ITService[] = [
   {
@@ -641,6 +644,7 @@ export const IT_SERVICES: ITService[] = [
     sla: '99.95% uptime guarantee',
   },
 ];
+}
 
 export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
   {
@@ -1011,6 +1015,7 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
     uptime: 99.9,
   },
 ];
+}
 
 export const CYBERSECURITY_SERVICES: ITService[] = [
   {
@@ -1141,6 +1146,7 @@ export const CYBERSECURITY_SERVICES: ITService[] = [
     sla: '99.99% security guarantee',
   },
 ];
+}
 
 export const DATA_ANALYTICS_SERVICES: AIService[] = [
   {
@@ -1271,6 +1277,7 @@ export const DATA_ANALYTICS_SERVICES: AIService[] = [
     realTimeProcessing: true,
   },
 ];
+}
 
 export const CLOUD_SOLUTIONS: ITService[] = [
   {
@@ -1390,6 +1397,7 @@ export const CLOUD_SOLUTIONS: ITService[] = [
     sla: '99.9% uptime guarantee',
   },
 ];
+}
 
 export const ALL_SERVICES = [
   ...AI_SERVICES,

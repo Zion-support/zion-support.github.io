@@ -42,6 +42,7 @@ interface AddMilestoneFormProps {
   projectStartDate?: string;
   projectEndDate?: string;
   projectType?: string;
+}
 
 export function AddMilestoneForm({
   onSubmit,

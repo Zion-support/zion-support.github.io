@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import Skeleton from '@/components/ui/skeleton';
@@ -15,6 +14,7 @@ interface NotificationListProps {
   onMarkAsRead: (id: string) => Promise<void>;
   onDismiss: (id: string) => Promise<void>;
   onRetry: () => void;
+}
 
 export const NotificationList: React.FC<NotificationListProps> = ({
   loading,
@@ -68,10 +68,3 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   );
 };
 "
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

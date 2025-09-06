@@ -1,7 +1,8 @@
-
 import { JobApplication } from "@/types/jobs";
 interface ScoreBadgeProps {
   application: JobApplication
+}
+}
 }
 
 export function ScoreBadge({ application }: ScoreBadgeProps) {

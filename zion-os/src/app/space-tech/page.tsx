@@ -1,4 +1,5 @@
 import Link from 'next/link';
+}
 
 export const metadata = {
   title:
@@ -8,6 +9,7 @@ export const metadata = {
   keywords:
     'space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services',
 };
+}
 
 export default function SpaceTechPage() {
   return (

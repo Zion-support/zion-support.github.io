@@ -48,6 +48,7 @@ export async function upsertReview(newReview: Review): Promise<void> {
 export async function getProjectReviews(projectId: string): Promise<Review[]> {
   const reviews = await readReviews();
   return reviews.filter(r => r.projectId === projectId && !r.removed);
+}
 
 export function counterpartRole(
   role: 'client' | 'talent'

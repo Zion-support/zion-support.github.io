@@ -10,6 +10,7 @@ import {
 interface VerifiedBadgeProps {
   verified: boolean;
   size?: 'sm' | 'md' | 'lg';
+}
 
 export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
   if (!verified) return null;

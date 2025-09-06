@@ -1,4 +1,3 @@
-
 import { Helmet } from "react-helmet-async";
 interface SEOProps {
   title: string,
@@ -8,6 +7,8 @@ interface SEOProps {
   ogUrl?: string;
   canonical?: string;
   noindex?: boolean
+}
+}
 }
 
 export function SEO({

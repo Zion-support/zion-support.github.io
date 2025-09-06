@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useResume } from '@/hooks/useResume';
@@ -17,6 +16,8 @@ import { ResumeStepContent } from './ResumeStepContent';
 import { useResumeProgress } from './useResumeProgress';
 import { ResumeVersionSelector } from './ResumeVersionSelector';
 import { RESUME_STEPS } from './constants';
+}
+
 export function ResumeWizard() {
   const { user } = useAuth();
   const { 

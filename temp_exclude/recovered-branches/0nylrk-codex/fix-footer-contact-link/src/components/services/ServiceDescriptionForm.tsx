@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -20,6 +19,8 @@ type FormData = z.infer<typeof formSchema>;
 
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void
+}
+}
 }
 
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -36,6 +35,8 @@ interface ProjectViewProps {
     description: string
   };
   milestones: Milestone[]
+}
+}
 }
 
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {

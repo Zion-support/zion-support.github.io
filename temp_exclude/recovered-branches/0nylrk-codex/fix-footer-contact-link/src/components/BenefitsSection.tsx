@@ -1,4 +1,3 @@
-
 import { GradientHeading } from "./GradientHeading";
 import { FeatureCard } from "./FeatureCard";
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react";
@@ -20,6 +19,7 @@ const benefits = [
     title: "Cost Reduction",
     description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",
     icon: <TrendingDown className="w-8 h-8" />}],
+}
 
 export function BenefitsSection() {
   return (

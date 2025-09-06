@@ -14,6 +14,7 @@ import {
   TrendingUp,
   Users,;
 } from 'lucide-react';
+}
 
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation

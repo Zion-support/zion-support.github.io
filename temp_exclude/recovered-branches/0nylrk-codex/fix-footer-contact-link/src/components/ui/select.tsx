@@ -1,4 +1,4 @@
- const Select = SelectPrimitive.Root const SelectGroup = SelectPrimitive.Group const SelectValue = SelectPrimitive.Value const SelectTrigger = React.forwardRef< React.ElementRef<typeof SelectPrimitive.Trigger>;
+const Select = SelectPrimitive.Root const SelectGroup = SelectPrimitive.Group const SelectValue = SelectPrimitive.Value const SelectTrigger = React.forwardRef< React.ElementRef<typeof SelectPrimitive.Trigger>;
 React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger> > ( ({
   className, children, ...props 
 }, ref) => (<SelectPrimitive.Trigger) 

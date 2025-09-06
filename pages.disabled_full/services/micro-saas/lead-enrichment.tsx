@@ -3,6 +3,7 @@ module.exports = default function LeadEnrichment() { return; }; return null} } ;
 import React from 'react';
 interface LeadenrichmentProps {
   // Add props here as needed
+}
 
 export default function Leadenrichment({ }: LeadenrichmentProps) {
   return (

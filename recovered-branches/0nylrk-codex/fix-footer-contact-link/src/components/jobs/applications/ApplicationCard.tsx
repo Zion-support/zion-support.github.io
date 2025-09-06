@@ -24,6 +24,7 @@ import { toast } from 'sonner';
 
 interface ApplicationCardProps {
   application: JobApplication;
+}
 
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false);

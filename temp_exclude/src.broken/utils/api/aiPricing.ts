@@ -1,4 +1,4 @@
- function experienceMultiplier (level: 'junior' | 'mid' | 'senior') : number {
+function experienceMultiplier (level: 'junior' | 'mid' | 'senior') : number {
   switch (level) {
   case 'junior': return 0.8;
 case 'mid': return 1.0;

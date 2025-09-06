@@ -8,6 +8,7 @@ interface InterviewResponseFormProps {
   onConfirm: () => Promise<void>;
   onClose: () => void;
   isLoading: boolean;
+}
 
 export function InterviewResponseForm({
   interview,

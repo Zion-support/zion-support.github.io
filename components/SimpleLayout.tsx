@@ -7,6 +7,8 @@ interface SimpleLayoutProps {,
   description?: string,
   children: React.ReactNode
 };
+}
+
 export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {,
   return (,
     <>,

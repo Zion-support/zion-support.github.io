@@ -533,6 +533,8 @@ class PasswordStrengthService {
   }
 
 // Export singleton instance
+}
+
 export const passwordStrengthService = new PasswordStrengthService();
 
 // Export the class for custom instances

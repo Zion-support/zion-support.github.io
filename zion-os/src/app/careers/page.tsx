@@ -5,6 +5,7 @@ export const metadata = {
   keywords:
     'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs',
 };
+}
 
 export default function CareersPage() {
   const openPositions = [

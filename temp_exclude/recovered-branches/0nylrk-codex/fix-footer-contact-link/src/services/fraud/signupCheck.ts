@@ -6,6 +6,9 @@ import { SignupCheckResult } from './types';
 /**
  * Check for suspicious signup patterns
  */
+}
+}
+
 export const checkSignupPatterns = async (
   email: string,
   ipAddress?: string

@@ -205,4 +205,6 @@
     </>
   );
 });
+}
+
 export default Home;

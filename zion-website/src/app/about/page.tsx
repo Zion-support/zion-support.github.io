@@ -60,6 +60,7 @@ const team = [
     image: '/images/team/james-kim.jpg',
   },
 ];
+}
 
 export default function AboutPage() {
   return (

@@ -109,6 +109,7 @@ const QuantumServicesPage: React.FC = () => {
       icon: <Globe className="w-6 h-6" />
     }
   ];
+}
 
 export default function QuantumServices() {
   return (
@@ -302,5 +303,6 @@ export default function QuantumServices() {
     </Layout>
   )
 };
+}
 
 export default QuantumServicesPage;

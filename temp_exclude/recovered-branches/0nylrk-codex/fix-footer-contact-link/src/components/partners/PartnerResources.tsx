@@ -10,6 +10,8 @@ interface ResourceItem {
   icon: JSX.Element,
   url: string
 }
+}
+}
 
 export function PartnerResources() {
   const resources: ResourceItem[] = [

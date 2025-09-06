@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
@@ -12,6 +11,8 @@ interface PostFormValues {
   content: string,
   categoryId: ForumCategory,
   tags: string
+}
+}
 }
 
 export default function CreatePostPage() {

@@ -45,7 +45,8 @@ projectOverview: initialJobTitle ? `Job: $ {
   initialJobTitle 
 }` : "";
 timeline: "";
-budgetMax: talent.hourly rate ? talent.hourly rate * 1.5 : 50 
+budgetMax: talent.hourly rate ? talent.hourly rate * 1.5 : 50
+}
 
 export function useHireRequestForm({
   talent,

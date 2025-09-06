@@ -46,6 +46,7 @@ const milestonesData = [
     amount: '$5,000',
   },
 ];
+}
 
 export function MobileProjects() {
   return (

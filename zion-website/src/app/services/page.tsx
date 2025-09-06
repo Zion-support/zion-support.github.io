@@ -153,6 +153,7 @@ const reasonsToChoose = [
     icon: GlobeAltIcon,
   },
 ];
+}
 
 export default function ServicesPage() {
   return (

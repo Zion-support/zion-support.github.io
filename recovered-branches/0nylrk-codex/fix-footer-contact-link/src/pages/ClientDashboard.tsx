@@ -169,6 +169,7 @@ function ClientDashboardContent() {
       <Footer />
     </>
   );
+}
 
 export default function ClientDashboard() {
   return (

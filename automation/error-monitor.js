@@ -42,7 +42,6 @@ class ErrorMonitor {
       fs.mkdirSync(logsDir, { recursive: true });
     }
 
-
     // Initial health check
     await this.performHealthCheck();
 
@@ -183,7 +182,6 @@ class ErrorMonitor {
       }
     }
 
-
     return errors;
   }
 
@@ -198,7 +196,6 @@ class ErrorMonitor {
         });
       }
     }
-
 
     return errors;
   }
@@ -247,7 +244,6 @@ class ErrorMonitor {
       await automation.run();
       console.log('✅ Error fixer completed');
 
-
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
@@ -284,7 +280,6 @@ class ErrorMonitor {
     if (!fs.existsSync(reportDir)) {
       fs.mkdirSync(reportDir, { recursive: true });
     }
-
 
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;

@@ -289,5 +289,7 @@ export class AICustomerServiceService {
     }
   }
 }
+}
+}
 
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');

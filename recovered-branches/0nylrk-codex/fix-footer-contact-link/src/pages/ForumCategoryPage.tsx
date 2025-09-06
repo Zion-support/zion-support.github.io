@@ -240,6 +240,8 @@ const iconMap = {
   FileText: FileText,
   Megaphone: Megaphone,
 };
+}
+}
 
 export default function ForumCategoryPage() {
   // useParams is typed as `any` in this environment due to missing type
@@ -260,8 +262,9 @@ export default function ForumCategoryPage() {
       </AppLayout>
     );
   }
+}
 
-  const category = categoriesInfo[categoryId];
+const category = categoriesInfo[categoryId];
   const IconComponent =
     iconMap[category.icon as keyof typeof iconMap] || MessageSquare;
   const posts = postsByCategory[categoryId] || [];
@@ -530,6 +533,9 @@ replyCount: 2;
 isPinned: true 
 
 };
+}
+}
+
 export default function ForumCategoryPage () {
   //useParams is typed as `any` in this environment due to missing type //definitions, so avoid passing a type argument to prevent TS2347. const {
   categoryId 

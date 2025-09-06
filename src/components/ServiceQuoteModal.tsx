@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import {
   Dialog,
@@ -37,7 +36,10 @@ interface ServiceQuoteModalProps {
   open: boolean;
 onOpenChange: (open: boolean) => void;
 service: ProductListing | null ;
-}const BUDGET RANGES = [ export function ServiceQuoteModal ({;
+}const BUDGET RANGES = [
+}
+
+export function ServiceQuoteModal ({;
   open,  onOpenChange, service ;
 }: ServiceQuoteModalProps) {;
   const [formData, setFormData] = useState ({;
@@ -84,6 +86,7 @@ const TIMELINE_OPTIONS = [
   { label: '3-6 months', value: '3-6months' },
   { label: '6+ months', value: '6+months' },
 ];
+}
 
 export function ServiceQuoteModal({
   open,
@@ -527,14 +530,3 @@ else if (currentStep === 'contact') setCurrentStep ('timeline') ;
 }className=" bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" > Next </Button>) : (<Button </Button>) ;
 }</div> </DialogFooter> </form> </DialogContent> </Dialog>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-            ...formData;
-            startDate: startDate?.toISOString(),
-            endDate: endDate?.toISOString()}
-        }
-      });
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

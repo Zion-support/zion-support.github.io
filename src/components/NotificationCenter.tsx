@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react';
@@ -18,6 +17,7 @@ import {
   NotificationFooter,;
 } from '@/components/notifications';
 import { FilterType } from '@/components/notifications/NotificationFilter';
+}
 
 export const NotificationCenter: React.FC = () => {
   const {
@@ -166,14 +166,3 @@ enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Erro
 }/> </PopoverContent> </Popover>) ;
 };
 '"
-=======
-
-<<<<<<< HEAD
-    unreadCount, 
-    markAsRead, 
-<<<<<<< HEAD
-
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

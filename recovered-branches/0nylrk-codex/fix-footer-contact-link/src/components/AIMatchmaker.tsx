@@ -21,7 +21,8 @@ serviceType;
 3);
 //Set empty matches to show no results found UI setMatches ([]) 
 }finally {
-  setIsMatchmaking (false) 
+  setIsMatchmaking (false)
+}
 
 export function AIMatchmaker({
   serviceType = '',

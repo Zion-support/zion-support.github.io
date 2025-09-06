@@ -4,6 +4,7 @@ import { quoteRequestService } from '@/services/quoteRequestService';
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 import { useToast } from '@/components/ui/use-toast';
 import type { DateRange } from '@/types/dateRange';
+}
 
 export const useAdminQuotes = () => {
   const { toast } = useToast();

@@ -49,7 +49,7 @@ payout method?: string;
 fraud flags?: number;
 commission rate?: number 
 }export default function PartnerManager () {
-  
+}
 
 export default function PartnerManager() {
   const [partners, setPartners] = useState<PartnerProfile[]>([]);

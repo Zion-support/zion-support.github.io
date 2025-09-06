@@ -55,6 +55,8 @@ const searchResults = []
     icon: FileText,
   };
 ];
+}
+}
 
 export default function SearchPage() {}
   const router = useRouter();

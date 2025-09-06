@@ -52,6 +52,7 @@ const benefits = [
     icon: Database
   }
 ];
+}
 
 export default function EducationPage() {
   return (

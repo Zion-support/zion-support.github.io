@@ -99,5 +99,7 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
   const port = env.PORT ? Number(env.PORT) : 3000;
   await app.start(port)
 })();
+}
+}
 
 export default app;

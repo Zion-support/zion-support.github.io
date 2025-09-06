@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -22,6 +21,7 @@ interface LoadingSpinnerProps {
   className?: string;
   showText?: boolean;
   text?: string;
+}
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
@@ -70,6 +70,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 }initial= {;
   {;
   opacity: 0, x: -20 ;
+}
 
 export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
   steps,
@@ -140,6 +141,7 @@ interface SkeletonProps {
   variant?: 'text' | 'circular' | 'rectangular' | 'card';
   animation?: 'pulse' | 'wave' | 'none';
   lines?: number;
+}
 
 export const Skeleton: React.FC<SkeletonProps> = ({
   className,
@@ -181,7 +183,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({
     );
   }
 
-  
     />
   );
 };
@@ -192,6 +193,7 @@ const getErrorConfig = () => {;
   switch (variant) {';
   case 'network': return {';
   icon: isOnline ? Wifi : WifiOff,  title: title || (isOnline ? 'Connection Error' : 'No Internet Connection'), description: description || (isOnline ? 'Unable to connect to our servers. Please check your connection.' : 'You appear to be offline. Please check your internet connection.' ;
+}
 
 export const ErrorState: React.FC<ErrorStateProps> = ({
   error,
@@ -335,6 +337,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
 <motion.div initial= {;
   {;
   scale: 0.8, opacity: 0 ;
+}
 
 export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8,
@@ -404,6 +407,7 @@ interface PerformanceIndicatorProps {
   loadTime?: number;
   itemCount?: number;
   className?: string;
+}
 
 export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   isLoading = false,
@@ -426,7 +430,6 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     );
   }
 
-  
     >
       {loadTime && (
         <Badge variant='outline' className={getPerformanceColor(loadTime)}>
@@ -438,17 +441,3 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     </div>
   );
 };
-=======
-
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-
-  const Icon = config.icon;
-  const canRetry = showRetry && onRetry && retryCount < maxRetries;
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

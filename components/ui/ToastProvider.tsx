@@ -27,6 +27,7 @@ export type ToastContextValue = {
 };
 
 const ToastContext = createContext<ToastContextValue | undefined>(undefined);
+}
 
 export function ToastProvider({ children }: { children: React.ReactNode }) {
   const [toasts, setToasts] = useState<Toast[]>([]);
@@ -125,6 +126,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
       </div>
     </ToastContext.Provider>
   );
+}
 
 export function useToast() {
   const ctx = useContext(ToastContext);

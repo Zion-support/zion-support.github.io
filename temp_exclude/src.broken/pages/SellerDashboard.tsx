@@ -1,2 +1,2 @@
- return (<div className="min-h-screen flex flex-col bg-zion-blue" > <SEO title="Seller Dashboard" description="Manage your listings" /> <Header /> </TabsList> <TabsContent value="products" > <ProductSubmissionForm /> </TabsContent> <TabsContent value="bulk" > <DropzoneBulkUpload /> </TabsContent> </Tabs> </main> <Footer /> </div>) 
+return (<div className="min-h-screen flex flex-col bg-zion-blue" > <SEO title="Seller Dashboard" description="Manage your listings" /> <Header /> </TabsList> <TabsContent value="products" > <ProductSubmissionForm /> </TabsContent> <TabsContent value="bulk" > <DropzoneBulkUpload /> </TabsContent> </Tabs> </main> <Footer /> </div>) 
 }

@@ -10,7 +10,10 @@ function createValidReactComponent(filePath) {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join("")
     .replace(/[^a-zA-Z0-9]/g, "");
-  return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`;
+  return `import React from "react";
+}
+
+export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`;
 
 function fixFile(filePath) {
   try {
@@ -61,6 +64,8 @@ function createValidReactComponent(filePath) {
     .join("")
     .replace(/[^a-zA-Z0-9]/g, "");
   return `import React from "react";
+}
+
 export default function ${componentName}() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
@@ -132,7 +137,10 @@ function createValidReactComponent(filePath) {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join("")
     .replace(/[^a-zA-Z0-9]/g, "");
-  return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`;
+  return `import React from "react";
+}
+
+export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`;
 
 function fixFile(filePath) {
   try {
@@ -184,7 +192,10 @@ function createValidReactComponent(filePath) {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join("")
     .replace(/[^a-zA-Z0-9]/g, "");
-  return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`;
+  return `import React from "react";
+}
+
+export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`;
 
 function fixFile(filePath) {
   try {

@@ -66,6 +66,8 @@ const "About": NextPage = () => {
     { \"number\": \'5+\', \"label\": \'Years Experience\' },
     { \"number\": \'24/7\', \"label\": \'Support Available\' }
   ];
+}
+
 export default function AboutPage() {
   return (
   const stats = [{ "number": '150+', "label": 'Projects Completed' },
@@ -73,6 +75,8 @@ export default function AboutPage() {
     { "number": '5+', "label": 'Years Experience' },
     { "number": '24/7', "label": 'Support Available' }
   ];
+}
+
 export default function AboutPage() {
   return (
     <main>
@@ -448,6 +452,4 @@ export default function AboutPage() {
       </div>
     </>
   );
-
-
 

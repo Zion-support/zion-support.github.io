@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { HireRequestForm } from "./HireRequestForm";
@@ -9,6 +8,8 @@ interface HireRequestModalProps {
   isOpen: boolean,
   onClose: () => void,
   userDetails?: UserProfile
+}
+}
 }
 
 export function HireRequestModal({ talent, isOpen, onClose, userDetails }: HireRequestModalProps) {

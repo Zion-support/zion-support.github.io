@@ -1,5 +1,9 @@
 import React from "react";
+}
+
 export const config = { api: { bodyParser: false } };
+}
+
 export default function handler(_req, res) {
   const httpServer = res.socket.server;
   if (!httpServer.io) {

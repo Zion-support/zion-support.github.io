@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -33,6 +32,8 @@ interface WorkExperienceItemFormProps {
   initialData?: WorkExperience;
   onSubmit: (data: WorkExperience) => Promise<void>,
   onCancel: () => void
+}
+}
 }
 
 export function WorkExperienceItemForm({

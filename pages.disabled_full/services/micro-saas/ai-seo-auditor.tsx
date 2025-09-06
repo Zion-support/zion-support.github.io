@@ -3,6 +3,7 @@ module.exports = default function AISEOAuditor() { return; }; return null} } ; f
 import React from 'react';
 interface AiseoauditorProps {
   // Add props here as needed
+}
 
 export default function Aiseoauditor({ }: AiseoauditorProps) {
   return (

@@ -52,4 +52,6 @@ const ContentRoutes = () => {
     </Routes>
   );
 };
+}
+
 export default ContentRoutes;

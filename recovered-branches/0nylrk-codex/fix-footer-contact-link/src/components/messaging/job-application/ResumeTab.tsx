@@ -8,6 +8,7 @@ export interface ResumeTabProps {
   onResumeSelected?: (resume: ResumeOption) => void;
   onApply?: () => Promise<void>;
   isSubmitting?: boolean;
+}
 
 export function ResumeTab({
   selectedResumeId,

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Header } from '@/components/Header';
 import { NextSeo } from '@/components/NextSeo';
@@ -60,6 +59,7 @@ const INSTANCES: Instance[] = [
 interface FeedItem {
   id: number;
   text: string;
+}
 
 export default function GlobalMapPage() {
   const [feed, setFeed] = useState<FeedItem[]>([]);
@@ -164,11 +164,3 @@ export default function GlobalMapPage() {
       </main>
     </div>
   );
-=======
-
-<<<<<<< HEAD
-
-  const width = 800;
-  const height = 400;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

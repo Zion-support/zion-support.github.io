@@ -15,6 +15,8 @@ export type SitemapItem = {
 const currentDate = '2025-05-15';
 
 // Public Pages - Accessible to all users
+}
+
 export const publicPages: SitemapItem[] = [
   {
     path: '/', label: 'Home',
@@ -79,6 +81,8 @@ export const publicPages: SitemapItem[] = [
     lastmod: currentDate}];
 
 // Authentication Pages
+}
+
 export const authPages: SitemapItem[] = [
   {
     path: '/login', label: 'Login',
@@ -109,6 +113,8 @@ export const authPages: SitemapItem[] = [
     lastmod: currentDate}];
 
 // Talent/Creator Routes - Requires authentication and appropriate role
+}
+
 export const talentRoutes: SitemapItem[] = [
   {
     path: '/talent-dashboard', label: 'Talent Dashboard',
@@ -136,6 +142,8 @@ export const talentRoutes: SitemapItem[] = [
     lastmod: currentDate}];
 
 // Client/Employer Routes - Requires authentication and appropriate role
+}
+
 export const clientRoutes: SitemapItem[] = [
   {
     path: '/client-dashboard', label: 'Client Dashboard',
@@ -157,6 +165,8 @@ export const clientRoutes: SitemapItem[] = [
     lastmod: currentDate}];
 
 // Shared Routes - Authenticated Users
+}
+
 export const sharedRoutes: SitemapItem[] = [
   {
     path: '/messages', label: 'Messages',
@@ -180,6 +190,8 @@ export const sharedRoutes: SitemapItem[] = [
     lastmod: currentDate}];
 
 // Admin Routes
+}
+
 export const adminRoutes: SitemapItem[] = [
   {
     path: '/analytics', label: 'Analytics',
@@ -201,6 +213,8 @@ export const adminRoutes: SitemapItem[] = [
     lastmod: currentDate}];
 
 // Dynamic Path Patterns
+}
+
 export const dynamicPaths = {
   talentProfile: '/talent/:id', projectDetails: '/project/:projectId',
   projectMilestones: '/project/:projectId/milestones', projectRoom: '/project/:projectId/room',
@@ -208,6 +222,8 @@ export const dynamicPaths = {
   disputeDetails: '/dashboard/disputes/:disputeId'};
 
 // The complete sitemap
+}
+
 export const completeSitemap: SitemapItem[] = [
   ...publicPages;
   ...authPages;
@@ -217,6 +233,8 @@ export const completeSitemap: SitemapItem[] = [
   ...adminRoutes];
 
 // Helper function to get appropriate routes based on user role
+}
+
 export const getAccessibleRoutes = (
   isAuthenticated: boolean, 
   userType?: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin' | null

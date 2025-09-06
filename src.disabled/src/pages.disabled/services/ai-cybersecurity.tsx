@@ -90,6 +90,7 @@ import {
   UserSearch2,
   UserVoice2;
 } from 'lucide-react';
+}
 
 export default function AICybersecurity() {
   const features = [

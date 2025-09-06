@@ -1,4 +1,3 @@
-
 import { format } from "date-fns";
 import { JobApplication } from "@/types/jobs";
 import { Avatar } from "@/components/ui/avatar";
@@ -24,6 +23,8 @@ interface ApplicationsTableProps {
   onViewApplication: (applicationId: string) => Promise<void>,
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,
   onViewScore: (application: JobApplication) => void
+}
+}
 }
 
 export function ApplicationsTable({ 

@@ -16,5 +16,7 @@ export async function retry<T>(
       await new Promise(res => setTimeout(res, delay));
     }
   }
+}
+}
 
 export default retry;

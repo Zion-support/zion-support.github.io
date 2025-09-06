@@ -6,6 +6,7 @@ import * as auth from '@/services/auth';
 interface LoginFields {
   email: string;
   password: string;
+}
 
 export default function Login() {
   const navigate = useNavigate();

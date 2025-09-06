@@ -107,6 +107,7 @@ const categories = [
 
 const featuredArticle = newsArticles.find(article => article.featured);
 const regularArticles = newsArticles.filter(article => !article.featured);
+}
 
 export default function NewsPage() {},
   {

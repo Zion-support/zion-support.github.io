@@ -1,4 +1,3 @@
-
 export interface TenantInfo {
   id: string, brand_name: string,
   subdomain: string, custom_domain: string | null,

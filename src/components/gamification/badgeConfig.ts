@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   LucideIcon,
   BadgeCheck,
@@ -24,6 +23,7 @@ export interface BadgeMeta {
   icon: LucideIcon;
   color: string;
   bg: string;
+}
 
 export const badgeList: BadgeMeta[] = [
   {
@@ -75,14 +75,7 @@ export const badgeList: BadgeMeta[] = [
     bg: '#F2FCE2', // Soft Green
   },
 ];
+}
 
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find(b => b.key === key);
-=======
-<<<<<<< HEAD
-  | "monetized";
-
-<<<<<<< HEAD
-  badgeList.find((b) => b.key === key);
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

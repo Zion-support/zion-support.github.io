@@ -14,6 +14,7 @@ export interface GeneratedMilestone {
   dueDate: string;
   estimatedHours: number;
   isAiGenerated: boolean;
+}
 
 export function useMilestoneGenerator() {
   const [isGenerating, setIsGenerating] = useState(false);

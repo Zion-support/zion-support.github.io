@@ -154,6 +154,7 @@ const processSteps = [
     description: 'Continuous optimization based on data insights'
   }
 ];
+}
 
 export default function RetailSolutionsPage() {
   return (

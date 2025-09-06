@@ -196,4 +196,6 @@ const DashboardRoutes = () => {
     </Routes>
   );
 };
+}
+
 export default DashboardRoutes;

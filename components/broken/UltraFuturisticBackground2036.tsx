@@ -18,7 +18,8 @@ ctx.beginPath ();
 ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2);
 ctx.fill ();
 ctx.restore ();
-//Draw connections between nearby particles 
+//Draw connections between nearby particles
+}
 
 export default function UltraFuturisticBackground2036({
   variant = 'default',
@@ -403,5 +404,6 @@ export default function UltraFuturisticBackground2036({
       </div>
     </div>
   );
+}
 
 export default UltraFuturisticBackground2036;

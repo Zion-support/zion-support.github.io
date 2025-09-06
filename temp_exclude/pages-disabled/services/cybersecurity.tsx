@@ -2,6 +2,8 @@ import React from "react";
 import Layout from "../../components/Layout";"
 import { motion } from 'framer-motion'
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react;
+}
+
 export default function CybersecurityPage() {},
   {
   const securityServices = []

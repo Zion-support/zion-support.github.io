@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   Table;
@@ -16,6 +15,7 @@ import {
   TooltipContent;
   TooltipProvider;
   TooltipTrigger} from "@/components/ui/tooltip";
+}
 
 export function RoleManagement() {
   // Mock team members data

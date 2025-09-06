@@ -1,4 +1,3 @@
-
 export interface JobData {
   id: string, title: string,
   description: string, skills: string[],

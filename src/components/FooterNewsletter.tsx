@@ -1,10 +1,10 @@
-<<<<<<< HEAD
 import React, { useState, useRef } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
+}
 
 export function FooterNewsletter(): React.ReactElement {
   const [email, setEmail] = useState('');
@@ -74,7 +74,6 @@ export function FooterNewsletter(): React.ReactElement {
     }
   };
 
-  
     >
       <label htmlFor='newsletter-email' className='sr-only'>
         Email address for newsletter subscription
@@ -117,13 +116,3 @@ export function FooterNewsletter(): React.ReactElement {
       </Button>
     </form>
   );
-=======
-
-<<<<<<< HEAD
-
-
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

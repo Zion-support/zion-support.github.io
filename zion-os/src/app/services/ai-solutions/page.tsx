@@ -197,6 +197,7 @@ const aiServices: AIService[] = [
     ],
   },
 ];
+}
 
 export default function AISolutionsPage() {
   const [selectedService, setSelectedService] = useState<string | null>(null);

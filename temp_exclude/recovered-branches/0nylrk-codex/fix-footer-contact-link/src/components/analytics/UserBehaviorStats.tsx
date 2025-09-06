@@ -1,4 +1,3 @@
-
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useState } from "react";
 import { AnalyticsChart } from "./AnalyticsChart";
 type TimeRange = '7d' | '30d' | '90d' | '365d';
+}
 
 export function UserBehaviorStats() {
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');

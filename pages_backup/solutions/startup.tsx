@@ -8,7 +8,6 @@ import { motion } from 'framer-motion';
 import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
-
 const features = [;
   {}
     title: 'Rapid Prototyping,',
@@ -51,6 +50,7 @@ const stats = [;
   { number: '300%, label: 'Average Growth' },',
   { number: '2-4, label: 'Weeks to MVP' }',
 ;];
+}
 
 export default function StartupSolutionsPage() {
   return (;

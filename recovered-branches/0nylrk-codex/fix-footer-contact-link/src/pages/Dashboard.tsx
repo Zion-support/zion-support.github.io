@@ -20,6 +20,7 @@ import {
 import { NotificationCenter } from '@/components/NotificationCenter';
 import { useToast } from '@/hooks/use-toast';
 import { Link } from 'react-router-dom';
+}
 
 export default function Dashboard() {
   const { user, logout } = useAuth();

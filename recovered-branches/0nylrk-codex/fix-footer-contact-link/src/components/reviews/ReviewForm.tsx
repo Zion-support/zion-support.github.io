@@ -30,6 +30,7 @@ is anonymous?: boolean
   onSubmit: (data: any) => Promise<boolean>;
   defaultValues?: Review;
   isSubmitting: boolean;
+}
 
 export function ReviewForm({
   projectId,

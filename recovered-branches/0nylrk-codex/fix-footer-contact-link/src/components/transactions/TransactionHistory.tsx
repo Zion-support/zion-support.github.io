@@ -42,7 +42,8 @@ provider?: {
   display name?: string 
 };
 service?: {
-  title?: string 
+  title?: string
+}
 
 export function TransactionHistory() {
   const { user } = useAuth();

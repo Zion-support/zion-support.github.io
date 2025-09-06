@@ -100,22 +100,31 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 );
 
 Button.displayName = 'Button';
+}
+
 export default Button;
 
 // Specialized button variants
+}
+
 export function PrimaryButton(props: Omit<ButtonProps, 'variant'>) {
   return <Button {...props} variant='primary' />;
+}
 
 export function SecondaryButton(props: Omit<ButtonProps, 'variant'>) {
   return <Button {...props} variant='secondary' />;
+}
 
 export function OutlineButton(props: Omit<ButtonProps, 'variant'>) {
   return <Button {...props} variant='outline' />;
+}
 
 export function GhostButton(props: Omit<ButtonProps, 'variant'>) {
   return <Button {...props} variant='ghost' />;
 
 // Icon button variant
+}
+
 export function IconButton({
   icon,
   children,
@@ -128,6 +137,8 @@ export function IconButton({
   );
 
 // Floating action button
+}
+
 export function FloatingActionButton({
   icon,
   onClick,

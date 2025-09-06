@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { useInterviews } from '@/hooks/useInterviews';
 import { Interview } from '@/types/interview';
@@ -205,6 +204,7 @@ function InterviewsContent() {
       </main>
     </>
   );
+}
 
 export default function Interviews() {
   return (
@@ -212,7 +212,3 @@ export default function Interviews() {
       <InterviewsContent />
     </ProtectedRoute>
   );
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

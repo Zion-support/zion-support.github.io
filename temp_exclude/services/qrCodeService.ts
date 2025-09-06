@@ -9,7 +9,6 @@ export interface QRCodeOptions {
     url: string, width: number,
     height: number
   }
-}
 
 export interface QRCodeResult {
   dataUrl: string, options: QRCodeOptions,
@@ -18,7 +17,6 @@ export interface QRCodeResult {
     width: number,
     height: number
   }
-}
 
 export interface QRCodeTemplate {
   id: string, name: string,
@@ -317,6 +315,8 @@ class QRCodeService {
     // In a real app, this would save to storage
     console.log('QR Code saved:', qrCode.options.text)
   }
+}
+}
 }
 
 export const qrCodeService = new QRCodeService();

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -15,6 +14,7 @@ action?: string ;
   steps: OnboardingStep[];
   title?: string;
   className?: string;
+}
 
 export function OnboardingTracker({
   steps,
@@ -24,7 +24,6 @@ export function OnboardingTracker({
   const completedSteps = steps.filter(step => step.completed).length;
   const progress = Math.round((completedSteps / steps.length) * 100);
 
-  
     >
       <div className='flex items-center justify-between mb-4'>
         <h3 className='text-lg font-medium text-white'>{title}</h3>
@@ -87,7 +86,3 @@ export function OnboardingTracker({
 }</div>) ) ;
 }</div> </div>) ;
 }"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

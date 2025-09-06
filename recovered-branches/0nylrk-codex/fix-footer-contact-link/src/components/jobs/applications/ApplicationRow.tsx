@@ -18,6 +18,7 @@ interface ApplicationRowProps {
     newStatus: ApplicationStatus
   ) => Promise<void>;
   onViewScore: (application: JobApplication) => void;
+}
 
 export function ApplicationRow({
   application,

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { UseFormReturn } from 'react-hook-form';
 import { AppMetadataValues } from './MetadataManager';
@@ -19,6 +18,7 @@ import { X } from 'lucide-react';
 
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>;
+}
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const { control, register, watch, setValue } = form;
@@ -178,15 +178,3 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 }/> </div> </Form> </CardContent> </Card>) ;
 };
 '"
-=======
-
-<<<<<<< HEAD
-
-  };
-  
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

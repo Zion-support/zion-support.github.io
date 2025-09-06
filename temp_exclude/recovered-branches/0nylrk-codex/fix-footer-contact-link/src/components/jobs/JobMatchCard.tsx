@@ -21,6 +21,8 @@ interface JobMatchProps {
   onViewDetails?: (matchId: string) => void,
   onInvite?: (matchId: string) => void
 }
+}
+}
 
 export function JobMatchCard({ 
   matchId;

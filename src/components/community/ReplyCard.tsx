@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { formatDistanceToNow } from 'date-fns';
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react';
 import {
@@ -18,6 +17,7 @@ interface ReplyCardProps {
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
   className?: string;
+}
 
 export const ReplyCard = ({
   reply,
@@ -29,7 +29,6 @@ export const ReplyCard = ({
     addSuffix: true,
   });
 
-  
     >
       <CardHeader className='flex flex-row items-start gap-4 space-y-0'>
         <Avatar className='h-8 w-8'>
@@ -86,10 +85,7 @@ export const ReplyCard = ({
     </Card>
   );
 };
+}
+
 export default ReplyCard;
 "
-=======
-
-      "transition-shadow";
-      reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

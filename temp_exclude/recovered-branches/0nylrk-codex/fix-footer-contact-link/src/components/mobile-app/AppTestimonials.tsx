@@ -26,6 +26,7 @@ const testimonials = [
     avatar: "/placeholder.svg"
   }
 ];
+}
 
 export const AppTestimonials: React.FC = () => {
   return (

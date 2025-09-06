@@ -10,6 +10,7 @@ interface KanbanColumnProps {
   description: string;
   applications: JobApplication[];
   count: number;
+}
 
 export function KanbanColumn({
   id,

@@ -12,4 +12,6 @@ const ErrorRoutes = () => {
     </Routes>
   );
 };
+}
+
 export default ErrorRoutes;

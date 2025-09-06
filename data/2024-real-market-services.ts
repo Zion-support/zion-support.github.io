@@ -41,6 +41,8 @@ export interface RealMarketService {,
   rating: number,
   reviews: number
 };
+}
+
 export const realMarketServices: RealMarketService[] = [,";
   {,'
     id: "ai-business-intelligence-pro",

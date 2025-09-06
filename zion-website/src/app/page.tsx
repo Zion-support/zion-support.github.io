@@ -76,6 +76,7 @@ const solutions = [
     href: '/solutions/it-asset-management',
   },
 ];
+}
 
 export default function HomePage() {
   return (

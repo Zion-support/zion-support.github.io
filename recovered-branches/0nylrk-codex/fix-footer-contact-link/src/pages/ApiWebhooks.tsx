@@ -2,6 +2,8 @@ import React from 'react';
 import ApiDocsLayout from '@/components/developers/ApiDocsLayout';
 import { CodeBlock } from '@/components/developers/CodeBlock';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+}
+}
 
 export function ApiWebhooks() {
   // Sample webhook event payload
@@ -16,8 +18,7 @@ export function ApiWebhooks() {
     "cover_letter": "I'm excited to apply for this position...",
     "resume_url": "https://storage.zionai.com/resumes/resume-123.pdf",
     "created_at": "2023-06-10T15:42:31Z"
-  }
-}`;
+  }`;
 
   const newHirePayload = `{
   "event_type": "talent_hired",
@@ -276,5 +277,7 @@ app.listen(3000, () => {
       </div>
     </ApiDocsLayout>
   );
+}
+}
 
 export default ApiWebhooks;

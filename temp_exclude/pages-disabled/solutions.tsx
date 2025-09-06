@@ -86,6 +86,7 @@ const process = [
   }
 ]
 ];
+}
 
 export default function SolutionsPage() {},
   {

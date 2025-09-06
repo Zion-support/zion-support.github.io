@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -27,6 +26,8 @@ interface Activity {
     display_name: string,
     avatar_url: string | null
   }
+}
+}
 }
 
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {

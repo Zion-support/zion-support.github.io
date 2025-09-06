@@ -2,6 +2,7 @@ import React from 'react';
 
 interface SOC2ComplianceAutomationProps {
   // Add props here as needed
+}
 
 export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationProps) {
   return (
@@ -10,6 +11,4 @@ export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationPr
       <p>This component is currently under development.</p>
     </div>
   );
-
-
 

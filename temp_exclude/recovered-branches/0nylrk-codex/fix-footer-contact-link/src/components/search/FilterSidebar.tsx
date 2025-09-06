@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -17,6 +16,8 @@ interface FilterSidebarProps {
   onFilterChange: (filterType: string, value: string) => void,
   onRatingChange: (rating: number | null) => void,
   onClearFilters: () => void
+}
+}
 }
 
 export function FilterSidebar({

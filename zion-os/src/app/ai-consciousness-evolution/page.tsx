@@ -1,4 +1,5 @@
 import Link from 'next/link';
+}
 
 export const metadata = {
   title: 'AI Consciousness Evolution - Zion Tech Group',
@@ -7,6 +8,7 @@ export const metadata = {
   keywords:
     'AI consciousness, artificial consciousness, cognitive AI, consciousness evolution, Zion Tech Group',
 };
+}
 
 export default function AIConsciousnessEvolutionPage() {
   return (

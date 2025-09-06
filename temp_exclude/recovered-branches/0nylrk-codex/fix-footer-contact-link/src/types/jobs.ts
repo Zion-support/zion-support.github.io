@@ -1,4 +1,3 @@
-
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 
 export type JobCategory = 
@@ -49,7 +48,6 @@ export interface JobMatch {
     category?: string;
     company_name?: string
   }
-}
 
 export interface ResumeAttachment {
   id: string, title: string,

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -14,6 +13,7 @@ import { Label } from "@/components/ui/label";
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react";
 
 type ResumeStep = "basics" | "experience" | "education" | "skills";
+}
 
 export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");

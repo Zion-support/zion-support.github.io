@@ -8,6 +8,8 @@ import { useReferrals } from "@/hooks/useReferrals";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+}
+}
 
 export function PartnerReferralLinks() {
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
@@ -41,8 +43,9 @@ export function PartnerReferralLinks() {
       if (customParam) {
         url.searchParams.append("source", customParam)
       }
-      
-      const newLink = {
+}
+
+const newLink = {
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,
         link: url.toString()
       };

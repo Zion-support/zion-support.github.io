@@ -129,6 +129,8 @@ toastAdapter.dismiss = (toastId?: string | number) => {
 };
 
 // Enhanced useToast hook with global toast manager integration
+}
+
 export const useToast = () => ({
   toast: toastAdapter,
   dismiss: (toastId?: string) => {
@@ -155,5 +157,6 @@ export const useToast = () => ({
   validationError: showToast.validationError,
   criticalError: showToast.criticalError,
 });
+}
 
 export const toast = toastAdapter;

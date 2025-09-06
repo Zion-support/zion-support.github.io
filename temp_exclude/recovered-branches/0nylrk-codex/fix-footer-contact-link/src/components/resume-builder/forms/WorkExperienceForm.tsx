@@ -38,6 +38,8 @@ interface WorkExperienceFormProps {
   onComplete: () => void,
   onBack: () => void
 }
+}
+}
 
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();

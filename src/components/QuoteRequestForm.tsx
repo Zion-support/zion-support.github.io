@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useToast } from '@/hooks/use-toast';
@@ -28,6 +27,7 @@ const serviceStepSchema = z.object({
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() }),
 });
+}
 
 export function QuoteRequestForm() {
   const router = useRouter();
@@ -186,11 +186,11 @@ export function QuoteRequestForm() {
   const renderStepContent = () => {
     switch (currentStep) {
       case 'service':
-        
+
           />
         );
       case 'details':
-        
+
           />
         );
       case 'timeline':
@@ -348,14 +348,3 @@ const renderStepContent = () => {;
   autoFillLoading ;
 }/> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-  
-  const updateFormData = (data: Partial<QuoteFormData>) => {
-    setFormData(prev => ({
-      ...prev;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

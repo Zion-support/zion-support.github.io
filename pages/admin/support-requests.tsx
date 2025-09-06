@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 
@@ -16,6 +15,7 @@ interface SupportRequest {
   updatedAt: string;
   assignedTo?: string;
   response?: string;
+}
 
 export default function SupportRequests({
   initialRequests,
@@ -54,9 +54,9 @@ const AdminSupportRequestsPage: React.FC = () => {
   }, []);
 
   const handleStatusChange = (requestId: string, newStatus: SupportRequest['status']) => {
-    setRequests(prev => 
-      prev.map(request => 
-        request.id === requestId 
+    setRequests(prev =>
+      prev.map(request =>
+        request.id === requestId
           ? { ...request, status: newStatus, updatedAt: new Date().toISOString() }
           : request
       )
@@ -64,9 +64,9 @@ const AdminSupportRequestsPage: React.FC = () => {
   };
 
   const handleAssign = (requestId: string, assignedTo: string) => {
-    setRequests(prev => 
-      prev.map(request => 
-        request.id === requestId 
+    setRequests(prev =>
+      prev.map(request =>
+        request.id === requestId
           ? { ...request, assignedTo, status: 'in_progress' as const, updatedAt: new Date().toISOString() }
           : request
       )
@@ -201,7 +201,7 @@ const AdminSupportRequestsPage: React.FC = () => {
                         {request.priority}
                       </span>
                     </div>
-                    
+
                     <div className="text-sm text-gray-600 mb-2">
                       <p><strong>From:</strong> {request.userName} ({request.email})</p>
                       <p><strong>Category:</strong> {request.category}</p>
@@ -209,22 +209,22 @@ const AdminSupportRequestsPage: React.FC = () => {
                         <p><strong>Assigned to:</strong> {request.assignedTo}</p>
                       )}
                     </div>
-                    
+
                     <p className="text-gray-700 mb-3">{request.message}</p>
-                    
+
                     {request.response && (
                       <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-3">
                         <p className="text-sm font-medium text-blue-800 mb-1">Response:</p>
                         <p className="text-sm text-blue-700">{request.response}</p>
                       </div>
                     )}
-                    
+
                     <div className="flex justify-between text-xs text-gray-500">
                       <span>Created: {new Date(request.createdAt).toLocaleString()}</span>
                       <span>Updated: {new Date(request.updatedAt).toLocaleString()}</span>
                     </div>
                   </div>
-                  
+
                   <div className="flex gap-2 ml-4">
                     {request.status === 'open' && (
                       <>
@@ -273,44 +273,3 @@ const AdminSupportRequestsPage: React.FC = () => {
       </main>
     </>
   );
-=======
-import { GetServerSideProps } from 'next';
-import { useState } from 'react';
-import { readJson } from '../../utils/fsDb';
-export const getServerSideProps: GetServerSideProps = async () => {
-  const requests = readJson<any[]>('support/requests.json', []);
-  return { props: { initialRequests: requests } }
-};
-
-export default function SupportRequests({ initialRequests }: { initialRequests: any[] }) {
-  const [requests, setRequests] = useState(initialRequests);
-
-  async function resolve(id: string) {
-    await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) }),
-    setRequests((prev: any[]) => prev.map((r) => (r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r)))
-  }
-
-  return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">Support Requests</h1>
-      <div className="grid gap-3">
-        {requests.length === 0 && <div className="opacity-70">No requests found.</div>}
-        {requests.map((r) => (
-          <div key={r.id} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex items-center justify-between">
-            <div className="text-sm">
-              <div className="font-medium">{r.id}</div>
-              <div className="opacity-80">Session: {r.sessionId}</div>
-              <div className="opacity-80">Tag: {r.tag}</div>
-              <div className="opacity-80">Reason: {r.reason}</div>
-              <div className="opacity-80">Status: {r.status}</div>
-            </div>
-            {r.status !== 'resolved' && (
-              <button onClick={() => resolve(r.id)} className="enhanced-button enhanced-button-primary">Mark Resolved</button>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

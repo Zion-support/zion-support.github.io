@@ -2,6 +2,8 @@ import React from 'react';
 interface MicroSaasServicesSectionProps {
   // Add props here as needed
 }
+}
+
 export default function MicroSaasServicesSection({ }: MicroSaasServicesSectionProps) {
   return (
     <div>

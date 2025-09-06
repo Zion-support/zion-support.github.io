@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Badge } from '@/components/ui/badge';
 import { ShieldAlert } from 'lucide-react';
 import {
@@ -9,6 +8,7 @@ import {
 
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed';
+}
 
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
   let variant: 'default' | 'destructive' | 'secondary' | 'outline' =
@@ -45,7 +45,3 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       </TooltipContent>
     </Tooltip>
   );
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

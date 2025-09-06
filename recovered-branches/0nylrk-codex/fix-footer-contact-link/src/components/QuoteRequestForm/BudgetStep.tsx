@@ -5,6 +5,7 @@ import { Slider } from '@/components/ui/slider';
 interface BudgetStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
+}
 
 export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
   const handleBudgetTypeSelect = (type: 'fixed' | 'hourly' | 'range') => {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -28,6 +27,7 @@ toast ({;
   //Set empty matches to show no results found UI setMatches ([]) ;
 }finally {;
   setIsMatchmaking (false) ;
+}
 
 export function AIMatchmaker({
   serviceType = '',
@@ -93,7 +93,6 @@ export function AIMatchmaker({
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item);
 
-  
     >
       <CardHeader className='pb-2'>
         <CardTitle className='flex items-center text-white'>
@@ -145,10 +144,3 @@ export function AIMatchmaker({
       </CardContent>
     </Card>
   );
-=======
-
-<<<<<<< HEAD
-      
-      logInfo('AI matching results:', { data: results }),
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

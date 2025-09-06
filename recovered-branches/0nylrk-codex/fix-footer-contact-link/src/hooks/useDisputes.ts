@@ -8,6 +8,7 @@ import {
   DisputeStatus,;
 } from '@/types/disputes';
 import { toast } from 'sonner';
+}
 
 export function useDisputes() {
   const { user } = useAuth();

@@ -40,7 +40,9 @@ async function main() {
       console.warn('Generate failed for', p.prompt);
       continue
     }
-    const file = path.join(outDir, `${res.slug}.json`);
+}
+
+const file = path.join(outDir, `${res.slug}.json`);
     fs.writeFileSync(file, JSON.stringify(res.payload, null, 2));
     console.log('Wrote', file)
   }

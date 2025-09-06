@@ -1,6 +1,7 @@
 import React from 'react';
 interface TalentsPageProps {
   // Add props here as needed
+}
 
 export default function TalentsPage({ }: TalentsPageProps) {
   return (

@@ -3,4 +3,6 @@
 }- Zion Tech Solutions</title> </Head>) 
 }</EnhancedLayout>) 
 };
+}
+
 export default AutomationDetail;

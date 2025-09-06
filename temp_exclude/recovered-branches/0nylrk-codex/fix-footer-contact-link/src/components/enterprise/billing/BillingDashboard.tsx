@@ -1,4 +1,3 @@
-
 import React from "react";
 import { BillingHeader } from "./BillingHeader";
 import { CurrentSubscription } from "./CurrentSubscription";
@@ -10,6 +9,7 @@ import {
   TabsContent;
   TabsList;
   TabsTrigger} from "@/components/ui/tabs";
+}
 
 export function BillingDashboard() {
   return (

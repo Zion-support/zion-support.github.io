@@ -18,6 +18,7 @@ interface TalentProfileProps {
   profile: TalentProfileType;
   onRequestHire: () => void;
   onMessageTalent?: () => void;
+}
 
 export function TalentProfile({
   profile,

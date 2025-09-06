@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist';
@@ -28,6 +27,7 @@ interface ProductCardProps {
   onBuyAttemptComplete?: () => void; // Callback to signal the buy attempt is finished (success or fail)
   /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */
   buyDisabled?: boolean;
+}
 
 export default function ProductCard({
   product,
@@ -77,7 +77,7 @@ export default function ProductCard({
         extra: { product },
       }
     );
-    
+
       >
         <p className='text-destructive text-sm'>
           Product information unavailable.
@@ -142,7 +142,6 @@ export default function ProductCard({
 
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
 
-  
     >
       <button
         className='absolute top-2 right-2 p-1 rounded-full bg-background/70'
@@ -302,32 +301,3 @@ onBuy () > {'";
 }</Tooltip> </TooltipProvider>) ;
 }</div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-
-  const stockStatus =
-    product.stock === undefined
-<<<<<<< HEAD
-      : 'In stock';
-
-  const stockVariant =
-    product.stock === undefined
-<<<<<<< HEAD
-  const productTitle = product.title;
-
-<<<<<<< HEAD
-
-  const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
-  const imageAltText = productTitle;
-
-<<<<<<< HEAD
-
-  const isMobile = useMediaQuery('(max-width: 768px)'),
-  const isTablet = useMediaQuery('(max-width: 1200px)'),
-
-  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw',
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

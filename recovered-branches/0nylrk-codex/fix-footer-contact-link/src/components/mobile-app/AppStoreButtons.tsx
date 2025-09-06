@@ -8,6 +8,7 @@ interface AppStoreButtonsProps {
   googlePlayUrl?: string;
   onAppStoreClick?: () => void;
   onGooglePlayClick?: () => void;
+}
 
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   className,

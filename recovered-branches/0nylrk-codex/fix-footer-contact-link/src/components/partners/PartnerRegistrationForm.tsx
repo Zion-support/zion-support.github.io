@@ -54,6 +54,7 @@ const partnerFormSchema = z.object({
 });
 
 type PartnerFormValues = z.infer<typeof partnerFormSchema>;
+}
 
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);

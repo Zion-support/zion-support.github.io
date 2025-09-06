@@ -41,6 +41,7 @@ const categories = [
   'Cybersecurity',
   'Digital Transformation'
 ];
+}
 
 export default function WhitePapersPage() {
   return (

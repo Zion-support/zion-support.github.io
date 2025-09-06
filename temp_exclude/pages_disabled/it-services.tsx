@@ -436,6 +436,7 @@ const supportLevels = [{
     pricing: 'Custom Pricing'
   }
 ];
+}
 
 export default function ITServicesPage() {
   return (

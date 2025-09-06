@@ -33,6 +33,8 @@ interface ReviewsModerationTableProps {
   isLoading: boolean,
   onRefresh: () => void
 }
+}
+}
 
 export function ReviewsModerationTable({
   reviews;
@@ -109,8 +111,9 @@ export function ReviewsModerationTable({
       </div>
     )
   }
+}
 
-  const handleApprove = (reviewId: string) => {
+const handleApprove = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "approved" })
   };
 

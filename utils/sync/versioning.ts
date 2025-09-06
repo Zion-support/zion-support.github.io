@@ -1,4 +1,5 @@
 import { MultiverseState } from './types';
+}
 
 export function nextVersionFor(
   state: MultiverseState,

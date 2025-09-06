@@ -211,6 +211,9 @@ export class PerformanceMonitorService {
 }
 
 // Pricing tiers for the Performance Monitor
+}
+}
+
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
       

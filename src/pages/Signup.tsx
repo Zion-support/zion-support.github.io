@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from react-router-dom
 import { useFormik } from 'formik';
@@ -33,6 +32,7 @@ const SignupSchema = Yup.object({
     'You must accept the terms and conditions'
   ),
 });
+}
 
 export default function Signup() {
   const router = useRouter(); // Changed from navigate
@@ -549,7 +549,6 @@ toast ({';
 });
 //Redirect to appropriate page after a short delay ;
 
-
 }catch (err: unknown) {';
   logErrorToProduction ('Signup error details:', {;
   message: err.message, response: err.response ? {;
@@ -589,29 +588,3 @@ request: err.request ? 'Request made but no response': 'No request';
 }</form> </div>) ;
 }</div> </div> </AuthLayout>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-  const isPartnerSignup = router.query.type === 'partner';
-  const signupSource = router.query.source as string || 'direct';
-
-<<<<<<< HEAD
-        
-<<<<<<< HEAD
-        
-<<<<<<< HEAD
-        
-        if (res.status === 201) {
-          const data = res.data;
-          
-<<<<<<< HEAD
-            
-<<<<<<< HEAD
-        
-        const status = err.response?.status;
-        // Try both 'error' and 'message' fields for compatibility
-        const errorMsg = err.response?.data?.error || err.response?.data?.message || 'Signup failed. Please try again.';
-        
-        logInfo('Processed error message:', { data: errorMsg }),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

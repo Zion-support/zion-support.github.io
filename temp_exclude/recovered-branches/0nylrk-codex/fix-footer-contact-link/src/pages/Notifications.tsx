@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
@@ -151,6 +150,8 @@ const NotificationCard: React.FC<{
     </div>
   )
 };
+}
+}
 
 export default function NotificationsPage() {
   const {

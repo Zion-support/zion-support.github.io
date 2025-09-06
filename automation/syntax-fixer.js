@@ -99,4 +99,6 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
   fixer.run().catch(console.error)
 };
 ,
+}
+
 export default SyntaxFixer,

@@ -2,6 +2,7 @@ import type { NextPage } from \'next\'; import MainLayout from \'../../component
 import React from 'react';
 interface CloudProps {
   // Add props here as needed
+}
 
 export default function Cloud({ }: CloudProps) {
   return (

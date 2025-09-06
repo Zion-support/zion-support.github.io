@@ -1,4 +1,5 @@
 import Link from 'next/link';
+}
 
 export const metadata = {
   title: 'AI Business Intelligence - Zion Tech Group',
@@ -7,6 +8,7 @@ export const metadata = {
   keywords:
     'AI business intelligence, predictive analytics, data insights, business analytics, Zion Tech Group',
 };
+}
 
 export default function AIBusinessIntelligencePage() {
   return (

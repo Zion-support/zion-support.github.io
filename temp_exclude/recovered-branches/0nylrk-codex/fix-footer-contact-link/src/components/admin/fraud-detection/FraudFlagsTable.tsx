@@ -13,6 +13,8 @@ interface FraudFlagsTableProps {
   resetFilters: () => void,
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
+}
+}
 
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
   flags;

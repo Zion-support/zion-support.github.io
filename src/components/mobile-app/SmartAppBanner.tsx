@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
 import { X, ArrowRight } from 'lucide-react';
@@ -11,6 +10,7 @@ interface SmartAppBannerProps {
   appStoreUrl?: string;
   googlePlayUrl?: string;
   delay?: number; // Delay in milliseconds before showing the banner
+}
 
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   appName = 'Zion Marketplace',
@@ -106,10 +106,3 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   );
 };
 '"
-=======
-
-<<<<<<< HEAD
-  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

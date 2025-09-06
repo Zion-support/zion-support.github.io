@@ -155,4 +155,7 @@ async function sendSlackAlert(message: string): Promise<void> {
   safeConsole.log (`SLACK ALERT: $ {
   message 
 }`) 
-}// In a real scenario, this would use the Slack API to send a message export default app;
+}// In a real scenario, this would use the Slack API to send a message
+}
+
+export default app;

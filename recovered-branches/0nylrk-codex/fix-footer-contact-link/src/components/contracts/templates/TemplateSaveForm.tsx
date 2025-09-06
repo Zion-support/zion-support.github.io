@@ -30,6 +30,7 @@ interface TemplateSaveFormProps {
   onComplete: () => void;
   editTemplate?: ContractTemplate | null;
   currentValues?: ContractFormValues;
+}
 
 export function TemplateSaveForm({
   onCancel,

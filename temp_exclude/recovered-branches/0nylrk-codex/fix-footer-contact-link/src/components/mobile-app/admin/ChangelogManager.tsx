@@ -16,6 +16,7 @@ type ChangelogEntry = {
   date: string,
   changes: string
 };
+}
 
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) => {
   const [entries, setEntries] = useState<ChangelogEntry[]>([

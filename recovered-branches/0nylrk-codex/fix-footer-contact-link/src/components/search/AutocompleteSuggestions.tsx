@@ -25,6 +25,7 @@ visible: boolean
     after: text.substring(index + searchTerm.length),
   };
 };
+}
 
 export function AutocompleteSuggestions({
   suggestions,

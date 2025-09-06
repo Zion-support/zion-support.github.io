@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Header } from '@/components/Header';
@@ -7,6 +6,8 @@ import { SEO } from '@/components/SEO';
 import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
+}
+
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.

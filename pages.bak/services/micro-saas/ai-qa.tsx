@@ -4,6 +4,7 @@ import React from 'react';
 
 interface AiqaProps {
   // Add props here as needed
+}
 
 export default function Aiqa({ }: AiqaProps) {
   return (
@@ -12,5 +13,4 @@ export default function Aiqa({ }: AiqaProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 

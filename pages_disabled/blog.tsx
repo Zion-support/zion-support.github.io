@@ -13,6 +13,8 @@ const blogPosts = [
 
 import { ArrowRight, Calendar, Filter, Search, User } from 'lucide-react';
 ;
+}
+
 export default function BlogPage() {
   
     >

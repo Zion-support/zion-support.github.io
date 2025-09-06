@@ -18,6 +18,7 @@ export interface CategorizedSkills {
 export interface EnhancedProfile {
   summary: string;
   categorizedSkills: CategorizedSkills;
+}
 
 export function useTalentProfileEnhancer() {
   const [isGenerating, setIsGenerating] = useState(false);

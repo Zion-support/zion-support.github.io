@@ -99,6 +99,7 @@ const recentPosts: ForumPost[] = [
     isAnswered: true,
   },
 ];
+}
 
 export default function CommunityPage() {
   const { user } = useAuth();

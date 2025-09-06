@@ -18,6 +18,8 @@ export function slugify(title: string, separator = '-'): string {
  * This simply splits the slug on the separator and
  * capitalizes each word.
  */
+}
+
 export function unslugify(slug: string, separator = '-'): string {
   return slug
     .split(separator)

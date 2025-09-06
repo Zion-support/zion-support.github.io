@@ -1,10 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const ServicesIndex: NextPage = () => {
   const services = [
     {
@@ -245,10 +241,6 @@ const ServicesIndex: NextPage = () => {
       link: "/services/ai-automation"
     }
   ];
-<<<<<<< HEAD
-=======
-=======
-=======
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
@@ -294,10 +286,9 @@ const services = [
     link: '/services/data-analytics'
   }
 ];
+}
 
 export default function ServicesIndex() {
-<<<<<<< HEAD
-=======
   return (
     <>
       <Head>
@@ -305,10 +296,6 @@ export default function ServicesIndex() {
         <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />
         <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />
       </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
@@ -317,7 +304,7 @@ export default function ServicesIndex() {
               Comprehensive Technology Services
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              From AI development to cloud solutions, we provide end-to-end technology services 
+              From AI development to cloud solutions, we provide end-to-end technology services
               that drive innovation and accelerate your business growth.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -337,7 +324,7 @@ export default function ServicesIndex() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Service Portfolio</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose from our comprehensive range of technology services, each designed to address 
+              Choose from our comprehensive range of technology services, each designed to address
               specific business challenges and drive digital transformation.
             </p>
           </div>
@@ -379,7 +366,7 @@ export default function ServicesIndex() {
             Our Technology Services
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to accelerate your business growth. 
+            Comprehensive technology solutions designed to accelerate your business growth.
             From innovative micro SAAS platforms to enterprise AI solutions.
           </p>
         </div>
@@ -512,10 +499,6 @@ export default function ServicesIndex() {
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
                   <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
-<<<<<<< HEAD
-=======
-=======
-=======
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -529,7 +512,7 @@ export default function ServicesIndex() {
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Services</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed to transform your business 
+                Comprehensive technology solutions designed to transform your business
                 with AI, cloud services, cybersecurity, and data analytics.
               </p>
             </motion.div>
@@ -566,8 +549,6 @@ export default function ServicesIndex() {
                     href={service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
-<<<<<<< HEAD
-=======
                     Learn More
                   </Link>
                 </div>
@@ -589,24 +570,20 @@ export default function ServicesIndex() {
             </Link>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       </main>
     </div>
   );
 };
-<<<<<<< HEAD
+}
+
 export default ServicesIndex;
-=======
+}
+
 export default ServicesIndex;
-=======
       </div>
     </>
   );
 }
-=======
       </div>
     </>
   );

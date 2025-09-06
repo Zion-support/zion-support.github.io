@@ -40,6 +40,7 @@ const productSchema = z.object({
 
 // Type for our form values
 type ProductFormValues = z.infer<typeof productSchema>;
+}
 
 export function ProductSubmissionForm() {
   const { user } = useAuth();

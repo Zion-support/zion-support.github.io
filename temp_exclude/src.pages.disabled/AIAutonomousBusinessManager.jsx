@@ -3,6 +3,7 @@ import React from 'react';
 interface AIAutonomousBusinessManagerProps {
   // Add props here as needed
 }
+}
 
 export default function AIAutonomousBusinessManager({ }: AIAutonomousBusinessManagerProps) {
   return (
@@ -11,13 +12,7 @@ export default function AIAutonomousBusinessManager({ }: AIAutonomousBusinessMan
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 }
-=======
 }
-=======
 }

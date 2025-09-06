@@ -13,6 +13,7 @@ import {
   Plus,
   HelpCircle,;
 } from 'lucide-react';
+}
 
 export function FeaturesGuideSection() {
   const features = [

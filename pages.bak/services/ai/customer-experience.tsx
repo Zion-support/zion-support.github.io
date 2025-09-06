@@ -4,6 +4,7 @@ import React from 'react';
 
 interface CustomerexperienceProps {
   // Add props here as needed
+}
 
 export default function Customerexperience({ }: CustomerexperienceProps) {
   return (
@@ -12,5 +13,4 @@ export default function Customerexperience({ }: CustomerexperienceProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
@@ -11,6 +10,7 @@ import { AlertCircle } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter';
 import { logErrorToProduction } from '@/utils/productionLogger';
+}
 
 export function SignUpForm() {
   const router = useRouter();
@@ -304,9 +304,3 @@ if (error) {;
   isLoading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Please wait... </>) : (signupMode ? "Create Account" : "Sign In") ";
 }</Button> </form> <Link href="/login" className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer" > Sign In </Link> </p> </div>) ;
 }"
-=======
-
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -102,7 +102,9 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
         "warnings": 0";,
 ;      };,
     } catch (error) {}
-      const output = error.stdout || error.stderr || '';',
+}
+
+const output = error.stdout || error.stderr || '';',
       const errorCount = (output.match(/error/g) || []).length;,
       const warningCount = (output.match(/warning/g) || []).length;,
       return {
@@ -126,7 +128,9 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
         "errors": 0";,
 ;      };,
     } catch (error) {}
-      const output = error.stdout || error.stderr || '';',
+}
+
+const output = error.stdout || error.stderr || '';',
       const errorCount = (output.match(/error/g) || []).length;,
       return {
         "success": false,",
@@ -149,7 +153,9 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
         "errors": 0";,
 ;      };,
     } catch (error) {}
-      const output = error.stdout || error.stderr || '';',
+}
+
+const output = error.stdout || error.stderr || '';',
       const errorCount = (output.match(/error/g) || []).length;,
       return {
         "success": false,",
@@ -199,7 +205,9 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
         "vulnerabilities": 0";,
 ;      };,
     } catch (error) {}
-      const output = error.stdout || error.stderr || '';',
+}
+
+const output = error.stdout || error.stderr || '';',
       const vulnerabilities = this.parseVulnerabilities(output);,
       return {
         "success": false,",
@@ -523,7 +531,9 @@ automation.start().catch(error => {}),
      {
         // npm outdated returns 1 when there are outdated packages;
   }
-        const output = error.stdout || ;';';
+}
+
+const output = error.stdout || ;';';
         const outdatedCount = (output.match(/\n/g) || []).length -;1; // Subtract header line
 };
     } catch (error) {

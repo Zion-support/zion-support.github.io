@@ -43,6 +43,7 @@ const testimonials = [
     company: 'EcoTech',
   },
 ];
+}
 
 export function TestimonialCarousel() {
   return (

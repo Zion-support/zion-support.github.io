@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -18,6 +17,8 @@ interface MilestoneCardProps {
   dueDate?: string;
   onApprove?: (id: string) => Promise<void>,
   onReject?: (id: string) => Promise<void>
+}
+}
 }
 
 export function MilestoneCard({ 

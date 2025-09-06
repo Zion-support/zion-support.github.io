@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 interface ProjectDetailsStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
+}
 
 export function ProjectDetailsStep({
   formData,

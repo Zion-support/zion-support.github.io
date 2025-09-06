@@ -31,6 +31,7 @@ const initialPosts: DiscussionPost[] = [
     body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.',
   },
 ];
+}
 
 export const CommunityDiscussion: React.FC = () => {
   const [posts, setPosts] = useState(initialPosts);

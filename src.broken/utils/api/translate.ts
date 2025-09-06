@@ -68,6 +68,8 @@ export async function translateText(
   } catch {
     return text;
   }
+}
+}
 
 export function detectLanguageSimple(text: string): string {
   // Very simple heuristic; in production use a language detection library or model

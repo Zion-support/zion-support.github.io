@@ -1,4 +1,3 @@
-
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
@@ -96,6 +95,8 @@ function ReviewsModerationContent() {
       <Footer />
     </>
   )
+}
+}
 }
 
 export default function ReviewsModeration() {

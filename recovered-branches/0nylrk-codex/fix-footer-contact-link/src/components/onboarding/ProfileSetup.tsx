@@ -32,6 +32,7 @@ type ProfileFormValues = z.infer<typeof profileSchema>;
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void;
   userType: string;
+}
 
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({

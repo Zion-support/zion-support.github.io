@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Check, Copy } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -32,6 +31,7 @@ showLineNumbers && "pl-12 relative") ;
   i ";
 }className="h-6 leading-6" > {;
   i + 1 ;
+}
 
 export function CodeBlock({
   code,
@@ -49,7 +49,6 @@ export function CodeBlock({
     }, 2000);
   };
 
-  
     >
       <pre
         className={cn('p-4 overflow-auto', showLineNumbers && 'pl-12 relative')}
@@ -79,12 +78,6 @@ export function CodeBlock({
       )}
     </div>
   );
+}
 
 export default CodeBlock;
-=======
-
-<<<<<<< HEAD
-
-export default CodeBlock;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

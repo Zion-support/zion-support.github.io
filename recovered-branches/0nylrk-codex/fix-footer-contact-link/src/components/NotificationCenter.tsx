@@ -16,6 +16,7 @@ import {
   NotificationFooter,;
 } from '@/components/notifications';
 import { FilterType } from '@/components/notifications/NotificationFilter';
+}
 
 export const NotificationCenter: React.FC = () => {
   const {

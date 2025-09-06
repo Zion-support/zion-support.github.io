@@ -129,8 +129,9 @@ const ChartTooltipContent = React.forwardRef<
       if (hideLabel || !payload?.length) {
         return null;
       }
+}
 
-      const [item] = payload;
+const [item] = payload;
       const key = `${labelKey || item.dataKey || item.name || 'value'}`;
       const itemConfig = getPayloadConfigFromPayload(config, item, key);
       const value =
@@ -164,8 +165,9 @@ const ChartTooltipContent = React.forwardRef<
     if (!active || !payload?.length) {
       return null;
     }
+}
 
-    const nestLabel = payload.length === 1 && indicator !== 'dot';
+const nestLabel = payload.length === 1 && indicator !== 'dot';
 
     
       >
@@ -301,8 +303,9 @@ function getPayloadConfigFromPayload(
   if (typeof payload !== 'object' || payload === null) {
     return undefined;
   }
+}
 
-  const payloadPayload =
+const payloadPayload =
     'payload' in payload &&
     typeof payload.payload === 'object' &&
     payload.payload !== null

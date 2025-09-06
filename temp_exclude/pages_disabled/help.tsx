@@ -242,6 +242,8 @@ const faqs = [
     category: 'Security'
   }
 ];
+}
+
 export default function HelpPage() {
   const [searchQuery, setSearchQuery] = useState('');',
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);

@@ -14,6 +14,7 @@ action?: string
   steps: OnboardingStep[];
   title?: string;
   className?: string;
+}
 
 export function OnboardingTracker({
   steps,

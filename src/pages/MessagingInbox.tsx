@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext';
@@ -13,6 +12,8 @@ import { Button } from '@/components/ui/button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
 import { useRouter } from 'next/router'; // Changed from react-router-dom
 import { logErrorToProduction } from '@/utils/productionLogger';
+}
+}
 
 export default function MessagingInbox() {
   const {
@@ -46,8 +47,9 @@ export default function MessagingInbox() {
       toast.error('Please select a conversation first');
       return;
     }
+}
 
-    const roomId = `msg-${activeConversation.id}`;
+const roomId = `msg-${activeConversation.id}`;
     setActiveCall(roomId);
 
     // Show toast notification
@@ -143,9 +145,3 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
   /* Conversation Detail */ ;
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-    
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

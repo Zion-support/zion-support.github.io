@@ -55,6 +55,7 @@ function HiringTrackerContent() {
       <Footer />
     </>
   );
+}
 
 export default function HiringTracker() {
   return (

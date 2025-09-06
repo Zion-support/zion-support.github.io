@@ -17,6 +17,7 @@ interface MilestoneSuggestionsProps {
   endDate?: Date;
   projectType: string;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
+}
 
 export function MilestoneSuggestions({
   projectName,

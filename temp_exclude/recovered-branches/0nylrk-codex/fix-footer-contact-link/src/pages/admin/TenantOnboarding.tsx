@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -14,6 +13,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { Switch } from "@/components/ui/switch";
+}
+}
+
 export default function TenantOnboarding() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
@@ -36,8 +38,9 @@ export default function TenantOnboarding() {
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }
+}
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }))
   };

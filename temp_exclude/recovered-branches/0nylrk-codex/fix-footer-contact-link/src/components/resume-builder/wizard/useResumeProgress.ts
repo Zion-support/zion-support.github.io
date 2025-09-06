@@ -1,6 +1,9 @@
 
 import { useState, useEffect } from 'react';
 import { Resume } from '@/types/resume';
+}
+}
+
 export const useResumeProgress = (resume: Resume | null) => {
   const [progress, setProgress] = useState(0);
   
@@ -10,8 +13,9 @@ export const useResumeProgress = (resume: Resume | null) => {
       setProgress(0);
       return
     }
-    
-    let completed = 0;
+}
+
+let completed = 0;
     
     // Basic info is always considered (1 point)
     completed += 1;
@@ -35,8 +39,9 @@ export const useResumeProgress = (resume: Resume | null) => {
     if (resume.certifications && resume.certifications.length > 0) {
       completed += 1
     }
-    
-    const progressPercentage = (completed / 5) * 100;
+}
+
+const progressPercentage = (completed / 5) * 100;
     setProgress(progressPercentage)
   }, [resume]);
 

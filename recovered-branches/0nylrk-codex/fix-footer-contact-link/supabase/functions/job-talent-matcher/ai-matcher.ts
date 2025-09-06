@@ -161,6 +161,8 @@ export async function findBestMatches(
  * @param talents Array of talent profiles
  * @returns Array of matches with scores
  */
+}
+
 export function performBasicSkillMatching(
   jobDetails: any,
   talents: TalentProfile[]

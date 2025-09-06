@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Control } from 'react-hook-form';
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form";
@@ -8,6 +7,8 @@ interface DescriptionFieldsProps {
   control: Control<JobSchemaType>,
   handleEditorChange: (content: string) => void,
   editorContent: string
+}
+}
 }
 
 export function DescriptionFields({ control, handleEditorChange, editorContent }: DescriptionFieldsProps) {

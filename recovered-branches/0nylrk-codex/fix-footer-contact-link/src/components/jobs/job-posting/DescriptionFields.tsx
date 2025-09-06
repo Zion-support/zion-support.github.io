@@ -15,6 +15,7 @@ interface DescriptionFieldsProps {
   control: Control<JobSchemaType>;
   handleEditorChange: (content: string) => void;
   editorContent: string;
+}
 
 export function DescriptionFields({
   control,

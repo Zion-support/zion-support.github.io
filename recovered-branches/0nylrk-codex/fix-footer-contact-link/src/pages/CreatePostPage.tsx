@@ -12,6 +12,7 @@ interface PostFormValues {
   content: string;
   categoryId: ForumCategory;
   tags: string;
+}
 
 export default function CreatePostPage() {
   const navigate = useNavigate();

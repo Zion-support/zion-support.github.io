@@ -4,6 +4,9 @@ import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from 'sonner';
 import { useRecordActivity } from './useRecordActivity';
+}
+}
+
 export const useUploadDeliverable = () => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);

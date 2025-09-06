@@ -153,6 +153,7 @@ const processSteps = [
     description: 'Ongoing monitoring and regulatory compliance support'
   }
 ];
+}
 
 export default function FinanceSolutionsPage() {
   return (

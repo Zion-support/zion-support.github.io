@@ -88,6 +88,8 @@ const solutions = [;
   'Healthcare Cybersecurity',',
   'Population Health Management'';
 ;];
+}
+
 export default function HealthcareSolutionsPage() {
   return (;
     <Layout );
@@ -151,12 +153,15 @@ const benefits = [
   'Better resource utilization',
   'Real-time health monitoring and alerts'
 ];
+}
+
 export default function HealthcareSolutions() {
     title: 'Provider Management',
     description: 'Comprehensive provider and staff management solutions',
     benefits: ['Provider profiles', 'Scheduling', 'Communication', 'Performance tracking']
   }
 ];
+}
 
 export default function HealthcareSolutionsPage() {
   

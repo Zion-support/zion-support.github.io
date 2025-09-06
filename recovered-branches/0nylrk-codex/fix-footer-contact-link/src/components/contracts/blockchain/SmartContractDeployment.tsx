@@ -20,6 +20,7 @@ interface SmartContractDeploymentProps {
   solidityCode: string;
   onDeploy: (options: DeploymentOptions) => Promise<void>;
   isDeploying: boolean;
+}
 
 export function SmartContractDeployment({
   solidityCode,

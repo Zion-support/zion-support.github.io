@@ -53,6 +53,7 @@ const industries = [
     color: 'from-gray-500 to-blue-600'
   }
 ];
+}
 
 export default function IndustriesPage() {
   

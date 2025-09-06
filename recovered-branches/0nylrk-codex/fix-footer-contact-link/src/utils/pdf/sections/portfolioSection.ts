@@ -1,6 +1,7 @@
 import { jsPDF } from 'jspdf';
 import { PortfolioProject } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
+}
 
 export function addPortfolioSection(
   doc: jsPDF,
@@ -85,7 +86,6 @@ export function addPortfolioSection(
   }
 
   return yPos + 5;
-
 
 }yPos += 10, // Add space between projects 
 }// If there are more projects than we're displaying 

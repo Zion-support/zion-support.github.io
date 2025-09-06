@@ -99,5 +99,6 @@ const OpenAppRedirect: React.FC = () => {
     </div>
   )
 };
+}
 
 export default OpenAppRedirect;

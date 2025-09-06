@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { apiClient } from '@/utils/apiClient';
 import { Loader2 } from 'lucide-react';
+}
 
 export function FooterNewsletter() {
   const [email, setEmail] = useState('');

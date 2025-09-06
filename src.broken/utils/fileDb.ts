@@ -9,6 +9,8 @@ function ensureDataDir(): void {
   if (!fs.existsSync(dataDir)) {
     fs.mkdirSync(dataDir, { recursive: true });
   }
+}
+}
 
 export function readJsonFile<T extends JsonRecord>(
   fileName: string,
@@ -26,6 +28,8 @@ export function readJsonFile<T extends JsonRecord>(
   } catch (error) {
     return fallback;
   }
+}
+}
 
 export function writeJsonFile<T extends JsonRecord>(
   fileName: string,
@@ -34,6 +38,8 @@ export function writeJsonFile<T extends JsonRecord>(
   ensureDataDir();
   const targetPath = path.join(dataDir, fileName);
   fs.writeFileSync(targetPath, JSON.stringify(data, null, 2), 'utf8');
+}
+}
 
 export function updateJsonFile<T extends JsonRecord>(
   fileName: string,

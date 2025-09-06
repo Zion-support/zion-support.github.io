@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";";
 import { motion,  useScroll, useTransform } from "framer-motion";";
 import { ArrowRight, Sparkles, Zap, Users, Star,  TrendingUp, Shield } from "lucide-react";";
 import { useRef } from "react";
+}
+
 export function HeroSection() {;
     const { t } = useTranslation();
     const containerRef = useRef(null);
@@ -172,6 +174,8 @@ export function HeroSection() {;
 }';
 import React from 'react';";
 import { Search, Rocket } from "lucide-react";
+}
+
 export const HeroSection = () => {;
     const containerVariants = {;
         hidden: { opacity: 0 },;

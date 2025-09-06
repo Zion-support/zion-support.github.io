@@ -4,6 +4,8 @@ import { Job, JobStatus } from '@/types/jobs';
 import { toast } from 'sonner';
 import { useAuth } from './useAuth';
 import { createJob, updateJob, getJobById } from '@/services/jobService';
+}
+}
 
 export const useJobs = (userId?: string, status?: JobStatus) => {
   const { user } = useAuth();
@@ -31,8 +33,9 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       if (status) {
         query = query.eq('status', status);
       }
+}
 
-      const { data, error: fetchError } = await query;
+const { data, error: fetchError } = await query;
 
       if (fetchError) throw fetchError;
 

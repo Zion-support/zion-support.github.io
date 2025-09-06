@@ -305,5 +305,6 @@ const Contact = () => {
     </Layout>
   );
 };
+}
 
 export default Contact;

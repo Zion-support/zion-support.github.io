@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState } from "react";
 
 interface SidebarContextType {
@@ -13,12 +12,15 @@ const SidebarContext = createContext<SidebarContextType>({
   toggle: () => {},
   open: () => {},
   close: () => {}}),
+}
+}
 
 export const useSidebar = (): SidebarContextType => useContext(SidebarContext);
 
 interface SidebarProviderProps {
   children: React.ReactNode,
   defaultOpen?: boolean
+}
 }
 
 export function SidebarProvider({ 

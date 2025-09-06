@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Star } from "lucide-react";
 import { ReviewStats } from "@/components/reviews/ReviewStats";
@@ -11,6 +10,8 @@ interface ProfileRatingsProps {
   userId: string,
   averageRating?: number;
   ratingCount?: number
+}
+}
 }
 
 export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {

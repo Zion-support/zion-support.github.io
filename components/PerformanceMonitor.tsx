@@ -109,7 +109,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
 
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
+         
         console.log('Performance Metrics:', performanceData);
       }
     };
@@ -128,5 +128,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
 
   return null;
 };
+}
+}
 
 export default PerformanceMonitor;

@@ -4,6 +4,7 @@ import React from 'react';
 
 interface DevopsautopilotProps {
   // Add props here as needed
+}
 
 export default function Devopsautopilot({ }: DevopsautopilotProps) {
   return (
@@ -12,5 +13,4 @@ export default function Devopsautopilot({ }: DevopsautopilotProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 

@@ -47,8 +47,9 @@ serve(async (req) => {
     if (data.error) {
       throw new Error(data.error.message)
     }
+}
 
-    const assistantMessage = data.choices[0].message.content;
+const assistantMessage = data.choices[0].message.content;
 
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.

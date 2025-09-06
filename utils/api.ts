@@ -1,6 +1,12 @@
 }};
+}
+}
+
 export const apiClient = new ApiClient();
 };
+}
+}
+
 export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions };
 ;
@@ -98,6 +104,8 @@ class ApiClient {
   async delete<T>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, { ...options, method: 'DELETE' });
   }
+}
+}
 }
 
 export const apiClient = new ApiClient();

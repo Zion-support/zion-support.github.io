@@ -24,6 +24,7 @@ interface Activity {
     display_name: string;
     avatar_url: string | null;
   };
+}
 
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   const [activities, setActivities] = useState<Activity[]>([]);

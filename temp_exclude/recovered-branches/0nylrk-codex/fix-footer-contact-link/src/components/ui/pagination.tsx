@@ -1,4 +1,4 @@
- />) Pagination.displayName = "Pagination" const PaginationContent = React.forwardRef< HTMLUListElement;
+/>) Pagination.displayName = "Pagination" const PaginationContent = React.forwardRef< HTMLUListElement;
 />) ) PaginationContent.displayName = "PaginationContent" const PaginationItem = React.forwardRef< HTMLLIElement;
 ) ) PaginationItem.displayName = "PaginationItem" React.ComponentProps<"a"> 
 }{

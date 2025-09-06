@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import {
   Card,
@@ -11,6 +10,7 @@ import { FraudStats } from '@/types/fraud';
 
 interface FraudStatsCardsProps {
   stats: FraudStats;
+}
 
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
   return (
@@ -83,10 +83,3 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
   );
 };
 "
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -14,6 +14,8 @@ interface AIMatchingResultsProps {
   projectDescription?: string;
   serviceType?: string
 }
+}
+}
 
 export function AIMatchingResults({
   matches;

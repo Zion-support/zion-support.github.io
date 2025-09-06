@@ -26,6 +26,7 @@ const newsletterFeatures = [
     description: 'Comprehensive market reports and industry analysis.'
   }
 ];
+}
 
 export default function NewsletterPage() {
   const [email, setEmail] = useState('');

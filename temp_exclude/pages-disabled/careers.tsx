@@ -6,6 +6,8 @@ import {
   ArrowRight, MapPin, Clock, DollarSign, Star, Zap
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+}
+
 export default function CareersPage() {
   const openPositions = [
     {

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
@@ -14,6 +13,8 @@ interface MilestoneSuggestionsProps {
   endDate?: Date;
   projectType: string,
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
+}
+}
 }
 
 export function MilestoneSuggestions({

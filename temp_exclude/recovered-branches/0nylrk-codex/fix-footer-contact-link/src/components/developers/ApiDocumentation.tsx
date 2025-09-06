@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { BookOpen, Code, Copy, Terminal } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -6,6 +5,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import CodeBlock from "./CodeBlock";
+}
+}
+
 export function ApiDocumentation() {
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
@@ -868,4 +870,3 @@ function EndpointSection({
     </div>
   )
 }
-

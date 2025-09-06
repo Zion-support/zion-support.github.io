@@ -46,5 +46,6 @@ const ModernLayout = ({
     </>
   ),;
 };
+}
 
 export default ModernLayout;

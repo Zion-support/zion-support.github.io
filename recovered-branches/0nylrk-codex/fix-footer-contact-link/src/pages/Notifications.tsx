@@ -163,6 +163,8 @@ const NotificationCard: React.FC<{
     </div>
   );
 };
+}
+}
 
 export default function NotificationsPage() {
   const {

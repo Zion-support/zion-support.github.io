@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
@@ -16,6 +15,7 @@ import {
 interface QuickAccessProps {
   className?: string;
   style?: React.CSSProperties;
+}
 
 export function QuickAccess({ className, style }: QuickAccessProps) {
   const { t } = useTranslation();
@@ -97,12 +97,6 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
       </div>
     </section>
   );
+}
 
 export default QuickAccess;
-=======
-
-<<<<<<< HEAD
-
-export default QuickAccess;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

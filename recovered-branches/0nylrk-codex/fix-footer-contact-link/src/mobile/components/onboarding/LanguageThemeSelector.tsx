@@ -16,6 +16,7 @@ const languages: Language[] = [
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
   { code: 'zh', name: '中文', flag: '🇨🇳' },
 ];
+}
 
 export function LanguageThemeSelector() {
   const { theme, setTheme } = useTheme();

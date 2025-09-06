@@ -1823,6 +1823,7 @@ features: ['Unlimited users', ""]
   },
   {
 ];
+}
 
 export default function MicroSaaSPage() {},
   {

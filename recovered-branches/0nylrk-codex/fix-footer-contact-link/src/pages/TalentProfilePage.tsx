@@ -14,6 +14,7 @@ import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/useAuth';
 import { UserProfile } from '@/types/auth';
 import { toast } from '@/hooks/use-toast';
+}
 
 export default function TalentProfilePage() {
   // Cast to specify the expected route param type since useParams may be untyped

@@ -115,6 +115,7 @@ const leadership = [
     bio: 'Operations expert ensuring smooth delivery of our services. Focused on client satisfaction and process optimization.'
   }
 ];
+}
 
 export default function CompanyPage() {
   return (

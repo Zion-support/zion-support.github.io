@@ -6,6 +6,8 @@ interface ResumeStepsProps {
   activeTab: string,
   onChange: (value: string) => void
 }
+}
+}
 
 export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) => {
   return (

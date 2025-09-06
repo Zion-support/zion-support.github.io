@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Quote } from "lucide-react";
 import {
@@ -27,6 +26,7 @@ const testimonials = [
     title: "CTO",
     company: "FutureTech Systems",
     image: "/placeholder.svg"}],
+}
 
 export function EnterpriseTestimonials() {
   return (

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
@@ -14,6 +13,7 @@ import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep";
 import { QuoteFormData } from "@/types/quotes";
 import { Sparkles } from "lucide-react";
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
+}
 
 export function QuoteRequestForm() {
   const navigate = useNavigate();

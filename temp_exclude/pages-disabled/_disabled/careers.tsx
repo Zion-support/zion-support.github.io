@@ -45,6 +45,7 @@ const benefits = [
     icon: Zap
   }
 ];
+}
 
 export default function CareersPage() {
   return (

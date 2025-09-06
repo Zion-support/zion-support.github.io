@@ -29,7 +29,8 @@ initialValues?: {
   title?: string;
 category?: string;
 keyFeatures?: string;
-targetAudience?: string 
+targetAudience?: string
+}
 
 export function AIListingGenerator({
   onApplyGenerated,

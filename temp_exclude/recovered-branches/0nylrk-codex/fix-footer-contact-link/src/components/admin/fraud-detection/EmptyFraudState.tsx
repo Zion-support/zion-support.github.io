@@ -6,6 +6,8 @@ interface EmptyFraudStateProps {
   hasFilters: boolean,
   onResetFilters: () => void
 }
+}
+}
 
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
   hasFilters;

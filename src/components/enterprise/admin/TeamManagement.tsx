@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import {
   Table,
@@ -23,6 +22,7 @@ import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
 import { Trash, Mail, UserPlus } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
+}
 
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false);
@@ -258,12 +258,3 @@ export function TeamManagement() {
 }</div> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table> </div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-      description: `An invitation has been sent to ${newMemberEmail}`}),
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -3,6 +3,7 @@ import React from 'react';
 interface Events.jsProps {
   // Add props here as needed
 }
+}
 
 export default function Events.js({ }: Events.jsProps) {
   return (

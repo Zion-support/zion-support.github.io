@@ -87,6 +87,7 @@ const categories = []
   "SaaS",
   "Data Privacy"];
 ];
+}
 
 export default function WhitePapersPage() {}
   return (")

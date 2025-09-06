@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Interview } from "@/types/interview";
@@ -9,6 +8,8 @@ interface InterviewResponseFormProps {
   onConfirm: () => Promise<void>,
   onClose: () => void,
   isLoading: boolean
+}
+}
 }
 
 export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading }: InterviewResponseFormProps) {

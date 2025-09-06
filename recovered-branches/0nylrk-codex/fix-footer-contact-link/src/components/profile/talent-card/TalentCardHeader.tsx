@@ -9,6 +9,7 @@ interface TalentCardHeaderProps {
   profilePicture?: string;
   availabilityType: string;
   yearsExperience: number;
+}
 
 export function TalentCardHeader({
   fullName,

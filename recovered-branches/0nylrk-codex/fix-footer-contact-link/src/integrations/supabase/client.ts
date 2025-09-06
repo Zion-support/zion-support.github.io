@@ -1,6 +1,11 @@
 import { createClient } from '@supabase/supabase-js';
+}
+}
 
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+}
+}
+
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 if (!supabaseUrl || !supabaseAnonKey) {
@@ -8,6 +13,9 @@ if (!supabaseUrl || !supabaseAnonKey) {
 
 // Utility to detect network connectivity. navigator.onLine is not reliable in
 // all environments, so we also try a small request with a short timeout.
+}
+}
+
 export const checkOnline = async (): Promise<boolean> => {
   if (typeof navigator !== 'undefined' && !navigator.onLine) {
     return false;
@@ -27,6 +35,9 @@ export const checkOnline = async (): Promise<boolean> => {
 };
 
 // Custom fetch wrapper to provide clearer errors when network requests fail
+}
+}
+
 export const safeFetch: typeof fetch = async (input, init) => {
   if (!(await checkOnline())) {
     throw new Error('No internet connection');
@@ -39,10 +50,15 @@ export const safeFetch: typeof fetch = async (input, init) => {
     throw new Error('Failed to connect to Supabase');
   }
 };
+}
+}
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   global: { fetch: safeFetch },
 });
 
 // Helper function to get profiles table
+}
+}
+
 export const getFromProfiles = () => supabase.from('profiles');

@@ -8,6 +8,7 @@ interface ConversationItemProps {
   conversation: Conversation;
   isActive: boolean;
   onClick: () => void;
+}
 
 export function ConversationItem({
   conversation,

@@ -30,7 +30,6 @@ try {
 else if (extensions.some (ext => item.endsWith (ext) ) ) {
   files.push (fullPath) 
 
-
 }catch (error) {
   // Skip directories that can't be read 
 }return files;

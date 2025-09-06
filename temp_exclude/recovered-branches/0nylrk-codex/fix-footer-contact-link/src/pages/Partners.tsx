@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -11,6 +10,8 @@ import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard";
 import { PartnerResources } from "@/components/partners/PartnerResources";
 import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from "react-router-dom";
+}
+
 export default function Partners() {
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();

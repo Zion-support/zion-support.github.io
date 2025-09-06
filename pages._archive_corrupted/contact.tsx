@@ -807,6 +807,7 @@ const "Contact": NextPage = () => {
       </PageTransition>
     </>
   )
+}
 
 export default ContactPage
           </div>

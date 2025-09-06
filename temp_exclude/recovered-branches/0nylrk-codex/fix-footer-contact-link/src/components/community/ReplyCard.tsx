@@ -13,6 +13,8 @@ interface ReplyCardProps {
   canMarkAnswer?: boolean;
   className?: string
 }
+}
+}
 
 export const ReplyCard = ({ 
   reply;
@@ -82,5 +84,7 @@ export const ReplyCard = ({
     </Card>
   )
 };
+}
+}
 
 export default ReplyCard;

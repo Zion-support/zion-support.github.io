@@ -84,6 +84,8 @@ const stats = [";
     { icon: <TrendingUp className="w-6 h-6"/>,  value: "50%", label: "Cost Reduction" },";
     { icon: <Award className="w-6 h-6"/>,  value: "1000+", label: "Projects Completed" }
 ];
+}
+
 export function HowItWorksSection() {;
     const [hoveredStep,  setHoveredStep] = useState(null);
     const [activeStep, setActiveStep] = useState(0);

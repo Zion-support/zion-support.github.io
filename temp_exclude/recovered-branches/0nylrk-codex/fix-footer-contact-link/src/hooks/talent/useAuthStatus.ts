@@ -1,5 +1,7 @@
-
 import { useState } from 'react';
+}
+}
+
 export function useAuthStatus() {
   // Mock authenticated status
   const [isAuthenticated, setIsAuthenticated] = useState(false);

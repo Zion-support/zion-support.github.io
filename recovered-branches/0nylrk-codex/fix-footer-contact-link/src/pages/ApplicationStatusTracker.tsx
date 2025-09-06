@@ -43,6 +43,7 @@ function ApplicationStatusTrackerContent() {
       </div>
     </>
   );
+}
 
 export default function ApplicationStatusTracker() {
   return (

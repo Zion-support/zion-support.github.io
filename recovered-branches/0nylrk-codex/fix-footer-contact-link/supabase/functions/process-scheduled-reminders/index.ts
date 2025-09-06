@@ -141,7 +141,6 @@ serve(async (req: Request) => {
   //Update job status to failed scheduled jobs") .update ({
   
 
-
 }return new Response (
 }catch (error) {
   console.error (error);

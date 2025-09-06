@@ -9,6 +9,7 @@ interface ViewModeContextValue {;
 
 ;
 const ViewModeContext = createContext<ViewModeContextValue | undefined>(undefined);
+}
 
 export const ViewModeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {';
 	const [viewMode, setViewMode] = useState<ViewMode>('grid');
@@ -26,6 +27,8 @@ export const ViewModeProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 	);
 
 ;
+}
+
 export function useViewMode(): ViewModeContextValue {;
 	const ctx = useContext(ViewModeContext);
 	if (!ctx) {';

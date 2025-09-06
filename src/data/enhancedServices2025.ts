@@ -42,6 +42,8 @@ export interface ServiceItem {,;";
   supportLevel: 'Standard' | Premium' | 'Enterprise,;
   tags: string[];
 };
+}
+
 export const contact = {,';
   phone: '+1 302 464 0950',';
   email: kleber@ziontechgroup.com', ';
@@ -49,6 +51,8 @@ export const contact = {,';
   website: 'https://ziontechgroup.com';
 };
 ,;
+}
+
 export const enhancedServices2025: ServiceItem[] = [,;
   // AI-Powered Micro SaaS Services,;
   {,';
@@ -549,4 +553,6 @@ export const enhancedServices2025: ServiceItem[] = [,;
   };
 ],;
 ,;
+}
+
 export default enhancedServices2025,'"

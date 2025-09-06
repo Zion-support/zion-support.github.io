@@ -19,6 +19,7 @@ import { Button } from '@/components/ui/button';
 import { toast } from '@/hooks/use-toast';
 import { Share, Users } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+}
 
 export default function ReferralsPage() {
   const navigate = useNavigate();

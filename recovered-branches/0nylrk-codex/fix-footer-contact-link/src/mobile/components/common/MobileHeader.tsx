@@ -12,6 +12,7 @@ interface MobileHeaderProps {
   className?: string;
   onNotificationsClick?: () => void;
   onSettingsClick?: () => void;
+}
 
 export function MobileHeader({
   title,

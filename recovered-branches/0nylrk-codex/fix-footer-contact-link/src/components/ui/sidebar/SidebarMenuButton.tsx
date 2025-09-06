@@ -7,6 +7,7 @@ interface SidebarMenuButtonProps
   className?: string;
   children?: React.ReactNode;
   asChild?: boolean;
+}
 
 export const SidebarMenuButton = forwardRef<
   HTMLButtonElement,

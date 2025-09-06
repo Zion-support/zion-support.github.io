@@ -2,6 +2,8 @@ import React from 'react';
 interface ForumPostPageProps {
   // Add props here as needed
 }
+}
+
 export default function ForumPostPage({ }: ForumPostPageProps) {
   return (
     <div>

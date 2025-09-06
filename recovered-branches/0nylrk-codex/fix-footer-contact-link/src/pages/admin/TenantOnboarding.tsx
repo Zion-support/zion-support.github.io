@@ -25,6 +25,8 @@ import {
 import { toast } from 'sonner';
 import { supabase } from '@/integrations/supabase/client';
 import { Switch } from '@/components/ui/switch';
+}
+}
 
 export default function TenantOnboarding() {
   const { user } = useAuth();
@@ -48,8 +50,9 @@ export default function TenantOnboarding() {
   if (!isAdmin) {
     return <Navigate to='/unauthorized' />;
   }
+}
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };

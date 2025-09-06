@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
@@ -55,6 +54,7 @@ interface Transaction {
   service?: {
     title?: string;
   };
+}
 
 export function TransactionHistory() {
   const { user } = useAuth();
@@ -144,7 +144,7 @@ export function TransactionHistory() {
   const getStatusBadge = (status: string, inEscrow: boolean) => {
     switch (status) {
       case 'in_escrow':
-        
+
           >
             <Clock className='w-3 h-3 mr-1' /> In Escrow
           </Badge>
@@ -166,37 +166,37 @@ export function TransactionHistory() {
           </Badge>
         );
       case 'released':
-        
+
           >
             <CheckCircle2 className='w-3 h-3 mr-1' /> Released
           </Badge>
         );
       case 'completed':
-        
+
           >
             <CheckCircle2 className='w-3 h-3 mr-1' /> Completed
           </Badge>
         );
       case 'disputed':
-        
+
           >
             <ShieldAlert className='w-3 h-3 mr-1' /> Disputed
           </Badge>
         );
       case 'refunded':
-        
+
           >
             <RefreshCcw className='w-3 h-3 mr-1' /> Refunded
           </Badge>
         );
       case 'cancelled':
-        
+
           >
             <XCircle className='w-3 h-3 mr-1' /> Cancelled
           </Badge>
         );
       default:
-        
+
           >
             <AlertCircle className='w-3 h-3 mr-1' /> Unknown
           </Badge>
@@ -325,7 +325,6 @@ export function TransactionHistory() {
                 ? transaction.provider?.display_name || 'Service Provider'
                 : 'Client';
 
-              
                 >
                   <CardHeader className='pb-3'>
                     <div className='flex justify-between items-start'>
@@ -488,22 +487,3 @@ default: return (<Badge variant="outline" className="bg-gray-500/20 text-gray-50
 }</p> </div>) ;
 }</div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-          provider: profiles!provider_id(display_name),
-<<<<<<< HEAD
-      query = query.order('created_at', { ascending: false }),
-      
-<<<<<<< HEAD
-
-  
-
-<<<<<<< HEAD
-
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   Table;
@@ -11,6 +10,8 @@ import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+}
+
 export function TeamActivity() {
   // Mock activity data
   const activities = [

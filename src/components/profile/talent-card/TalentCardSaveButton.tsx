@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -11,6 +10,7 @@ interface TalentCardSaveButtonProps {
   isSaved: boolean;
   onToggleSave?: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean;
+}
 
 export function TalentCardSaveButton({
   profileId,
@@ -53,7 +53,6 @@ export function TalentCardSaveButton({
     });
   };
 
-  
     >
       <Heart
         className={cn(
@@ -69,7 +68,3 @@ export function TalentCardSaveButton({
 };
 }/> </button>) ;
 }"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

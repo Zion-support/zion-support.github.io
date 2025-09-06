@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -212,6 +211,7 @@ function CategoryContent({
       </div>
     </div>
   );
+}
 
 export default function ForumCategoryPage() {
   const router = useRouter();
@@ -304,18 +304,3 @@ This category is only accessible to administrators. </p> <Button asChild> <Link 
   user ;
 }/> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-
-  logInfo('CategoryContent - categoryId:', { data: categoryId }),
-  logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),
-  logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),
-
-<<<<<<< HEAD
-  const category = categoryId ? categoriesInfo[categoryId] : null;
-  const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

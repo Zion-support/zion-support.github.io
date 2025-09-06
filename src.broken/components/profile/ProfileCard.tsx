@@ -3,6 +3,7 @@ import { TalentProfile } from '@/types/talent';
 
 interface ProfileCardProps {
   profile: TalentProfile;
+}
 
 export function ProfileCard({ profile }: ProfileCardProps) {
   return (

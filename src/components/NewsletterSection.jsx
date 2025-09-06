@@ -29,6 +29,8 @@ const stats = [";
     { value: "24/7", label: "Support" },";
     { value: "100%", label: "Free" }
 ];
+}
+
 export function NewsletterSection() {';
     const [email, setEmail] = useState('');
     const [isSubscribed, setIsSubscribed] = useState(false);

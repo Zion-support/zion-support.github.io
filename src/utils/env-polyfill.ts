@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * Environment Polyfill for Browser
  *
@@ -39,6 +38,9 @@ if (typeof (globalThis as any).process === 'undefined') {
   (globalThis as any).process = createProcessObject();
 
 // Export a safe environment accessor
+}
+}
+
 export const safeEnv = {
   NODE_ENV:
     (typeof (globalThis as any).process !== 'undefined' &&
@@ -59,6 +61,9 @@ export const safeEnv = {
 } as const;
 
 // Safe environment getter function
+}
+}
+
 export function getEnv(key: string, defaultValue = ''): string {
   if (
     typeof (globalThis as any).process !== 'undefined' &&
@@ -70,14 +75,23 @@ export function getEnv(key: string, defaultValue = ''): string {
   return defaultValue;
 
 // Check if we're in development mode safely
+}
+}
+
 export function isDevelopment(): boolean {
   return getEnv('NODE_ENV') === 'development';
 
 // Check if we're in production mode safely
+}
+}
+
 export function isProduction(): boolean {
   return getEnv('NODE_ENV') === 'production';
 
 // Export the polyfilled process object
+}
+}
+
 export const processEnv =
   typeof (globalThis as any).process !== 'undefined'
     ? (globalThis as any).process.env
@@ -89,15 +103,7 @@ export const processEnv =
       };
 
 console.log('✅ Environment polyfill loaded successfully');
+}
+}
 
 export default safeEnv;
-=======
-
-<<<<<<< HEAD
-
-export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (globalThis as any).process.env : {
-  NODE_ENV: 'production', NEXT_PUBLIC_APP_URL: '',
-  NEXT_PUBLIC_SUPABASE_URL: '',
-  NEXT_PUBLIC_SUPABASE_ANON_KEY: ''};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

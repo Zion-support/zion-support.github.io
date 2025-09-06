@@ -271,6 +271,8 @@ export class AIMarketResearchService {
       throw error;
     }
   }
+}
+}
 
 export const aiMarketResearchService = new AIMarketResearchService(
   process.env.MARKET_RESEARCH_API_KEY || 'demo-key'

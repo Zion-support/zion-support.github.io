@@ -24,6 +24,7 @@ interface ApplicationsTableProps {
   onViewApplication: (applicationId: string) => Promise<void>;
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
   onViewScore: (application: JobApplication) => void;
+}
 
 export function ApplicationsTable({
   applications,

@@ -2,6 +2,7 @@ import React from 'react';
 
 interface Basic.specProps {
   // Add props here as needed
+}
 
 export default function Basic.spec({ }: Basic.specProps) {
   return (
@@ -10,6 +11,4 @@ export default function Basic.spec({ }: Basic.specProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
 

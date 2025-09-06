@@ -1,6 +1,7 @@
 import React from 'react';
 interface LoginContentProps {
   // Add props here as needed
+}
 
 export default function LoginContent({ }: LoginContentProps) {
   return (

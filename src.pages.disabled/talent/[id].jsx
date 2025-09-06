@@ -2,6 +2,7 @@ import React from 'react';
 
 interface [id].jsProps {
   // Add props here as needed
+}
 
 export default function [id].js({ }: [id].jsProps) {
   return (

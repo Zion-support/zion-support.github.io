@@ -8,6 +8,7 @@ interface ProductListingCardProps {
   listing: ProductListing;
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
+}
 
 export function ProductListingCard({
   listing,
@@ -163,6 +164,5 @@ export function ProductListingCard({
       </div>
     </div>
   );
-
 
 };

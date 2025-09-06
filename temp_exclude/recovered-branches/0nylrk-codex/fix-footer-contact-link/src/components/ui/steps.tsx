@@ -1,4 +1,3 @@
-
 import React from "react";
 import { cn } from "@/lib/utils";
 import { CheckIcon } from "lucide-react";
@@ -7,6 +6,8 @@ interface StepProps {
   label: string,
   description?: string;
   className?: string
+}
+}
 }
 
 export function Step({
@@ -64,6 +65,8 @@ interface StepsProps {
   currentStep: number,
   className?: string;
   children: React.ReactNode
+}
+}
 }
 
 export function Steps({ currentStep, className, children }: StepsProps) {

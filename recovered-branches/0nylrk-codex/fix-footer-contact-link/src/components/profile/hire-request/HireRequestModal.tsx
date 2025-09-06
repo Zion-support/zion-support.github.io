@@ -14,6 +14,7 @@ interface HireRequestModalProps {
   isOpen: boolean;
   onClose: () => void;
   userDetails?: UserProfile;
+}
 
 export function HireRequestModal({
   talent,

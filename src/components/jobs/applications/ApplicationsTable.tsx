@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
@@ -55,6 +54,7 @@ const ApplicationAvatar = ({
     </AvatarPrimitive>
   );
 };
+}
 
 export function ApplicationsTable({
   applications,
@@ -210,12 +210,3 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
   handleHireConfirmed ;
 }/> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-  const talentName = application.talent_profile?.full_name || "Candidate";
-
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

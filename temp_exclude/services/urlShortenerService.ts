@@ -159,5 +159,7 @@ class UrlShortenerService {
     this.clicks = new Map(data.clicks)
   }
 }
+}
+}
 
 export const urlShortenerService = new UrlShortenerService();

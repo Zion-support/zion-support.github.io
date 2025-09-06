@@ -122,5 +122,6 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
     </Head>
   );
 };
+}
 
 export default Analytics;

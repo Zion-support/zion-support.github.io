@@ -12,6 +12,7 @@ interface HelpArticleListProps {
   categoryId: string;
   onArticleSelect: (articleId: string) => void;
   searchQuery: string;
+}
 
 export function HelpArticleList({
   categoryId,

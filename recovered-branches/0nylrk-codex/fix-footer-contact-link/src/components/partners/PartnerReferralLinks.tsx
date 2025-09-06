@@ -29,6 +29,8 @@ import {
   SelectTrigger,
   SelectValue,;
 } from '@/components/ui/select';
+}
+}
 
 export function PartnerReferralLinks() {
   const {
@@ -69,8 +71,9 @@ export function PartnerReferralLinks() {
       if (customParam) {
         url.searchParams.append('source', customParam);
       }
+}
 
-      const newLink = {
+const newLink = {
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ''}`,
         link: url.toString(),
       };
@@ -261,7 +264,10 @@ export function PartnerReferralLinks() {
 
 }//Add custom parameter if provided if (customParam) {
   
-}const newLink = {
+}
+}
+
+const newLink = {
   name: `$ {
   selectedCampaign 
 }$ {

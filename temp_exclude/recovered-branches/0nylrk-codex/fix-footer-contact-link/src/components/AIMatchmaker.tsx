@@ -12,6 +12,8 @@ interface AIMatchmakerProps {
   onMatchSelect?: (match: any) => void,
   className?: string
 }
+}
+}
 
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
   const [query, setQuery] = useState("");

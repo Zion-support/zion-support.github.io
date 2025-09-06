@@ -1,4 +1,3 @@
-<<<<<<< HEAD
  const observer = new IntersectionObserver ( ([entry]) => {;
   if (entry && entry.isIntersecting) {;
   return () => observer.disconnect () ;
@@ -79,7 +78,6 @@
     ).toString('base64')}`;
   };
 
-  
     >
       {isInView && !hasError && (
         <Image
@@ -143,6 +141,8 @@
   );
 
 // Higher-order component for easy migration from regular img tags
+}
+
 export function withImageOptimization<P extends { src: string; alt: string }>(
   Component: React.ComponentType<P>
 ) {
@@ -153,6 +153,8 @@ export function withImageOptimization<P extends { src: string; alt: string }>(
   };
 
 // Utility to preload critical images
+}
+
 export function preloadImage(src: string): Promise<void> {
   return new Promise((resolve, reject) => {
     const img = new window.Image();
@@ -162,6 +164,8 @@ export function preloadImage(src: string): Promise<void> {
   });
 
 // Utility to get image dimensions
+}
+
 export function getImageDimensions(
   src: string
 ): Promise<{ width: number; height: number }> {
@@ -172,9 +176,3 @@ export function getImageDimensions(
     img.onerror = reject;
     img.src = src;
   });
-=======
-
-<<<<<<< HEAD
-    
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

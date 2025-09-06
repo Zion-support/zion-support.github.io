@@ -221,8 +221,9 @@ function ProjectDetailsContent() {
     navigate("/unauthorized");
     return null
   }
-  
-  const isOfferPending = project.status === "offer_sent";
+}
+
+const isOfferPending = project.status === "offer_sent";
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
   
@@ -667,6 +668,8 @@ function ProjectDetailsContent() {
       <Footer />
     </>
   )
+}
+}
 }
 
 export default function ProjectDetails() {

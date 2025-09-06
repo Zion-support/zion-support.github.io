@@ -1,6 +1,8 @@
 import React, { useState,  useEffect, useRef } from 'react';';
 import { motion, AnimatePresence } from 'framer-motion';';
 import { MessageCircle, Send, X,  Bot, User } from 'lucide-react';
+}
+
 export function ChatAssistant({ isOpen: externalIsOpen, onClose,  recipient, onSendMessage } = {}) {;
     const [internalIsOpen, setInternalIsOpen] = useState(false);';
     const [message, setMessage] = useState('');

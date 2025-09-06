@@ -3,6 +3,7 @@ module.exports = default function ContractAI() { return; }; return null} } ; fun
 import React from 'react';
 interface ContractaiProps {
   // Add props here as needed
+}
 
 export default function Contractai({ }: ContractaiProps) {
   return (

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
@@ -9,6 +8,7 @@ import {
   DropdownMenuItem;
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
+}
 
 export function LanguageSelector() {
   const { t } = useTranslation();

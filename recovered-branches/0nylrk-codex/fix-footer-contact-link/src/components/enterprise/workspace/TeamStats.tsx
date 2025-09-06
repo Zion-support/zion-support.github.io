@@ -7,6 +7,7 @@ import {
   CardTitle,;
 } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
+}
 
 export function TeamStats() {
   return (

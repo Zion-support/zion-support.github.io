@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -56,6 +55,7 @@ const formSchema = z.object({
   title: z.string().min(3, 'Please provide a brief title for the interview.'),
   notes: z.string().optional(),
 });
+}
 
 export function InterviewRequestForm({
   talent,
@@ -449,7 +449,3 @@ toast ({;
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ;
 }/> </Button> </div> </form> </Form>) ;
 }'"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

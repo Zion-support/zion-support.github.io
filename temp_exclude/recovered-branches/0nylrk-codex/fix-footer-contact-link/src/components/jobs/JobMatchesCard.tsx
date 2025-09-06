@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -11,6 +10,8 @@ interface JobMatchCardProps {
   onApply: (matchId: string, jobId: string) => void,
   onDecline: (matchId: string) => void,
   showApplied?: boolean
+}
+}
 }
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {

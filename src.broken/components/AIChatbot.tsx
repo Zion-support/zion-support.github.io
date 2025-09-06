@@ -479,4 +479,6 @@ setIsTyping (false)
 }</motion.div>) 
 }</AnimatePresence> </div>) 
 };
+}
+
 export default AIChatbot;

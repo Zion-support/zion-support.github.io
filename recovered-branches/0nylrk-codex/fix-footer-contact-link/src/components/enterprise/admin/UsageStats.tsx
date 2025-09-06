@@ -14,6 +14,7 @@ import {
 } from '@/components/ui/card';
 import { Sparkles } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
+}
 
 export function UsageStats() {
   const handleSaveChanges = () => {

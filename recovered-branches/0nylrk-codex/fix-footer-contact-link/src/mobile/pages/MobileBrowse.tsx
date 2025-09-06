@@ -84,6 +84,7 @@ const talentsData = [
     match: 82,
   },
 ];
+}
 
 export function MobileBrowse() {
   const { user } = useAuth();

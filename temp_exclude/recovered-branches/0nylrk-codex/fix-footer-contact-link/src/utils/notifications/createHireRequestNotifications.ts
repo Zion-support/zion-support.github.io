@@ -1,4 +1,3 @@
-
 import { createNotification } from './createNotification';
 import { HireRequestNotificationParams } from './types';
 /**

@@ -10,6 +10,7 @@ const REGION_OPTIONS = [
   { id: 'Australia', label: 'Australia' },
   { id: 'Africa', label: 'Africa' },
 ];
+}
 
 export function RegionFilter({
   selectedRegions,

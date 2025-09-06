@@ -11,6 +11,8 @@ export interface MilestoneAssistantProps {
   endDateIso: string;
   projectType: ProjectType;
   onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void;
+}
+}
 
 export function MilestoneAssistant(props: MilestoneAssistantProps) {
   const [loading, setLoading] = useState(false);
@@ -52,7 +54,9 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
         const t = await res.text();
         throw new Error(t || 'Failed to generate');
       }
-      const data = await res.json();
+}
+
+const data = await res.json();
       setItems(Array.isArray(data?.milestones) ? data.milestones : []);
       setExpandedIdx(0);
     } catch (e: any) {
@@ -218,5 +222,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
       </div>
     </div>
   );
+}
+}
 
 export default MilestoneAssistant;

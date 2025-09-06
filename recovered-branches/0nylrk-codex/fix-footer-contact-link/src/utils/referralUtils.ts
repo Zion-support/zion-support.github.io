@@ -5,6 +5,8 @@ import { format } from 'date-fns';
  * @param date Date or string to format
  * @returns Formatted date string
  */
+}
+
 export function formatDate(date: Date | string | undefined): string {
   if (!date) return '-';
   try {
@@ -20,6 +22,8 @@ export function formatDate(date: Date | string | undefined): string {
 /**
  * Stores referral code in localStorage when detected in URL
  */
+}
+
 export function checkUrlForReferralCode(): string | null {
   if (typeof window === 'undefined') return null;
 

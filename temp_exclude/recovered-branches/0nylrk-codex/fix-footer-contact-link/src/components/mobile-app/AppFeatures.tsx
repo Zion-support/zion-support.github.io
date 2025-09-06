@@ -25,6 +25,7 @@ const features = [
     description: "Get instant alerts about new job opportunities, messages, and hiring requests." 
   }
 ];
+}
 
 export const AppFeatures: React.FC = () => {
   return (

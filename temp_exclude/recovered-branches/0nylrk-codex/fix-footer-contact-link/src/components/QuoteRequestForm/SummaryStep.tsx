@@ -10,6 +10,8 @@ interface SummaryStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
+}
+}
 
 export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
   const [isMatching, setIsMatching] = useState(false);

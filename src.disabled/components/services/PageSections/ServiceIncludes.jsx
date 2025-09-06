@@ -1,6 +1,7 @@
 import React from 'react';
 interface ServiceIncludesProps {
   // Add props here as needed
+}
 
 export default function ServiceIncludes({ }: ServiceIncludesProps) {
   return (

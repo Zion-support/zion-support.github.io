@@ -86,6 +86,7 @@ const benefits = [
     icon: FileText
   }
 ];
+}
 
 export default function GovernmentPage() {
   return (

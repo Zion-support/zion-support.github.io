@@ -14,6 +14,8 @@ interface PricingSuggestionAnalytics {
   isLoading: boolean,
   error: string | null
 }
+}
+}
 
 export function usePricingSuggestionAnalytics(days = 30) {
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({

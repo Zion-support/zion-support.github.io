@@ -1,4 +1,7 @@
- export default function ServiceCard ({
+}
+}
+
+export default function ServiceCard ({
   service, onSelect 
 }) {
   const navigate = useNavigate ();

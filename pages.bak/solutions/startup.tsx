@@ -4,6 +4,7 @@ import React from 'react';
 
 interface StartupProps {
   // Add props here as needed
+}
 
 export default function Startup({ }: StartupProps) {
   return (
@@ -12,5 +13,4 @@ export default function Startup({ }: StartupProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 

@@ -31,7 +31,9 @@ try {
 
 });
 }finally {
-  setLoading (false) 
+  setLoading (false)
+}
+}
 
 export function useWebhooks() {
   const { user } = useAuth();
@@ -65,8 +67,9 @@ export function useWebhooks() {
         setError('Authentication required');
         return;
       }
+}
 
-      const response = await fetch(`${getWebhookUrl()}/webhooks`, {
+const response = await fetch(`${getWebhookUrl()}/webhooks`, {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${session.access_token}`,
@@ -117,8 +120,9 @@ export function useWebhooks() {
         setError('Authentication required');
         return;
       }
+}
 
-      const response = await fetch(`${getWebhookUrl()}/create`, {
+const response = await fetch(`${getWebhookUrl()}/create`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${session.access_token}`,
@@ -178,8 +182,9 @@ export function useWebhooks() {
         setError('Authentication required');
         return;
       }
+}
 
-      const response = await fetch(`${getWebhookUrl()}/toggle`, {
+const response = await fetch(`${getWebhookUrl()}/toggle`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${session.access_token}`,
@@ -240,8 +245,9 @@ export function useWebhooks() {
         setError('Authentication required');
         return;
       }
+}
 
-      const response = await fetch(`${getWebhookUrl()}/delete`, {
+const response = await fetch(`${getWebhookUrl()}/delete`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${session.access_token}`,
@@ -300,8 +306,9 @@ export function useWebhooks() {
         setError('Authentication required');
         return;
       }
+}
 
-      const response = await fetch(`${getWebhookUrl()}/test`, {
+const response = await fetch(`${getWebhookUrl()}/test`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${session.access_token}`,

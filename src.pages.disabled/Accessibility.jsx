@@ -2,6 +2,7 @@ import React from 'react';
 
 interface AccessibilityProps {
   // Add props here as needed
+}
 
 export default function Accessibility({ }: AccessibilityProps) {
   return (
@@ -10,6 +11,4 @@ export default function Accessibility({ }: AccessibilityProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
 

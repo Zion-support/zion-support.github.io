@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -23,6 +22,8 @@ interface BrowseCardsProps {
   items: BrowseItem[],
   type: "jobs" | "talents",
   onViewDetails: (id: string) => void
+}
+}
 }
 
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {

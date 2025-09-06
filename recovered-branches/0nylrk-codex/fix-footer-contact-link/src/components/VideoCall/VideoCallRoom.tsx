@@ -8,6 +8,7 @@ interface VideoCallRoomProps {
   serverUrl?: string;
   onDisconnect?: () => void;
   className?: string;
+}
 
 export function VideoCallRoom({
   room,

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import {
@@ -39,6 +38,7 @@ const protectedRoutes = [
 function isProtectedRoute(href: string): boolean {
   // Also check against the item's own authRequired flag if present
   return protectedRoutes.some(route => href.startsWith(route));
+}
 
 export function MobileMenu({
   unreadCount = 0,
@@ -179,9 +179,3 @@ export function MobileMenu({
 }</Link>) ) ";
 }</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-    name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)})),
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

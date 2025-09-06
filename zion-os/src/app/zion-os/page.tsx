@@ -1,4 +1,5 @@
 import Link from 'next/link';
+}
 
 export const metadata = {
   title:
@@ -8,6 +9,7 @@ export const metadata = {
   keywords:
     'Zion OS, digital economy, blockchain, governance, marketplace, deployment, sovereign, AI-powered, Zion Tech Group',
 };
+}
 
 export default function ZionOSPage() {
   return (

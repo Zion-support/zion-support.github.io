@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -7,14 +5,12 @@ import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, Fil
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-import { Building, 
-  Shield, 
-  Users, 
-=======
+import { Building,
+  Shield,
+  Users,
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-=======
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -32,15 +28,11 @@ import {
   Phone,
   Mail;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Layout from '../../components/Layout';';
 const services = [;
   {}
     title: 'Citizen Service Portals,',
     description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',
-=======
-=======
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -109,16 +101,12 @@ const services = [
       'Audit automation'';
     ];
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
 const benefits = [;
   {}
     title: 'Enhanced Security,',
     description: 'Government-grade security measures protect sensitive citizen and government data.,',
     icon: Shield,
-=======
-=======
 ];
 const benefits = [
   {
@@ -141,9 +129,9 @@ const benefits = [
     description: 'Digital systems provide transparency and enable better accountability.,',
     icon: Globe,
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
+}
+
 export default function GovernmentPage() {
   return (;
     <Layout );
@@ -175,7 +163,7 @@ export default function GovernmentPage() {
                 </h1>;
               </div>;
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">";
-                Transform government operations with secure, efficient, and citizen-centric technology solutions. 
+                Transform government operations with secure, efficient, and citizen-centric technology solutions.
                 Enhance service delivery, improve transparency, and ensure public safety.,
               </p>;
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",
@@ -187,9 +175,9 @@ export default function GovernmentPage() {
             </motion.div>;
           </div>;
         </section>;
-=======
-=======
 ];
+}
+
 export default function GovernmentPage() {
   return (
     <Layout
@@ -243,22 +231,18 @@ export default function GovernmentPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Government Technology Services,
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Comprehensive government technology solutions designed for federal, state, 
+                Comprehensive government technology solutions designed for federal, state,
                 and local government agencies.;
               </p>;
             </motion.div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {services.map((service, index) => (,
                 <motion.div}),
-=======
-=======
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -276,8 +260,6 @@ export default function GovernmentPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">";
@@ -289,8 +271,6 @@ export default function GovernmentPage() {
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
-=======
-=======
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
@@ -308,13 +288,9 @@ export default function GovernmentPage() {
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
-=======
-=======
             </div>
           </div>
         </section>
@@ -325,22 +301,18 @@ export default function GovernmentPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Government Solutions?,
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Our government technology solutions deliver enhanced security, improved efficiency, 
+                Our government technology solutions deliver enhanced security, improved efficiency,
                 and better citizen services.;
               </p>;
             </motion.div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-=======
-=======
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -367,13 +339,9 @@ export default function GovernmentPage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
-=======
-=======
             </div>
           </div>
         </section>
@@ -384,8 +352,6 @@ export default function GovernmentPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             >,
               <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Government?,
               </h2>;
@@ -404,8 +370,6 @@ export default function GovernmentPage() {
         </section>;
       </div>;
     </Layout>;
-=======
-=======
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Government?

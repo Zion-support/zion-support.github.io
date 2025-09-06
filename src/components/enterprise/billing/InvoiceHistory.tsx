@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import {
   Table,
@@ -13,6 +12,7 @@ import { Badge } from '@/components/ui/badge';
 import { Download, FileText, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { toast } from '@/hooks/use-toast';
+}
 
 export function InvoiceHistory() {
   // Mock invoice data
@@ -160,14 +160,3 @@ export function InvoiceHistory() {
 }> > <Download className="h-3.5 w-3.5" /> PDF </Button> <Button variant="outline" size="sm" className="h-8 gap-1" > <FileText className="h-3.5 w-3.5" /> View </Button> </div> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Showing 1 - 6 of 12 invoices </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
 }"
-=======
-
-<<<<<<< HEAD
-
-
-  const getBadgeForStatus = (status: string) => {
-    switch (status) {
-      case "paid": return <Badge className="bg-green-500">Paid</Badge>;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

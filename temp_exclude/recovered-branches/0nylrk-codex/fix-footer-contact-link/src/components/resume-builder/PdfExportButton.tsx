@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { 
@@ -19,6 +18,8 @@ import { toast } from '@/hooks/use-toast';
 import { FontFamily } from '@/utils/pdf/fontConfig';
 interface PdfExportButtonProps {
   resume: Resume
+}
+}
 }
 
 export function PdfExportButton({ resume }: PdfExportButtonProps) {

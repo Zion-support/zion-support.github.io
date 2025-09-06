@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
@@ -23,6 +22,8 @@ interface OnboardingWizardProps {
   onComplete: () => void,
   onSkip: () => void,
   className?: string
+}
+}
 }
 
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {

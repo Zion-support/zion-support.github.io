@@ -50,6 +50,7 @@ const REWARD_OPTIONS: RewardOption[] = [
     type: 'credit',
   },
 ];
+}
 
 export function RedeemTokensCard() {
   const { wallet, spendTokens } = useWallet();

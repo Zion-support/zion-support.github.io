@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { AppHeader } from "@/layout/AppHeader";
@@ -51,6 +50,8 @@ function HiringTrackerContent() {
       <Footer />
     </>
   )
+}
+}
 }
 
 export default function HiringTracker() {

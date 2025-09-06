@@ -1,4 +1,3 @@
-
 import { Droppable } from "react-beautiful-dnd";
 import { JobApplication } from "@/types/jobs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,6 +9,8 @@ interface KanbanColumnProps {
   description: string,
   applications: JobApplication[],
   count: number
+}
+}
 }
 
 export function KanbanColumn({

@@ -19,7 +19,8 @@ project: {
   overview: string;
 timeline: string;
 budgetMin: number;
-budgetMax: number 
+budgetMax: number
+}
 
 export function useHireRequest() {
   const [isSubmitting, setIsSubmitting] = useState(false);

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+}
 
 export const metadata = {
   title: 'AI Autonomous Business Manager - Zion Tech Group',
@@ -7,6 +8,7 @@ export const metadata = {
   keywords:
     'AI business manager, autonomous business, business automation, AI decision making, Zion Tech Group',
 };
+}
 
 export default function AIBusinessManagerPage() {
   return (

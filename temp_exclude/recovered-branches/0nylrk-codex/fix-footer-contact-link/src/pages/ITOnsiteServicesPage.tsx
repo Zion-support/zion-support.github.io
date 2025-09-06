@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
@@ -14,6 +13,8 @@ import { ServiceDetailsSection } from "@/components/services/PageSections/Servic
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";
 import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
 import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
+}
+
 export default function ITOnsiteServicesPage() {
   const [searchParams] = useSearchParams();
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);

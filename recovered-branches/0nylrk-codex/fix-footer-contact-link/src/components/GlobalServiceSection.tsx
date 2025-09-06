@@ -47,6 +47,7 @@ const services = [
     icon: <Truck className='h-10 w-10' />,
   },
 ];
+}
 
 export function GlobalServiceSection() {
   return (

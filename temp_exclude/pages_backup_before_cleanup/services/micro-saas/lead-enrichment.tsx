@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default function LeadEnrichment() {; return (; <Article; title=\"Lead Enrichment API\"; subtitle=\"Company,technographic,and intent signals from an email or domain\"; price=\"from $149/mo\"; bullets={[
     ; \'"Firmographics\": \'size\',industry,location,funding stage\',; \'"Technographics\": \'CMS\',analytics,ads,cloud stack\',; \'Buying \"signals\": \'hiring\',product launches,traffic spikes\',,
     \'REST API + Zapier + native HubSpot/Salesforce connectors\'
@@ -17,6 +13,8 @@ import React from 'react';
 interface LeadenrichmentProps {
   // Add props here as needed
 }
+}
+
 export default function Leadenrichment({ }: LeadenrichmentProps) {
   return (
     <div>
@@ -25,5 +23,3 @@ export default function Leadenrichment({ }: LeadenrichmentProps) {
     </div>
   );
 }
-=======
-=======

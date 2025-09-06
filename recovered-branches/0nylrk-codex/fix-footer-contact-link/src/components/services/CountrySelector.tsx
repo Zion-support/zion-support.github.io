@@ -15,6 +15,7 @@ import {
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void;
   selectedCountry: CountryPricing | null;
+}
 
 export function CountrySelector({
   onCountryChange,

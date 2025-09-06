@@ -24,8 +24,9 @@ serve(async req => {
     if (!resendApiKey) {
       throw new Error('Resend API key is not set in environment variables');
     }
+}
 
-    const resend = new Resend(resendApiKey);
+const resend = new Resend(resendApiKey);
     const { subject, previewText, body, testMode, testEmail } =
       (await req.json()) as SendNewsletterRequest;
 

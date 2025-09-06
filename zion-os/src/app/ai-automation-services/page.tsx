@@ -1,4 +1,5 @@
 import Link from 'next/link';
+}
 
 export const metadata = {
   title: 'AI Automation Services - Zion Tech Group',
@@ -7,6 +8,7 @@ export const metadata = {
   keywords:
     'AI automation, business process automation, intelligent automation, workflow automation, Zion Tech Group',
 };
+}
 
 export default function AIAutomationServicesPage() {
   return (

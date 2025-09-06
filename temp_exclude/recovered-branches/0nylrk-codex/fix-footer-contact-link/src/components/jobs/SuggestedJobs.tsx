@@ -1,4 +1,3 @@
-
 import { useAuth } from "@/hooks/useAuth";
 import { Loader2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -7,6 +6,8 @@ import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
 interface SuggestedJobsProps {
   talentId?: string
+}
+}
 }
 
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {

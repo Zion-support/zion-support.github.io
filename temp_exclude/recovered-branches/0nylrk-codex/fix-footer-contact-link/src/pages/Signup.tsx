@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { useForm, type UseFormReturn } from "react-hook-form";
@@ -37,6 +36,7 @@ const signupSchema = z
     path: ["confirmPassword"]}),
 
 type SignupFormValues = z.infer<typeof signupSchema>;
+}
 
 export default function Signup() {
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();

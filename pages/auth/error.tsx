@@ -10,6 +10,7 @@ const errorMessages: Record<string, string> = {
     'The authentication provider is temporarily unavailable. Please try again later.',
   default: 'There was an issue with your authentication request.',
 };
+}
 
 export default function AuthErrorPage() {
   const { query } = useRouter();

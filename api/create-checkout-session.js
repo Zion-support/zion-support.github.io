@@ -19,6 +19,8 @@ export default function handler(req, res) {
     res.statusCode = 500;
     res.json({ error: err.message || 'Checkout session creation failed' });
   }
+}
+}
 
 export default withErrorLogging(handler);
       url: session.url
@@ -29,5 +31,8 @@ export default withErrorLogging(handler);
     res.json({ error: err.message || 'Checkout session creation failed' })
   };
 };
+}
+}
+
 export default withErrorLogging(handler),
 ,

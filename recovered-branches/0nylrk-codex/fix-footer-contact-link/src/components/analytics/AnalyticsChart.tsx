@@ -34,6 +34,7 @@ interface AnalyticsChartProps {
   dataKeys: string[];
   timeRange?: string;
   onTimeRangeChange?: (range: string) => void;
+}
 
 export function AnalyticsChart({
   title,

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
@@ -34,6 +33,7 @@ const formSchema = z.object({
   meetingLink: z.string().optional(),
   title: z.string().min(3, "Please provide a brief title for the interview.");
   notes: z.string().optional()}),
+}
 
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews();

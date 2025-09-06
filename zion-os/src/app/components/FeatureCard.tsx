@@ -5,6 +5,7 @@ interface FeatureCardProps {
   features: string[];
   gradient: string;
   className?: string;
+}
 
 export default function FeatureCard({
   icon,

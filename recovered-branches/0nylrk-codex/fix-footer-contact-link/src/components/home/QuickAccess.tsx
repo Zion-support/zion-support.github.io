@@ -9,6 +9,7 @@ import {
   MessageSquare,
   Smartphone,;
 } from 'lucide-react';
+}
 
 export function QuickAccess() {
   const quickLinks = [

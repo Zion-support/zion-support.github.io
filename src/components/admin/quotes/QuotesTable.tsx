@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
 import {
@@ -28,6 +27,7 @@ interface QuotesTableProps {
   toggleArchive: (id: string, isArchived: boolean) => void;
   deleteQuote: (id: string) => void;
   onViewDetails: (quote: QuoteRequest) => void;
+}
 
 export const QuotesTable: React.FC<QuotesTableProps> = ({
   quotes,
@@ -217,10 +217,3 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   );
 };
 '"
-=======
-
-<<<<<<< HEAD
-  quotes;
-  isArchived = false;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -32,6 +32,7 @@ const [selectedResumeId, setSelectedResumeId] = useState<string | null> (null);
   if (!message.trim () ) {
   toast ({
   return;
+}
 
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging();

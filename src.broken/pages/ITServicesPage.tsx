@@ -23,6 +23,7 @@ import {
   Users,
   BarChart3,;
 } from 'lucide-react';
+}
 
 export default function ITServicesPage() {
   const itServices = [

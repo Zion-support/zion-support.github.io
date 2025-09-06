@@ -22,6 +22,9 @@ import {
   Globe
 } from "lucide-react";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
+}
+}
+
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
@@ -39,8 +42,9 @@ export default function ProfileDetail() {
           setError("Profile ID is missing.");
           return
         }
+}
 
-        const { data, error } = await supabase
+const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)

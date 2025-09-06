@@ -10,6 +10,7 @@ interface SelectResumeSectionProps {
   handleResumeSelect: (resumeId: string) => void;
   handleDownloadResume: () => void;
   isLoading: boolean;
+}
 
 export function SelectResumeSection({
   resumeOptions,

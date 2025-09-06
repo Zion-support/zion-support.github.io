@@ -19,9 +19,13 @@ const initialState: ThemeProviderState = {
   setTheme: () => null,
   toggleTheme: () => null,
 };
+}
+}
 
 export const ThemeProviderContext =
   createContext<ThemeProviderState>(initialState);
+}
+}
 
 export function ThemeProvider({
   children,
@@ -91,6 +95,8 @@ export function ThemeProvider({
       {children}
     </ThemeProviderContext.Provider>
   );
+}
+}
 
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext);

@@ -100,4 +100,6 @@ return (<WhitelabelProvider> <ThemeProvider> <Suspense fallback= {
 }/>) ) 
 }</Routes> </Suspense> <Toaster /> <SonnerToaster position="top-right" /> <InstallPrompt /> </ThemeProvider> </WhitelabelProvider>) 
 };
+}
+
 export default App;

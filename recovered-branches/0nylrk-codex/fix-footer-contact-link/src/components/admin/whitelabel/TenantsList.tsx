@@ -28,6 +28,7 @@ import {
   RefreshCcw,;
 } from '@/components/icons';
 import { format } from 'date-fns';
+}
 
 export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);

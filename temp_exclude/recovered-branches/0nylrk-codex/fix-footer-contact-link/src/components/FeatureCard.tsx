@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 import React from "react";
 interface FeatureCardProps {
@@ -7,6 +6,7 @@ interface FeatureCardProps {
   icon: React.ReactNode,
   className?: string;
   key?: string | number, // Added key prop
+}
 }
 
 export function FeatureCard({ title, description, icon, className }: FeatureCardProps) {

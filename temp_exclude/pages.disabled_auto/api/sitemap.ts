@@ -1,28 +1,16 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
 interface SitemapProps {
   // Add props here as needed
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 interface SitemapProps {
   // Add props here as needed
 }
-=======
 interface SitemapProps {
   // Add props here as needed
 }
   res.status(200).send(sitemap)}
-=======
-=======
 import { NextApiRequest,NextApiResponse } from';next'';; export: default function handler(req: NextApiReques,t,res: NextApiResponse) { const baseUrl ,= https: const staticPages = [
     ','; /about';,'';/contact';';,'';/services';';,'';/products';';,'';/talent';';,'';/blog';';,'';/blockchain-solutions';';,'';/iot-platforms';';,'';/enhanced-home';';,'';/auth';';,'';/auth/callback';';,'';/auth/forgot-password';';,'';/auth/reset-password';';,'';/auth/verify',
     '
@@ -39,6 +27,9 @@ import { NextApiRequest,NextApiResponse } from';next'';; export: default functio
     '/chat-content/ai-powered-business-solutions-discussion';';,'';/chat-content/cloud-computing-strategies';';,'';/chat-content/cybersecurity-best-practices';';,'';/chat-content/data-analytics-implementation';';,'';/chat-content/digital-transformation-insights';';,'';/chat-content/emerging-technology-trends';';,'';/chat-content/future-of-work-and-automation';';,'';/chat-content/innovation-in-enterprise-technology';';,'';/chat-content/sustainable-technology-practices';';,'';/chat-content/technology-implementation-strategies',
     '
   ]';; const allPages = [ ...staticPages ...blogPages ...servicePages ...categoryPages ...chatContentPages]; const sitemap = `<?xml version='1.0' encoding='UTF-8'?>'; <urlset: xmlns='http: ${allPages, .map((page) => { const priority = page === '' ?',';1.0' : page.includes('';/blog/') ?';';0.8' :';';0.9'';; const changefreq = page === '';'; ? 'daily';'; : page.includes('/blog/', ') ? 'weekly';'; : 'monthly';; return `; <url> <loc>${baseUr,l}${page}</loc> <lastmod>${new: Date().toISOString()}</lastmod> <changefreq>${changefreq}</changefreq> <priority>${priority}</priority> </url>`}) .join('')}'; </urlset>`; res.setHeader( 'Content-Type','';text/xml')';; res.setHeader( 'Cache-Control','';public,max-age=86400,s-maxage=86400')';; res.status(200).send(sitemap)}
+}
+}
+
 export default function Sitemap({ }: SitemapProps) {
   return (
     <div>
@@ -46,16 +37,8 @@ export default function Sitemap({ }: SitemapProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 }
-=======
 }
-=======
 }
-=======
 }

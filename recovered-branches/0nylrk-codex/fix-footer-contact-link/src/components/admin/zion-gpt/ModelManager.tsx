@@ -29,6 +29,7 @@ import { ModelConfig } from '@/utils/zion-gpt';
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
   errorMessage?: string;
+}
 
 export function ZionGPTModelManager() {
   const [models, setModels] = useState<ModelVersionData[]>([]);

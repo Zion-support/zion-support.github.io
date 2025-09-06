@@ -55,6 +55,7 @@ const securityMeasures = [
     icon: Shield
   }
 ];
+}
 
 export default function CompliancePage() {
   return (

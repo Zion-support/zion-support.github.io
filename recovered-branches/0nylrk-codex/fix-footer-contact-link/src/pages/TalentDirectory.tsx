@@ -9,6 +9,7 @@ import { SORT_OPTIONS } from '@/data/sortOptions';
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { TalentProfile } from '@/types/talent';
+}
 
 export default function TalentDirectory() {
   const navigate = useNavigate();

@@ -74,6 +74,8 @@ const specialServices = [;
         description: "Scalable cloud infrastructure";
     }
 ];
+}
+
 export function CategoriesSection({ showTitle = true }) {;
     const containerVariants = {;
         hidden: { opacity: 0 },;

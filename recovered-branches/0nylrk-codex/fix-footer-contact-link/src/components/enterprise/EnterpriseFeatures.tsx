@@ -39,6 +39,7 @@ const features = [
     icon: Globe,
   },
 ];
+}
 
 export function EnterpriseFeatures() {
   return (

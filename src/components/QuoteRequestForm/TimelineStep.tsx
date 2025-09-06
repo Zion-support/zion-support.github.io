@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { format } from 'date-fns';
 import { Calendar } from '@/components/ui/calendar';
 import { Button } from '@/components/ui/button';
@@ -15,6 +14,7 @@ import { QuoteFormData } from '@/types/quotes';
 interface TimelineStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
+}
 
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
@@ -137,8 +137,3 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
       </div>
     </div>
   );
-=======
-
-<<<<<<< HEAD
-                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover: bg-zion-blue-dark",
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

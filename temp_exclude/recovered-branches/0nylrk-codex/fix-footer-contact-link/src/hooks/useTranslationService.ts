@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
@@ -8,6 +7,8 @@ type ContentType = 'job' | 'profile' | 'service' | 'general';
 interface TranslationResponse {
   translations: Record<SupportedLanguage, string>;
   error?: string
+}
+}
 }
 
 export function useTranslationService() {

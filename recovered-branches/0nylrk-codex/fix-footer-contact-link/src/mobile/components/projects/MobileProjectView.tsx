@@ -39,6 +39,7 @@ interface ProjectViewProps {
     description: string;
   };
   milestones: Milestone[];
+}
 
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   const navigate = useNavigate();

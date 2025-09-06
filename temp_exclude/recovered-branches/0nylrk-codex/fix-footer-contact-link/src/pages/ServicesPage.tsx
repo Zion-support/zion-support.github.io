@@ -1,4 +1,3 @@
-
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 import { AppLayout } from "@/layout/AppLayout";
@@ -116,6 +115,7 @@ const SERVICE_FILTERS = [
   { label: 'Analytics', value: 'analytics' },
   { label: 'Consulting', value: 'consulting' },
   { label: 'Strategy', value: 'strategy' }],
+}
 
 export default function ServicesPage() {
   return (

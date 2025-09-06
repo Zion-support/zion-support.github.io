@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { MilestonesList } from '../MilestonesList';
 import { PaymentSummary } from '../PaymentSummary';
@@ -18,6 +17,8 @@ interface MilestoneManagerProps {
   onDeleteMilestone: (id: string) => Promise<boolean>,
   onUploadDeliverable: (id: string, file: File) => Promise<any>,
   refetch: () => Promise<void>
+}
+}
 }
 
 export function MilestoneManager({

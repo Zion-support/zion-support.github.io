@@ -12,6 +12,7 @@ interface TalentCardFooterProps {
   profile: TalentProfile;
   onViewProfile: (id: string) => void;
   onRequestHire?: (profile: TalentProfile) => void;
+}
 
 export function TalentCardFooter({
   profile,

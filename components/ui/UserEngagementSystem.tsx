@@ -5,6 +5,7 @@ export type EmptyStateProps = {
   message: string,
   action?: React.ReactNode
 };
+}
 
 export default function EmptyState({ emoji = '✨', title, message, action }: EmptyStateProps) {
   return (

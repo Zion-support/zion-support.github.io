@@ -18,6 +18,7 @@ interface CertificationsFormProps {
   certifications: Certification[];
   onComplete: () => void;
   onBack: () => void;
+}
 
 export function CertificationsForm({
   resumeId,

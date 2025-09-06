@@ -27,6 +27,7 @@ interface QuotesTableProps {
   toggleArchive: (id: string, isArchived: boolean) => void;
   deleteQuote: (id: string) => void;
   onViewDetails: (quote: QuoteRequest) => void;
+}
 
 export const QuotesTable: React.FC<QuotesTableProps> = ({
   quotes,

@@ -3,6 +3,7 @@ import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
 import type { SafeRef } from '../sidebar.types';
+}
 
 export const SidebarInput = React.forwardRef<
   React.ElementRef<typeof Input>,
@@ -13,6 +14,7 @@ export const SidebarInput = React.forwardRef<
   );
 });
 SidebarInput.displayName = 'SidebarInput';
+}
 
 export const SidebarHeader = React.forwardRef<
   HTMLDivElement,
@@ -27,6 +29,7 @@ export const SidebarHeader = React.forwardRef<
   );
 });
 SidebarHeader.displayName = 'SidebarHeader';
+}
 
 export const SidebarFooter = React.forwardRef<
   HTMLDivElement,
@@ -41,6 +44,7 @@ export const SidebarFooter = React.forwardRef<
   );
 });
 SidebarFooter.displayName = 'SidebarFooter';
+}
 
 export const SidebarSeparator = React.forwardRef<
   HTMLDivElement,
@@ -51,6 +55,7 @@ export const SidebarSeparator = React.forwardRef<
   );
 });
 SidebarSeparator.displayName = 'SidebarSeparator';
+}
 
 export const SidebarContent = React.forwardRef<
   HTMLDivElement,
@@ -61,6 +66,7 @@ export const SidebarContent = React.forwardRef<
   );
 });
 SidebarContent.displayName = 'SidebarContent';
+}
 
 export const SidebarGroup = React.forwardRef<
   HTMLDivElement,

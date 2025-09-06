@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Web3Login } from './Web3Login';
 import { useState } from 'react';
 import { openAuthPopup } from '@/api/authSocial';
+}
 
 export function SocialLogin() {
   const [isLoading, setIsLoading] = useState(false);
@@ -87,10 +87,3 @@ export function SocialLogin() {
       </div>
     </div>
   );
-=======
-
-<<<<<<< HEAD
-  };
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,6 +1,8 @@
 // Testing utilities
 import { render } from '@testing-library/react';
 import { ThemeProvider } from 'next-themes';
+}
+}
 
 export const renderWithProviders = (ui, options = {}) => {
   const { theme = 'light', ...renderOptions } = options;
@@ -14,6 +16,8 @@ export const renderWithProviders = (ui, options = {}) => {
   return render(ui, { wrapper: Wrapper, ...renderOptions }
 });
 };
+}
+}
 
 export const mockNextRouter = () => ({
   push: jest.fn(),
@@ -25,6 +29,8 @@ export const mockNextRouter = () => ({
   asPath: '/',
 
 });
+}
+}
 
 export const createMockProps = (overrides = {}) => ({
   ...overrides

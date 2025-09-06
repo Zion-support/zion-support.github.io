@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
@@ -12,6 +11,7 @@ import { UploadSection } from './UploadSection';
 import { SelectResumeSection } from './SelectResumeSection';
 import { ResumeOption, ResumeSelectorProps } from './types';
 import { logErrorToProduction } from '@/utils/productionLogger';
+}
 
 export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const [selectedOption, setSelectedOption] = useState<
@@ -302,16 +302,3 @@ return (<div className="space-y-4" > <h3 className="text-lg font-medium text-whi
 }/>) ";
 }> <Plus className=" h-4 w-4 mr-2" /> Generate Resume Now </Button> </div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-
-        return
-      }
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

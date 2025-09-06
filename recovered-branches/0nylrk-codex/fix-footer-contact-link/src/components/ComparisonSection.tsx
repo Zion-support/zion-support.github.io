@@ -9,6 +9,7 @@ import {
   TableHeader,
   TableRow,;
 } from './ui/table';
+}
 
 export function ComparisonSection() {
   return (

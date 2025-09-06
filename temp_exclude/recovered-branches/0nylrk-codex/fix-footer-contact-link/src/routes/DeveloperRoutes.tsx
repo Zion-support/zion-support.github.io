@@ -7,6 +7,8 @@ import ApiGettingStarted from "../pages/ApiGettingStarted";
 import ApiWebhooks from "../pages/ApiWebhooks";
 import ApiSampleCode from "../pages/ApiSampleCode";
 import ApiErrorCodes from "../pages/ApiErrorCodes";
+}
+
 export default function DeveloperRoutes() {
   return (
     <Routes>

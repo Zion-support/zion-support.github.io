@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import {
   Card,
@@ -15,6 +14,7 @@ import { cn } from '@/lib/utils';
 interface InteractiveFeaturesProps {
   className?: string;
   style?: React.CSSProperties;
+}
 
 export function InteractiveFeatures({
   className,
@@ -124,13 +124,6 @@ export function InteractiveFeatures({
       </div>
     </section>
   );
+}
 
 export default InteractiveFeatures;
-=======
-
-<<<<<<< HEAD
-      details: "Every profile is vetted for quality and authenticity so you can hire with confidence.",
-      icon: <Users className="h-8 w-8 text-purple-700" />,
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

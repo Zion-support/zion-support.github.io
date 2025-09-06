@@ -1,4 +1,3 @@
-
 export interface FilterSidebarProps {
   searchTerm: string, setSearchTerm: (term: string) => void,
   selectedSkills: string[], toggleSkill: (skill: string) => void,

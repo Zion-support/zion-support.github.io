@@ -153,6 +153,7 @@ const processSteps = [
     description: 'Ongoing monitoring and compliance support'
   }
 ];
+}
 
 export default function GovernmentSolutionsPage() {
   return (

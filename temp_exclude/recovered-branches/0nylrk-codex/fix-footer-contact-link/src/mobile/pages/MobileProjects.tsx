@@ -1,4 +1,3 @@
-
 import React from "react";
 import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation";
@@ -47,6 +46,7 @@ const milestonesData = [
     amount: "$5,000"
   }
 ];
+}
 
 export function MobileProjects() {
   return (

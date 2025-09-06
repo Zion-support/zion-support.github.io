@@ -24,7 +24,9 @@ async function main() {
     console.error('Missing OPENAI_API_KEY'),
     process.exit(1)
   }
-  const all = readAll(),
+}
+
+const all = readAll(),
   const recent = all.filter(lastNDays(7)),
   const downs = recent.filter((r) => r.rating === 'down'),
 
@@ -38,8 +40,9 @@ async function main() {
     console.log('No low-rated feedback to analyze.'),
     return
   }
+}
 
-  const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON.stringify(downs.slice(-100), null, 2)}`,
+const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON.stringify(downs.slice(-100), null, 2)}`,
 
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
   const resp = await client.chat.completions.create({

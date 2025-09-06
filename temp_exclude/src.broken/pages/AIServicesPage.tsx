@@ -1,4 +1,6 @@
- export default function AIServicesPage () {
+}
+
+export default function AIServicesPage () {
   const aiServices = [ {
   benefits: [ "10x faster content creation", "Improved SEO rankings",
 "Consistent brand voice";

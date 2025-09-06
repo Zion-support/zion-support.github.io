@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { formatDistanceToNow } from 'date-fns';
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -20,6 +19,7 @@ interface ApplicationRowProps {
     newStatus: ApplicationStatus
   ) => Promise<void>;
   onViewScore: (application: JobApplication) => void;
+}
 
 export function ApplicationRow({
   application,
@@ -109,10 +109,3 @@ export function ApplicationRow({
       </TableCell>
     </TableRow>
   );
-=======
-
-<<<<<<< HEAD
-
-  const talentName = application.talent_profile?.full_name || "Unknown";
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

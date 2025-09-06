@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useWallet } from "@/hooks/useWallet";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -43,6 +42,7 @@ const REWARD_OPTIONS: RewardOption[] = [
     type: 'credit'
   }
 ];
+}
 
 export function RedeemTokensCard() {
   const { wallet, spendTokens } = useWallet();

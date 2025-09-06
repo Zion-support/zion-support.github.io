@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
@@ -47,6 +46,7 @@ interface WorkExperienceItemFormProps {
   initialData?: WorkExperience;
   onSubmit: (data: WorkExperience) => Promise<void>;
   onCancel: () => void;
+}
 
 export function WorkExperienceItemForm({
   initialData,
@@ -379,10 +379,3 @@ setIsEnhancementDialogOpen (false);
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) ;
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) ;
 }"
-=======
-
-<<<<<<< HEAD
-      location: initialData?.location || ""}}),
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

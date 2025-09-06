@@ -16,6 +16,8 @@ import {
   DialogHeader,
   DialogTitle,;
 } from '@/components/ui/dialog';
+}
+}
 
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -53,8 +55,9 @@ export default function ListingDetail() {
       </AppLayout>
     );
   }
+}
 
-  const handleContact = () => {
+const handleContact = () => {
     setIsContactDialogOpen(true);
   };
 
@@ -343,7 +346,6 @@ export default function ListingDetail() {
 
 }w-full h-full flex items-center justify-center bg-zion-blue-light/20"> <span className=" text-zion-slate-light">No image available</span> </div>) 
 }</div> 
-
 
 }</div>) 
 }</div> </div> <div> <h4 className=" font-medium text-white">Advanced AI</h4> <p className=" text-sm text-zion-slate-light">State-of-the-art machine learning techniques</p> </div> </div> <div className=" flex items-start gap-3"> <div className=" p-2 rounded-full bg-zion-cyan/20"> <Shield className=" h-5 w-5 text-zion-cyan"/> </div> <div> <h4 className=" font-medium text-white">Enterprise Security</h4> <p className=" text-sm text-zion-slate-light">Built-in data protection and encryption</p> </div> </div> </div> </div> </Badge>) ) 

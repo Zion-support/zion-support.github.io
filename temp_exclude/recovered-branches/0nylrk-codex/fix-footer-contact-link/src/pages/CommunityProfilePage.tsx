@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
@@ -102,6 +101,7 @@ const userPosts: ForumPost[] = [
     replyCount: 6
   }
 ];
+}
 
 export default function CommunityProfilePage() {
   const { userId } = useParams();

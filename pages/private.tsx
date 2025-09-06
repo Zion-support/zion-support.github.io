@@ -10,6 +10,7 @@ import type { User as SupabaseUser } from '@supabase/supabase-js';
 
 interface PrivatePageProps {
   user: SupabaseUser;
+}
 
 export default function PrivatePage({ user }: PrivatePageProps) {
   return (
@@ -96,6 +97,7 @@ export default function PrivatePage({ user }: PrivatePageProps) {
       </div>
     </>
   );
+}
 
 export const getServerSideProps: GetServerSideProps = async (
   context: GetServerSidePropsContext

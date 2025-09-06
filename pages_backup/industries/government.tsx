@@ -130,6 +130,8 @@ const benefits = [
     icon: Globe;
   }
 ;];
+}
+
 export default function GovernmentPage() {
   return (;
     <Layout );
@@ -177,6 +179,8 @@ export default function GovernmentPage() {
           </div>;
         </section>;
 ];
+}
+
 export default function GovernmentPage() {
   
     >

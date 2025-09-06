@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -34,6 +33,7 @@ onSubmit ({;
   if (field === 'title' && title[lang]) {;
   return;
 }return;
+}
 
 export function TranslatableJobForm({
   onSubmit,
@@ -471,7 +471,7 @@ export function TranslatableJobForm({
 //Ensure all translations are available if (!title.en && !title.es && !title.fr && !title.pt && !title.ar) return;
 if (!description.en && !description.es && !description.fr && !description.pt && !description.ar) return;
 //Title translations if (Object.values (title) .some (val => val) && Object.values (title) .some (val => !val) ) {;
-  
+
 }className="space-y-6"> <div> <h1 className="text-2xl font-bold mb-6"> {';
   t ('jobs.post job title') ";
 }</h1> <p className="text-zion-slate-light mb-6"> {';
@@ -586,27 +586,3 @@ if (!description.en && !description.es && !description.fr && !description.pt && 
 }</>) : (t ('jobs.post job button') ) ;
 }</Button> </div> </form>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-    ar: ""
-  });
-<<<<<<< HEAD
-    ar: ""
-  });
-  
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-
-    let sourceLanguage: SupportedLanguage = 'en', let content = '',
-    
-
-<<<<<<< HEAD
-
-          variant: "destructive"
-      });
-      return;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

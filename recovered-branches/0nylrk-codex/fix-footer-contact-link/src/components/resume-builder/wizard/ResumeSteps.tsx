@@ -5,6 +5,7 @@ interface ResumeStepsProps {
   steps: StepProps[];
   activeTab: string;
   onChange: (value: string) => void;
+}
 
 export const ResumeSteps = ({
   steps,

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
@@ -9,6 +8,8 @@ interface ConversationItemProps {
   conversation: Conversation,
   isActive: boolean,
   onClick: () => void
+}
+}
 }
 
 export function ConversationItem({ conversation, isActive, onClick }: ConversationItemProps) {

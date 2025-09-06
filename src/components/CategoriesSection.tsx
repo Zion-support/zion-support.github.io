@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { GradientHeading } from './GradientHeading';
 import Link from 'next/link';
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
@@ -81,6 +80,8 @@ interface CategoriesSectionProps {
   className?: string;
   style?: React.CSSProperties;
   categories?: CategoryType[]; // Accept categories as a prop
+}
+}
 
 export function CategoriesSection({
   showTitle = true,
@@ -113,7 +114,7 @@ export function CategoriesSection({
 
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
-    
+
       >
         <div className='container mx-auto px-4'>
           <h2 className='text-3xl font-semibold text-white mb-4'>
@@ -228,7 +229,7 @@ title: cat.name;
 icon: getIcon (cat.iconName) ;
 }) );
 //If fetchedCategories is an empty array, and we want to show nothing: if (fetchedCategories && fetchedCategories.length === 0) {;
-  
+
 }> <div className="container mx-auto px-4" > <h2 className="text-3xl font-semibold text-white mb-4" > {';
   t ('home.no categories title') ";
 }</h2> <p className="text-zion-slate-light text-lg mb-2" > {';
@@ -245,11 +246,3 @@ icon: getIcon (cat.iconName) ;
   t ('home.view all categories') ;
 }</Link> </div> </div> </section>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-        color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
-    : defaultCategories.map(cat => ({
-        ...cat;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

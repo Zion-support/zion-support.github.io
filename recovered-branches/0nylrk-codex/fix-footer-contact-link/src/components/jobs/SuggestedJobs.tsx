@@ -7,6 +7,7 @@ import { NoJobsCard } from './NoJobsCard';
 
 interface SuggestedJobsProps {
   talentId?: string;
+}
 
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth();

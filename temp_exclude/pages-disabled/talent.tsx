@@ -132,6 +132,7 @@ const values = [Innovation and creativity",]
   "Diversity and inclusion",
   "Client success focus"
 ];
+}
 
 export default function TalentPage() {}
   return ()

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -9,6 +8,7 @@ import Link from 'next/link';
 import { Calendar, Clock, Video } from 'lucide-react';
 import { Avatar } from '@/components/ui/avatar';
 import { logErrorToProduction } from '@/utils/productionLogger';
+}
 
 export function UpcomingInterviewsCard() {
   const { fetchInterviews } = useInterviews();
@@ -167,7 +167,3 @@ export function UpcomingInterviewsCard() {
       </CardContent>
     </Card>
   );
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

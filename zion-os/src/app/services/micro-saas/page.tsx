@@ -306,6 +306,7 @@ const microSAASServices: MicroSAASService[] = [
     deployment: 'Enterprise cloud with compliance features',
   },
 ];
+}
 
 export default function MicroSAASPage() {
   return (

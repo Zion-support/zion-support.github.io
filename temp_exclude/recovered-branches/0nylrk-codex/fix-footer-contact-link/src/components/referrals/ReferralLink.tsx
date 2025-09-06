@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,6 +8,8 @@ interface ReferralLinkProps {
   referralLink: string,
   onCopy: () => void,
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
+}
+}
 }
 
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {

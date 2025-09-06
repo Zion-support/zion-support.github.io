@@ -47,4 +47,3 @@ export async function createJob(jobData: any) {
     toast.error('Failed to load job details');
     return null;
   }
-

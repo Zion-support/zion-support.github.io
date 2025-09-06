@@ -164,6 +164,7 @@ const accessibilityGuidelines = [
     ]
   }
 ];
+}
 
 export default function AccessibilityPage() {
   return (

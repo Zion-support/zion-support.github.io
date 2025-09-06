@@ -32,6 +32,7 @@ onSubmit ({
   if (field === 'title' && title[lang]) {
   return;
 }return;
+}
 
 export function TranslatableJobForm({
   onSubmit,

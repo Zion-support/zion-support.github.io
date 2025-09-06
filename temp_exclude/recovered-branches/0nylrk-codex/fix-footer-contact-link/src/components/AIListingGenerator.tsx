@@ -29,6 +29,8 @@ interface AIListingGeneratorProps {
     targetAudience?: string
   }
 }
+}
+}
 
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
   const { toast } = useToast();

@@ -19,6 +19,8 @@ interface QuoteDetailsProps {
   isOpen: boolean,
   onClose: () => void
 }
+}
+}
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
   if (!quote) return null;

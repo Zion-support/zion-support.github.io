@@ -1,4 +1,3 @@
-
 import { ContractTemplate } from "@/types/contracts";
 import { Button } from "@/components/ui/button";
 import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react";
@@ -20,6 +19,8 @@ interface TemplateListProps {
   isLoading: boolean,
   onSelect: (template: ContractTemplate) => void,
   onEdit: (template: ContractTemplate) => void
+}
+}
 }
 
 export function TemplateList({

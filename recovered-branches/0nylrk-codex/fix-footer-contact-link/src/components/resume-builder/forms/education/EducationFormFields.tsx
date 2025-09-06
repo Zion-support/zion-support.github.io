@@ -33,6 +33,7 @@ const educationSchema = z.object({
 });
 
 type EducationFormValues = z.infer<typeof educationSchema>;
+}
 
 export function EducationFormFields({
   isEditing,

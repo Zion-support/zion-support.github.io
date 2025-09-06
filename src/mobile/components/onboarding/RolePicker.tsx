@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -8,6 +7,7 @@ type UserRole = 'talent' | 'client' | null;
 
 interface RolePickerProps {
   onSelect: (role: UserRole) => void;
+}
 
 export function RolePicker({ onSelect }: RolePickerProps) {
   const [selectedRole, setSelectedRole] = useState<UserRole>(null);
@@ -79,7 +79,3 @@ export function RolePicker({ onSelect }: RolePickerProps) {
       </div>
     </div>
   );
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

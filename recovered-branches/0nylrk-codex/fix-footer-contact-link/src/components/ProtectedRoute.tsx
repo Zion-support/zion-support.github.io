@@ -9,6 +9,7 @@ export interface ProtectedRouteProps {
   adminOnly?: boolean;
   tenantAdminAllowed?: boolean;
   requiredUserType?: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin';
+}
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   children,

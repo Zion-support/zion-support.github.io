@@ -58,6 +58,7 @@ import {
   SelectTrigger,
   SelectValue,;
 } from '@/components/ui/select';
+}
 
 export function WebhooksManager() {
   const {
@@ -648,7 +649,6 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
 setTestEventType ('new application');
 if (showTestResult) {
   
-
 
 }> <DialogContent className="bg-zinc-900 border-zinc-800 text-white"> <DialogHeader> <DialogTitle>Test Webhook</DialogTitle> <DialogDescription className="text-zinc-400"> Send a test webhook to your endpoint. </DialogDescription> </DialogHeader> {
   !showTestResult ? (<> <div className="space-y-4 py-4"> <div className="space-y-2"> <Label htmlFor=" test-event-type">Event Type</Label> <Select value= {

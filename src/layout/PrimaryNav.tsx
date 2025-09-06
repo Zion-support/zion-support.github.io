@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import Link from 'next/link';
@@ -21,6 +20,7 @@ import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { CartDrawer } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
+}
 
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -224,7 +224,6 @@ return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/2
 }setQuery ('');
 //Track analytics event ;
 
-
 }searchSuggestions= {;
   suggestions ;
 }/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link onClick={;
@@ -268,14 +267,3 @@ setLoginOpen (true) ;
   setLoginOpen ;
 }/> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-
-  let unreadCount = 0;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                  
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

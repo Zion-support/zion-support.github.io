@@ -28,6 +28,7 @@ const initialPosts: DiscussionPost[] = [
     time: "50m ago",
     title: "Quick tip: How to rank your Zion listing higher",
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}];
+}
 
 export const CommunityDiscussion: React.FC = () => {
   const [posts, setPosts] = useState(initialPosts);

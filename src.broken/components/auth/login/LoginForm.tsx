@@ -32,6 +32,7 @@ const loginSchema = z.object({
 });
 
 type LoginFormValues = z.infer<typeof loginSchema>;
+}
 
 export function LoginForm() {
   const { isLoading, login } = useAuth();

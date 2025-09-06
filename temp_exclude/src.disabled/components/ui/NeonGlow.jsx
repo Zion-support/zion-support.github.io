@@ -2,6 +2,8 @@ import React from 'react';
 interface NeonGlowProps {
   // Add props here as needed
 }
+}
+
 export default function NeonGlow({ }: NeonGlowProps) {
   return (
     <div>

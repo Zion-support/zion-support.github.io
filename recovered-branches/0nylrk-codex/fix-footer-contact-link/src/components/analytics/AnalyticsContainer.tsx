@@ -7,6 +7,7 @@ import { useAuth } from '@/hooks/useAuth';
 
 interface AnalyticsContainerProps {
   children: React.ReactNode;
+}
 
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   const { isAuthenticated, isLoading, user } = useAuth();

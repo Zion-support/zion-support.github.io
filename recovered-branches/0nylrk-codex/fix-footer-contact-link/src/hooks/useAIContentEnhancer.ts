@@ -14,6 +14,7 @@ export interface AIEnhancementOptions {
   content?: string;
   context?: string;
   instructions?: string;
+}
 
 export function useAIContentEnhancer() {
   const [isEnhancing, setIsEnhancing] = useState(false);

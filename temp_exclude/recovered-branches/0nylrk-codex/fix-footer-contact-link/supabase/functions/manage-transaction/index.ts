@@ -59,8 +59,9 @@ serve(async (req) => {
     if (!isClient && !isProvider) {
       throw new Error("You are not authorized to manage this transaction")
     }
+}
 
-    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
+const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2023-10-16"});
 
     let result;

@@ -20,6 +20,8 @@ interface ReplyFormProps {
 interface ReplyFormValues {
   content: string
 }
+}
+}
 
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -72,5 +74,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
     </Card>
   )
 };
+}
+}
 
 export default ReplyForm;

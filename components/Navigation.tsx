@@ -20,6 +20,7 @@ import {;
   Globe,
   BarChart3
 } from 'lucide-react;
+}
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

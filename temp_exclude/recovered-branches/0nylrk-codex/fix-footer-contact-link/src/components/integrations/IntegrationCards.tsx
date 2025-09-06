@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
@@ -12,6 +11,8 @@ interface IntegrationCardProps {
   status?: "connected" | "disconnected" | "pending";
   href?: string;
   onConnect?: () => void
+}
+}
 }
 
 export function IntegrationCard({
@@ -65,6 +66,8 @@ export function IntegrationCard({
       </CardFooter>
     </Card>
   )
+}
+}
 }
 
 export function IntegrationCards() {

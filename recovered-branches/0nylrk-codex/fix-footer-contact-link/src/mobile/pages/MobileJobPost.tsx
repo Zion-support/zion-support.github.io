@@ -17,6 +17,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 
 type JobPostStep = 'details' | 'requirements' | 'budget' | 'preview';
+}
 
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>('details');

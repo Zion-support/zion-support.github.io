@@ -15,6 +15,7 @@ import {
   QuotesFilter,
   QuotesTable,;
 } from '@/components/admin/quotes';
+}
 
 export default function QuoteManager() {
   const { user } = useAuth();

@@ -11,6 +11,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Badge } from '@/components/ui/badge';
 import { formatDistanceToNow } from 'date-fns';
+}
+}
 
 export function TransactionHistory() {
   const { transactions, loading } = useWallet();
@@ -25,8 +27,9 @@ export function TransactionHistory() {
       </Card>
     );
   }
+}
 
-  const earnTransactions = transactions.filter(
+const earnTransactions = transactions.filter(
     tx => tx.transaction_type === 'earn'
   );
   const burnTransactions = transactions.filter(

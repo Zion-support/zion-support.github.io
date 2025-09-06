@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
 import { MessageSquare } from 'lucide-react';
@@ -9,6 +8,8 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { useAuth } from '@/hooks/useAuth';
 import { MessageBubble } from './MessageBubble';
 import { DateDivider } from './DateDivider';
+}
+
 export function ConversationDetailView() {
   const { user } = useAuth();
   const { 

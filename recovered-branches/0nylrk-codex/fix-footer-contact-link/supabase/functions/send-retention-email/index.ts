@@ -409,7 +409,6 @@ html: ` <h2>Welcome to Zion AI Marketplace!</h2> <p>Hi $ {
   //For clients if (!onboarding.job posted) {
   
 
-
 }return {
   subject: `$ {
   firstName 

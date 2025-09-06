@@ -5,6 +5,7 @@ import { Sparkles, RefreshCcw } from 'lucide-react';
 export interface EmptyMatchesCardProps {
   onRefresh: () => void;
   isProcessing: boolean;
+}
 
 export function EmptyMatchesCard({
   onRefresh,

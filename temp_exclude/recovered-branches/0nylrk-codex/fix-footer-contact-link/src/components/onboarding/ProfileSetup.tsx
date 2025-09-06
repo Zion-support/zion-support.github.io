@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -25,6 +24,8 @@ type ProfileFormValues = z.infer<typeof profileSchema>;
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void,
   userType: string
+}
+}
 }
 
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {

@@ -85,6 +85,7 @@ const benefits = [
     icon: Globe
   }
 ];
+}
 
 export default function EducationPage() {
   

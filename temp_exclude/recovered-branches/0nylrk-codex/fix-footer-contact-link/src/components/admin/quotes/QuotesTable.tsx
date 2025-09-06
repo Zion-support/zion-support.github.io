@@ -28,6 +28,8 @@ interface QuotesTableProps {
   deleteQuote: (id: string) => void,
   onViewDetails: (quote: QuoteRequest) => void
 }
+}
+}
 
 export const QuotesTable: React.FC<QuotesTableProps> = ({
   quotes;

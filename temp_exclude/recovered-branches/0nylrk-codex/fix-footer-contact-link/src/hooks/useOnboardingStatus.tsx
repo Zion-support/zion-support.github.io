@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useAuth } from "./useAuth";
 import { supabase } from "@/integrations/supabase/client";
@@ -10,6 +9,8 @@ interface OnboardingStatus {
   jobPosted: boolean,
   inviteSent: boolean,
   responseReceived: boolean
+}
+}
 }
 
 export function useOnboardingStatus() {

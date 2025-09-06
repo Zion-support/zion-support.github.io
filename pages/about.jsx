@@ -159,5 +159,6 @@ const About = () => {
     </Layout>
   );
 };
+}
 
 export default About;

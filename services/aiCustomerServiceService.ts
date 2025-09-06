@@ -398,6 +398,8 @@ export class AICustomerServiceService {
       throw error;
     }
   }
+}
+}
 
 export const aiCustomerServiceService = new AICustomerServiceService(
   process.env.CUSTOMER_SERVICE_API_KEY || ''

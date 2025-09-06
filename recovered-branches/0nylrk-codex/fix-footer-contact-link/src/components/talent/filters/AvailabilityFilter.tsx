@@ -7,6 +7,7 @@ const AVAILABILITY_OPTIONS = [
   { id: 'part_time', label: 'Part-time' },
   { id: 'project', label: 'Project-based' },
 ];
+}
 
 export function AvailabilityFilter({
   selectedAvailability,

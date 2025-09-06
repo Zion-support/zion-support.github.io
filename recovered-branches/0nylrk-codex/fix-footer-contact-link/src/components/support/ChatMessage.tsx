@@ -8,6 +8,7 @@ interface ChatMessageProps {
   message: string;
   isUser: boolean;
   timestamp: Date;
+}
 
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
   const { theme } = useTheme();

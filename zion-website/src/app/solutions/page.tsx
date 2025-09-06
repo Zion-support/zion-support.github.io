@@ -152,6 +152,7 @@ const implementationSteps = [
     icon: ShieldCheckIcon,
   },
 ];
+}
 
 export default function SolutionsPage() {
   return (

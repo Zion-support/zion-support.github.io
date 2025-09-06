@@ -24,6 +24,7 @@ import {
   Building,
   Clock,;
 } from 'lucide-react';
+}
 
 export function FeatureCTAs() {
   const features = [

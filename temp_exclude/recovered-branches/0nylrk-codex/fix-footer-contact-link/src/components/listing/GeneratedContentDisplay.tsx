@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -20,6 +19,8 @@ interface GeneratedContent {
 interface GeneratedContentDisplayProps {
   content: GeneratedContent,
   onApply: () => void
+}
+}
 }
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {

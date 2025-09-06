@@ -23,6 +23,8 @@ interface DynamicListingPageProps {
   categoryFilters: { label: string, value: string }[],
   initialPrice?: PriceRange
 }
+}
+}
 
 export function DynamicListingPage({
   title;
@@ -30,8 +32,7 @@ export function DynamicListingPage({
   categorySlug;
   listings: allListings,
   categoryFilters;
-  initialPrice = { min: 0, max: 10000 }
-}: DynamicListingPageProps) {
+  initialPrice = { min: 0, max: 10000 }: DynamicListingPageProps) {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");

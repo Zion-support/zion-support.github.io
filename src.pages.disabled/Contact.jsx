@@ -2,6 +2,7 @@ import React from 'react';
 
 interface ContactProps {
   // Add props here as needed
+}
 
 export default function Contact({ }: ContactProps) {
   return (
@@ -10,6 +11,4 @@ export default function Contact({ }: ContactProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
 
