@@ -5,6 +5,7 @@ import { SEO } from '../components/SEO';
 import { usePerformance } from '../hooks/usePerformance';
 import Testimonials from '../components/Testimonials';
 import BlogSection from '../components/BlogSection';
+import { trackScrollDepth, trackButtonClick } from '../utils/analytics';
 import { 
   ArrowRight, 
   CheckCircle, 
@@ -22,6 +23,28 @@ import {
 
 const Home: React.FC = () => {
   usePerformance();
+
+  // Track scroll depth
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      
+      if (scrollPercent > 25 && scrollPercent <= 50) {
+        trackScrollDepth(25);
+      } else if (scrollPercent > 50 && scrollPercent <= 75) {
+        trackScrollDepth(50);
+      } else if (scrollPercent > 75 && scrollPercent <= 90) {
+        trackScrollDepth(75);
+      } else if (scrollPercent > 90) {
+        trackScrollDepth(100);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const services = [
     {
@@ -137,20 +160,22 @@ const Home: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                <Link
-                  to="/services"
-                  className="group bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
-                >
-                  Explore Our Services
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
-                  to="/contact"
-                  className="group border-2 border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
-                >
-                  Get Free Consultation
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
+              <Link
+                to="/services"
+                onClick={() => trackButtonClick('explore_services', 'hero')}
+                className="group bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
+              >
+                Explore Our Services
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/contact"
+                onClick={() => trackButtonClick('get_consultation', 'hero')}
+                className="group border-2 border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
+              >
+                Get Free Consultation
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
               </motion.div>
 
               {/* Stats */}
