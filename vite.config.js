@@ -18,7 +18,9 @@ export default defineConfig({
     }
   },
   css: {
-    postcss: false
+    postcss: {
+      plugins: []
+    }
   },
   esbuild: {
     loader: 'tsx',

@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-=======
 import { Activity } from 'lucide-react';
->>>>>>> cursor/expand-services-advertise-and-build-project-5c86
 
-export const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -16,7 +13,6 @@ export const PerformanceMonitor: React.FC = () => {
 
   if (!isVisible) return null;
 
-<<<<<<< HEAD
   return (
     <div className="fixed bottom-4 right-4 w-80 bg-gray-900 border border-gray-700 rounded-lg shadow-2xl z-50">
       <div className="p-4 border-b border-gray-700">
@@ -33,21 +29,20 @@ export const PerformanceMonitor: React.FC = () => {
           </button>
         </div>
       </div>
-
       <div className="p-4">
-        <p className="text-gray-400 text-sm">
-          Performance monitoring is active. This component will be enhanced with detailed metrics in future updates.
-        </p>
+        <div className="space-y-3">
+          <div className="flex justify-between text-sm">
+            <span className="text-gray-300">Status:</span>
+            <span className="text-green-400">Active</span>
+          </div>
+          <div className="flex justify-between text-sm">
+            <span className="text-gray-300">Mode:</span>
+            <span className="text-blue-400">Development</span>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
-<<<<<<< HEAD
 
 export default PerformanceMonitor;
-=======
-import React from 'react';
-;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-5c86
