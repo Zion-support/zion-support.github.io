@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { JSX } from 'react';
+=======
+import React from 'react';
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 
 <<<<<<< HEAD
 export default function App(): React.JSX.Element {

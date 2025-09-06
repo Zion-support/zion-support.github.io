@@ -13,8 +13,13 @@ for file in $files_with_conflicts; do
     echo "Fixing $file..."
     
     # Remove all merge conflict markers
+<<<<<<< HEAD
     sed -i '/<<<<<<< HEAD/,/>>>>>>>/d' "$file"
     sed -i '/=======/d' "$file"
+=======
+    sed -i '/^/,/^/d' "$file"
+    sed -i '/^>>>>>>>/d' "$file"
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     
     # Check if file is empty or has only whitespace
     if [ ! -s "$file" ] || [ -z "$(cat "$file" | tr -d '[:space:]')" ]; then

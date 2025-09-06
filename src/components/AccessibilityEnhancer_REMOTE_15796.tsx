@@ -1,3 +1,0 @@
-</AccessibilityFeature>
-</AccessibilitySettings>
-</any>;';';

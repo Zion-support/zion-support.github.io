@@ -1,16 +1,27 @@
 import js from '@eslint/js';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import typescript from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
+=======
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import next from '@next/eslint-plugin-next';
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 
 export default [
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
+<<<<<<< HEAD
       parser: tsparser,
+=======
+      parser: typescriptParser,
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -42,6 +53,7 @@ export default [
     files: ['**/*.js'],
     languageOptions: {
       globals: {
+<<<<<<< HEAD
         console: 'readonly',
         process: 'readonly',
         Buffer: 'readonly',
@@ -630,6 +642,40 @@ export default [{
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       globals: {
+=======
+        // Browser globals
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        fetch: 'readonly',
+        process: 'readonly',
+        // DOM types
+        Element: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        HTMLSelectElement: 'readonly',
+        HTMLDivElement: 'readonly',
+        MouseEvent: 'readonly',
+        KeyboardEvent: 'readonly',
+        Node: 'readonly',
+        PerformanceObserver: 'readonly',
+        PerformanceNavigationTiming: 'readonly',
+        PerformanceEventTiming: 'readonly',
+        LayoutShift: 'readonly',
+        performance: 'readonly',
+        IntersectionObserver: 'readonly',
+        IntersectionObserverEntry: 'readonly',
+        // React
+        React: 'readonly',
+        // Jest/Testing globals
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
@@ -639,6 +685,7 @@ export default [{
         beforeAll: 'readonly',
         afterAll: 'readonly',
         jest: 'readonly',
+<<<<<<< HEAD
         fireEvent: 'readonly',
         render: 'readonly',
 <<<<<<< HEAD
@@ -658,20 +705,96 @@ export default [{
   }
 ];
 =======
+=======
+      },
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      react: react,
+      'react-hooks': reactHooks,
+      '@next/next': next,
+    },
+    rules: {
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...next.configs.recommended.rules,
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
       '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
+  {
+    files: ['**/*.cjs'],
+    languageOptions: {
+      sourceType: 'commonjs',
+      globals: {
+        // Node.js globals
+        process: 'readonly',
+        console: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        Buffer: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        setImmediate: 'readonly',
+        clearImmediate: 'readonly',
+      },
     },
   },
   {
     ignores: [
-      'node_modules/',
-      '.next/',
-      'out/',
-      'dist/',
-      '*.min.js',
-      'build/',
-      'coverage/',
+      // Node/build outputs
+      'node_modules/**',
+      '.next/**',
+      'dist/**',
+      'out/**',
+      'build/**',
+      'coverage/**',
+      '*.log',
+      '*.tsbuildinfo',
+      // Generated files
+      '**/*.min.js',
+      '**/*.bundle.js',
+      '**/static/**',
+      '**/public/**',
+      '**/backup*/**',
+      '**/backups/**',
+      '**/cache/**',
+      '**/temp/**',
+      '**/tmp/**',
+      // Build artifacts
+      '**/ecosystem*.cjs',
+      '**/comprehensive-*.cjs',
+      '**/advanced-*.cjs',
+      '**/enhanced-*.cjs',
+      '**/automation/**',
+      '**/scripts/**',
+      '**/tools/**',
+      '**/zion-os/**',
+      '**/zion-website/**',
     ],
   },
 ];
+<<<<<<< HEAD
 >>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b

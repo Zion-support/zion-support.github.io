@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "Zion Tech Group - AI & Technology Solutions",
   "short_name": "Zion Tech",
   "description": "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
@@ -20,10 +21,36 @@
       "src": "/favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
+=======
+  "name": "Zion Tech Group",
+  "short_name": "Zion Tech",
+  "description": "Leading provider of AI-powered solutions, micro SaaS applications and enterprise IT services",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["business", "productivity", "technology", "education"],
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     },
     {
       "src": "/apple-touch-icon.png",
       "sizes": "180x180",
+<<<<<<< HEAD
       "type": "image/png"
     },
     {
@@ -37,14 +64,25 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+=======
+      "type": "image/png",
+      "purpose": "any"
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     }
   ],
   "shortcuts": [
     {
+<<<<<<< HEAD
       "name": "AI Services",
       "short_name": "AI Services",
       "description": "Explore our AI solutions",
       "url": "/ai-services",
+=======
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View our technology services",
+      "url": "/services",
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
       "icons": [
         {
           "src": "/favicon-32x32.png",
@@ -53,10 +91,17 @@
       ]
     },
     {
+<<<<<<< HEAD
       "name": "IT Services",
       "short_name": "IT Services",
       "description": "View our IT services",
       "url": "/it-services",
+=======
+      "name": "AI Solutions",
+      "short_name": "AI",
+      "description": "Explore AI-powered solutions",
+      "url": "/ai-services",
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
       "icons": [
         {
           "src": "/favicon-32x32.png",
@@ -73,10 +118,26 @@
         {
           "src": "/favicon-32x32.png",
           "sizes": "32x32"
+<<<<<<< HEAD
+=======
+        }
+      ]
+    },
+    {
+      "name": "About",
+      "short_name": "About",
+      "description": "Learn about Zion Tech Group",
+      "url": "/about",
+      "icons": [
+        {
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
         }
       ]
     }
   ],
+<<<<<<< HEAD
   "screenshots": [
     {
       "src": "/screenshot-wide.png",
@@ -92,3 +153,8 @@
     }
   ]
 }
+=======
+  "related_applications": [],
+  "prefer_related_applications": false
+}
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b

@@ -1,7 +1,26 @@
+<<<<<<< HEAD
       "mergeConflicts": { resolved: 0, "failed": 0 },
       "syntaxErrors": { fixed: 0, "failed": 0 },
       "prsProcessed": { merged: 0, "failed": 0 },
       "improvements": { applied: 0, "failed": 0 }};
+=======
+const fs = require('fs');
+const { exec, execSync } = require('child_process');
+const { promisify } = require('util');
+
+const execAsync = promisify(exec);
+
+class CompleteImprovementSuite {
+  constructor() {
+    this.reportsDir = './automation-reports';
+    this.projectRoot = process.cwd();
+    this.stats = {
+      "mergeConflicts": { resolved: 0, "failed": 0 },
+      "syntaxErrors": { fixed: 0, "failed": 0 },
+      "prsProcessed": { merged: 0, "failed": 0 },
+      "improvements": { applied: 0, "failed": 0 }
+    };
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
   }
 
   ensureDirectories() {
@@ -11,7 +30,11 @@
   }
 
   log(message) {
+<<<<<<< HEAD
     .toISOString()}] ${message}`);
+=======
+    console.log(`[${new Date().toISOString()}] ${message}`);
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
   }
 
   async runCommand(command, description, timeout = 60000) {
@@ -172,10 +195,16 @@
       const content = fs.readFileSync(filePath, 'utf8');
       return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         content.includes('>>>>>>> ')
 =======
 >>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+=======
+        content.includes('<<<<<<< HEAD') ||
+        content.includes('=======') ||
+        content.includes('>>>>>>> ')
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
       );
     } catch (error) {
       return false;
@@ -190,18 +219,26 @@
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+=======
+        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [a-f0-9]+/gs,
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
         '$1'
       );
 
       // Clean up any remaining markers
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       content = content.replace(/>>>>>>> [^\n]+\n/g, '');
 =======
 >>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+=======
+      content = content.replace(/>>>>>>> [^\n]+\n/g, '');
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
@@ -361,7 +398,11 @@
     );
 
     this.log('🎉 Complete Improvement Suite Finished');
+<<<<<<< HEAD
     this.log("📊 "Summary": ");
+=======
+    this.log("📊 Summary: ");
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     this.log(
       `   - Merge conflicts resolved: ${finalReport.summary.totalMergeConflictsResolved}`
     );
@@ -381,7 +422,11 @@ suite.run().catch(console.error);
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

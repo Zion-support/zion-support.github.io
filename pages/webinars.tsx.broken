@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/webinars.tsx.broken
 <<<<<<< HEAD
 <<<<<<< HEAD:pages/webinars.tsx.backup
@@ -450,89 +451,15 @@ const Page = () => {
 <<<<<<< HEAD:pages/webinars.tsx.broken
     <MainLayout
 =======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
-import { 
-  Calendar, 
-  Clock, 
-  Users, 
-  Play, 
-  ArrowRight, 
-  CheckCircle, 
-  Star,
-  Globe,
-  BookOpen,
-  Zap
-} from 'lucide-react';
+import Layout from './components/Layout';
 
-const webinars = [
-  {
-    id: 1,
-    title: 'Introduction to AI for Business',
-    description: 'Learn how artificial intelligence can transform your business operations and drive growth.',
-    date: '2024-02-15',
-    time: '2:00 PM EST',
-    duration: '60 minutes',
-    speaker: 'Dr. Sarah Chen',
-    category: 'AI & Machine Learning',
-    attendees: 150,
-    icon: BookOpen,
-    color: 'from-blue-500 to-purple-500'
-  },
-  {
-    id: 2,
-    title: 'Cloud Migration Best Practices',
-    description: 'Discover the best practices for migrating your infrastructure to the cloud safely and efficiently.',
-    date: '2024-02-20',
-    time: '3:00 PM EST',
-    duration: '45 minutes',
-    speaker: 'Michael Rodriguez',
-    category: 'Cloud Computing',
-    attendees: 200,
-    icon: Globe,
-    color: 'from-green-500 to-blue-500'
-  },
-  {
-    id: 3,
-    title: 'Cybersecurity Fundamentals',
-    description: 'Essential security measures to protect your business from cyber threats and attacks.',
-    date: '2024-02-25',
-    time: '1:00 PM EST',
-    duration: '90 minutes',
-    speaker: 'James Wilson',
-    category: 'Cybersecurity',
-    attendees: 180,
-    icon: Zap,
-    color: 'from-red-500 to-pink-500'
-  }
-];
-
-const upcomingWebinars = [
-  {
-    title: 'AI-Powered Analytics',
-    date: '2024-03-01',
-    time: '2:00 PM EST',
-    speaker: 'Dr. Sarah Chen'
-  },
-  {
-    title: 'DevOps Automation',
-    date: '2024-03-05',
-    time: '3:00 PM EST',
-    speaker: 'Michael Rodriguez'
-  },
-  {
-    title: 'Data Privacy & Compliance',
-    date: '2024-03-10',
-    time: '1:00 PM EST',
-    speaker: 'James Wilson'
-  }
-];
-
-export default function Webinars() {
+export default function WebinarsPage() {
   return (
+<<<<<<< HEAD
     <Layout
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
       title="Webinars - Zion Tech Group"
@@ -688,41 +615,37 @@ export default function Webinars() {
                     </motion.div>
                   ))}
                 </div>
+=======
+    <Layout title="Webinars - ZionTech Group" description="Join our educational webinars">
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Educational Webinars
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Learn from industry experts and stay ahead of the latest technology trends.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                AI & Machine Learning
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
               </div>
-            </div>
-          </section>
-        )}
-
-        {/* Search and Filter */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="flex flex-col md:flex-row gap-4 mb-8">
-                <div className="flex-1 relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search webinars..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                  />
-                </div>
-                <div className="relative">
-                  <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <select
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="pl-10 pr-8 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent appearance-none bg-white"
-                  >
-                    {categories.map(category => (
-                      <option key={category.id} value={category.id}>
-                        {category.name}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Introduction to AI in Business
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Learn how artificial intelligence can transform your business operations.
+              </p>
+              <div className="text-sm text-gray-500">
+                <p>Date: January 15, 2025</p>
+                <p>Time: 2:00 PM EST</p>
+                <p>Duration: 60 minutes</p>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages/webinars.tsx.backup
 =======
 <<<<<<< HEAD:pages/webinars.tsx.broken
@@ -1207,6 +1130,56 @@ export default function Webinars() {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
 >>>>>>> 380d5be269a380502c5b88f5cbeaaaacd40bbf12:pages/webinars.tsx
 >>>>>>> main:pages/webinars.tsx.broken
+=======
+            </div>
+            
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                Cloud Computing
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Cloud Migration Strategies
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Best practices for migrating your infrastructure to the cloud.
+              </p>
+              <div className="text-sm text-gray-500">
+                <p>Date: January 22, 2025</p>
+                <p>Time: 3:00 PM EST</p>
+                <p>Duration: 90 minutes</p>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="bg-purple-100 text-purple-800 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                Cybersecurity
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                Modern Security Threats
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Understanding and defending against current cybersecurity threats.
+              </p>
+              <div className="text-sm text-gray-500">
+                <p>Date: January 29, 2025</p>
+                <p>Time: 1:00 PM EST</p>
+                <p>Duration: 75 minutes</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-12 text-center">
+            <a
+              href="/contact"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Register for Webinars
+            </a>
+          </div>
+        </div>
+      </div>
+    </Layout>
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
   );
 }
 =======

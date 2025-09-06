@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node;
 
 const fs = require("fs")
@@ -84,6 +87,7 @@ export {};"
   this.log("\\n "Errors": ")
       this.log("\\n� TypeScript fixing completed!")
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node
 
@@ -276,3 +280,5 @@ fixer.run().catch(console.error);
 =======
 >>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b

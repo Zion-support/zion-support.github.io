@@ -1,11 +1,16 @@
 #!/bin/bash
 
 # Find all files with merge conflicts
+<<<<<<< HEAD
 conflicted_files=$(find ./pages -name "*.tsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
+=======
+files=$(find pages components -name "*.tsx" -o -name "*.ts" | xargs grep -l "")
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 
 for file in $conflicted_files; do
     echo "Fixing $file..."
     
+<<<<<<< HEAD
     # Create a clean version
     cat > "$file" << 'EOF'
 import React from 'react';
@@ -30,5 +35,18 @@ const Page = () => {
 export default Page;
 EOF
 done
+=======
+    # Create a backup
+    cp "$file" "$file.backup"
+    
+    # Remove all merge conflict markers and keep HEAD version
+    sed -i '/^/,/^/!d' "$file"
+    sed -i '/^/d' "$file"
+    sed -i '/^    
+    # Clean up any remaining conflict markers
+    sed -i '/^
+    sed -i '/^/d' "$file"
+    sed -i '/^done
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 
 echo "Fixed all conflicted files"
