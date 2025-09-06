@@ -13,6 +13,7 @@ function summarizeModules(
       .map(([k]) => `/${k}`),
   ];
   return active.length ? active.sort().join(', ') : 'None';
+}
 
 function missionParagraph(
   region: string,
@@ -31,7 +32,8 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });  }
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
   try {
     const body = req.body || {};
@@ -112,10 +114,11 @@ export default async function handler(
       provisionId,
       instanceName,
       region: deploymentRegion,
-      language: defaultLanguage || 'en',      governanceMode,
+      language: defaultLanguage || 'en',
+      governanceMode,
       tokenActivation,
       branding,
-    modules,
+      modules,
       bonusModules,
       createdAt: now,
       version: 'Zion OS v1.0.0',
@@ -126,3 +129,4 @@ export default async function handler(
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal error' });
   }
+}

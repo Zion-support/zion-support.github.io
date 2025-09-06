@@ -33,3 +33,4 @@ export default async function handler(
 
   res.setHeader('Allow', 'POST');
   return res.status(405).end('Method Not Allowed');
+}

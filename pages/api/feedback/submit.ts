@@ -21,3 +21,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   rows.push(entry);
   writeAll(rows);
   return res.status(200).json({ ok: true });
+}

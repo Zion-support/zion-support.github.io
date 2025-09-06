@@ -4,7 +4,7 @@ import path from 'path';
 import { getDisputeById } from '../../../../utils/fsdb';
 import {
   parseUserFromRequest,
-  ensureInvolvedOrAdmin,;
+  ensureInvolvedOrAdmin,
 } from '../../../../utils/auth';
 
 export default async function handler(
@@ -37,3 +37,4 @@ export default async function handler(
   );
   const stream = fs.createReadStream(att.path);
   stream.pipe(res);
+}

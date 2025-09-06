@@ -19,12 +19,20 @@ export default async function handler(
       c.providerId === 'pipedrive'
   );
   const results: any[] = [];
-   = await crm.syncContact(conn, {
+  for (const conn of connections) {
+    const log = {
+      id: `log-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      providerId: conn.providerId,
+      level: 'info',
+      action: 'sync_contact',
+    };
+    await crm.syncContact(conn, {
       company: job.company,
       contact: job.contact,
     });
     writeState(s => s.logs.push(log));
-    results.push({ providerId: conn.providerId, ok: true });  }
+    results.push({ providerId: conn.providerId, ok: true });
+  }
 
   // record Zapier event
   writeState(s => {
@@ -37,3 +45,4 @@ export default async function handler(
   });
 
   res.status(200).json({ ok: true, results });
+}

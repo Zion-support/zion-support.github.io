@@ -1,11 +1,15 @@
- import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
 
 const configPath = path.join(process.cwd(), 'data', 'dao', 'config.json');
 const cachePath = path.join(process.cwd(), 'data', 'dao', 'metrics.json');
+
 async function fetchJson(url: string) {
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   return resp.json();
+}
 
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
@@ -25,12 +29,14 @@ export default async function handler(
     const now = Date.now();
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
-      return res.status(200).json({ ...cache, cached: true });    }
+      return res.status(200).json({ ...cache, cached: true });
+    }
 
     const apiKey = process.env.ETHERSCAN_API_KEY || '';
     const tokenAddr = cfg.token.address;
 
-    // Top holders (using Etherscan token holder endpoint alternative: token supply holders is limited; use rich list approximation via token transactions + unique addresses)    // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
+    // Top holders (using Etherscan token holder endpoint alternative: token supply holders is limited; use rich list approximation via token transactions + unique addresses)
+    // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
     const transfersUrl = `${cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ''}`;
     const transfersJson = await fetchJson(transfersUrl);
     const txs = transfersJson?.result || [];
@@ -54,7 +60,8 @@ export default async function handler(
     const distribution = entries.map(e => ({
       address: e.address,
       percent:
-        total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0,    }));
+        total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0,
+    }));
 
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
     const activeProposals: any[] = [];
@@ -88,3 +95,4 @@ export default async function handler(
       .status(500)
       .json({ error: e?.message ?? 'Failed to load DAO metrics' });
   }
+}

@@ -8,3 +8,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   const invoices = store.listInvoices(companyId);
   return res.status(200).json(invoices);
+}

@@ -8,7 +8,7 @@ import {
   GptClassification,
   GptClassificationLabel,
   MonitoredSource,
-  StoredFraudRecord,;
+  StoredFraudRecord,
 } from '../../../utils/fraud/types';
 import { sendWarningEmail } from '../../../utils/email';
 
@@ -104,3 +104,4 @@ export default async function handler(
       .status(500)
       .json({ error: 'Internal error', details: e?.message || String(e) });
   }
+}

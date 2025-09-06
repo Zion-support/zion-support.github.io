@@ -64,3 +64,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .status(500)
       .json({ error: e?.message ?? 'Failed to generate certificate' });
   }
+}

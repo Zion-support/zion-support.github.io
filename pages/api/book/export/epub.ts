@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
 import { promises as fs } from 'fs';
-import { Epub } from 'epub';
+import { Epub } from 'epub-gen';
 
 export const config = {
   api: {

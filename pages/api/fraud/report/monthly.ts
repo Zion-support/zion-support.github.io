@@ -14,3 +14,4 @@ export default async function handler(
   const store = getFraudStore();
   const report = await store.generateMonthlyReport(month);
   res.status(200).json(report);
+}

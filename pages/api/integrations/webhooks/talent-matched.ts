@@ -27,7 +27,14 @@ export default async function handler(
   const crms = state.connections.filter(c =>
     ['salesforce', 'hubspot', 'zoho', 'pipedrive'].includes(c.providerId)
   );
-   = await crm.addProjectNote(conn, {
+  for (const conn of crms) {
+    const log = {
+      id: `log-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      providerId: conn.providerId,
+      level: 'info',
+      action: 'add_project_note',
+    };
+    await crm.addProjectNote(conn, {
       jobId: match.jobId,
       note: `Talent ${match.talentId} matched. ${match.summary || ''}`.trim(),
     });
@@ -35,3 +42,4 @@ export default async function handler(
   }
 
   res.status(200).json({ ok: true, eventId });
+}

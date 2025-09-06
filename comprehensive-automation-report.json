@@ -1,47 +1,43 @@
 {
-  "timestamp": "2025-09-06T09:19:19.691Z",
-  "totalDuration": 16676,
-  "successfulTasks": 1,
+  "timestamp": "2025-09-06T09:22:21.501Z",
+  "totalDuration": 93290,
+  "successfulTasks": 2,
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
-      "success": false,
-      "duration": 923,
-      "errors": [
-        "Command failed: npm install\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error path /workspace/package.json\nnpm error Merge conflict detected in your package.json.\nnpm error\nnpm error Please resolve the package.json conflict and retry.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-06T09_19_03_081Z-debug-0.log\n",
-        "Command failed: npm install @eslint/js --save-dev\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error path /workspace/package.json\nnpm error Merge conflict detected in your package.json.\nnpm error\nnpm error Please resolve the package.json conflict and retry.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-06T09_19_03_413Z-debug-0.log\n"
-      ],
+      "success": true,
+      "duration": 80288,
+      "errors": [],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
-      "duration": 3048,
+      "duration": 5840,
       "errors": [
-        "Command failed: npx tsc --noEmit --skipLibCheck\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
+        "spawnSync /bin/sh ENOBUFS",
         "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
       ],
       "warnings": []
     },
     "securityAudit": {
       "success": false,
-      "duration": 414,
+      "duration": 3375,
       "errors": [
-        "Command failed: npm audit --audit-level moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code ENOLOCK\nnpm error audit This command requires an existing lockfile.\nnpm error audit Try creating one first with: npm i --package-lock-only\nnpm error audit Original error: loadVirtual requires existing shrinkwrap file\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-06T09_19_07_026Z-debug-0.log\n"
+        "Command failed: npm audit --audit-level moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
       ],
       "warnings": []
     },
     "buildOptimization": {
       "success": false,
-      "duration": 162,
+      "duration": 550,
       "errors": [
-        "Command failed: npm run clean\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 12555 (line 169 column 1) while parsing near \"...run linkedin:cron\\\",\\n<<<<<<< HEAD\\n    \\\"au...\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-06T09_19_07_443Z-debug-0.log\n",
-        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 12555 (line 169 column 1) while parsing near \"...run linkedin:cron\\\",\\n<<<<<<< HEAD\\n    \\\"au...\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-06T09_19_07_522Z-debug-0.log\n"
+        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n> Build error occurred\n[Error: Configuring Next.js via 'next.config.cjs' is not supported. Please replace the file with 'next.config.js', 'next.config.mjs', or 'next.config.ts'.]\n"
       ],
       "warnings": []
     },
     "seoOptimization": {
       "success": false,
-      "duration": 38,
+      "duration": 39,
       "errors": [
         "Command failed: node scripts/generate-sitemap.cjs\n/workspace/scripts/generate-sitemap.cjs:11\n<<<<<<< HEAD\n^^\n\nSyntaxError: Unexpected token '<<'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n",
         "Command failed: node scripts/generate-search-index.cjs\n/workspace/scripts/generate-search-index.cjs:18\n<<<<<<< HEAD\n^^\n\nSyntaxError: Unexpected token '<<'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
@@ -50,7 +46,7 @@
     },
     "accessibilityImprovements": {
       "success": false,
-      "duration": 938,
+      "duration": 585,
       "errors": [
         "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
       ],
@@ -58,15 +54,15 @@
     },
     "performanceOptimization": {
       "success": false,
-      "duration": 174,
+      "duration": 990,
       "errors": [
-        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error code EJSONPARSE\nnpm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 12555 (line 169 column 1) while parsing near \"...run linkedin:cron\\\",\\n<<<<<<< HEAD\\n    \\\"au...\"\nnpm error JSON.parse Failed to parse JSON data.\nnpm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-06T09_19_08_582Z-debug-0.log\n"
+        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n> Build error occurred\n[Error: Configuring Next.js via 'next.config.cjs' is not supported. Please replace the file with 'next.config.js', 'next.config.mjs', or 'next.config.ts'.]\n"
       ],
       "warnings": []
     },
     "deployment": {
       "success": true,
-      "duration": 10975,
+      "duration": 1619,
       "errors": [],
       "warnings": []
     }
