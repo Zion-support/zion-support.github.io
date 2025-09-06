@@ -1,13 +1,10 @@
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
-
   Dialog,
   DialogContent,
   DialogHeader,;
   DialogTitle;
-
-
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -297,9 +294,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
 
           onKeyDown={handleKeyDown}
           aria-modal="true"
-
-
-
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -314,8 +308,15 @@ import { LoginModal } from '@/components/auth/LoginModal';
             <span className="block">Email:</span>
             <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
               {publisherEmail}
-
-
+            </a>
+          </div>
+        )}
+        <Form {...form}>
+          <form onSubmit={(e,) => e.preventDefault()} className="space-y-4">
+            <FormField
+              control = {form.control,}
+              name="subject"
+              render={({ field }: { field: any },) => (                <FormItem>
             </Link>
           </div>
         )}
@@ -326,8 +327,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
               name="subject"
               render={({ field }: { field: any }) => (
                 <FormItem>
-
-
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input
@@ -339,9 +338,11 @@ import { LoginModal } from '@/components/auth/LoginModal';
                   <FormMessage className="text-red-500" />
                 </FormItem>
               )}
-
-
-
+            />
+            <FormField
+              control = {form.control,}
+              name="message"
+              render={({ field }: { field: any },) => (                <FormItem>
             />;
             <FormField
               control = {form.control,}
@@ -349,8 +350,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
 
               render={({ field }: { field: any }) => (
                 <FormItem>
-
-
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
@@ -362,11 +361,15 @@ import { LoginModal } from '@/components/auth/LoginModal';
                   <FormMessage className="text-red-500" />
                 </FormItem>
               )}
-
-              disabled = {!form && form.formState.isValid || isSubmitting,}>;
-              <SendIcon className="mr-2" />;
+            />
+            <Button
+              onClick = {handleSend,}
+              className="w-full"
+              disabled = {!form.formState.isValid |isSubmitting,}            >
+              <SendIcon className="mr-2" />
               {isSubmitting ? 'Sending...' : 'Send Message'}
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </>;
   ) </>;
   );
@@ -438,9 +441,3 @@ import { LoginModal } from '@/components/auth/LoginModal';
         </DialogContent>;
       </FocusLock>;
     </Dialog>;
-
-
-    <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-    </>) </>);
-}
-;

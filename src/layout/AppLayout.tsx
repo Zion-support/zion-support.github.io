@@ -16,8 +16,7 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
 				{children ?? <Outlet />}
 			</main>
 			{!hideFooter && <Footer />}
-
-
+ursor/integrate-build-improve-and-re-verify-8f7d
 		</div>
 	)
 }

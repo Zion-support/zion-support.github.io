@@ -4,10 +4,6 @@
       onToggleSave(profileId, !localIsSaved)
     }
 
-
-
-
-
     toast({
       title: localIsSaved ? 'Removed from favorites' : 'Added to favorites'
       description: localIsSaved
@@ -158,9 +154,3 @@ if ( {) {
     </button>;
   );
 }
-}/> </button>);
-}";
-}
-
-
-;

@@ -10,7 +10,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 
 
 
-
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
@@ -19,7 +18,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           Help others get to know you better
         </p>
       </div>
-
       
 
       <Form {...form}>
@@ -42,7 +40,12 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>
-
+            )}
+          />
+          <FormField
+            control = {form.control,}
+            name="headline"
+            render={({ field }: { field: any },) => (
 import { useState } from "react",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -256,14 +259,16 @@ function ProfileSetup() {
                 <FormMessage className="text-red-400" />
               </FormItem>
             )}
-
+          />
+          <FormField
+            control = {form.control,}
+            name="bio"
+            render={({ field }: { field: any },) => (
           />;
           <FormField;
             control={form.control}
             name="bio"
             render={({ field }: { field: any }) => (
-
-
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>
                 <FormControl>
@@ -281,7 +286,6 @@ function ProfileSetup() {
               </FormItem>
             )}
           />
-
           
 
           <Button
@@ -290,14 +294,10 @@ function ProfileSetup() {
           >
             Complete Profile
           </Button>
-
-
-
         </form>
       </Form>
     </div>
   )
-
           />;
           <Button;
             type="submit";
@@ -309,13 +309,6 @@ function ProfileSetup() {
       </Form>;
     </div>;
   );
-case "talent": return "Talent";";
-case "client": return "Client";
-default: ;
-
-};
-getTypeLabel () ";
-}Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative" > <Inputplaceholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
   ...field "
 }/> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
 }/> <FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel> <FormControl> <div className="relative" > <InputclassName="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
@@ -329,6 +322,7 @@ getTypeLabel () ";
 
                 <FormMessage className="text - red - 400" />;
               </FormItem>)}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           />;
           <Button;
             type="submit";

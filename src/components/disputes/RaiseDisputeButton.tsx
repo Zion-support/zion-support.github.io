@@ -1,5 +1,33 @@
 return (
     <>;
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import {  Dialog
+  DialogContent
+  DialogHeader
+  DialogTitle
+  DialogDescription
+} from '@/components/ui/dialog'
+import { DisputeForm } from './DisputeForm'
+
+import { ShieldAlert } from 'lucide-react'
+  DialogDescription} from "@/components/ui/dialog"
+import { DisputeForm } from "./DisputeForm"
+import { useRouter } from 'next/router'
+interface RaiseDisputeButtonProps {
+  projectId: string;
+  milestoneId?: string;
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+  className?: string
+
+export function RaiseDisputeButton({
+Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   projectId: string,
   milestoneId?: string,
@@ -9,9 +37,6 @@ return (
 }
 
 export function RaiseDisputeButton({ 
-
-
-
   projectId,
   milestoneId, 
   variant = "outline", 
@@ -69,10 +94,11 @@ export function RaiseDisputeButton({
             project_id={project_id}
             milestone_id={milestone_id}
             onDisputeCreated={handleDisputeCreated}
-            on_cancel={() => setIsDialogOpen (false)}          />;
-        </DialogContent>;
-      </Dialog>;
-    </>);
+            onCancel={() => setIsDialogOpen(false)}          />
+        </DialogContent>
+      </Dialog>
+    </>
+  )
 }
 
 
@@ -138,6 +164,6 @@ export function RaiseDisputeButton({;
       </Dialog>;
     </>;
   );
-
+};
 }
 ;

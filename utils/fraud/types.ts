@@ -1,13 +1,18 @@
-
-// Fraud detection types;
-export type AdminActionType =;
-  | 'ban_user';
-  | 'suspend_user';
-  | 'flag_content';
-  | 'remove_content';
-  | 'investigate';
+// Fraud detection types
+export type AdminActionType =
+  | 'ban_user'
+  | 'suspend_user'
+  | 'flag_content'
+  | 'remove_content'
+  | 'investigate'
   | 'dismiss';
   | 'escalate';
+<<<<<<< HEAD
+export interface AdminAction {
+
+
+export interface AdminAction {;
+=======
 ;
 
 export interface AdminAction {
@@ -17,6 +22,7 @@ export interface AdminAction {
 export interface AdminAction {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   case_id: string;
   type: AdminActionType;
@@ -30,6 +36,11 @@ export interface AdminAction {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+export interface FraudDetectionResult {
+
+export interface FraudDetectionResult {;
+=======
 export interface FraudDetectionResult {
   is_fraud: boolean;
 =======
@@ -38,16 +49,23 @@ export interface FraudDetectionResult {
 
 export interface FraudDetectionResult {;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   isFraud: boolean;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   confidence: number;
   reasons: string[];
+<<<<<<< HEAD
 
   suggested_actions: AdminActionType[],
   metadata: Record < string, any>;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+export interface FraudDetectionConfig {
+
+export interface FraudDetectionConfig {;
+=======
 export interface FraudDetectionConfig {
 =======
 }
@@ -56,6 +74,7 @@ export interface FraudDetectionConfig {
 export interface FraudDetectionConfig {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   enabled: boolean;
   rules: {
     suspiciousActivity: {
@@ -79,6 +98,15 @@ export interface FraudDetectionConfig {;
   auto_actions: {
     enabled: boolean;
     actions: AdminActionType[];
+<<<<<<< HEAD
+    confidenceThreshold: number
+  }
+
+    confidenceThreshold: number,
+  };
+
+}
+=======
     confidence_threshold: number,
   }
 }
@@ -96,3 +124,4 @@ export interface FraudDetectionConfig {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

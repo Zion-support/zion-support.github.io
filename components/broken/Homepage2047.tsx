@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -21,12 +22,125 @@ import React, { useEffect, useState, useCallback } from 'react';
 
 
 =======
+import {
+<<<<<<< HEAD
+  ArrowRight
+  Play
+  TrendingUp
+  Brain
+  Shield
+  Rocket
+  Globe
+  Cpu
+  Database
+  Atom
+  Target
+  Star
+  Sparkles as SparklesIcon
+  Brain as BrainIcon
+  Atom as AtomIcon
+  Shield as ShieldIcon
+  Rocket as RocketIcon
+  Zap
+  Eye
+  Heart
+  Infinity
+  ChevronRight
+  ChevronLeft
+  ExternalLink
+  Users
+  Award
+  Clock
+  CheckCircle
+  Zap as ZapIcon
+  DollarSign
+  BarChart3
+  Palette
+  Cloud
+  Network
+  ShoppingCart
+  Settings
+  Building
+  Monitor
+  Layers
+  Globe2
+  Lock
+  Code
+  Server
+  Phone
+  Search
+  Filter
+  Grid
+  List
+  Eye as EyeIcon
+  ArrowUpRight
+  Star as StarIcon
+  Sparkles
+  Target as TargetIcon;} from 'lucide-react';import {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 import {motion, AnimatePresence} from 'framer-motion';
 import Link from 'next / link';
 import {
+<<<<<<< HEAD
+  ArrowRight
+  Play
+  TrendingUp
+  Brain
+  Shield
+  Rocket
+  Globe
+  Cpu
+  Database
+  Atom
+  Target
+  Star
+  Sparkles as SparklesIcon
+  Brain as BrainIcon
+  Atom as AtomIcon
+  Shield as ShieldIcon
+  Rocket as RocketIcon
+  Zap
+  Eye
+  Heart
+  Infinity
+  ChevronRight
+  ChevronLeft
+  ExternalLink
+  Users
+  Award
+  Clock
+  CheckCircle
+  Zap as ZapIcon
+  DollarSign
+  BarChart3
+  Palette
+  Cloud
+  Network
+  ShoppingCart
+  Settings
+  Building
+  Monitor
+  Layers
+  Globe2
+  Lock
+  Code
+  Server
+  Phone
+  Search
+  Filter
+  Grid
+  List
+  Eye as EyeIcon
+  ArrowUpRight
+  Star as StarIcon
+  Sparkles
+  Target as TargetIcon;} from 'lucide-react';import {
+=======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ArrowRight,
   Play,
   TrendingUp,
@@ -81,8 +195,11 @@ import {
 
   Sparkles,;
   Target as TargetIcon,;} from 'lucide-react';import { ;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -270,9 +387,8 @@ const Homepage2047: React.FC = () => {
     ...innovative2025AIAutonomousEcosystemV2,
     ...emergingTechBreakthroughs2025V4,
     ...innovative2025ITInfrastructureV2,    ...innovative2025AIAutonomousEcosystemV2;
-
     ...emergingTechBreakthroughs2025V4;
-    ...innovative2025ITInfrastructureV2;
+    ...innovative2025ITInfrastructureV2
   ];
 
     return allInnovativeServices.filter(service => 
@@ -315,85 +431,21 @@ if (return allInnovativeServices) {
 ;
   const categories = [;
     {
-      id: 'all',
-      name: 'All Services',
-      icon: SparklesIcon,
-      color: 'from - purple - 500 to - pink - 500',
-      count: allInnovativeServices.length,
-    },
-    {
-      id: 'ai',
-      name: 'AI & Autonomous',
-      icon: BrainIcon,
-      color: 'from - cyan - 500 to - blue - 500',
-      count: innovative2025AIAutonomousEcosystemV2.length,
-    },
-    {
-      id: 'quantum',
-      name: 'Quantum & Emerging',
-      icon: AtomIcon,
-      color: 'from - blue - 500 to - indigo - 500',
-      count: emergingTechBreakthroughs2025V4.length,
-    },
-    {
-      id: 'it',
-      name: 'IT Infrastructure',
-      icon: Cpu,
-      color: 'from - emerald - 500 to - teal - 500',
-      count: innovative2025ITInfrastructureV2.length,
-    },
-  ];
-;
-  const features = [;
-    {
-      icon: Brain,
-      title: 'AI Autonomous Ecosystem 2025',
-      description: 'Revolutionary autonomous AI solutions',
-      href: '/2025 - innovative - services - showcase - v2',
-      color: 'from - purple - 500 to - pink - 500',
-    },
-    {
-      icon: Atom,
-      title: 'Quantum AI Neural Networks 2025',
-      description: 'Quantum - powered AI with consciousness',
-      href: '/quantum - ai - neural - network - fusion - platform - 2025',
-      color: 'from - blue - 500 to - cyan - 500',
-    },
-    {
-      icon: Shield,
-      title: 'Quantum Cybersecurity Intelligence 2025',
-      description: 'Quantum - resistant security with AI',
-      href: '/quantum - cybersecurity - intelligence - platform - 2025',
-      color: 'from - red - 500 to - orange - 500',
-    },
-    {
-      icon: Rocket,
-      title: 'Space Resource Intelligence 2025',
-      description: 'AI - powered space resource discovery',
-      href: '/space - resource - intelligence - platform - 2025',
-      color: 'from - indigo - 500 to - purple - 500',
-    },
-    {
-      icon: Cpu,
-      title: 'Autonomous DevOps Intelligence 2025',
-      description: 'AI - powered DevOps optimization',
-      href: '/autonomous - devops - intelligence - platform - 2025',
-      color: 'from - emerald - 500 to - teal - 500',
-    },
-    {
-      icon: Database,
-      title: 'Edge Computing Orchestration 2025',
-      description: 'Edge computing optimization platform',
-      href: '/edge - computing - orchestration - platform - 2025',
-      color: 'from - yellow - 500 to - orange - 500',
-    },
-  ];
-;
-  const stats = [;
-    {
-=======
-
-
+      number: `${allInnovativeServices.length}+`
+      label: 'Innovative Services'
+      icon: Star
+    }
+    { number: '99.99%', label: 'Uptime Guarantee', icon: TrendingUp }
+    { number: '24/7', label: 'AI Intelligence Available', icon: Brain }
+    { number: '300+', label: 'Countries Served', icon: Globe },  ];    { number: `${allInnovativeServices.length}+`, label: "Innovative Services", icon: Star }
+    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp }
+    { number: "24/7", label: "AI Intelligence Available", icon: Brain }
+    { number: "300+", label: "Countries Served", icon: Globe }
+  const fadeInUp = {
+    initial: { opacity: 0, y: 60 }
+    animate: { opacity: 1, y: 0 }
+    transition: { duration: 0.6 },  };    transition: { duration: 0.6 }
+  }
       number: `${allInnovativeServices.length}+`,
       label: 'Innovative Services',
       icon: Star,
@@ -404,20 +456,48 @@ if (return allInnovativeServices) {
     { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp },
     { number: "24 / 7", label: "AI Intelligence Available", icon: Brain },
     { number: "300+", label: "Countries Served", icon: Globe }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  ];
+
+  ];
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
+<<<<<<< HEAD
+    transition: { duration: 0.6 },  };
+
+    transition: { duration: 0.6 },  };    transition: { duration: 0.6 }
+    transition: { duration: 0.6 },  };
+
+=======
+<<<<<<< HEAD
+    transition: { duration: 0.6 },  };
+
+=======
+<<<<<<< HEAD
+    transition: { duration: 0.6 },  };    transition: { duration: 0.6 }
+=======
+    transition: { duration: 0.6 },  };
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const staggerContainer = {
     animate: {
       transition: {
@@ -572,22 +652,87 @@ if (return allInnovativeServices) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden">;
       {/* Futuristic Background */}
-
+      <UltraFuturisticBackground2047 />
+      {/* Navigation */}
+      <UltraFuturisticNavigation2047 />
 
       {/* Navigation */}
       <UltraFuturisticNavigation2047 />;
 
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Hero Section */}
-      <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>;
-        <div className='max-w-7xl mx-auto w-full'>;
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>            {/* Left Content */}      <section className="relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">;
-        <div className="max-w-7xl mx-auto w-full">;
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">;
+      <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>
+        <div className='max-w-7xl mx-auto w-full'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>            {/* Left Content */}      <section className="relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              className='space-y-8'
+            >
+              <div className='space-y-6'>                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium'              className="space-y-8"
+            >
+              <div className="space-y-6">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium'
+                >
+                  <Sparkles className='w-4 h-4' />
+                  <span>Innovating the Future Since 2025</span>
+                </motion.div>
+                <h1 className='text-5xl md:text-7xl font-bold leading-tight'>
+                  <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
+                    Revolutionary
+                  </span>
+                  <br />
+                  <span className='text-white'>Technology Solutions</span>
+                  <br />
+                  <span className='bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent'>                    for 2047 & Beyond
+                  </span>
+                </h1>
+                >
+                  <Sparkles className="w-4 h-4" />
+                  <span>Innovating the Future Since 2025</span>
+                </motion.div>
+                <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+                  <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                    Revolutionary
+                  </span>
+                  <br />
+                  <span className="text-white">Technology Solutions</span>
+                  <br />
+                  <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+                    for 2047 & Beyond
+                  </span>
+                </h1>
+                <p className='text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl'>
+                  Discover our cutting-edge micro SAAS services, AI autonomous
+                  ecosystems, quantum computing breakthroughs, and
+                  next-generation IT infrastructure that are shaping the future
+                  of technology.                </p>                <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl">
+                  Discover our cutting-edge micro SAAS services, AI autonomous ecosystems, quantum computing breakthroughs, and next-generation IT infrastructure that are shaping the future of technology.
+                </p>
+              </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
       
 =======
@@ -622,12 +767,34 @@ if (return allInnovativeServices) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* CTA Buttons */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className='flex flex-col sm:flex-row gap-4'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
@@ -661,12 +828,15 @@ if (return allInnovativeServices) {
 
                 <Link
                   href="/contact"
-                  className="group border-2 border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 hover:border-cyan-500 transition-all duration-200 flex items-center justify-center space-x-2">;
-                  <span>Get Started</span>;
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />;
-                </Link>;
-              </motion && motion.div>;
+                  className="group border-2 border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 hover:border-cyan-500 transition-all duration-200 flex items-center justify-center space-x-2"
+                >
+                  <span>Get Started</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                </Link>
+              </motion.div>
 
+<<<<<<< HEAD
+=======
 
 =======
 
@@ -674,11 +844,28 @@ if (return allInnovativeServices) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Stats */}
               <motion&& motion.div
                 variants={staggerContainer}
+                initial='initial'
+                animate='animate'
+                className='grid grid-cols-2 md:grid-cols-4 gap-6'              >                initial="initial"
+                animate="animate"
+                className="grid grid-cols-2 md:grid-cols-4 gap-6"
+                className='grid grid-cols-2 md:grid-cols-4 gap-6'              >
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 {stats.map((stat, index) => (
                   <motion.div
@@ -690,7 +877,13 @@ if (return allInnovativeServices) {
                     <div className='text-2xl font-bold text-cyan-400 mb-1'>
                       {stat.number}
                     </div>
-
+                    <div className='text-sm text-gray-400'>{stat.label}</div>                  </motion.div>                    className="text-center"
+                  >
+                    <div className="text-2xl font-bold text-cyan-400 mb-1">{stat.number}</div>
+                    <div className="text-sm text-gray-400">{stat.label}</div>
+                ))}
+              </motion.div>
+            </motion.div>
                     <div className='text-sm text-gray-400'>{stat.label}</div>                  </motion.div>
 
 
@@ -699,6 +892,8 @@ if (return allInnovativeServices) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 
+<<<<<<< HEAD
+=======
               </motion && motion.div>;
             </motion && motion.div>;
 
@@ -708,11 +903,21 @@ if (return allInnovativeServices) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Right Content - Featured Service */}
             <motion&& motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.3 }}
+              className='relative'
+            >
+              <AnimatePresence mode='wait'>                <motion.div              className="relative"
+            >
+              <AnimatePresence mode="wait">
+                <motion.div
 
+<<<<<<< HEAD
+=======
 
 =======
 
@@ -720,15 +925,22 @@ if (return allInnovativeServices) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   key={currentServiceIndex}
                   initial={{ opacity: 0, scale: 0 && 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.5 }}
+                  className='relative'
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
                   <div className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm'>
                     <div className='flex items-center justify-between mb-6'>
@@ -872,14 +1084,15 @@ if (return allInnovativeServices) {
                       href={featuredServices[currentServiceIndex]?.slug |'#'}
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block"
 
-=======
-
 
                     >
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       Learn More
 
                     </Link>;
@@ -904,10 +1117,13 @@ if (return allInnovativeServices) {
         <div className="max-w-7xl mx-auto">
           <motion.div
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
                   className='relative';
@@ -1024,12 +1240,17 @@ if (return allInnovativeServices) {
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className='text-center mb-16'
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary Service Categories
@@ -1068,10 +1289,24 @@ if (return allInnovativeServices) {
 
 =======
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Category Cards */}
           <motion&& motion.div
             variants={staggerContainer}
@@ -1081,7 +1316,47 @@ if (return allInnovativeServices) {
                 className='group relative';
                 <Link;
                   href={
+                    category.id === 'all'
+                      ? '/2025-innovative-services-showcase-v2'
+                      : `/2025-innovative-services-showcase-v2?category=${category.id}`
+                  }
+                  className='block h-full'
+                >
+                  <div className='h-full bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl p-8 border border-gray-700/30 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 group-hover:shadow-2xl group-hover:shadow-cyan-500/25'>
+                    <div className='flex items-center justify-between mb-6'>
+                      <div
+                        className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${category.color} flex items-center justify-center`}
+                      >
+                        <category.icon className='w-8 h-8 text-white' />
+                      </div>
+                      <div className='text-right'>
+                        <div className='text-2xl font-bold text-cyan-400'>
+                          {category.count}
+                        </div>
+                        <div className='text-xs text-gray-400'>Services</div>
+                      </div>
+                    </div>
+                    <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200'>
+                      {category.name}
+                    </h3>
+                    <div className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200'>
+                      <span className='text-sm font-medium'>
+                        Explore Services
+                      </span>
+                      <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200' />                    </div>
+                    <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200">
+                      <span className="text-sm font-medium">Explore Services</span>
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
+<<<<<<< HEAD
+=======
 
       {/* Featured Services Grid */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
@@ -1093,16 +1368,20 @@ if (return allInnovativeServices) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Featured Services Grid */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
                     category.id === 'all';
@@ -1160,12 +1439,17 @@ if (return allInnovativeServices) {
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className='text-center mb-16'
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Featured Innovative Services
@@ -1204,14 +1488,66 @@ if (return allInnovativeServices) {
 
 =======
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Services Grid */}
           <motion&& motion.div
             variants={staggerContainer}
+            initial='initial'
+            whileInView='animate'
+            viewport={{ once: true }}
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'          >            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                className='group relative'
+                <Link href={feature.href} className='block h-full'>
+                  <div className='h-full bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl p-8 border border-gray-700/30 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 group-hover:shadow-2xl group-hover:shadow-cyan-500/25'>
+                    <div
+                      className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6`}
+                    >
+                      <feature.icon className='w-8 h-8 text-white' />
+                    </div>
+                    <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200'>
+                      {feature.title}
+                    </h3>
+                    <p className='text-gray-300 mb-6 leading-relaxed'>
+                      {feature.description}
+                    </p>
+                    <div className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200'>
+                      <span className='text-sm font-medium'>Learn More</span>
+                      <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200' />                    </div>
+                    <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200">
+                      <span className="text-sm font-medium">Learn More</span>
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
 
+<<<<<<< HEAD
+=======
 
 =======
 
@@ -1219,6 +1555,7 @@ if (return allInnovativeServices) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* View All Services CTA */}
           <motion&& motion.div
 =======
@@ -1236,8 +1573,20 @@ if (return allInnovativeServices) {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='text-center mt-16'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Link
@@ -1252,6 +1601,16 @@ if (return allInnovativeServices) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <Link
               href="/2025-innovative-services-showcase-v2"
+<<<<<<< HEAD
+              className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+            >
+              <span>View All {allInnovativeServices.length}+ Services</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+=======
 
               className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25">;
               <span>View All {allInnovativeServices && allInnovativeServices.length}+ Services</span>;
@@ -1262,9 +1621,24 @@ if (return allInnovativeServices) {
       </section>;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CTA Section */}
+      <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-4xl mx-auto text-center'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -1415,16 +1789,40 @@ export default Homepage2047;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Footer */}
       <UltraFuturisticFooter2047 />
     </div>
   );
+<<<<<<< HEAD
+}
+};
+
+export default Homepage2047;  )
+}
+export default Homepage2047;
+
+export default Homepage2047;
+export default Homepage2047;
+=======
 
 };
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

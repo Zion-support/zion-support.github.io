@@ -1,8 +1,21 @@
 
+<<<<<<< HEAD
+import React from 'react';
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {ArrowLeft} from "lucide-react";
+import React from 'react',
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom",
+import { ArrowLeft } from "lucide-react",
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ProfileErrorStateProps {
   error: string | null;
 }
@@ -22,11 +35,22 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
         </Link>
       </Button>
     </div>
+<<<<<<< HEAD
+  );
+}
+  )
+  )
+import React from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Link } from "react-router-dom",;
+import { ArrowLeft } from "lucide-react";
+=======
 
 import React from 'react';
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
 import {ArrowLeft} from "lucide-react";
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ProfileErrorStateProps {;
   error: string | null;
 }
@@ -44,6 +68,10 @@ export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
     </div>;
   );
 }
+<<<<<<< HEAD
+;
+;
+=======
 
 =======
 import React from './react';
@@ -85,3 +113,4 @@ function ProfileErrorState() {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

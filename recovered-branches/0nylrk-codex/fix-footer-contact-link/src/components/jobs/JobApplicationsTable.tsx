@@ -1,8 +1,14 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from "react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -11,17 +17,30 @@ import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} fr
 interface JobApplicationsTableProps {;
   jobId: string;
 }
+export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-
-export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;
-  const { ;
-    applications, ;
-    isLoading, ;
-    error, ;
-    updateApplicationStatus, ;
-
+  const {
+    applications
+    isLoading
+    error
+    updateApplicationStatus
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
+
+  const {
+    applications
+    isLoading
+    error
+    updateApplicationStatus
+  const { 
+    applications, 
+    isLoading, 
+    error, 
+    updateApplicationStatus, ;
+=======
 
   const { 
     applications, 
@@ -30,12 +49,31 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
     updateApplicationStatus, ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     markApplicationAsViewed;
     refetch;
   } = useJobApplications(jobId);
   const [processingId, setProcessingId] = useState<string | null>(null);
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
   const [showScoreDialog, setShowScoreDialog] = useState(false);
+  const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {
+    setProcessingId(applicationId)
+    try {
+      await updateApplicationStatus(applicationId, newStatus);
+      // If it's not already viewed, mark it as viewed
+      const application = applications.find(app => app.id === applicationId);
+      if (application && !application.viewed_at) {
+        await markApplicationAsViewed(applicationId)
+import { useState } from "react",
+import { JobApplication, ApplicationStatus } from "@/types/jobs",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import {
+  ApplicationsTable,
+  EmptyState,
+  ErrorState,
+  LoadingState,
+  ScoreDialog
+} from "./applications",
 
 
   const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {;
@@ -47,21 +85,30 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
       const application = applications && applications.find(app => app && app.id === applicationId);
       if (application && !application && application.viewed_at) {;
         await markApplicationAsViewed(applicationId);
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     } finally {;
       setProcessingId(null);
     }
+<<<<<<< HEAD
+  }
+  };
+
+=======
 
 
   };
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleViewScore = (application: JobApplication) => {
     setSelectedApplication(application)
     setShowScoreDialog(true)
@@ -72,9 +119,10 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
   const handleScoreUpdated = (updatedApplication: JobApplication) => {
     refetch()
   }
-=======
-  };
 
+  if (isLoading) {
+    return <LoadingState />
+  },;
   const handleViewScore = (application: JobApplication) => {;
     setSelectedApplication(application),;
     setShowScoreDialog(true);
@@ -91,28 +139,17 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
   if (isLoading) {;
     return <LoadingState />;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
   }
-
-
-  if (error) {;
-    return <ErrorState error={error} />;
+  if (error) {
+    return <ErrorState error={error} />
   }
-
-  if (applications && applications.length === 0) {;
-    return <EmptyState />;
-
+  if (applications.length === 0) {
+    return <EmptyState />
   }
 =======
-  }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       <ApplicationsTable

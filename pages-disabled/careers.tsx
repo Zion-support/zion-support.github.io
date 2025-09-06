@@ -20,7 +20,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Users, Rocket, Brain, Atom, Shield, Cloud;
@@ -39,12 +38,19 @@ function CareersPage() {
   const open_positions = [;
 
     {
+<<<<<<< HEAD
+      title: "Senior AI Engineer"
+      department: "AI & Machine Learning"
+      title: "Senior AI Engineer",
+      department: "AI & Machine Learning",;
+=======
 
 
       title: "Senior AI Engineer",
       department: "AI & Machine Learning",;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       location: "San Francisco, CA / Remote";
 
 export default function CareersPage() {;
@@ -404,6 +410,9 @@ export default function CareersPage() {;
                 <p className="text-white/70">{benefit && benefit.description}</p>;
               </motion && motion.div>;
             ))}
+          </div>
+        </div>
+      </section>
 
           </div>;
         </div>;
@@ -418,10 +427,24 @@ export default function CareersPage() {;
 
 =======
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Open Positions */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -447,6 +470,10 @@ export default function CareersPage() {;
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300">;
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">;
                   <div className="flex-1">;
@@ -486,7 +513,7 @@ export default function CareersPage() {;
                             <div className="w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full mr-2" />;
 
                             {req}
-                          </li>;
+                          </li>
                         ))}
 
                       </ul>;
@@ -498,8 +525,22 @@ export default function CareersPage() {;
                           <span key={benefit} className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded">;
 
                             {benefit}
-                          </span>;
+                          </span>
                         ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="lg:flex-shrink-0">
+                    <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
+                      Apply Now
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
                       </div>;
                     </div>;
@@ -558,6 +599,7 @@ export default function CareersPage() {;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
+<<<<<<< HEAD
 =======
                       </div>
                     </div>
@@ -588,6 +630,8 @@ export default function CareersPage() {;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text - center mb - 16";
@@ -738,46 +782,8 @@ export default function CareersPage() {;
   );
 }
 
-=======
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className="py - 20 px - 6">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >;
-            <h2 className="text - 4xl font - bold text - white mb - 6">;
-              Don't See the Right Role?;
-            </h2>;
-            <p className="text - xl text - white / 70 mb - 8 max - w-2xl mx - auto">;
-              We're always looking for talented individuals. Send us your resume and let's discuss how you can contribute to our mission.;
-            </p>;
-            <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
-              <button className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105">;
-                Send Resume;
-              </button>;
-              <button className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10">;
-                Contact Recruiting;
-              </button>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>);
+      <EnhancedFooter />
+    </div>
+  )
 }
-;
-      <EnhancedFooter />;
-    </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

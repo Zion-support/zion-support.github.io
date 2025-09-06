@@ -1,26 +1,29 @@
 
-
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,;
-
-=======
-
 import React from "react";
 import {
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
 TableRow,;
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
@@ -28,7 +31,59 @@ import { CalendarIcon, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
+<<<<<<< HEAD
+  const activities = [
+    {
+      id: 1
+      user: "Alex Johnson"
+      action: "Posted a job"
+      target: "Senior AI Engineer"
+      timestamp: new Date(Date.now() - 1000 * 60 * 30)
+      category: "jobs"
+    }
+    {
+      id: 2
+      user: "Jamie Smith"
+      action: "Contacted candidate"
+      target: "Michael Chen"
+      timestamp: new Date(Date.now() - 1000 * 60 * 120)
+      category: "candidates"
+    }
+    {
+      id: 3
+      user: "Sam Williams"
+      action: "Updated job"
+      target: "Frontend Developer"
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 5)
+      category: "jobs"
+    }
+    {
+      id: 4
+      user: "Alex Johnson"
+      action: "Added team member"
+      target: "Chris Rodriguez"
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24)
+      category: "team"
+    }
+    {
+      id: 5
+      user: "Taylor Brown"
+      action: "Viewed candidate profile"
+      target: "Sarah Kim"
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2)
+      category: "candidates"
+    }
+    {
+      id: 6
+      user: "Jamie Smith"
+      action: "Updated budget"
+      target: "Monthly spending cap"
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3)
+      category: "billing"
+    }
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       id: 6,
       user: "Jamie Smith",
       action: "Updated budget",
@@ -36,9 +91,18 @@ import { Input } from "@/components/ui/input";
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
       category: "billing",
     },;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];
-
+  // Function to format the date in a readable way
+  const formatDate = (date: Date) => {
+    const now = new Date();
+    const diffMs = now.getTime() - date.getTime();
+    const diffMins = Math.floor(diffMs / (1000 * 60));
+    const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
 
 import React from "react",
 import {
@@ -105,8 +169,6 @@ export function TeamActivity() {
     const diffMins = Math.floor(diffMs / (1000 * 60)),
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60)),
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)),
-
-
 
     if (diffMins < 60) {
 =======
@@ -181,12 +243,10 @@ export function TeamActivity() {;
     } else {;
       return date && date.toLocaleDateString();
     }
-
-  };
-
-  const getCategoryBadge = (category: string) => {;
-    const categoryStyles: Record<;
-      string,;
+  }
+  const getCategoryBadge = (category: string) => {
+    const categoryStyles: Record<
+      string
       { variant: "default" | "outline" | "secondary" | "destructive" }
     > = {;
       jobs: { variant: "default" },;
@@ -198,8 +258,6 @@ export function TeamActivity() {;
 
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   }
-=======
-
   },
 
   const getCategoryBadge = (category: string) => {
@@ -212,8 +270,6 @@ export function TeamActivity() {;
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
   return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -225,9 +281,34 @@ export function TeamActivity() {;
               type="search"
               placeholder="Search activities..."
               className="w-[200px] md:w-[300px] pl-9"
-
-=======
-
+            />
+          </div>
+          <Button variant="outline" size="icon" className="h-10 w-10">
+            <CalendarIcon className="h-4 w-4" />
+          </Button>
+        </div>
+      </div>
+      <div className="rounded-md border">
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>User</TableHead>
+              <TableHead>Activity</TableHead>
+              <TableHead>Target</TableHead>
+              <TableHead>Category</TableHead>
+              <TableHead>Time</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {activities.map((activity) => (
+              <TableRow key={activity.id}>
+                <TableCell className="font-medium">{activity.user}</TableCell>
+                <TableCell>{activity.action}</TableCell>
+                <TableCell>
+                  <span className="font-medium">{activity.target}</span>
+                </TableCell>
+                <TableCell>{getCategoryBadge(activity.category)}</TableCell>
+                <TableCell className="text-muted-foreground">
 import React from "react",;
 import {;
   Table,;
@@ -520,8 +601,11 @@ if ( {) {
 =======
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>;
                 <TableCell className="text-muted-foreground">;
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
@@ -529,10 +613,12 @@ if ( {) {
           </TableBody>
         </Table>
       </div>
-
       
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -545,10 +631,14 @@ if ( {) {
         </Button>
       </div>
     </div>
-
+  );
+}
   )
 }
 ;
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

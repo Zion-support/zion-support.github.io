@@ -341,5 +341,3 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

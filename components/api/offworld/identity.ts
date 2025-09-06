@@ -1,12 +1,17 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { buildIdentityProfile } from "@/utils/offworld/identity";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
+  try {
+    const { address } = req.query as { address?: string }
+    const profile = await buildIdentityProfile(address);
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return res.status(200).json(profile);
 
 =======
@@ -43,6 +48,10 @@ function handler() {
   }
   try {
     const { address } = req.query as { address?: string }
+<<<<<<< HEAD
+  try {;
+    const { address } = req.query as { address?: string };
+=======
     const profile = await buildIdentityProfile (address);
     return res.status (200).json (profile);
 =======
@@ -50,6 +59,7 @@ function handler() {
   try {;
     const { address } = req.query as { address?: string };
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

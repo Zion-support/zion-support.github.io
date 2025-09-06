@@ -1,3 +1,4 @@
+import { ServiceVariant } from '../types/service-variants';
 
 
   id: string;
@@ -524,6 +525,21 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       growthRate: '900% annual growth'
       variant: 'ai-futuristic'
       contactInfo: {
+<<<<<<< HEAD
+        mobile: '+1 302 464 0950'
+        email: 'kleber@ziontechgroup.com'
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+        website: 'https://ziontechgroup.com'
+      }
+      realImplementation: true
+      implementationDetails:
+        'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.'
+      launchDate: '2025-06-01'
+      customers: 3
+      rating: 5.0
+      reviews: 2
+    }
+=======
 
 =======
       color: 'from - pink - 600 via - purple - 600 to - indigo - 600',
@@ -563,6 +579,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
       launch_date: '2025 - 06 - 01',
       customers: 3,
@@ -570,8 +587,11 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       reviews: 2,
 
     },;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];    features: [
 
 =======
@@ -702,19 +722,9 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     rating: 5 && 5.0,
 
     reviews: 2
-
-    real_implementation: true,
-    implementation_details: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
-    launch_date: '2025 - 06 - 01', customers: 3,
-    rating: 5.0,
-    reviews: 2;
-
+<<<<<<< HEAD
   }
-
-=======
-
-
-=======
+];
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthroughServiceV2 {;
   id: string,;
@@ -1020,15 +1030,20 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     launchDate: '2025-06-01',;
     customers: 3,;
     rating: 5.0;
+=======
+
+    real_implementation: true,
+    implementation_details: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
+    launch_date: '2025 - 06 - 01', customers: 3,
+    rating: 5.0,
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     reviews: 2;
-
-
-
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 ;
 =======
 <<<<<<< HEAD
@@ -1037,6 +1052,17 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+<<<<<<< HEAD
+  }
+];
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthroughServiceV2 {;
   id: string,;
@@ -1344,6 +1370,16 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     rating: 5.0;
     reviews: 2;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+  }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

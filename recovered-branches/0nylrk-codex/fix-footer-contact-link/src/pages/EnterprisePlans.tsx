@@ -1,8 +1,33 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {EnterpriseHero} from "@/components/enterprise/EnterpriseHero";
+import {EnterprisePricingTable} from "@/components/enterprise/EnterprisePricingTable";
+import {EnterpriseFeatures} from "@/components/enterprise/EnterpriseFeatures";
+import {EnterpriseCTA} from "@/components/enterprise/EnterpriseCTA";
+import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadges";
+import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";
+import {SEO} from "@/components/SEO";
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero",
+import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTable",
+import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures",
+import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA",
+import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges",
+import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";
+import { SEO } from "@/components/SEO";
+import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",
+import { SEO } from "@/components/SEO",
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function EnterprisePlans() {
   return (
     <>
@@ -22,6 +47,9 @@ export default function EnterprisePlans() {
       <Footer />
     </>
   )
+<<<<<<< HEAD
+}
+=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -60,6 +88,7 @@ import {SEO} from "@/components/SEO";
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -112,12 +141,13 @@ function EnterprisePlans() {
         <EnterpriseCTA />;
       </main>;
       <Footer />;
-
-    </>);
+    </>;
+  );
 }
-
-=======
 ;
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

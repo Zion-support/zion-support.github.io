@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+ trace: on-first-retry'
+}
+ trace: on-first-retry' 
+// Playwright.config utility
+export const Playwright.config = () => {
+  // Implementation here
+  return null;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 reporter: [ ['list'], ['json', {
 
   outputFile: playwright-logs/test-results && results.json' 
@@ -92,9 +100,6 @@ reporter: [ ['list'], ['json', {
   //     name: firefox',  //     use: { ...devices['Desktop Firefox'] },  //   }
   //   {
 
+  //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   }
+  // ]
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -7,10 +7,16 @@ files && files.forEach((file) => {
     const filePath = path && path.join(process && process.cwd(), file);
     let content = fs && fs.readFileSync(filePath, "utf8");
     let modified = false;
+<<<<<<< HEAD
+    // Fix import statements missing semicolons
+
+    // Fix import statements missing semicolons;
+=======
 
 
     // Fix import statements missing semicolons;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
 
     const matches = content && content.match(importRegex);

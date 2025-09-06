@@ -1,19 +1,39 @@
 
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { useMessaging  } from '@/context/MessagingContext';
+import { MainNavigation  } from './MainNavigation';
+import { Logo  } from '@/components/header/Logo';
+import { ModeToggle  } from '@/components/ModeToggle';
+import { Menu, X  } from 'lucide-react';
+import { MobileMenu  } from '@/components/header/MobileMenu';
+import { useIsMobile  } from '@/hooks/use-mobile';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+export function AppHeader() {
+=======
 =======
 
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {use_messaging} from '@/context / MessagingContext';
 import {MainNavigation} from './MainNavigation';
 import {Logo} from '@/components / header / Logo';
 import {ModeToggle} from '@/components / ModeToggle';
 import {Menu, X} from 'lucide-react';
+<<<<<<< HEAD
+import {MobileMenu} from '@/components/header/MobileMenu';
+import {useIsMobile} from '@/hooks/use-mobile';
+import {MobileBottomNav} from '@/components/header/MobileBottomNav';
+export function AppHeader() {;
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isMobile = useIsMobile();
@@ -39,9 +59,13 @@ function AppHeader() {
 =======
   } catch (error) {
     console.warn('Messaging context not available')
+<<<<<<< HEAD
+  }
+=======
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',;
 import { useMessaging } from '@/context/MessagingContext',;
 import { MainNavigation } from './MainNavigation',;
@@ -61,11 +85,15 @@ export function AppHeader() {;
     unreadCount = count;
   } catch (error) {;
     console.warn('Messaging context not available');
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
+  
   return (
 
 
@@ -120,19 +148,13 @@ export function AppHeader() {;
           />;
           <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">;
             <MobileMenu
-              unreadCount={unreadCount} 
-              onClose={() => setMobileMenuOpen(false)} ;
-            />;
-          </div>;
-        </div>;
-
-      )}
-=======
+              unreadCount={unreadCount}
+              onClose={() => setMobileMenuOpen(false)}
+            />
+          </div>
+        </div>
       )}
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
 

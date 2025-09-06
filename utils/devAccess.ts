@@ -1,5 +1,17 @@
+<<<<<<< HEAD
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import type { NextApiRequest, NextApiResponse } from 'next';
+export type DevRole = 'admin' | 'maintainer' | 'contributor';
+export interface DevIdentity {
+
+export interface DevIdentity {;
+  isAuthenticated: boolean;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   roles: DevRole[];
   userId?: string;
 }
@@ -17,12 +29,18 @@
     return { connected: false }
   }
 }
+<<<<<<< HEAD
+export function getDevIdentity(req: NextApiRequest): DevIdentity {
+
+export function getDevIdentity(req: NextApiRequest): DevIdentity {;
+=======
 
 
 
 export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // TODO: integrate real auth; for now, check a header and env var for dev
 
   const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
@@ -41,14 +59,10 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   if (token && adminToken && token === adminToken) {
 
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
-
   }
   return { isAuthenticated: false, roles: [] }
 }
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
@@ -61,7 +75,10 @@ export function requireRoles(
   }
   const hasRole = identity.roles.some(r => allowed.includes(r));
   if (!hasRole) {
+<<<<<<< HEAD
     res.status(403).json({ error: 'Forbidden' });
+=======
+    res && res.status(403).json({ error: 'Forbidden' });
     return undefined;
   }
   return identity;
@@ -233,10 +250,13 @@ if ( {) {
   $2
 }
     res.status (403).json ({ error: 'Forbidden' });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return undefined;
   }
   return identity;
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -244,3 +264,4 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

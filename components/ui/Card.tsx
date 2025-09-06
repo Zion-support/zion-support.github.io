@@ -39,12 +39,22 @@ const CardFooter = React.forward_ref<;
     className={cn ("flex items - center p - 6 pt - 0", class_name)}
     {...props}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React from 'react';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+import React from 'react';
+import React from 'react',;
+<<<<<<< HEAD
 =======
 
-import React from 'react',;
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface CardProps {
   children: React.ReactNode;
   className?: string;
@@ -141,11 +151,32 @@ const Card: React.FC<CardProps> = ({
       {/* Hover glow effect */}
       {hover && (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
     </div>);
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      )}
+    </div>
+  )
+<<<<<<< HEAD
+}
+export default Card;
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+},
+export default Card,
+;
+<<<<<<< HEAD
+
+=======
 },
 export default Card,
 ;
@@ -153,11 +184,13 @@ export default Card,
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 
-
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+<<<<<<< HEAD
 =======
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

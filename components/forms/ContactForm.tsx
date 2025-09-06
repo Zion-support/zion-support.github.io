@@ -28,6 +28,10 @@ class ErrorBoundary extends React.Component {
 ;
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import {;
@@ -38,6 +42,7 @@ import {;
   CheckCircle,;
   AlertCircle,;
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -55,13 +60,21 @@ import {
   AlertCircle;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Mail,
   Phone,
   MapPin,
   Send,
 <<<<<<< HEAD
+<<<<<<< HEAD
   CheckCircle,
   AlertCircle,
+=======
+  CheckCircle,
+  AlertCircle,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const ContactForm: React.FC = () => {;
@@ -219,8 +232,6 @@ const ContactForm: React.FC = () => {
     } finally {
       setIsSubmitting (false);    }
   }
-;
-
   const services = [    } catch (error) {
 <<<<<<< HEAD
       setSubmitStatus ('error');
@@ -228,24 +239,17 @@ const ContactForm: React.FC = () => {
       setSubmitStatus('error')
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } finally {
-
-  };
-
-  const services = [    } catch (error) {;
-      setSubmitStatus('error');
-    } finally {;
-      setIsSubmitting(false),;
+      setIsSubmitting(false)
     }
-  };
-
-  const services = [;
-    'AI Development',;
-    'Cloud Architecture',;
-    'Digital Transformation',;
-    'IoT Platforms',;
-    'Blockchain Solutions',;
-    'Data Analytics',;
-    'Other',  ];    'AI DevelopmentCloud ArchitectureDigital TransformationIoT PlatformsBlockchain SolutionsData AnalyticsOther';
+  }
+  const services = [
+    'AI Development'
+    'Cloud Architecture'
+    'Digital Transformation'
+    'IoT Platforms'
+    'Blockchain Solutions'
+    'Data Analytics'
+    'Other',  ];    'AI DevelopmentCloud ArchitectureDigital TransformationIoT PlatformsBlockchain SolutionsData AnalyticsOther'
   ];
 
   const contactInfo = [;
@@ -287,11 +291,54 @@ const ContactForm: React.FC = () => {
 ;
   const contact_info = [;
     {
-      icon: Mail,
-      title: 'Email Us',
-      content: 'contact@ziontechgroup.com',
+      icon: Mail
+      title: 'Email Us'
+      content: 'contact@ziontechgroup.com'
+      href: 'mailto:contact@ziontechgroup.com'
+    },    {
+      icon: Phone
+      title: 'Call Us'
+      content: '+1 (555) 123-4567',      href: 'mailto:contact@ziontechgroup.com'
+    }
+    {
+      icon: Phone
+      title: 'Call Us'
+      content: '+1 (555) 123-4567'
+      href: 'tel:+15551234567'
+    },    {
+      icon: MapPin
+      title: 'Visit Us'
+      content: '123 Tech Street, Innovation City, IC 12345'
+      href: '#'
+    }
+  return (
+    <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>
+      {/* Background Elements */}
+      <div className='absolute inset-0'>
+        <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]' />
+        <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_50%)]' />
+      </div>
+      <div className='relative container mx-auto px-4'>        {/* Section Header */}      <div className="relative container mx-auto px-4">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className='text-center mb-16'
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
             Let&apos;s Start a
@@ -305,10 +352,7 @@ const ContactForm: React.FC = () => {
             goals.
           </p>
         </motion.div>
-
-          className="text-center mb-16"
-        >
-
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>          {/* Contact Information */}        >
           <h2 className="text-4xl md: text-6xl font-bold text-white mb-6">
             Let&apos,s Start a
             <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -382,16 +426,16 @@ const ContactForm: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {/* Contact Information */}
-          <motion&& motion.div
-=======
-
 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>          {/* Contact Information */}
 
           {/* Contact Information */}
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, x: -30 }}
@@ -462,8 +506,19 @@ const ContactForm: React.FC = () => {
                   whileInView={{ opacity: 1, x: 0 }}
 transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
                   viewport={{ once: true }}
+                  className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <info.icon className="w-6 h-6 text-white" />
@@ -478,7 +533,10 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
+            </div>
 
+<<<<<<< HEAD
+=======
             </div>;
 
 
@@ -488,13 +546,56 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Additional Info */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
               viewport={{ once: true }}
+              className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'
+            >
+              <h4 className='text-lg font-semibold text-white mb-3'>
+                Why Choose Zion Tech?
+              </h4>
+              <ul className='space-y-2 text-gray-300'>            >
+              <h4 className="text-lg font-semibold text-white mb-3">Why Choose Zion Tech?</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li className="flex items-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span>Expert team with 10+ years experience</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span>Proven track record of successful projects</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span>24/7 support and maintenance</span>
+                </li>
+                <li className='flex items-center space-x-2'>
+                  <CheckCircle className='w-5 h-5 text-green-400' />
+                  <span>Expert team with 10+ years experience</span>
+                </li>
+                <li className='flex items-center space-x-2'>
+                  <CheckCircle className='w-5 h-5 text-green-400' />
+                  <span>Proven track record of successful projects</span>
+                </li>
+                <li className='flex items-center space-x-2'>
+                  <CheckCircle className='w-5 h-5 text-green-400' />
+                  <span>24/7 support and maintenance</span>
+                </li>
+                <li className='flex items-center space-x-2'>
+                  <CheckCircle className='w-5 h-5 text-green-400' />                  <span>Competitive pricing and flexible solutions</span>                <li className="flex items-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span>Competitive pricing and flexible solutions</span>
+                </li>
+              </ul>
+            </motion.div>
+          </motion.div>
 
+<<<<<<< HEAD
+=======
 
 =======
 
@@ -502,14 +603,27 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Contact Form */}
           <motion&& motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
+            className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8'          >            className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
+            className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8'          >
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             {submitStatus === 'success' ? (
               <motion.div
@@ -867,8 +981,34 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
                     required
                     rows={5}
                     className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none'
+                    placeholder='Tell us about your project or inquiry...'                  />                  <label htmlFor="message" className="block text-white font-medium mb-2" htmlFor="input-
+                    Message *
+                  ">
+                    Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    onChange={handleChange}
+                    required
+                    rows={5}
+                    className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none'
+                    placeholder='Tell us about your project or inquiry...'                    className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                    placeholder="Tell us about your project or inquiry..."
+                    placeholder='Tell us about your project or inquiry...'                  />
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   />
                 </div>
                 {submitStatus === 'error' && (
@@ -912,6 +1052,11 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 };
 export default ContactForm;  );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ContactForm;
 
 
@@ -1031,9 +1176,17 @@ export default ContactForm;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   );
-
+}
 };
 
+export default ContactForm;  )
+}
+export default ContactForm;
 
+<<<<<<< HEAD
+export default ContactForm;
+export default ContactForm;
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

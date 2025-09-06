@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState, useEffect } from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {useDisputes} from "@/hooks/useDisputes";
@@ -22,6 +31,28 @@ export function DisputeDetail() {;
   const navigate = useNavigate();
   const { user } = useAuth();
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
+<<<<<<< HEAD
+import React, { useState, useEffect } from "react",
+import { useParams, useNavigate } from "react-router-dom",
+import { useDisputes } from "@/hooks/useDisputes",
+import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Separator } from "@/components/ui/separator",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { format, formatDistanceToNow } from "date-fns",
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
+import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",
+import { useAuth } from "@/hooks/useAuth",
+import { toast } from "sonner";
+export function DisputeDetail() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   const [dispute, setDispute] = useState<any>(null);
@@ -40,6 +71,24 @@ export function DisputeDetail() {;
 
   useEffect(() => {;
     if (!disputeId) return;
+import { toast } from "sonner",
+export function DisputeDetail() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const { disputeId } = useParams() as { disputeId?: string },
+  const navigate = useNavigate(),
+  const { user } = useAuth(),
+  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),
+  
+  const [dispute, setDispute] = useState<any>(null),
+  const [messages, setMessages] = useState<DisputeMessage[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+  const [message, setMessage] = useState(""),
+  const [isSending, setIsSending] = useState(false),
+  const [resolution, setResolution] = useState({
+    summary: "",
+    resolution_type: "compromise"}),
+  const [activeTab, setActiveTab] = useState("overview"),
 
     const loadDisputeData = async () => {;
 
@@ -89,21 +138,38 @@ export function DisputeDetail() {;
           navigate("/dashboard/disputes"),
           return
         }
-
+        setDispute(disputeData);
+        const messagesData = await getDisputeMessages(disputeId);
         setDispute(disputeData),
         
         const messagesData = await getDisputeMessages(disputeId),
-
         setMessages(messagesData)
       } catch (error) {
         console.error("Error loading dispute data:", error),
         toast.error("Failed to load dispute")
       } finally {
         setIsLoading(false)
+<<<<<<< HEAD
+      }
+    }
+    loadDisputeData()
+  }, [disputeId, navigate, getDisputeById, getDisputeMessages]);
+  const handleStatusChange = async (status: DisputeStatus) => {
+    if (!disputeId) return
+    const success = await updateDisputeStatus(disputeId, status);
+    if (success && dispute) {
+      setDispute({ ...dispute, status })
+    }
+  }
+  const handleResolveDispute = async () => {
+    if (!disputeId) return;
+  };
+=======
 
   };
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { useDisputes } from "@/hooks/useDisputes",;
@@ -168,25 +234,24 @@ export function DisputeDetail() {;
       setDispute({ ...dispute, status });
     }
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleResolveDispute = async () => {
     if (!disputeId) return,
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (!resolution.summary) {
       toast.error("Please provide a resolution summary");
       return
     }
-
-
+    const success = await resolveDispute(disputeId, resolution);
     
     const success = await resolveDispute(disputeId, resolution),
-
-
     if (success && dispute) {
       setDispute({
         ...dispute
@@ -196,18 +261,16 @@ export function DisputeDetail() {;
         resolved_at: new Date().toISOString()
       })
     }
-
-  };
-
-=======
-
+  }
+  const handleSendMessage = async () => {
+    if (!disputeId |!message.trim()) return;
+    setIsSending(true);
   },
 
   const handleSendMessage = async () => {
     if (!disputeId || !message.trim()) return,
     
     setIsSending(true),
-
     try {
       const success = await addDisputeMessage(disputeId, message, isAdmin),
       if (success) {
@@ -220,9 +283,22 @@ export function DisputeDetail() {;
       console.error("Error sending message:", error)
     } finally {
       setIsSending(false)
+<<<<<<< HEAD
+    }
+  }
+  if (isLoading) {
+    return (
+      <div className="p-8 text-center">
+        <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>
+        <p>Loading dispute details...</p>
+      </div>
+    )
+  }
+=======
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },;
 
   const handleResolveDispute = async () => {;
@@ -274,15 +350,17 @@ export function DisputeDetail() {;
         <p>Loading dispute details...</p>;
       </div>;
     );
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
-
-=======
+  if (!dispute) {
     return (
       <div className="p-8 text-center">
         <p>Dispute not found</p>
@@ -294,14 +372,22 @@ export function DisputeDetail() {;
   }
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
-
+      case "open": return "default";
+      case "under_review": return "secondary"
       case "open": return "default",
       case "under_review": return "secondary",
-
       case "resolved": return "outline", // Changed from "success" to "outline"
       case "closed": return "outline",
       default: return "default"
-
+    }
+  }
+  return (
+    <div className="container mx-auto p-4 space-y-6">
+      <div className="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <div className="flex items-center gap-2">
+            <h1 className="text-2xl font-bold">Dispute Case</h1>
+            <Badge variant={getStatusBadgeVariant(dispute.status)}>
 ;
 
   if (!dispute) {;
@@ -500,9 +586,12 @@ if ( {) {
           <div className="flex items-center gap-2">;
             <h1 className="text-2xl font-bold">Dispute Case</h1>;
             <Badge variant={getStatusBadgeVariant(dispute.status)}>;
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
@@ -521,44 +610,16 @@ if ( {) {
           )}
         </div>
       </div>
-=======
-;
-  return (
-    <div className="container mx - auto p - 4 space - y-6">;
-      <div className="flex flex - wrap items - center justify - between gap - 4">;
-        <div>;
-          <div className="flex items - center gap - 2">;
-            <h1 className="text - 2xl font - bold">Dispute Case</h1>;
-            <Badge variant={getStatusBadgeVariant (dispute.status)}>;
-              {dispute.status.replace ('_ ')}
-            </Badge>;
-          </div>;
-          <p className="text - muted - foreground">;
-            Reported {formatDistanceToNow (new Date (dispute.created_at), { add_suffix: true })}
-          </p>;
-        </div>;
-        <div className="flex gap - 2">;
-          <Button variant="outline" on_click={() => navigate ("/dashboard / disputes")}>;
-            Back to List;
-          </Button>;
-          {is_admin && dispute.status === "open" && (
-            <Button on_click={() => handleStatusChange ("under_review")}>;
-              Start Review;
-            </Button>)}
-        </div>;
-      </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {dispute.status === "resolved" && dispute.resolution_summary && (
-        <Alert className="bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green - 900">;
-          <Check className="h - 4 w - 4" />;
-          <AlertTitle > This dispute has been resolved</AlertTitle>;
-          <AlertDescription>;
+        <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
+          <Check className="h-4 w-4" />
+          <AlertTitle>This dispute has been resolved</AlertTitle>
+          <AlertDescription>
             {dispute.resolution_summary}
-
-
+          </AlertDescription>
+        </Alert>
+      )}
       
-
-
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
@@ -989,8 +1050,45 @@ if ( {) {
                           <Textarea;
                             placeholder="Enter resolution summary...";
                             value={resolution.summary}
-
-
+                            onChange={(e) => setResolution({ ...resolution, summary: e.target.value })}
+                            className="min-h-[100px]"
+                          />
+                          <div className="grid grid-cols-2 gap-4">
+                            <div>
+                              <label className="text-sm font-medium mb-1 block">Resolution Type</label>
+                              <select
+                                className="w-full p-2 border rounded"
+                                value={resolution.resolution_type}
+                                onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value })}
+                              >
+                                <option value="client_favor">In Client's Favor</option>
+                                <option value="talent_favor">In Talent's Favor</option>
+                                <option value="compromise">Compromise</option>
+                                <option value="dismissed">Dismissed</option>
+                              </select>
+                            </div>
+                          </div>
+                          <Button onClick={handleResolveDispute}>Resolve Dispute</Button>
+                        </div>
+                      </div>
+                    )}
+                    <div>
+                      <h3 className="font-medium mb-2">Admin Notes</h3>
+                      <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">
+                        {messages
+                          .filter(msg => msg.is_admin_note)
+                          .map((msg) => (
+                          <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">
+                            <div className="flex items-center justify-between mb-2">
+                              <div className="flex items-center gap-2">
+                                <Avatar className="h-6 w-6">
+                                  <AvatarImage src={msg.user_profile?.avatar_url} />
+                                  <AvatarFallback>
+                                    {msg.user_profile?.display_name?.[0] |'A'}
+                                  </AvatarFallback>
+                                </Avatar>
+                                <span className="text-sm font-medium">
+                                  {msg.user_profile?.display_name |'Admin'}
 ;
                     <div>;
                       <h3 className="font-medium mb-2">Admin Notes</h3>;
@@ -1009,8 +1107,6 @@ if ( {) {
                                 </Avatar>
                                 <span className="text-sm font-medium">
                                   {msg.user_profile?.display_name || 'Admin'}
-
-
                                 </span>
                               </div>
                               <span className="text-xs opacity-70">
@@ -1035,7 +1131,15 @@ if ( {) {
                           onClick={() => {
                             if (message.trim()) {
                               addDisputeMessage(disputeId!, message, true).then(() => {
+                                getDisputeMessages(disputeId!).then(setMessages);
 
+<<<<<<< HEAD
+                                setMessage("")
+                              })
+                                getDisputeMessages(disputeId!).then(setMessages),
+                                setMessage("")
+                              })
+=======
                     />;
                     <div className="flex justify-end">;
                       <Button onClick={handleSendMessage} disabled={isSending || !message && message.trim()}>;
@@ -1094,6 +1198,7 @@ if ( {) {
                         >;
                           Close Dispute;
                         </Button>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       </div>;
                     </div>;
 
@@ -1175,6 +1280,8 @@ if ( {) {
                                 getDisputeMessages(disputeId!).then(setMessages);
                                 setMessage("");
                               });
+<<<<<<< HEAD
+=======
 
 =======
                             on_change={(e) => set_resolution ({ ...resolution, summary: e.target.value })}
@@ -1250,127 +1357,84 @@ if ( {) {
                               })
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             }
                           }}
-                        >;
-                          Add Admin Note;
-                        </Button>;
-                      </div>;
-                    </div>;
-                  </CardContent>;
-                </Card>;
-
-          </Tabs>;
-        </div>;
-
-        <div className="space-y-6">;
-          <Card>;
-            <CardHeader>;
-              <CardTitle>Parties Involved</CardTitle>;
-            </CardHeader>;
-            <CardContent className="space-y-6">;
-              <div className="flex items-start gap-4">;
-                <Avatar className="h-10 w-10">;
-                  <AvatarImage src={dispute && dispute.client_profile?.avatar_url} />;
-                  <AvatarFallback>C</AvatarFallback>;
-                </Avatar>;
-                <div>;
-                  <p className="font-medium">Client</p>;
-                  <p className="text-sm text-muted-foreground">;
-                    {dispute && dispute.client_profile?.display_name || "Unknown Client"}
-                  </p>;
-                </div>;
-              </div>;
-
-              <div className="flex justify-center">;
-                <ArrowDown className="h-6 w-6 text-muted-foreground" />;
-              </div>;
-
-              <div className="flex items-start gap-4">;
-                <Avatar className="h-10 w-10">;
-                  <AvatarImage src={dispute && dispute.talent_profile?.avatar_url} />;
-                  <AvatarFallback>T</AvatarFallback>;
-                </Avatar>;
-                <div>;
-                  <p className="font-medium">Talent</p>;
-                  <p className="text-sm text-muted-foreground">;
-                    {dispute && dispute.talent_profile?.display_name || "Unknown Talent"}
-=======
-              </TabsContent>)}
-          </Tabs>;
-        </div>;
-        <div className="space - y-6">;
-          <Card>;
-            <CardHeader>;
-              <CardTitle > Parties Involved</CardTitle>;
-            </CardHeader>;
-            <CardContent className="space - y-6">;
-              <div className="flex items - start gap - 4">;
-                <Avatar className="h - 10 w - 10">;
-                  <AvatarImage src={dispute.client_profile?.avatar_url} />;
-                  <AvatarFallback > C</AvatarFallback>;
-                </Avatar>;
-                <div>;
-                  <p className="font - medium">Client</p>;
-                  <p className="text - sm text - muted - foreground">;
-                    {dispute.client_profile?.display_name || "Unknown Client"}
-                  </p>;
-                </div>;
-              </div>;
-              <div className="flex justify - center">;
-                <ArrowDown className="h - 6 w - 6 text - muted - foreground" />;
-              </div>;
-              <div className="flex items - start gap - 4">;
-                <Avatar className="h - 10 w - 10">;
-                  <AvatarImage src={dispute.talent_profile?.avatar_url} />;
-                  <AvatarFallback > T</AvatarFallback>;
-                </Avatar>;
-                <div>;
-                  <p className="font - medium">Talent</p>;
-                  <p className="text - sm text - muted - foreground">;
-                    {dispute.talent_profile?.display_name || "Unknown Talent"}
-
-                  </p>;
-                </div>;
-              </div>;
-            </CardContent>;
-          </Card>;
-
-          <Card>;
-            <CardHeader>;
-              <CardTitle > Case Information</CardTitle>;
-            </CardHeader>;
-            <CardContent className="space - y-4 text - sm">;
-              <div className="flex justify - between">;
-                <span className="font - medium">Case ID:</span>;
-                <span className="font - mono">{dispute.id}</span>;
-              </div>;
-              <div className="flex justify - between">;
-                <span className="font - medium">Created:</span>;
-                <span>{format (new Date (dispute.created_at), "MMM d, yyyy")}</span>;
-              </div>;
-              <div className="flex justify - between">;
-                <span className="font - medium">Status:</span>;
-                <Badge variant={getStatusBadgeVariant (dispute.status)}>;
-                  {dispute.status.replace ('_ ')}
-                </Badge>;
-              </div>;
-              <div className="flex justify - between">;
-                <span className="font - medium">Raised by:</span>;
-                <span>{dispute.raised_by === dispute.client_profile?.id ? "Client" : "Talent"}</span>;
-
-              </div>;
-            </CardContent>;
-          </Card>;
-        </div>;
-      </div>;
-
-    </div>);
+                        >
+                          Add Admin Note
+                        </Button>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+            )}
+          </Tabs>
+        </div>
+        <div className="space-y-6">
+          <Card>
+            <CardHeader>
+              <CardTitle>Parties Involved</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="flex items-start gap-4">
+                <Avatar className="h-10 w-10">
+                  <AvatarImage src={dispute.client_profile?.avatar_url} />
+                  <AvatarFallback>C</AvatarFallback>
+                </Avatar>
+                <div>
+                  <p className="font-medium">Client</p>
+                  <p className="text-sm text-muted-foreground">
+                    {dispute.client_profile?.display_name |"Unknown Client"}
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-center">
+                <ArrowDown className="h-6 w-6 text-muted-foreground" />
+              </div>
+              <div className="flex items-start gap-4">
+                <Avatar className="h-10 w-10">
+                  <AvatarImage src={dispute.talent_profile?.avatar_url} />
+                  <AvatarFallback>T</AvatarFallback>
+                </Avatar>
+                <div>
+                  <p className="font-medium">Talent</p>
+                  <p className="text-sm text-muted-foreground">
+                    {dispute.talent_profile?.display_name |"Unknown Talent"}
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Case Information</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 text-sm">
+              <div className="flex justify-between">
+                <span className="font-medium">Case ID:</span>
+                <span className="font-mono">{dispute.id}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="font-medium">Created:</span>
+                <span>{format(new Date(dispute.created_at), "MMM d, yyyy")}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="font-medium">Status:</span>
+                <Badge variant={getStatusBadgeVariant(dispute.status)}>
+                  {dispute.status.replace('_ ')}
+                </Badge>
+              </div>
+              <div className="flex justify-between">
+                <span className="font-medium">Raised by:</span>
+                <span>{dispute.raised_by === dispute.client_profile?.id ? "Client" : "Talent"}</span>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  )
 }
-
-=======
-
 }
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -28,8 +28,28 @@ const EnhancedServiceCard: React.FC < EnhancedServiceCardProps> = ({
 import React from 'react';
 
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import {
+  Star
+  ExternalLink
+  ArrowRight
+  TrendingUp
+  Users
+  Clock
+  Shield
+  Zap;
+  Star,
+  ExternalLink,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Clock,
+  Shield,;
+  Zap,;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 
 interface EnhancedServiceCardProps {
@@ -85,48 +105,73 @@ interface EnhancedServiceCardProps {;
       website: string;
     }
 
-
+    realImplementation: boolean;
+    implementationDetails: string;
+    launchDate: string;
+    customers: number;
+    rating: number;
     reviews: number;
   };
 
-
-
-
-const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
-  service,;
-}) => {;
-  const cardVariants = {;
-    hidden: { opacity: 0, y: 20, scale: 0 && 0.95 },;
-    visible: {      opacity: 1,    visible: { ;
-      opacity: 1,;
-      y: 0,;
-      scale: 1,;
-      transition: {;
-        duration: 0 && 0.6,;
-        ease: 'easeOut' as const,;
-      },;
-    },    hover: {        ease: "easeOut" as const;
+    reviews: number;
+  }
+const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
+  service
+}) => {
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20, scale: 0.95 }
+    visible: {      opacity: 1,    visible: {
+      opacity: 1
+      y: 0
+      scale: 1
+      transition: {
+        duration: 0.6
+        ease: 'easeOut' as const
       }
-    };
-    hover: {;
-      y: -8,;
-      scale: 1 && 1.02,;
-      transition: {;
-        duration: 0 && 0.3,;
-        ease: 'easeOut' as const,;
-      },;
-    },  };
-
-  const iconVariants = {;
-    hidden: { rotate: -180, scale: 0 },;
-    visible: {      rotate: 0,;
-      scale: 1,;
-      transition: {;
-        duration: 0 && 0.6,;
-        ease: 'backOut' as const,;
-      },;
-    },    hover: {        ease: "easeOut" as const;
-
+    },    hover: {        ease: "easeOut" as const
+      }
+    }
+    hover: {
+      y: -8
+      scale: 1.02
+      transition: {
+        duration: 0.3
+        ease: 'easeOut' as const
+      }
+    },  }
+  const iconVariants = {
+    hidden: { rotate: -180, scale: 0 }
+    visible: {      rotate: 0
+      scale: 1
+      transition: {
+        duration: 0.6
+        ease: 'backOut' as const
+      }
+    },    hover: {        ease: "easeOut" as const
+      }
+    }
+  }
+  const iconVariants = {
+    hidden: { rotate: -180, scale: 0 }
+    visible: {    visible: {
+      rotate: 0
+      scale: 1
+      transition: {
+        duration: 0.6
+        ease: 'backOut' as const
+      }
+    },        ease: "backOut" as const
+      }
+    }
+    hover: {
+      rotate: 360
+      scale: 1.1
+      transition: {
+        duration: 0.6
+        ease: 'easeInOut' as const
+      }
+    }
+  }
         duration: 0.6,
 
         ease: 'ease_out' as const,
@@ -190,8 +235,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
         duration: 0.6,
 
 
-=======
-
     >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Background Glow */}
@@ -247,23 +290,30 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
             POPULAR
           </motion.div>
         </div>
+<<<<<<< HEAD
+      )}
+<<<<<<< HEAD
+=======
 
       )}
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       {/* Card Content */}
       <div className='relative p-6'>
-=======
 
       {/* Card Content */}
       <div className='relative p-6'>
 
         {/* Header */}
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className='flex items-start justify-between mb-4'>
           <motion.div
             className={`text-4xl ${service.textColor}`}
@@ -292,19 +342,34 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
 
         </div>
         {/* Title & Tagline */}
+<<<<<<< HEAD
+        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
+          {service.name}
+        </h3>
+        <p className='text-gray-300 text-sm mb-4 leading-relaxed'>          {service.tagline}
+        </p>
+        {/* Description */}
+        <p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>          {service.description}
+        </p>
+        {/* Key Metrics */}
+        {/* Key Metrics */}          
+=======
 
 
         {/* Key Metrics */}          
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div className="text-right">
             <div className="text-2xl font-bold text-white">{service.price}</div>
             <div className="text-sm text-gray-400">{service.period}</div>
           </div>
         </div>
         {/* Title & Tagline */}
-
-        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
+          {service.name}
+        </h3>
+        <p className='text-gray-300 text-sm mb-4 leading-relaxed'>        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
           {service.name}
         </h3>
         <p className="text-gray-300 text-sm mb-4 leading-relaxed">
@@ -318,8 +383,12 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
           {service.description}
         </p>
         {/* Key Metrics */}
-
-
+        <div className='grid grid-cols-2 gap-4 mb-6'>
+          <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
+            <div className='text-cyan-400 text-lg font-bold'>
+              {service.customers}+
+            </div>
+            <div className='text-xs text-gray-400'>Customers</div>
 
           {service.tagline}
         </p>
@@ -331,9 +400,12 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
 
         {/* Key Metrics */}
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
           <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
             <div className='text-purple-400 text-lg font-bold'>
@@ -422,9 +494,15 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
                 className="flex items-center gap-2 text-sm text-gray-300"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 * index }}
+              >
+                <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full' />                <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {feature}
               </motion && motion.div>;
             ))}
@@ -437,19 +515,33 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
+          </div>
+        </div>
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Market Info */}
+        <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>
+          <div className='flex items-center justify-between mb-2'>
+            <span className='text-xs font-semibold text-white'>
+              Market Size
+            </span>
+            <span className='text-xs text-cyan-400'>{service.marketSize}</span>
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
           <div className='flex items-center justify-between mb-2'>
             <span className='text-xs font-semibold text-white'>
@@ -473,9 +565,13 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
           </div>
         </div>
         {/* Trial & Setup Info */}
-
-        <div className="flex items-center justify-between mb-6 text-sm">
-
+        <div className='flex items-center justify-between mb-6 text-sm'>
+          <div className='flex items-center gap-2 text-gray-400'>
+            <Clock className='w-4 h-4' />
+            {service.trialDays} day trial
+          </div>
+          <div className='flex items-center gap-2 text-gray-400'>
+            <Shield className='w-4 h-4' />            {service.setupTime}        <div className="flex items-center justify-between mb-6 text-sm">
           <div className="flex items-center gap-2 text-gray-400">
             <Clock className="w-4 h-4" />
             {service.trialDays} day trial
@@ -485,6 +581,10 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
 
             {service.setupTime}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
         </div>
           </div>;
@@ -541,14 +641,27 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
         </div>
         {/* Action Buttons */}
         <div className='flex gap-3'>
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <motion.a
             href={service.link}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -582,14 +695,16 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
 
           <div className="text-xs text-gray-500 text-center">
             Contact: {service.contactInfo.email}
-=======
 
 
             Contact: {service.contactInfo.email}
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
         </div>
       </div>
@@ -620,8 +735,22 @@ whileHover={{ scale: 1 && 1.05 }}
 };
 export default EnhancedServiceCard;    </motion && motion.div>;
   );
+<<<<<<< HEAD
+}
+};
+
+export default EnhancedServiceCard;    </motion.div>
+  )
+}
+export default EnhancedServiceCard;
 
 };
+export default EnhancedServiceCard;
+export default EnhancedServiceCard;
+=======
+
+};
+
 export default EnhancedServiceCard;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -874,3 +1003,4 @@ export default EnhancedServiceCard;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

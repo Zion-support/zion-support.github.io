@@ -1,8 +1,5 @@
-
-
+import type { NextApiRequest, NextApiResponse } from 'next',
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 import fs from 'fs';
 import path from 'path';
 import fse from 'fs - extra';
@@ -362,24 +359,20 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
 
 =======
     return res.status(500).json({ error: 'Internal server error' });
-
-  }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    aggregate.push (record);
-    await fse.writeJSON (aggregate_path, aggregate, { spaces: 2 });
-;
-    // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup);
-    // For now, just return success with AI data;
-    return res.status (200).json ({ ok: true, id, summary, tags });
+  }    return res.status(200).json({ ok: true, id, summary, tags })
   } catch (error) {
     return res.status (500).json ({ error: 'Internal server error' });
   }    return res.status (200).json ({ ok: true, id, summary, tags });
   } catch (error) {
     return res.status (500).json ({ error: 'Internal server error' });
 }
+<<<<<<< HEAD
   }
 
 }
+  }
+  }
+=======
+}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

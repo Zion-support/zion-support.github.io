@@ -241,14 +241,26 @@ if ( {) {
       error: 'Method not allowed',
     });
   }
+<<<<<<< HEAD
+// Handle redirects for short URLs
+export async function getServerSideProps({
+  params
+}: {
+  params: { shortCode: string }
+}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   params,
 }: {;
   params: { shortCode: string };
 }) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
@@ -291,28 +303,15 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
   // Redirect to original URL
   return {
     redirect: {
+      destination: shortUrl.originalUrl
+      permanent: false
+    }
+  };      destination: shortUrl.originalUrl;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       permanent: false
     }
 }
-
-
-=======
-// Handle redirects for short URLs;
-export async /**
- * getServerSideProps - Function description
- */
-function getServerSideProps() {  const short_code = params.short_code;export async /**
- * getServerSideProps - Function description
- */
-function getServerSideProps() {
-  const short_code = params.short_code;
-  const short_url = url_storage.get (short_code);
-;
-  // Check condition
-if ( {) {
-  $2
 }
 =======
       console.error('URL shortening error:', error);
@@ -376,5 +375,15 @@ export async function getServerSideProps({
       destination: shortUrl.originalUrl,
       permanent: false,
     },
+<<<<<<< HEAD
+  };
+  };      destination: shortUrl.originalUrl;
+      permanent: false
+    }
+};
+}
+  };
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -2,12 +2,9 @@ return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>;
       <button
         onClick={toggleSection}
-
-
+        className='flex w-full items-center justify-between text-white font-medium'      >
         className="flex w-full items-center justify-between text-white font-medium"
       >
-
-
         <span>Availability</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -104,8 +101,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 id={`availability-${option.id}`}
                 checked={selectedAvailability.includes(option.id)}
                 onCheckedChange={() => toggleAvailability(option.id)}
-  { id: "full_time", label: "Full-time" },
-  { id: "part_time", label: "Part-time" },
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label
@@ -224,7 +219,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
               <label
                 htmlFor={`availability-${option.id}`}
-
   option.label 
 }</label> </div>) ) 
 }</div>) ;

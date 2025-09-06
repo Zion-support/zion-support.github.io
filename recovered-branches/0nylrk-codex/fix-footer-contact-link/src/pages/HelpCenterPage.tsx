@@ -1,8 +1,19 @@
 
+<<<<<<< HEAD
+import React from "react";
+import HelpCenter from "@/components/support/HelpCenter";
+import {SEO} from "@/components/SEO";
+import React from "react",
+import HelpCenter from "@/components/support/HelpCenter";
+import { SEO } from "@/components/SEO";
+import HelpCenter from "@/components/support/HelpCenter",
+import { SEO } from "@/components/SEO",
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function HelpCenterPage() {
   return (
     <>
@@ -41,6 +52,18 @@ export default function HelpCenterPage() {;
         title="Help Center | Zion AI Marketplace"
         description="Find answers to common questions about using the Zion AI Marketplace platform. Browse help articles or contact our support team."
         keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace"
+<<<<<<< HEAD
+      />
+      <HelpCenter />
+    </>
+  )
+}
+import React from "react",;
+import HelpCenter from "@/components/support/HelpCenter",;
+import { SEO } from "@/components/SEO";
+export default function HelpCenterPage() {;
+  return (;
+=======
 
       />;
       <HelpCenter />;
@@ -61,6 +84,7 @@ export default /**
  */
 function HelpCenterPage() {
   return (
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <>;
       <SEO;
         title="Help Center | Zion AI Marketplace";
@@ -71,9 +95,16 @@ function HelpCenterPage() {
 
     </>;
   );
+<<<<<<< HEAD
+}
+;
+}
+;
+=======
 
 
 }
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

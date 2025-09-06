@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Sparkles, Loader2, RefreshCw, Check, X  } from '@/components/icons';
+import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIContentEnhancer';
+import { toast } from '@/hooks/use-toast';
+interface AIEnhancementButtonProps {
+=======
 =======
 
 
@@ -8,8 +16,22 @@ import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components/icons';
 import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
 import {toast} from '@/hooks/use-toast';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+  options: AIEnhancementOptions
+  onEnhanced: (enhancedContent: string) => void
 
+<<<<<<< HEAD
+  buttonText?: string;
+  className?: string;
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components/icons';
+import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
+import {toast} from '@/hooks/use-toast';
+=======
 export function AIEnhancementButton(): any ({;
 
   options;
@@ -27,14 +49,18 @@ export function AIEnhancementButton(): any ({;
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
 import { toast } from '@/hooks/use-toast',
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
   onEnhanced: (enhancedContent: string) => void,
@@ -42,13 +68,49 @@ interface AIEnhancementButtonProps {
   className?: string,
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",
   size?: "default" | "sm" | "lg" | "icon",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   contentLength?: number
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export function AIEnhancementButton({;
+  options;
+  onEnhanced;
+  buttonText = "Enhance with AI";
+  className;
+  variant = "ghost";
+  size = "sm";
+export function AIEnhancementButton({
+  options;
+  onEnhanced;
+
+  buttonText = "Enhance with AI";
+  className;
+  variant = "ghost";
+  size = "sm";
+  contentLength = 10
+}: AIEnhancementButtonProps) {
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
+  const [showActions, setShowActions] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null);
+  options,
+  onEnhanced,
+  buttonText = "Enhance with AI",
+  className,
+  variant = "ghost",
+  size = "sm",
+  contentLength = 10
+}: AIEnhancementButtonProps) {
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),
+  const [showActions, setShowActions] = useState(false),
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null),
+  
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
@@ -56,6 +118,18 @@ interface AIEnhancementButtonProps {
         title: "Not enough content"
         description: `Please enter at least ${contentLength} characters before enhancing.`
         variant: "destructive"
+<<<<<<< HEAD
+      });
+      return
+    }
+    const enhancedContent = await enhanceContent(options);
+    if (enhancedContent) {
+      setGeneratedContent(enhancedContent);
+      setShowActions(true)
+    }
+  }
+  };
+=======
 
 
 =======
@@ -63,6 +137,7 @@ interface AIEnhancementButtonProps {
   };
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }),
       return
 import { useState } from 'react',;
@@ -115,12 +190,13 @@ export function AIEnhancementButton({;
     }
 
   },
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleAccept = () => {
     if (generatedContent) {
       onEnhanced(generatedContent);
@@ -130,27 +206,23 @@ export function AIEnhancementButton({;
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
     }
-
-
+  }
+  const handleRegenerate = async () => {
+    await handleEnhance()
+  }
   },
   
   const handleRegenerate = async () => {
     await handleEnhance()
   },
   
-
-
   const handleCancel = () => {
     setShowActions(false);
     setGeneratedContent(null)
-
-  };
-
-=======
+  }
 
   },
   
-
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">
@@ -195,7 +267,6 @@ export function AIEnhancementButton({;
   return (
     <Button
       type="button"
-
   },;
 
   const handleAccept = () => {;
@@ -374,33 +445,27 @@ if ( {) {
   return (
     <Button;
       type="button";
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       variant={variant}
       size={size}
-
-      <span className="text-xs">{buttonText}</span>;
-    </Button>;
-  );
+      className={`gap-1 ${className}`}
+      onClick={handleEnhance}
+      disabled={isEnhancing}
+    >
+      {isEnhancing ? (
+        <Loader2 className="h-4 w-4 animate-spin" />
+      ) : (
+        <Sparkles className="h-4 w-4" />
+      )}
+      <span className="text-xs">{buttonText}</span>
+    </Button>
+  )
 }
-
-=======
-      className={`gap - 1 ${class_name}`}
-      on_click={handle_enhance}
-      disabled={is_enhancing}
-    >;
-      {is_enhancing ? (
-        <Loader2 className="h - 4 w - 4 animate - spin" />) : (
-        <Sparkles className="h - 4 w - 4" />)}
-      <span className="text - xs">{button_text}</span>;
-    </Button>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
 }
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

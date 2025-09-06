@@ -1,8 +1,18 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+import type {
+  GrantApplication
+  StatusUpdatePayload;
+  GrantApplication,;
+  StatusUpdatePayload,;
+} from '../../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
@@ -130,6 +140,14 @@ const payload = req.body as StatusUpdatePayload;
   existing.updated_at = new Date ().toISOString ();
   write_grant (existing);
   res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing });
+<<<<<<< HEAD
 
 }
+
+  res.status(200).json({ record: existing });
+}
+  res.status(200).json({ record: existing });
+=======
+}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

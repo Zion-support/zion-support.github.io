@@ -1,15 +1,23 @@
 
+<<<<<<< HEAD
+import { useAuth  } from './useAuth';
+import { getAccessibleRoutes  } from '@/config/sitemap';
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useAuth} from './useAuth';
 import {getAccessibleRoutes} from '@/config/sitemap';
-
 import type { SitemapItem } from '@/config/sitemap';
 // Define the allowed user types
 
-
+type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
+export function useSitemap() {
 export function useSitemap() {;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user, isAuthenticated } = useAuth();
   // Get routes that the current user can access
   // Cast userType to UserType or pass undefined if not valid
@@ -48,10 +56,9 @@ export function useSitemap() {;
     findRouteByPath;
 
     canAccessRoute
-=======
-import {use_auth} from './use_auth';
-import {getAccessibleRoutes} from '@/config / sitemap';
-import type { SitemapItem } from '@/config / sitemap';
+import { useAuth } from './useAuth',;
+import { getAccessibleRoutes } from '@/config/sitemap',;
+import type { SitemapItem } from '@/config/sitemap',;
 // Define the allowed user types;
 type UserType = 'employer' | 'buyer' | 'job_seeker' | 'creator' | 'admin';
 ;
@@ -107,10 +114,13 @@ if (return false) {
     accessible_routes;
     findRouteByPath;
     canAccessRoute;
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }

@@ -1,7 +1,18 @@
+<<<<<<< HEAD
+import React from 'react';
+import SEO from '../components/SEO';
+import React from 'react'
+import SEO from '../components/SEO'
+import React from 'react',;
+import SEO from '../components/SEO',;
+import React from 'react'
+import SEO from '../components/SEO'
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AIEducationPlatformPage() {
   return (
     <div className="min-h-[60vh] px-6 py-24">
@@ -12,35 +23,9 @@ export default function AIEducationPlatformPage() {
       </div>
     </div>
   )
-
-=======
-}
-
-=======
-import React from 'react',
-import SEO from '../components / SEO',
-export default /**
- * AIEducationPlatformPage - Function description
- */
-function AIEducationPlatformPage() {
-  return (
-    <div className="min - h-[60vh] px - 6 py - 24">;
-      <SEO title="AI Education Platform | Zion Tech Group" description="Personalized learning with AI" />;
-      <div className="max - w-3xl mx - auto">;
-        <h1 className="text - 4xl font - bold text - white mb - 4">AI Education Platform</h1>;
-        <p className="text - gray - 300">Adaptive learning and skill development powered by AI. Details coming soon.</p>;
-      </div>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
+};
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

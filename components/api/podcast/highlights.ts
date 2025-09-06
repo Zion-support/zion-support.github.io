@@ -29,6 +29,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   episode.highlights = highlights;
   episodes[idx] = episode;
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return res.status(200).json({ episode })
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -125,11 +129,25 @@ return res.status (200).json ({ episode });  return res.status (200).json ({ epi
 =======
 
   return res.status(200).json({ episode });
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+return res.status(200).json({ episode });  return res.status(200).json({ episode })
+}
+
+}
+}
   return res.status(200).json({ episode });
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

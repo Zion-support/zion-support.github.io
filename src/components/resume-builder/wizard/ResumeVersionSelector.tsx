@@ -74,23 +74,16 @@ if ( {) {
       setIsLoading (false);
     }
   }
-
-
-
-
-
-
-
-
-  return (
-
-        setNewResumeTitle('')
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       setIsLoading(false)
     }
-  };
+  },
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="flex items-center gap-2">
       <span className="text-sm text-muted-foreground">Resume:</span>
@@ -101,7 +94,6 @@ if ( {) {
             <ChevronDown className="h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
-
         <DropdownMenuContent align="end">
           {existingResumes.map((resume) => (
             <DropdownMenuItem
@@ -129,6 +121,15 @@ if ( {) {
             >;
 
 
+        <DropdownMenuContent align="end">
+          {existingResumes.map((resume) => (
+            <DropdownMenuItem 
+              key={resume.id}
+              onClick={() => onResumeChange(resume.id!)}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="cursor-pointer"
             >
               {resume.basic_info.title}
@@ -159,7 +160,6 @@ if ( {) {
             </DropdownMenuItem>;
 
           ))}
-
           <DropdownMenuSeparator />
           <DropdownMenuItem 
 
@@ -231,9 +231,6 @@ if ( {) {
 
             <Button 
               variant="outline" 
-
-
-
               <Save className="h-4 w-4" />
               Save
             </Button>

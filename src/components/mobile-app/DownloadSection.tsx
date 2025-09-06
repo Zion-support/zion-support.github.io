@@ -6,7 +6,6 @@ appStoreUrl = {appStoreUrl,}
 
 
               
-
               <AppStoreButtons 
                 className="mb-8" 
                 appStoreUrl={appStoreUrl}
@@ -20,7 +19,6 @@ appStoreUrl = {appStoreUrl,}
                 <p>Free download, in-app purchases available</p>
               </div>
             </div>
-
   // These would typically come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
   const googlePlayUrl = "#", // Replace with actual Google Play URL when available;

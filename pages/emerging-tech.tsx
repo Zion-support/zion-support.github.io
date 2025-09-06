@@ -1,38 +1,30 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-export default function EmergingTechPage() {
-  const features = [
-    'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  const solutions = [
-    { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
-    { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
-    { name: '5G Private Networks', href: '/5g-private-network-solutions' },
-    { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }],
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <Layout>
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
 import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',;
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',
-<<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function EmergingTechPage() {
   const features = [
     'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const solutions = [
     { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
     { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
@@ -45,9 +37,8 @@ export default function EmergingTechPage() {_const _features = [
     {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration'},
     {_name: '5G Private Networks', _href: '/5g-private-network-solutions'},
     {_name: 'Metaverse AI Platform', _href: '/metaverse-ai-development-platform'}];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+ursor/fix-lint-push-and-merge-to-main-ce13
   return (_<Layout>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <Head>
         <title>Emerging Tech | Zion Tech Group</title>
         <meta name="description" content="Blockchain, IoT/edge, 5G, and metaverse initiatives with secure, scalable architectures." />
@@ -62,13 +53,16 @@ export default function EmergingTechPage() {_const _features = [
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Emerging Technology</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Accelerate innovation responsibly across blockchain, IoT/edge, 5G, and spatial computing.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-
-
+              <a href="/contact" className="px-8 py-4">Start a Pilot</a>
+              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
               <a href="/contact" className="px-8 py-4">Start a Pilot</Link>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </div>
           </header>
           <section>
@@ -79,16 +73,9 @@ export default function EmergingTechPage() {_const _features = [
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
                 </div>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              ))}
             </div>
           </section>
-<<<<<<< HEAD
-<section>
-=======
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Highlighted Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -96,12 +83,25 @@ export default function EmergingTechPage() {_const _features = [
                 <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
                   <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
                   <p className="text-gray-300 text-sm">Learn more</p>
+<<<<<<< HEAD
+                </a>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
+    </Layout>
+  )
+  );
+};
+=======
 
 
   );
 };
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </Link>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -168,19 +168,6 @@ function EmergingTechPage() {
                   <div className="text - gray - 200 font - semibold mb - 2">{s.name}</div>;
                   <p className="text - gray - 300 text - sm">Learn more</p>;
                 </a>))}
-=======
-=======
-  );
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-                </Link>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>;
           </section>;
         </div>;
@@ -192,8 +179,13 @@ function EmergingTechPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+}
+}
+=======
 
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

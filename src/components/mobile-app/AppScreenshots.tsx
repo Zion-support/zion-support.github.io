@@ -62,12 +62,6 @@ export const AppScreenshots: React.FC = () => {;
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
-
-            aria-label="Scroll left";
-          >;
-            <ChevronLeft className="h-6 w-6" />;
-          </Button>;
-
           <div
             ref = {scrollContainerRef,}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
@@ -111,7 +105,6 @@ export const AppScreenshots: React.FC = () => {;
               </div>
             ))}
           </div>
-
           
 
           <Button
@@ -128,7 +121,6 @@ export const AppScreenshots: React.FC = () => {;
         </div>
       </div>
     </section>
-
             aria-label="Scroll right";
           >;
             <ChevronRight className="h-6 w-6" />;

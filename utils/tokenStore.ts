@@ -1,5 +1,11 @@
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+export interface TokenTransaction {
+
+
+export interface TokenTransaction {;
+=======
 
 ;
 
@@ -10,6 +16,7 @@ export interface TokenTransaction {
 export interface TokenTransaction {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -18,12 +25,18 @@ export interface TokenTransaction {;
   timestamp: string;
   metadata?: Record < string, any>;
 }
+<<<<<<< HEAD
+export interface TokenConfig {
+
+export interface TokenConfig {;
+=======
 
 
 
 export interface TokenConfig {;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   name: string;
   symbol: string;
   total_supply: number;
@@ -104,10 +117,30 @@ function save_config (config: TokenConfig): void {
 function getDefaultConfig (): TokenConfig {
 
   return {
+<<<<<<< HEAD
+    name: 'ZION Token'
+    symbol: 'ZION$'
+    totalSupply: 1000000000
+    circulatingSupply: 250000000
+    exchangeRate: 0.05
+    stakingEnabled: true
+    stakingRewardRate: 12.5
+  }
+}
+export function getAllTransactions(): TokenTransaction[] {
+  return loadTransactions();
+}
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     name: 'ZION Token',
     symbol: 'ZION$',
 
+<<<<<<< HEAD
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {
 
@@ -121,8 +154,18 @@ function getDefaultConfig (): TokenConfig {
   saveTransactions(transactions);
   return newTransaction;
 }
+<<<<<<< HEAD
+export function getConfig(): TokenConfig {
+  return loadConfig();
+}
+export function setConfig(config: TokenConfig): void {
+  saveConfig(config);
+}
+export function getUserBalance(userId: string): number {
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function getConfig(): TokenConfig {;
   return loadConfig();
@@ -133,8 +176,11 @@ export function setConfig(config: TokenConfig): void {;
 }
 
 export function getUserBalance(userId: string): number {;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const transactions = loadTransactions();
   let balance = 0;
   for (const tx of transactions) {

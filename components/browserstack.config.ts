@@ -43,15 +43,7 @@ default define_config ({
         browserName: webkit',        ...devices['iPhone 12']}
     }
   ];
-
+  reporter: [
+    ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
 });
-
-=======
-  reporter: [;
-    ['list'],    ['html', { output_folder: playwright - logs / html - report', open: never' }]];
 });
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

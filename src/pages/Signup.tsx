@@ -17,16 +17,6 @@ import { LoadingSpinner } from '@/components/ui/enhanced-loading-states'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'
 import { AuthButtons } from '@/components/AuthButtons'
-
-import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
-
-
-
-  ),
-});
-export default function Signup() {;
-
-
   const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
@@ -96,11 +86,6 @@ function Signup() {
         setHealthCheckError('Authentication service is experiencing issues')
       }
     } catch (err: any) {
-
-
-      if (true) {}
-
-
       ) {
         setHealthCheckError('Network connection issues detected')
       } else if (err.response?.status === 500) {
@@ -234,13 +219,6 @@ if ( {) {
                 url: err.config.url
                 method: err.config.method
               }
-
-
-        const errorMsg = null;
-          err.response?.data?.error ||
-          err.response?.data?.message ||
-
-
           'Signup failed. Please try again.'
         logInfo('Processed error message:', { data: errorMsg })
         if (status === 409) {
@@ -331,30 +309,37 @@ if ( {) {
     await formik.handle_submit (e);
 
   }
-  // After successful registration, guide the user to the verification screen;
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      const timer = set_timeout (() => {
-        router.push (
-          `/verify - status?email=${encodeURIComponent (formik.values.email)}`);
-      }, 3000);
-      return () => clear_timeout (timer) }
-    return undefined;
-  }, [emailVerificationRequired, formik.values.email, router]);
-  // Show loading state only during initial health check;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-
-const SignupSchema = Yup && Yup.object({;
-  name: Yup && Yup.string().required('Name is required'),;
-  email: Yup && Yup.string().email('Invalid email').required('Email is required'),;
-  password: Yup && Yup.string();
+  // After successful registration, guide the user to the verification screen
+  useEffect((,) => {
+    if (emailVerificationRequired && formik.values.email) {
+      const timer = setTimeout(() => {
+        router.push(
+          `/verify-status?email=${encodeURIComponent(formik.values.email)}`
+        )
+      }, 3000)
+      return () => clearTimeout(timer) }
+    return undefined
+  }, [emailVerificationRequired, formik.values.email, router])
+import { useState, useEffect } from 'react',;
+import { useRouter } from 'next/router', // Changed from react-router-dom;
+import { useFormik } from 'formik',;
+import * as Yup from 'yup',;
+import axios from 'axios',;
+import Link from 'next/link',;
+import { Input } from '@/components/ui/input',;
+import { Button } from '@/components/ui/button',;
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',;
+import { Alert, AlertDescription } from '@/components/ui/alert',;
+import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter',;
+import { AuthButtons } from '@/components/AuthButtons',;
+import { AlertCircle, CheckCircle, Mail } from 'lucide-react';
+import { toast } from '@/hooks/use-toast',;
+import { AuthLayout } from '@/layout',;
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
+const SignupSchema = Yup.object({;
+  name: Yup.string().required('Name is required'),;
+  email: Yup.string().email('Invalid email').required('Email is required'),;
+  password: Yup.string();
     .min(8, 'Password must be at least 8 characters');
     .matches(/[A-Z]/, 'Password must include an uppercase letter');
     .matches(/[a-z]/, 'Password must include a lowercase letter');
@@ -741,8 +726,6 @@ import { Checkbox  } from '@/components / ui / checkbox';
 import { Alert, AlertDescription  } from '@/components / ui / alert';
 import { PasswordStrengthMeter  } from '@/components / PasswordStrengthMeter';
 import {
-
-
       displayName: ",
       email: ",
       password: ",
@@ -752,8 +735,6 @@ import {
 }) as UseFormReturn<SignupFormValues>;
   // Form submission handler;
   const onSubmit = async (data: SignupFormValues) => {;
-
-
     if (isSubmitting) return; // Prevent multiple submissions
     setIsSubmitting(true)
     try {
@@ -854,8 +835,6 @@ if ( {) {
           form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
           toast.error(sessionError.message || "Failed to set session. Please try logging in.")
           return;
-
-
 }
         form.set_error ('email', { message: res_data.message });
         toast.error ('Email already registered – please login.');
@@ -1060,18 +1039,7 @@ export default function Signup() {;
         // Potentially navigate to login or show a more specific error;
         return;
 }
-
-      // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification);
-      if (data && data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {;
-        try {;
-          await mailchimpService && mailchimpService.addSubscriber({;
-            email: data && data.email,;
-            mergeFields: { FNAME: data && data.displayName }
-          });
-          await mailchimpService && mailchimpService.sendWelcomeEmail(data && data.email, 'NEW10');
-} catch (err) {;
-          console && console.error('Mailchimp subscription failed', err);
-          // Non-critical error, don't block user flow;
+}}
 }
       }
       // Toast and navigation are handled above if session is present;
@@ -1141,10 +1109,3 @@ const Signup = () => {;
 
 }};
 };
-
-        </div>;
-      </div>;
-    </AuthLayout>;
-  );
-}
-;

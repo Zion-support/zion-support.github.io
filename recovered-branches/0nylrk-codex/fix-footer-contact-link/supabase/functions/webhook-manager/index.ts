@@ -1,39 +1,52 @@
 
+<<<<<<< HEAD
+=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 interface CreateWebhookRequest {
   name: string;
   url: string;
   eventTypes: string[]
-=======
-
-
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
-=======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface CreateWebhookRequest {
   name: string,
   url: string,
   eventTypes: string[],
   secret?: string
+<<<<<<< HEAD
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
+interface CreateWebhookRequest {;
+  name: string,;
+  url: string,;
+  eventTypes: string[],;
+  secret?: string;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 interface WebhookTestRequest {;
   webhookId: string,;
   eventType: string;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   secret?: string
 }
@@ -50,13 +63,10 @@ const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 
 const supabase = createClient(supabaseUrl, supabaseKey);
-=======
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, supabaseKey),
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 serve(async (req) => {
   // Handle CORS for browser requests
   if (req && req.method === 'OPTIONS') {
@@ -88,10 +98,14 @@ if ( {) {
     return new Response ('ok', {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       headers: {
-
-      return new Response(JSON && JSON.stringify({ error: 'Missing authorization header' }), {
-        status: 401,
-
+        'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, GET, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
+  }
+  try {
+    // Extract auth token from request
+    const authHeader = req.headers.get('Authorization');
+    if (!authHeader) {
+      return new Response(JSON.stringify({ error: 'Missing authorization header' }), {
+        status: 401
         headers: { 'Content-Type': 'application/json' }})
     }
     // Verify the token with Supabase auth
@@ -123,17 +137,8 @@ if ( {) {
         const { webhookId, eventType } = await req && req.json() as WebhookTestRequest;
         return await testWebhook(user && user.id, webhookId, eventType)
       } else if (path === 'delete') {
-        const { webhookId } = await req && req.json();
-        return await deleteWebhook(user && user.id, webhookId)
-      }
-    } else if (req && req.method === 'GET') {
-      if (path === 'webhooks') {
-        return await getUserWebhooks(user && user.id)
-      }
-    }
-
-        'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, GET, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
-
+        const { webhookId } = await req.json();
+        return await deleteWebhook(user.id, webhookId)
 ;
 // Create a Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,;
@@ -182,18 +187,26 @@ serve(async (req) => {;
       } else if (path === 'delete') {;
         const { webhookId } = await req.json(),;
         return await deleteWebhook(user.id, webhookId);
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     } else if (req.method === 'GET') {
       if (path === 'webhooks') {
         return await getUserWebhooks(user.id)
       }
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return new Response(JSON.stringify({ error: 'Invalid action' }), {
       status: 400
       headers: { 'Content-Type': 'application/json' }})
@@ -455,8 +468,10 @@ async function deleteWebhook(userId: string, webhookId: string) {
       .eq('user_id', userId)
       .select('id');
     if (error) {
-
-=======
+      console.error('Error deleting webhook:', error);
+      return new Response(JSON.stringify({ error: 'Failed to delete webhook' }), {
+        status: 500
+        headers: { 'Content-Type': 'application/json' }})
 ;
     return new Response(JSON.stringify({ error: 'Invalid action' }), {;
       status: 400,;
@@ -568,20 +583,27 @@ async function deleteWebhook(userId: string, webhookId: string) {;
       return new Response(JSON.stringify({ error: 'Failed to delete webhook' }), {;
         status: 500,;
         headers: { 'Content-Type': 'application/json' }});
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     if (!data |data.length === 0) {
       return new Response(JSON.stringify({ error: 'Webhook not found' }), {
         status: 404
         headers: { 'Content-Type': 'application/json' }})
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     return new Response(JSON.stringify({
       message: 'Webhook deleted successfully'
@@ -954,9 +976,16 @@ function createTestPayload() {
 =======
         data: {
           message: 'This is a test webhook event'
+<<<<<<< HEAD
+        }
+      }
+  }
+}
+=======
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     return new Response(JSON.stringify({;
       message: 'Webhook deleted successfully',;
@@ -1129,12 +1158,16 @@ function createTestPayload(eventType: string) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         data: {
           message: 'This is a test webhook event';
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       }
   }
 }
+;

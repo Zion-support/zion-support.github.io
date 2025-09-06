@@ -49,22 +49,6 @@ import { Slider } from '@/components / ui / slider';
 import { Switch } from '@/components / ui / switch';
 import { Input } from '@/components / ui / input';
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components / ui / select';
-import { X, Filter } from 'lucide-react';
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetFooter,
-  SheetTrigger,
-} from '@/components / ui / sheet';
-import { Badge } from '@/components / ui / badge';
-import { Label } from '@/components / ui / label';
 interface BrowseFiltersProps {
   type: 'jobs' | 'talents';
 export /**
@@ -197,16 +181,11 @@ import { Slider } from "@/components/ui/slider",
 import { Switch } from "@/components/ui/switch",
 import { Input } from "@/components/ui/input",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-
-
-
 import { X, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
-
-
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -222,7 +201,8 @@ interface BrowseFiltersProps {
               <SheetHeader>
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
-
+              <div className='py-6 space-y-6'>
+                {type === 'jobs' ? (
               
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
@@ -237,7 +217,7 @@ interface BrowseFiltersProps {
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Freelance</Badge>
                       </div>
                     </div>
-
+                    <div className='space-y-2'>
                     
                     <div className="space-y-2">
 
@@ -260,7 +240,15 @@ interface BrowseFiltersProps {
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Content</Badge>
                       </div>
                     </div>
-
+                    <div className='space-y-2'>
+                      <Label>Experience (years)</Label>
+                      <Slider
+                        aria-label='Years of experience'
+                        defaultValue={[0, 10]}
+                        max={20}
+                        step={1}
+                        className='my-4'                      />
+                      <div className='flex justify-between text-xs text-muted-foreground'>
                     
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
@@ -279,7 +267,7 @@ interface BrowseFiltersProps {
                     </div>
                   </>
                 )}
-
+                <div className='space-y-2'>
                 
                 <div className="space-y-2">
 
@@ -296,8 +284,7 @@ interface BrowseFiltersProps {
                     </SelectContent>
                   </Select>
                 </div>
-
-
+                <div className='space-y-2'>
                 
                 <div className="space-y-2">
 
@@ -309,8 +296,7 @@ interface BrowseFiltersProps {
                     <Input placeholder="Max" type="number" className="w-full" />
                   </div>
                 </div>
-
-
+                <div className='space-y-2'>
                 
                 <div className="space-y-2">
 
@@ -358,8 +344,6 @@ interface BrowseFiltersProps {
                   <Switch />
                 </div>
               </div>
-
-
               
 
 
@@ -369,8 +353,6 @@ interface BrowseFiltersProps {
               </SheetFooter>
             </SheetContent>
           </Sheet>
-
-
           
 
 
@@ -511,22 +493,3 @@ interface BrowseFiltersProps {
     </div>;
   );
 }
-
-
-
-          {active_filters.map (filter => (
-            <Badge;
-              key={filter}
-              variant='secondary';
-              className='flex items - center gap - 1';
-            >;
-              {filter}
-              <X;
-                className='h - 3 w - 3 cursor - pointer';
-                on_click={() => remove_filter (filter)}              />;
-            </Badge>))}
-        </div>;
-      </div>;
-    </div>);
-}
-;

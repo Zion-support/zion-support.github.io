@@ -1,8 +1,5 @@
-
-
+import { useEffect, useState } from 'react';
 import {useEffect, useState} from 'react';
-
-
 
 function useCounter(target: number, durationMs: number) {
   const [value, setValue] = useState(0);
@@ -55,9 +52,13 @@ function useCounter(target: number, durationMs: number) {
   }, [target, durationMs]);
   return value
 }
-
+<<<<<<< HEAD
 
 export default function InteractiveStats() {
+<<<<<<< HEAD
+
+export default function InteractiveStats() {;
+=======
 =======
 =======
 
@@ -66,6 +67,7 @@ export default function InteractiveStats() {
 
 export default function InteractiveStats() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
@@ -137,12 +139,20 @@ function InteractiveStats() {
   )
 
 }
-
-
+function Stat({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {
+  return (
+    <div className="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur">
+      <div className="text-3xl font-bold">{value}{suffix}</div>
+      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
+    </div>
+);
   );
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function Stat({
   label
   value
@@ -191,8 +201,12 @@ function Stat() {
       </div>
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
-
   );
+<<<<<<< HEAD
+}
+  );
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

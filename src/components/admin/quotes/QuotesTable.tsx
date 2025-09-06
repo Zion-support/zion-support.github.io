@@ -1,9 +1,6 @@
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 
-
-
-
   quotes
   isArchived = false
   isLoading
@@ -17,9 +14,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   isLoading,
   updateStatus,
   toggleArchive,
-
-
-
   deleteQuote,
   onViewDetails
 },) => {
@@ -54,12 +48,10 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
             </TableRow>
           ) : (
             quotes.map(quote => (
-
-
+              <TableRow
+                key = {quote.id,}
               <TableRow 
                 key={quote.id}
-
-
                 className="border-zion-blue-light hover:bg-zion-blue"
               >
                 <TableCell className="text-white">
@@ -141,25 +133,41 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                 </TableCell>;
                 <TableCell className="text - white">;
                   {quote.requester_name}
-                </TableCell>;
-                <TableCell className="text - white">;
-                  <div className="font - medium">{quote.project_name}</div>;
-                  <div className="text - sm text - zion - slate - light truncate max - w-[200px]">;
+                </TableCell>
+                <TableCell className="text-white">
+                  <div className="font-medium">{quote.project_name}</div>
+                  <div className="text-sm text-zion-slate-light truncate max-w-[200px]">
                     {quote.project_summary}
-
-
+                  </div>
+                </TableCell>
+                <TableCell className="text-white">
+                  {quote.budget_display |
+                  (quote.budget_min && quote.budget_max
+                   ? `$${quote.budget_min} - $${quote.budget_max}`
+                   : quote.budget_min
+                     ? `$${quote.budget_min}`
+                     : 'Not specified')}
+                </TableCell>
+                <TableCell className="text-white">
+                  {formatDate(quote.created_at)}
+                </TableCell>
+                <TableCell>
+                  <QuoteStatusBadge status={quote.status} />
+                </TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick = {() => onViewDetails(quote),}
                     <Button 
                       variant="ghost" 
                       size="icon" 
                       onClick={() => onViewDetails(quote)}
-
-
                     >
                       <Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
                     </Button>
-
-
                     
 
 
@@ -236,12 +244,15 @@ import {formatDate} from "@/utils/dateUtils";
                             <Archive className="h-4 w-4 mr-2" />
                             Archive
                           </DropdownMenuItem>
-
+                          <DropdownMenuItem
+                            onClick = {() => {
+                              if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
+                                deleteQuote(quote.id)
+                              } }}
                           <DropdownMenuItem 
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
-
                             className="text-red-500"
                           >
                             <Trash2 className="h-4 w-4 mr-2" />
@@ -249,7 +260,6 @@ import {formatDate} from "@/utils/dateUtils";
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
-
 import React from "react",;
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
 import {;
@@ -425,14 +435,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
-
-                    )}
-                  </div>;
-                </TableCell>;
-              </TableRow>;
-            ));
-          )}
-
 
   );
 };

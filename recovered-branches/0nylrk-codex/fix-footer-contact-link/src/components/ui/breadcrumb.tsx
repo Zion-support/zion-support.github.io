@@ -1,32 +1,34 @@
 
 
 import * as React from "react"
+import {Slot} from "@radix-ui/react-slot"
+import {ChevronRight} from "lucide-react"
 
+<<<<<<< HEAD
+import {cn} from "@/lib/utils"
+const Breadcrumb = React.forwardRef<;
+  HTMLElement;
+=======
 const Breadcrumb = React.forwardRef<;
   HTMLElement;
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from "lucide-react"
  
 import { cn } from "@/lib/utils"
  
-
-
-
-const Breadcrumb = React.forwardRef<
+<<<<<<< HEAD
 =======
-import * as React from "react";
-import {Slot} from "@radix-ui/react-slot";
-import {ChevronRight} from "lucide-react";
 
-import {cn} from "@/lib/utils";
 
-const Breadcrumb = React && React.forwardRef<;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  HTMLElement;
-  React && React.ComponentPropsWithoutRef<"nav"> & {;
-    separator?: React && React.ReactNode;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+const Breadcrumb = React.forwardRef<
+  HTMLElement,
+  React.ComponentPropsWithoutRef<"nav"> & {
+    separator?: React.ReactNode
   }
 >(({ className, separator, ...props }, ref) => (;
   <nav
@@ -174,6 +176,16 @@ const BreadcrumbEllipsis = ({;
     aria - hidden="true";
     className={cn ("[&>svg]:size - 3.5 text - zion - slate - light / 70", class_name)}
     {...props}
+<<<<<<< HEAD
+  >
+    &#8230
+  </span>
+)
+BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
+export {
+ 
+export {;
+=======
   >;
     {children || <ChevronRight className="h - 4 w - 4" />}
   </li>);
@@ -202,16 +214,28 @@ BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = "BreadcrumbElipssis";
 
 export {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Breadcrumb;
   BreadcrumbList;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
+<<<<<<< HEAD
+  BreadcrumbEllipsis}
+
+export {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+=======
 
 =======
 
  
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   BreadcrumbEllipsis}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

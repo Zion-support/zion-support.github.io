@@ -8,19 +8,19 @@ import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
-
-
-
-
-
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
+interface ReplyFormValues {
+  content: string
 
       content: '',;
     },;
@@ -103,16 +103,24 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
     }
   },
 
-
-
-
   return (
     <Card>
       <CardContent className="pt-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleSubmit)}>
             <FormField
-
+              control={form.control}
+              name='content'
+              render={({
+                field
+              }: {
+                field: ControllerRenderProps<ReplyFormValues, 'content'>
+              }) => (                <FormItem>
+                  <FormControl>
+                    <Textarea className='min-h-[100px] resize-y' {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
               control={form.control}
               name="content"
               render={({ field }: { field: ControllerRenderProps<ReplyFormValues "content"> }) => (
@@ -171,5 +179,20 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
         </Form>;
       </CardContent>;
     </Card>);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              )}
+            />
+            <div className="mt-4 flex justify-end">
+              <Button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Post Reply"}
+              </Button>
+            </div>
+          </form>
+        </Form>
+      </CardContent>
+    </Card>
+  )
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export default ReplyForm;

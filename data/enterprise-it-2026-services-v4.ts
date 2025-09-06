@@ -1,52 +1,31 @@
-
-import { ServiceVariant } from '../types / service - variants';
-
-export interface EnterpriseIT2026ServiceV4 {
-
-  {
-
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'Quantum - safe cloud storage platform with quantum - resistant encryption and distributed storage.',
-    launch_date: '2026 - 05 - 01',
-    customers: 40,
-    rating: 4 && 4.9,
-    reviews: 32,
-  },
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup && ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-
-      website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true;
-    implementation_details: 'Quantum - safe cloud storage platform with quantum - resistant encryption and distributed storage.';
-    launch_date: '2026 - 05 - 01';
-
-    customers: 40;
-
-    rating: 4 && 4.9,
-
-    reviews: 32
-
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant,
+import { ServiceVariant } from '../types/service-variants';
+export interface EnterpriseIT2026ServiceV4 {;
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: ServiceVariant;
   contactInfo: {
     mobile: string, email: string,
     address: string,
@@ -315,15 +294,41 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },
     realImplementation: true, implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.',
     launchDate: '2026-05-01', customers: 40,
     rating: 4.9,
+<<<<<<< HEAD
+    reviews: 32,
+  },;
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+=======
     reviews: 32;
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+    realImplementation: true;
+    implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.';
+    launchDate: '2026-05-01';
+    customers: 40;
 
+<<<<<<< HEAD
+    rating: 4.9
+
+    reviews: 32
+  }
+];
 =======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV4 {;
   id: string,;
@@ -718,12 +723,12 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
     customers: 40,;
     rating: 4.9;
     reviews: 32;
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
-
-;
-

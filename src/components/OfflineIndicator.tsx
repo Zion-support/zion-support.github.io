@@ -1,7 +1,15 @@
 import { useState, useEffect } from 'react';
 
 import { WifiOff, Wifi } from 'lucide-react'
+import { useState, useEffect } from 'react',
+import { WifiOff, Wifi } from 'lucide-react'
+import { Alert, AlertDescription } from '@/components/ui/alert',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+import { Alert, AlertDescription } from '@/components/ui/alert'
+export const OfflineIndicator = () => {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import { WifiOff, Wifi } from 'lucide-react'
 
 
 
@@ -55,28 +63,9 @@ export const OfflineIndicator = () => {;
         setTimeout(() => setShowOfflineAlert(false), 3000);      }        setTimeout((,) => setShowOfflineAlert(false), 3000);
         setTimeout(() => setShowOfflineAlert(false), 3000);
 
-
-      }
-    };
-
-    // Set initial status;
-    updateOnlineStatus();
-
-    // Listen for online/offline events;
-    window && window.addEventListener('online', updateOnlineStatus);
-    window && window.addEventListener('offline', updateOnlineStatus);
-
-
-
-    }
-  }, [showOfflineAlert]);
-  // Check condition
-if (return null) {
-  $2
-}
-  return (
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }, [showOfflineAlert]),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   if (!showOfflineAlert) return null;
 
@@ -109,22 +98,3 @@ if (return null) {
       </Alert>;
     </div>;
   );
-
-
-};
-    <div className='fixed top - 4 right - 4 z - 50 max - w-sm pointer - events - none'>;
-      <Alert variant={is_online ? 'default' : 'destructive'}>;
-        <div className='flex items - center gap - 2'>;
-            <Wifi className='h - 4 w - 4' />) : (
-            <WifiOff className='h - 4 w - 4' />)}
-          <AlertDescription>;
-            {is_online;
-              ? 'Connection restored';
-              : 'You are offline. Some features may not work.'}          </AlertDescription>            {is_online ? (
-              'Connection restored') : (
-              'You are offline. Some features may not work.')}
-        </div>;
-      </Alert>;
-    </div>);
-} }
-};

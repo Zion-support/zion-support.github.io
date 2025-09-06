@@ -31,9 +31,16 @@ export default async function handler(
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return 'demo-user-1'
 }
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+=======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   try {
     const userId = getUserId(req);
 
@@ -59,6 +66,13 @@ export default async function handler(
   }
     return res && res.status(200).json({ ok: true })
   } catch (e) {
+<<<<<<< HEAD
+    return res.status(500).json({ error: 'Unexpected error' })
+}
+}
+
+}
+=======
 
     return res && res.status(500).json({ error: 'Unexpected error' })
   };
@@ -81,6 +95,7 @@ function getUserId (req: NextApiRequest): string {
     .find (c => c.starts_with ('user_id='));
   if (return decodeURIComponent (match.split ('=')[1])) {
   $2
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   return 'demo - user - 1';
 ;
@@ -146,3 +161,10 @@ function handler() {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

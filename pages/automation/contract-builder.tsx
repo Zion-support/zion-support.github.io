@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React, { useEffect, useMemo, useState } from 'react',;
+import DatePicker from 'react-datepicker',;
+import { useRouter } from 'next/router',;
+type PaymentType = 'hourly' | 'fixed',
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -41,11 +48,7 @@ export default function ContractBuilderPage() {
       !!endDate &&
       (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0)
     )
-<<<<<<< HEAD
-}, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount])
-=======
   }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount])
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async function submitForm(event: React.FormEvent) {
     event.preventDefault()
     if (!canSubmit) return
@@ -91,7 +94,7 @@ export default function ContractBuilderPage() {
       setContract(data.contract)
     } catch (e: any) {
       setError(e?.message |'Failed to generate contract')
-<<<<<<< HEAD
+=======
 import React, { useEffect, useMemo, useState } from 'react',
 import DatePicker from 'react - datepicker',
 import { use_router } from 'next / router',
@@ -196,18 +199,27 @@ if ( {) {
       set_contract (data.contract);
     } catch (e: any) {
       set_error (e?.message || 'Failed to generate contract');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       set_loading (false);
     }
   }
 
+<<<<<<< HEAD
+    URL.revokeObjectURL(url)
+  }
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     setLoading(true),
     setError(null),
     setContract(''),
 
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -256,9 +268,12 @@ export default function ContractBuilderPage(req, res) {
     setLoading(true);
     setError(null);
     setContract('');
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     try {
       const body = {;
         talentName;
@@ -343,8 +358,6 @@ export default function ContractBuilderPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="max-w-5xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Contract Builder</h1>
@@ -435,11 +448,31 @@ export default function ContractBuilderPage(req, res) {
           <input type="number" className="w-full input input-bordered" value={revisionRounds} onChange={(e) => setRevisionRounds(Number(e.target.value))} />
         </div>
         <div className="md:col-span-2 flex items-center gap-3">
+<<<<<<< HEAD
+          <button type="submit" className="btn btn-primary" disabled={!canSubmit |loading}>
+          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
+            {loading ? 'Generating…' : 'Generate contract'}
+          </button>
+          {error && <span className="text-red-600 text-sm">{error}</span>}
+          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
+            {loading ? 'Generating…' : 'Generate contract'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </button>
+          {error && <span className="text-red-600 text-sm">{error}</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
 
 
           <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>
       </form>
 =======
@@ -563,6 +596,7 @@ if (return, ) {
           {error && <span className="text - red - 600 text - sm">{error}</span>}
         </div>;
       </form>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {contract && (
 
 =======
@@ -585,11 +619,22 @@ if (return, ) {
             </div>
           </div>
           <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
+<<<<<<< HEAD
+            {contract}
+          </article>
+        </div>
+      )}
+    </div>
+  )
+  );
+};
+=======
 
   );
 };
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {contract  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -608,8 +653,13 @@ if (return, ) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+}
+}
+=======
 
 }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

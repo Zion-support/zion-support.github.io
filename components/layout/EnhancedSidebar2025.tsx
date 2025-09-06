@@ -1,6 +1,15 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+]
+ ] 
+] 
+ ] 
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }];
 ];</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {
   section.badge
@@ -81,11 +90,6 @@ const sidebarItems: SidebarItem[] = [
       { name: '2027 Services', href: '/revolutionary-2027-services-showcase', description: 'Future-ready services' }
       { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection' }
     ]
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
   }
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -99,56 +103,110 @@ class ErrorBoundary extends React.Component {
     }
     return this.props.children;
   }
-}
- ] ;
-}];
-];</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {;
-  section && section.badge ;
-}</span>) ;
-}</div>) : (<ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />) ;
-}</button> <AnimatePresence> > <CloseIcon className="w-5 h-5" /> </button> </div> </div> </a>) ) ;
-}+ {;
-  filteredServices && filteredServices.length - 5 ;
-}more results </div>) ;
-}</div>) : (<div className="text-sm text-gray-500 text-center py-2" > No services found </div>) ;
-}</div>) ;
-}</div> </div> </div> </div> </motion && motion.div>) ) ;
-}</div> </div> </span> </a>) ) ;
-}</div> </div> </span> </div> <ChevronRightclassName= {
-  `w-4 h-4 text-gray-400 transition-transform duration-200 $ {
-  expandedCategory === item && item.name ? 'rotate-90' : '' 
-}` 
-}/> </button> <AnimatePresence> > {;
-  item && item.children?.map ( (child) => (<Linkkey= {
-  child && child.name 
-}{
-  child && child.badge 
-}</span>) ;
-}</a>) ) ;
-}</motion && motion.div>) ;
-}</AnimatePresence> </div>) ) ;
-}</div> </div> <span>Quick Links</span> </h3> <div className="space-y-2" > <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > Contact Us </div> <div className="text-xs text-gray-500" >Get in touch with our team</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > View Pricing </div> <div className="text-xs text-gray-500" >Explore our pricing plans</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > About Us </div> <div className="text-xs text-gray-500" >Learn about Zion Tech Group</div> </a> </div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-blue-400" >1000+</div> <div className="text-xs text-gray-400" >Clients</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-purple-400" >24/7</div> <div className="text-xs text-gray-400" >Support</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-green-400" >99 && 99.9%</div> <div className="text-xs text-gray-400" >Uptime</div> </div> </div> </div> <Link href="/contact" className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25" > <span>Get Started Today</span> <ArrowRight className="w-4 h-4 ml-2 inline" /> </a> </div> </div> </motion && motion.aside>) ;
-};export default EnhancedSidebar2025;
-const sidebarItems: SidebarItem[] = [;
-  {;
-    name: 'All Services',;
-    href: '/comprehensive-services-showcase-2025',;
-    icon: <Globe className="w-5 h-5" />,;
-    description: 'Complete portfolio of all technology services',;
-    badge: 'Showcase',;
-    children: [;
-      { name: 'View All Services', href: '/comprehensive-services-showcase-2025', description: 'Complete services portfolio' },;
-      { name: 'Service Categories', href: '/comprehensive-services-showcase-2025#categories', description: 'Browse by category' },;
-      { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-2025#pricing', description: 'Compare service costs' },;
-      { name: 'Service Search', href: '/comprehensive-services-showcase-2025#search', description: 'Find specific services' },;
-      { name: 'Latest Innovations', href: '/revolutionary-2025-services-showcase', description: 'Cutting-edge solutions' },;
-      { name: '2026 Services', href: '/revolutionary-2026-services', description: 'Next generation solutions' },;
-      { name: '2027 Services', href: '/revolutionary-2027-services-showcase', description: 'Future-ready services' },;
-      { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection' }
-    ];
-=======
-
-
+  {
+    name: 'Micro SAAS'
+    href: '/micro-saas'
+    icon: <Rocket className="w-5 h-5" />
+    description: 'Innovative business solutions for modern enterprises'
+    badge: 'Popular'
+    children: [
+      { name: 'AI Business Intelligence', href: '/ai-business-intelligence-suite', description: 'Data-driven insights' }
+      { name: 'AI Content Generation', href: '/ai-content-generation-platform', description: 'Automated content creation' }
+      { name: 'AI Customer Service', href: '/ai-customer-service-automation', description: 'Intelligent support automation' }
+      { name: 'AI Sales Intelligence', href: '/ai-sales-intelligence-platform', description: 'Sales performance optimization' }
+      { name: 'AI Marketing Automation', href: '/ai-marketing-automation-suite', description: 'Campaign optimization' }
+      { name: 'AI Project Management', href: '/ai-project-management-platform', description: 'Intelligent project coordination' }
+      { name: 'AI Financial Analytics', href: '/ai-financial-analytics-platform', description: 'Financial insights and optimization' }
+      { name: 'AI HR Management', href: '/ai-hr-management-platform', description: 'HR operations automation' }
+      { name: 'AI Supply Chain', href: '/ai-supply-chain-optimization', description: 'Supply chain optimization' }
+      { name: 'AI Legal Analysis', href: '/ai-legal-document-analysis', description: 'Legal document processing' }
+    ]
+  }
+  {
+    name: 'Creative & Design'
+    href: '/creative-services'
+    icon: <Palette className="w-5 h-5" />
+    description: 'AI-powered creative and design solutions'
+    children: [
+      { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' }
+      { name: 'Metaverse Development', href: '/metaverse-development-studio', description: '3D world creation' }
+      { name: 'Quantum Metaverse', href: '/quantum-metaverse-platform', description: 'Quantum-enhanced experiences' }
+      { name: '3D Design & Modeling', href: '/3d-design-platform', description: 'Advanced 3D creation tools' }
+      { name: 'AI Video Generation', href: '/ai-video-generation', description: 'Automated video content' }
+      { name: 'AI Music Composition', href: '/ai-music-composition', description: 'AI-generated music' }
+    ]
+  }
+  {
+    name: 'Research & Development'
+    href: '/research-development'
+    icon: <BookOpen className="w-5 h-5" />
+    description: 'Cutting-edge research and development services'
+    children: [
+      { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', description: 'Self-directed research' }
+      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform', description: 'Materials science acceleration' }
+      { name: 'Space Technology Research', href: '/space-technology-research', description: 'Space exploration solutions' }
+      { name: 'Biotech AI Research', href: '/biotech-ai-research-platform', description: 'Biological research automation' }
+      { name: 'Neuroscience Research', href: '/neuroscience-research-platform', description: 'Brain research tools' }
+      { name: 'Climate Research AI', href: '/climate-research-ai', description: 'Environmental research automation' }
+    ]
+  }
+  {
+    name: 'Industry Solutions'
+    href: '/industry-solutions'
+    icon: <Truck className="w-5 h-5" />
+    description: 'Specialized solutions for specific industries'
+    children: [
+      { name: 'Healthcare AI', href: '/healthcare-ai-solutions', description: 'Medical AI applications' }
+      { name: 'Financial Services', href: '/financial-ai-solutions', description: 'Fintech AI solutions' }
+      { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions', description: 'Industrial automation' }
+      { name: 'Retail AI', href: '/retail-ai-solutions', description: 'Retail optimization' }
+      { name: 'Education AI', href: '/education-ai-solutions', description: 'Educational technology' }
+      { name: 'Transportation AI', href: '/transportation-ai-solutions', description: 'Smart transportation' }
+    ]
+  }
+  {
+    name: 'Pricing & Plans'
+    href: '/pricing'
+    icon: <DollarSign className="w-5 h-5" />
+    description: 'Flexible pricing options for all services'
+    children: [
+      { name: '2025 Pricing', href: '/pricing-2025', description: 'Current year pricing' }
+      { name: '2026 Pricing', href: '/pricing-2026', description: 'Next year pricing' }
+      { name: 'Enterprise Plans', href: '/enterprise-pricing', description: 'Large organization pricing' }
+      { name: 'Startup Plans', href: '/startup-pricing', description: 'Small business pricing' }
+      { name: 'Custom Solutions', href: '/custom-pricing', description: 'Tailored pricing' }
+      { name: 'ROI Calculator', href: '/roi-calculator', description: 'Calculate your return on investment' }
+    ]
+  }
+  {
+    name: 'Resources'
+    href: '/resources'
+    icon: <BookOpen className="w-5 h-5" />
+    description: 'Educational resources and documentation'
+    children: [
+      { name: 'Documentation', href: '/docs', description: 'Technical documentation' }
+      { name: 'API Reference', href: '/api-docs', description: 'API documentation' }
+      { name: 'Tutorials', href: '/tutorials', description: 'Step-by-step guides' }
+      { name: 'Case Studies', href: '/case-studies', description: 'Success stories' }
+      { name: 'Blog', href: '/blog', description: 'Latest insights and news' }
+      { name: 'Research Papers', href: '/research-papers', description: 'Academic publications' }
+    ]
+  }
+  {
+    name: 'Support'
+    href: '/support'
+    icon: <Settings className="w-5 h-5" />
+    description: 'Technical support and customer service'
+    children: [
+      { name: 'Help Center', href: '/help', description: 'Self-service support' }
+      { name: 'Contact Support', href: '/contact', description: 'Get in touch' }
+      { name: 'Live Chat', href: '/live-chat', description: 'Real-time assistance' }
+      { name: 'Training Programs', href: '/training', description: 'Skill development' }
+      { name: 'Community Forum', href: '/community', description: 'User community' }
+      { name: 'Status Page', href: '/status', description: 'Service status' }
+    ]
+  }
+];
   };
   {;
     name: 'AI & Consciousness',;
@@ -534,9 +592,6 @@ const sidebar_items: SidebarItem[] = [;
   }
 ];
 
-
-
-
 const resources = [
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> }
   { name: 'API Reference', href: '/api-documentation', icon: <Settings className="w-4 h-4" /> }
@@ -546,15 +601,16 @@ const resources = [
   { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
 ];
 const supportLinks = [
-
-
+  { name: 'Contact Support', href: '/support', description: 'Get help from our team' }
+  { name: 'Documentation', href: '/docs', description: 'Technical guides' }
+  { name: 'API Reference', href: '/api-documentation', description: 'Developer documentation' }
+  { name: 'Status Page', href: '/status', description: 'Service status' }
+  { name: 'Training', href: '/training', description: 'Learn our platforms' }
   { name: 'Contact Support', href: '/support', description: 'Get help from our team' },
   { name: 'Documentation', href: '/docs', description: 'Technical guides' },
   { name: 'API Reference', href: '/api-documentation', description: 'Developer documentation' },
   { name: 'Status Page', href: '/status', description: 'Service status' },
   { name: 'Training', href: '/training', description: 'Learn our platforms' },
-
-
   { name: 'Community', href: '/community', description: 'Connect with users' }
 ];
   const toggleSection = (title: string) => {
@@ -717,10 +773,13 @@ const supportLinks = [;
               )}
             </button>
 
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <AnimatePresence>
               {expandedSections.has(section.title) && (
                 <motion.div
@@ -1291,10 +1350,13 @@ const supportLinks = [
               )}
             </div>
 
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Contact Information */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -1574,13 +1636,38 @@ const supportLinks = [
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30";
+=======
+                    className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30";
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   >;
                     <div className="text - 2xl font - bold text - white mb - 1">{stat.value}</div>;
                     <div className="text - xs text - gray - 400">{stat.label}</div>;
                   </motion.div>))}
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
+                    className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30"
+                  >
+                    <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                    <div className="text-xs text-gray-400">{stat.label}</div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Quick Links */}
             <div className="p - 6 border - b border - cyan - 500 / 30">;
               <h3 className="text - lg font - semibold text - white mb - 4 flex items - center space - x-2">;
@@ -1600,10 +1687,19 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
                     </div>;
                     <span className="text - gray - 300 group - hover:text - white transition - colors duration - 200">;
                       {link.name}
+<<<<<<< HEAD
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+=======
                     </span>;
                   </Link>))}
               </div>;
             </div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Service Categories */}
             <div className="p - 6 border - b border - cyan - 500 / 30">;
               <h3 className="text - lg font - semibold text - white mb - 4 flex items - center space - x-2">;
@@ -1624,17 +1720,27 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
                         </div>;
                         <span className="text - gray - 300 group - hover:text - white transition - colors duration - 200">;
                           {item.name}
-
-
+                        </span>
+                      </div>
+                      <ChevronRight
+                        className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
+                          expandedCategory === item.name ? 'rotate-90' : ''
+                        }`}
+                      />
+                    </button>
                       <ChevronRight 
                         className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
                           expandedCategory === item.name ? 'rotate-90' : ''
                         }`} 
                       />
                     </button>
+<<<<<<< HEAD
+                    
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <AnimatePresence>
                       {expandedCategory === item.name && (
                         <motion.div
@@ -1880,6 +1986,20 @@ className="ml - 8 mt - 2 space - y-1";
                               {child.badge && (
                                 <span className="px - 2 py - 1 text - xs bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - full">;
                                   {child.badge}
+<<<<<<< HEAD
+                                </span>
+                              )}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+=======
                                 </span>)}
                             </Link>))}
                         </motion.div>)}
@@ -1887,6 +2007,7 @@ className="ml - 8 mt - 2 space - y-1";
                   </div>))}
               </div>;
             </div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Quick Links */}
             <div className="p - 6 border - b border - cyan - 500 / 30">;
               <h3 className="text - lg font - semibold text - white mb - 4 flex items - center space - x-2">;
@@ -1952,10 +2073,11 @@ className="ml - 8 mt - 2 space - y-1";
         </div>;
       </div>;
       {/* Floating Elements */}
-      <div className="absolute top - 1/4 left - 4 w - 1 h - 1 bg - cyan - 400 rounded - full animate - pulse"></div>;
-      <div className="absolute top - 1/2 right - 4 w - 1 h - 1 bg - blue - 400 rounded - full animate - pulse delay - 1000"></div>;
-      <div className="absolute bottom - 1/4 left - 4 w - 1 h - 1 bg - purple - 400 rounded - full animate - pulse delay - 2000"></div>;
-    </motion.aside>);
+      <div className="absolute top-1/4 left-4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute top-1/2 right-4 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000"></div>
+      <div className="absolute bottom-1/4 left-4 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-2000"></div>
+    </motion.aside>
+  )
 }
 ;
 
@@ -1976,12 +2098,6 @@ import { motion, AnimatePresence               } from 'framer-motion.ts;
     </motion && motion.aside>;
   );
 };
-
-
-=======
-
-};
-
 
 import React, { useState, useEffect              } from 'react.ts;
 import Link from 'next/link.ts;
@@ -3696,12 +3812,3 @@ Contact Us";
 <<<<<<< HEAD
 }}}}}}}}}}}}}}}}}}}}}}}}}})))))))))))))))))))))))))))))))));
 
-=======
-export default EnhancedSidebar2025, "), ,,
-}
-}}}}}}}}}}}}}}}}}}}}}}}}}})))))))))))))))))))))))))))))))));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

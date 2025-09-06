@@ -1,13 +1,33 @@
 
+<<<<<<< HEAD
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {ApplicationsTracker} from "@/components/jobs/applications";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Briefcase, Inbox} from "lucide-react";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {useIsMobile} from "@/hooks/use-mobile";
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { ApplicationsTracker } from "@/components/jobs/applications",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Briefcase, Inbox } from "lucide-react",
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { useIsMobile } from "@/hooks/use-mobile";
+function ApplicationStatusTrackerContent() {
+
+
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { useIsMobile } from "@/hooks/use-mobile",
+=======
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
   
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <SEO
@@ -36,6 +56,18 @@ function ApplicationStatusTrackerContent() {
       </div>
     </>
   )
+<<<<<<< HEAD
+}
+export default function ApplicationStatusTracker() {
+  return (
+    <ProtectedRoute>
+      <AppLayout>
+        <ApplicationStatusTrackerContent />
+      </AppLayout>
+    </ProtectedRoute>
+  )
+}
+=======
 
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -48,6 +80,7 @@ import {useIsMobile} from "@/hooks/use-mobile";
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 import { ApplicationsTracker } from "@/components/jobs/applications",;
@@ -89,6 +122,9 @@ function ApplicationStatusTrackerContent() {;
       </div>;
     </>;
   );
+<<<<<<< HEAD
+}
+=======
 
 import { AppLayout } from '@/layout / AppLayout';
 import { SEO } from '@/components / SEO';
@@ -102,6 +138,7 @@ import { useIsMobile } from '@/hooks / use - mobile';
  */
 function ApplicationStatusTrackerContent() {
   const is_mobile = useIsMobile ();
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   return (
     <>;
@@ -137,10 +174,25 @@ export default /**
 function ApplicationStatusTracker() {
   return (
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+;
+export default function ApplicationStatusTracker() {;
+  return (;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <ProtectedRoute>;
       <AppLayout>;
         <ApplicationStatusTrackerContent />;
       </AppLayout>;
+    </ProtectedRoute>;
+  );
+}
+;
+}
 
     </ProtectedRoute>);
 =======
@@ -148,4 +200,8 @@ function ApplicationStatusTracker() {
 
 
 }
+<<<<<<< HEAD
+;
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

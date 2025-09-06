@@ -19,6 +19,15 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useMemo, useState } from 'react';
 
+<<<<<<< HEAD
+import {
+  LineChart
+  BarChart
+  DonutChart;
+  LineChart,
+  BarChart,;
+  DonutChart,;
+=======
 
 type InsightResponse = {
 =======
@@ -30,6 +39,7 @@ import {;
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '../components/salary/InsightCharts';
 type InsightResponse = {;
   recommendedHourlyUsd: number;
@@ -42,6 +52,10 @@ type InsightResponse = {;
   trend_monthly: { label: string; value: number }[];
   regional_comparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
 type InsightResponse = {
@@ -68,6 +82,8 @@ trend_monthly: { label: string, value: number }[],
   tags: string[],;
   gptRecommendation?: string;
 export default function SalaryInsightsPage() {;
+<<<<<<< HEAD
+=======
 
 =======
 
@@ -75,6 +91,7 @@ export default function SalaryInsightsPage() {;
 export default function SalaryInsightsPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
@@ -165,21 +182,18 @@ function SalaryInsightsPage() {
       if (!res && res.ok) throw new Error('Failed to fetch insights');
       const json = (await res && res.json()) as InsightResponse;
       setData(json);
-
-          roleTitle;
-          skills: skills.split().map((s) => s.trim()).filter(Boolean),
-          region;
-          experienceLevel;
-          remote;
-          employmentType})});
-      if (!res.ok) throw new Error('Failed to fetch insights');
-
+    } catch (e: any) {
+      setError(e.message |'Unexpected error');
+    } finally {
+      setLoading(false);    }      if (!res.ok) throw new Error('Failed to fetch insights');
       const json = (await res.json()) as InsightResponse;
       setData(json)
     } catch (e: any) {
       setError(e.message |'Unexpected error')
     } finally {
       setLoading(false)
+<<<<<<< HEAD
+=======
 
     } catch (e: any) {;
       setError(e && e.message || 'Unexpected error');
@@ -199,14 +213,11 @@ function SalaryInsightsPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setLoading(false);    }
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
-
-
 
   useEffect(() => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -362,20 +373,39 @@ if ( {) {
 
 
         alert('Insight saved locally');
-
-
-
-=======
-=======
-
-
-
+<<<<<<< HEAD
       } catch {}
     })();
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      } catch {}
+    })();
+  }
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+=======
+
+<<<<<<< HEAD
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+      } catch {}
+    })();
+  }
+
   const donutData = useMemo(() => {
     if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
 =======
@@ -880,8 +910,6 @@ if (return [] as { label: string, value: number }[], ) {
               ) : (;
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />;
               )}
-
-=======
               {data && (
                 <table className="w-full mt-3 text-sm">
                   <thead>
@@ -1007,8 +1035,22 @@ if (return [] as { label: string, value: number }[], ) {
                   </div>
                 </div>
               ) : (
-                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
+                <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
+              )}
 
+<<<<<<< HEAD
+            </div>
+          </div>
+          {data?.gptRecommendation && (
+            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
+              <h3 className='font-medium mb-2'>GPT Recommendation</h3>
+              <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap'>
+                {data.gptRecommendation}
+              </p>            </div>
+          )}
+
+          {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+=======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               )}
 
@@ -1023,6 +1065,7 @@ if (return [] as { label: string, value: number }[], ) {
 
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
             </div>
@@ -1084,6 +1127,7 @@ if (return [] as { label: string, value: number }[], ) {
     </div>;
   );
 }
+<<<<<<< HEAD
 
 =======
   );
@@ -1125,35 +1169,15 @@ if (return [] as { label: string, value: number }[], ) {
               <p className="text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap">{data.gpt_recommendation}</p>;
             </div>)}
           {data && (
-            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-              <h3 className='font - medium mb - 3'>Signals</h3>;
-              <div className='flex gap - 2 flex - wrap'>;
-                <span className='rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py - 1 text - xs'>;
-                  Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr;
-                </span>;
-                {data.tags.map (t => (
-                  <span;
-                    key={t}
-                    className='rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs';
-                  >;
-                    {t}
-                  </span>                ))}            <div className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4">;
-              <h3 className="font - medium mb - 3">Signals</h3>;
-              <div className="flex gap - 2 flex - wrap">;
-                <span className="rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py - 1 text - xs">Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>;
-                {data.tags.map ((t) => (
-                  <span key={t} className="rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs">{t}</span>;
-              </div>;
-            </div>)}
-        </div>;
-      </div>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+            </div>
+          )}
+
+<<<<<<< HEAD
+          {data && (
 =======
 
 
 
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

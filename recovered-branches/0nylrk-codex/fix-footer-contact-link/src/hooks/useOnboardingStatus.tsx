@@ -1,8 +1,19 @@
 
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {useAuth} from "./useAuth";
+import {supabase} from "@/integrations/supabase/client";
+import { useState, useEffect } from "react",
+import { useAuth } from "./useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "./useAuth",
+import { supabase } from "@/integrations/supabase/client",
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface OnboardingStatus {
 
   profileCompleted: boolean
@@ -14,11 +25,20 @@ interface OnboardingStatus {
 
   responseReceived: boolean
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export function useOnboardingStatus() {;
+  const { user } = useAuth();
+export function useOnboardingStatus() {
+  const { user } = useAuth(),
+=======
 
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [status, setStatus] = useState<OnboardingStatus>({
 
     profileCompleted: false
@@ -29,36 +49,27 @@ interface OnboardingStatus {
     inviteSent: false
 
     responseReceived: false
-
-
+  });
   }),
   
-
   useEffect(() => {
 
     const fetchOnboardingStatus = async () => {
-
+      if (!user) return;
       if (!user) return,
       
-
-
       try {
         // Get user onboarding progress from database
         const { data, error } = await supabase
           .from('user_onboarding')
           .select('*')
           .eq('user_id', user.id)
-
-
+          .single();
           .single(),
           
-
-
         if (error) {
           console.error("Error fetching onboarding status:", error);
           return
-
-
 import { useState, useEffect } from "react",;
 import { useAuth } from "./useAuth",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -96,9 +107,12 @@ export function useOnboardingStatus() {;
         if (error) {;
           console.error("Error fetching onboarding status:", error),;
           return;
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
         if (data) {
           setStatus({
@@ -156,7 +170,13 @@ export function useOnboardingStatus() {;
 =======
       } catch (err) {
         console.error("Error in onboarding status hook:", err)
+      }
+    }
+    fetchOnboardingStatus()
+  }, [user]);
 
+  return status
+}
       } catch (err) {;
         console.error("Error in onboarding status hook:", err);
       }
@@ -196,6 +216,8 @@ function useOnboardingStatus() {
     response_received: false;
   });
 ;
+<<<<<<< HEAD
+=======
   useEffect (() => {
     const fetchOnboardingStatus = async () => {
       // Check condition
@@ -247,3 +269,4 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

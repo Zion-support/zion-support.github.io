@@ -1,38 +1,30 @@
 
-
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-
-
 import { ArrowRight } from "lucide-react";
 
-import {;
-  Card,;
-  CardContent,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
-
-} from "@/components/ui/card";
-
-interface GeneratedContent {;
-  description: string;
-  tags: string[];
-  suggestedPrice: {;
-=======
-import React from './react';
-import { Button  } from '@/components / ui / button';
-import { Badge  } from '@/components / ui / badge';
-import { ArrowRight  } from './lucide-react';
 import {
+<<<<<<< HEAD
+  Card
+  CardContent
+  CardFooter
+  CardHeader
+  CardTitle
+=======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Card,
   CardContent,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
+=======
 
   key_points: string[];
 
@@ -42,10 +34,9 @@ interface GeneratedContentDisplayProps {
 interface GeneratedContentDisplayProps {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   CardTitle,;
-
 } from "@/components/ui/card";
-
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -53,15 +44,25 @@ import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from "lucide-react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface GeneratedContent {
   description: string,
   tags: string[],
   suggestedPrice: {
+    min: number;
 
+    max: number;
+  }
+  keyPoints: string[];
+
+}
+interface GeneratedContentDisplayProps {
     min: number,
     max: number
   },
@@ -82,16 +83,21 @@ interface GeneratedContent {;
 }
 ;
 interface GeneratedContentDisplayProps {;
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   content: GeneratedContent;
-
-
+  onApply: () => void
+}
+export function GeneratedContentDisplay({
+  content
+  onApply
+}: GeneratedContentDisplayProps) {
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
-
-
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -104,62 +110,42 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           </h3>
           <p className="text-white">{content.description}</p>
         </div>
-
-
         
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Tags
           </h3>
           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
-
-
-export function GeneratedContentDisplay(): any ({;
-  content,;
-  onApply,;
-}: GeneratedContentDisplayProps) {;
-  return (
-    <Card className="border border-zion-blue-light bg-zion-blue-dark">;
-      <CardHeader>;
-        <CardTitle className="text-white">Generated Content</CardTitle>;
-      </CardHeader>;
-      <CardContent className="space-y-4">;
-        <div>;
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">;
-            Description;
-          </h3>;
-          <p className="text-white">{content && content.description}</p>;
-        </div>;
-
-        <div>;
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">;
-            Tags;
-          </h3>;
-          <div className="flex flex-wrap gap-2">;
-            {content && content.tags.map((tag, index) => (;
-
               <Badge
                 key={index}
-                className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
-=======
-
+                className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30"
+              >
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {tag}
               </Badge>;
             ))}
-
-
+          </div>
+        </div>
         
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Suggested Price Range
@@ -169,12 +155,13 @@ export function GeneratedContentDisplay(): any ({;
             {content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
-
-
         
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Key Selling Points
@@ -266,21 +253,22 @@ function GeneratedContentDisplay() {
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </CardFooter>
-
     </Card>
-
-
-    </Card>;
+<<<<<<< HEAD
   );
-=======
-        <Button;
-          on_click={on_apply}
-          className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover: from - zion - cyan - light hover:to - zion - cyan text - white";
+}
+  )
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
         >;
           Apply to My Listing;
-          <ArrowRight className="ml - 2 h - 4 w - 4" />;
+          <ArrowRight className="ml-2 h-4 w-4" />;
         </Button>;
       </CardFooter>;
-    </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    </Card>;
+  );
 }
+;

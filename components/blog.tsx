@@ -25,17 +25,21 @@ import React from 'react',
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+<<<<<<< HEAD
 =======
+=======
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
+<<<<<<< HEAD
+
 =======
-
-import React from 'react';
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function BlogPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -69,9 +73,8 @@ export default function BlogPage() {
           kleber@ziontechgroup.com.
         </p>
       </div>
-
+    </UltraFuturisticBackground>;
     </UltraFuturisticBackground>
-
   );export default function BlogPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -84,6 +87,12 @@ export default function BlogPage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </UltraFuturisticBackground>;
   );
+<<<<<<< HEAD
+}
+}
+
+}
+=======
 
 }
 
@@ -135,3 +144,4 @@ function BlogPage() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

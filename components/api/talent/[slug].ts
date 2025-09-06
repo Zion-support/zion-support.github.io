@@ -37,6 +37,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(500).json({ error: e && e.message })
   };
 }
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+=======
 
 
 =======
@@ -55,38 +68,13 @@ function apply_translations() {
   // Check condition
 if (return { item, translated: false }) {
   $2
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
-  const t = item.translations;
-  const translated: Partial < TalentProfile> = {}
-  // Check condition
-if (translated.title = t.title[lang]) {
-  $2
-}
-  // Check condition
-if (translated.summary = t.summary[lang]) {
-  $2
-}
-  // Check condition
-if (translated.bio = t.bio[lang]) {
-  $2
-}
-  // Check condition
-if (translated.category = t.category[lang]) {
-  $2
-}
-  return {
-    item: { ...item, ...translated },
-    translated: Object.keys (translated).length > 0,
   }
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
+
 }
+<<<<<<< HEAD
+=======
     return res.set_header ('Allow', 'GET').status (405).end ('Method Not Allowed');
   }
   const { slug, lang } = req.query as { slug: string; lang?: string }
@@ -153,7 +141,6 @@ if (throw error) {
   } catch (e: any) {
     return res.status (500).json ({ error: e.message });
 }
-  }
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

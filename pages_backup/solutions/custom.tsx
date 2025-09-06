@@ -1,121 +1,88 @@
-
-
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/custom.tsx
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Settings, Code, Zap, Users } from 'lucide-react';
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const features = [;
   {}
-    title: 'Tailored Solutions,',
-    description: 'Bespoke software solutions designed specifically for your unique business needs,',
-    icon: Settings,
-    benefits: ['Custom Architecture, 'Unique Features', 'Business Logic Integration', 'Scalable Design']',
-  },
+    title: 'Tailored Solutions,',;
+    description: 'Bespoke software solutions designed specifically for your unique business needs,',;
+    icon: Settings,;
+    benefits: ['Custom Architecture, 'Unique Features', 'Business Logic Integration', 'Scalable Design']',;
+  },;
   {}
-    title: 'Full Stack Development,',
-    description: 'Complete end-to-end development from frontend to backend and everything in between,',
-    icon: Code,
-    benefits: ['Frontend Development, 'Backend APIs', 'Database Design', 'Cloud Integration']',
-  },
+    title: 'Full Stack Development,',;
+    description: 'Complete end-to-end development from frontend to backend and everything in between,',;
+    icon: Code,;
+    benefits: ['Frontend Development, 'Backend APIs', 'Database Design', 'Cloud Integration']',;
+  },;
   {}
-    title: 'API Integration,',
-    description: 'Seamless integration with existing systems and third-party services,',
-    icon: Zap,
-    benefits: ['RESTful APIs, 'GraphQL', 'Third-party Integrations', 'Data Synchronization']',
-  },
+    title: 'API Integration,',;
+    description: 'Seamless integration with existing systems and third-party services,',;
+    icon: Zap,;
+    benefits: ['RESTful APIs, 'GraphQL', 'Third-party Integrations', 'Data Synchronization']',;
+  },;
   {}
-    title: 'Ongoing Support,',
-    description: 'Continuous support and maintenance to ensure your solution remains optimal,',
-    icon: Users,
-    benefits: ['24/7 Support, 'Regular Updates', 'Performance Monitoring', 'Bug Fixes']',
+    title: 'Ongoing Support,',;
+    description: 'Continuous support and maintenance to ensure your solution remains optimal,',;
+    icon: Users,;
+    benefits: ['24/7 Support, 'Regular Updates', 'Performance Monitoring', 'Bug Fixes']',;
   }
 ;];
 const technologies = [;
-  { category: 'Frontend, techs: ['_React, 'Next.js', 'Vue.js', 'Angular', 'TypeScript'] },',
-  { category: 'Backend, techs: ['Node.js, 'Python', 'Java', 'C#', 'Go'] },',
-  { category: 'Database, techs: ['PostgreSQL, 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch'] },',
-  { category: 'Cloud, techs: ['AWS, 'Azure', 'Google Cloud', 'Docker', 'Kubernetes'] },',
-  { category: 'Mobile, techs: ['_React Native, 'Flutter', 'iOS', 'Android', 'PWA'] }',
+  { category: 'Frontend, techs: ['_React, 'Next && Next.js', 'Vue && Vue.js', 'Angular', 'TypeScript'] },',;
+  { category: 'Backend, techs: ['Node && Node.js, 'Python', 'Java', 'C#', 'Go'] },',;
+  { category: 'Database, techs: ['PostgreSQL, 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch'] },',;
+  { category: 'Cloud, techs: ['AWS, 'Azure', 'Google Cloud', 'Docker', 'Kubernetes'] },',;
+  { category: 'Mobile, techs: ['_React Native, 'Flutter', 'iOS', 'Android', 'PWA'] }',;
 ;];
 const process = [;
-  { step: 'Discovery, description: 'Understanding your requirements and business goals' },',
-  { step: 'Planning, description: 'Creating detailed project roadmap and architecture' },',
-  { step: 'Development, description: 'Agile development with regular feedback and iterations' },',
-  { step: 'Testing, description: 'Comprehensive testing and quality assurance' },',
-  { step: 'Deployment, description: 'Smooth deployment and go-live support' },',
-  { step: 'Maintenance, description: 'Ongoing support and continuous improvement' }',
+  { step: 'Discovery, description: 'Understanding your requirements and business goals' },',;
+  { step: 'Planning, description: 'Creating detailed project roadmap and architecture' },',;
+  { step: 'Development, description: 'Agile development with regular feedback and iterations' },',;
+  { step: 'Testing, description: 'Comprehensive testing and quality assurance' },',;
+  { step: 'Deployment, description: 'Smooth deployment and go-live support' },',;
+  { step: 'Maintenance, description: 'Ongoing support and continuous improvement' }',;
 ;];
 const stats = [;
-  { number: '150+, label: 'Custom Projects' },',
-  { number: '98%, label: 'Client Satisfaction' },',
-  { number: 'On Time, label: 'Delivery Rate' },',
-  { number: '5+, label: 'Years Experience' }',
+  { number: '150+, label: 'Custom Projects' },',;
+  { number: '98%, label: 'Client Satisfaction' },',;
+  { number: 'On Time, label: 'Delivery Rate' },',;
+  { number: '5+, label: 'Years Experience' }',;
 ;];
-export default function CustomDevelopmentPage() {
-  return (;
-    <Layout);
-      title="Custom Development - Zion Tech Group"";
+export default function CustomDevelopmentPage() {;
+  return (
+    <Layout)
+      title="Custom Development - Zion Tech Group""
       description="Bespoke software solutions designed for your unique needs. Full stack development, API integration, and ongoing support for custom applications.""
-      keywords="custom development, bespoke software, full stack development, API integration, custom applications""
-    >;
+      keywords="custom development, bespoke software, full stack development, API integration, custom applications"">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">"
+        <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">";
           <div className="absolute inset-0">";
             <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
             <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
           </div>;
           <div className="container mx-auto px-4 relative z-10">";
-            <motion.div;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto""
-            >;
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center max-w-4xl mx-auto"">;
               <div className="flex items-center justify-center mb-6">";
                 <Settings className="w-16 h-16 text-purple-400 mr-4" />";
 
@@ -137,11 +104,11 @@ export default function CustomDevelopmentPage() {
                   View Portfolio;
                 </Link>;
               </div>;
-            </motion.div>;
+            </motion && motion.div>;
           </div>;
         </section>;
         {/* Stats Section */}
-        <section className="py-16 bg-white">"
+        <section className="py-16 bg-white">";
           <div className="container mx-auto px-4">";
 
             <div className="grid grid-cols-2 md: grid-cols-4 gap-8">",;
@@ -151,20 +118,19 @@ export default function CustomDevelopmentPage() {
 
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center""
-                >;
-                  <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2">{stat.number}</div>"
-                  <div className="text-gray-600 font-medium">{stat.label}</div>"
-                </motion.div>;
+                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                  className="text-center"">;
+                  <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2">{stat && stat.number}</div>";
+                  <div className="text-gray-600 font-medium">{stat && stat.label}</div>";
+                </motion && motion.div>;
               ))}
-            </div>,
+            </div>,;
           </div>;
         </section>;
         {/* Features Section */}
-        <section className="py-20 bg-gray-50">"
+        <section className="py-20 bg-gray-50">";
           <div className="container mx-auto px-4">";
-            <motion.div;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -176,42 +142,41 @@ export default function CustomDevelopmentPage() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 We build custom solutions that perfectly match your business requirements and integrate seamlessly with your existing systems;
               </p>;
-            </motion.div>;
+            </motion && motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
-              {features.map((feature, index) => (,
-                <motion.div}),
-                  key={feature.title}
+              {features && features.map((feature, index) => (,;
+                <motion&& motion.div}),
+                  key={feature && feature.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  className="bg-white rounded-2xl shadow-xl p-8""
-                >;
+                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
+                  className="bg-white rounded-2xl shadow-xl p-8"">;
                   <div className="flex items-center mb-6">";
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl flex items-center justify-center mr-4">";
-                      <feature.icon className="w-8 h-8 text-white" />";
+                      <feature && feature.icon className="w-8 h-8 text-white" />";
                     </div>;
                     <div>;
-                      <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>"
-                      <p className="text-gray-600">{feature.description}</p>"
+                      <h3 className="text-2xl font-bold text-gray-900">{feature && feature.title}</h3>";
+                      <p className="text-gray-600">{feature && feature.description}</p>";
                     </div>;
                   </div>;
                   <ul className="space-y-3">";
-                    {feature.benefits.map((benefit, benefitIndex) => (,
-                      <li key={benefitIndex} className="flex items-center text-gray-600">"
+                    {feature && feature.benefits.map((benefit, benefitIndex) => (,;
+                      <li key={benefitIndex} className="flex items-center text-gray-600">";
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
                         {benefit}
-                      </li>,
+                      </li>,;
                     ))}
-                  </ul>,
-                </motion.div>;
+                  </ul>,;
+                </motion && motion.div>;
               ))}
-            </div>,
+            </div>,;
           </div>;
         </section>;
         {/* Technologies Section */}
-        <section className="py-20 bg-white">"
+        <section className="py-20 bg-white">";
           <div className="container mx-auto px-4">";
-            <motion.div;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -221,38 +186,36 @@ export default function CustomDevelopmentPage() {
 
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                We use the latest technologies and frameworks to build robust, scalable, and maintainable custom solutions,
+                We use the latest technologies and frameworks to build robust, scalable, and maintainable custom solutions,;
               </p>;
-            </motion.div>;
+            </motion && motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {technologies.map((category, index) => (,
-                <motion.div}),
-                  key={category.category}
+              {technologies && technologies.map((category, index) => (,;
+                <motion&& motion.div}),
+                  key={category && category.category}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6""
-                >;
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{category.category}</h3>"
+                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                  className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6"">;
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{category && category.category}</h3>";
                   <div className="flex flex-wrap gap-2">";
-                    {category.techs.map((tech, techIndex) => (,
+                    {category && category.techs.map((tech, techIndex) => (,;
                       <span}),
                         key={techIndex}
-                        className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm""
-                      >;
+                        className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm"">;
                         {tech}
-                      </span>,
+                      </span>,;
                     ))}
-                  </div>,
-                </motion.div>;
+                  </div>,;
+                </motion && motion.div>;
               ))}
-            </div>,
+            </div>,;
           </div>;
         </section>;
         {/* Process Section */}
-        <section className="py-20 bg-gray-50">"
+        <section className="py-20 bg-gray-50">";
           <div className="container mx-auto px-4">";
-            <motion.div;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -262,13 +225,13 @@ export default function CustomDevelopmentPage() {
 
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Our proven development process ensures your custom solution is delivered on time, on budget, and exceeds expectations,
+                Our proven development process ensures your custom solution is delivered on time, on budget, and exceeds expectations,;
               </p>;
-            </motion.div>;
+            </motion && motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {process.map((step, index) => (,
-                <motion.div}),
-                  key={step.step}
+              {process && process.map((step, index) => (,;
+                <motion&& motion.div}),
+                  key={step && step.step}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
 
@@ -279,18 +242,18 @@ export default function CustomDevelopmentPage() {
                       <span className="text-white font-bold text-lg">{index + 1}</span>";
 
                     </div>;
-                    <h3 className="text-xl font-bold text-gray-900">{step.step}</h3>"
+                    <h3 className="text-xl font-bold text-gray-900">{step && step.step}</h3>";
                   </div>;
-                  <p className="text-gray-600">{step.description}</p>"
-                </motion.div>;
+                  <p className="text-gray-600">{step && step.description}</p>";
+                </motion && motion.div>;
               ))}
-            </div>,
+            </div>,;
           </div>;
         </section>;
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">"
+        <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">";
           <div className="container mx-auto px-4 text-center">";
-            <motion.div;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -315,7 +278,7 @@ export default function CustomDevelopmentPage() {
                   View All Solutions;
                 </Link>;
               </div>;
-            </motion.div>;
+            </motion && motion.div>;
           </div>;
         </section>;
       </div>;

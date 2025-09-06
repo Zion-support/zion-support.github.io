@@ -28,9 +28,9 @@ import { Button } from '@/components/ui/button';
 import { ProductListing } from '@/types/listings';
 import { DollarSign } from 'lucide-react';
 import { RatingStars } from '@/components/RatingStars';
-import { FavoriteButton } from '@/components/FavoriteButton';import { useDispatch } from 'react-redux';
-import type { AppDispatch } from '@/store';
-import { addItem } from '@/store/cartSlice';
+import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
+import type { AppDispatch } from '@/store'
+import { addItem } from '@/store/cartSlice'
 import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
 
@@ -62,7 +62,6 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
-
 import { RatingStars } from "@/components/RatingStars",
 import { FavoriteButton } from "@/components/FavoriteButton",
 import { useDispatch } from 'react-redux',
@@ -78,6 +77,9 @@ interface ProductListingCardProps {
   onRequestQuote?: (id: string) => void,
   detailBasePath?: string
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -86,18 +88,6 @@ const ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
-
-  const handleViewListing = () =>: any {
-    // Debug logging for development;
-    // Check condition
-if ( {) {
-  $2
-}
-      log_debug ('[ProductCard] Navigating to:', {
-        path: `${detailBasePath}/${listing.id}`,
-      });
-      log_debug ('[ProductCard] Listing ID:', { id: listing.id });
-      log_debug ('[ProductCard] Listing Title:', { title: listing.title });
     }
     // Validate listing ID exists before navigation;
     // Check condition
@@ -150,7 +140,6 @@ if ( {) {
   }
   const imageContainerClasses = is_grid ? 'h - 48' : 'h - 32 w - 48';
       onKeyDown={e => {
-
   detailBasePath?: string;
 const ProductListingCardComponent = ({;
   listing,;
@@ -277,12 +266,6 @@ const ProductListingCardComponent = ({;
         onClick={handleViewListing} // Keep existing onClick for navigation
         role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
-
-        onKeyDown={e => {;
-          if (e && e.key === 'Enter' || e && e.key === ' ') {;
-            e && e.preventDefault();
-            handleViewListing();
-          }  return ();
     <div
       data-testid= "equipment-link"'`
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
@@ -363,9 +346,6 @@ if ( {) {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
             handleViewListing()
-
-
-
             priority={false} // Assuming these are not LCP images
             sizes={
               isGrid
@@ -378,8 +358,10 @@ if ( {) {
               Featured;
             </Badge>;
           )}
-
-
+          {stockStatus && (
+            <Badge
+              variant={stockVariant as any}
+              className='absolute top-2 left-2'            >
           {stockStatus && (;
             <Badge;
               variant={stockVariant as any}
@@ -406,8 +388,6 @@ if ( {) {
 
           <div className="flex justify-between items-center mb-2">
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
-
-
               {listing.category}
             </Badge>
             {listing.rating && (
@@ -417,48 +397,9 @@ if ( {) {
           </div>;
 
           {/* Title & Description */}
-
-          <Image;
-            src = {image_src, }
-            alt = {listing.title, }
-            fill = {true, }
-            style={{ object_fit: 'cover' }}
-            on_error = {handleImageError, }
-            priority={false} // Assuming these are not LCP images;
-            sizes={
-              is_grid;
-                ? '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw';
-                : '192px';
-            } // 192px is w - 48;
-          />;
-          {listing.featured && (
-            <Badge className='absolute top - 2 right - 2 bg - primary text - primary - foreground border - none'>;
-              Featured;
-            </Badge>)}
-          {stock_status && (
-            <Badge;
-              variant={stock_variant as any}
-              className='absolute top - 2 left - 2'            >;
-              {stock_status}
-            </Badge>)}
-          <FavoriteButton item_id={listing.id} />;
-        </div>;
-      </div>;
-      {/* Content */}
-      <div;
-        className={`flex flex - col justify - between ${is_grid ? 'p - 4 flex - 1' : 'p - 4 flex - 1'}`}
-      >;
-        <div>;
-          {/* Category & Rating */}
-          <div className='flex justify - between items - center mb - 2'>;
-            <Badge;
-              variant='outline';
-              className='bg - background text - foreground / 80 border - primary / 10';
-            >;
-              {listing.category}
-            </Badge>;
-            {listing.rating && (
-              <RatingStars value={listing.rating} count={listing.review_count} />)}
+          <div onClick={handleViewListing} className='block'>
+            {listing.uspHeadline && (
+              <p className='text-primary font-semibold text-sm mb-1'>
           </div>;
           {/* Title & Description */}
           <div on_click={handleViewListing} className='block'>;
@@ -497,7 +438,20 @@ if ( {) {
                 {listing.uspHeadline}
               </p>
             )}
-
+            <h3 className='font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]'>
+              {listing.title}
+            </h3>
+          </div>
+          <p className='text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]'>
+            {listing.description}
+          </p>
+          {/* Tags */}
+          {listing.tags && listing.tags.length > 0 && (
+            <div className='flex flex-wrap gap-1 mb-4'>
+              {listing.tags.map((tag, idx) => (
+                <span
+                  key={idx}
+                  className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'                >
             <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
               {listing.title}
             </h3>
@@ -573,15 +527,23 @@ if ( {) {
 
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
-
-
             {listing.price !== null ? (
               <div className="flex items-center text-primary">
                 <DollarSign className="h-4 w-4 mr-1" />
                 {getPrice()}
               </div>
             ) : (
-
+              <span className='text-foreground/80'>{getPrice()}</span>
+            )}
+          </div>
+          <div className='flex gap-2'>
+            <Button
+              size='sm'
+              className='bg-primary hover:bg-primary/80 text-primary-foreground'
+              onClick={e => {
+                e.stopPropagation(); // Prevent card click event
+                addToCart() }}
+              disabled = {loading,}
               <span className="text-foreground/80">
                 {getPrice()}
               </span>;
@@ -611,7 +573,19 @@ if ( {) {
                 "Add to Cart"
               )}
             </Button>
-
+            <Button
+              size='sm'
+              variant='default'
+              className='bg-green-600 hover:bg-green-700 text-white'
+              onClick={e => {
+                e.stopPropagation(); // Prevent card click event                // Add to cart first, then redirect to checkout
+                dispatch(
+                  addItem({
+                    id: listing.id
+                    title: listing.title
+                    price: listing.price ?? 0
+                  })
+                )
             
             <Button
               size="sm"
@@ -630,25 +604,7 @@ if ( {) {
             >
               Buy Now
             </Button>
-
-              onClick={e => {;
-                e && e.stopPropagation(); // Prevent card click event                // Add to cart first, then redirect to checkout;
-                dispatch(;
-                  addItem({;
-                    id: listing && listing.id,;
-                    title: listing && listing.title,;
-                    price: listing && listing.price ?? 0,;
-                  });
-                );
-                router && router.push('/checkout');
-              }}
-              disabled = {loading,}
-            >;
-              Buy Now;
-            </Button>;
-
-            {onRequestQuote && (;
-
+            {onRequestQuote && (
               <Button
                 size='sm'
                 variant='outline'
@@ -810,109 +766,8 @@ if ( {) {
 }) );';
 router.push ('/checkout');
 }disabled= {
-  loading;
-}> Buy Now </Button> {";
-  onRequestQuote && (<Button size="sm" variant="outline" on_click={
-  handleRequestQuote ";
-}className="border - primary text - primary hover:bg - primary / 10 hover:text - primary - foreground" > Request Quote </Button>);
-}</div> </div> </div> </div>);
-
-}
-'";
-export const ProductListingCard = React.memo (ProductListingCardComponent);
-ProductListingCard.display_name = 'ProductListingCard';
-                Request Quote;
-              </Button>) }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-export const ProductListingCard = React.memo(ProductListingCardComponent);
-ProductListingCard.displayName = 'ProductListingCard';
-
-            
-            {onRequestQuote && (
-              <Button 
-                size="sm"
-                variant="outline" 
-                onClick={handleRequestQuote}
-                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
-              >
-                Request Quote
-              </Button>
-          </div>;
-          <div className="flex gap-2">;
-            <Button;
-              size="sm";
-              className="bg-primary hover: bg-primary/80 text-primary-foreground";
-              onClick={(e) => {;
-                e.stopPropagation(), // Prevent card click event;
-                addToCart();
-              }}
-              disabled={loading}
-            >;
-              {loading ? (;
-                <>;
-                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>;
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>;
-                  </svg>;
-                  Loading...;
-                </>;
-              ) : (;
-                "Add to Cart";
-              )}
-            </Button>;
-            <Button;
-              size="sm";
-              variant="default";
-              className="bg-green-600 hover: bg-green-700 text-white";
-              onClick={(e) => {;
-                e.stopPropagation(), // Prevent card click event;
-                // Add to cart first, then redirect to checkout;
-                dispatch(;
-                  addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 });
-                ),;
-                router.push('/checkout');
-              }}
-              disabled={loading}
-            >;
-              Buy Now;
-            </Button>;
-            {onRequestQuote && (;
-              <Button;
-                size="sm";
-                variant="outline";
-                onClick={handleRequestQuote}
-                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground";
-              >;
-                Request Quote;
-              </Button>;
-            )}
-
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  );
-
-          </div>;
-        </div>;
-      </div>;
-    </div>) }
-export default React.memo (ProductListingCard);
-
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-'"`;
-
-
-
-export const ProductListingCard = React.memo (ProductListingCardComponent);
-ProductListingCard.display_name = 'ProductListingCard';
-},;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';

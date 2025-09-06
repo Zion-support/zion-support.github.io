@@ -7,8 +7,19 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge",
 import { Loader2, Edit, X, Eye } from 'lucide-react'
 import { format } from "date-fns",
+import Link from "next/link";
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface JobsListProps {
 
-
+  filter?: JobStatus
+  onSelectJob?: (jobId: string, jobTitle: string) => void}
+export function JobsList({ filter, onSelectJob }: JobsListProps) {
+  const { user } = useAuth()
+  const [jobs, setJobs] = useState<Job[]>([])
+  const [isLoading, setIsLoading] = useState(true)
+  useEffect((,) => {
+    const fetchJobs = async () => {
+      if (!user) return
 import Link from "next/link",
 import {logErrorToProduction} from '@/utils/productionLogger',
 interface JobsListProps {
@@ -32,44 +43,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
           .from("jobs")
           .select("*")
           .eq("client_id", user.id)
-
-import { useState, useEffect  } from './react';
-import { use_auth  } from '@/hooks / use_auth';
-import { supabase  } from '@/integrations / supabase / client';
-import { Job, JobStatus  } from '@/types / jobs';
-import { Button  } from '@/components / ui / button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
-import { Badge  } from '@/components / ui / badge';
-import { Loader2, Edit, X, Eye } from 'lucide-react'import { format  } from './date - fns';
-import Link from './next / link';
-import {logErrorToProduction} from '@/utils / production_logger';
-interface JobsListProps {
-  filter?: JobStatus;
-  onSelectJob?: (job_id: string, job_title: string) => void}
-export /**
- * JobsList - Function description
- */
-function JobsList() {
-  const { user } = use_auth ();
-  const [jobs, set_jobs] = useState < Job[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-  useEffect ((, ) => {
-    const fetch_jobs = async () => {
-      // Check condition
-if (return) {
-  $2
-}
-      try {
-        let query = supabase;
-          .from ("jobs");
-          .select ("*");
-          .eq ("client_id", user.id);
-          .order ("created_at", { ascending: false }),
-        // Check condition
-if ( {) {
-  $2
-}
-          query = query.eq ("status", filter);
         }
         const { data, error } = await query;
         // Check condition
@@ -84,11 +57,6 @@ if (throw error) {
         setIsLoading (false);
       }
     }
-    fetch_jobs ();
-  }, [user, filter]);
-  // Check condition
-if ( {) {
-  $2
 }
     return (
       <div className="flex justify - center items - center p - 8">;
@@ -116,6 +84,10 @@ if ( {) {
 
           .order("created_at", { ascending: false }),
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
@@ -127,12 +99,13 @@ if ( {) {
     return (
       <div className="text-center p-8 border rounded-md bg-muted/20">
         <p className="text-lg text-muted-foreground">
-
+          {filter
+            ? `No jobs with status "${filter}" found.`
+            : "You haven't posted any jobs yet.", }
           {filter 
             ? `No jobs with status "${filter}" found.` 
             : "You haven't posted any jobs yet."
           }
-
         </p>
         <Button asChild className="mt-4">
           <Link href="/post-job">Post Your First Job</Link>
@@ -140,9 +113,6 @@ if ( {) {
       </div>
     )
   }
-
-
-
       case "closed":
         return "bg-gray-100 text-gray-800"
       default:
@@ -184,11 +154,14 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 
     }
 
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      {jobs.map((job,) => (
+        <Card
+          key = {job.id,}
   },
 
   },
-
-
 
   return (
     <div className="grid gap-6 md:grid-cols-2">
@@ -218,7 +191,8 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
               {job.description}
             </p>
             <div className="flex flex-wrap gap-1 mt-2">
-
+              {job.skills.slice(0, 3).map((skill, index,) => (
+                <Badge key={index} variant="outline" className="text-xs">
               {job.skills.slice(0, 3).map((skill, index) => (
                 <Badge key={index} variant="outline" className="text-xs">
     },;

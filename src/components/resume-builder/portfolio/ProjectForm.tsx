@@ -204,14 +204,26 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
-
+                <Input
+                  placeholder='E.g., AI Chatbot, E-commerce Website'
+                  {...field}                />
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
 
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-
+        />
+        <FormField
+          control={form.control}
+          name='description'
+          render={({ field }: { field: any }) => (            <FormItem>
+              <FormLabel>Project Description</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder='Describe what the project does and your role in it...'
+                  className='min-h-[100px]'
+                  {...field}
         />;
         <FormField;
           control={form.control}
@@ -230,7 +242,10 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               <FormMessage />
             </FormItem>
           )}
-
+        />
+        <FormField
+          control={form.control}
+          name='technologies'
         />;
         <FormField;
           control={form.control}
@@ -252,7 +267,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
 
           <FormField
-            control={form && form.control}
             name='github_url'
             render={({ field }: { field: any }) => (              <FormItem>;
                 <FormLabel className='flex items-center gap-2'>;
@@ -321,6 +335,15 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
 
 
+            name="github_url"
+            render={({ field }: { field: any }) => (
+              <FormItem>
+                <FormLabel className="flex items-center gap-2">
+                  <Github className="h-4 w-4" />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   GitHub URL
                 </FormLabel>
                 <FormControl>
@@ -329,7 +352,13 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 <FormMessage />
               </FormItem>
             )}
-
+          />
+          <FormField
+            control={form.control}
+            name='demo_url'
+            render={({ field }: { field: any }) => (              <FormItem>
+                <FormLabel className='flex items-center gap-2'>
+                  <Link className='h-4 w-4' />
           />;
           <FormField;
             control={form.control}
@@ -338,8 +367,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               <FormItem>
                 <FormLabel className="flex items-center gap-2">
                   <Link className="h-4 w-4" />
-
-
                   Demo URL
                 </FormLabel>
                 <FormControl>
@@ -374,8 +401,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             <FormItem>
               <FormLabel className="flex items-center gap-2">
                 <FileImage className="h-4 w-4" />
-
-
                 Screenshot URL
               </FormLabel>
               <FormControl>
@@ -384,7 +409,10 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               <FormMessage />
             </FormItem>
           )}
-
+        />
+        {/* Future file upload field would go here */}
+        <div className='flex justify-end space-x-2 pt-4'>
+          <Button type='button' variant='outline' onClick={onCancel}>
         />;
         {/* Future file upload field would go here */}
         
@@ -399,9 +427,10 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           </Button>
         </div>
       </form>
-
-
-
+    </Form>;
+  );
+};
+};
     </Form>
   )
         />;

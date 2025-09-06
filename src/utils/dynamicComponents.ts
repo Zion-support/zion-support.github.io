@@ -80,8 +80,6 @@ const LoadingSkeleton = () => React.createElement(
 // TODO: Uncomment when Chart component is available
 // export const DynamicChart = dynamic(
 //   () => import('../components/charts/Chart'),
-
-
 // Usage examples: // Replace: import Chart from '../components/charts/Chart';
 
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';

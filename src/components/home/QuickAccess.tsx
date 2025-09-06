@@ -489,11 +489,10 @@ export default function Page() {;";
                 </div>
               </div>
               {/* CTA */}
-
-              <motion&& motion.div
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}"
-                className="mt-auto">;
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}"
+                className="mt-auto">
                 <Link
                   to={link && link.path}`
                   className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${link && link.color} text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25`}>;
@@ -505,29 +504,6 @@ export default function Page() {;";
 
 export default QuickAccess;
 ;
-
-              className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
-            >
-              <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
-                {link.icon}
-              </div>
-              <h3 className="text-white font-medium mb-1">{link.title}</h3>
-              <p className="text-zion-slate-light text-xs mb-2">{link.description}</p>
-              <div className="flex items-center text-zion-cyan text-xs mt-auto">
-                <span>{t('general.explore')}</span>
-                <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
-              </div>
-            </Link>
-
-          ))}
-        </div>;
-      </div>;
-    </section>;
-  );
-
-export default QuickAccess;}
-
-export default QuickAccess;
 
 
 

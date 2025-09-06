@@ -15,7 +15,16 @@ className={`cursor-pointer transition-all ${
                 <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>
               </div>
               {selectedRole === 'client' && (
-
+                <Check className='h-5 w-5 text-primary' />
+              )}
+            </div>
+          </CardContent>
+        </Card>
+      </div>;
+    </div>;
+  );
+};
+}
                 <Check className="h-5 w-5 text-primary" />
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -160,9 +169,3 @@ function RolePicker() {
           </CardContent>;
         </Card>;
       </div>;
-
-
-
-    </div>);
-}
-;

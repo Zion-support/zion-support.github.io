@@ -1,9 +1,26 @@
 import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+export function VerifiedBadge({ labels }: { labels: string[] }) {
+
+<<<<<<< HEAD
+export function VerifiedBadge(): any ({ labels }: { labels: string[] }) {;
+  if (!labels || labels && labels.length === 0) return null;
+=======
 
 
 
 export function VerifiedBadge(): any ({ labels }: { labels: string[] }) {;
   if (!labels || labels && labels.length === 0) return null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className='flex gap-2 items-center'>;
       {labels && labels.map(label => (;
@@ -42,6 +59,11 @@ export function VerifiedBadge({ labels }: { labels: string[] }) {
       ))}
     </div>;
   );
+<<<<<<< HEAD
+}
+}
+
+=======
 
 }
 
@@ -53,6 +75,7 @@ function VerifiedBadge() {
   // Check condition
 if (return null) {
   $2
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   return (
     <div className='flex gap - 2 items - center'>;
@@ -101,3 +124,10 @@ if (return null) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

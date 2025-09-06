@@ -1,10 +1,4 @@
-
-
-=======
-
  setErrors (newErrors);
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
  setErrors (newErrors);
 }
@@ -62,13 +56,14 @@ const EnhancedContactForm: React.FC = () => {
   const { showSuccess, showError } = useToast();
   const services = [
     'AI & Machine LearningQuantum ComputingCybersecurityCloud InfrastructureData AnalyticsDigital TransformationOther'
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
-
-
-
-
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {}
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required'
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = 'Name must be at least 2 characters long'
+    }
 
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required'
@@ -76,24 +71,12 @@ const EnhancedContactForm: React.FC = () => {
       newErrors.email = 'Please enter a valid email address'
     }
 
-
-
-
-
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required'
     } else if (formData.message.trim().length < 10) {
       newErrors.message = 'Message must be at least 10 characters long'
     } else if (formData.message.trim().length > 1000) {
       newErrors.message = 'Message must be less than 1000 characters'
-
-
-  const validateForm = (): boolean => {;
-    const newErrors: FormErrors = {},;
-    if (!formData && formData.name.trim()) {;
-      newErrors && newErrors.name = 'Name is required';
-    } else if (formData && formData.name.trim().length < 2) {;
-      newErrors && newErrors.name = 'Name must be at least 2 characters long';
     }
 
     if (!formData && formData.email.trim()) {;
@@ -513,11 +496,10 @@ if ( {) {
         </div>;
 
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
-
+                    errors.name
+                      ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20'
                     errors.name 
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
-
-
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
 =======
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${;
@@ -554,11 +536,10 @@ if ( {) {
                   onBlur={() => handleInputBlur('email')}
 
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
-
+                    errors.email
+                      ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20'
                     errors.email 
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
-
-
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
 =======
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${;
@@ -638,11 +619,10 @@ if ( {) {
                 onBlur={() => handleInputBlur('message')}
 
                 className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 resize-none ${
-
+                  errors.message
+                    ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20'
                   errors.message 
                     ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
-
-
                     : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
 =======
                 className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 resize-none ${;
@@ -669,12 +649,10 @@ if ( {) {
               type="submit"
               disabled={isSubmitting}
               className={`w-full py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 transform ${
-
-
+                isSubmitting
+                  ? 'bg-gray-600 cursor-not-allowed'
                 isSubmitting 
                   ? 'bg-gray-600 cursor-not-allowed' 
-
-
                   : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 hover:scale-105'
               } flex items-center justify-center gap-3`}>;
               {isSubmitting ? (;
@@ -688,173 +666,12 @@ if ( {) {
                   Send Message;
                 </>;
               )}
-
-=======
-        {/* Contact Form */}
-        <div className="bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl rounded - 2xl border border - white / 10 p - 8">;
-          <form on_submit={handle_submit} className="space - y-6">;
-            <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 6">;
-              <div>;
-                <label html_for="name" className="block text - sm font - medium text - white / 80 mb - 2" html_for="input-;
-                  Full Name *;
-                ">;
-                  Full Name *;
-                </label>;
-                <input;
-                  type="text";
-                  id="name";
-                  name="name";
-                  value={form_data.name}
-                  on_change={handleInputChange}
-                  on_blur={() => handleInputBlur ('name')}
-                  className={`w - full px - 4 py - 3 rounded - xl border transition - all duration - 300 ${
-                    errors.name;
-                      ? 'border - red - 500 / 50 bg - red - 500 / 10 focus:border - red - 400 focus:bg - red - 500 / 20';
-                      : 'border - white / 20 bg - white / 5 focus:border - cyan - 400 focus:bg - white / 10';
-                  } text - white placeholder - white / 40 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 / 20`}
-                  placeholder="Enter your full name";
-                />;
-                {errors.name && (
-                  <motion.p;
-                    initial={{ opacity: 0, coordinate_y: -10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
-                    className="mt - 2 text - sm text - red - 400 flex items - center gap - 2";
-                  >;
-                    <AlertCircle className="w - 4 h - 4" />;
-                    {errors.name}
-                  </motion.p>)}
-              </div>;
-              <div>;
-                <label html_for="email" className="block text - sm font - medium text - white / 80 mb - 2" html_for="input-;
-                  Email Address *;
-                ">;
-                  Email Address *;
-                </label>;
-                <input;
-                  type="email";
-                  id="email";
-                  name="email";
-                  value={form_data.email}
-                  on_change={handleInputChange}
-                  on_blur={() => handleInputBlur ('email')}
-                  className={`w - full px - 4 py - 3 rounded - xl border transition - all duration - 300 ${
-                    errors.email;
-                      ? 'border - red - 500 / 50 bg - red - 500 / 10 focus:border - red - 400 focus:bg - red - 500 / 20';
-                      : 'border - white / 20 bg - white / 5 focus:border - cyan - 400 focus:bg - white / 10';
-                  } text - white placeholder - white / 40 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 / 20`}
-                  placeholder="Enter your email address";
-                />;
-                {errors.email && (
-                  <motion.p;
-                    initial={{ opacity: 0, coordinate_y: -10 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
-                    className="mt - 2 text - sm text - red - 400 flex items - center gap - 2";
-                  >;
-                    <AlertCircle className="w - 4 h - 4" />;
-                    {errors.email}
-                  </motion.p>)}
-              </div>;
-            </div>;
-            <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 6">;
-              <div>;
-                <label html_for="company" className="block text - sm font - medium text - white / 80 mb - 2" html_for="input-;
-                  Company;
-                ">;
-                  Company;
-                </label>;
-                <input;
-                  type="text";
-                  id="company";
-                  name="company";
-                  value={form_data.company}
-                  on_change={handleInputChange}
-                  className="w - full px - 4 py - 3 rounded - xl border border - white / 20 bg - white / 5 text - white placeholder - white / 40 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 / 20 focus:border - cyan - 400 focus:bg - white / 10 transition - all duration - 300";
-                  placeholder="Enter your company name";
-                />;
-              </div>;
-              <div>;
-                <label html_for="service" className="block text - sm font - medium text - white / 80 mb - 2" html_for="input-;
-                  Service Interest;
-                ">;
-                  Service Interest;
-                </label>;
-                <select;
-                  id="service";
-                  name="service";
-                  value={form_data.service}
-                  on_change={handleInputChange}
-                  className="w - full px - 4 py - 3 rounded - xl border border - white / 20 bg - white / 5 text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 400 / 20 focus:border - cyan - 400 focus:bg - white / 10 transition - all duration - 300";
-                >;
-                  <option value="">Select a service</option>;
-                  {services.map ((service) => (
-                    <option key={service} value={service} className="bg - slate - 800 text - white">;
-                      {service}
-                    </option>))}
-                </select>;
-              </div>;
-            </div>;
-            <div>;
-              <label html_for="message" className="block text - sm font - medium text - white / 80 mb - 2" html_for="input-;
-                Message *;
-              ">;
-                Message *;
-              </label>;
-              <textarea;
-                id="message";
-                name="message";
-                rows={5}
-                value={form_data.message}
-                on_change={handleInputChange}
-                on_blur={() => handleInputBlur ('message')}
-                className={`w - full px - 4 py - 3 rounded - xl border transition - all duration - 300 resize - none ${
-                  errors.message;
-                    ? 'border - red - 500 / 50 bg - red - 500 / 10 focus:border - red - 400 focus:bg - red - 500 / 20';
-                    : 'border - white / 20 bg - white / 5 focus:border - cyan - 400 focus:bg - white / 10';
-                } text - white placeholder - white / 40 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 / 20`}
-                placeholder="Tell us about your project and requirements...";
-              />;
-              {errors.message && (
-                <motion.p;
-                  initial={{ opacity: 0, coordinate_y: -10 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  className="mt - 2 text - sm text - red - 400 flex items - center gap - 2";
-                >;
-                  <AlertCircle className="w - 4 h - 4" />;
-                  {errors.message}
-                </motion.p>)}
-            </div>;
-            <button;
-              type="submit";
-              disabled={is_submitting}
-              className={`w - full py - 4 px - 8 rounded - xl font - semibold text - lg transition - all duration - 300 transform ${
-                is_submitting;
-                  ? 'bg - gray - 600 cursor - not - allowed';
-                  : 'bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 hover:scale - 105';
-              } flex items - center justify - center gap - 3`}
-            >;
-              {is_submitting ? (
-                <>;
-                  <Loader2 className="w - 5 h - 5 animate - spin" />;
-                  Sending Message...;
-                </>) : (
-                <>;
-                  <Send className="w - 5 h - 5" />;
-                  Send Message;
-                </>)}
-
-            </button>;
-          </form>;
-        </div>;
-      </div>;
-
-
-=======
-    </section>);
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  )
 }
-;
 export default EnhancedContactForm;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

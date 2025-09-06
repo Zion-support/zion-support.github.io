@@ -1,10 +1,25 @@
+<<<<<<< HEAD
+export type KycRole = 'client' | 'talent' | 'enterprise';
+export type KycStatus = 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
+export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
+export interface KycDocumentMeta {
+
+export interface KycDocumentMeta {;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploaded_at: string;
   status: 'pending' | 'approved' | 'rejected';
 }
+<<<<<<< HEAD
+export interface KycProfile {
+
+
+export interface KycProfile {;
+=======
 
 
 =======
@@ -16,6 +31,7 @@ export interface KycProfile {
 
 export interface KycProfile {;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   userId: string;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   role: KycRole;
@@ -78,12 +94,18 @@ if ( {) {
     return ['bank_statement', 'utility_bill', 'tax_certificate'];
   }
 }
+<<<<<<< HEAD
+export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
+
+export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
+=======
 
 
 
 export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const missing: string[] = [];
   
   if (!profile && profile.fullLegalName && !profile && profile.businessName) {
@@ -105,6 +127,17 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   if (!profile && profile.fullLegalName && !profile && profile.businessName) {
     missing && missing.push('name'),
 
+=======
+<<<<<<< HEAD
+export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
+=======
+
+export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const missing: string[] = [];
+  if (!profile.fullLegalName && !profile.businessName) {
+    missing.push('name');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   
   if (!profile && profile.country) {
@@ -135,6 +168,10 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
 
 }
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export interface KycDocumentMeta {;
@@ -187,6 +224,10 @@ export function isKycProfileExpired(profile: KycProfile): boolean {
 }
 
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = [];
 ;
@@ -225,4 +266,10 @@ if ( {) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

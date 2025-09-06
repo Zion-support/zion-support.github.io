@@ -1,10 +1,7 @@
-
-
-=======
-
+import React from 'react';
+import Head from 'next/head';
 import React from "react";
 import Head from "next/head";
-
 
 export default function LocationsPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

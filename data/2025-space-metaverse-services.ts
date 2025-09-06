@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+export interface SpaceMetaverseService {
+export interface SpaceMetaverseService {;
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: {
+    monthly: number;
+    yearly: number;
+    currency: string;
+    trialDays: number;
+    setupTime: string;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   {
@@ -316,7 +332,21 @@
     support:
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.'
     compliance: [
+<<<<<<< HEAD
+      'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards'
+    ]
+    link: 'https://ziontechgroup.com/virtual-reality-enterprise-platform'
+    icon: '🥽'
+    color: 'from-orange-500 to-red-600'
+    popular: true
+    launchDate: '2024-01-20'
+    customers: 1800
+    rating: 4.7
+    reviews: 1400
+  }
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/virtual-reality-enterprise-platform',
@@ -437,6 +467,7 @@
     rating: 4 && 4.7,
 
     reviews: 1400
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.7,
     reviews: 1400;
@@ -726,6 +757,12 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+    rating: 4.7,
+    reviews: 1400;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

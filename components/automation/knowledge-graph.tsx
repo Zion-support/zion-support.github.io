@@ -1,16 +1,25 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-
-export default function KnowledgeGraph({ report }: Props) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
+) )
+}</ul> </section> <section>) )
+}</ul> </section> </div>)
 };
-) ) ;
-}</ul> </section> <section>) ) ;
-}</ul> </section> </div>) ;
-export default function KnowledgeGraph(): any ({ report }: Props) {;
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>)
+export default function KnowledgeGraph({ report }: Props) {;
+ 
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
+=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default function KnowledgeGraph({ report }: Props) {
   if (!report) return <div>No knowledge graph yet.</div>;
   return (
     <div className="space-y-6">;
@@ -39,10 +48,11 @@ export default function KnowledgeGraph(): any ({ report }: Props) {;
           {report && report.edges.slice(0, 200).map((e, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{e && e.source} ⇄ {e && e.target}</span><span className="text-gray-500 truncate">{e && e.terms.join(', ')}</span></li>;
           ))}
-
-        </ul>;
-      </section>;
-    </div>;
+        </ul>
+      </section>
+    </div>
+);
+}
   );
 }
 

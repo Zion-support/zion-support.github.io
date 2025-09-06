@@ -1,3 +1,4 @@
+import React from "react";
 
 
 
@@ -20,11 +21,19 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from "react";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function EnhancedCard(): any ({;
   children,;
   className = "",;
 }: {;
+<<<<<<< HEAD
+  children: React.ReactNode;
+=======
   children: React && React.ReactNode;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   className?: string;
 }) {;
   return (
@@ -41,15 +50,6 @@ export default function EnhancedCard({ children, className = '' }: { children: R
       {children}
 </div>
   );
-}
-
-=======
-import React from './react';
-;
-export default /**
- * EnhancedCard - Function description
- */
-function EnhancedCard() {
   return (
     <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
   return (
@@ -58,9 +58,4 @@ function EnhancedCard() {
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

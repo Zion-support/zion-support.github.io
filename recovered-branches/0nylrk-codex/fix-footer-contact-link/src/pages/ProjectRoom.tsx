@@ -1,9 +1,27 @@
 
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { useParams  } from 'react-router-dom';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
+import { MessageSquare, FileText, Video, Calendar, Users, Settings, X  } from 'lucide-react';
+import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
+import { toast  } from 'sonner';
+export default function ProjectRoom() {
+
+  const { projectId } = useParams() as { projectId: string }
+  const { projectId } = useParams() as { projectId: string },;
+=======
 
 
   const { projectId } = useParams() as { projectId: string },;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState<Array<{
@@ -25,35 +43,45 @@
       isMuted: false
     }
   ]);
-  const startVideoCall = () => {
-=======
-import {useParams} from 'react-router-dom';
-import {Header} from '@/components/Header';
-import {Footer} from '@/components/Footer';
-import {SEO} from '@/components/SEO';
-import {Button} from '@/components/ui/button';
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
-import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
-=======
-import React, { useState } from 'react';
-import {use_params} from 'react-router-dom';
-import {Header} from '@/components / Header';
-import {Footer} from '@/components / Footer';
-import {SEO} from '@/components / SEO';
-import {Button} from '@/components / ui / button';
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components / ui / card';
-import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-import {MessageSquare, FileText, Video, Calendar, Users, Settings, X} from 'lucide-react';
-import {VideoCallRoom} from '@/components / video / VideoCallRoom';
-import {toast} from 'sonner';
-
+import React, { useState } from 'react',;
+import { useParams } from 'react-router-dom',;
+import { Header } from '@/components/Header',;
+import { Footer } from '@/components/Footer',;
+import { SEO } from '@/components/SEO',;
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react',;
+import { VideoCallRoom } from '@/components/video/VideoCallRoom',;
+import { toast } from 'sonner',;
+export default function ProjectRoom() {;
+  const { projectId } = useParams() as { projectId: string },;
+  const [activeTab, setActiveTab] = useState('chat'),;
+  const [isInCall, setIsInCall] = useState(false),;
+  const [callParticipants, setCallParticipants] = useState<Array<{;
+    id: string,;
+    name: string,;
+    avatar?: string,;
+    isMuted?: boolean,;
+    isVideoEnabled?: boolean,;
+    isScreenSharing?: boolean,;
+    isHost?: boolean;
+  }>>([;
+    {;
+      id: 'user-1',;
+      name: 'You',;
+      isHost: true,;
+      isVideoEnabled: true,;
+      isMuted: false;
+    }
   ]),
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const startVideoCall = () => {
     setIsInCall(true),
     toast.success("Video call started", {
@@ -63,31 +91,20 @@ import {toast} from 'sonner';
     if (activeTab !== 'video') {
       setActiveTab('video')
     }
-
+  }
   },
   
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const endVideoCall = () => {
     setIsInCall(false);
     toast.info("Video call ended", {
       description: "Call duration and participants will be logged"
     })
-
-  };
-
-  const endVideoCall = () => {;
-    setIsInCall(false);
-    toast && toast.info("Video call ended", {;
-      description: "Call duration and participants will be logged";
-    });
-  };
-
-  const simulateUserJoining = () => {;
-    // This is just for demo purposes - in a real app, this would be handled by the video call service;
-    const mockUsers = [;
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
+  }
+  const simulateUserJoining = () => {
+    // This is just for demo purposes - in a real app, this would be handled by the video call service
+    const mockUsers = [
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false }
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true }
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
     ];
 
@@ -102,8 +119,6 @@ import {toast} from 'sonner';
   };
 
 
-=======
-
   },
   
   const simulateUserJoining = () => {
@@ -111,10 +126,51 @@ import {toast} from 'sonner';
     const mockUsers = [
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
+<<<<<<< HEAD
+      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+    ];
+    
+    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
+    
+    if (!callParticipants.find(p => p.id === randomUser.id)) {
+      setCallParticipants(prev => [...prev, randomUser]);
+      toast(`${randomUser.name} joined the call`)
+    }
+  };
+  ]),;
+  const startVideoCall = () => {;
+    setIsInCall(true),;
+    toast.success("Video call started", {;
+      description: "Others can join with the project room link";
+    }),;
+    // Switch to video tab if not already there;
+    if (activeTab !== 'video') {;
+      setActiveTab('video');
+    }
+  },;
+  const endVideoCall = () => {;
+    setIsInCall(false),;
+    toast.info("Video call ended", {;
+      description: "Call duration and participants will be logged";
+    });
+  },;
+  const simulateUserJoining = () => {;
+    // This is just for demo purposes - in a real app, this would be handled by the video call service;
+    const mockUsers = [;
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
+      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+    ],;
+    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],;
+    if (!callParticipants.find(p => p.id === randomUser.id)) {;
+      setCallParticipants(prev => [...prev, randomUser]);
+      toast(`${randomUser.name} joined the call`);
+    }
+  },
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />;
@@ -153,65 +209,57 @@ import {toast} from 'sonner';
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>;
                 </span>;
               )}
-            </TabsTrigger>;
-            <TabsTrigger value="calendar" className="flex items-center gap-2">;
-              <Calendar className="h-4 w-4" />;
-              <span className="hidden sm:inline">Calendar</span>;
-            </TabsTrigger>;
-            <TabsTrigger value="team" className="flex items-center gap-2">;
-              <Users className="h-4 w-4" />;
-              <span className="hidden sm:inline">Team</span>;
-            </TabsTrigger>;
-            <TabsTrigger value="settings" className="flex items-center gap-2">;
-              <Settings className="h-4 w-4" />;
-              <span className="hidden sm:inline">Settings</span>;
-            </TabsTrigger>;
-          </TabsList>;
-
-          <TabsContent value="chat" className="space-y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle>Project Chat</CardTitle>;
-                <CardDescription>Communicate with your team members</CardDescription>;
-              </CardHeader>;
-              <CardContent className="h-[400px]">;
-                <div className="flex items-center justify-center h-full">;
-                  <p className="text-muted-foreground">Chat functionality will be implemented soon</p>;
-                </div>;
-              </CardContent>;
-            </Card>;
-          </TabsContent>;
-
-          <TabsContent value="files" className="space-y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle>Project Files</CardTitle>;
-                <CardDescription>Manage documents and files</CardDescription>;
-              </CardHeader>;
-              <CardContent className="h-[400px]">;
-                <div className="flex items-center justify-center h-full">;
-                  <p className="text-muted-foreground">File management will be implemented soon</p>;
-                </div>;
-              </CardContent>;
-            </Card>;
-          </TabsContent>;
-
-          <TabsContent value="video" className="space-y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle>Video Meetings</CardTitle>;
-                <CardDescription>Schedule and join video calls</CardDescription>;
-              </CardHeader>;
-              <CardContent className="min-h-[400px] p-4">;
-                {isInCall ? (;
-                  <div className="space-y-4">;
-
+            </TabsTrigger>
+            <TabsTrigger value="calendar" className="flex items-center gap-2">
+              <Calendar className="h-4 w-4" />
+              <span className="hidden sm:inline">Calendar</span>
+            </TabsTrigger>
+            <TabsTrigger value="team" className="flex items-center gap-2">
+              <Users className="h-4 w-4" />
+              <span className="hidden sm:inline">Team</span>
+            </TabsTrigger>
+            <TabsTrigger value="settings" className="flex items-center gap-2">
+              <Settings className="h-4 w-4" />
+              <span className="hidden sm:inline">Settings</span>
+            </TabsTrigger>
+          </TabsList>
+          <TabsContent value="chat" className="space-y-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Project Chat</CardTitle>
+                <CardDescription>Communicate with your team members</CardDescription>
+              </CardHeader>
+              <CardContent className="h-[400px]">
+                <div className="flex items-center justify-center h-full">
+                  <p className="text-muted-foreground">Chat functionality will be implemented soon</p>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          <TabsContent value="files" className="space-y-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Project Files</CardTitle>
+                <CardDescription>Manage documents and files</CardDescription>
+              </CardHeader>
+              <CardContent className="h-[400px]">
+                <div className="flex items-center justify-center h-full">
+                  <p className="text-muted-foreground">File management will be implemented soon</p>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          <TabsContent value="video" className="space-y-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Video Meetings</CardTitle>
+                <CardDescription>Schedule and join video calls</CardDescription>
+              </CardHeader>
+              <CardContent className="min-h-[400px] p-4">
+                {isInCall ? (
+                  <div className="space-y-4">
                     <VideoCallRoom
-=======
-
                     <VideoCallRoom 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
@@ -241,56 +289,56 @@ import {toast} from 'sonner';
                     </div>;
                   </div>;
                 )}
-
-              </CardContent>;
-            </Card>;
-          </TabsContent>;
-
-          <TabsContent value="calendar" className="space-y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle>Project Calendar</CardTitle>;
-                <CardDescription>Schedule and manage events</CardDescription>;
-              </CardHeader>;
-              <CardContent className="h-[400px]">;
-                <div className="flex items-center justify-center h-full">;
-                  <p className="text-muted-foreground">Calendar will be implemented soon</p>;
-=======
-export default /**
- * ProjectRoom - Function description
- */
-function ProjectRoom() {
-  const { project_id } = use_params () as { project_id: string },
-  const [active_tab, setActiveTab] = useState ('chat');
-  const [isInCall, setIsInCall] = useState (false);
-  const [call_participants, setCallParticipants] = useState < Array<{
-    id: string,
-    name: string,
-    avatar?: string;
-    is_muted?: boolean;
-    isVideoEnabled?: boolean;
-    isScreenSharing?: boolean;
-    is_host?: boolean;
-  }>>([;
-    {
-      id: 'user - 1',
-      name: 'You',
-      is_host: true,
-      isVideoEnabled: true,
-      is_muted: false;
-    }
-  ]);
-;
-  const startVideoCall = () =>: any {
-    setIsInCall (true);
-    toast.success ("Video call started", {
-      description: "Others can join with the project room link";
-    });
-    // Switch to video tab if not already there;
-    // Check condition
-if ( {) {
-  $2
+              </CardContent>
+            </Card>
+          </TabsContent>
+          <TabsContent value="calendar" className="space-y-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Project Calendar</CardTitle>
+                <CardDescription>Schedule and manage events</CardDescription>
+              </CardHeader>
+              <CardContent className="h-[400px]">
+                <div className="flex items-center justify-center h-full">
+                  <p className="text-muted-foreground">Calendar will be implemented soon</p>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          <TabsContent value="team" className="space-y-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Team Members</CardTitle>
+                <CardDescription>Manage project participants</CardDescription>
+              </CardHeader>
+              <CardContent className="h-[400px]">
+                <div className="flex items-center justify-center h-full">
+                  <p className="text-muted-foreground">Team management will be implemented soon</p>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          <TabsContent value="settings" className="space-y-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Project Settings</CardTitle>
+                <CardDescription>Configure project parameters</CardDescription>
+              </CardHeader>
+              <CardContent className="h-[400px]">
+                <div className="flex items-center justify-center h-full">
+                  <p className="text-muted-foreground">Settings will be implemented soon</p>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+        </Tabs>
+      </main>
+      <Footer />
+    </>
+  )
 }
+<<<<<<< HEAD
+=======
       setActiveTab ('video');
     }
   }
@@ -314,12 +362,12 @@ if ( {) {
 ;
     if () {) {
   $2
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
-      setCallParticipants (prev => [...prev, random_user]);
-      toast (`${random_user.name} joined the call`);
-    }
-  }
 ;
+<<<<<<< HEAD
+;
+=======
   return (
     <>;
       <SEO title={`Project Room - ${project_id}`} description="Collaborate on your project" />;
@@ -487,3 +535,4 @@ if ( {) {
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

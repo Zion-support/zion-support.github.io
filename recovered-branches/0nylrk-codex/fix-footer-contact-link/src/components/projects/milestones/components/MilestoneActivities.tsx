@@ -1,15 +1,9 @@
 
-interface MilestoneActivitiesProps {;
-  projectId: string;
-}
-
-export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesProps) {;
-  return <div>Activity will be shown here</div>;
-}
-
-=======
-import React from './react';
+import React from 'react';
 interface MilestoneActivitiesProps {
+<<<<<<< HEAD
+  projectId: string
+=======
   project_id: string;
 }
 export /**
@@ -24,17 +18,23 @@ function MilestoneActivities() {
   projectId: string
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface MilestoneActivitiesProps {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   projectId: string;
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   return <div>Activity will be shown here</div>;
-
+}
 }
 ;
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

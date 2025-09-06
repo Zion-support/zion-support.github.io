@@ -1,8 +1,25 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Download} from "lucide-react";
+import {AppPlatform, AppMetadataValues} from "./MetadataManager";
+import {toast} from "sonner";
+import React from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Download } from "lucide-react",
+import { AppPlatform, AppMetadataValues } from "./MetadataManager";
+import { toast } from "sonner";
+import { AppPlatform, AppMetadataValues } from "./MetadataManager",
+import { toast } from "sonner",
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ExportPanelProps {
 
   platform: AppPlatform
@@ -13,6 +30,17 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 
   const handleExport = (format: 'json' | 'csv') => {
     try {
+<<<<<<< HEAD
+      let content: string
+      let fileName: string
+      let content: string,
+      let fileName: string,
+      
+      if (format === 'json') {;
+        content = JSON.stringify(metadata, null, 2);
+      if (format === 'json') {
+        content = JSON.stringify(metadata, null, 2),
+=======
 
 import React from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
@@ -51,6 +79,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       let fileName: string,
       
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
       } else {
         // Convert object to CSV format
@@ -61,7 +90,10 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           metadata.longDescription,
           metadata.version,
           metadata.platform
-
+        ];
+        content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
+        // Add keywords as additional rows
+        content += '\n\nKeywords: \n' + metadata.keywords.join()
         ],
         
         content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join(),
@@ -69,11 +101,18 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
         // Add keywords as additional rows
         content += '\n\nKeywords:\n' + metadata.keywords.join(),
         
-
         fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
       // Create download link
-
+      const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' })
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
       const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' }),
       const url = URL.createObjectURL(blob),
       const link = document.createElement('a'),
@@ -84,8 +123,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       document.body.removeChild(link),
       URL.revokeObjectURL(url),
       
-
-
       toast.success(`Exported ${format.toUpperCase()} file successfully`)
 =======
 import React from './react';
@@ -143,19 +180,18 @@ if ( {) {
 
       console.error("Export failed:", error),
       toast.error(`Failed to export ${format.toUpperCase()} file`)
-
+    };
+  };
     }
-
-
+  }
+  },
+  
   const trackAnalytics = () => {
     console.log("Tracking app installation analytics...");
     toast.success("Analytics tracking enabled")
-
-
+  }
   },
   
-
-
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -192,6 +228,10 @@ if ( {) {
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
+}
+
+=======
 
 
         content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
@@ -200,6 +240,7 @@ if ( {) {
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 },
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -324,15 +365,14 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           </div>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
+    </Card>;
+  );
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </Card>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

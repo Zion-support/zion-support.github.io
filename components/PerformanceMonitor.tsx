@@ -465,15 +465,18 @@ if (return 'Needs Improvement) {
 <div className="mt - 3 pt - 2 border - t border - gray - 200>        <button"          on_click={() => setIsVisible (false)}
           className="text - xs text - gray - 500 hover: text - gray - 700        >"          Hide</button>;
       </div>;
-
-    </div>);
+    </div>;
+  );
 }
 export default PerformanceMonitor;
-;
-
-=======
-
 };
 export default PerformanceMonitor;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+}
+}
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

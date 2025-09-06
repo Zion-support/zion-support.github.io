@@ -577,7 +577,6 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Trash2, Download, Share2 } from 'lucide-react'
 import { Send } from 'lucide-react', // Added Send icon
-
 import { toast } from "sonner",
 import { logErrorToProduction } from '@/utils/productionLogger',
 interface WhitepaperSection {
@@ -922,9 +921,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     setShareableLink(null),
     setCurrentSharedWhitepaperId(null),
     setCurrentSharedWhitepaperIsPublic(null),
-
-
-
     try {
       const whitepaperPayload = {
         tokenName,
@@ -936,12 +932,19 @@ const WhitepaperGeneratorPage: React.FC = () => {;
   return (
     <div className="flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100">
       {/* Left Column: Inputs and Editors */}
-
-                isDownloading ||
-                sections && sections.length === 0 ||
-                isLoading ||
-                isSharing ||
-
+      <div className='md:w-1/2 lg:w-2/5 xl:w-1/3 p-4 bg-white rounded-lg shadow-md overflow-y-auto'>
+        <div className='flex justify-between items-center mb-6'>
+          <h1 className='text-xl font-bold text-center flex-grow'>
+            Whitepaper Configuration
+          </h1>
+          <div className='flex space-x-1'>
+            <Button
+              onClick={handleDownloadMarkdown}
+              disabled={
+                isDownloading |
+                sections.length === 0 |
+                isLoading |
+                isSharing |
                 isSubmittingToCounsel
               }
               variant='outline'
@@ -985,14 +988,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
               title='Generate Shareable Link'
             >
               <Share2 className='h-4 w-4' />{' '}
-
-              <span className='ml-1 hidden sm:inline'>Share</span>;
-            </Button>;
-          </div>;
-        </div>;
-
-        <form onSubmit={e => e && e.preventDefault()} className='space-y-6'>;
-
           {/* ... (Input fields remain the same) ... */}
           <div>
             <label htmlFor='tokenName' className='block text-sm font-medium'>
@@ -1145,43 +1140,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 <Button
                   variant='ghost'
                   size='icon'
-                  onClick={() => removeDistributionItem(item.id)}
-                  aria-label='Remove'
-                >
-                  <Trash2 className='h-4 w-4' />
-                </Button>              </div>
-
-        <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
-          {/* ... (Input fields remain the same) ... */}
-           <div>
-            <label htmlFor="tokenName" className="block text-sm font-medium">Token Name:</label>
-            <Input id="tokenName" value={tokenName} onChange={(e) => setTokenName(e.target.value)} required />
-          </div>
-          <div>
-            <label htmlFor="tokenSupply" className="block text-sm font-medium">Token Supply:</label>
-            <Input id="tokenSupply" value={tokenSupply} onChange={(e) => setTokenSupply(e.target.value)} required />
-          </div>
-          <div>
-            <label htmlFor="useCases" className="block text-sm font-medium">Use Cases:</label>
-            <textarea id="useCases" value={useCases} onChange={(e) => setUseCases(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
-          </div>
-          <div>
-            <label htmlFor="rewardsLogic" className="block text-sm font-medium">Rewards Logic:</label>
-            <textarea id="rewardsLogic" value={rewardsLogic} onChange={(e) => setRewardsLogic(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
-          </div>
-
-          {/* Token Distribution Inputs */}
-          <div className="space-y-3 p-3 border rounded-md">
-            <h2 className="text-lg font-semibold">Token Distribution</h2>
-            {distributionData.map((item) => (
-              <div key={item.id} className="flex items-center space-x-2">
-                <Input type="text" placeholder="Category" value={item.name} onChange={(e) => handleDistributionChange(item.id, 'name', e.target.value)} className="flex-grow"/>
-                <Input type="number" placeholder="%" value={item.percentage} onChange={(e) => handleDistributionChange(item.id, 'percentage', e.target.value)} className="w-24" min="0" max="100"/>
-                <Button variant="ghost" size="icon" onClick={() => removeDistributionItem(item.id)} aria-label="Remove"><Trash2 className="h-4 w-4"/></Button>
-              </div>
-            ))}
-            <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
-            <div>
               )}
             </div>
           )}
@@ -1189,13 +1147,68 @@ const WhitepaperGeneratorPage: React.FC = () => {;
 
            {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}
 
+          {/* Submit to Counsel Button */}
+          {sections.length > 0 && (
+            <Button
+              type='button'
+              onClick={handleSubmitToCounsel}
+              disabled={
+                isSubmittingToCounsel |isLoading |isSharing |isDownloading
+              }
+              variant='default'
+              size='lg'
+              className='w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white'            >
+              <Send className='mr-2 h-4 w-4' />
+              {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
+            </Button>
+          )}
+          {isSubmittingToCounsel && (
+            <p className='text-center text-sm text-blue-600'>
+              Submitting to counsel...
+            </p>
+          )}
+           {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}
 
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
+              type='button'
+              onClick={handleSubmitToCounsel}
+              disabled={
+                isSubmittingToCounsel |isLoading |isSharing |isDownloading
+              }
+              variant='default'
+              size='lg'
+              className='w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white'            >
+              <Send className='mr-2 h-4 w-4' />
+              {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
+            </Button>
+          )}
+          {isSubmittingToCounsel && (
+            <p className='text-center text-sm text-blue-600'>
+              Submitting to counsel...
+            </p>
+          )}
+                type="button"
+                onClick={handleSubmitToCounsel}
+                disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
+                variant="default"
+                size="lg"
+                className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"
+            >
+                <Send className="mr-2 h-4 w-4" />
+                {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
+            </Button>;
+          )}
+           {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600">Submitting to counsel...</p>}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </form>
         </form>;
 
@@ -1267,13 +1280,13 @@ const WhitepaperGeneratorPage: React.FC = () => {;
           <div className="mt-8 pt-6 border-t">
             <h2 className="text-xl font-bold mb-4 text-center">Edit Generated Sections</h2>
             {sections.map((section) => (
-
-
               <WhitepaperSectionEditor
                 key={section.id}
                 title={section.title}
                 content={section.content}
-
+                onContentChange={newContent =>
+                  handleSectionContentChange(section.id, newContent)
+                }              />
                 onContentChange={(newContent) => handleSectionContentChange(section.id, newContent)}
               />;
 
@@ -1281,7 +1294,20 @@ const WhitepaperGeneratorPage: React.FC = () => {;
           </div>
         )}
         {rawDraft && (
-
+          <div className='mt-6 p-3 border rounded-md'>
+            <Button
+              onClick={() => setShowRawDraft(!showRawDraft)}
+              variant='outline'
+              size='sm'
+              className='w-full'
+            >
+              {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text            </Button>
+            {showRawDraft && (
+              <pre className='mt-2 p-2 bg-gray-50 text-xs whitespace-pre-wrap break-all max-h-60 overflow-y-auto rounded'>
+                {rawDraft}
+              </pre>
+            )}
+          </div>
             <div className="mt-6 p-3 border rounded-md">
             <Button onClick={() => setShowRawDraft(!showRawDraft)} variant="outline" size="sm" className="w-full">
                 {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text
@@ -1297,6 +1323,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
       </div>
       {/* Right Column: Preview Panel - Pass ref here */}
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 '";
 ;
 }

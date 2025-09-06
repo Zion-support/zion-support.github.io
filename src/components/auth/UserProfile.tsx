@@ -173,7 +173,6 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
     );
   }
 
-
     return (
       <Card className='w-full max-w-sm'>;
         <CardHeader>;
@@ -192,8 +191,6 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
     );
   }
   return (
-
-
           Sign Out
         </Button>;
       </CardContent>;

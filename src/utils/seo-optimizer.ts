@@ -11,7 +11,6 @@ export const optimize_headings = () =>: any {
 // SEO optimizer utilities
 export const generateMetaTags = () => {;
   console.log('Generating meta tags...');
-
 };
 };
 

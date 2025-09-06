@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+// Marketplace data store utilitiesexport interface Project {
+// Marketplace data store utilitiesexport interface Project {;
+=======
 
 // Marketplace data store utilities
 
@@ -8,6 +12,7 @@ export interface Project {
 // Marketplace data store utilitiesexport interface Project {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   title: string;
   summary: string;
@@ -44,9 +49,15 @@ export interface Project {
   }
   createdAt: string;
   updatedAt: string
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+export interface Offer {
+
+export interface Offer {;
+=======
 export interface Offer {
 =======
 }
@@ -55,6 +66,7 @@ export interface Offer {
 export interface Offer {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   createdAtIso: string;
   clientId: string;
@@ -76,6 +88,7 @@ export interface Offer {;
   agreementUrl?: string;
   status: 'SENT' | 'ACCEPTED' | 'REJECTED' | 'EXPIRED' | 'CANCELLED';
   expiresAt?: string;
+<<<<<<< HEAD
 
   notes?: string
 
@@ -91,6 +104,10 @@ export interface Offer {;
 }
 <<<<<<< HEAD
 export interface Application {
+<<<<<<< HEAD
+
+export interface Application {;
+=======
 =======
   notes?: string
 }
@@ -99,32 +116,30 @@ export interface Application {
 export interface Application {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   projectId: string;
   talentSlug: string;
   appliedAtIso: string;
   status: 'PENDING' | 'ACCEPTED' | 'REJECTED' | 'WITHDRAWN';
-
+  coverLetter?: string;
+  proposedRate?: number;
+  proposedTimeline?: string;
+  portfolioItems?: string[];
   notes?: string
-
-=======
-  cover_letter?: string;
-  proposed_rate?: number;
-  proposed_timeline?: string;
-  portfolio_items?: string[];
-  notes?: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Message {
+
+export interface Message {;
 =======
-  notes?: string
-}
 
 
 export interface Message {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   conversationId: string;
   senderId: string;
@@ -136,6 +151,7 @@ export interface Message {;
   context?: string;
   sentAtIso: string;
   readAtIso?: string;
+<<<<<<< HEAD
 
   isRead: boolean
 
@@ -145,6 +161,10 @@ export interface Message {;
 }
 <<<<<<< HEAD
 export interface Conversation {
+<<<<<<< HEAD
+
+export interface Conversation {;
+=======
 =======
   isRead: boolean
 }
@@ -153,6 +173,7 @@ export interface Conversation {
 export interface Conversation {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -726,10 +747,16 @@ export async function updateProject(id: string, updates: Partial<Project>): Prom
 =======
   return marketplaceStore.getProject(id)
 }
+<<<<<<< HEAD
+export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
+
+export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
+=======
 
 
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return marketplaceStore.updateProject(id, updates);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -763,10 +790,16 @@ export async function updateOffer(id: string, updates: Partial<Offer>): Promise<
 =======
   return marketplaceStore.getOffer(id)
 }
+<<<<<<< HEAD
+export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
+
+export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
+=======
 
 
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return marketplaceStore.updateOffer(id, updates);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -800,10 +833,16 @@ export async function updateApplication(id: string, updates: Partial<Application
 =======
   return marketplaceStore.getApplication(id)
 }
+<<<<<<< HEAD
+export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
+
+export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
+=======
 
 
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return marketplaceStore.updateApplication(id, updates);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -837,10 +876,16 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
 =======
   return marketplaceStore.getMessage(id)
 }
+<<<<<<< HEAD
+export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
+
+export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
+=======
 
 
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return marketplaceStore.updateMessage(id, updates);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -853,6 +898,107 @@ export async function deleteMessage(id: string): Promise<boolean> {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 // Utility functions
+<<<<<<< HEAD
+=======
+export function createProjectData(
+  title: string
+  summary: string
+  clientId: string
+  additionalData?: Partial<Project>
+): Omit<Project, 'id' | 'createdAt' | 'updatedAt'> {
+  return {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    title
+    summary
+    clientId
+    startDateIso: new Date().toISOString()
+    status: 'DRAFT'
+    timeline: []
+    documents: []
+    ...additionalData
+  }
+=======
+    title,
+    summary,
+    clientId,
+    startDateIso: new Date().toISOString(),
+    status: 'DRAFT',
+    timeline: [],
+    documents: [],
+    ...additionalData;
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+export function createOfferData(
+  clientId: string
+  talentSlug: string
+  scopeSummary: string
+  paymentTerms: Offer['paymentTerms']
+  additionalData?: Partial<Offer>
+): Omit<Offer, 'id' | 'createdAtIso'> {
+  return {
+<<<<<<< HEAD
+    clientId
+    talentSlug
+    startDateIso: new Date().toISOString()
+    scopeSummary
+    paymentTerms
+    status: 'SENT'
+    ...additionalData
+  }
+=======
+    clientId,
+    talentSlug,
+    startDateIso: new Date().toISOString(),
+    scopeSummary,
+    paymentTerms,
+    status: 'SENT',
+    ...additionalData;
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+export function createApplicationData(
+  projectId: string
+  talentSlug: string
+  additionalData?: Partial<Application>
+): Omit<Application, 'id' | 'appliedAtIso'> {
+  return {
+<<<<<<< HEAD
+    projectId
+    talentSlug
+    status: 'PENDING'
+    ...additionalData
+  }
+=======
+    projectId,
+    talentSlug,
+    status: 'PENDING',
+    ...additionalData;
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+export function createMessageData(
+  conversationId: string
+  senderId: string
+  recipientId: string
+  body: string
+  additionalData?: Partial<Message>
+): Omit<Message, 'id' | 'sentAtIso'> {
+  return {
+<<<<<<< HEAD
+    conversationId
+    senderId
+    recipientId
+    body
+    isRead: false
+    ...additionalData
+  }
+}
+export function generateId(prefix: string = 'item'): string {
+  return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 =======
@@ -862,13 +1008,70 @@ export async function deleteMessage(id: string): Promise<boolean> {
     conversationId,
     senderId,
     recipientId,
+=======
+    title,
+    summary,
+    client_id,
+    startDateIso: new Date ().toISOString (),
+    status: 'DRAFT',
+    timeline: [],
+    documents: [],
+    ...additional_data;
+  }
+}
+export function createOfferData (
+  client_id: string,
+  talent_slug: string,
+  scope_summary: string,
+  payment_terms: Offer['payment_terms'],
+  additional_data?: Partial < Offer>): Omit < Offer, 'id' | 'createdAtIso'> {
+  return {
+    client_id,
+    talent_slug,
+    startDateIso: new Date ().toISOString (),
+    scope_summary,
+    payment_terms,
+    status: 'SENT',
+    ...additional_data;
+  }
+}
+export function createApplicationData (
+  project_id: string,
+  talent_slug: string,
+  additional_data?: Partial < Application>): Omit < Application, 'id' | 'appliedAtIso'> {
+  return {
+    project_id,
+    talent_slug,
+    status: 'PENDING',
+    ...additional_data;
+  }
+}
+export function createMessageData (
+  conversation_id: string,
+  sender_id: string,
+  recipient_id: string,
+  body: string,
+  additional_data?: Partial < Message>): Omit < Message, 'id' | 'sentAtIso'> {
+  return {
+    conversation_id,
+    sender_id,
+    recipient_id,
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     body,
     isRead: false,
     ...additionalData;
   };
 }
+<<<<<<< HEAD
+
+export function generateId(prefix: string = 'item'): string {;
+  return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+
+}
+=======
 export function generate_id (prefix: string = 'item'): string {
   return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

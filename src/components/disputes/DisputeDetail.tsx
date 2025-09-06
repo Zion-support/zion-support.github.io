@@ -64,9 +64,6 @@ import {;
   ResolutionType,;
 } from '@/types/disputes';
 
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {;
   Card,;
   CardContent,;
@@ -196,10 +193,10 @@ export function DisputeDetail() {;
     }
   };
 
-  if (isLoading) {;
-
-      summary: resolution.summary,
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (isLoading) {
 
     return (
@@ -215,7 +212,10 @@ export function DisputeDetail() {;
 
       <div className="p-8 text-center">
         <p>Dispute not found</p>
-
+        <Button
+          onClick={() => router.push('/dashboard/disputes')}
+          className='mt-4'
+        >          Back to Disputes
         <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
           Back to Disputes
 
@@ -224,39 +224,17 @@ export function DisputeDetail() {;
       </div>
     )
   }
-
-          onClick={() => router && router.push('/dashboard/disputes')}
-          className='mt-4';
-        >          Back to Disputes;
-        </Button>;
-      </div>;
-    );
-  }
-
-  const getStatusBadgeVariant = (status: DisputeStatus,) => {;
-    switch (status) {;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className='p - 8 text - center'>;
-        <p > Dispute not found</p>;
-        <Button;
-          on_click={() => router.push ('/dashboard / disputes')}
-          className='mt - 4';
-        >          Back to Disputes;
-        </Button>;
-      </div>);
-  }
-  const getStatusBadgeVariant = (status: DisputeStatus, ) =>: any {
-    switch (status) {
-
-      case 'open':;
         return 'default';
       case 'under_review':;
         return 'secondary';
       case 'resolved':;
+        return 'outline'; // Changed from "success" to "outline"
+      case 'closed':
+        return 'outline'
+      default:
+        return 'default'
+    }
+  }
 
         return 'outline'; // Changed from './success'; to "outline";
 
@@ -284,6 +262,18 @@ if ( {) {
             </Button>;
 
 
+      case "open": return "default",
+      case "under_review": return "secondary",
+      case "resolved": return "outline", // Changed from "success" to "outline"
+      case "closed": return "outline",
+      default: return "default"
+    }
+  },
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="container mx-auto p-4 space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -294,22 +284,24 @@ if ( {) {
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
-
-          <p className="text-muted-foreground">
-            Reported {formatDistanceToNow(new Date(dispute?.created_at || ""), { addSuffix: true })}
+          <p className='text-muted-foreground'>
+            Reported{' '}
+            {formatDistanceToNow(new Date(dispute?.created_at |''), {
+              addSuffix: true
+            })}
           </p>
         </div>
-
-            </Button>
-          )}
-
-
+          <AlertTitle>This dispute has been resolved</AlertTitle>
+          <AlertDescription>{dispute.resolution_summary}</AlertDescription>
+        </Alert>
+      )}
+      <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+        <div className='lg:col-span-2'>
 
       {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
           <Check className="h-4 w-4" />
           <AlertTitle>This dispute has been resolved</AlertTitle>
-
           <AlertTitle>This dispute has been resolved</AlertTitle>
           <AlertDescription>{dispute.resolution_summary}</AlertDescription>
         </Alert>
@@ -324,6 +316,7 @@ if ( {) {
           <Check className="h-4 w-4" />
           <AlertTitle>This dispute has been resolved</AlertTitle>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <AlertDescription>
   },;
   if (isLoading) {;
@@ -402,8 +395,7 @@ if ( {) {
               <TabsTrigger value='attachments'>Attachments</TabsTrigger>
               {isAdmin && <TabsTrigger value='admin'>Admin Notes</TabsTrigger>}
             </TabsList>
-
-
+            <TabsContent value='overview' className='space-y-6'>
             
             <TabsContent value="overview" className="space-y-6">
 
@@ -417,14 +409,6 @@ if ( {) {
                 </CardHeader>
                 <CardContent className='space-y-4'>
                   <div>
-                    <h3 className='font-medium'>Reason</h3>
-                    <p>
-                      {disputeReasonLabels[dispute.reason_code] ??
-                        dispute.reason_code}
-                    </p>
-                  </div>
-
-
                   
 
 
@@ -515,7 +499,6 @@ if ( {) {
                     <p>{dispute.project?.title || "Unknown Project"}</p>
                     <p className="text-sm text-muted-foreground">{dispute.project?.scope_summary}</p>
                   </div>
-
                   
 
                   {dispute.milestone_id && (
@@ -583,12 +566,10 @@ if ( {) {
                       </p>;
                     </div>;
                   )}
-
-                  <div>;
-                    <h3 className='font-medium'>Timeline</h3>;
-                    <ul className='space-y-2 mt-2'>;
-                      <li className='flex gap-2 items-center'>;
-
+                  <div>
+                    <h3 className='font-medium'>Timeline</h3>
+                    <ul className='space-y-2 mt-2'>
+                      <li className='flex gap-2 items-center'>
                         <Badge
                           variant='outline'
                           className='h-6 w-6 rounded-full p-0 flex items-center justify-center'>;
@@ -654,99 +635,58 @@ if ( {) {
                         <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">1</Badge>
                         <span>Created on {format(new Date(dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>
                       </li>
-
+                      {dispute.status !== 'open' && (
+                        <li className='flex gap-2 items-center'>
+                          <Badge
+                            variant='outline'
+                            className='h-6 w-6 rounded-full p-0 flex items-center justify-center'
+                          >
+                            2
+                          </Badge>
+                      
+                      {dispute.status !== "open" && (
+                        <li className="flex gap-2 items-center">
+                          <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">2</Badge>
+                          <span>Under review</span>
+                        </li>
+                      )}
+                      
                       {dispute.resolved_at && (
                         <li className="flex gap-2 items-center">
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">
                             {dispute.status !== "open" ? "3" : "2"}
                           </Badge>
-
+                          <span>
+                            Resolved on{' '}
+                            {format(
+                              new Date(dispute.resolved_at)
+                              "MMM d, yyyy 'at' h:mm a"
+                            )}
+                          </span>
                           <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>
-
                         </li>
                       )}
-
-                          {format (
-                            new Date (dispute.created_at),
-                            "MMM d, yyyy 'at' h:mm a")}
-                        </span>;
-                      </li>;
-                      {dispute.status !== 'open' && (
-                        <li className='flex gap - 2 items - center'>;
-                          <Badge;
-                            variant='outline';
-                            className='h - 6 w - 6 rounded - full p - 0 flex items - center justify - center';
-                          >;
-                            2;
-                          </Badge>;
-                          <span > Under review</span>;
-                        </li>)}
-                      {dispute.resolved_at && (
-                        <li className='flex gap - 2 items - center'>;
-                          <Badge;
-                            variant='outline';
-                            className='h - 6 w - 6 rounded - full p - 0 flex items - center justify - center';
-                          >;
-                            {dispute.status !== 'open' ? '3' : '2'}
-                          </Badge>;
-                          <span>;
-                            Resolved on{' '}
-                            {format (
-                              new Date (dispute.resolved_at),
-                              "MMM d, yyyy 'at' h:mm a")}
-                          </span>;
-                        </li>)}
-                    </ul>;
-                  </div>;
-                </CardContent>;
-              </Card>;
-
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
               {dispute.status === 'resolved' && (
-                <Card>;
-                  <CardHeader>;
-                    <CardTitle > Resolution</CardTitle>;
-                  </CardHeader>;
-                  <CardContent>;
-                    <p className='whitespace - pre - wrap'>;
-                      {dispute.resolution_summary}
-
-
               
               {dispute.status === "resolved" && (
-
-
                 <Card>
                   <CardHeader>
                     <CardTitle>Resolution</CardTitle>
                   </CardHeader>
                   <CardContent>
-
+                    <p className='whitespace-pre-wrap'>
+                      {dispute.resolution_summary}
+                    </p>
                     <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
                     
 
                     {dispute.resolution_type && (
                       <div className='mt-4'>
                         <Badge>
-
-                    </ul>;
-                  </div>;
-                </CardContent>;
-              </Card>;
-
-              {dispute && dispute.status === 'resolved' && (;
-                <Card>;
-                  <CardHeader>;
-                    <CardTitle>Resolution</CardTitle>;
-                  </CardHeader>;
-                  <CardContent>;
-                    <p className='whitespace-pre-wrap'>;
-                      {dispute && dispute.resolution_summary}
-                    </p>;
-
-                    {dispute && dispute.resolution_type && (;
-                      <div className='mt-4'>;
-                        <Badge>;
-
                           Resolution:{' '}
                           {dispute && dispute.resolution_type.replace('_', ' ')}
                         </Badge>;
@@ -760,8 +700,8 @@ if ( {) {
                   </CardContent>;
                 </Card>;
               )}
-
-
+            </TabsContent>
+            <TabsContent value='messages' className='space-y-6'>
             
             <TabsContent value="messages" className="space-y-6">
 
@@ -783,31 +723,9 @@ if ( {) {
                     ) : (
                       messages
                         .filter(msg => !msg.is_admin_note)
-
-            </TabsContent>;
-
-            <TabsContent value='messages' className='space-y-6'>;
-              <Card>;
-                <CardHeader>;
-                  <CardTitle>Messages</CardTitle>;
-                  <CardDescription>;
-                    Communication regarding this dispute;
-                  </CardDescription>;
-                </CardHeader>;
-                <CardContent>;
-                  <div className='space-y-6 max-h-[600px] overflow-y-auto p-2'>;
-                    {messages && messages.length === 0 ? (;
-                      <div className='text-center py-12'>;
-                        <MessageSquare className='mx-auto h-12 w-12 text-muted-foreground mb-2' />;
-                        <p className='text-muted-foreground'>No messages yet</p>;
-                      </div>;
-                    ) : (;
-                      messages;
-                        .filter(msg => !msg && msg.is_admin_note);
-                        .map(msg => {;
-                          const isCurrentUser = user?.id === msg && msg.user_id;
-                                                      >;
-
+                        .map(msg => {
+                          const isCurrentUser = user?.id === msg.user_id
+                                                      >
                               <div
                                 className={`max-w-[80%] ${
                                   isCurrentUser
@@ -875,8 +793,17 @@ if ( {) {
                 <CardFooter>;
                   <div className='w-full space-y-4'>;
                     <Textarea
-
-
+                      placeholder='Type your message here...'
+                      value={message}
+                      onChange={e => setMessage(e.target.value)}
+                      className='min-h-[100px]'
+                      disabled={isSending}                    />
+                    <div className='flex justify-end'>
+                      <Button
+                        onClick={handleSendMessage}
+                        disabled={isSending |!message.trim()}
+                      >
+                        {isSending ? 'Sending...' : 'Send Message'}
                       placeholder="Type your message here..."
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
@@ -894,8 +821,7 @@ if ( {) {
                 </CardFooter>
               </Card>
             </TabsContent>
-
-
+            <TabsContent value='attachments'>
             
             <TabsContent value="attachments">
 
@@ -917,8 +843,6 @@ if ( {) {
                 </CardContent>
               </Card>
             </TabsContent>
-
-
             
 
 
@@ -1082,8 +1006,6 @@ if ( {) {
                           variant="outline" 
                           onClick={() => handleStatusChange("closed")}
                           disabled={dispute.status === "closed"}
-
-
                         >
                           Mark as Open
                         </Button>
@@ -1097,52 +1019,28 @@ if ( {) {
                         <Button
                           variant='outline'
                           onClick={() => handleStatusChange('closed')}
-
-                  <CardContent className='space - y-6'>;
-                    <div>;
-                      <h3 className='font - medium mb - 2'>Change Status</h3>;
-                      <div className='flex gap - 2'>;
-                        <Button;
-                          variant='outline';
-                          on_click={() => handleStatusChange ('open')}
-                          disabled={dispute.status === 'open'}
-                        >;
-                          Mark as Open;
-                        </Button>;
-                        <Button;
-                          variant='outline';
-                          on_click={() => handleStatusChange ('under_review')}
-                          disabled={dispute.status === 'under_review'}
-                        >;
-                          Mark as Under Review;
-                        </Button>;
-                        <Button;
-                          variant='outline';
-                          on_click={() => handleStatusChange ('closed')}
-                          disabled={dispute.status === 'closed'}                        >;
-                          Close Dispute;
-                        </Button>;
-                      </div>;
-                    </div>;
-
+                          disabled={dispute.status === 'closed'}                        >
+                          Close Dispute
+                        </Button>
+                      </div>
+                    </div>
                     {dispute.status !== 'resolved' && (
-                      <div>;
-                        <h3 className='font - medium mb - 2'>Resolve Dispute</h3>;
-                        <div className='space - y-4'>;
-                          <Textarea;
-                            placeholder='Enter resolution summary...';
-                            value={resolution.summary}
-
-
                     
                     {dispute.status !== "resolved" && (
-
-
                       <div>
                         <h3 className="font-medium mb-2">Resolve Dispute</h3>
                         <div className="space-y-4">
                           <Textarea
-
+                            placeholder='Enter resolution summary...'
+                            value={resolution.summary}
+                            onChange={e =>
+                              setResolution({
+                                ...resolution
+                                summary: e.target.value
+                              })
+                            }
+                            className='min-h-[100px]'                          />
+                          <div className='grid grid-cols-2 gap-4'>
                             placeholder="Enter resolution summary..."
                             value={resolution.summary}
                             onChange={(e) => setResolution({ ...resolution, summary: e.target.value })}
@@ -1172,7 +1070,6 @@ if ( {) {
                           </div>
                           
                           <Button onClick={handleResolveDispute}>Resolve Dispute</Button>
-
                         </div>
                       </div>
                     )}
@@ -1273,57 +1170,19 @@ if ( {) {
                                 {msg.message}
                               </p>
                             </div>
-
-
+                          ))}
                             <p className="whitespace-pre-wrap text-sm">{msg.message}</p>
                           </div>
                         ))}
                         
-
-
                         {!messages.some(msg => msg.is_admin_note) && (
                           <p className='text-sm text-muted-foreground italic'>
                             No admin notes yet
                           </p>
                         )}
                       </div>
-
-                                        msg && msg.user_profile?.display_name ||
-                                        'Admin avatar'
-                                      }
-                                    />;
-                                    <AvatarFallback>;
-                                      {msg && msg.user_profile?.display_name?.[0] ||;
-                                        'A'}
-                                    </AvatarFallback>;
-                                  </Avatar>;
-                                  <span className='text-sm font-medium'>;
-                                    {msg && msg.user_profile?.display_name || 'Admin'}
-                                  </span>;
-                                </div>;
-                                <span className='text-xs opacity-70'>;
-                                  {format(;
-                                    new Date(msg && msg.created_at),;
-                                    'MMM d, h:mm a';
-                                  )}                                </span>;
-                              </div>;
-                              <p className='whitespace-pre-wrap text-sm'>;
-                                {msg && msg.message}
-                              </p>;
-                            </div>;
-                          ))}
-
-                        {!messages && messages.some(msg => msg && msg.is_admin_note) && (;
-                          <p className='text-sm text-muted-foreground italic'>;
-                            No admin notes yet;
-                          </p>;
-                        )}
-                      </div>;
-
-                      <Separator className='my-4' />;
-
-                      <div className='space-y-4'>;
-
+                      <Separator className='my-4' />
+                      <div className='space-y-4'>
                         <Textarea
                           placeholder='Add an admin note (only visible to administrators)...'
                           value={adminNote}
@@ -1338,78 +1197,6 @@ if ( {) {
                           value={adminNote}
                           onChange={(e) => setAdminNote(e.target.value)}
                         />
-
-                        <Button
-                          variant='outline'
-
-                          <Button on_click={handleResolveDispute}>;
-                            Resolve Dispute;
-                          </Button>;
-                        </div>;
-                      </div>)}
-                    <div>;
-                      <h3 className='font - medium mb - 2'>Admin Notes</h3>;
-                      <div className='space - y-4 max - h-[300px] overflow - y-auto p - 2'>;
-                        {messages;
-                          .filter (msg => msg.is_admin_note);
-                          .map (msg => (
-                            <div;
-                              key={msg.id}
-                              className='bg - yellow - 50 border - l-4 border - yellow - 200 p - 4 dark:bg - yellow - 900 / 20 dark:border - yellow - 900';
-                            >;
-                              <div className='flex items - center justify - between mb - 2'>;
-                                <div className='flex items - center gap - 2'>;
-                                  <Avatar className='h - 6 w - 6'>;
-                                    <AvatarImage;
-                                      src={msg.user_profile?.avatar_url}
-                                      alt={
-                                        msg.user_profile?.display_name ||;
-                                        'Admin avatar';
-                                      }
-                                    />;
-                                    <AvatarFallback>;
-                                      {msg.user_profile?.display_name?.[0] ||;
-                                        'A'}
-                                    </AvatarFallback>;
-                                  </Avatar>;
-                                  <span className='text - sm font - medium'>;
-                                    {msg.user_profile?.display_name || 'Admin'}
-                                  </span>;
-                                </div>;
-                                <span className='text - xs opacity - 70'>;
-                                  {format (
-                                    new Date (msg.created_at),
-                                    'MMM d, h:mm a')}                                </span>;
-                              </div>;
-                              <p className='whitespace - pre - wrap text - sm'>;
-                                {msg.message}
-                              </p>;
-                            </div>))}
-                        {!messages.some (msg => msg.is_admin_note) && (
-                          <p className='text - sm text - muted - foreground italic'>;
-                            No admin notes yet;
-                          </p>)}
-                      </div>;
-                      <Separator className='my - 4' />;
-                      <div className='space - y-4'>;
-                        <Textarea;
-                          placeholder='Add an admin note (only visible to administrators)...';
-                          value={admin_note}
-                          on_change={e => setAdminNote (e.target.value)}                        />;
-                        <Button;
-                          variant='outline';
-                          on_click={() => {
-                            if () {) {
-  $2
-}
-                              addDisputeMessage (
-                                dispute_id!,
-                                admin_note,
-                                true).then (() => {
-                                getDisputeMessages (dispute_id!).then (
-                                  set_messages);
-                                setAdminNote ('');
-
                               }) }
 
                           onClick={() => {;
@@ -1434,15 +1221,18 @@ if ( {) {
 
 
                           }}
-                        >;
-                          Add Admin Note;
-                        </Button>;
-                      </div>;
-                    </div>;
-                  </CardContent>;
-                </Card>;
-
-
+                        >
+                          Add Admin Note
+                        </Button>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+            )}
+          </Tabs>
+        </div>
+        <div className='space-y-6'>
         
         <div className="space-y-6">
 
@@ -1451,19 +1241,9 @@ if ( {) {
             <CardHeader>
               <CardTitle>Parties Involved</CardTitle>
             </CardHeader>
-
-          </Tabs>;
-        </div>;
-
-        <div className='space-y-6'>;
-          <Card>;
-            <CardHeader>;
-              <CardTitle>Parties Involved</CardTitle>;
-            </CardHeader>;
-            <CardContent className='space-y-6'>;
-              <div className='flex items-start gap-4'>;
-                <Avatar className='h-10 w-10'>;
-
+            <CardContent className='space-y-6'>
+              <div className='flex items-start gap-4'>
+                <Avatar className='h-10 w-10'>
                   <AvatarImage
                     src={dispute && dispute.client_profile?.avatar_url}
                     alt={
@@ -1491,8 +1271,15 @@ if ( {) {
                   <AvatarImage
                     src={dispute && dispute.talent_profile?.avatar_url}
                     alt={
-
-
+                      dispute.talent_profile?.display_name |'Talent avatar'
+                    }
+                  />
+                  <AvatarFallback>T</AvatarFallback>
+                </Avatar>
+                <div>
+                  <p className='font-medium'>Talent</p>
+                  <p className='text-sm text-muted-foreground'>
+                    {dispute.talent_profile?.display_name |'Unknown Talent'}
             <CardContent className="space-y-6">
               <div className="flex items-start gap-4">
                 <Avatar className="h-10 w-10">
@@ -1506,15 +1293,36 @@ if ( {) {
                   </p>
                 </div>
               </div>
-
-
+              <div className='flex justify-center'>
+                <ArrowDown className='h-6 w-6 text-muted-foreground' />
+              </div>
+              <div className='flex items-start gap-4'>
+                <Avatar className='h-10 w-10'>
+                  <AvatarImage
+                    src={dispute.talent_profile?.avatar_url}
+                    alt={
+                      dispute.talent_profile?.display_name || 'Talent avatar'
+                    }
+                  />
+              
+              <div className="flex justify-center">
+                <ArrowDown className="h-6 w-6 text-muted-foreground" />
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <Avatar className="h-10 w-10">
+                  <AvatarImage src={dispute.talent_profile?.avatar_url} alt={dispute.talent_profile?.display_name || "Talent avatar"} />
+                  <AvatarFallback>T</AvatarFallback>
+                </Avatar>
+                <div>
+                  <p className="font-medium">Talent</p>
+                  <p className="text-sm text-muted-foreground">
+                    {dispute.talent_profile?.display_name || "Unknown Talent"}
                   </p>
                 </div>
               </div>
             </CardContent>
           </Card>
-
-
           
 
 
@@ -1695,8 +1503,7 @@ if ( {) {
     </div>);
 
 }
-
-}, [dispute_id, getDisputeById, getDisputeMessages, router]);
+}, [disputeId, getDisputeById, getDisputeMessages, router])
 }
 const handleResolveDispute = async () => {
 

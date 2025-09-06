@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import { TALENT_PROFILES } from "../../data/talent";
 import type { TalentProfile } from "../../data/talent";
@@ -135,6 +134,19 @@ if (return true) {
     profile.title.toLowerCase ().includes (s) ||;
     profile.skills.some ((sk) => sk.toLowerCase ().includes (s)));
 }
+<<<<<<< HEAD
+
+export default function TalentGrid({ region, service }: Props) {
+  const items = React.useMemo(
+    () =>
+      TALENT_PROFILES.filter(
+        (p) => matchesRegion(p, region) && matchesService(p, service)
+      )
+    [region, service]
+        (p) => matchesRegion(p, region) && matchesService(p, service),
+      ),
+    [region, service],;
+=======
 export default /**
  * TalentGrid - Function description
  */
@@ -145,6 +157,7 @@ function TalentGrid() {
         (p) => matches_region (p, region) && matches_service (p, service),
       ),
     [region, service],
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 ;
   // Check condition
@@ -255,7 +268,3 @@ export default function TalentGrid(_{_region, _service}: Props) {_const _items =
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

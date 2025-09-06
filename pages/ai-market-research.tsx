@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React from 'react',
+import React from 'react';
+import Head from 'next/head';
+
+import {
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Star
+  Search;
+=======
 
 
 class ErrorBoundary extends React.Component {
@@ -121,6 +135,7 @@ import Head from 'next/head';
 import {
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Phone,
   Mail,
   MapPin,
@@ -129,8 +144,11 @@ import {
 
   Star,;
   Search,;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 import Layout from '../components / layout / Layout';
 ;
@@ -218,6 +236,7 @@ if (return null) {
                 <div className='flex items - center space - x-2 w - 4 h - 4 text - green - 400 text - xs'>;
                   <MapPin />;
                   <span>{service.contact_info.address}</span>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </div>              </div>;
             </div>;
           </div>;
@@ -245,43 +264,42 @@ if (return null) {
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Search } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
+export default function AIMarketResearchPage() {
+  const service = enhancedRealMicroSaasServices.find(s =>
+    s.link.endsWith('/ai-market-research');
+  );  if (!service) return null;
+
+=======
 
 
 
 export default function AIMarketResearchPage() {
-<<<<<<< HEAD
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-market-research'));
   if (!service) return null;
-=======
-  const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/ai-market-research');
-  );  if (!service) return null;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Search } from 'lucide-react',
 import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AIMarketResearchPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-market-research'))
   if (!service) return null,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-<<<<<<< HEAD
-<meta name="description" content={service.description} />
-=======
         <meta name="description" content={service.description} />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <link rel="canonical" href="https://ziontechgroup.com/ai-market-research" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -297,7 +315,6 @@ export default function AIMarketResearchPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-indigo-400 mt-0.5"><Check /><span>{feat}</span></li>
-<<<<<<< HEAD
                 ))}
               </ul>
             </div>
@@ -318,6 +335,27 @@ export default function AIMarketResearchPage() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+        <div className="bg-indigo-50 rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">Understand Your Market</h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Get comprehensive market insights with our AI-powered research and analysis platform.
+          </p>
+          <div className="flex justify-center gap-4">
+            <a href="/contact" className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover: bg-indigo-700">
+              Get Started
+            </a>
+            <a href="/about" className="border border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-50">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </main>
+    </Layout>
+);
+
+}
+=======
 
 
 
@@ -325,10 +363,13 @@ export default function AIMarketResearchPage() {
 
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>
     </Layout>
   )
 }
+<<<<<<< HEAD
+=======
 
     </Layout>);
 ;
@@ -339,3 +380,4 @@ export default function AIMarketResearchPage() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

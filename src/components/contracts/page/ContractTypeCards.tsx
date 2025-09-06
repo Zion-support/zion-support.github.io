@@ -7,8 +7,18 @@
           </CardDescription>
         </CardHeader>
         <CardContent>
-
-
+          <ul className="space-y-2">
+            <li className="text-sm">✓ Legally binding templates</li>
+            <li className="text-sm">✓ Milestone-based payment terms</li>
+            <li className="text-sm">✓ IP rights and confidentiality clauses</li>
+            <li className="text-sm">✓ DocuSign integration</li>
+          </ul>
+        </CardContent>
+        <CardFooter>
+          <Button variant='outline' onClick={onStandardClick}>            Create Standard Contract
+          </Button>
+        </CardFooter>
+      </Card>
           <ul className="space-y-2">
             <li className="text-sm">✓ Legally binding templates</li>
             <li className="text-sm">✓ Milestone-based payment terms</li>
@@ -57,11 +67,19 @@
           </ul>
         </CardContent>
         <CardFooter>
-
-          <Button 
-            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
-            onClick={onSmartClick}
-
+          <Button
+            className='w-full bg-gradient-to-r from-blue-600 to-indigo-600'            onClick={onSmartClick}          <ul className="space-y-2">
+            <li className="text-sm">✓ All standard contract features</li>
+            <li className="text-sm">✓ Automatic escrow payment release</li>
+            <li className="text-sm">✓ Transaction verification</li>
+            <li className="text-sm">✓ Permanent on-chain record</li>
+            <li className="text-sm">✓ Multi-signature approval flow</li>
+          </ul>
+        </CardContent>
+        <CardFooter>
+          <Button
+            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600"
+            onClick = {onSmartClick,}
           >
             Create Smart Contract
           </Button>
@@ -239,8 +257,9 @@ function ContractTypeCards() {
           </Button>;
         </CardFooter>;
       </Card>;
-
+    </div>;
   );
+};
 }
 
     </div>);

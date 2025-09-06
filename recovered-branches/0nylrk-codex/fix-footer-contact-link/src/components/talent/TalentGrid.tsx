@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+import { TalentCard } from "@/components/talent/TalentCard";
+import { TalentProfile } from "@/types/talent";
+export interface TalentGridProps {
+
+  clearFilters?: () => void;
+import { TalentCard } from "@/components/talent/TalentCard",
+import { TalentProfile } from "@/types/talent",
+import {TalentCard} from "@/components/talent/TalentCard";
+import {TalentProfile} from "@/types/talent";
+import { TalentCard } from "@/components/talent/TalentCard",
+import { TalentProfile } from "@/types/talent",
+=======
 import {TalentCard} from "@/components/talent/TalentCard";
 import {TalentProfile} from "@/types/talent";
 export interface TalentGridProps {;
@@ -25,6 +38,7 @@ import { TalentCard } from "@/components/talent/TalentCard",
 import { TalentProfile } from "@/types/talent",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface TalentGridProps {
   talents: TalentProfile[],
   isLoading: boolean,
@@ -32,11 +46,15 @@ export interface TalentGridProps {
   savedTalentIds: string[],
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean,
-
+  viewProfile?: (id: string) => void,;
+  clearFilters?: () => void;
   viewProfile?: (id: string) => void,
   clearFilters?: () => void,
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   handleRequestHire?: (talent: TalentProfile) => void
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -47,48 +65,50 @@ export function TalentGrid({
   savedTalentIds
   onToggleSave
 
-
-
+  isAuthenticated;
+  viewProfile;
+  clearFilters;
 export function TalentGrid({ 
   talents, 
   isLoading, 
   onTalentClick, 
   savedTalentIds, 
+<<<<<<< HEAD
+  onToggleSave, ;
+  isAuthenticated;
+  viewProfile;
+  clearFilters;
+  onToggleSave, 
+  isAuthenticated,
+  viewProfile,
+  clearFilters,
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   handleRequestHire
 }: TalentGridProps) {
 
   const handleRequestHireInternal = (talent: TalentProfile) => {
     if (handleRequestHire) {
       handleRequestHire(talent)
-=======
-import { TalentCard } from '@/components / talent / TalentCard';
-import { TalentProfile } from '@/types / talent';
-export interface TalentGridProps {
-  talents: TalentProfile[],
-  is_loading: boolean,
-  onTalentClick: (id: string) => void,
-  savedTalentIds: string[],
-  onToggleSave: (id: string, is_saved: boolean) => void,
-  is_authenticated: boolean,
-  view_profile?: (id: string) => void,
-  clear_filters?: () => void;
-  handleRequestHire?: (talent: TalentProfile) => void;
-}
-export /**
- * TalentGrid - Function description
- */
-function TalentGrid() {
-  const handleRequestHireInternal = (talent: TalentProfile) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      handleRequestHire (talent);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } else {
+<<<<<<< HEAD
+      // Default implementation
+      console.log("Request to hire:", talent.id)
+    }
+  }
+  const handleViewProfile = (id: string) => {
+    if (viewProfile) {
+      viewProfile(id)
+    } else {
+      onTalentClick(id)
+    }
+  }
+
+  };
+=======
 
 ;
   const handleViewProfile = (id: string) =>: any {
@@ -107,6 +127,7 @@ if ( {) {
   };
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       // // // console.log("Request to hire:", talent.id)
 import { TalentCard } from "@/components/talent/TalentCard",;
 import { TalentProfile } from "@/types/talent",;
@@ -148,12 +169,13 @@ export function TalentGrid({;
       onTalentClick(id);
     }
   },
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (isLoading) {
     return <div className="py-8 text-center">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>
@@ -190,8 +212,6 @@ export function TalentGrid(): any ({ ;
         >
           Clear Filters
         </button>
-
-
   };
 
   const handleViewProfile = (id: string) => {;
@@ -221,6 +241,11 @@ export function TalentGrid(): any ({ ;
         >
           Clear Filters
         </button>
+<<<<<<< HEAD
+      )}
+    </div>
+  }
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -231,6 +256,7 @@ export function TalentGrid(): any ({ ;
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
@@ -245,7 +271,9 @@ export function TalentGrid(): any ({ ;
           isAuthenticated={isAuthenticated}
         />;
       ))}
-
+    </div>
+  )
+}
     </div>;
   );
 }
@@ -253,6 +281,3 @@ export function TalentGrid(): any ({ ;
 =======
   }
 ;
-
-
-

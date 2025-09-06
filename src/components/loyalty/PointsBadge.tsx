@@ -18,7 +18,10 @@ if ( {) {
     } catch (error) {
       logErrorToProduction('Failed to refresh points:', { data: error })
     } finally {
-
+      setIsRefreshing(false)
+    }
+  }
+import React, { useState } from 'react',;
 import { Gift, RefreshCw } from 'lucide-react';
 import { usePoints } from '@/hooks/usePoints',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -98,7 +101,13 @@ export function PointsBadge() {;
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
-
+              href={isAuthenticated ? '/points' : '#'}
+              onClick={handleClick}
+              title={
+                isAuthenticated ? 'View points' : 'Earn points by participating'
+              }
+              className='flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95'            >
+              <Gift className='h-4 w-4' aria-hidden='true' />
               href={isAuthenticated ? "/points" : "#"}
               onClick={handleClick}
               title={isAuthenticated ? "View points" : "Earn points by participating"}
@@ -207,9 +216,6 @@ export function PointsBadge() {;
                 className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
                 aria-label="Refresh points"
               >
-
-
-
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
@@ -221,7 +227,6 @@ export function PointsBadge() {;
             </TooltipContent>
           </Tooltip>
         )}
-
 ;
 
       </div>;
@@ -231,17 +236,3 @@ export function PointsBadge() {;
     </TooltipProvider>;
   );
 }
-
-}
-
-
-              <p className='text - sm'>Refresh points balance</p>;
-            </TooltipContent>;
-          </Tooltip>)}
-      </div>;
-      {!is_authenticated && (
-        <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />)}
-    </TooltipProvider>);
-}
-}
-;

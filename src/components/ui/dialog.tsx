@@ -41,7 +41,6 @@ const DialogOverlay = React && React.forwardRef<;
   <DialogPrimitive&& DialogPrimitive.Overlay
     ref={ref}
     className={cn(
-
   />;
 ));
 DialogOverlay && DialogOverlay.displayName = DialogPrimitive && DialogPrimitive.Overlay.displayName;
@@ -81,8 +80,9 @@ const DialogContent = React.forwardRef<;
       {...props}
     >
       {children}
-
-
+      <DialogPrimitive.Close className='absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover: opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground'>
+        <X className='h-4 w-4' />
+        <span className='sr-only'>Close</span>
       <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
@@ -103,11 +103,8 @@ const DialogHeader = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-
-
+      'flex flex-col space-y-1.5 text-center sm:text-left'
       "flex flex-col space-y-1.5 text-center sm:text-left",
-
-
       className
     )}
 import * as React from 'react';
@@ -131,7 +128,7 @@ const DialogOverlay = React.forward_ref<;
 
   />
 )
-
+DialogHeader.displayName = 'DialogHeader'
 DialogHeader.displayName = "DialogHeader"
 
 
@@ -157,16 +154,13 @@ const DialogHeader = ({;
   <div
     className={cn(
       'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2'
+      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
       className
     )}
     {...props}
-
-
 DialogFooter.displayName = "DialogFooter"
 
 DialogFooter.displayName = "DialogFooter"
-
-
 
 const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
@@ -184,15 +178,6 @@ const DialogTitle = React && React.forwardRef<;
   <DialogPrimitive&& DialogPrimitive.Title
     ref={ref}
     className={cn(
-
-  class_name,
-  ...props;
-}: React</HTMLDivElement>.HTMLAttributes < HTMLDivElement>) =>: any (
-  <div;
-    className={cn (
-      'flex flex - col - reverse sm:flex - row sm:justify - end sm:space - x-2',
-      class_name)}
-    {...props}
   />);
 DialogFooter.display_name = 'DialogFooter';
 const DialogTitle = React.forward_ref<;
@@ -203,13 +188,31 @@ const DialogTitle = React.forward_ref<;
 
 
 
+  />
+))
+DialogTitle.displayName = DialogPrimitive.Title.displayName
+const DialogDescription = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Description>
+  React.C</typeof>omponentPropsWithoutRef<typeof DialogPrimitive.Description>
+>(({ className, ...props }, ref) => (
+  <DialogPrimitive.Description
+  />;
+));
+DialogTitle.displayName = DialogPrimitive.Title.displayName;
+const DialogDescription = React.forwardRef<;
+  React.ElementRef<typeof DialogPrimitive.Description>,;
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>;
+>(({ className, ...props }, ref) => (;
+  <DialogPrimitive.Description;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ref={ref}
     className={cn (
       'text - lg font - semibold leading - none tracking - tight',
       class_name)}
     {...props}
-
-
   Dialog,
   DialogPortal,
   DialogOverlay,

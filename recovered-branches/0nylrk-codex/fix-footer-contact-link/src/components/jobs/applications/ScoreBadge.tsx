@@ -1,21 +1,30 @@
 
-
-
-
 import { JobApplication } from "@/types/jobs";
 interface ScoreBadgeProps {;
   application: JobApplication;
 }
+export function ScoreBadge({ application }: ScoreBadgeProps) {
 
+  const score = application.match_score |0;
 
+export function ScoreBadge({ application }: ScoreBadgeProps) {;
+  const score = application.match_score || 0;
 
-export function ScoreBadge(): any ({ application }: ScoreBadgeProps) {;
-  const score = application && application.match_score || 0;
+import { JobApplication } from "@/types/jobs",
+interface ScoreBadgeProps {
+  application: JobApplication
+}
 
+<<<<<<< HEAD
+export function ScoreBadge({ application }: ScoreBadgeProps) {
+  const score = application.match_score || 0,
+  
+=======
 =======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Determine color based on score
   let className = "text-gray-700 bg-gray-100",
   if (score >= 80) className = "text-green-700 bg-green-100",
@@ -27,7 +36,8 @@ export function ScoreBadge(): any ({ application }: ScoreBadgeProps) {;
     <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>
       {score ? `${score}%` : "Not scored"}
     </span>
-
+  );
+}
   )
 import { JobApplication } from "@/types/jobs",;
 interface ScoreBadgeProps {;
@@ -88,6 +98,9 @@ if (class_name = "text - orange - 700 bg - orange - 100") {
 =======
 }
 ;
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

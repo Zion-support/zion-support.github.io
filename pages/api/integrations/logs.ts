@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../lib/integrations/fileStore";
@@ -19,9 +23,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     : state.logs;
   res.status(200).json({ logs });
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -48,6 +57,8 @@ function handler() {
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
 }
+<<<<<<< HEAD
+=======
   const { provider_id } = req.query as { provider_id?: string }
   const state = read_state ();
   const logs = provider_id;
@@ -66,3 +77,4 @@ function handler() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

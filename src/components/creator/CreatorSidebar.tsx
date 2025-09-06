@@ -132,6 +132,7 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-reac
 
     </Sidebar>;
   );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   );
 }

@@ -24,24 +24,39 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+export default function ApiPerformanceTestingPage() {
 
-import React from './react';
-import SEO from "../components / SEO";
-import { Check, ExternalLink  } from './lucide-react';
-export default /**
- * ApiPerformanceTestingPage - Function description
- */
-function ApiPerformanceTestingPage() {
-  const features = [;
-    "k6 / Gatling - compatible test runner",
-    "SLO - aware latency reports",
+  const features = [
+    "k6/Gatling-compatible test runner"
+    "SLO-aware latency reports"
+    "Regression baselines per endpoint"
+    "CI checks and PR annotations"
+    "Synthetic traffic for staging"
+  ];
+  return (
+
+export default function ApiPerformanceTestingPage() {
+  const features = [
+    "k6/Gatling-compatible test runner",
+    "SLO-aware latency reports",
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
   ];
 ;
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <>;
       <SEO;
         title="API Performance Testing";
@@ -95,13 +110,10 @@ function ApiPerformanceTestingPage() {
             >;
               <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
 
-            </a>;
-          </div>;
-        </section>;
-      </main>;
-
-    </>);
+return (
   return (
+<<<<<<< HEAD
+=======
     <>;
       <SEO;
         title="API Performance Testing";
@@ -120,6 +132,7 @@ function ApiPerformanceTestingPage() {
             {features.map ((f) => (
               <div;
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <>
       <SEO
         title="API Performance Testing"
@@ -180,11 +193,3 @@ function ApiPerformanceTestingPage() {
 
 }
 
-
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

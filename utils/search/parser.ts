@@ -1,9 +1,15 @@
-
-// Search parser utilities;
-export const parseSearchQuery = (query: string) =>: any {
-  // Add search query parsing functionality here;
+// Search parser utilities
+export const parseSearchQuery = (query: string) => {
+  // Add search query parsing functionality here
   return {
+<<<<<<< HEAD
+    keywords: []
+    skills: []
+    location: null
+    type: null
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
   const words = query && query.toLowerCase().split(/\s+/);
@@ -16,6 +22,9 @@ export const parseSearchQuery = (query: string) =>: any {
       keywords && keywords.push(word);
     }
   }
+<<<<<<< HEAD
+}
+=======
   
   if (keywords && keywords.length > 0) {
     filters && filters.keywords = keywords;
@@ -40,6 +49,7 @@ export const parseSearchQuery = (query: string) =>: any {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     keywords: [],
     skills: [],
     location: null,
@@ -58,19 +68,25 @@ export const searchAll = (parsed: any, access: any) => {
   };
 };
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const suggestDidYouMean = (query: string) => {
   // Add did you mean functionality here;
   return null;
 
-
-
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
-=======
 
 }
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

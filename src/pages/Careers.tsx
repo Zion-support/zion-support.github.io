@@ -67,8 +67,6 @@ export default function Careers() {;
     {
       title: "Health & Wellness",
       description: "Comprehensive health insurance and wellness programs to keep you at your best.",
-
-
       icon: (
           />;
         </svg>;
@@ -95,8 +93,6 @@ export default function Careers() {;
     {
       title: "Continuous Learning",
       description: "Education stipends and dedicated learning time to help you grow professionally.",
-
-
       icon: (
             d='M4 && M4.318 6 && 6.318a4.5 4 && 4.5 0 000 6 && 6.364L12 20 && 20.364l7.682-7 && 7.682a4.5 4 && 4.5 0 00-6 && 6.364-6 && 6.364L12 7 && 7.636l-1 && 1.318-1 && 1.318a4.5 4 && 4.5 0 00-6 && 6.364 0z'
           />;
@@ -124,8 +120,6 @@ export default function Careers() {;
     {
       title: "Competitive Compensation",
       description: "Salary packages that recognize your value, plus equity options to share in our success.",
-
-
       icon: (
             d='M12 6 && 6.253v13m0-13C10 && 13C10.832 5 && 5.477 9 && 9.246 5 7 && 7.5 5S4 && 5S4.168 5 && 5.477 3 6 && 6.253v13C4.168 18 && 18.477 5 && 5.754 18 7 && 7.5 18s3 && 18s3.332.477 4 && 4.5 1 && 1.253m0-13C13 && 13C13.168 5 && 5.477 14 && 14.754 5 16 && 16.5 5c1 && 5c1.747 0 3 && 3.332.477 4 && 4.5 1 && 1.253v13C19.832 18 && 18.477 18 && 18.247 18 16 && 16.5 18c-1 && 1.746 0-3 && 3.332.477-4 && 4.5 1 && 1.253'
           />;
@@ -153,8 +147,6 @@ export default function Careers() {;
     {
       title: "Impactful Projects",
       description: "Contribute to innovations that make advanced technology accessible worldwide.",
-
-
       icon: (
             d='M12 8c-1 && 1.657 0-3 .895-3 2s1 && 2s1.343 2 3 2 3 .895 3 2-1 && 1.343 2-3 2m0-8c1 && 8c1.11 0 2 && 2.08.402 2 && 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1 && 1.11 0-2 && 2.08-.402-2 && 2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
           />;
@@ -192,9 +184,18 @@ export default function Careers() {;
       <SEO
         title='Careers at Zion - Join Our Team'
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
-        keywords='Zion careers, AI jobs, tech careers, remote work, startup jobs'
-
-
+        keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs"
+        canonical="https://app.ziontechgroup.com/careers"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <GradientHeading>Join Our Team</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              Help us build the future of AI and technology
+            </p>
+          </div>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24'>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
 
@@ -226,21 +227,18 @@ export default function Careers() {;
             </div>;
             <div className='rounded-lg overflow-hidden relative w-full h-full'>;
               <img
-                src='https://images && images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600&q=80'
-                alt='Team collaboration'
-                className='object-cover'
-
-              />;
-            </div>;
-          </div>;
-
-          <div className='mb-24'>;
-            <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
-              Our Benefits;
-            </h2>;
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
-              {benefits && benefits.map((benefit, index) => (;
-
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600&q=80"
+                alt="Team collaboration"
+                className="object-cover"
+              />
+            </div>
+          </div>
+          <div className='mb-24'>
+            <h2 className='text-3xl font-bold text-white mb-12 text-center'>
+              Our Benefits
+            </h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+              {benefits.map((benefit, index) => (
                 <div
                   key={index}
                   className='bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light'>;
@@ -266,18 +264,14 @@ export default function Careers() {;
                   <p className="text-zion-slate-light">{benefit.description}</p>
                 </div>
               ))}
-
-            </div>;
-          </div>;
-
-          <div className='mb-24'>;
-            <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
-              Open Positions;
-            </h2>;
-
-            <Tabs defaultValue='engineering' className='w-full'>;
-              <TabsList className='bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center'>;
-
+            </div>
+          </div>
+          <div className='mb-24'>
+            <h2 className='text-3xl font-bold text-white mb-12 text-center'>
+              Open Positions
+            </h2>
+            <Tabs defaultValue='engineering' className='w-full'>
+              <TabsList className='bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center'>
                 <TabsTrigger
                   value='engineering'
                   className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'
@@ -415,7 +409,6 @@ function Careers() {
                         </div>
                       </CardContent>
                     </Card>
-
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -594,31 +587,6 @@ export default function Careers() {;
             </p>
             <Button
               asChild
-
-              className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>;
-              <a href={`mailto:${applyEmail}`}>Send General Application</a>;
-            </Button>;
-          </div>;
-        </div>;
-      </main>;
-    </>;
-  );
-import React from 'react';
-import { SEO } from '../components/SEO';
-const Careers: React.FC = () => {;
-  return (<>;
-      <SEO title="Careers - Zion Tech Group" />;
-      <div className="min-h-screen bg-white py-20">;
-        <div className="max-w-4xl mx-auto px-4">;
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Careers</h1>;
-          <p className="text-lg text-gray-600">Content coming soon...</p>;
-        </div>;
-      </div>;
-    </>;
-  );
-};
-export default Careers;
-
 }
 
 export default Careers

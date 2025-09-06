@@ -301,7 +301,5 @@ return res;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
-
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}

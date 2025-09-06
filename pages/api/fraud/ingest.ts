@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
@@ -6,15 +10,26 @@ import { classifyWithGPT } from "../../../utils/fraud/gpt";
 import { getFraudStore, newEvent } from "../../../utils/fraud/store";
 import { extractClientIp } from "../../../utils/ip";
 import {
+<<<<<<< HEAD
+  AdminActionRecord
+  GptClassification
+  GptClassificationLabel
+  MonitoredSource
+  StoredFraudRecord
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   AdminActionRecord,
   GptClassification,
   GptClassificationLabel,
   MonitoredSource,
   StoredFraudRecord,;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "../../../utils/fraud/types";
 import { sendWarningEmail } from "../../../utils/email";
 const allowedSources: MonitoredSource[] = [
@@ -42,6 +57,7 @@ import { extractClientIp } from '../../../utils/ip';
 import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
 import { sendWarningEmail } from '../../../utils/email';
 const allowedSources: MonitoredSource[] = ['signup', 'job_post', 'message', 'quote', 'review'];
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
@@ -57,18 +73,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res && res.status(400).json({ error: "Invalid source" });
       return;
     }
+
     const userId = typeof body && body.userId === "string" ? body && body.userId : null;
     const content = typeof body && body.content === "string" ? body && body.content : null;
 
 
     const metadata =
       body && body.metadata && typeof body && body.metadata === "object" ? body && body.metadata : null;
+=======
       res.status(400).json({ error: 'Invalid source' });
       return
     }
+
     const userId = typeof body.userId === 'string' ? body.userId : null;
     const content = typeof body.content === 'string' ? body.content : null;
     const metadata = (body.metadata && typeof body.metadata === 'object') ? body.metadata : null;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const ip = extractClientIp(req);
     const store = getFraudStore();
 
@@ -81,31 +102,10 @@ import { classifyWithGPT  } from '../../../utils / fraud / gpt';
 import { getFraudStore, new_event  } from '../../../utils / fraud / store';
 import { extractClientIp  } from '../../../utils / ip';
 import {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import type { NextApiRequest, NextApiResponse } from "next";
-import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
-import { classifyWithGPT } from "../../../utils/fraud/gpt";
-import { getFraudStore, newEvent } from "../../../utils/fraud/store";
-import { extractClientIp } from "../../../utils/ip";
-import {
-<<<<<<< HEAD
-  AdminActionRecord
-  GptClassification
-  GptClassificationLabel
-  MonitoredSource
-  StoredFraudRecord
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   AdminActionRecord,
   GptClassification,
   GptClassificationLabel,
   MonitoredSource,
-<<<<<<< HEAD
   StoredFraudRecord,
 } from '../../../utils / fraud / types';
 import { sendWarningEmail  } from '../../../utils / email';
@@ -154,6 +154,7 @@ if ( {) {
 ;
     const heuristic = await evaluate_heuristics (event, {
       countEventsByIp: (ip, s, m) => store.countEventsByIp (ip, s, m),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
     // Privacy opt - out check for content analysis;
     let gpt: GptClassification | undefined = undefined;
@@ -262,7 +263,36 @@ if ( {) {
       created_at: saved.created_at,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
+
   } catch (e: any) {
+<<<<<<< HEAD
+    res
+      .status(500)
+      .json({ error: "Internal error", details: e?.message |String(e) });
+      .json({ error: "Internal error", details: e?.message || String(e) });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'Fraud ingest endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
+import { classifyWithGPT } from '../../../utils/fraud/gpt';
+import { getFraudStore, newEvent } from '../../../utils/fraud/store';
+import { extractClientIp } from '../../../utils/ip';
+import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
+import { sendWarningEmail } from '../../../utils/email';
+const allowedSources: MonitoredSource[] = ['signupjob_postmessagequotereview'];
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+=======
 
 
       .json({ error: "Internal error", details: e?.message || String(e) });
@@ -270,11 +300,23 @@ if ( {) {
 
 =======
       .json({ error: "Internal error", details: e?.message |String(e) });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 =======
+    res
+      .status(500)
+<<<<<<< HEAD
+      .json({ error: "Internal error", details: e?.message |String(e) });
+=======
+      .json({ error: "Internal error", details: e?.message || String(e) });
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
       status: 'PENDING'};
+
     const saved = await store.saveEvent(stored);
+
     if (process.env.FRAUD_EMAIL_WARNINGS === 'true' && userId) {
       const prior = await store.countFlaggedForUser(userId);
       if (prior <= 1 && combinedLabel !== 'SAFE') {
@@ -283,6 +325,7 @@ if ( {) {
           body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`})
       }
     }
+
     res.status(200).json({
       id: saved.id, flagged: combinedLabel !== 'SAFE',
       label: combinedLabel, heuristic,
@@ -352,10 +395,13 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

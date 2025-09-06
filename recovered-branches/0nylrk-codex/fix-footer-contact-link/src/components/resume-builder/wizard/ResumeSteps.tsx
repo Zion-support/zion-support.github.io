@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { StepProps } from "./types";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { StepProps } from "./types",
+import {Tabs, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {StepProps} from "./types";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { StepProps } from "./types",
+=======
 
 
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -13,6 +23,7 @@ import { StepProps } from "./types",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ResumeStepsProps {
   steps: StepProps[];
   activeTab: string;
@@ -35,9 +46,19 @@ import {StepProps} from "./types";
     <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">
       {steps.map((step) => (
         <TabsTrigger key={step.id} value={step.id}>
+<<<<<<< HEAD
+          {step.label}
+        </TabsTrigger>
+      ))}
+    </TabsList>
+  );
+}
+
+=======
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { StepProps } from "./types",;
 
@@ -60,19 +81,3 @@ export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) =>
     </TabsList>;
   );
 };
-
-=======
-  steps,
-  active_tab,
-  on_change,
-}: ResumeStepsProps) =>: any {
-  return (
-    <TabsList className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 mb - 8">;
-      {steps.map ((step) => (
-        <TabsTrigger key={step.id} value={step.id}>;
-          {step.label}
-        </TabsTrigger>))}
-    </TabsList>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -97,6 +97,8 @@ function handler() {
     return res.status(200).json({ summary: text.trim() });
   } catch (err) {
     return fallback();
+  }
+    const text = completion.choices?.[0]?.message?.content ?? '';
 
   }
 
@@ -106,6 +108,7 @@ function handler() {
   } catch (err) {
     return fallback ();
 }
+<<<<<<< HEAD
 
   if (!apiKey) return fallback(),
 
@@ -121,4 +124,9 @@ function handler() {
       temperature: 0.3}),
 
 }
+  }
+  }
+=======
+}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

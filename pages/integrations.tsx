@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {useEffect} from 'react';
+import {useRouter} from 'next/router';
+export default function IntegrationsRedirect() {
+import {useEffect} from 'react';
+import {useRouter} from 'next/router';
+
+export default function IntegrationsRedirect() {;
+=======
 
 
 import {useEffect} from 'react';
@@ -6,18 +17,20 @@ import {useEffect} from 'react';
 export default function IntegrationsRedirect() {;
 
 =======
-import {useEffect} from 'react';
-import {useRouter} from 'next/router';
 
 export default function IntegrationsRedirect() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const router = useRouter();
   useEffect(() => {;
     router && router.replace('/admin/integrations');
   }, [router]);
   return null;
 
+<<<<<<< HEAD
+}
+=======
 =======
 
 
@@ -25,6 +38,7 @@ export default function IntegrationsRedirect() {;
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 export default function IntegrationsRedirect() {
@@ -32,6 +46,8 @@ export default function IntegrationsRedirect() {
   useEffect(() => { router.replace('/admin/integrations') }, [router]);
   return null
 }
+<<<<<<< HEAD
+=======
 
 import {use_router} from 'next / router';
 ;
@@ -52,3 +68,4 @@ function IntegrationsRedirect() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useEffect, useState} from "react";
 import {QuoteFormData} from "@/types/quotes";
 import {Card, CardContent} from "@/components/ui/card";
@@ -7,6 +10,78 @@ import {Textarea} from "@/components/ui/textarea";
 import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {toast} from "@/hooks/use-toast";
+<<<<<<< HEAD
+interface SummaryStepProps {
+  formData: QuoteFormData,
+  updateFormData: (data: Partial<QuoteFormData>) => void
+}
+
+export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
+  const [isMatching, setIsMatching] = useState(false);
+  const [matches, setMatches] = useState<MatchResult[]>([]);
+  
+  // Run AI matching when the component mounts
+  useEffect(() => {
+    const runMatching = async () => {
+      if (!formData.projectDescription) return;
+      
+      setIsMatching(true);
+      try {
+        // Create a query string from the form data
+        const queryString = `
+          ${formData.projectName} 
+          ${formData.projectDescription} 
+          ${formData.serviceType} 
+          ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
+          ${formData.timeline}
+        `;
+import { useEffect, useState } from "react",
+import { QuoteFormData } from "@/types/quotes",
+import { Card, CardContent } from "@/components/ui/card",
+import { Label } from "@/components/ui/label",
+import { Textarea } from "@/components/ui/textarea",
+import { AIMatchingResults } from "@/components/AIMatchingResults",
+import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
+import { toast } from "@/hooks/use-toast";
+interface SummaryStepProps {
+
+  formData: QuoteFormData
+
+  updateFormData: (data: Partial<QuoteFormData>) => void
+}
+export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
+  const [isMatching, setIsMatching] = useState(false);
+
+  const [matches, setMatches] = useState<MatchResult[]>([]);
+  // Run AI matching when the component mounts
+  useEffect(() => {
+    const runMatching = async () => {
+      if (!formData.projectDescription) return;
+      setIsMatching(true);
+      try {
+        // Create a query string from the form data
+        const queryString = `
+          ${formData.projectName}
+          ${formData.projectDescription}
+          ${formData.serviceType}
+          ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
+          ${formData.timeline}
+        `;
+import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
+import { toast } from "@/hooks/use-toast",
+interface SummaryStepProps {
+  formData: QuoteFormData,
+  updateFormData: (data: Partial<QuoteFormData>) => void
+import { useEffect, useState } from "react",;
+import { QuoteFormData } from "@/types/quotes",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Label } from "@/components/ui/label",;
+import { Textarea } from "@/components/ui/textarea",;
+import { AIMatchingResults } from "@/components/AIMatchingResults",;
+import { findMatches, MatchResult } from "@/lib/ai-matchmaking",;
+import { toast } from "@/hooks/use-toast",;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface SummaryStepProps {;
   formData: QuoteFormData,;
   updateFormData: (data: Partial<QuoteFormData>) => void;
@@ -28,6 +103,14 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
       try {;
         // Create a query string from the form data;
         const queryString = `;
+<<<<<<< HEAD
+          ${formData.projectName} ;
+          ${formData.projectDescription} ;
+          ${formData.serviceType} ;
+          ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
+          ${formData.timeline}
+        `,
+=======
           ${formData && formData.projectName} ;
           ${formData && formData.projectDescription} ;
           ${formData && formData.serviceType} ;
@@ -44,8 +127,8 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
 =======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Get AI matches
         const results = await findMatches(
           queryString,
@@ -108,12 +191,9 @@ if (return) {
       } finally {
         setIsMatching (false);
       }
-
-
+    }
     },
     
-
-
     runMatching()
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
@@ -125,15 +205,14 @@ if (return) {
     toast({
       title: "Match Selected"
       description: `You've selected ${match.item.title}`})
-
-
+  }
+  // Extract just the items from each MatchResult for the AIMatchingResults component
+  const matchItems = matches.map(match => match.item);
   },
   
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item),
   
-
-
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
@@ -141,16 +220,66 @@ if (return) {
     if (matchResult) {
       handleSelectMatch(matchResult)
     }
+  }
 
-
+  return (
+    <div className="space-y-6">
+      <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
   },
   
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
+<<<<<<< HEAD
+      
+        `,;
+        // Get AI matches;
+        const results = await findMatches(;
+          queryString,;
+          formData.serviceType,;
+          3;
+        ),;
+        setMatches(results);
+      } catch (error) {;
+        console.error("Error during AI matching:", error),;
+        toast({;
+          title: "Matching Error",;
+          description: "We couldn't find matches for your request. Please try again.",;
+          variant: "destructive"});
+      } finally {;
+        setIsMatching(false);
+      }
+    },;
+    runMatching();
+  }, [formData]),;
+  const handleSelectMatch = (match: MatchResult) => {;
+    // Update the form with the selected match;
+    updateFormData({;
+      specificItem: match.item,;
+      serviceCategory: match.item.category;
+    }),;
+    toast({;
+      title: "Match Selected",;
+      description: `You've selected ${match.item.title}`});
+  },;
+  // Extract just the items from each MatchResult for the AIMatchingResults component;
+  const matchItems = matches.map(match => match.item),;
+  // Map the onSelectMatch handler to work with the item directly;
+  const handleItemSelect = (item: any) => {;
+    // Find the original MatchResult that contains this item;
+    const matchResult = matches.find(match => match.item.id === item.id);
+    if (matchResult) {;
+      handleSelectMatch(matchResult);
+    }
+  };
+  return (;
+    <div className="space-y-6">;
+      <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>;
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}
@@ -215,11 +344,7 @@ if (return) {
                   </div>
                 </div>
               )}
-
-
               
-
-
               {formData.endDate && (
                 <div>
                   <Label className="text-zion-slate-light">End Date</Label>
@@ -281,6 +406,11 @@ if (return) {
       </div>
     </div>
   )
+<<<<<<< HEAD
+}
+};
+}
+=======
 
 
         setMatches(results);
@@ -536,3 +666,4 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

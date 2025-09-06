@@ -1,12 +1,16 @@
 
-
-
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Admin Pages
 import QuoteManager from "@/pages/admin/QuoteManager",
 import ReviewsModeration from "@/pages/admin/ReviewsModeration",
@@ -15,12 +19,11 @@ import PartnerManager from "@/pages/admin/PartnerManager",
 import AppMetadataManager from "@/pages/admin/AppMetadataManager",
 import SupportRequests from "@/pages/admin/SupportRequests",
 import FraudDetection from "@/pages/admin/FraudDetection",
-
+import TokenManager from "@/pages/admin/TokenManager";
+import IntegrationsPage from "@/pages/admin/IntegrationsPage";
 
 import TokenManager from "@/pages/admin/TokenManager",
 import IntegrationsPage from "@/pages/admin/IntegrationsPage",
-
-
 const AdminRoutes = () => {
 =======
 // Admin Pages;
@@ -128,23 +131,15 @@ const AdminRoutes = () => {;
       <Route
         path="/admin/integrations"
         element={
-
-      />;
-    </Routes>;
-  );
-};
-
-
-export default AdminRoutes;
-
-=======
-import { Fragment } from './react';
-import { Route, Routes } from './react-router-dom';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-=======
           <ProtectedRoute adminOnly={true}>
             <IntegrationsPage />
           </ProtectedRoute>
+        }
+      />
+    </Routes>
+  )
+}
+export default AdminRoutes;
 
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
@@ -239,8 +234,9 @@ const AdminRoutes = () =>: any {
     </Routes>;
   );
 },;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default AdminRoutes;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

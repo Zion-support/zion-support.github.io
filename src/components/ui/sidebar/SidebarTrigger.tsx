@@ -42,6 +42,3 @@ export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerPr
 };
 
 }
-
-
-;

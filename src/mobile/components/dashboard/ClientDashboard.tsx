@@ -67,7 +67,6 @@ export function ClientDashboard() {
           </CardContent>
         </Card>
       </section>
-
       
 
       
@@ -82,8 +81,7 @@ export function ClientDashboard() {
             </Button>
           </Link>
         </div>
-
-
+        <div className='space-y-3'>
         
         <div className="space-y-3">
 
@@ -115,8 +113,6 @@ export function ClientDashboard() {
               </div>
             </CardContent>
           </Card>
-
-
           
 
 
@@ -136,8 +132,16 @@ export function ClientDashboard() {
                   89% match
                 </div>
               </div>
-
-
+              <div className='mt-3 flex gap-1 flex-wrap'>
+                <Badge variant='outline' className='text-xs'>
+                  React
+                </Badge>
+                <Badge variant='outline' className='text-xs'>
+                  Node.js
+                </Badge>
+                <Badge variant='outline' className='text-xs'>
+                  AWS
+                </Badge>              <div className="mt-3 flex gap-1 flex-wrap">
               <div className="mt-3 flex gap-1 flex-wrap">
 
 
@@ -153,8 +157,6 @@ export function ClientDashboard() {
           </Card>
         </div>
       </section>
-
-
       
 
 
@@ -162,8 +164,6 @@ export function ClientDashboard() {
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Recent Updates</h2>
         </div>
-
-
         
 
 
@@ -180,8 +180,9 @@ export function ClientDashboard() {
                 <p className="text-xs text-muted-foreground">2 hours ago</p>
               </div>
             </div>
-
-
+            <div className='flex gap-3 items-start'>
+              <div className='bg-primary/10 p-2 rounded-full'>
+                <FileText className='h-5 w-5 text-primary' />
             
             <div className="flex gap-3 items-start">
               <div className="bg-primary/10 p-2 rounded-full">
@@ -196,10 +197,9 @@ export function ClientDashboard() {
                 <p className="text-xs text-muted-foreground">1 day ago</p>
               </div>
             </div>
-
-      
-      <section>
-
+            <Button variant='outline' className='w-full'>
+              View All Notifications
+            </Button>          </CardContent>      <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Recent Updates</h2>
         </div>
@@ -234,11 +234,6 @@ export function ClientDashboard() {
           </CardContent>
         </Card>
       </section>
-
-
-
-    </div>
-
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
 import Link from "next/link";
 export function ClientDashboard() {;

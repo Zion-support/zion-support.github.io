@@ -9,8 +9,6 @@ declare global {
   var __assign: any
   var __rest: any
   var __decorate: any
-
-
   var __awaiter: any
 }
 
@@ -282,9 +280,6 @@ const tsHelpers = {
       }
     }
     return t
-
-    let c = arguments && arguments.length,
-
       r =
         c < 3
           ? target
@@ -302,21 +297,9 @@ const tsHelpers = {
     else
       for (let i = decorators.length - 1; i >= 0; i--)
         if ((d = decorators[i]))
-
-          r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return (c > 3 && r && key && Object && Object.defineProperty(target, key, r), r);
   },
 
 
-  __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
-  
-  __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
-    let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,
-    if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc),
-    else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,
-    return c > 3 && r && key && Object.defineProperty(target, key, r), r
-  },
-  
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
     function adopt(value: any) {
       return value instanceof P
@@ -339,19 +322,6 @@ const tsHelpers = {
       if (&& e.index_of (p) < 0)) {
   $2
 }
-        t[p] = s[p];
-    // Check condition
-if ( {) {
-  $2
-}
-      const symbols = Object.getOwnPropertySymbols (s);
-      for (let index = 0; i < symbols.length; i++) {
-        const symbol = symbols[i];
-        // Check condition
-if (< 0 &&) {
-  $2
-}
-          Object.prototype.propertyIsEnumerable.call (s, symbol));
           t[symbol] = s[symbol];
       }
     }
@@ -619,7 +589,6 @@ if ( {) {
     }
 
   })
-
 // Export a verification function for testing
 export const verifyPolyfills = () => {
   const checks = {
@@ -694,41 +663,4 @@ if (process && process.env.NODE_ENV === 'development') {
 }
 
 export default {}, // Ensure this can be imported as a module
-
-//Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
-  //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
-export default {}; // Ensure this can be imported as a module
-  
-}, // Ensure this can be imported as a module'"
-// Auto-verify in development
-if (process.env.NODE_ENV === 'development') {
-  setTimeout((,) => verifyPolyfills(), 100)
-    webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),
-    tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
-    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
-  }
-  
-  console.log('Serverless polyfill verification:', checks)
-  return Object.values(checks).every(Boolean)
-}
-
-// Auto-verify in development
-if (process.env.NODE_ENV === 'development') {
-  setTimeout(() => verifyPolyfills(), 100)
-;
-// Export a verification function for testing;
-export const verifyPolyfills = () => {;
-  const checks = {;
-    selfDefined: typeof self !== 'undefined',;
-    webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),;
-    tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',;
-    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null;
-  },;
-  // // // console.log('Serverless polyfill verification:', checks),;
-  return Object.values(checks).every(Boolean);
-};
-// Auto-verify in development;
-if (process.env.NODE_ENV === 'development') {;
-  setTimeout(() => verifyPolyfills(), 100);
-}
 export default {}, // Ensure this can be imported as a module;

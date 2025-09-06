@@ -1,11 +1,11 @@
-
-
-=======
-
+ password.toLowerCase () .includes (pattern) );
 password.toLowerCase () .includes (pattern) );
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
 // Check condition
 if (strength = 'very - weak') {
@@ -144,10 +144,27 @@ export default async function handler(
 
     }
     const result: PasswordStrengthResult = {
-
-      password,
-      strength,
-
+      password
+      strength
+      score: Math.max(0, Math.min(100, score))
+      feedback
+      details: {
+        length
+        hasUppercase
+        hasLowercase
+        hasNumbers
+        hasSymbols
+        hasCommonPatterns
+        entropy: Math.round(entropy * 100) / 100
+      }
+      suggestions
+    }
+    res.status(200).json(result);
+  } catch (error) {
+    console.error('Password strength check error:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }      suggestions.push('Make it at least 12 characters long');
+      suggestions.push('Avoid personal information and common words')
     }
     if (hasCommonPatterns) {
       suggestions && suggestions.push('Replace common patterns with random characters');
@@ -490,13 +507,10 @@ export default async function handler(
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  } catch (error) {
-    console.error('Password strength check error:', error);
-    res.status(500).json({ error: 'Internal server error' });
-
   }
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

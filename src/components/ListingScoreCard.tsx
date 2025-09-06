@@ -2,10 +2,6 @@ import { cn } from '@/lib / utils';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { StarIcon } from 'lucide-react';
-import Image from 'next / image'; // Import next / image;
-import React, { useState } from 'react'; // Import useStateimport Image from 'next / image'; // Import next / image;
-import React, { useState } from 'react'; // Import useState;
-import { Star } from 'lucide-react';
 interface ListingScoreCardProps {
   title: string;
   description: string;
@@ -13,9 +9,6 @@ interface ListingScoreCardProps {
   category: string;
   tags?: string[];
   author?: string;
-
-export function ListingScoreCard(): any ({;
-
 
   tags,
   author,
@@ -25,8 +18,6 @@ export function ListingScoreCard(): any ({;
   reviewCount = 0,
   className
 }: ListingScoreCardProps) {
-
-
       {image && !mainImageError && (
         <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
           <Image
@@ -39,9 +30,6 @@ export function ListingScoreCard(): any ({;
             priority={false}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes
           />
-
-
-
         </div>
       )}
       {(!image || mainImageError) && ( // Fallback if no image or error
@@ -249,24 +237,10 @@ function ListingScoreCard() {
             </span>;
           </div>;
         )}
-
-
-        {tags && tags.length > 0 && (;
-          <div className='flex flex-wrap gap-2 mb-4'>;
-            {tags && tags.map((tag, i) => (;
-
-              <Badge
-                key={i}
-                variant='outline'
-                className='border-zion-slate-dark text-zion-slate-light'>                {tag}
               </Badge>;
             ))}
           </div>;
         )}
-
-
-
-
         {author && (
           <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>
             {authorImage && !authorImageError ? (
@@ -350,6 +324,6 @@ function ListingScoreCard() {
       </div>;
     </div>;
   );
-
+};
 }
 ;

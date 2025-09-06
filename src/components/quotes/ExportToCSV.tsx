@@ -4,9 +4,6 @@ import type { QuoteRequest } from "@/types/quotes";
 
 
 import { Button } from "@/components/ui/button";
-import { Download } from 'lucide-react'
-import type { QuoteRequest } from "@/types/quotes";
-
 interface ExportToCSVProps {
   quotes: QuoteRequest[]
   filename?: string
@@ -39,7 +36,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     // Create CSV content
     const csvContent = [
       headers.join()
-<<<<<<< HEAD
       ...rows.map(row =>
         row.map(cell =>
 
@@ -50,15 +46,14 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
             : cell
         ).join()
       )
-
-    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.setAttribute('href', url);
-    link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`);
-    document.body.appendChild(link);
-    
-
+    ].join('\n')
+    // Create download link
+    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' })
+    const url = URL.createObjectURL(blob)
+    const link = document.createElement('a')
+    link.setAttribute('href', url)
+    link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`)
+    document.body.appendChild(link)
     // Download file and clean up
     link.click()
     setTimeout(() => {
@@ -194,6 +189,7 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
 '"
   } }
   return (
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import { Button } from "@/components/ui/button",
@@ -247,6 +243,8 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   );
 };
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ].join('\n'),
     
     // Create download link

@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+export interface MarketTrend {
+export interface MarketTrend {;
+  id: string;
+  keyword: string;
+  searchVolume: number;
+  trendDirection: 'rising' | 'falling' | 'stable';
+  growthRate: number;
+  relatedKeywords: string[];
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   search_volume: number;
   trend_direction: 'rising' | 'falling' | 'stable';
@@ -7,7 +18,14 @@
   timestamp: Date;
 
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 export interface CompetitorAnalysis {
+
+export interface CompetitorAnalysis {;
+=======
+export interface CompetitorAnalysis {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   competitor_name: string;
   website: string;
@@ -23,7 +41,14 @@ export interface CompetitorAnalysis {
   last_updated: Date;
 
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 export interface MarketSegment {
+
+export interface MarketSegment {;
+=======
+export interface MarketSegment {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   name: string;
   size: number;
@@ -36,7 +61,14 @@ export interface MarketSegment {
   solutions: string[];
 
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 export interface MarketReport {
+
+export interface MarketReport {;
+=======
+export interface MarketReport {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   title: string;
   industry: string;
@@ -51,7 +83,14 @@ export interface MarketReport {
   expires_at: Date;
 
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 export interface MarketResearchRequest {
+
+export interface MarketResearchRequest {;
+=======
+export interface MarketResearchRequest {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   industry: string;
   target_market: string;
   research_type: 'trends' | 'competitors' | 'segments' | 'comprehensive';
@@ -61,7 +100,14 @@ export interface MarketResearchRequest {
   custom_metrics?: string[];
 
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 export interface MarketResearchResponse {
+
+export interface MarketResearchResponse {;
+=======
+export interface MarketResearchResponse {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   success: boolean;
   data: {
     trends?: MarketTrend[];
@@ -71,6 +117,20 @@ export interface MarketResearchResponse {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
+<<<<<<< HEAD
+  estimatedROI: number
+}
+export class AIMarketResearchService {
+
+export class AIMarketResearchService {;
+  private apiKey: string;
+
+  private baseUrl: string
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
+    this.apiKey = apiKey
+    this.baseUrl = baseUrl
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]> {
     try {
@@ -226,11 +286,81 @@ export interface MarketResearchResponse {
 }
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key');
 
+<<<<<<< HEAD
+export interface MarketTrend {;
+  id: string,;
+  keyword: string,;
+  searchVolume: number,;
+  trendDirection: 'rising' | 'falling' | 'stable',;
+  growthRate: number,;
+  relatedKeywords: string[],;
+  marketOpportunity: 'high' | 'medium' | 'low',;
+  timestamp: Date;
+}
+;
+export interface CompetitorAnalysis {;
+  id: string,;
+  competitorName: string,;
+  website: string,;
+  marketShare: number,;
+  strengths: string[],;
+  weaknesses: string[],;
+  opportunities: string[],;
+  threats: string[],;
+  pricingStrategy: string,;
+  featureComparison: Record<string boolean>,;
+  socialMediaPresence: Record<string number>,;
+  lastUpdated: Date;
+}
+;
+export interface MarketSegment {;
+  id: string,;
+  name: string,;
+  size: number,;
+  growthRate: number,;
+  demographics: Record<string any>,;
+  psychographics: Record<string any>,;
+  buyingBehavior: Record<string any>,;
+  painPoints: string[],;
+  solutions: string[];
+}
+;
+export interface MarketReport {;
+  id: string,;
+  title: string,;
+  industry: string,;
+  summary: string,;
+  keyFindings: string[],;
+  marketSize: number,;
+  growthProjection: number,;
+  recommendations: string[],;
+  dataSources: string[],;
+  generatedAt: Date,;
+  expiresAt: Date;
+}
+;
+export interface MarketResearchRequest {;
+  industry: string,;
+  targetMarket: string,;
+  researchType: 'trends' | 'competitors' | 'segments' | 'comprehensive',;
+  timeframe: '7d' | '30d' | '90d' | '1y',;
+  includeHistoricalData: boolean,;
+  customMetrics?: string[];
+}
+;
+export interface MarketResearchResponse {;
+  success: boolean,;
+  data: {;
+    trends?: MarketTrend[],;
+    competitors?: CompetitorAnalysis[],;
+    segments?: MarketSegment[],;
+=======
 
 export const aiMarketResearchService = new AIMarketResearchService(process && process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
 
 =======
     segments?: MarketSegment[],
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     report?: MarketReport;
   }
   insights: string[];
@@ -399,11 +529,12 @@ if ( {) {
 }
 export const aiMarketResearchService = new AIMarketResearchService (process.env.MARKET_RESEARCH_API_KEY || 'demo - key');
 ;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 export interface MarketTrend {;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

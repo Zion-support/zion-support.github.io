@@ -22,25 +22,12 @@ class ErrorBoundary extends React.Component {
 
 
 import React from 'react';
-
-
-
+import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 
 import {motion} from 'framer-motion';
 import {Atom, Brain, Rocket, Shield, Zap, Target, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Grid, List, TrendingUp, User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building, MessageCircle, Sparkles, ArrowRight, CheckCircle, Star, Globe} from 'lucide-react';
 
-import Layout from '../components / layout / Layout';
-import SEO from '../components / SEO';
-import {motion} from 'framer-motion';
-import {Atom, Brain, Rocket, Shield, Zap, Target, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Grid, List, TrendingUp, User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building, MessageCircle, Sparkles, ArrowRight, CheckCircle, Star, Globe} from 'lucide-react';
-;
-
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const QuantumServicesPage: React.FC = () => {
   const quantumServices = [
     {
@@ -225,7 +212,12 @@ export default function QuantumServices() {;
                   <p className="text-gray-300">{capability.description}</p>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
 
+<<<<<<< HEAD
+=======
             </div>;
           </div>;
         </section>;
@@ -237,6 +229,7 @@ export default function QuantumServices() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Quantum Services */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -265,16 +258,10 @@ export default function QuantumServices() {;
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
-
-                    service && service.popular 
-                      ? 'border-blue-500 shadow-lg shadow-blue-500/25' 
-
-=======
-
+                    service.popular
+                      ? 'border-blue-500 shadow-lg shadow-blue-500/25'
                     service.popular 
                       ? 'border-blue-500 shadow-lg shadow-blue-500/25' 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       : 'border-gray-700 hover:border-blue-500'
                   }`}
                 >
@@ -531,11 +518,18 @@ function QuantumServices() {
                     ))}
 
                   </ul>
+<<<<<<< HEAD
+                  <a
+                    href="/contact"
+                  <a 
+                    href="/contact" 
+=======
 
                   <a 
                     href="/contact" 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
                   >
                     Get Started
@@ -546,6 +540,8 @@ function QuantumServices() {
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
                   </ul>;
 
                   <a
@@ -566,6 +562,7 @@ function QuantumServices() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
@@ -588,16 +585,17 @@ function QuantumServices() {
                   Start Your Quantum Journey;
                 </a>;
                 <a
-                  href="/contact" 
-                  className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105">;
-                  Schedule Consultation;
-                </a>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </main>;
-    </Layout>;
+                  href="/contact"
+                  className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+                >
+                  Schedule Consultation
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </main>
+    </Layout>
   );
 };
 
@@ -675,6 +673,12 @@ export default QuantumServicesPage;
   )
 }
 export default QuantumServicesPage;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export default QuantumServicesPage;
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

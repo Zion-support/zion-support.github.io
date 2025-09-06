@@ -1,5 +1,58 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { findPartnerByApiKey, signJwt } from '../../../utils/api/partnerAuth';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { findPartnerByApiKey, signJwt } from '../../../utils/api/partnerAuth';
 
+<<<<<<< HEAD
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST') {;
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
+  const { apiKey, ttlSeconds } = req.body |{}
+  if (!apiKey) {
+    return res.status(400).json({ error: 'apiKey required' });
+  }
+  const match = await findPartnerByApiKey(apiKey);
+  if (!match) {
+    return res.status(401).json({ error: 'Invalid API key' });  }
+  const { partner, apiKey: key } = match;
+  const token = signJwt(
+    {
+
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST') {;
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
+  const { apiKey, ttlSeconds } = req.body |{}
+  if (!apiKey) {
+    return res.status(400).json({ error: 'apiKey required' });
+  }
+  const match = await findPartnerByApiKey(apiKey);
+  if (!match) {
+    return res.status(401).json({ error: 'Invalid API key' });  }
+  const { partner, apiKey: key } = match;
+  const token = signJwt(
+    {
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   if (req && req.method !== "POST") {
@@ -17,21 +70,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
   }
-  const { api_key, ttl_seconds } = req.body || {}
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (400).json ({ error: 'api_key required' });
-  }
-  const match = await findPartnerByApiKey (api_key);
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (401).json ({ error: 'Invalid API key' });  }
-  const { partner, api_key: key } = match;
-  const token = sign_jwt (
+  const { partner, apiKey: key } = match;
+  const token = signJwt(
     {
 
 export default async /**
@@ -86,6 +126,10 @@ if ( {) {
   );
   return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
 }
+<<<<<<< HEAD
+    {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     .json({ token, partner: { id: partner && partner.id, name: partner && partner.name } });      sub: partner && partner.id;
       apiKeyId: key && key.id;
@@ -136,6 +180,21 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  }
+  const { partner, apiKey: key } = match;
+  const token = signJwt(
+    {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

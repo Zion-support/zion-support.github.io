@@ -1,6 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {;
   ArrowRight,;
   Star,;
@@ -11,8 +12,38 @@ import {;
   Globe,;
   Rocket,;
 =======
+import {
+<<<<<<< HEAD
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Shield
+  Brain
+  Globe
+  Rocket;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 import { motion } from 'framer-motion';
+import {
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Shield
+  Brain
+  Globe
+  Rocket;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Brain,
+  Globe,;
+  Rocket,;
+=======
 
 
 =======
@@ -27,6 +58,7 @@ import { motion } from 'framer-motion';
   Rocket,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
@@ -34,14 +66,19 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
-
-
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+        staggerChildren: 0.2
+        delayChildren: 0.1
+      }
+    },  }
         staggerChildren: 0.2,
         delayChildren: 0.1,
       },
     },  };
-
-
 
   const itemVariants = {
     hidden: {
@@ -98,45 +135,16 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
     visible: {
       opacity: 1,
       transition: {
-
-        stagger_children: 0.2,
-        delay_children: 0.1,
-      },
-    },  }
-;
-  const item_variants = {
-    hidden: {
-      opacity: 0,
-      coordinate_y: 50,
-      scale: 0.9,
-    },
-    visible: {      opacity: 1,        delay_children: 0.1;
+        duration: 0.3
+        ease: 'easeOut' as const
+      }
+    },  };        ease: "easeOut" as const
       }
     }
   }
-;
-  const item_variants = {
-    hidden: {
-      opacity: 0,
-      coordinate_y: 50,
-      scale: 0.9;
-    }
-    visible: {
-
-      opacity: 1,
-      coordinate_y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-
-  const containerVariants = {;
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0 && 0.2,;
-        delayChildren: 0 && 0.1,;
-      },;
+        duration: 0.3,
+        ease: 'easeOut' as const,
+      },
     },  };
   const itemVariants = {;
     hidden: {;
@@ -166,6 +174,10 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
       }
     }
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const cardVariants = {;
     hover: {;
       y: -10,;
@@ -183,6 +195,8 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
       key={service && service.id}
 
       variants={itemVariants}
+      whileHover='hover'
+      className='group relative'
 
 
     >
@@ -220,6 +234,16 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
       whileHover="hover"
       className="group relative"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     >
       <motion.div
         variants={cardVariants}
@@ -339,7 +363,80 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
             </div>
             {service.popular && (
               <div className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium'>
-
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>    >
+      <motion.div
+        variants={cardVariants}
+        className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300"
+      >
+        {/* Glowing border effect */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="relative p-6">
+          {/* Service header */}
+          <div className="flex items-start justify-between mb-4">
+            <div className="flex items-center space-x-3">
+              <div className="text-3xl">{service.icon}</div>
+              <div>
+                <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                  {service.name}
+                </h3>
+                <p className="text-slate-400 text-sm">{service.tagline}</p>
+              </div>
+            </div>
+            {service.popular && (
+              <div className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                <Star className="w-3 h-3 fill-current" />
+                <span>Popular</span>
+              </div>
+            )}
+          </div>
+          {/* Description */}
+          <p className='text-slate-300 text-sm mb-4 leading-relaxed'>            {service.description}
+          </p>
+          {/* Features */}          <p className="text-slate-300 text-sm mb-4 leading-relaxed">
+            {service.description}
+          </p>
+          {/* Features */}
+          <div className='mb-4'>
+            <h4 className='text-white font-semibold mb-2 text-sm'>
+              Key Features:
+            </h4>
+            <div className='grid grid-cols-1 gap-1'>
+              {service.features
+                .slice(0, 3)
+                .map((feature: string, idx: number) => (
+                  <div
+                    key={idx}
+                    className='flex items-center space-x-2 text-xs text-slate-400'
+                  >
+                    <div className='w-1.5 h-1.5 bg-cyan-500 rounded-full' />
+                    <span>{feature}</span>
+                  </div>
+                ))}            </div>
+          </div>
+          {/* Price and CTA */}          <div className="mb-4">
+            <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
+            <div className="grid grid-cols-1 gap-1">
+              {service.features.slice(0, 3).map((feature: string, idx: number) => (
+                <div key={idx} className="flex items-center space-x-2 text-xs text-slate-400">
+                  <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full" />
+                  <span>{feature}</span>
+                </div>
+              ))}
+          </div>
+          {/* Price and CTA */}
+          <div className='flex items-center justify-between'>
+            <div className='text-right'>
+              <div className='text-2xl font-bold text-white'>
+                {service.price}
+              </div>
+              <div className='text-slate-400 text-sm'>{service.period}</div>            </div>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'
+            >
+              <span>Learn More</span>
+              <ArrowRight className='w-4 h-4' />            </motion.button>
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
 
                 <span>Popular</span>
@@ -360,9 +457,12 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
           {/* Features */}
 
             </motion.button>
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>
@@ -481,12 +581,16 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className='text-center mb-16'
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <div className='flex items-center justify-center space-x-2 mb-4'>
             <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
@@ -535,9 +639,23 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
         <motion&& motion.div
 =======
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* AI Services Section */}
         <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -587,6 +705,17 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           whileInView={{ opacity: 1, y: 0 }}
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Brain className='w-6 h-6 text-cyan-400' />
@@ -685,16 +814,42 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* IT Infrastructure Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className='mb-20'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Globe className='w-6 h-6 text-purple-400' />
@@ -729,6 +884,10 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           </motion.div>
         </motion.div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
           className='mb-20'>;
@@ -738,6 +897,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
               IT Infrastructure & Security;
             </h3>;
           </div>;
+<<<<<<< HEAD
           <motion&& motion.div
 =======
 <<<<<<< HEAD
@@ -762,6 +922,10 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           </div>
           <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+          <motion&& motion.div
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             variants={containerVariants}
             initial='hidden'
             whileInView='visible'
@@ -777,11 +941,16 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {innovative2026ITInfrastructureServices && innovative2026ITInfrastructureServices.map((service, index) => renderServiceCard(service, index))}
-          </motion && motion.div>;
-        </motion && motion.div>;
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {innovative2026MicroSaasServices.map((service, index) => renderServiceCard(service, index))}
+          </motion.div>
+        </motion.div>
 
+<<<<<<< HEAD
+        {/* CTA Section */}
+        <motion.div
+=======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -793,10 +962,20 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Micro SAAS Section */}
         <motion&& motion.div
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className='text-center mt-16'
 
-
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -809,6 +988,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           whileInView={{ opacity: 1, y: 0 }}
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -854,6 +1034,10 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
@@ -1108,8 +1292,16 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
 }
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4'>;
               <motion.button;
                 while_hover={{ scale: 1.05 }}
@@ -1143,4 +1335,9 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
       </div>;
     </section>);
 }
+<<<<<<< HEAD
+  );
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

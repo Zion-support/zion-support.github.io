@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { formatDistanceToNow } from 'date - fns';
 import { JobApplication } from '@/types / jobs';
 import { Button } from '@/components / ui / button';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   Card,
   CardContent,
@@ -33,32 +34,12 @@ import { StatusBadge  } from './StatusBadge';
 import { ApplicationProgress  } from './ApplicationProgress';
 import { toast  } from './sonner';
 interface ApplicationCardProps {
-  application: JobApplication;
-export /**
- * ApplicationCard - Function description
- */
-function ApplicationCard() {
-  const [ expanded, set_expanded ] = useState (false),
-  const handleDownloadResume = () =>: any {
-    // This would typically download the resume file;
-    toast.info ('Resume download functionality will be implemented soon') }
-  const renderActionButtons = () =>: any {
-    switch (application.status) {interface ApplicationCardProps {
-  application: JobApplication;
 }
-export /**
- * ApplicationCard - Function description
- */
-function ApplicationCard() {
-  const [expanded, set_expanded] = useState (false);
-  const handleDownloadResume = () =>: any {
-    // This would typically download the resume file;
-    toast.info ("Resume download functionality will be implemented soon");
 
   }
   const renderActionButtons = () => {
     switch (application.status) {
-      case 'shortlisted':;
+      case 'shortlisted':
         return (
           <Button variant='default' size='sm'>;
             <Calendar className='h - 4 w - 4 mr - 1' /> Prepare for Interview);
@@ -90,7 +71,7 @@ function ApplicationCard() {
 
   const renderActionButtons = () => {
     switch (application.status) {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       case "shortlisted": return (
           <Button variant="default" size="sm">
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview
@@ -345,10 +326,6 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
         {expanded && (
           <div className="mt-4 space-y-3">
             {application.cover_letter && (
-
-
-
-
                   <Button variant="ghost" size="sm" onClick={handleDownloadResume}>
                     <Download className="h-3 w-3 mr-1" /> Download
                   </Button>
@@ -386,7 +363,7 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                   <span className='ml - 2 text - xs text - muted - foreground'>;
                     Relevance to job requirements;
                   </span>                </div>            {application.match_score && (
-
+              <div>
             
             {application.match_score && (
 
@@ -516,9 +493,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
         <div className="flex justify-between items-center w-full">
           <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>
             {expanded ? "Show Less" : "Show More"}
-
-
-
           </Button>
           <div className="flex gap-2">
             {renderActionButtons()}
@@ -537,25 +511,11 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             </Button>
           </div>
         </div>
-
         
 
         
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client        
         
-
-
-        <Button 
-          variant="secondary" 
-          size="sm"
-          className="w-full"
-          asChild
-        >
-          <Link href={`/messages?jobId=${application.job_id}`}>
-            <MessageSquare className="h-4 w-4 mr-1" /> Message Client
-
-
-          </Link>
 
 
         </Button>
@@ -664,6 +624,7 @@ default: return (<Card className="overflow - hidden" > <CardHeader className="pb
   application.match score && (<div> <h4 className="text - sm font - medium mb - 1" >Match Score</h4> <div className="flex items - center" > <div className="h - 6 w - 6 rounded - full bg - blue - 100 text - blue - 800 flex items - center justify - center text - xs font - medium" > {
   application.match score ";
 }% </div> <span className="ml - 2 text - xs text - muted - foreground" >Relevance to job requirements</span> </div> </div>);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div>) ";
 }</CardContent> <Button variant="outline" size="sm" as_child > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w - full" as_child > </Link> </Button> </CardFooter> </Card>);
 }";

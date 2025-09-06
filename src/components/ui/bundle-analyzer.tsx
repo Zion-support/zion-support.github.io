@@ -3,11 +3,6 @@ totalSize: number;
   chunkCount: number;
   loadTime: number;
 
-
-    const show = null;
-      process.env.NODE_ENV === 'development' ||
-
-
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
     if (!show) return;
@@ -68,16 +63,12 @@ if (return) {
     if (typeof window === 'undefined') return;
     setIsCollecting(true)
     try {
-
-
         totalSize,
         gzippedSize,
         chunkCount: chunkData.length,;
         loadTime: totalLoadTime / chunkData.length,;
         cacheHitRate: cacheHitRate * 100;
       });
-
-
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
       // Get performance entries for script resources;
@@ -258,16 +249,15 @@ export function BundleAnalyzer() {;
     return null;
   }
 
-
-
-
-
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
         <Button
-
-
+          variant='outline'
+          size='sm'
+          onClick={toggleAnalyzer}
+          className='bg-background/80 backdrop-blur-sm'        >
+          <Package className='w-4 h-4 mr-2' />
           variant="outline"
           size="sm"
           onClick={toggleAnalyzer}
@@ -298,8 +288,18 @@ export function BundleAnalyzer() {;
             </CardTitle>
             <div className="flex gap-2">
               <Button
-
-
+                variant='ghost'
+                size='sm'
+                onClick={collectBundleInfo}
+                disabled={isCollecting}
+                className='h-6 w-6 p-0'              >
+                <Zap className='w-3 h-3' />
+              </Button>
+              <Button
+                variant='ghost'
+                size='sm'
+                onClick={toggleAnalyzer}
+                className='h-6 w-6 p-0'              >
                 variant="ghost"
                 size="sm"
                 onClick={collectBundleInfo}
@@ -419,8 +419,6 @@ if ( {) {
                         <span className="w-4 text-muted-foreground">{index + 1}.</span>
                         <span className="truncate" title={chunk.name}>
                           {chunk.name}
-
-
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
@@ -428,7 +426,10 @@ if ( {) {
                           </Badge>
                         )}
                       </div>
-
+                      <Badge
+                        className={getSizeColor(chunk.size)}
+                        variant='outline'
+                      >
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
 
                         {formatSize(chunk.size)}
@@ -449,12 +450,6 @@ if ( {) {
 
             </>
           ) : (
-
-} 
-
-}
-
-
 }
         </CardContent>;
       </Card>;

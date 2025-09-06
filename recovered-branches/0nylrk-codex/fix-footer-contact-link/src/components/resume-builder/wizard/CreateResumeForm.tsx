@@ -1,13 +1,30 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {CreateResumeFormProps} from "./types";
+<<<<<<< HEAD
+export const CreateResumeForm = ({
+  onCreateResume;
+  onCancel;
+  isLoading
+}: CreateResumeFormProps) => {
+  const [newResumeTitle, setNewResumeTitle] = useState('');
+export const CreateResumeForm = ({ ;
+  onCreateResume;
+  onCancel;
+=======
 
 
 export const CreateResumeForm = ({ ;
@@ -15,6 +32,7 @@ export const CreateResumeForm = ({ ;
   onCancel;
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -23,21 +41,15 @@ import { CreateResumeFormProps } from "./types",
 export const CreateResumeForm = ({ 
   onCreateResume,
   onCancel,
-
   isLoading 
 }: CreateResumeFormProps) => {
   const [newResumeTitle, setNewResumeTitle] = useState(''),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleSubmit = async () => {
     if (!newResumeTitle.trim()) return;
     await onCreateResume(newResumeTitle)
-
-
+  }
   },
-
-
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -56,7 +68,6 @@ export const CreateResumeForm = ({ ;
               type="text"
               placeholder="Resume Title (e.g. 'AI Engineer Resume')"
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-
 import { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -88,15 +99,19 @@ export const CreateResumeForm = ({;
               type="text";
               placeholder="Resume Title (e.g. 'AI Engineer Resume')";
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm";
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               value={newResumeTitle}
-
-
+              onChange={(e) => setNewResumeTitle(e.target.value)}
+            />
+            <Button
+              onClick={handleSubmit}
+              disabled={!newResumeTitle.trim() |isLoading}
               disabled={!newResumeTitle.trim() || isLoading}
-
-
             >
               {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               Create
@@ -113,6 +128,13 @@ export const CreateResumeForm = ({;
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
+}
+
+},
+};
+},
+=======
 
               onChange={(e) => setNewResumeTitle(e && e.target.value)}
             />;
@@ -190,3 +212,4 @@ export const CreateResumeForm = ({
 }
 ;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

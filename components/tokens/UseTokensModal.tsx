@@ -1,15 +1,33 @@
 
+<<<<<<< HEAD
+import React, { useEffect, useState } from "react";
+import { connectMetaMask, getAccounts } from "../../utils/wallet";
+export type RedemptionType =
+  | "boost_profile"
+  | "promote_listing";
+  | "premium_support";
+export default function UseTokensModal({
+  isOpen
+  onClose
+  serviceId
+  defaultType
+}: {
+=======
 
 
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   isOpen,
   onClose,
   serviceId,
   defaultType,
 }: {;
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
@@ -102,10 +120,6 @@ defaultType
       setIsSubmitting(false);
     }
   }
-
-
-
-
 
   if (!isOpen) return null;
 
@@ -207,7 +221,13 @@ defaultType
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+  );
+);
+  );
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -218,4 +238,3 @@ defaultType
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

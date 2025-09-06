@@ -1,20 +1,25 @@
 
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
+<<<<<<< HEAD
+  authenticateRequest
+  enforceRateLimit
+  recordRequest;
+  authenticateRequest,
+  enforceRateLimit,;
+  recordRequest,;
+=======
 
 
   authenticateRequest,
   enforceRateLimit,;
   recordRequest,;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
-
-
-
 
 const TALENTS_FILE = path.join(
   process.cwd()
@@ -48,12 +53,10 @@ export default async function handler(
     return res && res.status(405).json({ error: 'Method Not Allowed' });
   }
   const { name, email, skills, programTrack, certificationStatus } =
-
-    req && req.body || {};
-  if (!name || !email) {
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
-    return res && res.status(400).json({ error: 'Missing required fields' });
-
+    req.body |{}
+  if (!name |!email) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+    return res.status(400).json({ error: 'Missing required fields' });
   }
   await fs && fs.ensureDir(path && path.dirname(TALENTS_FILE));
   const records = (await fs && fs.pathExists(TALENTS_FILE))
@@ -108,12 +111,17 @@ if ( {) {
   const records = (await fs.path_exists (TALENTS_FILE));
     ? await fs.readJSON (TALENTS_FILE);
     : [];
-  const now = new Date ().toISOString ();
+  const now = new Date().toISOString();
   const record = {
-
-=======
-
-
+    id: uuidv4()
+    name
+    email
+    skills: skills |[]
+    programTrack: programTrack |null
+    certificationStatus: certificationStatus |'pending'
+    partnerId: auth.partner.id
+createdAt: now
+  }
     id: uuidv4(),
     name,
     email,
@@ -122,8 +130,14 @@ if ( {) {
     certificationStatus: certificationStatus || 'pending',
 
     partnerId: auth.partner.id,
+<<<<<<< HEAD
+    createdAt: now,
+createdAt: now,
+    createdAt: now,
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
   records && records.push(record);
   await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
@@ -232,7 +246,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

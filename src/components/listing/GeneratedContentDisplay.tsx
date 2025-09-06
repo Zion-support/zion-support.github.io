@@ -7,14 +7,14 @@
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
 
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface GeneratedContent {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   description: string,
   tags: string[],
   suggestedPrice: {
@@ -46,6 +46,10 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 
 
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -56,8 +60,16 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>
           <p className="text-white">{content.description}</p>
         </div>
-
-
+        <div>
+          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
+            Tags
+          </h3>
+          <div className='flex flex-wrap gap-2'>
+            {content.tags.map((tag, index) => (
+              <Badge
+                key={index}
+                className='bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30'
+              >                {tag}              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
         
         <div>
 
@@ -67,19 +79,14 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
             {content.tags.map((tag, index) => (
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
                 {tag}
-
-
-
+              </Badge>
+            ))}
+          </div>
+        </div>
               </Badge>;
             ))}
 
         
-
-
-        <div>
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
-          <p className="text-white">
-            ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
 
@@ -234,21 +241,3 @@ function GeneratedContentDisplay() {
     </Card>;
   );
 }
-
-        <Button;
-          on_click={on_apply}
-          className='w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white';
-        >;
-          Apply to My Listing;
-          <ArrowRight className='ml - 2 h - 4 w - 4' />        </Button>;
-      </CardFooter>;
-    </Card>);
-}          className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover: from - zion - cyan - light hover:to - zion - cyan text - white";
-        >;
-          Apply to My Listing;
-          <ArrowRight className="ml - 2 h - 4 w - 4" />;
-      </CardFooter>;
-    </Card>);
-}
-
-;

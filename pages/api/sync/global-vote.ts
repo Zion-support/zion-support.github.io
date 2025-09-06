@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
+import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle",;
+import { signPayload } from "../../../utils/sync/signature",;
+import axios from "axios",;
+import { v4 as uuidv4 } from "uuid",;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -10,7 +21,6 @@ import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   if (!state.config.optIn |state.config.paused) {
@@ -23,8 +33,29 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const merkleRoot = computeMerkleRootFromVotes(votes)
   const version = (state.latestVersionByEntityId[proposalId] |0) + 1
   const event = {
+<<<<<<< HEAD
+    eventId: uuidv4()
+    type: "proposal" as const
+    payload: { id: proposalId, proposalId, title, votes }
+    originInstanceId: state.config.instanceId
+    version
+    timestamp: Date.now()
+merkleRoot}
+  upsertEvent(state, event)
+  writeState(state)
+  const body = { ...event, propagate: false }
+  const headers: Record<string, string> = {}
+  const sig = signPayload(body)
+  if (sig) headers["x-zion-signature"] = sig
+    eventId: uuidv4(),
+    type: "proposal" as const,
+    payload: { id: proposalId, proposalId, title, votes },
+    originInstanceId: state.config.instanceId,
+    version,
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     timestamp: Date.now(),
     merkleRoot};
 
@@ -43,6 +74,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .map(async (peer) => {
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, write_state, upsert_event  } from '../../../utils / sync / storage';,
 import { computeMerkleRootFromVotes  } from '../../../utils / sync / merkle';,
@@ -97,8 +129,11 @@ if (headers["x - zion - signature"] = sig, ) {
 =======
   return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId });
 };
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -160,31 +195,21 @@ export default async function handler(req, res) {
   const headers: Record<string, string> = {},
   const sig = signPayload(body),
   if (sig) headers["x-zion-signature"] = sig,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString()
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         try {
-          await axios.post (url, body, { headers, timeout: 5000 });
+          await axios.post(url, body, { headers, timeout: 5000 })
         } catch {
-
-}
-
-=======
-      })),
-  return res.status (200).json ({ status: "created", merkle_root, version, event_id: event.event_id });
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
           // ignore
+        }
+      })
+  )
 
+  return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId })
           } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -294,6 +319,11 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+}
+}
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

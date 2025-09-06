@@ -1,9 +1,33 @@
 
+<<<<<<< HEAD
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
+
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 type Tx = {
 =======
 class ErrorBoundary extends React.Component {
@@ -65,12 +89,18 @@ function getUserId(): any (): string {;
   const generated = 'demo-user';
   window && window.localStorage.setItem('zion_user_id', generated);
   return generated;
+<<<<<<< HEAD
+export default function WalletPanel() {
+
+export default function WalletPanel() {;
+=======
 
 
 
 export default function WalletPanel() {;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
@@ -85,8 +115,11 @@ import Badges from "./Badges";
 type Tx = {
   created_at: string;
 }
-;
 type Summary = {
+<<<<<<< HEAD
+  wallet: { userId: string, balance: number }
+  transactions: Tx[]
+=======
   wallet: { user_id: string; balance: number }
   transactions: Tx[];
   config: { usdPerToken: number; symbol: string }
@@ -135,23 +168,27 @@ export default function WalletPanel() {;
 type Summary = {;
   wallet: { userId: string, balance: number },;
   transactions: Tx[],;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   config: { usdPerToken: number, symbol: string }
 };
 function getUserId(): any (): string {;
 
   if (typeof window === "undefined") return "demo-user";
-  const fromStorage = window && window.localStorage.getItem("zion_user_id");
+  const fromStorage = window.localStorage.getItem("zion_user_id");
   if (fromStorage) return fromStorage;
   const generated = "demo-user";
-  window && window.localStorage.setItem("zion_user_id", generated);
-  return generated;
+  window.localStorage.setItem("zion_user_id", generated);
+  return generated
 }
-
+export default function WalletPanel() {
 
 export default function WalletPanel() {;
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
   const [ethAddress, setEthAddress] = useState<string | null>(null);
@@ -780,23 +817,55 @@ export default function WalletPanel() {
               <button className="px-3 py-1 rounded border" onClick={_() => redeem(500)}>Redeem 500</button>
 
             </div>
+<<<<<<< HEAD
             <div className="text-xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>
-          </div>
-
-        )}
-
-
-}
-
-
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      </div>;
-    </div>;
-  );
+            <div className='text-gray-600'>
+              Rate: 1 {symbol} = $
+              {summary?.config.usdPerToken?.toFixed(2) ?? '0.00'}
+            </div>
+            <div className='flex gap-2 items-center'>
+              <button
+                className='px-3 py-1 rounded border'
+                onClick={() => redeem(100)}
+              >
+                Redeem 100
+              </button>
+              <button
+                className='px-3 py-1 rounded border'
+                onClick={() => redeem(250)}
+              >
+                Redeem 250
+              </button>
+              <button
+                className='px-3 py-1 rounded border'
+                onClick={() => redeem(500)}
+              >
+                Redeem 500
+              </button>
+            </div>
+            <div className='text-xs text-gray-500'>
+              Coming soon: Redeem for branded perks and courses.
+            </div>          </div>            <div className="text-xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>
+          </div>
+        )}
+<<<<<<< HEAD
+      </div>
+    </div>
+);
+<<<<<<< HEAD
+=======
 
-  );
+
 }
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 =======
             <div className='text - xs text - gray - 500'>;
@@ -807,9 +876,33 @@ export default function WalletPanel() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+          </div>
+
+        )}
+      </div>
+    </div>
+);
 }
 
+<<<<<<< HEAD
+          </div>
+
+        )}
+      </div>
+    </div>
+  );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}
+}
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

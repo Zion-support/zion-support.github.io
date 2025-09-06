@@ -1,8 +1,13 @@
+<<<<<<< HEAD
+export interface Job {
+export interface Job {;
+=======
 
 
 export interface Job {;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   title: string;
   description: string;
@@ -10,8 +15,14 @@ export interface Job {;
   budget?: string;
   client_id: string
 }
+<<<<<<< HEAD
+export interface ApplyToJobModalProps {
+  job: Job;
+  isOpen: boolean;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export interface ApplyToJobModalProps {;
   job: Job;
@@ -19,8 +30,12 @@ export interface ApplyToJobModalProps {;
   onClose: () => void;
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export interface Job {;
   id: string,;
@@ -34,21 +49,15 @@ export interface Job {;
 export interface ApplyToJobModalProps {;
   job: Job,;
   isOpen: boolean,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onClose: () => void;
 
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
 
-
-  is_open: boolean;
-  on_close: () => void;
-  onApplySuccess?: (job_id: string) => Promise < void>;
-}
-
-=======
 ;
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

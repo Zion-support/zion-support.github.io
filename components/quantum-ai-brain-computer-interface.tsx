@@ -1,37 +1,19 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
+import React from 'react',
 import React from 'react';
-
-=======
-
-import React from 'react';
-
 import Head from 'next/head';
 
 import {
+<<<<<<< HEAD
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Brain
+  Star;
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Phone,
   Mail,
   MapPin,
@@ -39,19 +21,25 @@ import {
   ArrowRight,
   Brain,;
   Star,;
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/quantum-ai-brain-computer-interface')
@@ -289,40 +277,12 @@ export default function QuantumAIBCIPage() {
     </UltraAdvancedFuturisticBackground>
 
   );
-
-import Head from 'next / head';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Brain,
-  Star,
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
-import Button from '../components / ui / Button';
-import { enhancedRealMicroSaasServices } from '../data / enhanced - real - micro - saas - services';
-export default /**
- * QuantumAIBCIPage - Function description
- */
-function QuantumAIBCIPage() {
-  const service = enhancedRealMicroSaasServices.find (string =>;
-    s.link.ends_with ('/quantum - ai - brain - computer - interface'));  // Check condition
-if (return null) {
-  $2
-}import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
-import Button from '../components / ui / Button';
-import { enhancedRealMicroSaasServices } from '../data / enhanced - real - micro - saas - services';
-export default /**
- * QuantumAIBCIPage - Function description
- */
-function QuantumAIBCIPage() {
-  const service = enhancedRealMicroSaasServices.find (string => s.link.ends_with ('/quantum - ai - brain - computer - interface'));
-  // Check condition
-if (return null) {
-  $2
 }
+<<<<<<< HEAD
+}
+;
+}
+=======
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -419,3 +379,4 @@ if (return null) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

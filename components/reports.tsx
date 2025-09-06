@@ -1,5 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+</Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
+import React from 'react';
+
+ </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   reports.filter (report => report.featured) .map ( (report, index) => (<motion.div key= {
   index
 }</span>) )
@@ -128,44 +137,6 @@ import { FileText;
  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
-
-</Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision - making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6" > Featured Report </h2> </motion.div> {
-  reports.filter (report => report.featured) .map ( (report, index) => (<motion.div key= {
-  index;
-}</span>) );
-}</div> </div> </div> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <button className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white px - 8 py - 4 rounded - xl font - semibold transition - all duration - 200 shadow - lg hover:shadow - cyan - 500 / 25 inline - flex items - center space - x-2" > <Download className="w - 5 h - 5" /> <span > Download Full Report</span> </button> <button className="border border - cyan - 400 / 40 text - cyan - 400 hover:bg - cyan - 400 / 10 px - 8 py - 4 rounded - xl font - semibold transition - all duration - 200 inline - flex items - center space - x-2" > <Eye className="w - 5 h - 5" /> <span > Preview Report</span> </button> </div> </motion.div>) );
-}</div> </section> > <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6" > All Reports </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Explore our comprehensive research across different technology domains </p> </motion.div> {
-  /* Category Pills */;
-}<motion.div > {
-  categories.map ( (category, index) => (<button key= {
-  index;
-}className= {
-  `px - 6 py - 3 rounded - full font - medium transition - all duration - 200 $ {
-  category.active ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white' : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50';
-}`;
-}> {
-  category.name;
-}({
-  category.count;
-}) </button>) );
-}</motion.div> > <div className= {
-  `w - 16 h - 16 bg - gradient - to - br $ {
-  report.color;
-}rounded - xl flex items - center justify - center text - white mb - 6`;
-}> {
-  report.icon;
-}</div> </span> <button className="text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 200 inline - flex items - center space - x-1" > <span > Download</span> <Download className="w - 4 h - 4" /> </button> </div> </motion.article>) );
-}</div> </div> </section> > <h2 className="text - 4xl font - bold text - white mb - 6" > Need Custom Research? </h2> <p className="text - xl text - gray - 300 mb - 8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white px - 8 py - 4 rounded - xl font - semibold transition - all duration - 200 shadow - lg hover:shadow - cyan - 500 / 25 inline - flex items - center space - x-2" > <span > Request Custom Research</span> <ArrowRight className="w - 5 h - 5" /> </a> <a href="/services" className="border border - cyan - 400 / 40 text - cyan - 400 hover:bg - cyan - 400 / 10 px - 8 py - 4 rounded - xl font - semibold transition - all duration - 200" > View Research Services </a> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>);
-}
-export default ReportsPage;import React from 'react';
-import Head from 'next / head';
-import {motion} from 'framer-motion';
-import {FileText, Download, Calendar, User, Tag, ArrowRight, TrendingUp, BarChart3, Brain, Atom, Globe, Shield, Zap, Eye, Clock, Award} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const ReportsPage: React.FC = () => {
   const reports = [;
     {
@@ -335,11 +306,56 @@ const ReportsPage: React.FC = () => {;
     }
   ];
   return (
-
-
+    <UltraAdvancedFuturisticBackground>
+      <div className="min-h-screen">
+        <Head>
+          <title>Research Reports - Zion Tech Group | Industry Analysis & Technology Insights</title>
+          <meta name="description" content="Access Zion Tech Group's comprehensive research reports, whitepapers, and industry analysis covering AI, quantum computing, cybersecurity, and emerging technologies." />
+        </Head>
+        <QuickNavigation />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {categories.map((category) => (
+            <Link
+              key={category.name}
+              href={category.href}
+              className="group bg-slate-900/50 border border-white/10 rounded-lg p-8 hover:border-cyan-400/50 transition-all hover:scale-105"
+            >
+              Research Reports
+            </motion.h1>
+            <motion.p
+              className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making.
+            </motion.p>
+            <motion.div
+              className="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <span className="flex items-center space-x-2">
+                <FileText className="w-5 h-5" />
+                <span>{reports.length} Reports Available</span>
+              </span>
+              <span className="flex items-center space-x-2">
+                <Download className="w-5 h-5" />
+                <span>{formatNumber(reports.reduce((sum, r) => sum + r.downloads, 0))} Downloads</span>
+              </span>
+              <span className="flex items-center space-x-2">
+                <Eye className="w-5 h-5" />
+                <span>{formatNumber(reports.reduce((sum, r) => sum + r.views, 0))} Views</span>
+              </span>
+            </motion.div>
+          </div>
+        </section>
+        {/* Featured Report */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
             <motion.div 
-
-
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -518,6 +534,10 @@ icon: <Globe className="w - 8 h - 8" />,
                       <span className="bg - cyan - 500 / 20 text - cyan - 400 px - 3 py - 1 rounded - full text - sm font - medium">;
                         {report.category}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 transition={{ duration: 0 && 0.8 }}
                 viewport={{ once: true }}>;
                 <div className="flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0 lg:space-x-8">;
@@ -559,14 +579,34 @@ icon: <Globe className="w - 8 h - 8" />,
                         <span key={tagIndex} className="bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-sm">;
 
                           {tag}
-                        </span>;
+                        </span>
                       ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2">
+                    <Download className="w-5 h-5" />
+                    <span>Download Full Report</span>
+                  </button>
+                  <button className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200 inline-flex items-center space-x-2">
+                    <Eye className="w-5 h-5" />
+                    <span>Preview Report</span>
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Categories Filter */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -626,8 +666,6 @@ icon: <Globe className="w - 8 h - 8" />,
 =======
 
             <motion.div 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="flex flex-wrap justify-center gap-4 mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -644,7 +682,10 @@ icon: <Globe className="w - 8 h - 8" />,
                   {category && category.name} ({category && category.count});
                 </button>;
               ))}
+            </motion.div>
 
+<<<<<<< HEAD
+=======
             </motion && motion.div>;
 
 
@@ -654,6 +695,7 @@ icon: <Globe className="w - 8 h - 8" />,
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {reports && reports.filter(report => !report && report.featured).map((report, index) => (;
@@ -800,10 +842,12 @@ icon: <Globe className="w - 8 h - 8" />,
                   </div>;
                 </motion && motion.article>;
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
 
+<<<<<<< HEAD
+=======
 
 =======
 
@@ -811,6 +855,7 @@ icon: <Globe className="w - 8 h - 8" />,
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -851,89 +896,4 @@ icon: <Globe className="w - 8 h - 8" />,
 
 export default ReportsPage;
 
-
-=======
-                  </div>;
-                  <div className="flex items - center space - x-4 mb - 4">;
-                    <span className="bg - cyan - 500 / 20 text - cyan - 400 px - 3 py - 1 rounded - full text - sm font - medium">;
-                      {report.category}
-                    </span>;
-                    <span className="text - gray - 400 text - sm flex items - center space - x-1">;
-                      <Calendar className="w - 4 h - 4" />;
-                      <span>{format_date (report.date)}</span>;
-                    </span>;
-                  </div>;
-                  <h3 className="text - xl font - bold text - white mb - 4 line - clamp - 3">{report.title}</h3>;
-                  <p className="text - gray - 300 mb - 6 line - clamp - 4">{report.excerpt}</p>;
-                  <div className="flex items - center justify - between mb - 6">;
-                    <span className="text - gray - 400 text - sm flex items - center space - x-1">;
-                      <FileText className="w - 4 h - 4" />;
-                      <span>{report.pages} pages</span>;
-                    </span>;
-                    <span className="text - gray - 400 text - sm flex items - center space - x-1">;
-                      <Download className="w - 4 h - 4" />;
-                      <span>{format_number (report.downloads)}</span>;
-                    </span>;
-                  </div>;
-                  <div className="flex items - center justify - between">;
-                    <span className="text - gray - 400 text - sm flex items - center space - x-1">;
-                      <User className="w - 4 h - 4" />;
-                      <span>{report.author.split ('&')[0].trim ()}</span>;
-                    </span>;
-                    <button className="text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 200 inline - flex items - center space - x-1">;
-                      <span > Download</span>;
-                      <Download className="w - 4 h - 4" />;
-                    </button>;
-                  </div>;
-                </motion.article>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              className="bg - gradient - to - r from - cyan - 900 / 20 to - blue - 900 / 20 border border - cyan - 400 / 20 rounded - 3xl p - 12";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >;
-              <h2 className="text - 4xl font - bold text - white mb - 6">;
-                Need Custom Research?;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
-                Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges.;
-              </p>;
-              <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
-                <a;
-                  href="/contact";
-                  className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white px - 8 py - 4 rounded - xl font - semibold transition - all duration - 200 shadow - lg hover:shadow - cyan - 500 / 25 inline - flex items - center space - x-2";
-                >;
-                  <span > Request Custom Research</span>;
-                  <ArrowRight className="w - 5 h - 5" />;
-                </a>;
-                <a;
-                  href="/services";
-                  className="border border - cyan - 400 / 40 text - cyan - 400 hover:bg - cyan - 400 / 10 px - 8 py - 4 rounded - xl font - semibold transition - all duration - 200";
-                >;
-                  View Research Services;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>);
-}
-;
 export default ReportsPage;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-export default ReportsPage;
-
-
-export default ReportsPage;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

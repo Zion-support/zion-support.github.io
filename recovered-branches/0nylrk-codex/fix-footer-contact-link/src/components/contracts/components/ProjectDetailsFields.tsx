@@ -1,4 +1,74 @@
+<<<<<<< HEAD
+import { format } from "date-fns";
+import { CalendarIcon } from "lucide-react";
+import { UseFormReturn } from "react-hook-form";
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+  FormMessage,;
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,;
+} from "@/components/ui/popover";
+import { Calendar } from "@/components/ui/calendar";
+import { ContractFormValues } from "./ContractForm";
+interface ProjectDetailsFieldsProps {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+import { format } from "date-fns",
+import { CalendarIcon } from "lucide-react";
+import { UseFormReturn } from "react-hook-form";
+
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormDescription
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import {
+  Popover
+  PopoverContent
+  PopoverTrigger
+} from "@/components/ui/popover";
+
+import { Calendar } from "@/components/ui/calendar";
+import { ContractFormValues } from "./ContractForm";
+interface ProjectDetailsFieldsProps {
+import { CalendarIcon } from "lucide-react",
+import { UseFormReturn } from "react-hook-form",
+import { 
+  FormField,
+  FormItem, 
+  FormLabel, 
+  FormControl, 
+  FormDescription, 
+  FormMessage 
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Button } from "@/components/ui/button",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { Calendar } from "@/components/ui/calendar",
+import { ContractFormValues } from "./ContractForm",
+interface ProjectDetailsFieldsProps {
+  form: UseFormReturn<ContractFormValues>
+import { format } from "date-fns",;
+import { CalendarIcon } from "lucide-react",;
+import { UseFormReturn } from "react-hook-form",;
 import {;
   FormField,;
   FormItem,;
@@ -22,11 +92,14 @@ import {;
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
+<<<<<<< HEAD
+=======
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   form: UseFormReturn<ContractFormValues>;
 }
 
@@ -38,63 +111,24 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
       <FormField
         control={form && form.control}
         name="projectName"
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>Project Name</FormLabel>;
-=======
-import { format  } from './date - fns';
-import { CalendarIcon  } from './lucide-react';
-import { UseFormReturn  } from './react - hook - form';
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormDescription,
-  FormMessage,
-} from '@/components / ui / form';
-import { Input  } from '@/components / ui / input';
-import { Textarea  } from '@/components / ui / textarea';
-import { Button  } from '@/components / ui / button';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components / ui / popover';
-import { Calendar  } from '@/components / ui / calendar';
-import { ContractFormValues  } from './ContractForm';
-interface ProjectDetailsFieldsProps {
-  form: UseFormReturn < ContractFormValues>;
-}
-export /**
- * ProjectDetailsFields - Function description
- */
-function ProjectDetailsFields() {
-  return (
-    <>;
-      <FormField;
-        control={form.control}
-        name="project_name";
         render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Project Name</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-            <FormControl>;
-              <Input placeholder="AI Website Development" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-
-      />;
-
-
+          <FormItem>
+            <FormLabel>Project Name</FormLabel>
+            <FormControl>
+              <Input placeholder="AI Website Development" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
       <FormField
-        control={form && form.control}
-=======
-
       />;
       <FormField;
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         name="scopeSummary"
@@ -137,10 +171,7 @@ function ProjectDetailsFields() {
           </FormItem>
         )}
       />
-
       
-
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 =======
       />;
@@ -181,18 +212,15 @@ function ProjectDetailsFields() {
               <FormMessage />;
             </FormItem>;
           )}
-
-        />;
-
-
+        />
         <FormField
-          control={form && form.control}
-=======
-
         />;
         <FormField;
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           name="endDate"
@@ -217,6 +245,27 @@ function ProjectDetailsFields() {
                 <PopoverContent className="w-auto p-0" align="start">;
                   <Calendar
                     mode="single"
+<<<<<<< HEAD
+                    selected={field.value |undefined}
+                    onSelect={field.onChange}
+                    disabled={(date) => date < form.getValues("startDate")}
+                    initialFocus
+                  />
+                </PopoverContent>
+              </Popover>
+              <FormDescription>
+                Leave empty if the end date is flexible
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </div>
+    </>
+        />;
+      </div>;
+    </>;
+=======
 
                     selected={field && field.value || undefined}
                     onSelect={field && field.onChange}
@@ -306,6 +355,7 @@ function ProjectDetailsFields() {
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 =======
             </FormItem>)}

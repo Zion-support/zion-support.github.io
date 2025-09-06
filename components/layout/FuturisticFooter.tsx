@@ -1,5 +1,5 @@
-
-
+import React from 'react',
+import Link from 'next/link';
 import React from 'react';
 import Link from 'next/link';
 import {
@@ -13,6 +13,48 @@ import {
   Shield,;
   ArrowRight,;
 } from 'lucide-react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {
+  Mail
+  Phone
+  MapPin
+  Globe
+  Zap
+  Bot
+  Cloud
+  Shield
+  ArrowRight;
+} from 'lucide-react';
+export default function FuturisticFooter() {;
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+import {
+  Mail
+  Phone
+  MapPin
+  Globe
+  Zap
+  Bot
+  Cloud
+  Shield
+  ArrowRight;
+} from 'lucide-react';
+=======
+<<<<<<< HEAD
+export default function FuturisticFooter() {;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+export default function FuturisticFooter() {
+  const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
+export default function FuturisticFooter() {
+
+export default function FuturisticFooter() {;
+=======
 
   const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
 
@@ -20,6 +62,7 @@ import {
 export default function FuturisticFooter() {;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const currentYear = new Date().getFullYear();
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -169,11 +212,71 @@ import Link from 'next/link';
 
 
               ))}
+            </div>
+          </div>
 
-            </div>;
-          </div>;
+          {/* Quick Links */}
+          <div>
+            <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
+              <ArrowRight className='w-5 h-5 text-blue-400 mr-2' />
+              Quick Links
+            </h3>
+            <ul className='space-y-3'>
+              {quickLinks.map(link => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'                  >              Quick Links
+            </h3>
+            <ul className="space-y-3">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
+          {/* Services */}
+          <div>
+            <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
+              <Cloud className='w-5 h-5 text-green-400 mr-2' />
+              Services
+            </h3>
+            <ul className='space-y-3'>
+              {serviceCategories.map(service => (
+                <li key={service.name}>
+                  <Link
+                    href={service.href}
+                    className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'                  >              Services
+            </h3>
+            <ul className="space-y-3">
+              {serviceCategories.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    href={service.href}
+                    className="text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -202,6 +305,7 @@ import Link from 'next/link';
                   <a
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Contact Info */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -344,6 +448,10 @@ import Link from 'next/link';
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 className='text-gray-400 hover:text-white transition-colors duration-200'>                Cookie Policy              © {currentYear} Zion Tech Group. All rights reserved.;
             </div>;
@@ -373,122 +481,14 @@ import Link from 'next/link';
   );
 }
 
-=======
-                  </Link>;
-                </li>))}
-            </ul>;
-          </div>;
-          {/* Contact Info */}
-          <div>;
-            <h3 className='text - lg font - semibold text - white mb - 6 flex items - center'>;
-              <Shield className='w - 5 h - 5 text - purple - 400 mr - 2' />;
-              Contact Us;
-            </h3>;
-            <div className='space - y-4'>;
-              <div className='flex items - start space - x-3'>;
-                <Phone className='w - 5 h - 5 text - blue - 400 mt - 1 flex - shrink - 0' />;
-                <div>;
-                  <p className='text - white font - medium'>Phone</p>;
-                  <a;
-                    href={`tel:${contact_info.mobile}`}
-                    className='text - gray - 400 hover:text - blue - 400 transition - colors duration - 200'                  >              Contact Us;
-            </h3>;
-            <div className="space - y-4">;
-              <div className="flex items - start space - x-3">;
-                <Phone className="w - 5 h - 5 text - blue - 400 mt - 1 flex - shrink - 0" />;
-                <div>;
-                  <p className="text - white font - medium">Phone</p>;
-                  <a;
-                    href={`tel:${contact_info.mobile}`}
-                    className="text - gray - 400 hover:text - blue - 400 transition - colors duration - 200";
-                  >;
-                    {contact_info.mobile}
-                  </a>;
-                </div>;
-              </div>;
-              <div className='flex items - start space - x-3'>;
-                <Mail className='w - 5 h - 5 text - green - 400 mt - 1 flex - shrink - 0' />;
-                <div>;
-                  <p className='text - white font - medium'>Email</p>;
-                  <a;
-                    href={`mailto:${contact_info.email}`}
-                    className='text - gray - 400 hover:text - green - 400 transition - colors duration - 200'                  >                <div>;
-                  <p className="text - white font - medium">Email</p>;
-                  <a;
-                    href={`mailto:${contact_info.email}`}
-                    className="text - gray - 400 hover:text - green - 400 transition - colors duration - 200";
-                  >;
-                    {contact_info.email}
-                  </a>;
-                </div>;
-              </div>;
-              <div className='flex items - start space - x-3'>;
-                <MapPin className='w - 5 h - 5 text - purple - 400 mt - 1 flex - shrink - 0' />;
-                <div>;
-                  <p className='text - white font - medium'>Address</p>;
-                  <p className='text - gray - 400 text - sm'>{contact_info.address}</p>                </div>                  <p className="text - white font - medium">Address</p>;
-                  <p className="text - gray - 400 text - sm">;
-                    {contact_info.address}
-                  </p>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-        {/* Bottom section */}
-        <div className='pt - 8 border - t border - gray - 800'>;
-          <div className='flex flex - col md:flex - row justify - between items - center space - y-4 md:space - y-0'>;
-            <div className='text - gray - 400 text - sm'>;
-              © {current_year} Zion Tech Group. All rights reserved.;
-            </div>;
-            <div className='flex space - x-6 text - sm'>;
-              <Link;
-                href='/privacy';
-                className='text - gray - 400 hover:text - white transition - colors duration - 200';
-              >;
-                Privacy Policy;
-              </Link>;
-              <Link;
-                href='/terms';
-                className='text - gray - 400 hover:text - white transition - colors duration - 200';
-              >;
-                Terms of Service;
-              </Link>;
-              <Link;
-                href='/cookies';
-                className='text - gray - 400 hover:text - white transition - colors duration - 200';
-              >                Cookie Policy              © {current_year} Zion Tech Group. All rights reserved.;
-            </div>;
-            <div className="flex space - x-6 text - sm">;
-              <Link href="/privacy" className="text - gray - 400 hover:text - white transition - colors duration - 200">;
-                Privacy Policy;
-              </Link>;
-              <Link href="/terms" className="text - gray - 400 hover:text - white transition - colors duration - 200">;
-                Terms of Service;
-              </Link>;
-              <Link href="/cookies" className="text - gray - 400 hover:text - white transition - colors duration - 200">;
-                Cookie Policy;
-              </Link>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-      {/* Floating elements */}
-      <div className='absolute top - 20 right - 20 w - 2 h - 2 bg - blue - 400 rounded - full animate - pulse' />;
-      <div className='absolute bottom - 32 left - 32 w - 3 h - 3 bg - purple - 400 rounded - full animate - pulse delay - 1000' />;
-      <div className='absolute top - 1/2 left - 10 w - 1 h - 1 bg - green - 400 rounded - full animate - pulse delay - 500' />;
-    </footer>);      <div className="absolute top - 20 right - 20 w - 2 h - 2 bg - blue - 400 rounded - full animate - pulse" />;
-      <div className="absolute bottom - 32 left - 32 w - 3 h - 3 bg - purple - 400 rounded - full animate - pulse delay - 1000" />;
-      <div className="absolute top - 1/2 left - 10 w - 1 h - 1 bg - green - 400 rounded - full animate - pulse delay - 500" />;
-    </footer>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  );
 }
+<<<<<<< HEAD
+=======
 
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,5 +1,22 @@
+<<<<<<< HEAD
+import { useRouter  } from 'next/router';
+import EnhancedCard from '../../components/ui/EnhancedCard',
+import EnhancedButton from '../../components/ui/EnhancedButton',
+import EnhancedLoading from '../../components/ui/EnhancedLoading',
+import useResponsive from '../../hooks/useResponsive';
+import { useToast  } from '../../components/ui/NotificationSystem';
+import { useEffect, useState } from 'react';
+export default function JobDetailsPage() {
+
+  const router = useRouter();
+  const { slug } = router.query as { slug?: string }
+  const { isMobile } = useResponsive();
+  const { notify } = useToast();
+  const [loading, setLoading] = useState(true);
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useRouter} from 'next/router';
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
@@ -13,13 +30,25 @@ export default function JobDetailsPage() {;
   const { isMobile } = useResponsive();
   const { notify } = useToast();
   const [loading, setLoading] = useState(true);
+<<<<<<< HEAD
+
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
+<<<<<<< HEAD
+  const onApply = () => {
+    notify(
+      'Application submitted! We’ll notify you when it’s viewed.'
+      'success'
+    );
+  }
+=======
 
 import {useToast} from '../../components/ui/NotificationSystem';
 import {useEffect, useState} from 'react';
@@ -52,11 +81,25 @@ export default function JobDetailsPage() {;
 
 
   useEffect(() => { const t = setTimeout(() => setLoading(false), 600), return () => clearTimeout(t) }, []);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+import { useRouter } from 'next/router',
+import EnhancedCard from '../../components/ui/EnhancedCard',
+import EnhancedButton from '../../components/ui/EnhancedButton',
+import EnhancedLoading from '../../components/ui/EnhancedLoading',
+import useResponsive from '../../hooks/useResponsive',
+import { useToast } from '../../components/ui/NotificationSystem',
+import { useEffect, useState } from 'react',
+export default function JobDetailsPage() {
+  const router = useRouter(),
+  const { slug } = router.query as { slug?: string },
+  const { isMobile } = useResponsive(),
+  const { notify } = useToast(),
+  const [loading, setLoading] = useState(true),
+  useEffect(() => { const t = setTimeout(() => setLoading(false), 600), return () => clearTimeout(t) }, []),
   const onApply = () => {
     notify('Application submitted! We’ll notify you when it’s viewed.success')
-  };
-
+  },
   return (
     <div className="relative">
       {loading ? (
@@ -66,18 +109,33 @@ export default function JobDetailsPage() {;
           <EnhancedCard>
             <div className="flex items-start justify-between gap-3">
               <div>
-
+                <h1 className='text-xl font-semibold'>
+                  {slug?.replace(/-/g, ' ') |'Job Title'}
+                </h1>
+                <p className='text-sm text-gray-600 dark:text-gray-300'>
+                  Remote • Contract • Posted today
+                </p>
+                <h1 className="text-xl font-semibold">{slug?.replace(/-/g, ' ') || 'Job Title'}</h1>
+                <p className="text-sm text-gray-600 dark:text-gray-300">Remote • Contract • Posted today</p>
+              </div>
+              {!isMobile && (
+                <EnhancedButton onClick={onApply} variant="primary">Apply Now</EnhancedButton>
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
           </EnhancedCard>
-
           <EnhancedCard>
 
             <h2 className="font-semibold mb-2">Description</h2>
             <p className="text-sm text-gray-700 dark:text-gray-300">You will design, build, and scale AI features using LLMs and modern tooling.</p>
           </EnhancedCard>
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+          <EnhancedCard>
+            <h2 className="font-semibold mb-2">Requirements</h2>
+            <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
               <li>3+ years with Python or TypeScript</li>
 
               <li>Experience with ML/AI production systems</li>
@@ -85,6 +143,21 @@ export default function JobDetailsPage() {;
             </ul>
           </EnhancedCard>
         </div>
+<<<<<<< HEAD
+      )}
+      {/* Sticky mobile apply CTA */}
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+      {/* Sticky mobile apply CTA */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
 
     <div className='relative'>;
       {loading ? (;
@@ -110,12 +183,21 @@ export default function JobDetailsPage() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {isMobile && (
         <div className="fixed inset-x-0 bottom-0 z-30 bg-white/90 dark:bg-black/80 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-3">
           <div className="container mx-auto px-2">
             <EnhancedButton onClick={onApply} variant="primary" fullWidth>Apply Now</EnhancedButton>
           </div>
         </div>
+<<<<<<< HEAD
+      )}
+    </div>
+);
+
+
+}
+=======
 
           <EnhancedCard>;
             <h2 className='font - semibold mb - 2'>Requirements</h2>;
@@ -143,6 +225,7 @@ export default function JobDetailsPage() {;
 }
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -155,7 +238,10 @@ export default function JobDetailsPage() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -67,19 +67,31 @@ import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks
 import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
 import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
 import { PartnerResources } from "@/components/partners/PartnerResources",
-
-  logInfo('PartnersPage rendering'),;
-  const [activeTab, setActiveTab] = useState("overview"),;
-  const { t } = useTranslation(),;
-  const { user, isAuthenticated } = useAuth(),;
-  const router = useRouter(),;
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),;
-
+import { useAuth } from "@/hooks/useAuth";
+import { useRouter  } from 'next/router';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 export default function Partners() {
 
-  logInfo('PartnersPage rendering'),
-  const [activeTab, setActiveTab] = useState("overview"),
-  const { t } = useTranslation(),
-  const { user, isAuthenticated } = useAuth(),
-  const router = useRouter(),
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
+  logInfo('PartnersPage rendering')
+  const [activeTab, setActiveTab] = useState("overview")
+  const { t } = useTranslation()
+  const { user, isAuthenticated } = useAuth()
+  const router = useRouter()
+  const [authServiceAvailable, setAuthServiceAvailable] = useState(true)
+  useEffect((,) => {
+    async function checkHealth() {
+      try {
+        const res = await fetch('/api/auth/health');
+        setAuthServiceAvailable(res.ok);
+        logErrorToProduction('Partner login auth health check failed', {
+          data: err
+        });
+        setAuthServiceAvailable(false);
+      }
+    }
+    checkHealth();  }, []);    checkHealth()
+  }, []);
+import { useAuth } from "@/hooks/useAuth",
+import { useRouter } from 'next/router',
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+

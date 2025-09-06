@@ -1,17 +1,42 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+export type ModerationModalProps = {;
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+export type ModerationModalProps = {
   flag: any | null;
 
   onAction: (;
     action: 'approve' | 'remove' | 'warn' | 'ban',;
     adminNotes?: string;
   ) => Promise<void>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function ModerationModal(): any ({;
   flag,;
   onClose,;
   onAction,;
 }: ModerationModalProps) {;
 
+=======
+<<<<<<< HEAD
+export default function ModerationModal({
+<<<<<<< HEAD
+  flag
+  onClose
+  onAction
+}: ModerationModalProps) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+  flag,
+  onClose,
+  onAction,
+}: ModerationModalProps) {;
 =======
 
   flag,
@@ -20,6 +45,7 @@ export default function ModerationModal(): any ({;
 }: ModerationModalProps) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
   return (
@@ -123,6 +149,14 @@ export default function ModerationModal(): any ({;
 
 
   );
+}        <div className="p-4 border-t flex items-center justify-end gap-2">
+          <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
+          <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
+          <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
+          <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
+      </div>
+    </div>
+);
 }
   on_close: () => void;
   on_action: (
@@ -299,6 +333,9 @@ if (return null) {
 =======
 
   );
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

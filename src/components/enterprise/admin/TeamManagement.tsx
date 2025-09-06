@@ -2,22 +2,6 @@ const handleAddMember = () => {
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
-
-
-        title: "Email required",
-        description: "Please enter an email address for the new team member.",
-        variant: "destructive"}),
-
-
-      return
-    }
-    toast({
-
-
-      title: 'Invitation sent',
-      description: `An invitation has been sent to ${newMemberEmail}`,
-
-
     })
     setNewMemberEmail('')
     setIsAddingMember(false)
@@ -140,6 +124,7 @@ if ( {) {
   }
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
@@ -147,7 +132,6 @@ if ( {) {
     }
 
     toast({
-
       title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
@@ -196,7 +180,12 @@ if ( {) {
                   Email
                 </Label>
                 <Input
-
+                  id='email'
+                  type='email'
+                  placeholder='colleague@company.com'
+                  className='col-span-3'
+                  value={newMemberEmail}
+                  onChange={e => setNewMemberEmail(e.target.value)}                />
                   id="email"
                   type="email"
                   placeholder="colleague@company.com"
@@ -230,7 +219,7 @@ if ( {) {
           </DialogContent>
         </Dialog>
       </div>
-
+      <div className='rounded-md border'>
 
       <div className="rounded-md border">
 
@@ -245,7 +234,7 @@ if ( {) {
             </TableRow>
           </TableHeader>
           <TableBody>
-
+            {teamMembers.map(member => (              <TableRow key={member.id}>
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
 
@@ -254,7 +243,9 @@ if ( {) {
                     <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
                       <span className="text-sm font-medium">
                         {member.name
-
+                          .split(' ')
+                          .map(n => n[0])
+                          .join('')}                      </span>
                           .split(" ")
                           .map((n) => n[0])
                           .join("")}
@@ -272,7 +263,7 @@ if ( {) {
                 <TableCell>{member.role}</TableCell>
                 <TableCell>
                   <Badge
-
+                    variant={member.status === 'active' ? 'default' : 'outline'}                  >
                     variant={member.status === "active" ? "default" : "outline"}
                   >
 
@@ -284,7 +275,10 @@ if ( {) {
                   <div className="flex justify-end gap-2">
                     {member.status === "pending" ? (
                       <Button
-
+                        variant='ghost'
+                        size='sm'
+                        onClick={() => handleResendInvite(member.email)}                      >
+                        <Mail className='h-4 w-4 mr-1' />
                         variant="ghost"
                         size="sm"
                         onClick={() => handleResendInvite(member.email)}
@@ -295,7 +289,12 @@ if ( {) {
                       </Button>
                     ) : (
                       <Button
-
+                        variant='ghost'
+                        size='sm'
+                        className='text-destructive hover:text-destructive'
+                        onClick={() => handleRemoveMember(member.id)}                      >
+                        <Trash className='h-4 w-4' />
+                      </Button>
                         variant="ghost"
                         size="sm"
                         className="text-destructive hover:text-destructive"

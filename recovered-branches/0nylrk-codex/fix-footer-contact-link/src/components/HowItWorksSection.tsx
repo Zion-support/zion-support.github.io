@@ -1,4 +1,19 @@
 
+<<<<<<< HEAD
+
+import {GradientHeading} from "./GradientHeading";
+import {Check, Handshake, Search, Send} from "lucide-react";
+const steps = [
+  {
+    title: "Post"
+    description: "Publish your service, job, or equipment in minutes with our AI-powered form.";
+    icon: Send}
+import {GradientHeading} from "./GradientHeading";
+import {Check, Handshake, Search, Send} from "lucide-react";
+import { GradientHeading } from "./GradientHeading",
+import { Check, Handshake, Search, Send } from "lucide-react",
+
+=======
 import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from './lucide-react';
 const steps = [;
@@ -11,13 +26,13 @@ import { Check, Handshake, Search, Send } from "lucide-react",
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const steps = [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   {
     title: "Post",
     description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
     icon: Send},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     title: "Match"
     description: "Our AI automatically matches your needs with the perfect providers or opportunities."
@@ -50,7 +65,6 @@ export function HowItWorksSection() {;
 =======
                 className={`flex flex-col md:flex-row items-center ${
                   index % 2 === 0 ? "md:flex-row-reverse" : ""
-
 import { GradientHeading } from "./GradientHeading",;
 import { Check, Handshake, Search, Send } from "lucide-react",;
 const steps = [;
@@ -93,8 +107,11 @@ export function HowItWorksSection() {;
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${;
                   index % 2 === 0 ? "md:flex-row-reverse" : "";
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 } relative`}
               >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
@@ -123,6 +140,16 @@ export function HowItWorksSection() {;
                 </div>;
               </div>;
             ))}
+<<<<<<< HEAD
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+};
+;
+=======
 
           </div>;
         </div>;
@@ -193,3 +220,4 @@ function HowItWorksSection() {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

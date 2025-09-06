@@ -1,9 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
 
 
 =======
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import ReactMarkdown from 'react-markdown',;
 import { useRouter } from 'next/router',;
@@ -19,9 +24,12 @@ import path from 'path',;
 function parseMarkdown(filePath: string): BlogPost | null {
   if (!fs.existsSync(filePath)) {
     return null
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
@@ -30,21 +38,18 @@ import { BLOG_POSTS } from '@/data/blog-posts';
 import { AuthorBio } from '@/components/blog/AuthorBio';
 import { SocialShareButtons } from '@/components/blog/SocialShareButtons';
 import { CommentsSection } from '@/components/blog/CommentsSection';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-
 
 import type { BlogPost } from '@/types/blog';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import fs from 'fs';
 import path from 'path';
+function parseMarkdown(filePath: string): BlogPost | null {
+  if (!fs.existsSync(filePath)) {
+    return null
+  }
 
 
 interface BlogPostPageProps {
-<<<<<<< HEAD
   /**;
   * Preloaded blog post for static generation. Can be null if not found.;
   */;
@@ -76,37 +81,23 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
       } else {
         // If getStaticProps is working correctly, this path (slug exists, no initialPost, no fallback)
         // should ideally not be hit frequently, as getStaticProps would have returned notFound.
-<<<<<<< HEAD
-// However, to maintain some robustness for dynamic client-side slug changes not triggering a new getStaticProps: setPost(null)
-=======
         // However, to maintain some robustness for dynamic client-side slug changes not triggering a new getStaticProps: setPost(null)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         setError('Article not found')
       }
     }
   }, [slug, initialPost])
   if (error) {
     return <div>{error}</div>
-
-=======
-const BlogPostPage: React.FC < BlogPostPageProps> = ({ initial_post }) => {
-  const router = use_router (),
-  const { slug } = router.query,
-  const [post, set_post] = React.useState < BlogPost | null>(initial_post),
-  const [error, set_error] = React.useState < string | null>(null),
-  React.useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-=======
-
 function parseMarkdown(filePath: string): BlogPost | null {;
   if (!fs.existsSync(filePath)) {;
     return null;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
 }
@@ -116,8 +107,30 @@ function parseMarkdown(filePath: string): BlogPost | null {;
 if ( {) {
   $2
 }
-      // This case handles if the slug changes and initial_post is not for the current slug;
-      // Or if initial_post was null from getStaticProps (which shouldn't happen if not_found is true);
+;
+interface BlogPostPageProps {;
+  /**;
+   * Preloaded blog post for static generation. Can be null if not found.;
+   */;
+  initialPost: BlogPost | null;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
+  const router = useRouter();
+  const { slug } = router.query;
+  const [post, setPost] = React.useState<BlogPost | null>(initialPost);
+  const [error, setError] = React.useState<string | null>(null);
+  React.useEffect(() => {;
+    if (initialPost && initialPost.slug === slug) {;
+      setPost(initialPost);
+      setError(null), // Clear any previous error;
+    } else if (slug) {;
+      // This case handles if the slug changes and initialPost is not for the current slug;
+      // Or if initialPost was null from getStaticProps (which shouldn't happen if notFound is true);
       // For now, we will rely on getStaticProps to provide the correct post or a 404.;
       // If initial_post is null and getStaticProps didn't return not_found, that's an inconsistent state.;
       // The previous logic tried a fallback here, but we aim to make getStaticProps authoritative.;
@@ -141,23 +154,13 @@ if ( {) {
   $2
 }
     return <div>{error}</div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-  // Check condition
-if ( {) {
-  $2
-}
-    return <div > Article not found</div>;
-  }
-
-=======
-  const article_ld = {
-
-    author: post.author.name,
-    published_time: post.published_date,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    tags: post.tags || []},
-  const body = (post as any).body || post.content;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  const articleLd = {
+    author: post.author.name
+    publishedTime: post.publishedDate
+    tags: post.tags |[]}
+  const body = (post as any).body |post.content
   return (
     <>;
       <AdvancedSEO;
@@ -176,8 +179,6 @@ if ( {) {
           <img;
             src={post.author.avatar_url}
             alt={post.author.name}
-
-
 }
       } catch (error) {
     console.error("Error:", error);
@@ -248,15 +249,29 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             className="w-10 h-10 rounded-full"
             onError={(e) => {
               const target = e.currentTarget as HTMLImageElement
               target.src = '/images/blog-placeholder.svg'
-
-
+            }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          />
+          <div>
+            <p className="m-0 font-medium">{post.author.name}</p>
+            {post.author.title && (
+              <p className="m-0 text-sm text-zion-slate-light">
+                {post.author.title}
+              </p>
+            )}
                 {post.author.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -268,39 +283,19 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
         </div>
         {post.featuredImage && (
           <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">
             <img
-
-=======
-            className="w - 10 h - 10 rounded - full";
-            on_error={(e) => {
-              const target = e.current_target as HTMLImageElement,
-              target.src = '/images / blog - placeholder.svg';
-
-            }}
-          />;
-          <div>;
-            <p className="m - 0 font - medium">{post.author.name}</p>;
-            {post.author.title && (
-              <p className="m - 0 text - sm text - zion - slate - light">;
-                {post.author.title}
-              </p>)}
-          </div>;
-        </div>;
-        {post.featured_image && (
-          <div className="aspect-[16 / 9] w - full relative overflow - hidden rounded - lg mb - 6">;
-            <img;
-              src={post.featured_image}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              src={post.featuredImage}
               alt={post.title}
-
-
               src={post.featuredImage  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -311,20 +306,16 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="object-cover w-full h-full"
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement
                 target.src = '/images/blog-placeholder.svg'
-
-
-=======
-              className="object - cover w - full h - full";
-              on_error={(e) => {
-                const target = e.current_target as HTMLImageElement,
-                target.src = '/images / blog - placeholder.svg';
               }}
             />;
           </div>)}
@@ -353,21 +344,6 @@ export const getStaticProps: GetStaticProps < BlogPostPageProps> = async ({
   if () {) {
   $2
 }
-    return { not_found: true }
-  }
-  const file_path = path.join (process.cwd (), 'contentblog', `${slug}.md`),
-  const post = parse_markdown (file_path),
-  // Check condition
-if ( {) {
-  $2
-}
-    return { not_found: true }
-  }
-  return { props: { initial_post: post }, revalidate: 60 }
-},
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
               }  } catch (error) {
     console.error("Error:", error);
@@ -380,5 +356,73 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+  return { props: { initialPost: post }, revalidate: 60 }
+},;
+;
+}
+        <ReactMarkdown>{body}</ReactMarkdown>;
+        <AuthorBio author={post.author} />;
+        <SocialShareButtons title={post.title} />;
+        <CommentsSection slug={post.slug} />;
+      </main>;
+    </>;
+  );
+};
+export default BlogPostPage,;
+export const getStaticPaths: GetStaticPaths = async () => {;
+  const dir = path.join(process.cwd(), 'contentblog'),;
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.md'));
+  const paths = files.map((f) => ({;
+    params: { slug: f.replace(/\.md$/, '') }})),;
+  // Use `blocking` so new posts added after build can be generated on demand;
+  return { paths, fallback: 'blocking'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+},;
+export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({;
+  params}: {;
+  params?: { slug?: string   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}) => {;
+  const slug = params?.slug as string;
+  // Validate slug to prevent malformed paths;
+  if (!/^[a-z0-9-]+$/.test(slug)) {;
+    return { notFound: true   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const filePath = path.join(process.cwd(), 'contentblog', `${slug}.md`),;
+  const post = parseMarkdown(filePath);
+  if (!post) {;
+    return { notFound: true   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return { props: { initialPost: post }, revalidate: 60   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

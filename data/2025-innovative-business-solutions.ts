@@ -1,3 +1,4 @@
+import { ServiceVariant } from '../types/service-variants';
 
 
   id: string;
@@ -86,11 +87,97 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     marketSize: '$7.8B business intelligence market', growthRate: '28% annual growth',
     variant: 'ai-business-intelligence',
     contactInfo: {
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
+    reviews: 26
+  }
+];
+import { ServiceVariant } from '../types/service-variants',;
+export interface InnovativeBusinessSolution {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string[],;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
+;
+export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
+  // AI Business Intelligence Suite;
+  {;
+    id: 'ai-business-intelligence-suite',;
+    name: 'AI Business Intelligence Suite',;
+    tagline: 'Intelligent business insights and analytics',;
+    price: '$3,200',;
+    period: '/month',;
+    description: 'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business window.window.window.performance.',;
+    features: [;
+      'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems',;
+      'Advanced analytics and reportingCustom business intelligence workflows';
+    ],;
+    popular: true,;
+    icon: '📈',;
+    color: 'from-blue-500 to-indigo-600',;
+    textColor: 'text-blue-400',;
+    link: 'https://ziontechgroup.com/ai-business-intelligence-suite',;
+    marketPosition: 'Leading AI-powered business intelligence platform with advanced analytics, predictive insights, and comprehensive business optimization capabilities.',;
+    targetAudience: ['Business analystsData scientistsExecutivesBusiness intelligence teamsTechnology companies'],;
+    trialDays: 30,;
+    setupTime: '3-4 weeks',;
+    category: 'AI Business Intelligence',;
+    realService: true,;
+    technology: ['Artificial IntelligenceMachine LearningBusiness AnalyticsData VisualizationPythonTensorFlowReact'],;
+    integrations: ['ERP systemsCRM platformsDatabasesCloud platformsBusiness applicationsAPI services'],;
+    useCases: ['Business analyticsPerformance monitoringPredictive insightsDecision supportBusiness optimization'],;
+    roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business window.window.window.performance.',;
+    competitors: ['TableauPower BIQlikViewLooker'],;
+    marketSize: '$7.8B business intelligence market',;
+    growthRate: '28% annual growth',;
+    variant: 'ai-business-intelligence',;
+    contactInfo: {;
+      mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
       website: 'https://ziontechgroup.com';
     }
 <<<<<<< HEAD
@@ -100,7 +187,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     customers: 38;
     rating: 4.7,
     reviews: 26;
-
+  }
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -624,6 +711,8 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
@@ -897,6 +986,12 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     rating: 4.7;
     reviews: 26;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

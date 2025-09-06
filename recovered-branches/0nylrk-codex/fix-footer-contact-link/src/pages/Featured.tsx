@@ -1,8 +1,21 @@
 
+<<<<<<< HEAD
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {FeaturedListingsSection} from "@/components/FeaturedListingsSection";
+import {GradientHeading} from "@/components/GradientHeading";
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+import { GradientHeading } from "@/components/GradientHeading";
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
+import { GradientHeading } from "@/components/GradientHeading",
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function Featured() {
   return (
     <>
@@ -18,13 +31,6 @@ export default function Featured() {
               These featured listings represent the best that the Zion Marketplace has to offer.
             </p>
           </div>
-
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {FeaturedListingsSection} from "@/components/FeaturedListingsSection";
-import {GradientHeading} from "@/components/GradientHeading";
-=======
-
           
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -79,9 +85,12 @@ function Featured() {
               These featured listings represent the best that the Zion Marketplace has to offer.;
             </p>;
           </div>;
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Reuse the FeaturedListings component */}
           <FeaturedListingsSection showTitle={false} />
         </div>
@@ -89,8 +98,14 @@ function Featured() {
       <Footer />
     </>
   )
+<<<<<<< HEAD
+}
+}
+;
+=======
 
 }
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

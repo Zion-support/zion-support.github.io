@@ -11,8 +11,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   try {
     await supabase && supabase.from('trust_appeals').insert(appeal)
   } catch {}
-
-=======
+return res.status(200).json({ ok: true, appeal });
+}
 
 
 

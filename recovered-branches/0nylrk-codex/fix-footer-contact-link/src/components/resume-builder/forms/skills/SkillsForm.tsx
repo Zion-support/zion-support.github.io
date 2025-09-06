@@ -1,10 +1,23 @@
 
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { Skill  } from '@/types/resume';
+import { Button  } from '@/components/ui/button';
+import { Alert, AlertDescription  } from '@/components/ui/alert';
+import { useResume  } from '@/hooks/useResume';
+import { SkillsFormProps  } from './types';
+import { SkillsList  } from './SkillsList';
+import { AddSkillForm  } from './AddSkillForm';
+import { BulkAddSkills } from './BulkAddSkills';
+export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {
+=======
 =======
 
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {Skill} from '@/types / resume';
 import {Button} from '@/components / ui / button';
@@ -16,14 +29,35 @@ import {AddSkillForm} from './AddSkillForm';
 import {BulkAddSkills} from './BulkAddSkills';
 
 export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { addSkill, deleteSkill, fetchResume } = useResume();
 
   const [error, setError] = useState<string | null>(null);
   const [localSkills, setLocalSkills] = useState<Skill[]>(skills);
-
-
+  const handleAddSkill = async (data: Skill) => {
+    try {
+      setError(null)
+      const success = await addSkill(resumeId, data);
+      if (success) {
+        // Refresh the skills list
+        await refreshSkills()
+import { useState } from 'react',;
+import { Skill } from '@/types/resume',;
+import { Button } from '@/components/ui/button',;
+import { Alert, AlertDescription } from '@/components/ui/alert',;
+import { useResume } from '@/hooks/useResume',;
+import { SkillsFormProps } from './types',;
+import { SkillsList } from './SkillsList',;
+import { AddSkillForm } from './AddSkillForm',;
+import { BulkAddSkills } from './BulkAddSkills',;
+export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {;
+  const { addSkill, deleteSkill, fetchResume } = useResume(),;
+  const [error, setError] = useState<string | null>(null),;
+  const [localSkills, setLocalSkills] = useState<Skill[]>(skills),;
   const handleAddSkill = async (data: Skill) => {;
     try {;
       setError(null),;
@@ -32,6 +66,17 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       if (success) {;
         // Refresh the skills list;
         await refreshSkills();
+<<<<<<< HEAD
+      }
+      return success
+    } catch (err: any) {
+      setError(err.message |'An error occurred')
+      return false
+    }
+  }
+  };
+
+=======
 
 
 
@@ -44,6 +89,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleDeleteSkill = async (id: string, category: string = 'Other') => {
     if (confirm('Are you sure you want to delete this skill?')) {
       const success = await deleteSkill(id)
@@ -55,14 +101,10 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
   }
   const refreshSkills = async () => {
     try {
-=======
-      return success;
-    } catch (err: any) {;
-      setError(err && err.message || 'An error occurred'),;
-      return false;
-    }
-  };
-
+      const resumeData = await fetchResume(resumeId);
+      if (resumeData && resumeData.skills) {
+        setLocalSkills(resumeData.skills)
+  },;
   const handleDeleteSkill = async (id: string, category: string = 'Other') => {;
     if (confirm('Are you sure you want to delete this skill?')) {;
       const success = await deleteSkill(id),;
@@ -79,29 +121,39 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       const resumeData = await fetchResume(resumeId);
       if (resumeData && resumeData.skills) {;
         setLocalSkills(resumeData.skills);
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 
     } catch (err: any) {;
       setError(err && err.message || 'Failed to refresh skills');
 
     }
+<<<<<<< HEAD
+  }
+  },
+=======
 
 
   },
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
-=======
   },
 
+<<<<<<< HEAD
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
     <div className="space-y-6">;
@@ -125,20 +177,17 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       </div>;
 
       {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
-      <div className="flex justify-between">;
-        <Button variant="outline" onClick={onBack}>;
-          Back;
-        </Button>;
-        <Button onClick={onComplete} disabled={localSkills && localSkills.length === 0}>;
-          Next;
-        </Button>;
-      </div>;
-    </div>;
-  );
-=======
-
-
+      <div className="flex justify-between">
+        <Button variant="outline" onClick={onBack}>
+          Back
+        </Button>
+        <Button onClick={onComplete} disabled={localSkills.length === 0}>
+          Next
+        </Button>
+      </div>
+    </div>
+  )
+}
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -150,6 +199,3 @@ function SkillsForm() {
   const [error, set_error] = useState < string | null>(null);
   const [local_skills, setLocalSkills] = useState < Skill[]>(skills);
 ;
-
-
-

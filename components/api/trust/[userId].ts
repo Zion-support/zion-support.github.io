@@ -1,6 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
+import { computeTrustScore } from '../../../utils/trust/compute';
+import type {
+  TrustMetricInputs
+  TrustScoreBreakdown;
+  TrustMetricInputs,;
+  TrustScoreBreakdown,;
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 async function analyzeWithGPT(
@@ -318,8 +327,20 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   res.setHeader('Allow', 'GET, POST');
+  return res.status(405).json({ error: 'Method not allowed' });      } catch {}
+      return res.status(200).json(breakdown)
+    } catch (e: any) {
+      return res.status(500).json({ error: e?.message |'Failed to save trust inputs' })
+    }
+  }
+  res.setHeader('AllowGET, POST');
 
+  return res.status(405).json({ error: 'Method not allowed' })
+}
   return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

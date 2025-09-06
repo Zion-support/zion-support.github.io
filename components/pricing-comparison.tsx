@@ -1,10 +1,9 @@
-
-
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
-
-
 import Button from '../components/ui/Button';
 import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
 export default function PricingComparisonPage() {
@@ -23,8 +22,22 @@ export default function PricingComparisonPage() {
           rating: '4.8/5'
           pros: ['Excellent templates', 'Good AI quality', 'Wide integrations']
           cons: [
+<<<<<<< HEAD
+            'Higher pricing'
+            'Limited customization'
+            'No unlimited plan'
+          ]
+          savings: 'Save $20/month with Zion'
+        },        {
+          name: 'Copy.ai'
+          pricing: '$36/month'
+          rating: '4.6/5'
+          pros: ['Unlimited words', 'Good value', 'Simple interface']
+          cons: ['Basic features', 'Limited templates', 'No advanced SEO']
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             'Higher pricing',
             'Limited customization',
             'No unlimited plan',
@@ -52,8 +65,11 @@ export default function PricingComparisonPage() {
           savings: 'Save $17/month with Zion',
         },          pros: ['Unlimited wordsGood valueSimple interface'],
           cons: ['Basic featuresLimited templatesNo advanced SEO'],
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           savings: 'Save $17/month with Zion'
         },        {
           name: 'Writesonic'
@@ -212,10 +228,6 @@ export default function PricingComparisonPage() {
     },  ];      icon: '🚀'
     }
   ];
-
-
-
-
 
   const marketInsights = [
     {
@@ -495,18 +507,30 @@ href="/pricing"
 
                     {insight.icon}
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </div>
                   <p className={`text-lg font-semibold ${insight.color}`}>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {insight.insight}
+                  </p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Detailed Comparison */}
 
         <section id="comparison" className="py-24 bg-gray-800">
@@ -692,14 +716,23 @@ href="/pricing"
                           <div className='inline-flex items-center px-3 py-1 rounded-full bg-gray-500/20 text-gray-400 text-sm font-medium mb-4'>
                             {competitor.name}
                           </div>
-
+                          <div className='flex items-center justify-center mb-4'>                            {[...Array(5)].map((_, i) => (                    <div key={compIndex} className="lg:col-span-1">
+                      <Card className="h-full border border-gray-700">
+                        <div className="text-center p-6">
+                          <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-500/20 text-gray-400 text-sm font-medium mb-4">
+                            {competitor.name}
+                          </div>
+                          <div className="flex items-center justify-center mb-4">
                           <div className='flex items-center justify-center mb-4'>                            {[...Array(5)].map((_, i) => (
 
                             {[...Array(5)].map((_, i) => (
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
@@ -709,8 +742,21 @@ href="/pricing"
                                 }`}
                               />;
                             ))}
+                            <span className='text-sm text-gray-400 ml-2'>
+                              {competitor.rating}
+                            </span>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           </div>
                           <div className='mb-4'>
                             <p className='text-lg font-semibold text-white'>
@@ -792,13 +838,27 @@ href="/pricing"
                         </div>
                       </Card>
                     </div>
+<<<<<<< HEAD
+=======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   ))}
 </div>;
               </div>;
             ))}
+          </div>
+        </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
           </div>;
         </section>;
 
@@ -806,15 +866,18 @@ href="/pricing"
         {/* CTA Section */}
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
 
-
               Ready to Save Money and Get Better Features?
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </h2>
             <p className='text-xl text-indigo-100 mb-12'>
               Start your free trial today and see why thousands of businesses
@@ -1042,8 +1105,37 @@ href="/devops-automation"
                 className="bg-white text-indigo-600 hover:bg-gray-100"
                 Try AI Content Generator
               </Button>
-
               <Button
+<<<<<<< HEAD
+                href='/cloud-monitoring'
+                variant='secondary'
+                size='lg'
+                className='bg-white text-indigo-600 hover:bg-gray-100'                href="/cloud-monitoring"
+                variant="secondary"
+                size="lg"
+                className="bg-white text-indigo-600 hover:bg-gray-100"
+                Try Cloud Monitoring
+              </Button>
+              <Button
+                href='/devops-automation'
+                variant='secondary'
+                size='lg'
+                className='bg-white text-indigo-600 hover:bg-gray-100'                href="/devops-automation"
+                variant="secondary"
+                size="lg"
+                className="bg-white text-indigo-600 hover:bg-gray-100"
+                Try DevOps Automation
+              </Button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+);
+}
+              <Button
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,13 +1,85 @@
-
-
+import React, { useState } from 'react',
+import Head from 'next/head',
 import React, { useState } from 'react';
 import Head from 'next/head';
-
-
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+  Check
+  Star
+  Users
+  TrendingUp
+  DollarSign
+  Clock
+  Shield
+  Zap
+  Rocket
+  Brain
+  Atom
+  Globe
+  Target
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  ExternalLink;} from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
+  Check, Star, Users, TrendingUp, DollarSign, Clock
+
+=======
+<<<<<<< HEAD
+  Check
+  Star
+  Users
+  TrendingUp
+  DollarSign
+  Clock
+  Shield
+  Zap
+  Rocket
+  Brain
+  Atom
+  Globe
+  Target
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  ExternalLink;} from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
+  Check, Star, Users, TrendingUp, DollarSign, Clock
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+  Check,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  Shield,
+  Zap,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Target,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,;
+  ExternalLink,;} from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
+  Check, Star, Users, TrendingUp, DollarSign, Clock, ;
+=======
 
 
   Check,
@@ -34,6 +106,7 @@ import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFoote
   Check, Star, Users, TrendingUp, DollarSign, Clock, ;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Shield, Zap, Rocket, Brain, Atom, Globe, Target;
   ArrowRight, Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
@@ -47,10 +120,71 @@ import { quantumSpaceInnovations2029  } from '../data/2029-quantum-space-innovat
 import { enterpriseITInnovations2029  } from '../data/2029-enterprise-it-innovations';
 =======
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
+  const allServices = [
+    ...enhancedRealMicroSaasServices
+    ...innovativeAIServices2029
+    ...quantumSpaceInnovations2029
+    ...enterpriseITInnovations2029
+    ...innovativeMicroSaas2029
+  ];
+  // Get unique services by ID
+  const uniqueServices = allServices.filter(
+    (service, index, self) => index === self.findIndex(s => s.id === service.id)
+  );
+  // Get all categories
+  const categories = [
+    'All'
+    ...Array.from(
+      new Set(
+        uniqueServices.map(s =>
+          Array.isArray(s.category) ? s.category[0] : s.category
+        )
+      )
+    )
+  ];  ];
+  // Get unique services by ID
+  const uniqueServices = allServices.filter((service, index, self) =>
+    index === self.findIndex(s => s.id === service.id)
+  );
+  // Get all categories
+  const categories = ['All', ...Array.from(new Set(uniqueServices.map(s =>
+    Array.isArray(s.category) ? s.category[0] : s.category
+  )))];
+  // Price ranges
+  const priceRanges = [
+    { id: 'All', name: 'All Prices', range: 'All' }
+    { id: 'Under $1K', name: 'Under $1K/month', range: 'Under $1K' }
+    { id: '$1K - $5K', name: '$1K - $5K/month', range: '$1K - $5K' }
+    { id: '$5K - $20K', name: '$5K - $20K/month', range: '$5K - $20K' }
+    { id: '$20K+', name: '$20K+/month', range: '$20K+' },  ];
+  // Filter services
+  const filteredServices = uniqueServices.filter(service => {    { id: '$20K+', name: '$20K+/month', range: '$20K+' }
+  ];
+  // Filter services
+  const filteredServices = uniqueServices.filter(service => {
+    const matchesCategory =
+      selectedCategory === 'All' |
+      (Array.isArray(service.category)
+        ? service.category.includes(selectedCategory)
+        : service.category === selectedCategory);
+    const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
+    const matchesPrice =
+      selectedPriceRange === 'All' |
+      (selectedPriceRange === 'Under $1K' && price < 1000) |
+      (selectedPriceRange === '$1K - $5K' && price >= 1000 && price < 5000) |
+      (selectedPriceRange === '$5K - $20K' && price >= 5000 && price < 20000) |
+      (selectedPriceRange === '$20K+' && price >= 20000);
+    return matchesCategory && matchesPrice;  });    const matchesPrice = selectedPriceRange === 'All' |
+                        (selectedPriceRange === 'Under $1K' && price < 1000) |
+                        (selectedPriceRange === '$1K - $5K' && price >= 1000 && price < 5000) |
+                        (selectedPriceRange === '$5K - $20K' && price >= 5000 && price < 20000) |
+                        (selectedPriceRange === '$20K+' && price >= 20000);
+    return matchesCategory && matchesPrice
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com'
   }
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -345,21 +479,38 @@ export default function PricingPage() {;
     'AllContent & MarketingDevelopment & DevOpsSales & CRMLegal & ComplianceHuman ResourcesAnalytics & DataFinance & Accounting';
     'Project ManagementCustomer ExperienceSecurity & Compliance'
   ];
-
-
-
-
+  const filteredServices = selectedCategory === 'All'
+    ? microSaasServices
+    : microSaasServices.filter(service => service.category === selectedCategory);
 
   const yearlyDiscount = 0.2, // 20% discount for yearly billing
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  const filteredServices = selectedCategory === 'All' ;
+    ? microSaasServices ;
+    : microSaasServices && microSaasServices.filter(service => service && service.category === selectedCategory);
+
+  const yearlyDiscount = 0 && 0.2, // 20% discount for yearly billing;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
         />;
@@ -452,8 +603,43 @@ export default function PricingPage() {;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
-
+            className='max-w-4xl mx-auto'
+          >
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
+              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+                Revolutionary 2029
+              </span>
+              <br />
+              <span className='text-white'>Technology Pricing</span>
+            </h1>
+            <p className='text-xl text-gray-300 mb-8'>
+              Transparent pricing for our cutting-edge technology services that
+              are already operational and delivering transformative results
+            </p>
+            {/* Filter Controls */}
+            <div className='flex flex-col lg:flex-row gap-4 justify-center items-center mb-8'>
+              <select
+                value={selectedCategory}
+                onChange={e => setSelectedCategory(e.target.value)}
+                className='px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20'
+              >
+                {categories.map(category => (
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
+                ))}
+              </select>
+              <select
+                value={selectedPriceRange}
+                onChange={e => setSelectedPriceRange(e.target.value)}
+                className='px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20'
+              >
+                {priceRanges.map(range => (
+                  <option key={range.id} value={range.id}>
+                    {range.name}
+                  </option>                ))}
+              </select>
+            </div>
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -498,7 +684,14 @@ export default function PricingPage() {;
 
               <select
                 value={selectedPriceRange}
+                onChange={(e) => setSelectedPriceRange(e.target.value)}
+                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"
+              >
+                {priceRanges.map(range => (
+                  <option key={range.id} value={range.id}>{range.name}</option>
 
+<<<<<<< HEAD
+=======
 
 =======
             transition={{ duration: 0.8 }}
@@ -507,6 +700,7 @@ export default function PricingPage() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 ))}
 
 
@@ -1030,8 +1224,6 @@ if ( {) {
                           </div>
                         )}
 
-
-
                         {/* ROI Information */}
                         {service.roi && (
                           <div className="mb-6 p-3 bg-green-900/20 border border-green-500/20 rounded-lg">
@@ -1040,13 +1232,13 @@ if ( {) {
                             </p>
                           </div>
                         )}
-
+                        {/* CTA */}
+                        <div className="flex items-center justify-between">
+                          <Link href={service.link |`/services/${service.id}`}>
 
                         {/* CTA */}
                         <div className="flex items-center justify-between">
                           <Link href={service.link || `/services/${service.id}`}>
-
-
                             <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
                               <span className="flex items-center">
                                 Learn More
@@ -1079,17 +1271,12 @@ if ( {) {
             ))}
 
 
-        {/* Contact CTA Section */}
-        <section className='py-20 px-4 sm:px-6 lg:px-8'>;
-          <div className='max-w-4xl mx-auto text-center'>        <section className="py-20 px-4 sm:px-6 lg:px-8">;
-          <div className="max-w-4xl mx-auto text-center">;
-            <motion&& motion.div
+          </div>
+<<<<<<< HEAD
 =======
 
-
-          </div>
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </section>
         {/* Contact CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
@@ -1097,6 +1284,10 @@ if ( {) {
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1136,6 +1327,7 @@ if ( {) {
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -1143,6 +1335,8 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1221,13 +1415,14 @@ if ( {) {
       </main>
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
+<<<<<<< HEAD
+);
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -1613,5 +1808,14 @@ if ( {) {
 
   once: true 
 
+<<<<<<< HEAD
+}> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)
+}> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) }
+
+}
+}
+}> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

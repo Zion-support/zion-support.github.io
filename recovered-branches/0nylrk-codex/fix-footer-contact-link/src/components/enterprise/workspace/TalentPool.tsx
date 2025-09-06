@@ -1,22 +1,76 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function TalentPool() {
   // Mock talent data
 
   const talents = [
     {
-
-import React from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-=======
-
+      id: "talent-1"
+      name: "Jessica Lee"
+      role: "UI/UX Designer"
+      skills: ["Figma", "Sketch", "User Testing"];
+      status: "available"
+      match: 95
+    }
+    {
+      id: "talent-2"
+      name: "Marcus Wright"
+      role: "Full Stack Developer"
+      skills: ["React", "Node.js", "MongoDB"];
+      status: "interviewing"
+      match: 92
+    }
+    {
+      id: "talent-3"
+      name: "Aisha Patel"
+      role: "Product Manager"
+      skills: ["Agile", "Roadmapping", "User Research"];
+      status: "available"
+      match: 88
+    }
+  ];
       id: "talent-1",
       name: "Jessica Lee",
+      role: "UI/UX Designer",;
+      skills: ["Figma", "Sketch", "User Testing"];
+      role: "UI/UX Designer",
+      skills: ["Figma", "Sketch", "User Testing"],
+      status: "available",
+      match: 95
+    },
+    {
+      id: "talent-2",
+      name: "Marcus Wright",
+      role: "Full Stack Developer",
+      skills: ["React", "Node.js", "MongoDB"],
+      status: "interviewing",
+      match: 92
+    },
+    {
+      id: "talent-3",
+      name: "Aisha Patel",
+      role: "Product Manager",
+      skills: ["Agile", "Roadmapping", "User Research"],
+      status: "available",
+      match: 88
+    }
+  ],
 
   const getStatusBadge = (status: string) => {
     switch (status) {
@@ -28,9 +82,8 @@ import {Button} from "@/components/ui/button";
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-
+  }
   },
-
 
   return (
     <Card>
@@ -61,7 +114,6 @@ import {Button} from "@/components/ui/button";
               </div>
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
-
                   <Badge key={index} variant="secondary" className="text-xs">
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -189,8 +241,11 @@ function TalentPool() {
               </div>
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <Badge key={index} variant="secondary" className="text-xs">
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {skill}
@@ -203,7 +258,11 @@ function TalentPool() {
               </div>;
             </div>;
           ))}
-
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
         </div>;
       </CardContent>;
     </Card>;
@@ -244,5 +303,3 @@ function TalentPool() {
 
 =======
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

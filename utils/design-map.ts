@@ -1,35 +1,51 @@
+<<<<<<< HEAD
+export type UIKitKind = 'ios' | 'android' | 'web';
+export interface TokenSet {
+
+export interface TokenSet {;
+  colors: Record<string, string>;
+  typography: Record<string, any>;
+  spacing: Record<string, number>;
+}
+export interface UIKit {
+
+export interface UIKit {;
+  components: Record<string, any>;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   tokens: TokenSet;
 }
-
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+export async function buildTokenSet(fileId: string): Promise<TokenSet> {
+  // Placeholder implementation
+  return {
+<<<<<<< HEAD
+    colors: {
+      primary: '#007AFF'
+      secondary: '#5856D6'
+      success: '#34C759'
+      warning: '#FF9500'
+      error: '#FF3B30'
+    }
+    typography: {
+      heading1: { fontSize: 32, fontWeight: 'bold' }
+      heading2: { fontSize: 24, fontWeight: 'bold' }
+      body: { fontSize: 16, fontWeight: 'normal' }
+    }
+    spacing: {
+      xs: 4
+      sm: 8
+      md: 16
+      lg: 24
+      xl: 32
     }
     
     return this.props.children;
   }
 }
-// Mock design map utility
-export function getDesignMap() {
-  return {
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
+=======
     components: [],
     pages: [],
     styles: []
@@ -81,6 +97,7 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     };
   }
   if (kind === 'chakra') {
@@ -175,17 +192,27 @@ export interface FigmaNode {
 
 
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const tokens = await buildTokenSet(fileId);
 =======
     };
   };
 }
+<<<<<<< HEAD
 
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const tokens = await buildTokenSet(fileId);
+=======
+export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < UIKit> {
+  const tokens = await buildTokenSet (file_id);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return {
 
     id,
@@ -208,9 +235,19 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
           padding: tokens.spacing.md;
         }
       }
+<<<<<<< HEAD
+    }
+    tokens
+  }
+
+  };
+
+}
+=======
     },
     tokens;
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

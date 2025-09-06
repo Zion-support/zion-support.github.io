@@ -27,13 +27,11 @@ if ( {) {
 
 import { Sparkles } from 'lucide-react'
 interface ClientBudgetRecommenderProps {
-
   jobTitle: string,
   category: string,
   timeline?: string,
   scope?: string,
   experienceLevel?: string,
-
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
@@ -41,15 +39,28 @@ interface ClientBudgetRecommenderProps {
           suggestionType: "client",
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
+          accepted: true
+        })
+      }
+    }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-4">
       <div>
         {!suggestion && !isLoading ? (
           <Button
-
+            type='button'
+            variant='outline'
+            onClick={generateSuggestion}
+            disabled={!jobTitle |!category}
+            className='w-full'          >
+            <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation
             type="button"
             variant="outline"
             onClick={generateSuggestion}
@@ -81,41 +92,21 @@ interface ClientBudgetRecommenderProps {
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
-
-            rate_type='hourly'          />)}
-      </div>;
-    </div>);
-}
-// Check condition
-if (params.scope = scope) {
-  $2
-}
-// Check condition
-if (params.experience_level = experience_level) {
-  $2
-}
-//Track this suggestion application // Check condition
-if ( {) {
-  $2
-
+            rateType='hourly'          />
+        )}
+      </div>
+    </div>
+  )
 }
 if (scope) params.scope = scope
 if (experienceLevel) params.experienceLevel = experienceLevel
 //Track this suggestion application if (user && user.id) {
   trackPricingSuggestion ({
 }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 },
-
-            rateType="hourly"
-          />
-        )}
-
-      </div>;
-    </div>;
-  );
-};
 
 
 

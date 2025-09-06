@@ -1,17 +1,23 @@
 
+<<<<<<< HEAD
+import React from "react";
+import { format } from "date-fns";
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {format} from "date-fns";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
 import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",
 import { format } from "date-fns",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
   Card;
   CardContent;
@@ -21,71 +27,42 @@ import {
 } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
-
-import React from './react';
-import { format } from './date - fns';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { QuoteStatusBadge } from '@/components / quotes / QuoteStatusBadge';
-import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from './lucide-react';
-import type { QuoteRequest } from "@/types / quotes";
-type QuoteRequestCardProps = {
-  quote: QuoteRequest,
-  onViewDetails: (quote: QuoteRequest) => void,
-  onMarkAsResponded?: (id: string) => void,
-  onToggleArchive: (id: string, is_archived: boolean) => void;
-}
-;
-export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
-  quote;
-  onViewDetails;
-  onMarkAsResponded,
-  onToggleArchive;
-
-}) => {
-  // Format date for display;
-  const format_date = (date_string: string) =>: any {
-    try {
-      return format (new Date (date_string), 'PP');
-    } catch (e) {
-
-type QuoteRequestCardProps = {;
-  quote: QuoteRequest,;
-  onViewDetails: (quote: QuoteRequest) => void,;
-  onMarkAsResponded?: (id: string) => void,;
-  onToggleArchive: (id: string, isArchived: boolean) => void;
-};
-
-export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
-  quote;
-  onViewDetails;
-  onMarkAsResponded,;
-  onToggleArchive;
-}) => {;
-  // Format date for display;
-  const formatDate = (dateString: string) => {;
-    try {;
-      return format(new Date(dateString), 'PP');
-    } catch (e) {;
-      return dateString;
-
-    }
-  }
-=======
-
+import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react";
+import type { QuoteRequest } from "@/types/quotes";
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react",
 import type { QuoteRequest } from "@/types/quotes",
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 type QuoteRequestCardProps = {
   quote: QuoteRequest,
   onViewDetails: (quote: QuoteRequest) => void,
   onMarkAsResponded?: (id: string) => void,
   onToggleArchive: (id: string, isArchived: boolean) => void
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+type QuoteRequestCardProps = {
+  quote: QuoteRequest
+  onViewDetails: (quote: QuoteRequest) => void
+  onMarkAsResponded?: (id: string) => void
+  onToggleArchive: (id: string, isArchived: boolean) => void
+}
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
+  quote;
+  onViewDetails;
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
+  quote;
+  onViewDetails;
+  onMarkAsResponded
+  quote,
+  onViewDetails,
+  onMarkAsResponded,
+=======
 
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onToggleArchive
 }) => {
   // Format date for display
@@ -95,11 +72,9 @@ type QuoteRequestCardProps = {
     } catch (e) {
       return dateString
     }
-
+  }
   },
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
@@ -155,9 +130,21 @@ type QuoteRequestCardProps = {
                 <RefreshCw className="h-4 w-4" />
               ) : (
                 <ArchiveIcon className="h-4 w-4" />
+<<<<<<< HEAD
+              )}
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+
+=======
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { format } from "date-fns",;
 import {;
@@ -317,15 +304,14 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           </div>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
+    </Card>;
+  );
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </Card>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

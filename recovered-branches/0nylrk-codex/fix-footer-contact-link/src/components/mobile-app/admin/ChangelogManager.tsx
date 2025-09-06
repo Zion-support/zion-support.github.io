@@ -1,42 +1,76 @@
+<<<<<<< HEAD
+import React, { useState } from "react";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Plus, Trash2 } from "lucide-react";
+import { AppPlatform } from "./MetadataManager";
+
+import React, { useState } from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Plus, Trash2 } from "lucide-react";
+import { AppPlatform } from "./MetadataManager";
+import { Plus, Trash2 } from "lucide-react",
+import { AppPlatform } from "./MetadataManager",
+=======
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ChangelogManagerProps {
   platform: AppPlatform
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
-type ChangelogEntry = {;
-=======
-import React, { useState } from './react';
-import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
-import { Textarea  } from '@/components / ui / textarea';
-import { Plus, Trash2  } from './lucide-react';
-import { AppPlatform  } from './MetadataManager';
-interface ChangelogManagerProps {
-  platform: AppPlatform;
-}
 type ChangelogEntry = {
-
+  id: string;
+  version: string;
+  date: string;
+  changes: string;
 }
-;
-export const ChangelogManager: React.FC < ChangelogManagerProps> = ({
-  platform,
-
+export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
+  platform
 }) => {
-  const [entries, set_entries] = useState < ChangelogEntry[]>([;
+  const [entries, setEntries] = useState<ChangelogEntry[]>([
     {
-
-};
-
-export const ChangelogManager: React.FC<ChangelogManagerProps> = ({;
-  platform,;
-}) => {;
-=======
-
+      id: "1"
+      version: "1.0.0"
+      date: "2025-05-15"
+      changes: "Initial release of the Zion AI Marketplace app."
+    }
+  ]);
+  const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry, "id">>({
+    version: ""
+    date: new Date().toISOString().split("T")[0]
+    changes: ""
+  });
+  const handleAddEntry = () => {
+    if (!newEntry.version |!newEntry.changes) return;
+    const entry: ChangelogEntry = {
+      ...newEntry
+      id: Math.random().toString(36).substring(2, 9)
+    }
+    setEntries([entry, ...entries]);
+    setNewEntry({
+      version: ""
+      date: new Date().toISOString().split("T")[0]
+      changes: ""
+    });
+  }
+  const handleRemoveEntry = (id: string) => {
+    setEntries(entries.filter((entry) => entry.id !== id));
+  }
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setNewEntry((prev) => ({ ...prev, [name]: value }));
+  }
   id: string,
   version: string,
   date: string,
@@ -49,7 +83,46 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
       id: "1",
       version: "1.0.0",
       date: "2025-05-15",
+      changes: "Initial release of the Zion AI Marketplace app.",
+    },;
+  ]);
 
+  const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry, "id">>({
+      changes: "Initial release of the Zion AI Marketplace app."
+    }
+  ]),
+  
+  const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry "id">>({
+    version: "",
+    date: new Date().toISOString().split('T')[0],
+    changes: ""
+  }),
+  
+  const handleAddEntry = () => {
+    if (!newEntry.version || !newEntry.changes) return,
+    
+    const entry: ChangelogEntry = {
+      ...newEntry,
+      id: Math.random().toString(36).substring(2, 9)
+    },
+    
+    setEntries([entry, ...entries]),
+    setNewEntry({
+      version: "",
+      date: new Date().toISOString().split('T')[0],
+      changes: ""
+    })
+  },
+  
+  const handleRemoveEntry = (id: string) => {
+    setEntries(entries.filter(entry => entry.id !== id))
+  },
+  
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target,
+    setNewEntry(prev => ({ ...prev, [name]: value }))
+  },
+  
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -68,9 +141,19 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               <Input
                 type="date"
                 name="date"
+<<<<<<< HEAD
+                value={newEntry.date}
+                onChange={handleInputChange}
+              />
+            </div>
+            <Button
+              onClick={handleAddEntry}
+              disabled={!newEntry.version |!newEntry.changes}
+=======
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -156,37 +239,41 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             </div>;
 
             <Button;
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               onClick={handleAddEntry}
-
-              disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
-              <Plus className="mr-2 h-4 w-4" />;
-              Add;
-            </Button>;
-          </div>;
-
-
-=======
-
+              disabled={!newEntry.version || !newEntry.changes}
+            >
+              <Plus className="mr-2 h-4 w-4" />
+              Add
+            </Button>
+          </div>
           
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Textarea
             placeholder="What's new in this version?"
             name="changes"
             value={newEntry && newEntry.changes}
             onChange={handleInputChange}
             rows={3}
-
-
+          />
           
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
             {entries.map((entry) => (
 =======
@@ -217,6 +304,24 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 <p className="text-sm whitespace-pre-wrap">{entry && entry.changes}</p>;
               </div>;
             ))}
+<<<<<<< HEAD
+            {entries.length === 0 && (
+              <p className="text-center text-gray-400 py-4">
+                No changelog entries yet
+              </p>
+            )}
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
+            
+            {entries.length === 0 && (
+);
+              <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
+=======
 
 
             {entries && entries.length === 0 && (;
@@ -224,12 +329,15 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 No changelog entries yet;
               </p>;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             )}
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
+=======
 }
 
 =======
@@ -350,6 +458,5 @@ if (return) {
 =======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

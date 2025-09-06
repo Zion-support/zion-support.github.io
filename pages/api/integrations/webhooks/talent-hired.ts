@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
@@ -48,6 +52,7 @@ function handler() {
       c.provider_id === "lever" ||;
       c.provider_id === "workable" ||;
       c.provider_id === "bamboohr",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   );
   const results: any[] = [];
   for (const conn of connections) {
@@ -65,9 +70,18 @@ function handler() {
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
   }
+<<<<<<< HEAD
+  res.status(200).json({ ok: true, results });
+}
+res.status(200).json({ ok: true, results });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+=======
   res && res.status(200).json({ ok: true, results });
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { ats } from '../../../../lib/integrations/connectors';
@@ -82,7 +96,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   for (const conn of atsProviders) {
     const { log } = await ats.updateStatus(conn, { applicantId: talent.id, status: 'hired' });
     writeState(s => s.logs.push(log));
-results.push({ providerId: conn.providerId, ok: true })
+    results.push({ providerId: conn.providerId, ok: true })
   }
   res.status(200).json({ ok: true, results })
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -120,9 +134,11 @@ results.push({ providerId: conn.providerId, ok: true })
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

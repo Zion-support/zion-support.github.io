@@ -1,11 +1,58 @@
 
+import type { NextApiRequest, NextApiResponse } from "next";
+import OpenAI from "openai";
+import { readJson } from "../../../utils/fsDb";
+import { HelpArticle, matchIntent } from "../../../utils/support";
+import { logSupportEventToOperator } from "../../../utils/operator";
+const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== "POST")
+    return res.status(405).json({ error: "Method not allowed" });
+  const { sessionId, messages } = req.body as {
+    sessionId?: string;
+    messages: Array<{ role: "user" | "assistant" | "system"; content: string }>;
+  }
+  if (!messages |!Array.isArray(messages))
+    return res.status(400).json({ error: "messages required" });
+  const articles = readJson<HelpArticle[]>("help/articles.json", []);
+  const lastUser = [...messages].reverse().find((m) => m.role === "user");
+  const intent = lastUser
+    ? matchIntent(lastUser.content, articles)
+    : { intentMatched: false, matchedArticleIds: [] }
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import OpenAI from 'openai';
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
 import { logSupportEventToOperator } from '../../../utils/operator';
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { sessionId, messages } = req.body as { sessionId?: string, messages: Array<{ role: 'user' | 'assistant' | 'system', content: string }> };
+  if (!messages || !Array.isArray(messages)) return res.status(400).json({ error: 'Invalid messages' });
+  const articles = readJson<HelpArticle[]>('help/articles.json', []);
+  const lastUser = [...messages].reverse().find((m) => m.role === 'user');
+  const intent = lastUser ? matchIntent(lastUser.content, articles) : { intentMatched: false, matchedArticleIds: [] },
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Build context with top matched articles as brief references
 
 
@@ -51,12 +98,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       messages: [sysMessage, ...messages],
       temperature: 0.2
     });
+<<<<<<< HEAD
 
     const assistantMessage = completion.choices?.[0]?.message?.content ?? 'Let me know how I can help.';
 
     await logSupportEventToOperator({ type: 'chat_completion', sessionId: sessionId ?? 'unknown', payload: { intent } });
+=======
+>>>>>>> 25b772ac8bd79941dee781476b83a226cf2dd161
 
+  } catch (e: any) {
     return res.status(200).json({
+<<<<<<< HEAD
       assistantMessage,
 =======
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -79,10 +131,21 @@ function handler() {
     messages: Array<{ role: "user" | "assistant" | "system"; content: string }>;
 =======
 
+=======
+      assistantMessage:
+        "I could not reach the assistant right now. Please try again in a moment."
+    });
+>>>>>>> 25b772ac8bd79941dee781476b83a226cf2dd161
     return res.status(200).json({ assistantMessage: 'I could not reach the assistant right now. Please try again in a moment.' })
+<<<<<<< HEAD
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   if ()) {
   $2

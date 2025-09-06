@@ -6,7 +6,6 @@ interface ServiceStatus {
   lastChecked: string
 }
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +17,12 @@ class ErrorBoundary extends React.Component {
 
 ;
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
     name: "Marketplace API",
@@ -379,6 +384,3 @@ function Status() { const [last_updated, setLastUpdated] = useState (new Date ()
 }
   );
 }
-
-
-;

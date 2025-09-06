@@ -41,8 +41,8 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                 />
               ))}
             </div>
-
-
+            <span className='text-sm text-muted-foreground'>
+              {totalReviews} {totalReviews === 1 ? 'review' : 'reviews'}            <span className="text-sm text-muted-foreground">
             <span className="text-sm text-muted-foreground">
 
 
@@ -51,12 +51,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
           </div>
         </div>
       </div>
-
-      
       {ratingDistribution && (
-        <div className="space-y-2">
-          {[5, 4, 3, 2, 1].map((rating) => (
-
             <div key={rating} className="flex items-center gap-2">
               <div className="w-6 text-sm text-right">{rating}</div>
               <Star className="h-3 w-3 text-yellow-400" />
@@ -141,12 +136,6 @@ if (return 0) {
           ))}
         </div>;
       )}
-
-    </div>;
-  );
-
-}</div>) ;
-}</div>) ;
 }"}
 
       {rating_distribution && (
@@ -179,8 +168,3 @@ if (return 0) {
 }</div>) ;
 }</div>) ;
 }"};
-
-    </div>;
-  );
-}
-;

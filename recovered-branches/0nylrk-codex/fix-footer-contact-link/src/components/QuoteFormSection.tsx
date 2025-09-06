@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Button} from "./ui/button";
 import {Input} from "./ui/input";
 import {GradientHeading} from "./GradientHeading";
@@ -7,6 +16,14 @@ export function QuoteFormSection() {;
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
+import { Button } from "./ui/button",
+import { Input } from "./ui/input",
+import { GradientHeading } from "./GradientHeading";
+import { useState } from "react";
+import { GradientHeading } from "./GradientHeading",
+import { useState } from "react",
+=======
 
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -14,13 +31,19 @@ export function QuoteFormSection() {;
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
-
   const handleSubmit = (e: React.FormEvent) => {
-
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate form submission
+    setTimeout(() => {
+      (setIsSubmitting(false), setIsSubmitted(true));
+    }, 1000);
+  }
     e.preventDefault(),
     setIsSubmitting(true),
     
@@ -30,8 +53,6 @@ export function QuoteFormSection() {
       setIsSubmitted(true)
     }, 1000)
   },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <section className="py-20 bg-zion-blue">
@@ -184,9 +205,16 @@ export function QuoteFormSection() {
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       />
+<<<<<<< HEAD
+                      <label
+                        htmlFor={`interest-${index}`}
+                        className="ml-2 text-sm text-zion-slate-light"
+                      >
+=======
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
 import { Button } from "./ui/button",;
 import { Input } from "./ui/input",;
@@ -293,18 +321,14 @@ export function QuoteFormSection() {;
                         id={`interest-${index}`}
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
-
-                      />;
-                      <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">;
-
-=======
                       />
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         {item}
                       </label>;
                     </div>;

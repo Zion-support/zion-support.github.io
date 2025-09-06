@@ -1,5 +1,22 @@
 
+<<<<<<< HEAD
+useEffect ( () => {
+  const observer = new IntersectionObserver ( ([entry]) => {
+  if (entry.isIntersecting) {
+  return () => observer.disconnect ()
+}, [threshold]);
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+'
+  threshold = 0.1
+  width
+  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({
 
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
+  threshold = 0.1,
+  width,
+  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   src;
   alt;
   className = ''
@@ -146,25 +163,28 @@ if ( {) {
   const handle_load = () =>: any {
     setIsLoaded (true);
   }
-;
   return (
     <div className={`relative overflow - hidden ${class_name}`}>;
       {/* Placeholder */}
-      <img;
+      <img
         src={placeholder}
-
-
-=======
-
+        alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${        alt=""
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ width, height }}
+<<<<<<< HEAD
+      />
+
+=======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -175,6 +195,7 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Actual Image */}
       {isInView && (;
         <motion&& motion.img
@@ -182,6 +203,32 @@ if ( {) {
           src={src}
           alt={alt}
           onLoad={handleLoad}
+<<<<<<< HEAD
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
+          transition={{ duration: 0.5 }}
+          className='w-full h-full object-cover'
+          loading='lazy'          style={{ width, height }}
+        />
+      )}
+    </div>
+  );
+}
+export default LazyImage;          className="w-full h-full object-cover"
+          loading="lazy"
+          style={{ width, height }}
+        />
+      )}
+    </div>
+  );
+}
+export default LazyImage;  )
+}
+export default LazyImage;
+
+    </div>
+    </div>
+=======
 
 
 =======
@@ -204,3 +251,4 @@ export default LazyImage);
 export default LazyImage;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

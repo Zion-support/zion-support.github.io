@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 
 
 #!/usr / bin / env node;
@@ -87,18 +88,31 @@ if ( {) {
     console.error (`Error processing ${file}:`, error.message);
 
   }
+<<<<<<< HEAD
+=======
 
 });
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 });
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
-=======
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }},
-
+,
+// Run all fixes,
+fixFooter();
+fixAccessibility();
+fixAiServices();
+fixApiDocs();
+fixCareers();
+,
+console.log('🎉 Syntax error fixes completed');
 // Run all fixes,
 fixFooter(),
 fixAccessibility(),
@@ -114,6 +128,9 @@ fixAiServices(),;
 fixApiDocs(),;
 fixCareers(),;
 // // // console.log('🎉 Syntax error fixes completed'),;
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,11 +1,10 @@
 
-
-=======
-
+const AutomationsIndex: NextPage = () => {
+  const items = [
+    { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' }
+    { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }]
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
     { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <main className="space-y-6">
       <h1 className="text-3xl font-bold">Autonomous Automations</h1>
@@ -18,7 +17,21 @@
               <p className="text-sm text-gray-600 mt-1">{it.desc}</p>
             </div>
           </Link>
+        ))}
+      </div>
+    </main>
+  )
+}
+export default AutomationsIndex;
 
+<<<<<<< HEAD
+export default AutomationsIndex,;
+        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
 
 =======
 import type { NextPage } from 'next',
@@ -39,13 +52,17 @@ const AutomationsIndex: NextPage = () => {
               <p className="text - sm text - gray - 600 mt - 1">{it.desc}</p>;
             </div>;
           </Link>))}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>;
 
     </main>;
   );
 },;
 export default AutomationsIndex;
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

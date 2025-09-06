@@ -7,8 +7,6 @@ return (
           <CardDescription>Total Flags</CardDescription>
         </CardHeader>
       </Card>
-
-
       
 
 
@@ -21,8 +19,6 @@ return (
           {stats.pending_flags > 0 && <ShieldAlert className="h-5 w-5 text-amber-500" />}
         </CardHeader>
       </Card>
-
-
       
 
 
@@ -35,8 +31,6 @@ return (
           <AlertTriangle className="h-5 w-5 text-amber-500" />
         </CardHeader>
       </Card>
-
-
       
 
 
@@ -49,8 +43,6 @@ return (
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
-
-
       
 
 
@@ -60,8 +52,6 @@ return (
           <CardDescription>Actions Taken</CardDescription>
         </CardHeader>
       </Card>
-
-
       
 
 
@@ -72,8 +62,6 @@ return (
         </CardHeader>
       </Card>
     </div>
-
-import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'import { FraudStats } from "@/types/fraud";
 interface FraudStatsCardsProps {;
   stats: FraudStats;
 }

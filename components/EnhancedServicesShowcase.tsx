@@ -19,7 +19,44 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+import {
+<<<<<<< HEAD
+  Brain
+  Shield
+  Rocket
+  Cpu
+  Database
+  Atom
+  Users
+  CheckCircle
+  TrendingUp
+  Clock
+  Star
+  Filter
+  ChevronDown;
+=======
+  Brain,
+  Shield,
+  Rocket,
+  Cpu,
+  Database,
+  Atom,
+  Users,
+  CheckCircle,
+  TrendingUp,
+  Clock,
+  Star,
+  Filter,;
+  ChevronDown,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 interface Service {;
 =======
@@ -40,6 +77,10 @@ interface Service {;
 
   Filter,;
   ChevronDown,;
+<<<<<<< HEAD
+} from 'lucide-react';
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 } from 'lucide-react';
@@ -60,7 +101,255 @@ interface Service {
   growth_rate: string;
   popular?: boolean;
 
+  color: string;} from 'lucide-react';
+interface Service {
+  id: string
+  name: string
+  tagline: string
+  category: string
+  price: string
+  period: string
+  setupTime: string
+  customers: string
+  features: string[]
+  benefits: string[]
+  roi: string
+  marketSize: string
+  growthRate: string
+  popular?: boolean;
+  icon: React.ComponentType<any>
+  color: string
+}
+const EnhancedServicesShowcase: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const services: Service[] = [
+    {
+      id: 'ai-bi'
+      name: 'AI Business Intelligence'
+      tagline:
+        'Transform data into actionable insights with AI-powered analytics',      category: 'AI & Analytics',      tagline: 'Transform data into actionable insights with AI-powered analytics'
+      category: 'AI & Analytics'
+      price: '$499'
+      period: '/month'
+      setupTime: '2-3 weeks'
+      customers: '150+'
+      features: [
+        'AI-powered dashboards'
+        'Predictive analytics'
+        'Real-time insights'
+        'Custom reporting'
+      ]
+      benefits: [
+        '30% faster decision making'
+        'Improved data accuracy'
+        'Cost reduction'
+      ],      roi: 'Average 3.2x ROI within 6 months',      features: ['AI-powered dashboardsPredictive analyticsReal-time insightsCustom reporting']
+      benefits: ['30% faster decision makingImproved data accuracyCost reduction']
+      roi: 'Average 3.2x ROI within 6 months'
+      marketSize: '$25B'
+      growthRate: '25% YoY'
+      popular: true
+      icon: Brain
+      color: 'from-purple-500 to-pink-500'
+    }
+    {
+      id: 'quantum-cyber'
+      name: 'Quantum Cybersecurity'
+      tagline:
+        'Future-proof security with quantum-resistant encryption and AI threat detection',      category: 'Security',      color: 'from-purple-500 to-pink-500'
+    }
+    {
+      id: 'quantum-cyber'
+      name: 'Quantum Cybersecurity'
+      tagline: 'Future-proof security with quantum-resistant encryption and AI threat detection'
+      price: '$799'
+      period: '/month'
+      setupTime: '4-6 weeks'
+      customers: '75+'
+      features: [
+        'Quantum-resistant encryption'
+        'AI threat detection'
+        'Zero-trust architecture'
+        '24/7 monitoring'
+      ]
+      benefits: [
+        '99.99% threat prevention'
+        'Compliance ready'
+        'Reduced security incidents'
+      ],      roi: 'Average 4.1x ROI within 8 months',      features: ['Quantum-resistant encryptionAI threat detectionZero-trust architecture24/7 monitoring']
+      benefits: ['99.99% threat preventionCompliance readyReduced security incidents']
+      roi: 'Average 4.1x ROI within 8 months'
+      marketSize: '$18B'
+      growthRate: '32% YoY'
+      popular: false
+      icon: Shield
+      color: 'from-red-500 to-orange-500'
+    }
+    {
+      id: 'edge-computing'
+      name: 'Edge Computing Orchestration'
+      tagline:
+        'Deploy and manage applications at the edge with intelligent orchestration',      category: 'Infrastructure',      color: 'from-red-500 to-orange-500'
+    }
+    {
+      id: 'edge-computing'
+      name: 'Edge Computing Orchestration'
+      tagline: 'Deploy and manage applications at the edge with intelligent orchestration'
+      price: '$349'
+      period: '/month'
+      setupTime: '1-2 weeks'
+      customers: '200+'
+      features: [
+        'Edge node management'
+        'IoT device management'
+        'Real-time monitoring'
+        'Auto-scaling'
+      ]
+      benefits: [
+        '50% latency reduction'
+        'Improved reliability'
+        'Cost optimization'
+      ],      roi: 'Average 2.8x ROI within 4 months',      features: ['Edge node managementIoT device managementReal-time monitoringAuto-scaling']
+      benefits: ['50% latency reductionImproved reliabilityCost optimization']
+      roi: 'Average 2.8x ROI within 4 months'
+      marketSize: '$12B'
+      growthRate: '28% YoY'
+      popular: false
+      icon: Cpu
+      color: 'from-emerald-500 to-teal-500'
+    }
+      id: 'space-tech'
+      name: 'Space Technology Innovation'
+      tagline:
+        'Accelerate space exploration with cutting-edge technology solutions'
+      category: 'Space Tech'
+      price: '$2,499'
+      period: '/month'
+      setupTime: '8-12 weeks'
+      customers: '25+'
+      features: [
+        'Satellite management'
+        'AI mission planning'
+        'Quantum communication'
+        'Space analytics'
+      ]
+      benefits: [
+        'Mission success rate 95%+'
+        'Reduced launch costs'
+        'Advanced capabilities'
+      ],      roi: 'Average 5.2x ROI within 12 months',      features: ['Satellite managementAI mission planningQuantum communicationSpace analytics']
+      benefits: ['Mission success rate 95%+Reduced launch costsAdvanced capabilities']
+      roi: 'Average 5.2x ROI within 12 months'
+      marketSize: '$8B'
+      growthRate: '45% YoY'
+      popular: true
+      icon: Rocket
+      color: 'from-violet-500 to-purple-500'
+    }
+    {
+      id: 'neural-interface'
+      name: 'Neural Interface Development'
+      tagline:
+        'Build the future of human-computer interaction with neural interfaces',      category: 'Emerging Tech',      color: 'from-violet-500 to-purple-500'
+    }
+    {
+      id: 'neural-interface'
+      name: 'Neural Interface Development'
+      tagline: 'Build the future of human-computer interaction with neural interfaces'
+      price: '$899'
+      period: '/month'
+      setupTime: '6-8 weeks'
+      customers: '40+'
+      features: [
+        'BCI development tools'
+        'Neural signal processing'
+        'AI pattern recognition'
+        'Safety protocols'
+      ]
+      benefits: [
+        'Revolutionary UX'
+        'Accessibility improvements'
+        'Research advancement'
+      ],      roi: 'Average 6.8x ROI within 18 months',      features: ['BCI development toolsNeural signal processingAI pattern recognitionSafety protocols']
+      benefits: ['Revolutionary UXAccessibility improvementsResearch advancement']
+      roi: 'Average 6.8x ROI within 18 months'
+      marketSize: '$3B'
+      growthRate: '67% YoY'
+      popular: false
+      icon: Brain
+      color: 'from-pink-500 to-rose-500'
+    },    {      color: 'from-pink-500 to-rose-500'
+    }
+    {
+      id: 'quantum-ai'
+      name: 'Quantum AI Neural Networks'
+      tagline: 'Quantum-powered AI with advanced consciousness capabilities'
+      category: 'Quantum AI'
+      price: '$1,299'
+      period: '/month'
+      setupTime: '10-14 weeks'
+      customers: '15+'
+      features: [
+        'Quantum neural networks'
+        'Consciousness simulation'
+        'Advanced learning'
+        'Quantum optimization'
+      ]
+      benefits: [
+        'Unprecedented AI capabilities'
+        'Breakthrough research'
+        'Competitive advantage'
+      ],      roi: 'Average 8.5x ROI within 24 months',      price: '$1,299';
+      period: '/month'
+      setupTime: '10-14 weeks'
+      customers: '15+'
+      features: ['Quantum neural networksConsciousness simulationAdvanced learningQuantum optimization']
+      benefits: ['Unprecedented AI capabilitiesBreakthrough researchCompetitive advantage']
+      roi: 'Average 8.5x ROI within 24 months'
+      marketSize: '$2B'
+      growthRate: '89% YoY'
+      popular: true
+      icon: Atom
+      color: 'from-blue-500 to-cyan-500'
+    }
+  ];
+  const categories = [
+    'all'
+    ...Array.from(new Set(services.map(s => s.category)))
+    'all',
+    ...Array.from(new Set(services.map(s => s.category))),
 
+<<<<<<< HEAD
+  ];
+
+  ];
+
+  const filteredServices = services.filter(service => {
+    const matchesCategory =
+      selectedCategory === 'all' |service.category === selectedCategory;
+    const matchesSearch =
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;  });
+  const getCategoryIcon = (category: string) => {
+    const iconMap: { [key: string]: React.ComponentType<any> } = {    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch
+  const getCategoryIcon = (category: string) => {
+    const iconMap: { [key: string]: React.ComponentType<any> } = {
+      'AI & Analytics': Brain
+      Security: Shield
+      Infrastructure: Cpu
+      'Space Tech': Rocket
+      'Emerging Tech': Brain
+      'Quantum AI': Atom
+    }
+    return iconMap[category] |Brain;
+  }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <section id='services' className='py-24 px-6 relative overflow-hidden'>;
       {/* Background */}
@@ -109,9 +398,7 @@ interface Service {
 
 
         {/* Filters */}
-
-=======
-        <div className="flex flex-col md:flex-row gap-4 mb-12 justify-center items-center">
+        <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>
           {/* Category Filter */}
           <div className="relative">
             <select
@@ -122,22 +409,21 @@ interface Service {
               {categories.map((category) => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
 
+<<<<<<< HEAD
+=======
 =======
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
-
-
-            </select>;
-            <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />;
-          </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+            </select>
+            <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />
+          </div>
           {/* Search */}
           <div className='relative'>;
             <input
@@ -162,15 +448,86 @@ interface Service {
               type="text"
               placeholder="Search services..."
               value={searchTerm}
+<<<<<<< HEAD
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64"
+            />
+            <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />
+          </div>
+        </div>
+        {/* Services Grid */}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {filteredServices.map((service, index) => (
+            <div
+              key={service.id}
+              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className='absolute top-4 right-4 z-20'>
+                  <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
+                    <Star className='w-3 h-3' />                    Popular          {filteredServices.map((service, index) => (
+            <div
+              key={service.id}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className="absolute top-4 right-4 z-20">
+                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                    <Star className="w-3 h-3" />
+                    Popular
+                  </div>
+                </div>
+              )}
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64"
+            />
+            <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />
+          </div>
+        </div>
+        {/* Services Grid */}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {filteredServices.map((service, index) => (
+            <div
+              key={service.id}
+              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className='absolute top-4 right-4 z-20'>
+                  <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
+                    <Star className='w-3 h-3' />                    Popular          {filteredServices.map((service, index) => (
+            <div
+              key={service.id}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className="absolute top-4 right-4 z-20">
+                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                    <Star className="w-3 h-3" />
+                    Popular
+                  </div>
+                </div>
+              )}
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Service Content */}
               <div className='p-8'>
-=======
         </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -202,10 +559,13 @@ interface Service {
 
               <div className='p-8'>
 
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Icon and Category */}
                 <div className='flex items-center justify-between mb-4'>;
                   <div
@@ -502,7 +862,29 @@ interface Service {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
+                  </div>
+                </div>
 
+<<<<<<< HEAD
+                {/* Benefits */}
+                <div className='mb-6'>
+                  <h4 className='text-sm font-semibold text-white mb-3'>
+                    Key Benefits:
+                  </h4>
+                  <div className='space-y-2'>
+                    {service.benefits.slice(0, 2).map((benefit, idx) => (
+                      <div
+                        key={idx}
+                        className='flex items-center gap-2 text-xs text-white/70'
+                      >
+                        <TrendingUp className='w-3 h-3 text-blue-400' />                        {benefit}                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-3">Key Benefits:</h4>
+                  <div className="space-y-2">
+                    {service.benefits.slice(0, 2).map((benefit, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-xs text-white/70">
+                        <TrendingUp className="w-3 h-3 text-blue-400" />
+                      </div>
+=======
                   </div>;
                 </div>;
 
@@ -516,13 +898,19 @@ interface Service {
                 {/* Benefits */}
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     ))}
+                  </div>
+                </div>
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* ROI and Market Info */}
 
                 <div className="mb-6 p-4 bg-white/5 rounded-lg">
@@ -694,24 +1082,41 @@ interface Service {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+=======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           ))}
+        </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
         </div>;
 
 
         {/* CTA Section */}
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Ready to Transform Your Business?
             </h3>
             <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
@@ -806,9 +1211,20 @@ export default EnhancedServicesShowcase;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   );
-
+}
 };
 
+export default EnhancedServicesShowcase;  )
+}
+export default EnhancedServicesShowcase;
 
+<<<<<<< HEAD
+export default EnhancedServicesShowcase;
+
+}
+}
+export default EnhancedServicesShowcase;
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

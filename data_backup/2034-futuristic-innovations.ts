@@ -1,5 +1,3 @@
-
-
 export interface Service2034 {
   "id": string;
   name: string;

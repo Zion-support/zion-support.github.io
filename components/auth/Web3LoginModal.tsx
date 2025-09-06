@@ -246,22 +246,36 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message, signature: bs58.encode(signature), publicKey })});
       if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
+<<<<<<< HEAD
+      onLoggedIn?.({ address: publicKey, chain: 'sol' });
+      onClose();
+    } catch (e: any) {
+      console.error(e);
+      setError(e?.message |'Phantom connection failed');
+    } finally {
+      setLoading(false);    }      if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
+      onLoggedIn?.({ address: publicKey, chain: 'sol' })
+=======
 =======
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setLoading(false);    }
 
-
-
       onLoggedIn?.({ address: publicKey, chain: 'sol' }),
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       onClose()
     } catch (e: any) {
       console.error(e);
       setError(e?.message |'Phantom connection failed')
     } finally {
       setLoading(false)
+      setLoading(false);    }
 
 
       const verifyRes = await fetch('/api/auth/verify-sol', {;
@@ -294,6 +308,10 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             Cancel;
@@ -312,6 +330,7 @@ if (return null) {
   $2
 }
   return <ModalInner {...props} />;
+<<<<<<< HEAD
 
   useEffect__(() => {
     if (!isOpen) {
@@ -494,6 +513,8 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
       </div>
     </div>
   )
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -501,5 +522,39 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
 
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
+<<<<<<< HEAD
+  return <ModalInner {...props} />;        </div>
+        {error && (
+          <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
+        )}
+        <div className="space-y-3">
+          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">
+            {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
+          </button>
+          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">
+            {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
+          </button>
+        </div>
+        <div className="mt-4 flex justify-end">
+          <button onClick={onClose} className="text-sm text-gray-600 dark: text-gray-300">Cancel</button>
+        </div>
+      </div>
+    </div>
+  )
+}
+export default function Web3LoginModal(props: Web3LoginModalProps) {
+  if (!isClient) return null;
+
+  return <ModalInner {...props} />
+}
+
+export default function Web3LoginModal(props: Web3LoginModalProps) {;
+  if (!isClient) return null;
+  return <ModalInner {...props} />;
+  return <ModalInner {...props} />
+}
+  return <ModalInner {...props} />;
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

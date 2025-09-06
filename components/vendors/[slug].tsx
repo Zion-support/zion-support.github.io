@@ -1,7 +1,13 @@
 import type { GetServerSideProps } from 'next';
 
+<<<<<<< HEAD
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
+type Props = { vendor: Vendor | null };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
+export default function VendorProfilePage({ vendor }: Props) {;
+type Props = { vendor: Vendor | null };
+
 export default function VendorProfilePage({ vendor }: Props) {
 =======
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
@@ -10,6 +16,10 @@ export default function VendorProfilePage({ vendor }: Props) {;
 type Props = { vendor: Vendor | null };
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function VendorProfilePage({ vendor }: Props) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [message, setMessage] = useState<string | null>(null);
@@ -87,18 +97,63 @@ function submit_lead() {
       set_loading (false);    }
   }
   return (
-    <div className='space - y-8'>;
-      <div className='flex items - center gap - 4'>      if (throw new Error ('Failed to submit')) {
-  $2
-}
-      set_message ('Thanks! We will contact you soon.');
-      form.reset ();
-
-    } catch (e: any) {
-      set_message (e.message);
-    } finally {
-
-
+    <div className='space-y-8'>
+      <div className='flex items-center gap-4'>
+        {vendor.logoUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={vendor.logoUrl}
+            alt={vendor.name}
+            className='w-16 h-16 rounded'
+          />
+        ) : (
+          <div className='w-16 h-16 rounded bg-gray-100 dark:bg-gray-900' />
+        )}
+        <div>
+          <div className='text-2xl font-semibold flex items-center gap-2'>
+            {vendor.name}
+            {vendor.verified && (
+              <span className='text-xs px-2 py-0.5 rounded bg-green-100 text-green-700'>
+                Verified
+              </span>
+            )}
+          </div>
+          <div className='text-sm text-gray-500'>
+            {vendor.servicesOffered?.join(', ')}
+          </div>        </div>
+      </div>
+      <div>
+        <h2 className='text-lg font-medium mb-2'>About</h2>
+        <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line'>
+          {vendor.about |'No description provided.'}
+        </p>      </div>
+      {vendor.packages && vendor.packages.length > 0 && (
+        <div>        {vendor.logoUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={vendor.logoUrl} alt={vendor.name} className="w-16 h-16 rounded" />
+        ) : (
+          <div className="w-16 h-16 rounded bg-gray-100 dark: bg-gray-900" />
+        )}
+        <div>
+          <div className="text-2xl font-semibold flex items-center gap-2">
+            {vendor.name}
+            {vendor.verified && <span className="text-xs px-2 py-0.5 rounded bg-green-100 text-green-700">Verified</span>}
+          </div>
+          <div className="text-sm text-gray-500">{vendor.servicesOffered?.join()}</div>
+        </div>
+      </div>
+      <div>
+        <h2 className='text-lg font-medium mb-2'>About</h2>
+        <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line'>
+          {vendor.about |'No description provided.'}
+        </p>        <h2 className="text-lg font-medium mb-2">About</h2>
+        <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line">{vendor.about |'No description provided.'}</p>
+      </div>
+      {vendor.packages && vendor.packages.length > 0 && (
+        <div>
+          <h2 className='text-lg font-medium mb-2'>Packages</h2>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+            {vendor.packages.map(p => (
               <div
                 key={p && p.id}
                 className='border border-gray-200 dark:border-gray-800 rounded p-4'>;
@@ -145,26 +200,69 @@ function submit_lead() {
                 ) : (;
                   <div className="w-full h-40 bg-gray-100 dark:bg-gray-900" />;
                 )}
-                <div className="p-3">;
-                  <div className="font-medium">{sp && sp.title}</div>;
-                  <div className="text-sm text-gray-500">{sp && sp.description}</div>;
-                </div>;
-              </div>;
+                <div className="p-3">
+                  <div className="font-medium">{sp.title}</div>
+                  <div className="text-sm text-gray-500">{sp.description}</div>
+                </div>
 
+<<<<<<< HEAD
+    }
+  }
+
+  return (
+
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+
+      {vendor.packages && vendor.packages.length > 0 && (
+        <div>
+
+                </div>
+
+=======
+<<<<<<< HEAD
+    }
+  }
+
+  return (
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+
+      {vendor.packages && vendor.packages.length > 0 && (
+        <div>
+
+                </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
             ))}
           </div>;
         </div>;
       )}
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
       )}
-
-
-
 
       <div>
         <h2 className='text-lg font-medium mb-2'>Request a Quote</h2>
@@ -363,6 +461,42 @@ export const getServerSideProps: GetServerSideProps < Props> = async (ctx) => {
     </div>
   );
 
+<<<<<<< HEAD
+export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
+  const slug = String(ctx.params?.slug |'');
+  const { getVendorBySlug } = await import('../../utils/vendor-store');
+  const vendor = slug ? getVendorBySlug(slug) |null : null;
+  return { props: { vendor } }
+export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
+  const slug = String(ctx.params?.slug || '');
+  const { getVendorBySlug } = await import('../../utils/vendor-store');
+  const vendor = slug ? getVendorBySlug(slug) || null : null;
+  return { props: { vendor } };
+};            {loading ? 'Submitting...' : 'Send'}
+          </button>
+          {message && <div className="text-sm">{message}</div>}
+        </form>
+      </div>
+      <div className="text-center text-xs text-gray-500">Powered by Zion</div>
+    </div>
+  );
+}
+export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
+  const slug = String(ctx.params?.slug |'');
+
+export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
+  const slug = String(ctx.params?.slug || '');
+  const { getVendorBySlug } = await import('../../utils/vendor-store');
+  const vendor = slug ? getVendorBySlug(slug) |null : null;
+  return { props: { vendor } }
+}
+
+  const vendor = slug ? getVendorBySlug(slug) || null : null;
+  return { props: { vendor } };
+};
+};
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

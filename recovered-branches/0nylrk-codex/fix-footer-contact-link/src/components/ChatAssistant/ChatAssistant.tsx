@@ -1,29 +1,66 @@
+<<<<<<< HEAD
+import React, { useState, useEffect, useRef, ReactNode } from 'react';
+import { ChatMessage  } from './ChatMessage';
+import { ChatInput  } from './ChatInput';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
+export interface Message {
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
 import {X} from "lucide-react";
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState, useEffect, useRef, ReactNode } from 'react',
 import { ChatMessage } from './ChatMessage',
 import { ChatInput } from './ChatInput',
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { X } from "lucide-react",
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface Message {
   id: string,
   role: 'user' | 'assistant',
   message: string,
   timestamp: Date,
   read?: boolean
+<<<<<<< HEAD
+}
+
+  id: string
+  role: 'user' | 'assistant'
+  message: string
+  timestamp: Date
+
+  read?: boolean
+}
+export interface ChatAssistantProps {
+
+  isOpen: boolean
+  onClose: () => void
+  recipient: {
+    id: string
+    name: string
+    id: string,
+    name: string,;
+=======
 
     id: string,
     name: string,;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     avatarUrl?: string;
     role?: string
   }
@@ -33,10 +70,16 @@ export interface Message {
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
   contextHeader?: ReactNode
 }
+<<<<<<< HEAD
+export function ChatAssistant({
+
+export function ChatAssistant({;
+=======
 
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   isOpen;
   onClose;
   recipient;
@@ -44,6 +87,72 @@ import {ChatInput} from './ChatInput';
 
   initialMessages = [];
   onSendMessage;
+<<<<<<< HEAD
+  contextHeader
+}: ChatAssistantProps) {
+  const [messages, setMessages] = useState<Message[]>(initialMessages);
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    if (initialMessages.length > 0) {
+      setMessages(initialMessages)
+    }
+  }, [initialMessages]);
+  useEffect(() => {
+    scrollToBottom()
+  }, [messages]);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+import React, { useState, useEffect, useRef, ReactNode } from 'react',
+import { ChatMessage } from './ChatMessage',
+import { ChatInput } from './ChatInput',
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { X } from "lucide-react",
+export interface Message {
+  id: string,
+  role: 'user' | 'assistant',
+  message: string,
+  timestamp: Date,
+  read?: boolean
+import React, { useState, useEffect, useRef, ReactNode } from 'react',;
+import { ChatMessage } from './ChatMessage',;
+import { ChatInput } from './ChatInput',;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { X } from "lucide-react",;
+export interface Message {;
+  id: string,;
+  role: 'user' | 'assistant',;
+  message: string,;
+  timestamp: Date,;
+  read?: boolean;
+}
+;
+export interface ChatAssistantProps {;
+  isOpen: boolean,;
+  onClose: () => void,;
+  recipient: {;
+    id: string,;
+    name: string,;
+    avatarUrl?: string,;
+    role?: string;
+  },;
+  conversationId?: string,;
+  initialMessages?: Message[],;
+  onSendMessage: (message: string, conversationId?: string) => Promise<void>,;
+  contextHeader?: ReactNode;
+}
+;
+export function ChatAssistant({;
+  isOpen,;
+  onClose,;
+  recipient,;
+  conversationId,;
+  initialMessages = [],;
+  onSendMessage,;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   contextHeader;
 }: ChatAssistantProps) {;
 
@@ -54,6 +163,16 @@ import {ChatInput} from './ChatInput';
       setMessages(initialMessages);
     }
   }, [initialMessages]),
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -64,16 +183,16 @@ import {ChatInput} from './ChatInput';
   }, [messages]);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
+  },
+  
   const handleSendMessage = async (message: string) => {
     if (!message.trim()) return
     // Add user message to the chat
     const newMessage: Message = {
-
-
-  useEffect(() => {;
-    if (initialMessages && initialMessages.length > 0) {;
-      setMessages(initialMessages);
+      id: Date.now().toString()
+      role: 'user'
+      message;
+      timestamp: new Date()
     }
   }, [initialMessages]);
 
@@ -104,8 +223,6 @@ import {ChatInput} from './ChatInput';
 
 
   if (!isOpen) return null;
-=======
-
       id: Date.now().toString(),
       role: 'user',
       message,
@@ -119,8 +236,6 @@ import {ChatInput} from './ChatInput';
   },
 
   if (!isOpen) return null,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">;
@@ -170,11 +285,8 @@ import {ChatInput} from './ChatInput';
           ) : (;
             messages && messages.map((msg) => (;
               <ChatMessage
-
-
+                key={msg.id}
                 key={msg.id} 
-
-
                 role={msg.role}
                 message={msg.message}
               />
@@ -326,6 +438,12 @@ if (return null) {
       </div>
     </div>
   )
+<<<<<<< HEAD
+}
+};
+}
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

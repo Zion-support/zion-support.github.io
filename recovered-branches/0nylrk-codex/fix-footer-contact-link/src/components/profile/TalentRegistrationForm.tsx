@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 
@@ -29,6 +31,7 @@ interface CategorizedSkills {
   softSkills: string[]
   other: string[]
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -46,8 +49,73 @@ import {toast} from "@/components/ui/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {useAuth} from "@/hooks/useAuth";
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Switch } from "@/components/ui/switch",
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import {
+  Form;
+  FormControl;
+  FormDescription;
+  FormField;
+  FormItem;
+  FormLabel;
+import { Badge } from "@/components/ui/badge",
+import { Separator } from "@/components/ui/separator",
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from "lucide-react",
+import { toast } from "@/components/ui/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useAuth } from "@/hooks/useAuth";
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { useAuth } from "@/hooks/useAuth",
+// Define form schema
 =======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+const talentProfileSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters long"),
+  title: z.string().min(5, "Professional title is required"),
+  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
+  location: z.string().min(2, "Location is required"),
+  skills: z.string().min(2, "Enter at least one skill"),
+  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
+    message: "Hourly rate must be a number"})
+  availability: z.enum(["available", "limited", "unavailable"]);
+  enhancedProfile: z.boolean().default(true)})
+type TalentFormValues = z.infer<typeof talentProfileSchema>;
+type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other';
+    message: "Hourly rate must be a number"}),
+  availability: z.enum(["available", "limited", "unavailable"]),
+  enhancedProfile: z.boolean().default(true)}),
+
+type TalentFormValues = z.infer<typeof talentProfileSchema>,
+
+type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
+
+interface CategorizedSkills {
+  programming: string[]
+  devops: string[]
+  platforms: string[]
+  softSkills: string[]
+  other: string[]
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -95,19 +163,42 @@ interface CategorizedSkills {;
   platforms: string[],;
   softSkills: string[],;
   other: string[];
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 interface EnhancedProfile {
   summary: string
   categorizedSkills: CategorizedSkills
 }
-
+export function TalentRegistrationForm() {
+  // Remove the useToast() hook since we're importing the toast function directly
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [skillTags, setSkillTags] = useState<string[]>([]);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null);
+  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
 
 export function TalentRegistrationForm() {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  // Remove the useToast() hook since we're importing the toast function directly;
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [skillTags, setSkillTags] = useState<string[]>([]);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null);
+  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+  // Remove the useToast() hook since we're importing the toast function directly
+  const { user } = useAuth(),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [skillTags, setSkillTags] = useState<string[]>([]),
+  const [isGenerating, setIsGenerating] = useState(false),
+  const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),
+  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
+  
   // Initialize form with default values
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentProfileSchema)
@@ -130,7 +221,11 @@ export function TalentRegistrationForm() {
       setSkillTags([...skillTags, skillInput]),
       form.setValue("skills", "")
     }
-
+  }
+  // Handle removing skill tags
+  const handleRemoveSkill = (skill: string) => {
+    setSkillTags(skillTags.filter((s) => s !== skill))
+  }
   },
 
   // Handle removing skill tags
@@ -138,16 +233,36 @@ export function TalentRegistrationForm() {
     setSkillTags(skillTags.filter((s) => s !== skill))
   },
 
-
   // Handle key press in skills input (add on enter)
   const handleSkillKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       e.preventDefault()
       handleAddSkill()
+<<<<<<< HEAD
+    }
+  }
+  // Handle avatar upload
+  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader()
+      reader.onloadend = () => {
+        setUploadedAvatar(reader.result as string)
+      }
+      reader.readAsDataURL(file)
+    }
+  }
+  // Generate enhanced profile with AI
+  const generateEnhancedProfile = async () => {
+    const formData = form.getValues();
+    if (!formData.bio |formData.bio.length < 20) {
+  };
+=======
 
   };
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 export function TalentRegistrationForm() {;
   // Remove the useToast() hook since we're importing the toast function directly;
@@ -203,6 +318,16 @@ export function TalentRegistrationForm() {;
       reader.readAsDataURL(file);
     }
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -210,26 +335,33 @@ export function TalentRegistrationForm() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
-    const formData = form.getValues();
-    if (!formData.bio |formData.bio.length < 20) {
+    const formData = form.getValues(),
+    if (!formData.bio || formData.bio.length < 20) {
       toast({
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return
-
-  };
-
-  // Handle removing skill tags;
-  const handleRemoveSkill = (skill: string) => {;
-    setSkillTags(skillTags && skillTags.filter((s) => s !== skill));
-  };
-
-  // Handle key press in skills input (add on enter);
-  const handleSkillKeyPress = (e: React && React.KeyboardEvent) => {;
-    if (e && e.key === "Enter") {;
-      e && e.preventDefault(),;
-      handleAddSkill();
     }
+<<<<<<< HEAD
+    try {
+      setIsGenerating(true);
+      // Call the Supabase Edge Function
+      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
+        body: {
+          talentData: {
+            name: formData.name
+            title: formData.title
+            bio: formData.bio
+            skills: skillTags
+            location: formData.location
+          }
+        }
+      });
+      if (error) {
+        throw new Error(error.message)
+      }
+      setGeneratedContent(data as EnhancedProfile);
+=======
   };
 
   // Handle avatar upload;
@@ -248,6 +380,7 @@ export function TalentRegistrationForm() {;
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },;
 
   // Generate enhanced profile with AI;
@@ -278,47 +411,54 @@ export function TalentRegistrationForm() {;
       }),;
       if (error) {;
         throw new Error(error.message);
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-      if (error) {;
-        throw new Error(error && error.message);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      }
-      setGeneratedContent(data as EnhancedProfile);
+      setGeneratedContent(data as EnhancedProfile),
+      
+      toast({
+        title: "Enhanced Profile Generated"
+        description: "AI has created a professional bio and suggested additional skills for your profile."})
+    } catch (error: any) {
+      console.error("Error generating enhanced profile:", error),
+      toast({
+        title: "Generation failed"
+        description: error.message |"There was an error generating your enhanced profile. Please try again."
+        variant: "destructive"})
+    } finally {
+      setIsGenerating(false)
+    }
+  }
+  // Apply generated content to form
+  const applyGeneratedContent = () => {
+    if (generatedContent) {
+      form.setValue("bio", generatedContent.summary);
+      // Extract all skills from categorized skills and properly type cast them
+      const allCategorizedSkills = generatedContent.categorizedSkills;
+      const newSkills: string[] = []
+  },
 
-import React, { useState } from './react';
-import { use_form } from './react - hook - form';
-import { zod_resolver } from '@hookform / resolvers / zod';
-import { z } from './zod';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Textarea } from '@/components / ui / textarea';
-import { Switch } from '@/components / ui / switch';
-import { Badge } from '@/components / ui / badge';
-import { Separator } from '@/components / ui / separator';
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from './lucide-react';
-import { toast } from '@/components / ui / use - toast';
-import { supabase } from '@/integrations / supabase / client';
-import { AspectRatio } from '@/components / ui / aspect - ratio';
-import { use_auth } from '@/hooks / use_auth';
-// Define form schema;
-const talentProfileSchema = z.object ({
-  name: z.string ().min (2, "Name must be at least 2 characters long");
-  title: z.string ().min (5, "Professional title is required");
-  bio: z.string ().min (50, "Bio must be at least 50 characters long").max (1000, "Bio cannot exceed 1000 characters");
-  location: z.string ().min (2, "Location is required");
-  skills: z.string ().min (2, "Enter at least one skill");
-  hourly_rate: z.string ().refine ((val) => !isNaN (Number (val)), {
-    message: "Hourly rate must be a number"}),
-  availability: z.enum (["available", "limited", "unavailable"]);
-  enhanced_profile: z.boolean ().default (true)}),
-type TalentFormValues = z.infer < typeof talentProfileSchema>;
+  // Apply generated content to form
+  const applyGeneratedContent = () => {
+    if (generatedContent) {
+      form.setValue("bio", generatedContent.summary),
+      
+      // Extract all skills from categorized skills and properly type cast them
+      const allCategorizedSkills = generatedContent.categorizedSkills,
+      const newSkills: string[] = [],
+      
+      // Safely extract and flatten skills from each category
+      Object.values(allCategorizedSkills).forEach(categorySkills => {
+        if (Array.isArray(categorySkills)) {
+          categorySkills.forEach(skill => {
+            if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
+              newSkills.push(skill)
 ;
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'soft_skills' | 'other';
 ;
@@ -366,15 +506,31 @@ function TalentRegistrationForm() {
       setSkillTags ([...skill_tags, skill_input]);
       form.set_value ("skills", "");
     }
+<<<<<<< HEAD
+  },;
+  // Apply generated content to form;
+  const applyGeneratedContent = () => {;
+    if (generatedContent) {;
+      form.setValue("bio", generatedContent.summary),;
+      // Extract all skills from categorized skills and properly type cast them;
+      const allCategorizedSkills = generatedContent.categorizedSkills,;
+      const newSkills: string[] = [],;
+      // Safely extract and flatten skills from each category;
+      Object.values(allCategorizedSkills).forEach(categorySkills => {;
+        if (Array.isArray(categorySkills)) {;
+          categorySkills.forEach(skill => {;
+            if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {;
+              newSkills.push(skill);
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             }
           });
         }
-
-
-      if (newSkills && newSkills.length > 0) {;
-        setSkillTags([...skillTags, ...newSkills]);
+      });
+      if (newSkills.length > 0) {
+        setSkillTags([...skillTags, ...newSkills])
       }
     }
   };
@@ -387,11 +543,19 @@ function TalentRegistrationForm() {
       case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
       case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
       case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
+<<<<<<< HEAD
+      case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500'
+      default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
+    }
+  }
+  };
+=======
 
 
   };
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }),;
       if (newSkills.length > 0) {;
         setSkillTags([...skillTags, ...newSkills]);
@@ -409,37 +573,92 @@ function TalentRegistrationForm() {
       default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
     }
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
 
 
 
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
-=======
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        setSkillTags ([...skill_tags, ...new_skills]);
+    try {
+      await supabase.functions.invoke('send-email', {
+        body: {
+          to: email
+          subject: "Your Zion Talent Profile Has Been Enhanced"
+          html: `
+          <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">
+            <h2 style="color: #6D28D9,">Profile Enhancement Complete</h2>
+            <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>
+            <p>We've added a professional summary and categorized your skills to help you stand out.</p>
+            <p>You can review and edit these enhancements in your profile dashboard.</p>
+            <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee,">
+              <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>
+            </div>
+          </div>
+          `
+        }
+      })
+    } catch (error) {
+      console.error("Failed to send notification email:", error)
+    }
+  }
+  },
+
+  // Handle form submission
+  const onSubmit = async (values: TalentFormValues) => {
+    if (skillTags.length === 0) {
+      toast({
+        title: "Skills required"
+        description: "Please add at least one skill to your profile."
+        variant: "destructive"})
+      return
+    }
+    setIsSubmitting(true);
+
+    setIsSubmitting(true),
+
+    try {
+      // For actual implementation with Supabase
+      if (!user?.id) {
+        throw new Error("User not authenticated")
       }
-    }
-  }
-;
-  // Get category color;
-  const getCategoryColor = (category: CategoryType) =>: any {
-    switch (category) {
-      case 'programming': return 'bg - blue - 500 / 20 hover:bg - blue - 500 / 30 text - blue - 500';
-      case 'devops': return 'bg - green - 500 / 20 hover:bg - green - 500 / 30 text - green - 500';
-      case 'platforms': return 'bg - amber - 500 / 20 hover:bg - amber - 500 / 30 text - amber - 500';
-      case 'soft_skills': return 'bg - purple - 500 / 20 hover:bg - purple - 500 / 30 text - purple - 500';
-      case 'other': return 'bg - gray - 500 / 20 hover:bg - gray - 500 / 30 text - gray - 500',
-      default: return 'bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple';
-    }
-  }
-;
+      // Enhance profile if not already done
+      let finalSummary = "";
+      let finalSkills = skillTags;
+      let finalSummary = "",
+      let finalSkills = skillTags,
+      
+      if (values.enhancedProfile && !generatedContent) {
+        try {
+          const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {
+            body: {
+              talentData: {
+                name: values.name
+                title: values.title
+                bio: values.bio
+                skills: skillTags
+                location: values.location
+              }
+            }
+          });
+          if (aiData) {
+            finalSummary = (aiData as EnhancedProfile).summary;
+            // Safely merge AI suggested skills with user-provided skills
+            const categorizedSkills = (aiData as EnhancedProfile).categorizedSkills;
+            const aiSkills: string[] = []
+            // Extract skills from each category and ensure they're strings
+            Object.values(categorizedSkills).forEach(categorySkills => {
+              if (Array.isArray(categorySkills)) {
+                categorySkills.forEach(skill => {
+                  if (typeof skill === 'string' && skill) {
+                    aiSkills.push(skill)
+  },;
   // Send notification email;
   const sendEnhancementNotification = async (user_id: string, email: string) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -594,52 +813,53 @@ if ( {) {
                 categorySkills.forEach(skill => {;
                   if (typeof skill === 'string' && skill) {;
                     aiSkills.push(skill);
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   }
                 });
               }
-
-
-            // Create a unique set of skills;
-            finalSkills = [...new Set([...skillTags, ...aiSkills])];
-
-          }
-=======
-
+            });
+            // Create a unique set of skills
+            finalSkills = [...new Set([...skillTags, ...aiSkills])]
             }),;
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails
           finalSummary = ""
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
           finalSummary = "";
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       } else if (generatedContent) {;
         finalSummary = generatedContent && generatedContent.summary;
       }
-
-
+      // Get user email for notification
+      const { data: userData } = await supabase.auth.getUser()
+      const userEmail = userData.user?.email;
 
       // Get user email for notification
       const { data: userData } = await supabase.auth.getUser(),
       const userEmail = userData.user?.email,
-
-
 
       // Create the talent profile
       // In a real implementation, this would save to Supabase
@@ -652,11 +872,8 @@ if ( {) {
           sendEnhancementNotification(user.id, userEmail)
         }
         setIsSubmitting(false)
-
-
+      }, 1500);
       }, 1500),
-
-
 
       // Here would be the actual code to save the profile to Supabase
       /*
@@ -673,52 +890,11 @@ if ( {) {
           hourly_rate: Number(values.hourlyRate)
           availability_status: values.availability
           // Other fields would be handled here
-
-
-      // Get user email for notification;
-      const { data: userData } = await supabase && supabase.auth.getUser(),;
-      const userEmail = userData && userData.user?.email;
-
-      // Create the talent profile;
-      // In a real implementation, this would save to Supabase;
-      setTimeout(() => {;
-        toast({;
-          title: "Profile Created Successfully",;
-          description: "Your talent profile has been published and is now visible in the directory."}),;
-
-        // Send notification email if we have user email;
-        if (userEmail && values && values.enhancedProfile) {;
-          sendEnhancementNotification(user && user.id, userEmail);
-        }
-
-        setIsSubmitting(false);
-      }, 1500);
-
-      // Here would be the actual code to save the profile to Supabase;
-      /*;
-      const { error } = await supabase;
-        .from('talent_profiles');
-        .insert({;
-          user_id: user && user.id,;
-          name: values && values.name,;
-          title: values && values.title,;
-          bio: values && values.bio,;
-          summary: finalSummary,;
-          location: values && values.location,;
-          skills: finalSkills && finalSkills.map(name => ({ name, level: 4 })), // Default skill level;
-          hourly_rate: Number(values && values.hourlyRate),;
-          availability_status: values && values.availability,;
-          // Other fields would be handled here;
-
         });
       if (error) throw error;
-
-
         }),
 
       if (error) throw error,
-
-
       */
     } catch (error: any) {
       console.error("Error creating profile:", error);
@@ -727,24 +903,21 @@ if ( {) {
         description: error.message |"There was an error creating your profile. Please try again."
         variant: "destructive"})
       setIsSubmitting(false)
-
-      */;
-
-    } catch (error: any) {;
-      console && console.error("Error creating profile:", error);
-      toast({;
-        title: "Error Creating Profile",;
-        description: error && error.message || "There was an error creating your profile. Please try again.",;
-        variant: "destructive"}),;
-      setIsSubmitting(false);
-
     }
   }
 
   return (
-
-=======
-
+    <div className="max-w-4xl mx-auto p-4 md:p-6">
+      <Card className="bg-zion-blue-dark border-zion-blue-light">
+        <CardHeader>
+          <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle>
+          <CardDescription className="text-zion-slate">
+            Showcase your skills and experience to potential clients and employers.
+          </CardDescription>
+        </CardHeader>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)}>
+            <CardContent className="space-y-8">
 ;
       // Get user email for notification;
       const { data: userData } = await supabase.auth.getUser(),;
@@ -803,10 +976,13 @@ if ( {) {
         <Form {...form}>;
           <form onSubmit={form && form.handleSubmit(onSubmit)}>;
             <CardContent className="space-y-8">;
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;
@@ -1213,10 +1389,6 @@ if (throw error) {
                   </div>;
                 )}
 
-
-
-
-
                 {/* Generated Content Display */}
                 {generatedContent && (;
                   <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">;
@@ -1564,58 +1736,38 @@ if (throw error) {
                     <FormLabel className="text-zion-slate-light">Availability Message</FormLabel>;
                     <Textarea
                       placeholder="Describe your availability, working hours, or when you'll be available next..."
-                      className="mt-1 && 1.5 bg-zion-blue border-zion-blue-light text-white"
-                    />;
-                    <FormDescription className="text-zion-slate mt-1 && 1.5 text-sm">;
-=======
-                        <FormMessage className="text - red - 400" />;
-                      </FormItem>)}
-                  />;
-                  <div className="pt - 2">;
-                    <FormLabel className="text - zion - slate - light">Availability Message</FormLabel>;
-                    <Textarea;
-                      placeholder="Describe your availability, working hours, or when you'll be available next...";
-                      className="mt - 1.5 bg - zion - blue border - zion - blue - light text - white";
-                    />;
-                    <FormDescription className="text - zion - slate mt - 1.5 text - sm">;
-
-                      Let clients know about your working hours, time zone, or availability for calls.;
-                    </FormDescription>;
-                  </div>;
-                </div>;
-              </div>;
-            </CardContent>;
-
-=======
-            <CardFooter className="border - t border - zion - blue - light pt - 6">;
-              <div className="flex flex - col sm:flex - row gap - 4 w - full sm:justify - between">;
-                <Button;
-                  type="button";
-                  variant="outline";
-                  className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white";
-                >;
-                  Save as Draft;
-                </Button>;
-                <Button;
-                  type="submit";
-                  className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
-                  disabled={is_submitting}
-                >;
-                  {is_submitting ? "Creating Profile..." : "Create Profile"}
-
-                </Button>;
-              </div>;
-            </CardFooter>;
-          </form>;
-        </Form>;
-      </Card>;
-
-    </div>);
+                      className="mt-1.5 bg-zion-blue border-zion-blue-light text-white"
+                    />
+                    <FormDescription className="text-zion-slate mt-1.5 text-sm">
+                      Let clients know about your working hours, time zone, or availability for calls.
+                    </FormDescription>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+            <CardFooter className="border-t border-zion-blue-light pt-6">
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+                >
+                  Save as Draft
+                </Button>
+                <Button
+                  type="submit"
+                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Creating Profile..." : "Create Profile"}
+                </Button>
+              </div>
+            </CardFooter>
+          </form>
+        </Form>
+      </Card>
+    </div>
+  )
 }
-
-=======
-
 }
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

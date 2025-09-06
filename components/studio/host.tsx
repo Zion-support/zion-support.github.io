@@ -19,12 +19,34 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
+<<<<<<< HEAD
+type PersonaConfig = {
+  voice: 'Visionary' | 'Grounded' | 'Technical';
+  language: string;
+  cloneStyleText?: string;
+}
+export default function StudioHostPage() {
+  const [persona, setPersona] = useState<PersonaConfig>({
+    voice: 'Visionary'
+    language: 'English'
+    voice: 'Visionary',
+    language: 'English',;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
+<<<<<<< HEAD
+  const [operatorPrompt, setOperatorPrompt] = useState(
+    'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'
+  );}
+export default function StudioHostPage() {
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' })
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
+=======
 
 
 =======
@@ -32,6 +54,7 @@ import React, { useState } from 'react';
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
@@ -121,6 +144,10 @@ function StudioHostPage() {
     if (!episode?.id) return;
     setPublishing(true);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     <div className='space-y-8'>;
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>;
@@ -129,6 +156,10 @@ function StudioHostPage() {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
           <div>;
             <label className='block text-sm font-medium'>Voice</label>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <select
               className='mt-1 w-full border rounded p-2'
               value={persona && persona.voice}
@@ -241,8 +272,27 @@ function StudioHostPage() {
             <label className="block text-sm font-medium" htmlFor="input-Voice">Voice</label>;
             <select
               className="mt-1 w-full border rounded p-2"
+              value={persona.voice}
+              onChange={(e) => setPersona({ ...persona, voice: e.target.value as any })}
+            >
+              <option value="Visionary">Visionary</option>
+              <option value="Grounded">Grounded</option>
+              <option value="Technical">Technical</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>
+            <input className="mt-1 w-full border rounded p-2" value={persona.language} onChange={(e) => setPersona({ ...persona, language: e.target.value })} />
+          </div>
+          <div>
+            <label className="block text-sm font-medium" htmlFor="input-Clone Style (optional)">Clone Style (optional)</label>
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText |''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
 
-            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
+    }
+  };
+
+  return (
+
           </div>
         </div>
       </section>
@@ -970,9 +1020,90 @@ function StudioHostPage() {
               >                {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>
+<<<<<<< HEAD
+            {episode.audio && (
+              <div className='flex gap-3'>
+                {episode.audio.mp3Url && (
+                  <a
+                    href={episode.audio.mp3Url}
+                    className='text-blue-600 underline'
+                  >
+                    Download MP3
+                  </a>
+                )}
+                {episode.audio.wavUrl && (
+                  <a
+                    href={episode.audio.wavUrl}
+                    className='text-blue-600 underline'
+                  >
+                    Download WAV
+                  </a>
+                )}
+                {episode.audio.mp4Url && (
+                  <a
+                    href={episode.audio.mp4Url}
+                    className='text-blue-600 underline'
+                  >
+                    Download MP4
+                  </a>
+                )}              </div>              <div className="flex gap-3">
+                {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text-blue-600 underline">Download MP3</a>}
+                {episode.audio.wavUrl && <a href={episode.audio.wavUrl} className="text-blue-600 underline">Download WAV</a>}
+                {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text-blue-600 underline">Download MP4</a>}
+            )}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+;
+            {episode.audio && (
+              <div className='flex gap-3'>
+                {episode.audio.mp3Url && (
+                  <a
+                    href={episode.audio.mp3Url}
+                    className='text-blue-600 underline'
+                  >
+                    Download MP3
+                  </a>
+                )}
+                {episode.audio.wavUrl && (
+                  <a
+                    href={episode.audio.wavUrl}
+                    className='text-blue-600 underline'
+                  >
+                    Download WAV
+                  </a>
+                )}
+                {episode.audio.mp4Url && (
+                  <a
+                    href={episode.audio.mp4Url}
+                    className='text-blue-600 underline'
+                  >
+                    Download MP4
+                  </a>
+                )}              </div>              <div className="flex gap-3">
+                {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text-blue-600 underline">Download MP3</a>}
+                {episode.audio.wavUrl && <a href={episode.audio.wavUrl} className="text-blue-600 underline">Download WAV</a>}
+                {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text-blue-600 underline">Download MP4</a>}
+            )}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 ;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
             {episode.audio && (
 
@@ -980,7 +1111,10 @@ function StudioHostPage() {
               </button>
             </div>
             {episode.audio && (
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

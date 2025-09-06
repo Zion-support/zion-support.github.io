@@ -1010,9 +1010,12 @@ if ( {) {
 
                 <button
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -1023,7 +1026,14 @@ if ( {) {
                 >;
                   {category.icon}
                   {category.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
 
+<<<<<<< HEAD
+=======
             </div>;
           </div>;
         </div>;
@@ -1035,6 +1045,7 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Results Summary */}
 
 
@@ -1068,20 +1079,33 @@ if ( {) {
                 </div>
               ) : (
                 <div className='space-y-6'>
-
+                  {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                          {filteredServices.map((service) => (
+          <ServiceCard key={service.id} service={service} />
+        ))}
+                </div>
+              ) : (
+                <div className="space-y-6">
+                  {filteredServices.map((service) => (
                   {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />
 
                     <ServiceList key={service.id} service={service} />
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   ))}
                 </div>;
               )}
             </AnimatePresence>;
           )}
+        </div>
 
+<<<<<<< HEAD
+=======
         </div>;
 
 
@@ -1091,6 +1115,7 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Call to Action */}
         <div className='mt-16 text-center'>;
           <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>;
@@ -1243,21 +1268,10 @@ if ( {) {
   );
 
 }
-
-=======
-          <button className="px - 8 py - 4 bg - white text - blue - 600 rounded - xl font - semibold hover:bg - gray - 100 transition - all duration - 300">;
-            Get Started Today;
-          </button>;
-        </motion.div>;
-      </div>;
-    </div>);        </div>;
-      </div>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
           </div>
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,5 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import { readJsonFile } from '../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../utils/api/auth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
+  const data = null;
+  res.status(200).send(JSON.stringify(data, null, 2))
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
@@ -33,6 +44,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.setHeader('Content-Dispositionattachment, filename="audit-log.json"');
   res.status(200).send(JSON.stringify(data, null, 2))
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { readJsonFile } from '../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../utils / api / auth';
@@ -43,6 +64,8 @@ function handler() {
   if () return) {
   $2
 }
+<<<<<<< HEAD
+=======
   const data = readJsonFile ('audit - log.json', [] as unknown[]);
   res.set_header ('Content - Type', 'application / json');
   res.set_header ('Content - Disposition', 'attachment; filename="audit - log.json"');
@@ -63,3 +86,4 @@ function handler() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

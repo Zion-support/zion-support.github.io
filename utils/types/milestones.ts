@@ -1,5 +1,13 @@
+<<<<<<< HEAD
+export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
+export type ProjectParticipantRole = 'client' | 'talent';
+export type ProjectParticipants = {
+
+export type ProjectParticipants = {;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   clientUserId: string;
   talentUserId: string;
 }
@@ -17,19 +25,31 @@ export type Project = {  id: string;
 }
 export function isMilestoneStatus(value: string): value is MilestoneStatus {
   return (
+<<<<<<< HEAD
+    value === 'Pending' |
+    value === 'In Progress' |
+    value === 'Submitted' |
+    value === 'Approved' |
+    value === 'Paid'
+  );export interface MilestoneAttachment {
+=======
 
   );export interface MilestoneAttachment {
 
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     value === 'Pending' ||
     value === 'In Progress' ||
     value === 'Submitted' ||
     value === 'Approved' ||;
     value === 'Paid';
   );export interface MilestoneAttachment {;
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   name: string;
   url: string;
@@ -41,6 +61,10 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 }
 <<<<<<< HEAD
 export interface CreateMilestoneRequest {
+<<<<<<< HEAD
+
+export interface CreateMilestoneRequest {;
+=======
 =======
   uploadedAt: string
 }
@@ -49,12 +73,19 @@ export interface CreateMilestoneRequest {
 export interface CreateMilestoneRequest {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   title: string;
   description?: string;
 
   attachments?: MilestoneAttachment[]
 
 }
+<<<<<<< HEAD
+export interface UpdateMilestoneRequest {
+
+
+export interface UpdateMilestoneRequest {;
+=======
 
   due_date: string;
   amount_usd: number;
@@ -68,6 +99,7 @@ export interface UpdateMilestoneRequest {
 export interface UpdateMilestoneRequest {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   title?: string;
   description?: string;
   dueDate?: string;
@@ -88,6 +120,15 @@ export function isOverdue(milestone: Milestone): boolean {
   }
   return new Date(milestone.dueDate) < new Date();
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 export function getDaysUntilDue(milestone: Milestone): number | null {
   if (!milestone.dueDate) return null;
@@ -97,6 +138,8 @@ export function getDaysUntilDue(milestone: Milestone): number | null {
   return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 }
 
+<<<<<<< HEAD
+=======
 export function isDueSoon(milestone: Milestone, daysThreshold: number = 3): boolean {
   const daysUntilDue = getDaysUntilDue(milestone);
   return daysUntilDue !== null && daysUntilDue <= daysThreshold && daysUntilDue >= 0;
@@ -211,3 +254,4 @@ export function createMilestoneFile(
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,7 +1,47 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {CompanyDashboard} from "@/components/enterprise/workspace/CompanyDashboard";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate, useParams} from "react-router-dom";
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
+import {useWhitelabel} from "@/context/WhitelabelContext";
+export default function CompanyWorkspace() {;
+  const { companySlug } = useParams() as { companySlug?: string };
+  const { user } = useAuth();
+  const { company, isLoading, error } = useCompanyWorkspace(companySlug);
+  const { isWhitelabel, tenant, brandName } = useWhitelabel();
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate, useParams } from "react-router-dom",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
+import { useWhitelabel } from "@/context/WhitelabelContext";
+export default function CompanyWorkspace() {
+  const { companySlug } = useParams() as { companySlug?: string }
+  const { user } = useAuth();
+  const { company, isLoading, error } = useCompanyWorkspace(companySlug);
+  const { isWhitelabel, tenant, brandName } = useWhitelabel();
+import { useWhitelabel } from "@/context/WhitelabelContext",
+export default function CompanyWorkspace() {
+  const { companySlug } = useParams() as { companySlug?: string },
+  const { user } = useAuth(),
+  const { company, isLoading, error } = useCompanyWorkspace(companySlug),
+  const { isWhitelabel, tenant, brandName } = useWhitelabel(),
+  
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (isLoading) {
     return (
 
@@ -24,12 +64,13 @@
   const hasAccess = true, // For demo purposes, always grant access
   if (!hasAccess) {
     return <Navigate to="/unauthorized" />
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
   }
+<<<<<<< HEAD
+  return (
+    <ProtectedRoute>
+      <SEO
+      <SEO 
+=======
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -63,6 +104,7 @@ import {useWhitelabel} from "@/context/WhitelabelContext";
       <SEO 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -111,10 +153,13 @@ export default function CompanyWorkspace() {;
   return (;
     <ProtectedRoute>;
       <SEO;
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
       />
@@ -128,44 +173,12 @@ export default function CompanyWorkspace() {;
       <Footer />
     </ProtectedRoute>
   )
-
-    <ProtectedRoute>;
-      <SEO
-        title={`${company && company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
-        description={`${company && company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
-      />;
-      <Header
-        customLogo={isWhitelabel ? tenant?.logo_url : company && company.logoUrl}
-        customTheme={effectiveTheme}
-      />;
-      <main className="min-h-screen" style={{ backgroundColor: effectiveTheme?.backgroundColor || 'var(--background)' }}>;
-        <CompanyDashboard company={company} />;
-      </main>;
-      <Footer />;
-    </ProtectedRoute>;
-  );
 }
-
-=======
-import React from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { CompanyDashboard } from '@/components / enterprise / workspace / CompanyDashboard';
-import { use_auth } from '@/hooks / use_auth';
-import { Navigate, use_params } from './react-router-dom';
-import { SEO } from '@/components / SEO';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import { useCompanyWorkspace } from '@/hooks / useCompanyWorkspace';
-import { use_whitelabel } from '@/context / WhitelabelContext';
-export default /**
- * CompanyWorkspace - Function description
- */
-function CompanyWorkspace() {
-  const { company_slug } = use_params () as { company_slug?: string }
-  const { user } = use_auth ();
-  const { company, is_loading, error } = useCompanyWorkspace (company_slug);
-  const { is_whitelabel, tenant, brand_name } = use_whitelabel ();
+}
 ;
+<<<<<<< HEAD
+;
+=======
   // Check condition
 if ( {) {
   $2
@@ -218,3 +231,4 @@ if ( {) {
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,5 +1,6 @@
 
-
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 let animationFrameId: number;
 let particles: Particle[] = [];
 let quantumFields: QuantumField[] = [];
@@ -216,6 +217,10 @@ if (return) {
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       maxLife: number;      x: number,;
       y: number,;
       vx: number,;
@@ -244,6 +249,16 @@ if (return) {
           this && this.x = Math && Math.random() * canvas && canvas.width;
           this && this.y = Math && Math.random() * canvas && canvas.height;        }          this && this.y = Math && Math.random() * canvas && canvas.height;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       }
       draw() {;
@@ -252,12 +267,8 @@ if (return) {
 
           this.y = Math.random() * canvas.height;        }
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
-
-
 
       draw() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -491,9 +502,13 @@ if (return) {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-
+            ctx.stroke();          }            ctx.stroke()
             ctx.stroke();          }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -517,6 +532,16 @@ if (return) {
 <<<<<<< HEAD
             ctx.stroke()
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }
         }
       }
@@ -783,11 +808,22 @@ if ( {) {
 
       />;
       <motion.div
-        className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl"
+        className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl'
         animate={{
-          scale: [1, 1.2, 1];
-          opacity: [0.2, 0.4, 0.2]}}
+          scale: [1, 1.3, 1]
+          opacity: [0.2, 0.5, 0.2],        animate={{
+          scale: [1, 1.4, 1];
+          opacity: [0.2, 0.6, 0.2]}}
         transition={{
+          duration: 6
+          repeat: Infinity
+          ease: 'easeInOut'
+          delay: 2,          ease: "easeInOut"
+          delay: 2
+          duration: 6,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: 2,
 
         }}
         transition={{
@@ -815,7 +851,10 @@ if ( {) {
           repeat: Infinity
           ease: 'easeInOut'
           delay: 2,        }}
+      />
 
+<<<<<<< HEAD
+=======
 
 =======
 
@@ -823,6 +862,7 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
@@ -835,7 +875,13 @@ if ( {) {
 
       />;
       {/* Content Layer */}
-
+      <div className='relative z-10'>{children}</div>
+      {/* Quantum Energy Waves */}
+      <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden'>
+        <motion.div
+          className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 to-transparent'
+          animate={{
+            x: [0, -100, 0]
           }}
           transition={{
             duration: 8
@@ -856,12 +902,45 @@ if ( {) {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+}
+export default UltraAdvancedQuantumBackground;            ease: "linear"
+};
 
 
+      {/* Content Layer */}
+
+export default UltraAdvancedQuantumBackground;            ease: "linear",
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             delay: 2
           }}
         />
       </div>
+<<<<<<< HEAD
+    </div>
+  );
+}
+export default UltraAdvancedQuantumBackground;  )
+}
+export default UltraAdvancedQuantumBackground;
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    </div>
+  );
+}
+export default UltraAdvancedQuantumBackground;  )
+}
+export default UltraAdvancedQuantumBackground;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 };
 
@@ -871,6 +950,7 @@ export default UltraAdvancedQuantumBackground;  );
 
 export default UltraAdvancedQuantumBackground;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
             ease: 'linear',          }}
@@ -880,6 +960,10 @@ export default UltraAdvancedQuantumBackground;
           animate={{
             coordinate_x: [0, 100, 0],
           }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           transition={{
             duration: 10,
             repeat: Infinity,
@@ -918,7 +1002,22 @@ export default UltraAdvancedQuantumBackground;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+        />
+      </div>
+    </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+      {/* Content Layer */}
 
+<<<<<<< HEAD
+          }}
+        />
+      </div>
+    </div>
+    </div>
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

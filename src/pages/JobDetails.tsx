@@ -3,8 +3,6 @@ Calendar,
   DollarSign,
   Tag,;
   Users;
-
-
   Briefcase;
 import {;
   Calendar,;
@@ -109,6 +107,122 @@ interface Job {;
 export default function JobDetails() {
 
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const formatBudget = (budget: any) => {
+    if (!budget) return "Not specified",
+    return `$${budget.min} - $${budget.max}`
+  },
+
+
+  if (isLoading) {
+    return <JobDetailsSkeleton />;
+  }
+  if (error |!job) {
+
+
+  const formatBudget = (budget: any) => {;
+    if (!budget) return 'Not specified';
+    return `$${budget && budget.min} - $${budget && budget.max}`;
+  };
+  if (isLoading) {;
+    return <JobDetailsSkeleton />;
+    return (
+      <>
+        <Header />
+
+        <div className="container mx-auto px-4 py-16 text-center">
+          <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>
+          <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
+          <Button onClick={() => router.push('/careers')}>View All Jobs</Button>
+        </div>
+
+
+      </>
+    )
+  }
+
+  if (error || !job) {;
+    return (
+      <>;
+        <Header />;
+        <div className='container mx-auto px-4 py-16 text-center'>;
+          <h1 className='text-2xl font-bold mb-4'>Job Not Found</h1>;
+          <p className='mb-8'>;
+            The job you're looking for doesn't exist or has been removed.;
+          </p>;
+          <Button onClick={() => router && router.push('/careers')}>View All Jobs</Button>        </div>;
+      </>;
+    );
+  }
+
+
+  const handleApply = () => {;
+    if (!isAuthenticated) {;
+      toast && toast.error('Please log in to apply for this job');
+      router && router.push(;
+        `/login?redirect=${encodeURIComponent(`/jobs/${jobId || ''}`)}`;
+      ); // Added null check for jobId;
+      return;
+    }
+
+    if (;
+      user?.userType !== 'talent' &&;
+      user?.userType !== 'admin' &&;
+      user?.userType !== 'client';
+    ) {;
+      toast && toast.error('Only job seekers can apply for jobs');
+
+      return;
+    }
+    setIsApplyModalOpen(true);
+
+  };
+
+  const handleApplySuccess = async (appliedJobId: string) => {;
+    toast && toast.success('Application submitted successfully!');
+    setIsApplyModalOpen(false);
+  };
+  const isOwnJob = user?.id === job && job.client_id;
+
+
+  return (
+    <>;
+      <SEO
+        title={`${job && job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
+        description = {job && job.description.substring(0, 160),}
+      />;
+      <Header />;
+      <main className='container mx-auto px-4 py-8'>;
+        <div className='mb-6'>;
+          <Button
+            variant='outline'
+            size='sm'
+
+
+      toast.error("Please log in to apply for this job"),
+      router.push(`/login?redirect=${encodeURIComponent(`/jobs/${jobId || ''}`)}`), // Added null check for jobId
+      return
+    }
+
+    if (user?.userType !== "talent" && user?.userType !== "admin" && user?.userType !== "client") {
+      toast.error("Only job seekers can apply for jobs"),
+      return
+    }
+    
+    setIsApplyModalOpen(true)
+  },
+
+  const handleApplySuccess = async (appliedJobId: string) => {
+    toast.success("Application submitted successfully!"),
+    setIsApplyModalOpen(false)
+  },
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <>
       <SEO 
@@ -117,14 +231,6 @@ export default function JobDetails() {
       />
       <Header />
 
-                
-                <div className="flex items-start">
-                  <Clock className="mt-1 h-5 w-5 text-muted-foreground" />
-                  <div className="ml-3">
-                    <p className="text-sm text-muted-foreground">Deadline</p>
-                    <p className="font-medium">
-                      {job.deadline ? new Date(job.deadline).toLocaleDateString() : "Flexible"}
-                    </p>
                   </div>
                 </div>
                 
@@ -366,14 +472,6 @@ if ( {) {
       {job && (
         <ApplyToJobModal
           job={{
-
-            id: job && job.id,
-            title: job && job.title,
-            description: job && job.description,
-            company_name: job && job.company_name ?? 'Company',
-            budget: formatBudget(job && job.budget),
-            client_id: job && job.client_id,
-
           }}
 
           isOpen={isApplyModalOpen}

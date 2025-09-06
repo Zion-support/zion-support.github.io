@@ -11,23 +11,36 @@ export function Web3Login() {;
   const handleWeb3Login = async () => {
     if (!isWalletSystemAvailable) {
       toast("Web3 login unavailable", {
+        description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})
+      return
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+  const handleWeb3Login = async () => {
+    if (!isWalletSystemAvailable) {
+      toast("Web3 login unavailable", {
+        description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})
+      return
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  const handleWeb3Login = async () => {
+    if (!isWalletSystemAvailable) {
+      toast("Web3 login unavailable", {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),
       return;
-
     }
     try {
-
+      setIsLoading(true)
+      // Check if Ethereum provider (e.g., MetaMask) is available
+      const ethereum = (window as any).ethereum
       setIsLoading(true),
       
       // Check if Ethereum provider (e.g., MetaMask) is available
       const ethereum = (window as any).ethereum,
-
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet."}),
         return;
       }
-
+      await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
       
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
       
@@ -76,8 +89,14 @@ if ( {) {
         description: error.message || "Failed to connect wallet. Please try again."}),
       logErrorToProduction ('Web3 login error:', { data: error });
     } finally {
-      setIsLoading (false);
+      setIsLoading(false)
     }
+  }
+  const buttonDisabled = isLoading |!isWalletSystemAvailable
+  const buttonTitle = !isWalletSystemAvailable
+    ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
+    : ""
+}
 
   const { loginWithWeb3 } = useAuth();
   const { isWalletSystemAvailable } = useAppWallet();
@@ -134,6 +153,3 @@ if ( {) {
 }
   );
 }
-
-
-;

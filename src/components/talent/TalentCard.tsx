@@ -18,8 +18,6 @@ import { TalentProfile } from "@/types/talent";
 import { RatingStars  } from '@/components/RatingStars';
 import { useAuth  } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
-
-
 import { TalentProfile } from "@/types/talent",
 import { RatingStars } from '@/components/RatingStars',
 import { useAuth } from '@/context/auth/AuthProvider',
@@ -32,8 +30,6 @@ export interface TalentCardProps {
   onViewProfile: (id: string,) => void
   onRequestHire: (talent: TalentProfile,) => void
   isAuthenticated: boolean
-
-
 import React from 'react',;
 import { useRouter } from 'next/router',;
 import { Badge } from "@/components/ui/badge",;
@@ -67,21 +63,23 @@ const TalentCardComponent = ({
     if (onViewProfile) {
       onViewProfile(talent.id)
     }
+  },
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleRequestHire = (e: React.MouseEvent,) => {
     e.preventDefault()
     e.stopPropagation()
     if (onRequestHire) {
       onRequestHire(talent)
     }
-
-
+  }
   },
-
-
 
 
   // Extract skills - limit to 5 for display
@@ -129,12 +127,10 @@ const TalentCardComponent = ({;
   return (
     <Card
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
-
-
+      onClick = {handleViewProfile,}
+      tabIndex = {0,}
       onClick={handleViewProfile}
       tabIndex={0}
-
-
     >
       <div className="p-6">
         <div className="flex items-start">
@@ -143,19 +139,19 @@ const TalentCardComponent = ({;
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
               {talent.profile_picture_url ? (
                 <img
-
-
+                  src = {talent.profile_picture_url,}
+                  alt = {talent.full_name,}
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
 
 
                   className="w-full h-full object-cover"
                   loading="lazy"
-
-
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
+                  {talent.full_name?.charAt(0) |"T"}
                   {talent.full_name?.charAt(0) || "T"}
-
-
                 </div>
                 />;
               ) : (;
@@ -198,8 +194,9 @@ const TalentCardComponent = ({;
                   <span>{talent.availability_type}</span>
                 </div>
               )}
-
-
+            </div>
+          </div>
+        </div>
             </div>;
           </div>;
         </div>;
@@ -227,39 +224,6 @@ const TalentCardComponent = ({;
                 <span 
                   key={index}
 
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
-                >
-                  {skill}
-                </span>;
-              ))}
-
-              {(talent && talent.skills?.length || 0) > 5 && (;
-                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
-                  +{(talent && talent.skills?.length || 0) - 5} more;
-                </span>;
-
-              )}
-            </div>
-          </div>
-        )}
-
-
-
-        {/* Hourly Rate & Actions */}
-        <div className="mt-5 flex items-center justify-between">;
-          <div>;
-            {talent && talent.hourly_rate ? (;
-              <div className="text-white font-bold">;
-                ${talent && talent.hourly_rate}
-                <span className="text-zion-slate-light font-normal">/hr</span>;
-              </div>;
-            ) : (;
-              <div className="text-zion-slate-light">Rate not specified</div>;
-            )}
-
-
-          
-
 
           <div className="flex items-center gap-2">
             {isAuthenticated && (
@@ -270,11 +234,8 @@ const TalentCardComponent = ({;
               <Button
                 size="sm"
                 variant="secondary"
-
-
+                onClick = {handleRequestHire,}
                 onClick={handleRequestHire}
-
-
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
                 Hire
@@ -283,12 +244,6 @@ const TalentCardComponent = ({;
             <Button
               size="sm"
               variant="ghost"
-
-
-              onClick={(e) => {
-              onClick={(e) => {
-
-
                 e.stopPropagation(),
                 handleViewProfile()
               }}
@@ -301,9 +256,6 @@ const TalentCardComponent = ({;
       </div>
     </Card>
   )
-
-              onClick={(e,) => {;
-                e && e.stopPropagation(),;
                 handleViewProfile();
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";

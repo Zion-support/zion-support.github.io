@@ -1,8 +1,17 @@
-
-
+import React from 'react',
+import CodeSamples from './CodeSamples',
 import React from 'react';
 import CodeSamples from './CodeSamples';
+import TryItConsole from './TryItConsole';
+import { EndpointSpec } from '../../data/api-docs/types';
 
+<<<<<<< HEAD
+export default function EndpointDetail({
+  endpoint
+}: {
+  endpoint,
+}: {;
+=======
 
 import TryItConsole from './TryItConsole';
 
@@ -10,14 +19,17 @@ import TryItConsole from './TryItConsole';
   endpoint,
 }: {;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   endpoint: EndpointSpec;
 }) {
 
-
   return (
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <div className='space-y-4'>
 
       <div>
@@ -153,6 +165,11 @@ export default function EndpointDetail(): any ({;
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
             {endpoint.rateLimits.map((r, idx) => (
               <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>
+<<<<<<< HEAD
+            ))}
+
+<<<<<<< HEAD
+=======
 
             (endpoint && endpoint.auth || []).includes('jwt') ||
             (endpoint && endpoint.auth || []).includes('wallet')
@@ -166,6 +183,7 @@ export default function EndpointDetail(): any ({;
 
             ))}
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -248,6 +266,15 @@ export default function EndpointDetail(): any ({;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </ul>
         </div>
       )}
@@ -258,6 +285,8 @@ export default function EndpointDetail(): any ({;
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
             {endpoint.errors.map((e) => (
               <li key={e.code}><strong>{e.code}</strong> ({e.httpStatus}) - {e.message}</li>
+<<<<<<< HEAD
+
             ))}
 =======
 =======
@@ -297,12 +326,19 @@ export default function EndpointDetail(): any ({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+            ))}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </ul>
         </div>
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       )}
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           </span>        </div>;
       </div>;
@@ -369,10 +405,17 @@ export default function EndpointDetail(): any ({;
 }
 
 =======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 }
 
 }
+<<<<<<< HEAD
+}
+=======
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

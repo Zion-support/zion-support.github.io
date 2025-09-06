@@ -19,12 +19,42 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-
 import Head from 'next/head';
 import { motion  } from 'framer-motion';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026',
 import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
+<<<<<<< HEAD
+export default function ServicesShowcase2026V3() {
+
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup && ziontechgroup.com',  };
+
+=======
+export default function ServicesShowcase2026V3() {
+<<<<<<< HEAD
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',  }
+
+=======
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup.com',  };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 
@@ -37,6 +67,7 @@ export default function ServicesShowcase2026V3() {;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',  };
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <UltraQuantumHolographicBackground
       intensity="extreme" 
@@ -62,34 +93,12 @@ export default function ServicesShowcase2026V3() {;
 
       <div className='min-h-screen'>      <div className="min-h-screen">;
         {/* Navigation */}
-        <UltraAdvancedNavigation2026 />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-        {/* Hero Section */}
-        <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative'>;
-          <div className='max-w-7xl mx-auto text-center'>            <motion && motion.div        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">;
-          <div className="max-w-7xl mx-auto text-center">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}>;
-              <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>;
-                Revolutionary 2026 Services;
-              </h1>;
-              <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8'>;
-                Experience the future of technology with our cutting-edge micro;
-                SAAS, AI, and emerging technology solutions. Transform your;
-                business with services designed for tomorrow's challenges.;
-              </p>;
-              <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
-                <motion&& motion.a
-                  href='#services'
-
-
-      <div className="min-h-screen">
+        <UltraAdvancedNavigation2026 />
         {/* Navigation */}
         <UltraAdvancedNavigation2026 />
 
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -99,16 +108,20 @@ export default function ServicesShowcase2026V3() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -188,7 +201,10 @@ export default function ServicesShowcase2026V3() {;
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -250,6 +266,10 @@ export default function ServicesShowcase2026V3() {;
         </section>
       </div>
     </UltraQuantumHolographicBackground>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}>;
@@ -384,8 +404,16 @@ function ServicesShowcase2026V3() {
 
 }
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>                <motion.a;
                   href={`tel:${contact_info.mobile}`}
                   while_hover={{ scale: 1.05 }}
@@ -454,4 +482,9 @@ function ServicesShowcase2026V3() {
       </div>;
     </UltraQuantumHolographicBackground>);
 }
+<<<<<<< HEAD
+  );
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

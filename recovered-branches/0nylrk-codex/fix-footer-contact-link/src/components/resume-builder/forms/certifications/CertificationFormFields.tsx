@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { UseFormReturn } from "react-hook-form";
+import { CertificationFormValues } from "./types";
+=======
 
   FormField,
   FormItem,
@@ -9,14 +21,21 @@
 import { Input  } from '@/components / ui / input';
 import { UseFormReturn  } from './react - hook - form';
 import { CertificationFormValues  } from './types';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 interface CertificationFormFieldsProps {
   form: UseFormReturn < CertificationFormValues>;
 }
+<<<<<<< HEAD
+export function CertificationFormFields({
+  form
+}: CertificationFormFieldsProps) {
+=======
 
 =======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';
 import {Input} from '@/components/ui/input';
 import {UseFormReturn} from 'react-hook-form';
@@ -24,22 +43,27 @@ import {CertificationFormValues} from './types';
 
 interface CertificationFormFieldsProps {
   form: UseFormReturn<CertificationFormValues>
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
 import { Input } from '@/components/ui/input',;
 import { UseFormReturn } from 'react-hook-form',;
 import { CertificationFormValues } from './types';
 interface CertificationFormFieldsProps {;
   form: UseFormReturn<CertificationFormValues>;
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
-export function CertificationFormFields(): any ({ form }: CertificationFormFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+export function CertificationFormFields({ form }: CertificationFormFieldsProps) {
   return (
     <>;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -92,61 +116,33 @@ function CertificationFormFields() {
           name="issuing_organization";
 
           render={({ field }) => (
-            <FormItem>;
-              <FormLabel > Issuing Organization</FormLabel>;
-              <FormControl>;
-                <Input;
-                  placeholder="Amazon Web Services, PMI, etc.";
-                  {...field}
-
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Issuing Organization</FormLabel>;
-              <FormControl>;
-                <Input placeholder="Amazon Web Services, PMI, etc." {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-        />;
-      </div>;
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
-        <FormField
-          control={form && form.control}
-          name="issue_date"
-
-
+            <FormItem>
+              <FormLabel>Issue Date</FormLabel>
+              <FormControl>
+                <Input type="date" {...field} value={field.value |""} />
                 <Input 
                   type="date" 
                   {...field}
                   value={field.value || ''}
                 />
-
-
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Issue Date</FormLabel>;
-              <FormControl>;
-                <Input
-=======
-
+        />
+        <FormField
         />;
         <FormField;
-
           control={form.control}
           name="expiration_date"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Expiration Date (Optional)</FormLabel>
               <FormControl>
-
+                <Input type="date" {...field} value={field.value |""} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
                 <Input 
 
                   type="date" 
@@ -156,9 +152,6 @@ function CertificationFormFields() {
               </FormControl>;
               <FormMessage />;
             </FormItem>;
-
-
-
           )}
         />;
 
@@ -180,6 +173,16 @@ function CertificationFormFields() {
               <FormMessage />;
             </FormItem>;
           )}
+<<<<<<< HEAD
+        />
+      </div>
+    </>
+  );
+}
+  )
+}
+;
+=======
         />;
       </div>;
 
@@ -290,3 +293,4 @@ function CertificationFormFields() {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,8 +1,5 @@
-
-
+import type { GetServerSideProps, NextPage } from 'next',
 import type { GetServerSideProps, NextPage } from 'next';
-
-
 import Head from 'next/head';
 import Link from 'next/link';
 import { BlogPost  } from '@/utils/types/blog';
@@ -91,6 +88,10 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
                 }),
               }).catch (() => {});
             }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           />;
         </div>;
         <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
@@ -105,6 +106,12 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
       </div>;
 
 
+export const getServerSideProps: GetServerSideProps = async ctx => {;
+  const topic = String(ctx.params?.topic || '');
+  const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
+  return { props: { topic, posts } }
+}
+export default TopicPage;      </Head>
       <div className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>
         <div className="mb-6">
@@ -134,6 +141,19 @@ export default TopicPage;      </Head>;
           {posts && posts.map((p) => (;
             <BlogCard key={p && p.id} post={p} />;
           ))}
+<<<<<<< HEAD
+        </div>
+        <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>
+      </div>
+    </div>
+  )
+}
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const topic = String(ctx.params?.topic |'');
+};
+export const getServerSideProps: GetServerSideProps = async (ctx) => {;
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+=======
 
         </div>;
         <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>;
@@ -141,6 +161,7 @@ export default TopicPage;      </Head>;
     </div>;
   );
 };
+
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const topic = String(ctx && ctx.params?.topic || '');
   const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
@@ -151,55 +172,11 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
 };
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const topic = String(ctx.params?.topic || '');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return { props: { topic, posts } }
 }
 export default TopicPage;
 
-
-
-=======
-    </div>);
-}
-;
-export const getServerSideProps: GetServerSideProps = async ctx => {
-  const topic = String (ctx.params?.topic || '');
-  const posts = listPublishedPosts ().filter (p => p.topics.includes (topic));
-  return { props: { topic, posts } }
-}
-;
-export default TopicPage;      </Head>;
-      <div className="mx - auto max - w-6xl">;
-        <h1 className="text - 4xl font - bold mb - 3">{topic}</h1>;
-        <div className="mb - 6">;
-          <PageShareButtons;
-            title={`${topic} - Zion Blog`}
-            url={typeof window === 'undefined' ? `https://zion.app / categories/${encodeURIComponent (topic)}` : window.location.href}
-            description={`Articles about ${topic}`}
-            on_share={(network) => fetch ('/api / analytics / share', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ url: window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium = share & utm_campaign = category' }) }).catch (() => {})}
-          />;
-        </div>;
-        <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
-          {posts.map ((p) => (
-            <BlogCard key={p.id} post={p} />))}
-        </div>;
-        <div className="mt - 6"><Link href="/blog" className="underline">Back to Blog</Link></div>;
-      </div>;
-    </div>);
-}
-;
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const topic = String (ctx.params?.topic || '');
-  const posts = listPublishedPosts ().filter ((p) => p.topics.includes (topic));
-  return { props: { topic, posts } }
-}
-;
-export default TopicPage;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -3,11 +3,7 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
 
   const handlePaymentInitiated = () => {
     toast({
-
-
       title: 'Processing your request',
-
-
       description:
         "You'll be redirected to our secure payment portal momentarily."
     })

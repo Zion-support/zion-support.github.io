@@ -296,7 +296,6 @@ import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, P
 export function FeaturesGuideSection() {
   const features = [
     {
-
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
@@ -675,12 +674,7 @@ export function FeaturesGuideSection() {;
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
-
-      id: "ai-matcher",
-      title: "AI Matcher",
-      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
-      icon: <Sparkles className = "h-10 w-10 text-zion-cyan" />,
-
+                className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace"
         "Fill in your project requirements and specifications"
@@ -1342,9 +1336,12 @@ function FeaturesGuideSection() {
               </TabsTrigger>
             ))}
           </TabsList>
-
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
-
+          <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>
+            {features.slice(4).map(feature => (
+              <TabsTrigger
+                key={feature.id}
+                value={feature.id}
+                className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
             {features.slice(4).map(feature => (
               <TabsTrigger
                 key={feature.id}
@@ -1526,25 +1523,6 @@ function FeaturesGuideSection() {
                       <li key={idx} className="text-zion-slate-light">;
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>;
                       </li>;
-
-                    ))}
-                  </ol>;
-                </div>;
-              </div>;
-            </TabsContent>;
-          ))}
-
-
-          <Button
-            variant='outline'
-            className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'
-            asChild>;
-            <Link
-              href='/marketplace'              onClick={() => fireEvent('explore_marketplace_click')}
-              href="/marketplace";
-              onClick = {() => fireEvent('explore_marketplace_click'),}
-
-
                     ))}
                   </ol>
                 </div>
@@ -1552,8 +1530,7 @@ function FeaturesGuideSection() {
             </TabsContent>
           ))}
         </Tabs>
-
-
+        <div className='mt-12 text-center'>
         
         <div className="mt-12 text-center">
 
@@ -1564,9 +1541,12 @@ function FeaturesGuideSection() {
             asChild
           >
             <Link
-
-
-
+              href='/marketplace'              onClick={() => fireEvent('explore_marketplace_click')}
+              href="/marketplace"
+              onClick = {() => fireEvent('explore_marketplace_click'),}
+            >
+              Explore Full Marketplace
+              <ArrowRight className='ml-2 h-4 w-4' />            </Link>              <ArrowRight className="ml-2 h-4 w-4" />
               href="/marketplace"
               onClick={() => fireEvent('explore_marketplace_click')}
             >
@@ -1580,18 +1560,6 @@ function FeaturesGuideSection() {
         </div>
       </div>
     </section>
-
-
-            >;
-              Explore Full Marketplace;
-              <ArrowRight className='ml-2 h-4 w-4' />            </Link>              <ArrowRight className="ml-2 h-4 w-4" />;
-            </Link>;
-          </Button>;
-        </div>;
-      </div>;
-    </section>;
-  );
-}
   );
 };
 

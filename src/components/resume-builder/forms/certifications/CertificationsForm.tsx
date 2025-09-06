@@ -16,7 +16,6 @@ return (
         <CertificationsList
           certifications={certifications}
           onEdit={handleEdit}
-          onDelete={handleDelete}        />;
       )}
 
 
@@ -26,9 +25,6 @@ return (
           onEdit={handleEdit} 
           onDelete={handleDelete} 
         />
-
-
-
       )}
 
       <div className="bg-muted/40 p-6 rounded-lg">
@@ -44,36 +40,18 @@ return (
 
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
-
             <div className="flex justify-between pt-2">
               <Button
                 type="button"
                 variant="outline"
                 onClick={() => {
                   if (editingId) {
-
-
-                    setEditingId(null),
-                    setEditingId(null),
-
-
                     form.reset({
                       name: '',
                       issuing_organization: '',
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
-
-
-                    setEditingId(null),
-                    setEditingId(null),
-                    form.reset({
-                      name: '',
-                      issuing_organization: '',
-                      issue_date: '',
-                      expiration_date: '',
-                      credential_id: '',
-                      credential_url: ''})
                   } else {
                     onBack()
 
@@ -117,7 +95,14 @@ return (
                 {editingId ? 'Cancel' : 'Back'}
 
               </Button>
-
+              <div className='flex gap-2'>
+                <Button type='submit' disabled={isLoading}>
+                  {isLoading && (
+                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+                  )}
+                  {editingId ? 'Update' : 'Add'} Certification
+                </Button>
+                <Button type='button' onClick={onComplete}>
 
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
@@ -271,8 +256,8 @@ if ( {) {
       </div>;
     </div>);
 }> {
-  editing_id ? 'Cancel' : 'Back';
-}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>);
+  editingId ? 'Cancel' : 'Back'
+}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>)
 }'"}
 
 }

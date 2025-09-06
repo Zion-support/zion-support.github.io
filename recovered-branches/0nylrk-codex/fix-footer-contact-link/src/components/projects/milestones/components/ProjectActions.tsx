@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { Link  } from 'react-router-dom';
+import { ShieldAlert } from "lucide-react";
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+interface ProjectActionsProps {
+=======
 =======
 
 
@@ -7,28 +15,57 @@ import {Button} from '@/components/ui/button';
 import {Link} from 'react-router-dom';
 import {ShieldAlert} from "lucide-react";
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+  projectId: string
+  isUnderDispute: boolean
+  disputeId?: string;
+  isTalent: boolean
 
+<<<<<<< HEAD
+import {Button} from '@/components/ui/button';
+import {Link} from 'react-router-dom';
+import {ShieldAlert} from "lucide-react";
+import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 =======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { Link } from 'react-router-dom',
 import { ShieldAlert } from "lucide-react",
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ProjectActionsProps {
   projectId: string,
   isUnderDispute: boolean,
   disputeId?: string,
   isTalent: boolean,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onAddMilestone: () => void
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export function ProjectActions({;
+  projectId;
+  isUnderDispute;
+  disputeId;
+  isTalent;
+export function ProjectActions({
+  projectId,
+  isUnderDispute,
+  disputeId,
+  isTalent,
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onAddMilestone
 }: ProjectActionsProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -39,7 +76,6 @@ interface ProjectActionsProps {
           projectId={projectId}
           variant="outline"
         />
-
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Link } from 'react-router-dom',;
@@ -76,9 +112,12 @@ export function ProjectActions({;
           projectId={projectId}
           variant="outline"
         />;
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>

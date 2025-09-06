@@ -83,13 +83,10 @@ if ( {) {
       });
     }
 
-=======
-        users: Object.keys(users).length,
-        courses: courses.length,
-        completions: Object.values(users).reduce((acc, u) => acc + (u.certifications?.length || 0), 0)
-      },
-      topBadges: Object.values(users).reduce((map, u) => {
-        (u.badges || []).forEach((b) => { map[b] = (map[b] || 0) + 1 }),
+
+    const owner = process.env.GITHUB_OWNER,
+    const repo = process.env.GITHUB_REPO,
+    const token = process.env.GITHUB_TOKEN,
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         return map
@@ -171,17 +168,4 @@ if ( {) {
 
 },
 
-=======
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
-    return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
-  } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-  }
-
-},
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,6 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+ //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+ //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+  
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }];
 setIsSearching (true);
 
@@ -92,15 +102,15 @@ setIsSearching (false) ;
   opacity: 1, y: 0, scale: 1
 }exit= {
   {
-
-
+  opacity: 0, y: -10, scale: 0.95
+}transition= {
+  {
+  duration: 0.2
   opacity: 0, y: -10, scale: 0.95 
 
 }transition= {
   {
   duration: 0.2 
-
-
 
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto" > {
   /* Filters */
@@ -713,6 +723,8 @@ function debounce<T extends (...args: any[]) => any>(;
 }
 export default EnhancedSearch;
 
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -828,6 +840,7 @@ export default EnhancedSearch;
 }</div> </div> </div>);
 }</div> </motion.div>);
 }</AnimatePresence> </div>);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 // Debounce utility function function debounce < T extends (...args: unknown[]) => any> (func: T;
 wait: number;
@@ -842,6 +855,15 @@ function debounce < T extends (...args: any[]) => any>(
     timeout = set_timeout (() => func (...args), wait);
   }
 }
+<<<<<<< HEAD
+}
+}
+}
+}
+}
+}
+=======
 export default EnhancedSearch;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

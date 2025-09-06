@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React, { useState } from 'react',
+=======
 
 
 class ErrorBoundary extends React.Component {
@@ -22,10 +25,103 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react';
+import Head from 'next/head';
 
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
+=======
+import {
+<<<<<<< HEAD
+  Check
+  Star
+  Zap
+  Shield
+  Users
+  Globe
+  ArrowRight
+  ExternalLink
+  TrendingUp
+  Clock
+  Target
+  Building
+  Rocket
+  Award
+  DollarSign
+  ChartBar
+  Lock
+  Cpu
+  Database
+  Cloud
+  Smartphone
+  Palette
+  Search
+  MessageSquare
+  FileText
+  Calendar
+  CreditCard
+  BarChart3
+  Settings
+  Zap as ZapIcon
+  Code
+  BookOpen
+  Activity
+  Database as DatabaseIcon
+  Play
+  Mail
+  Phone
+  MapPin
+  Filter
+  Grid
+  List
+  ChevronDown
+  ChevronUp
+  Sparkles
+  FlaskConical
+  Dna
+  Car
+  Leaf
+  Factory
+  Truck
+  Microscope
+  GraduationCap
+  ShieldCheck
+  Brain
+  Atom
+  Globe2
+  Bot
+  Eye
+  Target as TargetIcon
+  Zap as ZapIcon2
+  Shield as ShieldIcon
+  Globe as GlobeIcon
+  Cpu as CpuIcon
+  Cloud as CloudIcon
+  Bot as BotIcon
+  Lock as LockIcon
+  BarChart3 as BarChart3Icon
+  TrendingUp as TrendingUpIcon
+  Users as UsersIcon
+  Award as AwardIcon
+  Star as StarIcon
+  Check as CheckIcon
+  ArrowRight as ArrowRightIcon
+  ExternalLink as ExternalLinkIcon
+  Phone as PhoneIcon
+  Mail as MailIcon
+  MapPin as MapPinIcon
+  Trophy
+  FlaskConical as FlaskConicalIcon
+  Dna as DnaIcon
+  Car as CarIcon
+  Leaf as LeafIcon
+  Factory as FactoryIcon
+  Truck as TruckIcon
+  Microscope as MicroscopeIcon
+  GraduationCap as GraduationCapIcon
+  ShieldCheck as ShieldCheckIcon;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
@@ -170,7 +266,10 @@ export default function InnovativeServicesPage() {;
 
   GraduationCap as GraduationCapIcon,;
   ShieldCheck as ShieldCheckIcon,;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -179,6 +278,23 @@ import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 import {
+<<<<<<< HEAD
+  innovativeMicroSaasServices
+  getInnovativeServicesByCategory
+  getPopularInnovativeServices
+  getInnovativeServicesByPriceRange
+  getInnovativeServiceCategories;
+} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+
+export default function InnovativeServicesPage() {
+  innovativeMicroSaasServices,
+  getInnovativeServicesByCategory,
+  getPopularInnovativeServices,
+  getInnovativeServicesByPriceRange,;
+  getInnovativeServiceCategories,;
+} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+export default function InnovativeServicesPage() {;
+=======
 
   innovativeMicroSaasServices,
   getInnovativeServicesByCategory,
@@ -188,6 +304,7 @@ import {
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 export default function InnovativeServicesPage() {;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
@@ -214,11 +331,40 @@ export default function InnovativeServicesPage() {;
     { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
 
   ];
-
-    filteredServices = filteredServices.filter(service =>
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  // Filter and sort services
+  let filteredServices = innovativeMicroSaasServices;
+  // Category filter
+  if (selectedCategory !== 'All') {
+    filteredServices = getInnovativeServicesByCategory(selectedCategory);  }
+  // Price range filter
+  if (priceRange !== 'All') {
+    const [min, max] = priceRange
+      .split('-')
+      .map(p => (p === '+' ? Infinity : parseInt(p)));
+    filteredServices = getInnovativeServicesByPriceRange(min, max);  }
+  // Search filter
+  if (searchQuery) {    filteredServices = getInnovativeServicesByCategory(selectedCategory)
+  }
+  // Price range filter
+  if (priceRange !== 'All') {
+    const [min, max] = priceRange
+      .split('-')
+      .map(p => (p === '+' ? Infinity : parseInt(p)));
+    filteredServices = getInnovativeServicesByPriceRange(min, max);    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+    filteredServices = getInnovativeServicesByPriceRange(min, max)
+  }
+  // Search filter
+  if (searchQuery) {
+    filteredServices = filteredServices.filter(
+      service =>
+        service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.category.toLowerCase().includes(searchQuery.toLowerCase())
+    );  }    filteredServices = filteredServices.filter(service =>
+      service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+      service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+      service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
     )
   }
@@ -362,9 +508,6 @@ if ( {) {
 
   };
 
-
-
-
   const popularServices = getPopularInnovativeServices();
   const categories = getInnovativeServiceCategories();
   return (
@@ -432,63 +575,87 @@ if ( {) {
                       <option value="All">All Categories</option>
                       {categories.map((category) => (
                         <option key={category.name} value={category.name}>
-=======
-                      onChange={e => setSelectedCategory(e.target.value)}
-                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-                    >
-                      <option value='All'>All Categories</option>
-
                       {categories.map(category => (                        <option key={category.name} value={category.name}>
 
                         <option key={category.name} value={category.name}>
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           {category.name} ({category.count})
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
+                    </select>
+                  </div>
+                  {/* Price Range Filter */}
+                  <div className='flex-shrink-0'>
 
-                    </select>;
-                  </div>;
+
+<<<<<<< HEAD
+                    <select
+                      value={priceRange}
+                      onChange={e => setPriceRange(e.target.value)}
+                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                    >
+                      {priceRanges.map(range => (                        <option key={range.value} value={range.value}>                    <select
+                      value={priceRange}
+                      onChange={(e) => setPriceRange(e.target.value)}
+                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      {priceRanges.map((range) => (
+                        <option key={range.value} value={range.value}>
+                      {priceRanges.map(range => (                        <option key={range.value} value={range.value}>
+
+                        <option key={range.value} value={range.value}>
+
 =======
 
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                  {/* Price Range Filter */}
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           {range.label}
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
+                    </select>
+                  </div>
+                  {/* Sort Options */}
+                  <div className='flex-shrink-0'>
 
-                    </select>;
-                  </div>;
+
+<<<<<<< HEAD
+                    <select
+                      value={sortBy}
+                      onChange={e => setSortBy(e.target.value)}
+                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                    >
+                      {sortOptions.map(option => (                        <option key={option.value} value={option.value}>                    <select
+                      value={sortBy}
+                      onChange={(e) => setSortBy(e.target.value)}
+                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      {sortOptions.map((option) => (
+                        <option key={option.value} value={option.value}>
+                      {sortOptions.map(option => (                        <option key={option.value} value={option.value}>
+
+                        <option key={option.value} value={option.value}>
+
 =======
 
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                  {/* Sort Options */}
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           {option.value}
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
-
-                    </select>;
-                  </div>;
-
-
+                    </select>
+                  </div>
                   {/* View Mode Toggle */}
                   <div className='flex-shrink-0'>;
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>;
@@ -515,9 +682,12 @@ if ( {) {
                   <div className='flex-shrink-0'>
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <button
                         onClick={() => setViewMode('grid')}
                         className={`px-3 py-2 rounded-lg transition-all ${;
@@ -532,8 +702,22 @@ if ( {) {
                       <button
                         onClick={() => setViewMode('list')}
                         className={`px-3 py-2 rounded-lg transition-all ${
+                          viewMode === 'list'
+                            ? 'bg-cyan-500 text-white'
+                            : 'text-gray-400 hover:text-white'
+                        }`}
+                      >
+                        <List className='w-5 h-5' />                      </button>                          viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
+                        }`}
+                      >
+                        <List className="w-5 h-5" />
 
+<<<<<<< HEAD
+                      </button>
+
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </div>
                   </div>
                 </div>
@@ -684,7 +868,34 @@ if ( {) {
                             </div>
                           </div>
                           {service.popular && (
-
+                            <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'>                              POPULAR              {filteredServices.length === 0 ? (
+                <div className="text-center py-20">
+                  <div className="text-6xl mb-4">🔍</div>
+                  <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+                  <p className="text-gray-400">Try adjusting your search criteria or filters</p>
+                </div>
+              ) : (
+                <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+                  {filteredServices.map((service) => (
+                    <QuantumHolographicCard key={service.id} className="group">
+                      <div className="p-6">
+                        {/* Service Header */}
+                        <div className="flex items-start justify-between mb-4">
+                          <div className="flex items-center space-x-3">
+                            <div className="text-3xl">{service.icon}</div>
+                            <div>
+                              <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                                {service.name}
+                              </h3>
+                              <p className="text-sm text-gray-400">{service.category}</p>
+                            </div>
+                          </div>
+                          {service.popular && (
+                            <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">
+                              POPULAR
+                            </div>
+                          )}
+                        </div>
                             <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'>                              POPULAR
 
                               POPULAR
@@ -693,17 +904,23 @@ if ( {) {
                           )}
                         </div>
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         {/* Tagline */}
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
                         </p>
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         {/* Description */}
                         <p className='text-gray-400 text-sm mb-6 leading-relaxed'>
                           {service.description}
@@ -787,12 +1004,19 @@ if ( {) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             )}
+                          </div>
+                        </div>
+                        {/* Market Info */}
+                        <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
 
                         <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           <div>
                             <div className='text-gray-400'>Market Size</div>
                             <div className='text-white font-medium'>
@@ -884,19 +1108,31 @@ if ( {) {
                   ))}
 </div>;
               )}
+            </div>
+          </section>
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Call to Action */}
+          <section className='px-4 sm:px-6 lg:px-8 mb-20'>
+            <div className='max-w-4xl mx-auto text-center'>
+              <EnhancedFuturisticCard className='p-12'>
+                <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   Ready to Lead the Future?
                 </h2>
                 <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -965,13 +1201,7 @@ if ( {) {
                   <Button
                     href={`mailto:${contactInfo && contactInfo.email}`}
                     variant='secondary'
-
-          <section className="px-4 sm:px-6 lg:px-8 mb-20">
-            <div className="max-w-4xl mx-auto text-center">
-              <EnhancedFuturisticCard className="p-12">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Ready to Lead the Future?
-
+                    className='px-8 py-4 text-lg'                  Ready to Lead the Future?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                   Join the revolution with our breakthrough micro SAAS services.
@@ -991,8 +1221,27 @@ if ( {) {
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-=======
-
+                    Call Now: {contactInfo.mobile}
+                  </Button>
+                  <Button
+                    href={`mailto:${contactInfo.email}`}
+                    variant='secondary'
+                    className='px-8 py-4 text-lg'
+                  >
+                    <Mail className='w-5 h-5 mr-2' />
+                    Email Us
+                  </Button>
+                </div>
+                <div className='mt-8 text-sm text-gray-400'>
+                  <div>Address: {contactInfo.address}</div>
+                  <div className='mt-1'>Website: {contactInfo.website}</div>                </div>                  >
+                    <Mail className="w-5 h-5 mr-2" />
+                    Email Us
+                  </Button>
+                </div>
+                <div className="mt-8 text-sm text-gray-400">
+                  <div>Address: {contactInfo.address}</div>
+                  <div className="mt-1">Website: {contactInfo.website}</div>
                     className='px-8 py-4 text-lg'
 
 
@@ -1001,10 +1250,13 @@ if ( {) {
                   <Button
                     href={`mailto:${contactInfo.email}`}
 
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </div>
               </EnhancedFuturisticCard>
             </div>
@@ -1012,6 +1264,10 @@ if ( {) {
         </div>
       </QuantumHolographicBackground>
     </>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     className='px-8 py-4 text-lg'>;
                     <Mail className='w-5 h-5 mr-2' />;
@@ -1252,11 +1508,25 @@ if ( {) {
       </QuantumHolographicBackground>;
 
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 =======
 
   );
+<<<<<<< HEAD
+=======
+}
+
+=======
+
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -1270,4 +1540,11 @@ if ( {) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 }
+<<<<<<< HEAD
+}
+}
+  );
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

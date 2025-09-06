@@ -1,37 +1,142 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
+import {
+  Menu
+  X
+  ChevronDown
+  ChevronRight
+  Phone
+  Mail
+  MapPin
+  Globe
+  ArrowRight
+  Sparkles
+  Brain
+  Atom
+  Shield
+  DollarSign
+  FileText
+  BarChart3
+  MessageSquare
+  Truck
+  Users
+  Database
+  Cpu
+  Cloud
+  Play
+  Search
+  ShieldCheck
+  TrendingUp
+  Rocket
+  Zap
+  Check
+  Star
+  Clock
+  Target
+  Building
+  Award
+  ChartBar
+  Lock
+  Smartphone
+  Palette
+  Calendar
+  CreditCard
+  Settings
+  Code
+  BookOpen
+  Activity
+  Bot
+  ChevronRight as ChevronRightIcon
+  Eye
+  FlaskConical
+  Link as LinkIcon;
+import Button from '../ui/Button';
+import {
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Sparkles,
+  Brain,
+  Atom,
+  Shield,
+  DollarSign,
+  FileText,
+  BarChart3,
+  MessageSquare,
+  Truck,
+  Users,
+  Database,
+  Cpu,
+  Cloud,
+  Play,
+  Search,
+  ShieldCheck,
+  TrendingUp,
+  Rocket,
+  Zap,
+  Check,
+  Star,
+  Clock,
+  Target,
+  Building,
+  Award,
+  ChartBar,
+  Lock,
+  Smartphone,
+  Palette,
+  Calendar,
+  CreditCard,
+  Settings,
+  Code,
+  BookOpen,
+  Activity,
+  Bot,
+  ChevronRight as ChevronRightIcon,
+  Eye,
+  FlaskConical,;
+  Link as LinkIcon,;
+import Button from '../ui/Button';
+export default function NeoFuturisticNavigation() {;
+
+export default function NeoFuturisticNavigation() {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const router = useRouter();
-
-
-
-
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com'
+  }
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  }
+  const closeMobileMenu = () => {
+    setIsOpen(false);
+    setActiveDropdown(null);
+  }
+  const isActive = (path: string) => router.pathname === path;
 
   const serviceCategories = [
     {
@@ -324,10 +429,6 @@ import React, { useState, useEffect } from 'react';
     }
   ];
 
-
-
-
-
   // Popular quick links to flagship services
   const popularServiceLinks = [
     { name: 'AI Content Generator', href: '/ai-content-generator' }
@@ -340,10 +441,6 @@ import React, { useState, useEffect } from 'react';
     { name: 'AI Sales Automation', href: '/ai-sales-automation' }
     { name: 'AI Market Research', href: '/ai-market-research' }
   ];
-
-
-
-
 
   // Newly added real services quick links
   const newServiceLinks = [
@@ -1456,12 +1553,17 @@ export default function NeoFuturisticNavigation() {;
                   <span>Services</span>;
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
+                  />
+                </button>
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
@@ -1565,7 +1667,10 @@ export default function NeoFuturisticNavigation() {;
                     </div>;
                   </div>;
                 )}
+              </div>
 
+<<<<<<< HEAD
+=======
               </div>;
 
 
@@ -1575,6 +1680,7 @@ export default function NeoFuturisticNavigation() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Company Section */}
               <div>;
                 <button
@@ -2531,127 +2637,7 @@ icon: <Atom className="w-5 h-5" />,
 				</div>
 			)}
 		</nav>
-
-
-  `w-4 h-4 transition-transform duration-300 $ {;
-  activeDropdown === 'services' ? 'rotate-180' : '' ;
-}` ;
-}/> </button> </div>) ) ;
-}</div> </div>) ) ;
-}</div> <div className="mt-6 pt-6 border-t border-gray-700/50" > <div className="flex items-center justify-between" > <div className="text-gray-400 text-sm" > <span className="text-cyan-400 font-semibold" >500+</span> Revolutionary Services Available </div> <Button href="/services" variant="quantum" size="sm" > View All Services <ArrowRight className="w-4 h-4 ml-2" /> </Button> </div> </div> </div>) ;
-}</div> > <span>Popular</span> <ChevronDownclassName= {
-  `w-4 h-4 transition-transform duration-300 $ {
-  activeDropdown === 'popular'? 'rotate-180': '' 
-}` 
-}/> </button>) ) ;
-}</div> </div>) ;
-}</div>) ) ;
-}</div> </div>) ;
-}</div> </div> </button> </div> </div> <span>Services</span> <ChevronRightclassName= {
-  `w-5 h-5 transition-transform duration-300 $ {
-  activeDropdown === 'mobile-services'? 'rotate-90': '' 
-}` 
-}/> </button>) ) ;
-}</div> </div>) ) ;
-}<div className="pt-3" > <Button href="/services" variant="quantum" size="sm" className="w-full" > View All Services <ArrowRight className="w-4 h-4 ml-2" /> </Button> </div> </div>) ;
-}</div> {;
-  /* Company Section */ ;
-}<div> <span>Company</span> <ChevronRightclassName= {
-  `w-5 h-5 transition-transform duration-300 $ {
-  activeDropdown === 'mobile-company'? 'rotate-90': '' 
-}` 
-}/> </button>) ) ;
-}</div>) ;
-}</div> {;
-  /* Resources Section */ ;
-}<div> <span>Resources</span> <ChevronRightclassName= {
-  `w-5 h-5 transition-transform duration-300 $ {
-
-  activeDropdown === 'mobile-resources'? 'rotate-90': '' 
-}` 
-}/> </button>) ) ;
-}</div>) ;
-}</div> </div> </div> <div className="mt-6 space-y-3" > <Button href="/services" variant="quantum" size="lg" className="w-full" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w-full" > Contact Us </Button> </div> </div> </div> </div> </div>) ;
-}</nav>) 								<div className="mt-6 space-y-3">;
-									<Button href="/services" variant="quantum" size="lg" className="w-full">;
-										Explore Services;
-										<ArrowRight className="w-5 h-5 ml-2" />;
-									</Button>;
-									<Button href="/contact" variant="secondary" size="lg" className="w-full">;
-										Contact Us;
-									</Button>;
-								</div>;
-							</div>;
-						</div>;
-					</div>;
-				</div>;
-			)}
-		</nav>;
+);
+}
 	);
 }
-
-
-=======
-        </div>)}
-    </nav>);
-;
-  `w - 4 h - 4 transition - transform duration - 300 $ {
-  active_dropdown === 'services' ? 'rotate - 180' : '';
-}`;
-}/> </button> </div>) );
-}</div> </div>) );
-}</div> <div className="mt - 6 pt - 6 border - t border - gray - 700 / 50" > <div className="flex items - center justify - between" > <div className="text - gray - 400 text - sm" > <span className="text - cyan - 400 font - semibold" >500+</span> Revolutionary Services Available </div> <Button href="/services" variant="quantum" size="sm" > View All Services <ArrowRight className="w - 4 h - 4 ml - 2" /> </Button> </div> </div> </div>);
-}</div> > <span > Popular</span> <ChevronDown className= {
-  `w - 4 h - 4 transition - transform duration - 300 $ {
-  active_dropdown === 'popular'? 'rotate - 180': '';
-}`;
-}/> </button>) );
-}</div> </div>);
-}</div>) );
-}</div> </div>);
-}</div> </div> </button> </div> </div> <span > Services</span> <ChevronRight className= {
-  `w - 5 h - 5 transition - transform duration - 300 $ {
-  active_dropdown === 'mobile - services'? 'rotate - 90': '';
-}`;
-}/> </button>) );
-}</div> </div>) );
-}<div className="pt - 3" > <Button href="/services" variant="quantum" size="sm" className="w - full" > View All Services <ArrowRight className="w - 4 h - 4 ml - 2" /> </Button> </div> </div>);
-}</div> {
-  /* Company Section */;
-}<div> <span > Company</span> <ChevronRight className= {
-  `w - 5 h - 5 transition - transform duration - 300 $ {
-  active_dropdown === 'mobile - company'? 'rotate - 90': '';
-}`;
-}/> </button>) );
-}</div>);
-}</div> {
-  /* Resources Section */;
-}<div> <span > Resources</span> <ChevronRight className= {
-  `w - 5 h - 5 transition - transform duration - 300 $ {
-  active_dropdown === 'mobile - resources'? 'rotate - 90': '';
-}`;
-}/> </button>) );
-}</div>);
-}</div> </div> </div> <div className="mt - 6 space - y-3" > <Button href="/services" variant="quantum" size="lg" className="w - full" > Explore Services <ArrowRight className="w - 5 h - 5 ml - 2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w - full" > Contact Us </Button> </div> </div> </div> </div> </div>);
-}</nav>) 								<div className="mt - 6 space - y-3">;
-        <Button href="/services" variant="quantum" size="lg" className="w - full">;
-          Explore Services;
-          <ArrowRight className="w - 5 h - 5 ml - 2" />;
-        </Button>;
-        <Button href="/contact" variant="secondary" size="lg" className="w - full">;
-          Contact Us;
-        </Button>;
-        </div>;
-      </div>;
-      </div>;
-    </div>;
-    </div>)}
-  </nav>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-	);
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

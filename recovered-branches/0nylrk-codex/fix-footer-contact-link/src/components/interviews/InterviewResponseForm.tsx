@@ -23,12 +23,21 @@ export function InterviewResponseForm(): any ({;
   const interviewDate = parseISO(interview && interview.scheduled_date);
   const formattedDate = format(interviewDate, "EEEE, MMMM d");
   const formattedTime = format(interviewDate, "h: mm a");
-=======
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Interview } from "@/types/interview";
 import { format, parseISO } from "date-fns";
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Interview } from "@/types/interview",
+import { format, parseISO } from "date-fns",
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface InterviewResponseFormProps {
   interview: Interview,
   onConfirm: () => Promise<void>,
@@ -36,29 +45,43 @@ interface InterviewResponseFormProps {
   isLoading: boolean
 }
 
-
+export function InterviewResponseForm({
+  interview,
+  onConfirm,
+  onClose,
+  isLoading,
+}: InterviewResponseFormProps) {
+  // Format interview date and time;
+  const interviewDate = parseISO(interview.scheduled_date);
+  const formattedDate = format(interviewDate, "EEEE, MMMM d");
+  const formattedTime = format(interviewDate, "h: mm a");
 export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading }: InterviewResponseFormProps) {
   // Format interview date and time
   const interviewDate = parseISO(interview.scheduled_date),
   const formattedDate = format(interviewDate, 'EEEE, MMMM d'),
   const formattedTime = format(interviewDate, 'h: mm a'),
 
-
-
-  // Calculate when interview ends;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  const endTime = new Date(interviewDate);
-  endTime && endTime.setMinutes(endTime && endTime.getMinutes() + interview && interview.duration_minutes);
-  const formattedEndTime = format(endTime, "h: mm a");
+  // Calculate when interview ends
+  const endTime = new Date(interviewDate),
+  endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes),
+  const formattedEndTime = format(endTime, 'h: mm a'),
 
   return (
-
-
+    <div className="space-y-4">
+      <div className="p-4 bg-zion-blue-light/20 rounded-md">
+        <h3 className="font-medium text-lg mb-2">{interview.title}</h3>
+        <p className="text-sm text-zion-slate-light mb-4">
+          Interview requested by {interview.client_name |"Client"}
+        </p>
           Interview requested by {interview.client_name || 'Client'}
         </p>
+<<<<<<< HEAD
+        
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="grid gap-3">
           <div className="flex items-center gap-3">
             <div className="w-24 text-sm text-zion-slate-light">Date:</div>
@@ -97,7 +120,8 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
         </Button>
       </div>
     </div>
-
+  );
+}
   )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -242,6 +266,9 @@ function InterviewResponseForm() {
 =======
 }
 ;
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

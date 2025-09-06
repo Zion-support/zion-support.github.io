@@ -55,8 +55,8 @@ import Link from 'next / link';
             <li>;
 
 import { useState } from "react";
+import { useState } from 'react'
 import { Menu } from 'lucide-react'
-import Link from "next/link";
 
 export function EnterpriseStickyNav() {
                 className='text-sm font-medium hover:text-primary'>;
@@ -84,19 +84,15 @@ export function EnterpriseStickyNav() {
             onClick={() => setOpen(!open)}
             aria-label="Toggle navigation";
             aria-expanded={open}
-
-
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
             </li>
           </ul>
         </div>
       </div>
-
-
-
+    </nav>;
+  );
+};
     </nav>
-
-
           >;
             <Menu className="h-6 w-6" />;
           </button>;

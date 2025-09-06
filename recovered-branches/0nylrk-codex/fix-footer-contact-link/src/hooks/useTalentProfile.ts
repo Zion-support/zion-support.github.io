@@ -1,6 +1,37 @@
 
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {TalentProfile, as, TalentProfileType} from "@/types/talent";
+import {ProfileData} from "@/types/profile";
+import {MOCK_TALENTS} from "@/data/mockTalents";
+import {MOCK_PROFILES} from "@/data/mockProfiles";
+import {convertProfileToTalentProfile} from "@/utils/profileConverter";
+export function useTalentProfile(id: string | undefined) {;
+  const [profile, setProfile] = useState<TalentProfileType | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);
+import { useState, useEffect } from "react",
+import { TalentProfile as TalentProfileType } from "@/types/talent",
+import { ProfileData } from "@/types/profile",
+import { MOCK_TALENTS } from "@/data/mockTalents",
+import { MOCK_PROFILES } from "@/data/mockProfiles",
+import { convertProfileToTalentProfile } from "@/utils/profileConverter";
+export function useTalentProfile(id: string | undefined) {
+  const [profile, setProfile] = useState<TalentProfileType | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+  const [error, setError] = useState<string | null>(null);
+  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);
+import { convertProfileToTalentProfile } from "@/utils/profileConverter",
+export function useTalentProfile(id: string | undefined) {
+  const [profile, setProfile] = useState<TalentProfileType | null>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
+  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null),
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -9,28 +40,19 @@
         setIsLoading(false);
         return
       }
-
-
+      setIsLoading(true);
+      setError(null);
 
       setIsLoading(true),
       setError(null),
       
-
-
       try {
         // In a real implementation, we would fetch from Supabase
         // For now, we'll use mock data
         setTimeout(() => {
-
-          const foundProfile = MOCK_TALENTS && MOCK_TALENTS.find(talent => talent && talent.id === id);
-          
-
-=======
-
+          const foundProfile = MOCK_TALENTS.find(talent => talent.id === id);
           const foundProfile = MOCK_TALENTS.find(talent => talent.id === id),
           
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           if (foundProfile) {
             setProfile(convertProfileToTalentProfile(foundProfile))
 =======
@@ -97,6 +119,10 @@ if ( {) {
         console.error("Error fetching profile:", err),
         setError("Failed to load profile data"),
         setIsLoading(false)
+      }
+    }
+    fetchProfile()
+  }, [id]);
 
 import { useState, useEffect } from "react",;
 import { TalentProfile as TalentProfileType } from "@/types/talent",;
@@ -149,9 +175,12 @@ export function useTalentProfile(id: string | undefined) {;
     };
     fetchProfile();
   }, [id]);
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return { profile, isLoading, error, mockProfileData }
 =======
         console.error ("Error fetching profile:", err);

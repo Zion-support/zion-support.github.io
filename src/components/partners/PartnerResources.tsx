@@ -15,12 +15,31 @@ import { Button } from '@/components / ui / button';
   Link,
 } from 'lucide-react';
 import { toast } from '@/hooks / use - toast';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import {
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+  Download
+  FileImage
+  FileText
+  FileType
+  FileVideo
+  Link
+} from 'lucide-react'
+import { toast } from '@/hooks/use-toast'
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ResourceItem {
   id: string;
   title: string;
   description: string;
   type: 'image' | 'video' | 'document' | 'link';
-
   icon: JSX.Element;
   url: string;
 export /**
@@ -42,9 +61,6 @@ interface ResourceItem {
   icon: JSX.Element,
   url: string
 }
-
-
-
 
 export function PartnerResources() {
   const resources: ResourceItem[] = [
@@ -97,16 +113,32 @@ export function PartnerResources() {
   icon: JSX && JSX.Element;
 
 
+      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
+      url: '#'
+    }
+  ],
+
+  const handleDownload = (resource: ResourceItem) => {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     // In a real app, this would download the actual resource
     toast({
       title: "Download started",
       description: `Downloading ${resource.title}`,
+      variant: "default"})
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -117,7 +149,26 @@ export function PartnerResources() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
+            {resources.map(resource => (
+              <Card
+                key={resource.id}
+                className='bg-zion-blue border-zion-blue-light overflow-hidden'
+              >
+                <CardContent className='p-6 flex flex-col items-center text-center'>
+                  <div className='mb-4'>{resource.icon}</div>
+                  <h3 className='font-semibold text-white mb-1'>
+                    {resource.title}
+                  </h3>
+                  <p className='text-xs text-zion-slate-light mb-4'>
+                    {resource.description}
+                  </p>
+                  <Button
+                    onClick={() => handleDownload(resource)}
+                    size='sm'
+                    variant='outline'
+                    className='w-full flex items-center gap-2'                  >
+                    <Download className='h-4 w-4' />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {resources.map((resource) => (
               <Card key={resource.id} className="bg-zion-blue border-zion-blue-light overflow-hidden">
@@ -273,15 +324,15 @@ export function PartnerResources() {;
                     className="w-full flex items-center gap-2";
                   >;
                     <Download className="h-4 w-4" />;
-
-
                     {resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>
                 </CardContent>
               </Card>
             ))}
-
-
+          </div>
+        </CardContent>
+      </Card>
+      <Card className='bg-zion-blue-dark border-zion-blue-light'>
 
       <Card className="bg-zion-blue-dark border-zion-blue-light">
 
@@ -303,8 +354,9 @@ export function PartnerResources() {;
               <li>Focus on how the platform can help your audience solve their AI talent needs</li>
             </ul>
           </div>
-
-
+          <div className='space-y-2'>
+            <h3 className='text-lg font-semibold text-white'>Don'ts</h3>
+            <ul className='list-disc pl-5 space-y-1 text-zion-slate-light'>
 
           <div className="space-y-2">
             <h3 className="text-lg font-semibold text-white">Don'ts</h3>
@@ -320,8 +372,7 @@ export function PartnerResources() {;
           </div>
         </CardContent>
       </Card>
-
-
+      <Card className='bg-zion-blue-dark border-zion-blue-light'>
 
       <Card className="bg-zion-blue-dark border-zion-blue-light">
 
@@ -343,7 +394,6 @@ export function PartnerResources() {;
         </CardContent>
       </Card>
     </div>
-
           </div>;
         </CardContent>;
       </Card>;

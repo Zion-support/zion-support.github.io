@@ -1,8 +1,21 @@
 
+<<<<<<< HEAD
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {CategoriesSection} from "@/components/CategoriesSection";
+import {GradientHeading} from "@/components/GradientHeading";
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { CategoriesSection } from "@/components/CategoriesSection";
+import { GradientHeading } from "@/components/GradientHeading";
+import { CategoriesSection } from "@/components/CategoriesSection",
+import { GradientHeading } from "@/components/GradientHeading",
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function Categories() {
   return (
     <>
@@ -18,13 +31,6 @@ export default function Categories() {
               Find exactly what you're looking for to enhance your business or personal projects.
             </p>
           </div>
-
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {CategoriesSection} from "@/components/CategoriesSection";
-import {GradientHeading} from "@/components/GradientHeading";
-=======
-
           
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -79,9 +85,12 @@ function Categories() {
               Find exactly what you're looking for to enhance your business or personal projects.;
             </p>;
           </div>;
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Reuse the Categories Section component */}
           <CategoriesSection showTitle={false} />
         </div>
@@ -89,8 +98,14 @@ function Categories() {
       <Footer />
     </>
   )
+<<<<<<< HEAD
+}
+}
+;
+=======
 
 }
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

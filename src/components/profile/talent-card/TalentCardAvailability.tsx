@@ -24,12 +24,20 @@ function TalentCardAvailability() {
 import { Clock } from 'lucide-react'
 interface TalentCardAvailabilityProps {
   availabilityType: string
+export function TalentCardAvailability({
+  availabilityType
+}: TalentCardAvailabilityProps) {  // Format availability status
+export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
+interface TalentCardAvailabilityProps {
+  availabilityType: string
+}
+export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
+  // Format availability status
 
         return 'bg-blue-500/20 text-blue-400',;
       default:;
         return 'bg-gray-500/20 text-gray-400';
     };
-
   }; return 'bg-gray-500/20 text-gray-400'
     }
   }
@@ -52,6 +60,12 @@ interface TalentCardAvailabilityProps {
   // Format availability label
   const getAvailabilityLabel = (status: string) => {
 
+  }; return 'bg-gray-500/20 text-gray-400'
+    }
+  }
+  const getAvailabilityLabel = (status: string,) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     switch (status) {
       case 'full-time':
         return 'Full-time'

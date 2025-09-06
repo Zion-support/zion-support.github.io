@@ -2,36 +2,16 @@
 
 const MOCK_SUPPORT_REQUESTS = [
   {
-
-import React, { useState } from 'react';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-import { Input } from '@/components / ui / input';
-import { Button } from '@/components / ui / button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components / ui / select';
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components / ui / table';
-import { Badge } from '@/components / ui / badge';
-import { Search, Filter } from 'lucide-react';
-import { SEO } from '@/components / SEO';
-// Mock data for support requests;
-const MOCK_SUPPORT_REQUESTS = [;
+    id: 'SR-1001'
+    user: 'john.doe@example.com'
+    userId: 'user-123'
+    issue: 'Cannot access account after password reset'
+    status: 'open'
+    priority: 'high'
+    createdAt: '2023-12-15T14:30:00Z'
+    lastUpdated: '2023-12-15T15:45:00Z'
+    category: 'authentication'
+  }
   {
     id: 'SR - 1001',
     user: 'john.doe@example.com',
@@ -99,15 +79,6 @@ const MOCK_SUPPORT_REQUESTS = [;
     category: "disputes"
   },
   {
-    id: "SR-1006",
-    user: "alex.wong@datacompany.com",
-    userId: "user-890",
-    issue: "Profile verification pending for over 7 days",
-    status: "resolved",
-    priority: "medium",
-    createdAt: "2023-12-08T13:20:00Z",
-    lastUpdated: "2023-12-15T08:30:00Z",
-    category: "verification"
   },
   {
 
@@ -117,13 +88,6 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-],
-
-export default function SupportRequests() {
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [statusFilter, setStatusFilter] = useState<string | null>(null),
-  const [priorityFilter, setPriorityFilter] = useState<string | null>(null),
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
   
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
@@ -275,10 +239,28 @@ export default function SupportRequests() {;
     setCategoryFilter(null);
   };
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
-    <>;
-
-
+    <>
+      <SEO 
+        title="Support Requests | Admin Dashboard"
+        description="Manage and track user support requests and issues"
+      />
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
+          <div>
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+              Support Requests
+            </h1>
+            <p className="text-zion-slate-light mt-2">
+              Manage and respond to user support requests and issues
+            </p>
+          </div>
+          <div className='mt-4 md:mt-0'>
+            <Button className='bg-zion-purple hover:bg-zion-purple-light'>
           
           <div className="mt-4 md:mt-0">
             <Button className="bg-zion-purple hover:bg-zion-purple-light">
@@ -288,8 +270,6 @@ export default function SupportRequests() {;
             </Button>
           </div>
         </div>
-
-
         
 
 
@@ -301,8 +281,6 @@ export default function SupportRequests() {;
               <CardDescription>Open Requests</CardDescription>
             </CardHeader>
           </Card>
-
-
           
 
 
@@ -312,8 +290,6 @@ export default function SupportRequests() {;
               <CardDescription>In Progress</CardDescription>
             </CardHeader>
           </Card>
-
-
           
 
 
@@ -323,8 +299,6 @@ export default function SupportRequests() {;
               <CardDescription>Resolved</CardDescription>
             </CardHeader>
           </Card>
-
-
           
 
 
@@ -335,8 +309,7 @@ export default function SupportRequests() {;
             </CardHeader>
           </Card>
         </div>
-
-
+        <Tabs defaultValue='all' className='mb-8'>
         
         <Tabs defaultValue="all" className="mb-8">
 
@@ -415,17 +388,6 @@ export default function SupportRequests() {;
 
           
           <TabsContent value="all" className="mt-6">
-
-            {/* Search and Filters */}
-            <div className="flex flex-col md:flex-row gap-4 mb-6">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                <Input
-
-
-                value={statusFilter || ''}
-                onValueChange={value => setStatusFilter(value || null)}
-
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Status' />
@@ -450,11 +412,6 @@ export default function SupportRequests() {;
                   <SelectItem value="resolved">Resolved</SelectItem>
                 </SelectContent>
               </Select>
-
-
-                value={priorityFilter || ''}
-                onValueChange={value => setPriorityFilter(value || null)}
-
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Priority' />
@@ -473,11 +430,6 @@ export default function SupportRequests() {;
                   <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
-
-
-                value={categoryFilter || ''}
-                onValueChange={value => setCategoryFilter(value || null)}
-
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Category' />
@@ -514,8 +466,6 @@ export default function SupportRequests() {;
               </Button>
             </div>
             
-
-
             {/* Support Requests Table */}
             <Card>
               <CardContent className="p-0">
@@ -534,7 +484,10 @@ export default function SupportRequests() {;
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-
+                    {filteredRequests.map(request => (                      <TableRow key={request.id}>
+                        <TableCell className='font-medium'>
+                          {request.id}
+                        </TableCell>
                     {filteredRequests.map((request) => (
                       <TableRow key={request.id}>
                         <TableCell className="font-medium">{request.id}</TableCell>
@@ -542,7 +495,28 @@ export default function SupportRequests() {;
                         <TableCell>{request.user}</TableCell>
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
                         <TableCell>
-
+                          <Badge
+                            variant={
+                              request.status === 'open'
+                                ? 'default'
+                                : request.status === 'in-progress'
+                                  ? 'secondary'
+                                  : 'outline'
+                            }
+                          >
+                            {request.status}
+                          </Badge>
+                        </TableCell>
+                        <TableCell>
+                          <Badge
+                            variant={
+                              request.priority === 'high'
+                                ? 'destructive'
+                                : request.priority === 'medium'
+                                  ? 'default'
+                                  : 'outline'
+                            }
+                          >
                           <Badge variant={
                             request.status === 'open' 
                               ? 'default' 
@@ -726,7 +700,6 @@ export default function SupportRequests() {;
                           </Badge>;
                         </TableCell>;
                         <TableCell>;
-
                             {request.priority}
                           </Badge>;
                         </TableCell>;
@@ -849,6 +822,7 @@ export default function SupportRequests() {;
 
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Escalated Requests</h3> <p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flagged"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need-response"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Awaiting Response</h3> <p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>) ;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }'"}
 
 
@@ -910,5 +884,3 @@ export default function SupportRequests() {;
 }</TableCell> <TableCell> {
   new Date (request.last_updated) .toLocaleDateString () ";
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
-}</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Escalated Requests</h3> <p className=" text - zion - slate - light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai - flagged"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">AI Flagged Issues</h3> <p className=" text - zion - slate - light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need - response"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Awaiting Response</h3> <p className=" text - zion - slate - light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>);
-}'"}

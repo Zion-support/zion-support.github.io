@@ -7,29 +7,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Label } from '@/components/ui/label',;
+import { Textarea } from '@/components/ui/textarea',;
 import {;
   Dialog,;
   DialogContent,;
@@ -95,10 +77,8 @@ export default function GuestCheckoutModal(): any ({;
             date.;
           </div>;
         )}
-
-        <form onSubmit={handleSubmit} className='space-y-4'>;
-          <div className='space-y-2'>;
-
+        <form onSubmit={handleSubmit} className='space-y-4'>
+          <div className='space-y-2'>
             <Label
               htmlFor='guest-email'
               className='text-white flex items-center gap-2'>;
@@ -203,8 +183,6 @@ export default function GuestCheckoutModal(): any ({;
               Email Address
             </Label>
             <Input
-
-
               {isSubmitting ? (
                 'Processing...'
               ) : (
@@ -227,35 +205,3 @@ export default function GuestCheckoutModal(): any ({;
 
 };
 };
-
-
-          <DialogFooter className='space - x-2'>;
-            <Button;
-              type='button';
-              variant='outline';
-              on_click={() => onOpenChange (false)}
-              className='border - zion - cyan / 30 text - zion - slate - light hover:bg - zion - cyan / 10'            >;
-              Cancel;
-            </Button>;
-            <Button;
-              type='submit';
-              disabled={is_submitting || !email || !address}
-              className='bg - zion - cyan hover:bg - zion - cyan / 90 text - zion - blue'            >;
-              {is_submitting ? (
-                'Processing...') : (
-                <>;
-                  <CreditCard className='h - 4 w - 4 mr - 2' />;
-                  Continue to Payment;
-                </>)}
-            </Button>;
-          </DialogFooter>;
-        </form>;
-      </DialogContent>;
-
-}
-
-
-    </Dialog>);
-}
-}
-;

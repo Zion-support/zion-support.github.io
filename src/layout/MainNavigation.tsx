@@ -2,60 +2,6 @@ interface MainNavigationProps {
   isAdmin?: boolean
   unreadCount?: number
   className?: string
-
-import Link from 'next / link';
-import { use_router } from 'next / router';
-import { useState } from 'react';
-import { cn } from '@/lib / utils';
-import { use_auth } from '@/hooks / use_auth';
-import { use_translation } from 'react - i18next';
-import { use_favorites } from '@/hooks / use_favorites';
-import { use_cart } from '@/context / CartContext';
-import {
-  Heart,
-  MessageSquare,
-  CreditCard,
-  ShoppingCart,
-  Wallet,
-} from 'lucide-react';
-import { LanguageSelector } from '@/components / header / LanguageSelector';
-  HoverCard,
-  HoverCardTrigger,
-  HoverCardContent,
-} from '@/components / ui / hover - card';
-import { MiniCartPreview } from '@/components / cart / MiniCartPreview';
-import { LoginModal } from '@/components / auth / LoginModal'; import { LanguageSelector } from '@/components / header / LanguageSelector';
-import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components / ui / hover - card';
-import { LoginModal } from '@/components / auth / LoginModal';
-interface MainNavigationProps {
-  is_admin?: boolean,
-  unread_count?: number,
-  class_name?: string;
-}
-interface MainNavigationProps {
-  is_admin?: boolean;
-  unread_count?: number;
-  class_name?: string;
-export /**
- * MainNavigation - Function description
- */
-function MainNavigation() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false); // Add state;
-  const { user } = use_auth ();
-  const is_authenticated = !!user;
-  const [login_open, setLoginOpen] = useState (false);
-  const { count } = use_favorites ();
-  const { items } = use_cart ();
-  const cart_count = items.length;
-  const router = use_router (); // Changed from use_location;
-  const { t } = use_translation ();
-  const handleCartClick = (e: React.MouseEvent, ) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      e.prevent_default ();
-      setLoginOpen (true);
       return;
 
     }
@@ -86,37 +32,6 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
-import { cn } from '@/lib/utils';
-import { useAuth } from '@/hooks/useAuth';
-import { useTranslation } from 'react-i18next';
-import { useFavorites } from '@/hooks/useFavorites';
-import { useCart } from '@/context/CartContext';
-import {;
-  Heart,;
-  MessageSquare,;
-  CreditCard,;
-  ShoppingCart,;
-  Wallet,;
-} from 'lucide-react';
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import {;
-  HoverCard,;
-  HoverCardTrigger,;
-  HoverCardContent,;
-} from '@/components/ui/hover-card';
-import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
-import { LoginModal } from '@/components/auth/LoginModal';import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card';
-import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
-import { LoginModal } from '@/components/auth/LoginModal';
 interface MainNavigationProps {;
   isAdmin?: boolean,;
   unreadCount?: number,;
@@ -200,12 +115,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         className="navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" // Added ml-auto and mr-4 for positioning
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-expanded={isMobileMenuOpen}
-        aria-controls="main-navbar-collapse"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <nav
         className={cn('navbar', className)}
         role='navigation'
         aria-label='Main navigation'>;
@@ -214,19 +123,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         <div
           id="main-navbar-collapse"
           className={cn(
-
-
-
                   href={link.href}
                   aria-label={link.name}
 
                   onClick={() => setIsMobileMenuOpen(false)}
-
-
-                    'nav-link',
-                    'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
-
-
                     link.matches(router.pathname)
                       ? 'bg-zion-purple/20 text-zion-cyan'
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
@@ -256,18 +156,23 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 </Link>;
               </li>;
             ))}
-
-                  className={cn(;
-                    'nav-link',;
-                    'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',;
-                    router && router.pathname === '/wishlist';
-                      ? 'bg-zion-purple/20 text-zion-cyan';
-                      : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
-                  )}                >;
-                  <Heart className='w-4 h-4' />;
-                  {count > 0 && (;
-                    <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>;
-
+            {/* Wishlist link */}
+            {isAuthenticated && (
+              <li className='nav-item'>
+                <Link
+                  href='/wishlist'
+                  aria-label='Wishlist'
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={cn(
+                    'nav-link'
+                    'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
+                    router.pathname === '/wishlist'
+                      ? 'bg-zion-purple/20 text-zion-cyan'
+                      : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
+                  )}                >
+                  <Heart className='w-4 h-4' />
+                  {count > 0 && (
+                    <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>
                       {count}
                     </span>
                   )}
@@ -846,13 +751,10 @@ export default function Page() {; []);
                         ? 'bg-zion-purple/20 text-zion-cyan';
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
                     )}
-
-
                   >
                     <ShoppingCart className="w-4 h-4 mr-1" />
                     {t('nav.cartCart')}
                     {cartCount > 0 && (
-
 }`};
 ;
                           {link.name}'`;
@@ -979,51 +881,3 @@ export default function Page() {; []);
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-
-
-                        {link && link.name}
-                      </Link>;
-                    )}
-                                on_click={: unknown setIsMobileMenuOpen (false)}
-                                {child.name}
-                              </Link>))}
-                          </div>)}
-                      </div>) : (
-                      <Link;
-                        to={link.href}`;
-                        className={`block px - 4 py - 3 text - sm font - medium rounded - md transition - colors ${is_active (link);
-                            ? 'bg - zion - cyan text - white'';
-                            : 'text - zion - slate - light hover:text - white hover:bg - white / 10'`;
-}`}
-                        on_click={: unknown setIsMobileMenuOpen (false)}
-                        {link.name}
-                      </Link>)}
-
-                  </Link>;
-                </HoverCardTrigger>;
-                <HoverCardContent>;
-                  <MiniCartPreview />;
-                </HoverCardContent>;
-              </HoverCard>;
-            </li>;
-          </ul>;
-
-          <div className='flex items - center gap - 2 mt - 4 md:mt - 0 md:ml - auto'>;
-
-            <LanguageSelector />;
-          </div>;
-        </div>;
-      </nav>;
-
-
-
-      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-    </>));
-}
-
-;
-}
-
-  )
-}
-;

@@ -1,32 +1,3 @@
-
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
@@ -37,137 +8,139 @@ import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-export default function SMBSolutionsPage() {
+export default function SMBSolutionsPage() {;
   const smbServices = [;
     {}
-      title: "Cost-Effective IT","
-      description: "Affordable technology solutions for small and medium businesses","
-      icon: DollarSign,
-      features: ["Budget-Friendly", "Scalable Solutions", "ROI Focused"]"
-    },
+      title: "Cost-Effective IT",";
+      description: "Affordable technology solutions for small and medium businesses",";
+      icon: DollarSign,;
+      features: ["Budget-Friendly", "Scalable Solutions", "ROI Focused"]";
+    },;
     {}
-      title: "Quick Setup","
-      description: "Rapid deployment of essential business systems","
-      icon: Zap,
-      features: ["Fast Implementation", "Minimal Downtime", "Easy Migration"]"
-    },
+      title: "Quick Setup",";
+      description: "Rapid deployment of essential business systems",";
+      icon: Zap,;
+      features: ["Fast Implementation", "Minimal Downtime", "Easy Migration"]";
+    },;
     {}
-      title: "Team Collaboration","
-      description: "Tools and systems to enhance team productivity","
-      icon: Users,
-      features: ["Communication Tools", "Project Management", "File Sharing"]"
-    },
+      title: "Team Collaboration",";
+      description: "Tools and systems to enhance team productivity",";
+      icon: Users,;
+      features: ["Communication Tools", "Project Management", "File Sharing"]";
+    },;
     {}
-      title: "Business Growth","
-      description: "Technology solutions that grow with your business","
-      icon: Building2,
-      features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]"
+      title: "Business Growth",";
+      description: "Technology solutions that grow with your business",";
+      icon: Building2,;
+      features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]";
     }
 ;  ];
-  return (;
-    <Layout );
-      title="SMB Solutions - Zion Tech Group"";
-      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."";
-    >;
+  return (
+    <Layout)
+      title="SMB Solutions - Zion Tech Group""
+      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."">;
       <div className="min-h-screen bg-gray-50">";
   ];
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
-=======
-
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
+import { 
+  Building2, 
+  Users, 
+  DollarSign, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight ;
+} from 'lucide-react';
 
 
-import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 export default function SMBSolutionsPage() {
+ursor/fix-syntax-push-and-merge-to-main-40de
+import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+export default function SMBSolutionsPage() {;
   const smbServices = [;
     {}
-      title: "Cost-Effective IT","
-      description: "Affordable technology solutions for small and medium businesses","
-      icon: DollarSign,
-      features: ["Budget-Friendly", "Scalable Solutions", "ROI Focused"]"
-    },
+      title: "Cost-Effective IT",";
+      description: "Affordable technology solutions for small and medium businesses",";
+      icon: DollarSign,;
+      features: ["Budget-Friendly", "Scalable Solutions", "ROI Focused"]";
+    },;
     {}
-      title: "Quick Setup","
-      description: "Rapid deployment of essential business systems","
-      icon: Zap,
-      features: ["Fast Implementation", "Minimal Downtime", "Easy Migration"]"
-    },
+      title: "Quick Setup",";
+      description: "Rapid deployment of essential business systems",";
+      icon: Zap,;
+      features: ["Fast Implementation", "Minimal Downtime", "Easy Migration"]";
+    },;
     {}
-      title: "Team Collaboration","
-      description: "Tools and systems to enhance team productivity","
-      icon: Users,
-      features: ["Communication Tools", "Project Management", "File Sharing"]"
-    },
+      title: "Team Collaboration",";
+      description: "Tools and systems to enhance team productivity",";
+      icon: Users,;
+      features: ["Communication Tools", "Project Management", "File Sharing"]";
+    },;
     {}
-      title: "Business Growth","
-      description: "Technology solutions that grow with your business","
-      icon: Building2,
-      features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]"
+      title: "Business Growth",";
+      description: "Technology solutions that grow with your business",";
+      icon: Building2,;
+      features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]";
     }
 ;  ];
-  return (;
-    <Layout );
-      title="SMB Solutions - Zion Tech Group"";
-      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."";
-    >;
+  return (
+    <Layout)
+      title="SMB Solutions - Zion Tech Group""
+      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."">;
       <div className="min-h-screen bg-gray-50">";
   ];
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <Layout
       title="SMB Solutions - Zion Tech Group"
-
+      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."
   
-
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
     >
       <div className="min-h-screen bg-gray-50">
+=======
+      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency.">;
+      <div className="min-h-screen bg-gray-50">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/smb.tsx
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">"
+        <section className="bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">";
           <div className="container mx-auto px-4">";
-            <motion.div;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center"">;
-              <h1 className="text-4xl md: text-6xl font-bold mb-6">", SMB Solutions,;
+              transition={{ duration: 0.8 }}
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+              className="text-center""
+            >;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
+                SMB Solutions;
               </h1>;
               <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",;
                 Technology solutions designed specifically for small and medium businesses. ;
 
                 Get enterprise-level capabilities at SMB-friendly prices.;
               </p>;
-            </motion.div>;
+            </motion && motion.div>;
           </div>;
         </section>;
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -180,12 +153,97 @@ export default function SMBSolutionsPage() {
             </motion.div>
           </div>
         </section>
+        {/* Services Section */}
+        <section className="py-20">"
+          <div className="container mx-auto px-4">";
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
+              {smbServices.map((service, index) => {}
+                const IconComponent = service.icon;
+                return (;
+                  <motion.div);
+                    key={index}
+                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >,
+                    <div className="text-orange-600 mb-4">";
+                      <IconComponent className="w-10 h-10" />";
+                    </div>;
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">";
+                      {service.title}
+                    </h3>,
+                    <p className="text-gray-600 mb-4">";
+                      {service.description}
+                    </p>,
+                    <ul className="space-y-2">";
+                      {service.features.map((feature, featureIndex) => (,
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
+                          {feature}
+                        </li>,
+                      ))}
+                    </ul>,
+                  </motion.div>;
+                );
+              })}
+            </div>,
+          </div>;
+        </section>;
+            </div>
+          </div>
+        </section>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/smb.tsx
+ursor/fix-syntax-push-and-merge-to-main-40de
+        {/* Services Section */}
+        <section className="py-20">"
+          <div className="container mx-auto px-4">";
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
+              {smbServices.map((service, index) => {}
+                const IconComponent = service.icon;
+                return (;
+                  <motion.div);
+                    key={index}
+                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >,
+                    <div className="text-orange-600 mb-4">";
+                      <IconComponent className="w-10 h-10" />";
+                    </div>;
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">";
+                      {service.title}
+                    </h3>,
+                    <p className="text-gray-600 mb-4">";
+                      {service.description}
+                    </p>,
+                    <ul className="space-y-2">";
+                      {service.features.map((feature, featureIndex) => (,
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
+                          {feature}
+                        </li>,
+                      ))}
+                    </ul>,
+                  </motion.div>;
+                );
+              })}
+            </div>,
+          </div>;
+        </section>;
+            </div>
+          </div>
+        </section>
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">"
+        <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">";
           <div className="container mx-auto px-4 text-center">";
 
             <h2 className="text-3xl md: text-4xl font-bold mb-6">", Grow Your Business Today,;
@@ -202,7 +260,7 @@ export default function SMBSolutionsPage() {
 
               Get SMB Consultation;
               <ArrowRight className="w-5 h-5 ml-2" />";
-            </motion.a>;
+            </motion && motion.a>;
           </div>;
         </section>;
       </div>;

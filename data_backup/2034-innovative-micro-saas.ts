@@ -1,5 +1,3 @@
-
-
 export interface MicroSaasService2034 {
   "id": string;
   name: string;

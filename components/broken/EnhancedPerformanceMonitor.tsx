@@ -1,6 +1,15 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+//FCP recommendations if (metrics.fcp > 2000) {
+ //FCP recommendations if (metrics.fcp > 2000) {
+//FCP recommendations if (metrics.fcp > 2000) {
+ //FCP recommendations if (metrics.fcp > 2000) {
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   recs.push ({
 }return recs;
 }, []);
@@ -124,33 +133,25 @@ if ( {) {
   metrics.fcp > 2000 ? 'text - red - 400': 'text - green - 400';
 }`;
 }> {
-  metrics.fcp.to_fixed (0);
-}ms </span> </div> </span> </div> </div> </div>);
-}</span> </div> <div className="w - full bg - gray - 700 rounded - full h - 2" > <div width: `$ {
-  (metrics.memory_usage.usedJSHeapSize / metrics.memory_usage.totalJSHeapSize) * 100;
-}%`;
-}/> </div> </div> </div>);
-}</span> </div> </div> </div>);
-}rec.priority === 'high'? 'bg - red - 500 / 20 text - red - 400': rec.priority === 'medium'? 'bg - yellow - 500 / 20 text - yellow - 400': 'bg - green - 500 / 20 text - green - 400';
-}`;
+  metrics.fcp.toFixed (0)
+}ms </span> </div> </span> </div> </div> </div>)
+}</span> </div> <div className="w-full bg-gray-700 rounded-full h-2" > <div width: `$ {
+  (metrics.memoryUsage.usedJSHeapSize / metrics.memoryUsage.totalJSHeapSize) * 100
+}%`
+}/> </div> </div> </div>)
+}</span> </div> </div> </div>)
+}rec.priority === 'high'? 'bg-red-500/20 text-red-400': rec.priority === 'medium'? 'bg-yellow-500/20 text-yellow-400': 'bg-green-500/20 text-green-400'
+}`
 }> {
-  rec.priority;
-}</span> </div> </div>) );
-}</div> </div>);
-}) : (<BarChart3 className="w - 4 h - 4" />);
+  rec.priority
+}</span> </div> </div>) )
+}</div> </div>)
+}) : (<BarChart3 className="w-4 h-4" />)
 }<span> {
-  is_monitoring ? 'Measuring...': 'Measure Performance';
-}</span> </button> </div> </div> </motion.div>);
-}</AnimatePresence> </>);
+  isMonitoring ? 'Measuring...': 'Measure Performance'
+}</span> </button> </div> </div> </motion.div>)
+}</AnimatePresence> </>)
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+export default EnhancedPerformanceMonitor;
 export default EnhancedPerformanceMonitor;
 
-
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

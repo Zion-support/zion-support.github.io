@@ -26,24 +26,12 @@ export function CountryTabs(): any ({;
   const [currentPage, setCurrentPage] = useState(1);
   const countriesPerPage = 50;
 
-  useEffect(() => {;
-    setCurrentPage(1);
-  }, [searchQuery]);
-  const totalPages = Math && Math.ceil(filteredCountries && filteredCountries.length / countriesPerPage);
-  const paginatedCountries = filteredCountries && filteredCountries.slice(;
-    (currentPage - 1) * countriesPerPage,;
-    currentPage * countriesPerPage;
-  );
-
-
-
 export function CountryTabs({
   popularCountries,
   filteredCountries,
   handleCountrySelect,
   onQuote,
   searchQuery,
-
   popularCountries,
   filteredCountries,
   handleCountrySelect,
@@ -54,6 +42,8 @@ export function CountryTabs({
     currentPage * countriesPerPage
   )
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1),
   const countriesPerPage = 50,
@@ -66,16 +56,25 @@ export function CountryTabs({
   const paginatedCountries = filteredCountries.slice(
     (currentPage - 1) * countriesPerPage
     currentPage * countriesPerPage
-
+  )
   ),
 
   return (
     <Tabs defaultValue='featured' className='w-full'>;
       <TabsList className='bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6'>;
         <TabsTrigger
-          value='featured'
-
-
+          value="featured"
+          className="data-[state=active]:bg-zion-purple"
+        >
+          Featured Countries
+        </TabsTrigger>
+        <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple">
+          All Countries
+        </TabsTrigger>
+      </TabsList>
+      <TabsContent value='featured' className='mt-0'>
+        <div className='mb-6'>
+          <h2 className='text-2xl font-bold text-white text-center'>
 
       <TabsContent value="featured" className="mt-0">
         <div className="mb-6">
@@ -88,29 +87,9 @@ export function CountryTabs({
             Browse our most popular service destinations
           </p>
         </div>
-
-          className='data-[state=active]:bg-zion-purple'>;
-          Featured Countries;
-        </TabsTrigger>;
-        <TabsTrigger value='all' className='data-[state=active]:bg-zion-purple'>;
-          All Countries;
-        </TabsTrigger>;
-      </TabsList>;
-
-      <TabsContent value='featured' className='mt-0'>;
-        <div className='mb-6'>;
-          <h2 className='text-2xl font-bold text-white text-center'>;
-            Featured Service Locations;
-          </h2>;
-          <p className='text-zion-slate-light text-center mt-2'>;
-            Browse our most popular service destinations;
-          </p>;
-        </div>;
-
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>;
-          {filteredCountries;
-            .filter(country => popularCountries && popularCountries.includes(country && country.country));
-
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+          {filteredCountries
+            .filter(country => popularCountries.includes(country.country))
             .map(country => (              <CountryServiceCard
                 key = {country.country,}
                 country = {country,}
@@ -401,8 +380,6 @@ function CountryTabs() {
                       <PaginationButton;
                         page={page}
                         isActive={page === currentPage}
-
-
                 )}
                 <PaginationItem>;
                   <PaginationNext;

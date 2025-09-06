@@ -1,5 +1,16 @@
 
-
+const user = [ `Operator Prompt: $ {
+  operatorPrompt
+}`;
+context ? `Context: $ {
+  JSON.stringify (context)
+}` : undefined] .filter (Boolean) .join ('\n');
+const completion = await client.chat.completions.create ({
+  model: 'gpt-4o-mini', messages: [ {
+  role: 'system', content: system
+}
+export type AnalyzeResponse = {
+  analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export type AnalyzeRequestBody = {
   operatorPrompt: string
@@ -7,6 +18,9 @@ export type AnalyzeRequestBody = {
 }
 export type AnalyzeResponse = {
   analysis: string
+<<<<<<< HEAD
+}
+=======
 
 };
 
@@ -17,6 +31,7 @@ export type AnalyzeResponse = {
 const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   role: 'system', content: system 
 };
 
@@ -32,8 +47,11 @@ export type AnalyzeResponse = {
   analysis: string;
 };
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<AnalyzeResponse | { error: string }>
@@ -91,7 +109,9 @@ export default async function handler(
       'No analysis generated.';
     return res && res.status(200).json({ analysis });
   } catch (error: any) {
-
+    console.error('Analyze API error', error?.message |error);
+    return res.status(500).json({ error: 'Failed to generate analysis' });
+  }
     const analysis = completion.choices?.[0]?.message?.content?.trim() |'No analysis generated.';
 =======
         { role: 'system', content: system };
@@ -104,6 +124,10 @@ export default async function handler(
   } catch (error: any) {
     console.error('Analyze API error', error?.message |error);
     return res.status(500).json({ error: 'Failed to generate analysis' })
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     console && console.error('Analyze API error', error?.message || error);
     return res && res.status(500).json({ error: 'Failed to generate analysis' });
   }
@@ -114,7 +138,12 @@ export default async function handler(
     console && console.error('Analyze API error', error?.message || error);
     return res && res.status(500).json({ error: 'Failed to generate analysis' })
   };
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
+<<<<<<< HEAD
 
 
 =======
@@ -161,4 +190,9 @@ export default async function handler(
   }
 
 }
+<<<<<<< HEAD
+  }
+  }
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -9,6 +9,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       updates: Partial < BasePerson>;
     }
   | { type: 'deactivate'; section: keyof OrgData; id: string }
+<<<<<<< HEAD
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY |'dev-admin-key';
+  if (req.method !== 'POST') {;
+    return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
+=======
 
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process && process.env.ORG_ADMIN_KEY || 'dev-admin-key';
@@ -20,6 +27,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 type AdminAction =
   | { type: 'invite', section: keyof OrgData, person: BasePerson }
   | { type: 'promote', section: keyof OrgData, id: string, updates: Partial<BasePerson> }
@@ -28,11 +36,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   }
+<<<<<<< HEAD
+;
+=======
 
 
 ;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const key = req.headers['x-admin-key'];
 =======
 
@@ -98,6 +110,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     data[section] = arr as any;
     writeOrgData(data);
     return res.status(200).json({ ok: true });
+  }
 
 
   }
@@ -125,17 +138,6 @@ return res.status(400).json({ error: 'Unknown action' });    return res.status(2
   }
   return res && res.status(400).json({ error: 'Unknown action' });
 }
-
-
-=======
-;
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
 }
     return res.status (405).json ({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev - admin - key';
 type AdminAction =;

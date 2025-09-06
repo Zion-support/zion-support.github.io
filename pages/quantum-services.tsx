@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 class ErrorBoundary extends React.Component {
@@ -22,12 +24,27 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 import Head from 'next / head';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
 import {Atom, CheckCircle, Shield, Sparkles} from 'lucide-react';
 
+<<<<<<< HEAD
+import React from 'react',
+import Head from 'next/head',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Button from '../components/ui/Button';
+import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react';
+export default function QuantumServicesPage() {
+
+  const features = [
+    'Quantum-inspired optimization & annealing strategies'
+    'Hybrid quantum-classical pipelines (QAOA, VQE) where applicable'
+    'Quantum-safe cryptography assessments and roadmaps'
+    'R&D ideation for quantum-ready workloads'
+=======
 =======
 export default /**
  * QuantumServicesPage - Function description
@@ -38,6 +55,7 @@ function QuantumServicesPage() {
     'Hybrid quantum - classical pipelines (QAOA, VQE) where applicable',
     'Quantum - safe cryptography assessments and roadmaps',
     'R & D ideation for quantum - ready workloads',
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];
 ;
   const solutions = [;
@@ -52,7 +70,16 @@ function QuantumServicesPage() {
     },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
-;
+
+import Button from '../components/ui/Button',
+import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react',
+export default function QuantumServicesPage() {
+  const features = [
+    'Quantum-inspired optimization & annealing strategiesHybrid quantum-classical pipelines (QAOA, VQE) where applicableQuantum-safe cryptography assessments and roadmapsR&D ideation for quantum-ready workloads'],
+  const solutions = [
+    { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
+    { name: 'Quantum AI Cognitive', href: '/quantum-ai-cognitive' },
+    { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }],
   return (
 
 
@@ -119,6 +146,27 @@ function QuantumServicesPage() {
                 <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
                   <div className="flex items-center gap-3 text-cyan-300 mb-2"><Sparkles className="w-5 h-5" /><span className="font-semibold">{s.name}</span></div>
                   <p className="text-gray-300 text-sm">Learn more</p>
+<<<<<<< HEAD
+                </Link>
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>
+          </section>
+          <section className='text-center'>
+            <div className='inline-flex items-center justify-center gap-3 text-gray-300'>
+              <Shield className='w-5 h-5 text-purple-400' />
+              <span>
+                Post-quantum readiness assessments and migration planning
+              </span>            </div>
+          <section className="text-center">
+            <div className="inline-flex items-center justify-center gap-3 text-gray-300">
+              <Shield className="w-5 h-5 text-purple-400" />
+              <span>Post-quantum readiness assessments and migration planning</span>
+            </div>
+=======
                 </a>
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -126,10 +174,18 @@ function QuantumServicesPage() {
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </section>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
+);
+
+}
+  )
+}
+=======
 
             </div>;
           </section>;
@@ -237,3 +293,4 @@ function QuantumServicesPage() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

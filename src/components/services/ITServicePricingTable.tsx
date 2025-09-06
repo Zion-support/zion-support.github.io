@@ -24,19 +24,12 @@ export function ITServicePricingTable() {;
     direction: 'ascending',;
   });
 
-  const sortedData = useMemo(() => {;
-    let filteredData = [...onsiteServicePricing];
-    // Filter by search query;
-    if (searchQuery) {;
-      filteredData = filteredData && filteredData.filter(item =>;
-        item && item.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
-      );
     }
-
-    // Sort data;
-    filteredData && filteredData.sort((a, b,) => {;
-      if (a[sortConfig && sortConfig.key] < b[sortConfig && sortConfig.key]) {;
-        return sortConfig && sortConfig.direction === 'ascending' ? -1 : 1;
+    
+    // Sort data
+    filteredData.sort((a, b) => {
+      if (a[sortConfig.key] < b[sortConfig.key]) {
+        return sortConfig.direction === 'ascending' ? -1 : 1
       }
       if (a[sortConfig.key] > b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? 1 : -1
@@ -89,17 +82,19 @@ export function ITServicePricingTable() {;
           : "ascending"})
   },
 
-
-
-
-
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
           <Input
-
+            placeholder='Search by country...'
+            value={searchQuery}
+            onChange={e => setSearchQuery(e.target.value)}
+            className='pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white'          />
+        </div>
+      </div>
+      <div className='rounded-md border border-zion-blue-light overflow-hidden'>
             placeholder="Search by country..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -113,18 +108,7 @@ export function ITServicePricingTable() {;
         <Table>
           <TableHeader className='bg-zion-blue'>
             <TableRow>
-
-            onChange={e => setSearchQuery(e && e.target.value)}
-            className='pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white'          />;
-        </div>;
-      </div>;
-
-      <div className='rounded-md border border-zion-blue-light overflow-hidden'>;
-        <Table>;
-          <TableHeader className='bg-zion-blue'>;
-            <TableRow>;
-              <TableHead className='text-zion-cyan font-medium'>;
-
+              <TableHead className='text-zion-cyan font-medium'>
                 <Button
                   variant='ghost'
                   onClick={() => handleSort('country')}
@@ -135,7 +119,3 @@ export function ITServicePricingTable() {;
                   onClick={() => handleSort("country")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
                 >
-                  <span>Country</span>
-                  <ArrowUpDown className="h-4 w-4" />
-                </Button>
-              </TableHead>

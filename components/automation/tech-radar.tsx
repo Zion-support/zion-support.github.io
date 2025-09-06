@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
  
 
 
@@ -22,37 +25,26 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
     const data = JSON.parse (raw);
     return {
       props: {
-
-};
-type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } },;
-export const getStaticProps: GetStaticProps<Props> = async () => {;
-  try {;
-    const file = path && path.join(process && process.cwd(), 'publicautomationtech-radar && radar.json');
-    const raw = fs && fs.readFileSync(file, 'utf8');
-    const data = JSON && JSON.parse(raw);
-    return {;
-      props: {;
-        pypi: data && data.ecosystems.pypi || [],;
-        crates: data && data.ecosystems.crates || [],;
-        github: data && data.ecosystems.github || {}},;
-
-=======
-
+        pypi: data.ecosystems.pypi |[]
+        crates: data.ecosystems.crates |[]
+        github: data.ecosystems.github |{}}
         pypi: data.ecosystems.pypi || [],
         crates: data.ecosystems.crates || [],
         github: data.ecosystems.github || {}},
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       revalidate: 7200}
   } catch {;
     return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
   }
-
-
+}
 };
 
+<<<<<<< HEAD
+export default function TechRadar({ pypi, crates, github }: Props) {
+export default function TechRadar({ pypi, crates, github }: Props) {;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const langs = Object.keys(github);
 
   return (
@@ -89,7 +81,7 @@ export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
                 <div className="text-xs text-gray-500">Downloads: {it && it.downloads.toLocaleString()}</div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
-            </li>;
+            </li>
           ))}
 
         </ul>;
@@ -116,8 +108,8 @@ export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
               </li>;
 
             ))}
-          </ul>;
-        </section>;
+          </ul>
+        </section>
       ))}
 
     </div>;
@@ -197,8 +189,7 @@ export default function TechRadar({ pypi, crates, github }: Props) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     </div>
-
+);
+}
   );
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

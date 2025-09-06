@@ -11,12 +11,6 @@ import { Sparkles, Search } from 'lucide-react';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface AIMatchmakerProps {
 
-
-
-  //Set empty matches to show no results found UI setMatches ([]) ;
-}finally {;
-
-
   setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 interface AIMatchmakerProps {
   serviceType?: string
@@ -40,9 +34,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       toast({
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
-
-
-
       // Set empty matches to show no results found UI
       setMatches([])
 import { useState } from 'react';
@@ -122,9 +113,44 @@ function AIMatchmaker() {
       // Set empty matches to show no results found UI;
       set_matches ([]);
     } finally {
+      setIsMatchmaking(false)
+        variant: "destructive"}),
+      return
+    }
 
+    setIsMatchmaking(true),
+    setHasSearched(true),
+    
+    try {
+      logInfo("Starting AI matching", { data: { query, serviceType } }),
+      
+      // Get AI matches
+      const results = await findMatches(
+        query,
+        serviceType,
+        3
+      ),
+      
+      logInfo('AI matching results:', { data: results }),
+      setMatches(results),
+      
+      toast({
+        title: "Matches Found",
+        description: `Found ${results.length} matches based on your description.`})
+    } catch (error) {
+      logErrorToProduction('Error during AI matching:', { data: error }),
+      toast({
+        title: "Matching Error",
+        description: "We couldn't find matches for your request. Please try again.",
+        variant: "destructive"}),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      // Set empty matches to show no results found UI
+      setMatches([])
+    } finally {
       setIsMatchmaking(false)
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
           AI Matchmaker;
         </CardTitle>;
@@ -257,13 +283,10 @@ if ( {) {
       <CardHeader className="pb-2">
         <CardTitle className="flex items-center text-white">
           <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
-
-
           AI Matchmaker
         </CardTitle>
         <p className="text-sm text-zion-slate-light">
           Describe what you're looking for and our AI will find the best matches
-
         </p>
       </CardHeader>
       <CardContent>
@@ -280,8 +303,19 @@ if ( {) {
             <Button
               onClick={handleSearch}
               disabled={isMatchmaking}
-
-
+              className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'            >
+              {isMatchmaking ? (
+                <>Analyzing your needs...</>
+              ) : (
+                <>
+                  <Search className='h-4 w-4 mr-2' />
+                  Find Matches
+                </>
+              )}
+            </Button>
+          </div>
+          {hasSearched && (
+            <AIMatchingResults
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
             >;
 
@@ -307,16 +341,6 @@ if ( {) {
 
 
 }
-}
-
-              projectDescription={query}
-            />;
-          )}
-
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
 }
 
 

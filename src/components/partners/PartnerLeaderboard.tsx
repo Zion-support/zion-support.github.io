@@ -12,8 +12,7 @@ export function PartnerLeaderboard() {
       referrals: 178
       earnings: 4500
       badges: ["gold", "trending"]
-
-
+    }
     },
 
 
@@ -25,8 +24,7 @@ export function PartnerLeaderboard() {
       referrals: 145
       earnings: 3625
       badges: ["silver"]
-
-
+    }
     },
 
 
@@ -38,8 +36,7 @@ export function PartnerLeaderboard() {
       referrals: 124
       earnings: 3100
       badges: ["bronze"]
-
-
+    }
     },
 
 
@@ -51,7 +48,6 @@ export function PartnerLeaderboard() {
       referrals: 98
       earnings: 2450
       badges: []
-
 interface LeaderboardEntry {;
   id: string,;
   rank: number,;

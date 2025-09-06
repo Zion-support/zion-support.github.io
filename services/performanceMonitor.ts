@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+export interface PerformanceMetrics {
+export interface PerformanceMetrics {;
+  url: string;
+  timestamp: Date;
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  timeToInteractive: number;
+  totalBlockingTime: number;
+  speedIndex: number;
+  performanceScore: number;
+  accessibilityScore: number;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   speed_index: number;
   performance_score: number;
@@ -6,7 +23,14 @@
   seo_score: number;
 
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 export interface PerformanceAlert {
+
+export interface PerformanceAlert {;
+=======
+export interface PerformanceAlert {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   url: string;
   type: 'critical' | 'warning' | 'info';
@@ -19,7 +43,14 @@ export interface PerformanceAlert {
   resolved: boolean;
 
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 export interface MonitoringConfig {
+
+export interface MonitoringConfig {;
+=======
+export interface MonitoringConfig {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   urls: string[];
   frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily';
   thresholds: {
@@ -30,15 +61,112 @@ export interface MonitoringConfig {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
+<<<<<<< HEAD
+    cumulativeLayoutShift: number
+  }
+  notifications: {
+    email: boolean;
+
+    slack: boolean
+
+    webhook: boolean
+  }
+}
+export class PerformanceMonitorService {
+
+export class PerformanceMonitorService {;
+  private apiKey: string;
+
+  private baseUrl: string
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
+    this.apiKey = apiKey
+    this.baseUrl = baseUrl
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   async monitorWebsite(url: string): Promise<PerformanceMetrics> {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
+<<<<<<< HEAD
+      const response = await fetch(`${this.baseUrl}/performance/monitor`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`;
+          'Content-Type': 'application/json'}
+        body: JSON.stringify({ url })});
+      if (!response.ok) {
+        throw new Error(`Performance monitoring failed: ${response.statusText}`)
+export interface PerformanceMetrics {;
+  url: string,;
+  timestamp: Date,;
+  loadTime: number,;
+  firstContentfulPaint: number,;
+  largestContentfulPaint: number,;
+  cumulativeLayoutShift: number,;
+  firstInputDelay: number,;
+  timeToInteractive: number,;
+  totalBlockingTime: number,;
+  speedIndex: number,;
+  performanceScore: number,;
+  accessibilityScore: number,;
+  bestPracticesScore: number,;
+  seoScore: number;
+}
+;
+export interface PerformanceAlert {;
+  id: string,;
+  url: string,;
+  type: 'critical' | 'warning' | 'info',;
+  message: string,;
+  metric: string,;
+  threshold: number,;
+  currentValue: number,;
+  timestamp: Date,;
+  resolved: boolean;
+}
+;
+export interface MonitoringConfig {;
+  urls: string[],;
+  frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily',;
+  thresholds: {;
+    loadTime: number,;
+    firstContentfulPaint: number,;
+    largestContentfulPaint: number,;
+    cumulativeLayoutShift: number;
+  },;
+  notifications: {;
+    email: boolean,;
+    slack: boolean,;
+    webhook: boolean;
+  }
+}
+;
+export class PerformanceMonitorService {;
+  private apiKey: string,;
+  private baseUrl: string,;
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {;
+    this.apiKey = apiKey,;
+    this.baseUrl = baseUrl;
+  }
+;
+  async monitorWebsite(url: string): Promise<PerformanceMetrics> {;
+    try {;
+      // In a real implementation, this would use Lighthouse, WebPageTest, or similar;
+      const response = await fetch(`${this.baseUrl}/performance/monitor`, {;
+        method: 'POST',;
+        headers: {;
+          'Authorization': `Bearer ${this.apiKey}`,;
+          'Content-Type': 'application/json'},;
+        body: JSON.stringify({ url })}),;
+      if (!response.ok) {;
+        throw new Error(`Performance monitoring failed: ${response.statusText}`);
+=======
 
 
 export interface PerformanceMetrics {;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       return await response.json()
 =======
@@ -60,17 +188,22 @@ export interface PerformanceMetrics {;
       return this && this.generateMockMetrics(url)
     }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
         headers: {
-
-=======
+          'Authorization': `Bearer ${this.apiKey}`}});
+      if (!response.ok) {
+        throw new Error(`Failed to fetch historical data: ${response.statusText}`)
 ;
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {;
     try {;
@@ -79,10 +212,13 @@ export interface PerformanceMetrics {;
           'Authorization': `Bearer ${this.apiKey}`}}),;
       if (!response.ok) {;
         throw new Error(`Failed to fetch historical data: ${response.statusText}`);
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       return await response.json()
 =======
@@ -99,10 +235,14 @@ export interface PerformanceMetrics {;
       return this && this.generateMockHistoricalData(url, days)
     }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
     try {
@@ -128,8 +268,9 @@ export interface PerformanceMetrics {;
       const params = url ? `?url=${encodeURIComponent(url)}` : '';
       const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
         headers: {
-
-=======
+          'Authorization': `Bearer ${this.apiKey}`}});
+      if (!response.ok) {
+        throw new Error(`Failed to fetch alerts: ${response.statusText}`)
 ;
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {;
     try {;
@@ -156,10 +297,13 @@ export interface PerformanceMetrics {;
           'Authorization': `Bearer ${this.apiKey}`}}),;
       if (!response.ok) {;
         throw new Error(`Failed to fetch alerts: ${response.statusText}`);
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       return await response.json()
 =======
@@ -176,10 +320,14 @@ export interface PerformanceMetrics {;
       return this && this.generateMockAlerts(url)
     }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
     summary: {
@@ -265,8 +413,6 @@ export interface PerformanceMetrics {;
         seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
 
       })
-
-=======
 ;
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{;
     summary: {;
@@ -345,16 +491,22 @@ export interface PerformanceMetrics {;
         bestPracticesScore: Math.floor(Math.random() * 20) + 80,;
         seoScore: Math.floor(Math.random() * 20) + 80;
       });
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     return data
   }
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   private generateMockAlerts(url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [
 =======
@@ -561,10 +713,19 @@ if ( {) {
         message: 'Performance score improved';
         metric: 'performance_score';
         threshold: 80;
+<<<<<<< HEAD
+        currentValue: 85;
+        timestamp: new Date()
+        resolved: true
+      }
+    ];
+    return url ? alerts.filter(a => a.url === url) : alerts
+=======
 
 
     return url ? alerts && alerts.filter(a => a && a.url === url) : alerts
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 // Pricing tiers for the Performance Monitor
@@ -606,10 +767,13 @@ export const PERFORMANCE_MONITOR_PRICING = {
     price: 149;
     period: '/month';
 
+<<<<<<< HEAD
+=======
 =======
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   private generateMockAlerts(url?: string): PerformanceAlert[] {;
     const alerts: PerformanceAlert[] = [;
@@ -650,16 +814,43 @@ export const PERFORMANCE_MONITOR_PRICING = {;
     features: [;
       'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
       'SLA guarantee';
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ];
   }
+}
 
-
-
+// Pricing tiers for the Performance Monitor
+export const PERFORMANCE_MONITOR_PRICING = {
+  starter: {;
+    name: 'Starter';
+    price: 19;
+    period: '/month',
+    features: [
+      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting'
+    ]
+  };
+  professional: {
+    name: 'Professional';
+    price: 49;
+    period: '/month',
+    features: [
+      'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access'
+    ]
+  };
+  enterprise: {
+    name: 'Enterprise';
+    price: 149;
+    period: '/month';
+    features: [
+      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support',
+      'SLA guarantee'
+    ]
+  }
 };
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

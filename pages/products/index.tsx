@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import type { NextPage } from 'next';
+=======
 
 
 class ErrorBoundary extends React.Component {
@@ -5,16 +8,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -23,9 +30,14 @@ class ErrorBoundary extends React.Component {
 =======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 import { NextPage } from 'next';
+import Head from 'next/head';
+ursor/integrate-build-improve-and-re-verify-8f7d
 
+origin/main
+origin/automation-improvements-final
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -101,6 +113,7 @@ const products = [;
     popular: false;
   }
 ];
+
 const categories = [;
   'All',;
   'AI & Analytics',;
@@ -110,9 +123,11 @@ const categories = [;
   'Collaboration',;
   'Data Management';
 ];
+
 const ProductsIndex: NextPage = () => {;
   const [selectedCategory, setSelectedCategory] = React && React.useState('All');
   const [searchTerm, setSearchTerm] = React && React.useState('');
+
   const filteredProducts = products && products.filter(product => {;
     const matchesCategory = selectedCategory === 'All' || product && product.category === selectedCategory;
     const matchesSearch = product && product.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
@@ -121,23 +136,15 @@ const ProductsIndex: NextPage = () => {;
 
     return matchesCategory && matchesSearch;
   });
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
+origin/main
+origin/automation-improvements-final
 
-=======
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-const Index: NextPage = () => {
   return (
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
     <Layout
       title="Products - Zion Tech Group"
       description="Discover our comprehensive suite of technology products designed to transform your business operations."
@@ -394,12 +401,15 @@ const ProductsIndex: NextPage = () => {
 
                       </div>;
                     </div>;
+
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">;
                       {product && product.name}
                     </h3>;
+
                     <p className="text-gray-600 mb-4 leading-relaxed">;
                       {product && product.description}
                     </p>;
+
                     <div className="space-y-2 mb-4">;
                       <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>;
                       <ul className="space-y-1">;
@@ -411,6 +421,7 @@ const ProductsIndex: NextPage = () => {
                         ))}
                       </ul>;
                     </div>;
+
                     <div className="space-y-2 mb-6">;
                       <h4 className="font-semibold text-gray-900 text-sm">Benefits:</h4>;
                       <ul className="space-y-1">;
@@ -422,12 +433,14 @@ const ProductsIndex: NextPage = () => {
                         ))}
                       </ul>;
                     </div>;
+
                     <div className="space-y-2 mb-6">;
                       <div className="flex justify-between items-center">;
                         <span className="text-sm font-medium text-gray-900">Pricing:</span>;
                         <span className="text-lg font-bold text-blue-600">{product && product.pricing}</span>;
                       </div>;
                     </div>;
+
                     <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">;
                       Learn More;
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
@@ -436,6 +449,7 @@ const ProductsIndex: NextPage = () => {
                 </motion && motion.div>;
               ))}
             </div>;
+
             {filteredProducts && filteredProducts.length === 0 && (;
               <div className="text-center py-12">;
                 <div className="text-gray-400 mb-4">;
@@ -469,38 +483,42 @@ const ProductsIndex: NextPage = () => {
                 </button>;
                 <Link
                   href="/contact"
-
-
-
-
-=======
-=======
-    <div>
-      <Head>
-        <title>Index - Zion Tech Solutions</title>
-
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
-                  Contact Sales;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
+<<<<<<< HEAD
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
+                  Contact Sales
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
   );
 };
 
 
+export default Index;
+import type { NextPage } from 'next',
+import Head from 'next/head',
+const Index: NextPage = () => {
+  return (
+=======
+
+
+
 
 =======
 =======
-
-        <meta name="description" content="Index page" />
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    <div>
+      <Head>
+        <title>Index - Zion Tech Solutions</title>
+        <meta name='description' content='Index page' />
       </Head>
-      
-=======
+ursor/integrate-build-improve-and-re-verify-8f7d
 
+export default ProductsIndex;
 import type { NextPage } from 'next';
 import Head from 'next/head';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -509,25 +527,25 @@ import Head from 'next/head';
         <p>This page is under construction.</p>
       </main>
     </div>
-
-
-
+  ),
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
   );
+ursor/integrate-build-improve-and-re-verify-8f7d
+};
+
+export default Index;
+<<<<<<< HEAD
 }
 export default ProductsIndex;
-
-  );
-};
-
-
-export default Index;
-
-=======
+origin/main
   )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-};
-
+}
 export default Index;
+
+},
+export default Index,
+=======
 
 
 
@@ -652,3 +670,4 @@ export default Index,
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

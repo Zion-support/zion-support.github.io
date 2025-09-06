@@ -1,8 +1,13 @@
 
+<<<<<<< HEAD
+import { useState } from 'react';
+import {useState} from 'react';
+=======
 
 import {useState} from 'react';
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function useAuthStatus() {
   // Mock authenticated status
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -42,6 +47,10 @@ export function useAuthStatus() {
     handleToggleSave;
 
     toggleAuth
+<<<<<<< HEAD
+  }
+}
+=======
 
 import {useState} from 'react';
 export /**
@@ -52,6 +61,7 @@ function useAuthStatus() {
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',;
 export function useAuthStatus() {;
 
@@ -99,23 +109,12 @@ if ( {) {
     savedTalents;
     handleToggleSave;
     toggleAuth;
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ;
-  // For demo purposes, let's provide a login / logout toggle;
-  const toggle_auth = () =>: any {
-    setIsAuthenticated (prev => !prev);
-  }
-;
-  return {
-    is_authenticated;
-    user_details;
-    saved_talents;
-    handleToggleSave;
-    toggle_auth;
-  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}

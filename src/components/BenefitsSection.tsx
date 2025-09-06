@@ -1,7 +1,36 @@
 const getBenefits = (t: any) => [
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   {
+    title: t('benefits.ai_matchmaking')
+    description: t('benefits.ai_matchmaking_desc')
+    icon: <Bot className='w-8 h-8' />
+  }
+  {
+    title: t('benefits.global_availability')
+    description: t('benefits.global_availability_desc')
+    icon: <Globe className='w-8 h-8' />
+  }
+  {
+    title: t('benefits.support_24_7')
+    description: t('benefits.support_24_7_desc')
+    icon: <Clock className='w-8 h-8' />
+  }
+  {
+    title: t('benefits.cost_reduction')
+    description: t('benefits.cost_reduction_desc')
+    icon: <TrendingDown className='w-8 h-8' />
+  }
+]
+export function BenefitsSection({ className, style }: BenefitsSectionProps) {
+  const { t } = useTranslation()
+  const benefits = getBenefits(t)
+    >
+      <div className='container mx-auto px-4'>
+        <div className='text-center mb-16'>
 
     title: t('benefits.ai_matchmaking'),
     description: t('benefits.ai_matchmaking_desc'),
@@ -23,11 +52,6 @@ const getBenefits = (t: any) => [
             {t('home.benefits_subtitle')}
           </p>
         </div>
-
-
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (        
-
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
 
@@ -160,7 +184,9 @@ function BenefitsSection() {
               title={benefit.title}
               description={benefit.description}
               icon={benefit.icon}
-
+              className='bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300'            />              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
+              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
+            />
           ))}
 
               className='bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300'            />              className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";

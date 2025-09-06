@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Props {;
   children: React && React.ReactNode;
 }
@@ -20,16 +21,14 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
   static getDerivedStateFromError(error: Error): State {;
     return { hasError: true, error }
   }
-
-
-
+;
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {;
+    logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack });
   }
 
   render() {;
     if (this && this.state.hasError) {;
       return (
-
-
                 <Button onClick={() => window.location.reload()} variant="default">
                   Refresh Page
                 </Button>
@@ -39,8 +38,6 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
         </div>
       )
 
-
-
     return this.props.children
   }      )
     }
@@ -48,8 +45,6 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
     return this.props.children;
   };
 } ;
-
-
 }
                   onClick={() => window && window.location.reload()}
                   variant='default';

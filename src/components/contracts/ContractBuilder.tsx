@@ -40,11 +40,23 @@ isOpen;
   }
 
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
   return (
-
-
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle>Contract Builder</DialogTitle>
+        </DialogHeader>
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">
+          <div className="flex justify-between items-center">
+            <TabsList className="grid grid-cols-2">
+              <TabsTrigger value="form">Contract Details</TabsTrigger>
+              <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
+            </TabsList>
             
 
 
@@ -89,69 +101,9 @@ isOpen;
               <Button
                 variant="secondary"
                 size="sm"
-                onClick = {() => setShowSmartContractBuilder(true),}
-
-              >;
-                Smart Contract Builder;
-              </Button>;
-            </div>;
-          </div>;
-
-          <TabsContent value="form" className="pt-4">;
-
             <ContractForm
 
             <ContractForm 
-
-              talent = {talent,}
-              clientName = {clientName,}
-              initialValues = {formValues,}
-              onFormValuesChange = {setFormValues,}
-              onContractGenerated = {handleContractGenerated,}
-
-            />;
-          </TabsContent>;
-
-          <TabsContent value="preview" className="pt-4">;
-            {generatedContract && (;
-
               <ContractPreview
 
               <ContractPreview 
-
-                contractContent = {generatedContract,}
-                talent = {talent,}
-                onClose = {onClose,}
-                status="ready"
-              />;
-            )}
-
-          </TabsContent>;
-        </Tabs>;
-
-
-        <TemplateManager
-          isOpen = {templateManagerOpen,}
-          onClose = {() => setTemplateManagerOpen(false),}
-          onSelectTemplate = {handleLoadTemplate,}
-          currentValues = {formValues,}
-
-        />;
-      </DialogContent>;
-    </Dialog>;
-  );
-
-  handleContractGenerated;
-}/> </TabsContent> />);
-}</TabsContent> </Tabs> <TemplateManager is_open= {
-  templateManagerOpen;
-}on_close= {
-  () => setTemplateManagerOpen (false);
-}onSelectTemplate= {
-  handleLoadTemplate;
-}current_values= {
-  form_values;
-}/> </DialogContent> </Dialog>);
-}"}
-}
-;

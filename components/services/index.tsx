@@ -1,19 +1,35 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export default function ServicesIndexPage () {
+ export default function ServicesIndexPage () {
+export default function ServicesIndexPage () {
+ export default function ServicesIndexPage () {
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
   //Category const handle_submit = async (values: QuoteFormValues) => {
   const res = await fetch ('/api / quote - request', {
   method: 'POST', headers: {
+<<<<<<< HEAD
+  'Content-Type': 'application/json'
+}
+  'Content-Type': 'application/json' ;
+};
+=======
 
 
   'Content-Type': 'application/json' ;
 };
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
   start: values.timelineStart, end: values.timelineEnd
@@ -290,25 +306,37 @@ function ServicesIndexPage() {
 
     }
   }
-=======
-    }
-
   };
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-
-
+    <UltraFuturisticBackground variant="quantum" intensity={1.5}>
+      <Head>
+        <title>Zion AI Marketplace - Services</title>
+        <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." />
+      </Head>
+      <div className="relative">
+        <div className="absolute -z-10 -top-40 -left-40 w-96 h-96 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500" />
+        <div className="flex flex-col sm: flex-row gap-6">
+          <MarketplaceFilters availableCategories={availableCategories} value={filters} onChange={setFilters} />
+          <div className="flex-1">
+            <div className="mb-4 flex items-center justify-between">
+              <h1 className="text-2xl font-semibold text-white">Services</h1>
+              <div className="text-sm text-white/70">{filtered.length} results</div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {filtered.map((service) => (
+                <EnhancedMarketplaceCard key={service.slug |service.id} service={service} onRequestQuote={handleRequestQuote} />
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
-
-
               ))}
             </div>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <UltraFuturisticBackground variant="quantum" intensity={1 && 1.5}>;
       <Head>;
         <title>Zion AI Marketplace - Services</title>;
@@ -424,11 +452,27 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
         service={selected}
         onSubmit={handleSubmit}
+<<<<<<< HEAD
+      />
+    </div>
+  )
+}
+=======
 
       />;
     </div>;
@@ -438,20 +482,16 @@ if ( {) {
 
 export default ServicesPage;
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ServicesPage;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-=======
-      <QuoteRequestModal;
-        open={modal_open}
-        on_close={() => setModalOpen (false)}
-        service={selected}
-        on_submit={handle_submit}
-      />;
-    </div>);
 }
+<<<<<<< HEAD
+}
+}
+=======
 ;
 export default ServicesPage;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

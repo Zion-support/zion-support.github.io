@@ -41,6 +41,14 @@ import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
 import { logErrorToProduction } from '@/utils / production_logger';
+import React, { useState } from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { logErrorToProduction } from '@/utils/productionLogger'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   Zap,
   Download,
@@ -72,11 +80,6 @@ if ( {) {
 }
     return null;
   }
-  const [is_visible, setIsVisible] = useState (false);
-  const [is_processing, setIsProcessing] = useState < string | null>(null);
-  const execute_action = async (action_id: string, action: () => void) => {
-    setIsProcessing (action_id);    try {
-      await action ();
     } catch (error) {
       logErrorToProduction (`Failed to execute action ${action_id}:`, {
         data: error,
@@ -127,9 +130,6 @@ export function QuickActions() {;
     }
   },
 
-
-
-
   const actions: QuickAction[] = [
     // Performance Actions
     {
@@ -139,10 +139,6 @@ export function QuickActions() {;
       icon: <Activity className="w-4 h-4" />,
       category: 'performance',
       action: () => {
-
-
-
-
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
@@ -150,10 +146,6 @@ export function QuickActions() {;
       icon: <Package className="w-4 h-4" />,
       category: 'performance',
       action: () => {
-
-
-
-
     {
       id: 'clear-cache',
       label: 'Clear Cache',
@@ -167,8 +159,6 @@ export function QuickActions() {;
             names.forEach(name => caches.delete(name))
           })
         }
-
-
       },
     },
         localStorage.clear(),
@@ -186,41 +176,6 @@ export function QuickActions() {;
       action: () => {
         // Preload critical fonts
         const criticalFonts = [
-
-  dangerous?: boolean;
-
-        // Preload critical images
-        const criticalImages = [
-          '/logos/zion-logo.png/images/hero-bg.webp'
-        ],
-        
-        criticalImages.forEach(img => {
-          const link = document.createElement('link'),
-          link.rel = 'preload',
-          link.as = 'image',
-          link.href = img,
-          document.head.appendChild(link)
-        })
-      }},
-    {
-      id: 'download-performance-report',
-      label: 'Download Performance Report',
-      description: 'Export current performance metrics',
-      icon: <Download className="w-4 h-4" />,
-      category: 'development',
-      action: () => {
-        const metrics = {
-          timestamp: new Date().toISOString(),
-          performance: window.window.window.performance.getEntriesByType('navigation')[0],
-          resources: window.window.window.performance.getEntriesByType('resource').slice(0, 20),
-          memory: (performance as any).memory || {},
-          userAgent: navigator.userAgent,
-          screen: {
-            width: screen.width,
-            height: screen.height,
-            colorDepth: screen.colorDepth
-          }
-        },
 
         const blob = new Blob([JSON.stringify(metrics, null, 2)], {
           type: 'application/json'
@@ -339,8 +294,6 @@ export function QuickActions() {;
           screen: {
             width: screen.width,
             height: screen.height,
-
-
     {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
@@ -349,8 +302,6 @@ export function QuickActions() {;
       category: 'development',
       dangerous: true,
       action: () => {
-
-
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
@@ -359,17 +310,15 @@ export function QuickActions() {;
       category: 'maintenance',
       action: () => {
         window.location.reload()
-
-
-
-
-
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
         <Button
-
-
+          variant='outline'
+          size='sm'
+          onClick={() => setIsVisible(true)}
+          className='bg-background/80 backdrop-blur-sm'        >
+          <Settings className='w-4 h-4 mr-2' />
           variant="outline"
           size="sm"
           onClick={() => setIsVisible(true)}
@@ -406,8 +355,6 @@ export function QuickActions() {;
               onClick={() => setIsVisible(false)}
               className="h-6 w-6 p-0"
             >
-
-
               ✕
             </Button>
           </div>

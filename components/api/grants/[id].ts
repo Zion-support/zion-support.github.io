@@ -1,6 +1,31 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+import type {
+  GrantApplication
+  UpdateGrantPayload;
+  GrantApplication,;
+  UpdateGrantPayload,;
+} from '../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  }
+function grantPath(id: string) {
+  return path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true })
+  }
+}
+function grantPath(id: string) {
+  return path.join(GRANTS_DIR, `${id}.json`);
+}
+function readGrant(id: string): GrantApplication | null {
+  ensureDir();
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 function ensureDir() {
@@ -25,18 +50,8 @@ function grantPath(id: string) {
     'utf8'
   );  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
 }
-
-
-
-function readGrant(id: string): GrantApplication | null {
-  ensureDir();
-  const file = grantPath(id);
-
-  if (!fs.existsSync(file)) return null;
-  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
-}
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+function writeGrant(record: GrantApplication) {
+  ensureDir()
 
 function writeGrant(record: GrantApplication) {
 
@@ -72,10 +87,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
-
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+  const { id } = req.query as { id: string }
+  const { id } = req.query as { id: string };
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
     return
@@ -127,10 +147,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
-
-  res && res.setHeader('Allow', 'GET, PUT');
-  res && res.status(405).end('Method Not Allowed');  res && res.setHeader('AllowGET, PUT');
-  res && res.status(405).end('Method Not Allowed')
+  res.status(405).end('Method Not Allowed')
 }
 
 =======
@@ -158,9 +175,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(405).end('Method Not Allowed')
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

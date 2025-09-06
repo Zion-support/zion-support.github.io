@@ -1,4 +1,15 @@
 
+<<<<<<< HEAD
+import React from 'react';
+import { format  } from 'date-fns';
+import { cn  } from '@/lib/utils';
+import { Conversation  } from '@/types/messaging';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+interface ConversationItemProps {
+  conversation: Conversation,
+  isActive: boolean,
+  onClick: () => void
+=======
 
 
   conversation: Conversation,
@@ -6,6 +17,7 @@
   onClick: () => void
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { format } from 'date-fns',;
 import { cn } from '@/lib/utils',;
@@ -15,12 +27,13 @@ interface ConversationItemProps {;
   conversation: Conversation,;
   isActive: boolean,;
   onClick: () => void;
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   conversation: Conversation
   isActive: boolean
@@ -29,12 +42,28 @@ interface ConversationItemProps {;
 }
 export function ConversationItem({ conversation, isActive, onClick }: ConversationItemProps) {
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    <div
+    <div 
+      className={cn(;
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30",
+      className={cn(
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30"
+
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover:bg-zion-blue-dark/30",
+=======
 
 
     <div 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}

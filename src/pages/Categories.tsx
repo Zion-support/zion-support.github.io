@@ -1,8 +1,6 @@
 import { GradientHeading } from "@/components/GradientHeading",
 import { SkeletonCard } from '@/components/ui',
 import ErrorBoundary from "@/components/GlobalErrorBoundary",
-
-
 import { Folder } from 'lucide-react'
 import { CATEGORIES  } from '@/data/categories';
 import { NextSeo  } from '@/components/NextSeo';
@@ -12,35 +10,6 @@ interface CategoryType {
   name: string;
   slug: string;
   icon: string
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-      logErrorToProduction('Categories API error:', { data: response && response.statusText }),;
-      return CATEGORIES as CategoryType[];
-    fallbackData: initialCategories}),;
-  const categories = data || [];
-  const isLoading = !data && !error;
 
 
       logErrorToProduction ('Categories API error:', { data: response.status_text }),
@@ -171,11 +140,6 @@ const Categories: React.FC = () => {}
 export default Categories"";
 ";
   )}
-
-export: default Categories,;
-export default Categories," ];
-export default Categories"")))))))));
-}
 
 const Categories: React.FC: = () => {, ";
   const categories = [];

@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+import {cn} from "@/lib/utils";
+import {Badge} from "@/components/ui/badge";
+import {Link} from "react-router-dom";
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
+=======
 
 
 
@@ -11,6 +19,7 @@ interface ListingCardProps {;
 import { cn } from '@/lib / utils';
 import { Badge } from '@/components / ui / badge';
 import { Link } from './react-router-dom';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ListingCardProps {
 
   id?: string;
@@ -46,7 +55,12 @@ export function ListingCard(): any ({ ;
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer"
 
+<<<<<<< HEAD
+import { Badge } from "@/components/ui/badge",
+import { Link } from "react-router-dom",
 =======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ListingCardProps {
   id?: string,
   title: string,
@@ -58,13 +72,52 @@ interface ListingCardProps {
   authorImage?: string,
   className?: string,
   profileType?: 'service' | 'talent'
+<<<<<<< HEAD
+}
 
 
+  return (
+    <Link 
+import { cn } from "@/lib/utils",;
+import { Badge } from "@/components/ui/badge",;
+import { Link } from "react-router-dom",;
+interface ListingCardProps {;
+  id?: string,;
+  title: string,;
+  description: string,;
+  image?: string,;
+  category: string,;
+  tags?: string[],;
+  author?: string,;
+  authorImage?: string,;
+  className?: string,;
+  profileType?: 'service' | 'talent';
+}
+;
+export function ListingCard({;
+  id,;
+  title,;
+  description,;
+  image,;
+  category,;
+  tags,;
+  author,;
+  authorImage,;
+  className,;
+  profileType = 'service';
+}: ListingCardProps) {;
+  // Generate a profile ID based on the listing data;
+  // In a real app, this would be a proper ID from the database;
+  const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
+  return (;
+    <Link;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       to={`/profile/${profileId}`}
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         className
 
       )}>;
@@ -98,11 +151,7 @@ interface ListingCardProps {
             ))}
           </div>;
         )}
-
-
         
-
-
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {authorImage ? (

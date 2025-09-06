@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+
+import { Control } from "react-hook-form";
+import { BasicInfoFormData } from "./schema";
+=======
 
   FormField,
   FormItem,
@@ -17,20 +30,27 @@ interface ContactFieldsProps {
 =======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Control} from "react-hook-form";
 import {BasicInfoFormData} from "./schema";
+<<<<<<< HEAD
+=======
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ContactFieldsProps {
   control: Control<BasicInfoFormData>;
 }
@@ -48,7 +68,6 @@ export function ContactFields({ control }: ContactFieldsProps) {
             </FormControl>
             <FormMessage />
           </FormItem>
-
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { Control } from "react-hook-form",;
@@ -92,9 +111,12 @@ function ContactFields() {
             </FormControl>
             <FormMessage />
           </FormItem>
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         )}
 
       />;
@@ -168,6 +190,15 @@ function ContactFields() {
             <FormMessage />;
           </FormItem>;
         )}
+<<<<<<< HEAD
+      />
+    </div>
+  );
+}
+  )
+}
+;
+=======
 
       />;
     </div>;
@@ -202,3 +233,4 @@ function ContactFields() {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

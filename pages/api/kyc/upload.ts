@@ -1,11 +1,25 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'KYC uploaded' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { KycDocumentMeta, KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 
+<<<<<<< HEAD
+const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
+const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
+const FILE = path.join(DATA_DIR, 'profiles.json');
+
+const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
+const FILE = path.join(DATA_DIR, 'profiles.json');
+=======
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
@@ -14,19 +28,34 @@ const FILE = path.join(DATA_DIR, 'profiles.json');
 
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'kyc');const FILE = path && path.join(DATA_DIR, 'profiles && profiles.json');
+=======
 const DATA_DIR = path.join(process.cwd(), 'datakyc');
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function load(): Record<string, KycProfile> {
   try {
-
-  };
-  if (!userId || !kind || !filename)
-    return res && res.status(400).json({ error: 'Missing userId, kind or filename' });
-
-
+    const raw = fs.readFileSync(FILE, 'utf8');
+    return JSON.parse(raw);
+  } catch {
+    return {}
+  }
+function save(db: Record<string, KycProfile>) {
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+  fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+  const { userId, kind, filename } = req.body as {
+    userId?: string;
+    kind?: KycDocumentMeta['kind'];
+    filename?: string;
+  }
+  if (!userId |!kind |!filename)
+    return res.status(400).json({ error: 'Missing userId, kind or filename' });
   const db = load();
   const profile = db[userId];
   if (!profile)
@@ -46,17 +75,62 @@ function load(): Record<string, KycProfile> {
 
   }
 }
-function save(db: Record<string, KycProfile>) {
+
+  } catch {;
+    return {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+function save(db: Record<string, KycProfile>) {;
   fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
 }
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { userId, kind, filename } = req.body as { userId?: string, kind?: KycDocumentMeta['kind'], filename?: string };
   if (!userId || !kind || !filename) return res.status(400).json({ error: 'Missing userId, kind or filename' });
-const db = load();
+
+  const db = load();
   const profile = db[userId];
   if (!profile) return res.status(404).json({ error: 'Profile not found. Start KYC first.' });
+
   const id = crypto.randomUUID();
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const uploadedAt = new Date().toISOString();
@@ -71,8 +145,10 @@ const db = load();
   profile.documents = [...withoutSameKind, doc];
   profile.lastUpdatedAt = uploadedAt;
   profile.auditTrail.push({ at: uploadedAt, by: userId, action: 'document_uploaded', details: { kind, filename } });
-db[userId] = profile;
+
+  db[userId] = profile;
   save(db);
+
   res.status(200).json({ ok: true, profile })
 
 =======
@@ -89,9 +165,15 @@ db[userId] = profile;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+}
+}
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 ;
 const DATA_DIR = path.join (process.cwd (), 'data', 'kyc');const FILE = path.join (DATA_DIR, 'profiles.json');
 ;
@@ -160,3 +242,4 @@ if (
 res.status (200).json ({ ok: true, profile });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

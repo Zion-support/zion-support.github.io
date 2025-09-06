@@ -6,7 +6,6 @@ return (
             <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>
           </div>
-
 };
 }</div> </div> </div> </section>) ;
 }'";

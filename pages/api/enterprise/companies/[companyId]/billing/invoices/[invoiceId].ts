@@ -1,18 +1,44 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 export const config = {
   api: {
+<<<<<<< HEAD
+    responseLimit: false
+  }
+}
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+import type { NextApiRequest, NextApiResponse } from "next";
+export const config = {
+  api: {
+    responseLimit: false,
+  },;
+};
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  const { companyId, invoiceId } = req.query;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (
     !companyId |
     typeof companyId !== "string" |
     !invoiceId |
     typeof invoiceId !== "string"
   ) {
-    return res.status(400).json({ error: "companyId and invoiceId required" });
+    return res && res.status(400).json({ error: "companyId and invoiceId required" });
   }
 
 
@@ -22,8 +48,18 @@ export const config = {
   );
   res && res.status(200).send(pdfBuffer);
 }
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ invoice: 'PDF buffer' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export const config = {;
+  api: {;
 =======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     responseLimit: false}};
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -31,6 +67,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!companyId || typeof companyId !== 'string' || !invoiceId || typeof invoiceId !== 'string') {
     return res.status(400).json({ error: 'companyId and invoiceId required' })
   }
+
   if (req.method !== 'GET') return res.status(405).json({ error: 'method_not_allowed' });
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -52,6 +89,8 @@ export const config = {
     response_limit: false,
   },
 }
+<<<<<<< HEAD
+=======
 ;
 export default async /**
  * handler - Function description
@@ -91,3 +130,4 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

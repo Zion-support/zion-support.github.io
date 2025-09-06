@@ -1,10 +1,10 @@
 
-import {supabase} from '@/integrations / supabase / client';
-import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
-import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';
-import {format} from 'date - fns';
-import {Skeleton} from '@/components / ui / skeleton';
-
+import React, { useState, useEffect } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
+import { format  } from 'date-fns';
+import { Skeleton } from '@/components/ui/skeleton';
 interface MilestoneActivitiesProps {
   project_id: string;
 }
@@ -22,12 +22,23 @@ interface Activity {
   milestone: {
 
 
+<<<<<<< HEAD
+    avatar_url: string | null
+  }
+}
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
+  const [activities, setActivities] = useState<Activity[]>([]),
+
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
+  const [activities, setActivities] = useState<Activity[]>([]);
+=======
 
 
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
   const [activities, setActivities] = useState<Activity[]>([]);
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     async function fetchActivities() {
@@ -46,56 +57,16 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         if (error) throw error;
         setActivities(data |[])
 
-=======
-    title: string;
-  }
-  created_by_profile: {
-    display_name: string,
-    avatar_url: string | null;
-  }
-}
-export /**
- * MilestoneActivities - Function description
- */
-function MilestoneActivities() {
-  const [activities, set_activities] = useState < Activity[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-;
-  useEffect (() => {
-    async /**
- * fetch_activities - Function description
- */
-function fetch_activities() {
-      try {
-        setIsLoading (true);
-;
-        const { data, error } = await supabase;
-          .from ('milestone_activities');
-          .select (`;
-            *;
-            milestone: milestone_id (title),
-            created_by_profile:profiles ! user_id (display_name, avatar_url);
-          `);
-          .eq ('project_id', project_id);
-          .order ('created_at', { ascending: false }),
-        // Check condition
-if (throw error) {
-  $2
-}
-        set_activities (data || []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } catch (err) {
-        console.error ('Error fetching milestone activities:', err);
+        console.error('Error fetching milestone activities:', err)
       } finally {
-        setIsLoading (false);
-      }
-    }
-
-import {supabase} from '@/integrations/supabase/client';
-import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
-import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
-import {format} from 'date-fns';
-import {Skeleton} from '@/components/ui/skeleton';
+        setIsLoading(false)
+import React, { useState, useEffect } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
+import { format } from 'date-fns',;
+import { Skeleton } from '@/components/ui/skeleton',;
 interface MilestoneActivitiesProps {;
   projectId: string;
 }
@@ -144,10 +115,34 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
         console && console.error('Error fetching milestone activities:', err);
       } finally {;
         setIsLoading(false);
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     }
+    if (projectId) {
+      fetchActivities()
+    }
+  }, [projectId]);
+  function getActivityDescription(activity: Activity): string {
+    switch (activity.action) {
+      case 'created':
 
+<<<<<<< HEAD
+        return 'created a new milestone'
+
+      case 'status_changed':
+        return `changed status from ${activity.previous_status |'none'} to ${activity.new_status}`;
+      case 'updated':
+        return 'updated milestone details';
+      case 'deliverable_added':
+        return 'added a deliverable';
+      default:
+        return activity.action.replace(/_/g, ' ')
+    }
+  }
+=======
     if (projectId) {;
       fetchActivities();
     }
@@ -155,6 +150,7 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
     switch (activity.action) {;
@@ -169,19 +165,16 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
       case 'deliverable_added':;
         return 'added a deliverable';
       default:;
-
-
-  if (isLoading) {;
-
-=======
         return activity.action.replace(/_/g, ' ');
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -201,8 +194,6 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
       </div>
     )
   }
-
-
 
   if (activities.length === 0) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -273,7 +264,12 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
                 </div>;
               </div>;
             ))}
-
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  )
+}
           </div>;
         </CardContent>;
       </Card>;
@@ -290,6 +286,3 @@ if ( {) {
     }
   }, [project_id]);
 ;
-
-
-

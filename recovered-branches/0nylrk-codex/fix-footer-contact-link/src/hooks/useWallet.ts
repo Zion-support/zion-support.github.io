@@ -1,4 +1,26 @@
 
+<<<<<<< HEAD
+import { useEffect, useState  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { supabase  } from '@/integrations/supabase/client';
+import {useEffect, useState} from 'react';
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import type { Wallet, TokenTransaction } from '@/types/tokens';
+export function useWallet() {;
+  const { user } = useAuth();
+  const [wallet, setWallet] = useState<Wallet | null>(null),
+  const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
+  const [loading, setLoading] = useState(true);
+
+  const [error, setError] = useState<string | null>(null);
+
+  async function fetchWallet() {
+    if (!user?.id) {
+      setWallet(null);
+      setLoading(false);
+      return
+=======
 import {useEffect, useState} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
@@ -24,6 +46,7 @@ if ( {) {
       set_wallet (null);
       set_loading (false);
       return;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     try {
       set_loading (true);
@@ -158,7 +181,7 @@ if (return) {
     transactions;
     loading;
     error;
-
+    fetchWallet;
 import { useEffect, useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -254,9 +277,12 @@ export function useWallet() {;
     loading,;
     error,;
     fetchWallet,;
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     fetchTransactions;
     earnTokens;
 

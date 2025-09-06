@@ -161,15 +161,17 @@ if ( {) {
     }
   },
   
-
-
-
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
-
+          name='title'
+          render={({
+            field
+          }: {
+            field: ControllerRenderProps<FormValues, 'title'>
+          }) => (            <FormItem>
           name="title"
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
@@ -307,7 +309,6 @@ if ( {) {
                 Saving...
               </>
             ) : (
-
   editTemplate ? "Update" : "Save" 
 }Template`) ;
 }</Button> </div> </form> </Form>) ;

@@ -123,18 +123,10 @@ export function ApplicationActions({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-
       
 
       
       
-
-
-      <Button 
-        variant="default" 
-        size="sm"
-        asChild
-      >
 
             onClick={() => onStatusChange(application && application.id, 'hired')}          >;
             Shortlist;
@@ -167,6 +159,21 @@ import {
   DropdownMenuTrigger,
 } from '@/components / ui / dropdown - menu';
 import { Button } from '@/components / ui / button';
+          Contact
+        </Link>
+      </Button>
+    </div>
+  )
+import Link from "next/link",;
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger;
+} from "@/components/ui/dropdown-menu",;
+import { Button } from "@/components/ui/button",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Eye, ChevronDown, Loader2 } from 'lucide-react';
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
 interface ApplicationActionsProps {;

@@ -29,12 +29,6 @@ export const ReputationDisplay = ({
   // Styling based on size
   const sizeClasses = {
     sm: {
-
-
-      container: 'text-xs',
-      icon: 'w-3 h-3',
-
-
       progress: 'h-1',  // Styling based on size
   const sizeClasses = {
     sm: {
@@ -121,7 +115,6 @@ export const ReputationDisplay = ({
       </div>
     </div>
   )
-
 },
 
 export default ReputationDisplay,
@@ -133,10 +126,9 @@ interface ReputationDisplayProps {;
 
 
 }
-
-export default ReputationDisplay;
-';
-    },
+export default ReputationDisplay
+'
+    }
     md: {
       container: 'text - sm',
       icon: 'w - 4 h - 4',
@@ -163,6 +155,7 @@ export default ReputationDisplay;
       </div>;
     </div>);
 }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export const ReputationDisplay = ({;
   reputation,;

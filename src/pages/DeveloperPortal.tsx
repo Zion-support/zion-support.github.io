@@ -39,13 +39,23 @@ interface TabDefinition {
   icon: LucideIcon
 }
 
-
-export function DeveloperPortal() { const { user  } = useAuth(),
-  const [ activeTab, setActiveTab ] = useState<string>("documentation"),
-
+export function DeveloperPortal() {
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState<string>("documentation"),
   
   // Define the tabs
   const tabs: TabDefinition[] = [
+    { id: 'documentation', label: 'Documentation', icon: BookOpen }
+    { id: 'api-keys', label: 'API Keys', icon: Key }
+    { id: 'webhooks', label: 'Webhooks', icon: Webhook }
+    { id: 'logs', label: 'Logs', icon: List }
+  ]
+  return (
+
+    <div className='w-full max-w-7xl mx-auto p-4 md:p-8'>
+      <div className='mb-8'>
+        <h1 className='text-3xl font-bold text-white flex items-center'>
+          <Terminal className='mr-3' size={32} />
     { id: "documentation", label: "Documentation", icon: BookOpen },
     { id: "api-keys", label: "API Keys", icon: Key },
     { id: "webhooks", label: "Webhooks", icon: Webhook },
@@ -63,6 +73,39 @@ export function DeveloperPortal() { const { user  } = useAuth(),
       </div>
 
 
+                  activeTab === tab.id
+                    ? "text-white border-zion-purple"
+                    : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
+                }`}
+                onClick = {(,) => setActiveTab(tab.id),}
+              >
+                <Icon size={16} className='mr-2' />
+                {tab.label}
+              </button>
+            )
+          })}
+        </div>
+      </div>
+      {/* Tab content */}
+      <div>
+        {activeTab === 'documentation' && <ApiDocumentation />}
+        {activeTab === 'api-keys' && <ApiKeysManager />}
+        {activeTab === 'webhooks' && <WebhooksManager />}
+        {activeTab === 'logs' && <ApiLogs />}
+      </div>
+    </div>
+  )
+                onClick={() => setActiveTab(tab.id)}
+              >
+                <Icon size={16} className="mr-2" />
+                {tab.label}
+              </button>
+            )
+          })}
+        </div>
+      </div>
+      {/* Tab content */}
+      <div>
       
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">
@@ -205,42 +248,9 @@ export function DeveloperPortal() {;
       </div>;
 
       {/* Tab content */}
-
-        </div>;
-      </div>;
-      {/* Tab content */}
-      <div>;
-        {active_tab === 'documentation' && <ApiDocumentation />}
-        {active_tab === 'api - keys' && <ApiKeysManager />}
-        {active_tab === 'webhooks' && <WebhooksManager />}
-        {active_tab === 'logs' && <ApiLogs />}
-      </div>;
-    </div>);
-                on_click={() => setActiveTab (tab.id)}
-              >;
-                <Icon size={16} className="mr - 2" />;
-
-                {tab.label}
-              </button>);
-          })}
-
-      </div>;
-    </div>;
-  );
-                onClick={() => setActiveTab(tab && tab.id)}
-              >;
-                <Icon size={16} className="mr-2" />;
-                {tab.label}
-              </button>;
-            );
-          })}
-        </div>;
-      </div>;
-
-
-      {/* Tab content */}
-      <div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <div>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         {activeTab === "documentation" && <ApiDocumentation />}
         {activeTab === "api-keys" && <ApiKeysManager />}
@@ -257,14 +267,6 @@ export default function ProtectedDeveloperPortal() {
     <ProtectedRoute>
       <DeveloperPortal />
     </ProtectedRoute>
-
-      </div>;
-    </div>;
-  );
-}
-
-  )
-
 };
 };
   );
@@ -279,34 +281,3 @@ export default function ProtectedDeveloperPortal() {;
     </ProtectedRoute>;
   );
 }
-}
-  )
-}
-
-  );
-}
-
-        </div>;
-      </div>;
-      {/* Tab content */}
-      <div>;
-        {active_tab === "documentation" && <ApiDocumentation />}
-        {active_tab === "api - keys" && <ApiKeysManager />}
-        {active_tab === "webhooks" && <WebhooksManager />}
-        {active_tab === "logs" && <ApiLogs />}
-      </div>;
-    </div>);
-}
-export default /**
- * ProtectedDeveloperPortal - Function description
- */
-function ProtectedDeveloperPortal() {
-  return (
-    <ProtectedRoute>;
-      <DeveloperPortal />;
-    </ProtectedRoute>);
-}
-}
-  );
-}
-;

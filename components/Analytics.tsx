@@ -238,8 +238,6 @@ if ( {) {
 
                         name: 'load',
                         value: Math.round(loadTime),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       });
 =======
           __html: `
@@ -273,22 +271,13 @@ if ( {) {
                 }, 0)
               })
             }
-
-    </Head>);
-}
-;
-
-=======
-
+          `
           `,
-
         }}
       />
     </Head>
   );
-
+}
 };
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Analytics;

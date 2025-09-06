@@ -1,4 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (!requireSuperadminApi(req, res)) return;
+
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });  const { amount } = req.body |{};export default function handler(req: NextApiRequest, res: NextApiResponse) {
+    return res.status(405).json({ error: 'Method not allowed' });  const { amount } = req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+=======
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -14,6 +26,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     return res.status(405).json({ error: 'Method not allowed' });  const { amount } = req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!requireSuperadminApi(req, res)) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { amount } = req.body |{}
@@ -28,6 +41,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const record = { amount, timestamp: new Date().toISOString() }
   commits.push(record);
   writeJsonFile('deal/soft-commits.json', commits);
+<<<<<<< HEAD
+  res.status(200).json(record);  res.status(200).json(record)
+}
+
+=======
 
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });  const { amount } = req && req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -43,11 +61,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
   res.status(200).json(record)
 }
 import { readJsonFile, writeJsonFile } from '../../../../utils / api / storage';
@@ -82,3 +102,10 @@ function handler() {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

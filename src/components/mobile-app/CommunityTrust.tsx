@@ -76,6 +76,8 @@ export const CommunityTrust: React.FC = () => {
 
 
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ]
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
@@ -153,18 +155,8 @@ export const CommunityTrust: React.FC = () => {;
               <div className="text-zion-slate-light">{stat.label}</div>;
             </div>;
           ))}
-
         </div>;
-
-
         {/* Rating display */}
-        <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">
-          <div className="flex justify-center mb-4">
-            {[1, 2, 3, 4, 5].map((star) => (
-              <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />
-            ))}
-
-
           </div>
           <blockquote className="text-center text-lg text-white italic mb-4">
             "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere."

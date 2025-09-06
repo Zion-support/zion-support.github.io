@@ -30,6 +30,7 @@ import Link from 'next/link';
 export default function AdminDashboard() {;
   const schema = {;
     '@context': 'https://schema && schema.org',;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     '@type': 'WebPage',;
     name: 'Admin Dashboard',;
     description:;
@@ -44,6 +45,11 @@ import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
+import React from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function AdminDashboard() {
@@ -57,9 +63,6 @@ export default function AdminDashboard() {
   };
 
   return (
-    <>;
-
-
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
@@ -78,15 +81,32 @@ export default function AdminDashboard() {
               src="https: //placehold.co/800x400"
               alt="Screenshot of admin dashboard"
               className="object-cover"
-
-
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Track sales and service metrics in real time.</li>
             <li>Approve or remove listings with a few clicks.</li>
             <li>Assign roles and permissions to your team.</li>
           </ul>
-
+          <h2 className='text-2xl font-bold mb-4'>
+            Frequently Asked Questions
+          </h2>
+          <div className='space-y-4 mb-12'>
+            <div>
+              <p className='font-semibold'>Who can access the dashboard?</p>
+              <p className='text-zion-slate-light'>
+                Only authorized admins and moderators with the proper roles.
+              </p>
+            </div>
+            <div>
+              <p className='font-semibold'>Can I export reports?</p>
+              <p className='text-zion-slate-light'>
+                Yes, you can export data to CSV for further analysis.
+              </p>
+            </div>
+          </div>
+          <div className='text-center'>
+            <Button size='lg' className='bg-zion-purple text-white' asChild>
+              <Link href='/admin'>View Dashboard</Link>            </Button>            <div>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
           <div className="space-y-4 mb-12">
             <div>
@@ -109,8 +129,6 @@ export default function AdminDashboard() {
         </div>
       </main>
     </>
-
-
             />;
           </div>;
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>;

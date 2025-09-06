@@ -4,8 +4,6 @@ import {
   Home,
   Bug,
   Send,
-
-
   Clipboard,;
 
 } from 'lucide-react';
@@ -28,7 +26,6 @@ interface ErrorBoundaryProps {
 
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   enableRetry?: boolean;
-
   maxRetries?: number;
 
   showReportButton?: boolean;
@@ -38,13 +35,29 @@ interface ErrorBoundaryProps {
   context?: string;
 }
 
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: null,
-      retryCount: 0,
-      userFeedback: '',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export class GlobalErrorBoundary extends Component<
+  ErrorBoundaryProps
+  ErrorBoundaryState
+> {
+  private retryTimeouts: NodeJS.Timeout[] = []
+  constructor(props: ErrorBoundaryProps) {
+    super(props)
+export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  private retryTimeouts: NodeJS.Timeout[] = []
+  constructor(props: ErrorBoundaryProps) {
+    super(props)
 
+    this.state = {
+      hasError: false
+      error: null
+      errorInfo: null
+      errorId: null
+      retryCount: 0
+      userFeedback: ''
+      showDetails: false
+    } }    ,}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       showDetails: false
     }
   }
@@ -94,6 +107,16 @@ export class GlobalErrorBoundary extends Component < ErrorBoundaryProps, ErrorBo
       show_details: false,
     } }    , }
       show_details: false;
+      scope.setLevel('error');      scope.setContext('errorInfo', {
+        componentStack: errorInfo.componentStack
+        retryCount: this.state.retryCount
+      })
+      Sentry.captureException(error)
+    })
+    // Custom error handler
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo)
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
   static getDerivedStateFromError (error: Error): Partial < ErrorBoundaryState> {
@@ -708,7 +731,6 @@ if (return) {
           context: this.props.context,
           timestamp: new Date ().toISOString (),
         }),
-      });          timestamp: new Date ().toISOString ();
         });
       });
       // Check condition
@@ -726,9 +748,6 @@ if ( {) {
 
     }
 
-    this.setState({
-      errorInfo,
-      errorId,
 
 
 
@@ -749,6 +768,8 @@ if ( {) {
 
         return this.props.fallback;
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   private getBuildInfo() {;
     return {;
@@ -761,17 +782,15 @@ if ( {) {
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 
       const severity = this.getErrorSeverity(this.state.error)
       const suggestion = this.getErrorSuggestion(this.state.error)
-
-
       const canRetry = this.props.enableRetry !== false && 
                        this.state.retryCount < (this.props.maxRetries || 3)
 
       return (
-
         <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -793,9 +812,31 @@ if ( {) {
                 <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">
                   Oops! Something went wrong
                 </CardTitle>
-
-                    <Badge variant="outline" className="text-xs">
-
+                <div className='flex items-center justify-center gap-2 mt-2'>
+                  <Badge
+                    variant={
+                      severity === 'critical'
+                        ? 'destructive'
+                        : severity === 'high'
+                          ? 'destructive'
+                          : 'secondary'
+                    }                  >
+                    {severity.toUpperCase()}
+                  </Badge>
+                  {this.state.errorId && (
+                    <Badge variant='outline' className='text-xs'>                      ID: {this.state.errorId.slice(-8)}                    variant = {severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary',}
+                </div>
+                <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                  Oops! Something went wrong
+                </CardTitle>
+                <div className="flex items-center justify-center gap-2 mt-2">
+                  <Badge
+                    variant={severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary'}
+                  >
+                    {severity.toUpperCase()}
+                  </Badge>
+                  {this.state.errorId && (
+                    <Badge variant='outline' className='text-xs'>                    <Badge variant="outline" className="text-xs">
                       ID: {this.state.errorId.slice(-8)}
                     </Badge>
                   )}
@@ -808,7 +849,6 @@ if ( {) {
                   {this.state.retryCount > 0 && (
                     <p className="text-sm text-orange-600 dark:text-orange-400">
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
-
                     </p>
                 <div className="flex items-center justify-center gap-2 mt-2">
                   <Badge 
@@ -926,13 +966,10 @@ if ( {) {
 
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
                     </p>;
-
-
-
                   )}
                 </div>
                 {/* Action Buttons */}
-
+                <div className='flex flex-col sm:flex-row gap-3 justify-center'>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
 
                   {canRetry && (
@@ -976,14 +1013,8 @@ if ( {) {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-
-
-                    >
-                      <div className='space-y-4'>
-                        <div>
-
+                      className='border-t pt-4'
                       className="border-t pt-4"
-
                     >
                       <div className="space-y-4">
                         <div>
@@ -994,10 +1025,6 @@ if ( {) {
                             {this.state.error.message}
                           </code>
                         </div>
-
-
-
-
                         {process.env.NODE_ENV === 'development' &&
   private go_home = () => {
     // Check condition
@@ -1206,17 +1233,7 @@ if ( {) {
                               </pre>;
                             </div>;
                           )}
-
-                        <div className='flex gap-2'>;
-                          <Button
-                            onClick={this && this.copyErrorDetails}
-                            variant='outline'
-
-                            size='sm'>;
-                            <Clipboard className='h-4 w-4 mr-2' />;
-                            Copy Details;
-                          </Button>;
-
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                           {this && this.props.showReportButton !== false && (;
 
                             <Button
@@ -1224,6 +1241,7 @@ if ( {) {
                               variant='outline'
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         {process.env.NODE_ENV === 'development' && this.state.error.stack && (
                           <div>
                             <h4 className="font-semibold text-sm mb-2">Stack Trace:</h4>
@@ -1234,9 +1252,15 @@ if ( {) {
                         )}
 
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                            Copy Details
+                          </Button>
+                          {this.props.showReportButton !== false && (
                         <div className="flex gap-2">
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                             Copy Details
                           </Button>
                           {this.props.showReportButton !== false && (
@@ -1272,10 +1296,6 @@ if ( {) {
                       </div>;
                     </motion && motion.div>;
                   )}
-
-
-
-  return WrappedComponent;
 }
 
 
@@ -1305,5 +1325,6 @@ export default GlobalErrorBoundary;
     return this.props.children;
 
   }
+
 // Hook for programmatic error boundary
 export const useErrorBoundary = () => {

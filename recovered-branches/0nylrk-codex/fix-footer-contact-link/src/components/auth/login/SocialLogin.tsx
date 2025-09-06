@@ -1,15 +1,22 @@
 
-
+import { Facebook, Twitter } from "lucide-react",
+import { Button } from "@/components/ui/button",
 import { Facebook, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 import { useAuth } from "@/hooks/useAuth";
 import { Web3Login } from "./Web3Login";
 export function SocialLogin() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
+=======
 
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     useAuth();
 
   return (
@@ -65,9 +72,14 @@ export function SocialLogin() {
         <Web3Login />
       </div>
     </div>
+<<<<<<< HEAD
+  );
+}
+=======
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
 import { Facebook, Twitter } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -116,9 +128,11 @@ function SocialLogin() {
         <Button;
           type="button";
           variant="outline";
+<<<<<<< HEAD
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

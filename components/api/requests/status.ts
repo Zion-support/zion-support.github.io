@@ -19,6 +19,13 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+  const { id, status } = req.body |{}
+  if (!id |!status)
+    return res.status(400).json({ error: 'Missing id or status' });
+=======
 
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
@@ -27,14 +34,17 @@ export default async function handler(
     return res && res.status(400).json({ error: 'Missing id or status' });
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const items = readAll();
-  const idx = items && items.findIndex((r: any) => r && r.id === id),
-  if (idx === -1) return res && res.status(404).json({ error: 'Not found' });
-  items[idx] = { ...items[idx], status, updatedAt: new Date().toISOString() };
-
-
+  const idx = items.findIndex((r: any) => r.id === id)
+if (idx === -1) return res.status(404).json({ error: 'Not found' });
+  items[idx] = { ...items[idx], status, updatedAt: new Date().toISOString() }
   writeAll(items);
+<<<<<<< HEAD
+  res.status(200).json({ ok: true });  res.status(200).json({ ok: true })
+=======
   res && res.status(200).json({ ok: true });  res && res.status(200).json({ ok: true })
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 
@@ -42,6 +52,11 @@ export default async function handler(
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
 const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json');
@@ -70,6 +85,7 @@ function handler() {
     return res.status (405).json ({ error: 'Method not allowed' })) {
   $2
 }
+<<<<<<< HEAD
   const { id, status } = req.body || {}
   if (
     return res.status (400).json ({ error: 'Missing id or status' })) {
@@ -87,3 +103,11 @@ if (return res.status (404).json ({ error: 'Not found' })) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

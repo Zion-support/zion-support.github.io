@@ -1,8 +1,5 @@
 }
 
-
-  
-
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -10,7 +7,6 @@
           <h1 className="text-2xl font-bold">Portfolio Projects</h1>
           <p className="text-muted-foreground">Showcase your best work and projects</p>
         </div>
-
         <Button 
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
@@ -25,21 +21,9 @@
           Add Project
         </Button>
       </div>
-
       {/* Edit or Add Form */}
       {(showAddProject |editingProject) && (
         <Card>
-
-
-          <CardContent className='pt-6'>
-            <h2 className='text-xl font-semibold mb-6'>
-              {editingProject ? 'Edit Project' : 'Add New Project'}
-            </h2>
-
-
-            <ProjectForm              project={editingProject || undefined}
-
-
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
                 setShowAddProject(false)
@@ -144,6 +128,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           {projects.map((project) => (
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <Button 
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
@@ -157,9 +142,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
       {/* Edit or Add Form */}
       {(showAddProject || editingProject) && (
         <Card>
-
-
-
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
@@ -184,11 +166,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <ProjectCard
-
-              key={project.id}
-              project={project}
-
-
             <CardContent>
               <div className="flex flex-col items-center gap-4">
                 <div className="bg-muted/50 p-6 rounded-full">
@@ -202,6 +179,9 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
 
 
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Button 
                   onClick={() => setShowAddProject(true)} 
                   className="mt-2"
@@ -213,71 +193,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           </Card>
         )
       )}
-
-                  className='mt-2'                >            <CardContent>;
-              <div className="flex flex-col items-center gap-4">;
-                <div className="bg-muted/50 p-6 rounded-full">;
-                  <FilePlus className="h-12 w-12 text-muted-foreground" />;
-                </div>;
-                <h3 className="text-xl font-medium">No portfolio projects yet</h3>;
-                <p className="text-muted-foreground max-w-md mx-auto">;
-                  Add your best work to showcase your skills and experience to potential employers.;
-                </p>;
-                <Button
-                  onClick={() => setShowAddProject(true)} ;
-                  className="mt-2";
-              on_edit={() => setEditingProject (project)}
-              on_delete={handleDeleteProject}
-          {projects.map ((project, ) => (
-            <ProjectCard;
-              key = {project.id, }
-              project = {project, }
-              on_edit = {(, ) => setEditingProject (project), }
-              on_delete = {handleDeleteProject, }
-            />))}
-        </div>) : (
-        !showAddProject && (
-          <Card className='text - center py - 12'>;
-            <CardContent>;
-              <div className='flex flex - col items - center gap - 4'>;
-                <div className='bg - muted / 50 p - 6 rounded - full'>;
-                  <FilePlus className='h - 12 w - 12 text - muted - foreground' />;
-                </div>;
-                <h3 className='text - xl font - medium'>;
-                  No portfolio projects yet;
-                </h3>;
-                <p className='text - muted - foreground max - w-md mx - auto'>;
-                  Add your best work to showcase your skills and experience to;
-                  potential employers.;
-                </p>;
-                <Button;
-                  on_click={() => setShowAddProject (true)}
-                  className='mt - 2'                >            <CardContent>;
-              <div className="flex flex - col items - center gap - 4">;
-                <div className="bg - muted / 50 p - 6 rounded - full">;
-                  <FilePlus className="h - 12 w - 12 text - muted - foreground" />;
-                </div>;
-                <h3 className="text - xl font - medium">No portfolio projects yet</h3>;
-                <p className="text - muted - foreground max - w-md mx - auto">;
-                  Add your best work to showcase your skills and experience to potential employers.;
-                </p>;
-                <Button;
-                  on_click={() => setShowAddProject (true)}
-                  className="mt - 2";
-
-                >;
-                  Add Your First Project;
-                </Button>;
-              </div>;
-            </CardContent>;
-
-  );
-}
-
-          </Card>))}
-    </div>);
-}
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 }
 }

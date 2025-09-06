@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 /* eslint - env node */;
 =======
@@ -13,20 +17,36 @@ module.exports = {
 =======
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /* eslint-env node */
 module.exports = {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   env: {
     node: true,
     es2021: true
   },
-
-
-
-=======
-
-
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+/* eslint-env node */
+module.exports = {
+  extends: [
+    'next/core-web-vitals',
+    '@typescript-eslint/recommended'
+  ],
+ursor/fix-syntax-push-and-merge-to-main-40de
+export default {
+  extends: ['next/core-web-vitals', 'next/typescript'],
+ursor/add-new-services-and-deploy-updates-0462
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -43,17 +63,52 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'warn',
     'no-console': 'off',
     'no-undef': 'off',
-
-
-    node: true,
-    browser: true,
-    es2021: true
+    'react/no-unescaped-entities': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn'
   },
 
 =======
 
 
 
+  env: {
+ursor/fix-syntax-push-and-merge-to-main-40de
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  rules: {
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off",
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-html-link-for-pages": "off",
+    "@next/next/no-img-element": "off"
+  },
+  env: {
+    browser: true,
+    es2021: true,
+  },
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+    node: true,
+    browser: true,
+    es2021: true
+  },
+ursor/integrate-build-improve-and-re-verify-8f7d
   env: {
     node: true,
     es2021: true
@@ -71,11 +126,8 @@ module.exports = {
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
   },
-
-
-
-
-
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
   ignorePatterns: [
     'node_modules/',
     '.next/',
@@ -232,7 +284,6 @@ module.exports = {
     'clean-conflicts.js',
     'commit-and-push.js'
   ]
-
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -240,7 +291,7 @@ module.exports = {
       jsx: true
     }
   extends: ['next/core-web-vitals'],
-
+origin/automation-improvements-final
   rules: {
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-explicit-any": "off",
@@ -251,9 +302,6 @@ module.exports = {
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
   },
-  ignore_patterns: [;
-=======
-
   ignorePatterns: [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     "node_modules/",
@@ -380,9 +428,20 @@ module.exports = {
 
   ],
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 
@@ -400,50 +459,55 @@ module.exports = {
     "commit-and-push.js"
   ]
 };
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     "ecosystem.simple.js",
     "ecosystem.working.js",
-    "execute - automation.js",
+    "execute-automation.js",
     "fix_all_function_names.js",
     "fix_corrupted_files.js",
     "fix_empty_pages.js",
     "fix_utils_files.js",
     "fix_variable_names.js",
-    "git - ops.js",
-    "health - endpoint.js",
+    "git-ops.js",
+    "health-endpoint.js",
     "hooks/",
-    "improve - app.js",
+    "improve-app.js",
     "jest.config.ts",
     "jest.setup.js",
     "lib.broken/",
     "lib.disabled/",
     "lib/",
-    "lint - stub.js",
-    "lint - target/",
-    "maintenance - scheduler.js",
-    "merge - prs.js",
-    "merge - resolver.js",
+    "lint-stub.js",
+    "lint-target/",
+    "maintenance-scheduler.js",
+    "merge-prs.js",
+    "merge-resolver.js",
     "middleware.security.ts",
     "middleware/",
-    "monitoring - system.js",
+    "monitoring-system.js",
     "netlify/",
-    "next - env.d.ts",
+    "next-env.d.ts",
     "next.config.analyze.js",
     "next.config.analyzer.js",
     "next.config.optimized.js",
     "next.config.resolved.js",
-    "optimized - build.js",
-    "pages - backup/",
+    "optimized-build.js",
+    "pages-backup/",
     "pages._quarantine/",
     "pages.disabled_full/",
     "pages.old/",
     "App.tsx",
-    "advanced - app - improvements.js",
-    "analyze - missing - pages.js",
-    "api - disabled/",
+    "advanced-app-improvements.js",
+    "analyze-missing-pages.js",
+    "api-disabled/",
     "api.disabled/",
     "api/",
-    "automation - runner.js",
-    "basic - test.js",
+    "automation-runner.js",
+    "basic-test.js",
     "broken_files_backup/",
 <<<<<<< HEAD
     "build - verification.js",
@@ -451,7 +515,17 @@ module.exports = {
     "clean - conflicts.js",
     "commit - and - push.js",
   ],
-}
+};
+};
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+};
+origin/main
+origin/automation-improvements-final
+    "commit-and-push.js"
+  ]
+};
+};
 ;
 
 ;
@@ -486,7 +560,10 @@ module.exports = {;
     'automation/netlify/src/apps/';
   ];
 },;
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

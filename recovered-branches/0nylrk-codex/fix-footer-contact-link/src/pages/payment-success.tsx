@@ -1,4 +1,18 @@
 
+<<<<<<< HEAD
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { useNavigate  } from 'react-router-dom';
+import { CheckCircle2 } from 'lucide-react';
+export default function PaymentSuccess() {
+
+
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+import {CheckCircle2} from 'lucide-react';
+export default function PaymentSuccess() {;
+  const navigate = useNavigate();
+=======
 
 
 import {Button} from '@/components/ui/button';
@@ -8,16 +22,14 @@ export default function PaymentSuccess() {;
   const navigate = useNavigate();
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useNavigate } from 'react-router-dom',
 import { CheckCircle2 } from 'lucide-react',
 export default function PaymentSuccess() {
   const navigate = useNavigate(),
-
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -35,11 +47,16 @@ export default function PaymentSuccess() {
           >
             Go to Dashboard
           </Button>
+<<<<<<< HEAD
+          <Button
+          <Button 
+=======
 
 
           <Button 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             variant="outline"
             onClick={() => navigate('/')}
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
@@ -50,6 +67,9 @@ export default function PaymentSuccess() {
       </div>
     </div>
   )
+<<<<<<< HEAD
+}
+=======
 
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
@@ -58,6 +78,7 @@ import {CheckCircle2} from 'lucide-react';
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
@@ -129,14 +150,15 @@ function PaymentSuccess() {
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
+    </div>;
+  );
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

@@ -1,29 +1,43 @@
+<<<<<<< HEAD
+};
+};
+};
+};
+;
+,;
+,
+ursor/integrate-build-improve-and-re-verify-8f7d
+=======
 
 
 =======
 
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }}}};
 ;
 ;
-=======
 
 }
 }
 }
+},
 
+,
+
+ursor/fix-lint-push-and-merge-to-main-28da
 },;
 ,;
-
-=======
-
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ursor/automate-test-improve-and-merge-code-4094
+ursor/fix-syntax-push-and-merge-to-main-40de
+export const messageChannelHandler = {
+  sendMessage: (message: string) => {},
+  receiveMessage: (callback: (message: string) => void) => {},
+  sendMessage: (message: any) => {},
+  receiveMessage: (callback: any) => {},
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
   receiveMessage: (callback: (message: unknown) => void) => void;
@@ -35,16 +49,9 @@ export const messageChannelHandler: MessageHandler = {
   receiveMessage: (_callback) => {
     // No-op: placeholder for message listener registration
   }
-
 };
-
 };
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+ursor/add-new-services-and-deploy-updates-0462
 };
 };
 };
@@ -57,11 +64,14 @@ export const messageChannelHandler: MessageHandler = {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Message channel handler for real-time communication
 export class MessageChannelHandler {;
   private channels: Map<string, MessageChannel> = new Map();
@@ -85,23 +95,33 @@ export class MessageChannelHandler {;
   }
 }
 export default MessageChannelHandler;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 }}}};
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 
 },;
 ,;
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

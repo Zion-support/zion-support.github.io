@@ -1,4 +1,52 @@
 
+<<<<<<< HEAD
+{
+  /* Robots Meta */
+}{
+  noindex && <meta name="robots" content="noindex" />
+}{
+  nofollow && <meta name="robots" content="nofollow" />
+}{
+  !noindex && !nofollow && <meta name="robots" content="index, follow" />
+}{
+  /* Open Graph Meta Tags */
+}<meta property="og:title" content= {
+  fullTitle
+}/> <meta property="og:description" content= {
+  description
+}/> <meta property="og:type" content= {
+  type
+}/> <meta property="og:url" content= {
+  fullUrl
+}/> <meta property="og:image" content= {
+  fullImage
+}/> <meta property="og:site name" content="Zion Tech Group" /> <meta property="og:locale" content="en US" /> {
+  /* Twitter Card Meta Tags */
+}<meta name="twitter:card" content="summary large image" /> <meta name="twitter:site" content="@ziontechgroup" /> <meta name="twitter:creator" content="@ziontechgroup" /> <meta name="twitter:title" content= {
+  fullTitle
+}/> <meta name="twitter:description" content= {
+  description
+}/> <meta name="twitter:image" content= {
+  fullImage
+}/> {
+  /* Article Specific Meta Tags */
+}{
+  type === 'article' && (<> {
+  publishedTime && <meta property="article:published time" content= {
+  publishedTime
+}/>
+}{
+  modifiedTime && <meta property="article:modified time" content= {
+  modifiedTime
+}/>
+}{
+  author && <meta property="article:author" content= {
+  author
+}/>
+}{
+  section && <meta property="article:section" content= {
+  section
+=======
 
 }
 import React from 'react';
@@ -35,6 +83,7 @@ import React from 'react';
 }{;
   type === 'article' && (<> {;
   publishedTime && <metaproperty="article:published time" content= {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   publishedTime 
 }/> ;
 }{;
@@ -48,16 +97,20 @@ import React from 'react';
 }{;
   section && <metaproperty="article:section" content= {
   section 
-}/> ;
-}{;
-  tags && tags.map ( (tag, index) => (<metakey= {
-  index 
+<<<<<<< HEAD
+}/>
+}{
+  tags.map ( (tag, index) => (<meta key= {
+  index
 }property="article:tag" content= {
+  tag
+}/>
+}</>)
   tag 
-}/> ;
-}</>) ;
-}{;
-  /* Structured Data */ ;
+}/>
+}</>) 
+}{
+  /* Structured Data */
 }<script
 }] 
 const SEO: React.FC<SEOProps> = ({;
@@ -172,6 +225,18 @@ const SEO: React.FC<SEOProps> = ({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }{
   /* Structured Data */
+=======
+}/> ;
+}{;
+  tags && tags.map ( (tag, index) => (<metakey= {
+  index 
+}property="article:tag" content= {
+  tag 
+}/> ;
+}</>) ;
+}{;
+  /* Structured Data */ ;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }<script
 }]
 const SEO: React.FC<SEOProps> = ({
@@ -380,10 +445,6 @@ const SEO: React.FC < SEOProps> = ({
         </>;
       )}
 
-
-
-
-
       {/* Additional Meta Tags */}
       <meta
         name='viewport'
@@ -396,7 +457,11 @@ const SEO: React.FC < SEOProps> = ({
       <meta
         name='apple-mobile-web-app-status-bar-style'
         content='black-translucent'
+      />
+      <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
 
+<<<<<<< HEAD
+=======
       />;
       <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />;
 
@@ -448,6 +513,7 @@ const SEO: React.FC < SEOProps> = ({
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Structured Data */}
       <script;
         type='application / ld + json';
@@ -484,9 +550,12 @@ const SEO: React.FC < SEOProps> = ({
                 {
                   '@type': 'Offer'
                   itemOffered: {
-
-
-
+                    '@type': 'Service'
+                    name: 'AI & Machine Learning Solutions'
+                  }
+                }
+                {
+                  '@type': 'Offer'
                     '@type': 'Service',
                     name: 'AI & Machine Learning Solutions',
                   },
@@ -675,8 +744,10 @@ const SEO: React.FC < SEOProps> = ({
       />;
 
       {/* Canonical URL */}
-      <link rel='canonical' href={fullUrl} />;
+      <link rel='canonical' href={fullUrl} />
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -686,6 +757,7 @@ const SEO: React.FC < SEOProps> = ({
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -739,7 +811,7 @@ export default SEO;            __html: JSON && JSON.stringify(structuredData);
           }}
         />;
       )}
-    </Head>;
+    </Head>
   );
 
 };
@@ -748,6 +820,12 @@ export default SEO;  );
 
 
 export default SEO;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    </Head>
+    </Head>
+=======
 
 
 =======
@@ -868,3 +946,4 @@ export default SEO);
 export default SEO;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

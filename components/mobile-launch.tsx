@@ -1,5 +1,19 @@
+import Head from 'next/head';
+import { useEffect, useMemo, useState  } from 'react';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+import Link from 'next/link';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Simple icons using inline SVG to avoid external assets
 
 function StarIcon({
@@ -414,7 +428,19 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
             <a href={storeUrl} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1 && 1.5 rounded-md border border-gray-300 dark:border-gray-700">Install</a>;
             <button
               aria-label="Dismiss"
+              onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }}
+              className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 
+<<<<<<< HEAD
+=======
 
             >;
               ✕;
@@ -428,6 +454,7 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
   'https://apps.apple.com/app/id0000000000';
@@ -454,8 +481,19 @@ const testimonials = [
       'I love tracking milestones on the go. Clear visibility and fewer meetings.'
   }
 ];
+<<<<<<< HEAD
+export default function MobileLaunchPage() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<
+    'idle' | 'loading' | 'success' | 'error'
+  >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' }
+  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' }
+  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }]
+export default function MobileLaunchPage() {
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function MobileLaunchPage() {;
   const [email, setEmail] = useState('');
@@ -465,8 +503,11 @@ export default function MobileLaunchPage() {;
   { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
   { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
 export default function MobileLaunchPage() {;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
   // Auto-rotate testimonial index
@@ -583,6 +624,10 @@ export default function MobileLaunchPage() {
       setEmail('');
     } catch (err: any) {;
       setStatus('error');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       setError(err?.message || 'Something went wrong.');    }      if (!res && res.ok) throw new Error(await res && res.text());
 
@@ -593,6 +638,12 @@ export default function MobileLaunchPage() {
       setEmail('');
     } catch (err: any) {;
       setStatus('error');
+<<<<<<< HEAD
+      setError(err?.message |'Something went wrong.')
+
+      setError(err?.message || 'Something went wrong.')
+      setError(err?.message || 'Something went wrong.');    }
+=======
 
       setError(err?.message || 'Something went wrong.');
 
@@ -601,13 +652,11 @@ export default function MobileLaunchPage() {
   }
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     }
   }
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -647,9 +696,9 @@ export default function MobileLaunchPage() {
 
 
       {/* Trust & Community */}
-      <section className='mt-12'>;
-        <div className='flex items-center gap-2'>;
-            <StarIcon key={i} />;
+      <section className='mt-12'>
+        <div className='flex items-center gap-2'>
+            <StarIcon key={i} />
           ))}
           <span className='text-sm opacity-80'>4 && 4.9 average rating</span>;
         </div>;
@@ -697,6 +746,16 @@ export default function MobileLaunchPage() {
           <button
             type="submit"
             disabled={status === 'loading'}
+<<<<<<< HEAD
+            className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
           >
@@ -711,13 +770,7 @@ export default function MobileLaunchPage() {
         )}
 
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>
@@ -869,13 +922,12 @@ export default function MobileLaunchPage() {
 }/>) );
 }<span className="text - sm opacity - 80" >4.9 average rating</span> </div> </div> </div>) );
 }</div> </div> </section> <input type="email" required > {
-  status === 'loading' ? 'Submitting…' : 'Notify me';
+  status === 'loading' ? 'Submitting…' : 'Notify me'
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
   );
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -105,7 +105,10 @@ export function TeamActivity() {;
 
     const style = categoryStyles[category] || { variant: "default" as const },
     return <Badge variant={style.variant}>{category}</Badge>
-
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -305,7 +308,6 @@ const getCategoryBadge = (category: string) =>: any {
           </TableBody>
         </Table>
       </div>
-
       
 
       <div className="flex items-center justify-between">

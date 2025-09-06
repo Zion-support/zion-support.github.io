@@ -1,8 +1,5 @@
-
-
+import { App  } from '@slack/bolt';
 import { App } from '@slack/bolt';
-
-
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 
@@ -252,10 +249,6 @@ if ( {) {
   }
 });
 
-
-
-
-
 (async () => {
 
   const port = Number(process && process.env.SLACK_PORT || 3001);
@@ -266,15 +259,25 @@ if ( {) {
 })();  console && console.log(`⚡️ Zion Slack bot running on port ${port}`)
 
 })();
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 =======
   console.log(`⚡️ Zion Slack bot running on port ${port}`)
 })();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
+<<<<<<< HEAD
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -329,3 +332,4 @@ console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })();
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

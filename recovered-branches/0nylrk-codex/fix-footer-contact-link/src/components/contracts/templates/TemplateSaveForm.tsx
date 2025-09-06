@@ -1,4 +1,26 @@
 
+<<<<<<< HEAD
+
+import {useState} from "react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
+import {Loader2} from "lucide-react";
+import {ContractFormValues} from "@/components/contracts/components/ContractForm";
+import {ContractTemplate} from "@/types/contracts";
+import {useContractTemplates} from "@/hooks/useContractTemplates";
+import {Button} from "@/components/ui/button";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Switch} from "@/components/ui/switch";
+const formSchema = z.object({
+  title: z.string().min(1, "Title is required");
+  isDefault: z.boolean().default(false)})
+type FormValues = z.infer<typeof formSchema>;
+interface TemplateSaveFormProps {
+  onCancel: () => void
+  onComplete: () => void
+=======
 const formSchema = z && z.object({;
   title: z && z.string().min(1, "Title is required");
   isDefault: z && z.boolean().default(false)}),;
@@ -9,6 +31,7 @@ interface TemplateSaveFormProps {;
   onCancel: () => void,;
   onComplete: () => void,;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   editTemplate?: ContractTemplate | null;
   currentValues?: ContractFormValues;
 }
@@ -23,6 +46,30 @@ export function TemplateSaveForm(): any ({;
 }: TemplateSaveFormProps) {;
   const [saving, setSaving] = useState(false);
   const { createTemplate, updateTemplate } = useContractTemplates();
+<<<<<<< HEAD
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema)
+    defaultValues: {
+      title: editTemplate?.title |""
+      isDefault: editTemplate?.is_default |false}})
+  const onSubmit = async (values: FormValues) => {
+    if (!currentValues && !editTemplate) {
+      return
+    }
+    setSaving(true);
+    try {
+      if (editTemplate) {
+        await updateTemplate.mutateAsync({
+          templateId: editTemplate.id
+          title: values.title
+          templateData: editTemplate.template_data
+          isDefault: values.isDefault})
+      } else if (currentValues) {
+        await createTemplate.mutateAsync({
+          title: values.title
+          templateData: currentValues
+          isDefault: values.isDefault})
+=======
 
 
 =======
@@ -30,6 +77,7 @@ export function TemplateSaveForm(): any ({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -42,9 +90,12 @@ import { Button } from "@/components/ui/button",
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Switch } from "@/components/ui/switch",
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
   isDefault: z.boolean().default(false)}),
@@ -56,13 +107,111 @@ interface TemplateSaveFormProps {
   onComplete: () => void,
   editTemplate?: ContractTemplate | null,
   currentValues?: ContractFormValues
+<<<<<<< HEAD
+}
+
+export function TemplateSaveForm({;
+  onCancel;
+  onComplete;
+  editTemplate;
+  currentValues
+}: TemplateSaveFormProps) {
+  const [saving, setSaving] = useState(false);
+  const { createTemplate, updateTemplate } = useContractTemplates();
+  
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      title: editTemplate?.title || "",
+      isDefault: editTemplate?.is_default || false}}),
+  
+  const onSubmit = async (values: FormValues) => {
+    if (!currentValues && !editTemplate) {
+      return
+    }
+    
+    setSaving(true);
+    
+    try {
+      if (editTemplate) {
+        await updateTemplate.mutateAsync({
+          templateId: editTemplate.id,
+          title: values.title,
+          templateData: editTemplate.template_data,
+          isDefault: values.isDefault})
+      } else if (currentValues) {
+        await createTemplate.mutateAsync({
+          title: values.title,
+          templateData: currentValues,
+          isDefault: values.isDefault})
+import { useState } from "react",;
+import { useForm } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
+import { Loader2 } from "lucide-react",;
+import { ContractFormValues } from "@/components/contracts/components/ContractForm",;
+import { ContractTemplate } from "@/types/contracts",;
+import { useContractTemplates } from "@/hooks/useContractTemplates",;
+import { Button } from "@/components/ui/button",;
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Switch } from "@/components/ui/switch",;
+const formSchema = z.object({;
+  title: z.string().min(1, "Title is required"),;
+  isDefault: z.boolean().default(false)}),;
+type FormValues = z.infer<typeof formSchema>,;
+interface TemplateSaveFormProps {;
+  onCancel: () => void,;
+  onComplete: () => void,;
+  editTemplate?: ContractTemplate | null,;
+  currentValues?: ContractFormValues;
+}
+;
+export function TemplateSaveForm({;
+  onCancel,;
+  onComplete,;
+  editTemplate,;
+  currentValues;
+}: TemplateSaveFormProps) {;
+  const [saving, setSaving] = useState(false),;
+  const { createTemplate, updateTemplate } = useContractTemplates(),;
+  const form = useForm<FormValues>({;
+    resolver: zodResolver(formSchema),;
+    defaultValues: {;
+      title: editTemplate?.title || "",;
+      isDefault: editTemplate?.is_default || false}}),;
+  const onSubmit = async (values: FormValues) => {;
+    if (!currentValues && !editTemplate) {;
+      return;
+    }
+;
+    setSaving(true),;
+    try {;
+      if (editTemplate) {;
+        await updateTemplate.mutateAsync({;
+          templateId: editTemplate.id,;
+          title: values.title,;
+          templateData: editTemplate.template_data,;
+          isDefault: values.isDefault});
+      } else if (currentValues) {;
+        await createTemplate.mutateAsync({;
+          title: values.title,;
+          templateData: currentValues;
+          isDefault: values.isDefault});
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       onComplete()
     } finally {
       setSaving(false)
     }
+<<<<<<< HEAD
+  }
+
+  },
+=======
 
 
   const form = useForm<FormValues>({;
@@ -96,20 +245,19 @@ interface TemplateSaveFormProps {
     } finally {;
       setSaving(false);
     }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
   },
+<<<<<<< HEAD
+=======
 =======
   };
 =======
   },
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;

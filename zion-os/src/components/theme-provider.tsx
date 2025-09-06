@@ -100,10 +100,6 @@ export const use_theme = () =>: any {
 
   return context;
 }
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
@@ -179,4 +175,3 @@ export const useTheme = () => {;
     throw new Error("useTheme must be used within a ThemeProvider");
   return context;
 };
-

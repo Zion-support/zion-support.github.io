@@ -1,12 +1,69 @@
-
-
+import React, { useState } from 'react',
 import React, { useState } from 'react';
-
-
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+  Menu
+  X
+  Search
+  ChevronDown
+  ChevronRight
+  Home
+  Users
+  Settings
+  HelpCircle
+  Mail
+  Phone
+  MapPin
+  BookOpen
+  MessageCircle
+  Star
+  TrendingUp
+  Layers
+  Cpu
+  Database
+  Cloud
+  Lock
+  Shield
+  Globe
+  Factory
+  Car
+  Building
+  GraduationCap
+  Scale
+  Palette
+  Camera
+  Video
+  Music
+  Gamepad2
+  Heart
+  Leaf
+  Sun
+  Moon
+  Wind
+  Droplets
+  Mountain
+  Code
+  Wrench
+  Smartphone
+  BarChart3
+  Eye
+  Globe2
+  Zap
+  Rocket
+  Brain
+  Sparkles
+  ShieldCheck
+  Target
+  Users2
+  Briefcase
+  Lightbulb
+  Award
+  Clock
+  CheckCircle;} from 'lucide-react';import {
+=======
 
 
 class ErrorBoundary extends React.Component {
@@ -40,6 +97,7 @@ import {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Menu,
   X,
   Search,
@@ -99,8 +157,11 @@ import {
 
   Clock,;
   CheckCircle,;} from 'lucide-react';import { ;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Menu, X, Search, ChevronDown, ChevronRight;
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -236,24 +297,17 @@ const quickLinks = [
 =======
   { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
-;
-const quick_links = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Case Studies', href: '/case - studies', icon: BookOpen },
-  { name: 'Blog', href: '/blog', icon: BookOpen },
-  { name: 'News', href: '/news', icon: TrendingUp },
-  { name: 'Careers', href: '/careers', icon: GraduationCap },
 
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default function UltraFuturisticNavigation2029V2() {
+<<<<<<< HEAD
+export default function UltraFuturisticNavigation2029V2() {;
+=======
   const [isOpen, setIsOpen] = useState(false)
 =======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isOpen, setIsOpen] = useState(false);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -261,8 +315,30 @@ export default function UltraFuturisticNavigation2029V2() {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
   return (
+    <nav className='relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20'>
+      {/* Main Navigation Bar */}
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex justify-between items-center h-20'>          {/* Logo */}    <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">
+      {/* Main Navigation Bar */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className='flex-shrink-0'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
@@ -480,7 +556,13 @@ className="relative group"
                   <span>{item.name}</span>
                 </Link>
                 {/* Hover effect */}
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300" />
+                <div className='absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300' />              </motion.div>                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300" />
+              </motion.div>
+            ))}
+          </div>
+          {/* Right side - Contact & Search */}
+          <div className='hidden lg:flex items-center space-x-4'>
+
               </motion.div>
 
             ))}
@@ -500,7 +582,10 @@ className="relative group"
 
           {/* Right side - Contact & Search */}
 
+<<<<<<< HEAD
+=======
           <div className="hidden lg:flex items-center space-x-4">
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Search */}
             <div className='relative'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
@@ -520,20 +605,22 @@ className="relative group"
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery}
-
-
-=======
-                onChange={e => setSearchQuery(e.target.value)}
-
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64"
+              />
+            </div>
                 className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'              />
 
               />
 
             </div>
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Contact Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -553,7 +640,13 @@ className="relative group"
               onClick={toggleMenu}
               className="p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800 transition-colors duration-300">;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+      </div>
 
+<<<<<<< HEAD
+=======
 
             </button>;
           </div>;
@@ -567,6 +660,7 @@ className="relative group"
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -574,8 +668,20 @@ className="relative group"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <div className='px-4 py-6 space-y-4'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -630,33 +736,77 @@ className="relative group"
                     key={item && item.name}
                     href={item && item.href}
                     onClick={closeMenu}
-
-
+                    className='flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
+                  >
+                    <item.icon className='w-5 h-5' />                    className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
+                  >
+                    <item.icon className="w-5 h-5" />
+                    <span>{item.name}</span>
+                  </Link>
                 ))}
-
-              </div>;
-
-
-=======
+              </div>
 
 
                   </Link>
                 ))}
               </div>
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Quick Links */}
+              <div className='pt-4 border-t border-gray-700'>
+                <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
+                  Quick Links
+                </h3>
+                <div className='space-y-2'>
+                  {quickLinks.map(item => (                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={closeMenu}
+                      className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
+                    >
+                      <item.icon className='w-4 h-4' />
+                      <span className='text-sm'>{item.name}</span>                    </Link>              <div className="pt-4 border-t border-gray-700">
+                <h3 className="text-sm font-medium text-gray-400 mb-3 px-4">Quick Links</h3>
+                <div className="space-y-2">
+                  {quickLinks.map((item) => (
+                      key={item.name}
+                      href={item.href}
+                      onClick={closeMenu}
+                      className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
+                    >
+                      <item.icon className='w-4 h-4' />
+                      <span className='text-sm'>{item.name}</span>                      className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
+                    >
+                      <item.icon className="w-4 h-4" />
+                      <span className="text-sm">{item.name}</span>
+                  ))}
+                </div>
+              </div>
 
+<<<<<<< HEAD
 
                   ))}
                 </div>
               </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Contact Info */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -667,10 +817,13 @@ className="relative group"
                     <Phone className='w-4 h-4' />
                     <span className='text-sm'>{contactInfo.mobile}</span>
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </div>
                   <div className="flex items-center space-x-3 text-gray-400">
                     <Mail className="w-4 h-4" />
@@ -836,10 +989,13 @@ className="relative group"
         )}
       </AnimatePresence>
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Service Categories Dropdown */}
       <AnimatePresence>;
         {activeCategory && (;
@@ -865,8 +1021,20 @@ className="relative group"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <div className='max-w-7xl mx-auto px-4 py-8'>
               <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
@@ -991,7 +1159,46 @@ className="relative group"
                         <Link
                           key={service.name}
                           href={service.href}
+<<<<<<< HEAD
+                          className='block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group'
+                        >
+                          <div className='flex justify-between items-start'>
+                            <div>
+                              <h4 className='font-medium text-white group-hover:text-cyan-400 transition-colors duration-300'>
+                                {service.name}
+                              </h4>
+                              <p className='text-sm text-gray-400 mt-1'>
+                                {service.description}
+                              </p>
+                            </div>
+                            <span className='text-sm font-semibold text-cyan-400'>
+                              {service.price}
+                            </span>                          </div>                        >
+                          <div className="flex justify-between items-start">
+                            <div>
+                              <h4 className="font-medium text-white group-hover:text-cyan-400 transition-colors duration-300">
+                                {service.name}
+                              </h4>
+                              <p className="text-sm text-gray-400 mt-1">{service.description}</p>
+                            </div>
+                            <span className="text-sm font-semibold text-cyan-400">{service.price}</span>
+                          </div>
 
+                          </div>
+
+<<<<<<< HEAD
+=======
+                          </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1003,9 +1210,24 @@ className="relative group"
             </div>;
           </motion && motion.div>;
         )}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
       </AnimatePresence>;
     </nav>;
+=======
+      </AnimatePresence>
+    </nav>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+      </AnimatePresence>;
+    </nav>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 =======
 
@@ -1013,10 +1235,18 @@ className="relative group"
 
 }
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </p>;
                       </div>;
                     </div>;
@@ -1075,4 +1305,9 @@ className="relative group"
       </AnimatePresence>;
     </nav>);
 }
+<<<<<<< HEAD
+  );
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

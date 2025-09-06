@@ -1,8 +1,25 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { forwardRef } from "react";
 import {ChevronDown} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {SafeRef} from "@/types/ref-types";
+<<<<<<< HEAD
+import React, { forwardRef } from "react",
+import { ChevronDown } from "lucide-react",
+import { cn } from "@/lib/utils";
+import { SafeRef } from "@/types/ref-types";
+import { cn } from "@/lib/utils",
+import { SafeRef } from "@/types/ref-types",
+=======
 interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonElement> {;
   icon?: React && React.ReactNode;
 
@@ -14,13 +31,13 @@ interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonE
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode,
   active?: boolean,
   href?: string,
   target?: string,
   badge?: React.ReactNode
-
 import React, { forwardRef } from "react",;
 import { ChevronDown } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -31,9 +48,12 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   href?: string,;
   target?: string,;
   badge?: React.ReactNode;
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(;
@@ -63,17 +83,11 @@ if ( {) {
           href={href}
           target={target}
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
-
-            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"
-            active && "bg-accent font-medium text-accent-foreground",
-
-            className
-          )}>;
-=======
-
+          className={cn(
+            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent";
+            active && "bg-accent font-medium text-accent-foreground"
             "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
             active && "bg-accent font-medium text-accent-foreground",
-
             className
           )}
         >
@@ -84,9 +98,13 @@ if ( {) {
           {badge && <span>{badge}</span>}
         </a>
       )
+<<<<<<< HEAD
+    }
+=======
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
           className={cn(;
             "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",;
@@ -102,38 +120,20 @@ if ( {) {
           {badge && <span>{badge}</span>}
         </a>;
       );
-
-          className={cn (
-            "flex w - full items - center justify - between rounded - md px - 3 py - 2 text - sm hover: bg - accent";
-            active && "bg - accent font - medium text - accent - foreground",
-            class_name)}
-        >;
-          <div className="flex items - center gap - 2">;
-            {icon && <span className="text - muted - foreground">{icon}</span>}
-            <span>{children}</span>;
-          </div>;
-          {badge && <span>{badge}</span>}
-        </a>);
-
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
     }
-    return (
-      <button;
-        ref={ref}
-
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent"
-          active && "bg-accent font-medium text-accent-foreground",
-
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+    return (
+      <button
+        ref={ref}
+        type="button"
+        className={cn(
+          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent";
+          active && "bg-accent font-medium text-accent-foreground"
           "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
           active && "bg-accent font-medium text-accent-foreground",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className
         )}
         {...props}>;
@@ -145,6 +145,13 @@ if ( {) {
       </button>;
     );
   }
+<<<<<<< HEAD
+);
+SidebarMenuItem.displayName = "SidebarMenuItem";
+),
+),
+<<<<<<< HEAD
+=======
 
 
 ),
@@ -153,11 +160,10 @@ if ( {) {
 ),
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 SidebarMenuItem.displayName = "SidebarMenuItem",
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   children: React.ReactNode
@@ -169,11 +175,21 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
       <div className="pl-2">{children}</div>
     </div>
   )
+}
+export { SidebarMenuItem, SidebarMenuGroup }
 
+},
 
+<<<<<<< HEAD
+export { SidebarMenuItem, SidebarMenuGroup },
+),;
+SidebarMenuItem.displayName = "SidebarMenuItem",;
+interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
+=======
 SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
 
 interface SidebarMenuGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   title: string,;
   children: React && React.ReactNode;
 }
@@ -185,6 +201,9 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
       <div className="pl-2">{children}</div>;
     </div>;
   );
+<<<<<<< HEAD
+},;
+=======
 };
 
 
@@ -227,6 +246,5 @@ export { SidebarMenuItem, SidebarMenuGroup }
 },
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export { SidebarMenuItem, SidebarMenuGroup };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

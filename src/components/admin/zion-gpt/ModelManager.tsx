@@ -3,16 +3,20 @@
 if ( {) {
   $2
 }
-        await supabase;
-
-          .from('model_versions');
-          .update({ active: false });
-          .eq('purpose', purpose);
 
 
       }
 
       // Update this model;
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
+import { supabase  } from '@/integrations/supabase/client';
+import { ModelConfig  } from '@/utils/zion-gpt';
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface ModelVersionData extends ModelConfig {
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
+  errorMessage?: string
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       await supabase;
         .from ('model_versions');
         .update ({ active: !current_active });
@@ -37,6 +41,9 @@ if ( {) {
           .from('model_versions');
           .update({ active: false });
           .eq('purpose', purpose);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 
       // Update this model;
@@ -103,13 +110,11 @@ if ( {) {
                     ) : (;
                       <Badge className="bg-yellow-500">Queued</Badge>;
                     )}
-
-                    {model && model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
-                  </TableCell>;
-                  <TableCell>{new Date(model && model.createdAt).toLocaleDateString()}</TableCell>;
-                  <TableCell className="text-right">;
-                    {model && model.trainingStatus === 'queued' || model && model.trainingStatus === 'running' ? (;
-
+                    {model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
+                  </TableCell>
+                  <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
+                  <TableCell className="text-right">
+                    {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
                       <Button
                         variant="ghost"
                         size="sm"
@@ -125,7 +130,6 @@ if ( {) {
                       <Button
                         variant="ghost"
                         size="sm"
-
                       >
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
@@ -136,13 +140,12 @@ if ( {) {
                       </Button>;
                     ) : model && model.trainingStatus === 'succeeded' ? (;
                       <Button
-
-
+                        variant = {model.active ? "outline" : "default",}
+                        size="sm"
+                        onClick = {(,) => toggleModelActive(model.id, model.active, model.purpose),}
                         variant={model.active ? "outline" : "default"}
                         size="sm"
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
-
-
                       >
                         {model.active ? (
                           <>
@@ -176,7 +179,8 @@ if ( {) {
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
-
+                  </TableCell>
+                </TableRow>
                   </TableCell>;
                 </TableRow>;
 
@@ -188,8 +192,6 @@ if ( {) {
     </Card>;
   );
 }
-
-
 }
 
   },

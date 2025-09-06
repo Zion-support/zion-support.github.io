@@ -1,8 +1,13 @@
 
+<<<<<<< HEAD
+import { ReactNode } from 'react';
+import {ReactNode} from 'react';
+=======
 
 import {ReactNode} from 'react';
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Extend FeatureCardProps to include key for mapping
 declare module '@/components/FeatureCard' {
 =======
@@ -33,8 +38,57 @@ declare module '@/components / ListingScoreCard' {
     ai_score?: number;
     rating?: number;
 
-    review_count?: number;
-    key?: string | number,
+    key?: string | number
+
+    variant?: string
+  }
+}
+// Extend ChatMessageProps to include key for mapping
+declare module '@/components/ChatAssistant/ChatMessage' {
+  export interface ChatMessageProps {;
+    role: 'user' | 'assistant';
+    message: string;
+
+    timestamp?: Date
+
+    key?: string | number
+  }
+}
+// Extend ProductListingCardProps to include key for mapping
+declare module '@/components/ProductListingCard' {
+  export interface ProductListingCardProps {;
+    listing: any;
+    view: any;
+
+    onRequestQuote: (listingId: string) => void
+
+    key?: string | number
+import { ReactNode } from 'react',;
+// Extend FeatureCardProps to include key for mapping;
+declare module '@/components/FeatureCard' {;
+  export interface FeatureCardProps {;
+    title: string,;
+    description: string,;
+    icon: ReactNode,;
+    className?: string,;
+    key?: number | string;
+  }
+}
+;
+// Extend ListingScoreCardProps to include key for mapping;
+declare module '@/components/ListingScoreCard' {;
+  export interface ListingScoreCardProps {;
+    title: string,;
+    description: string,;
+    category: string,;
+    image?: string,;
+    tags?: string[],;
+    author?: string,;
+    authorImage?: string,;
+    aiScore?: number,;
+    rating?: number,;
+    reviewCount?: number,;
+    key?: string | number,;
     variant?: string;
   }
 }
@@ -54,7 +108,10 @@ declare module '@/components / ProductListingCard' {
     view: any;
     onRequestQuote: (listing_id: string) => void,
     key?: string | number;
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }

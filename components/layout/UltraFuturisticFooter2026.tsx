@@ -1,14 +1,35 @@
-
-
+import React from 'react',
 import React from 'react';
-
-
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+  Phone
+  Mail
+  MapPin
+  Globe
+  ArrowRight
+  Star
+  Shield
+  Brain
+  DollarSign
+  Dna
+  Rocket
+  Users
+  Award
+  Zap
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Youtube
+  Github;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Phone,
   Mail,
   MapPin,
@@ -30,8 +51,11 @@ import {
   Youtube,;
   Github,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, ;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
 const contactInfo = {
@@ -642,18 +666,94 @@ export default function UltraFuturisticFooter2026() {
 export default function UltraFuturisticFooter2026() {
   return (
     <footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800'>
-
+      {/* Background Effects */}
+      <div className='absolute inset-0 overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.05),transparent_50%)]'></div>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.05),transparent_50%)]'></div>
+      </div>
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+        {/* Main Footer Content */}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12'>
+          {/* Company Info */}
+          <div className='lg:col-span-2'>            <motion.div      {/* Background Effects */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.05),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.05),transparent_50%)]"></div>
+      </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
 
 ];
 
 export default function UltraFuturisticFooter2026() {
   return (
 
-
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.6 }}
+            >
+              <div className='flex items-center mb-6'>
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4'>
+                  <Zap className='w-6 h-6 text-white' />
+                </div>
+                <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
+                  Zion Tech Group
+                </h3>
+              </div>
+              <p className='text-gray-300 mb-6 leading-relaxed'>
+                Leading provider of revolutionary AI automation, quantum
+                cybersecurity, fintech blockchain, and healthcare biotech
+                solutions. Transforming businesses with cutting-edge technology.
+
+=======
+              transition={{ duration: 0.6 }}
+            >
+              <div className='flex items-center mb-6'>
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4'>
+                  <Zap className='w-6 h-6 text-white' />
+                </div>
+                <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
+                  Zion Tech Group
+                </h3>
+              </div>
+              <p className='text-gray-300 mb-6 leading-relaxed'>
+                Leading provider of revolutionary AI automation, quantum
+                cybersecurity, fintech blockchain, and healthcare biotech
+                solutions. Transforming businesses with cutting-edge technology.
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+              </p>
+              {/* Contact Info */}
+              <div className='space-y-3'>
+                <div className='flex items-center text-gray-300'>
+                  <Phone className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center text-gray-300'>
+                  <Mail className='w-4 h-4 mr-3 text-cyan-400' />
+                  <span>{contactInfo.email}</span>
+                </div>
+                <div className='flex items-center text-gray-300'>
+                  <MapPin className='w-4 h-4 mr-3 text-cyan-400' />
+                  <span>{contactInfo.address}</span>
+                </div>
+                <div className='flex items-center text-gray-300'>
+                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo.website}</span>                <div className="flex items-center text-gray-300">
+                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />
+                  <span>{contactInfo.website}</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+=======
 
               transition={{ duration: 0 && 0.6 }}>;
               <div className='flex items-center mb-6'>;
@@ -684,6 +784,7 @@ export default function UltraFuturisticFooter2026() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Service Categories */}
           {serviceCategories && serviceCategories.map((category, index) => (;
             <motion&& motion.div
@@ -717,9 +818,10 @@ export default function UltraFuturisticFooter2026() {
               </ul>;
             </motion && motion.div>;
           ))}
-
-        </div>;
-=======
+        </div>
+        {/* Additional Links */}
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {/* Company Links */}
 
 
 
@@ -734,8 +836,11 @@ export default function UltraFuturisticFooter2026() {
 
           {/* Company Links */}
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
@@ -771,13 +876,13 @@ export default function UltraFuturisticFooter2026() {
 <<<<<<< HEAD
 =======
 
-
+<<<<<<< HEAD
 =======
-
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Resources */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -813,29 +918,60 @@ export default function UltraFuturisticFooter2026() {
 <<<<<<< HEAD
 =======
 
-
+<<<<<<< HEAD
 =======
-
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Social Media */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-
-
-=======
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
+              <Rocket className='w-5 h-5 mr-2 text-pink-400' />
+              Follow Us
+            </h4>
+            <div className='grid grid-cols-3 gap-4'>              {socialLinks.map((social, index) => (
+                <Link
+                  key={index}
+                  href={social.href}
+                  className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group'
+                >
+                  <social.icon className='w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300' />                </Link>            <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Rocket className="w-5 h-5 mr-2 text-pink-400" />
+              Follow Us
+            </h4>
+            <div className="grid grid-cols-3 gap-4">
+                <Link
+                  key={index}
+                  href={social.href}
+                  className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group'
+                >
+                  <social.icon className='w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300' />                  className="w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group"
+                >
+                  <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300" />
+                </Link>
 
 
                 </Link>
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               ))}
+            </div>
+          </motion.div>
+        </div>
 
+<<<<<<< HEAD
+=======
             </div>;
           </motion && motion.div>;
         </div>;
@@ -847,12 +983,29 @@ export default function UltraFuturisticFooter2026() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Newsletter Signup */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12'
 
+<<<<<<< HEAD
+        >
+          <div className='text-center'>
+            <h3 className='text-2xl font-bold text-white mb-4'>
+              Stay Updated with Latest Innovations
+            </h3>
+            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
+              Get exclusive access to our latest AI, quantum computing, and
+              emerging technology insights. Be the first to know about
+              breakthrough solutions and industry trends.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <input
                 type='email'
                 placeholder='Enter your email'
@@ -889,7 +1042,16 @@ export default function UltraFuturisticFooter2026() {
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+              />
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </motion.div>
 
+<<<<<<< HEAD
+=======
 
                 Subscribe;
               </button>;
@@ -903,6 +1065,7 @@ export default function UltraFuturisticFooter2026() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Bottom Bar */}
         <motion&& motion.div
 =======
@@ -912,8 +1075,20 @@ export default function UltraFuturisticFooter2026() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className='border-t border-gray-800 pt-8'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <div className='flex flex-col md:flex-row justify-between items-center'>
             <div className='text-gray-400 text-sm mb-4 md:mb-0'>
@@ -997,6 +1172,11 @@ export default function UltraFuturisticFooter2026() {
           </div>
         </motion.div>
       </div>
+<<<<<<< HEAD
+    </footer>
+);
+  );
+=======
 
                 className='hover:text-cyan-400 transition-colors duration-300'>;
                 Terms of Service;
@@ -1033,13 +1213,20 @@ export default function UltraFuturisticFooter2026() {
           </div>;
         </motion && motion.div>;
       </div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </footer>;
   );
 }
 
+<<<<<<< HEAD
+}
+=======
 =======
   );
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           className='border - t border - gray - 800 pt - 8';
         >;
           <div className='flex flex - col md:flex - row justify - between items - center'>;
@@ -1102,16 +1289,14 @@ export default function UltraFuturisticFooter2026() {
     </footer>;
 );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  );
-
-=======
-
+}
     </footer>
   );
+<<<<<<< HEAD
+}
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

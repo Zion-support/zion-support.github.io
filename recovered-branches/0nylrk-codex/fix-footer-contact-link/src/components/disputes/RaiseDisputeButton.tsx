@@ -1,17 +1,23 @@
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Button} from "@/components/ui/button";
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
 import {DisputeForm} from "./DisputeForm";
 import {useNavigate} from "react-router-dom";
 import {ShieldAlert} from "lucide-react";
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
   Dialog;
   DialogContent;
@@ -21,6 +27,9 @@ import {
   DialogOverlay
 } from "@/components/ui/dialog",
 import { DisputeForm } from "./DisputeForm",
+import { useNavigate } from "react-router-dom";
+import { ShieldAlert } from "lucide-react";
+interface RaiseDisputeButtonProps {
 
 import {Button} from "@/components/ui/button";
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
@@ -36,10 +45,19 @@ interface RaiseDisputeButtonProps {;
   className?: string;
 }
 
-
+  milestoneId
+  variant = "outline"
+  size;
+  className
+}: RaiseDisputeButtonProps) {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const navigate = useNavigate();
 import { useNavigate } from "react-router-dom",
 import { ShieldAlert } from "lucide-react",
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string,
@@ -48,10 +66,10 @@ interface RaiseDisputeButtonProps {
   className?: string
 }
 
-
+export function RaiseDisputeButton({ ;
+  projectId;
 export function RaiseDisputeButton({ 
   projectId,
-
   milestoneId, 
   variant = "outline", 
   size,
@@ -60,15 +78,13 @@ export function RaiseDisputeButton({
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const navigate = useNavigate(),
   
-
   const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false)
     navigate(`/dashboard/disputes/${disputeId}`)
+  }
 
   },
   
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <Button
@@ -88,6 +104,39 @@ export function RaiseDisputeButton({
               Please provide details about the issue you're experiencing with this project.
             </DialogDescription>
           </DialogHeader>
+<<<<<<< HEAD
+          <DisputeForm
+          
+          <DisputeForm 
+          <DisputeForm 
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogHeader,;
+  DialogTitle,;
+  DialogDescription,;
+  DialogOverlay;
+} from "@/components/ui/dialog",;
+import { DisputeForm } from "./DisputeForm",;
+import { useNavigate } from "react-router-dom",;
+import { ShieldAlert } from "lucide-react",;
+interface RaiseDisputeButtonProps {;
+  projectId: string,;
+  milestoneId?: string,;
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",;
+  size?: "default" | "sm" | "lg" | "icon",;
+  className?: string;
+}
+;
+export function RaiseDisputeButton({;
+  projectId,;
+  milestoneId,;
+  variant = "outline",;
+  size,;
+  className;
+=======
 
 
 export function RaiseDisputeButton(): any ({ ;
@@ -96,6 +145,7 @@ export function RaiseDisputeButton(): any ({ ;
   variant = "outline", ;
   size;
   className ;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }: RaiseDisputeButtonProps) {;
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const navigate = useNavigate();
@@ -167,6 +217,9 @@ function RaiseDisputeButton() {
               Please provide details about the issue you're experiencing with this project.;
             </DialogDescription>;
           </DialogHeader>;
+<<<<<<< HEAD
+          <DisputeForm;
+=======
 
 
           
@@ -175,6 +228,7 @@ function RaiseDisputeButton() {
           <DisputeForm 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}

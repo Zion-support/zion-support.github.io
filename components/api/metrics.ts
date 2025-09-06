@@ -25,12 +25,19 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
   return series;
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+  const now = new Date()
+  const labels = Array.from({ length: 14 }, (_, i) => {
+  const now = new Date(),
+  const labels = Array.from({ length: 14 }, (_, i) => {;
+=======
 
 
   const now = new Date(),
   const labels = Array.from({ length: 14 }, (_, i) => {;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
 
@@ -399,5 +406,3 @@ if ( {) {
 
   res.status(200).json(response)
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

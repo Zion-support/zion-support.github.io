@@ -106,28 +106,18 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
           alt={talentName}
           width={32} // for h-8 w-8
           height={32} // for h-8 w-8
-
-
+          className='rounded-full object-cover'
+          onError={() => setAvatarError(true)}
+          priority={false}        />
           className="rounded-full object-cover"
           onError={() => setAvatarError(true)}
           priority={false}
         />
-
-
       ) : (
         <User className="h-4 w-4" />
       )}
-
-  application: JobApplication;
-}) =>: any {
-  const [avatar_error, setAvatarError] = useState (false);
-  const talent_name = application.talent_profile?.full_name || 'Candidate';
-interface ApplicationsTableProps {
-  applications: JobApplication[],
-  processing_id: string | null,
-  onViewApplication: (application_id: string, ) => Promise < void>,
-  onStatusChange: (application_id: string, new_status: string, ) => Promise < void>,
-  onViewScore: (application: JobApplication, ) => void;
+    </AvatarPrimitive>
+  )
 }
 // Sub - component for avatar to handle its own error state;
 const ApplicationAvatar = ({ application }: { application: JobApplication }, ) =>: any {
@@ -268,6 +258,7 @@ export function ApplicationsTable({
         onConfirm = {handleHireConfirmed,}
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   applications,
   processingId,
   onViewApplication,
@@ -277,7 +268,6 @@ export function ApplicationsTable({
   applications, 
   processingId, 
   onViewApplication, 
-
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
@@ -292,6 +282,8 @@ export function ApplicationsTable({
   onViewScore
 }: ApplicationsTableProps) {
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   
@@ -307,9 +299,6 @@ export function ApplicationsTable({
     })
   },
   
-
-
-
   return (
     <>
       <div className="rounded-md border">
@@ -324,7 +313,7 @@ export function ApplicationsTable({
             </TableRow>
           </TableHeader>
           <TableBody>
-
+            {applications.map(application => (              <TableRow key={application.id}>
             {applications.map((application) => (
               <TableRow key={application.id}>
 
@@ -332,13 +321,17 @@ export function ApplicationsTable({
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
                     <div>
-
+                      <div className='font-medium'>
+                        {application.talent_profile?.full_name |'Candidate'}
+                      </div>
+                      <div className='text-xs text-muted-foreground mt-0.5'>
+                        {application.talent_profile?.professional_title |
+                          'Applicant'}
                       <div className="font-medium">
                         {application.talent_profile?.full_name || "Candidate"}
                       </div>
                       <div className="text-xs text-muted-foreground mt-0.5">
                         {application.talent_profile?.professional_title || "Applicant"}
-
                       </div>
                     </div>
                   </div>
@@ -349,7 +342,13 @@ export function ApplicationsTable({
                 <TableCell className="hidden md:table-cell">
                   <StatusBadge status={application.status} />
                 </TableCell>
-
+                <TableCell className='hidden lg:table-cell'>
+                  {application.match_score !== undefined &&
+                  application.match_score !== null ? (
+                    <ClickableBadge
+                      variant='outline'
+                      className='cursor-pointer'
+                      onClick={() => onViewScore(application)}                    >
                 <TableCell className="hidden lg:table-cell">
                   {application.match_score !== undefined && application.match_score !== null ? (
                     <ClickableBadge 
@@ -364,7 +363,6 @@ export function ApplicationsTable({
                     <span className="text-muted-foreground text-sm">Not scored</span>
                   )}
                 </TableCell>
-
 }h-4 w-4"/>) ;
 }</AvatarPrimitive>) ;
 

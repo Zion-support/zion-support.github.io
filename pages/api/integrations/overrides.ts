@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readState, writeState } from '[^']*';
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   if (req && req.method === "GET") {
 
@@ -31,9 +36,37 @@
 
 
     });
+
   }
+<<<<<<< HEAD
+  return res.status(405).json({ error: "Method not allowed" });
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState } from "../../../lib/integrations/fileStore";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === "GET") {;
+    const state = readState();
+    return res.status(200).json({ overrides: state.overrides });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readState, writeState } from '../../../lib/integrations/fileStore';
+export default function handler(req, res) {
+  try {
+  if (req.method === 'GET') {
+    const state = readState();
+    return res.status(200).json({ overrides: state.overrides });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+=======
 
   return res && res.status(405).json({ error: "Method not allowed" });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 =======
@@ -90,6 +123,31 @@ if (state.overrides[idx] = entry) {
 =======
 
   }
+<<<<<<< HEAD
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return res.status(405).json({ error: 'Method not allowed' });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+return res.status(405).json({ error: "Method not allowed" });
+}
+}
+=======
 }
   } catch (error) {
     console.error("Error:", error);
@@ -98,3 +156,4 @@ if (state.overrides[idx] = entry) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

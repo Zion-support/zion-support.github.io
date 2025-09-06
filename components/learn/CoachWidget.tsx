@@ -29,6 +29,12 @@ export default function CoachWidget() {;
     } finally {;
       setLoading(false);    }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  return (
+
+=======
 
 
 =======
@@ -38,21 +44,30 @@ export default function CoachWidget() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (      });
+      const data = await resp.json();
+      setReply(data.text |'')
 
-      const data = await resp && resp.json();
-      setReply(data && data.text || '');
-    } finally {;
-      setLoading(false);
+  return (
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
 
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react';
 export default /**
  * CoachWidget - Function description
@@ -163,6 +178,12 @@ function ask() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+<<<<<<< HEAD
+
+  return (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
     }
   }
 
@@ -171,4 +192,10 @@ function ask() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

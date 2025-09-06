@@ -19,14 +19,16 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function SecurityAwarenessPhishingPage() {
 
   const service = extraServices.find(s =>
@@ -375,15 +377,13 @@ export default function SecurityAwarenessPhishingPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-
-    </UltraAdvancedFuturisticBackground>);
 }
-;
+}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
+;
+}
 =======
 
-}
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

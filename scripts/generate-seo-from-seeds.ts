@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+ 
+import fs from 'fs';
+import path from 'path';
+
+  const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  return await res.json()
+}
+=======
 
 
  
@@ -17,6 +28,7 @@ async function post(url: string, body: any) {
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /* eslint-disable no-console */;
 import fs from 'fs',;
 import path from 'path',;
@@ -24,13 +36,14 @@ const HOST = process.env.SELF_HOST || 'http: //localhost:3000',;
 async function post(url: string, body: any) {;
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }),;
   return await res.json();
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 async function main() {
   try {
   const seedsPath = path && path.join(process && process.cwd(), 'datapage-metadataseo-seeds && seeds.json');
@@ -44,6 +57,17 @@ async function main() {
   for (const s of seeds) {
     const gen = await post(`${HOST}/api/seo/generate`, s);
     if (gen?.slug && gen?.payload) {
+<<<<<<< HEAD
+      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2));
+      console.log('Generated', gen.slug)
+    }
+  }
+}
+main().catch((e) => { console.error(e), process.exit(1) });
+
+      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),
+      // // // console.log('Generated', gen.slug)
+=======
 
 main().catch((e) => { console && console.error(e), process && process.exit(1) });
 
@@ -52,6 +76,7 @@ main().catch((e) => { console && console.error(e), process && process.exit(1) })
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 import fs from 'fs';
 import path from 'path';
@@ -85,6 +110,37 @@ if ( {) {
 }
       fs.writeFileSync (path.join (out_dir, `${gen.slug}.json`), JSON.stringify (gen.payload, null, 2));
       console.log ('Generated', gen.slug);
+=======
+<<<<<<< HEAD
+      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2));
+      console.log('Generated', gen.slug)
+    }
+  }
+}
+main().catch((e) => { console.error(e), process.exit(1) });
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),
+      // // // console.log('Generated', gen.slug)
+;
+async function main() {;
+  const seedsPath = path.join(process.cwd(), 'datapage-metadataseo-seeds.json'),;
+  if (!fs.existsSync(seedsPath)) {;
+    // // // console.log('No seeds file found at', seedsPath),;
+    process.exit(0);
+  }
+  const seeds = JSON.parse(fs.readFileSync(seedsPath, 'utf8')) as Array<{ prompt: string, region?: string, service?: string }>,;
+  const outDir = path.join(process.cwd(), 'datapage-metadataseo'),;
+  fs.mkdirSync(outDir, { recursive: true }),;
+  for (const s of seeds) {;
+    const gen = await post(`${HOST}/api/seo/generate`, s),;
+    if (gen?.slug && gen?.payload) {;
+      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),;
+      // // // console.log('Generated', gen.slug);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   }
 }
@@ -92,7 +148,10 @@ main ().catch ((e) => { console.error (e), process.exit (1) });
 ;
 
 main().catch((e) => { console.error(e), process.exit(1) });
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

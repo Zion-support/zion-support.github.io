@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import clsx from "clsx";
 export type EnhancedButtonProps =;
@@ -46,6 +45,12 @@ export default function EnhancedButton(): any ({;
         className
       )}
       {...props}
+<<<<<<< HEAD
+    />
+  );
+}
+}
+=======
 
 }
 
@@ -97,8 +102,22 @@ function EnhancedButton() {
 
 }
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     />;
 );
 }
 
+<<<<<<< HEAD
+const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EnhancedButton</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default EnhancedButton;
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

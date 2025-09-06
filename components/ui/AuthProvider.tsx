@@ -1,11 +1,36 @@
 import React, { create_context, useContext, useEffect, useState } from 'react';
 ;
 type UserRole = 'talent' | 'client';
-
-
+<<<<<<< HEAD
+type AuthContextType = {
+  role: UserRole;
+  setRole: (role: UserRole) => void;
+}
+const AuthContext = createContext<AuthContextType>({
+  role: 'talent'
+  setRole: () => {}
+});  role: UserRole
+  setRole: (role: UserRole) => void
+}
+const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: () => {} })
+  const [role, setRoleState] = useState<UserRole>('talent');
+  useEffect(() => {
+    try {
+      const stored = window.localStorage.getItem('userRole') as UserRole | null;
+      if (stored === 'talent' |stored === 'client') {
+        setRoleState(stored);      }        setRoleState(stored)
       if (stored === 'talent' || stored === 'client') {
         setRoleState(stored);      }
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+      if (stored === 'talent' || stored === 'client') {
+        setRoleState(stored);      }        setRoleState(stored)
+        setRoleState(stored);      }
+
+<<<<<<< HEAD
+=======
 
 =======
       if (stored === 'talent' || stored === 'client') {
@@ -15,6 +40,7 @@ type UserRole = 'talent' | 'client';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     } catch {}
   }, []);
@@ -73,6 +99,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     } catch {}
   }
 
+<<<<<<< HEAD
 
     try { 
       window.localStorage.setItem('userRole', r);
@@ -133,23 +160,33 @@ export function useAuth() {;
 =======
     <AuthContext.Provider value={{ role, set_role }}>;
       {children}
-    </AuthContext.Provider>);
-;
-export /**
- * use_auth - Function description
- */
-function use_auth() {
-  return useContext (AuthContext);    <AuthContext.Provider value={{ role, set_role }}>{children}</AuthContext.Provider>);
+    </AuthContext.Provider>
+  );
+export function useAuth() {
+  return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
+  )
 }
-export /**
- * use_auth - Function description
- */
-function use_auth() {
-return useContext (AuthContext);
+export function useAuth() {
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return (
+    <AuthContext.Provider value={{ role, setRole }}>
+      {children}
+    </AuthContext.Provider>
+  );
+<<<<<<< HEAD
+export function useAuth() {
+  return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
+  )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export function useAuth() {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function useAuth() {;
   return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
@@ -157,12 +194,17 @@ export function useAuth() {;
 }
 
 export function useAuth() {;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 return useContext(AuthContext);
 }
-=======
   return (
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

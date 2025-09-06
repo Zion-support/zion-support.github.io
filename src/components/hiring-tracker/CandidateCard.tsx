@@ -2,12 +2,6 @@ const handleSaveNotes = () => {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
-
-
-      title: 'Notes saved',
-      description: 'Your notes have been saved',
-
-
     })
     setShowNotes(false)
   }
@@ -22,6 +16,7 @@ const handleSaveNotes = () => {
 
 import { useState } from 'react';
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const candidateName = application.talent_profile?.full_name || 'Candidate'
   return (
     <>
@@ -50,7 +45,10 @@ import { useState } from 'react';
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
-
+        {provided => (
+          <Card
+            className='mb-2 p-0 shadow-sm border'
+            ref={provided.innerRef}            {...provided.draggableProps}
         {(provided) => (
           <Card 
             className="mb-2 p-0 shadow-sm border"
@@ -139,13 +137,37 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
             className="mb-2 p-0 shadow-sm border";
             ref={provided.innerRef}
             {...provided.draggableProps}
-
-
             {...provided.dragHandleProps}
           >
             <CardContent className='p-3'>
               {/* Candidate Header */}
-
+              <div className='flex justify-between items-start mb-2'>
+                <div className='flex items-center gap-2'>
+                  <AvatarPrimitive className='h-8 w-8'>
+                    {' '}
+                    {/* Using renamed AvatarPrimitive */}
+                    {application.talent_profile?.profile_picture_url &&
+                    !avatarError ? (
+                      <Image
+                        src={application.talent_profile.profile_picture_url}
+                        alt={candidateName}
+                        width={32} // Match h-8 w-8
+                        height={32} // Match h-8 w-8
+                        className='rounded-full object-cover' // Ensure rounded and object-cover
+                        onError={() => setAvatarError(true)}                        priority={false} // Avatars are usually not LCP
+                      />
+                    ) : (
+                      <User className='h-4 w-4' />
+                    )}
+                  </AvatarPrimitive>
+                  <div>
+                    <h4 className='font-medium text-sm'>{candidateName}</h4>
+                    <p className='text-xs text-muted-foreground'>
+                      {application.talent_profile?.professional_title |
+                        'Applicant'}
+                    </p>
+                  </div>
+                </div>
               <div className="flex justify-between items-start mb-2">;
                 <div className="flex items-center gap-2">;
                   <AvatarPrimitive className="h-8 w-8"> {/* Using renamed AvatarPrimitive */}
@@ -286,8 +308,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                     <MessageSquare className='h-3 w-3 mr-1' /> Message
                   </Link>
                 </Button>
-
-
+                <Button variant='outline' size='sm' className='flex-1' asChild>
                 
                 <Button 
                   variant="outline" 
@@ -318,18 +339,11 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                       <FileText className='h-3 w-3 mr-1' /> No Resume;
                     </span>;
                   )}
-
-                </Button>;
-
-
+                </Button>
                 <Button
                   variant='default'
                   size='sm'
                   className='flex-1'
-                  onClick={() => setShowHireModal(true)}                >;
-                  <BriefcaseIcon className='h-3 w-3 mr-1' /> Hire;
-                </Button>
-
   handleHireConfirmed 
 }/> </>) 
 }'"};

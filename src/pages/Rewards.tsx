@@ -15,7 +15,7 @@ return (
 import { Gift } from 'lucide-react'
 
 const REWARDS = [
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
   { id: 'premium-week', title: 'Premium Week', cost: 1000 },
   { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }],

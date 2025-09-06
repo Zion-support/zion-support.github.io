@@ -1,8 +1,11 @@
 
+<<<<<<< HEAD
+=======
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -10,9 +13,23 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
+import React from "react",
+import { Card } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Search } from "lucide-react",
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
+interface Conversation {
+
+  id: string
+  name: string
+=======
 interface Conversation {;
   id: string,;
   name: string,;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   avatar?: string;
   lastMessage: string,;
   timestamp: string,;
@@ -26,7 +43,12 @@ interface MobileConversationListProps {;
   activeConversation?: string;
   onSelectConversation: (id: string) => void;
 }
+<<<<<<< HEAD
+import { Input } from "@/components/ui/input",
+import { cn } from "@/lib/utils",
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Conversation {
   id: string,
   name: string,
@@ -35,18 +57,53 @@ interface Conversation {
   timestamp: string,
   unreadCount: number,
   isTyping?: boolean
+<<<<<<< HEAD
+}
+=======
 
 
 
 export function MobileConversationList({
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function MobileConversationList(): any ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   conversations;
   activeConversation;
+<<<<<<< HEAD
+import React from "react",;
+import { Card } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Search } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { cn } from "@/lib/utils",;
+interface Conversation {;
+  id: string,;
+  name: string,;
+  avatar?: string,;
+  lastMessage: string,;
+  timestamp: string,;
+  unreadCount: number,;
+  isTyping?: boolean;
+}
+;
+interface MobileConversationListProps {;
+  conversations: Conversation[],;
+  activeConversation?: string,;
+  onSelectConversation: (id: string) => void;
+}
+
+export function MobileConversationList({
+  conversations,
+  activeConversation,
+  onSelectConversation
+}: MobileConversationListProps) {
+=======
   onSelectConversation;
 }: MobileConversationListProps) {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
     <div className="space-y-4">;
@@ -56,30 +113,25 @@ export function MobileConversationList(): any ({;
           <Input
             placeholder="Search messages..."
             className="pl-9"
-          />;
-        </div>;
-      </div>;
-
-      <div className="px-4 pb-4 space-y-2">;
-        <div className="flex space-x-2">;
-          <Badge variant="secondary" className="rounded-full px-3">All</Badge>;
-          <Badge variant="outline" className="rounded-full px-3">Unread</Badge>;
-          <Badge variant="outline" className="rounded-full px-3">Interviews</Badge>;
-          <Badge variant="outline" className="rounded-full px-3">Projects</Badge>;
-        </div>;
-      </div>;
-
-      <div className="space-y-2 pb-24">;
-        {conversations && conversations.map((conversation) => (;
-
+          />
+        </div>
+      </div>
+      <div className="px-4 pb-4 space-y-2">
+        <div className="flex space-x-2">
+          <Badge variant="secondary" className="rounded-full px-3">All</Badge>
+          <Badge variant="outline" className="rounded-full px-3">Unread</Badge>
+          <Badge variant="outline" className="rounded-full px-3">Interviews</Badge>
+          <Badge variant="outline" className="rounded-full px-3">Projects</Badge>
+        </div>
+      </div>
+      <div className="space-y-2 pb-24">
+        {conversations.map((conversation) => (
           <div
-            key={conversation && conversation.id}
+            key={conversation.id}
             className={cn(
-
+              "px-4";
 
               "px-4",
-
-
               activeConversation === conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation.id)}
@@ -100,11 +152,16 @@ export function MobileConversationList(): any ({;
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="text-sm text-muted-foreground truncate">
+<<<<<<< HEAD
+                    {conversation.isTyping
+                    {conversation.isTyping 
+=======
 
 
                     {conversation.isTyping 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       ? <em>Typing...</em>
                       : conversation.lastMessage}
                   </p>

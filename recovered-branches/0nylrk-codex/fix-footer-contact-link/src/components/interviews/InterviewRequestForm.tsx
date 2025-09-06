@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 
 
 
@@ -9,6 +11,7 @@ interface InterviewRequestFormProps {
   onClose: () => void
   userDetails?: UserProfile
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -27,6 +30,29 @@ import {format, addDays} from "date-fns";
 import {CalendarIcon, Check, Clock} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
 import {useInterviews} from "@/hooks/useInterviews";
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select",
+import { Calendar } from "@/components/ui/calendar",
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover",
+import { TalentProfile } from "@/types/talent",
+import { UserProfile } from "@/types/auth",
+import { cn } from "@/lib/utils",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { useForm } from "react-hook-form",
+import { z } from "zod",
+import { format, addDays } from "date-fns",
+import { CalendarIcon, Check, Clock } from "lucide-react",
+import { toast } from "@/components/ui/use-toast";
+import { useInterviews } from "@/hooks/useInterviews";
+import { toast } from "@/components/ui/use-toast",
+import { useInterviews } from "@/hooks/useInterviews",
+interface InterviewRequestFormProps {
+=======
 interface InterviewRequestFormProps {;
   talent: TalentProfile,;
   onClose: () => void,;
@@ -68,13 +94,23 @@ export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: I
 
     }
     setIsSubmitting(true);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 const formSchema = z.object({
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
     message: "Interview date must be in the future"
-
+  });
+  time: z.string().min(1, "Please select a time for the interview.");
+  duration: z.string().min(1, "Please select the interview duration.");
+  platform: z.string().min(1, "Please select a meeting platform.");
+  meetingLink: z.string().optional()
+  title: z.string().min(3, "Please provide a brief title for the interview.");
+  notes: z.string().optional()})
+export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
+  const { requestInterview } = useInterviews();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   }),
   time: z.string().min(1, "Please select a time for the interview."),
   duration: z.string().min(1, "Please select the interview duration."),
@@ -83,6 +119,12 @@ const formSchema = z.object({
   title: z.string().min(3, "Please provide a brief title for the interview."),
   notes: z.string().optional()}),
 
+export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {;
+  const { requestInterview } = useInterviews();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
+  const { requestInterview } = useInterviews(),
+  const [isSubmitting, setIsSubmitting] = useState(false),
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
@@ -100,7 +142,13 @@ const formSchema = z.object({
         variant: "destructive"})
       return
     }
-
+    setIsSubmitting(true);
+    try {
+      // Combine date and time
+      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
+      const scheduledDate = new Date(dateTimeString);
+      // Calculate end time based on duration
+      const durationMinutes = parseInt(values.duration);
 
     setIsSubmitting(true),
 
@@ -112,8 +160,6 @@ const formSchema = z.object({
       // Calculate end time based on duration
       const durationMinutes = parseInt(values.duration),
 
-
-
       await requestInterview({
         talent_id: talent.id
         client_id: userDetails.id
@@ -124,11 +170,8 @@ const formSchema = z.object({
         meeting_link: values.meetingLink
         interview_type: "video"
         title: values.title
-
-
+      });
       }),
-
-
 
       toast({
         title: "Interview requested"
@@ -243,12 +286,12 @@ if ( {) {
   }
 
   const timeSlots = [
-
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30"
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30"
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17: 30"
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
-
-
     "18:00", "18:30", "19:00", "19:30", "20: 00"
   ]
   return (
@@ -386,11 +429,9 @@ if ( {) {
                       <Button
                         variant="outline"
                         className={cn(
-
+                          "w-full pl-3 text-left font-normal";
 
                           "w-full pl-3 text-left font-normal",
-
-
                           !field.value && "text-muted-foreground"
 =======
                           "w-full pl-3 text-left font-normal"
@@ -409,11 +450,16 @@ if ( {) {
                   <PopoverContent className="w-auto p-0" align="start">;
                     <Calendar
                       mode="single"
-
-                      selected={field && field.value}
-                      onSelect={field && field.onChange}
-=======
-
+                      selected={field.value}
+                      onSelect={field.onChange}
+                      disabled={(date) => date < new Date() |date > addDays(new Date(), 90)}
+                      initialFocus
+                      className="p-3 pointer-events-auto"
+                    />
+                  </PopoverContent>
+                </Popover>
+                <FormMessage />
+              </FormItem>
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
@@ -613,9 +659,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormMessage />;
 
               </FormItem>;
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             )}
           />;
 
@@ -780,78 +829,35 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           />
         )}
 
-
-
-
         <FormField
           control={form && form.control}
           name="notes"
-
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Notes (Optional)</FormLabel>;
-              <FormControl>;
-
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Notes (Optional)</FormLabel>
+              <FormControl>
                 <Textarea
-=======
-
                 <Textarea 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
-=======
-              </FormItem>)}
-          />)}
-        <FormField;
-          control={form.control}
-          name="notes";
-          render={({ field }) => (
-            <FormItem>;
-              <FormLabel > Notes (Optional)</FormLabel>;
-              <FormControl>;
-                <Textarea;
-                  placeholder="Share what you'd like to discuss in this interview";
-                  className="h - 20";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {...field}
-                />;
-              </FormControl>;
-              <FormMessage />;
-
-        />;
-
-        <div className="flex justify-end gap-4 pt-4">;
-          <Button variant="outline" onClick={onClose} type="button">;
-            Cancel;
-          </Button>;
-          <Button type="submit" disabled={isSubmitting}>;
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <div className="flex justify-end gap-4 pt-4">
+          <Button variant="outline" onClick={onClose} type="button">
+            Cancel
+          </Button>
+          <Button type="submit" disabled={isSubmitting}>
             {isSubmitting ? "Scheduling..." : "Schedule Interview"}
-          </Button>;
-        </div>;
-      </form>;
-    </Form>;
-  );
+          </Button>
+        </div>
+      </form>
+    </Form>
+  )
 }
-
-=======
-            </FormItem>)}
-        />;
-        <div className="flex justify - end gap - 4 pt - 4">;
-          <Button variant="outline" on_click={on_close} type="button">;
-            Cancel;
-          </Button>;
-          <Button type="submit" disabled={is_submitting}>;
-            {is_submitting ? "Scheduling..." : "Schedule Interview"}
-          </Button>;
-        </div>;
-      </form>;
-    </Form>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
 }
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

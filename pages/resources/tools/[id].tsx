@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -7,19 +10,63 @@ import { useRouter } from 'next/router',;
 export default function ToolResourcePage() {
   const router = useRouter(),
   const { id } = router.query,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
-
-      type: 'Interactive Tool',
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+export default function ToolResourcePage() {
+  const router = useRouter()
+  const { id } = router.query
+  // Tools data - this should match the data in resources.tsx
+  const tools = [
+    {
+      id: 'automation-assessment'
+      title: 'Automation Readiness Assessment'
+      description: 'Evaluate your organization\'s readiness for AI automation implementation.'
+      type: 'Interactive Tool'
+      estimatedTime: '15 minutes'
+      fullContent: `
+        <h2>About This Tool</h2>
+        <p>The Automation Readiness Assessment is designed to help organizations evaluate their current
+        capabilities and identify opportunities for AI automation implementation. This comprehensive assessment
+        covers technology infrastructure, organizational culture, and business processes.</p>
+        <h2>What You'll Learn</h2>
+        <p>This assessment will help you understand:</p>
+        <ul>
+          <li>Your current automation maturity level</li>
+          <li>Areas where automation can provide the most value</li>
+          <li>Potential challenges and how to address them</li>
+          <li>Recommended next steps for your automation journey</li>
+        </ul>
+        <h2>Assessment Categories</h2>
+        <p>The assessment covers several key areas:</p>
+        <ul>
+          <li><strong>Technology Infrastructure:</strong> Current systems, data quality, and technical capabilities</li>
+          <li><strong>Organizational Culture:</strong> Change readiness, innovation mindset, and learning culture</li>
+          <li><strong>Business Processes:</strong> Process maturity, standardization, and optimization opportunities</li>
+          <li><strong>Data & Analytics:</strong> Data availability, quality, and analytical capabilities</li>
+          <li><strong>Leadership & Strategy:</strong> Executive support, strategic alignment, and resource allocation</li>
+        </ul>
+        <h2>How to Use This Tool</h2>
+        <p>To get the most accurate results:</p>
+        <ol>
+          <li>Set aside 15-20 minutes for the assessment</li>
+          <li>Answer questions honestly based on your current situation</li>
+          <li>Consider involving key stakeholders for broader perspective</li>
+          <li>Review results with your team to develop action plans</li>
+        </ol>
+        <h2>Next Steps After Assessment</h2>
+        <p>Once you complete the assessment, you'll receive:</p>
         <ul>
           <li>A detailed readiness score and analysis</li>
           <li>Specific recommendations for improvement</li>
@@ -43,7 +90,6 @@ import { useRouter } from 'next/router';
       fullContent: `
         <h2>About This Framework</h2>
         <p>The AI Maturity Model provides a structured approach to understanding and advancing your
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         organization's AI capabilities. This framework helps you identify where you are today and
         create a roadmap for where you want to be tomorrow.</p>
         <h2>Maturity Levels</h2>
@@ -55,11 +101,7 @@ import { useRouter } from 'next/router';
           <li><strong>Level 4 - Optimization:</strong> Advanced AI systems with continuous improvement</li>
           <li><strong>Level 5 - Innovation:</strong> AI-driven business transformation and new capabilities</li>
         </ul>
-<<<<<<< HEAD
-<h2>Assessment Dimensions</h2>
-=======
         <h2>Assessment Dimensions</h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <p>The maturity model evaluates several key dimensions:</p>
         <ul>
           <li><strong>Strategy & Leadership:</strong> AI vision, executive support, and strategic alignment</li>
@@ -80,10 +122,6 @@ import { useRouter } from 'next/router';
           <li>Develop a phased transformation roadmap</li>
           <li>Track progress and adjust plans as needed</li>
         </ol>
-<<<<<<< HEAD
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <h2>Benefits of the Framework</h2>
         <p>This framework provides several key benefits:</p>
         <ul>
@@ -110,7 +148,6 @@ import { useRouter } from 'next/router';
       fullContent: `
         <h2>About This Tool</h2>
         <p>The Performance Benchmarking Tool helps you compare your automation performance against
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         industry standards and best practices. This tool provides insights into how your organization
         performs relative to peers and identifies opportunities for improvement.</p>
         <h2>Benchmarking Categories</h2>
@@ -130,10 +167,6 @@ import { useRouter } from 'next/router';
           <li><strong>Peer Groups:</strong> Similar-sized organizations with comparable resources</li>
           <li><strong>Historical Trends:</strong> Performance evolution over time</li>
         </ul>
-<<<<<<< HEAD
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <h2>How to Use This Tool</h2>
         <p>To get the most value from benchmarking:</p>
         <ol>
@@ -143,10 +176,6 @@ import { useRouter } from 'next/router';
           <li>Develop targeted improvement strategies</li>
           <li>Track progress and measure improvement over time</li>
         </ol>
-<<<<<<< HEAD
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <h2>Interpreting Results</h2>
         <p>When analyzing benchmark results:</p>
         <ul>
@@ -174,6 +203,11 @@ import { useRouter } from 'next/router';
         'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
       ]
     }
+<<<<<<< HEAD
+  ]
+  const tool = tools.find(t => t.id === id)
+
+=======
 
 
 
@@ -181,11 +215,15 @@ import { useRouter } from 'next/router';
 
 =======
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function ToolResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -357,13 +395,14 @@ export default function ToolResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ],
   const tool = tools.find(t => t.id === id),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!tool) {
     return (
       <>
@@ -371,17 +410,22 @@ export default function ToolResourcePage(req, res) {
           <title>Tool Resource Not Found | Zion Tech Group</title>
         </Head>
         <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <main className="container mx-auto px-6 py-12">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl font-bold mb-6 text-white">Tool Resource Not Found</h1>
               <p className="text-xl text-white/80 mb-8">
                 The tool resource you're looking for doesn't exist.
               </p>
+<<<<<<< HEAD
+              <Link
+              <Link 
+              <Link
+=======
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -392,15 +436,8 @@ export default function ToolResourcePage(req, res) {
         </div>
       </>
     )
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
-
-
 }
-
-
   return (
     <>
       <Head>
@@ -420,16 +457,18 @@ export default function ToolResourcePage(req, res) {
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">
-
-
+                  {tool.type}
                   {tool.type  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{tool.title}</h1>
@@ -441,26 +480,40 @@ export default function ToolResourcePage(req, res) {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
               <div className="lg:col-span-2">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+<<<<<<< HEAD
+                  <div 
+                    className="prose prose-invert max-w-none"
+                    dangerouslySetInnerHTML={{ __html: tool.fullContent }}
+                  <div
+                    className="prose prose-invert max-w-none"
+                    dangerouslySetInnerHTML={{ __html: tool.fullContent }}
+                    dangerouslySetInnerHTML={{ __html: tool.fullContent }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   />
                 </div>
               </div>
 
 
               <div className="space-y-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Features</h3>
                   <ul className="space-y-3">
                     {tool.features.map((feature, index) => (
                       <li key={index} className="text-white/80 flex items-center gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-
-
+                        {feature}
+                      </li>
+                    ))}
   ];
   const tool = tools.find(t => t.id === id);
   if (!tool) {;
@@ -556,15 +609,17 @@ export default function ToolResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </ul>
                 </div>
 
 
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>
                   <div className="space-y-3">
                     <div>
@@ -582,10 +637,16 @@ export default function ToolResourcePage(req, res) {
 
 
             <div className="text-center">
+<<<<<<< HEAD
+              <Link
+              <Link 
+              <Link
+=======
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -596,6 +657,11 @@ export default function ToolResourcePage(req, res) {
         </main>
       </div>
     </>
+<<<<<<< HEAD
+  );
+};
+  )
+=======
 
 =======
 }
@@ -832,6 +898,7 @@ if ( {) {
                         <div className="w - 2 h - 2 bg - green - 400 rounded - full"></div>;
                         {feature}
                       </li>))}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </ul>;
                 </div>;
                 <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 20">;
@@ -844,36 +911,15 @@ if ( {) {
                     <div>;
                       <span className="text - white / 60 text - sm">Time Required:</span>;
                       <p className="text - white font - medium">{tool.estimated_time}</p>;
-=======
-                  </ul>;
-                </div>;
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">;
-                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>;
-                  <div className="space-y-3">;
-                    <div>;
-                      <span className="text-white/60 text-sm">Type:</span>;
-                      <p className="text-white font-medium">{tool.type}</p>;
-                    </div>;
-                    <div>;
-                      <span className="text-white/60 text-sm">Time Required:</span>;
-                      <p className="text-white font-medium">{tool.estimatedTime}</p>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     </div>;
                   </div>;
                 </div>;
               </div>;
             </div>;
-<<<<<<< HEAD
             <div className="text - center">;
               <Link;
                 href="/contact";
                 className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
-=======
-            <div className="text-center">;
-              <Link;
-                href="/contact";
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >;
                 Get Started with Your Project;
               </Link>;
@@ -882,6 +928,15 @@ if ( {) {
         </main>;
       </div>;
 <<<<<<< HEAD
+    </>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+=======
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -890,3 +945,4 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

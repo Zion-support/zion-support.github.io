@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export type AdminNotesPanelProps = {;
@@ -7,6 +11,17 @@ export type AdminNotesPanelProps = {;
 type Note = {;
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+<<<<<<< HEAD
+
+export type AdminNotesPanelProps = {
+=======
+export type AdminNotesPanelProps = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  targetType: string; // e.g., 'user' | 'listing'
+  targetId: string; // unique identifier for the target
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 ;
 type Note = {
@@ -14,6 +29,7 @@ type Note = {
   target_type: string;
   target_id: string;
   text: string;
+<<<<<<< HEAD
 
 export type AdminNotesPanelProps = {
   targetType: string, // e.g., 'user' | 'listing'
@@ -26,12 +42,29 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 =======
 
+<<<<<<< HEAD
+=======
+  authorId: string;
+  createdAt: number;
+}
+export default function AdminNotesPanel({
+<<<<<<< HEAD
+  targetType
+  targetId
+}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   targetType,
   targetId,;
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 type Note = {
   id: string
   targetType: string
@@ -39,6 +72,13 @@ type Note = {
   text: string
   authorId: string
   createdAt: number
+<<<<<<< HEAD
+}
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
+};
+
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
+=======
 
 };
 
@@ -51,6 +91,7 @@ type Note = {
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
@@ -144,6 +185,10 @@ if ( {) {
       }
       setText('');
       await fetchNotes();
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
         method: 'POST',
@@ -170,24 +215,47 @@ if ( {) {
       if (!res.ok) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
+=======
+    } finally {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      setAdding(false);    }      if (!res.ok) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         alert('Failed to add note');
         return;
       }
       setText('');
 
+<<<<<<< HEAD
+      await fetchNotes()
+    } finally {
+      setAdding(false)
+      setAdding(false);    }
 
+=======
+<<<<<<< HEAD
+      await fetchNotes()
+    } finally {
+      setAdding(false)
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+      setAdding(false);    }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
-
-  if (!isAdmin) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    return (
-
-
-    }
-  }
-
-
 
   if (!isAdmin) {
     return (
@@ -274,9 +342,24 @@ if ( {) {
             ))}
           </ul>;
         )}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
       </div>;
     </div>;
+=======
+      </div>
+    </div>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+      </div>;
+    </div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 =======
 
@@ -284,16 +367,27 @@ if ( {) {
 
 }
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   useEffect (() => {
     if (fetch_notes ()) {
   $2
 }    if (fetch_notes ()) {
   $2
 }
+<<<<<<< HEAD
+  );
+=======
   }, [is_admin, target_type, target_id]);
 ;
   async /**
@@ -302,6 +396,7 @@ if ( {) {
 function add_note() {
     if () return) {
   $2
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
     set_adding (true);
     try {
@@ -488,3 +583,10 @@ if ( {) {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

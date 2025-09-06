@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+let pool: Pool | null = null;
+}return pool
+ let pool: Pool | null = null;
+let pool: Pool | null = null;
+ let pool: Pool | null = null;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }return pool 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export async function withUser<T>(
   userId: string
   fn: (client: PoolClient) => Promise<T>

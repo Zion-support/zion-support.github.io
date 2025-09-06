@@ -1,8 +1,5 @@
-
-
+'use client'
 import React from 'react';
-
-
 
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
@@ -16,6 +13,8 @@ const navigation = [
   { name: 'Contact', href: '/contact' }]
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+<<<<<<< HEAD
+=======
 
 'use client';
 import { useState } from 'react';
@@ -36,6 +35,7 @@ function Navigation() {
 
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   return (;
     <header className=&quot;fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10&quot;>
@@ -44,36 +44,38 @@ function Navigation() {
           <a href=&quot;/&quot; className=&quot;-m-1.5 p-1.5&quot;>
             <span className=&quot;sr-only&quot;>Zion Tech Group</span>
             <div className=&quot;text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200&quot;>
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-    <header className=&quot;fixed inset - x-0 top - 0 z - 50 bg - black / 80 backdrop - blur - md border - b border - white / 10 & quot;>;
-      <nav className=&quot;flex items - center justify - between p - 6 lg:px - 8&quot; aria - label=&quot;Global & quot;>;
-        <div className=&quot;flex lg:flex - 1&quot;>;
-          <a href=&quot;/&quot; className=&quot;-m - 1.5 p - 1.5 & quot;>;
-            <span className=&quot;sr - only & quot;>Zion Tech Group</span>;
-            <div className=&quot;text - 2xl font - bold bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent hover:scale - 105 transition - transform duration - 200 & quot;>;
-              Zion Tech Group;
-            </div>;
-          </Link>;
-        </div>;
-        <div className=&quot;flex lg:hidden & quot;>;
-          <button;
-            type=&quot;button & quot;
-            className=&quot;-m - 2.5 inline - flex items - center justify - center rounded - md p - 2.5 text - gray - 400 & quot;
-            on_click={() => setMobileMenuOpen (true)}
-          >;
-            <span className=&quot;sr - only & quot;>Open main menu</span>;
-            <Bars3Icon className=&quot;h - 6 w - 6&quot; aria - hidden=&quot;true & quot; />;
-          </button>;
-        </div>;
-        <div className=&quot;hidden lg:flex lg:gap - x-12 & quot;>;
-          {navigation.map ((item) => (
-            <a;
+    <header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+      <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div className="flex lg:flex-1">
+          <a href="/" className="-m-1.5 p-1.5">
+            <span className="sr-only">Zion Tech Group</span>
+            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200">
+              Zion Tech Group
+            </div>
+          </Link>
+        </div>
+        <div className="flex lg:hidden">
+          <button
+            type="button"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
+            onClick={() => setMobileMenuOpen(true)}
+          >
+            <span className="sr-only">Open main menu</span>
+            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+          </button>
+        </div>
+        <div className="hidden lg:flex lg:gap-x-12">
+          {navigation.map((item) => (
+            <a
               key={item.name}
               href={item.href}
               className=&quot;text - sm font - semibold leading - 6 text - white hover:text - blue - 400 transition - colors duration - 200 hover:-translate - y-0.5 & quot;

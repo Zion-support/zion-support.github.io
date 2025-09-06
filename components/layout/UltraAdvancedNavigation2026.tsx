@@ -1,14 +1,43 @@
-
-
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
-
-
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Atom
+  Globe
+  Zap
+  Sparkles
+  Shield
+  Microscope
+  DollarSign
+  Home
+  Users
+  Briefcase
+  BookOpen
+  MessageCircle;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
+  Microscope, DollarSign, Home, Users, Briefcase
+  BookOpen, MessageCircle
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Menu,
   X,
   ChevronDown,
@@ -39,8 +68,11 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
 const serviceCategories = [
@@ -249,17 +281,36 @@ const serviceCategories = [
         price: '$2,999/month'
       }
       {
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
+        name: 'AI Business Intelligence'
+        href: '/autonomous-business-intelligence-network'
+        description: 'Self-evolving BI'
+        price: '$1,299/month'
+      }
+    ]
+  },];      { name: 'Autonomous Supply Chain', href: '/autonomous-supply-chain-optimization-ai', description: 'AI supply chain optimization', price: '$899/month' }
+      { name: 'Autonomous Marketing AI', href: '/autonomous-marketing-ai-platform', description: 'Self-optimizing marketing', price: '$1,499/month' }
+      { name: 'AI Cybersecurity', href: '/ai-cybersecurity-platform', description: 'Next-gen security', price: '$2,999/month' }
+      { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
+    ]
   }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
+        name: 'AI Business Intelligence',
+        href: '/autonomous-business-intelligence-network',
+        description: 'Self-evolving BI',
+        price: '$1,299/month',
+      },
+    ],
+  },];      { name: 'Autonomous Supply Chain', href: '/autonomous-supply-chain-optimization-ai', description: 'AI supply chain optimization', price: '$899/month' },
+      { name: 'Autonomous Marketing AI', href: '/autonomous-marketing-ai-platform', description: 'Self-optimizing marketing', price: '$1,499/month' };
+      { name: 'AI Cybersecurity', href: '/ai-cybersecurity-platform', description: 'Next-gen security', price: '$2,999/month' };
+      { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
+    ]
   }
+<<<<<<< HEAD
+
+];
+
+];
+=======
   
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
@@ -296,6 +347,7 @@ import { motion, AnimatePresence } from 'framer-motion';
     color: 'from - teal - 600 to - cyan - 600',
     description: 'Healthcare innovation',
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home }
@@ -521,42 +573,41 @@ const UltraAdvancedNavigation2026 = () => {;
         { name: 'Digital Reality', href: '/services?category=digital-reality', description: 'Immersive experiences' },;
         { name: 'Holographic Tech', href: '/services?category=holographic', description: '3D holographic systems' },;
         { name: 'Consciousness Interface', href: '/services?category=consciousness-interface', description: 'Brain-computer interfaces' }
-      ];
-    };
-      name: 'Enterprise IT',;
-      href: '/services?category=enterprise',;
-      icon: Zap,;
-      color: 'from-green-500 to-emerald-500',;
-      description: 'Enterprise solutions and infrastructure',;
-      subItems: [;
-        {;
-          name: 'Cloud Solutions',;
-          href: '/services?category=cloud',;
-          description: 'Cloud infrastructure and services',;
-        },;
-        {;
-          name: 'Cybersecurity',;
-          href: '/services?category=security',;
-          description: 'Advanced security solutions',;
-        },;
-        {;
-          name: 'Data Analytics',;
-          href: '/services?category=analytics',;
-          description: 'Business intelligence and analytics',;
-        },;
-        {;
-          name: 'DevOps',;
-          href: '/services?category=devops',;
-          description: 'Development and operations',;
-        },;
-      ],;
-    },  ];        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' },;
-        { name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' },;
-        { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },;
-
-
-=======
-
+      ]
+    }
+      name: 'Enterprise IT'
+      href: '/services?category=enterprise'
+      icon: Zap
+      color: 'from-green-500 to-emerald-500'
+      description: 'Enterprise solutions and infrastructure'
+      subItems: [
+        {
+          name: 'Cloud Solutions'
+          href: '/services?category=cloud'
+          description: 'Cloud infrastructure and services'
+        }
+        {
+          name: 'Cybersecurity'
+          href: '/services?category=security'
+          description: 'Advanced security solutions'
+        }
+        {
+          name: 'Data Analytics'
+          href: '/services?category=analytics'
+          description: 'Business intelligence and analytics'
+        }
+        {
+          name: 'DevOps'
+          href: '/services?category=devops'
+          description: 'Development and operations'
+        }
+      ]
+    },  ];        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' }
+        { name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' }
+        { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' }
+        { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
+      ]
+    }
           name: 'DevOps',
           href: '/services?category=devops',
           description: 'Development and operations',
@@ -569,11 +620,20 @@ const UltraAdvancedNavigation2026 = () => {;
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ];
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  ];
+
+  ];
+
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const contactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -587,6 +647,7 @@ const UltraAdvancedNavigation2026 = () => {;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
 
+<<<<<<< HEAD
 =======
         { name: 'AI Autonomous Agents', href: '/services?category=ai-autonomous', description: 'Fully autonomous AI systems' },
         { name: 'AI Consciousness', href: '/services?category=ai-consciousness', description: 'Consciousness simulation and interfaces' },
@@ -929,6 +990,16 @@ const UltraAdvancedNavigation2026 = () =>: any {
       description: 'Enterprise solutions and infrastructure',
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Logo */}
 
       sub_items: [;
@@ -1052,10 +1123,27 @@ const UltraAdvancedNavigation2026 = () =>: any {
                 </div>              </div>;
             </Link>;
             {/* Desktop Navigation */}
-
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+            <div className='hidden lg:flex items-center space-x-8'>
+              {navigationItems.map(item => (
+                <div key={item.name} className='relative group'>
+                    onClick={() =>
+                      setActiveDropdown(
+                        activeDropdown === item.name ? null : item.name
+                      )
+                    }
+                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'
+                  >
+                    <item.icon className='w-5 h-5' />
+                    <span className='font-medium'>{item.name}</span>
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform duration-200 ${
+                        activeDropdown === item.name ? 'rotate-180' : ''
+                      }`}
+                    />                  </button>                    <item.icon className="w-5 h-5" />
+                    <span className="font-medium">{item.name}</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                      activeDropdown === item.name ? 'rotate-180' : ''
+                    }`} />
                   {/* Dropdown Menu */}
                   <AnimatePresence>;
                     {activeDropdown === item && item.name && (;
@@ -1069,8 +1157,18 @@ const UltraAdvancedNavigation2026 = () =>: any {
                                 href={subItem && subItem.href}
                                 className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group"
                                 onClick={() => setActiveDropdown(null)}
+                              >
+                                <div className="text-white font-medium group-hover:text-purple-300 transition-colors duration-200">
+                                  {subItem.name}
+                                </div>
+                                <div className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200">
 
 
+<<<<<<< HEAD
+            {/* Desktop Navigation */}
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                                   {subItem.description}
                                 </div>
                               </Link>
@@ -1091,32 +1189,19 @@ const UltraAdvancedNavigation2026 = () =>: any {
                 </div>
               ))}
 
+              {/* Quick Links */}
+              <div className='flex items-center space-x-6'>
+                <Link
+                  href='/services'
+                  className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'
+                >
 
-                          <Link
-                            href={item && item.href}
-                            className='block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                            onClick={() => setActiveDropdown(null)}                          ;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                          <Link
-                            href={item && item.href}
-                            className="block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200">;
-                            View All {item && item.name}
-                          </Link>;
-                        </div>;
-                      </motion && motion.div>;
-                    )}
-                  </AnimatePresence>;
-                </div>;
-              ))}
+<<<<<<< HEAD
+                  All Services
+                </Link>
 =======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              {/* Quick Links */}
-
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Link
                   href='/pricing'
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'>;
@@ -1239,6 +1324,8 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Get Started
+              </Link>
+            </div>
 
               </Link>;
             </div>;
@@ -1251,14 +1338,43 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 =======
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
+              className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200'
+            >
+              {isOpen ? (
+                <X className='w-6 h-6' />
+              ) : (
+                <Menu className='w-6 h-6' />
+              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+      </nav>
 
+<<<<<<< HEAD
+=======
 
             </button>;
           </div>;
@@ -1272,6 +1388,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1285,19 +1402,18 @@ const UltraAdvancedNavigation2026 = () =>: any {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-
-
+            transition={{ duration: 0.2 }}
+            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
             onClick={() => setIsOpen(false)}
-          >;
-            <motion&& motion.div
-=======
-
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
 
             onClick={() => setIsOpen(false)}
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1320,6 +1436,31 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 
               {/* Mobile Navigation Items */}
+              <div className='space-y-4'>
+                {navigationItems.map(item => (
+                  <div
+                    key={item.name}
+                    className='border-b border-gray-700/50 pb-4'
+                  >
+                      href={item.href}
+                      className='flex items-center space-x-3 text-white hover:text-purple-300 transition-colors duration-200 py-2'
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <div
+                        className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center`}
+                      >
+                        <item.icon className='w-4 h-4 text-white' />
+                      </div>
+                      <span className='font-medium'>{item.name}</span>
+                    </Link>
+                    {/* Mobile Sub-items */}
+                    <div className='mt-3 ml-11 space-y-2'>
+                      {item.subItems.slice(0, 3).map(subItem => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1'                          onClick={() => setIsOpen(false)}                          className="block text-gray-400 hover: text-white transition-colors duration-200 text-sm py-1"
+                          onClick={() => setIsOpen(false)}
 
                         className={`w-8 h-8 bg-gradient-to-br ${item && item.color} rounded-lg flex items-center justify-center`}>;
                         <item && item.icon className='w-4 h-4 text-white' />;
@@ -1327,6 +1468,17 @@ const UltraAdvancedNavigation2026 = () =>: any {
                       <span className='font-medium'>{item && item.name}</span>;
                     </Link>;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         >
                           {subItem.name}
                         </Link>
@@ -1335,7 +1487,8 @@ const UltraAdvancedNavigation2026 = () =>: any {
                   </div>
                 ))}
 
-
+                {/* Quick Links */}
+                <div className='space-y-3 pt-4'>
                   <Link
                     href='/services'
                     className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}                <div className="space-y-3 pt-4">;
@@ -1572,6 +1725,8 @@ const UltraAdvancedNavigation2026 = () =>: any {
         )}
       </AnimatePresence>
 
+<<<<<<< HEAD
+=======
 
       <div className="h-20"></div>
     </>
@@ -1600,13 +1755,27 @@ export default UltraAdvancedNavigation2026;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
   );
+<<<<<<< HEAD
+}
+};
+
+export default UltraAdvancedNavigation2026;    </>
+  );
+}
+export default UltraAdvancedNavigation2026;
+
+export default UltraAdvancedNavigation2026;
+export default UltraAdvancedNavigation2026;
+=======
 
 };
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

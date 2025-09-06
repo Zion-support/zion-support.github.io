@@ -63,13 +63,6 @@ export function EnterpriseTrustBadges() {
           </div>
         </div>
       </div>
-
-
-
-    </section>
-
-
-import React from 'react';
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 export function EnterpriseTrustBadges() {;
   return (

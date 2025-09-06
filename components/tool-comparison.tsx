@@ -1,53 +1,25 @@
-
-
+import React from 'react',
+import Head from 'next/head',
 import React from 'react';
 import Head from 'next/head';
-
-
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-
-  Search;
-  Filter, ;
-  TrendingUp, ;
-  DollarSign, ;
-  Users, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  Search
+  Filter
+  TrendingUp
+  DollarSign
+  Users
+  Star
+  Check
+  X
+  ArrowRight
+  ExternalLink
+  Zap
+  Brain
+  Globe
+  Rocket;} from 'lucide-react';import {
   Search,
   Filter,
   TrendingUp,
@@ -60,6 +32,18 @@ import {
   ExternalLink,
   Zap,
   Brain,
+<<<<<<< HEAD
+  Globe,
+  Rocket,;} from 'lucide-react';import { 
+  Globe,;
+  Rocket,;} from 'lucide-react';import { ;
+  Search;
+  Filter
+  TrendingUp
+  DollarSign
+  Users
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -93,6 +77,12 @@ import {
   Brain;
   Globe;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export default function ToolComparisonPage() {
+export default function ToolComparisonPage() {;
+=======
 
 
 export default function ToolComparisonPage() {
@@ -101,6 +91,7 @@ export default function ToolComparisonPage() {
 export default function ToolComparisonPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
@@ -118,8 +109,89 @@ function ToolComparisonPage() {
   const all_tools = [;
     // AI Tools;
     {
-
-
+      name: 'ChatGPT'
+      category: 'AI Assistant'
+      pricing: 'Free - $20/month'
+      rating: 4.8
+      users: '100M+'
+      bestFor: 'Content creators, developers, researchers'
+      pros: [
+        'Powerful capabilities'
+        'Easy to use'
+        'Regular updates'
+        'Good free tier'
+      ]
+      cons: ['Sometimes inaccurate', 'Limited context', 'Privacy concerns']
+      website: 'https://chat.openai.com'
+      icon: <Brain className='w-6 h-6' />
+      color: 'text-green-400'
+    },    {      bestFor: 'Content creators, developers, researchers';
+      pros: ['Powerful capabilitiesEasy to useRegular updatesGood free tier']
+      cons: ['Sometimes inaccurateLimited contextPrivacy concerns']
+      website: 'https://chat.openai.com'
+      icon: <Brain className="w-6 h-6" />
+      color: 'text-green-400'
+    }
+    {
+      name: 'Midjourney'
+      category: 'AI Art'
+      pricing: '$10 - $30/month'
+      rating: 4.7
+      users: '1M+'
+      bestFor: 'Designers, marketers, content creators'
+      pros: [
+        'High-quality output'
+        'Creative control'
+        'Commercial rights'
+        'Active community'
+      ]
+      cons: [
+        'Discord-only interface'
+        'Limited customization'
+        'Monthly subscription'
+      ]
+      website: 'https://midjourney.com'
+      icon: <Zap className='w-6 h-6' />
+      color: 'text-purple-400'
+    },    {      bestFor: 'Designers, marketers, content creators';
+      pros: ['High-quality outputCreative controlCommercial rightsActive community']
+      cons: ['Discord-only interfaceLimited customizationMonthly subscription']
+      website: 'https://midjourney.com'
+      icon: <Zap className="w-6 h-6" />
+      color: 'text-purple-400'
+    }
+    {
+      name: 'Jasper'
+      category: 'AI Writing'
+      pricing: '$39 - $125/month'
+      rating: 4.6
+      users: '100K+'
+      bestFor: 'Marketing teams, content creators, businesses'
+      pros: [
+        'Specialized for marketing'
+        'Brand voice training'
+        'SEO optimization'
+        'Team features'
+      ]
+      cons: ['Expensive', 'Limited free trial', 'Can be repetitive']
+      website: 'https://jasper.ai'
+      icon: <Brain className='w-6 h-6' />
+      color: 'text-blue-400'
+    },    // SaaS Tools      bestFor: 'Marketing teams, content creators, businesses';
+      pros: ['Specialized for marketingBrand voice trainingSEO optimizationTeam features']
+      cons: ['ExpensiveLimited free trialCan be repetitive']
+      website: 'https://jasper.ai'
+      icon: <Brain className="w-6 h-6" />
+      color: 'text-blue-400'
+    }
+    // SaaS Tools
+    {
+      name: 'Zapier'
+      category: 'Automation'
+      pricing: 'Free - $19.99/month'
+      rating: 4.8
+      users: '2M+'
+      bestFor: 'Businesses looking to automate workflows'
         'Specialized for marketing',
         'Brand voice training',
         'SEO optimization',
@@ -244,8 +316,6 @@ function ToolComparisonPage() {
       rating: 4.8,
       users: '10M+',
       bestFor: 'Sales teams, consultants, remote teams',
-
-
       pros: [
         'Easy to use'
         'Extensive integrations'
@@ -959,12 +1029,21 @@ export default function ToolComparisonPage() {;
             </div>
           </div>
           {/* Stats */}
+          <div
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
+            style={{ animationDelay: '0.6s' }}
+          >
+            <div className='text-center group'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {allTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>Tools Analyzed</div>
@@ -1129,9 +1208,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
-=======
-            <div className='flex flex-wrap gap-2'>
-
               {categories.map(category => (                <button
 
               />
@@ -1141,9 +1217,12 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
                 <button
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1165,19 +1244,20 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
             </div>
 <<<<<<< HEAD
             {/* Sort */}
-            <div className="flex items-center space-x-2">
-              <Filter className="w-5 h-5 text-gray-400" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+            <div className='flex items-center space-x-2'>
+              <Filter className='w-5 h-5 text-gray-400' />
 
 
             {/* Sort */}
             <div className='flex items-center space-x-2'>
               <Filter className='w-5 h-5 text-gray-400' />
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e && e.target.value)}
@@ -1402,7 +1482,9 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
               <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
-=======
+          )}
+        </div>
+      </section>
 
 
 
@@ -1412,18 +1494,26 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Detailed Comparison Cards */}
-
-
+      <section className='py-24 bg-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
 
               Detailed Analysis
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Deep dive into each tool's pros, cons, and use cases to make the
@@ -1692,6 +1782,10 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 =======
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <div className="flex items-center justify-between">
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
 =======
@@ -1699,36 +1793,74 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <div className='flex items-center justify-between'>
                   <span
                     className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}
                   >                    {tool.pricing}
                   </span>
                   <Button
-
+                    href={tool.website}                <div className="flex items-center justify-between">
+                  <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
                     href={tool.website}
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {tool.pricing}
                   </span>
                   <Button
                     href={tool.website}
-
-
+                    variant='outline'
+                    size='sm'
+                    className='group-hover:border-purple-500 group-hover:text-purple-400'
+                  >
+                    Visit Website
+                    <ExternalLink className='w-4 h-4 ml-2' />                  </Button>                    variant="outline"
+                    size="sm"
+                    className="group-hover:border-purple-500 group-hover:text-purple-400"
+                  >
+                    Visit Website
+                    <ExternalLink className="w-4 h-4 ml-2" />
 
                   </Button>
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </div>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
+          </div>
+        </div>
+      </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
           </div>;
         </div>;
       </section>;
@@ -1737,16 +1869,19 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
       {/* CTA Section */}
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
 
-
             Need Help Choosing?
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our experts can analyze your business needs and recommend the
@@ -1766,6 +1901,19 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               href='/saas-marketplace'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
+              className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'            >              href="/saas-marketplace"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
+              Explore All Tools
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+);
+=======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1777,11 +1925,13 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     </>);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 );
@@ -1792,3 +1942,33 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+              className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'            >              href="/saas-marketplace"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
+              Explore All Tools
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

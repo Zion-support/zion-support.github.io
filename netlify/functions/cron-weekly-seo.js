@@ -1,7 +1,10 @@
+const { upsertFile } = require('./_lib/github');
 
-
-=======
-
+async function scorePage(url) {
+  const t0 = Date.now();
+  try {
+    const resp = await fetch(url);
+    const html = await resp.text();
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -89,11 +92,8 @@ if ( {) {
       });
     }
     return {
-
-  const t0 = Date.now(),
-=======
-      status_code: 200,
-      body: JSON.stringify ({ ok: true, pages: results.length }),
+      statusCode: 200
+      body: JSON.stringify({ ok: true, pages: results.length })
     }
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
@@ -292,5 +292,3 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

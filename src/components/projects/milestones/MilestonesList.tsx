@@ -13,11 +13,7 @@ if (isLoading) {
       </div>
     )
   }
-
-
   
-
-
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
@@ -34,7 +30,10 @@ if (isLoading) {
             onClick: () => setShowAddForm(true)
           } : undefined
         }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
 
@@ -62,30 +61,11 @@ if (isLoading) {
           </Button>
         </div>
       )}
-
-
       
-
-
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
-
-
-      {showAddForm && (;
-        <Card>;
-          <CardContent className="pt-6">;
-            <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
-
-            <AddMilestoneForm
-            <AddMilestoneForm 
-              onSubmit = {handleSubmit,}
-              isSubmitting = {isSubmitting,}
-              onCancel = {(,) => setShowAddForm(false),}
-            />
-          </CardContent>
-        </Card>
       )}
 
 
@@ -93,17 +73,6 @@ if (isLoading) {
         {milestones && milestones.map((milestone,) => (;
 
           <MilestoneCard
-            key = {milestone.id,}
-            id = {milestone.id,}
-            projectId = {milestone.project_id,}
-            title = {milestone.title,}
-            description = {milestone.description,}
-            amount = {parseFloat(milestone.amount.toString()),}
-            status = {milestone.status,}
-            dueDate = {milestone.due_date,}
-            onApprove = {onApprove,}
-            onReject = {onReject,}
-          />
         ))}
 
       </div>;

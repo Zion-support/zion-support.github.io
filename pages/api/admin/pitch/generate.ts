@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
@@ -9,11 +13,39 @@ const client = new OpenAI({
 
 });
 export default async function handler(
+<<<<<<< HEAD
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  const { allowed } = await ensureAdminFromApi(req);
+  if (!allowed) return res.status(403).json({ error: "Forbidden" });
+  if (req.method !== "POST")
+    return res.status(405).json({ error: "Method Not Allowed" });
+  const { operatorPrompt, inputs, metrics } = req.body |{}
+  const seed = [
+    "Problem & Opportunity"
+    "Solution & Product"
+    "Market Size (TAM/SAM/SOM)"
+    "Traction & Metrics"
+    "Business Model"
+    "Go-To-Market"
+    "Team"
+    "Roadmap"
+    "Token Strategy"
+    "Ask & Call to Action"
+  ];
+  try {
+import type { NextApiRequest, NextApiResponse } from 'next';
+=======
 
 
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   const { allowed } = await ensureAdminFromApi(req);
@@ -32,22 +64,19 @@ export default async function handler(
     "Ask & Call to Action",
   ];
 ;
-  try {
-    const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
-Operator Prompt: ${operator_prompt}
-Company Mission: ${inputs?.mission}
-
-Key Metrics: ${JSON && JSON.stringify(metrics)}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
 <<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
 Operator Prompt: ${operatorPrompt}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
+Operator Prompt: ${operator_prompt}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 Company Mission: ${inputs?.mission}
+
 Key Metrics: ${JSON && JSON.stringify(metrics)}
+
 Return 10 sections with title and 120-180 words per section, markdown-friendly.`;
     let content = "";
     try {
@@ -68,6 +97,8 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
 
   }
 }
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function extractSection(body: string, title: string): string {
   if (!body) return "";
   // naive split by headings
@@ -92,6 +123,8 @@ function extractSection(body: string, title: string): string {
   return ''
 
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
       content = chat.choices?.[0]?.message?.content || "";
 ;
     } catch (err) {
@@ -127,10 +160,12 @@ if ( {) {
   }
   return "";
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
@@ -141,9 +176,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+<<<<<<< HEAD
+=======
 =======
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
@@ -181,7 +219,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

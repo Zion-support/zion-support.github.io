@@ -18,6 +18,9 @@ import { toast  } from '@/hooks / use - toast';
 import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { supabase  } from '@/integrations / supabase / client';
 import { logErrorToProduction } from '@/utils / production_logger';
 import { EmptyState  } from '@/components / ui / empty - state';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -26,11 +29,6 @@ interface PartnerProfile {
   created_at: string,
   niche: string,
   audience_size: string,
-  social_media?: Record < string, string>;
-  website?: string;
-  bio?: string;
-  payout_method?: string;
-  fraud_flags?: number;
   commission_rate?: number;
 }
 export default /**

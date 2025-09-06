@@ -33,8 +33,6 @@ import {
   Tabs;
   TabsContent;
   TabsList;
-
-
   const pageKey = `search-${routeKey}-${router.asPath}`
 import { useRouter } from 'next/router'
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
@@ -60,6 +58,10 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger} from "@/components/ui/tabs",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Loader2 } from 'lucide-react'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -108,8 +110,6 @@ function highlight(text: string, term: string) {
   },
 
 
-
-
   return (
     <div key={pageKey}>
       <main className="container mx-auto px-4 py-8">
@@ -117,8 +117,12 @@ function highlight(text: string, term: string) {
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
+            onSelectSuggestion={(suggestion) => {
+              const searchTerm = suggestion.text.trim()
+              setQuery(searchTerm);              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
 
-
+            }}
+            searchSuggestions = {suggestions,}
             onSelectSuggestion={(suggestion) => {;
               const searchTerm = suggestion.text.trim();
               setQuery(searchTerm);
@@ -256,11 +260,6 @@ function highlight(text: string, term: string) {
             </TabsContent>
           </Tabs>
         )}
-
-
-return;
-
-
 }setLoading (true)
 try {
   const res = await fetch (`/api/search?query=$ {
@@ -498,8 +497,6 @@ router.push (`/search?q=$ {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="max - w-6xl mx -auto">
           {/* Results Count */}
-
-
 ;
 
 

@@ -1,6 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+    const r = await fetch(
+      `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.host}/api/metrics`
+      `${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`;
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     );
     const metrics = await r && r.json();
     const jobs24 =

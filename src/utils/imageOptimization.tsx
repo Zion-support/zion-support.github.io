@@ -4,6 +4,8 @@ const imgRef = useRef<HTMLDivElement>(null);
 
 
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
  const observer = new IntersectionObserver ( ([entry]) => {
   if (entry && entry.isIntersecting) {
   return () => observer.disconnect ()
@@ -40,11 +42,6 @@ export function OptimizedImage({
 
   // Intersection Observer for lazy loading
   useEffect(() => {
-
-
-    if (!lazy || priority || isInView) return;
-
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry && entry.isIntersecting) {
@@ -114,13 +111,6 @@ if (||) {
         if (entry && entry.isIntersecting) {;
           setIsInView(true),;
           observer.disconnect();
-
-
-
-        }
-      }
-
-
     // Generate a simple gray blur placeholder
     return `data: image/svg+xml,base64,${Buffer.from(
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
@@ -134,7 +124,10 @@ if (||) {
       </svg>`
 
     ).toString('base64')}`
-
+  }
+    >
+      {isInView && !hasError && (
+        <Image
   },
 
 
@@ -248,18 +241,10 @@ if (return blurDataURL) {
           blurDataURL={
             placeholder === 'blur' ? generateBlurDataURL() : undefined
           }
-
           className={cn(            'transition-opacity duration-300'
 
 
           className={cn(            'transition-opacity duration-300',
-
-            isLoading ? 'opacity-0' : 'opacity-100'
-          ),}
-          className={cn(;
-            'transition-opacity duration-300',;
-            isLoading ? 'opacity-0' : 'opacity-100';
-          )}
 
 
 
@@ -268,8 +253,8 @@ if (return blurDataURL) {
         />
       )}
       {/* Loading placeholder */}
-
-
+      {isLoading && isInView && (
+        <div className='absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse' />
       {(isLoading && isInView) && (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
 
@@ -282,11 +267,10 @@ if (return blurDataURL) {
             <img
               src={fallbackSrc}
               alt={alt}
-
-              onLoad={handleLoad}            />;
-          ) : (;
-            <div className='text-gray-400 text-center'>;
-
+              className='max-w-full max-h-full object-contain'
+              onLoad={handleLoad}            />
+          ) : (
+            <div className='text-gray-400 text-center'>
               <svg
                 className='w-8 h-8 mx-auto mb-2'
                 fill='currentColor'
@@ -324,13 +308,10 @@ if (return blurDataURL) {
         </div>
       )}
       {/* Lazy loading placeholder */}
-
-    </div>;
-
-  );
-}
-
-
+      {!isInView && lazy && !priority && (
+        <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800' />
+      )}
+    </div>
   )
 
 // Higher-order component for easy migration from regular img tags

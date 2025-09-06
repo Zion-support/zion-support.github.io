@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {ChatBotPanel} from "./ChatBotPanel";
@@ -11,19 +20,54 @@ export function SupportWidget() {;
 
 
   return (
+<<<<<<< HEAD
+    <>
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { ChatBotPanel } from "./ChatBotPanel",
+import { MessageSquare, Info, X } from "lucide-react",
+import { cn } from "@/lib/utils";
+import { useTheme } from "@/hooks/useTheme";
+export function SupportWidget() {
+  const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
+  return (
+    <>
+=======
     <>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
         <Button
 
+<<<<<<< HEAD
+import { cn } from "@/lib/utils",
+import { useTheme } from "@/hooks/useTheme",
+export function SupportWidget() {
+  const [isOpen, setIsOpen] = useState(false),
+  const { theme } = useTheme(),
+  
+  return (
+    <>
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { ChatBotPanel } from "./ChatBotPanel",;
+import { MessageSquare, Info, X } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { useTheme } from "@/hooks/useTheme",;
+export function SupportWidget() {;
+  const [isOpen, setIsOpen] = useState(false),;
+  const { theme } = useTheme();
+  return (;
+    <>;
+=======
 =======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Fixed button in the bottom right */}
       {!isOpen && (
         <Button
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           onClick={() => setIsOpen(true)}
           size="icon";
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50";
@@ -38,17 +82,13 @@ export function SupportWidget() {;
       {isOpen && (;
         <div
           className={cn(
-            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col"
-            theme === "dark" 
-              ? "bg-zion-blue-dark border border-zion-blue-light" 
-
-=======
+            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col";
+            theme === "dark"
+              ? "bg-zion-blue-dark border border-zion-blue-light"
 
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
             theme === "dark" 
               ? "bg-zion-blue-dark border border-zion-blue-light" 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               : "bg-white border border-gray-200"
           )}
           style={{ height: "600px", maxHeight: "80vh" }}>;

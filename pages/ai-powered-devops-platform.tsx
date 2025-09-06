@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React from 'react',
+import React from 'react';
+import Head from 'next/head';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function AIPoweredDevOpsPlatformPage() {
+=======
 
 
 class ErrorBoundary extends React.Component {
@@ -5,20 +12,25 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React from 'react';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <>;
@@ -54,25 +66,32 @@ import React from 'react';
     </>;
   );
 
+<<<<<<< HEAD
+}
+import React from 'react',
+import Head from 'next/head',
+import ServiceLanding from '../components/sections/ServiceLanding',
+=======
 
 =======
 import ServiceLanding from '../components/sections/ServiceLanding';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AIPoweredDevOpsPlatformPage() {
 	return (
 		<>
 			<Head>
 				<title>AI-Powered DevOps Platform | Zion Tech Group</title>
-<meta name="description" content="Intelligent CI/CD, test acceleration, incident prevention, and release automation powered by AI." />
+				<meta name="description" content="Intelligent CI/CD, test acceleration, incident prevention, and release automation powered by AI." />
 				<link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops-platform" />
 			</Head>
 			<ServiceLanding
 				title="AI-Powered DevOps Platform"
-description="Accelerate software delivery with autonomous pipeline optimization, flaky test triage, change-risk prediction, incident prevention, and automated release orchestration."
+				description="Accelerate software delivery with autonomous pipeline optimization, flaky test triage, change-risk prediction, incident prevention, and automated release orchestration."
 				subtitle="Ship faster with higher reliability"
 				pricePerMonthUSD={2499}
 				implementationWeeks="2-4 weeks"
 				roiNote="Cut MTTR by 40% and increase deployment frequency 3-5x"
-features={[
+				features={[
 					"Autonomous CI/CD optimization and caching";
 					"Flaky test detection and auto quarantine";
 					"Change-risk scoring before deploy";
@@ -86,6 +105,8 @@ features={[
 		</>
 	)
 }
+<<<<<<< HEAD
+=======
 
 =======
 import Head from 'next / head';
@@ -94,19 +115,6 @@ export default /**
  * AIPoweredDevOpsPlatformPage - Function description
  */
 function AIPoweredDevOpsPlatformPage() {
-=======
-<<<<<<< HEAD
-import React from 'react',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIPoweredDevOpsPlatformPage() {
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <>;
       <Head>;
@@ -146,3 +154,4 @@ export default function AIPoweredDevOpsPlatformPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

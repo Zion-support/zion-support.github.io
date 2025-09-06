@@ -1,10 +1,7 @@
-
-
-=======
-
+import React from 'react';
+import Head from 'next/head';
 import React from "react";
 import Head from "next/head";
-
 
 export default function DiversityInclusionPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -66,7 +63,6 @@ export default function DiversityInclusionPage() {
       </div>;
     </div>;
   );
-
 }
 =======
 	return (

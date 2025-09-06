@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import { TalentProfile } from '@/types/talent';
+
+import { TalentProfile } from "@/types/talent";
+// Sample talent profiles with realistic data for the talent directory
+export const TALENT_PROFILES: TalentProfile[] = [
+=======
 
 
       {
@@ -12,6 +19,7 @@
     ],
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   {
 
       'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
@@ -306,6 +314,10 @@
 =======
 
 
+<<<<<<< HEAD
+import { TalentProfile } from "@/types/talent",
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -557,23 +569,26 @@ export const TALENT_PROFILES: TalentProfile[] = [
         description: "Developed a deep learning system for detecting abnormalities in chest X-rays with 97% sensitivity, reducing radiologist workload by 35% and improving early detection rates."
       };
       {
+<<<<<<< HEAD
+title: 'Cancer Treatment Response Prediction',
+        description:
+          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.',
+      },
+    ],
+  },;
+];
+}];
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         title: "Cancer Treatment Response Prediction",
         description: "Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes."
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       }
     ]
   }
-=======
-    key_projects: [;
-      {
-        title: 'AI - Assisted Radiology Platform',
-        description:;
-          'Developed a deep learning system for detecting abnormalities in chest X - rays with 97% sensitivity, reducing radiologist workload by 35% and improving early detection rates.',
-      },
-      {
-
-
 ];
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -584,3 +599,4 @@ export const TALENT_PROFILES: TalentProfile[] = [
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

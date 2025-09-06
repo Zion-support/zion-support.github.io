@@ -1,5 +1,15 @@
+import React from 'react';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
  const SolutionsPage: React.FC = () => {
   const industrySolutions = [ {
   category: 'Healthcare & Life Sciences', solutions: [ {
@@ -123,15 +133,15 @@ import React from 'react';
   opacity: 0, y: 30
 }whileInView= {
   {
-
-
+  opacity: 1, y: 0
+}transition= {
+  {
+  duration: 0.8, delay: categoryIndex * 0.2
   opacity: 1, y: 0 
 
 }transition= {
   {
   duration: 0.8, delay: categoryIndex * 0.2 
-
-
 
 }viewport= {
   {
@@ -766,5 +776,34 @@ export default Solutions;}
 ;
 export default Solutions;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

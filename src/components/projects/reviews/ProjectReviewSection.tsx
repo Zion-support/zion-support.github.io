@@ -16,7 +16,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     ? talentProfile?.full_name || "Talent" 
     : clientProfile?.full_name || "Client",
 
-
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
@@ -58,7 +57,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
 
 
       
-
       <CardContent>
         {isCompleted ? (
           <div className="space-y-6">
@@ -82,7 +80,12 @@ import { useState } from 'react';
                     <p className="text-sm text-muted-foreground mb-3">
                       Your review is {userReview.status === "approved" ? "published" : "pending approval"}
                     </p>
-
+                    {userReview.status === 'pending' && (
+                      <Button
+                        variant='outline'
+                        onClick={() => setIsReviewModalOpen(true)}
+                      >                        Edit Review
+                      </Button>
                     {userReview.status === "pending" && (
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>
                         Edit Review
@@ -162,14 +165,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
 
 
                     )}
-                  </div>
-                ) : null}
-              </div>
-            )}
-
-
-
-
 
             <ReviewsList
               reviews = {reviews,}
@@ -201,9 +196,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
               reviews={reviews}
               isLoading={isLoading}
               onReportReview={reportReview}
-
-
-
             />
           </div>
         ) : (
@@ -214,7 +206,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
             </p>
           </div>
         )}
-
     </Card>;
   );
 };

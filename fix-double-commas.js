@@ -1,7 +1,22 @@
+<<<<<<< HEAD
+#!/usr/bin/env node
+import fs from "fs";
+import path from "path";
+function fixDoubleCommas(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
+    // Fix double commas in import statements
+
+    // Fix double commas in import statements;
+    const doubleCommaRegex = /,\s*,/g;
+    const fixedContent = content.replace(doubleCommaRegex, ",");
+=======
 
     const fixedContent = content && content.replace(doubleCommaRegex, ",");
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     if (fixedContent !== content) {
       fs && fs.writeFileSync(filePath, fixedContent, "utf8");
 #!/usr / bin / env node;

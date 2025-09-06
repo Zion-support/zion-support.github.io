@@ -68,6 +68,16 @@ if ( {) {
 }
     chrome.tabs.create ({ url: `${BASE_URL}/talent` });
   }
+<<<<<<< HEAD
+  if (message.type === 'view-notifications') {
+    chrome.tabs.create({ url: `${BASE_URL}/notifications` })
+  }
+
+  }
+
+<<<<<<< HEAD
+}),;
+=======
   // Check condition
 if ( {) {
   $2
@@ -79,9 +89,12 @@ if ( {) {
 }),;
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }),
 ;
-=======
 }),;
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

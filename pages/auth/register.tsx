@@ -1,7 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
 
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useEffect } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -26,9 +31,12 @@ const RegisterPage = () => {
     } else {
       router.push('/auth/login?registrationSuccess=true')
     }
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -37,45 +45,21 @@ import { AuthButtons } from '@/components/AuthButtons';
 import { fireEvent } from '@/lib/analytics';
 import { logInfo } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
-
-import React, { useEffect } from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-import SignupForm from '@/components / auth / SignupForm',
-import { AuthButtons } from '@/components / AuthButtons',
-import { fire_event } from '@/lib / analytics',
-import { log_info } from '@/utils / production_logger',
-import { use_router } from 'next / router',
-const RegisterPage = () =>: any {
-  const router = use_router (),
-  useEffect (() => {
-    fire_event ('signup_page_view');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-import React, { useEffect } from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import SignupForm from '@/components/auth/SignupForm',;
-import { AuthButtons } from '@/components/AuthButtons',;
-import { fireEvent } from '@/lib/analytics',;
-import { logInfo } from '@/utils/productionLogger',;
-import { useRouter } from 'next/router',;
 const RegisterPage = () => {
-  const router = useRouter(),
-
+  const router = useRouter()
   useEffect(() => {
     fireEvent('signup_page_view')
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  }, []),
-  const handle_success = ({ email, emailVerificationRequired }: {
-    email: string,
-=======
-
+  }, [])
+  const handleSuccess = ({ email, emailVerificationRequired }: {
+    email: string
+    emailVerificationRequired: boolean
+  }) => {
+    if (emailVerificationRequired) {
+      router.push(`/verify-status?email=${encodeURIComponent(email)}`)
+    } else {
+      router.push('/auth/login?registrationSuccess=true')
+    }
+  }
 const RegisterPage = () => {;
   const router = useRouter();
   useEffect(() => {;
@@ -90,15 +74,16 @@ const RegisterPage = () => {;
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
 
       router.push ('/auth / login?registration_success = true');
 
     }
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <Head>
@@ -112,21 +97,6 @@ if ( {) {
               className="mx-auto h-12 w-auto"
               src="/logos/zion-logo.png"
               alt="Zion Tech"
-
-  },
-  return (
-    <>;
-      <Head>;
-        <title > Create Account - Zion Tech Marketplace</title>;
-        <meta name="description" content="Create your Zion Tech Marketplace account" />;
-      </Head>;
-      <div className="min - h-screen flex items - center justify - center bg - gray - 50 py - 12 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-md w - full space - y-8">;
-          <div>;
-            <img;
-              className="mx - auto h - 12 w - auto";
-              src="/logos / zion - logo.png";
-              alt="Zion Tech";
               width={48}
               height={48}
               on_error={(e) => {
@@ -134,14 +104,6 @@ if ( {) {
                 target.style.display = 'none';
 
               }}
-            />;
-            <h2 className="mt - 6 text - center text - 3xl font - extrabold text - gray - 900">;
-              Create your account;
-            </h2>;
-            <p className="mt - 2 text - center text - sm text - gray - 600">;
-              Or{' '}
-
-
               width={48  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -160,22 +122,28 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
               Create your account
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
-
+              Or{' '}
               Or{' '  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <Link
                 href="/auth/login"
                 className="font-medium text-blue-600 hover:text-blue-500 underline"
@@ -185,16 +153,18 @@ if ( {) {
             </p>
           </div>
           <SignupForm onSuccess={handleSuccess} />
-
-
+          {/* Social signup options */}
           {/* Social signup options */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
@@ -208,38 +178,11 @@ if ( {) {
           </div>
           <div className="text-center mt-4">
             <p className="text-xs text-gray-500">
-
-              <Link;
-                href="/auth / login";
-                className="font - medium text - blue - 600 hover:text - blue - 500 underline";
-              >;
-                sign in if you already have an account;
-              </Link>;
-            </p>;
-          </div>;
-          <SignupForm on_success={handle_success} />;
-          {/* Social signup options */}
-          <div className="mt - 6">;
-            <div className="relative">;
-              <div className="absolute inset - 0 flex items - center">;
-                <div className="w - full border - t border - gray - 300" />;
-              </div>;
-              <div className="relative flex justify - center text - sm">;
-                <span className="px - 2 bg - gray - 50 text - gray - 500">Or continue with</span>;
-              </div>;
-            </div>;
-            <AuthButtons providers={["google", "github"]} />;
-          </div>;
-          <div className="text - center mt - 4">;
-            <p className="text - xs text - gray - 500">;
-
               By creating an account, you agree to our{' '}
               <Link href="/legal / terms" className="text - blue - 600 hover:text - blue - 500">;
                 Terms of Service;
               </Link>{' '}
               and{' '}
-
-
               By creating an account, you agree to our{' '  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -257,9 +200,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
                 Privacy Policy
               </Link>
@@ -269,18 +215,86 @@ if ( {) {
       </div>
     </>
   )
-
-};
-
-
+}
 export default RegisterPage;
+
+<<<<<<< HEAD
+},
+
+export default RegisterPage,;
+;
+export default RegisterPage,
+            />;
+            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">;
+              Create your account;
+            </h2>;
+            <p className="mt-2 text-center text-sm text-gray-600">;
+              Or{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <Link;
+                href="/auth/login";
+                className="font-medium text-blue-600 hover:text-blue-500 underline";
+              >;
+                sign in if you already have an account;
+              </Link>;
+            </p>;
+          </div>;
+          <SignupForm onSuccess={handleSuccess} />;
+          {/* Social signup options */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className="mt-6">;
+            <div className="relative">;
+              <div className="absolute inset-0 flex items-center">;
+                <div className="w-full border-t border-gray-300" />;
+              </div>;
+              <div className="relative flex justify-center text-sm">;
+                <span className="px-2 bg-gray-50 text-gray-500">Or continue with</span>;
+              </div>;
+            </div>;
+            <AuthButtons providers={["google", "github"]} />;
+          </div>;
+          <div className="text-center mt-4">;
+            <p className="text-xs text-gray-500">;
+              By creating an account, you agree to our{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <Link href="/legal/terms" className="text-blue-600 hover:text-blue-500">;
+                Terms of Service;
+              </Link>{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              and{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">;
+=======
+=======
               <Link href="/legal / privacy" className="text - blue - 600 hover: text - blue - 500">;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 Privacy Policy;
               </Link>;
             </p>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+    </>;
+  );
+},;
+export default RegisterPage;
+=======
     </>);
 },
 export default RegisterPage,
@@ -291,3 +305,4 @@ export default RegisterPage,
 },
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -2,15 +2,9 @@ import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
-
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 
-
-
-}
-export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
-  roomId
 
   participants = [], ;
     const secs = seconds % 60;
@@ -77,14 +71,13 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     if (onLeave) {
       onLeave()
     }
-
-
+  }
+  return (
+    <Card className={`w-full ${className |'max-w-5xl mx-auto'}`}>
   },
 
   return (
     <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>
-
-
       <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">
         <div className="flex items-center space-x-2">
           <CardTitle className="text-white">Video Call</CardTitle>
@@ -200,139 +193,14 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
         <div className="flex items-center space-x-2">
           <Badge variant="secondary" className="bg-zion-blue-light text-white">
             {formatDuration(callDuration)}
-
-import React, { useState } from 'react';
-import { Button  } from '@/components / ui / button';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
-import { Badge  } from '@/components / ui / badge';
-import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
-import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react';
-import './video - call.css';interface Participant {
-  id: string,
-  name: string,
-  avatar?: string;
-  is_muted?: boolean;
-  isVideoEnabled?: boolean;
-  isScreenSharing?: boolean;
-  is_host?: boolean;
-}
-interface VideoCallRoomProps {
-  room_id: string,
-  participants?: Participant[];
-  on_leave?: () => void;
-  onToggleMute?: (is_muted: boolean) => void,
-  onToggleVideo?: (is_enabled: boolean) => void,
-  onToggleScreenShare?: (is_sharing: boolean) => void,  class_name?: string;
-}
-export const VideoCallRoom: React.FC < VideoCallRoomProps> = ({
-  room_id;
-  participants = [],
-    const secs = seconds % 60;
-}  on_leave,
-  onToggleMute,
-  onToggleVideo,
-  onToggleScreenShare,
-  class_name;
-}, ) => {
-  const [is_muted, setIsMuted] = useState (false),
-  const [isVideoEnabled, setIsVideoEnabled] = useState (true),
-  const [isScreenSharing, setIsScreenSharing] = useState (false),
-  const [isAudioOnly, setIsAudioOnly] = useState (false),
-  const [call_duration, setCallDuration] = useState (0),
-  // Call duration timer;
-  React.useEffect ((, ) => {
-    const timer = set_interval ((, ) => {
-      setCallDuration (prev_duration => prev_duration + 1);
-    }, 1000),
-    return () => clear_interval (timer);
-  }, []),
-  const format_duration = (seconds: number, ) =>: any {
-    const hrs = Math.floor (seconds / 3600),
-    const mins = Math.floor ((seconds % 3600) / 60),
-    const secs = seconds % 60,
-    return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
-  },
-  const handleToggleMute = () =>: any {
-    const newMuteState = !is_muted,
-    setIsMuted (newMuteState),
-    // Check condition
-if ( {) {
-  $2
-}
-      onToggleMute (newMuteState);
-    }
-  },
-  const handleToggleVideo = () =>: any {
-    const newVideoState = !isVideoEnabled,
-    setIsVideoEnabled (newVideoState),
-    // Check condition
-if ( {) {
-  $2
-}
-      onToggleVideo (newVideoState);
-    }
-    // If turning video back on, ensure we're not in audio - only mode;
-    // Check condition
-if ( {) {
-  $2
-}
-      setIsAudioOnly (false);
-    }
-  },
-  const handleToggleScreenShare = () =>: any {
-    const newScreenShareState = !isScreenSharing,
-    setIsScreenSharing (newScreenShareState),
-    // Check condition
-if ( {) {
-  $2
-}
-      onToggleScreenShare (newScreenShareState);
-    }
-  },
-  const handleToggleAudioOnly = () =>: any {
-    setIsAudioOnly (!isAudioOnly),
-    // Check condition
-if ( {) {
-  $2
-}
-      setIsVideoEnabled (false),
-      // Check condition
-if ( {) {
-  $2
-}
-        onToggleVideo (false);
-      }
-    }
-  },
-  const handleLeaveCall = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      on_leave ();
-    }
-  },
-  return (
-    <Card className={`w - full ${class_name || 'max - w-5xl mx - auto'}`}>;
-      <CardHeader className="flex flex - row items - center justify - between bg - zion - blue - dark rounded - t-lg p - 4">;
-        <div className="flex items - center space - x-2">;
-          <CardTitle className="text - white">Video Call</CardTitle>;
-          <Badge variant="outline" className="text - white border - zion - purple bg - zion - blue - light">;
-            Room: {room_id}
-          </Badge>;
-        </div>;
-        <div className="flex items - center space - x-2">;
-          <Badge variant="secondary" className="bg - zion - blue - light text - white">;
-            {format_duration (call_duration)}
-          </Badge>;
-          <Badge variant="outline" className="text - white">;
+          </Badge>
+          <Badge variant="outline" className="text-white">
             {participants.length} participant{participants.length !== 1 ? 's' : ''}
-          </Badge>;
-        </div>;
-      </CardHeader>;
-      <CardContent className="p - 0">;
-        <div className="video - container p - 4 grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
-
+          </Badge>
+        </div>
+      </CardHeader>
+      <CardContent className="p-0">
+        <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {participants.length > 0 ? (
             participants.map ((participant, ) => (
               <div key={participant.id} className="video - participant bg - zion - blue - dark rounded - lg overflow - hidden relative">;
@@ -379,11 +247,7 @@ if ( {) {
                     </Avatar>
                   </div>
                 )}
-
-
                 
-
-
                 <div className="video-metadata flex items-center space-x-2">
                   <span>{participant.name}</span>
                   {participant.isMuted && <MicOff className="h-4 w-4" />}
@@ -401,8 +265,6 @@ if ( {) {
             </div>
           )}
         </div>
-
-
         
 
 

@@ -1,9 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const advancedITInfrastructureExpansion2025V2 = [
   {
 
@@ -379,6 +386,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ],
   },
   {
+<<<<<<< HEAD
     name: 'Quantum Identity Verification',
     description: 'Quantum - powered identity verification',
     category: 'Quantum Computing',
@@ -619,6 +627,19 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ],
   },
   {
+<<<<<<< HEAD
+    name: 'Zero-Trust Security'
+    description: 'Comprehensive zero-trust security platform'
+    category: 'Cybersecurity'
+    pricing: '$599/month'
+    features: [
+      'Identity verification'
+      'Access control'
+      'Threat detection'
+      'Performance monitoring'
+    ]
+  }
+=======
     name: 'Zero - Trust Security',
     description: 'Comprehensive zero - trust security platform',
     category: 'Cybersecurity',
@@ -627,6 +648,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'Identity verification',
       'Access control',
       'Threat detection',
@@ -634,13 +656,22 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ],
 
   },;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
 
-=======
-];      'Identity verification_access control_threat detection_performance monitoring';
+export const advancedITInfrastructureExpansion2025V2 = [;
+  {;
+    name: 'Autonomous DevOps Platform',;
+    description: 'Self-managing DevOps automation platform',;
+    category: 'Cloud & FinOps',;
+    pricing: '$399/month',;
+    features: [;
+      'Automated deploymentSelf-healing infrastructurePerformance optimizationCost management';
     ];
 
   },;
@@ -1102,10 +1133,13 @@ export const advancedITInfrastructureExpansion2025V2 = [
     features: [;
       'Identity verificationAccess controlThreat detectionPerformance monitoring';
     ];
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 ;

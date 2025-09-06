@@ -1,23 +1,34 @@
-
-import React from 'react';
-import SEO from '../components / SEO';
-import Layout from '../components / layout / Layout';
-
-import { motion } from 'framer-motion';
-
-import {
-
-=======
-
+import React from 'react',
+import SEO from '../components/SEO',
 import React from 'react';
 import SEO from '../components/SEO';
-
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
+  Star
+  Brain
+  Atom
+  Shield
+  Zap
+  TrendingUp
+  Globe
+  Rocket
+  Lock
+  Palette
+  Factory
+  Database
+  Cloud
+  Cpu
+  Eye
+  Target
+  Users
+  BarChart3;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Star,
   Brain,
   Atom,
@@ -34,10 +45,17 @@ import {
   Cpu,
   Eye,
   Target,
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  Users,;
+  BarChart3,;
+=======
 
   Users,;
   BarChart3,;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
 
 const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
@@ -87,6 +105,20 @@ import { motion } from 'framer-motion';
     { name: 'AI & Creativity', icon: Palette, color: 'from-pink-500 to-rose-500' }
     { name: 'AI & Robotics', icon: Database, color: 'from-emerald-500 to-green-500' }
 
+<<<<<<< HEAD
+  ];
+
+  ];
+
+  const getCategoryIcon = (category: string) => {
+    const cat = categories.find(c => c.name === category);
+    return cat ? cat.icon : Star;    return cat ? cat.icon : Star
+  }
+  const getCategoryColor = (category: string) => {
+    const cat = categories.find(c => c.name === category);
+    return cat ? cat.color : 'from-gray-500 to-gray-600';    return cat ? cat.color : 'from-gray-500 to-gray-600'
+  }
+=======
   };
 
   const getCategoryColor = (category: string) => {;
@@ -95,17 +127,32 @@ import { motion } from 'framer-motion';
   };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
-
-        <div className='absolute inset-0 pointer-events-none'>;
-          <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse'></div>;
-          <div className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000'></div>;
-          <div className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000'></div>;
-          <div className='absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-500'></div>;
-          <div className='absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-1500'></div>;
-        </div>;
-
-        <div className='text-center max-w-6xl mx-auto relative z-10'>          <motion&& motion.div
+    <Layout>
+      <SEO
+        title='2025 Innovative Services Showcase | Zion Tech Group'
+        description='Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.'
+        keywords={[
+          'innovative services 2025'
+          'micro SAAS'
+          'quantum computing'
+          'space technology'
+          'AI platforms'
+          'autonomous systems'
+        ]}
+      />
+      {/* Hero Section */}
+      <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>
+        {/* Enhanced Background Elements */}
+        <div className='absolute inset-0 pointer-events-none'>
+          <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse'></div>
+          <div className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000'></div>
+          <div className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000'></div>
+          <div className='absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-500'></div>
+          <div className='absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-1500'></div>
+        </div>
+        <div className='text-center max-w-6xl mx-auto relative z-10'>          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -140,14 +187,14 @@ import { motion } from 'framer-motion';
         </div>
         
         <div className="text-center max-w-6xl mx-auto relative z-10">
-=======
-  return (
-    <Layout>
 
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -155,11 +202,14 @@ import { motion } from 'framer-motion';
             className="space-y-6"
           >
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Enhanced Company Badge */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -279,8 +329,20 @@ import { motion } from 'framer-motion';
             <motion.div;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <Star className='w-5 h-5' />
               <span>Innovation Leader 2025</span>
@@ -292,6 +354,8 @@ import { motion } from 'framer-motion';
               quantum computing solutions, and autonomous AI platforms
             </p>
 
+<<<<<<< HEAD
+=======
 
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm'>;
@@ -331,12 +395,25 @@ import { motion } from 'framer-motion';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Enhanced Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <div className='p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20'>
                 <div className='text-3xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors'>
@@ -453,18 +530,32 @@ import { motion } from 'framer-motion';
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
 
+<<<<<<< HEAD
+=======
 =======
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+            className='text-center mb-16'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
               Service Categories
@@ -477,6 +568,17 @@ import { motion } from 'framer-motion';
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {categories.map((category, index) => {
               const IconComponent = category.icon;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+              
+
+=======
 
 
 
@@ -488,6 +590,7 @@ import { motion } from 'framer-motion';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -539,6 +642,10 @@ import { motion } from 'framer-motion';
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category, index) => {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className='inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 400 / 30 rounded - full text - cyan - 400 text - lg font - medium backdrop - blur - sm';
             >;
               <Star className='w - 5 h - 5' />;
@@ -613,6 +720,22 @@ import { motion } from 'framer-motion';
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Featured Services */}
+      <section className='py-20 px-4'>
+        <div className='max-w-7xl mx-auto'>          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text - center mb - 16';
@@ -673,8 +796,26 @@ import { motion } from 'framer-motion';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               return (
-
-
+                <motion.div
+                  key={category.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group relative"
+                >
+                  <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl`}>
+                    <div className="text-center">
+                      <div className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br ${category.color} bg-opacity-20 flex items-center justify-center border border-white/20`}>
+                        <IconComponent className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-4">{category.name}</h3>
+                      <div className="text-gray-300 text-sm">
+                        {innovative2025MicroSaasBatch.filter(service => service.category === category.name).length} Services
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
               );
             })}
 
@@ -685,6 +826,10 @@ import { motion } from 'framer-motion';
 
 =======
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -697,17 +842,34 @@ import { motion } from 'framer-motion';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Featured Services */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      <section className='py-20 px-4'>
+        <div className='max-w-7xl mx-auto'>          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className='text-center mb-16'
+          >
+            <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
+              Featured Services
+            </h2>
+            <p className='text-xl text-gray-300 max-w-4xl mx-auto'>
+              Our most popular and innovative services that are transforming
+              industries
+            </p>
+          </motion.div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {innovative2025MicroSaasBatch
               .filter(service => service.popular)
@@ -967,11 +1129,15 @@ import { motion } from 'framer-motion';
       {/* All Services Grid */}
       <section className='py-20 px-4 bg-black/30 relative'>
         <div className='absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5'></div>
-
+        <div className='max-w-7xl mx-auto relative z-10'>      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
         <div className='max-w-7xl mx-auto relative z-10'>
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
@@ -980,12 +1146,13 @@ import { motion } from 'framer-motion';
             viewport={{ once: true }}
             className='text-center mb-16'
 
-
-
           >
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent'>
               Complete Service Portfolio
             </h2>
@@ -997,6 +1164,17 @@ import { motion } from 'framer-motion';
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {innovative2025MicroSaasBatch.map((service, index) => {
               const IconComponent = getCategoryIcon(service.category);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+              
+
+=======
 
 
 
@@ -1008,6 +1186,7 @@ import { motion } from 'framer-motion';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
                   <div className='p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm'>
                     <div className='flex items-start space-x-4'>
@@ -1121,7 +1300,12 @@ import { motion } from 'framer-motion';
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               );
             })}
+          </div>
+        </div>
+      </section>
 
+<<<<<<< HEAD
+=======
           </div>;
         </div>;
       </section>;
@@ -1133,6 +1317,7 @@ import { motion } from 'framer-motion';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Contact CTA */}
       <section className='py-20 px-4'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion && motion.div      {/* All Services Grid */}
@@ -1147,20 +1332,32 @@ import { motion } from 'framer-motion';
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
 
-=======
-
 
           <motion.div
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+            className='space-y-8'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
               Ready to Transform Your Business?
@@ -1481,6 +1678,23 @@ export default Comprehensive2025InnovativeServicesShowcase;
 
 export default Comprehensive2025InnovativeServicesShowcase;
 
+<<<<<<< HEAD
+export default Comprehensive2025InnovativeServicesShowcase;
+export default Comprehensive2025InnovativeServicesShowcase;
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default Comprehensive2025InnovativeServicesShowcase;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+export default Comprehensive2025InnovativeServicesShowcase;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+}
+export default Comprehensive2025InnovativeServicesShowcase;
+=======
 =======
 export default Comprehensive2025InnovativeServicesShowcase;
 
@@ -1490,3 +1704,4 @@ export default Comprehensive2025InnovativeServicesShowcase;
 export default Comprehensive2025InnovativeServicesShowcase;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

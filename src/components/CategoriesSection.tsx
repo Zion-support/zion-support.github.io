@@ -9,10 +9,8 @@
 }
 // Default static categories with translation keys
 
-
+const getDefaultCategories = (t: any,) => [
 const getDefaultCategories = (t: any) => [
-
-
   {
     id: "services"
     name: t('categories.services')
@@ -20,8 +18,7 @@ const getDefaultCategories = (t: any) => [
     iconName: "Briefcase", // Corresponds to lucide icon name
     link: "/services"
     color: "from-purple-500 to-indigo-600", // Keep color for styling
-
-
+  }
   },
 
 
@@ -40,8 +37,12 @@ const getDefaultCategories = (t: any) => [
     link: "/equipment"
     color: "from-amber-500 to-orange-600"}
   {
-
-
+    id: "innovation"
+    name: t('categories.innovation')
+    description: t('categories.innovation_desc')
+    iconName: "Lightbulb"
+    link: "/innovation"
+    color: "from-emerald-500 to-green-600"}]
     id: "innovation",
     name: t('categories.innovation'),
     description: t('categories.innovation_desc'),
@@ -49,18 +50,17 @@ const getDefaultCategories = (t: any) => [
     link: "/innovation",
     color: "from-emerald-500 to-green-600"}],
 
-
-
 // Helper to get icon component from name
 const getIcon = (iconName?: string,) => {
   switch (iconName) {
-
-    title: "AI Services",
-    description: "Cutting - edge AI solutions, chatbots, and machine learning",
-    icon: "🤖",
-    link: "/ai - services",
-    color: "from - purple - 500 to - indigo - 600", ,
-},
+    case "Briefcase": return <Briefcase className="w-10 h-10" />
+    case "Users": return <Users className="w-10 h-10" />
+    case "HardDrive": return <HardDrive className="w-10 h-10" />
+    case "Lightbulb": return <Lightbulb className="w-10 h-10" />
+    default: return <HelpCircle className="w-10 h-10" />, // Default icon
+  }
+}
+const getSpecialServices = (t: any,) => [
   {
     title: "Micro SAAS",
     description: "Cloud - based software solutions for modern businesses",
@@ -95,64 +95,14 @@ const special_services = [{
     title: "Services Comparison",
     link: "/services - comparison";
 }
-// Default static categories with translation keys;
-const getDefaultCategories = (t: any, ) =>: any [;
-  {
-    id: "services",
-    name: t ('categories.services'),
-    description: t ('categories.services_desc'),
-    icon_name: "Briefcase", // Corresponds to lucide icon name;
-    link: "/services",
-    color: "from - purple - 500 to - indigo - 600", // Keep color for styling;
-  }
-  {
-    id: "talents",
-    name: t ('categories.talents'),
-    description: t ('categories.talents_desc'),
-    icon_name: "Users",
-    link: "/talent",
-    color: "from - cyan - 500 to - blue - 600"},
-  {
-    id: "equipment",
-    name: t ('categories.equipment'),
-    description: t ('categories.equipment_desc'),
-    icon_name: "HardDrive",
-    link: "/equipment",
-    color: "from - amber - 500 to - orange - 600"},
-  {
-    id: "innovation",
-    name: t ('categories.innovation'),
-    description: t ('categories.innovation_desc'),
-    icon_name: "Lightbulb",
-    link: "/innovation",
-    color: "from - emerald - 500 to - green - 600"}],
-// Helper to get icon component from name;
-const get_icon = (icon_name?: string, ) =>: any {
-  switch (icon_name) {
-    case "Briefcase": return <Briefcase className="w - 10 h - 10" />;
-    case "Users": return <Users className="w - 10 h - 10" />;
-    case "HardDrive": return <HardDrive className="w - 10 h - 10" />;
-    case "Lightbulb": return <Lightbulb className="w - 10 h - 10" />;
-    default: return <HelpCircle className="w - 10 h - 10" />, // Default icon;
-
-  }
-}
-const getSpecialServices = (t: any, ) =>: any [;
-  {
-
-    title: t ('categories.it_onsite_services'),
-    link: "/it - onsite - services";
-
-  }
-];
-interface CategoriesSectionProps {
-  show_title?: boolean;
-  class_name?: string;
-  style?: React.CSSProperties;
-  categories?: CategoryType[], // Accept categories as a prop;
-}
-
-
+export function CategoriesSection({
+  showTitle = true
+  className
+  style
+  categories: fetchedCategories, // Rename prop for clarity
+}: CategoriesSectionProps) {
+  const { t } = useTranslation()
+  const defaultCategories = getDefaultCategories(t)
     case "Briefcase": return <Briefcase className="w-10 h-10" />,
     case "Users": return <Users className="w-10 h-10" />,
     case "HardDrive": return <HardDrive className="w-10 h-10" />,
@@ -259,12 +209,6 @@ export function CategoriesSection({
         // Assign a default color or implement logic to assign colors
         color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
-
-
-        ...cat,
-        ...cat,
-
-
         title: cat.name,
         icon: getIcon(cat.iconName)})),
 
@@ -279,114 +223,6 @@ export function CategoriesSection({
           </p>
           <p className="text-zion-slate-light text-md">
             {t('home.no_categories_support')}
-
-
-import React from 'react';
-        color: defaultCategories && defaultCategories.find(dc => dc && dc.id === cat && cat.id)?.color || "from-gray-500 to-gray-600"}));
-    : defaultCategories && defaultCategories.map(cat => ({;
-        ...cat;
-import { GradientHeading } from "./GradientHeading";
-import Link from "next/link";
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon;
-import { cn } from "@/lib/utils";
-import { useTranslation } from "react-i18next";
-// This is the type definition copied from Categories && Categories.tsx for consistency.;
-// Ideally, this would be in a shared types file.;
-interface CategoryType {;
-  id: string,;
-  name: string,;
-  description?: string;
-  iconName?: string, // Example field if categories have icons;
-  itemCount?: number, // Example field for number of items in a category;
-  // Add a 'link' property if your API provides it, or construct it.;
-  link?: string;
- * CategoriesSection function;
- * @param {*} params - Function parameters;
- * @returns {*} Function return value;
- */;
-function CategoriesSection(): any ({ showTitle = true }: CategoriesSectionProps) {;
-
-const categories = [{;
-    title: "AI Services",;
-    description: "Cutting - edge AI solutions, chatbots, and machine learning",;
-    icon: "🤖",;
-    link: "/ai - services",;
-    color: "from - purple - 500 to - indigo - 600",,;
-},;
-  {;
-    title: "Micro SAAS",;
-    description: "Cloud - based software solutions for modern businesses",;
-    icon: "☁️",;
-    link: "/micro - saas",;
-    color: "from - cyan - 500 to - blue - 600",,;
-},;
-  {;
-    title: "IT Services",;
-    description: "Infrastructure, security, and technical consulting",;
-    icon: "⚡",;
-    link: "/all - services",;
-    color: "from - amber - 500 to - orange - 600",,;
-},;
-  {;
-    title: "Digital Transformation",;
-    description: "Business modernization and digital strategy",;
-    icon: "📈",;
-    link: "/all - services",;
-    color: "from - emerald - 500 to - green - 600",,;
-},;
-];
-const specialServices = [{;
-    title: "IT Onsite Services",;
-    link: "/it - onsite - services";
-},;
-  {;
-    title: "Comprehensive Services",;
-    link: "/comprehensive - services";
-},;
-  {;
-    title: "Services Comparison",;
-    link: "/services - comparison";
-}
-
-// Default static categories with translation keys;
-const getDefaultCategories = (t: any,) => [;
-  {;
-    id: "services",;
-    name: t('categories && categories.services'),;
-    description: t('categories && categories.services_desc'),;
-    iconName: "Briefcase", // Corresponds to lucide icon name;
-    link: "/services",;
-    color: "from-purple-500 to-indigo-600", // Keep color for styling;
-  };
-  {;
-    id: "talents",;
-    name: t('categories && categories.talents'),;
-    description: t('categories && categories.talents_desc'),;
-    iconName: "Users",;
-    link: "/talent",;
-    color: "from-cyan-500 to-blue-600"},;
-  {;
-    id: "equipment",;
-    name: t('categories && categories.equipment'),;
-    description: t('categories && categories.equipment_desc'),;
-    iconName: "HardDrive",;
-    link: "/equipment",;
-    color: "from-amber-500 to-orange-600"},;
-  {;
-    id: "innovation",;
-    name: t('categories && categories.innovation'),;
-    description: t('categories && categories.innovation_desc'),;
-    iconName: "Lightbulb",;
-    link: "/innovation",;
-    color: "from-emerald-500 to-green-600"}],;
-// Helper to get icon component from name;
-const getIcon = (iconName?: string,) => {;
-  switch (iconName) {;
-    case "Briefcase": return <Briefcase className="w-10 h-10" />;
-    case "Users": return <Users className="w-10 h-10" />;
-    case "HardDrive": return <HardDrive className="w-10 h-10" />;
-    case "Lightbulb": return <Lightbulb className="w-10 h-10" />;
-    default: return <HelpCircle className="w-10 h-10" />, // Default icon;
   }
 };
 
@@ -443,11 +279,16 @@ export function CategoriesSection(): any ({;
         </div>;
       </section>;
     );
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
   }
+
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>;
       <div className="container mx-auto px-4">;
@@ -459,11 +300,13 @@ export function CategoriesSection(): any ({;
             </p>;
           </div>;
         )}
-
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {displayCategories.map((category,) => (
+            <Link
+              key = {category.id,}
+              href = {category.link |'#',}
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
             <Link
               key={category.id}
               href={category.link || '#'}
@@ -481,8 +324,7 @@ export function CategoriesSection(): any ({;
               </div>
             </Link>
           ))}
-
-
+        </div>
         </div>;
 
 
@@ -490,8 +332,16 @@ export function CategoriesSection(): any ({;
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
           <div className="flex flex-wrap justify-center gap-4">
-
-
+            {getSpecialServices(t).map((service,) => (
+              <Link
+                key = {service.title,}
+                href = {service.link,}
+                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
+              >
+                {service.title}
+              </Link>            ))}
+          </div>
+        </div>
             {getSpecialServices(t).map((service) => (
               <Link 
                 key={service.title}
@@ -512,14 +362,10 @@ export function CategoriesSection(): any ({;
             className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
           >
             {t('home.view_all_categories')}
-
-
   t ;
 }= useTranslation ();
 const defaultCategories = getDefaultCategories (t);
 //Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
-
-
   id: cat.id;"
 title: cat.name,  //Map name to title description: cat.description |"No description available."
 icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {

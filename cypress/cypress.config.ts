@@ -1,3 +1,7 @@
+import { defineConfig } from 'cypress';
+export default defineConfig({
+  e2e: {
+    baseUrl: 'http://localhost:3000', // Standard Next.js port
 
 import { define_config } from 'cypress';
 export default define_config ({
@@ -38,15 +42,24 @@ export default defineConfig({;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors;
     setupNodeEvents(on, config) {;
       on('before:browser:launch', (browser = {}, launchOptions) => {;
-
         if (browser.family === 'chromium') {;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
+<<<<<<< HEAD
+      });export default defineConfig({
+  e2e: {
+    baseUrl: 'http://localhost:3000', // Standard Next.js port
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
 
 
+<<<<<<< HEAD
+=======
+    supportFile: 'cypress/support/e2e.ts';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -125,21 +138,14 @@ export default defineConfig({;
     toConsole: true
   }
 });
-
-
-    base_url: 'http://localhost:3000', // Standard Next.js port;
-    support_file: 'cypress / support / e2e.ts';
-    experimentalModifyObstructiveThirdPartyCode: true;
-    // Disable IPv6 in Chromium - based browsers to avoid socket errors;
-    setupNodeEvents (on, config) {
-      on ('before:browser:launch', (browser = {}, launch_options) => {
-        // Check condition
-if ( {) {
-  $2
-}
-          launch_options.args.push ('--disable - ipv6');        }
-        return launch_options;
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import { defineConfig } from 'cypress',;
 export default defineConfig({;
   e2e: {;
@@ -153,10 +159,13 @@ export default defineConfig({;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
+<<<<<<< HEAD
+=======
 =======
 =======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       });
     }
     env: {
@@ -199,8 +208,11 @@ export default defineConfig({;
     to_console: true;
   }
 });
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

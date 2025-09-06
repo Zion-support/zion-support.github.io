@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+// Define the types for our sitemap structure
+
+export type SitemapItem = {
+export type SitemapItem = {;
+=======
 // Define the types for our sitemap structure;
 
 export type SitemapItem = {
@@ -8,6 +14,7 @@ export type SitemapItem = {
 export type SitemapItem = {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   path: string;
   label: string;
   description?: string;
@@ -509,8 +516,6 @@ export const getAccessibleRoutes = (
     // Add role-specific routes
     if (userType === 'creator' |userType === 'jobSeeker') {
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
-
-=======
 // Define the types for our sitemap structure;
 export type SitemapItem = {;
   path: string,;
@@ -811,10 +816,13 @@ export const getAccessibleRoutes = (;
     // Add role-specific routes;
     if (userType === 'creator' || userType === 'jobSeeker') {;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes];
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     if (userType === 'employer' |userType === 'buyer') {
       accessibleRoutes = [...accessibleRoutes, ...clientRoutes]
@@ -823,6 +831,10 @@ export const getAccessibleRoutes = (;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]
     }
   }
+<<<<<<< HEAD
+  return accessibleRoutes
+}
+=======
 
     required_auth: true;
     required_roles: ['admin'];
@@ -831,22 +843,18 @@ export const getAccessibleRoutes = (;
     lastmod: current_date}];
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 ;
-// Dynamic Path Patterns;
-export const dynamic_paths = {
-  talent_profile: '/talent/:id';
-  project_details: '/project/:project_id';
-  project_milestones: '/project/:project_id / milestones';
-  project_room: '/project/:project_id / room';
-  job_details: '/job/:id';
-  category_details: '/categories/:slug',
-  dispute_details: '/dashboard / disputes/:dispute_id'}
+  return accessibleRoutes;
+  
+  return accessibleRoutes
 ;
 
   return accessibleRoutes;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

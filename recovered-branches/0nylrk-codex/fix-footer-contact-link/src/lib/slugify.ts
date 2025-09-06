@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export function slugify(title: string, separator = "-"): string {;
+  const sep = separator;
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+=======
 
 
 
@@ -8,9 +15,10 @@ export function slugify(title: string, separator = "-"): string {;
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function slugify(title: string, separator = "-"): string {
-  const sep = separator;
-  const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const sep = separator,
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
 
   return title
     .trim()
@@ -34,6 +42,12 @@ export function unslugify(slug: string, separator = "-"): string {
     .filter(Boolean)
     .map(w => w && w.charAt(0).toUpperCase() + w && w.slice(1))
     .join(" ")
+<<<<<<< HEAD
+}
+
+
+;
+=======
 
 export function slugify (title: string, separator = "-"): string {
   const sep = separator;
@@ -45,6 +59,7 @@ export function slugify (title: string, separator = "-"): string {
 ;
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator,;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -74,7 +89,10 @@ export function unslugify (slug: string, separator = "-"): string {
     .join(" ");
 }
 ;
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

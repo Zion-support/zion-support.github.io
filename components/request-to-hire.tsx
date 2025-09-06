@@ -18,8 +18,23 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
+<<<<<<< HEAD
+import { useRouter } from 'next/router';
+import { TALENT_PROFILES } from '../data/talent';
+export default function RequestToHirePage() {
 
 
+export default function RequestToHirePage() {;
+  const router = useRouter();
+  const { talent } = router.query as { talent?: string }
+  const selected = useMemo(
+    () => TALENT_PROFILES.find(t => t.slug === talent)
+    [talent]
+  );export default function RequestToHirePage() {;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
@@ -105,6 +120,9 @@ export default function RequestToHirePage() {;
       setError(err.message |'Something went wrong')
     } finally {
       setSubmitting(false)
+    }
+  }
+  };
 
 =======
     }
@@ -259,10 +277,11 @@ export default function RequestToHirePage() {;
 
 
           {submitting ? 'Submitting…' : 'Submit Request'}
-
-        </button>;
-      </form>;
-    </div>;
+        </button>
+      </form>
+    </div>
+);
+}
   );
 }
 

@@ -1,12 +1,21 @@
 
+<<<<<<< HEAD
+=======
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Button} from "@/components/ui/button";
 import {HireRequestModal} from "./hire-request";
 import {useState} from "react";
 import {TalentProfile} from "@/types/talent";
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button",
+import { HireRequestModal } from "./hire-request",
+import { useState } from "react";
+import { TalentProfile } from "@/types/talent";
+=======
 interface HireNowCTAProps {;
   talentProfile: {;
     id: string,;
@@ -16,12 +25,17 @@ import { Button } from '@/components / ui / button';
 import { HireRequestModal } from './hire - request';
 import { useState } from './react';
 import { TalentProfile } from '@/types / talent';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface HireNowCTAProps {
   talent_profile: {
     id: string,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     full_name?: string;
     professional_title?: string;
+<<<<<<< HEAD
+import { useState } from "react",
+import { TalentProfile } from "@/types/talent",
+=======
     hourly_rate?: number;
   }
 }
@@ -46,22 +60,38 @@ export function HireNowCTA(): any ({ talentProfile }: HireNowCTAProps) {;
   const profileCompleteness = calculateProfileCompleteness(talentProfile);
   return (
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface HireNowCTAProps {
   talentProfile: {
     id: string,
     full_name?: string,
     professional_title?: string,
-
     hourly_rate?: number
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
+  const [modalOpen, setModalOpen] = useState(false);
+export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
+  const [modalOpen, setModalOpen] = useState(false),
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleOpenModal = () => {
     setModalOpen(true)
-
+  }
+  const handleCloseModal = () => {
+    setModalOpen(false)
+  }
+  // Check if we have minimum required data
+  const canHire = talentProfile && talentProfile.id && talentProfile.full_name;
+  // Calculate talent profile completeness (simplified)
+  const profileCompleteness = calculateProfileCompleteness(talentProfile);
   },
 
   const handleCloseModal = () => {
@@ -74,13 +104,17 @@ interface HireNowCTAProps {
   // Calculate talent profile completeness (simplified)
   const profileCompleteness = calculateProfileCompleteness(talentProfile),
 
-
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">
+<<<<<<< HEAD
+      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name |'This Talent'}</h3>
+      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
+=======
 
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className="mb-4">
         <div className="flex justify-between mb-2">
           <span>Profile Completeness</span>
@@ -105,7 +139,40 @@ interface HireNowCTAProps {
           Schedule Interview
         </Button>
       </div>
+<<<<<<< HEAD
+      <HireRequestModal
 
+      <HireRequestModal 
+      <HireRequestModal 
+import { Button } from "@/components/ui/button",;
+import { HireRequestModal } from "./hire-request",;
+import { useState } from "react",;
+import { TalentProfile } from "@/types/talent",;
+interface HireNowCTAProps {;
+  talentProfile: {;
+    id: string,;
+    full_name?: string,;
+    professional_title?: string,;
+    hourly_rate?: number;
+  }
+}
+;
+export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
+  const [modalOpen, setModalOpen] = useState(false),;
+  const handleOpenModal = () => {;
+    setModalOpen(true);
+  },;
+  const handleCloseModal = () => {;
+    setModalOpen(false);
+  },;
+  // Check if we have minimum required data;
+  const canHire = talentProfile && talentProfile.id && talentProfile.full_name,;
+  // Calculate talent profile completeness (simplified);
+  const profileCompleteness = calculateProfileCompleteness(talentProfile),;
+  return (;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">;
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>;
 
@@ -134,6 +201,32 @@ interface HireNowCTAProps {
           Schedule Interview;
         </Button>;
       </div>;
+<<<<<<< HEAD
+      <HireRequestModal;
+        isOpen={modalOpen}
+        onClose={handleCloseModal}
+        talent={talentProfile ? {
+          id: talentProfile.id
+          user_id: talentProfile.id
+          full_name: talentProfile.full_name |'Talent'
+          professional_title: talentProfile.professional_title |'Professional'
+          bio: ''
+          years_experience: 0
+          skills: []
+          availability_type: 'full_time'
+          timezone: ''
+          hourly_rate: talentProfile.hourly_rate
+        } : null}
+      />
+    </div>
+  )
+}
+
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
       <HireRequestModal
@@ -220,12 +313,16 @@ function HireNowCTA() {
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Helper function to calculate profile completeness
 function calculateProfileCompleteness(profile: any) {
   if (!profile) return 0;
   const fields = [
 =======
 
+  return Math.min(Math.round((completedFields / totalFields) * 100), 100)
+}
+;
 // Helper function to calculate profile completeness;
 function calculateProfileCompleteness(): any (profile: any) {;
   if (!profile) return 0;
@@ -243,10 +340,13 @@ function calculateProfileCompleteness(): any (profile: any) {;
   });
 
   return Math.min(Math.round((completedFields / totalFields) * 100), 100);
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 =======
   return Math && Math.min(Math && Math.round((completedFields / totalFields) * 100), 100);
@@ -272,18 +372,3 @@ if (return 0) {
     'availability_type';
   ];
 ;
-  let completed_fields = 0;
-  let total_fields = 0,
-  fields.for_each (field => {
-    // Check condition
-if ( {) {
-  $2
-}
-      completed_fields++;
-    }
-    total_fields++;
-  });
-;
-  return Math.min (Math.round ((completed_fields / total_fields) * 100), 100);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

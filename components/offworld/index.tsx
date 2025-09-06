@@ -1,8 +1,5 @@
-
-
+import { useState  } from 'react';
 import {useState} from 'react';
-
-
 import Head from 'next/head';
 
 
@@ -42,14 +39,11 @@ import Head from 'next/head';
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
   }
   async function broadcast() {
-
-
-  async function sendChat() {;
-    setStatus('Sending chat...');
-    const res = await fetch('/api/offworld/orbit?action=chat', {;
-      method: 'POST',;
-      headers: { 'content-type': 'application/json' },;
-      body: JSON && JSON.stringify({ from: 'anon', text: chat }),;
+    setStatus('Broadcasting manifesto...');
+    const res = await fetch('/api/offworld/ipfs?action=broadcast', {
+      method: 'POST'
+      headers: { 'content-type': 'application/json' }
+      body: JSON.stringify({ message: 'We build beyond platforms.' })
     });
     setStatus(res && res.ok ? 'Chat sent' : 'Chat failed');    const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON && JSON.stringify({ from: 'anon', text: chat }) }),;
     setStatus(res && res.ok ? 'Chat sent' : 'Chat failed');
@@ -283,17 +277,30 @@ function broadcast() {
         <h2 className='font-semibold'>Broadcast Manifesto</h2>;
         <button
           className='px-3 py-2 bg-indigo-600 text-white rounded'
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           onClick={broadcast}>;
           Broadcast;
         </button>;
       </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {status && <p className='text-sm text-gray-700'>{status}</p>}
-    </div>;
-  );
+    </div>
+);
 }
+    setStatus('Broadcasting manifesto...');
 
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <button;
           className='px - 3 py - 2 bg - black text - white rounded';
           on_click={cast_vote}
@@ -376,4 +383,8 @@ function broadcast() {
   )
 
 }
+<<<<<<< HEAD
+    setStatus('Broadcasting manifesto...');
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

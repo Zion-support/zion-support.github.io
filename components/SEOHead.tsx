@@ -259,37 +259,19 @@ const SEOHead: React.FC < SEOHeadProps> = ({
       <meta name="msapplication - config" content="/browserconfig.xml" />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Structured Data */}
-      <script;
-        type="application / ld + json";
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{
-
-          __html: JSON && JSON.stringify(structuredData || defaultStructuredData)
+          __html: JSON.stringify(structuredData |defaultStructuredData)
         }}
-      />;
-
-
+      />
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
-      <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="anonymous" />;
-      <link rel="preconnect" href="https://images && images.unsplash.com" />;
-    </Head>;
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://images.unsplash.com" />
+    </Head>
   );
-
-          __html: JSON.stringify (structured_data || defaultStructuredData);
-        }}
-      />;
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />;
-      <link rel="preconnect" href="https://fonts.gstatic.com" cross_origin="anonymous" />;
-      <link rel="preconnect" href="https://images.unsplash.com" />;
-    </Head>);
 }
-;
-
-=======
-
 };
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default SEOHead;

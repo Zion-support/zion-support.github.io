@@ -11,56 +11,9 @@ import { Handshake, MessageSquare } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
 import { UserProfile } from "@/types/auth",
-
-import React, { useState, useEffect } from 'react';
-import { use_router } from 'next / router';
-import { TalentProfile } from '@/components / profile / TalentProfile';
-import { ProfileLoadingState } from '@/components / profile / ProfileLoadingState';
-import { ProfileErrorState } from '@/components / profile / ProfileErrorState';
-import { BackToDirectoryButton } from '@/components / profile / BackToDirectoryButton';
-import { useTalentProfile } from '@/hooks / useTalentProfile';
-import { HireRequestModal } from '@/components / profile / hire - request';
-import { useAuthStatus } from '@/hooks / talent';
-import { MessageTalentModal } from '@/components / messaging / MessageTalentModal';
-import { StickyAction } from '@/components / ui / sticky - action';
-import { Handshake, MessageSquare } from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import { use_auth } from '@/hooks / use_auth';
-import { UserProfile } from '@/types / auth';
-import { toast } from '@/hooks / use - toast';
-import { SEO } from '@/components / SEO';
-import { TalentProfile  } from '@/components / profile / TalentProfile';
-import { ProfileLoadingState  } from '@/components / profile / ProfileLoadingState';
-import { ProfileErrorState  } from '@/components / profile / ProfileErrorState';
-import { BackToDirectoryButton  } from '@/components / profile / BackToDirectoryButton';
-import { useTalentProfile  } from '@/hooks / useTalentProfile';
-import { HireRequestModal  } from '@/components / profile / hire - request';
-import { useAuthStatus  } from '@/hooks / talent';
-import { MessageTalentModal  } from '@/components / messaging / MessageTalentModal';
-import { StickyAction  } from '@/components / ui / sticky - action';
-import { Button  } from '@/components / ui / button';
-import { use_auth  } from '@/hooks / use_auth';
-import { UserProfile  } from '@/types / auth';
-import { toast  } from '@/hooks / use - toast';
-import { SEO  } from '@/components / SEO';
-export default /**
- * TalentProfilePage - Function description
- */
-function TalentProfilePage() {
-  const router = use_router ();
-  // Get id from Next.js router query params;
-
-  const { id } = router.query as { id?: string }
-  const { profile, is_loading, error } = useTalentProfile (id);
-  const [isHireModalOpen, setIsHireModalOpen] = useState (false);
-  const [isMessageModalOpen, setIsMessageModalOpen] = useState (false);
-  const { user_details } = useAuthStatus ();
-  const { is_authenticated, user } = use_auth ();
-  // Create a compatible UserProfile from UserDetails or the authenticated user;
-  const user_profile: UserProfile = user;
-    ? {
-
-
+import { toast } from "@/hooks/use-toast";
+import { SEO } from "@/components/SEO";
+export default function TalentProfilePage() {
 import { toast } from "@/hooks/use-toast",
 import { SEO } from "@/components/SEO",
 export default function TalentProfilePage() {
@@ -73,13 +26,41 @@ export default function TalentProfilePage() {
   const { userDetails } = useAuthStatus(),
   const { isAuthenticated, user } = useAuth(),
 
-
-
-
   // Create a compatible UserProfile from UserDetails or the authenticated user
-
+  const userProfile: UserProfile = user
+    ? {
+        id: user.id |''
+        displayName: user.displayName |''
+        email: user.email |'', // Ensure email is always a string
+        userType: user.userType |null
+        profileComplete: user.profileComplete |false
+        created_at: user.created_at |new Date().toISOString()
+        updated_at: user.updatedAt |new Date().toISOString()
+        role: user.role |''
+        name: user.name |''
+        points: user.points |0
+      }
+    : {
+        id: userDetails?.id |''
+        displayName: userDetails?.name |''
+        email: userDetails?.email |'', // Ensure email is always a string
+        userType: null, // Default empty string since userDetails doesn't have this property
+        profileComplete: false, // Default value since userDetails doesn't have this property
+        created_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
+        updated_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
+        role: '', // Default empty string since userDetails doesn't have this property
+        name: ''
+        points: 0
+      };  const userProfile: UserProfile = user ? {
+    id: user.id |''
+    displayName: user.displayName |''
+    email: user.email |'', // Ensure email is always a string
+    userType: user.userType |null
+    profileComplete: user.profileComplete |false
+    created_at: user.created_at |new Date().toISOString(), updated_at: user.updatedAt |new Date().toISOString(),    role: user.role |''
+    name: user.name |''
+    points: user.points |0
   const userProfile: UserProfile = user ? {
-
     id: user.id || '',
     displayName: user.displayName || '',
     email: user.email || '', // Ensure email is always a string
@@ -97,24 +78,25 @@ export default function TalentProfilePage() {
     email: userDetails?.email |'', // Ensure email is always a string
     userType: null, // Default empty string since userDetails doesn't have this property
     profileComplete: false, // Default value since userDetails doesn't have this property
-
-
+    created_at: new Date().toISOString(); // Default value since userDetails doesn't have this property
+    updated_at: new Date().toISOString(); // Default value since userDetails doesn't have this property    role: '', // Default empty string since userDetails doesn't have this property
+    name: ''
+    points: 0
+  }
     created_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
     updated_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
     role: '', // Default empty string since userDetails doesn't have this property
     name: '',
     points: 0
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Handle loading error gracefully
   useEffect(() => {
     if (error) {
       toast({
-
-
-        title: 'Error loading profile',
-
-
         description:
           'There was a problem loading this talent profile. Please try again.'
         variant: 'destructive'
@@ -579,15 +561,11 @@ export default function TalentProfilePage() {;
 ;
   if (error || !profile) {;
     return <ProfileErrorState error={error} />;
-
-
-
   }
 
   const handleRequestHire = () => {
     if (!isAuthenticated) {
       toast({
-
 
       {/* Sticky action buttons that appear when scrolling */}
       <StickyAction>
@@ -675,8 +653,6 @@ export default function TalentProfilePage() {;
 
 
       <HireRequestModal 
-
-
         talent = {profile,}
         isOpen = {isHireModalOpen,}
         onClose = {(,) => setIsHireModalOpen(false),}
@@ -692,42 +668,4 @@ export default function TalentProfilePage() {;
 
         onClose = {() => setIsMessageModalOpen(false),}      />;
 
-;
-
-      
-      {/* Request to Hire Modal */}
-      <HireRequestModal;
-        talent={profile}
-        isOpen={isHireModalOpen}
-        onClose={() => setIsHireModalOpen(false)}
-        userDetails={userProfile}
-      />;
-      {/* Message Talent Modal */}
-      <MessageTalentModal;
-        talent={profile}
-        isOpen={isMessageModalOpen}
-        onClose={() => setIsMessageModalOpen(false)}
-      />;
-
-    </div>;
-    </>;
-  );
-}
-
-
-      {/* Request to Hire Modal */}
-      <HireRequestModal;
-        talent = {profile, }
-        is_open = {isHireModalOpen, }
-        on_close = {(, ) => setIsHireModalOpen (false), }
-        user_details = {user_profile, }
-      />;
-      {/* Message Talent Modal */}
-      <MessageTalentModal;
-        talent = {profile, }
-        is_open = {isMessageModalOpen, }
-        on_close = {() => setIsMessageModalOpen (false), }      />;
-    </div>;
-    </>);
-}
 ;

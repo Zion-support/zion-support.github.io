@@ -15,6 +15,7 @@ function readGrant(id: string): GrantApplication | null {
 
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   const p = grantPath(id);
+<<<<<<< HEAD
   if (!fs && fs.existsSync(p)) return null;
   return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication;
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
@@ -27,12 +28,18 @@ function writeGrant(record: GrantApplication) {
     grantPath(record && record.id),
     JSON && JSON.stringify(record, null, 2),
     'utf8'
-  );  return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication
+  );  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
 }
 function writeGrant(record: GrantApplication) {
-  if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
-  fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
+<<<<<<< HEAD
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req.query as { id: string }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const { id } = req.query as { id: string };
+=======
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -42,6 +49,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id } = req.query as { id: string };
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!id) return res.status(400).json({ error: 'Missing id' });
   const existing = readGrant(id);
   if (!existing) return res.status(404).json({ error: 'Not found' });
@@ -101,22 +109,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res && res.status(405).end('Method Not Allowed')
 }
 
-
-=======
-import type { GrantApplication } from '../../../../types / grants';
-;
-const GRANTS_DIR = path.join (process.cwd (), 'data', 'grants');
-;
-/**
- * grant_path - Function description
- */
-function grant_path() {
-  return path.join (GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path.join (process.cwd (), 'datagrants');
-/**
- * grant_path - Function description
- */
-function grant_path() {
-  return path.join (GRANTS_DIR, `${id}.json`);
 }
 function read_grant (id: string): GrantApplication | null {
   if () fs.mkdir_sync (GRANTS_DIR, { recursive: true })) {
@@ -209,3 +201,22 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+  res.status(405).end('Method Not Allowed')
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

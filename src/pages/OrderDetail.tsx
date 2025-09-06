@@ -100,12 +100,6 @@ const getStatusIcon = (status: string) => {
     default:
       return <Clock className="h-4 w-4" />;
   }
-
-};
-
-export default function OrderDetail() {;
-
-
   const router = useRouter();
   const { user } = useAuth();
   const [order, setOrder] = useState<Order | null>(null);
@@ -250,10 +244,6 @@ if ( {) {
 
   if (isLoading || !order) {;
     return (
-      <div className='container max-w-3xl py-10'>;
-        <Skeleton className='h-6 w-full' />;
-      </div>;
-
     );
   }
   return (

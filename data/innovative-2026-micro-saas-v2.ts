@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+export interface Innovative2026MicroSaasV2 {
+  id: string;
+export interface Innovative2026MicroSaasV2 {  id: string;
+=======
 
 export interface Innovative2026MicroSaasV2 {
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   name: string;
   tagline: string;
   price: string;
@@ -12,12 +18,17 @@ export interface Innovative2026MicroSaasV2 {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
+    address: string;
+  };
+=======
 
 
     address: string;
   };
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface Innovative2026MicroSaasV2 {;
   id: string,;
   name: string,;
@@ -34,10 +45,14 @@ export interface Innovative2026MicroSaasV2 {;
     address: string;
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     address: string;
   }
@@ -76,9 +91,11 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [;
   },
 ];      mobile: "+1 302 464 0950";
 
-
-=======
-
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
     id: "2026-micro-saas-v2",
     name: "2026 Micro SAAS Platform V2",
     tagline: "Enhanced micro SAAS solutions",
@@ -95,8 +112,33 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [;
     category: "Innovative 2026 Micro SAAS V2",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+=======
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },;
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+=======
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -145,7 +187,9 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
 ];
 <<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];

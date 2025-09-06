@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React from "react";
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+
+} from "@/components/ui/card";
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+=======
 
 
 import {;
@@ -8,6 +30,7 @@ import {;
   CardTitle,;
 
 } from "@/components/ui/card";
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 
@@ -17,22 +40,27 @@ interface PageViewsChartProps {;
   timeRange: string;
   onTimeRangeChange: (range: string) => void
 }
+<<<<<<< HEAD
+export function PageViewsChart({
+  data
+  timeRange
+  onTimeRangeChange
+}: PageViewsChartProps) {
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
+=======
 
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface PageViewsChartProps {
   data: Array<{ date: string, views: number }>,
   timeRange: string,
   onTimeRangeChange: (range: string) => void
 }
 
-
-export function PageViewsChart(): any ({;
-  data,;
-  timeRange,;
-  onTimeRangeChange,;
-}: PageViewsChartProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViewsChartProps) {
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
       <CardHeader className="pb-2">;
@@ -44,10 +72,20 @@ export function PageViewsChart(): any ({;
       <CardContent className="p-0 pb-4">;
         <AnalyticsChart
           title=""
+<<<<<<< HEAD
+          data={data |[]}
+          dataKeys={["views"]}
+          timeRange={timeRange}
+          onTimeRangeChange={onTimeRangeChange}
+        />
+      </CardContent>
+    </Card>
+=======
 
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
@@ -67,13 +105,24 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
       <CardContent className="p-0 pb-4">;
         <AnalyticsChart;
           title="";
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           data={data || []}
           dataKeys={["views"]}
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
+<<<<<<< HEAD
+        />
+      </CardContent>
+        />;
+      </CardContent>;
+    </Card>;
+  );
+=======
 
 
     </Card>;
@@ -119,4 +168,5 @@ function PageViewsChart() {
       </CardContent>;
     </Card>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }

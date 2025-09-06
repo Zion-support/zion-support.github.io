@@ -19,11 +19,21 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+<<<<<<< HEAD
+import {
+  Star
+  Quote
+  Users
+  Award
+  TrendingUp
+  CheckCircle;
+=======
 
 =======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Star,
   Quote,
   Users,
@@ -31,8 +41,11 @@ import React from 'react';
 
   TrendingUp,;
   CheckCircle,;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 interface Testimonial {;
   id: string;
@@ -198,16 +211,17 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
               </div>;
               <div className='text - 3xl font - bold text - white mb - 2'>;
                 {stat.number}
-              </div>;
-              <p className='text - blue - 300 font - medium'>{stat.label}</p>            </div>          {stats.map ((stat, index) => (
-            <div key={index} className="text - center group">;
-              <div className="w - 20 h - 20 bg - gradient - to - br from - blue - 500 / 20 to - cyan - 500 / 20 rounded - 2xl flex items - center justify - center mx - auto mb - 4 group - hover: scale - 110 transition - transform duration - 300">;
-                <stat.icon className="w - 10 h - 10 text - blue - 400" />;
-              </div>;
-              <div className="text - 3xl font - bold text - white mb - 2">{stat.number}</div>;
-              <p className="text - blue - 300 font - medium">{stat.label}</p>;
-            </div>))}
-        </div>;
+              </div>
+              <p className='text-blue-300 font-medium'>{stat.label}</p>            </div>          {stats.map((stat, index) => (
+            <div key={index} className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300">
+                <stat.icon className="w-10 h-10 text-blue-400" />
+              </div>
+              <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+              <p className="text-blue-300 font-medium">{stat.label}</p>
+            </div>
+          ))}
+        </div>
         {/* Testimonials Grid */}
         <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
           {testimonials.map (testimonial => (
@@ -309,8 +323,18 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {testimonials.map(testimonial => (
 
+<<<<<<< HEAD
+          ))}
+        </div>
+
+        {/* Testimonials Grid */}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {testimonials.map(testimonial => (
+
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div
               key={testimonial.id}
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
@@ -327,7 +351,22 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
                 {/* Testimonial Text */}
                 <p className='text-white/80 text-sm leading-relaxed mb-6'>                  "{testimonial.content}"
                 </p>
-
+                {/* Author Info */}            <div
+              key={testimonial.id}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              {/* Quote Icon */}
+              <div className="absolute top-4 right-4 text-blue-400/20 group-hover:text-blue-400/40 transition-colors duration-300">
+                <Quote className="w-8 h-8" />
+              </div>
+              {/* Content */}
+              <div className="p-8">
+                {/* Rating */}
+                <div className="flex items-center gap-1 mb-4">
+                  {renderStars(testimonial.rating)}
+                </div>
+                {/* Testimonial Text */}
+                <p className='text-white/80 text-sm leading-relaxed mb-6'>                <p className="text-white/80 text-sm leading-relaxed mb-6">
 
                 {/* Author Info */}
 
@@ -336,18 +375,50 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
                 {/* Testimonial Text */}
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   "{testimonial.content}"
                 </p>
                 {/* Author Info */}
-
+                <div className='flex items-center gap-4'>
+                  <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm'>
+                    {testimonial.avatar}
+                  </div>
+                  <div className='flex-1'>
+                    <div className='font-semibold text-white'>
+                      {testimonial.name}
+                    </div>
+                    <div className='text-sm text-white/70'>
+                      {testimonial.title}
+                    </div>
+                    <div className='text-xs text-blue-400'>
+                      {testimonial.company}
+                    </div>                  </div>
+                </div>
+                {/* Category Badge */}
+                <div className='mt-4'>
+                  <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>                    {testimonial.category}                  <div className="flex-1">
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-sm text-white/70">{testimonial.title}</div>
+                    <div className="text-xs text-blue-400">{testimonial.company}</div>
+                </div>
+                {/* Category Badge */}
+                <div className='mt-4'>
+                  <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>                <div className="mt-4">
+                  <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
+                    {testimonial.category}
 
                     {testimonial.category}
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </span>
                 </div>
               </div>
@@ -410,21 +481,28 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 =======
               <div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />            </div>              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
             </div>
-
+          ))}
+        </div>
 
           ))}
         </div>
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Ready to Join Our Success Stories?
             </h3>
             <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
@@ -599,6 +677,11 @@ className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
 };
 export default EnhancedTestimonialsSection;  );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default EnhancedTestimonialsSection;
 
 
@@ -614,9 +697,17 @@ export default EnhancedTestimonialsSection;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   );
-
+}
 };
 
+export default EnhancedTestimonialsSection;  )
+}
+export default EnhancedTestimonialsSection;
 
+<<<<<<< HEAD
+export default EnhancedTestimonialsSection;
+export default EnhancedTestimonialsSection;
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

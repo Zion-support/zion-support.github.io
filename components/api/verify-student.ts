@@ -1,19 +1,24 @@
 
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
+<<<<<<< HEAD
+  authenticateRequest
+  enforceRateLimit
+  recordRequest;
+  authenticateRequest,
+  enforceRateLimit,;
+  recordRequest,;
+=======
 
 
   authenticateRequest,
   enforceRateLimit,;
   recordRequest,;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '../../utils/api/partnerAuth';
-
-
-
 
 const TALENTS_FILE = path.join(
   process.cwd()
@@ -31,6 +36,7 @@ const TALENTS_FILE = path && path.join(
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+<<<<<<< HEAD
 ) {
 
   try {
@@ -97,6 +103,13 @@ import fs from "fs-extra";
 import path from "path";
 import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+=======
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 
@@ -104,34 +117,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const started = Date.now();
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res.status(401).json({ error: "Unauthorized" });
   }
-
-  authenticate_request,
-  enforceRateLimit,
-  record_request,
-} from '../../utils / api / partner_auth';
-;
-const TALENTS_FILE = path.join (
-  process.cwd (),
-  'data',
-  'talents',
-  'talents.json');
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const started = Date.now ();
-  const auth = await authenticate_request (req),
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (401).json ({ error: 'Unauthorized' });
+  if (!(await enforceRateLimit(auth.apiKey))) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
+    return res.status(429).json({ error: "Rate limit exceeded" })
   }
   if ()) {) {
   $2
@@ -198,6 +192,7 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400);
   await record_request (req, res, auth.partner, auth.api_key, started, 200);
   return res.status (200).json ({ verified });  return res.status (200).json ({ verified });
 
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const started = Date.now()
   const auth = await authenticateRequest(req)
@@ -263,12 +258,18 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   return res.status(200).json({_verified});
 
 }
-
 =======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 }
 }
+<<<<<<< HEAD
+  const { email, programTrack } = req.body || {};
+  if (!email) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+=======
 
 =======
   const { email, programTrack } = req.body || {};
@@ -278,3 +279,4 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

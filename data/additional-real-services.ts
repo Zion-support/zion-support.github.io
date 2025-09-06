@@ -1,5 +1,5 @@
-
-
+export interface AdditionalRealService {;
+export interface AdditionalRealService {
   id: string;
   name: string;
   tagline: string;
@@ -12,20 +12,41 @@
   contact_info: {
     mobile: string;
     email: string;
-
-
     address: string;
   };
+<<<<<<< HEAD
+}
+}
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     address: string;
   }
 export const additionalEnhancedServices: AdditionalRealService[] = [
   {
-
-=======
-    address: string;
+    id: 'ai-automation-suite'
+    name: 'AI Automation Suite'
+    tagline: 'Intelligent automation for modern businesses'
+    price: '$79/month'
+    description:
+      'Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.'
+    features: [
+      'Workflow automation'
+      'AI decision making'
+      'Integration APIs'
+      'Custom workflows'
+      'Analytics dashboard'
+    ]
+    link: '/services/ai-automation-suite'
+    category: 'AI & Automation'
+    realImplementation: true
+    contactInfo: {
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
   }
 ;
 export const additionalEnhancedServices: AdditionalRealService[] = [;
@@ -104,9 +125,11 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
   },
 ];      mobile: "+1 302 464 0950";
 
-
-=======
-
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
     id: "ai-automation-suite",
     name: "AI Automation Suite",
     tagline: "Intelligent automation for modern businesses",
@@ -145,8 +168,18 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     category: "Data & Analytics",
     realImplementation: true,
     contactInfo: {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },;
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
 =======
       email: "kleber@ziontechgroup.com";
@@ -215,6 +248,10 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       email: "kleber@ziontechgroup.com",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

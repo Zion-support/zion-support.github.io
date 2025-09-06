@@ -19,18 +19,70 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useRef } from 'react';
 
+<<<<<<< HEAD
+import type {
+  RemoteParticipant
+  LocalParticipant
+  TrackPublication
+  Track;
+  RemoteParticipant,
+  LocalParticipant,
+  TrackPublication,;
+  Track,;
+=======
+import type {
+<<<<<<< HEAD
+  RemoteParticipant
+  LocalParticipant
+  TrackPublication
+  Track;
+=======
+  RemoteParticipant,
+  LocalParticipant,
+  TrackPublication,;
+  Track,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 import type {;
   RemoteParticipant,;
   LocalParticipant,;
   TrackPublication,;
   Track,;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'livekit-client';
 
 type Props = {;
   participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
   displayName?: string;
+<<<<<<< HEAD
+}
+export default function ParticipantTile({
+  participant
+  isLocal
+  displayName
+  participant,
+  isLocal,
+  displayName,;
+}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
+type Props = {
+  participant: RemoteParticipant | LocalParticipant
+  isLocal?: boolean;
+  displayName?: string
+}
+export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
+};
+
+export default function ParticipantTile({ participant, isLocal, displayName }: Props) {;
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  useEffect(() => {
+    const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
+      if (track.kind === 'video' && videoRef.current) {
+        track.attach(videoRef.current);
+=======
 };
 
 export default function ParticipantTile(): any ({;
@@ -54,6 +106,7 @@ type Props = {
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.attach(audioRef && audioRef.current);      }
@@ -130,13 +183,9 @@ type Props = {
           (participant as any).name ||;
 
           (isLocal ? 'You' : 'Participant')}
-
-=======
-      participant.off('trackUnsubscribed', handleTrackUnsubscribed)
-    }
-  }, [participant]);
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      </div>
+    </div>
+  );  }, [participant]);
 
   return (
 
@@ -302,8 +351,12 @@ if ( {) {
 =======
       </div>
     </div>
-
+);
+}
   );
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

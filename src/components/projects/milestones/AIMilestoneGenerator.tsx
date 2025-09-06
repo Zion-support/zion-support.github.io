@@ -5,13 +5,6 @@ interface AIMilestoneGeneratorProps {;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
 
-
-
-
-    if (!scope || !startDate || !projectType) {
-      return;
-
-
     }
     const input: MilestoneInput = {
       scope
@@ -105,6 +98,8 @@ if ( {) {
 
 
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -186,15 +181,6 @@ export function AIMilestoneGenerator({;
 
 
   return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <h3 className="text-lg font-medium flex items-center">
-          <Sparkles className="w-5 h-5 mr-2 text-primary" />
-          AI Milestone Generator
-        </h3>
-        <Button
-
-
           disabled={isGenerating || !scope || !startDate || !projectType}        >
 
           variant="outline"
@@ -224,30 +210,6 @@ export function AIMilestoneGenerator({;
               <p className="text-sm text-muted-foreground">
                 {generatedMilestones.length} milestones generated based on your project scope
               </p>
-
-          disabled={isGenerating || !scope || !startDate || !projectType}>;
-          {isGenerating ? (;
-            <>;
-              <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
-              Generating...;
-            </>;
-          ) : (;
-            <>;
-              <Sparkles className='mr-2 h-4 w-4' />;
-              Generate Milestones;
-            </>;
-          )}
-        </Button>;
-      </div>;
-
-      {generatedMilestones && generatedMilestones.length > 0 && (;
-        <Card>;
-          <CardContent className='pt-6'>;
-            <div className='flex justify-between items-center mb-4'>;
-              <p className='text-sm text-muted-foreground'>;
-                {generatedMilestones && generatedMilestones.length} milestones generated based on your;
-                project scope;
-              </p>;
               <Button
                 onClick={handleAddToProject}
                 disabled={!Object && Object.values(selectedMilestones).some(Boolean)}>;
@@ -370,23 +332,12 @@ export function AIMilestoneGenerator({;
                           <span className="font-medium">{milestone.title}</span>
                           <Badge variant="secondary" className="ml-2 flex items-center">
                             <Sparkles className="w-3 h-3 mr-1" />
-
-
                             AI Suggested
                           </Badge>
                         </div>
                       </AccordionTrigger>
                     </div>
                     <Button
-
-
-                      variant="ghost"
-                      size="sm"
-                      onClick={(e) => {
-                        e.stopPropagation(),
-                        handleAddSingleMilestone(milestone)
-                      }}
-                      className="mr-2"
 
 
                       variant="ghost"
@@ -443,7 +394,6 @@ export function AIMilestoneGenerator({;
           </CardContent>;
         </Card>;
       )}
-
     </div>;
   );
 }

@@ -1,7 +1,4 @@
 
-
-
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 interface NoJobsCardProps {;
@@ -32,10 +29,15 @@ import { Button  } from '@/components / ui / button';
 interface NoJobsCardProps {
   onUpdateProfile?: () => void;
 }
+<<<<<<< HEAD
+
+export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
+=======
 export /**
  * NoJobsCard - Function description
  */
 function NoJobsCard() {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Card className="bg - muted / 30 border border - dashed">;
       <CardContent className="p - 6 text - center">;
@@ -44,6 +46,18 @@ function NoJobsCard() {
           AI - matched jobs.;
         </p>;
         {onUpdateProfile && (
+<<<<<<< HEAD
+          <Button variant="outline" className="mt-4" asChild>
+            <a href="/profile">Update Profile</a>
+          </Button>
+        )}
+      </CardContent>
+    </Card>
+  );
+}
+
+    </Card>;
+=======
           <Button variant="outline" className="mt - 4" as_child>;
             <a href="/profile">Update Profile</a>;
           </Button>)}
@@ -61,15 +75,19 @@ function NoJobsCard() {
     </Card>;
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 interface NoJobsCardProps {
   onUpdateProfile?: () => void
 }
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 }
+<<<<<<< HEAD
+;
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

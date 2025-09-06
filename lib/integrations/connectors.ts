@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+import { ProviderConnection, SyncLogEntry } from "./types";
+import { v4 as uuidv4 } from "uuid";
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -16,15 +25,38 @@ async function mockProviderCall<T>(
 }
 // CRM actions;
 export const crm = {
+<<<<<<< HEAD
+  async syncContact(
+    connection: ProviderConnection
+    contact: Record<string, any>
+  ) {
+    connection: ProviderConnection,
+    contact: Record<string, any>,
+  ) {;
+    return mockProviderCall(connection, "sync_contact", { contact });
+=======
 
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
 };
 
 // ATS actions
 export const ats = {
+<<<<<<< HEAD
+  async updateStatus(
+    connection: ProviderConnection
+    status: Record<string, any>
+  ) {
+    connection: ProviderConnection,
+    status: Record<string, any>,
+  ) {;
+    return mockProviderCall(connection, "update_status", { status });
+  }
+}
+=======
 
   async pushApplicant($2) {
     return simulateAction($3);
@@ -70,6 +102,7 @@ export const ats = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   async createCandidate(
     connection: ProviderConnection,
@@ -78,5 +111,19 @@ export const ats = {
     return executeProviderAction(connection, 'createCandidate', { candidate });
   },
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+// Email actions
+export const email = {
+  async sendNotification(
+    connection: ProviderConnection,
+    notification: Record<string, any>
+  ) {
+    return executeProviderAction(connection, 'sendNotification', { notification });
+  },
+};
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

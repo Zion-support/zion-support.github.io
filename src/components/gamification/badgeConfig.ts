@@ -17,31 +17,6 @@ export type BadgeKey =
   | 'profile_complete'
   | 'featured_creator'
   | 'first_action'
-
-  LucideIcon,
-  BadgeCheck,
-  Award,
-  Star,
-  Trophy,
-  BadgePlus,
-  BadgeDollarSign,
-} from 'lucide-react';
-export type BadgeKey =;
-  | 'first_listing';
-  | 'top_contributor';
-  | 'profile_complete';
-  | 'featured_creator';
-  | 'first_action';
-  | 'monetized';
-
-export interface BadgeMeta {
-  key: BadgeKey;
-  name: string;
-  description: string;
-  icon: LucideIcon;
-  color: string;
-  bg: string;
-export const badge_list: BadgeMeta[] = [;
   {
 
   badgeList && badgeList.find(b => b && b.key === key);

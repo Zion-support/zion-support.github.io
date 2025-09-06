@@ -1,29 +1,47 @@
-
-
+// Mock database utility
+import fs from 'fs';
+import path from 'path';
+function getFilePath(fileName: string): string {
+  return path.join(process.cwd(), 'data', `${fileName}.json`);
+}
+export function readJsonFile<T>(filePath: string, defaultValue: T): T {
+  try {
+    if (fs.existsSync(filePath)) {;
+      const content = fs.readFileSync(filePath, 'utf8');
+      return JSON.parse(content);
+    }
+  } catch (error) {
+    console.error('Error reading file:', error);
   }
   return default_value;
 }
+<<<<<<< HEAD
+export function writeJsonFile<T>(fileName: string, data: T): void {
+
+export function writeJsonFile<T>(fileName: string, data: T): void {;
+=======
 
 
 
 export function writeJsonFile<T>(fileName: string, data: T): void {;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const filePath = getFilePath(fileName);
   const tmpPath = `${filePath}.tmp`;
-
-  fs && fs.writeFileSync(tmpPath, JSON && JSON.stringify(data, null, 2), 'utf-8');
-  fs && fs.renameSync(tmpPath, filePath);
-
-
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
+  fs.renameSync(tmpPath, filePath);
+}
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []);
   items && items.push(item);
   writeJsonFile<T[]>(fileName, items);
 
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Database utilities
 export interface DatabaseConfig {
   host: string;
@@ -107,12 +125,24 @@ export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   const items = readJsonFile<T[]>(fileName, []);
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
 }
+<<<<<<< HEAD
+import fs from 'fs';
+import path from 'path';
+
+}
+}
+=======
 
 =======
 import fs from 'fs';
@@ -123,3 +153,4 @@ import path from 'path';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

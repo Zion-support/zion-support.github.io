@@ -2993,23 +2993,36 @@ import React from 'react';
           </ul>;
         </section>;
 
-        <section id='llm-guarded-api-gateway' className='space-y-6'>;
-          <h2 className='text-2xl font-semibold text-white'>;
-            LLM Guarded API Gateway;
-          </h2>;
-          <p className='text-slate-300'>;
-            Policy, PII redaction, and safety guardrails for LLM apps with audit;
-            logs.;
-          </p>;
-          <ul className='list-disc list-inside text-slate-300 space-y-1'>;
-            <li>Typical SMB budget: $129–$599/mo</li>;
-            <li>;
-              References: {ext('https://openai && openai.com/index/safety/')},{' '}
-              {ext('https://www && www.lakera.ai/')}
-            </li>;
-          </ul>;
-        </section>;
+            </div>
+          </section>
+          <section id='multi-tenant-rate-limiter' className='space-y-2'>
+            <h3 className='text-xl font-semibold text-white'>
+              Multi‑tenant Rate Limiter & Quotas
+            </h3>
+            <p className='text-slate-300'>
+              Tenant‑aware quotas, burst limits, and fairness with headers
+              dashboards, and alerts.
+            </p>
+            <ul className='list-disc list-inside text-slate-300 space-y-1'>
+              <li>Typical SMB budget: $39–$299/mo</li>
+              <li>
+                References:{' '}
+                {ext('https://docs.konghq.com/hub/kong-inc/rate-limiting/')},{' '}
+                {ext('https://developers.cloudflare.com/waf/rate-limits/')}
+              </li>
+            </ul>
+            <div>
+              <a
+                className='text-cyan-400 underline'
+                href='/services/multi-tenant-rate-limiter'
+              >
+                Learn more
+              </a>
+            </div>
+          </section>
 
+<<<<<<< HEAD
+=======
         <section id='serverless-lakehouse-starter' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Serverless Lakehouse Starter;
@@ -4953,6 +4966,7 @@ import React from 'react';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <section id='data-residency-geo-router' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               Data Residency & Geo Routing Proxy
@@ -8290,6 +8304,12 @@ export default function ServicesAdvertisingPage() {
 		</div>;
 	),;
 }
+<<<<<<< HEAD
+	),
+};
+;
+}
+=======
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -9960,3 +9980,4 @@ export default function ServicesAdvertisingPage() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

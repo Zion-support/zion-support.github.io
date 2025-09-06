@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+import { FormEvent, useState } from 'react';
+import {FormEvent, useState} from 'react';
+export default function VendorRegisterPage() {;
+=======
 
 import {FormEvent, useState} from 'react';
+
 export default function VendorRegisterPage() {;
 
 =======
@@ -7,6 +13,7 @@ export default function VendorRegisterPage() {;
 import {FormEvent, useState} from 'react';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   async function onSubmit(): any (e: FormEvent<HTMLFormElement>) {;
@@ -66,6 +73,12 @@ import {FormEvent, useState} from 'react';
     } finally {;
       setLoading(false);    }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  return (
+
+=======
 
 
 =======
@@ -75,6 +88,7 @@ import {FormEvent, useState} from 'react';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (            .map(s => s.trim())
             .filter(Boolean);
           teamSize: Number(payload.teamSize |0)
@@ -89,6 +103,10 @@ import {FormEvent, useState} from 'react';
       setMessage('Application submitted. Await approval.');
 
       form.reset()
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 import {FormEvent, useState} from 'react';
 export default /**
@@ -134,6 +152,7 @@ function on_submit() {
 }
       set_message ('Application submitted. Await approval.');
       form.reset ();
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -162,9 +181,89 @@ function on_submit() {
       form.reset()
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } catch (err: any) {
+      setMessage(err.message)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return (
+    <div className='max-w-2xl mx-auto space-y-6'>
+      <h1 className='text-2xl font-semibold'>
+        Apply to become a Vendor Partner
+      </h1>
+      <form onSubmit={onSubmit} className='space-y-4'>
+          <label className='block text-sm mb-1'>Agency Name</label>
+          <input
+            name='name'
+            required
+            className='w-full border rounded px-3 py-2 bg-transparent'
+          />
+        </div>
+        <div>
+          <label className='block text-sm mb-1'>Unique URL Slug</label>
+          <input
+            name='slug'
+            required
+            pattern='[a-z0-9-]+'
+            className='w-full border rounded px-3 py-2 bg-transparent'
+          />
+          <p className='text-xs text-gray-500'>Example: acme-ai</p>
+        </div>
+        <div>
+          <label className='block text-sm mb-1'>Services Offered</label>
+          <input
+            name='servicesOffered'
+            placeholder='AI prototyping, Data labeling, MLOps'
+            className='w-full border rounded px-3 py-2 bg-transparent'
+          />
+        </div>
+        <div>
+          <label className='block text-sm mb-1'>Team Size</label>
+          <input
+            name='teamSize'
+            type='number'
+            min={1}
+            className='w-full border rounded px-3 py-2 bg-transparent'
+          />
+        </div>
+        <div>
+          <label className='block text-sm mb-1'>About</label>
+          <textarea
+            name='about'
+            rows={4}
+            className='w-full border rounded px-3 py-2 bg-transparent'
+          />
+        </div>
+        <div>
+          <label className='block text-sm mb-1'>
+            Verification Docs (URLs, comma-separated)
+          </label>
+          <input
+            name='verificationDocs'
+            className='w-full border rounded px-3 py-2 bg-transparent'
+          />
+        </div>
+        <button
+          disabled={loading}
+          className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'
+        >
+          {loading ? 'Submitting...' : 'Submit Application'}
+        </button>
+      </form>
+      {message && <div className='text-sm'>{message}</div>}
+      <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
+    </div>
+);
+}
+
+    }
+=======
+    } catch (err: any) {
       set_message (err.message);
     } finally {
       set_loading (false);    }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
 
@@ -191,6 +290,10 @@ function on_submit() {
   }
 <<<<<<< HEAD
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   );
@@ -306,4 +409,10 @@ function on_submit() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

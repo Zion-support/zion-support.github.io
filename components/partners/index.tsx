@@ -1,5 +1,29 @@
+<<<<<<< HEAD
+import { useState } from "react";
+import Head from "next/head";
+import { useState } from 'react';
+import Head from 'next/head';
+
+export default function Partners() {
+  const [form, setForm] = useState({
+
+export default function Partners() {
+  const [form, setForm] = useState({
+    name: '',
+    entityType: '',
+    pocName: '',
+    pocEmail: '',
+    useCaseType: 'Education Partnership',;
+  });  const [result, setResult] = useState<any>(null);    name: "",
+    entityType: "",
+    pocName: "",
+    pocEmail: "",
+    useCaseType: "Education Partnership"}),
+  const [loading, setLoading] = useState(false);
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     name: ''
@@ -376,6 +400,16 @@ function submit() {
             <p className="text-sm">Your API Key:</p>
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>
             <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>
+<<<<<<< HEAD
+        )}
+      </div>
+    </div>
+);
+}
+
+          </div>
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
@@ -383,10 +417,15 @@ function submit() {
       </div>;
     </div>;
   );
-}
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
-  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
     <div className="min - h-screen bg - gray - 50 text - gray - 900">;
       <Head>;
@@ -494,4 +533,10 @@ function submit() {
 }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

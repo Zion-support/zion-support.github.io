@@ -1,27 +1,23 @@
 import { Check, Copy, ExternalLink } from 'lucide-react'
 export function ZapierIntegration() {
-
-
-import React, { useState } from 'react';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import {;
-  Card,;
-  CardContent,;
-  CardFooter,;
-  CardHeader,;
-} from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { toast } from 'sonner';
-import { Check, Copy, ExternalLink } from 'lucide-react';
-export function ZapierIntegration() {;
-  const [copied, setCopied] = useState(false);
-  const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R');
-  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
-
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Zap } from 'lucide-react';
+  const [copied, setCopied] = useState(false)
+  const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R')
+  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+import { Zap } from 'lucide-react'
+export function ZapierIntegration() {
+  const [copied, setCopied] = useState(false)
+  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")
+  const handleCopyApiKey = () => {
+    navigator.clipboard.writeText(apiKey)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+    toast.success('API key copied to clipboard')
+    navigator.clipboard.writeText(apiKey)
+    setCopied(true)
+    setTimeout((,) => setCopied(false), 2000)
+    toast.success("API key copied to clipboard")
+  }
 
 export function ZapierIntegration() {;
   const [copied, setCopied] = useState(false);
@@ -85,6 +81,7 @@ function ZapierIntegration() {
     toast.success ("API key copied to clipboard");
 
   },
+  
   return (
     <div className='space - y-6'>;
       <div className='grid md:grid - cols - 3 gap - 6'>;
@@ -101,6 +98,10 @@ function ZapierIntegration() {
 
 
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
                   </Button>
                 </div>
@@ -150,7 +151,8 @@ function ZapierIntegration() {
             </ul>
           </CardContent>
           <CardFooter>
-
+            <Button variant='outline' className='w-full gap-1'>
+              <ExternalLink className='h-4 w-4' />              <span>Explore Zion Zaps</span>            <Button variant="outline" className="w-full gap-1">
             <Button variant="outline" className="w-full gap-1">
 
 
@@ -177,6 +179,10 @@ function ZapierIntegration() {
           </p>
 
       
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <Card>
         <CardHeader>
           <h3 className="text-lg font-semibold">Zapier Webhook Triggers</h3>
@@ -207,8 +213,6 @@ function ZapierIntegration() {
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
             </div>
-
-
             </div>
           </div>
         </CardContent>
@@ -226,10 +230,6 @@ function ZapierIntegration() {
                 Triggers when a contract is signed by all parties.
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
-
-
-
-
             </div>
           </div>
         </CardContent>
@@ -241,6 +241,8 @@ function ZapierIntegration() {
               to set up integrations.;
 
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -368,6 +370,3 @@ export function ZapierIntegration() {;
           </div>;
         </CardContent>;
       </Card>;
-
-
-;

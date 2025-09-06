@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +24,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -35,46 +38,37 @@ import {ProtectedRoute} from "@/components/ProtectedRoute";
 export default function RequestsPanel() {;
   const { user } = useAuth();
   const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { useTalentQuotes } from "@/hooks/useTalentQuotes",
+import { useAuth } from "@/hooks/useAuth",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { QuoteDetails } from "@/components/quotes/QuoteDetails";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { QuoteDetails } from "@/components/quotes/QuoteDetails",
+import { 
+  RequestsHeader;
+  QuoteRequestsList 
+} from "@/components/quotes",
+import type { QuoteRequest } from "@/types/quotes";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+export default function RequestsPanel() {
+  const { user } = useAuth();
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
-
-  const {;
-
-=======
-import React, { useState } from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { useTalentQuotes } from '@/hooks / useTalentQuotes';
-import { use_auth } from '@/hooks / use_auth';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { QuoteDetails } from '@/components / quotes / QuoteDetails';
-import { RequestsHeader, QuoteRequestsList } from '@/components / quotes';
-import type { QuoteRequest } from "@/types / quotes";
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-export default /**
- * RequestsPanel - Function description
- */
-function RequestsPanel() {
-  const { user } = use_auth ();
-  const is_talent = user?.user_type === 'creator' || user?.user_type === 'job_seeker';
-;
-  const [selected_quote, setSelectedQuote] = useState < QuoteRequest | null>(null);
-  const [show_details, setShowDetails] = useState (false);
-;
-  const {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    quotes;
-    unread_count;
-    is_loading;
-    status_filter;
-    setStatusFilter;
-    archive_filter;
-    setArchiveFilter;
-    markAsViewed;
-    markAsResponded;
-
-
+import type { QuoteRequest } from "@/types/quotes",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+export default function RequestsPanel() {
+  const { user } = useAuth(),
+  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',
+  
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
+  const [showDetails, setShowDetails] = useState(false),
 
   const {
     quotes,
@@ -87,29 +81,29 @@ function RequestsPanel() {
     markAsViewed,
     markAsResponded,
     toggleArchive
-
+  } = useTalentQuotes();
+  const handleViewDetails = (quote: QuoteRequest) => {
+    setSelectedQuote(quote);
+    setShowDetails(true)
   } = useTalentQuotes(),
 
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote),
     setShowDetails(true),
     
-
-
     // If status is new, mark as viewed
     if (quote.status === 'new') {
       markAsViewed(quote.id)
     }
-
-
-=======
-
+  }
+  // Filter quotes by archive status
+  const activeQuotes = quotes.filter(q => !q.is_archived);
+  const archivedQuotes = quotes.filter(q => q.is_archived);
   },
 
   // Filter quotes by archive status
   const activeQuotes = quotes.filter(q => !q.is_archived),
   const archivedQuotes = quotes.filter(q => q.is_archived),
-
 
   return (
     <ProtectedRoute>
@@ -118,7 +112,6 @@ function RequestsPanel() {
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <RequestsHeader
-
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -173,9 +166,12 @@ export default function RequestsPanel() {;
           <div className="container mx-auto">;
 
             <RequestsHeader;
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
@@ -225,14 +221,19 @@ export default function RequestsPanel() {;
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
+          onClose={() => {
+            setShowDetails(false);
 
-
+            setSelectedQuote(null)
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }}
         />
         <Footer />

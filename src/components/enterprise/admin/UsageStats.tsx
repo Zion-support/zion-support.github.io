@@ -37,8 +37,6 @@ return (
             </Button>
           </CardFooter>
         </Card>
-
-
         
 
 
@@ -74,8 +72,6 @@ return (
             </Button>
           </CardFooter>
         </Card>
-
-
         
 
 
@@ -109,8 +105,6 @@ return (
             </Button>
           </CardFooter>
         </Card>
-
-
         
 
 
@@ -156,8 +150,10 @@ return (
           </CardFooter>
         </Card>
       </div>
-
-
+      <div className='bg-muted/50 rounded-lg p-6 flex items-center justify-between'>
+        <div className='flex items-center gap-4'>
+          <div className='h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center'>
+            <Sparkles className='h-5 w-5 text-primary' />
       
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -176,7 +172,6 @@ return (
         </div>
         <Button>Contact Us</Button>
       </div>
-
 import {;
   Card,;
   CardContent,;
@@ -389,13 +384,3 @@ export function UsageStats() {;
             </p>;
           </div>;
         </div>;
-
-
-
-        <Button > Contact Us</Button>;
-      </div>;
-    </div>);
-}"}
-
-    </div>
-  )

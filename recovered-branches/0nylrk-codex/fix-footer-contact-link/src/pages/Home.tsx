@@ -1,8 +1,39 @@
 
+<<<<<<< HEAD
+import React from 'react';
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {CategoriesSection} from "@/components/CategoriesSection";
+import {BenefitsSection} from "@/components/BenefitsSection";
+import {HowItWorksSection} from "@/components/HowItWorksSection";
+import {NewsletterSection} from "@/components/NewsletterSection";
+import {FeaturedListingsSection} from "@/components/FeaturedListingsSection";
+import {SEO} from "@/components/SEO";
+import {HeroSection} from "@/components/HeroSection";
+import {QuickAccess} from "@/components/home/QuickAccess";
+import {FeatureCTAs} from "@/components/home/FeatureCTAs";
+import {FeatureHighlights} from "@/components/home/FeatureHighlights";
+import React from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { CategoriesSection } from "@/components/CategoriesSection",
+import { BenefitsSection } from "@/components/BenefitsSection",
+import { HowItWorksSection } from "@/components/HowItWorksSection",
+import { NewsletterSection } from "@/components/NewsletterSection",
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
+import { SEO } from "@/components/SEO",
+import { HeroSection } from "@/components/HeroSection",
+import { QuickAccess } from "@/components/home/QuickAccess",
+import { FeatureCTAs } from "@/components/home/FeatureCTAs";
+import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+import { FeatureCTAs } from "@/components/home/FeatureCTAs",
+import { FeatureHighlights } from "@/components/home/FeatureHighlights",
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -25,6 +56,9 @@ export default function Home() {
       <Footer />
     </div>
   )
+<<<<<<< HEAD
+}
+=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -66,6 +100,7 @@ import {FeatureHighlights} from "@/components/home/FeatureHighlights";
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -137,12 +172,13 @@ function Home() {
       <FeaturedListingsSection />;
       <NewsletterSection />;
       <Footer />;
-
-    </div>);
+    </div>;
+  );
 }
-
-=======
 ;
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

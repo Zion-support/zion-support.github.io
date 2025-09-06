@@ -199,9 +199,6 @@ if ( {) {
   }
   private hardRefresh(): void {
     // Force a hard refresh bypassing all caches
-
-    window && window.location.href = window && window.location.href + '?_t=' + Date && Date.now();
-
   }
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
@@ -262,8 +259,27 @@ if ( {) {
 
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
+    const errorDiv = document.createElement('div'),
+    errorDiv.style.cssText = `
+      position: fixed,
+      top: 0,
+      left: 0,
+      width: 100%,
+      height: 100%,
+      background: rgba(0, 0, 0, 0.8),
+      color: white,
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      z-index: 999999,
+      font-family: system-ui, -apple-system, sans-serif,
+    `,
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     errorDiv.innerHTML = `
       <div style="text-align: center, padding: 2rem, max-width: 500px,">
         <h2 style="margin-bottom: 1rem,">Connection Issue</h2>
@@ -272,18 +288,12 @@ if ( {) {
           This might be due to a poor network connection or a temporary server issue.
         </p>
         <button onclick="window.location.reload()" style="
-
-
-
         ">
           Go Home
         </button>
       </div>
-
-    `;
-
-    document && document.body.appendChild(errorDiv);
-
+    `
+    document.body.appendChild(errorDiv)
   }
   private delay(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms))
@@ -451,46 +461,6 @@ export default chunkErrorHandler
           Try Again;
         </button>;
         <button onclick="window.location.href='/'" style=";
-export default chunkErrorHandler;
-}
-}
-;
-  // Public method to manually trigger recovery;
-  public triggerRecovery(): void {;
-    this.clearCaches().then(() => {;
-      this.reloadPage();
-    });
-  }
-;
-  // Public method to check if we're in a chunk error state;
-  public isInErrorState(): boolean {;
-    const sessionKey = this.getSessionKey(),;
-    const stats = this.errorStats.get(sessionKey),;
-    return stats ? stats.errorCount > 0 : false;
-  }
-;
-  // Public method to reset error state;
-  public resetErrorState(): void {;
-    const sessionKey = this.getSessionKey(),;
-    this.errorStats.delete(sessionKey);
-  }
-}
-;
-// Create and export singleton instance;
-export const chunkErrorHandler = new ChunkErrorHandler();
-// Export for manual usage;
-export default chunkErrorHandler;
-export default chunkErrorHandler;
-        ">;
-          Try Again;
-        </button>;
-        <button onclick="window.location.href='/'" style=";
-export default chunkErrorHandler;
-        <button onclick="window.location.href='/'" style=";
-export default chunkErrorHandler;
-}
-}
-
 ;
   // Public method to manually trigger recovery;
   public triggerRecovery(): void {;

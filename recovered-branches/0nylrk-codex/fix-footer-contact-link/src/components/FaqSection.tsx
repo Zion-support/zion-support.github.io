@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+
+    answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
+import {GradientHeading} from "./GradientHeading";
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
+import {FileText} from "lucide-react";
+=======
 const faqs = [;
   {;
     question: "How do I publish my AI product or service on Zion?",;
@@ -22,6 +29,7 @@ const faqs = [;
 =======
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { GradientHeading } from "./GradientHeading",
 import {
   Accordion,
@@ -29,9 +37,12 @@ import {
   AccordionItem,
   AccordionTrigger} from "@/components/ui/accordion",
 import { FileText } from "lucide-react",
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const faqs = [
   {
     question: "How do I publish my AI product or service on Zion?",
@@ -51,8 +62,6 @@ const faqs = [
   {
     question: "Are there any fees for listing my products or services?",
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export function FaqSection() {;
   return (
@@ -108,10 +117,24 @@ function FaqSection() {
 =======
                 </AccordionTrigger>
                 <AccordionContent className="text-zion-slate-light">
+<<<<<<< HEAD
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </div>
+    </section>
+  )
+}
+};
+=======
 
 };
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { GradientHeading } from "./GradientHeading",;
 import {;
   Accordion,;
@@ -173,6 +196,10 @@ export function FaqSection() {;
     </section>;
   );
 }
+<<<<<<< HEAD
+;
+;
+=======
 
                 </AccordionContent>;
               </AccordionItem>))}
@@ -188,3 +215,4 @@ export function FaqSection() {;
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

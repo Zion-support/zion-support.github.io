@@ -1,11 +1,15 @@
 
 
-import { Link  } from './react-router-dom';
-import { use_auth  } from '@/hooks / use_auth';
-import { use_toast  } from '@/hooks / use - toast';
-import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
-import { Button  } from '@/components / ui / button';
-=======
+import {
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuSeparator
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
+export function UserMenu() {
+  const { user, logout } = useAuth();
+  const { toast } = useToast();
 import { Link } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
@@ -39,22 +43,34 @@ import {;
 export function UserMenu() {;
   const { user, logout } = useAuth();
   const { toast } = useToast();
+import { Link } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+import { useToast } from "@/hooks/use-toast",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { 
+  DropdownMenu,
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuSeparator, 
+  DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu",
 
-  const handleSignOut = async () => {;
-    try {;
-      await logout();
-    } catch (error) {;
-      toast({;
-        title: "Error signing out",;
-        description: "There was an error signing you out. Please try again.",;
-        variant: "destructive",;
+export function UserMenu() {
+  const { user, logout } = useAuth(),
+  const { toast } = useToast(),
 
+  const handleSignOut = async () => {
+    try {
+      await logout()
+    } catch (error) {
+      toast({
+        title: "Error signing out"
+        description: "There was an error signing you out. Please try again."
+        variant: "destructive"
       });
     }
   }
-=======
-      toast({
-
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
         variant: "destructive"})
@@ -83,23 +99,29 @@ export function UserMenu() {;
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="h-8 w-8 rounded-full">
           <Avatar className="h-8 w-8">
-
+            <AvatarImage
+              src={user.avatarUrl |""}
+              alt={user.displayName |"User Avatar"}
+            />
+            <AvatarFallback>
+              {user.displayName?.charAt(0).toUpperCase() |"U"}
+            </AvatarFallback>
             <AvatarImage src={user.avatarUrl || ""} alt={user.displayName || "User Avatar"} />
             <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>
-
-
           </Avatar>
           <span className="sr-only">Open user menu</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <div className="grid gap-2 px-2 py-2">
-
-
+          <div className="text-sm font-medium leading-none">
+            {user.displayName |"User"}
+          </div>
+          <div className="text-muted-foreground text-xs leading-none">
+            {user.email}
+          </div>
           <div className="text-sm font-medium leading-none">{user.displayName || "User"}</div>
           <div className="text-muted-foreground text-xs leading-none">{user.email}</div>
-
-
         </div>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
@@ -118,15 +140,8 @@ export function UserMenu() {;
         <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-
-              src={user && user.avatarUrl || ""}
-              alt={user && user.displayName || "User Avatar"}
-            />;
-            <AvatarFallback>;
-              {user && user.displayName?.charAt(0).toUpperCase() || "U"}
-            </AvatarFallback>;
-=======
-
+  );
+}
   )
 import { Link } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -280,6 +295,9 @@ if ( {) {
 =======
 }
 ;
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -42,14 +42,13 @@ import React from 'react';
   return (
     <>
       <header
-
         style={{ "--nav-height": "64px" } as React.CSSProperties}
-
+        className = {cn(
+          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground"
+          { "bg-red-500": mobileMenuOpen ,}
         className={cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
           { "bg-red-500": mobileMenuOpen }
-
-
         )}
       >
         <div className="container flex h-16 items-center px-4 sm:px-6">
@@ -70,14 +69,14 @@ import React from 'react';
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">
             <button
-
-
+              onClick = {() => setMobileMenuOpen(!mobileMenuOpen),}
+              className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-expanded = {mobileMenuOpen,}
+              aria-label = {t('general.toggle_mobile_menu'),}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}
               aria-label={t('general.toggle_mobile_menu')}
-
-
             >
               <span className="sr-only">{t('general.open_main_menu')}</span>
               {mobileMenuOpen ? (
@@ -102,9 +101,6 @@ import React from 'react';
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
-
-
-
                   e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
                   // or we could default to dashboard.
@@ -126,11 +122,8 @@ import React from 'react';
               <Link
                 href="/signup"
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
-
-
+                aria-label = {t('auth.signup'),}
                 aria-label={t('auth.signup')}
-
-
                 data-testid="signup-nav-link"
               >
                 {t('auth.signup')}
@@ -148,17 +141,17 @@ import React from 'react';
       </header>;
 
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
-      {mobileMenuOpen && (;
-        <div className="md:hidden fixed inset-0 z-60 pt-16">;
+      {mobileMenuOpen && (
+        <div className="md:hidden fixed inset-0 z-60 pt-16">
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             onClick = {(,) => setMobileMenuOpen(false),}
             aria-hidden="true";
           />;
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">;
 
             <MobileMenu
-            onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
@@ -175,123 +168,26 @@ import React from 'react';
             />;
           </div>;
         </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+              unreadCount = {unreadCount,}
+              onClose = {() => setMobileMenuOpen(false),}
+              openLoginModal = {openLoginModal,}
+            />;
+          </div>;
+        </div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-
-  const show_tagline = router.pathname === '/';
-  const [mobileMenuOpen, setMobileMenuOpen] = useState (false),
-  const [login_open, setLoginOpen] = useState (false),
-  const is_mobile = useIsMobile (),
-  const { t } = use_translation (),
-  const { user } = use_auth (),
-  const isLoggedIn = use_selector ((state: RootState, ) => state.auth.isLoggedIn),
-  const router = use_router (),
-  const show_tagline = router.pathname === '/',
-  // Messaging context (unread message count);
-  const { unread_count } = use_messaging (),
-  const openLoginModal = (returnToPath?: string, ) =>: any {
-    // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu);
-    // using router.push with shallow:true before this function is called.;
-    // This function's main job is just to open the modal.;
-    // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.;
-    setLoginOpen (true);
-  },
-  return (
-    <>;
-      <header;
-        style={{ "--nav - height": "64px" } as React.CSSProperties}
-        class_name = {cn (
-          "sticky top - 0 z - 50 w - full border - b border - border bg - background / 90 backdrop - blur - md text - foreground",
-          { "bg - red - 500": mobileMenuOpen , }
-        )}
-      >;
-        <div className="container flex h - 16 items - center px - 4 sm:px - 6">;
-          <Logo />;
-          {show_tagline && (
-            <span className="ml - 4 hidden text - sm text - muted - foreground md:inline">;
-              {t ('home.header_tagline')}
-            </span>)}
-          <div className="ml - 6 flex - 1 hidden md:block">;
-            <nav role="navigation" aria - label="Main navigation">;
-              <ResponsiveNavigation openLoginModal={openLoginModal} />;
-            </nav>;
-          </div>;
-          {/* Mobile menu button */}
-          <div className="md:hidden ml - auto mr - 4">;
-            <button;
-              on_click = {() => setMobileMenuOpen (!mobileMenuOpen), }
-              className="inline - flex items - center justify - center rounded - md p - 2 text - foreground / 70 hover:text - foreground hover:bg - primary / 10 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring";
-              aria - expanded = {mobileMenuOpen, }
-              aria - label = {t ('general.toggle_mobile_menu'), }
-            >;
-              <span className="sr - only">{t ('general.open_main_menu')}</span>;
-              {mobileMenuOpen ? (
-                <X className="block h - 6 w - 6" aria - hidden="true" />) : (
-                <Menu className="block h - 6 w - 6" aria - hidden="true" />)}
-            </button>;
-          </div>;
-          <PointsBadge />;
-          {!isLoggedIn && (
-            <div className="ml - 4 relative z - 10 flex items - center">;
-              <Link;
-                href="/auth / login";
-                className="text - sm font - medium text - foreground / 70 hover:text - foreground";
-                aria - label = {t ('auth.login'), }
-                data - testid="login - link";
-                on_click={(e, ) => {
-                  e.prevent_default (),
-                  // For the main login link, we might not have a specific return_to beyond current page,
-                  // or we could default to dashboard.;
-                  // For consistency with how sub - menus now set it:;
-                  router.push ({ pathname: '/auth / login', query: { return_to: router.as_path } }, undefined, { shallow: true }),
-                  openLoginModal (router.as_path);
-                }}
-              >;
-                {t ('auth.login')}
-              </Link>;
-              <Link;
-                href="/signup";
-                className="ml - 2 text - sm font - medium text - foreground / 70 hover:text - foreground";
-                aria - label = {t ('auth.signup'), }
-                data - testid="signup - nav - link";
-              >;
-                {t ('auth.signup')}
-              </Link>;
-            </div>)}
-          {/* User avatar menu */}
-          {isLoggedIn && (
-            <div className="ml - 4">;
-              <UserMenu />;
-            </div>)}
-        </div>;
-      </header>;
-      {/* Mobile menu - positioned outside of header to prevent overlap issues */}
-      {mobileMenuOpen && (
-        <div className="md:hidden fixed inset - 0 z - 60 pt - 16">;
-          <div;
-            className="absolute inset - 0 bg - black / 50 backdrop - blur - sm";
-            on_click = {(, ) => setMobileMenuOpen (false), }
-            aria - hidden="true";
-          />;
-          <div className="relative bg - background border - t border - border h - auto max - h-[calc (100vh - 4rem)] overflow - y-auto">;
-            <MobileMenu;
-              unread_count = {unread_count, }
-              on_close = {() => setMobileMenuOpen (false), }
-              openLoginModal = {openLoginModal, }
-            />;
-          </div>;
-        </div>)}
-      {/* Mobile Bottom Navigation */}
-      {is_mobile && <MobileBottomNav unread_count={unread_count} />}
-      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-    </>;
-      setActiveNav (null);
-      setServicesDropdownOpen (false);
-      setSolutionsDropdownOpen (false);
-      setCompanyDropdownOpen (false);
-      setResourcesDropdownOpen (false)}
-
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+    </>
+      setActiveNav(null)
+      setServicesDropdownOpen(false)
+      setSolutionsDropdownOpen(false)
+      setCompanyDropdownOpen(false)
+      setResourcesDropdownOpen(false)}
   }
   const closeAllDropdowns = (...args: unknown[]): unknown => {
     setServicesDropdownOpen(false);    setSolutionsDropdownOpen(false)

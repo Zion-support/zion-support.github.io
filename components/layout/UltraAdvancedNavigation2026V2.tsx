@@ -19,74 +19,34 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState, useEffect } from 'react';
-
 import Link from 'next/link';
 
 import { motion, AnimatePresence } from 'framer-motion';
-
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  useEffect(() => {
-    const handleScroll = () => {
-
-
-      name: 'Showcase',
-      href: '/enhanced-services-showcase-2026-v2',
-      icon: <Rocket className='w-4 h-4' />,
-    },
-    {
-      name: 'Pricing',
-      href: '/pricing-enhanced-2026',
-      icon: <Database className='w-4 h-4' />,
-    },
-    {
-      name: 'About',
-      href: '/about',
-      icon: <Globe className='w-4 h-4' />,
-    },
-    {
-      name: 'Contact',
-      href: '/contact',
-      icon: <Mail className='w-4 h-4' />,
-    },  ];
-
-
-
-  ];
-  const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
-  }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import {;
-  Menu,;
-  X,;
-  ChevronDown,;
-  Search,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Zap,;
-  Brain,;
-  Atom,;
-  Microscope,;
-  Gamepad2,;
-  Shield,;
-  Rocket,;
-  Database,;
-  TestTube,;
-  Car,;
-  Globe,;
-  Code,;
-  Palette,;
-  Cloud,;
-  Server,;
-  Network,;
-  Cpu,;
+import {
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Zap
+  Brain
+  Atom
+  Microscope
+  Gamepad2
+  Shield
+  Rocket
+  Database
+  TestTube
+  Car
+  Globe
+  Code
+  Palette
+  Cloud
+  Server
+  Network
+  Cpu;
 } from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
 export default function UltraAdvancedNavigation2026V2() {;
   const [isOpen, setIsOpen] = useState(false);
@@ -305,6 +265,23 @@ icon: <Zap className="w-4 h-4" />
   Palette,
   Cloud,
   Server,
+<<<<<<< HEAD
+  Network,;
+  Cpu,;
+} from 'lucide-react';
+
+} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+export default function UltraAdvancedNavigation2026V2() {;
+} from 'lucide-react';
+
+export default function UltraAdvancedNavigation2026V2() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+=======
   Network,
   Cpu,
 } from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
@@ -319,6 +296,7 @@ function UltraAdvancedNavigation2026V2() {
   useEffect (() => {
     const handle_scroll = () =>: any {
       setIsScrolled (window.scroll_y > 20);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 <<<<<<< HEAD
     window.addEventListener ('scroll', handle_scroll);
@@ -419,6 +397,26 @@ function UltraAdvancedNavigation2026V2() {
         },
       ],
     },    {
+      name: 'Showcase'
+      href: '/enhanced-services-showcase-2026-v2'
+      icon: <Rocket className='w-4 h-4' />
+    }
+    {
+      name: 'Pricing'
+      href: '/pricing-enhanced-2026'
+      icon: <Database className='w-4 h-4' />
+    }
+    {
+      name: 'About'
+      href: '/about'
+      icon: <Globe className='w-4 h-4' />
+    }
+    {
+      name: 'Contact'
+      href: '/contact'
+      icon: <Mail className='w-4 h-4' />
+    },  ];      icon: <Mail className="w-4 h-4" />
+    }
       name: 'Showcase',
       href: '/enhanced - services - showcase - 2026 - v2',
       icon: <Rocket className='w - 4 h - 4' />,
@@ -439,14 +437,33 @@ function UltraAdvancedNavigation2026V2() {
       icon: <Mail className='w - 4 h - 4' />,
     },  ];      icon: <Mail className="w - 4 h - 4" />;
 
-    }
   ];
 ;
   const contact_info = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
 
+  return (
+    <>
+      {/* Top Contact Bar */}
+      <div className='bg-gradient-to-r from-purple-900/80 to-blue-900/80 backdrop-blur-sm border-b border-white/10'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='flex items-center justify-between py-2 text-sm'>
+            <div className='flex items-center space-x-6 text-gray-300'>
+              <div className='flex items-center space-x-2'>
+                <Phone className='w-4 h-4 text-purple-400' />
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <span>{contactInfo.mobile}</span>
               </div>
               <div className='flex items-center space-x-2'>
@@ -560,8 +577,31 @@ function UltraAdvancedNavigation2026V2() {
                     <button
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
+<<<<<<< HEAD
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'
+                    >
+                      {item.icon}
+                      <span>{item.name}</span>
+                      <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                    </button>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'                    >                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                    >
+                      {item.icon}
+                      <span>{item.name}</span>
+                      <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                    >
+                      {item.icon}
+                      <span>{item.name}</span>
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -571,9 +611,41 @@ function UltraAdvancedNavigation2026V2() {
                     <div
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
+                      className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-4'
 
+<<<<<<< HEAD
+                    >
+                      <div className='grid grid-cols-1 gap-2'>
+                        {item.dropdown.map(dropdownItem => (
+                          <Link
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className='flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group'
+                          >
+                            <div className='text-purple-400 group-hover:text-purple-300 transition-colors'>
+                              {dropdownItem.icon}
+                            </div>
+                            <span className='text-gray-300 group-hover:text-white transition-colors'>                              {dropdownItem.name}                    >
+                      <div className="grid grid-cols-1 gap-2">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group"
+                          >
+                            <div className="text-purple-400 group-hover:text-purple-300 transition-colors">
+                              {dropdownItem.icon}
+                            </div>
+                            <span className="text-gray-300 group-hover:text-white transition-colors">
+                              {dropdownItem.name}
+                            <span className='text-gray-300 group-hover:text-white transition-colors'>                              {dropdownItem.name}
+
+                              {dropdownItem.name}
+
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             </span>
                           </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -586,15 +658,28 @@ function UltraAdvancedNavigation2026V2() {
               ))}
 
             </div>
+            {/* CTA Button */}
+            <div className='hidden lg:flex items-center space-x-4'>
+              <Link href='/contact'>
+                <button className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started            <div className="hidden lg:flex items-center space-x-4">
+              <Link href="/contact">
+                <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
 
             {/* CTA Button */}
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   Get Started
                 </button>
               </Link>
             </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             </div>;
             {/* CTA Button */}
@@ -727,10 +812,35 @@ function UltraAdvancedNavigation2026V2() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
+              className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors'
+            >
+              {isOpen ? (
+                <X className='w-6 h-6' />
+              ) : (
+                <Menu className='w-6 h-6' />
+              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+      </nav>
 
+<<<<<<< HEAD
+=======
 
             </button>;
           </div>;
@@ -744,6 +854,7 @@ function UltraAdvancedNavigation2026V2() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -751,8 +862,17 @@ function UltraAdvancedNavigation2026V2() {
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
+            transition={{ duration: 0.3 }}
+            className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden'
 
+<<<<<<< HEAD
+          >
+            <div className='p-6'>
+              <div className='flex items-center justify-between mb-8'>
+                <div className='text-xl font-bold text-white'>Menu</div>
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <button
                   onClick={() => setIsOpen(false)}
 
@@ -949,11 +1069,15 @@ href={item && item.href}
                       <Link
                         href={item.href}
                         onClick={() => setIsOpen(false)}
+                        className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'                        className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
 
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       >
                         {item.icon}
                         <span>{item.name}</span>
@@ -963,10 +1087,6 @@ href={item && item.href}
                     )}
                   </div>;
                 ))}
-
-
-
-
 
                 <div className='pt-6 border-t border-white/10'>
                   <Link href='/contact' onClick={() => setIsOpen(false)}>
@@ -1134,10 +1254,24 @@ href={item && item.href}
 
 =======
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Overlay */}
       {isOpen && (;
         <motion&& motion.div
@@ -1149,10 +1283,14 @@ href={item && item.href}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-
-
+          transition={{ duration: 0.3 }}
+          className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
+        />
+=======
         />;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
       {/* Spacer for fixed navigation */}
 
@@ -1167,6 +1305,8 @@ href={item && item.href}
   );
 
 }
+<<<<<<< HEAD
+=======
 
 =======
           className='fixed inset - 0 bg - black / 50 z - 40 lg:hidden'          on_click={() => setIsOpen (false)}          className="fixed inset - 0 bg - black / 50 z - 40 lg:hidden";
@@ -1182,19 +1322,34 @@ href={item && item.href}
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}
 
           onClick={() => setIsOpen(false)}
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />
       )}
 
       {/* Spacer for fixed navigation */}
       <div className='h-32'></div>
     </>
+<<<<<<< HEAD
+  );
+);      <div className="h-32"></div>
+    </>
+  );
+}
+
+}
+  );
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

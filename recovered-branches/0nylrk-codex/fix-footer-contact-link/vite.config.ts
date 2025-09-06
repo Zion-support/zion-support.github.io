@@ -1,32 +1,42 @@
-
-
-// https://vitejs && vitejs.dev/config/
-
+import {defineConfig} from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'node: path';
+;
+// https://vitejs.dev/config/
 export default defineConfig({
+
+  plugins: [react()]
+
+<<<<<<< HEAD
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    }
+  }
+})
 =======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
 
 import {define_config} from 'vite';
 =======
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { defineConfig } from 'vite';
 
 import react from '@vitejs/plugin-react';
 import path from 'node: path';
-;
-// https://vitejs.dev / config/;
-export default define_config ({
-  plugins: [react ()],
-  resolve: {
-    alias: {
-      '@': path.resolve (__dirname, './src');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+// https://vitejs.dev/config/;
+export default defineConfig({;
+  plugins: [react()];
+  resolve: {;
+    alias: {;
+      '@': path.resolve(__dirname, './src');
     }
   }
 
 });
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -20,6 +20,27 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
+export default function InteractiveSearch({
+  placeholder = 'Search talent, skills, or jobs...'
+}: {
+  placeholder = 'Search talent, skills, or jobs...',
+}: {;
+  placeholder?: string;
+}) {
+  const [value, setValue] = useState('');
+    >
+      <input
+        value={value}
+        onChange={e => setValue(e.target.value)}
+        placeholder={placeholder}
+        className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'      />
+      {value && (
+        <button
+          onClick={() => setValue('')}
+          className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'        >  const [value, setValue] = useState('');
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   placeholder?: string;
 }) {;
@@ -33,10 +54,18 @@ export default function InteractiveSearch({ placeholder = 'Search talent, skills
         value={value}
         onChange={e => setValue(e && e.target.value)}
         placeholder={placeholder}
-
-    </motion && motion.div>;
-  );
-
+        className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      {value && (
+        <button
+          onClick={() => setValue('')}
+          className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'          className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
+        >
+          ✕
+        </button>
+      )}
+    </motion.div>
+);
 }
 import React from "react";
 interface InteractiveSearchProps {;
@@ -119,9 +148,14 @@ function InteractiveSearch() {
         </button>;
       </div>;
     </form>;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  );
+}}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }}
 
@@ -161,3 +195,20 @@ function InteractiveSearch() {
 }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  );
+}}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  );
+}}
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

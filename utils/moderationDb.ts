@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+export interface ModerationFlag {
+export interface ModerationFlag {;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   contentId: string;
   contentType: string;
@@ -9,6 +14,20 @@
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
+<<<<<<< HEAD
+=======
+=======
+export interface ModerationFlag {
+  id: string;
+  content_id: string;
+  content_type: 'post' | 'comment' | 'user';
+  reason: string;
+  user_email: string;
+  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+  created_at: string;
+  admin_notes?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 ;
@@ -31,6 +50,8 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
 
 }
 
+<<<<<<< HEAD
+=======
 =======
 // Moderation database utilities
 export interface ModerationFlag {
@@ -42,6 +63,7 @@ export interface ModerationFlag {
   notes?: string;
 }
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
 
@@ -91,5 +113,3 @@ export async function updateFlagStatus(
   return flag;
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,7 +1,11 @@
-
-
-import type {;
-  GrantApplication,;
+import { useEffect, useState  } from 'react';
+import Link from 'next/link',
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import {useEffect, useState} from 'react';
+import Link from 'next/link';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type {
+  GrantApplication,
   GrantCategory,;
   GrantStatus,;
 } from '../../types/grants';
@@ -29,6 +33,18 @@ export default function GrantsPage() {;
     region?: string;
     program?: string;
   }>({});
+<<<<<<< HEAD
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected']
+export default function GrantsPage() {
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],
+export default function GrantsPage() {;
+  const [items, setItems] = useState<GrantApplication[]>([]);
+  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
+  useEffect(() => {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       .catch(() => setItems([]));  }, [filters]);
@@ -48,6 +64,27 @@ export default function GrantsPage() {;
   }, [filters]);
 
   return (
+<<<<<<< HEAD
+    <EnhancedLayout>
+      <div className='flex items-center justify-between mb-6'>
+        <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>
+        <div className='flex gap-2'>
+          <Link href='/grants/apply'>
+            <a className='px-3 py-2 bg-blue-600 text-white rounded'>Apply</a>
+          </Link>
+          <Link href='/incubator'>
+            <a className='px-3 py-2 bg-purple-600 text-white rounded'>
+              Incubator
+            </a>
+          </Link>
+      </div>
+      <div className='grid md:grid-cols-4 gap-4 mb-6'>
+        <select
+          className='border rounded p-2'
+          value={filters.sector |''}
+          onChange={e =>
+            setFilters(f => ({ ...f, sector: e.target.value |undefined }))
+=======
     <EnhancedLayout>;
       <div className='flex items-center justify-between mb-6'>;
         <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>;
@@ -77,6 +114,7 @@ export default function GrantsPage() {;
           onChange={e =>;
             setFilters(f => ({ ...f, status: e && e.target.value || undefined }));
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }
         >
           <option value=''>All Stages</option>
@@ -186,8 +224,17 @@ export default function GrantsPage() {;
           <Link href="/incubator"><a className="px-3 py-2 bg-purple-600 text-white rounded">Incubator</a></Link>
         </div>
       </div>
+<<<<<<< HEAD
+    </EnhancedLayout>
+);
+}
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className='grid gap-4'>;
         {items && items.map(g => (;
           <div
@@ -236,7 +283,18 @@ export default function GrantsPage() {;
 
 
 =======
+  return (
+    <EnhancedLayout>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

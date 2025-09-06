@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import {useState} from "react";
 import {useMutation} from "@tanstack/react-query";
@@ -9,10 +13,19 @@ import {format} from "date-fns";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
+<<<<<<< HEAD
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+=======
 
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
@@ -20,9 +33,13 @@ import { format } from "date-fns",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { Review, ReviewStatus } from "@/types/reviews",
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import {
   Table,
@@ -46,24 +63,31 @@ import {
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ReviewsModerationTableProps {
   reviews: Review[]
   isLoading: boolean
 
   onRefresh: () => void
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export function ReviewsModerationTable({;
+  reviews;
+  isLoading;
+export function ReviewsModerationTable({
+  reviews,
+  isLoading,
+=======
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
-
+  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
-
-
 
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
@@ -77,9 +101,19 @@ interface ReviewsModerationTableProps {
       const { error } = await supabase
         .from("reviews")
         .update({ status })
+        .eq("id", reviewId);
+      if (error) throw error;
+      return { reviewId, status }
+    }
+    onSuccess: (data) => {
+      toast({
 
-=======
+        title: "Review updated"
+        description: `Review has been ${data.status}.`})
 
+      onRefresh();
+      setViewDetailsOpen(false)
+    }
         .eq("id", reviewId),
 
       if (error) throw error,
@@ -92,16 +126,14 @@ interface ReviewsModerationTableProps {
       onRefresh(),
       setViewDetailsOpen(false)
     },
-
     onError: (error: Error) => {
       toast({
 
         title: "Error"
         description: `Failed to update review: ${error.message}`
         variant: "destructive"})
-
+    }});
     }}),
-
 
   const getStatusColor = (status: ReviewStatus) => {
     switch (status) {
@@ -111,9 +143,8 @@ interface ReviewsModerationTableProps {
       default:
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
     }
-
+  }
   },
-
 
   const getInitials = (name: string) => {
     return name
@@ -121,9 +152,8 @@ interface ReviewsModerationTableProps {
       .map((n) => n[0])
       .join("")
       .toUpperCase()
-
+  }
   },
-
 
   if (isLoading) {
     return (
@@ -147,20 +177,21 @@ interface ReviewsModerationTableProps {
   }
   const handleApprove = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "approved" })
-
+  }
+  const handleReject = (reviewId: string) => {
+    updateReviewStatus({ reviewId, status: "rejected" })
+  }
   },
 
   const handleReject = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "rejected" })
   },
 
-
   const handleViewDetails = (review: Review) => {
     setSelectedReview(review)
     setViewDetailsOpen(true)
-
+  }
   },
-
 
   const renderStars = (rating: number) => {
     return (
@@ -170,9 +201,39 @@ interface ReviewsModerationTableProps {
             key={star}
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />
+        ))}
+      </div>
+    )
+  }
 
+<<<<<<< HEAD
+  return (
+    <>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Reviewer</TableHead>
+            <TableHead>Rating</TableHead>
+            <TableHead>Date</TableHead>
+            <TableHead>Status</TableHead>
+            <TableHead>Reports</TableHead>
+            <TableHead className="text-right">Actions</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {reviews.map((review) => (
+            <TableRow key={review.id}>
+              <TableCell>
+                <div className="flex items-center gap-2">
+                  <Avatar className="h-8 w-8">
+                    {review.reviewer_profile?.avatar_url ? (
+                      <AvatarImage
+                        src={review.reviewer_profile.avatar_url}
+                        alt={review.reviewer_profile.display_name |""}
+=======
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
@@ -453,12 +514,15 @@ if ( {) {
 
                     {review.reviewer_profile?.avatar_url ? (;
                       <AvatarImage;
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         src={review.reviewer_profile.avatar_url}
-                        alt={review.reviewer_profile.display_name |""}
+                        alt={review.reviewer_profile.display_name || ""}
                       />
                     ) : (
                       <AvatarFallback>
@@ -649,22 +713,27 @@ if ( {) {
                           Mark as rejected;
                         </DropdownMenuItem>)}
                       {review.status === "rejected" && (
-                        <DropdownMenuItem on_click={() => updateReviewStatus ({ review_id: review.id, status: "approved" })}>;
-                          Mark as approved;
-                        </DropdownMenuItem>)}
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "approved" })}>
+                          Mark as approved
+                        </DropdownMenuItem>
+                      )}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
+              </TableCell>
+            </TableRow>
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
               </TableCell>;
 
             </TableRow>;
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           ))}
 
         </TableBody>;

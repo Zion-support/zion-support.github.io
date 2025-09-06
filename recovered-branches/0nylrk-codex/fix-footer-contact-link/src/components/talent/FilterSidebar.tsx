@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Filter} from "lucide-react";
@@ -29,11 +38,27 @@ export function FilterSidebar(): any ({;
   sortOption;
   setSortOption;
   clearFilters;
+<<<<<<< HEAD
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Filter } from "lucide-react",
+import { SearchFilter } from "./filters/SearchFilter",
+import { SortFilter } from "./filters/SortFilter",
+import { SkillsFilter } from "./filters/SkillsFilter",
+import { AvailabilityFilter } from "./filters/AvailabilityFilter",
+import { RegionFilter } from "./filters/RegionFilter",
+import { ExperienceFilter } from "./filters/ExperienceFilter",
+import { PriceFilter } from "./filters/PriceFilter";
+import { FilterSidebarProps } from "@/types/filters";
+import { PriceFilter } from "./filters/PriceFilter",
+import { FilterSidebarProps } from "@/types/filters",
+=======
   isMobileFilterOpen;
 }: FilterSidebarProps) {;
 =======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -52,15 +77,26 @@ export function FilterSidebar({
   sortOption,
   setSortOption,
   clearFilters,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   isMobileFilterOpen
 }: FilterSidebarProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       {/* Filter header */}
-
-
+      <div className="flex items-center justify-between mb-6">
+        <h3 className="text-lg font-semibold text-white flex items-center">
+          <Filter className="h-4 w-4 mr-2 text-zion-purple" />
+          Filters
+        </h3>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={clearFilters}
+          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
+        >
+          Clear All
+        </Button>
+      </div>
       
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -110,9 +146,12 @@ export function FilterSidebar({;
           Clear All;
         </Button>;
       </div>;
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}

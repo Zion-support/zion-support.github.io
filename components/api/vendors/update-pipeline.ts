@@ -1,4 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import { updatePipelineItemStatus } from '../../../utils/vendor-store';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+
+  if (req.method !== 'POST')
+  if (req.method !== 'POST');
+=======
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -7,6 +15,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return res.status(405).json({ error: 'Method not allowed' });
   const { itemId, status } = req.body |{}
   if (!itemId |!status)
@@ -115,9 +124,15 @@ function handler() {
   } catch (e: any) {
     res.status(500).json({ error: e.message })
   }
+<<<<<<< HEAD
+}
+
+}
+=======
 
 }
 
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

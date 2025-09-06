@@ -41,10 +41,26 @@ interface Particle {
   life: number;
 
 
+<<<<<<< HEAD
+interface EnergyField {
+  x: number;
+  y: number;
+  radius: number;
+  intensity: number;
+  color: string;
+
+  pulse: number;
+export default function UltraFuturisticBackground2029({
+  children
+}: {
+  children,
+}: {;
+=======
   children,
 }: {;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   children: React.ReactNode;
 =======
   children,
@@ -69,6 +85,13 @@ interface Particle {
   life: number,;
   maxLife: number;
 }
+<<<<<<< HEAD
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {
+
+
+
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
+=======
 
 interface EnergyField {;
   x: number,;
@@ -87,6 +110,7 @@ export default function UltraFuturisticBackground2029(): any ({ children }: { ch
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -1275,24 +1299,44 @@ if ( {) {
             duration: 10
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
+            duration: 10,
+            repeat: Infinity,
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+          }}
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+
+          }}
 
 =======
-            rotate: [-45, 315];
-            opacity: [0.2, 0.6, 0.2];
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
           }}
-          transition={{
+=======
+<<<<<<< HEAD
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+=======
+
+          }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+          }}
+
+
             duration: 10,
             repeat: Infinity,
 
 
-          }}
-
-
-            duration: 10,
-            repeat: Infinity,
-
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />
       </div>
       {/* Gradient overlays for depth */}
@@ -1337,8 +1381,17 @@ if ( {) {
 =======
       <div className='relative z-10'>{children}</div>
     </div>
-
+  );      {/* Content */}
+      <div className="relative z-10">
+        {children}
+      </div>
+    </div>
+  )
+}
   );
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

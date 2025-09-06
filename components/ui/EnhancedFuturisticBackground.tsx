@@ -1,5 +1,13 @@
 
-
+const colorSchemes = {
+  quantum: {
+  resizeCanvas ();
+window.addEventListener ('resize', resizeCanvas);
+// Wrap around edges if (this.x < 0) this.x = canvas.width;
+if (this.x > canvas.width) this.x = 0;
+if (this.y < 0) this.y = canvas.height;
+if (this.y > canvas.height) this.y = 0;
+// Fade out near end of life if (this.life < 20) {
 }let particles: Particle[] = [];
 let connections: Connection[] = [];
 // Initialize particles ctx.fill_style = colors.primary;
@@ -182,6 +190,9 @@ if (return) {
         if (this.y > canvas.height) this.y = 0;
         // Fade out near end of life
         if (this.life < 20) {
+<<<<<<< HEAD
+          this.opacity *= 0.95;        }          this.opacity *= 0.95
+=======
 
           this.opacity *= 0.95
 
@@ -189,16 +200,12 @@ if (return) {
       }
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           this.opacity *= 0.95;        }
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
@@ -218,6 +225,7 @@ if (return) {
         
 
         ctx.restore()
+<<<<<<< HEAD
 =======
         return this.life <= 0 || this.opacity < 0.01;      }
 
@@ -226,6 +234,14 @@ if (return) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }
+      isDead() {
+        return this.life <= 0 |this.opacity < 0.01;      }
+        return this.life <= 0 || this.opacity < 0.01;      }        
+        ctx.restore()
+        return this.life <= 0 || this.opacity < 0.01;      }
+
+=======
       }
       isDead() {
 
@@ -244,14 +260,12 @@ if (return) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
     }
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Connection lines between particles
 =======
       max_life: number,
@@ -593,19 +607,16 @@ if (> 0.975) {) {
           }
           drops[i]++;
         }
-
-
-        for (let i = 0, i < drops.length, i++) {
-          const text = characters[Math.floor(Math.random() * characters.length)];
-          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-
+      }
+      return drawMatrix;    };          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          }
+          drops[i]++
+        }
+      }
+      return drawMatrix
+    }
       };
       return drawMatrix;    };          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
@@ -615,7 +626,6 @@ if (> 0.975) {) {
         }
 
     };
-
 
     const drawMatrix = matrixRain();
     // Main animation loop
@@ -747,16 +757,39 @@ if (> 0.975) {) {
       }
       // Create connections between nearby particles
       connections = [];
+<<<<<<< HEAD
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const distance = Math.sqrt(
+            Math.pow(particles[i].x - particles[j].x, 2) +
+              Math.pow(particles[i].y - particles[j].y, 2)
+          );
+          if (distance < 150) {
+            connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math.sqrt(
+            Math.pow(particles[i].x - particles[j].x, 2) +
+            Math.pow(particles[i].y - particles[j].y, 2)
+          );
+          if (distance < 150) {
+            connections.push(new Connection(particles[i], particles[j]))
+
+      }
+
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }
         }
       }
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Draw connections
       connections.forEach(connection => connection.draw());
       // Add floating geometric shapes
@@ -1024,6 +1057,11 @@ if (< 0.5) {) {
 }
 export default EnhancedFuturisticBackground;
 
+<<<<<<< HEAD
+export default EnhancedFuturisticBackground;
+export default EnhancedFuturisticBackground;
+export default EnhancedFuturisticBackground;
+=======
 
 =======
 
@@ -1042,3 +1080,4 @@ export default EnhancedFuturisticBackground;
 export default EnhancedFuturisticBackground;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

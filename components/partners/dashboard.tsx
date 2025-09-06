@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
+export default function PartnerDashboard() {;
+  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);import { useEffect, useState } from "react";
+import Head from "next/head";
+export default function PartnerDashboard() {;
+  const [apiKey, setApiKey] = useState("");
+  const [token, setToken] = useState<string | null>(null),
+  const [usage, setUsage] = useState<any>(null),
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
+=======
 
 
 import Head from "next/head";
@@ -8,6 +22,7 @@ export default function PartnerDashboard() {;
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
@@ -15,8 +30,14 @@ export default function PartnerDashboard() {
   const [token, setToken] = useState<string | null>(null);
 
   const [usage, setUsage] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function PartnerDashboard() {
+  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
+
+  const [token, setToken] = useState<string | null>(null);
+
+  const [usage, setUsage] = useState<any>(null);
   const [loading, setLoading] = useState(false);
 
   const [token, setToken] = useState<string | null>(null);
@@ -117,8 +138,18 @@ export default function PartnerDashboard() {
     }
   }
   return (
-
-
+    <div className='min-h-screen bg-gray-50 text-gray-900'>
+        <title>Zion Partner Dashboard</title>
+      </Head>
+      <div className='max-w-5xl mx-auto py-12 px-4'>
+        <h1 className='text-3xl font-semibold mb-2'>Partner Dashboard</h1>
+        <p className='text-gray-600 mb-6'>
+          Manage access, view usage, and download SDKs.
+        </p>
+        {!token && (
+          <div className='bg-white p-6 rounded-lg shadow mb-8'>
+            <h2 className='text-lg font-medium mb-3'>Authenticate</h2>
+            <div className='flex gap-2'>
               <input
                 className='border rounded px-3 py-2 flex-1'
                 placeholder='Paste your API key'
@@ -295,14 +326,16 @@ export default function PartnerDashboard() {
 
 =======
                     ))}
-=======
 
 
                     ))}
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </ul>
                 </div>
               </div>
@@ -565,6 +598,9 @@ if ( {) {
           </div>
 
         </div>
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

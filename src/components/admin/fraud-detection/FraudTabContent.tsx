@@ -1,5 +1,8 @@
 import React from 'react';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
+import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface FraudTabContentProps {
   tab_value: string;
 export const FraudTabContent: React.FC < FraudTabContentProps> = ({
@@ -16,6 +19,7 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({
     case 'dangerous':;
 
   switch (tabValue) {    case 'pending':
+      return (
 
 
 interface FraudTabContentProps {
@@ -41,8 +45,6 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab will show fraud flags that are still pending admin review.
           </p>
         </div>
-
-
     case 'dangerous':
       return (
         <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">
@@ -52,12 +54,9 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab shows high-priority dangerous flags requiring immediate attention.
           </p>
         </div>
-
+      )
       ),
     
-
-    case 'actioned':
-      return (
         <div className='bg - red - 50 dark:bg - red - 950 / 20 p - 8 rounded - lg text - center'>;
           <AlertCircle className='mx - auto h - 12 w - 12 text - red - 500 mb - 4' />;
           <h3 className='text - xl font - medium mb - 4'>Dangerous Flags</h3>;
@@ -70,6 +69,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       return (
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       return null;
   };
 };
@@ -124,7 +124,10 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({;
 
     default:;
       return null;
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 

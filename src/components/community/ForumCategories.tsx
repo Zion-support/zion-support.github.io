@@ -4,8 +4,7 @@
     description: "Share your feedback and suggest new features."
     adminOnly: false
     icon: "FileText"
-
-
+  }
   },
 
 
@@ -23,32 +22,13 @@ const categories: ForumCategoryInfo[] = [;
     admin_only: false,
     icon: "Briefcase";
   }
-
-export const ForumCategories = () =>: any {
-  const { user } = use_auth ();
-  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
-  const visible_categories = categories.filter (
-    category => !category.admin_only || is_admin);
-
-  return (
-    <div className="grid gap - 4 md: grid - cols - 2 lg:grid - cols - 3">;
-      {visible_categories.map ((category) => {
-        const Icon = icon_map[category.icon as keyof typeof icon_map]; return (
-          <Link key={category.id} href={`/community / category/${category.id}`}>;
-            <Card className="h - full transition - all hover: shadow - md hover:border - zion - purple / 50 cursor - pointer">;
-              <CardHeader className="flex flex - row items - center gap - 4">;
-                <div className="p - 2 bg - zion - purple / 10 rounded - full">;
-                  <Icon className="h - 6 w - 6 text - zion - purple" />;
-                </div>;
-                <CardTitle className="text - xl">{category.name}</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                <CardDescription className="text - base">{category.description}</CardDescription>;
-              </CardContent>;
-            </Card>;
-          </Link>);
-      })}
-    </div>);
+]
+const iconMap = {
+  Briefcase
+  MessageSquare
+  Code
+  FileText
+  Megaphone
 }
 
 

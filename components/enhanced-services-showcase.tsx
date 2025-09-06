@@ -1,12 +1,30 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+ //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+ //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+<<<<<<< HEAD
+=======
 
 
 =======
 
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 //Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ...cuttingEdgeITServices;
 ...innovativeMicroSaasV2Services;
 ...enhancedRealMicroSaasServices;
@@ -311,12 +329,23 @@ visible: {
   opacity: 1, y: 0
 }transition= {
   {
-
-
+  duration: 0.8
+}viewport= {
+  {
+  once: true
+}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8"> Join thousands of companies achieving breakthrough results with our revolutionary services </p> <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"> <div className="flex items-center justify-center space-x-3"> <Phone className="w-6 h-6 text-cyan-400"/> <span className="text-lg"> {
+  contactInfo.mobile
+}</span> </div> <div className="flex items-center justify-center space-x-3"> <Mail className="w-6 h-6 text-purple-400"/> <span className="text-lg"> {
+  contactInfo.email
+}</span> </div> <div className="flex items-center justify-center space-x-3"> <MapPin className="w-6 h-6 text-green-400"/> <span className="text-lg"> {
+  contactInfo.address
+}</span> </div> </div> <div className="flex flex-col sm: flex-row gap-4 justify-center"> <Button href="/contact"variant=" primary"size=" lg"className="text-lg px-8 py-4"> Start Your Transformation <Rocket className="ml-2 w-6 h-6"/> </Button> <Button href="/pricing"variant=" secondary"size=" lg"className="text-lg px-8 py-4"> View Pricing <DollarSign className="ml-2 w-6 h-6" /> </Button> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticMatrixBackground>)
+}//Button component (if not imported)
+}> {
+  children
+}</a>)
   children 
 }</a>) 
-
-
 }
 }> {
   children
@@ -982,12 +1011,13 @@ const Button = ({
     )
   }
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <button onClick={onClick} className={classes}>;
       {children}
+<<<<<<< HEAD
+    </button>
+  )
+=======
 
     </button>;
   );
@@ -1021,21 +1051,18 @@ const Button = ({
   // Check condition
 if ( {) {
   $2
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
-    return (
-      <a href={href} className={classes}>;
-        {children}
-      </a>);
-  }
-  return (
-    <button on_click={on_click} className={classes}>;
-      {children}
-    </button>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
+<<<<<<< HEAD
+}
+}
+}
+}
+}
+}
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

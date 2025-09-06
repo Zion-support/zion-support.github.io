@@ -62,15 +62,31 @@ export function FilterSidebar(): any ({;
   setSortOption;
   clearFilters;
 
+export function FilterSidebar({
+  searchTerm,
+  setSearchTerm,
+  selectedSkills,
+  toggleSkill,
+  selectedAvailability,
+  toggleAvailability,
+  selectedRegions,
+  toggleRegion,
+  priceRange,
+  setPriceRange,
+  experienceRange,
+  setExperienceRange,
+  expandedSections,
+  toggleSection,
+  sortOption,
+  setSortOption,
+  clearFilters,
+  isMobileFilterOpen,}: FilterSidebarProps) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <>
       {/* Filter header */}
-
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-lg font-semibold text-white flex items-center">
-          <Filter className="h-4 w-4 mr-2 text-zion-purple" />
-
           Filters
         </h3>
         <Button
@@ -120,6 +136,8 @@ export function FilterSidebar({
   setSortOption,
   clearFilters,
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   isMobileFilterOpen
 }: FilterSidebarProps) {
   return (
@@ -141,8 +159,6 @@ export function FilterSidebar({
           Clear All
         </Button>
       </div>
-
-
       
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -266,11 +282,8 @@ export function FilterSidebar({;
         setPriceRange={setPriceRange}
         expanded={expandedSections.price}
         toggleSection={() => toggleSection('price')}
-
-        isMobileFilterOpen={isMobileFilterOpen}      />;
-
-      {isMobileFilterOpen && (;
-
+        isMobileFilterOpen={isMobileFilterOpen}      />
+      {isMobileFilterOpen && (
         <Button
           onClick={() =>
             window.dispatchEvent(new CustomEvent('closeMobileFilter'))
@@ -391,24 +404,7 @@ function FilterSidebar() {
         toggle_section={() => toggle_section ('price')}
         isMobileFilterOpen={isMobileFilterOpen}      />;
       {isMobileFilterOpen && (
-        <Button;
-          on_click={() =>;
-            window.dispatch_event (new CustomEvent ('closeMobileFilter'));
-          }
-          className='w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4'        >;
-        <Button;
-          on_click = {(, ) => window.dispatch_event (new CustomEvent ('closeMobileFilter')), }
-          className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
-      {/* Search */}
-      <SearchFilter search_term={search_term} setSearchTerm={setSearchTerm} />;
-      {/* Sorting */}
-      <SortFilter sort_option={sort_option} setSortOption={setSortOption} />;
-      {/* Skills */}
-      <SkillsFilter;
-        selected_skills={selected_skills}
-        toggle_skill={toggle_skill}
-        expanded={expanded_sections.skills}
-        toggle_section={() => toggle_section ('skills')}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         isMobileFilterOpen={isMobileFilterOpen}
       />;
 
@@ -423,90 +419,5 @@ function FilterSidebar() {
           Apply Filters
         </Button>
       )}
-
-          className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'        >;
-        <Button
-          onClick = {(,) => window && window.dispatchEvent(new CustomEvent('closeMobileFilter')),}
-          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
-      {/* Search */}
-      <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;
-
-      {/* Sorting */}
-      <SortFilter sortOption={sortOption} setSortOption={setSortOption} />;
-
-      {/* Skills */}
-      <SkillsFilter
-        selectedSkills={selectedSkills} 
-        toggleSkill={toggleSkill} 
-        expanded={expandedSections && expandedSections.skills} 
-        toggleSection={() => toggleSection('skills')}
-        isMobileFilterOpen={isMobileFilterOpen}
-      />;
-
-      {/* Availability */}
-      <AvailabilityFilter
-        selectedAvailability={selectedAvailability} 
-        toggleAvailability={toggleAvailability} 
-        expanded={expandedSections && expandedSections.availability} 
-        toggleSection={() => toggleSection('availability')}
-        isMobileFilterOpen={isMobileFilterOpen}
-      />;
-
-      {/* Region */}
-      <RegionFilter
-        selectedRegions={selectedRegions} 
-        toggleRegion={toggleRegion} 
-        expanded={expandedSections && expandedSections.region} 
-        toggleSection={() => toggleSection('region')}
-        isMobileFilterOpen={isMobileFilterOpen}
-      />;
-
-      {/* Years of Experience */}
-      <ExperienceFilter
-        experienceRange={experienceRange} 
-        setExperienceRange={setExperienceRange} 
-        expanded={expandedSections && expandedSections.experience} 
-        toggleSection={() => toggleSection('experience')}
-        isMobileFilterOpen={isMobileFilterOpen}
-      />;
-
-      {/* Price Range */}
-      <PriceFilter
-        priceRange={priceRange} 
-        setPriceRange={setPriceRange} 
-        expanded={expandedSections && expandedSections.price} 
-        toggleSection={() => toggleSection('price')}
-        isMobileFilterOpen={isMobileFilterOpen}
-      />;
-
-      {isMobileFilterOpen && (;
-        <Button
-          onClick={() => window && window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
-          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
-        >;
-          Apply Filters;
-        </Button>;
-      )}
     </>;
   );
-<<<<<<< HEAD
-};
-}
-
-  );
-}
-        <Button;
-          on_click={() => window.dispatch_event (new CustomEvent ('closeMobileFilter'))}
-          className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
-        >;
-          Apply Filters;
-        </Button>)}
-    </>);
-}
-
-
-    </>;
-  );
-
-}
-;

@@ -1,6 +1,3 @@
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, DollarSign, Target;
@@ -12,8 +9,12 @@ import Link from 'next/link';
 export default function MarketPricing() {;
   const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
 
-
-
+  const markets = [
+    { id: 'ai-consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> }
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> }
+    { id: 'autonomous-systems', name: 'Autonomous Systems', icon: <Zap className="w-6 h-6" /> }
+    { id: 'enterprise-it', name: 'Enterprise IT', icon: <Shield className="w-6 h-6" /> }
+  ];
 ];
   'ai-consciousness': {
   marketSize: '$45.2B', growthRate: '+28.4%', growthTrend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
@@ -21,11 +22,26 @@ export default function MarketPricing() {;
 pricingAnalysis: {
   lowEnd: '$0.005 per 1K tokens', midRange: '$0.015 per 1K tokens', highEnd: '$0.025 per 1K tokens', ourPosition: 'Mid-range with premium features'   'ai-consciousness': {
   marketSize: '$45.2B', growthRate: '+28.4%', growthTrend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+import React, { useState } from 'react';
+import {motion} from 'framer-motion';
+import {TrendingUp, TrendingDown, DollarSign, Target, ArrowRight, Check, Star, BarChart3, Globe, Zap, Shield, Crown, Brain, Atom} from 'lucide-react';
+import Link from 'next/link';
+export default function MarketPricing() {;
+  const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
+
+  const markets = [
+    { id: 'ai-consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> },
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },
+    { id: 'autonomous-systems', name: 'Autonomous Systems', icon: <Zap className="w-6 h-6" /> },
+    { id: 'enterprise-it', name: 'Enterprise IT', icon: <Shield className="w-6 h-6" /> }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const marketData = {
     'ai-consciousness': {
       marketSize: '$45.2B'
@@ -299,11 +315,8 @@ pricingAnalysis: {
 
       }
     }
-
-
+  }
   };
-
-
 
   const currentMarket = marketData[selectedMarket as keyof typeof marketData];
 
@@ -474,6 +487,20 @@ pricingAnalysis: {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
+            className="text-center"
+          >
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              {currentMarket.description}
+            </p>
+          </motion.div>
+        </div>
+      </section>
+      {/* Competitive Analysis Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+=======
 
             className="text-center">;
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
@@ -487,12 +514,12 @@ pricingAnalysis: {
 
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       {/* Competitive Analysis Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
-        <div className="max-w-7xl mx-auto">;
-          <motion&& motion.h2 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -807,26 +834,26 @@ pricingAnalysis: {
         </div>;
       </section>;
       {/* Pricing Analysis Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
-        <div className="max-w-7xl mx-auto">;
-          <motion&& motion.h2 
-
-=======
-
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
           <motion.h2 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
-
+            className="text-4xl md:text-5xl font-bold text-center mb-16"
+          >
+            Pricing Analysis
+          </motion.h2>
+          <div className="grid lg:grid-cols-4 gap-6 mb-12">
+            {[
+              { label: 'Low End', price: currentMarket.pricingAnalysis.lowEnd, color: 'from-green-500 to-emerald-600' }
+              { label: 'Mid Range', price: currentMarket.pricingAnalysis.midRange, color: 'from-yellow-500 to-orange-600' }
+              { label: 'High End', price: currentMarket.pricingAnalysis.highEnd, color: 'from-red-500 to-pink-600' }
               { label: 'Low End', price: currentMarket.pricingAnalysis.lowEnd, color: 'from-green-500 to-emerald-600' },
               { label: 'Mid Range', price: currentMarket.pricingAnalysis.midRange, color: 'from-yellow-500 to-orange-600' },
               { label: 'High End', price: currentMarket.pricingAnalysis.highEnd, color: 'from-red-500 to-pink-600' },
-
-
               { label: 'Our Position', price: currentMarket.pricingAnalysis.ourPosition, color: 'from-cyan-500 to-blue-600' }
             ].map((tier, index) => (
               <motion.div
@@ -888,6 +915,16 @@ pricingAnalysis: {
                   <p className="text-sm text-gray-300">{advantage && advantage.description}</p>;
                 </div>;
               ))}
+<<<<<<< HEAD
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      {/* Market Trends Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+=======
 
             </div>;
           </motion && motion.div>;
@@ -898,12 +935,12 @@ pricingAnalysis: {
 
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       {/* Market Trends Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
-        <div className="max-w-7xl mx-auto">;
-          <motion&& motion.h2 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -950,7 +987,14 @@ pricingAnalysis: {
                     <span className="text-gray-300">{opportunity}</span>;
                   </li>;
                 ))}
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
+<<<<<<< HEAD
+=======
               </ul>;
             </motion && motion.div>;
           </div>;
@@ -964,21 +1008,51 @@ pricingAnalysis: {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-
-
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md: text-5xl font-bold mb-6">
+              Ready to Compete in the Market?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Our competitive pricing and unique AI consciousness features give you the edge
+              you need to succeed in today's rapidly evolving technology landscape.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/pricing"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                View Our Pricing
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                href="/contact"
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
+              >
+                Get Custom Quote
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  )
+}
+}
+}
 };
 
 };
 
 };
-
-
 'quantum-computing': {
   marketSize: '$8.7B', growthRate: '+45.2%', growthTrend: 'up', description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.', competitors: [ {
   ];
@@ -995,6 +1069,32 @@ pricingAnalysis: {
   marketSize: '$1.2T', growthRate: '+12.3%', growthTrend: 'up', description: 'Enterprise IT market continues steady growth with digital transformation initiatives.', competitors: [ {
   ];
 pricingAnalysis: {
+<<<<<<< HEAD
+  lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages'
+}
+}
+}
+export default MarketPricing;export default MarketPricing;
+
+};
+  lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
+
+};
+
+};
+
+};
+export default MarketPricing;export default MarketPricing;
+
+}
+}
+}
+}
+}
+}
+}
+};
+=======
 
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
@@ -1888,3 +1988,4 @@ export default MarketPricing;export default MarketPricing;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

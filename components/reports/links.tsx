@@ -1,14 +1,20 @@
 import { useEffect } from 'react';
-
-
-=======
 export default function LinksReportRedirect() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.location.replace('/reports/links/index.html')
     }
   }, []);
+<<<<<<< HEAD
+  return null
+}
+
+}
+export default function LinksReportRedirect(req, res) {
+  try {
+=======
   return null;export default function LinksReportRedirect() {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   useEffect(() => {;
     if (typeof window !== 'undefined') {;
       window && window.location.replace('/reports/links/index && index.html');
@@ -48,8 +54,11 @@ if ( {) {
   return null;
 
 }
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

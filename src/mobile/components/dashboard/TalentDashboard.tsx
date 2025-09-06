@@ -11,7 +11,6 @@ export function TalentDashboard() {
             </Button>
           </Link>
         </div>
-
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between items-start">
@@ -36,7 +35,6 @@ export function TalentDashboard() {
               </div>
             </CardContent>
           </Card>
-
           
 
           
@@ -60,8 +58,11 @@ export function TalentDashboard() {
                   <span className="text-xs text-muted-foreground mt-1">4 hours ago</span>
                 </div>
               </div>
-
-
+              <div className='flex gap-2 mt-3'>
+                <Button size='sm'>Apply Now</Button>
+                <Button size='sm' variant='outline'>
+                  View Details
+                </Button>              </div>              <div className="flex gap-2 mt-3">
               <div className="flex gap-2 mt-3">
 
 
@@ -72,8 +73,6 @@ export function TalentDashboard() {
           </Card>
         </div>
       </section>
-
-
       
 
 
@@ -313,6 +312,10 @@ export function TalentDashboard() {;
       </section>;
 
       
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <section>
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
         <div className="grid grid-cols-2 gap-4">
@@ -352,7 +355,40 @@ export function TalentDashboard() {;
           </Button>
         </div>
       </section>
-
+      <section>
+        <div className='flex items-center justify-between mb-4'>
+          <h2 className='text-lg font-medium'>Learning Hub</h2>
+          <Button variant='ghost' size='sm' className='h-8'>            View all
+          </Button>
+        </div>
+        <Card>
+      <section>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-medium">Learning Hub</h2>
+          <Button variant="ghost" size="sm" className="h-8">
+          </Button>
+        </div>
+        <Card>
+          <CardContent className='p-4'>
+            <div className='flex items-center gap-3'>
+              <div
+                className='bg-primary/10 p-3 rounded-full'
+                aria-hidden='true'
+              >
+                <BookOpen className='h-6 w-6 text-primary' />
+              </div>
+              <div>
+                <h3 className='font-medium'>Improve your profile visibility</h3>
+                <p className='text-sm text-muted-foreground'>
+                  5 tips for getting noticed by clients
+                </p>              </div>          <CardContent className="p-4">
+            <div className="flex items-center gap-3">
+              <div className="bg-primary/10 p-3 rounded-full" aria-hidden="true">
+                <BookOpen className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-medium">Improve your profile visibility</h3>
+                <p className="text-sm text-muted-foreground">5 tips for getting noticed by clients</p>
       
 
 
@@ -386,9 +422,6 @@ export function TalentDashboard() {;
           </CardContent>
         </Card>
       </section>
-
-
-            aria-label="Set Availability">;
             <Clock className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Availability</span>;
           </Button>;

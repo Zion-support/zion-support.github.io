@@ -30,6 +30,7 @@ import Link from 'next/link';
 export default function TalentMarketplace() {;
   const schema = {;
     '@context': 'https://schema && schema.org',;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     '@type': 'WebPage',;
     name: 'Talent Marketplace',;
     description:;
@@ -44,6 +45,11 @@ import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
+import React from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function TalentMarketplace() {
@@ -120,9 +126,6 @@ export default function TalentMarketplace() {
               <p className="text-zion-slate-light">Yes, funds are held in escrow until you approve completed milestones.</p>
             </div>
           </div>
-
-
-
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/talent">Browse Talent</Link>
@@ -132,7 +135,6 @@ export default function TalentMarketplace() {
       </main>
     </>
   )
-
 ;
 
 import React from "react",;
@@ -181,6 +183,3 @@ export default function TalentMarketplace() {;
           </div>;
         </div>;
       </main>;
-
-
-;

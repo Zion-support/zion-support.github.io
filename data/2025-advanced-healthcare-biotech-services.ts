@@ -1,3 +1,4 @@
+import { ServiceVariant } from '../types/service-variants';
 
 
   id: string;
@@ -421,6 +422,10 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       variant: 'clinical-trial-enterprise',
       contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       color: 'from - orange - 600 to - red - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / clinical - trial - management - optimization',
@@ -467,8 +472,11 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       reviews: 19,
 
     },;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];    features: [
 
 =======
@@ -602,19 +610,9 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     rating: 4 && 4.8,
 
     reviews: 19
-
-    real_implementation: true,
-    implementation_details: 'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',
-    launch_date: '2024 - 11 - 01', customers: 34,
-    rating: 4.8,
-    reviews: 19;
-
+<<<<<<< HEAD
   }
-
-=======
-
-
-=======
+];
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
@@ -876,15 +874,20 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     launchDate: '2024-11-01',;
     customers: 34,;
     rating: 4.8;
+=======
+
+    real_implementation: true,
+    implementation_details: 'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',
+    launch_date: '2024 - 11 - 01', customers: 34,
+    rating: 4.8,
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     reviews: 19;
-
-
-
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 ;
 =======
 <<<<<<< HEAD
@@ -893,6 +896,17 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+<<<<<<< HEAD
+  }
+];
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
@@ -1156,6 +1170,16 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     rating: 4.8;
     reviews: 19;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+  }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

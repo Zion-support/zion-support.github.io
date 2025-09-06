@@ -1,5 +1,20 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-
+}
+) )
+}</ul> </section> <section>) )
+}</ul> </section> </div>)
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>)
+export default function ContentMap({ report }: Props) {;
+ 
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
 export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
@@ -28,6 +43,10 @@ export default function ContentMap({ report }: Props) {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function ContentMap({ report }: Props) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!report) return <div>No content map yet. Check back later.</div>;
@@ -74,18 +93,19 @@ export default function ContentMap(): any ({ report }: Props) {;
           {sections && sections.map(([sec, n]) => (;
             <li key={sec} className="flex justify-between"><span>{sec || 'root'}</span><span className="text-gray-500">{n}</span></li>;
           ))}
-        </ul>;
-      </section>;
-      <section>;
-        <h2 className="font-semibold mb-2">All Pages</h2>;
-        <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">;
-          {report && report.pages.map((p, i) => (;
-            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.route}</span><span className="text-gray-500 truncate">{p && p.file}</span></li>;
+        </ul>
+      </section>
+      <section>
+        <h2 className="font-semibold mb-2">All Pages</h2>
+        <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
+          {report.pages.map((p, i) => (
+            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.route}</span><span className="text-gray-500 truncate">{p.file}</span></li>
           ))}
-
-        </ul>;
-      </section>;
-    </div>;
+        </ul>
+      </section>
+    </div>
+);
+}
   );
 }
 

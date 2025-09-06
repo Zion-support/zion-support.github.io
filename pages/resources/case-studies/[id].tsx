@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -7,20 +10,32 @@ import { useRouter } from 'next/router',;
 export default function CaseStudyResourcePage() {
   const router = useRouter(),
   const { id } = router.query,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
-      id: 'ai-automation-manufacturing',
-      title: 'AI-Powered Manufacturing Automation',
-      company: 'Global Manufacturing Corp',
-      industry: 'Manufacturing',
-      results: '40% increase in production efficiency, 60% reduction in downtime',
-    description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
+export default function CaseStudyResourcePage() {
+  const router = useRouter()
+  const { id } = router.query
+  // Case studies data - this should match the data in resources.tsx
+  const caseStudies = [
+    {
+      id: 'ai-automation-manufacturing'
+      title: 'AI-Powered Manufacturing Automation'
+      company: 'Global Manufacturing Corp'
+      industry: 'Manufacturing'
+      results: '40% increase in production efficiency, 60% reduction in downtime'
+      description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
       fullContent: `
         <h2>Executive Summary</h2>
         <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations,
@@ -30,7 +45,6 @@ import { useRouter } from 'next/router';
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
         High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line
         and preventing them from meeting growing customer demands.</p>
-        
         <h2>Challenge</h2>
 
 
@@ -40,10 +54,6 @@ import { useRouter } from 'next/router';
           <li><strong>Automated Quality Control:</strong> Computer vision systems for defect detection</li>
           <li><strong>Intelligent Scheduling:</strong> AI-powered production planning and optimization</li>
         </ul>
-<<<<<<< HEAD
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <h2>Implementation</h2>
         <p>The system was deployed in phases over 6 months:</p>
         <ul>
@@ -52,10 +62,6 @@ import { useRouter } from 'next/router';
           <li><strong>Phase 3:</strong> Integration with existing systems</li>
           <li><strong>Phase 4:</strong> Training and optimization</li>
         </ul>
-<<<<<<< HEAD
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <h2>Results</h2>
         <p>The implementation delivered exceptional results:</p>
         <ul>
@@ -64,10 +70,6 @@ import { useRouter } from 'next/router';
           <li><strong>25% improvement in quality control</strong> - AI-powered inspection systems caught defects early</li>
           <li><strong>30% reduction in operational costs</strong> - Optimized resource allocation and reduced waste</li>
         </ul>
-<<<<<<< HEAD
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <h2>Key Learnings</h2>
         <p>This project revealed several important insights:</p>
         <ul>
@@ -76,11 +78,7 @@ import { useRouter } from 'next/router';
           <li>Gradual implementation reduces resistance and improves adoption</li>
           <li>Continuous monitoring and optimization is essential for long-term success</li>
         </ul>
-<<<<<<< HEAD
-<h2>Conclusion</h2>
-=======
         <h2>Conclusion</h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <p>The AI automation implementation at Global Manufacturing Corp demonstrates the transformative potential
         of autonomous systems in traditional industries. The results exceeded expectations and positioned the company
         as a leader in smart manufacturing.</p>
@@ -203,6 +201,11 @@ import { useRouter } from 'next/router';
         optimal performance and cost efficiency.</p>
       `
     }
+<<<<<<< HEAD
+  ]
+  const caseStudy = caseStudies.find(study => study.id === id)
+
+=======
 
 
 
@@ -210,11 +213,15 @@ import { useRouter } from 'next/router';
 
 =======
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function CaseStudyResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -396,13 +403,14 @@ export default function CaseStudyResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!caseStudy) {
     return (
       <>
@@ -410,17 +418,22 @@ export default function CaseStudyResourcePage(req, res) {
           <title>Case Study Resource Not Found | Zion Tech Group</title>
         </Head>
         <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <main className="container mx-auto px-6 py-12">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl font-bold mb-6 text-white">Case Study Resource Not Found</h1>
               <p className="text-xl text-white/80 mb-8">
                 The case study resource you're looking for doesn't exist.
               </p>
+<<<<<<< HEAD
+              <Link
+              <Link 
+              <Link
+=======
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -431,21 +444,13 @@ export default function CaseStudyResourcePage(req, res) {
         </div>
       </>
     )
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
-
-
 }
-
-
   return (
     <>
       <Head>
         <title>{caseStudy.title} | Zion Tech Group - Case Study Resource</title>
         <meta name="description" content={caseStudy.description} />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <meta property="og:title" content={`${caseStudy.title} | Zion Tech Group`} />
         <meta property="og:description" content={caseStudy.description} />
       </Head>
@@ -460,16 +465,18 @@ export default function CaseStudyResourcePage(req, res) {
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-
-
+                  {caseStudy.industry}
                   {caseStudy.industry  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -481,10 +488,32 @@ export default function CaseStudyResourcePage(req, res) {
               <p className="text-green-400 font-semibold text-lg">{caseStudy.results}</p>
             </div>
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
+<<<<<<< HEAD
+              <div 
+                className="prose prose-invert max-w-none"
+                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
+              />
+            </div>
+            <div className="text-center">
+              <Link 
+              <div
+                className="prose prose-invert max-w-none"
+                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
+                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              />
+            </div>
+            <div className="text-center">
+              <Link
+=======
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -495,6 +524,15 @@ export default function CaseStudyResourcePage(req, res) {
         </main>
       </div>
     </>
+<<<<<<< HEAD
+  );
+};
+  )
+  ];
+  const caseStudy = caseStudies.find(study => study.id === id);
+  if (!caseStudy) {;
+    return (;
+=======
 
 =======
 }
@@ -558,6 +596,7 @@ if ( {) {
   $2
 }
     return (
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <>;
         <Head>;
           <title > Case Study Resource Not Found | Zion Tech Group</title>;
@@ -567,37 +606,17 @@ if ( {) {
             <div className="max - w-4xl mx - auto text - center">;
               <h1 className="text - 4xl font - bold mb - 6 text - white">Case Study Resource Not Found</h1>;
               <p className="text - xl text - white / 80 mb - 8">;
-=======
-  ];
-  const caseStudy = caseStudies.find(study => study.id === id);
-  if (!caseStudy) {;
-    return (;
-      <>;
-        <Head>;
-          <title>Case Study Resource Not Found | Zion Tech Group</title>;
-        </Head>;
-        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
-          <main className="container mx-auto px-6 py-12">;
-            <div className="max-w-4xl mx-auto text-center">;
-              <h1 className="text-4xl font-bold mb-6 text-white">Case Study Resource Not Found</h1>;
-              <p className="text-xl text-white/80 mb-8">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 The case study resource you're looking for doesn't exist.;
               </p>;
               <Link;
                 href="/resources";
-<<<<<<< HEAD
                 className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
-=======
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >;
                 ← Back to Resources;
               </Link>;
             </div>;
           </main>;
         </div>;
-<<<<<<< HEAD
       </>);
   }
   return (
@@ -640,64 +659,6 @@ if ( {) {
               <Link;
                 href="/contact";
                 className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
-=======
-      </>;
-    );
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  return (;
-    <>;
-      <Head>;
-        <title>{caseStudy.title} | Zion Tech Group - Case Study Resource</title>;
-        <meta name="description" content={caseStudy.description} />;
-        <meta property="og:title" content={`${caseStudy.title} | Zion Tech Group`} />;
-        <meta property="og:description" content={caseStudy.description} />;
-      </Head>;
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
-        <main className="container mx-auto px-6 py-12">;
-          <div className="max-w-4xl mx-auto">;
-            <nav className="mb-8">;
-              <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">;
-                ← Back to Resources;
-              </Link>;
-            </nav>;
-            <header className="mb-12">;
-              <div className="mb-6">;
-                <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">;
-                  {caseStudy.industry  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </span>;
-              </div>;
-              <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>;
-              <p className="text-xl text-cyan-400 font-semibold mb-2">{caseStudy.company}</p>;
-              <p className="text-white/80 text-lg">{caseStudy.description}</p>;
-            </header>;
-            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 mb-8">;
-              <h2 className="text-2xl font-bold mb-4 text-white">Key Results</h2>;
-              <p className="text-green-400 font-semibold text-lg">{caseStudy.results}</p>;
-            </div>;
-            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">;
-              <div;
-                className="prose prose-invert max-w-none";
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              />;
-            </div>;
-            <div className="text-center">;
-              <Link;
-                href="/contact";
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >;
                 Get Started with Your Project;
               </Link>;
@@ -706,6 +667,15 @@ if ( {) {
         </main>;
       </div>;
 <<<<<<< HEAD
+    </>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+=======
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -714,3 +684,4 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

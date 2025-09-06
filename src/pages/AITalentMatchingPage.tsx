@@ -15,7 +15,6 @@ export default function AITalentMatchingPage() {;
       title: "Success Tracking",;
       description: "Monitor performance and success rates of placements";
     }
-  ];
 
 
 import React from "react",
@@ -25,8 +24,6 @@ import { Bot, Users, TrendingUp } from 'lucide-react'
 export default function AITalentMatchingPage() {
   const benefits = [
     {
-
-
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
       icon: <Bot className="h-8 w-8" />},

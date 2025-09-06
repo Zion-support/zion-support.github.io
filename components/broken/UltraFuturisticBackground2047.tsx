@@ -19,8 +19,24 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const UltraFuturisticBackground2047: React.FC = () => {
 
 
@@ -40,6 +56,8 @@ const UltraFuturisticBackground2047: React.FC = () => {;
 
   }
 
+<<<<<<< HEAD
+=======
 
 
 
@@ -55,13 +73,22 @@ const UltraFuturisticBackground2047: React.FC = () => {;
 =======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <>
       {/* Background Gradient */}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />;
+=======
+=======
+      <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'>;
         {/* Animated Hexagons */}
@@ -520,9 +547,6 @@ ease: 'linear',
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 }}
-              />;
-=======
-
                   duration: 3,
                   repeat: Infinity as any,
                   delay: i * 0.1,
@@ -532,16 +556,33 @@ ease: 'linear',
                   duration: 3,
                   repeat: Infinity as any,
                   delay: i * 0.1,
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+                }}
+
+                  ease: 'easeInOut',                  ease: "easeInOut"
+                }}
+
+                }}
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
+          </div>
+        </motion.div>
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Neon Glow Effects */}
 
           </div>;
@@ -575,12 +616,6 @@ ease: 'linear',
         {/* Scanning Lines */}
         <motion&& motion.div
           className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30'
-
-=======
-        <motion.div
-          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           animate={{
             y: [0, 1000]}}
           transition={{
@@ -656,8 +691,15 @@ ease: 'linear',
             repeat: Infinity as any
             ease: 'linear',          }}
           animate={{
-            coordinate_y: [0, 1000]}}
+            y: [0, 1000]}}
           transition={{
+<<<<<<< HEAD
+            duration: 8
+            repeat: Infinity as any
+            ease: "linear"
+          }}
+        />
+=======
 
         />;
 
@@ -669,15 +711,18 @@ ease: 'linear',
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             duration: 8,
             repeat: Infinity as any,
-            ease: "linear";
+            ease: "linear"
           }}
-
         />
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Pulse Rings */}
         <motion.div;
           className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4';
@@ -837,6 +882,17 @@ ease: 'linear',
           transition={{
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CSS for hexagon clip */}
       <style jsx>{`
         .clip-hexagon {
@@ -880,7 +936,14 @@ ease: 'linear',
       `}</style>;
     </>;
   );
+<<<<<<< HEAD
+}
 };
+=======
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default UltraFuturisticBackground2047;
 
 
@@ -909,18 +972,34 @@ export default UltraFuturisticBackground2047;
     </>);
 }
 ;
-export default UltraFuturisticBackground2047;        }
-      `}</style>;
-    </>);
+=======
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
+=======
 ;
 export default UltraFuturisticBackground2047;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 
-
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+export default UltraFuturisticBackground2047;        }
+      `}</style>
+    </>
+  )
+}
+export default UltraFuturisticBackground2047;
+
+export default UltraFuturisticBackground2047;
+export default UltraFuturisticBackground2047;
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

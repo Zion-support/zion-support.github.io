@@ -10,7 +10,6 @@ interface EmptyStateProps {
   onRetry?: () => void;
   showRetry?: boolean;
 
-
   icon
 }: EmptyStateProps) {
   return (
@@ -104,7 +103,6 @@ export function EmptyState({;
 
 
           Try Again
-
         </Button>
       )}
     </div>;

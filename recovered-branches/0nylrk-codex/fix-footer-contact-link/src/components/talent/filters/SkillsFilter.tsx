@@ -1,12 +1,30 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {Checkbox} from "@/components/ui/checkbox";
 import {SkillsFilterProps} from "@/types/filters";
+<<<<<<< HEAD
+import { ChevronDown, ChevronUp } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Checkbox } from "@/components/ui/checkbox";
+import { SkillsFilterProps } from "@/types/filters";
+import { Checkbox } from "@/components/ui/checkbox",
+import { SkillsFilterProps } from "@/types/filters",
+=======
 =======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Common skills in AI and tech
 
 const POPULAR_SKILLS = [
@@ -56,7 +74,6 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
                 htmlFor={`skill-${skill}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
-
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
@@ -109,15 +126,25 @@ const POPULAR_SKILLS = [;
 
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {skill}
               </label>;
             </div>;
           ))}
         </div>;
       )}
+<<<<<<< HEAD
+    </div>
+  )
+}
+};
+;
+=======
 
     </div>;
   );
@@ -167,3 +194,4 @@ function SkillsFilter() {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

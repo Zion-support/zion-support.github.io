@@ -11,7 +11,6 @@ import {
     title: "CTO",
     company: "FutureTech Systems",
     image: "/placeholder.svg"}],
-
 export function EnterpriseTestimonials() {
   return (
     <section id="testimonials" className="py-20 px-4 md:px-6">
@@ -41,7 +40,6 @@ export function EnterpriseTestimonials() {
                   <div className='flex items-center gap-4'>
                     <div className='h-12 w-12 rounded-full overflow-hidden bg-muted'>
                       <img
-
             <CarouselNext />
           </div>
         </Carousel>
@@ -208,15 +206,6 @@ export function EnterpriseTestimonials() {;
                       <p className='font-bold'>{testimonial && testimonial.author}</p>;
                       <p className='text-sm text-muted-foreground'>                        {testimonial && testimonial.title}, {testimonial && testimonial.company}                      <p className="font-bold">{testimonial && testimonial.author}</p>;
                       <p className="text-sm text-muted-foreground">;
-                        {testimonial && testimonial.title}, {testimonial && testimonial.company}
-                      </p>;
-                    </div>;
-                  </div>;
-                </div>;
-              </CarouselItem>;
-            ))}
-
-
             <CarouselNext />
           </div>
         </Carousel>

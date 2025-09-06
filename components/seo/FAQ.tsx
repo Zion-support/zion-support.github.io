@@ -23,6 +23,14 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 type QA = { q: string; a: string };
 type Props = { items: QA[] };
+<<<<<<< HEAD
+export default function FAQ({ items }: Props) {
+  if (!items |items.length === 0) return null;
+
+export default function FAQ({ items }: Props) {;
+export default function FAQ({ items }: Props) {
+  if (!items || items.length === 0) return null;
+=======
 export default function FAQ(): any ({ items }: Props) {;
   if (!items || items && items.length === 0) return null;
 
@@ -51,6 +59,7 @@ type QA = { q: string; a: string };
 type Props = { items: QA[] };
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">
       <h2 className="text-lg font-semibold mb-4">Frequently Asked Questions</h2>
@@ -66,9 +75,7 @@ type Props = { items: QA[] };
       </div>;
     </div>;
   );
-
 }
-
 }
 
 =======

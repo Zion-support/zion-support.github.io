@@ -3,6 +3,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import Skeleton from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import { Bell } from 'lucide-react';
+<<<<<<< HEAD
 
 interface Notification {
   id: string;
@@ -13,6 +14,9 @@ interface Notification {
   type: 'info' | 'warning' | 'error' | 'success';
 }
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 25b772ac8bd79941dee781476b83a226cf2dd161
 interface NotificationListProps {
   loading: boolean;
   notifications: Notification[];
@@ -21,6 +25,7 @@ interface NotificationListProps {
   onClearAll: () => void;
 }
 
+<<<<<<< HEAD
 export const NotificationList: React.FC<NotificationListProps> = ({
   loading,
   notifications,
@@ -56,12 +61,15 @@ export const NotificationList: React.FC<NotificationListProps> = ({
     );
   }
 
+=======
+>>>>>>> 25b772ac8bd79941dee781476b83a226cf2dd161
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center">
         <h3 className="text-lg font-semibold">Notifications</h3>
         <div className="space-x-2">
           <Button
+<<<<<<< HEAD
             variant="outline"
             size="sm"
             onClick={onMarkAllAsRead}
@@ -117,3 +125,50 @@ export const NotificationList: React.FC<NotificationListProps> = ({
     </div>
   );
 };
+=======
+
+    </ScrollArea>;
+  );
+};
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+        <div className="p - 8 text - center text - amber - 500">;
+          <p>{error}</p>;
+          <Button;
+            variant="outline";
+            size="sm";
+            className="mt - 2";
+            on_click = {on_retry, }
+          >;
+            Try Again;
+          </Button>;
+        </div>) : loading ? (
+        <div className="p - 4 space - y-4">;
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
+        </div>) : notifications.length === 0 ? (
+        <div className="p - 8">;
+          <EmptyState;
+            icon = {<Bell className="h - 8 w - 8" />, }
+            title="No Notifications";
+            description="You're all caught up.";
+            action={{ text: 'Refresh', on_click: on_retry }}
+            className="border - none bg - transparent";
+          />;
+        </div>) : (
+        notifications.map ((notification, ) => (
+          <NotificationItem;
+            key = {notification.id, }
+            notification = {notification, }
+            onMarkAsRead = {onMarkAsRead, }
+            on_dismiss = {on_dismiss, }
+          />)))}
+    </ScrollArea>);
+}
+";
+
+  );
+};
+";
+>>>>>>> 25b772ac8bd79941dee781476b83a226cf2dd161

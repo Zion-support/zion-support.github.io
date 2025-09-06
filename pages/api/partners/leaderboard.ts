@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
@@ -7,6 +11,12 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const usingPlaceholder =
+<<<<<<< HEAD
+    (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
+=======
 
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
@@ -17,19 +27,21 @@ export default async function handler(
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       "placeholder-key";
-
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase/server';
-export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
-  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   try {
     if (usingPlaceholder) {
-      return res && res.status(200).json({
+      return res.status(200).json({
         leaders: [
+<<<<<<< HEAD
+          { code: "aihub", profile_completions: 9 }
+          { code: "modelmasters", profile_completions: 7 }
+          { code: "promptpro", profile_completions: 5 }
+        ]
+      });
+    }
+
+=======
 
 
       });
@@ -49,7 +61,9 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
       map && map.set(key, (map && map.get(key) || 0) + 1);
 
     }
+
     const leaders = Array && Array.from(map && map.entries())
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b && b.profile_completions - a && a.profile_completions)
       .slice(0, 10);
@@ -95,6 +109,7 @@ if (continue) {
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -145,14 +160,34 @@ export default async function handler(req, res) {
   }
 }
 ;
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
+    const { data, error } = await supabase
+      .from("referral_events")
+      .select("partner_code, event, created_at")
+      .gte("created_at", startOfMonth.toISOString());
+    if (error) return res.status(500).json({ error: "Database error" });
+    const map = new Map<string, number>();
+    for (const row of data |[]) {
+      if (row.event !== "profile_completed") continue;
+      const key = row.partner_code as string;
+      map.set(key, (map.get(key) |0) + 1);
+    }
+    const leaders = Array.from(map.entries())
+      .map(([code, profile_completions]) => ({ code, profile_completions }))
+      .sort((a, b) => b.profile_completions - a.profile_completions)
+      .slice(0, 10);
+    return res.status(200).json({ leaders });
 
+  } catch (e: any) {
     const { data, error } = await supabase;
       .from('referral_events');
       .select('partner_code, event, created_at');
@@ -179,8 +214,11 @@ export default async function handler(req, res) {
       .slice(0, 10);
     return res.status(200).json({ leaders });
   } catch (error) {
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return res.status(500).json({ error: e?.message });
     } catch (error) {
     console.error("Error:", error);

@@ -1,7 +1,5 @@
 Spinner.displayName = 'Spinner'
 export default Spinner; import React from 'react'
-
-
 import { Loader2 } from 'lucide-react'
 
 class ErrorBoundary extends React.Component {
@@ -49,6 +47,9 @@ const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
       ref = {ref,}
       {...props}
 
+      className={cn('animate-spin', className)}
+      width={size}
+      height={size}
     />;
   );
 ),;

@@ -1,31 +1,37 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import type { NextApiRequest, NextApiResponse } from 'next',;
+;
+=======
 
 
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query
   if (!id |typeof id !== 'string') {
     return res.status(400).json({ error: 'Missing id' })
-
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',
-;
-export default /**
- * handler - Function description
- */
-function handler() {
-  const { id } = req.query,
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (400).json ({ error: 'Missing id' });
-
   }
-  // In a real system, look up persisted deployment by id;
+  // In a real system, look up persisted deployment by id
   const fake = {
+<<<<<<< HEAD
+    id
+    exportedAt: new Date().toISOString()
+    note: 'This is a stub export. Connect to persistence to return real deployment state.'}
+  res.setHeader('Content-Typeapplication/json')
+
+  return res.status(200).json(fake)
+    id,
+
+    note: 'This is a stub export. Connect to persistence to return real deployment state.'},
+  res.setHeader('Content-Typeapplication/json'),
+  return res.status(200).json(fake);
+};
+=======
 
 =======
 
@@ -38,6 +44,7 @@ if ( {) {
 };
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Export endpoint' });
@@ -81,21 +88,12 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-
-
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
 }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

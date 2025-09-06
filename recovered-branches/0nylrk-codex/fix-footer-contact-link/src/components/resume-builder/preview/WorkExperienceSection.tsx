@@ -1,4 +1,18 @@
 
+<<<<<<< HEAD
+import { WorkExperience  } from '@/types/resume';
+import { format } from 'date-fns';
+import {WorkExperience} from '@/types/resume';
+import {format} from 'date-fns';
+interface WorkExperienceSectionProps {
+  workExperience: WorkExperience[]
+}
+export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {
+  // Sort work experience by date (newest first)
+
+  const sortedWorkExperience = [...workExperience].sort((a, b) => {
+  const sortedWorkExperience = [...workExperience].sort((a, b) => {;
+=======
 import {WorkExperience} from '@/types / resume';
 import {format} from 'date - fns';
 
@@ -16,6 +30,7 @@ interface WorkExperienceSectionProps {
   const sortedWorkExperience = [...workExperience].sort((a, b) => {;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
@@ -26,10 +41,18 @@ interface WorkExperienceSectionProps {
     if (!date) return ''
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
+<<<<<<< HEAD
+    }
+    return format(date, 'MMM yyyy')
+  }
+  if (sortedWorkExperience.length === 0) return null;
+
+=======
 
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { WorkExperience } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface WorkExperienceSectionProps {;
@@ -49,17 +72,18 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
     if (!date) return '',;
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     return format(date, 'MMM yyyy')
   },
 
   if (sortedWorkExperience.length === 0) return null,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Professional Experience</h2>

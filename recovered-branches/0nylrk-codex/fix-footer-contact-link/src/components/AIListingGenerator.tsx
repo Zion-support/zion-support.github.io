@@ -1,8 +1,11 @@
+<<<<<<< HEAD
+=======
 
 
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -13,6 +16,28 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {Sparkles, ArrowRight} from "@/components/icons";
 import {supabase} from "@/integrations/supabase/client";
 import {Badge} from "@/components/ui/badge";
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Skeleton } from "@/components/ui/skeleton",
+import { Sparkles, ArrowRight } from "@/components/icons",
+import { supabase } from "@/integrations/supabase/client";
+import { Badge } from "@/components/ui/badge";
+interface GeneratedContent {
+
+  description: string
+  tags: string[]
+  suggestedPrice: {
+    min: number
+
+    max: number
+  }
+  keyPoints: string[]
+=======
 interface GeneratedContent {;
   description: string,;
   tags: string[],;
@@ -21,6 +46,7 @@ interface GeneratedContent {;
     max: number;
   };
   keyPoints: string[];
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 interface AIListingGeneratorProps {;
@@ -30,6 +56,11 @@ interface AIListingGeneratorProps {;
     title?: string;
     category?: string;
     keyFeatures?: string;
+<<<<<<< HEAD
+    targetAudience?: string
+import { supabase } from "@/integrations/supabase/client",
+import { Badge } from "@/components/ui/badge",
+=======
     targetAudience?: string;
   }
 }
@@ -37,6 +68,7 @@ interface AIListingGeneratorProps {;
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -45,41 +77,85 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[]
+<<<<<<< HEAD
+}
 
 
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
+  const { toast } = useToast();
+  const [title, setTitle] = useState(initialValues.title || "");
+  const [category, setCategory] = useState(initialValues.category || "");
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
+  const [isLoading, setIsLoading] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
+import React, { useState } from "react",;
+import { useToast } from "@/hooks/use-toast",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { Sparkles, ArrowRight } from "@/components/icons",;
+import { supabase } from "@/integrations/supabase/client",;
+import { Badge } from "@/components/ui/badge",;
+interface GeneratedContent {;
+  description: string,;
+  tags: string[],;
+  suggestedPrice: {;
+    min: number,;
+    max: number;
+  },;
+  keyPoints: string[];
+}
+;
+interface AIListingGeneratorProps {;
+  onApplyGenerated?: (content: GeneratedContent) => void,;
+  initialValues?: {;
+    title?: string,;
+    category?: string,;
+    keyFeatures?: string,;
+    targetAudience?: string;
+  }
+}
+
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
+  const { toast } = useToast();
+  const [title, setTitle] = useState(initialValues.title |"");
+  const [category, setCategory] = useState(initialValues.category |"");
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures |"");
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience |"");
+  const [isLoading, setIsLoading] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
+  const { toast } = useToast(),
+  const [title, setTitle] = useState(initialValues.title || ""),
+  const [category, setCategory] = useState(initialValues.category || ""),
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
+  const [isLoading, setIsLoading] = useState(false),
+  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
     switch(field) {
       case 'title':
-        setTitle(e.target.value);
-=======
-  const [title, setTitle] = useState(initialValues && initialValues.title || "");
-  const [category, setCategory] = useState(initialValues && initialValues.category || "");
-  const [keyFeatures, setKeyFeatures] = useState(initialValues && initialValues.keyFeatures || "");
-  const [targetAudience, setTargetAudience] = useState(initialValues && initialValues.targetAudience || "");
-  const [isLoading, setIsLoading] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
-
-  const handleInputChange = (e: { target: { value: string } }, field: string) => {;
-    switch(field) {;
-      case 'title':;
-        setTitle(e && e.target.value);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-        break;
-      case 'category':;
-        setCategory(e && e.target.value);
-        break;
-      case 'keyFeatures':;
-        setKeyFeatures(e && e.target.value);
-        break;
-      case 'targetAudience':;
-        setTargetAudience(e && e.target.value),;
-        break;
-
-
+        setTitle(e.target.value),
+        break,
+      case 'category':
+        setCategory(e.target.value),
+        break,
+      case 'keyFeatures':
+        setKeyFeatures(e.target.value),
+        break,
+      case 'targetAudience':
+        setTargetAudience(e.target.value)
+        break
+    }
+  }
   },
-
-
 
   const handleGenerate = async () => {
     if (!title |!category) {
@@ -87,9 +163,16 @@ interface GeneratedContent {
         title: "Missing required fields"
         description: "Please provide at least a title and category."
         variant: "destructive"
-
-=======
-
+      });
+      return
+    }
+    setIsLoading(true);
+    try {
+      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
+        body: { title, category, keyFeatures, targetAudience }
+      });
+      if (error) {
+        throw new Error(error.message)
       }),
       return
 ;
@@ -215,19 +298,19 @@ if ( {) {
       }),;
       if (error) {;
         throw new Error(error.message);
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       if (data.error) {
         throw new Error(data.error)
       }
-
-
+      setGeneratedContent(data.generated);
 
       setGeneratedContent(data.generated),
-
-
       toast({
         title: "Content Generated"
         description: "AI has created optimized listing content for you."
@@ -274,10 +357,8 @@ if ( {) {
     } finally {
       setIsLoading(false)
     }
-
+  }
   },
-
-
 
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
@@ -286,27 +367,9 @@ if ( {) {
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
       })
-
-
-    try {;
-      const { data, error } = await supabase && supabase.functions.invoke('ai-listing-generator', {;
-        body: { title, category, keyFeatures, targetAudience }
-      });
-
-      if (error) {;
-        throw new Error(error && error.message);
-      }
-
-      if (data && data.error) {;
-        throw new Error(data && data.error);
-      }
-
-      setGeneratedContent(data && data.generated);
-=======
     }
-
+  }
   },
-
 
   return (
     <div className="space-y-6">
@@ -362,10 +425,20 @@ if ( {) {
               onChange={(e) => handleInputChange(e, 'targetAudience')}
               placeholder="e.g. Developers, Marketers, Startups"
               className="bg-zion-blue border border-zion-blue-light text-white"
+<<<<<<< HEAD
+              disabled={isLoading}
+            />
+          </div>
+          <Button
+            onClick={handleGenerate}
+            disabled={isLoading |!title |!category}
+          <Button 
+=======
 
           <Button 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
       setGeneratedContent(data.generated),;
 
@@ -455,12 +528,15 @@ if ( {) {
             />;
           </div>;
           <Button;
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             onClick={handleGenerate}
-            disabled={isLoading |!title |!category}
+            disabled={isLoading || !title || !category}
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           >
             {isLoading ? (
@@ -484,51 +560,17 @@ if ( {) {
             <div className="flex flex-wrap gap-2">
               {[...Array(5)].map((_, i) => (
                 <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />
-=======
-            />;
-          </div>;
-          <Button
-            onClick={handleGenerate}
-            disabled={isLoading || !title || !category}
-            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2">;
-            {isLoading ? (;
-              <>Generating Optimized Content...</>;
-            ) : (;
-              <>;
-                <Sparkles className="h-4 w-4 mr-2" />;
-                Generate Optimized Content;
-              </>;
-            )}
-          </Button>;
-        </CardContent>;
-      </Card>;
-
-      {isLoading && (;
-        <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">;
-          <CardHeader>;
-            <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" />;
-          </CardHeader>;
-          <CardContent className="space-y-4">;
-            <Skeleton className="h-32 w-full bg-zion-blue-light/20" />;
-            <div className="flex flex-wrap gap-2">;
-              {[...Array(5)].map((_, i) => (;
-                <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               ))}
-            </div>;
-            <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />;
-            <div className="space-y-2">;
-              {[...Array(3)].map((_, i) => (;
-                <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />;
+            </div>
+            <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />
+            <div className="space-y-2">
+              {[...Array(3)].map((_, i) => (
+                <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />
               ))}
-            </div>;
-          </CardContent>;
-        </Card>;
+            </div>
+          </CardContent>
+        </Card>
       )}
-
-
-
-
 
       {generatedContent && !isLoading && (
         <Card className="border border-zion-blue-light bg-zion-blue-dark">

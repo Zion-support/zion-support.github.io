@@ -1,6 +1,7 @@
-
-
-
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -10,11 +11,22 @@ import Link from './next / link';
 import { motion  } from './framer-motion';
 
 import {
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  ArrowRight,
+  Award,
+  BarChart3,
+  Shield,
+  Code,
+  Zap,
+  Globe,
+  Home,
+  Building,
+  FileText,
+  MessageSquare,
+  Calendar,
+  ShoppingCart,
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   BookOpen,
   Brain,
   Building,
@@ -49,53 +61,17 @@ import {
   Star,
   Target,
   TrendingUp,
-
-import {;
-  ArrowRight,;
-  Award,;
-  BarChart3,;
-  BookOpen,;
-  Brain,;
-  Building,;
-  Calculator,;
-  Calendar,;
-  Camera,;
-  CheckCircle,;
-  ChevronDown,;
-  Clock,;
-  Cloud,;
-  Code,;
-  CreditCard,;
-  DollarSign,;
-  Eye,;
-  FileText,;
-  Gamepad2,;
-  Globe,;
-  Heart,;
-  Home,;
-  Lock,;
-  Mail,;
-  MapPin,;
-  Menu,;
-  MessageSquare,;
-  Music,;
-  Network,;
-  Phone,;
-  Rocket,;
-  Settings,;
-  Shield,;
-  ShoppingCart,;
-  Star,;
-  Target,;
-  TrendingUp,;
-  Truck,;
-  Users,;
-  X,;
+ursor/integrate-build-improve-and-re-verify-8f7d
+  Truck,
+  Users,
+  X,
   Zap,;
 
 } from "lucide-react";
-=======
-
+  Truck,
+  Users,
+  X,
+  Zap
   Clock,
   DollarSign,
   Cpu,
@@ -133,21 +109,15 @@ import {;
   TrendingUp as Growth,
   Clock as Time,
   DollarSign as Money;
-
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 } from 'lucide-react';
->>>>>>> origin/automation-improvements-final
+origin/automation-improvements-final
 
-
-=======
-
-
-} from 'lucide-react';
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
   ArrowRight
   Award
   BarChart3
@@ -190,11 +160,7 @@ import {;
   X
   Zap
 } from "lucide-react";
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+origin/main
 const navigationItems = [
   {
     title: "Services"
@@ -222,6 +188,7 @@ const navigationItems = [
         description: "40+ innovative micro SaaS solutions"
         popular: true
       }
+=======
 } from './lucide-react';
 ;
 const navigation_items = [;
@@ -251,6 +218,7 @@ const navigation_items = [;
         description: "40+ innovative micro SaaS solutions",
         popular: true,
       },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
         title: "Cybersecurity"
         href: "/cybersecurity"
@@ -641,7 +609,7 @@ const navigationItems = [;
     ],;
   },;
 ];
-<<<<<<< HEAD
+
 const quickLinks = [;
   { title: "Pricing", href: "/pricing", icon: DollarSign },;
   { title: "Contact", href: "/contact", icon: Phone },;
@@ -650,17 +618,17 @@ const quickLinks = [;
   { title: "Quote", href: "/quote", icon: FileText },;
   { title: "API Docs", href: "/api-docs", icon: Code },;
 ];
-export default function Navigation() {;
-=======
 <<<<<<< HEAD
 export default function Navigation() {
+
+export default function Navigation() {;
 =======
 
 export default function Navigation() {;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-=======
 
 
 export default function Navigation() {;
@@ -670,8 +638,6 @@ export default function Navigation() {;
 
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}
@@ -698,6 +664,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 href="/pricing"
 
                 className="hover:text-blue-200 transition-colors">;
+=======
 ;
 const quick_links = [;
   { title: "Pricing", href: "/pricing", icon: DollarSign },
@@ -759,6 +726,7 @@ function Navigation() {
                 Zion Tech Group;
               </div>;
               <div className="text-sm text-gray-500">;
+=======
       {/* Main Navigation */}
       <div className="container mx - auto px - 4">;
         <div className="flex justify - between items - center py - 4">;
@@ -910,6 +878,7 @@ function Navigation() {
       </div>;
     </nav>;
   );
+=======
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items - center space - x-8">;
             {navigation_items.map ((item) => (
@@ -1038,4 +1007,5 @@ function Navigation() {
           </motion.div>)}
       </div>;
     </nav>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

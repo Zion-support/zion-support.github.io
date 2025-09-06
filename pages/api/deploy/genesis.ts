@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from "next";
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 function summarizeModules(
@@ -5,7 +9,7 @@ function summarizeModules(
   bonus: Record<string, boolean>
 ) {
   const active = [
-    ...Object.entries(modules)
+    ...Object && Object.entries(modules)
       .filter(([, v]) => v)
 
       .map(([k]) => `/${k}`),
@@ -46,6 +50,7 @@ function missionParagraph(region: string, instanceName: string, modules: Record<
   const activeCount = Object.values(modules).filter(Boolean).length + Object.values(bonus).filter(Boolean).length;
   return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`
 }
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
@@ -94,6 +99,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         governanceMode
         votingDashboard: "/dao"
       }
+=======
 import type { NextApiRequest, NextApiResponse } from './next';
 ;
 /**
@@ -166,6 +172,7 @@ if ( {) {
         governance_mode,
         voting_dashboard: "/dao",
       },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       assets: {
         whitepaper: "/whitepaper"
         roadmap: "/roadmap"
@@ -197,6 +204,7 @@ if ( {) {
         bonusModules
       )
     }
+=======
           pdf: "/book / manifesto.pdf",
           trailer_script: "/trailer / script",
         },
@@ -224,6 +232,7 @@ if ( {) {
       ),
     }
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     const access = {
       roles: ["Founder", "Superadmin", "DAO Multisig"]
       export: {
@@ -236,37 +245,13 @@ if ( {) {
 
       operator,
       access,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
-  } catch (err: any) {
 
-    return res && res.status(500).json({ error: err && err.message || "Internal error" });
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  }
-}
-      version: 'Zion OS v1.0.0'};
-    const operator = {
-      activeModulesSummary: summarizeModules(modules, bonusModules),
-      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
-    const access = {
-      roles: ['FounderSuperadminDAO Multisig'],
-      export: {
-        type: 'application/json',
-        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
-    return res.status(200).json({ outputActions, deployLog, access, operator })
   } catch (err: any) {
-    return res.status(500).json({ error: err.message || 'Internal error' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  }
-}
-    return res.status (500).json ({ error: err.message || "Internal error" });
-=======
 <<<<<<< HEAD
     return res.status(500).json({ error: err.message |"Internal error" });
-=======
     return res.status(500).json({ error: err.message || "Internal error" });
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -285,6 +270,31 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+
+    return res && res.status(500).json({ error: err && err.message || "Internal error" });
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+=======
+      version: 'Zion OS v1.0.0'};
+
+    const operator = {
+      activeModulesSummary: summarizeModules(modules, bonusModules),
+      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
+
+    const access = {
+      roles: ['FounderSuperadminDAO Multisig'],
+      export: {
+        type: 'application/json',
+        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
+
+    return res.status(200).json({ outputActions, deployLog, access, operator })
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message || 'Internal error' })
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
   try {
@@ -491,15 +501,11 @@ export default async function handler(req, res) {
       export: {;
         type: 'application/json';
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
-    return res.status(200).json({ outputActions, deployLog, access, operator });
-  } catch (error) {
-    return res.status(500).json({ error: err.message || 'Internal error' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+
+    return res.status(200).json({ outputActions, deployLog, access, operator })
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message || 'Internal error' })
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
   } catch (error) {
@@ -507,22 +513,20 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

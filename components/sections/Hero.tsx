@@ -1,8 +1,5 @@
-
-
+import React from 'react',
 import React from 'react';
-
-
 import Button from '../ui/Button';
 import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
 interface HeroProps {
@@ -61,10 +58,6 @@ interface HeroProps {;
     color: string;
   }>;
 
-
-
-
-
 const Hero: React.FC<HeroProps> = ({
   title
   subtitle
@@ -107,12 +100,21 @@ const Hero: React.FC<HeroProps> = ({;
       <div
         className='absolute top-1/2 left-1/4 w-48 h-48 bg-purple-500/8 rounded-full blur-3xl animate-float'
         style={{ animationDelay: '3s' }}
-
-  title: string,
-  subtitle: string,
-  primaryAction?: {
-    text: string,
-
+      />
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+        {/* Main Content */}
+        <div className='mb-20 animate-fade-in'>
+          <div className='mb-8'>
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6 animate-scale-in'>
+              <Zap className='w-4 h-4 mr-2' />
+              World&apos;s Most Advanced Autonomous Platform
+            </div>
+          </div>
+          <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>
+            {title}
+          </h1>
+          <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}  primaryAction?: {
+    text: string
     href: string
   }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -198,21 +200,24 @@ const Hero: React.FC<HeroProps> = ({;
           </h1>;
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">;
             {subtitle}
+<<<<<<< HEAD
+          </p>
+          {/* Action Buttons */}
+          {(primaryAction |secondaryAction) && (
+=======
 
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
 
             {subtitle}
 
           </p>
 
-
           {/* Action Buttons */}
           {(primaryAction || secondaryAction) && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               {primaryAction && (
 =======
@@ -225,85 +230,25 @@ const Hero: React.FC<HeroProps> = ({;
                   href={primaryAction && primaryAction.href}
                   size='lg'
                   className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
+                  style={{ animationDelay: '0.2s' }}
+                >
+                  {primaryAction.text}
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>              {primaryAction && (
+                <Button
+                  href={primaryAction.href}
+                  size="lg"
+                  className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40"
+                  style={{ animationDelay: '0.2s' }}
+                >
+                  {primaryAction.text}
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>
 
-=======
-=======
-    <section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - black'>;
-      {/* Background Elements */}
-      <div className='absolute inset - 0'>;
-        <div className='absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (59, 130, 246, 0.1), transparent_50%)]' />;
-        <div className='absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (59, 130, 246, 0.08), transparent_50%)]' />;
-        <div className='absolute inset - 0 bg-[radial - gradient (circle_at_20%_80%, rgba (34, 197, 94, 0.06), transparent_50%)]' />;
-      </div>;
-      {/* Grid Pattern */}
-      <div className='absolute inset - 0 bg-[linear - gradient (rgba (59, 130, 246, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (59, 130, 246, 0.1)_1px, transparent_1px)] bg-[size:50px_50px] opacity - 20' />;
-      {/* Floating Elements */}
-      <div className='absolute top - 20 left - 10 w - 72 h - 72 bg - blue - 500 / 10 rounded - full blur - 3xl animate - float' />;
-      <div;
-        className='absolute bottom - 20 right - 10 w - 96 h - 96 bg - emerald - 500 / 10 rounded - full blur - 3xl animate - float';
-        style={{ animation_delay: '1.5s' }}
-      />;
-      <div;
-        className='absolute top - 1/2 left - 1/4 w - 48 h - 48 bg - purple - 500 / 8 rounded - full blur - 3xl animate - float';
-        style={{ animation_delay: '3s' }}
-      />;
-      <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>;
-        {/* Main Content */}
-        <div className='mb - 20 animate - fade - in'>;
-          <div className='mb - 8'>;
-            <div className='inline - flex items - center px - 4 py - 2 rounded - full bg - blue - 500 / 10 border border - blue - 500 / 20 text - blue - 400 text - sm font - medium mb - 6 animate - scale - in'>;
-              <Zap className='w - 4 h - 4 mr - 2' />;
-              World & apos;s Most Advanced Autonomous Platform;
-            </div>;
-          </div>;
-          <h1 className='text - 4xl sm:text - 5xl md:text - 6xl lg:text - 7xl font - black mb - 8 text - white leading - tight tracking - tight'>;
-            {title}
-          </h1>;
-          <p className='text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb - 16 leading - relaxed font - light'>            {subtitle}  primary_action?: {
-    text: string,
-    href: string;
-  }
-  secondary_action?: {
-    text: string,
-    href: string;
-  }
-  stats?: Array<{
-    value: string,
-    label: string,
-    color: string;
-  }>;
-}
-const Hero: React.FC < HeroProps> = ({
-  title;
-  subtitle;
-  primary_action;
-  secondary_action;
-  stats}) => {
-  return (
-    <section className="relative min - h-screen flex items - center justify - center overflow - hidden bg - black">;
-      {/* Background Elements */}
-      <div className="absolute inset - 0">;
-        <div className="absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (59, 130, 246, 0.1), transparent_50%)]" />;
-        <div className="absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (59, 130, 246, 0.08), transparent_50%)]" />;
-        <div className="absolute inset - 0 bg-[radial - gradient (circle_at_20%_80%, rgba (34, 197, 94, 0.06), transparent_50%)]" />;
-      </div>;
-      {/* Grid Pattern */}
-      <div className="absolute inset - 0 bg-[linear - gradient (rgba (59, 130, 246, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (59, 130, 246, 0.1)_1px, transparent_1px)] bg-[size:50px_50px] opacity - 20" />;
-      {/* Floating Elements */}
-      <div className="absolute top - 20 left - 10 w - 72 h - 72 bg - blue - 500 / 10 rounded - full blur - 3xl animate - float" />;
-      <div className="absolute bottom - 20 right - 10 w - 96 h - 96 bg - emerald - 500 / 10 rounded - full blur - 3xl animate - float" style={{ animation_delay: '1.5s' }} />;
-      <div className="absolute top - 1/2 left - 1/4 w - 48 h - 48 bg - purple - 500 / 8 rounded - full blur - 3xl animate - float" style={{ animation_delay: '3s' }} />;
-      <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
-        {/* Main Content */}
-        <div className="mb - 20 animate - fade - in">;
-          <div className="mb - 8">;
-            <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - blue - 500 / 10 border border - blue - 500 / 20 text - blue - 400 text - sm font - medium mb - 6 animate - scale - in">;
-              <Zap className="w - 4 h - 4 mr - 2" />;
-              World & apos, s Most Advanced Autonomous Platform;
-            </div>;
-          </div>;
-          <h1 className="text - 4xl sm:text - 5xl md:text - 6xl lg:text - 7xl font - black mb - 8 text - white leading - tight tracking - tight">;
+                </Button>
 
+<<<<<<< HEAD
+=======
             {title}
           </h1>;
           <p className="text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb - 16 leading - relaxed font - light">;
@@ -313,6 +258,7 @@ const Hero: React.FC < HeroProps> = ({
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               )}
               {secondaryAction && (;
                 <Button
@@ -332,7 +278,10 @@ const Hero: React.FC < HeroProps> = ({
               )}
             </div>;
           )}
+        </div>
 
+<<<<<<< HEAD
+=======
         </div>;
 
 
@@ -342,6 +291,7 @@ const Hero: React.FC < HeroProps> = ({
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Stats Section */}
         {stats && (;
           <div
@@ -432,14 +382,26 @@ const Hero: React.FC < HeroProps> = ({
                   </div>
                   <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
                 </div>
-
+                <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>                  {stat.label}            {stats.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="relative">
+                  <div className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3 ${stat.color} group-hover:scale-110 transition-transform duration-300`}>
+                    {stat.value}
+                  </div>
+                  <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="text-gray-400 text-xs sm:text-sm md:text-base font-medium">
+                  {stat.label}
                 <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>                  {stat.label}
 
                   {stat.label}
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </div>
               </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -448,7 +410,7 @@ const Hero: React.FC < HeroProps> = ({
           </div>
         )}
 
-
+        {/* Trust Indicators */}
         <div
           className='mt-16 md:mt-20 animate-fade-in'
 
@@ -473,9 +435,11 @@ const Hero: React.FC < HeroProps> = ({
         </div>
       </div>
       {/* Scroll Indicator */}
-
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-
+      <div className='absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce'>
+        <div className='w-6 h-10 border-2 border-white/20 rounded-full flex justify-center'>
+          <div className='w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse' />        </div>
+      </div>
+      {/* Decorative Elements */}      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse" />
         </div>
@@ -518,7 +482,13 @@ const Hero: React.FC < HeroProps> = ({
 }
 export default Hero;
 
+<<<<<<< HEAD
+}
+}
+}
 =======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 }
@@ -583,7 +553,10 @@ export default Hero;
       </div>
 
       {/* Decorative Elements */}
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -18,9 +18,16 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
+import { useRouter } from 'next/router';
+
+export default function EpisodePage() {
+=======
 
 
 export default function EpisodePage() {
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const router = useRouter();
   const { id } = router.query as { id?: string }
   const [episode, setEpisode] = useState<any>(null);
@@ -151,8 +158,22 @@ if (return <div > Loading…</div>) {
         </pre>
       </div>
     </div>
-
+  );      {episode.audio?.mp3Url && (
+        <audio controls className="w-full">
+          <source src={episode.audio.mp3Url} type="audio/mpeg" />
+        </audio>
+      )}
+      <div>
+        <h2 className="text-xl font-semibold">Transcript</h2>
+        <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
+      </div>
+    </div>
+);
+}
   );
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

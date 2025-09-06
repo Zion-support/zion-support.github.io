@@ -52,11 +52,24 @@ Style: - Use bullets and short paragraphs
     };
     return res && res.status(200).json({ message });
   } catch (error: any) {
+<<<<<<< HEAD
+console.error('Assistant API error:', error?.message |error);
+    return res.status(500).json({ error: 'Assistant request failed' });
+  }    return res.status(500).json({ error: 'Assistant request failed' })
+  }
+}
+
+  }
+  };
+}
+  }
+=======
     console && console.error('Assistant API error:', error?.message || error);
     return res && res.status(500).json({ error: 'Assistant request failed' });
   }    return res && res.status(500).json({ error: 'Assistant request failed' })
 
   };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
@@ -90,3 +103,4 @@ console.error ('Assistant API error:', error?.message || error);
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

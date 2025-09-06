@@ -1,9 +1,22 @@
 
+<<<<<<< HEAD
+// Message checking functionality
+import { FraudSeverity  } from '@/types/fraud';
+import { analyzeContent  } from './analyzeContent';
+import { MessageAnalysisResult } from './types';
+/**
+ * Check message for suspicious content
+ */
+
+export const checkMessage = (messageContent: string): MessageAnalysisResult => {
+export const checkMessage = (messageContent: string): MessageAnalysisResult => {;
+=======
 
 
 export const checkMessage = (messageContent: string): MessageAnalysisResult => {;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const analysis = analyzeContent(messageContent);
   // Determine severity based on number and type of issues
 
@@ -39,6 +52,12 @@ if ( {) {
   }
   return {
     ...analysis;
+<<<<<<< HEAD
+    severity
+  }
+}
+
+=======
 
 ;
 
@@ -47,6 +66,7 @@ if ( {) {
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Message checking functionality;
 import { FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -68,10 +88,11 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
   return {;
     ...analysis;
     severity;
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

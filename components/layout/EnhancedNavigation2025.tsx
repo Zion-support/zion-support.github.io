@@ -1,7 +1,4 @@
 
-
-
-
 'use client';
 
 
@@ -446,7 +443,18 @@ export default function EnhancedNavigation2025() {
               {navigationItems && navigationItems.map((item) => (;
                 <div key={item && item.name} className="relative group">;
                   <button
+                    onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
+                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                  >
+                    <item.icon className="w-4 h-4" />
+                    <span>{item.name}</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                      activeSubmenu === item.name ? 'rotate-180' : ''
+                    }`} />
+                  </button>
 
+<<<<<<< HEAD
+=======
                     onClick={() => setActiveSubmenu(activeSubmenu === item && item.name ? null : item && item.name)}
                     className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2";
                   >;
@@ -464,6 +472,7 @@ export default function EnhancedNavigation2025() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {/* Submenu */}
                   <AnimatePresence>;
                     {activeSubmenu === item && item.name && (;
@@ -544,7 +553,10 @@ export default function EnhancedNavigation2025() {
                   </AnimatePresence>;
                 </div>;
               ))}
+            </div>
 
+<<<<<<< HEAD
+=======
             </div>;
 
 
@@ -554,6 +566,7 @@ export default function EnhancedNavigation2025() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <Link
@@ -563,7 +576,14 @@ export default function EnhancedNavigation2025() {
               </Link>;
               <Link
                 href="/contact"
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+              </Link>
+            </div>
 
+<<<<<<< HEAD
+=======
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
                 Get Started;
               </Link>;
@@ -576,12 +596,19 @@ export default function EnhancedNavigation2025() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
               className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200">;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+      </nav>
 
+<<<<<<< HEAD
+=======
 =======
 ];
 }];
@@ -799,6 +826,7 @@ function EnhancedNavigation2025() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -812,12 +840,20 @@ function EnhancedNavigation2025() {
                           {item && item.badge}
                         </span>;
                       )}
+                    </div>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                      activeDropdown === item.name ? 'rotate-180' : ''
+                    }`} />
+                  </button>
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {activeDropdown === item.name && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
@@ -844,10 +880,6 @@ function EnhancedNavigation2025() {
                 </div>;
               ))}
 
-
-
-
-
               {/* Mobile CTA */}
               <div className="pt-4">;
                 <Link
@@ -863,6 +895,39 @@ function EnhancedNavigation2025() {
             <div
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={closeMenu}
+<<<<<<< HEAD
+            />
+            
+            {/* Menu Panel */}
+            <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">
+              <div className="p-6">
+                {/* Close Button */}
+                <div className="flex justify-end mb-6">
+                  <button
+                    onClick={closeMenu}
+                    className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
+                  >
+                    <X className="w-6 h-6" />
+                  </button>
+                </div>
+                {/* Mobile Navigation Items */}
+                <div className="space-y-4">
+                  {navigationItems.map((item) => (
+                    <div key={item.name}>
+                      <button
+                        onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
+                        className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
+                      >
+                        <div className="flex items-center space-x-3">
+                          <item.icon className="w-5 h-5 text-cyan-400" />
+                          <span className="text-white font-medium">{item.name}</span>
+                        </div>
+                        <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
+                          activeSubmenu === item.name ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+
+=======
 
             />;
 
@@ -912,6 +977,7 @@ function EnhancedNavigation2025() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       {/* Mobile Submenu */}
                       <AnimatePresence>;
                         {activeSubmenu === item && item.name && (;
@@ -1106,6 +1172,22 @@ className="ml - 8 space - y-2";
                               <Link;
                                 key={subitem.name}
                                 href={subitem.href}
+<<<<<<< HEAD
+                                onClick={closeMenu}
+                                className="block p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200"
+                              >
+                                <h4 className="text-white font-medium">{subitem.name}</h4>
+                                <p className="text-sm text-gray-400 mt-1">{subitem.description}</p>
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ))}
+                </div>
+
+=======
                                 on_click={close_menu}
                                 className="block p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - all duration - 200";
                               >;
@@ -1116,6 +1198,7 @@ className="ml - 8 space - y-2";
                       </AnimatePresence>;
                     </div>))}
                 </div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Mobile CTA */}
                 <div className="mt - 8 space - y-4">;
                   <Link;
@@ -1176,10 +1259,13 @@ className="ml - 8 space - y-2";
         )}
       </AnimatePresence>
 
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>

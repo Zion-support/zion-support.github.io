@@ -157,7 +157,6 @@ function ComparisonSection() {
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
 
-
                   </TableRow>
 
 import { GradientHeading } from "./GradientHeading",
@@ -232,14 +231,6 @@ export function ComparisonSection() {
           </div>
         </div>
       </div>
-
-
-
-    </section>
-
-
-import { GradientHeading } from './GradientHeading';
-import { Button } from './ui/button';
 import { CheckCircle2 } from 'lucide-react';
 import {;
   Table,;

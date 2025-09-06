@@ -1,4 +1,25 @@
 
+<<<<<<< HEAD
+import { Certification  } from '@/types/resume';
+import { format } from 'date-fns';
+interface CertificationsSectionProps {
+  certifications: Certification[];
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Certification  } from '@/types/resume';
+import { format } from 'date-fns';
+interface CertificationsSectionProps {
+  certifications: Certification[]
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}
+
+
+import {Certification} from '@/types/resume';
+import {format} from 'date-fns';
+interface CertificationsSectionProps {
+  certifications: Certification[]
+=======
 import {Certification} from '@/types / resume';
 import {format} from 'date - fns';
 
@@ -14,13 +35,17 @@ interface CertificationsSectionProps {
   certifications: Certification[]
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Certification } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface CertificationsSectionProps {;
   certifications: Certification[];
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {;
@@ -29,15 +54,13 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
     }
-
+    return format(date, 'MMM yyyy');
+  };
     return format(date, 'MMM yyyy')
   },
 
-
   if (certifications.length === 0) return null,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div>
       <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>

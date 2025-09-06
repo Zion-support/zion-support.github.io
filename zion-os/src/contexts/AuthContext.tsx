@@ -149,10 +149,6 @@ if ( {) {
     throw new Error ("use_auth must be used within an AuthProvider");
 
   }
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 import { useSession, signIn, signOut } from "next-auth/react",;
@@ -271,7 +267,6 @@ export function useAuth() {;
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
   }
-
   return context;
 }
 ;

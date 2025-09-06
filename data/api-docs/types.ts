@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export interface RateLimitInfo {
@@ -15,8 +23,11 @@ export interface ErrorCode {
 ;
 
 export interface EndpointSpec {
+<<<<<<< HEAD
+=======
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 export interface CodeSample {;
@@ -34,8 +45,11 @@ export interface ErrorCode {;
   message: string;
 
 export interface EndpointSpec {;
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   title: string;
   description: string;
@@ -50,6 +64,7 @@ export interface EndpointSpec {;
   rate_limits?: RateLimitInfo[];
   errors?: ErrorCode[];
   tags?: string[];
+<<<<<<< HEAD
 
   versions: string[]; // e && e.g., ['v1'] or ['v1','v2']
 
@@ -63,15 +78,27 @@ export interface EndpointSpec {;
 export interface SectionSpec {
 =======
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
+<<<<<<< HEAD
+export interface SectionSpec {
+
+export interface SectionSpec {;
+=======
 
 
 export interface SectionSpec {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   title: string;
   description?: string;
   endpoints: EndpointSpec[];
+<<<<<<< HEAD
+export interface ApiDocsSpec {
+
+
+export interface ApiDocsSpec {;
+=======
 
 ;
 
@@ -82,6 +109,7 @@ export interface ApiDocsSpec {
 export interface ApiDocsSpec {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   product: 'Zion OS';
   versions: string[]; // available versions;
   default_version: string;
@@ -112,12 +140,21 @@ export interface ErrorCode {
 }
 export interface EndpointSpec {
 <<<<<<< HEAD
+<<<<<<< HEAD
+  id: string, title: string,
+  description: string, path: string,
+  method: HttpMethod, visibility: Visibility,
+  auth: Array<'jwt' | 'oauth' | 'wallet' | 'apiKey' | 'none'>,;
+  query?: Record<string, string>;
+  params?: Record<string, string>;
+=======
   id: string, title: string,
   description: string, path: string,
   method: HttpMethod, visibility: Visibility,
   auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>,
   query?: Record < string, string>;
   params?: Record < string, string>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   requestBodySchema?: unknown;
   responseBodySchema?: unknown;
 
@@ -125,11 +162,22 @@ export interface EndpointSpec {
   lastUpdatedIso: string
 
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
 
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 }
@@ -137,6 +185,10 @@ export interface EndpointSpec {
 }
 }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -192,8 +244,11 @@ export interface ApiDocsSpec {;
   sections: SectionSpec[];
   lastUpdatedIso: string;
 }
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

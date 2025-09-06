@@ -1,5 +1,29 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import {
+<<<<<<< HEAD
+  setVendorApproval
+  setVendorCommission
+  suspendVendor;
+} from '../../../utils/vendor-store';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body |{};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
+=======
+  setVendorApproval,
+  setVendorCommission,;
+  suspendVendor,;
+} from '../../../utils/vendor-store';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   try {
     if (action === 'approve') setVendorApproval(String(vendorId), true);
@@ -16,25 +40,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 =======
   setVendorApproval,
-  setVendorCommission,
-  suspend_vendor,
-} from '../../../utils / vendor - store';
-export default /**
- * handler - Function description
- */
-function handler() {
-  if (
-    return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
-}  const { action, vendor_id, value } = req.body || {}import { setVendorApproval, setVendorCommission, suspend_vendor } from '../../../utils / vendor - store';
-;
-export default /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
-}
+  setVendorCommission,;
+  suspendVendor,;
+} from '../../../utils/vendor-store';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { action, vendorId, value } = req.body || {},
   try {
     if (setVendorApproval (String (vendor_id), true)) {
   $2
@@ -64,8 +79,3 @@ function handler() {
   }
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

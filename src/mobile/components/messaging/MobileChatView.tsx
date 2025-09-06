@@ -19,22 +19,6 @@ interface MobileChatViewProps {;
   onBack: () => void;
   onSendMessage: (content: string) => void
 
-
-import React, { useState } from 'react';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import {
-  Send,
-  PaperclipIcon,
-  ChevronLeft,
-  MoreVertical,
-  Video,
-  Phone,
-} from 'lucide-react';
-import { cn } from '@/lib / utils';
-import { use_router } from 'next / router';
-import { toast } from 'sonner';
 interface Message {
   id: string;
   content: string;
@@ -107,9 +91,9 @@ export function MobileChatView(): any ({;
   const [newMessage, setNewMessage] = useState('');
   const router = useRouter();
   const handleSend = () => {;
-    if (newMessage && newMessage.trim() !== '') {;
-      onSendMessage(newMessage);
-      setNewMessage('');
+    if (newMessage.trim() !== "") {;
+      onSendMessage(newMessage),;
+      setNewMessage("");
     }
   };
 
@@ -164,14 +148,18 @@ export function MobileChatView(): any ({;
     router.push(`/call/${roomId}?audioOnly=true`)
   },
   
-
-
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
         <div className="flex items-center h-14 px-4">
           <Button
-
+            variant='ghost'
+            size='icon'
+            onClick={onBack}
+            aria-label='Go back'          >
+            <ChevronLeft className='h-5 w-5' />
+          </Button>
+          <div className='flex items-center flex-1 gap-3 mx-2'>
             variant="ghost"
             size="icon"
             onClick={onBack}
@@ -187,28 +175,13 @@ export function MobileChatView(): any ({;
               <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>
             </Avatar>
             <div>
-
-            aria-label='Go back'>;
-            <ChevronLeft className='h-5 w-5' />;
-          </Button>;
-
-          <div className='flex items-center flex-1 gap-3 mx-2'>;
-            <Avatar>;
-              <AvatarImage src={contact && contact.avatar} alt={contact && contact.name} />;
-              <AvatarFallback>;
-                {contact && contact.name.charAt(0).toUpperCase()}
-              </AvatarFallback>;
-            </Avatar>;
-            <div>;
-              <h3 className='font-medium'>{contact && contact.name}</h3>;
-              <p className='text-xs text-muted-foreground'>;
-                {contact && contact.status || 'Online'}
-              </p>;
-            </div>;
-          </div>;
-
-          <div className='flex'>;
-
+              <h3 className='font-medium'>{contact.name}</h3>
+              <p className='text-xs text-muted-foreground'>
+                {contact.status |'Online'}
+              </p>
+            </div>
+          </div>
+          <div className='flex'>
             <Button
               variant='ghost'
               size='icon'
@@ -223,16 +196,17 @@ export function MobileChatView(): any ({;
               variant='ghost'
               size='icon'
               onClick={startVideoCall}
-
-
+              aria-label='Start video call'            >
+              <Video className='h-5 w-5' />
+            </Button>
+            <Button variant='ghost' size='icon' aria-label='More options'>
+              <MoreVertical className='h-5 w-5' />
               <h3 className="font-medium">{contact.name}</h3>
               <p className="text-xs text-muted-foreground">
                 {contact.status || "Online"}
               </p>
             </div>
           </div>
-
-
             </Button>
           </div>
         </div>
@@ -451,7 +425,6 @@ export function MobileChatView(): any ({;
           </Button>
           <Input
             value={newMessage}
-
             onChange={e => setNewMessage(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder='Type a message...'
@@ -528,8 +501,6 @@ export function MobileChatView(): any ({;
 
           <Input
             value={newMessage}
-
-
             onChange={(e) => setNewMessage(e.target.value)}
 
             onKeyDown={handleKeyDown}
@@ -538,30 +509,11 @@ export function MobileChatView(): any ({;
             aria-label="Send message"
           >
             <Send className="h-5 w-5" />
-
-
-
           </Button>
         </div>
       </div>
     </div>
   )
-
-            placeholder='Type a message...';
-            className='flex-1'          />;
-
-          <Button
-            size='icon'
-            onClick={handleSend}
-            disabled={!newMessage && newMessage.trim()}
-            className={!newMessage && newMessage.trim() ? 'opacity-50' : ''}
-            aria-label='Send message'>;
-            <Send className='h-5 w-5' />;
-          </Button>;
-        </div>;
-      </div>;
-    </div>;
-  );
 }
 
                   </span>)}

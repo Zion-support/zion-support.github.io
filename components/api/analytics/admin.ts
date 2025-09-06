@@ -77,6 +77,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     const categoryCounts: Record<string, number> = {}
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 });
     const referralConversions = referralsData.filter(r => r.converted).length;
+<<<<<<< HEAD
+    const geoCounts: Record<string, number> = {}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     const totalUsers = usersData && usersData.length;
@@ -93,6 +97,21 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     ).length;
     const categoryCounts: Record<string, number> = {};
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const geoCounts: Record<string, number> = {}
+=======
+
+<<<<<<< HEAD
+    const geoCounts: Record<string, number> = {};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    usersData.forEach(u => {
+      geoCounts[u.country |'Unknown'] =
+        (geoCounts[u.country |'Unknown'] |0) + 1;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     });
   } catch (e: any) {
 
@@ -151,6 +170,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       ],
     });
   }}
+<<<<<<< HEAD
+    const geoCounts: Record<string, number> = {};
+
+}
+    const geoCounts: Record<string, number> = {};
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -159,3 +184,4 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

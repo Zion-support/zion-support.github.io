@@ -1,5 +1,25 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+</div> </div>) )
+ </div> </div>) ) 
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+export type Trend = {
+  id: string
+  date: string
+  title: string
+  highlights: string[]
+  summary: string
+  tags: string[]
+}
+export async function getServerSideProps() {
+</div> </div>) ) 
+ </div> </div>) ) 
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
@@ -26,6 +46,34 @@ function getServerSideProps() {
 
 
  </div> </div>) ) ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+</div> </div>) )
+=======
+ </div> </div>) ) 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+export type Trend = {
+  id: string
+  date: string
+  title: string
+  highlights: string[]
+  summary: string
+  tags: string[]
+}
+export async function getServerSideProps() {
+=======
+</div> </div>) ) 
+=======
+ </div> </div>) ) 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {;
@@ -36,11 +84,18 @@ export type Trend = {;
   summary: string,;
   tags: string[];
 };
+<<<<<<< HEAD
 export async function getServerSideProps() {;
+<<<<<<< HEAD
+=======
+
+export async function getServerSideProps() {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const file = path && path.join(process && process.cwd(), 'dataai-trends && trends.json');
   let items: Trend[] = [];  try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
     items = JSON && JSON.parse(raw);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,6 +138,8 @@ export async function getServerSideProps() {;
     const raw = fs.readFileSync(file, 'utf-8');
     items = JSON.parse(raw)
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch {}
   items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1));
   return { props: { items } }
@@ -135,15 +192,17 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
           </div>
         ))}
       </div>
+<<<<<<< HEAD
+    </div>
+    </div>;
+=======
 
     </div>;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 );
 }
-=======
-      </div>;
-    </div>;
   );
 }
 

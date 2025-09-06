@@ -1,8 +1,24 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {Button} from "@/components/ui/button";
 import {X} from "lucide-react";
+<<<<<<< HEAD
+import React from "react",
+import { ClickableBadge } from "@/components/ui/clickable-badge",
+import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
+interface ActiveFiltersProps {
+=======
 interface ActiveFiltersProps {;
   selectedSkills: string[],;
   toggleSkill: (skill: string) => void,;
@@ -10,12 +26,17 @@ interface ActiveFiltersProps {;
   toggleAvailability: (status: string) => void,;
   selectedRegions: string[],;
   toggleRegion: (region: string) => void,;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   priceRange: [number, number];
 
   setPriceRange: (range: [number, number]) => void;
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void;
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button",
+import { X } from "lucide-react",
+=======
   clearFilters: () => void;
 }
 
@@ -35,6 +56,7 @@ export function ActiveFilters(): any ({;
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ActiveFiltersProps {
   selectedSkills: string[],
   toggleSkill: (skill: string) => void,
@@ -46,18 +68,52 @@ interface ActiveFiltersProps {
   setPriceRange: (range: [number, number]) => void,
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void,
-
   clearFilters: () => void
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export function ActiveFilters({;
+  selectedSkills;
+  toggleSkill;
+  selectedAvailability;
+  toggleAvailability;
+  selectedRegions;
+  toggleRegion;
+  priceRange;
+  setPriceRange;
+  experienceRange;
+  setExperienceRange;
+export function ActiveFilters({
+  selectedSkills,
+  toggleSkill,
+  selectedAvailability,
+  toggleAvailability,
+  selectedRegions,
+  toggleRegion,
+  priceRange,
+  setPriceRange,
+  experienceRange,
+  setExperienceRange,
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   clearFilters
 }: ActiveFiltersProps) {
   // Check if any filters are active
 
-
+  const hasActiveFilters =
+    selectedSkills.length > 0 |
+    selectedAvailability.length > 0 |
+    selectedRegions.length > 0 |
+    experienceRange[0] !== 0 |
+    experienceRange[1] !== 15 |
+    priceRange[0] !== 50 |
+    priceRange[1] !== 200;
+  if (!hasActiveFilters) return null;
   const hasActiveFilters = 
     selectedSkills.length > 0 || 
     selectedAvailability.length > 0 || 
@@ -69,8 +125,6 @@ interface ActiveFiltersProps {
   
   if (!hasActiveFilters) return null,
 
-
-
   return (
     <div className="mb-6 flex flex-wrap gap-2 items-center">
       <span className="text-zion-slate-light text-sm">Active filters:</span>
@@ -80,7 +134,6 @@ interface ActiveFiltersProps {
         <ClickableBadge
           key={skill}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-
 import React from "react",;
 import { ClickableBadge } from "@/components/ui/clickable-badge",;
 import { Button } from "@/components/ui/button",;
@@ -135,9 +188,12 @@ export function ActiveFilters({;
           key={skill}
 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           onClick={() => toggleSkill(skill)}
         >;
           {skill}
@@ -199,12 +255,25 @@ export function ActiveFilters({;
 
 
       <Button
+<<<<<<< HEAD
+        variant="ghost"
+        size="sm"
+        onClick={clearFilters}
+        className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
+      >
+        Clear All
+      </Button>
+    </div>
+  )
+}
+=======
         variant="ghost" 
         size="sm" 
 =======
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
@@ -239,11 +308,14 @@ export function ActiveFilters({;
       </Button>;
     </div>;
   );
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -278,66 +350,3 @@ function ActiveFilters() {
     price_range[0] !== 50 ||;
     price_range[1] !== 200;
 ;
-  // Check condition
-if (return null) {
-  $2
-}
-  return (
-    <div className="mb - 6 flex flex - wrap gap - 2 items - center">;
-      <span className="text - zion - slate - light text - sm">Active filters:</span>;
-      {selected_skills.map (skill => (
-        <ClickableBadge;
-          key={skill}
-          className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2";
-          on_click={() => toggle_skill (skill)}
-        >;
-          {skill}
-          <X className="h - 3 w - 3" />;
-        </ClickableBadge>))}
-      {selected_availability.map (status => (
-        <ClickableBadge;
-          key={status}
-          className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2";
-          on_click={() => toggle_availability (status)}
-        >;
-          {status === 'full - time' ? 'Full - time' :;
-          status === 'part - time' ? 'Part - time' :;
-          'Project - based'}
-          <X className="h - 3 w - 3" />;
-        </ClickableBadge>))}
-      {selected_regions.map (region => (
-        <ClickableBadge;
-          key={region}
-          className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2";
-          on_click={() => toggle_region (region)}
-        >;
-          {region}
-          <X className="h - 3 w - 3" />;
-        </ClickableBadge>))}
-      {(price_range[0] !== 50 || price_range[1] !== 200) && (
-        <ClickableBadge;
-          className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2";
-          on_click={() => setPriceRange ([50, 200])}
-        >;
-          ${price_range[0]}-${price_range[1]}/hr;
-          <X className="h - 3 w - 3" />;
-        </ClickableBadge>)}
-      {(experience_range[0] !== 0 || experience_range[1] !== 15) && (
-        <ClickableBadge;
-          className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2";
-          on_click={() => setExperienceRange ([0, 15])}
-        >;
-          {experience_range[0]}-{experience_range[1]} years;
-          <X className="h - 3 w - 3" />;
-        </ClickableBadge>)}
-      <Button;
-        variant="ghost";
-        size="sm";
-        on_click={clear_filters}
-        className="h - 7 text - xs text - zion - purple hover: text - zion - purple - light hover:bg - transparent";
-      >;
-        Clear All;
-      </Button>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

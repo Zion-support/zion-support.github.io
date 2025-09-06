@@ -1,21 +1,41 @@
 
+<<<<<<< HEAD
+  path: string; // full URL or relative
+  requiresAuth: boolean;
+export default function TryItConsole({
+  method
+  path
+  requiresAuth
+}: TryItProps) {
+  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
+=======
 
 interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   method,
   path,
   requiresAuth,
 }: TryItProps) {;
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   path: string, // full URL or relative
   requiresAuth: boolean
 }
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
+=======
 
 
 
@@ -42,6 +62,7 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
@@ -78,14 +99,28 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
       setLoading(false);    }
   }
   return (
+<<<<<<< HEAD
+    <div className='space-y-2'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+=======
 
       const headers: Record<string, string> = { 'Content-Type': 'application/json' };
       if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       const res = await fetch(url, {
 
         method;
         headers;
 
+<<<<<<< HEAD
+      setResponse(text)
+    } catch (e: any) {
+      setResponse(String(e?.message |e))
+    } finally {
+      setLoading(false)
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+
+=======
         body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),;
       const text = await res && res.text();
       setResponse(text);
@@ -95,18 +130,12 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
       setLoading(false);
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
   return (
-
-
-            placeholder='Optional';
-          />;
-        </div>;
-        <div>;
-
-    <div className="space-y-2">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+    <div className='space-y-2'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
         <div>
 
           <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>
@@ -122,7 +151,12 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+=======
+      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div>
 
           />        </div>;
@@ -186,6 +220,11 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
 
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <label className='block text - sm mb - 1'>Method</label>;
           <input;
             className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary';
@@ -253,6 +292,12 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
 =======
     <div className='space-y-2'>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     }
   }
@@ -261,5 +306,10 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
 
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+<<<<<<< HEAD
+        <div>
+        <div>
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

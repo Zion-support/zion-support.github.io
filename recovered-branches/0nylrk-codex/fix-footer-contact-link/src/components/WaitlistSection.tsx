@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -14,9 +23,21 @@ export function WaitlistSection() {;
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+<<<<<<< HEAD
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { useToast } from "@/hooks/use-toast";
+import { Checkbox } from "@/components/ui/checkbox";
+import { useToast } from "@/hooks/use-toast",
+import { Checkbox } from "@/components/ui/checkbox",
+=======
 =======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function WaitlistSection() {
   const [email, setEmail] = useState(""),
   const [name, setName] = useState(""),
@@ -24,11 +45,20 @@ export function WaitlistSection() {
   const [agreeTerms, setAgreeTerms] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { toast } = useToast(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-
-
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email |!name |!role |!agreeTerms) {
+      toast({
+        variant: "destructive"
+        title: "Missing information"
+        description: "Please fill all fields and agree to the terms."})
+      return
+    }
+    setIsSubmitting(true);
+    try {
+      // Simulating an API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
     
     setIsSubmitting(true),
     
@@ -36,8 +66,6 @@ export function WaitlistSection() {
       // Simulating an API call
       await new Promise(resolve => setTimeout(resolve, 1000)),
       
-
-
       toast({
         title: "Success!"
         description: "Thank you for registering with Zion. We'll be in touch soon."})
@@ -147,11 +175,10 @@ if ( {) {
     } finally {
       setIsSubmitting(false)
     }
+  }
 
   },
   
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
   return (
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
       {/* Background elements */}
@@ -221,6 +248,19 @@ if ( {) {
               />;
               <Label
                 htmlFor="terms"
+<<<<<<< HEAD
+                className="text-sm text-zion-slate font-normal"
+              >
+                I agree to receive updates about Zion and understand I can unsubscribe anytime.
+              </Label>
+            </div>
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+            <Button 
+              type="submit" 
+              disabled={isSubmitting} 
+=======
 
 
             <Button 
@@ -228,6 +268,7 @@ if ( {) {
               disabled={isSubmitting} 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
               {isSubmitting ? "Processing..." : "Complete Registration"}
@@ -237,6 +278,32 @@ if ( {) {
       </div>
     </section>
   )
+<<<<<<< HEAD
+}
+import { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Input } from "@/components/ui/input",;
+import { Label } from "@/components/ui/label",;
+import { useToast } from "@/hooks/use-toast",;
+import { Checkbox } from "@/components/ui/checkbox",;
+export function WaitlistSection() {;
+  const [email, setEmail] = useState(""),;
+  const [name, setName] = useState(""),;
+  const [role, setRole] = useState(""),;
+  const [agreeTerms, setAgreeTerms] = useState(false),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const { toast } = useToast(),;
+  const handleSubmit = async (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    if (!email || !name || !role || !agreeTerms) {;
+      toast({;
+        variant: "destructive",;
+        title: "Missing information",;
+        description: "Please fill all fields and agree to the terms."}),;
+      return;
+    }
+=======
 
                 className="text-sm text-zion-slate font-normal">;
                 I agree to receive updates about Zion and understand I can unsubscribe anytime.;
@@ -253,6 +320,7 @@ if ( {) {
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   return (
     <section id="waitlist" className="py - 20 bg - zion - blue - dark relative overflow - hidden">;
@@ -326,14 +394,15 @@ if ( {) {
           </form>;
         </div>;
       </div>;
+<<<<<<< HEAD
+    </section>;
+  );
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </section>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

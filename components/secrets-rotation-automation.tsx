@@ -24,16 +24,27 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+export default function SecretsRotationAutomationPage() {
 
-import React from './react';
-import SEO from "../components / SEO";
-import { Check, ExternalLink  } from './lucide-react';
-export default /**
- * SecretsRotationAutomationPage - Function description
- */
-function SecretsRotationAutomationPage() {
-  const features = [;
+  const features = [
+    "Automated key and secret rotation"
+    "JIT credentials with expirations"
+    "Policy approvals and audit trails"
+    "CI/CD integration (GitHub Actions, CircleCI)"
+    "Cloud KMS and Vault support"
+  ];
+  return (
+
+export default function SecretsRotationAutomationPage() {
+  const features = [
     "Automated key and secret rotation",
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
@@ -42,6 +53,10 @@ function SecretsRotationAutomationPage() {
   ];
 ;
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <>;
       <SEO;
         title="Secrets Rotation Automation";
@@ -95,13 +110,10 @@ function SecretsRotationAutomationPage() {
             >;
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
 
-            </a>;
-          </div>;
-        </section>;
-      </main>;
-
-    </>);
+return (
   return (
+<<<<<<< HEAD
+=======
     <>;
       <SEO;
         title="Secrets Rotation Automation";
@@ -120,6 +132,7 @@ function SecretsRotationAutomationPage() {
             {features.map ((f) => (
               <div;
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <>
       <SEO
         title="Secrets Rotation Automation"
@@ -180,11 +193,3 @@ function SecretsRotationAutomationPage() {
 
 }
 
-
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -3,7 +3,6 @@ Table;
   TableCell;
   TableHead;
   TableHeader;
-
   Table
   TableBody
   TableCell
@@ -30,8 +29,8 @@ import {
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { Download, FileText, Search } from 'lucide-react'
-
-
+import { Input } from "@/components/ui/input";
+import { toast } from "@/hooks/use-toast";
 import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
 
@@ -41,18 +40,6 @@ export function InvoiceHistory() {
 
   const invoices = [
     {
-
-  TableRow } from '@/components / ui / table';
-import { Button  } from '@/components / ui / button';
-import { Badge  } from '@/components / ui / badge';
-import { Download, FileText, Search } from 'lucide-react'import { Input  } from '@/components / ui / input';
-import { toast  } from '@/hooks / use - toast';
-export /**
- * InvoiceHistory - Function description
- */
-function InvoiceHistory() {
-  // Mock invoice data;
-  const invoices = [;
     {
       id: "INV - 1234",
       date: "May 1, 2025";
@@ -103,37 +90,29 @@ function InvoiceHistory() {
       date: "May 1, 2025",
       amount: "$1,999.00",
       id: "INV-1234",
-
       status: "paid",
       period: "May 2025"},
     {
       id: "INV-1233",
-
-
       status: "paid",
       period: "Apr 2025"},
     {
       id: "INV-1232",
-
-
       status: "paid",
       period: "Mar 2025"},
     {
       id: "INV-1231",
-
-
       status: "paid",
       period: "Feb 2025"},
     {
       id: "INV-1230",
-
-
       status: "paid",
       period: "Jan 2025"},
     {
       id: "INV-1229",
 
-
+  const handleDownloadInvoice = (invoiceId: string) => {
+    // In a real app, this would trigger a download of the invoice PDF
     toast({
       title: "Downloading invoice"
       description: `Downloading invoice ${invoiceId} as PDF.`})
@@ -148,7 +127,6 @@ function InvoiceHistory() {
     toast({
       title: "Downloading invoice",
       description: `Downloading invoice ${invoiceId} as PDF.`})
-
   },
 
   const getBadgeForStatus = (status: string) => {

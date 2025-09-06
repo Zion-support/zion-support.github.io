@@ -1,3 +1,4 @@
+import { ServiceVariant } from '../types/service-variants';
 
 
   id: string;
@@ -45,6 +46,7 @@
     features: [
 
   {
+<<<<<<< HEAD
 
       'No-code smart contract creation',
     id: 'smart - contract - automation - platform',
@@ -387,8 +389,11 @@
     rating: 4.8,
     reviews: 912,
   },;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -403,7 +408,6 @@
 
 =======
     reviews: 912
-
   }
 ];
 
@@ -516,12 +520,11 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     customers: 789;
     rating: 4.8,
     reviews: 912;
-
   }
-
 ];
-
 ];
+<<<<<<< HEAD
+=======
 
 =======
 ;
@@ -530,3 +533,4 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,29 +1,29 @@
+<<<<<<< HEAD
+import { NextApiRequest, NextApiResponse } from '[^']*';
+import { requireUser } from '[^']*';
+import { sendMessage } from '[^']*';
+import { ConversationContext } from '[^']*';
+import { NextApiRequest, NextApiResponse } from 'next';
+import { requireUser } from '../../../utils/auth';
+import { sendMessage } from '../../../utils/messaging/storage';
+import { ConversationContext } from '../../../utils/messaging/types';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+import { NextApiRequest, NextApiResponse } from "next";
+import { requireUser } from "../../../utils/auth";
+import { sendMessage } from "../../../utils/messaging/storage";
+import { ConversationContext } from "../../../utils/messaging/types";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+=======
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const user = requireUser(req, res);
   if (!user) return;
-
-    recipientId,
-=======
-import { NextApiRequest, NextApiResponse  } from './next';
-import { require_user  } from '../../../utils / auth';
-import { send_message  } from '../../../utils / messaging / storage';
-import { ConversationContext  } from '../../../utils / messaging / types';
-export default /**
- * handler - Function description
- */
-function handler() {
-  const user = require_user (req, res);
-  // Check condition
-if (return) {
-  $2
-}
-  if (
-    return res.status (405).json ({ error: "Method not allowed" })) {
-  $2
-}
+  if (req.method !== "POST")
+    return res.status(405).json({ error: "Method not allowed" });
   const {
     recipient_id,
 
@@ -60,6 +60,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!user) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
+  const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {
+    recipientId: string, body: string,
     linkUrl?: string;
     attachmentBase64?: string;
     attachmentName?: string;
@@ -89,20 +91,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
     context,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   });
 
 }
-
-=======
-    context});
-  res.status(200).json({ conversation, message })
-
-}
-  res.status (200).json ({ conversation, message });
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {
@@ -125,6 +117,52 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   });
   res.status(200).json({ conversation, message })
 }
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import { NextApiRequest, NextApiResponse } from 'next';
+import { requireUser } from '../../../utils/auth';
+import { sendMessage } from '../../../utils/messaging/storage';
+import { ConversationContext } from '../../../utils/messaging/types';
+export default function handler(req, res) {
+  try {
+  const user = requireUser(req, res);
+  if (!user) return,;
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {;
+    recipientId: string;
+    body: string;
+    linkUrl?: string,;
+    attachmentBase64?: string,;
+    attachmentName?: string,;
+    context?: ConversationContext;
+  },;
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  const { conversation, message } = sendMessage({;
+    senderId: user.id;
+    recipientId,;
+    body,;
+    linkUrl,;
+    attachmentBase64,;
+    attachmentName;
+    context});
+  res.status(200).json({ conversation, message });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,4 +1,25 @@
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Document, {
+<<<<<<< HEAD
+  Html
+  Head
+  Main
+  NextScript
+  DocumentContext;
+=======
+  Html,
+  Head,
+  Main,
+  NextScript,;
+  DocumentContext,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from 'next/document';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   return (
     <Html lang='en'>;
@@ -77,16 +98,28 @@ import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/do
 
 
 import Document, {
+<<<<<<< HEAD
+  Html
+  Head
+  Main
+  NextScript
+  DocumentContext;
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Html,
   Head,
   Main,
   NextScript,;
   DocumentContext,;
+<<<<<<< HEAD
+} from 'next/document';
+=======
 
 } from 'next/document';
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function Document() {
   return (
@@ -106,12 +139,5 @@ export default function Document() {
     </Html>
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
-
-    </Html>);
 }
-
-=======
-
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -66,7 +66,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
-
+      {expanded && (
       
       {expanded && (
 
@@ -76,7 +76,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
             <span>{experienceRange[1]} years</span>
           </div>
           <Slider
-
+            aria-label='Experience range'            aria-label="Experience range"
             aria-label="Experience range"
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Slider } from "@/components/ui/slider",;
@@ -112,17 +112,21 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 
     </div>;
   );
-};
-}
-<<<<<<< HEAD
+            className="mt-6"
+          />
+        </div>
+      )};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             className="mt-6"
           />
         </div>
       )}
-    </div>
   );
+};
 }
 
         <div className="mt - 6">;

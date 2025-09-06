@@ -1,10 +1,21 @@
 
+<<<<<<< HEAD
+import React from 'react';
+import { format  } from 'date-fns';
+import { PaperclipIcon  } from 'lucide-react';
+import { cn  } from '@/lib/utils';
+import { Message } from '@/types/messaging';
+interface MessageBubbleProps {
+  message: Message,
+  isUserMessage: boolean
+=======
 
 
   message: Message,
   isUserMessage: boolean
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { format } from 'date-fns',;
 import { PaperclipIcon } from 'lucide-react',;
@@ -13,12 +24,13 @@ import { Message } from '@/types/messaging',;
 interface MessageBubbleProps {;
   message: Message,;
   isUserMessage: boolean;
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   message: Message
 
@@ -26,18 +38,28 @@ interface MessageBubbleProps {;
 }
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    <div className={cn(;
+      "flex";
+    <div className={cn(
+      "flex",
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       isUserMessage ? "justify-end" : "justify-start"
     )}>
       <div className={cn(
+        "max-w-[75%] rounded-lg px-4 py-2";
+        isUserMessage
+          ? "bg-zion-purple text-white"
 
         "max-w-[75%] rounded-lg px-4 py-2",
         isUserMessage 
           ? "bg-zion-purple text-white" 
-
-
           : "bg-zion-blue-dark text-white"
       )}>
         <div className="whitespace-pre-wrap">{message.content}</div>
@@ -49,14 +71,13 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
             className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30"
           >
             <PaperclipIcon className="h-3 w-3 mr-1" />
-
-
+            {message.attachment_name |'Attachment'}
+          </a>
+        )}
             {message.attachment_name || 'Attachment'}
           </Link>
         )}
         
-
-
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
         </div>

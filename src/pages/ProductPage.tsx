@@ -10,12 +10,6 @@ if (!id) return;
         // Fail silently and fall back to local data
         logErrorToProduction('Error fetching product', { data: err })
       }
-
-
-    };
-
-
-
     // Only fetch if id is available (from router)
     if (id) {
       fetchProduct();
@@ -45,10 +39,20 @@ if (!id) return;
     // Only fetch if id is available (from router);
     if (id) {;
       fetchProduct();
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }, [id]), // id is now from router && router.query;
 
 
+  return (
+    <>
+      <SEO
+        title = {product.title,}
+        description = {product.description,}
+        ogImage = {product.images?.[0],}
     return <div className="p-6 text-white">Product not found</div>
   }, [id]), // id is now from router.query;
 
@@ -86,7 +90,6 @@ if (!id) return;
         {product.images?.length ? (
           <div className="mb-4 relative w-full h-64">
             <Image
-
               src = {product.images[0] |'/placeholder.svg',}
               alt = {product.title,}
 
@@ -99,25 +102,7 @@ if (!id) return;
           </div>
         ) : null}
         <p className="mb-6">{product.description}</p>
-
-        title = {product && product.title,}
-        description = {product && product.description,}
-        ogImage = {product && product.images?.[0],}
-      />;
-      <div className="min-h-screen bg-zion-blue p-6 text-white">;
-        <h1 className="text-2xl font-bold mb-4">{product && product.title}</h1>;
-        {product && product.images?.length ? (;
-          <div className="mb-4 relative w-full h-64">;
-            <Image
-              src = {product && product.images[0] || '/placeholder && placeholder.svg',}
-              alt = {product && product.title,}
-              className="object-cover rounded-md"
-            />;
-          </div>;
-        ) : null}
-        <p className="mb-6">{product && product.description}</p>;
-        <Button onClick={handleAdd} disabled={adding || inCart}>;
-
+        <Button onClick={handleAdd} disabled={adding |inCart}>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
         </Button>;
       </div>;

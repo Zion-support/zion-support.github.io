@@ -1,11 +1,13 @@
 import React from 'react';
 import { Milestone  } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { CreditCard } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+import React from 'react'
+interface PaymentSummaryProps {
 
-import { CreditCard } from 'lucide-react';
-interface PaymentSummaryProps {;
-  milestones: Milestone[],;
-  paymentTerms: string | null;
+  milestones: Milestone[]
+  paymentTerms: string | null
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
@@ -29,7 +31,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 
 
 
-
   return (
     <Card className="mb-8 bg-muted/30">;
       <CardHeader className="pb-3">;
@@ -43,8 +44,8 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
             <p className="text-sm text-muted-foreground mb-1">Total Payment</p>;
             <p className="text-2xl font-semibold">;
               ${totalPayment}
-
-
+            </p>
+          </div>
           
 
 
@@ -54,8 +55,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
               {paymentTerms |"Not specified"}
             </p>
           </div>
-
-
           
 
 
@@ -81,6 +80,8 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 
 
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             </p>;
           </div>;
         </div>;

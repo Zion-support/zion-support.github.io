@@ -1,20 +1,28 @@
-
-
-=======
-
 import React from 'react';
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 import React from 'react';
   id: string;
 label: string;
+<<<<<<< HEAD
+threshold: number, //token balance threshold
+}
+const BADGES: Badge[] = [
+  { id: 'starter', label: 'Starter', threshold: 50 }
+  { id: 'rising', label: 'Rising Star', threshold: 200 }
+  { id: 'pro', label: 'Pro', threshold: 500 }
+  { id: 'elite', label: 'Elite', threshold: 1000 }
+];
+export function currentBadge(balance: number): Badge | null {
+
+export function currentBadge(balance: number): Badge | null {;
+=======
 
 
 
 export function currentBadge(balance: number): Badge | null {;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   let current: Badge | null = null;
 =======
 threshold: number, //token balance threshold ;
@@ -111,6 +119,10 @@ export default function Badges(): any ({ balance }: { balance: number }) {;
   }
   return current;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -169,14 +181,20 @@ function Badges() {
 =======
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 export default function Badges({ balance }: { balance: number }) {;
-=======
 
+<<<<<<< HEAD
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function Badges({ balance }: { balance: number }) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const active = currentBadge(balance);
 
   return (
@@ -187,20 +205,43 @@ export default function Badges({ balance }: { balance: number }) {
           key={b.id}
           className={`px-3 py-1 rounded-full text-xs border ${
             balance >= b.threshold
+              ? 'bg-yellow-100 border-yellow-300 text-yellow-800'
+              : 'bg-gray-100 border-gray-200 text-gray-500'              ? "bg-yellow-100 border-yellow-300 text-yellow-800"
+              : "bg-gray-100 border-gray-200 text-gray-500"
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }`}
           title={`Requires ${b.threshold} ZION$`}
         >;
           {b.label}
         </span>))}
       {active && (
+<<<<<<< HEAD
+        <span className='ml-2 text-xs text-green-600'>
+          Current: {active.label}
+        </span>
+      )}
+    </div>
+);        <span className="ml-2 text-xs text-green-600">Current: {active.label}</span>
+      )}
+    </div>
+  );
+}
+  );
+
+}
+  );
+=======
 
         <span className='ml - 2 text - xs text - green - 600'>;
           Current: {active.label}
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

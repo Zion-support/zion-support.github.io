@@ -1,27 +1,23 @@
+<<<<<<< HEAD
+import React, { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { HelpCategoryList } from "./HelpCategoryList";
+import { HelpArticleList } from "./HelpArticleList";
+import { HelpArticleView } from "./HelpArticleView";
+import { HELP_CATEGORIES } from "./help-content";
+import { AppLayout } from "@/layout/AppLayout";
+import { Search } from "lucide-react";
+export default function HelpCenter() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 
 import React, { useState } from "react";
 import {Input} from "@/components/ui/input";
@@ -35,6 +31,40 @@ import {AppLayout} from "@/layout/AppLayout";
 import {Search} from "lucide-react";
 export default function HelpCenter() {;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { HelpCategoryList } from "./HelpCategoryList";
+import { HelpArticleList } from "./HelpArticleList";
+import { HelpArticleView } from "./HelpArticleView";
+import { HELP_CATEGORIES } from "./help-content";
+import { AppLayout } from "@/layout/AppLayout";
+import { Search } from "lucide-react";
+export default function HelpCenter() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+import React, { useState } from "react",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { HelpCategoryList } from "./HelpCategoryList",
+import { HelpArticleList } from "./HelpArticleList",
+import { HelpArticleView } from "./HelpArticleView",
+import { HELP_CATEGORIES } from "./help-content",
+import { AppLayout } from "@/layout/AppLayout",
+import { Search } from "lucide-react",
+export default function HelpCenter() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
+  const [searchQuery, setSearchQuery] = useState(""),
+=======
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -45,6 +75,7 @@ export default function HelpCenter() {;
 =======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId),
@@ -64,8 +95,6 @@ export default function HelpCenter() {;
     setSelectedArticle(null)
   },
   
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -94,74 +123,28 @@ export default function HelpCenter() {;
             </TabsList>
             <TabsContent value="articles">
               {!selectedCategory && !selectedArticle && (
-
-import React, { useState } from './react';
-import { Input  } from '@/components / ui / input';
-import { Button  } from '@/components / ui / button';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
-import { HelpCategoryList  } from './HelpCategoryList';
-import { HelpArticleList  } from './HelpArticleList';
-import { HelpArticleView  } from './HelpArticleView';
-import { HELP_CATEGORIES  } from './help - content';
-import { AppLayout  } from '@/layout / AppLayout';
-import { Search  } from './lucide-react';
-export default /**
- * HelpCenter - Function description
- */
-function HelpCenter() {
-  const [selected_category, setSelectedCategory] = useState < string | null>(null);
-  const [selected_article, setSelectedArticle] = useState < string | null>(null);
-  const [search_query, setSearchQuery] = useState ("");
-;
-  const handleCategorySelect = (category_id: string) =>: any {
-    (setSelectedCategory (category_id), setSelectedArticle (null));
-  }
-;
-  const handleArticleSelect = (article_id: string) =>: any {
-    setSelectedArticle (article_id);
-  }
-;
-  const handleBackToCategories = () =>: any {
-    setSelectedCategory (null);
-    setSelectedArticle (null);
-  }
-;
-  const handleBackToArticles = () =>: any {
-    setSelectedArticle (null);
-  }
-;
-  return (
-    <AppLayout>;
-      <div className="container mx - auto px - 4 py - 8">;
-        <div className="max - w-4xl mx - auto">;
-          <h1 className="text - 3xl font - bold mb - 2 bg - gradient - to - r from - zion - cyan to - zion - purple bg - clip - text text - transparent">;
-            Help Center;
-          </h1>;
-          <p className="text - zion - slate - light mb - 6">;
-            Find answers to common questions or get in touch with our support;
-            team.;
-          </p>;
-          <div className="relative mb - 8">;
-            <Input;
-              placeholder="Search for help articles...";
-              value={search_query}
-              on_change={(e) => setSearchQuery (e.target.value)}
-              className="pl - 10";
-            />;
-            <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - gray - 400" />;
-          </div>;
-          <Tabs default_value="articles" className="mb - 8">;
-            <TabsList className="w - full grid grid - cols - 3 mb - 6">;
-              <TabsTrigger value="articles">Articles</TabsTrigger>;
-              <TabsTrigger value="faq">FAQ</TabsTrigger>;
-              <TabsTrigger value="contact">Contact Us</TabsTrigger>;
-            </TabsList>;
-            <TabsContent value="articles">;
-              {!selected_category && !selected_article && (
-                <HelpCategoryList;
-
+                <HelpCategoryList
                   categories={HELP_CATEGORIES}
+<<<<<<< HEAD
+                <HelpCategoryList 
+                  categories={HELP_CATEGORIES} 
+import React, { useState } from "react",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { HelpCategoryList } from "./HelpCategoryList",;
+import { HelpArticleList } from "./HelpArticleList",;
+import { HelpArticleView } from "./HelpArticleView",;
+import { HELP_CATEGORIES } from "./help-content",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { Search } from "lucide-react",;
+export default function HelpCenter() {;
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
+  const [searchQuery, setSearchQuery] = useState(""),;
 =======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleCategorySelect = (categoryId: string) => {;
     setSelectedCategory(categoryId),;
     setSelectedArticle(null);
@@ -210,6 +193,14 @@ function HelpCenter() {
 
             <TabsContent value="articles">;
               {!selectedCategory && !selectedArticle && (;
+<<<<<<< HEAD
+                <HelpCategoryList;
+                  categories={HELP_CATEGORIES} ;
+                  onCategorySelect={handleCategorySelect}
+                  searchQuery={searchQuery}
+                />
+              )}
+=======
                 <HelpCategoryList
                   categories={HELP_CATEGORIES} 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -222,9 +213,8 @@ function HelpCenter() {
                   onCategorySelect={handleCategorySelect}
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               
-
-
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -234,34 +224,15 @@ function HelpCenter() {
                   >
                     ← All Categories
                   </Button>
-
-
-              {selectedCategory && !selectedArticle && (;
-                <>;
-                  <Button
-                    variant="ghost"
-                    onClick={handleBackToCategories}
-                    className="mb-4">;
-                    ← All Categories;
-                  </Button>;
-
                   <HelpArticleList
-=======
-
                   <HelpArticleList 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
                   />;
                 </>;
               )}
-
-
               
-
-
               {selectedArticle && (
                 <>
 =======
@@ -278,11 +249,21 @@ function HelpCenter() {
                   <HelpArticleView articleId={selectedArticle} />;
                 </>;
               )}
+<<<<<<< HEAD
+            </TabsContent>
+            <TabsContent value="faq">
+              <div className="bg-zion-blue-light/20 rounded-lg p-6">
+                <h2 className="text-xl font-semibold mb-4">
+                  Frequently Asked Questions
+                </h2>
+                <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
+=======
 
 
                 <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
@@ -414,6 +395,16 @@ function HelpCenter() {
         </div>
       </div>
     </AppLayout>
+<<<<<<< HEAD
+  );
+}
+  )
+;
+              {selectedArticle && (;
+                <>;
+                  <Button;
+                    variant="ghost";
+=======
 
             </TabsContent>;
 
@@ -620,9 +611,6 @@ function HelpCenter() {
   )
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </AppLayout>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

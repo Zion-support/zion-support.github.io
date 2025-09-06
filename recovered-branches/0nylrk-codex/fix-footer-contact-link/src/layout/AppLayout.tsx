@@ -1,8 +1,19 @@
 
+<<<<<<< HEAD
+import React from "react";
+import {AppHeader} from "./AppHeader";
+import {Footer} from "@/components/Footer";
+import React from "react",
+import { AppHeader } from "./AppHeader";
+import { Footer } from "@/components/Footer";
+import { AppHeader } from "./AppHeader",
+import { Footer } from "@/components/Footer",
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface AppLayoutProps {
 
   children: React.ReactNode
@@ -19,9 +30,18 @@ import {Footer} from "@/components/Footer";
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
       <main className="flex-grow">
+<<<<<<< HEAD
+        {children}
+      </main>
+      {!hideFooter && <Footer />}
+    </div>
+  )
+}
+=======
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { AppHeader } from "./AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -44,9 +64,14 @@ export function AppLayout(): any ({ children, hideFooter = false }: AppLayoutPro
     </div>;
   );
 }
+<<<<<<< HEAD
+;
+;
+=======
 
 =======
 
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

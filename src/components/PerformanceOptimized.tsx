@@ -3,11 +3,6 @@
 }
 }
 }
-
-
-}
-}
-}
 // Debounced search hook
 export const useDebouncedSearch = (value: string, delay: number = 300) => {,
   const [debouncedValue, setDebouncedValue] = React.useState(value)
@@ -193,7 +188,6 @@ export const: OptimizedImage: React.FC<{,;
         </div>)},;
     </div>,;
   );
-
 }
 }
 }
@@ -212,10 +206,10 @@ export const useDebouncedSearch = (value: string, delay: number = 300) =>: any {
       setDebouncedValue (value);
     }, delay);
     return () => {
-      clear_timeout (handler);
+      clearTimeout(handler)
 }
-  }, [value, delay]);
-  return debounced_value;
+  }, [value, delay])
+  return debouncedValue
 }
 
 
@@ -416,7 +410,7 @@ export const usePerformanceMetrics = () =>: any {
     }));
   }, []); return { metrics, record_render }
 }
-  return { metrics, record_render }
+  return { metrics, recordRender }
 }
 
 },

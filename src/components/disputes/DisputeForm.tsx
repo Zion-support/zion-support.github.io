@@ -3,6 +3,7 @@ if (onDisputeCreated) {
         }
       }
     } catch (error) {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       logErrorToProduction('Error submitting dispute:', { data: error }),
@@ -21,14 +22,21 @@ if (onDisputeCreated) {
         <FileText className="h-5 w-5 text-primary" />
         <h2 className="text-xl font-semibold">Report an Issue</h2>
       </div>
-
       
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
             control={form.control}
-
+            name='reason_code'
+            render={({
+              field
+            }: {
+              field: ControllerRenderProps<
+                z.infer<typeof formSchema>
+                'reason_code'
+              >
+            }) => (              <FormItem>
             name="reason_code"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
               <FormItem>
@@ -41,7 +49,34 @@ if (onDisputeCreated) {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-
+                    {Object.entries(disputeReasonLabels).map(
+                      ([value, label]) => (
+                        <SelectItem key={value} value={value}>
+                          {label}
+                        </SelectItem>
+                      )
+                    )}                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name='description'
+            render={({
+              field
+            }: {
+              field: ControllerRenderProps<
+                z.infer<typeof formSchema>
+                'description'
+              >
+            }) => (              <FormItem>
+                <FormLabel>Describe the issue in detail</FormLabel>
+                <FormControl>
+                  <Textarea
+                    placeholder='Please provide specific details about the issue...'
+                    className='min-h-[150px]'
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (
                       <SelectItem key={value} value={value}>{label}</SelectItem>
 import React, { useState } from "react",;
@@ -337,8 +372,11 @@ if ( {) {
                     </ul>;
                   </div>;
                 )}
-
-
+              </div>
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+          <div className='flex justify-end space-x-2'>
           
           <div className="flex justify-end space-x-2">
 
@@ -399,38 +437,23 @@ if ( {) {
     </div>);
 
 }
-
-            </Button>;
-          </div>;
-        </form>;
-      </Form>;
-    </div>;
-  );
-
-};
-const removeFile = (index: number) => {;
-  async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
-  try {;
-  setIsSubmitting (true);
-const dispute = await createDispute ({;
-  project id: projectId;
-milestone id: milestoneId;
-reason code: values && values.reason code;
-description: values && values.description ;
-});
-//Future enhancement: Upload attachments //For now we just log the files that would be uploaded if (files && files.length > 0) {;
-
-
-}finally {;
-  setIsSubmitting (false) ;
-}";
-}return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <SelectonValueChange= {
-  field && field.onChange 
+const removeFile = (index: number) => {
+  async function onSubmit (values: z.infer<typeof formSchema>) {
+  try {
+  setIsSubmitting (true)
+const dispute = await createDispute ({
+  project id: projectId
+milestone id: milestoneId
+reason code: values.reason code
+description: values.description
+})
+//Future enhancement: Upload attachments //For now we just log the files that would be uploaded if (files.length > 0) {
+}finally {
+  setIsSubmitting (false)
+}"
+}return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <Select onValueChange= {
+  field.onChange
 }defaultValue= {
-  field && field.value "
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {;
-  Object && Object.entries (disputeReasonLabels) .map ( ([value, label]) => (<SelectItemkey= {
-  value 
 }value= {
   value 
 }> {;
@@ -473,11 +496,3 @@ if ( {) {
 }value= {
   value;
 }> {
-  label;
-}</SelectItem>) );
-}</SelectContent> </Select> <FormMessage /> </FormItem>);
-}/> <FormField <FormItem> <FormLabel > Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";
-}/> <FormItem> <FormLabel > Attachments (optional) </FormLabel> <FormControl> <div className="space - y-4" > <Input type="file" multiple > Remove </Button> </li>) );
-}</ul> </div>);
-}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>);
-}'"}

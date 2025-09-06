@@ -1,7 +1,8 @@
-
-  static async testUserInteraction (
-    element: HTMLElement,
-    action: 'click' | 'type' | 'hover') {
+export class TestingSystem {
+  static async testUserInteraction(
+    element: HTMLElement
+    action: 'click' | 'type' | 'hover'
+  ) {
     switch (action) {
       case 'click':;
         element.click ();
@@ -12,6 +13,13 @@
       case 'hover': // Handle hover
         break;
     }
+<<<<<<< HEAD
+  }
+
+
+}
+
+=======
 
 
 
@@ -26,3 +34,4 @@
 =======
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

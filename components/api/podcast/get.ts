@@ -10,46 +10,36 @@ function ensureStorage() {
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  ensureStorage();
+<<<<<<< HEAD
+  ensureStorage()
+  const { id } = req.query as { id?: string }
+  ensureStorage(),;
   const { id } = req.query as { id?: string };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-  const episode = episodes.find((e) => e.id === id);
+=======
 
+  ensureStorage();
+  const { id } = req.query as { id?: string };
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+  const episode = episodes.find(e => e.id === id);
+  if (!episode) return res.status(404).json({ error: 'Not found' });
+  return res.status(200).json({ episode });  const episode = episodes.find((e) => e.id === id);
   if (!episode) return res.status(404).json({ error: 'Not found' });
 <<<<<<< HEAD
   return res.status(200).json({ episode })
 }
-
-  ensureStorage(),
-  const { id } = req && req.query as { id?: string };
-  const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-  const episode = episodes && episodes.find(e => e && e.id === id);
-  if (!episode) return res && res.status(404).json({ error: 'Not found' });
-  return res && res.status(200).json({ episode });  const episode = episodes && episodes.find((e) => e && e.id === id);
-  if (!episode) return res && res.status(404).json({ error: 'Not found' });
-  return res && res.status(200).json({ episode })
-
+<<<<<<< HEAD
+  return res.status(200).json({ episode });
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-;
-const EPISODES_PATH = path.join (
-  process.cwd (),
-  'data',
-  'podcast',
-  'episodes.json');
-/**
- * ensure_storage - Function description
- */
-function ensure_storage() {
-  const dir = path.dirname (EPISODES_PATH);
-  if () fs.mkdir_sync (dir, { recursive: true })) {
-  $2
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if ()) {
   $2
 }
@@ -89,3 +79,12 @@ function handler() {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+=======
+=======
+  return res.status(200).json({ episode });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

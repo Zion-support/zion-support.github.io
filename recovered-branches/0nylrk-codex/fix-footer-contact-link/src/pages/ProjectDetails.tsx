@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import {useState, useEffect} from "react";
 import {useParams, useNavigate, Link} from "react-router-dom";
@@ -23,12 +27,19 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewSection";
 import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
+<<<<<<< HEAD
+function ProjectDetailsContent() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const { projectId } = useParams() as { projectId?: string }
+=======
 
 
 function ProjectDetailsContent() {;
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { projectId } = useParams() as { projectId?: string };
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user } = useAuth();
   const navigate = useNavigate();
   const { getProjectById, updateProjectStatus } = useProjects();
@@ -40,10 +51,21 @@ function ProjectDetailsContent() {;
   const [newNote, setNewNote] = useState("");
   const [isSubmittingNote, setIsSubmittingNote] = useState(false);
   const [activeTab, setActiveTab] = useState("details");
+<<<<<<< HEAD
+  // Load project data
+  useEffect(() => {
+    async function loadProject() {
+      if (!projectId) return;
+      setIsLoading(true);
+      const projectData = await getProjectById(projectId);
+      if (projectData) {
+        setProject(projectData);
+=======
 
 
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from "react",
 import { useParams, useNavigate, Link } from "react-router-dom",
 import { format } from "date-fns",
@@ -94,9 +116,13 @@ import {
   Video,
   User,
   XCircle} from "lucide-react",
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -124,8 +150,6 @@ function ProjectDetailsContent() {
       if (projectData) {
         setProject(projectData),
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
@@ -134,36 +158,6 @@ function ProjectDetailsContent() {
           description: "The requested project could not be found."
           variant: "destructive"})
         navigate("/dashboard")
-
-import { useState, useEffect } from './react';
-import { use_params, use_navigate, Link } from './react-router-dom';
-import { format } from './date - fns';
-import { use_auth } from '@/hooks / use_auth';
-import { use_projects } from '@/hooks / use_projects';
-import { AppHeader } from '@/layout / AppHeader';
-import { Footer } from '@/components / Footer';
-import { SEO } from '@/components / SEO';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import { Project, ProjectStatus } from '@/types / projects';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from '@/components / ui / alert - dialog';
-import { Avatar } from '@/components / ui / avatar';
-import { Badge } from '@/components / ui / badge';
-import { Textarea } from '@/components / ui / textarea';
-import { toast } from '@/hooks / use - toast';
-import { supabase } from '@/integrations / supabase / client';
-import { ProjectReviewSection } from '@/components / projects / reviews / ProjectReviewSection';
-import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from './lucide-react';
-;
-/**
- * ProjectDetailsContent - Function description
- */
-function ProjectDetailsContent() {
-  // use_params may be untyped in this environment, so avoid passing a;
-=======
-
 import { useState, useEffect } from "react",;
 import { useParams, useNavigate, Link } from "react-router-dom",;
 import { format } from "date-fns",;
@@ -376,21 +370,23 @@ if ( {) {
           description: "The requested project could not be found.",;
           variant: "destructive"}),;
         navigate("/dashboard");
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 
       setIsLoading(false);
     }
-
-
+    loadProject()
+  }, [projectId]);
     
     loadProject()
   }, [projectId]),
   
-
   const fetchProjectNotes = async (projectId: string) => {
     try {
       const { data, error } = await supabase
@@ -400,7 +396,16 @@ if ( {) {
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
         .eq("project_id", projectId)
-
+        .order("created_at", { ascending: false })
+      if (error) throw error;
+      setNotes(data |[])
+    } catch (err) {
+      console.error("Error fetching project notes:", err)
+    }
+  }
+  const handleSubmitNote = async () => {
+    if (!newNote.trim() |!project |!user) return;
+    setIsSubmittingNote(true);
         .order("created_at", { ascending: false }),
       
       if (error) throw error,
@@ -416,7 +421,6 @@ if ( {) {
     
     setIsSubmittingNote(true),
     
-
     try {
       const { data, error } = await supabase
         .from("project_notes")
@@ -424,7 +428,11 @@ if ( {) {
           project_id: project.id
           user_id: user.id
           content: newNote})
-
+        .select();
+      if (error) throw error;
+      // Refresh notes
+      fetchProjectNotes(project.id);
+      setNewNote("");
         .select(),
       
       if (error) throw error,
@@ -433,7 +441,6 @@ if ( {) {
       fetchProjectNotes(project.id),
       setNewNote(""),
       
-
       toast({
         title: "Note added"
         description: "Your note has been added to the project."})
@@ -446,7 +453,14 @@ if ( {) {
     } finally {
       setIsSubmittingNote(false)
     }
-
+  }
+  const handleStatusChange = async (newStatus: ProjectStatus) => {
+    if (!project) return
+    const success = await updateProjectStatus(project.id, newStatus);
+    if (success) {
+      setProject({
+        ...project;
+        status: newStatus})
   },
   
   const handleStatusChange = async (newStatus: ProjectStatus) => {
@@ -459,7 +473,6 @@ if ( {) {
         ...project,
         status: newStatus}),
       
-
       // If offer was accepted, show a special toast
       if (newStatus === "offer_accepted") {
         toast({
@@ -467,10 +480,9 @@ if ( {) {
           description: "The project is now in progress. Congratulations!"})
       }
     }
-
+  }
   },
   
-
   const getStatusBadge = (status: ProjectStatus) => {
     switch (status) {
       case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,
@@ -488,12 +500,9 @@ if ( {) {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-
-
+  }
   },
   
-
-
   if (isLoading) {
 =======
       case "canceled":;
@@ -598,33 +607,24 @@ if ( {) {
     )
   }
   // Check if user is either the client or the talent
-
+  const isClient = user?.id === project.client_id;
+  const isTalent = user?.id === project.talent_id;
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
   
-
-
   if (!isClient && !isTalent) {
-=======
-
-  // Check if user is either the client or the talent;
-  const isClient = user?.id === project && project.client_id;
-  const isTalent = user?.id === project && project.talent_id;
-
-  if (!isClient && !isTalent) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    navigate("/unauthorized");
-    return null;
+    navigate("/unauthorized"),
+    return null
   }
-
+  const isOfferPending = project.status === "offer_sent";
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
 
   
   const isOfferPending = project.status === "offer_sent",
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
   
-
-
   return (
     <>
       <SEO
@@ -1440,7 +1440,12 @@ if ( {) {
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message
                         </Button>
-
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
 ;
     loadProject();
   }, [projectId]),;
@@ -1695,7 +1700,13 @@ if ( {) {
 
                     </div>;
                   </div>;
+<<<<<<< HEAD
+                </div>;
+              </CardContent>;
+            </Card>;
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
@@ -1787,10 +1798,36 @@ if ( {) {
                   </p>;
                 </CardFooter>;
               )}
-
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              {project.status === "completed" && (
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
+                  <p className="text-sm text-green-600 flex items-center gap-1">
+                    <CheckCircle2 className="h-4 w-4" /> This project has been completed.
+                  </p>
+                </CardFooter>
+              )}
+              {project.status === "canceled" && (
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
+                  <p className="text-sm text-red-600 flex items-center gap-1">
+                    <XCircle className="h-4 w-4" /> This project has been canceled.
+                  </p>
+                </CardFooter>
+              )}
+            </Card>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  )
+}
+export default function ProjectDetails() {
+  return (
+    <ProtectedRoute>
+      <ProjectDetailsContent />
+    </ProtectedRoute>
+  )
+};
+;
             </Card>;
           </div>;
         </div>;
@@ -1801,8 +1838,15 @@ if ( {) {
   );
 
 }
-=======
-
+            </Card>;
+          </div>;
+        </div>;
+      </main>;
+      <Footer />;
+    </>;
+  );
+}
+;
 export default function ProjectDetails() {;
   return (
     <ProtectedRoute>;
@@ -1810,21 +1854,10 @@ export default function ProjectDetails() {;
     </ProtectedRoute>;
   );
 }
-
-    </>);
-}
-export default /**
- * ProjectDetails - Function description
- */
-function ProjectDetails() {
-  return (
-    <ProtectedRoute>;
-      <ProjectDetailsContent />;
-    </ProtectedRoute>);
-}
-
-=======
 ;
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

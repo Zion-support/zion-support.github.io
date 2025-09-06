@@ -90,6 +90,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   existing.fundsReleased = (existing.fundsReleased |0) + tranche;
   existing.milestones = ms;
   existing.updatedAt = new Date().toISOString();
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   if (!existing) return res && res.status(404).json({ error: 'Not found' });
   const ms = existing && existing.milestones || [];
@@ -202,8 +206,36 @@ write_grant (existing);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+writeGrant(existing);
+  res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  writeGrant(existing);
+  res.status(200).json({ record: existing });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+}
+}
+=======
+  writeGrant(existing);
+  res.status(200).json({ record: existing });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

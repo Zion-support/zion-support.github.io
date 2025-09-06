@@ -60,14 +60,11 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       variant = "outline",
       message = "This dispute has been closed",
       break,
-
-
-
     default:
       break
   }
+  
   return (
-
     <Tooltip>;
       <TooltipTrigger asChild>;
         <Badge variant={variant} className='flex items-center gap-1'>;
@@ -86,13 +83,3 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
-
-
-
-
-    </Tooltip>);
-}
-
-      </TooltipContent>
-    </Tooltip>
-  )

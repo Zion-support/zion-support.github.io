@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+import { useEffect, useState  } from 'react';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { useAuth  } from '@/hooks/useAuth';
+import { supabase  } from '@/integrations/supabase/client';
+import { TokenTransaction  } from '@/types/tokens';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
+import { useToast } from '@/hooks/use-toast';
+export default function TokenManager() {
+import {useEffect, useState} from 'react';
+import {Header} from '@/components/Header';
+import {Footer} from '@/components/Footer';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import {TokenTransaction} from '@/types/tokens';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
+import {useToast} from '@/hooks/use-toast';
+export default function TokenManager() {;
+=======
 
 =======
 
@@ -6,6 +34,7 @@ import {useEffect, useState} from 'react';
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user } = useAuth();
   const { toast } = useToast();
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
@@ -74,14 +103,22 @@ if ( {) {
       });
       fetch_transactions ();
     } else {
-
-
-=======
+      const err = await res.json();
+      toast({
+        title: 'Error'
+        description: err.error |'Failed'
+        variant: 'destructive'
+      })
     }
+<<<<<<< HEAD
+  }
+  };
+=======
 
   };
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -174,8 +211,13 @@ export default function TokenManager() {;
         variant: 'destructive';
       });
     }
+<<<<<<< HEAD
+  },
+
+=======
   }
 ;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <ProtectedRoute admin_only>;
       <div>;

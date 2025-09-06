@@ -12,9 +12,6 @@ className
             </span>;
             {reply && reply.authorRole && (;
               <Badge variant="outline" className="ml-2 text-xs">;
-
-
-
                 {reply.authorRole}
               </Badge>
             )}
@@ -27,8 +24,12 @@ className
           </div>;
           <div className="text-xs text-muted-foreground">;
             {timeAgo}
-
-
+          </div>
+        </div>
+      </CardHeader>
+      <CardContent>
+        <div>{reply.content}</div>
+      </CardContent>
       
 
 
@@ -49,6 +50,7 @@ className
             Mark as Answer
           </Button>
         )}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           </div>;
         </div>;
@@ -86,7 +88,13 @@ className
 
       </CardFooter>;
       </CardFooter>
+    </Card>
+  )
+}
+export default ReplyCard
 
+      </CardFooter>;
+      </CardFooter>
     </Card>;
   );
 };

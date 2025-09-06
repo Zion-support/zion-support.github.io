@@ -1,6 +1,18 @@
 
-  attachment_url?: string,
-  attachment_name?: string;
+// Define the shape of a message
+export interface Message {;
+  id: string;
+  sender_id: string;
+  recipient_id: string;
+  content: string;
+  created_at: string;
+  read: boolean;
+  sender_name?: string;
+  sender_avatar?: string;
+
+  attachment_url?: string
+
+  attachment_name?: string
 }
 // Define the shape of a conversation;
 
@@ -38,9 +50,27 @@ export interface ConversationContextData {
   image_url?: string;
 }
 
-=======
+  isLoading: boolean
+  sendMessage: (conversationId: string, content: string) => Promise<void>
+  createConversation: (
+    recipientId: string
+    initialMessage: string
 
+    contextType?: 'job' | 'talent' | 'general';
+    contextId?: string;
+    contextData?: ConversationContextData
+  ) => Promise<void>;
+  markAsRead: (conversationId: string) => Promise<void>;
+  /**
+   * Set the currently active conversation. Passing `null` will clear the
+   * selection.
+   */
+  setActiveConversation: (value: Conversation | null) => void;
 
+  fetchConversations: () => Promise<void>
+
+  loadMessages: (conversationId: string) => Promise<void>
+}
 // Define the shape of a message;
 export interface Message {;
   id: string,;
@@ -112,6 +142,9 @@ export interface MessagingContextType {
   loadMessages: (conversationId: string) => Promise<void>;
 }
 ;
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

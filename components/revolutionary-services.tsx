@@ -17,12 +17,166 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
+import Head from 'next/head';
+import {
+  Check
+  Star
+  Zap
+  Shield
+  Users
+  Globe
+  ArrowRight
+  ExternalLink
+  TrendingUp
+  Clock
+  Target
+  Building
+  Rocket
+  Award
+  DollarSign
+  ChartBar
+  Lock
+  Cpu
+  Database
+  Cloud
+  Smartphone
+  Palette
+  Search
+  MessageSquare
+  FileText
+  Calendar
+  CreditCard
+  BarChart3
+  Settings
+  Zap as ZapIcon
+  Code
+  BookOpen
+  Activity
+  Database as DatabaseIcon
+  Play
+  Mail
+  Phone
+  MapPin
+  Filter
+  Grid
+  List
+  ChevronDown
+  ChevronUp
+  Sparkles
+  FlaskConical
+  Dna
+  Car
+  Leaf
+  Factory
+  Truck
+  Microscope
+  GraduationCap
+  ShieldCheck
+  Brain
+  Atom
+  Globe2
+  Bot
+  Eye
+  Trophy
+  FlaskConical as FlaskIcon
+  Dna as DnaIcon
+  Car as CarIcon
+  Leaf as LeafIcon
+  Factory as FactoryIcon
+  Truck as TruckIcon
+  Microscope as MicroscopeIcon
+  GraduationCap as GraduationCapIcon
+  ShieldCheck as ShieldCheckIcon;
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Zap as ZapIcon,
+  Code,
+  BookOpen,
+  Activity,
+  Database as DatabaseIcon,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  FlaskConical,
+  Dna,
+  Car,
+  Leaf,
+  Factory,
+  Truck,
+  Microscope,
+  GraduationCap,
+  ShieldCheck,
+  Brain,
+  Atom,
+  Globe2,
+  Bot,
+  Eye,
+  Trophy,
+  FlaskConical as FlaskIcon,
+  Dna as DnaIcon,
+  Car as CarIcon,
+  Leaf as LeafIcon,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Microscope as MicroscopeIcon,
+  GraduationCap as GraduationCapIcon,;
+  ShieldCheck as ShieldCheckIcon,;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+<<<<<<< HEAD
+import {
+  revolutionaryMicroSaasServices
+  revolutionaryServiceCategories
+  getRevolutionaryServicesByCategory
+  getPopularRevolutionaryServices
+  getRevolutionaryServicesByPriceRange;
+  revolutionaryMicroSaasServices,
+  revolutionaryServiceCategories,
+  getRevolutionaryServicesByCategory,
+  getPopularRevolutionaryServices,;
+  getRevolutionaryServicesByPriceRange,;
+=======
 
 import {;
   revolutionaryMicroSaasServices,;
@@ -31,6 +185,7 @@ import {;
   getPopularRevolutionaryServices,;
   getRevolutionaryServicesByPriceRange,;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
 
@@ -168,10 +323,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
     }
   });
 
-
-
-
-
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -263,79 +414,112 @@ if ( {) {
       icon: <Brain className="w-6 h-6" />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum AI & Cognitive Computing').length,
       color: 'from-purple-500 to-indigo-600'
-    };
-    {
-      name: 'Autonomous Manufacturing & Industry 4.0',
-      description: 'Next-generation autonomous manufacturing with zero human intervention',
-      icon: <Factory className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Manufacturing & Industry 4.0').length,
+    }
+      name: 'Autonomous Manufacturing & Industry 4.0'
+      description:
+        'Next-generation autonomous manufacturing with zero human intervention'
+      icon: <Factory className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'Autonomous Manufacturing & Industry 4.0'
+      ).length
       color: 'from-orange-500 to-red-600'
-    };
+    }
     {
-      name: 'Quantum Blockchain & DeFi',
-      description: 'Quantum-secured blockchain platforms with infinite scalability',
-      icon: <Globe className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Blockchain & DeFi').length,
+      name: 'Quantum Blockchain & DeFi'
+      description:
+        'Quantum-secured blockchain platforms with infinite scalability'
+      icon: <Globe className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'Quantum Blockchain & DeFi'
+      ).length
       color: 'from-green-500 to-emerald-600'
-    };
+    }
     {
-      name: 'AI Biomedical Research & Drug Discovery',
-      description: 'AI-powered platforms for accelerated drug discovery and medical research',
-      icon: <FlaskIcon className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Biomedical Research & Drug Discovery').length,
+      name: 'AI Biomedical Research & Drug Discovery'
+      description:
+        'AI-powered platforms for accelerated drug discovery and medical research'
+      icon: <FlaskIcon className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'AI Biomedical Research & Drug Discovery'
+      ).length
       color: 'from-blue-500 to-indigo-600'
-    };
+    }
     {
-      name: 'Quantum Cybersecurity & Threat Detection',
-      description: 'Quantum-resistant cybersecurity with AI-powered threat detection',
-      icon: <ShieldCheck className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Cybersecurity & Threat Detection').length,
+      name: 'Quantum Cybersecurity & Threat Detection'
+      description:
+        'Quantum-resistant cybersecurity with AI-powered threat detection'
+      icon: <ShieldCheck className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'Quantum Cybersecurity & Threat Detection'
+      ).length
       color: 'from-red-500 to-pink-600'
-    };
+    }
     {
-      name: 'Space Technology & Satellite Optimization',
-      description: 'Revolutionary platforms for space exploration and satellite optimization',
-      icon: <Rocket className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Space Technology & Satellite Optimization').length,
+      name: 'Space Technology & Satellite Optimization'
+      description:
+        'Revolutionary platforms for space exploration and satellite optimization'
+      icon: <Rocket className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'Space Technology & Satellite Optimization'
+      ).length
       color: 'from-indigo-500 to-purple-600'
-    };
+    }
     {
-      name: 'AI Content Creation & Marketing',
-      description: 'Quantum-powered content creation at infinite scale',
-      icon: <FileText className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Content Creation & Marketing').length,
+      name: 'AI Content Creation & Marketing'
+      description: 'Quantum-powered content creation at infinite scale'
+      icon: <FileText className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'AI Content Creation & Marketing'
+      ).length
       color: 'from-teal-500 to-cyan-600'
-    };
+    }
     {
-      name: 'Quantum Computing as a Service',
-      description: 'Enterprise quantum computing with real quantum processors',
-      icon: <Cpu className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Computing as a Service').length,
+      name: 'Quantum Computing as a Service'
+      description: 'Enterprise quantum computing with real quantum processors'
+      icon: <Cpu className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'Quantum Computing as a Service'
+      ).length
       color: 'from-violet-500 to-purple-600'
-    };
+    }
     {
-      name: 'Autonomous Vehicles & Smart Transportation',
-      description: 'AI platforms for autonomous vehicles and smart transportation',
-      icon: <CarIcon className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Vehicles & Smart Transportation').length,
+      name: 'Autonomous Vehicles & Smart Transportation'
+      description:
+        'AI platforms for autonomous vehicles and smart transportation'
+      icon: <CarIcon className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'Autonomous Vehicles & Smart Transportation'
+      ).length
       color: 'from-emerald-500 to-green-600'
-    };
+    }
     {
-      name: 'Smart Energy & Renewable Energy',
-      description: 'AI platforms for smart energy grids and renewable energy optimization',
-      icon: <LeafIcon className="w-6 h-6" />,
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length,
+      name: 'Smart Energy & Renewable Energy'
+      description:
+        'AI platforms for smart energy grids and renewable energy optimization'
+      icon: <LeafIcon className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'Smart Energy & Renewable Energy'
+      ).length
+      color: 'from-yellow-500 to-orange-600'
+    },  ];      description: 'AI platforms for smart energy grids and renewable energy optimization'
+      icon: <LeafIcon className="w-6 h-6" />
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length
       color: 'from-yellow-500 to-orange-600'
     }
+
   ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-  ];
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const containerVariants = {
     hidden: { opacity: 0 }
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
@@ -451,14 +635,35 @@ if ( {) {
       y: 0
       opacity: 1
       transition: {
-
-
+        duration: 0.5
+      }
+    }
         duration: 0.5,
       },
     },
 
+<<<<<<< HEAD
+  };
+
+  };
+
+=======
+<<<<<<< HEAD
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+  };
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
       <div className='min-h-screen'>
@@ -660,8 +865,9 @@ if ( {) {
 
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
                 animate={{ opacity: 1, y: 0 }}
-
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                transition={{ duration: 0.8 }}
+              >
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Revolutionary
 
                 </span>
@@ -670,45 +876,37 @@ if ( {) {
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-=======
-                transition={{ duration: 0.8 }}
-              >
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
-                Experience the future of technology with our revolutionary micro;
-                SaaS platform. Quantum AI, autonomous systems, space technology,;
-                and cutting-edge solutions that redefine what's possible.                  Revolutionary;
-                </span>;
-                <br />;
-                <span className="text-white">Micro SaaS Services</span>;
-              </motion && motion.h1>;
-              <motion&& motion.p 
-                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
-                Experience the future of technology with our revolutionary micro;
-                SaaS platform. Quantum AI, autonomous systems, space technology,;
-                and cutting-edge solutions that redefine what's possible.;
-              </motion && motion.p>;
-
-
+                Experience the future of technology with our revolutionary micro
+                SaaS platform. Quantum AI, autonomous systems, space technology
+                and cutting-edge solutions that redefine what's possible.
+              </motion.p>
               {/* Service Count Stats */}
               <motion&& motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >              </motion.p>
+              {/* Service Count Stats */}
+              <motion.div
+                className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -917,21 +1115,58 @@ if ( {) {
               {enhancedCategories.map((category, index) => (
                 <motion.div
                   key={category.name}
+<<<<<<< HEAD
+=======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   variants={itemVariants}
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}>;
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   <UltraFuturisticCard
-
-
+                    variant='quantum-advanced'
+                    size='small'
+                    className='text-center cursor-pointer h-full'
+                    onClick={() =>
+                      setSelectedCategory(
+                        category.name === selectedCategory
+                          ? 'All'
+                          : category.name
+                      )
+                    }
+                    <div
+                      className={`w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br ${category.color} flex items-center justify-center text-white`}
+                    >
+                      {category.icon}
+                    </div>
+                    <h3 className='text-lg font-semibold text-white mb-2'>
+                      {category.name}
+                    </h3>
+                    <p className='text-sm text-gray-400 mb-3'>
+                      {category.description}
+                    </p>
+                    <div className='text-2xl font-bold text-cyan-400'>
+                      {category.count}
+                    </div>
+                    <div className='text-xs text-gray-500'>Services</div>                  </UltraFuturisticCard>                    <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
+                    <p className="text-sm text-gray-400 mb-3">{category.description}</p>
+                    <div className="text-2xl font-bold text-cyan-400">{category.count}</div>
+                    <div className="text-xs text-gray-500">Services</div>
+                </motion.div>
               ))}
+            </motion.div>
+          </div>
+        </section>
 
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Popular Services Showcase */}
 
         <section className="py-16">
@@ -942,6 +1177,8 @@ if ( {) {
 
               initial={{ opacity: 0, y: 20 }}
 
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -950,6 +1187,7 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -987,6 +1225,18 @@ if ( {) {
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'              viewport={{ once: true }}                  Most Popular
+<<<<<<< HEAD
+                </span>
+                <br />
+                <span className="text-white">Revolutionary Services</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.
+              </p>
+            </motion.div>
+            <motion.div
+            <motion.div 
+=======
 
 
 =======
@@ -994,12 +1244,35 @@ if ( {) {
             <motion.div 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {popularServices.slice(0, 6).map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  variants={itemVariants}
+                  whileHover={{ y: -10 }}
+                >
+                  <UltraFuturisticCard
+                    variant={service.variant as any}
+                    size='large'
+                    className='h-full cursor-pointer'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     onClick={() => setSelectedService(service)}
 
                   variants={item_variants}
@@ -1139,7 +1412,10 @@ if ( {) {
               className="mb-8"
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -1214,6 +1490,28 @@ if ( {) {
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+<<<<<<< HEAD
+                    >
+                      <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+            {/* Services Display */}
+            <motion.div
+              className={
+                viewMode === 'grid'
+                  ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+                  : 'space-y-6'
+              }
+              variants={containerVariants}
+              initial='hidden'
+              whileInView='visible'              viewport={{ once: true }}            <motion.div
+              className={viewMode === 'grid'
+              whileInView='visible'              viewport={{ once: true }}            <motion.div 
+              className={viewMode === 'grid' 
+=======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1231,13 +1529,27 @@ if ( {) {
               className={viewMode === 'grid' 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
               variants={containerVariants}
               initial="hidden"
+              whileInView="visible"
+              whileInView='visible'              viewport={{ once: true }}
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1355,8 +1667,10 @@ if ( {) {
         <AnimatePresence>
           {selectedService && (
             <motion.div
-              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
 
+<<<<<<< HEAD
+=======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
@@ -1364,6 +1678,7 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -1630,9 +1945,124 @@ if ( {) {
                          </Button>;
                          <Button
                            variant="futuristic"
+                           onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+                         >
+                           Contact Sales
+                           <Mail className="ml-2 w-4 h-4" />
+                         </Button>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+        {/* Contact Section */}
+        <section className='py-20'>
+          <div className='container mx-auto px-4 text-center'>
+            <motion.div
+              className='max-w-4xl mx-auto'              initial={{ opacity: 0, y: 20 }}        <section className="py-20">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              className="max-w-4xl mx-auto"
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+                Ready to Experience the Future?
+              </h2>
+              <p className='text-xl text-gray-300 mb-8'>
+                Join thousands of companies already transforming their business
+                with our revolutionary micro SaaS services.
+              </p>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
+                <Button
+                  variant='primary'
+                  size='lg'
+                  onClick={() =>
+                    window.open('https://ziontechgroup.com/contact', '_blank')
+                  }
+                >
+                  Start Free Trial
+                  <Rocket className='ml-2 w-5 h-5' />
+                </Button>
+                <Button
+                  variant='futuristic'
+                  size='lg'
+                  onClick={() =>
+                    window.open('https://ziontechgroup.com/contact', '_blank')
+                  }
+                >
+                  Schedule Demo
+                  <Calendar className='ml-2 w-5 h-5' />
+                </Button>
+              </div>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
+                <div>
+                  <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />
+                  <div className='text-white font-semibold'>
+                    {contactInfo.mobile}
+                  </div>
+                  <div className='text-gray-400 text-sm'>Call us anytime</div>
+                </div>
+                <div>
+                  <Mail className='w-8 h-8 text-purple-400 mx-auto mb-2' />
+                  <div className='text-white font-semibold'>
+                    {contactInfo.email}
+                  </div>
+                  <div className='text-gray-400 text-sm'>Email us 24/7</div>
+                </div>
+                <div>
+                  <MapPin className='w-8 h-8 text-green-400 mx-auto mb-2' />
+                  <div className='text-white font-semibold'>
+                    {contactInfo.address}
+                  </div>
+                  <div className='text-gray-400 text-sm'>Visit our office</div>                </div>                Ready to Experience the Future?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of companies already transforming their business with our revolutionary micro SaaS services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                                 <Button
+                   variant="primary"
+                   size="lg"
+                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+                 >
+                   Start Free Trial
+                   <Rocket className="ml-2 w-5 h-5" />
+                 </Button>
+                 <Button
+                   variant="futuristic"
+                   size="lg"
+                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+                 >
+                   Schedule Demo
+                   <Calendar className="ml-2 w-5 h-5" />
+                 </Button>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div>
+                  <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+                  <div className="text-white font-semibold">{contactInfo.mobile}</div>
+                  <div className="text-gray-400 text-sm">Call us anytime</div>
+                </div>
+                <div>
+                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />
+                  <div className="text-white font-semibold">{contactInfo.email}</div>
+                  <div className="text-gray-400 text-sm">Email us 24/7</div>
+                </div>
+                <div>
+                  <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
+                  <div className="text-white font-semibold">{contactInfo.address}</div>
+                  <div className="text-gray-400 text-sm">Visit our office</div>
+                </div>
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
             </motion.div>
           </div>
@@ -1875,6 +2305,9 @@ if ( {) {
 =======
 
   );
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
