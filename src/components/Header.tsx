@@ -1,6 +1,14 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
+import { Button } from './ui/button'
+
+const navigation = [
+  { name: 'Home', href: '/' },
+  { name: 'Services', href: '/services' },
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' },
+]
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,7 +68,7 @@ const Header: React.FC = () => {
             </nav>
           </div>
         )}
-      </nav>
+      </div>
     </header>
   )
 }
