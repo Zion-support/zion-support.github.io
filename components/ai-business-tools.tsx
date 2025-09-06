@@ -28,8 +28,6 @@ import {
   BarChart3
   Users
 
-
-
   Brain;
   MessageSquare,
   Image,
@@ -674,9 +672,6 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
                       {tool.description}
                     </p>
 
-
-
-
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -763,9 +758,6 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-
-
-
 
               Why Choose AI Tools?
             </h2>
@@ -946,9 +938,9 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
                         <div className='text - sm text - gray - 300 max - w-xs'>;
                           {tool.use_case}
                         </div>                      </div>;
-                      <div className="text - right">;
-                        <div className="text - xs text - gray - 500 mb - 1">Use Case:</div>;
-                        <div className="text - sm text - gray - 300 max - w-xs">{tool.use_case}</div>;
+                      <div className="text-right">;
+                        <div className="text - xs text - gray-500 mb-1">Use Case:</div>;
+                        <div className="text - sm text - gray-300 max-w-xs">{tool.use_case}</div>;
                     </div>;
                   </div>;
                 </div>;

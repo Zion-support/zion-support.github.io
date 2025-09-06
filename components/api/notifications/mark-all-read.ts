@@ -33,9 +33,6 @@ function getUserId(req: NextApiRequest): string {
       .eq('read_status', false);
 <<<<<<< HEAD
 
-
-
-
     if (error) return res && res.status(200).json({ ok: true });
 
     return res && res.status(200).json({ ok: true });

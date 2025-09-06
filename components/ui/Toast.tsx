@@ -17,7 +17,6 @@ interface ToastProps {
   onRemove: (id: string) => void
 }
 
-
 import React from 'react';
  export type ToastType = 'success' | 'error' | 'info' | 'warning';
 import React, { useState, useEffect } from 'react';
@@ -36,7 +35,6 @@ export type ToastType = 'success' | 'error' | 'info' | 'warning';
   id: string,
   type: ToastType,
   title: string,;
-
 
 export interface Toast {;
   id: string,;
@@ -83,7 +81,6 @@ return <CheckCircle className='w-5 h-5 text-green-400' />;
     }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
-
 
         return <Info className='w-5 h-5 text-blue-400' />;    }
 
@@ -168,7 +165,6 @@ default:
             setIsVisible(false);
 <<<<<<< HEAD
 
-
   return (
 =======
 setTimeout(() => onRemove(toast.id), 300);
@@ -193,7 +189,7 @@ setTimeout(() => onRemove(toast.id), 300);
         />;
       </div>;
     </motion && motion.div>;
-  );
+  )
 };
 
 interface ToastContainerProps {;
@@ -235,7 +231,6 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({;
         ))}
       </AnimatePresence>
     </div>
-
 
 interface ToastContainerProps {
   toasts: Toast[]
@@ -288,13 +283,13 @@ interface ToastContainerProps {;
         {toasts.map (toast => (          <ToastItem key={toast.id} toast={toast} on_remove={on_remove} />))}
       </AnimatePresence>;
     </div>);}          }}
-          className="flex - shrink - 0 ml - 2 p - 1 rounded - lg hover:bg - white / 10 transition - colors duration - 200";
+          className="flex - shrink - 0 ml - 2 p - 1 rounded - lg hover:bg - white / 10 transition-colors duration-200";
         >;
-          <X className="w - 4 h - 4 text - white / 60 hover:text - white" />;
+          <X className="w - 4 h - 4 text-white / 60 hover:text-white" />;
         </button>;
       </div>;
       {/* Progress bar */}
-      <div className="absolute bottom - 0 left - 0 right - 0 h - 1 bg - white / 20 rounded - b-xl overflow - hidden">;
+      <div className="absolute bottom - 0 left - 0 right - 0 h - 1 bg - white / 20 rounded-b-xl overflow-hidden">;
         <motion.div;
           className={`h - full ${
             toast.type === 'success' ? 'bg - green - 400' :;

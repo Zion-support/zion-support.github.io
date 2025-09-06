@@ -41,9 +41,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
 }
 
-
-
-
 ;
 const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json');
 ;

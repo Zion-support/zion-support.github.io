@@ -332,7 +332,7 @@ return (
 import { useEffect, useState } from 'react';
 import Link from 'next / link';
 import { BriefcaseIcon, Clock } from 'lucide-react';
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import {
   Card,
   CardContent,
@@ -340,10 +340,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { use_projects } from '@/hooks / use_projects';
-import { Project } from '@/types / projects';
+} from '@/components/ui/ card';
+import { Badge } from '@/components/ui/ badge';
+import { use_projects } from '@/hooks/ use_projects';
+import { Project } from '@/types/ projects';
 export /**
  * ActiveProjectsCard - Function description
  */

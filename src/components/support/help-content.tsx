@@ -4,11 +4,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     id: "getting-started",
     name: "Getting Started",
     description: "Learn the basics of using the Zion AI Marketplace",
-<<<<<<< HEAD
-    icon: <HelpCircle className = "h-6 w-6 text-zion-purple" />,
-=======
-    icon: <HelpCircle className="h-6 w-6 text-zion-purple" />,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     articles: [
       {
         id: "create-account",
@@ -150,8 +146,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       },
       {
 
-
-
       }
       {
         id: 'complete-profile'
@@ -169,7 +163,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         lastUpdated: '2023-12-01'
         tags: ['navigation', 'interface']
       }
-
 
 import React from 'react';
 import { HelpCategory } from './types';
@@ -218,47 +211,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
     ],;
   },;
   {;
-<<<<<<< HEAD
-    id: 'hiring',;
-    name: 'Hiring Process',;
-    description: 'How to find and hire talent on the platform',;
-    icon: <Briefcase className='h-6 w-6 text-zion-cyan' />,;
-    articles: [;
-      {;
-        id: 'post-job',;
-        title: 'Posting a job',;
-        content:;
-          "Posting a job on Zion AI Marketplace is quick and straightforward. Follow these steps to create an effective job posting:\n\n1. Click on the 'Post a Job' button from your dashboard\n2. Fill in the job title, category, and required skills\n3. Write a detailed description of the project or position\n4. Specify your budget range and timeline\n5. Add any specific requirements or qualifications\n6. Review and publish your listing\n\nFor best results, be as specific as possible about your requirements and expectations. Our AI matching system will use this information to connect you with the most qualified talent.",;
-        lastUpdated: '2023-10-25',;
-        tags: ['job', 'hiring', 'recruitment'],;
-      },;
-      {;
-        id: 'ai-matching',;
-        title: 'Using AI matching',;
-        content:;
-          "Zion's AI matching system is designed to connect you with the perfect talent for your needs. Here's how to make the most of this feature:\n\n1. Ensure your job posting is detailed and specific\n2. Navigate to the 'AI Matcher' section from your dashboard\n3. Review the automatically generated list of compatible talent\n4. Use filters to refine your search based on skills, experience, or availability\n5. Click on profiles to view detailed information about each candidate\n6. Save promising matches for future reference or reach out directly\n\nOur AI system considers not just skills and experience, but also work style compatibility, communication preferences, and past project success to suggest optimal matches.",;
-        lastUpdated: '2023-11-05',;
-        tags: ['ai', 'matching', 'recruitment'],;
-=======
-    id: "payments",;
-    name: "Payments",;
-    description: "Everything about payments and billing",;
-    icon: <CreditCard className="h-6 w-6 text-zion-cyan" />,;
-    articles: [;
-      {;
-        id: "payment-methods",;
-        title: "Accepted payment methods",;
-        content: "Zion AI Marketplace supports a variety of payment methods to accommodate users worldwide. Currently accepted payment methods include:\n\n• Credit Cards (Visa, Mastercard, American Express, Discover)\n• PayPal\n• Bank Transfers (ACH for US, SEPA for Europe)\n• Wire Transfers for international payments\n• Cryptocurrency (Bitcoin, Ethereum)\n\nTo add or update your payment method:\n1. Go to Settings > Billing & Payments\n2. Select 'Add Payment Method'\n3. Follow the prompts to enter your information\n4. Set your preferred default payment method\n\nAll payment information is securely encrypted and stored in compliance with PCI DSS standards.",;
-        lastUpdated: "2023-11-01",;
-        tags: ["payment", "billing", "finance"];
-      },;
-      {;
-        id: "escrow-system",;
-        title: "How our escrow system works",;
-        content: "Zion's escrow system protects both clients and talent by ensuring secure and fair payments. Here's how it works:\n\n1. Client makes a payment into escrow when beginning a project\n2. Funds are held securely by Zion, not released to either party\n3. Talent begins work knowing that funds are secured\n4. Upon milestone or project completion, talent submits deliverables\n5. Client reviews and approves the work\n6. Funds are released from escrow to the talent\n\nIf any disputes arise, our resolution team will review the situation and determine the appropriate distribution of escrowed funds based on contract terms and delivered work.",;
-        lastUpdated: "2023-11-15",;
-        tags: ["escrow", "payment", "security"];
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       },;
       {;
 
@@ -271,10 +224,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
     ];
   }
 
-
 ];
-
-
 
 import React from 'react';
 import { HelpCategory } from './types';

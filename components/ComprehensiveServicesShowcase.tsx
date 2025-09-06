@@ -257,11 +257,10 @@ return categoryData?.icon || '🚀';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Header */}
 
-
         <motion.div
   const formatPrice = (price: string) => {;
-    return price && price.replace('$', '').replace(, '');
-  };
+    return price && price.replace('$', '').replace(, '')
+};
 
   return (
         {/* Header */}
@@ -446,9 +445,6 @@ className='text-center mb-16'
           </div>;
         </motion && motion.div>;
 
-
-
-
         {/* Search and Filters */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -539,9 +535,6 @@ viewMode === 'list'
           </div>;
         </motion && motion.div>;
 
-
-
-
         {/* Category Filter */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -604,13 +597,13 @@ className='mb-12'
                 <motion.div
                 <span className='text - xs bg - white / 20 px - 2 py - 1 rounded - full'>;
                   {category.count}
-                </span>              </button>                <span className="text - xs bg - white / 20 px - 2 py - 1 rounded - full">{category.count}</span>;
+                </span>              </button>                <span className="text - xs bg - white / 20 px - 2 py-1 rounded-full">{category.count}</span>;
               </button>))}
           </div>;
         </motion.div>;
         {/* Services Display */}
         {view_mode === 'grid' ? (
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            <AnimatePresence>          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            <AnimatePresence>          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8">;
             <AnimatePresence>;
               {filtered_services.map ((service, index) => (
                 <motion.div;
@@ -673,7 +666,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 
                     <h3 className="text-xl font-bold text-white mb-2">{service && service.name}</h3>;
                     <p className="text-white/70 text-sm mb-4">{service && service.tagline}</p>;
-
 
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
@@ -754,7 +746,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                         <div className="text-xs text-white/60">Trial</div>;
                       </div>;
                     </div>;
-
 
                     {/* CTA */}
                     <a
@@ -1037,12 +1028,9 @@ className='text-center py-20'
 
         )}
 
-
             </p>          </motion.div>
 
           </motion.div>
-
-
 
         )}
 
@@ -1096,7 +1084,6 @@ className='mt-20 text-center'
     </section>
 <<<<<<< HEAD
 }
-
 
                 Call +1 302 464 0950;
               </a>;

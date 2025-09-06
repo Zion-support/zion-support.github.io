@@ -99,7 +99,6 @@ body: JSON.stringify({
       setShowEscalation(true)
       setShowEscalation(true);    } catch {}
 
-
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
     } catch {}
   }
@@ -187,13 +186,10 @@ timestamp: Date.now(),
 
   return (
 
-
-
     }
   }
 
   return (
-
 
     }
   }
@@ -282,7 +278,6 @@ timestamp: Date.now(),
             ))}
 <<<<<<< HEAD
 
-
             )}
                   <button
                     key={q}
@@ -332,10 +327,6 @@ timestamp: Date.now(),
               </div>;
             </div>;
           )}
-
-
-
-
 
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
 =======

@@ -6,6 +6,6 @@ const PricingSection = ({ className }) => {
       <h1>PricingSection</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

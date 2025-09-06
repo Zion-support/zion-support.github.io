@@ -3,7 +3,6 @@ const outDir = resolve(root, '../public/icons'),
 if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true }),
 const sizes = [16, 32, 48, 128],
 
-
 #!/usr/bin/env node const root = new URL('.'
 import.meta.url).pathname
 const svgPath = resolve(root, '../assets/zion.svg')

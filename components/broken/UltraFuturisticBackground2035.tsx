@@ -250,7 +250,8 @@ const drawParticle = (
 <<<<<<< HEAD
           }
         }
-      });    };            ctx && ctx.stroke();
+      })
+};            ctx && ctx.stroke();
           }
         }
 =======
@@ -553,7 +554,6 @@ ease: 'easeInOut',
 
         />;
 
-
         {/* Quantum energy waves */}
 <<<<<<< HEAD
         <div className='absolute inset-0 overflow-hidden'>;
@@ -573,7 +573,6 @@ ease: 'easeInOut',
 
             duration: 8,
             repeat: Infinity,
-
 
             }}
             transition={{

@@ -26,7 +26,6 @@ export default function InviteBanner({
   message: string
   message: string,;
 
-
 type Props = {;
   message: string;
   return (
@@ -44,7 +43,7 @@ type Props = {;
           className={`px-3 py-2 rounded ${canJoin ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-400'}`}>          Join Meetingtype Props = {;
   message: string,;
   onJoin?: () => void;
-  canJoin?: boolean;
+  canJoin?: boolean
 };
 
 export default function InviteBanner(): any ({ message, onJoin, canJoin = true }: Props) {;

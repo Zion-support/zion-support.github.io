@@ -13,7 +13,6 @@ export default async function handler(
   try {
     const raw = null;
 
-
     res.status(200).json({ items })
   } catch {
     const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");

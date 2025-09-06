@@ -6,6 +6,6 @@ const Contact = ({ className }) => {
       <h1>Contact</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

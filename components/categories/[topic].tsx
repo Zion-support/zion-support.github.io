@@ -1,31 +1,17 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import type { GetServerSideProps, NextPage } from 'next';
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import Head from 'next/head';
 import Link from 'next/link';
 import { BlogPost  } from '@/utils/types/blog';
 import PageShareButtons from '@/components/blog/PageShareButtons';
 import { listPublishedPosts } from '@/utils/data/blogStore';
 import BlogCard from '@/components/blog/BlogCard';
-<<<<<<< HEAD
 
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { GetServerSideProps, NextPage } from 'next';
 import Head from 'next / head';
 import Link from 'next / link';
@@ -38,48 +24,24 @@ type Props = { topic: string; posts: BlogPost[] }type Props = { topic: string, p
 const TopicPage: NextPage < Props> = ({ topic, posts }) => {
   return (
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
 type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] },;
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
   return (
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div>;
       <Head>;
         <title>{topic} - Zion Blog</title>;
         <meta name='description' content={`Articles about ${topic}`} />;
         <meta property='og:title' content={`${topic} - Zion Blog`} />;
         <meta property='og:description' content={`Articles about ${topic}`} />;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <meta property='og:image' content='/images / og / topic - default.jpg' />;
 
-=======
-        <meta property='og:image' content='/images / og / topic - default.jpg' />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <meta property='og:type' content='website' />;
         <meta name='twitter:card' content='summary_large_image' />;
         <meta name='twitter:title' content={`${topic} - Zion Blog`} />;
         <meta name='twitter:description' content={`Articles about ${topic}`} />;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             onShare={network =>;
               fetch('/api/analytics/share', {;
                 method: 'POST',;
@@ -94,13 +56,7 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
                     '&utm_medium=share&utm_campaign=category',;
                 }),;
               }).catch(() => {});
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             }
           />;
         </div>;
@@ -150,25 +106,11 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
           </Link>;
         </div>;
       </div>;
-<<<<<<< HEAD
-  const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
-  return { props: { topic, posts } }
-}
-export default TopicPage;      </Head>
-      <div className="mx-auto max-w-6xl">
-        <h1 className="text-4xl font-bold mb-3">{topic}</h1>
-        <div className="mb-6">
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
       <div className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>
         <div className="mb-6">
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     <div>
       <Head>
         <title>{topic} - Zion Blog</title>
@@ -185,8 +127,6 @@ export default TopicPage;      </Head>
       <div className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>
         <div className="mb-6">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
@@ -199,27 +139,12 @@ export default TopicPage;      </Head>;
       <div className="mx-auto max-w-6xl">;
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>;
         <div className="mb-6">;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <PageShareButtons
             title={`${topic} - Zion Blog`}
             url={typeof window === 'undefined' ? `https://zion && zion.app/categories/${encodeURIComponent(topic)}` : window && window.location.href}
             description={`Articles about ${topic}`}
-<<<<<<< HEAD
-}
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const topic = String(ctx.params?.topic |'');
-};
-export const getServerSideProps: GetServerSideProps = async (ctx) => {;
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-=======
             onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ url: window && window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch(() => {})}
           />;
         </div>;
@@ -227,46 +152,30 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
           {posts && posts.map((p) => (;
             <BlogCard key={p && p.id} post={p} />;
           ))}
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </div>;
         <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>;
       </div>;
     </div>;
   );
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const topic = String(ctx && ctx.params?.topic || '');
   const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
-<<<<<<< HEAD
-=======
 
 };
 
 
   const topic = String(ctx.params?.topic || '');
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
   return { props: { topic, posts } }
 }
 export default TopicPage;
 
-<<<<<<< HEAD
-=======
 
 
-<<<<<<< HEAD
-=======
-=======
-  return { props: { topic, posts } }
-}
-export default TopicPage;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </div>);
 }
 ;
@@ -304,12 +213,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 ;
 export default TopicPage;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 const TopicPage: NextPage<Props> = (_{_topic, _posts}) => {_return (
@@ -347,15 +251,12 @@ import { listPublishedPosts } from '@/utils/data/blogStore';
 import BlogCard from '@/components/blog/BlogCard';
 
 type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] }
-=======
-type Props = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
   return (
     <div>
       <Head>
         <title>{topic} - Zion Blog</title>
-<meta name='description' content={`Articles about ${topic}`} />
+        <meta name='description' content={`Articles about ${topic}`} />
         <meta property='og:title' content={`${topic} - Zion Blog`} />
         <meta property='og:description' content={`Articles about ${topic}`} />
         <meta property='og:image' content='/images/og/topic-default.jpg' />
@@ -413,10 +314,7 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   const topic = String(ctx.params?.topic || '');
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
-<<<<<<< HEAD
   return { props: { topic, posts } }
 }
 export default TopicPage;      </Head>
@@ -457,14 +355,3 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
 }
 export default TopicPage;
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-  return { props: { topic, posts } };
-};
-
-export default TopicPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

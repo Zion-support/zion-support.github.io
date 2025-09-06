@@ -30,20 +30,15 @@ const contactInfo = {;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
   hours: 'Mon-Fri: 9AM-6PM EST',;
-  rating: '4 && 4.9/5 (200+ Reviews)',;
+  rating: '4 && 4.9/5 (200+ Reviews)',
 };
-
 
 const quickActions = [;
   { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> },;
   { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> },;
   { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
 
-
-
 export default function TopContactBar() {;
-
-
 
 export default function TopContactBar() {;
 
@@ -156,7 +151,7 @@ export default function TopContactBar() {
             </div>
                     key={action.name}
                     href={action.href}
-                    className="flex items - center space - x-2 px - 3 py - 1.5 text - xs text - gray - 300 hover:text - white bg - gray - 800 / 50 hover:bg - cyan - 500 / 20 border border - gray - 700 / 50 hover:border - cyan - 500 / 50 rounded - lg transition - all duration - 200 hover:shadow - xl hover:shadow - cyan - 500 / 30";
+                    className="flex items - center space - x-2 px - 3 py - 1.5 text - xs text - gray - 300 hover:text - white bg - gray - 800 / 50 hover:bg - cyan - 500 / 20 border border - gray - 700 / 50 hover:border - cyan - 500 / 50 rounded - lg transition - all duration - 200 hover:shadow - xl hover:shadow-cyan-500 / 30";
                   >;
             {/* Right Side - Quick Actions & Expand Button */}
 <<<<<<< HEAD
@@ -190,17 +185,11 @@ export default function TopContactBar() {
 
               </div>;
 
-
               {/* Expand/Collapse Button */}
               <button
                 onClick={() => setIsExpanded(!isExpanded)}
 
-
                 )}
-
-
-
-
 
               {/* Expand/Collapse Button */}
               <button
@@ -410,9 +399,9 @@ className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                         key={action.name}
                         href={action.href}
-                        className="flex items - center space - x-3 p - 3 text - gray - 300 hover:text - white bg - gray - 800 / 30 hover:bg - cyan - 500 / 20 border border - gray - 700 / 30 hover:border - cyan - 500 / 50 rounded - lg transition - all duration - 200 hover:shadow - xl hover:shadow - cyan - 500 / 30 group";
+                        className="flex items - center space - x-3 p - 3 text - gray - 300 hover:text - white bg - gray - 800 / 30 hover:bg - cyan - 500 / 20 border border - gray - 700 / 30 hover:border - cyan - 500 / 50 rounded - lg transition - all duration - 200 hover:shadow - xl hover:shadow-cyan-500 / 30 group";
                       >;
-                        <div className="text - cyan - 400 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 200">;
+                        <div className="text - cyan - 400 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition-transform duration-200">;
                           {action.icon}
 <<<<<<< HEAD
 =======
@@ -428,13 +417,7 @@ className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-
                   <h3 className='text-lg font-semibold text-white flex items-center space-x-2'>
                     <Star className='w-5 h-5 text-cyan-400' />
 
-
-
                 {/* Company Highlights */}
-
-
-
-
 
                     <span>Why Choose Us</span>
 <<<<<<< HEAD

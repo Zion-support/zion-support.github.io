@@ -11,22 +11,16 @@ import { AlertCircle } from 'lucide-react';
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
-<<<<<<< HEAD
-export function SignUpForm() {;
-=======
-export function SignUpForm() {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
 
 ;
-import { use_router } from 'next / router';
+import { use_router } from 'next/router';
 import Link from 'next / link';
 import { use_auth  } from '@/context / auth / AuthProvider';
-import { AlertCircle } from 'lucide-react'import { use_router } from 'next / router';
+import { AlertCircle } from 'lucide-react'import { use_router } from 'next/router';
 import { AlertCircle } from 'lucide-react';
-import { Alert, AlertDescription  } from '@/components / ui / alert';
-import { PasswordStrengthMeter  } from '@/components / PasswordStrengthMeter';
-import {logErrorToProduction} from '@/utils / production_logger';
+import { Alert, AlertDescription  } from '@/components/ui/ alert';
+import { PasswordStrengthMeter  } from '@/components/ PasswordStrengthMeter';
+import {logErrorToProduction} from '@/utils/ production_logger';
 export /**
  * SignUpForm - Function description
  */
@@ -71,13 +65,7 @@ function SignUpForm() {
     try {;
       setShowVerificationMessage(false), // Reset verification message;
       if (signupMode) {;
-<<<<<<< HEAD
-        const result = await signUp(formData && formData.email, formData && formData.password, {;
-          name: formData && formData.name}),;
-=======
-        const result = await signUp(formData.email, formData.password, {;
-          name: formData.name}),;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         if (result?.error) {;
           throw new Error(result.error as any), // Cast to any if type is AuthError;
         }
@@ -92,18 +80,7 @@ function SignUpForm() {
           setShowVerificationMessage(true);
         } else {;
           // Only navigate if email verification is not required;
-<<<<<<< HEAD
-          router && router.push("/mobile");
-        };
-      } else {;
-        const { error } = await login(formData && formData.email, formData && formData.password);
 
-=======
-          router.push("/mobile");
-        }
-      } else {;
-        const { error } = await login(formData.email, formData.password),;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         if (error) {;
           throw new Error(error);
         }
@@ -119,25 +96,15 @@ function SignUpForm() {
       setIsLoading(false)
     }
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleGoogleLogin = async () => {;
     try {;
       await loginWithGoogle();
     } catch (err: any) {;
-<<<<<<< HEAD
-      setError(err && err.message);
-=======
-      setError(err.message);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     }
 
   },
-  
-
-
 
 =======
 import React, { useState } from "react",
@@ -163,10 +130,6 @@ export function SignUpForm() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
-
-      
-
-
       <div className="space-y-2">
         <Button
           variant="outline"
@@ -182,10 +145,8 @@ export function SignUpForm() {
           Continue with Google
         </Button>
 
-
         <Button 
           variant="outline" 
-
 
           className="w-full py-6 relative"
         >
@@ -252,10 +213,6 @@ export function SignUpForm() {
         </Button>;
       </div>;
 
-
-      
-
-
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -264,10 +221,7 @@ export function SignUpForm() {
         </Alert>
       )}
 
-
       )}
-
-      
 
       <form onSubmit={handleSubmit} className="space-y-4">
         {signupMode && (
@@ -282,12 +236,10 @@ export function SignUpForm() {
               id="name"
               name="name"
 
-
               value={formData.name}
               onChange={handleInputChange}
               required;
               aria-invalid={!!fieldErrors.name}
-
 
               placeholder="Enter your full name"
             />
@@ -296,10 +248,6 @@ export function SignUpForm() {
             )}
           </div>
         )}
-
-
-
-
 
         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>
@@ -311,12 +259,10 @@ export function SignUpForm() {
             name="email"
             type="email"
 
-
             value={formData.email}
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.email}
-
 
             placeholder="Enter your email"
           />;
@@ -334,12 +280,10 @@ export function SignUpForm() {
             name="password"
             type="password"
 
-
             value={formData.password}
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.password}
-
 
             placeholder="Create a password"
           />;
@@ -349,10 +293,6 @@ export function SignUpForm() {
           )}
 
         </div>;
-
-
-
-        
 
         <Button
           type="submit"
@@ -366,10 +306,6 @@ export function SignUpForm() {
           ) : (;
             signupMode ? "Create Account" : "Sign In";
           )}
-
-
-      
-
 
       <p className="text-center text-sm">
         {signupMode
@@ -483,8 +419,6 @@ export function SignUpForm() {
       </p>;
     </div>;
   );
-
-
 
   error;
 }= await login (form_data.email, form_data.password);

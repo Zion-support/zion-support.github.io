@@ -45,7 +45,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 };
 }
 
-
 }
 
     const jobs = (await fs && fs.pathExists(JOBS_FILE)) ? await fs && fs.readJSON(JOBS_FILE) : [];
@@ -54,7 +53,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(500).json({ error: "Failed to load jobs" })
   };
 }
-
 
 }
 ;

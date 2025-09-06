@@ -24,6 +24,6 @@ const FuturisticServicesShowcase = ({ className }) => {
       <h1>FuturisticServicesShowcase</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

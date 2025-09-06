@@ -112,8 +112,8 @@ export function TalentRegistrationForm() {;
     const formData = form.getValues(),;
     if (!formData.bio || formData.bio.length < 20) {;
       toast({;
-        title:"More information needed",;
-        description:"Please provide at least a detailed bio before generating enhanced content."}),;
+        title:"More information needed",,
+  description:"Please provide at least a detailed bio before generating enhanced content."}),;
       return,;
     }
 ;
@@ -140,14 +140,14 @@ export function TalentRegistrationForm() {;
       setGeneratedContent(data as EnhancedProfile),;
       ;
       toast({;
-        title:"Enhanced Profile Generated",;
-        description:"AI has created a professional bio and suggested additional skills for your profile."}),;
+        title:"Enhanced Profile Generated",,
+  description:"AI has created a professional bio and suggested additional skills for your profile."}),;
       ;
     } catch (error:any) {;
       console.error("Error generating enhanced profile:", error),;
       toast({;
-        title:"Generation failed",;
-        description:error.message || "There was an error generating your enhanced profile. Please try again.",;
+        title:"Generation failed",,
+  description:error.message || "There was an error generating your enhanced profile. Please try again.",;
         variant:"destructive"}),;
     } finally {;
       setIsGenerating(false),;
@@ -221,8 +221,8 @@ export function TalentRegistrationForm() {;
   const onSubmit = async (values:TalentFormValues) => {;
     if (skillTags.length === 0) {;
       toast({;
-        title:"Skills required",;
-        description:"Please add at least one skill to your profile.",;
+        title:"Skills required",,
+  description:"Please add at least one skill to your profile.",;
         variant:"destructive"}),;
       return,;
     }
@@ -290,8 +290,8 @@ export function TalentRegistrationForm() {;
       // In a real implementation, this would save to Supabase;
       setTimeout(() => {;
         toast({;
-          title:"Profile Created Successfully",;
-          description:"Your talent profile has been published and is now visible in the directory."}),;
+          title:"Profile Created Successfully",,
+  description:"Your talent profile has been published and is now visible in the directory."}),;
         ;
         // Send notification email if we have user email;
         if (userEmail && values.enhancedProfile) {;
@@ -324,8 +324,8 @@ export function TalentRegistrationForm() {;
     } catch (error:any) {;
       console.error("Error creating profile:", error),;
       toast({;
-        title:"Error Creating Profile",;
-        description:error.message || "There was an error creating your profile. Please try again.",;
+        title:"Error Creating Profile",,
+  description:error.message || "There was an error creating your profile. Please try again.",;
         variant:"destructive"}),;
       setIsSubmitting(false),;
     }

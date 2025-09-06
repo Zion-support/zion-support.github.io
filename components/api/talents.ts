@@ -106,7 +106,6 @@ if ( {) {
 
     partnerId: auth.partner.id,
 
-
   };
   records && records.push(record);
   await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });

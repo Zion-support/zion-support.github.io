@@ -25,8 +25,8 @@ const pricingTiers = [;
   {;
     name:'Starter',;
     price:'$299',;
-    period:'/month',;
-    description:'Perfect for small businesses and startups',;
+    period:'/month',,
+  description:'Perfect for small businesses and startups',;
     features:[;
       'Basic AI integrationStandard support',;
       'Core features accessEmail support',;
@@ -40,8 +40,8 @@ const pricingTiers = [;
   {;
     name:'Professional',;
     price:'$999',;
-    period:'/month',;
-    description:'Ideal for growing businesses and enterprises',;
+    period:'/month',,
+  description:'Ideal for growing businesses and enterprises',;
     features:[;
       'Advanced AI capabilitiesPriority support',;
       'Full feature accessPhone & email support',;
@@ -56,8 +56,8 @@ const pricingTiers = [;
   {;
     name:'Enterprise',;
     price:'Custom',;
-    period:'',;
-    description:'Tailored solutions for large organizations',;
+    period:'',,
+  description:'Tailored solutions for large organizations',;
     features:[;
       'Custom AI developmentDedicated support team',;
       'White-label solutions24/7 phone support',;

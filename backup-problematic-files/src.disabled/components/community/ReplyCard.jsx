@@ -6,6 +6,6 @@ const ReplyCard = ({ className }) => {
       <h1>ReplyCard</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

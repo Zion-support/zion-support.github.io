@@ -62,7 +62,6 @@ import {
   Download,
   Phone,
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -87,7 +86,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 import Head from 'next / head';
-import Link from 'next / link';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
@@ -459,9 +458,6 @@ website: 'https://ziontechgroup.com',
         </div>;
       </section>;
 
-
-
-
       {/* Search and Filters */}
 <<<<<<< HEAD
                 <input
@@ -470,7 +466,6 @@ website: 'https://ziontechgroup.com',
                   value={searchTerm}
                 </select>;
               </div>;
-
 
               {/* Price Range Filter */}
               <div>;
@@ -549,9 +544,6 @@ website: 'https://ziontechgroup.com',
                   Sort By;
                 </label>;
 
-
-
-
               {/* Sort By */}
               <div>
 <<<<<<< HEAD
@@ -606,9 +598,9 @@ website: 'https://ziontechgroup.com',
       {/* Services Grid */}
       <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;
         <div className='max - w-7xl mx - auto'>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            <AnimatePresence>      <section className="px - 4 sm:px - 6 lg:px - 8 mb - 20">;
-        <div className="max - w-7xl mx - auto">;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            <AnimatePresence>      <section className="px - 4 sm:px - 6 lg:px-8 mb-20">;
+        <div className="max-w-7xl mx-auto">;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8">;
             <AnimatePresence>;
               {sorted_services.map ((service, index) => (
                 <motion.div;
@@ -628,11 +620,11 @@ className='group'
                     </div>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     {/* Service Info */}
-                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors duration - 300">;
+                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition-colors duration-300">;
                       {service.name}
 <<<<<<< HEAD
                     </h3>;
-                    <p className="text - cyan - 300 text - sm mb - 4 line - clamp - 3">;
+                    <p className="text - cyan - 300 text - sm mb - 4 line-clamp-3">;
                       {service.description}
                       <div className='text-2xl font-bold text-white'>                        {service.price}
 
@@ -718,7 +710,6 @@ className='group'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
 
-
                     {/* ROI */}
                     <div className='mb-6 text-center'>;
                       <div className='text-green-400 font-semibold text-lg'>;
@@ -761,9 +752,6 @@ href='/contact'
                         Contact;
                       </Link>;
                     </div>;
-
-
-
 
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                        href="/contact"
                     {/* Category Badge */}
@@ -830,9 +818,6 @@ setSelectedPriceRange('all');
         <div className='max-w-4xl mx-auto'>
           <div className='bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20'>
             <h2 className='text-3xl font-bold text-white mb-4'>
-
-
-
 
               Ready to Transform Your Business?
             </h2>
@@ -926,8 +911,8 @@ href='/pricing'
                     </p>;
                     {/* Price */}
                     <div className='mb - 4'>;
-                      <div className='text - 2xl font - bold text - white'>                    <div className="mb - 4">;
-                      <div className="text - 2xl font - bold text - white">;
+                      <div className='text - 2xl font - bold text - white'>                    <div className="mb-4">;
+                      <div className="text - 2xl font-bold text-white">;
                         {service.price}
                       </div>;
                     </div>;
@@ -949,12 +934,12 @@ href='/pricing'
                           </div>))}
                         {service.features.length > 3 && (
                           <div className='text - cyan - 400 text - sm'>                            +{service.features.length - 3} more features                        {service.features.slice (0, 3).map ((feature, idx) => (
-                          <div key={idx} className="flex items - center space - x-2">;
-                            <CheckCircle className="w - 4 h - 4 text - green - 400" />;
-                            <span className="text - gray - 300 text - sm">{feature}</span>;
+                          <div key={idx} className="flex items-center space-x-2">;
+                            <CheckCircle className="w - 4 h - 4 text-green-400" />;
+                            <span className="text - gray-300 text-sm">{feature}</span>;
                           </div>))}
                         {service.features.length > 3 && (
-                          <div className="text - cyan - 400 text - sm">;
+                          <div className="text - cyan-400 text-sm">;
                             +{service.features.length - 3} more features;
                           </div>)}
                       </div>;
@@ -979,25 +964,25 @@ href='/pricing'
                         href='/contact';
                         className='px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300 text - sm'                      >                    </div>;
                     {/* Actions */}
-                    <div className="flex space - x-3">;
+                    <div className="flex space-x-3">;
                       <Link;
                         href={service.link}
-                        className="flex - 1 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - lg hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 text - center text - sm";
+                        className="flex - 1 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - lg hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 text-center text-sm";
                       >;
                         Learn More;
                       </Link>;
                       <Link;
                         href='/contact';
                         className='px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300 text - sm'                        href="/contact";
-                        className="px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300 text - sm";
+                        className="px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration-300 text-sm";
                       >;
                         Contact;
                       </Link>;
                     </div>;
                     {/* Category Badge */}
                     <div className='mt - 4'>;
-                      <span className='inline - block px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full border border - cyan - 500 / 30'>                        {service.category}                    <div className="mt - 4">;
-                      <span className="inline - block px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full border border - cyan - 500 / 30">;
+                      <span className='inline - block px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full border border - cyan - 500 / 30'>                        {service.category}                    <div className="mt-4">;
+                      <span className="inline - block px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full border border-cyan-500 / 30">;
                         {service.category}
                       </span>;
                     </div>;
@@ -1024,11 +1009,11 @@ href='/pricing'
                   setSelectedCategory ('all');
                   setSelectedPriceRange ('all');
                 }}
-                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'              >              className="text - center py - 20";
+                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'              >              className="text-center py-20";
             >;
-              <div className="text - 6xl mb - 4">🔍</div>;
-              <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>;
-              <p className="text - cyan - 300 mb - 6">Try adjusting your search criteria or browse all services.</p>;
+              <div className="text-6xl mb-4">🔍</div>;
+              <h3 className="text - 2xl font - bold text-white mb-2">No services found</h3>;
+              <p className="text - cyan-300 mb-6">Try adjusting your search criteria or browse all services.</p>;
                 on_click={() => {
                   setSearchTerm ('');
                   setSelectedCategory ('all');
@@ -1036,7 +1021,7 @@ href='/pricing'
                 }}
                 className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                  setSelectedPriceRange ('all');
                 }}
-                className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300";
+                className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition-all duration-300";
               >;
                 Clear Filters;
               </button>;
@@ -1078,34 +1063,34 @@ href='/pricing'
                 href='/pricing';
                 className='px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'              >              Ready to Transform Your Business?;
             </h2>;
-            <p className="text - cyan - 300 mb - 8 text - lg">;
+            <p className="text - cyan - 300 mb-8 text-lg">;
               Contact our team to discuss how our 2027 services can revolutionize your operations and drive unprecedented growth.;
             </p>;
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8">;
-              <div className="flex items - center justify - center space - x-3">;
-                <Phone className="w - 5 h - 5 text - cyan - 400" />;
-                <span className="text - white">{contact_info.mobile}</span>;
+            <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6 mb-8">;
+              <div className="flex items - center justify-center space-x-3">;
+                <Phone className="w - 5 h - 5 text-cyan-400" />;
+                <span className="text-white">{contact_info.mobile}</span>;
               </div>;
-              <div className="flex items - center justify - center space - x-3">;
-                <Mail className="w - 5 h - 5 text - purple - 400" />;
-                <span className="text - white">{contact_info.email}</span>;
+              <div className="flex items - center justify-center space-x-3">;
+                <Mail className="w - 5 h - 5 text-purple-400" />;
+                <span className="text-white">{contact_info.email}</span>;
               </div>;
-              <div className="flex items - center justify - center space - x-3">;
-                <MapPin className="w - 5 h - 5 text - pink - 400" />;
-                <span className="text - white">{contact_info.address}</span>;
+              <div className="flex items - center justify-center space-x-3">;
+                <MapPin className="w - 5 h - 5 text-pink-400" />;
+                <span className="text-white">{contact_info.address}</span>;
               </div>;
             </div>;
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+            <div className="flex flex - col sm:flex - row gap-4 justify-center">;
               <Link;
                 href="/contact";
-                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow - cyan - 500 / 25";
+                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow-cyan-500 / 25";
               >;
                 Get Started Today;
               </Link>;
               <Link;
                 href='/pricing';
                 className='px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'                href="/pricing";
-                className="px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300";
+                className="px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition-all duration-300";
               >;
                 View Pricing Plans;
               </Link>;
@@ -1149,19 +1134,19 @@ href='/pricing'
                 Contact Us;
               </Link>            </p>              Z;
             </div>;
-            <h3 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent mb - 2">;
+            <h3 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text-transparent mb-2">;
               Zion Tech Group;
             </h3>;
-            <p className="text - cyan - 300">2027 Innovation Hub</p>;
+            <p className="text-cyan-300">2027 Innovation Hub</p>;
           </div>;
-          <div className="text - cyan - 300 text - sm">;
+          <div className="text - cyan-300 text-sm">;
             <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>;
-            <p className="mt - 2">;
-              <Link href="/privacy" className="hover:text - cyan - 400 transition - colors duration - 300">Privacy Policy</Link>;
+            <p className="mt-2">;
+              <Link href="/privacy" className="hover:text - cyan - 400 transition-colors duration-300">Privacy Policy</Link>;
               {' • '}
-              <Link href="/terms" className="hover:text - cyan - 400 transition - colors duration - 300">Terms of Service</Link>;
+              <Link href="/terms" className="hover:text - cyan - 400 transition-colors duration-300">Terms of Service</Link>;
               {' • '}
-              <Link href="/contact" className="hover: text - cyan - 400 transition - colors duration - 300">Contact Us</Link>;
+              <Link href="/contact" className="hover: text - cyan - 400 transition-colors duration-300">Contact Us</Link>;
             </p>;
           </div>;
         </div>;

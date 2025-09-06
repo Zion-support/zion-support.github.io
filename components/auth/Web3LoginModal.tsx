@@ -178,7 +178,6 @@ body: JSON.stringify({
   return (
 <<<<<<< HEAD
 
-
             Cancel;
           </button>;
         </div>;
@@ -245,7 +244,6 @@ body: JSON.stringify({
   )
 }
 
-
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
 <<<<<<< HEAD
@@ -267,7 +265,6 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
     </div>
   )
 }
-
 
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;

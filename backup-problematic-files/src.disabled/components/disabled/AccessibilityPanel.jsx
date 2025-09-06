@@ -6,6 +6,6 @@ const AccessibilityPanel = ({ className }) => {
       <h1>AccessibilityPanel</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

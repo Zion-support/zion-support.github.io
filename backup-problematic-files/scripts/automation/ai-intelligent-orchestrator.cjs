@@ -4,8 +4,6 @@
  * Advanced decision-making system for PM2 process management;
  */
 
-
-
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -33,5 +31,4 @@ const { execSync } = require('child_process')
       "action"
         "type"
       this.log(` Learning model update "failed"`)
-      this.log(` Fatal "error"`)
-      this.log(` Fatal "error"`)
+

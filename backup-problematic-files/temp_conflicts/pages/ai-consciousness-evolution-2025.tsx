@@ -256,20 +256,20 @@ export default function AIConsciousnessEvolution2025() {;
             {[;
               {;
                 step:'01',;
-                title:'AI Assessment',;
-                description:'Our AI analyzes your current consciousness level and creates a personalized development plan.',;
+                title:'AI Assessment',,
+  description:'Our AI analyzes your current consciousness level and creates a personalized development plan.',;
                 icon:<Brain className="w-12 h-12" />;
               },;
               {;
                 step:'02',;
-                title:'Personalized Training',;
-                description:'AI-generated exercises and experiences tailored to your specific needs and goals.',;
+                title:'Personalized Training',,
+  description:'AI-generated exercises and experiences tailored to your specific needs and goals.',;
                 icon:<Target className="w-12 h-12" />;
               },;
               {;
                 step:'03',;
-                title:'Continuous Evolution',;
-                description:'Real-time feedback and adaptation ensure continuous growth and development.',;
+                title:'Continuous Evolution',,
+  description:'Real-time feedback and adaptation ensure continuous growth and development.',;
                 icon:<TrendingUp className="w-12 h-12" />;
               }
             ].map((step, index) => (;
@@ -456,8 +456,8 @@ export default function AIConsciousnessEvolution2025() {;
               {;
                 name:'Starter',;
                 price:'$99',;
-                period:'/month',;
-                description:'Perfect for individuals beginning their consciousness journey',;
+                period:'/month',,
+  description:'Perfect for individuals beginning their consciousness journey',;
                 features:[;
                   'Basic AI assessment10 consciousness exercises',;
                   'Progress trackingEmail support',;
@@ -468,8 +468,8 @@ export default function AIConsciousnessEvolution2025() {;
               {;
                 name:'Professional',;
                 price:'$299',;
-                period:'/month',;
-                description:'Advanced features for serious consciousness development',;
+                period:'/month',,
+  description:'Advanced features for serious consciousness development',;
                 features:[;
                   'Advanced AI assessmentUnlimited exercises',;
                   'Personalized coachingPriority support',;
@@ -481,8 +481,8 @@ export default function AIConsciousnessEvolution2025() {;
               {;
                 name:'Enterprise',;
                 price:'$799',;
-                period:'/month',;
-                description:'Complete solution for organizations and teams',;
+                period:'/month',,
+  description:'Complete solution for organizations and teams',;
                 features:[;
                   'Everything in ProfessionalTeam management',;
                   'Custom integrationsDedicated support',;

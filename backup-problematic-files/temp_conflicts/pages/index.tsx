@@ -18,16 +18,16 @@ export default function HomePage() {;
 ;
   const services = [;
     {;
-      title:"AI Business Intelligence",;
-      description:"Transform data into actionable insights with AI-powered analytics",;
+      title:"AI Business Intelligence",,
+  description:"Transform data into actionable insights with AI-powered analytics",;
       color:"from-purple-500 to-pink-500",;
       link:"https://ziontechgroup.com/ai-business-intelligence",;
       price:"$499/month",;
       features:["AI-powered dashboards", "Predictive analytics", "Real-time insights"];
     },;
     {;
-      title:"Quantum Cybersecurity",;
-      description:"Future-proof security with quantum-resistant encryption and AI threat detection",;
+      title:"Quantum Cybersecurity",,
+  description:"Future-proof security with quantum-resistant encryption and AI threat detection",;
       color:"from-red-500 to-orange-500",;
       link:"https://ziontechgroup.com/quantum-cybersecurity",;
       price:"$799/month",;
@@ -84,8 +84,8 @@ export default function HomePage() {;
             }
           })}
         </script>;
-      title:"AI Customer Experience",;
-      description:"Deliver personalized customer experiences with intelligent automation",;
+      title:"AI Customer Experience",,
+  description:"Deliver personalized customer experiences with intelligent automation",;
       color:"from-blue-500 to-cyan-500",;
       link:"https://ziontechgroup.com/ai-customer-experience",;
       price:"$599/month",;
@@ -98,20 +98,20 @@ export default function HomePage() {;
 ;
   const features = [;
     {;
-      title:"Cutting-Edge Technology",;
-      description:"Leverage the latest advancements in AI, quantum computing, and cybersecurity",;
+      title:"Cutting-Edge Technology",,
+  description:"Leverage the latest advancements in AI, quantum computing, and cybersecurity",;
     },;
     {;
-      title:"Enterprise-Grade Security",;
-      description:"Bank-level security with SOC 2 compliance and regular penetration testing",;
+      title:"Enterprise-Grade Security",,
+  description:"Bank-level security with SOC 2 compliance and regular penetration testing",;
     },;
     {;
-      title:"Scalable Solutions",;
-      description:"Built to grow with your business, from startup to enterprise",;
+      title:"Scalable Solutions",,
+  description:"Built to grow with your business, from startup to enterprise",;
     },;
     {;
-      title:"Expert Support",;
-      description:"24/7 technical support with dedicated account managers",;
+      title:"Expert Support",,
+  description:"24/7 technical support with dedicated account managers",;
     }
   ],;
 ;
@@ -361,38 +361,38 @@ export default function HomePage() {;
               {[;
                 {;
                   icon:Rocket,;
-                  title:"Cutting-Edge Innovation",;
-                  description:"We stay ahead of the curve, constantly researching and implementing the latest technological breakthroughs.",;
+                  title:"Cutting-Edge Innovation",,
+  description:"We stay ahead of the curve, constantly researching and implementing the latest technological breakthroughs.",;
                   color:"from-purple-500 to-pink-500";
                 },;
                 {;
                   icon:Brain,;
-                  title:"AI-First Approach",;
-                  description:"Every solution we create is built with artificial intelligence at its core, ensuring maximum efficiency and intelligence.",;
+                  title:"AI-First Approach",,
+  description:"Every solution we create is built with artificial intelligence at its core, ensuring maximum efficiency and intelligence.",;
                   color:"from-blue-500 to-cyan-500";
                 },;
                 {;
                   icon:Atom,;
-                  title:"Quantum-Ready Solutions",;
-                  description:"Our services are designed to leverage quantum computing capabilities as they become commercially available.",;
+                  title:"Quantum-Ready Solutions",,
+  description:"Our services are designed to leverage quantum computing capabilities as they become commercially available.",;
                   color:"from-green-500 to-emerald-500";
                 },;
                 {;
                   icon:Shield,;
-                  title:"Unbreakable Security",;
-                  description:"Quantum internet protocol suite with unbreakable encryption and quantum network security.",;
+                  title:"Unbreakable Security",,
+  description:"Quantum internet protocol suite with unbreakable encryption and quantum network security.",;
                   color:"from-indigo-500 to-blue-500";
                 },;
                 {;
                   icon:Zap,;
-                  title:"Future-Ready Solutions",;
-                  description:"Cutting-edge technology services designed for the challenges and opportunities of 2029 and beyond.",;
+                  title:"Future-Ready Solutions",,
+  description:"Cutting-edge technology services designed for the challenges and opportunities of 2029 and beyond.",;
                   color:"from-yellow-500 to-orange-500";
                 },;
                 {;
                   icon:Star,;
-                  title:"Proven Results",;
-                  description:"Our services deliver measurable ROI and transformative business outcomes for clients worldwide.",;
+                  title:"Proven Results",,
+  description:"Our services deliver measurable ROI and transformative business outcomes for clients worldwide.",;
                   color:"from-pink-500 to-rose-500";
                 }
               ].map((feature, index) => (;

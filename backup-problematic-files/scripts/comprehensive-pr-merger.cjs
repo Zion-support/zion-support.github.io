@@ -1,6 +1,5 @@
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -29,5 +28,4 @@ async function githubApiCall(endpoint, method = 'GET')
       "state"
     console.log('\n Final "Report")
     console.error(' Comprehensive PR merger "failed")
-cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;

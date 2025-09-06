@@ -24,6 +24,6 @@ const TalentsPage = ({ className }) => {
       <h1>TalentsPage</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

@@ -1,15 +1,10 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function middleware(request: NextRequest) {
-=======
-export function middleware(_request: NextRequest) {
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+<<<<<<< HEAD
   return NextResponse.next();
 =======
-export function middleware(_request: NextRequest) {
   const response = NextResponse.next();
 
   // Security headers
@@ -35,18 +30,15 @@ export function middleware(_request: NextRequest) {
   response.headers.set('Content-Security-Policy', csp);
 
   return response;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
 }
 
 export const config = {
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
+};
+  matcher: [
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
 };

@@ -14,8 +14,8 @@ export default function ServicesPage() {;
   const mainServices = [;
     {;
       icon:Brain,;
-      title:"AI Business Intelligence",;
-      description:"Transform your data into actionable insights with our advanced AI-powered analytics platform.",;
+      title:"AI Business Intelligence",,
+  description:"Transform your data into actionable insights with our advanced AI-powered analytics platform.",;
       features:[;
         "Real-time data processing",;
         "Predictive analytics",;
@@ -29,8 +29,8 @@ export default function ServicesPage() {;
     },;
     {;
       icon:Shield,;
-      title:"Quantum Cybersecurity",;
-      description:"Future-proof your security with quantum-resistant encryption and AI-powered threat detection.",;
+      title:"Quantum Cybersecurity",,
+  description:"Future-proof your security with quantum-resistant encryption and AI-powered threat detection.",;
       features:[;
         "Quantum-resistant encryption",;
         "AI threat detection",;
@@ -44,8 +44,8 @@ export default function ServicesPage() {;
     },;
     {;
       icon:Users,;
-      title:"AI Customer Experience",;
-      description:"Deliver personalized customer experiences at scale with intelligent automation and insights.",;
+      title:"AI Customer Experience",,
+  description:"Deliver personalized customer experiences at scale with intelligent automation and insights.",;
       features:[;
         "Customer journey mapping",;
         "AI personalization",;
@@ -59,8 +59,8 @@ export default function ServicesPage() {;
     },;
     {;
       icon:Database,;
-      title:"Edge Computing Orchestration",;
-      description:"Deploy and manage applications at the edge with intelligent orchestration and optimization.",;
+      title:"Edge Computing Orchestration",,
+  description:"Deploy and manage applications at the edge with intelligent orchestration and optimization.",;
       features:[;
         "Edge node management",;
         "IoT device management",;
@@ -74,8 +74,8 @@ export default function ServicesPage() {;
     },;
     {;
       icon:Rocket,;
-      title:"Space Technology Innovation",;
-      description:"Accelerate space exploration with cutting-edge AI and quantum technology solutions.",;
+      title:"Space Technology Innovation",,
+  description:"Accelerate space exploration with cutting-edge AI and quantum technology solutions.",;
       features:[;
         "Satellite management",;
         "AI mission planning",;
@@ -89,8 +89,8 @@ export default function ServicesPage() {;
     },;
     {;
       icon:Atom,;
-      title:"Neural Interface Development",;
-      description:"Build the future of human-computer interaction with advanced neural interfaces.",;
+      title:"Neural Interface Development",,
+  description:"Build the future of human-computer interaction with advanced neural interfaces.",;
       features:[;
         "BCI development tools",;
         "Neural signal processing",;
@@ -106,26 +106,26 @@ export default function ServicesPage() {;
 ;
   const specializedServices = [;
     {;
-      title:"AI Autonomous Systems",;
-      description:"Build self-managing, self-optimizing systems that adapt and evolve",;
+      title:"AI Autonomous Systems",,
+  description:"Build self-managing, self-optimizing systems that adapt and evolve",;
       icon:Brain,;
       color:"from-blue-500 to-cyan-500";
     },;
     {;
-      title:"Quantum Machine Learning",;
-      description:"Leverage quantum computing for unprecedented ML performance",;
+      title:"Quantum Machine Learning",,
+  description:"Leverage quantum computing for unprecedented ML performance",;
       icon:Atom,;
       color:"from-purple-500 to-pink-500";
     },;
     {;
-      title:"AI-Powered DevOps",;
-      description:"Automate and optimize your development and deployment processes",;
+      title:"AI-Powered DevOps",,
+  description:"Automate and optimize your development and deployment processes",;
       icon:Cpu,;
       color:"from-green-500 to-emerald-500";
     },;
     {;
-      title:"Blockchain AI Integration",;
-      description:"Combine blockchain security with AI intelligence for next-gen applications",;
+      title:"Blockchain AI Integration",,
+  description:"Combine blockchain security with AI intelligence for next-gen applications",;
       icon:Shield,;
       color:"from-orange-500 to-red-500";
     }

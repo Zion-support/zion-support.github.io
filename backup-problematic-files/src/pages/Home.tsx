@@ -79,11 +79,11 @@ const HomePage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
 
 function Card({ title, description, href, icon }: { 
-  title: string; 
+  title: string,
   description: string; 
   href: string; 
   icon: string; 
@@ -101,7 +101,7 @@ function Card({ title, description, href, icon }: {
 }
 
 function FeatureCard({ title, description }: { 
-  title: string; 
+  title: string,
   description: string; 
 }) {
   return (

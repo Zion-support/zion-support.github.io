@@ -6,6 +6,6 @@ const AIBusinessIntelligenceElite.js = ({ className }) => {
       <h1>AIBusinessIntelligenceElite.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

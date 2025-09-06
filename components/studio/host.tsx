@@ -13,7 +13,6 @@ export default function StudioHostPage() {
     voice: 'Visionary',
     language: 'English',;
 
-
   });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');

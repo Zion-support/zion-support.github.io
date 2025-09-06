@@ -6,7 +6,6 @@
 
     const fixedContent = content && content.replace(doubleCommaRegex, ",");
 
-
     if (fixedContent !== content) {
       fs && fs.writeFileSync(filePath, fixedContent, "utf8");
 #!/usr / bin / env node;

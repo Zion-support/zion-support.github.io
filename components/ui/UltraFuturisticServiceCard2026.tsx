@@ -160,7 +160,7 @@ import React from 'react';
       viewport={{ once: true }}
       className="group relative";
     >;
-      <div className="relative p - 8 rounded - 2xl bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 border border - white / 10 hover:border - white / 20 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm overflow - hidden">;
+      <div className="relative p - 8 rounded - 2xl bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 border border - white / 10 hover:border - white / 20 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur-sm overflow-hidden">;
         {/* Enhanced Background Glow */}
         <div className={`absolute inset - 0 bg - gradient - to - br ${styles.gradient} opacity - 5 group - hover:opacity - 10 transition - opacity duration - 300`}></div>;
         {/* Popular Badge */}
@@ -170,7 +170,7 @@ import React from 'react';
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
         {/* Service Header */}
-        <div className="text - center mb - 8 relative z - 10">;
+        <div className="text - center mb-8 relative z-10">;
           <div className={`w - 24 h - 24 mx - auto mb - 6 rounded - full ${styles.icon_bg} flex items - center justify - center border ${styles.icon_border} text - 4xl backdrop - blur - sm`}>;
             {service.icon}
         {/* Features List */}
@@ -236,13 +236,11 @@ import React from 'react';
       </div>
     </motion.div>
 
-  );
+  )
 };
-
 
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
-
 
         {/* CTA Button */}
         <div className="relative z-10">;
@@ -262,35 +260,32 @@ export default UltraFuturisticServiceCard2026;
 
 UltraFuturisticServiceCard2026 && UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 
-
-
-
 export default UltraFuturisticServiceCard2026;
 export default UltraFuturisticServiceCard2026;
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 
           </div>;
-          <h3 className="text - 2xl font - bold text - white mb - 3 group - hover:text - gray - 100 transition - colors">;
+          <h3 className="text - 2xl font - bold text - white mb - 3 group - hover:text - gray-100 transition-colors">;
             {service.name}
           </h3>;
-          <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
+          <p className="text - gray - 300 text - sm mb-4 leading-relaxed">;
             {service.tagline}
           </p>;
-          <div className="text - 4xl font - bold text - cyan - 400 mb - 2 group - hover:text - cyan - 300 transition - colors">;
+          <div className="text - 4xl font - bold text - cyan - 400 mb - 2 group - hover:text - cyan-300 transition-colors">;
             {service.price}
-            <span className="text - lg text - gray - 400 font - normal">/{service.period}</span>;
+            <span className="text - lg text - gray-400 font-normal">/{service.period}</span>;
           </div>;
           {/* Category Badge */}
-          <div className="inline - flex items - center space - x-2 px - 3 py - 1 bg - gray - 800 / 50 border border - gray - 600 / 30 rounded - full text - xs text - gray - 300">;
-            <CategoryIcon className="w - 3 h - 3" />;
+          <div className="inline - flex items - center space - x-2 px - 3 py - 1 bg - gray - 800 / 50 border border - gray - 600 / 30 rounded - full text - xs text-gray-300">;
+            <CategoryIcon className="w-3 h-3" />;
             <span>{service.category}</span>;
           </div>;
         </div>;
         {/* Features List */}
-        <div className="space - y-3 mb - 8 relative z - 10">;
-          <h4 className="text - sm font - semibold text - gray - 300 mb - 4 flex items - center">;
-            <Zap className="w - 4 h - 4 mr - 2 text - cyan - 400" />;
+        <div className="space - y-3 mb-8 relative z-10">;
+          <h4 className="text - sm font - semibold text - gray - 300 mb-4 flex items-center">;
+            <Zap className="w - 4 h - 4 mr - 2 text-cyan-400" />;
             Key Features;
           </h4>;
           {service.features.slice (0, 6).map ((feature, idx) => (
@@ -299,54 +294,54 @@ export default UltraFuturisticServiceCard2026;
               initial={{ opacity: 0, coordinate_x: -10 }}
               animate={{ opacity: 1, coordinate_x: 0 }}
               transition={{ delay: idx * 0.1 }}
-              className="flex items - center space - x-3 text - sm text - gray - 300 group - hover:text - gray - 200 transition - colors";
+              className="flex items - center space - x-3 text - sm text - gray - 300 group - hover:text - gray-200 transition-colors";
             >;
-              <div className="w - 2 h - 2 bg - cyan - 400 rounded - full group - hover:bg - cyan - 300 transition - colors"></div>;
+              <div className="w - 2 h - 2 bg - cyan - 400 rounded - full group - hover:bg - cyan-300 transition-colors"></div>;
               <span>{feature}</span>;
             </motion.div>))}
         </div>;
         {/* Enhanced Market Information */}
         {service.market_price && (
-          <div className="border - t border - white / 10 pt - 4 mb - 6 space - y-3 relative z - 10">;
-            <div className="flex items - center justify - between text - xs">;
-              <span className="text - gray - 400">Market Price:</span>;
-              <span className="text - green - 400 font - semibold">{service.market_price}</span>;
+          <div className="border - t border - white / 10 pt - 4 mb - 6 space-y-3 relative z-10">;
+            <div className="flex items - center justify-between text-xs">;
+              <span className="text-gray-400">Market Price:</span>;
+              <span className="text - green-400 font-semibold">{service.market_price}</span>;
             </div>;
             {service.competitors && (
-              <div className="text - xs text - gray - 500">;
+              <div className="text - xs text-gray-500">;
                 Competes with: {service.competitors.slice (0, 2).join ()}
               </div>)}
           </div>)}
         {/* Target Market & Use Cases */}
         {service.target_market && (
-          <div className="border - t border - white / 10 pt - 4 mb - 6 space - y-3 relative z - 10">;
-            <div className="text - xs">;
-              <div className="text - gray - 400 mb - 2">Target Market:</div>;
-              <div className="text - gray - 300">{service.target_market}</div>;
+          <div className="border - t border - white / 10 pt - 4 mb - 6 space-y-3 relative z-10">;
+            <div className="text-xs">;
+              <div className="text - gray-400 mb-2">Target Market:</div>;
+              <div className="text-gray-300">{service.target_market}</div>;
             </div>;
             {service.use_cases && (
-              <div className="text - xs mt - 3">;
-                <div className="text - gray - 400 mb - 2">Use Cases:</div>;
-                <div className="text - gray - 300">{service.use_cases.slice (0, 3).join ()}</div>;
+              <div className="text-xs mt-3">;
+                <div className="text - gray-400 mb-2">Use Cases:</div>;
+                <div className="text-gray-300">{service.use_cases.slice (0, 3).join ()}</div>;
               </div>)}
           </div>)}
         {/* Benefits Section */}
         {service.benefits && (
-          <div className="border - t border - white / 10 pt - 4 mb - 6 relative z - 10">;
-            <h4 className="text - sm font - semibold text - gray - 300 mb - 3 flex items - center">;
-              <TrendingUp className="w - 4 h - 4 mr - 2 text - green - 400" />;
+          <div className="border - t border - white / 10 pt - 4 mb-6 relative z-10">;
+            <h4 className="text - sm font - semibold text - gray - 300 mb-3 flex items-center">;
+              <TrendingUp className="w - 4 h - 4 mr - 2 text-green-400" />;
               Key Benefits;
             </h4>;
-            <div className="space - y-2">;
+            <div className="space-y-2">;
               {service.benefits.slice (0, 3).map ((benefit, idx) => (
-                <div key={idx} className="text - xs text - gray - 400 flex items - start space - x-2">;
-                  <Check className="w - 3 h - 3 text - green - 400 mt - 0.5 flex - shrink - 0" />;
+                <div key={idx} className="text - xs text - gray - 400 flex items-start space-x-2">;
+                  <Check className="w - 3 h - 3 text - green - 400 mt - 0.5 flex-shrink-0" />;
                   <span>{benefit}</span>;
                 </div>))}
             </div>;
           </div>)}
         {/* CTA Button */}
-        <div className="relative z - 10">;
+        <div className="relative z-10">;
           <motion.button;
             while_hover={{ scale: 1.02 }}
             while_tap={{ scale: 0.98 }}
@@ -356,7 +351,7 @@ export default UltraFuturisticServiceCard2026;
           </motion.button>;
         </div>;
         {/* Enhanced Hover Effects */}
-        <div className="absolute inset - 0 bg - gradient - to - br from - white / 0 via - white / 0 to - white / 0 group - hover: from - white / 5 group - hover:via - white / 2 group - hover:to - white / 5 transition - all duration - 500 rounded - 2xl"></div>;
+        <div className="absolute inset - 0 bg - gradient - to - br from - white / 0 via - white / 0 to - white / 0 group - hover: from - white / 5 group - hover:via - white / 2 group - hover:to - white / 5 transition - all duration-500 rounded-2xl"></div>;
       </div>;
     </motion.div>),
 });

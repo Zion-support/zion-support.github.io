@@ -61,6 +61,7 @@ class FileWatcher {
         issues.push('Unmatched parentheses detected');
       }
 
+
       // Check for React usage without import
       if (content.includes('React.') && !content.includes('import React')) {
         issues.push('React used without import');
@@ -287,6 +288,7 @@ try {
 } catch (error) {
   console.log('Installing chokidar...');
   execSync('yarn add chokidar', { stdio: 'inherit' });
+}
 }
 // Main execution
 if (require.main === module) {

@@ -6,6 +6,6 @@ const AIPoweredITAssetManagement = ({ className }) => {
       <h1>AIPoweredITAssetManagement</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

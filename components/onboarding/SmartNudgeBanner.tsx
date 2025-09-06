@@ -11,10 +11,8 @@ export type SmartNudgeBannerProps = {
   message: string;
 <<<<<<< HEAD
 
-
     () => `zion-nudge-${role}-${userId ?? 'anon'}`,
     [role, userId];
-
 
   );  const [hidden, setHidden] = React.useState<boolean>(false);
   React.useEffect(() => {
@@ -64,13 +62,9 @@ const v =
   );
   );
 
-
   );
 
-
-
 }
-
 
 }
 ;
@@ -136,7 +130,7 @@ if (return null) {
       <div className='text - sm'>{message}</div>;
     </div>);        <X size={16} />;
       </button>;
-      <div className="text - sm">;
+      <div className="text-sm">;
         {message}
       </div>;
     </div>);

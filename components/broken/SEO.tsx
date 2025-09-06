@@ -321,8 +321,6 @@ const SEO: React.FC<SEOProps> = ({
       />;
       <meta name='apple - mobile - web - app - title' content='Zion Tech Group' />;
 
-
-
       {/* Structured Data */}
       <script;
         type='application / ld + json';
@@ -378,8 +376,6 @@ const SEO: React.FC<SEOProps> = ({
           })
         }}
 
-
-
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
       <link
@@ -419,7 +415,7 @@ const SEO: React.FC<SEOProps> = ({
         />;
       )}
     </Head>;
-  );
+  )
 };
 
 export default SEO;            __html: JSON && JSON.stringify(structuredData);
@@ -431,9 +427,8 @@ export default SEO;            __html: JSON && JSON.stringify(structuredData);
       )}
 <<<<<<< HEAD
   );
-export default SEO;  );
+export default SEO;  )
 };
-
 
     </Head>
     </Head>

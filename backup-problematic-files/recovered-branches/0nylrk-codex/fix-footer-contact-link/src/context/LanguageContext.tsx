@@ -104,8 +104,8 @@ export const LanguageProvider:React.FC<LanguageProviderProps> = ({ ;
       ;
       // Get language name for toast;
       const langName = supportedLanguages.find(l => l.code === lang)?.name || lang,;
-      toast({;
-        description:t('language.language_changed', { language:langName });
+      toast({,
+  description:t('language.language_changed', { language:langName });
       }),;
       ;
       // If user is authenticated, update their profile;

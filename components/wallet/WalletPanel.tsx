@@ -1,10 +1,6 @@
 <<<<<<< HEAD
 
 
-
-
-
-
 type Tx = {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -45,10 +41,7 @@ type Tx = {
   window && window.localStorage.setItem('zion_user_id', generated);
   return generated;
 
-
-
 export default function WalletPanel() {;
-
 
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
@@ -72,7 +65,7 @@ export default function WalletPanel() {;
   type: "earn" | "burn" | "issue" | "revoke" | "redeem",;
   amount: number,;
   reason: string,;
-  createdAt: string;
+  createdAt: string
 };
 
 type Summary = {;
@@ -133,8 +126,8 @@ setSummary(data);
       const accounts = await eth && eth.request({ method: "eth_requestAccounts" }),;
       setEthAddress(accounts?.[0] || null);
     } catch (e) {;
-      console && console.error(e);
-    };
+      console && console.error(e)
+};
   }
     }
   }
@@ -345,7 +338,7 @@ const res = await fetch('/api/wallet/redeem', {
         <div className='mt - 4'>          <Badges balance={balance} />;
         </div>;
       </div>;
-        <div className="mt - 4">;
+        <div className="mt-4">;
           <Badges balance={balance} />;
         </div>;
       </div>;
@@ -433,7 +426,7 @@ const res = await fetch('/api/wallet/redeem', {
 }
             <div className='text - xs text - gray - 500'>;
               Coming soon: Redeem for branded perks and courses.;
-            </div>          </div>            <div className="text - xs text - gray - 500">Coming soon: Redeem for branded perks and courses.</div>;
+            </div>          </div>            <div className="text - xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>;
           </div>)}
       </div>;
     </div>);

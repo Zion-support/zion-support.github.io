@@ -24,7 +24,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
 
-
   }
 }
 function readAllGrants(): GrantApplication[] {

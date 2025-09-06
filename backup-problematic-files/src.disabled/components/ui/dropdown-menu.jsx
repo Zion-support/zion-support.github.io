@@ -6,6 +6,6 @@ const Dropdown-menu = ({ className }) => {
       <h1>Dropdown-menu</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

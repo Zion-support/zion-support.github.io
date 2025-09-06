@@ -1,9 +1,6 @@
 <<<<<<< HEAD
 }
 
-
-  
-
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -21,7 +18,6 @@
           Add Project
         </Button>
       </div>
-      
 
           Add Project
         </Button>
@@ -31,15 +27,12 @@
       {(showAddProject |editingProject) && (
         <Card>
 
-
           <CardContent className='pt-6'>
             <h2 className='text-xl font-semibold mb-6'>
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>
 
-
             <ProjectForm              project={editingProject || undefined}
-
 
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
@@ -122,7 +115,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
   const [ showAddProject, setShowAddProject ] = useState(false),
   const [ editingProject, setEditingProject ] = useState<PortfolioProject | null>(null),
 
-  
   useEffect(() => {
     fetchProjects()
   }, [fetchProjects]);
@@ -163,7 +155,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
 
-
         <Button 
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
@@ -178,43 +169,19 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
       {(showAddProject || editingProject) && (
         <Card>
 
-
-
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
-<<<<<<< HEAD
-            </h2>
-            
-            <ProjectForm 
-              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {
-=======
-            </h2>;
-            <ProjectForm;
-              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                 setShowAddProject(false);
 
                 setEditingProject(null)
 
               }}
-<<<<<<< HEAD
-            />
-          </CardContent>
-        </Card>
-=======
-            />;
-          </CardContent>;
-        </Card>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       )}
 <<<<<<< HEAD
 
-      
       {/* Projects List */}
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -223,7 +190,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
 
               key={project.id}
               project={project}
-
 
             <CardContent>
               <div className="flex flex-col items-center gap-4">
@@ -234,9 +200,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
                 <p className="text-muted-foreground max-w-md mx-auto">
                   Add your best work to showcase your skills and experience to potential employers.
                 </p>
-
-
-
 
                 <Button 
                   onClick={() => setShowAddProject(true)} 

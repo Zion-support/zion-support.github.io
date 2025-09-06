@@ -75,7 +75,7 @@ const serviceCategories = [
       { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai' }
     ]
   };
-import Link from 'next / link';
+import Link from 'next/link';
 import {
   Phone
   Mail
@@ -470,7 +470,7 @@ export default function UltraFuturisticFooter2028() {
                         </Link>;
                       </li>;
                           href={service.href}
-                          className="text - sm text - purple - 200 hover:text - white transition - colors hover:underline";
+                          className="text - sm text - purple - 200 hover:text-white transition-colors hover:underline";
                         >;
                           {service.name}
 =======
@@ -567,7 +567,6 @@ export default function UltraFuturisticFooter2028() {
             </div>
               </ul>;
             </div>;
-
 
             {/* Newsletter Signup */}
 <div className='bg-purple-900/20 border border-purple-500/30 rounded-lg p-4'>

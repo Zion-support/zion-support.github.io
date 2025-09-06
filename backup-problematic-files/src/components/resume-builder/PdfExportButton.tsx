@@ -62,8 +62,8 @@ export default function ProjectRoom() {;
   ]),;
   const startVideoCall = () => {;
     setIsInCall(true),;
-    toast.success("Video call started", {;
-      description: "Others can join with the project room link";
+    toast.success("Video call started", {,
+  description: "Others can join with the project room link";
     }),;
     // Switch to video tab if not already there;
     if (activeTab !== 'video') {;
@@ -72,8 +72,8 @@ export default function ProjectRoom() {;
   },;
   const endVideoCall = () => {;
     setIsInCall(false),;
-    toast.info("Video call ended", {;
-      description: "Call duration and participants will be logged";
+    toast.info("Video call ended", {,
+  description: "Call duration and participants will be logged";
     });
   },;
   const simulateUserJoining = () => {;

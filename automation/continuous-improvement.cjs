@@ -1,22 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -31,23 +14,7 @@ class ContinuousImprovement {
     console.log(logMessage);
     this.logFile = path.join(__dirname, '..', 'logs', 'continuous-improvement.log');
 #!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class ContinuousImprovement { constructor() { this.ensureLogDir(); } ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; return false; } } try {" this.log("Checking for dependency updates.");"" execSync("npm outdated", { stdio: "pipe" });" this.log("Dependency check completed"); return true; } catch (error) {"` this.log(`Dependency check failed: ${error.message}`); return false; } } return false; } }}module.exports = ContinuousImprovement;""`"`
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 #!/usr/bin/env node;
 ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 cursor/website-audit-and-update-with-deployment-76dc;
@@ -71,17 +38,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   };
   log(message) {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     const logMessage = `[${timestamp}] ${message}\n`;
     );
     fs.appendFileSync(this.logFile, logMessage);
@@ -121,19 +78,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   }
   async runDependencyUpdates() {
     try {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     const logMessage = `[${timestamp}] ${message}\n`;`
 console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
@@ -163,21 +108,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     } catch (error) {}
       this.log(`Dependency check "failed": ${error.message}`);
       return false;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     }
   }
   async runCodeAnalysis() {
@@ -226,36 +157,13 @@ const improvement = new ContinuousImprovement();
 improvement.run().catch(console.error);
 
 module.exports = ContinuousImprovement;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 // Run the automation
 if (require.main === module) {
   const automation = new ContinuousImprovement();
   automation.run().catch(console.error);
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     };
   };
 cursor/fix-lint-push-and-merge-to-main-f3c1;
@@ -329,15 +237,7 @@ cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 };
 module.exports = ContinuousImprovement;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     this.log('🔄 Running continuous improvement...');
     
     // Monitor file changes
@@ -367,38 +267,4 @@ module.exports = ContinuousImprovement;
     // Implementation would go here
   }
 }
-<<<<<<< HEAD
-=======
-=======
-=======
-<<<<<<< HEAD
-module.exports = ContinuousImprovement;
-=======
-module.exports = ContinuousImprovement;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
-const improvement = new ContinuousImprovement();
-improvement.run().catch(console.error);
-
-module.exports = ContinuousImprovement;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

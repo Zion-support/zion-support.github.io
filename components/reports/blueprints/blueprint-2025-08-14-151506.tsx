@@ -1,24 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-import Head from 'next/head';
-
-export default function Page() {
-
-=======
-import Head from 'next/head';
-export default function Page(){
-export default function Page() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className='min-h-screen bg-slate-950 text-white'>
       <Head>
         <title>Reference Architecture — Autonomous Content Mesh</title>
@@ -53,7 +34,6 @@ export default function Page() {
         </p>
       </main>
     </div>
-<<<<<<< HEAD
   );  return (
   return (
     </div>;
@@ -103,9 +83,6 @@ export default function Page() {
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export default function Page(){
   return (
               '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>'
@@ -121,7 +98,6 @@ export default function Page(){
   return (
     </div>;
   );  return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Reference Architecture — Autonomous Content Mesh</title>
@@ -137,10 +113,6 @@ export default function Page(){
       </main>
     </div>
 
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import Head from 'next / head';
 ;
 export default /**
@@ -196,16 +168,7 @@ function Page() {
       </main>;
     </div>);
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
-
-=======
-  );
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   )
   } catch (error) {
     console.error("Error:", error);
@@ -213,15 +176,4 @@ function Page() {
   }
 }
 ;
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

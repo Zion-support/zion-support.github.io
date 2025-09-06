@@ -13,7 +13,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   writeJsonFile('deal/soft-commits.json', commits);
 }
 
-
 }
 
   res.status(200).json(record)

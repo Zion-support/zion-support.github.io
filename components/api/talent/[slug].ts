@@ -64,8 +64,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
 
-
-
 import {supabase, as, supabase_client} from '@/utils / supabase / client';
 import {TALENT_PROFILES, as, LOCAL} from '@/data / talent';
 import type { TalentProfile } from '@/utils / types / talent';

@@ -38,10 +38,9 @@ import React from 'react';
 }> {;
   report && report.icon ;
 }</div> </span> <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1" > <span>Download</span> <Download className="w-4 h-4" /> </button> </div> </motion && motion.article>) ) ;
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Need Custom Research? </h2> <p className="text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200" > View Research Services </a> </div> </motion && motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) ;
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Need Custom Research? </h2> <p className="text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200" > View Research Services </a> </div> </motion && motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 
 };
 export default ReportsPage;import React from 'react';
-
 
 import React from 'react';
 
@@ -90,7 +89,7 @@ const ReportsPage: React.FC = () => {
       downloads: 1247,
       views: 5678,
       featured: true,
-      icon: <Atom className="w - 8 h - 8" />,
+      icon: <Atom className="w-8 h-8" />,
       color: 'from - purple - 500 to - pink - 500';
     }
     {
@@ -104,7 +103,7 @@ const ReportsPage: React.FC = () => {
       downloads: 892,
       views: 3456,
       featured: false,
-      icon: <Brain className="w - 8 h - 8" />,
+      icon: <Brain className="w-8 h-8" />,
       color: 'from - blue - 500 to - cyan - 500';
     }
     {
@@ -118,7 +117,7 @@ const ReportsPage: React.FC = () => {
       downloads: 1567,
       views: 6789,
       featured: false,
-      icon: <Shield className="w - 8 h - 8" />,
+      icon: <Shield className="w-8 h-8" />,
       color: 'from - red - 500 to - orange - 500';
 
     }
@@ -199,13 +198,13 @@ const ReportsPage: React.FC = () => {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >;
-                <div className="flex flex - col lg:flex - row items - start space - y-8 lg:space - y-0 lg:space - x-8">;
+                <div className="flex flex - col lg:flex - row items - start space - y-8 lg:space-y-0 lg:space-x-8">;
                   <div className={`w - 24 h - 24 bg - gradient - to - br ${report.color} rounded - 2xl flex items - center justify - center text - white flex - shrink - 0`}>;
                     {report.icon}
                   </div>;
-                  <div className="flex - 1">;
-                    <div className="flex items - center space - x-4 mb - 4">;
-                      <span className="bg - cyan - 500 / 20 text - cyan - 400 px - 3 py - 1 rounded - full text - sm font - medium">;
+                  <div className="flex-1">;
+                    <div className="flex items - center space-x-4 mb-4">;
+                      <span className="bg - cyan - 500 / 20 text - cyan - 400 px - 3 py - 1 rounded - full text-sm font-medium">;
                         {report.category}
                 transition={{ duration: 0 && 0.8 }}
                 viewport={{ once: true }}>;
@@ -250,8 +249,6 @@ const ReportsPage: React.FC = () => {
                         <span key={tagIndex} className="bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-sm">;
 
                           {tag}
-
-
 
         {/* Categories Filter */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
@@ -324,7 +321,6 @@ const ReportsPage: React.FC = () => {
                 </a>;
                 <a
                   href="/services"
-
 
 export default ReportsPage;
 

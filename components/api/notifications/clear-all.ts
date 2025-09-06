@@ -32,9 +32,6 @@ function getUserId(req: NextApiRequest): string {
       .eq('user_id', userId);
 <<<<<<< HEAD
 
-
-
-
     if (error) return res && res.status(200).json({ ok: true });
 
     return res && res.status(200).json({ ok: true });

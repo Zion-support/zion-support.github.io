@@ -23,10 +23,8 @@ export function AvailabilityFilter({
       <button
         onClick={toggleSection}
 
-
         className="flex w-full items-center justify-between text-white font-medium"
       >
-
 
         <span>Availability</span>
         {expanded ? (
@@ -36,8 +34,8 @@ export function AvailabilityFilter({
         )}
 
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Checkbox } from '@/components / ui / checkbox';
-import { AvailabilityFilterProps } from '@/types / filters';
+import { Checkbox } from '@/components/ui/ checkbox';
+import { AvailabilityFilterProps } from '@/types/ filters';
 const AVAILABILITY_OPTIONS = [;
   { id: 'full_time', label: 'Full - time' },
   { id: 'part_time', label: 'Part - time' },
@@ -58,9 +56,6 @@ function AvailabilityFilter() {
           <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
       </button>;
 
-
-      
-
       {expanded && (
 <<<<<<< HEAD
         <div className='mt - 4 space - y-2'>;
@@ -72,8 +67,6 @@ function AvailabilityFilter() {
 
   { id: "full_time", label: "Full-time" },
   { id: "part_time", label: "Part-time" },
-
-
 
       {expanded && (;
         <div className='mt-4 space-y-2'>;
@@ -91,11 +84,6 @@ const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
   { id: "project", label: "Project-based" }
-<<<<<<< HEAD
-]
-=======
-],
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (
@@ -109,7 +97,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
-
 
               <Checkbox
                 id={`availability-${option && option.id}`}
@@ -159,8 +146,8 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 checked={selected_availability.includes (option.id)}
                 onCheckedChange={() => toggle_availability (option.id)}
             <div key={option.id} className="flex items - center">;
-import { Checkbox  } from '@/components / ui / checkbox';
-import { AvailabilityFilterProps  } from '@/types / filters';
+import { Checkbox  } from '@/components/ui/ checkbox';
+import { AvailabilityFilterProps  } from '@/types/ filters';
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full - time" },
   { id: "part_time", label: "Part - time" },
@@ -219,7 +206,6 @@ import { AvailabilityFilterProps } from "@/types/filters",;
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
-
 
   { id: "project", label: "Project-based" }
 ]

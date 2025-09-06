@@ -1,6 +1,6 @@
 // SEO optimizer utilities
 export const generateMetaTags = () => {
-  console.log('Generating meta tags...');
+  console.log('Generating meta tags...')
 };
 
 export const optimizeHeadings = () => {

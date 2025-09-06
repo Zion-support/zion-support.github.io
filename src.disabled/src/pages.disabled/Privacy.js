@@ -1,7 +1,7 @@
 // Privacy utility
 export const Privacy = () => {
   // Implementation here
-  return null;
+  return null
 };
 
 export default Privacy;

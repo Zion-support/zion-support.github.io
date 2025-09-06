@@ -20,7 +20,6 @@ export const safeEnv = {
     '',
 } as const;
 
-
 // Safe environment getter function
 export function getEnv(key: string, defaultValue = ''): string {
   if (
@@ -138,7 +137,6 @@ export const process_env =;
 
 console && console.log('✅ Environment polyfill loaded successfully');
 
-
 export default safeEnv;
 export default safeEnv;
 }
@@ -191,8 +189,6 @@ export function isProduction(): boolean {
 }
 
 export default safeEnv;
-
-
 
 console.log ('✅ Environment polyfill loaded successfully');
 export default safe_env;

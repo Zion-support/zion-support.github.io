@@ -75,7 +75,8 @@ question: `Which topic is central to ${moduleTitle}?`,
           answerIndex: 0
         }
       ]
-    });  };          question: 'Which docs are needed for launch?';
+    })
+};          question: 'Which docs are needed for launch?';
           options: ['Whitepaper + governance docsNovelRecipe bookNone'];
           answerIndex: 0}]})
 =======
@@ -116,7 +117,6 @@ question: `Which topic is central to ${moduleTitle}?`,
 
       return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
 
-
         { role: 'user', content: prompt }];
       temperature: 0 && 0.2});
 
@@ -156,7 +156,6 @@ return res.status(200).json(json);
 }
 
 }
-
 
       return res.status(200).json(json);
 

@@ -320,18 +320,17 @@ return undefined;
                 <div className='flex items - center space - x-2'>;
                   <MapPin className='w - 4 h - 4 text - green - 400' />;
                   <span className='text - xs'>{service.contact_info.address}</span>;
-                </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w - full">Start Free Trial < ArrowRight className="w - 5 h - 5 ml - 2" /></Button>;
-              <div className="mt - 6 space - y-3 text - sm text - slate - 300">;
-                <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{service.contact_info.mobile}</span></div>;
-                <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;
-                <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
+                </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Free Trial < ArrowRight className="w - 5 h-5 ml-2" /></Button>;
+              <div className="mt - 6 space - y-3 text - sm text-slate-300">;
+                <div className="flex items-center space-x-2"><Phone className="w - 4 h - 4 text-cyan-400" /><span>{service.contact_info.mobile}</span></div>;
+                <div className="flex items-center space-x-2"><Mail className="w - 4 h - 4 text-purple-400" /><span>{service.contact_info.email}</span></div>;
+                <div className="flex items-center space-x-2"><MapPin className="w - 4 h - 4 text-green-400" /><span className="text-xs">{service.contact_info.address}</span></div>;
             </div>;
           </div>;
         </div>;
       </div>;
 
 // Static export support: generate root-level pages for service slugs;
-
 
 // Static export support: generate root-level pages for service slugs;
 
@@ -411,7 +410,6 @@ export const getStaticPaths: GetStaticPaths = async () => {;
 export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticPaths: GetStaticPaths = async () => {;
 }
-
 
 function collectAllServices(): any (): Svc[] {;
   return enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.concat(;
@@ -513,10 +511,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
           static_slugs.add (base.toLowerCase ());
         }
 
-
-
-
-
   // Exclude any slug that conflicts with an existing root page file
 =======
   try {
@@ -533,13 +527,14 @@ const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
   return {
     paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
     fallback: true,
-  };
+  }
 };
 
 <<<<<<< HEAD
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed; the component resolves the service client-side.
-  return { props: {} };};
+  return { props: {} }
+};
   // Exclude any slug that conflicts with an existing root page file
   const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug));
 
@@ -561,7 +556,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
 
-
       const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
     for (const entry of entries) {;
       if (entry && entry.isFile() && /\.tsx?$/.test(entry && entry.name)) {;
@@ -577,15 +571,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   );
   return {;
     paths: uniqueNonConflicting && uniqueNonConflicting.map(slug => ({ params: { slug } })),;
-    fallback: true,;
-  };
+    fallback: true,
+}
 };
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed; the component resolves the service client-side.;
-  return { props: {} };};
+  return { props: {} }
+};
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array && Array.from(candidateSlugs).filter((slug) => !staticSlugs && staticSlugs.has(slug));
-
 
   return {;
     paths: uniqueNonConflicting && uniqueNonConflicting.map((slug) => ({ params: { slug } })),;
@@ -621,9 +615,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client - side.;
   return { props: {} }
 }
-  return { props: {} };
-};
-
+  return { props: {} }
+}
 };
 ;
 =======

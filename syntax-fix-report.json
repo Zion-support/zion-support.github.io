@@ -1,24 +1,4 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
   "timestamp": "2025-09-04T15:37:53.118Z",
   "totalFiles": 1516,
   "fixedFiles": 31,
@@ -6922,28 +6902,4 @@
     "zion_academy/static/js/script.jsx"
   ],
   "errorList": []
-=======
-  "timestamp": "2025-09-03T22:43:17.753Z",
-  "fixes": [
-    "components/ErrorBoundary.tsx: Remove semicolon after closing brace (2 fixes)",
-    "components/ErrorBoundary.tsx: Remove duplicate closing braces (2 fixes)",
-    "components/LoadingSpinner.tsx: Remove semicolon after closing brace (1 fixes)",
-    "components/PerformanceMonitor.tsx: Remove semicolon after closing brace (1 fixes)",
-    "components/PerformanceMonitor.tsx: Remove duplicate closing braces (4 fixes)",
-    "components/SearchBar.tsx: Remove semicolon after closing brace (1 fixes)",
-    "components/ThemeToggle.tsx: Remove semicolon after closing brace (1 fixes)",
-    "pages/_app.tsx: Remove duplicate closing braces (1 fixes)",
-    "pages/cloud-devops.tsx: Remove semicolon after closing brace (1 fixes)",
-    "pages/cybersecurity.tsx: Remove semicolon after closing brace (1 fixes)",
-    "pages/docs.tsx: Remove semicolon after closing brace (1 fixes)",
-    "pages/index.tsx: Remove semicolon after closing brace (1 fixes)",
-    "pages/index.tsx: Remove duplicate closing braces (1 fixes)",
-    "pages/index.tsx: Remove merge conflict markers (2 fixes)",
-    "pages/quantum-computing.tsx: Remove semicolon after closing brace (1 fixes)",
-    "scripts/performance-monitor.js: Remove semicolon after closing brace (2 fixes)"
-  ],
-  "issues": [],
-  "totalFixes": 16,
-  "totalIssues": 0
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 }

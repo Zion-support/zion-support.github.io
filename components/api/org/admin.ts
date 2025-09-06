@@ -22,7 +22,6 @@ type AdminAction =
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process && process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 
-
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 
@@ -38,9 +37,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
-
 ;
-
 
   const key = req.headers['x-admin-key'];
 

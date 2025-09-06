@@ -59,10 +59,6 @@ function handler() {
   $2
 }
 
-
-
-
-
   return res.status(405).end();
 <<<<<<< HEAD
 

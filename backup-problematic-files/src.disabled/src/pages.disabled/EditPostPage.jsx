@@ -24,6 +24,6 @@ const EditPostPage = ({ className }) => {
       <h1>EditPostPage</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

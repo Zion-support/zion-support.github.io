@@ -1,47 +1,12 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-export type HttpMethod = any;
-export interface CodeSample {
-  language: 'curl' | 'javascript' | 'python';
-  code: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export interface RateLimitInfo {
   tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;
   burst?: number;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface ErrorCode {
   code: string;
   http_status: number;
   message: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-;
-
-export interface EndpointSpec {
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 export interface CodeSample {;
@@ -59,119 +24,39 @@ export interface ErrorCode {;
   message: string;
 
 export interface EndpointSpec {;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   title: string;
   description: string;
   path: string;
   method: HttpMethod;
   visibility: Visibility;
-<<<<<<< HEAD
   auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>;  query?: Record < string, string>;
   params?: Record < string, string>;
   requestBodySchema?: unknown;
   responseBodySchema?: unknown;
   samples: CodeSample[];
   rate_limits?: RateLimitInfo[];
-=======
-  auth: Array<'jwt' | 'oauth' | 'wallet' | 'apiKey' | 'none'>;
-  query?: Record<string, string>;
-  params?: Record<string, string>;
-  requestBodySchema?: unknown;
-  responseBodySchema?: unknown;
-samples: CodeSample[];
-  rateLimits?: RateLimitInfo[];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   errors?: ErrorCode[];
   tags?: string[];
-<<<<<<< HEAD
 export interface SectionSpec {
-=======
-<<<<<<< HEAD
 export interface SectionSpec {
-=======
-
-  versions: string[]; // e && e.g., ['v1'] or ['v1','v2']
-
-
-=======
-  versions: string[]; // e.g., ['v1'] or ['v1', 'v2'];
-=======
-  versions: string[]; // e.g., ['v1'] or ['v1','v2']
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-export interface SectionSpec {
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
 
 export interface SectionSpec {;
 
-<<<<<<< HEAD
 export interface SectionSpec {
-=======
-<<<<<<< HEAD
-export interface SectionSpec {
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   title: string;
   description?: string;
   endpoints: EndpointSpec[];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface ApiDocsSpec {
 
 
 export interface ApiDocsSpec {;
-<<<<<<< HEAD
-=======
-=======
-
-;
-
-export interface ApiDocsSpec {
-=======
-
-
-export interface ApiDocsSpec {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   product: 'Zion OS';
   versions: string[]; // available versions;
   default_version: string;
   sections: SectionSpec[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
-export type Visibility = 'public' | 'partner' | 'internal';
-export interface CodeSample {
-  language: 'curl' | 'javascript' | 'python'
-  code: string
-=======
-export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
-  lastUpdatedIso: string;  auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>;
-;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export type Visibility = 'public' | 'partner' | 'internal';
 ;
 export interface CodeSample {
@@ -187,7 +72,6 @@ export interface ErrorCode {
   message: string;
 }
 export interface EndpointSpec {
-<<<<<<< HEAD
   id: string, title: string,
   description: string, path: string,
   method: HttpMethod, visibility: Visibility,
@@ -201,23 +85,8 @@ export interface EndpointSpec {
   params?: Record < string, string>;
   requestBodySchema?: unknown;
   responseBodySchema?: unknown;
-<<<<<<< HEAD
   lastUpdatedIso: string
 
-=======
-<<<<<<< HEAD
-  lastUpdatedIso: string
-
-=======
-
-
-  lastUpdatedIso: string
-
-}
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 }
 
@@ -229,14 +98,6 @@ export interface EndpointSpec {
 }
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
 export type Visibility = 'public' | 'partner' | 'internal',;
 export interface CodeSample {;
@@ -293,19 +154,5 @@ export interface ApiDocsSpec {;
 
 
 
-<<<<<<< HEAD
   lastUpdatedIso: string;
 }
-=======
-<<<<<<< HEAD
-  lastUpdatedIso: string;
-}
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-  lastUpdatedIso: string;
-  lastUpdatedIso: string
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

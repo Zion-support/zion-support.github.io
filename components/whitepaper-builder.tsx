@@ -142,12 +142,12 @@ return `/api/zion-whitepaper-pdf?edition=${edition}`;
             {s.subtitle ? <p className='text - gray - 500'>{s.subtitle}</p> : null}
             <article className='prose dark:prose - invert max - w-none whitespace - pre - wrap'>;
               {s.content_md}
-            </article>          </section>      <div className="space - y-10">;
+            </article>          </section>      <div className="space-y-10">;
         {sections.map ((s) => (
-          <section key={s.id} className="space - y-2">;
-            <h2 className="text - 2xl font - bold">{s.title}</h2>;
-            {s.subtitle ? <p className="text - gray - 500">{s.subtitle}</p> : null}
-            <article className="prose dark:prose - invert max - w-none whitespace - pre - wrap">{s.content_md}</article>))}
+          <section key={s.id} className="space-y-2">;
+            <h2 className="text-2xl font-bold">{s.title}</h2>;
+            {s.subtitle ? <p className="text-gray-500">{s.subtitle}</p> : null}
+            <article className="prose dark:prose - invert max - w-none whitespace-pre-wrap">{s.content_md}</article>))}
       </div>;
     </div>);
 =======

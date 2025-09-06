@@ -52,7 +52,6 @@ class SecurityScanner {; constructor() {; this.processName = process.env.PM2_PRO
 ; // Check if npm audit is available; try {; const auditOutput = execSync('npm audit --json', {; encoding: 'utf8'; stdio: 'pipe'; cwd: process.cwd()});
 ; const auditData = JSON.parse(auditOutput); const vulnerabilities = auditData.vulnerabilities || {};
 
-
         const vulnerabilities = auditData.vulnerabilities || {};
 
 ;

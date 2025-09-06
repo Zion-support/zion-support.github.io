@@ -159,12 +159,12 @@ if (return) {
 window && window.addEventListener ('resize', handleResize);
 //Set up orientation change detection const mediaQuery = window && window.matchMedia (' (orientation: portrait) ');
 const handleMediaQueryChange = (e: MediaQueryListEvent) => {;
-  setCurrentOrientation (e && e.matches ? 'portrait' : 'landscape') ;
+  setCurrentOrientation (e && e.matches ? 'portrait' : 'landscape') 
 };
-if (!showPanel || !isVisible) return null;
+if (!showPanel || !isVisible) return null
 };
 const getStatusIcon = (status: string) => {;
-  switch (status) {;
+  switch (status) {
 };
 children ;
 }{;
@@ -179,7 +179,7 @@ children ;
 }<style jsx global> {;
   `.mobile-optimized * {;
 }` ;
-}</style> </>) ;
+}</style> </>) 
 };
 
 export default MobileOptimizer;
@@ -187,8 +187,6 @@ export default MobileOptimizer;
 export default MobileOptimizer;
 export default MobileOptimizer;
 export default MobileOptimizer;
-
-
 
 }
 interface TouchGesture {
@@ -843,7 +841,7 @@ if (return null) {
 }{
   /* Mobile Optimization Panel */;
 }<AnimatePresence> {
-  showMobilePanel && (<motion.div > <div className="p - 6" > <div className="flex items - center justify - between mb - 6" > <h2 className="text - xl font - bold text - white" >Mobile Optimizer</h2> <button > × </button> </div> </div>) );
+  showMobilePanel && (<motion.div > <div className="p-6" > <div className="flex items - center justify-between mb-6" > <h2 className="text - xl font-bold text-white" >Mobile Optimizer</h2> <button > × </button> </div> </div>) );
 }</div> </div> > Scroll to Top </button> <button > Scroll to Bottom </button> </div> </div> </div> </motion.div>);
 }</AnimatePresence> {
   /* Mobile Toggle Button */;
