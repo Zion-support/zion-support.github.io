@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
     "start": "vite preview --port 4173",
@@ -269,7 +268,6 @@
     "@fastify/rate-limit": "^10.3.0",
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
-    "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^5.2.1",
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
     "@modelcontextprotocol/sdk": "^1.17.1",
@@ -298,9 +296,8 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
-    "@reduxjs/toolkit": "^2.8.2",
-    "@stripe/stripe-js": "^2.3.0",
-    "@sendgrid/mail": "^8.1.5",
+    "@reduxjs/toolkit": "^2.9.0",
+    "@stripe/stripe-js": "^7.9.0",
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -365,11 +362,6 @@
     "@esbuild/linux-x64": "^0.25.9"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "@babel/preset-env": "^7.28.3",
-    "@babel/preset-react": "^7.27.1",
-    "@babel/preset-typescript": "^7.27.1",
-=======
     "@axe-core/cli": "^4.10.2",
     "@axe-core/react": "^4.10.2",
     "@babel/plugin-transform-class-properties": "^7.27.1",
@@ -378,7 +370,6 @@
     "@babel/preset-typescript": "^7.27.1",
     "@esbuild/linux-x64": "^0.25.9",
     "@eslint/eslintrc": "^3.3.1",
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
     "@eslint/js": "^9.35.0",
     "@netlify/plugin-nextjs": "^5.12.1",
     "@next/bundle-analyzer": "^13.5.6",

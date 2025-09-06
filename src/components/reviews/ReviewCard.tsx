@@ -559,7 +559,6 @@ if (return null) {
               className="min-h-[100px]"
             />
             
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <DialogFooter>
               <Button variant="outline" onClick={() => setIsReportDialogOpen(false)}>
                 Cancel

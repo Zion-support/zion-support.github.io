@@ -1,170 +1,264 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { 
+  Code, 
+  Database, 
+  Smartphone, 
+  Shield, 
+  Cloud, 
+  Globe,
+  Zap,
+  Users,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Award,
+  Clock,
+  DollarSign
+} from 'lucide-react';
 
-// ServiceCard component
-const ServiceCard = ({ 
-  href, 
-  title, 
-  description, 
-  bullets, 
-  icon 
-}: { 
-  href: string; 
-  title: string; 
-  description: string; 
-  bullets: string[]; 
-  icon: string; 
-}) => (
-  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-    <div className="text-4xl mb-4">{icon}</div>
-    <h3 className="text-xl font-semibold mb-2">{title}</h3>
-    <p className="text-gray-600 mb-4">{description}</p>
-    <ul className="space-y-2 mb-4">
-      {bullets.map((bullet, index) => (
-        <li key={index} className="flex items-center text-sm text-gray-600">
-          <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-          {bullet}
-        </li>
-      ))}
-    </ul>
-    <a 
-      href={href}
-      className="text-blue-600 hover:text-blue-800 font-medium"
-    >
-      Learn More →
-    </a>
-  </div>
-);
-
-// CTA component
-const CTA = () => (
-  <div className="bg-blue-600 text-white p-8 rounded-lg text-center">
-    <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
-    <p className="text-xl mb-6">Let's discuss how our AI-powered solutions can drive your success.</p>
-    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-      <a 
-        href="/contact"
-        className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-      >
-        Get Started
-      </a>
-      <a 
-        href="/contact"
-        className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-      >
-        Schedule Consultation
-      </a>
-    </div>
-  </div>
-);
-
-const Services: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Services</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-xl font-semibold mb-4">AI Services</h3>
-            <p className="text-gray-600">
-              Cutting-edge AI solutions for your business.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-xl font-semibold mb-4">IT Services</h3>
-            <p className="text-gray-600">
-              Comprehensive IT solutions and support.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-xl font-semibold mb-4">Cloud Solutions</h3>
-            <p className="text-gray-600">
-              Scalable cloud infrastructure and services.
-            </p>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <ServiceCard
-            href="/services/micro-saas"
-            title="Micro SaaS"
-            description="End-to-end product development with billing, auth, and analytics"
-            bullets={[
-              "Foundational architecture",
-              "Billing + subscriptions",
-              "Growth analytics",
-            ]}
-            icon="🚀"
-          />
-          <ServiceCard
-            href="/services/ai-services"
-            title="AI Services"
-            description="LLM applications, RAG systems, and MLOps pipelines"
-            bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
-            icon="🤖"
-          />
-          <ServiceCard
-            href="/services/it-services"
-            title="IT Services"
-            description="Cloud migration, DevOps, and security solutions"
-            bullets={["Cloud migration", "DevOps + SRE", "Security"]}
-            icon="⚙️"
-          />
-          <ServiceCard
-            href="/services/ai-powered-crm"
-            title="AI-Powered CRM"
-            description="Revolutionary CRM with AI automation, predictive analytics, and 300% sales boost"
-            bullets={["Intelligent lead scoring", "Smart sales automation", "Advanced analytics", "AI customer service"]}
-            icon="🎯"
-          />
-          <ServiceCard
-            href="/services/ai-content-optimizer"
-            title="AI Content Optimizer"
-            description="AI-powered content creation and optimization that increases engagement by 400%"
-            bullets={["AI content generation", "SEO optimization", "Performance analytics", "Multi-language support"]}
-            icon="✍️"
-          />
-          <ServiceCard
-            href="/services/ai-finance-analyzer"
-            title="AI Finance Analyzer"
-            description="Advanced financial analysis with real-time insights and automated investment recommendations"
-            bullets={["Market analysis", "Portfolio optimization", "Financial planning", "Risk assessment"]}
-            icon="💰"
-          />
-          <ServiceCard
-            href="/services/ai-healthcare-assistant"
-            title="AI Healthcare Assistant"
-            description="Revolutionary healthcare AI for diagnosis support, patient monitoring, and treatment optimization"
-            bullets={["Diagnosis support", "Patient monitoring", "Clinical decisions", "Healthcare analytics"]}
-            icon="🏥"
-          />
-          <ServiceCard
-            href="/services/cybersecurity-suite"
-            title="Cybersecurity Suite"
-            description="Comprehensive security solutions with threat detection, monitoring, and 24/7 protection"
-            bullets={["Threat detection", "Vulnerability management", "Network security", "SOC services"]}
-            icon="🔒"
-          />
-          <ServiceCard
-            href="/services/cloud-optimization"
-            title="Cloud Optimization"
-            description="AI-powered cloud optimization that reduces costs by 40% and improves performance by 60%"
-            bullets={["Cost optimization", "Performance tuning", "Security hardening", "Migration services"]}
-            icon="☁️"
-          />
-        </div>
-        <CTA />
+const ServiceCard = ({ title, description, icon, href, features, price, popular = false }) => (
+  <motion.div 
+    className={`relative bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-gray-800/70 transition-all duration-300 border ${
+      popular ? 'border-cyan-400/50 ring-2 ring-cyan-400/20' : 'border-gray-700/50'
+    }`}
+    whileHover={{ y: -5, scale: 1.02 }}
+    transition={{ duration: 0.3 }}
+  >
+    {popular && (
+      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+        <span className="bg-cyan-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold">
+          Most Popular
+        </span>
       </div>
     )}
     
-    <div className="text-cyan-400 mb-6 group-hover:scale-110 transition-transform duration-300">
-      {icon}
+    <div className="text-center mb-6">
+      <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-400/10 rounded-2xl mb-4">
+        {icon}
+      </div>
+      <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
+      <p className="text-gray-400 text-lg">{description}</p>
     </div>
     
-    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-      {title}
-    </h3>
+    {features && (
+      <ul className="space-y-3 mb-8">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center text-gray-300">
+            <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+            <span>{feature}</span>
+          </li>
+        ))}
+      </ul>
+    )}
     
-    <p className="text-gray-300 mb-6 leading-relaxed">
-      {description}
-    </p>
+    {price && (
+      <div className="text-center mb-6">
+        <div className="text-4xl font-bold text-white mb-2">{price}</div>
+        <div className="text-gray-400">per month</div>
+      </div>
+    )}
+    
+    <Link
+      to={href}
+      className="block w-full bg-cyan-400 text-gray-900 font-semibold py-3 px-6 rounded-lg text-center hover:bg-cyan-300 transition-colors duration-200"
+    >
+      Learn More
+      <ArrowRight className="inline-block ml-2 w-4 h-4" />
+    </Link>
+  </motion.div>
+);
+
+const Services: React.FC = () => {
+  const services = [
+    {
+      title: 'AI Solutions',
+      description: 'Transform your business with cutting-edge artificial intelligence',
+      icon: <Code className="w-8 h-8 text-cyan-400" />,
+      href: '/services/ai-services',
+      features: [
+        'Machine Learning Models',
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics',
+        'AI Consulting'
+      ],
+      price: '$2,999'
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Protect your digital assets with advanced security solutions',
+      icon: <Shield className="w-8 h-8 text-cyan-400" />,
+      href: '/services/cybersecurity',
+      features: [
+        'Security Assessment',
+        'Penetration Testing',
+        'Incident Response',
+        'Compliance Management',
+        '24/7 Monitoring'
+      ],
+      price: '$1,999'
+    },
+    {
+      title: 'Cloud Infrastructure',
+      description: 'Scale your operations with robust cloud solutions',
+      icon: <Cloud className="w-8 h-8 text-cyan-400" />,
+      href: '/services/cloud-infrastructure',
+      features: [
+        'Cloud Migration',
+        'Infrastructure as Code',
+        'Auto-scaling',
+        'Disaster Recovery',
+        'Cost Optimization'
+      ],
+      price: '$1,499',
+      popular: true
+    },
+    {
+      title: 'Blockchain Solutions',
+      description: 'Leverage blockchain technology for secure transactions',
+      icon: <Globe className="w-8 h-8 text-cyan-400" />,
+      href: '/services/blockchain',
+      features: [
+        'Smart Contracts',
+        'DeFi Applications',
+        'NFT Marketplaces',
+        'Token Development',
+        'Blockchain Consulting'
+      ],
+      price: '$3,499'
+    },
+    {
+      title: 'Mobile Development',
+      description: 'Create powerful mobile applications for iOS and Android',
+      icon: <Smartphone className="w-8 h-8 text-cyan-400" />,
+      href: '/services/mobile-development',
+      features: [
+        'Native iOS/Android Apps',
+        'Cross-platform Solutions',
+        'UI/UX Design',
+        'App Store Optimization',
+        'Maintenance & Support'
+      ],
+      price: '$2,499'
+    },
+    {
+      title: 'Data Analytics',
+      description: 'Turn your data into actionable insights',
+      icon: <Database className="w-8 h-8 text-cyan-400" />,
+      href: '/services/data-analytics',
+      features: [
+        'Data Visualization',
+        'Business Intelligence',
+        'Real-time Dashboards',
+        'Data Warehousing',
+        'Advanced Analytics'
+      ],
+      price: '$1,799'
+    }
+  ];
+
+  const processSteps = [
+    {
+      step: '01',
+      title: 'Discovery & Planning',
+      description: 'We analyze your requirements and create a detailed project plan.'
+    },
+    {
+      step: '02',
+      title: 'Design & Development',
+      description: 'Our team builds your solution using cutting-edge technologies.'
+    },
+    {
+      step: '03',
+      title: 'Testing & Quality Assurance',
+      description: 'Rigorous testing ensures your solution meets the highest standards.'
+    },
+    {
+      step: '04',
+      title: 'Deployment & Launch',
+      description: 'We handle the deployment process and ensure a smooth launch.'
+    },
+    {
+      step: '05',
+      title: 'Support & Maintenance',
+      description: 'Ongoing support and maintenance to keep your solution running smoothly.'
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            We provide comprehensive technology solutions to help your business 
+            thrive in the digital age. From AI and cybersecurity to cloud infrastructure 
+            and blockchain, we've got you covered.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+            >
+              <ServiceCard {...service} />
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Our Process
+          </h2>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            We follow a proven methodology to deliver exceptional results for every project.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          {processSteps.map((step, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              className="text-center"
+            >
+              <div className="bg-cyan-400/10 rounded-2xl p-6 mb-4">
+                <div className="text-2xl font-bold text-cyan-400 mb-2">
+                  {step.step}
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-gray-400 text-sm">
+                  {step.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Services;
