@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Header } from '../components/Header';
 import Footer from '../components/Footer';
 import { GradientHeading } from '../components/GradientHeading';
@@ -115,6 +116,8 @@ const About: React.FC = () => {
                   should be accessible, reliable, and transformative.
                 </p>
               </Card>
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               <Card className="p-8">
                 <div className="flex items-center mb-6">

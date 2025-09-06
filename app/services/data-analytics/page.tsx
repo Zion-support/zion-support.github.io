@@ -212,4 +212,40 @@ function Plan({ name, price, features }: { name: string; price: string; features
       </a>
     </div>
   );
+<<<<<<< HEAD
+=======
+}
+
+function ContactSection() {
+  return (
+    <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
+      <div className="text-center">
+        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+          Ready to Unlock Your Data's Potential?
+        </h3>
+        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          Let's transform your data into actionable insights that drive business growth. 
+          Our data analytics experts have delivered 100+ successful analytics projects.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Email Us
+          </a>
+        </div>
+        <div className="mt-8 text-sm text-gray-500">
+          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+        </div>
+      </div>
+    </section>
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }

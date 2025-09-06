@@ -1,4 +1,24 @@
+import Link from 'next/link';
 
+=======
+export default function HomePage() {
+  return (
+    <div className="animate-fade-in">
+      <section className="text-center py-12 md:py-20">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          Build and scale with{' '}
+          <span className="text-blue-600">AI</span>,{' '}
+          <span className="text-green-600">Micro SaaS</span>{' '}
+          and{' '}
+          <span className="text-purple-600">Enterprise IT</span>
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+          We design, build and operate production-grade platforms: AI copilots, data/ML pipelines, automation, cloud infra, and secure micro SaaS products.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            href="/services"
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
           >
             Explore Services
@@ -34,17 +54,6 @@
   );
 }
 
-=======
-function Card({ title, description, href, icon }: { 
-  title: string; 
-  description: string; 
-  href: string; 
-  icon: string; 
-}) {
-  return (
-    <Link 
-      href={href} 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
       <div className="text-4xl mb-4">{icon}</div>

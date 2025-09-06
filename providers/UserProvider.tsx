@@ -35,9 +35,13 @@ export function UserProvider({ children }: { children: React.ReactNode }) {;
   useEffect(() => {;
     try {;
   user: User | null;
-  set_user: (user: User | null) => void;
+  loading: boolean;
+  login: (email: string, password: string) => Promise<void>;
   logout: () => void;
+  updateUser: (userData: Partial<User>) => Promise<void>;
+}
 
+const UserContext = createContext<UserContextType | undefined>(undefined);
 
 
       const raw = localStorage.getItem('zion.user');
@@ -52,19 +56,25 @@ export function UserProvider({ children }: { children: React.ReactNode }) {;
     }
   }, []);
 
-=======
 
+interface UserProviderProps {
+  children: React.ReactNode;
+}
 
-
+export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   useEffect(() => {
-    try {
-
-      if (user) {
-        localStorage.setItem('zion.user', JSON.stringify(user));
-      } else {
-        localStorage.removeItem('zion.user');
+    // Check for existing user session
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      try {
+        setUser(JSON.parse(storedUser));
+      } catch (error) {
+        console.error('Error parsing stored user:', error);
+        localStorage.removeItem('user');
       }
     } catch {
       // Ignore localStorage errors
@@ -104,8 +114,9 @@ export function useUser() {;
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
-=======
 
+  return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
+};
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

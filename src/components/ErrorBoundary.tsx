@@ -1,21 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import './ErrorBoundary.css';
 
-interface Props {
-  children: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-}
-
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
@@ -81,5 +66,8 @@ class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ErrorBoundary;
