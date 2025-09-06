@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import {Home, Search, Briefcase, MessageSquare, User} from "lucide-react";
@@ -12,31 +9,13 @@ export function BottomNavigation() {;
   const location = useLocation();
 
 
-<<<<<<< HEAD
-import React from "react",
-import { Link, useLocation } from "react-router-dom",
-import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react";
-import { cn } from "@/lib/utils";
-export function BottomNavigation() {
-import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react",
-import { cn } from "@/lib/utils",
-export function BottomNavigation() {
-  const location = useLocation(),
-  
-  const navItems = [
-    { path: "/mobile", icon: <Home />, label: "Home" },
-    { path: "/mobile/browse", icon: <Search />, label: "Browse" },
-    { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },
-    { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },
-    { path: "/mobile/profile", icon: <User />, label: "Profile" }],
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const location = useLocation();
   const navItems = [
@@ -78,15 +57,17 @@ export function BottomNavigation() {
         );
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       })}
 
     </div>;

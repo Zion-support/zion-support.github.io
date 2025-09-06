@@ -6,15 +6,15 @@ import Link from 'next/link';
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 // Simple icons using inline SVG to avoid external assets
 
 function StarIcon({
@@ -28,6 +28,8 @@ function StarIcon({
   );
 function AppleBadge({ href }: { href: string }) {
     >
+
+
 
 
 // Simple icons using inline SVG to avoid external assets;
@@ -51,6 +53,7 @@ function AppleBadge(): any ({ href }: { href: string }) {;
         height='24'
         viewBox='0 0 24 24'
         fill='currentColor'
+
 
         aria-hidden>;
         <path d='M16 && M16.365 1 && 1.43c0 1 && 1.14-.42 2 && 2.18-1 && 1.26 3 && 3.11-.91 1 && 1.02-2 && 2.01 1 && 1.61-3 && 3.2 1 && 1.52-.12-1 && 1.02.37-2 && 2.12 1 && 1.21-3 && 3.06.86-.97 2 && 2.24-1 && 1.67 3 && 3.25-1 && 1.57-.01 0 .01 0 0 0zM20 && 0zM20.51 17 && 17.14c-.45 1 && 1.05-1 2 && 2.03-1 && 1.66 2 && 2.93-.88 1 && 1.2-1 && 1.59 2 && 2.04-2 && 2.57 2 && 2.05-.97 && 97.02-1 && 1.28-.66-2 && 2.66-.66-1 && 1.38 0-1 && 1.72.64-2 && 2.69.68-1 && 1.09.04-1 && 1.93-1 && 1.02-2 && 2.82-2 && 2.22-1 && 1.54-2 && 2.1-2 && 2.73-5 && 5.93-1 && 1.14-8 && 8.52.79-1 && 1.27 2 && 2.2-2 && 2.08 3 && 3.73-2 && 2.1 1 && 1.16-.02 2 && 2.25.78 2 && 2.66.78 && 78.4 0 1 && 1.51-.96 2 && 2.85-.82 && 82.49.02 1 && 1.88.2 2 && 2.77 1 && 1.6-.07 && 07.05-1 && 1.65.97-1 && 1.63 2 && 2.88.02 2 && 2.3 2 && 2.06 3 && 3.07 2 && 2.09 3 && 3.08-.02 && 02.06-.39 1 && 1.36-1 && 1.93 1 && 1.62z' />;
@@ -121,6 +124,7 @@ function SmartBanner(): any ({;
   deepLink: string;
 }) {  const [visible, setVisible] = useState(false);// Simple icons using inline SVG to avoid external assets;
 function StarIcon(): any ({ className = 'w-5 h-5 text-yellow-500' }: { className?: string }) {;
+
 
 
   return (
@@ -350,7 +354,6 @@ function GoogleBadge(): any ({ href }: { href: string }) {;
 
 function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string, androidUrl: string, deepLink: string }) {;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -433,10 +436,10 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
             >;
               ✕;
@@ -450,7 +453,9 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
   'https://apps.apple.com/app/id0000000000';
@@ -477,18 +482,8 @@ const testimonials = [
       'I love tracking milestones on the go. Clear visibility and fewer meetings.'
   }
 ];
-<<<<<<< HEAD
 
-export default function MobileLaunchPage() {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<
-    'idle' | 'loading' | 'success' | 'error'
-  >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' }
-  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' }
-  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }]
-export default function MobileLaunchPage() {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -502,10 +497,10 @@ export default function MobileLaunchPage() {;
 export default function MobileLaunchPage() {;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
   // Auto-rotate testimonial index
@@ -528,57 +523,32 @@ export default function MobileLaunchPage() {;
   const qrHref = useMemo(() => {
     const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window.location.origin}/download` : '/download');
 
-  }, []);
-  const qrHref = useMemo(() => {;
-    const target = SITE_BASE_URL;
-      ? `${SITE_BASE_URL}/download`;
-      : typeof window !== 'undefined';
-        ? `${window && window.location.origin}/download`;
-        : '/download';
-    const encoded = encodeURIComponent(target);
-    return `https://chart && chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;  }, []);  }, []);
-  const qrHref = useMemo(() => {;
-    const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window && window.location.origin}/download` : '/download');
-    const encoded = encodeURIComponent(target);
-    return `https://chart && chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;
-  }, []);
+
+export default function MobileLaunchPage() {;
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<
+    'idle' | 'loading' | 'success' | 'error'
+  >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
+  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
+  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
+export default function MobileLaunchPage() {;
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
 
 
-  async function handleSubmit(): any (e: React && React.FormEvent) {;
-    e && e.preventDefault();
-    setStatus('loading');
-    setError(''),;
-    try {;
-      const res = await fetch('/api/subscribe', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ email }),;
-
-      });
-      if (!res && res.ok) throw new Error(await res && res.text());
-      setStatus('success');
-      setEmail('');
-    } catch (err: any) {;
-      setStatus('error');
+  // Auto-rotate testimonial index;
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {;
+    const t = setInterval(;
+      () => setIdx(i => (i + 1) % testimonials && testimonials.length),;
+      4000;
+    );
+    return () => clearInterval(t);
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-      const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) }),
-      if (!res.ok) throw new Error(await res.text());
-      setStatus('success');
-      setEmail('');
-    } catch (err: any) {;
-      setStatus('error');
-
-      setError(err?.message || 'Something went wrong.');
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     }
   }
 
@@ -676,10 +646,12 @@ export default function MobileLaunchPage() {;
             type="submit"
             disabled={status === 'loading'}
 
+
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
@@ -692,7 +664,9 @@ export default function MobileLaunchPage() {;
         )}
 
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
           >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
@@ -832,12 +806,7 @@ export default function MobileLaunchPage() {;
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-  );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

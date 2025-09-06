@@ -1,12 +1,10 @@
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import {useState} from "react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -15,15 +13,10 @@ import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} fr
 interface JobApplicationsTableProps {;
   jobId: string;
 }
-<<<<<<< HEAD
+
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
 export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;
@@ -33,17 +26,10 @@ export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProp
     error, ;
     updateApplicationStatus, ;
 
-=======
-export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
-  const { 
-    applications, 
-    isLoading, 
-    error, 
-    updateApplicationStatus, ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     markApplicationAsViewed;
     refetch;
   } = useJobApplications(jobId);
@@ -81,33 +67,34 @@ import {
         await markApplicationAsViewed(applicationId);
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       }
     } finally {;
       setProcessingId(null);
     }
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
   };
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const handleViewScore = (application: JobApplication) => {
     setSelectedApplication(application)
     setShowScoreDialog(true)
@@ -138,10 +125,8 @@ import {
 
   if (isLoading) {;
     return <LoadingState />;
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
   if (error) {
@@ -150,8 +135,8 @@ import {
   if (applications.length === 0) {
     return <EmptyState />
   }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
   return (

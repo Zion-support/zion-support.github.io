@@ -59,6 +59,27 @@ if (body.sha = existing.sha) {
   const resp = await fetch(url, {
     headers: {
 
+      Accept: 'application / vnd.github + json',
+      'Content - Type': 'application / json',
+    },
+    body: JSON.stringify (body),
+  });
+  // Check condition
+if ( {) {
+  $2
+}
+    const text = await resp.text ();
+    throw new Error (`GitHub upsert_file HTTP ${resp.status}: ${text}`);
+  }
+  return resp.json ();
+;
+module.exports = { upsert_file }async /**
+ * get_file - Function description
+ */
+function get_file() {
+  const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent (path)}`,
+  const resp = await fetch (url, {
+    headers: {
 
       'Authorization': `token ${token}`,
       'Accept': 'application / vnd.github + json';
@@ -111,14 +132,8 @@ if ( {) {
 module.exports = { upsertFile },
 
 
-<<<<<<< HEAD
 
 
-}
-}
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

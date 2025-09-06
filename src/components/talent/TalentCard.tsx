@@ -24,10 +24,8 @@ import { useAuth } from '@/context/auth/AuthProvider',
 import { useCart } from '@/context/CartContext',
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export interface TalentCardProps {
 
   talent: TalentProfile
@@ -67,15 +65,24 @@ const TalentCardComponent = ({
     if (onViewProfile) {
       onViewProfile(talent.id)
     }
-<<<<<<< HEAD
-  },
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+  },;
+  const handleRequestHire = (e: React.MouseEvent) => {;
+    e.preventDefault(),;
+    e.stopPropagation(),;
+    if (onRequestHire) {;
+      onRequestHire(talent);
+    }
+
+  },
+
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
   const handleRequestHire = (e: React.MouseEvent,) => {
     e.preventDefault()
@@ -138,11 +145,8 @@ const TalentCardComponent = ({;
       tabIndex={0}
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     >
       <div className="p-6">
         <div className="flex items-start">
@@ -155,18 +159,8 @@ const TalentCardComponent = ({;
                   alt = {talent.full_name,}
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -202,46 +196,9 @@ const TalentCardComponent = ({;
 
             
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-            {/* Location & Availability */}
-            <div className="mt-2 flex flex-wrap gap-3 text-sm">
-              {talent.location && (
-                <div className="flex items-center text-zion-slate-light">
-                  <MapPin className="h-4 w-4 mr-1" />
-                  <span>{talent.location}</span>
-                </div>
-              )}
-              {talent.availability_type && (
-                <div className="flex items-center text-zion-slate-light">
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>{talent.availability_type}</span>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-            </div>;
-          </div>;
-        </div>;
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Skills */}
         {skills.length > 0 && (
           <div className="mt-4">
@@ -258,19 +215,14 @@ const TalentCardComponent = ({;
 
                 <span
                   key = {index,}
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
 
               {skills.map((skill, index) => (
                 <span 
                   key={index}
+
 
 
 
@@ -303,13 +255,7 @@ const TalentCardComponent = ({;
             )}
           </div>
           
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           <div className="flex items-center gap-2">
@@ -325,11 +271,8 @@ const TalentCardComponent = ({;
                 onClick={handleRequestHire}
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
                 Hire
@@ -340,11 +283,8 @@ const TalentCardComponent = ({;
               variant="ghost"
 
 
-<<<<<<< HEAD
-              onClick={(e,) => {
-                e.stopPropagation()
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
               onClick={(e) => {
               onClick={(e) => {
 
@@ -361,58 +301,8 @@ const TalentCardComponent = ({;
       </div>
     </Card>
   )
-<<<<<<< HEAD
 
 
-}
-export const TalentCard = React.memo(TalentCardComponent)
-TalentCard.displayName = 'TalentCard'
-export const TalentCard = React.memo(TalentCardComponent)
-TalentCard.displayName = 'TalentCard'
-
-export const TalentCard = React.memo(TalentCardComponent),
-TalentCard.displayName = 'TalentCard',
-},
-
-export const TalentCard = React.memo(TalentCardComponent),
-TalentCard.displayName = 'TalentCard',
-;
-export const TalentCard = React.memo(TalentCardComponent);
-TalentCard.displayName = 'TalentCard';
-        <div className="mt-5 flex items-center justify-between">;
-          <div>;
-            {talent.hourly_rate ? (;
-              <div className="text-white font-bold">;
-                ${talent.hourly_rate}
-                <span className="text-zion-slate-light font-normal">/hr</span>;
-              </div>;
-            ) : (;
-              <div className="text-zion-slate-light">Rate not specified</div>;
-            )}
-          </div>;
-          <div className="flex items-center gap-2">;
-            {isAuthenticated && (;
-              <Button;
-                size="sm";
-                variant="secondary";
-                onClick={handleRequestHire}
-                className="bg-zion-purple hover:bg-zion-purple-light text-white";
-              >;
-                Hire;
-              </Button>;
-            )}
-            <Button;
-              size="sm";
-              variant="ghost";
-              onClick={(e) => {;
-                e.stopPropagation(),;
-
-
-=======
-
-              onClick={(e,) => {;
-                e && e.stopPropagation(),;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 handleViewProfile();
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
@@ -567,14 +457,8 @@ if ( {) {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     </Card>);

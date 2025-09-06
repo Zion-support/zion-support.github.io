@@ -2,48 +2,15 @@
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React from "react";
 import {CheckCircle, Circle, ArrowRight} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
-<<<<<<< HEAD
-
-import React from "react",
-import { CheckCircle, Circle, ArrowRight } from "lucide-react",
-import { cn } from "@/lib/utils",
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-export interface OnboardingStep {
-
-  id: string
-  label: string
-  completed: boolean
-  link: string
-
-  action?: string
-}
-interface OnboardingTrackerProps {
-
-  steps: OnboardingStep[]
-
-  title?: string;
-  className?: string
-}
-export function OnboardingTracker({
-  steps;
-
-  title = "Complete Your Profile"
-  className
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export interface OnboardingStep {
   id: string,
   label: string,
@@ -58,8 +25,8 @@ import { cn } from "@/lib/utils",;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 export interface OnboardingStep {;
   id: string,;
   label: string,;
@@ -91,27 +58,9 @@ export function OnboardingTracker({
       </div>
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
-<<<<<<< HEAD
-
-        <div
-          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
-        <div 
-          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
-
-;
-export function OnboardingTracker({;
-  steps,;
-  title = "Complete Your Profile",;
-  className;
-
-=======
 
 
-export function OnboardingTracker(): any ({ ;
-  steps;
-  title = "Complete Your Profile", ;
-  className ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }: OnboardingTrackerProps) {;
   const completedSteps = steps && steps.filter(step => step && step.completed).length;
   const progress = Math && Math.round((completedSteps / steps && steps.length) * 100);
@@ -125,10 +74,8 @@ export function OnboardingTracker(): any ({ ;
 
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         <div
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
           style={{ width: `${progress}%` }}></div>;
@@ -137,11 +84,11 @@ export function OnboardingTracker(): any ({ ;
 
 
 
-<<<<<<< HEAD
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           style={{ width: `${progress}%` }}
         ></div>
       </div>

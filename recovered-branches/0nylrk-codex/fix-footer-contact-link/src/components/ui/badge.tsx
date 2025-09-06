@@ -31,19 +31,11 @@ function Badge({ className, variant, ...props }: BadgeProps) {return (;
   );
 }
 
-<<<<<<< HEAD
-export { Badge, badgeVariants }
-;
-
-;
-export { Badge, badgeVariants };
-export { Badge, badgeVariants }
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 ;
 import { badge_variants } from &quot;@/components / ui / badge - variants & quot;
@@ -65,4 +57,6 @@ export interface BadgeProps;
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

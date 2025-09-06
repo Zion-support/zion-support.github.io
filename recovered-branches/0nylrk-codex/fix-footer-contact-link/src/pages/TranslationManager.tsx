@@ -1,32 +1,7 @@
 
-<<<<<<< HEAD
 
 
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState, useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -43,26 +18,8 @@ import {useIsMobile} from "@/hooks/use-mobile";
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {useTranslationService} from "@/hooks/useTranslationService";
 export default function TranslationManager() {;
-<<<<<<< HEAD
 
-import React, { useState, useEffect } from 'react',
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/components/ui/use-toast",
-import { useTranslation } from "react-i18next",
-import { AlertTriangle, Check, Globe, Search, Loader2 } from "lucide-react",
-import { useIsMobile } from "@/hooks/use-mobile",
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
-import { useTranslationService } from "@/hooks/useTranslationService";
-export default function TranslationManager() {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const { t, i18n } = useTranslation();
 
@@ -110,154 +67,14 @@ export default function TranslationManager() {
         // Flatten nested objects for easier management
         const flattenObject = (obj: any, prefix = '') => {
           return Object.keys(obj).reduce((acc, key) => {
-<<<<<<< HEAD
+
             const pre = prefix.length ? `${prefix}.` : '',
             if (typeof obj[key] === 'object' && obj[key] !== null) {
               Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))
             } else {
               acc[`${pre}${key}`] = obj[key]
 
-            }
-            return acc
-          }, {} as Record<string, string>)
-        }
-        currentTranslations[lang.code] = flattenObject(res)
-      }
-    });
-    setTranslations(currentTranslations);
-    // Get all unique keys across all languages
-    const allKeys = new Set<string>();
-    Object.values(currentTranslations).forEach(langTranslations => {
-      Object.keys(langTranslations).forEach(key => allKeys.add(key))
-    });
-    setFilteredKeys(Array.from(allKeys))
-  }, [selectedNamespace, i18n]);
-  // Filter keys based on search query
-  useEffect(() => {
-    if (!searchQuery.trim()) {
-      // Get all unique keys across all languages
-      const allKeys = new Set<string>();
-      Object.values(translations).forEach(langTranslations => {
-        Object.keys(langTranslations).forEach(key => allKeys.add(key))
-      });
-      setFilteredKeys(Array.from(allKeys));
-      return
-    }
-    const query = searchQuery.toLowerCase().trim();
-    const filtered: string[] = []
-    // Search in keys and values
-    Object.values(translations).forEach(langTranslations => {
-      Object.entries(langTranslations).forEach(([key, value]) => {
-        if (
-          key.toLowerCase().includes(query) |
-          (typeof value === 'string' && value.toLowerCase().includes(query))
-        ) {
-          filtered.push(key)
-        }
-      })
-    });
-    setFilteredKeys([...new Set(filtered)])
-  }, [searchQuery, translations]);
-  const handleEdit = (key: string) => {
-    setEditingKey(key)
-    // Initialize edited translations for this key
-    const initialEdits: Record<SupportedLanguage, string> = {} as Record<SupportedLanguage, string>;
-    supportedLanguages.forEach(lang => {
-      initialEdits[lang.code] = translations[lang.code]?.[key] |''
-    });
-    setEditedTranslations({
-      ...editedTranslations;
-      [key]: initialEdits
-    })
-  }
-  const handleSave = (key: string) => {
-    setIsSaving(true)
-    // In a real application, you would save these to your backend
-    setTimeout(() => {
-      // Update translations with edited values
-      const updatedTranslations = { ...translations }
-      supportedLanguages.forEach(lang => {
-        if (!updatedTranslations[lang.code]) {
 
-
-=======
-=======
-import React, { useState, useEffect } from 'react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { SEO } from '@/components / SEO';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { Input } from '@/components / ui / input';
-import { Button } from '@/components / ui / button';
-import { Textarea } from '@/components / ui / textarea';
-import { toast } from '@/components / ui / use - toast';
-import { use_translation } from './react - i18next';
-import { AlertTriangle, Check, Globe, Search, Loader2 } from './lucide-react';
-import { useIsMobile } from '@/hooks / use - mobile';
-import { use_language, SupportedLanguage } from '@/context / LanguageContext';
-import { useTranslationService } from '@/hooks / useTranslationService';
-export default /**
- * TranslationManager - Function description
- */
-function TranslationManager() {
-  const { t, i18n } = use_translation ();
-  const is_mobile = useIsMobile ();
-  const { supported_languages } = use_language ();
-  const { translate_content, is_translating } = useTranslationService ();
-;
-  const [selected_namespace, setSelectedNamespace] = useState ("translation");
-  const [search_query, setSearchQuery] = useState ("");
-  const [translations, set_translations] = useState < Record < string, any>>({});
-  const [filtered_keys, setFilteredKeys] = useState < string[]>([]);
-  const [editing_key, setEditingKey] = useState < string | null>(null);
-  const [edited_translations, setEditedTranslations] = useState < Record < string, Record < SupportedLanguage, string>>>({});
-  const [is_saving, setIsSaving] = useState (false);
-;
-  // Simulated translation data - in a real app, this would come from your backend;
-  useEffect (() => {
-    // For demo purposes, we're using the loaded translations from i18next;
-    const current_translations: Record < string, any> = {}
-;
-    supported_languages.for_each (lang => {
-      const res = i18n.getResourceBundle (lang.code, selected_namespace);
-      // Check condition
-if ( {) {
-  $2
-}
-        // Flatten nested objects for easier management;
-        const flatten_object = (obj: any, prefix = '') =>: any {
-          return Object.keys (obj).reduce ((acc, key) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-            const pre = prefix.length ? `${prefix}.` : '';
-            // Check condition
-if ( {) {
-  $2
-}
-              Object.assign (acc, flatten_object (obj[key], `${pre}${key}`));
-            } else {
-
-
-  // Simulated translation data - in a real app, this would come from your backend;
-  useEffect(() => {;
-    // For demo purposes, we're using the loaded translations from i18next;
-    const currentTranslations: Record<string, any> = {};
-
-    supportedLanguages && supportedLanguages.forEach(lang => {;
-      const res = i18n && i18n.getResourceBundle(lang && lang.code, selectedNamespace);
-      if (res) {;
-        // Flatten nested objects for easier management;
-        const flattenObject = (obj: any, prefix = '') => {;
-          return Object && Object.keys(obj).reduce((acc, key) => {;
-            const pre = prefix && prefix.length ? `${prefix}.` : '';
-            if (typeof obj[key] === 'object' && obj[key] !== null) {;
-              Object && Object.assign(acc, flattenObject(obj[key], `${pre}${key}`));
-=======
-              acc[`${pre}${key}`] = obj[key]
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState, useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -384,11 +201,11 @@ export default function TranslationManager() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           updatedTranslations[lang.code] = {}
         }
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
@@ -513,17 +330,12 @@ export default function TranslationManager() {;
   }
 
 
-<<<<<<< HEAD
-  return (
-    <>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code];
       }),;
       setTranslations(updatedTranslations),;
@@ -607,15 +419,17 @@ export default function TranslationManager() {;
         title={t('translation.manager_title')} ;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         description={t('translation.manager_description')}
       />
       <Header />
@@ -654,14 +468,15 @@ export default function TranslationManager() {;
               
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               {/* Translations table */}
               <div className="border rounded-md">
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">

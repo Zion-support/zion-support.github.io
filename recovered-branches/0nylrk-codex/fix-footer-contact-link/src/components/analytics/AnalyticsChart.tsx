@@ -1,92 +1,19 @@
 
-<<<<<<< HEAD
-
-
-interface AnalyticsChartProps {
-
-  title: string
-  description?: string;
-  data: any[]
-  type?: 'line' | 'bar';
-  dataKeys: string[]
-
-  timeRange?: string;
-  onTimeRangeChange?: (range: string) => void
-}
-export function AnalyticsChart({
-  title;
-
-  description
-  data
-  type = 'line';
-  dataKeys
-  timeRange = '7d';
-  onTimeRangeChange
-}: AnalyticsChartProps) {
-  const [chartType, setChartType] = useState<'line' | 'bar'>(type);
-  const colors = [
-    '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57'
-  ];
 
 
 
-=======
-=======
-
-
-
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {useState} from "react";
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
-import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-import { useState } from './react';
-interface AnalyticsChartProps {
-  title: string,
-
-  description?: string;
-  data: any[],;
-  type?: 'line' | 'bar';
-
-
-export function AnalyticsChart(): any ({ ;
-  title;
-  description, ;
-  data, ;
-  type = 'line';
-  dataKeys, ;
-
-  timeRange = '7d';
-  onTimeRangeChange;
-}: AnalyticsChartProps) {;
-  const [chartType, setChartType] = useState<'line' | 'bar'>(type);
-
-
-  const colors = [;
-    '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57';
-  ];
-
-
-=======
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { useState } from "react",
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface AnalyticsChartProps {
   title: string,
   description?: string,
@@ -149,14 +76,15 @@ export function AnalyticsChart({
                   textAnchor="end";
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   height={50}
 
                 />;

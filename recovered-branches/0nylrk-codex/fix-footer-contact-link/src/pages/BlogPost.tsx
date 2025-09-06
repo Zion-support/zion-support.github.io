@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState, useEffect} from "react";
 import {useParams, Link, useNavigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
@@ -12,48 +9,18 @@ import {ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook,
 import type { BlogPost as BlogPostType } from "@/types/blog";
 import {Separator} from "@/components/ui/separator";
 import {AppLayout} from "@/layout/AppLayout";
-<<<<<<< HEAD
 
 
-import { useState, useEffect } from "react",
-import { useParams, Link, useNavigate } from "react-router-dom",
-import { SEO } from "@/components/SEO",
-import { Button } from "@/components/ui/button",
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react",
-import type { BlogPost as BlogPostType } from "@/types/blog",
-import { Separator } from "@/components/ui/separator";
-import { AppLayout } from "@/layout/AppLayout";
-// Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts";
-export default function BlogPost() {
 
-=======
-// Importing the sample blog posts - in a real app, you would fetch this from an API;
-import {BLOG_POSTS} from "@/data/blog-posts";
-export default function BlogPost() {;
-  const { slug } = useParams() as { slug: string },;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const navigate = useNavigate();
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
   const [showShareMenu, setShowShareMenu] = useState(false);
-<<<<<<< HEAD
-
-  useEffect(() => {
-    // Find the current post by slug
-    const currentPost = BLOG_POSTS.find(p => p.slug === slug);
-    if (currentPost) {
-      setPost(currentPost);
-import { Separator } from "@/components/ui/separator",
-import { AppLayout } from "@/layout/AppLayout",
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts",
 export default function BlogPost() {
@@ -103,30 +70,13 @@ export default function BlogPost() {
         </div>
       </AppLayout>
     )
-<<<<<<< HEAD
-
-  }
-  // Helper function to get share URL
-  const getShareUrl = (platform: string) => {
-    const url = encodeURIComponent(window.location.href);
-    const title = encodeURIComponent(post.title)
-    switch (platform) {
-      case 'facebook':
-        return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-      case 'twitter':
-        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
-      case 'linkedin':
-        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
-      default: return '#'
-    }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
+
 import { useState, useEffect } from "react",;
 import { useParams, Link, useNavigate } from "react-router-dom",;
 import { SEO } from "@/components/SEO",;
@@ -192,11 +142,11 @@ export default function BlogPost() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   
   return (
     <AppLayout>
@@ -378,15 +328,17 @@ export default function BlogPost() {;
                     </div>;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   )}
 
                 </div>;
@@ -410,31 +362,16 @@ export default function BlogPost() {;
                 alt={post.title}
                 className="object-cover w-full h-full"
                 onError={(e) => {
-<<<<<<< HEAD
 
 
-                  const target = e.target as HTMLImageElement,
-                  target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
-          <div className="mb-12 max-w-5xl mx-auto">;
-            <div className="aspect-[21/9] rounded-lg overflow-hidden">;
-              <img;
-                src={post.featuredImage} ;
-                alt={post.title}
-                className="object-cover w-full h-full";
-                onError={(e) => {;
-                  const target = e.target as HTMLImageElement;
-                  target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 }}
 
               />;
@@ -522,15 +459,17 @@ export default function BlogPost() {;
                     </Link>;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   ))}
                 </div>;
               </div>;
@@ -577,19 +516,12 @@ export default function BlogPost() {;
 
     </AppLayout>);
 }
-<<<<<<< HEAD
-;
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
 
-=======
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

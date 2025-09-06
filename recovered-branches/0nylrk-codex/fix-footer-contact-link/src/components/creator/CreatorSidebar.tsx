@@ -5,10 +5,11 @@ import {
 
 
 
+
+
 import {
 
-<<<<<<< HEAD
-=======
+
 import {;
   Bell,;
   FileText,;
@@ -16,16 +17,7 @@ import {;
   Mail,;
   Search,;
   Settings,;
-=======
 
-  Bell,
-  FileText,
-  Home,
-  Mail,
-  Search,
-  Settings,
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Users,;
 } from "lucide-react";
 import {;
@@ -39,11 +31,10 @@ import {;
   SidebarGroupContent,;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 } from "@/components/ui/sidebar";
 
 export function AppSidebar() {;
@@ -74,14 +65,15 @@ export function AppSidebar() {;
         
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -108,14 +100,15 @@ export function AppSidebar() {;
         
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -140,25 +133,8 @@ export function AppSidebar() {;
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-<<<<<<< HEAD
 
-    </Sidebar>
 
-  )
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
-import {;
-  Sidebar,;
-  SidebarContent,;
-  SidebarGroup,;
-  SidebarMenu,;
-  SidebarMenuItem,;
-  SidebarMenuButton,;
-  SidebarGroupLabel,;
-  SidebarGroupContent} from "@/components/ui/sidebar";
-export function AppSidebar() {;
-  return (;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     <Sidebar>;
       <SidebarContent>;

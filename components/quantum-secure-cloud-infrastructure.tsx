@@ -1,26 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network  } from 'lucide-react';
-import SEO from '../components/SEO';
-export default function QuantumSecureCloudInfrastructure() {
-	return (
-		<ServiceLanding
-			title;
-=======
  import React from 'react';
 =======
 =======
  import React from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { motion } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -32,23 +13,17 @@ export default function QuantumSecureCloudInfrastructure() {
 			pricePerMonthUSD={5999}
 			implementationWeeks="6-10 weeks"
 			roiNote="Meet emerging PQC compliance and safeguard long-lived data"
-<<<<<<< HEAD
-			features={[;
-=======
 			features={[
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 				"PQC algorithms for data at-rest and in-transit";
 				"Hybrid crypto transition plans";
 				"HSM/KMS integrations and key rotation";
 				"Zero Trust + PQC reference designs";
 				"Threat modeling and validation";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 				"NIST PQC roadmap alignment]}
 			]}
 			industries={["Financial Services", "Healthcare", "Government"]}
@@ -83,55 +58,27 @@ import SEO from '../components/SEO';
 export default function QuantumSecureCloudInfrastructure() {;
 	return (<ServiceLanding
 =======
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network  } from 'lucide-react';
-import SEO from '../components/SEO';
-export default function QuantumSecureCloudInfrastructure() {
-	return (
-		<ServiceLanding
-			title;
-=======
  import React from 'react';
 =======
 =======
  import React from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { motion } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
 import SEO from '../components/SEO';
 export default function QuantumSecureCloudInfrastructure() {
 	return(<ServiceLanding
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 			title="Quantum-Secure Cloud Infrastructure"
 			description="Future-proof your cloud with PQC, encrypted networking, and key management designed to resist quantum attacks."
 			subtitle="Protect data beyond the quantum horizon"
 			pricePerMonthUSD={5999}
 			implementationWeeks="6-10 weeks"
 			roiNote="Meet emerging PQC compliance and safeguard long-lived data"
-<<<<<<< HEAD
-features={[
-				"PQC algorithms for data at-rest and in-transit"
-				"Hybrid crypto transition plans"
-				"HSM/KMS integrations and key rotation"
-				"Zero Trust + PQC reference designs"
-				"Threat modeling and validation"
-=======
-<<<<<<< HEAD
-			features={[;
-=======
 			features={[
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 				"PQC algorithms for data at-rest and in-transit";
 				"Hybrid crypto transition plans";
 				"HSM/KMS integrations and key rotation";
 				"Zero Trust + PQC reference designs";
 				"Threat modeling and validation";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 				"NIST PQC roadmap alignment]}
 			]}
 			industries={["Financial Services", "Healthcare", "Government"]}

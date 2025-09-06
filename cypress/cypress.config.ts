@@ -15,6 +15,7 @@ export default define_config ({
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
 
+
         if (browser && browser.family === 'chromium') {
           launchOptions && launchOptions.args.push('--disable-ipv6');
     base_url: 'http://localhost:3000', // Standard Next.js port;
@@ -50,8 +51,8 @@ export default defineConfig({;
 
 
 
+
     supportFile: 'cypress/support/e2e.ts';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
@@ -121,10 +122,11 @@ export default defineConfig({;
     mochaFile: 'cypress/results/junit-[hash].xml',
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     toConsole: true
   }
 });
+
+
 
 
 
@@ -142,16 +144,11 @@ export default defineConfig({;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       });
     }
     env: {
@@ -196,13 +193,15 @@ export default defineConfig({;
 });
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -20,10 +20,8 @@ class ErrorBoundary extends React.Component {
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   FaRocket,
   FaBrain,
   FaCloud,
@@ -36,46 +34,14 @@ import { motion, AnimatePresence } from 'framer-motion';
   FaDatabase,
   FaNetworkWired,
 
-=======
 
 } from 'react-icons/si';
 
 interface Service {;
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  FaRocket,
-  FaBrain,
-  FaCloud,
-  FaShieldAlt,
-  FaChartLine,
-  FaCogs,
-  FaLightbulb,
-  FaGlobe,
-  FaMobile,
-  FaDatabase,
-  FaNetworkWired,
-<<<<<<< HEAD
-  FaRobot,
-  FaSearch,
-import {
-  SiNextdotjs,
-  SiReact,
-  SiTypescript,
-  SiTailwindcss,
-  SiPrisma,
-  SiSupabase,
-  SiVercel,
-  SiDocker,
-  SiKubernetes,
-  SiAws,
-
-  SiGooglecloud,;
-  SiMicrosoftazure,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 } from 'react-icons/si';
 
 
@@ -84,10 +50,12 @@ interface Service {
   title: string;
   description: string;
 
+
   icon: React && React.ReactNode;
   category: string;
   features: string[];
   pricing: {;
+
     starter: number;
     professional: number;
 
@@ -103,10 +71,8 @@ interface ServiceCategory {
   id: string;
   name: string;
   description: string;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import { 
   FaRocket;
@@ -138,12 +104,10 @@ import {
   SiMicrosoftazure
 } from 'react-icons/si';
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
   color: string;  id: string
   name: string
@@ -153,10 +117,10 @@ import {
   color: string
 }
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
   color: string;  id: string,
   name: string,
@@ -166,7 +130,9 @@ import {
 }
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 const serviceCategories: ServiceCategory[] = [
   {
 
@@ -600,171 +566,13 @@ const serviceCategories: ServiceCategory[] = [;
 
     technologies: [;
 
-      'TensorFlow',
-      'PyTorch',
-      'OpenAI',
-      'LangChain',
-      'React',
-      'Node.js',
-    ],
 
-    benefits: [;
-      'Reduce manual tasks by 80%',
-      'Improve accuracy by 95%',
-      '24 / 7 automated operations',
-
-      'Scalable AI infrastructure',
-    ],
-  },
-
-  {
-
-    id: 'quantum - computing - platform',
-    title: 'Quantum Computing Platform',
-
-    description:;
-      'Next - generation quantum computing solutions for complex problem solving',
-    icon: <FaBrain className='w - 6 h - 6' />,
-    category: 'ai - ml',
-    features: [;
-      'Quantum algorithm optimization',
-      'Hybrid classical - quantum computing',
-
-      'Quantum machine learning',
-      'Cryptographic solutions',
-      'Quantum simulation tools',
-      'API access to quantum hardware',
-    ],
-
-    pricing: {
-      starter: 999,
-      professional: 2499,
-      enterprise: 4999
-    
-    },
-
-    technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
-    benefits: [;
-      'Solve previously impossible problems',
-      'Exponential speed improvements',
-      'Future - proof technology',
-
-      'Research and development support',
-    ],
-  },
-
-  {
-
-    id: 'edge - ai - platform',
-    title: 'Edge AI Computing Platform',
-
-    description:;
-      'Distributed artificial intelligence at the edge for real - time processing',
-    icon: <FaNetworkWired className='w - 6 h - 6' />,
-    category: 'iot',
-    features: [;
-      'Edge device optimization',
-      'Real - time AI inference',
-      'Distributed learning',
-      'Low - latency processing',
-      'Offline AI capabilities',
-      'Edge - to - cloud synchronization',
-    ],
-
-    pricing: {
-      starter: 199,
-      professional: 599,
-      enterprise: 1499
-    
-    },
-
-    technologies: [;
-      'TensorFlow Lite',
-      'ONNX Runtime',
-      'Edge TPU',
-      'Raspberry Pi',
-      'Arduino',
-    ],
-
-      'Comprehensive compliance',
-      'Advanced threat protection',
-    ],
-  },
-
-  {
-
-    id: 'data - fabric - platform',
-    title: 'Intelligent Data Fabric Platform',
-
-    description:;
-      'Unified data management and analytics across all sources and formats',
-    icon: <FaDatabase className='w - 6 h - 6' />,
-    category: 'data',
-    features: [;
-      'Unified data access',
-      'Real - time analytics',
-      'Data governance',
-      'AI - powered insights',
-      'Multi - cloud support',
-
-      'Data lineage tracking',
-    ],
-
-    pricing: {
-      starter: 299,
-      professional: 799,
-      enterprise: 1999
-    
-    },
-
-    technologies: [;
-      'Apache Kafka',
-      'Apache Spark',
-      'Snowflake',
-      'Databricks',
-      'Airflow',
-    ],
-
-    benefits: [;
-      'Unified data view',
-      'Real - time insights',
-
-      'Improved data quality',
-      'Reduced integration costs',
-    ],
-  },  {
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-    id: 'cloud - native - platform',
-    title: 'Cloud - Native Development Platform',
-    description: 'Modern cloud - native development and deployment platform',
-    icon: <FaCloud className='w - 6 h - 6' />,      'Unified data view_real - time insights_improved data quality_reduced integration costs';
-    ];
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-  }
-  {
-
-  {
-    id: 'cloud-native-platform',
-    title: 'Cloud-Native Development Platform',
-    description: 'Modern cloud-native development and deployment platform',
-
-<<<<<<< HEAD
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 ];
 const services: Service[] = [;
   {;
@@ -988,18 +796,15 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       )
     }
 
-<<<<<<< HEAD
-
-    
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
@@ -1017,12 +822,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
   }
   const closeModal = () => {
 
-<<<<<<< HEAD
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
     if (searchTerm) {;
       filtered = filtered && filtered.filter(service => ;
         service && service.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
@@ -1196,13 +996,8 @@ if ( {) {
         </motion && motion.div>;
 
 
-=======
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Search and Filters */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1213,15 +1008,15 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
             <div className='relative flex-1 max-w-md'>
@@ -1251,7 +1046,6 @@ if ( {) {
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
             <div className="relative flex-1 max-w-md">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <input
                 type="text"
                 placeholder="Search services, technologies, or features..."
@@ -1268,9 +1062,7 @@ if ( {) {
         </motion.div>
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e && e.target.value as 'name' | 'price' | 'category')}
@@ -1311,8 +1103,10 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         {/* Category Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1328,15 +1122,17 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${;
                 selectedCategory === 'all';
@@ -1344,25 +1140,18 @@ if ( {) {
                   : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';
               }`}
 
-<<<<<<< HEAD
-            >
-              All Services
-            </button>
-            {serviceCategories.map(category => (              <button            {serviceCategories.map((category) => (
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               <button
 
 
 
 
-<<<<<<< HEAD
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
@@ -1380,6 +1169,8 @@ if ( {) {
         </motion.div>
 
 
+
+
           </div>;
         </motion && motion.div>;
 
@@ -1387,12 +1178,13 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Services Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1404,15 +1196,15 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         >
           {filteredServices.map((service, index) => (
             <motion.div
@@ -1426,17 +1218,19 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               onClick={() => handleServiceSelect(service)}
             >;
               <div className='flex items-center gap-3 mb-4'>;
@@ -1541,18 +1335,17 @@ if ( {) {
                   >
                     className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'                  >
 
-<<<<<<< HEAD
+
                   >
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                     {tech}
                   </span>
                 ))}
@@ -1607,24 +1400,23 @@ if ( {) {
         </motion && motion.div>;
 
 
-<<<<<<< HEAD
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
@@ -1655,12 +1447,13 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Service Detail Modal */}
       <AnimatePresence>;
         {selectedService && (;
@@ -1676,14 +1469,15 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
@@ -1691,19 +1485,20 @@ if ( {) {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
 
+
               className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
               onClick={e => e.stopPropagation()}
 
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             >
               <div className='flex items-start justify-between mb-6'>
                 <div className='flex items-center gap-4'>
@@ -1726,7 +1521,6 @@ if ( {) {
                 <button
                   onClick={closeModal}
                   className='p-2 hover:bg-white/10 rounded-lg transition-colors'            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="flex items-start justify-between mb-6">
                 <div className="flex items-center gap-4">
                   <div className="p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl">
@@ -1770,18 +1564,13 @@ if ( {) {
 
 
                         {feature}
-<<<<<<< HEAD
 
 
-
-=======
-<<<<<<< HEAD
-                      </li>;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                         {feature}
+
+
 
 
 
@@ -1792,6 +1581,8 @@ if ( {) {
                 </div>
 
 
+
+
                   </ul>;
                 </div>;
 
@@ -1799,12 +1590,13 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 {/* Benefits */}
 
 
@@ -1812,6 +1604,8 @@ if ( {) {
                   </ul>
                 </div>
               </div>
+
+
 
 
                   </ul>;
@@ -1822,12 +1616,13 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               {/* Technologies */}
               <div className='mt-8'>
                 <h3 className='text-xl font-bold text-white mb-4'>
@@ -1849,13 +1644,13 @@ if ( {) {
                     >
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                       {tech}
                     </span>;
                   ))}
@@ -1863,12 +1658,14 @@ if ( {) {
               </div>
 
 
+
+
                 </div>;
               </div>;
 
 
 
-<<<<<<< HEAD
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -1881,14 +1678,13 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               {/* Pricing */}
               <div className='mt-8'>
                 <h3 className='text-xl font-bold text-white mb-4'>
@@ -1925,46 +1721,26 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
               </div>
             </motion.div>
           </motion.div>
         )}
-<<<<<<< HEAD
-
-      </AnimatePresence>
-    </div>
-);
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-export default EnhancedServicesShowcase2025;
-
-export default EnhancedServicesShowcase2025;
-
-export default EnhancedServicesShowcase2025;
 
 
-
-<<<<<<< HEAD
-export default EnhancedServicesShowcase2025;  )
-}
-export default EnhancedServicesShowcase2025;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-};
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

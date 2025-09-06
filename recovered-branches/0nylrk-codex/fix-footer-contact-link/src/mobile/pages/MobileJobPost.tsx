@@ -1,12 +1,10 @@
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -21,10 +19,8 @@ import {Card, CardContent} from "@/components/ui/card";
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -44,11 +40,10 @@ import { Badge } from "@/components/ui/badge",
 import { Card, CardContent } from "@/components/ui/card",
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
 
@@ -81,144 +76,8 @@ export function MobileJobPost() {
   
   const renderStepContent = () => {
     switch (currentStep) {
-<<<<<<< HEAD
-
-      case "details": return <DetailsStep />,
-      case "requirements":
-        return <RequirementsStep />,
-      case "budget":
-        return <BudgetStep />,
-      case "preview":
-        return <PreviewStep />,
-      default:
-        return <DetailsStep />
-    }
-  }
-  },
-  
-  return (
-    <div className="min-h-screen flex flex-col">
-      <MobileHeader
-        title={`Post a Job (${currentStep === "preview" ? 4 : currentStep === "budget" ? 3 : currentStep === "requirements" ? 2 : 1}/4)`}
-        showBack
-      />
-      <main className="flex-1 py-4 pb-24 px-4">
-        <div className="mb-6 flex justify-between">
-          <div className="flex space-x-1">
-            <Badge variant={currentStep === "details" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1</Badge>
-            <Badge variant={currentStep === "requirements" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2</Badge>
-            <Badge variant={currentStep === "budget" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3</Badge>
-            <Badge variant={currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>
-          </div>
-          <Button variant="outline" className="flex gap-1">
-            <Zap className="h-4 w-4" /> AI Assist
-          </Button>
-        </div>
-        {renderStepContent()}
-        <div className="flex gap-2 mt-6">
-          {currentStep !== "details" && (
-            <Button
-              variant="outline"
-              className="flex-1 gap-1"
-              onClick={goToPrevStep}
-            >
-              <ChevronLeft className="h-4 w-4" /> Back
-            </Button>
-          )}
-          <Button
-            className="flex-1 gap-1"
-            onClick={goToNextStep}
-          >
-            {currentStep === "preview" ? "Publish Job" : "Continue"}
-            {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
-          </Button>
-        </div>
-      </main>
-      <BottomNavigation />
-    </div>
-  )
-}
-function DetailsStep() {
-  return (
-    <div className="space-y-4">
-      <h2 className="text-lg font-medium">Job Details</h2>
-      <div className="space-y-2">
-        <Label htmlFor="title">Job Title</Label>
-        <Input id="title" placeholder="e.g. Senior React Developer" />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="company">Company Name</Label>
-        <Input id="company" placeholder="Your company name" />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="location">Location</Label>
-        <Select defaultValue="remote">
-          <SelectTrigger>
-            <SelectValue placeholder="Select location type" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="remote">Remote</SelectItem>
-            <SelectItem value="onsite">On-site</SelectItem>
-            <SelectItem value="hybrid">Hybrid</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="jobType">Job Type</Label>
-        <Select>
-          <SelectTrigger>
-            <SelectValue placeholder="Select job type" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="fulltime">Full-time</SelectItem>
-            <SelectItem value="parttime">Part-time</SelectItem>
-            <SelectItem value="contract">Contract</SelectItem>
-            <SelectItem value="freelance">Freelance</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="description">Job Description</Label>
-
-          rows={5}
-        />
-      </div>
-    </div>
-  )
-}
 
 
-function RequirementsStep() {
-  const [skills, setSkills] = useState<string[]>([
-    "React", "TypeScript", "Node.js"
-  ]);
-  const [newSkill, setNewSkill] = useState("");
-        <Textarea 
-          id="description" 
-          placeholder="Describe the job role and responsibilities" 
-
-
-import React, { useState } from "react",;
-import { MobileHeader } from "../components/common/MobileHeader",;
-import { BottomNavigation } from "../components/common/BottomNavigation",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Label } from "@/components/ui/label",;
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue;
-} from "@/components/ui/select",;
-import { Zap, ChevronLeft, ChevronRight } from "lucide-react",;
-import { Badge } from "@/components/ui/badge",;
-import { Card, CardContent } from "@/components/ui/card",;
-type JobPostStep = "details" | "requirements" | "budget" | "preview",;
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export function MobileJobPost() {;
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
@@ -370,7 +229,10 @@ function DetailsStep() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 
 
@@ -561,30 +423,8 @@ function DetailsStep() {
           {skills.map((skill) => (
             <Badge
               key={skill}
-<<<<<<< HEAD
 
-              variant="secondary"
-              className="flex items-center gap-1 px-3 py-1"
-            >
-              {skill}
-              <button
-                className="ml-1 rounded-full hover:bg-background/20 p-1"
-              <button 
-                className="ml-1 rounded-full hover:bg-background/20 p-1"
 
-;
-function RequirementsStep() {;
-  const [skills, setSkills] = useState<string[]>([;
-    "React", "TypeScript", "Node.js";
-  ]),;
-  const [newSkill, setNewSkill] = useState(""),;
-  const addSkill = () => {;
-    if (newSkill && !skills.includes(newSkill)) {;
-      setSkills([...skills, newSkill]),;
-      setNewSkill("");
-    }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   };
 
@@ -638,21 +478,20 @@ function RequirementsStep() {;
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1">;
               {skill}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               <button
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
 
 
-<<<<<<< HEAD
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 onClick={() => removeSkill(skill)}
               >;
                 ×;
@@ -683,51 +522,29 @@ function RequirementsStep() {;
       <div className="space-y-2">
         <Label htmlFor="responsibilities">Key Responsibilities</Label>
         <Textarea
-<<<<<<< HEAD
-
-          id="responsibilities"
-          placeholder="List the key responsibilities for this role"
-          rows={4}
-
-        />
-      </div>
-    </div>
-  )
 
 
-}
-        <Textarea 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
 
           rows={4}
-<<<<<<< HEAD
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         />;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 
 function BudgetStep() {
@@ -841,20 +658,7 @@ function PreviewStep() {
 }
 }
 
-<<<<<<< HEAD
-=======
-=======
-      <div className="space - y-2">;
-        <Label html_for="additional_info">Additional Budget Information</Label>;
-        <Textarea;
-          id="additional_info";
-          placeholder="Any additional information about budget or payment";
-          rows={3}
-        />;
-      </div>;
-    </div>);
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 /**
  * PreviewStep - Function description
  */
@@ -894,11 +698,12 @@ function PreviewStep() {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

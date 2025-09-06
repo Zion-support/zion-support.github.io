@@ -14,6 +14,7 @@ export const PerformanceMonitor: React.FC = () => {
 
   if (!isVisible) return null;
 
+
   return (
 
     <div className="fixed bottom-4 right-4 w-80 bg-gray-900 border border-gray-700 rounded-lg shadow-2xl z-50">
@@ -41,12 +42,4 @@ export const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 
-
-
-export default PerformanceMonitor;
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

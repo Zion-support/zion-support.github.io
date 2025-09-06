@@ -50,42 +50,8 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
     setPriceRange([values[0] || 0, values[1] || 500])
   },
 
-<<<<<<< HEAD
 
 
-  return (
-    <div className="mb-6 border-b border-zion-blue-light pb-6">
-      <button
-        onClick={toggleSection}
-        className='flex w-full items-center justify-between text-white font-medium'      >
-        className="flex w-full items-center justify-between text-white font-medium"
-      >
-        <span>Hourly Rate</span>
-        {expanded ? (
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />
-        ) : (
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />
-        )}
-      </button>
-      {expanded && (
-        <div className='mt-6'>
-          <div className='flex justify-between text-sm text-zion-slate-light mb-2'>            <span>${priceRange[0]}/hr</span>
-            <span>${priceRange[1]}/hr</span>
-          </div>
-          <Slider
-            aria-label='Hourly rate range'            value={[priceRange[0], priceRange[1]]}
-        <div className="mt-6">
-          <div className="flex justify-between text-sm text-zion-slate-light mb-2">
-import { Slider } from "@/components/ui/slider"
-import { PriceFilterProps } from "@/types/filters"
-export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {
-  const handleChange = (values: number[]) => {
-    setPriceRange([values[0] |0, values[1] |500])
-  }
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -106,10 +72,9 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
       
       {expanded && (
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
             <span>${priceRange[0]}/hr</span>
@@ -150,17 +115,14 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             onValueChange={handleChange}
 
 
-<<<<<<< HEAD
+
     </div>;
   );
-            className="mt-6"
-          />
-        </div>
-      )};
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
 
             className="mt-6"
           />
@@ -168,20 +130,12 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
       )}
 
 
-<<<<<<< HEAD
-    </div>
-  )
-}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-    </div>;
 
 
   );
 };
 }
-<<<<<<< HEAD
-=======
+
 <<<<<<< HEAD
 }
 
@@ -192,7 +146,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
     </div>
   );
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         <div className="mt - 6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;

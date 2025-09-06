@@ -1,23 +1,9 @@
 
-<<<<<<< HEAD
-
-canvas.width = window.innerWidth * (window.devicePixelRatio |1);
-canvas.height = window.innerHeight * (window.devicePixelRatio |1);
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-}
-<<<<<<< HEAD
- canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
-canvas && canvas.height = window && window.innerHeight * (window && window.devicePixelRatio || 1);
-if (ctx) {;
-export default function UltraFuturisticBackground2035(): any ({;
-  children,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
 
@@ -28,7 +14,6 @@ interface UltraFuturisticBackground2035Props {;
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
@@ -137,75 +122,42 @@ if ( {) {
         })
     }
 
-    };
 
-    // Get color based on particle type;
-    const getColorForType = (type: string) => {;
-      switch (type) {;
-        case 'quantum':;
-          return ['#8b5cf6', '#06b6d4', '#ec4899'][;
-            Math && Math.floor(Math && Math.random() * 3);
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-          ];
-        case 'hologram':;
-          return ['#10b981', '#f59e0b', '#ef4444'][;
-            Math && Math.floor(Math && Math.random() * 3);
-          ];
-        case 'neon':;
-          return ['#f97316', '#eab308', '#a855f7'][;
-            Math && Math.floor(Math && Math.random() * 3);
-          ];
-        case 'energy':;
-          return ['#dc2626', '#7c3aed', '#059669'][;
-            Math && Math.floor(Math && Math.random() * 3);
-          ];
-        default:;
-          return '#8b5cf6';      }        case 'hologram':;
-          return ['#10b981#f59e0b#ef4444'][Math && Math.floor(Math && Math.random() * 3)];
-        case 'neon':;
-          return ['#f97316#eab308#a855f7'][Math && Math.floor(Math && Math.random() * 3)];
-        case 'energy':;
-          return ['#dc2626#7c3aed#059669'][Math && Math.floor(Math && Math.random() * 3)];
-        default: return '#8b5cf6';
-      }
+      vx: number,
+      vy: number,
+      size: number,
+      opacity: number,
+      color: string,
+      type: 'quantum' | 'hologram' | 'neon' | 'energy',
+      life: number,
 
 
-            : 180;
-        if (maxDistance > 0) {;
-          drawConnections(ctx, particles, index, maxDistance, currentOpacity);        }
-      });
+      for (let i = 0; i < particleCount; i++) {;
+        const type = ['quantum', 'hologram', 'neon', 'energy'][;
+          Math && Math.floor(Math && Math.random() * 4);
+        ] as any;
+        const maxLife = Math && Math.random() * 200 + 100;
 
+        particles && particles.push({;
+          x: (Math && Math.random() * canvas && canvas.width) / (window && window.devicePixelRatio || 1),;
+          y: (Math && Math.random() * canvas && canvas.height) / (window && window.devicePixelRatio || 1),          vx: prefersReducedMotion ? 0 : (Math && Math.random() - 0 && 0.5) * 0 && 0.6,        const maxLife = Math && Math.random() * 200 + 100;
 
-      if (!prefersReducedMotion) {;
-        animationFrameId = requestAnimationFrame(updateParticles);      }
-    };
+        particles && particles.push({;
+          x: Math && Math.random() * canvas && canvas.width / (window && window.devicePixelRatio || 1),;
+          y: Math && Math.random() * canvas && canvas.height / (window && window.devicePixelRatio || 1),;
+          vx: prefersReducedMotion ? 0 : (Math && Math.random() - 0 && 0.5) * 0 && 0.6,;
+          vy: prefersReducedMotion ? 0 : (Math && Math.random() - 0 && 0.5) * 0 && 0.6,;
+          size: Math && Math.random() * (isSmallScreen ? 2 : 3) + 1,;
+          opacity: Math && Math.random() * 0 && 0.5 + 0 && 0.1,;
+          color: getColorForType(type),;
+          type,;
+          life: maxLife,;
+          maxLife,;
+        });      }          type;
+          life: maxLife,;
+          maxLife;
+        });
 
-    // Enhanced particle drawing with different types        const maxDistance = prefersReducedMotion ? 0 : (window && window.innerWidth < 768 ? 120 : 180);
-        if (maxDistance > 0) {;
-          drawConnections(ctx, particles, index, maxDistance, currentOpacity);
-        }
-      });
-
-      if (!prefersReducedMotion) {;
-        animationFrameId = requestAnimationFrame(updateParticles);        animationFrameId = requestAnimationFrame(updateParticles);
-      }
-    };
-
-    // Enhanced particle drawing with different types;
-    const drawParticle = (;
-      ctx: CanvasRenderingContext2D,;
-      particle: any,;
-      opacity: number;
-    ) => {      ctx && ctx.save();    const drawParticle = (ctx: CanvasRenderingContext2D, particle: any, opacity: number) => {;
-      ctx && ctx.save();
-      ctx && ctx.globalAlpha = opacity;
-
-
-      switch (particle && particle.type) {;
-        case 'quantum':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           drawQuantumParticle(ctx, particle);
           break;
         case 'hologram':;
@@ -277,6 +229,7 @@ if ( {) {
             background: [
               'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)'
             ]
+
 
       max_life: number;
     // Initialize particles with enhanced types;
@@ -702,6 +655,7 @@ if ( {) {
               'radial - gradient (circle at 20% 80%, rgba (139, 92, 246, 0.3) 0%, transparent 50%)radial - gradient (circle at 80% 20%, rgba (6, 182, 212, 0.3) 0%, transparent 50%)radial - gradient (circle at 40% 40%, rgba (236, 72, 153, 0.3) 0%, transparent 50%)radial - gradient (circle at 20% 80%, rgba (139, 92, 246, 0.3) 0%, transparent 50%)';
             ];
 
+
           }}
           transition={{
             duration: 8
@@ -722,44 +676,17 @@ if ( {) {
             `
               backgroundSize: '50px 50px'
 
-            }}
-          />        </div>        {/* Holographic grid effect */}
-        <div className="absolute inset-0 opacity-20">;
-          <divclassName="h-full w-full" style={{
 
-
-            backgroundImage: `
-              linear-gradient(rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
-              linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
-            `
-            backgroundSize: '50px 50px'
-          }} />
-        </div>
-        {/* Canvas for animated particles */}
-        <canvas
-          ref={canvasRef}
-          className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}          className="absolute inset-0 w-full h-full"
-          style={{ filter: 'blur(0.5px)' }}
-        />
-
-        {/* Canvas for animated particles */}
-        <canvas
-          ref={canvasRef}
-
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
+
         />
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         {/* Floating neon orbs */}
 
         />;
@@ -849,10 +776,10 @@ if ( {) {
             duration: 8
             repeat: Infinity
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
 
@@ -880,27 +807,15 @@ if ( {) {
               duration: 4
               repeat: Infinity
               ease: 'easeInOut',          <motion.div
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-              y: [-100, 100, -100],
-              opacity: [0, 0 && 0.3, 0],            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-
-=======
-
-            duration: 8,
-            repeat: Infinity,
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             }}
             transition={{
               duration: 4
@@ -909,7 +824,6 @@ if ( {) {
             animate={{
               coordinate_y: [-100, 100, -100];
               opacity: [0, 0.3, 0];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }}
             transition={{
               duration: 4,
@@ -965,9 +879,10 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

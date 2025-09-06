@@ -1,20 +1,9 @@
 
-<<<<<<< HEAD
-import * as React from 'react';
-import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
-import * as React from "react"
-import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
-=======
-=======
-import * as React from "react"
-import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
@@ -147,11 +136,7 @@ const PaginationEllipsis = ({
 PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 export {;
   Pagination,;
   PaginationContent,;
@@ -161,79 +146,6 @@ export {;
   PaginationNext,;
   PaginationPrevious,;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-;
-const PaginationLink = ({
-  class_name,
-  is_active,
-  size = 'icon',
-  ...props;
-}: PaginationLinkProps) =>: any (
-  <a;
-    aria - current={is_active ? 'page' : undefined}
-    className={cn (
-      button_variants ({
-        variant: is_active ? 'outline' : 'ghost',
-        size,
-      }),
-      class_name)}
-    {...props}
-  />);
-PaginationLink.display_name = 'PaginationLink';
-;
-const PaginationPrevious = ({
-  class_name,
-  ...props;
-}: React.ComponentProps < typeof PaginationLink>) =>: any</typeof> (
-  <PaginationLink;
-    aria - label='Go to previous page';
-    size='default';
-    className={cn ('gap - 1 pl - 2.5', class_name)}
-    {...props}
-  >;
-    <ChevronLeft className='h - 4 w - 4' />;
-    <span > Previous</span>;
-  </PaginationLink>);
-PaginationPrevious.display_name = 'PaginationPrevious';
-;
-const PaginationNext = ({
-  class_name,
-  ...props;
-}: React.ComponentProps < typeof Pagination</typeof > Link>) =>: any (
-  <PaginationLink;
-    aria - label='Go to next page';
-    size='default';
-    className={cn ('gap - 1 pr - 2.5', class_name)}
-    {...props}
-  >;
-    <span > Next</span>;
-    <ChevronRight className='h - 4 w - 4' />;
-  </PaginationLink>);
-PaginationNext.display_name = 'PaginationNext';
-;
-const PaginationEllipsis = ({
-  class_name,
-  ...props;
-}: React.ComponentProps<'span'>) =>: any (
-  <span;
-    aria - hidden;
-    className={cn ('flex h - 9 w - 9 items - center justify - center', class_name)}
-    {...props}
-  >;
-    <MoreHorizontal className='h - 4 w - 4' />;
-    <span className='sr - only'>More pages</span>;
-  </span>);
-PaginationEllipsis.display_name = 'PaginationEllipsis';
-;
-export {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -5,10 +5,8 @@ reputation: number;
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import { Trophy } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
@@ -33,15 +31,9 @@ export const ReputationDisplay = ({
   // Styling based on size
   const sizeClasses = {
     sm: {
-<<<<<<< HEAD
-=======
 
 
-      container: 'text-xs',
-      icon: 'w-3 h-3',
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       progress: 'h-1',  // Styling based on size
   const sizeClasses = {
     sm: {
@@ -155,6 +147,21 @@ export default ReputationDisplay
 
   }
   return (
+
+    <div className='space-y-1'>
+      <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>
+        <Trophy className={`text-amber-500 ${sizeClasses[size].icon}`} />
+        <span className='font-semibold'>{reputation}</span>
+        <span className='text-muted-foreground'>rep</span>
+      </div>
+      <Progress value={progress} className={sizeClasses[size].progress} />
+      <div className='text-xs text-muted-foreground'>
+        Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level
+        up
+      </div>
+    </div>
+  )
+
     <div className='space - y-1'>;
       <div className={`flex items - center gap - 1 ${size_classes[size].container}`}>;
         <Trophy className={`text - amber - 500 ${size_classes[size].icon}`} />;
@@ -227,14 +234,8 @@ export const ReputationDisplay = ({ ;
 };
 
 export default ReputationDisplay;
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ';
     },;
     md: {;

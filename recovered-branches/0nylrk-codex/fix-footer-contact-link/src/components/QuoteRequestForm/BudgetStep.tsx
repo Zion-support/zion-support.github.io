@@ -1,23 +1,18 @@
 
 
-<<<<<<< HEAD
-import { QuoteFormData } from "@/types/quotes",
-import { Label } from "@/components/ui/label";
-import { Slider } from "@/components/ui/slider";
-import { Label } from "@/components/ui/label",
-import { Slider } from "@/components/ui/slider",
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface BudgetStepProps {
 
   formData: QuoteFormData
@@ -62,19 +57,16 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
         budget: {;
           ...formData && formData.budget;
           type,;
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         }
       })
     } else {
       updateFormData({
-=======
+
           maxAmount: formData && formData.budget.amount + 5000;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         budget: {
 
@@ -93,23 +85,13 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
     }
 
 
-<<<<<<< HEAD
-=======
-  },
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-  };
+
   },
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
@@ -137,17 +119,10 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
               <p className="text-sm text-zion-slate-light">I have a set amount</p>
             </div>
 
-<<<<<<< HEAD
-            <div
-            <div 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-            <div 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "hourly"
                   ? "bg-zion-purple/20 border-zion-purple"
@@ -159,17 +134,10 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
               <p className="text-sm text-zion-slate-light">Pay per hour of work</p>
             </div>
 
-<<<<<<< HEAD
-            <div
-            <div 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-            <div 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "range"
                   ? "bg-zion-purple/20 border-zion-purple"
@@ -184,14 +152,15 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
           
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           {formData.budget.type === "fixed" && (
             <div className="mt-6">
               <Label className="text-zion-slate-light mb-4 block">
@@ -269,15 +238,17 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                       }
                     });
                   }}

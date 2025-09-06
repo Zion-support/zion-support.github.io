@@ -10,10 +10,8 @@ id: string;
     totalAmount: string;
     progress: number;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React from 'react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -35,9 +33,21 @@ import { toast } from 'sonner';
 
 
 
+  const router = useRouter()
+  const startProjectCall = () => {
+    const roomId = `project-${project.id}`
+    toast.success('Starting project call', {
+      description: 'Initializing video connection...'
+    })
+    router.push(`/call/${roomId}`)
+  }
+  const messageClient = () => {
+    toast.info('Opening message thread with client', {
+      description: `Messaging ${project.client.name}...`
+    })
+    // Navigate to messaging with this client
+  }
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 import React from "react",
@@ -141,10 +151,8 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
     <div className="space-y-6 px-4 pb-24">
       <Card>
@@ -467,11 +475,11 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 <div className="pl-7">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Due Date:</span>
-<<<<<<< HEAD
-=======
+
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                     <span>{milestone.dueDate}</span>
                   </div>
                   <div className="flex justify-between text-sm">
@@ -522,10 +530,10 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
           ))}
         </div>;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
       </section>;
     </div>;
   );

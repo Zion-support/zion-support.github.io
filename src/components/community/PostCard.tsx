@@ -23,19 +23,15 @@ import { ForumPost } from "@/types/community",
 import { logInfo } from '@/utils/productionLogger',
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface PostCardProps {
   post: ForumPost
   compact?: boolean
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -43,6 +39,7 @@ interface PostCardProps {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
       "transition-shadow hover: shadow-md",
@@ -74,12 +71,6 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 export default PostCard;
 
 
-<<<<<<< HEAD
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default PostCard;

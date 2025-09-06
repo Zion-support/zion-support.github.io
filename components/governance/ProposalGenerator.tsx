@@ -24,26 +24,13 @@ export type ProposalType =;
   | 'AI Ethics';
   | 'Digital ID';
   | 'Education';
-<<<<<<< HEAD
 
 
-
-export type ProposalForm = {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
-export type ProposalForm = {;
-
-=======
-
-
-export type ProposalForm = {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   targetInstitution: string;
 ;
@@ -55,96 +42,36 @@ export type ProposalForm = {
   supportingMultiverses: string;
   language?: string;
   customPrompt?: string;};export type ProposalForm = {
-<<<<<<< HEAD
-
-  targetInstitution: string
-  type: ProposalType
-  regionalScope: string
-  budgetOrGoals: string
-  supportingMultiverses: string
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   targetInstitution: string,
   type: ProposalType,
   regionalScope: string,
   budgetOrGoals: string,
   supportingMultiverses: string,;
-<<<<<<< HEAD
 
-  language?: string;
-  customPrompt?: string
-}
 
-  language?: string;
-  customPrompt?: string
-}
-export default function ProposalGenerator() {
-  const [form, setForm] = useState<ProposalForm>({
-    targetInstitution: 'UNDP'
-    type: 'Workforce Dev'
-    regionalScope: 'Global'
-    budgetOrGoals: ''
-    supportingMultiverses: ''
-    language: 'English'
-    customPrompt:
-
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
   language?: string;
   customPrompt?: string
 }
-=======
-export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
-export type ProposalForm = {
-  targetInstitution: string,
-  custom_prompt?: string;}export type ProposalForm = {
-  target_institution: string,
-  type: ProposalType,
-  regional_scope: string,
-  budgetOrGoals: string,
-  supporting_multiverses: string,
-  language?: string;
 
-  customPrompt?: string;};export type ProposalForm = {;
-  targetInstitution: string,;
-  type: ProposalType,;
-  regionalScope: string,;
-  budgetOrGoals: string,;
-  supportingMultiverses: string,;
-  language?: string;
-  customPrompt?: string;
-};
-export default function ProposalGenerator() {;
-  const [form, setForm] = useState<ProposalForm>({;
-    targetInstitution: 'UNDP',;
-    type: 'Workforce Dev',;
-    regionalScope: 'Global',;
-    budgetOrGoals: '',;
-    supportingMultiverses: '',;
-    language: 'English',;
-    customPrompt:;
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
 
-=======
-
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
 
+
   const [exportLinks, setExportLinks] = useState<{;
+
 
     pdfUrl?: string;
     jsonUrl?: string;
@@ -181,27 +108,16 @@ export default function ProposalGenerator() {;
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
       setIsGenerating(false)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-  }
-=======
-    } finally {
 
-      setIsGenerating(false);    }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
   }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   async function handleExport() {
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
@@ -221,26 +137,21 @@ export default function ProposalGenerator() {;
       console.error(e);
       setStatusMessage('Export failed')
     }
-<<<<<<< HEAD
-  }
-=======
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       setStatusMessage('Export failed');    }
 
     }
 
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
 
   async function handleSubmitBridge() {
@@ -311,25 +222,9 @@ export default function ProposalGenerator() {;
       setStatusMessage('Submission failed');    }
   }
   return (
-<<<<<<< HEAD
-
-    <div className='space-y-6'>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-
-        <div className='space-y-4'>      const data = await res.json();
-      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
-    } catch (e) {
-      console.error(e);
-
-    <div className='space-y-6'>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
 
 
-      setStatusMessage('Submission failed')
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     <div className='space-y-6'>;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
@@ -339,11 +234,8 @@ export default function ProposalGenerator() {;
       console && console.error(e);
       setStatusMessage('Submission failed');
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   }
   return (
@@ -449,9 +341,7 @@ export default function ProposalGenerator() {;
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
     }
   }
@@ -536,9 +426,6 @@ export default function ProposalGenerator() {;
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               onClick={handleGenerate}
               disabled={isGenerating}
             >
@@ -611,6 +498,7 @@ export default function ProposalGenerator() {;
                 </div>
 
 
+
               onClick={handleGenerate}
               disabled={isGenerating}>;
               {isGenerating ? 'Generating...' : 'Generate Draft'}
@@ -626,30 +514,20 @@ export default function ProposalGenerator() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
               )}
             </div>;
           )}
 
 
-<<<<<<< HEAD
-}
-  );
-}
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
             className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
             value={draftMarkdown}
 
@@ -659,17 +537,18 @@ export default function ProposalGenerator() {;
         </div>;
       </div>;
     </div>;
-  );
-=======
 
   );
 
 }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  );
+}
+
 }
   );
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   custom_prompt?: string;
 }
 ;
@@ -1033,4 +912,6 @@ function handleSubmitBridge() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

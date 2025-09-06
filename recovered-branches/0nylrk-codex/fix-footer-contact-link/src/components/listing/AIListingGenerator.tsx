@@ -2,10 +2,8 @@
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -14,64 +12,8 @@ import {supabase} from "@/integrations/supabase/client";
 import {AIListingForm} from "./AIListingForm";
 import {GeneratedContentDisplay} from "./GeneratedContentDisplay";
 import {LoadingContentSkeleton} from "./LoadingContentSkeleton";
-<<<<<<< HEAD
-
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Sparkles } from "lucide-react",
-import { supabase } from "@/integrations/supabase/client",
-import { AIListingForm } from "./AIListingForm",
 
 
-
-  description: string
-  tags: string[]
-  suggestedPrice: {
-    min: number
-
-    max: number
-  }
-  keyPoints: string[]
-}
-interface AIListingGeneratorProps {
-
-  onApplyGenerated?: (content: GeneratedContent) => void
-
-  initialValues?: {
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
-    targetAudience?: string
-  }
-}
-
-export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
-  const handleGenerate = async ({
-    title;
-    category;
-    keyFeatures;
-    targetAudience
-  }: {
-    title: string
-    category: string
-    keyFeatures: string
-    targetAudience: string
-  }) => {
-    setIsLoading(true);
-    try {
-      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
-        body: { title, category, keyFeatures, targetAudience }
-      });
-      if (error) {
-        throw new Error(error.message)
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface GeneratedContent {;
   description: string,;
   tags: string[],;
@@ -132,35 +74,10 @@ function AIListingGenerator() {
   const [is_loading, setIsLoading] = useState (false);
   const [generated_content, setGeneratedContent] = useState < GeneratedContent | null>(null);
 ;
-<<<<<<< HEAD
-
-export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
-  const { toast } = useToast(),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null),;
-  const handleGenerate = async ({;
-    title,;
-    category,;
-    keyFeatures,;
-    targetAudience;
-  }: {;
-    title: string,;
-    category: string,;
-    keyFeatures: string,;
-    targetAudience: string;
-  }) => {;
-    setIsLoading(true),;
-    try {;
-      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {;
-        body: { title, category, keyFeatures, targetAudience }
-      }),;
-      if (error) {;
-        throw new Error(error.message);
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
   const handle_generate = async ({
 
     title;
@@ -183,7 +100,9 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       });
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       }
       if (data.error) {
         throw new Error(data.error)
@@ -201,46 +120,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       })
-<<<<<<< HEAD
 
-    } finally {
-      setIsLoading(false)
-    }
-  }
-  const handleApply = () => {
-    if (generatedContent && onApplyGenerated) {
-      onApplyGenerated(generatedContent);
-      toast({
-        title: "Content Applied"
-        description: "The generated content has been applied to your listing."
-      })
-    }
-  }
-  },
 
-  return (
-    <div className="space-y-6">
-      <Card className="border border-zion-blue-light bg-zion-blue-dark">
-        <CardHeader>
-          <CardTitle className="flex items-center text-white">
-            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
-            AI Listing Optimizer
-          </CardTitle>
-          <p className="text-sm text-zion-slate-light">
-            Provide basic information and let AI generate optimized, SEO-friendly content for your listing
-          </p>
-        </CardHeader>
-        <CardContent>
-          <AIListingForm
-            onSubmit={handleGenerate}
-            isLoading={isLoading}
-          <AIListingForm 
-            onSubmit={handleGenerate} 
-            isLoading={isLoading} 
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
       // Check condition
 if ( {) {
@@ -342,20 +223,18 @@ if ( {) {
           </p>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           <AIListingForm
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
 
 
-<<<<<<< HEAD
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             initialValues={initialValues}
           />;
         </CardContent>;

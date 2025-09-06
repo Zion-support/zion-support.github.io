@@ -14,18 +14,8 @@ export function PartnerLeaderboard() {
       badges: ["gold", "trending"]
     }
     },
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       id: "2"
       rank: 2
@@ -36,18 +26,8 @@ export function PartnerLeaderboard() {
       badges: ["silver"]
     }
     },
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       id: "3"
       rank: 3
@@ -58,18 +38,8 @@ export function PartnerLeaderboard() {
       badges: ["bronze"]
     }
     },
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       id: "4"
       rank: 4
@@ -78,73 +48,8 @@ export function PartnerLeaderboard() {
       referrals: 98
       earnings: 2450
       badges: []
-<<<<<<< HEAD
 
 
-    }
-    {
-      id: "5"
-      rank: 5
-      name: "Deep Learning Daily"
-      avatar: ""
-      referrals: 87
-      earnings: 2175
-
-      badges: ["newcomer"]
-    }
-  ]
-  // Function to render rank badge
-
-  const renderRankBadge = (rank: number,) => {
-    switch(rank) {
-      case 1:
-        return <Trophy className="h-5 w-5 text-yellow-500" />
-      case 2:
-        return <Medal className="h-5 w-5 text-gray-400" />
-      case 3:
-        return <Medal className="h-5 w-5 text-amber-700" />
-      default:
-        return <span className="text-sm font-semibold">{rank}</span>
-}
-
-  )
-}
-    },
-    },
-    {
-      id: "5",
-      rank: 5,
-      name: "Deep Learning Daily",
-      avatar: "",
-      referrals: 87,
-      earnings: 2175,
-      badges: ["newcomer"]
-    }
-  ]
-  // Function to render rank badge
-  const renderRankBadge = (rank: number,) => {
-    switch(rank) {
-      case 1:
-        return <Trophy className="h-5 w-5 text-yellow-500" />
-      case 2:
-        return <Medal className="h-5 w-5 text-gray-400" />
-      case 3:
-        return <Medal className="h-5 w-5 text-amber-700" />,
-      default:
-        return <span className="text-sm font-semibold">{rank}</span>;
-};
-  );
-};
-}
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Badge } from "@/components/ui/badge",;
-import { Crown, Medal, Trophy } from 'lucide-react';
-
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface LeaderboardEntry {;
   id: string,;
   rank: number,;

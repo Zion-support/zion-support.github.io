@@ -69,7 +69,7 @@ const EnhancedFuturisticBackground: React.FC<;
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
   children;
   class_name = '';
   intensity = 'medium';
@@ -100,9 +100,7 @@ const EnhancedFuturisticBackground: React.FC<;
       x: number,
       y: number,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
       vx: number,
       vy: number,
       size: number,
@@ -131,7 +129,7 @@ const EnhancedFuturisticBackground: React.FC<;
 
           this.opacity *= 0.95
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         }
       }
 
@@ -160,10 +158,12 @@ const EnhancedFuturisticBackground: React.FC<;
 
         ctx.restore()
 
+
         return this.life <= 0 || this.opacity < 0.01;      }
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       }
       isDead() {
 
@@ -179,11 +179,11 @@ const EnhancedFuturisticBackground: React.FC<;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
@@ -322,7 +322,8 @@ constructor(p1: Particle, p2: Particle) {
           ctx && ctx.restore();
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
         }
       }
     }
@@ -367,49 +368,70 @@ constructor(p1: Particle, p2: Particle) {
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
 
 
-          }
-        }
-      }
+
+    };
+
+    const drawMatrix = matrixRain();
+    // Main animation loop
+    const animate = () => {
+      // Clear canvas with fade effect
+      ctx.fillStyle = colors.background;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // Draw matrix rain
+      drawMatrix();
+      // Update and draw particles
+      particles.forEach(particle => {
+        particle.update();
+
+        particle.draw()
+
+      });
+      // Remove dead particles and add new ones
+      particles = particles.filter(particle => !particle.isDead());
+      while (particles.length < settings.particleCount) {
+
+      };
+      return drawMatrix;
+    };
+    const drawMatrix = matrixRain();
+    // Main animation loop;
+    const animate = () => {;
+      // Clear canvas with fade effect;
+      ctx && ctx.fillStyle = colors && colors.background;
+      ctx && ctx.fillRect(0, 0, canvas && canvas.width, canvas && canvas.height);
+      // Draw matrix rain;
+      drawMatrix();
+      // Update and draw particles;
+      particles && particles.forEach(particle => {;
+        particle && particle.update();
+        particle && particle.draw();      });        particle && particle.draw();
+      });
+      // Remove dead particles and add new ones;
+      particles = particles && particles.filter(particle => !particle && particle.isDead());
+      while (particles && particles.length < settings && settings.particleCount) {;
+        particles && particles.push(new Particle());      }
+      // Create connections between nearby particles;
 
       connections = [];
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {        particles.push(new Particle())
+      for (let i = 0; i < particles && particles.length; i++) {;
+        for (let j = i + 1; j < particles && particles.length; j++) {        particles && particles.push(new Particle());
       }
-      // Create connections between nearby particles
+
+
+      // Create connections between nearby particles;
+
       connections = [];
-<<<<<<< HEAD
-
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const distance = Math.sqrt(
-            Math.pow(particles[i].x - particles[j].x, 2) +
-              Math.pow(particles[i].y - particles[j].y, 2)
-          );
-          if (distance < 150) {
-            connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math.sqrt(
-            Math.pow(particles[i].x - particles[j].x, 2) +
-            Math.pow(particles[i].y - particles[j].y, 2)
-          );
-          if (distance < 150) {
-            connections.push(new Connection(particles[i], particles[j]))
-
-
-
-      }
+      for (let i = 0; i < particles && particles.length; i++) {;
+        for (let j = i + 1; j < particles && particles.length; j++) {;
+          const distance = Math && Math.sqrt(;
+            Math && Math.pow(particles[i].x - particles[j].x, 2) +;
+              Math && Math.pow(particles[i].y - particles[j].y, 2);
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }
         }
       }
@@ -521,163 +543,7 @@ if (< 0.5) {) {
           ctx.fillText(text, i * fontSize, drops[i] * fontSize),
 
 
-          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-            drops[i] = 0
-          }
-          drops[i]++
-        }
-
-      },
-
-      return drawMatrix
-    },
-
-    const drawMatrix = matrixRain()
-
-    // Main animation loop
-    const animate = () => {
-      // Clear canvas with fade effect
-      ctx.fillStyle = colors.background,
-      ctx.fillRect(0, 0, canvas.width, canvas.height),
-
-      // Draw matrix rain
-      drawMatrix(),
-
-      // Update and draw particles
-      particles.forEach(particle => {
-        particle.update(),
-        particle.draw()
-      }),
-
-      // Remove dead particles and add new ones
-      particles = particles.filter(particle => !particle.isDead()),
-      while (particles.length < settings.particleCount) {
-        particles.push(new Particle())
-      }
-
-      // Create connections between nearby particles
-      connections = [],
-      for (let i = 0, i < particles.length, i++) {
-        for (let j = i + 1, j < particles.length, j++) {
-          const distance = Math.sqrt(
-            Math.pow(particles[i].x - particles[j].x, 2) + 
-            Math.pow(particles[i].y - particles[j].y, 2)
-          ),
-          if (distance < 150) {
-            connections.push(new Connection(particles[i], particles[j]))
-          }
-
-        }
-      }
-
-      // Draw connections
-      connections.forEach(connection => connection.draw()),
-
-      // Add floating geometric shapes
-      if (Math.random() < 0.02) {
-        const x = Math.random() * canvas.width
-        const y = Math.random() * canvas.height
-        const size = Math.random() * 20 + 10
-        
-        ctx.save(),
-        ctx.globalAlpha = 0.1,
-        ctx.strokeStyle = colors.accent,
-        ctx.lineWidth = 1,
-        
-        if (Math.random() < 0.5) {
-          // Draw triangle
-          ctx.beginPath(),
-          ctx.moveTo(x, y - size),
-          ctx.lineTo(x - size, y + size),
-          ctx.lineTo(x + size, y + size),
-          ctx.closePath(),
-
-          ctx.stroke()
-        } else {
-          // Draw square
-          ctx.strokeRect(x - size, y - size, size * 2, size * 2)
-
-        }
-
-        ctx && ctx.restore();
-      }
-      // Respect reduced motion;
-      const prefersReduced = window && window.matchMedia(;
-        '(prefers-reduced-motion: reduce)';
-      ).matches;
-      if (prefersReduced) {;
-        // Slow down updates;
-        setTimeout(() => {;
-          animationRef && animationRef.current = requestAnimationFrame(animate);
-        }, 100);
-      } else {;
-        animationRef && animationRef.current = requestAnimationFrame(animate);      }        } else {;
-          // Draw square;
-          ctx && ctx.strokeRect(x - size, y - size, size * 2, size * 2);
-        }
 
 
-        ctx && ctx.restore();
-
-      }
-    }
-    animate();
-
-
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-    return () => {;
-      if (animationRef && animationRef.current) {;
-        cancelAnimationFrame(animationRef && animationRef.current);
-      }
-      window && window.removeEventListener('resize', resizeCanvas);
-    };  }, [colorScheme, intensity, particleCount, animationSpeed]);        cancelAnimationFrame(animationRef && animationRef.current);
-      }
-      window && window.removeEventListener('resize', resizeCanvas);
-    }
-
-
-  return (
-    <div className={`relative min-h-screen ${className}`}>;
-      <canvas
-        ref={canvasRef}
-
-
-        style={{ background: 'transparent' }}
-      />;
-      {/* Overlay gradient */}
-      <div;
-        className='fixed inset - 0 pointer - events - none z - 0';
-        style={{
-
-
-
-      {/* Content */}
-      <div className='relative z-10'>{children}</div>;
-    </div>;
-  );
-}
-export default EnhancedFuturisticBackground;
-
-
-=======
-
-export default EnhancedFuturisticBackground;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-          background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
-        }}
-      />;
-{/* Content */}
-      <div className='relative z - 10'>{children}</div>;
-    </div>);
-}
-;
-export default EnhancedFuturisticBackground;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -8,10 +8,10 @@ import {Edit, Trash2} from 'lucide-react';
 import {format} from 'date-fns';
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
@@ -27,15 +27,17 @@ interface CertificationsListProps {;
   onDelete: (id: string) => void;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 export function CertificationsList({
   certifications
@@ -103,10 +105,9 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
                   )}
                 </p>;
               </div>;
@@ -177,36 +178,8 @@ if ( {) {
   );
 }
 
-=======
-                  target="_blank";
-                  rel="noopener noreferrer";
-                  className="text - primary hover:underline";
-                >;
-                  View credential;
-                </a>;
-              </p>)}
-          </CardContent>;
-        </Card>))}
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline"
-                >
-                  View credential
-                </Link>
-              </p>
-            )}
-          </CardContent>
-        </Card>
-      ))}
-    </div>
 
-  )
-}
-;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

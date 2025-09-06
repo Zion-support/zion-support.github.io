@@ -1,23 +1,13 @@
-<<<<<<< HEAD
-
-import * as React from 'react';
-import * as SeparatorPrimitive from '@radix-ui/react-separator';
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
-=======
-=======
-import * as React from "react"
-import * as SeparatorPrimitive from "@radix-ui/react-separator"
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { cn } from "@/lib/utils"
 
@@ -46,32 +36,16 @@ const Separator = React.forwardRef<
     />;
   );
 );
-<<<<<<< HEAD
-
-Separator.displayName = SeparatorPrimitive.Root.displayName;
 
 
-=======
-
-Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
-=======
-
-export { Separator }
-;
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export { Separator };
 export { Separator }
 ;
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

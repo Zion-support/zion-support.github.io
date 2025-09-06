@@ -2,11 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { MessageSquare } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -133,12 +130,8 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
       </div>
       <h2 className="text-xl font-medium mb-2">{title}</h2>
 
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <p className="text-muted-foreground mb-6">{subtitle}</p>
       <TooltipProvider>
         <Tooltip>
@@ -152,28 +145,14 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
             )}
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
-<<<<<<< HEAD
-
-
-        </Tooltip>
-      </TooltipProvider>
-    </div>
-  )
-};
-export default EmptyState;
-}
-export default EmptyState
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
         </Tooltip>;
       </TooltipProvider>;
     </div>;

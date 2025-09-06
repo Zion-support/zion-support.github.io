@@ -19,37 +19,8 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
-<<<<<<< HEAD
-
-type Question = {
-  id: string;
-  question: string;
-  options: string[];
-  answerIndex: number;
-}
-type Props = {
-  questions: Question[];
-  onComplete: (score: number) => void;};  id: string
-  question: string
-  options: string[]
-  answerIndex: number
-}
-type Props = {
-  questions: Question[]
-  onComplete: (score: number) => void
-
-  const [answers, setAnswers] = useState<Record<string, number>>({});
-  const [submitted, setSubmitted] = useState(false);
-  const score = questions.reduce(
-    (acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0)
-    0
-  );
-  function submit() {
-
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     setSubmitted(true);
     onComplete(score);
   }
@@ -66,7 +37,16 @@ type Props = {
                 <input
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+
+export default function Quiz({ questions, onComplete }: Props) {
+  const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [submitted, setSubmitted] = useState(false);
+  const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0), 0);
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   function submit() {
 
     setSubmitted(true)
@@ -83,6 +63,7 @@ type Props = {
               <label key={i} className="flex items-center gap-2">;
                 <input
                   type="radio"
+
 
                   name={q.id}
                   checked={answers[q.id] === i}
@@ -115,19 +96,25 @@ type Props = {
       {submitted && (
         <div className='text-sm'>
 
+
           Score: {score} / {questions.length}
         </div>)}
     </div>);      <button on_click={submit} className="px - 4 py - 2 bg - blue - 600 text - white rounded">Submit Quiz</button>;
       {submitted && <div className="text - sm">Score: {score} / {questions.length}</div>}
     </div>);
 
+
                 />
+
+
 
 
               </label>
             ))}
           </div>
           {submitted && (
+
+
 
             <div className='mt-2 text-sm'>
               {answers[q.id] === q.answerIndex ? (
@@ -138,32 +125,23 @@ type Props = {
               ) : (
                 <span className="text-red-600">Incorrect</span>
 
+
+
               )}
             </div>
           )}
         </div>
       ))}
 
+
       <button onClick={submit} className=&quot;px-4 py-2 bg-blue-600 text-white rounded&quot;>Submit Quiz</button>
       {submitted && <div className=&quot;text-sm&quot;>Score: {score} / {questions.length}</div>}
     </div>
-<<<<<<< HEAD
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-=======
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  );
-}
-
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

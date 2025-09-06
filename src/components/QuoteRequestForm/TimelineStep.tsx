@@ -4,32 +4,8 @@ interface TimelineStepProps {
   formData: QuoteFormData
   updateFormData: (data: Partial<QuoteFormData>) => void
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-import { format } from "date-fns",
-import { Calendar } from "@/components/ui/calendar",
-import { Button } from "@/components/ui/button",
-import { Label } from "@/components/ui/label",
-import { CalendarIcon } from 'lucide-react'
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { cn } from "@/lib/utils",
-import { QuoteFormData } from "@/types/quotes",
-interface TimelineStepProps {
-  formData: QuoteFormData,
-  updateFormData: (data: Partial<QuoteFormData>) => void
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
@@ -37,24 +13,8 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
 
     <div className='space-y-6'>
       <div>
-<<<<<<< HEAD
 
 
-        <h3 className='text-xl font-semibold text-white mb-4'>
-          When do you need this?
-        </h3>
-        <div className='space-y-4'>
-          <div className='flex items-center space-x-4'>
-            <div
-    <div className="space-y-6">
-      <div>
-<<<<<<< HEAD
-
-
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.timeline === 'fixed'
                   ? 'bg-zion-purple/20 border-zion-purple'
@@ -76,42 +36,9 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
             
             <div 
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-              className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
-                formData && formData.timeline === 'flexible'
-                  ? 'bg-zion-purple/20 border-zion-purple'
-                  : 'bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50'
-              }`}
-              onClick={() => updateFormData({ timeline: "flexible" })}
-            >
-              <h4 className="font-medium text-white">Flexible Timeline</h4>
-              <p className="text-sm text-zion-slate-light">I'm flexible on the timing</p>
-            </div>
-          </div>
-          {formData.timeline === 'fixed' && (
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-6'>
-          
-          {formData.timeline === "fixed" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <div>
                 <Label className='block mb-2 text-zion-slate-light'>
                   Start Date
@@ -185,11 +112,8 @@ function TimelineStep() {
                         !formData.startDate && "text-zion-slate-light"
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
@@ -208,31 +132,9 @@ function TimelineStep() {
                       initialFocus
                       className="p-3 pointer-events-auto"
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                    />
-                  </PopoverContent>
-                </Popover>
-              </div>
-              
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <div>
                 <Label className='block mb-2 text-zion-slate-light'>
                   End Date
@@ -240,23 +142,8 @@ function TimelineStep() {
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
-<<<<<<< HEAD
 
 
-                      variant='outline'
-                      className={cn(
-                        'w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark'
-                        !formData.endDate && 'text-zion-slate-light'
-                      )}                    >
-                      <CalendarIcon className='mr-2 h-4 w-4' />
-                      {formData.endDate ? (
-                        format(formData.endDate, 'PPP')
-                      ) : (
-                        <span>Pick a date</span>
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                       selected={formData && formData.startDate}
                       onSelect={date => updateFormData({ startDate: date })}                      initialFocus;
@@ -318,11 +205,8 @@ function TimelineStep() {
                       mode="single"
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       selected={formData.endDate}
                       onSelect={date => updateFormData({ endDate: date })}
                       initialFocus

@@ -1,9 +1,7 @@
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import {Resume} from '@/types/resume';
 import {jsPDF} from 'jspdf';
 import 'jspdf-autotable';
@@ -18,10 +16,10 @@ import {addPortfolioSection} from './sections/portfolioSection';
 export interface ExportOptions {;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   theme: 'light' | 'dark';
   includePortfolio?: boolean;
 
@@ -38,20 +36,10 @@ export async function exportResumeToPDF(
   resume: Resume
   options: Partial<ExportOptions> = {}
 
-<<<<<<< HEAD
-): Promise<Blob> {
-  const mergedOptions: ExportOptions = { ...defaultOptions, ...options }
-): Promise<Blob> {;
-  const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-): Promise<Blob> {;
-  const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   // Create new PDF document (A4)
   const doc = new jsPDF({
@@ -139,15 +127,17 @@ export async function exportResumeToPDF (
     currentY = addPortfolioSection(doc, resume.portfolio_projects, colors, currentY, maxProjects);
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
   return doc.output ('blob');
 }

@@ -258,49 +258,14 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
 
-    }
-    realImplementation: true
-    implementationDetails:
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     },
     realImplementation: true, implementationDetails: 'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.',
     launchDate: '2024-03-25', customers: 156,
     rating: 4.8,
-<<<<<<< HEAD
-
-    reviews: 89,
-  },;
-
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
 
 
-    realImplementation: true;
-    implementationDetails: 'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.';
-    launchDate: '2024-03-25';
-    customers: 156;
-
-
-    rating: 4.8
-
-    reviews: 89
-
-
-=======
-    reviews: 89;
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAIService2025 {;
   id: string,;
@@ -566,11 +531,12 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 ];

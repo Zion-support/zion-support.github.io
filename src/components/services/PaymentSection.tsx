@@ -3,12 +3,8 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
 
   const handlePaymentInitiated = () => {
     toast({
-<<<<<<< HEAD
 
 
-      title: 'Processing your request'
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       title: 'Processing your request',

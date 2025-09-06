@@ -1,9 +1,7 @@
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume, ResumeBasicInfo} from '@/types/resume';
@@ -12,10 +10,10 @@ import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeU
 export function useResumeActions() {;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -27,10 +25,8 @@ export function useResumeActions() {;
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume, ResumeBasicInfo } from '@/types/resume',;
@@ -47,11 +43,11 @@ export function useResumeActions() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     }
     
     setIsLoading(true),
@@ -87,21 +83,8 @@ export function useResumeActions() {;
       return handleResumeError(e, 'Could not create resume') ? null : null
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-
-    }
-  }
-  const updateBasicInfo = async (resumeId: string, basicInfo: ResumeBasicInfo): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to update a resume')
-      return false
 
 
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     setIsLoading(true),;
     setError(null),;
@@ -132,11 +115,11 @@ export function useResumeActions() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     }
     
     setIsLoading(true),
@@ -165,60 +148,9 @@ export function useResumeActions() {;
       if (error) throw error,
       
       return showSuccessToast("Resume updated", "Your resume information has been updated")
-<<<<<<< HEAD
-    } catch (e: any) {
-      return handleResumeError(e, 'Could not update resume')
-    } finally {
-      setIsLoading(false)
-
-    }
-  }
-  const setActiveResume = async (resumeId: string): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to set active resume')
-      return false
 
 
-=======
-=======
-;
-  const updateBasicInfo = async (resume_id: string, basic_info: ResumeBasicInfo): Promise < boolean> => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ('You must be logged in to update a resume'),
-      return false;
-    }
-    setIsLoading (true);
-    set_error (null);
-;
-    try {
-      const { error } = await supabase;
-        .from ('talent_resumes');
-        .update ({
-          title: basic_info.title;
-          headline: basic_info.headline,
-          summary: basic_info.summary;
-        });
-        .eq ('id', resume_id);
-        .eq ('user_id', user.id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      return showSuccessToast ("Resume updated", "Your resume information has been updated");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    } catch (e: any) {
-      return handleResumeError (e, 'Could not update resume');
-    } finally {
 
-      setIsLoading(false)
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     setIsLoading(true),;
     setError(null),;
@@ -247,11 +179,11 @@ if (throw error) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     }
     
     setIsLoading(true),
@@ -341,18 +273,8 @@ if (throw error) {
 
     setActiveResume}
 }
-<<<<<<< HEAD
 
 
-=======
-=======
-  },;
-  return {;
-    isLoading,;
-    error,;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     createResume;
     updateBasicInfo;
 

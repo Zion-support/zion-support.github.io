@@ -1,14 +1,6 @@
 
-<<<<<<< HEAD
 
 
-import React from "react",
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
-import { PlusCircle, SendIcon, InboxIcon } from "lucide-react";
-import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
-export function ClientOnboardingSteps() {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const onboardingStatus = useOnboardingStatus();
@@ -48,20 +40,17 @@ export function ClientOnboardingSteps() {
       action: "Check Dashboard"}],
   
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
-<<<<<<< HEAD
-=======
 
-  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 }
 
 

@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Filter} from "lucide-react";
@@ -34,35 +31,13 @@ export function FilterSidebar(): any ({;
   sortOption;
   setSortOption;
   clearFilters;
-<<<<<<< HEAD
 
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Filter } from "lucide-react",
-import { SearchFilter } from "./filters/SearchFilter",
-import { SortFilter } from "./filters/SortFilter",
-import { SkillsFilter } from "./filters/SkillsFilter",
-import { AvailabilityFilter } from "./filters/AvailabilityFilter",
-import { RegionFilter } from "./filters/RegionFilter",
-import { ExperienceFilter } from "./filters/ExperienceFilter",
-import { PriceFilter } from "./filters/PriceFilter";
-import { FilterSidebarProps } from "@/types/filters";
-import { PriceFilter } from "./filters/PriceFilter",
-import { FilterSidebarProps } from "@/types/filters",
 
   isMobileFilterOpen;
 }: FilterSidebarProps) {;
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-  isMobileFilterOpen;
-}: FilterSidebarProps) {;
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -81,10 +56,8 @@ export function FilterSidebar({
   sortOption,
   setSortOption,
   clearFilters,
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   isMobileFilterOpen
 }: FilterSidebarProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -156,14 +129,15 @@ export function FilterSidebar({;
       </div>;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}

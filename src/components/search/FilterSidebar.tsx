@@ -70,17 +70,8 @@ export default FilterSidebar;
             </div>
           ))}
         </div>
-<<<<<<< HEAD
 
 
-      </div>
-    </>
-  )}
-'"`
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   filters: FilterGroup[];
@@ -125,8 +116,7 @@ function FilterSidebar() {
     </>;
   )};
 '"`;
-<<<<<<< HEAD
-=======
+
 
 
 
@@ -147,4 +137,5 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
   );
 };
 export default FilterSidebar;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

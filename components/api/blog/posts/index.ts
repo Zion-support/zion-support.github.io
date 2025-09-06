@@ -1,25 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
-import { v4 as uuidv4  } from 'uuid';
-import { BlogPost  } from '@/utils/types/blog';
-import { readPosts, writePosts } from '@/utils/data/blogStore';
-import { requireAdmin } from '@/utils/api/auth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
   if (req.method === 'GET') {
-=======
 
-  if (req.method === 'GET') {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     const { status, topic, tag, author, limit, offset } = req.query;
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query;
@@ -40,20 +31,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
 
-<<<<<<< HEAD
-  return res.status(405).end();
-
-return res.status(405).end();
-}
-
-}
-}
-  return res.status(405).end();
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

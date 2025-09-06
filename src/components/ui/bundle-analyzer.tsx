@@ -4,25 +4,8 @@ totalSize: number;
   loadTime: number;
 
 
-<<<<<<< HEAD
 
-  const { user } = useAuth()
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
-  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
-  if (!isAllowed) {
-    return null
-  }
-  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null)
-  const [chunks, setChunks] = useState<ChunkInfo[]>([])
-  const [isVisible, setIsVisible] = useState(false)
-  const [isCollecting, setIsCollecting] = useState(false)
-  const [shouldShow, setShouldShow] = useState(false)
-  useEffect((,) => {
-    // Only show in development or when explicitly enabled
-    const show =
-      process.env.NODE_ENV === 'development' |
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     const show = null;
       process.env.NODE_ENV === 'development' ||
 
@@ -87,48 +70,8 @@ if (return) {
     if (typeof window === 'undefined') return;
     setIsCollecting(true)
     try {
-<<<<<<< HEAD
 
 
-      // Get performance entries for script resources
-      const resourceEntries = performance.getEntriesByType(
-        'resource'
-      ) as PerformanceResourceTiming[]
-      const scriptEntries = resourceEntries.filter(
-        entry =>
-          entry.name.includes('/_next/static/') &&
-          (entry.name.endsWith('.js') |entry.name.endsWith('.css'))
-      )
-      // Calculate bundle information
-      let totalSize = 0
-      let totalLoadTime = 0
-      const chunkData: ChunkInfo[] = []
-      const chunkData: ChunkInfo[] = []
-      scriptEntries.forEach(entry => {
-        const size = entry.transferSize |entry.encodedBodySize |0
-        const loadTime = entry.responseEnd - entry.requestStart
-        const cached = entry.transferSize === 0
-        totalLoadTime += loadTime
-        chunkData.push({
-          name: entry.name.split('/').pop()?.split('?')[0] |'unknown'
-          size
-          loadTime
-          cached
-        })
-      })
-      // Estimate gzipped size (roughly 70% of original)
-      const gzippedSize = totalSize * 0.7
-      const cacheHitRate = null;
-        chunkData.filter(chunk => chunk.cached).length / chunkData.length
-      setBundleInfo({
-        totalSize
-        gzippedSize
-        chunkCount: chunkData.length
-        loadTime: totalLoadTime / chunkData.length
-        cacheHitRate: cacheHitRate * 100
-      })
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
         totalSize,
@@ -139,11 +82,8 @@ if (return) {
       });
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
       // Get performance entries for script resources;
@@ -343,18 +283,8 @@ export function BundleAnalyzer() {;
           className="bg-background/80 backdrop-blur-sm"
         >
           <Package className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           Bundle Analyzer
         </Button>
       </div>
@@ -403,18 +333,8 @@ export function BundleAnalyzer() {;
                 onClick={toggleAnalyzer}
                 className="h-6 w-6 p-0"
               >
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 ✕
               </Button>
             </div>
@@ -520,11 +440,8 @@ if ( {) {
                           {chunk.name}
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
@@ -538,47 +455,9 @@ if ( {) {
                       >
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                        {formatSize(chunk.size)}
-                      </Badge>
-                    </div>
-                  ))}
-
-                </div>;
-              </div>;
-
-              {bundleInfo && bundleInfo.totalSize > 1000000 && (;
-                <div className='flex items-center gap-2 p-2 bg-yellow-50 dark:bg-yellow-900/20 rounded text-xs'>;
-                  <AlertTriangle className='w-3 h-3 text-yellow-600' />;
-                  <span>Bundle size is large. Consider code splitting.</span>;
-                </div>;
-
-              )}
-
-            </>
-          ) : (
-
-<<<<<<< HEAD
-
-            <div className='text-xs text-muted-foreground'>
-              {isCollecting
-                ? 'Analyzing bundle...'
-                : 'Click refresh to analyze'}
-            </div>
-          )}
-        </CardContent>
-      </Card>
-    </div>
-  )
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } 
 
 }
@@ -590,14 +469,8 @@ if ( {) {
     </div>;
   );
 } ;
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

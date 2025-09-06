@@ -24,19 +24,9 @@ class ErrorBoundary extends React.Component {
 import React, { useMemo, useState } from 'react';
 
 
-<<<<<<< HEAD
-=======
-=======
 
-export default function ServiceDescriptionGeneratorPage(req, res) {
-  try {
 
-=======
-export default function ServiceDescriptionGeneratorPage(req, res) {
-  try {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default function ServiceDescriptionGeneratorPage() {;
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
@@ -46,35 +36,38 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
   const [additionalNotes, setAdditionalNotes] = useState('');
 
 
+
+
+
   const [tone, setTone] = useState<
     'professional' | 'friendly' | 'persuasive' | 'technical'
 
   >('professional');
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
   const [generated, setGenerated] = useState('');
@@ -82,117 +75,8 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
 
 
-<<<<<<< HEAD
-  const keyFeatures = useMemo(() => {
-    return featuresInput
-      .split('\n')
-      .map(f => f.trim())
-      .filter(Boolean);  }, [featuresInput]);
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
-    setAccepted(false)
-    try {
-      const response = await fetch('/api/generate-service-description', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          title
-          keyFeatures
-          targetAudience
-          additionalNotes: additionalNotes |undefined
-          tone
-        })
-      });
-      if (!response.ok) {
-        const data = await response.json().catch(() => ({}));
-        throw new Error(data.error |'Failed to generate');
-      }
-      const data = (await response.json()) as { description: string }
-      setGenerated(data.description |'');
-    } catch (err: any) {
-      setError(err.message |'Something went wrong');
-    } finally {
-      setLoading(false);    }
-  }
-  function handleAccept() {
-    setAccepted(true);  }
-  function handleCopy() {
 
 
-    if (!generated) return;
-    navigator.clipboard.writeText(generated).catch(() => {});
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-  }
-  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [generated, setGenerated] = useState('');
-  const [accepted, setAccepted] = useState(false);
-
-
-  const keyFeatures = useMemo(() => {;
-    return featuresInput;
-      .split('\n');
-      .map((f) => f.trim());
-      .filter(Boolean);
-  }, [featuresInput]),;
-  async function handleSubmit(e: React.FormEvent) {;
-    e.preventDefault(),;
-    setLoading(true);
-    setError(null);
-    setAccepted(false);
-    try {
-      const response = await fetch('/api/generate-service-description', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify({;
-          title,;
-          keyFeatures,;
-          targetAudience,;
-          additionalNotes: additionalNotes || undefined,;
-          tone})}),;
-      if (!response.ok) {;
-        const data = await response.json().catch(() => ({}));
-        throw new Error(data.error || 'Failed to generate');
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-      const data = (await response.json()) as { description: string };
-      setGenerated(data.description || '');
-    } catch (error) {
-      setError(err.message || 'Something went wrong');
-    } finally {;
-      setLoading(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  function handleAccept() {;
-    setAccepted(true);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  function handleCopy() {;
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     if (!generated) return;
     navigator.clipboard.writeText(generated).catch(() => {});
     } catch (error) {
@@ -203,6 +87,7 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   return (
     <div className="max-w-3xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Service Description Generator</h1>
@@ -211,10 +96,8 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
       </p>
       <form
         onSubmit={handleSubmit}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         className='space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4'>;
         <div>;
           <label className='block text-sm font-medium mb-1'>;
@@ -230,14 +113,11 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
   }
 
 
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         <div>
           <label className="block text-sm font-medium mb-1">Service Title</label>
           <input
@@ -263,7 +143,6 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
           </label>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <input
             type='text'
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
@@ -289,6 +168,7 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
           <textarea
 
+
             className="w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Constraints, deliverables, timeline, pricing preferences, compliance, etc."
             value={additionalNotes  } catch (error) {
@@ -309,6 +189,7 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
           <button
             type="submit"
             disabled={loading}
@@ -363,43 +244,10 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
     </div>;
   );
 
-<<<<<<< HEAD
 
 
 
-=======
-=======
-            className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            value={generated}
-            onChange={(e) => setGenerated(e.target.value)}
-          />
-          {accepted && (
-            <div className="text-emerald-700 dark:text-emerald-400 text-sm">Accepted. You can copy and paste this into your CMS.</div>
-          )}
-        </div>
-      )}
-    </div>
-  )
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-        <div>;
-          <label className='block text - sm font - medium mb - 1'>;
-            Additional Notes (optional);
-          </label>;
-          <textarea;
-            className='w - full min - h-[80px] rounded - md border border - gray - 300 dark:border - gray - 700 bg - transparent px - 3 py - 2 focus:outline - none focus:ring - 2 focus:ring - blue - 500';
-            placeholder='Constraints, deliverables, timeline, pricing preferences, compliance, etc.';
-            value={additional_notes}
-            on_change={e => setAdditionalNotes (e.target.value)}
-          />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </div>;
 
       )  } catch (error) {
@@ -416,12 +264,14 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -1,13 +1,6 @@
 
 
-<<<<<<< HEAD
-=======
-interface File extends Blob {
-  name: string;
-  lastModified: number;
-}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface Blob {
   size: number;
@@ -94,19 +87,15 @@ interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;
   success: boolean,
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 // Define RequestInit if not available
 interface File extends Blob {
   name: string;
   lastModified: number;
-<<<<<<< HEAD
-origin/main
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+origin/main
+
 }
 interface Blob {
   size: number;
@@ -322,13 +311,11 @@ origin/main
 export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions };
 ;
-<<<<<<< HEAD
+
 >>>>>>> origin/automation-improvements-final
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;
@@ -401,13 +388,18 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+
 export type { ApiResponse, RequestOptions };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+export type { ApiResponse, RequestOptions };
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+
+
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 
@@ -417,48 +409,12 @@ export type { ApiResponse, RequestOptions }
 
 >>>>>>> origin/automation-improvements-final
 
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-        error: error instanceof Error ? error.message : 'Unknown error occurred',
-      }
-    }
-  }
-  async get < T = unknown>(endpoint: string, options?: RequestOptions): Promise < ApiResponse < T>> {
-    return this.request < T>(endpoint, { ...options, method: 'GET' });
-  }
-  async post < T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise < ApiResponse < T>> {
-    return this.request < T>(endpoint, {
-      ...options,
-      method: 'POST',
-      body: data ? JSON.stringify (data) : undefined,
-      headers: {
-        'Content - Type': 'application / json',
-        ...options?.headers,
-      },
-    });
-  }
-  async put < T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise < ApiResponse < T>> {
-    return this.request < T>(endpoint, {
-      ...options,
-      method: 'PUT',
-      body: data ? JSON.stringify (data) : undefined,
-      headers: {
-        'Content - Type': 'application / json',
-        ...options?.headers,
-      },
-    });
-  }
-  async delete < T = unknown>(endpoint: string, options?: RequestOptions): Promise < ApiResponse < T>> {
-    return this.request < T>(endpoint, { ...options, method: 'DELETE' });
-  }
-}
-export const api_client = new ApiClient ();
-export type { ApiResponse, RequestOptions }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -4,17 +4,15 @@ BarChart3,;
 
 
 
-<<<<<<< HEAD
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 export default function LandingPage() {
   const { t } = useTranslation();
@@ -43,20 +41,8 @@ export default function LandingPage() {
   const { t } = useTranslation(),
   const { isRTL } = useLanguage(),
   
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Tools and features showcase
 
   const toolsFeatures = [
@@ -269,34 +255,8 @@ export default function LandingPage() { const { t  } = useTranslation(),
 
 
   return (
-<<<<<<< HEAD
 
 
-    <div className='min-h-screen bg-zion-blue text-white'>
-      <SEO
-        title={t('home.seo_title')}
-        description={t('home.seo_description')}
-        keywords={t('home.seo_keywords')}
-        canonical='https://app.ziontechgroup.com/'      />
-      <Header />
-      <HeroSection />
-    <div className="min-h-screen bg-zion-blue text-white">
-      <SEO 
-        title={t("home.seo_title")} 
-        description={t("home.seo_description")} 
-        keywords={t("home.seo_keywords")}
-        canonical="https://app.ziontechgroup.com/"
-      />
-      <Header />
-      <HeroSection />
-      
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -326,20 +286,8 @@ export default function LandingPage() { const { t  } = useTranslation(),
                 className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
               >
                 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
@@ -372,18 +320,8 @@ export default function LandingPage() { const { t  } = useTranslation(),
       <TestimonialCarousel />
       <TrustedBySection />
       <BlogSection />
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>;
         </div>;
       </section>;
@@ -440,8 +378,7 @@ export default function LandingPage() { const { t  } = useTranslation(),
 
 
 ;
-<<<<<<< HEAD
-=======
+
 
 
     <div className='min - h-screen bg - zion - blue text - white'>;
@@ -522,4 +459,5 @@ export default function LandingPage() { const { t  } = useTranslation(),
     </div>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

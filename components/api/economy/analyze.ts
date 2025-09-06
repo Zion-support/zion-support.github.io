@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+
 const user = [ `Operator Prompt: $ {
   operatorPrompt
 }`;
@@ -14,9 +14,7 @@ const completion = await client.chat.completions.create ({
 }
 export type AnalyzeResponse = {
   analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import OpenAI from 'openai';
 export type AnalyzeRequestBody = {
   operatorPrompt: string
@@ -26,16 +24,9 @@ export type AnalyzeResponse = {
   analysis: string
 
 
-<<<<<<< HEAD
-=======
 
-=======
-  JSON.stringify (context)
-}` : undefined] .filter (Boolean) .join ('\n');
-const completion = await client.chat.completions.create ({
-  model: 'gpt-4o-mini', messages: [ {
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   role: 'system', content: system 
 };
 
@@ -52,13 +43,14 @@ export type AnalyzeResponse = {
 };
 
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<AnalyzeResponse | { error: string }>
@@ -80,7 +72,6 @@ export default async function handler(
     const fallback = `Analysis (fallback): Based on the provided prompt, doubling staking rewards for 6 months with a weekly emission cap may temporarily increase user participation and token velocity while moderately increasing inflation risk. Monitor treasury inflows from taxes/burns to offset emissions and adjust the cap if net inflation exceeds target bands.`;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   try {
     const client = new OpenAI ({ api_key });
@@ -115,51 +106,31 @@ export default async function handler(
     console.error('Analyze API error', error?.message |error);
     return res.status(500).json({ error: 'Failed to generate analysis' });
   }
-<<<<<<< HEAD
-    const analysis = completion.choices?.[0]?.message?.content?.trim() |'No analysis generated.';
 
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const analysis = completion && completion.choices?.[0]?.message?.content?.trim() || 'No analysis generated.';
     return res && res.status(200).json({ analysis })
   } catch (error: any) {
     console && console.error('Analyze API error', error?.message || error);
     return res && res.status(500).json({ error: 'Failed to generate analysis' })
   };
-}
 
-
-=======
-
-  }
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-;
-    const analysis =;
-      completion.choices?.[0]?.message?.content?.trim () ||;
-      'No analysis generated.';
-    return res.status (200).json ({ analysis });
-  } catch (error: any) {
-    console.error ('Analyze API error', error?.message || error);
-    return res.status (500).json ({ error: 'Failed to generate analysis' });
-  }
-    const analysis = completion.choices?.[0]?.message?.content?.trim () || 'No analysis generated.';
-    return res.status (200).json ({ analysis });
-  } catch (error: any) {
-    console.error ('Analyze API error', error?.message || error);
-    return res.status (500).json ({ error: 'Failed to generate analysis' });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+}
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
+  }
+
+
+
+}
+
+
+
+
     const analysis = completion.choices?.[0]?.message?.content?.trim() || 'No analysis generated.'
     return res.status(200).json({ analysis })
   } catch (error: any) {
@@ -169,5 +140,7 @@ export default async function handler(
   }
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

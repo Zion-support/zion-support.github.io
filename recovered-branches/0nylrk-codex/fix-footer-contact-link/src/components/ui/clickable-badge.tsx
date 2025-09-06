@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react";
 import {X} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -20,32 +17,13 @@ export function ClickableBadge(): any ({;
   className;
   variant = "default";
   onRemove;
-<<<<<<< HEAD
 
 
-import React from "react",
-import { X } from "lucide-react",
-import { cn } from "@/lib/utils";
-import { badgeVariants } from "@/components/ui/badge-variants";
-export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
-  onRemove?: () => void;
-import { cn } from "@/lib/utils",
-import { badgeVariants } from "@/components/ui/badge-variants",
-export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
-  onRemove?: () => void,
 
   ...props;
 }: ClickableBadgeProps) {;
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-  ...props;
-}: ClickableBadgeProps) {;
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   variant?: "default" | "secondary" | "destructive" | "outline"
 }
 export function ClickableBadge({
@@ -81,27 +59,9 @@ export function ClickableBadge({
   );
 }
 
-<<<<<<< HEAD
 
 
-=======
-=======
-          className="ml-1 rounded-full p-0.5 hover:bg-background/20"
-          aria-label="Remove"
-        >
-          <X className="h-3 w-3" />
-        </button>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import React from './react';
-import { X } from './lucide-react';
-import { cn } from '@/lib / utils';
-import { badge_variants } from '@/components / ui / badge - variants';
-export interface ClickableBadgeProps extends React.HTMLAttributes < HTMLDivElement> {
-  on_remove?: () => void;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   variant?: "default" | "secondary" | "destructive" | "outline";
 }
 export /**
@@ -136,14 +96,16 @@ function ClickableBadge() {
   );
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 ;

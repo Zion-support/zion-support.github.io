@@ -43,10 +43,8 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           <Button variant="outline" size="sm" className="gap-2">
             <Download className="h-4 w-4" />
             Export Data
@@ -147,13 +145,13 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
 
 
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl || "loading..."}
@@ -163,21 +161,14 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
         <Button>Customize Workspace</Button>
       </div>
     </div>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     <div className='space-y-4'>;
       <div className='flex items-center justify-between'>;
 
 ;
-<<<<<<< HEAD
-=======
+
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -327,4 +318,5 @@ function AdminHeader() {
     </div>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

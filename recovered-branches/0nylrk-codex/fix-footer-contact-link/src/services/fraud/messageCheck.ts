@@ -1,23 +1,15 @@
 
-<<<<<<< HEAD
-
-// Message checking functionality
-import { FraudSeverity  } from '@/types/fraud';
-import { analyzeContent  } from './analyzeContent';
-import { MessageAnalysisResult } from './types';
-/**
- * Check message for suspicious content
- */
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 export const checkMessage = (messageContent: string): MessageAnalysisResult => {;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const analysis = analyzeContent(messageContent);
   // Determine severity based on number and type of issues
 
@@ -32,22 +24,9 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
   }
   return {
     ...analysis;
-<<<<<<< HEAD
 
 
 
-
-
-=======
-
-;
-
-=======
-    severity
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Message checking functionality;
 import { FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -71,12 +50,11 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
     severity;
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
 };

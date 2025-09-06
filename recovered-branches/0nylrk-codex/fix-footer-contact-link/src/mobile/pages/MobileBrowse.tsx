@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -10,11 +8,11 @@
 const jobsData = [
   {
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -22,26 +20,11 @@ import {BrowseFilters} from "../components/browse/BrowseFilters";
 import {BrowseCards} from "../components/browse/BrowseCards";
 import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
-<<<<<<< HEAD
-
-import React, { useState } from "react",
-import { MobileHeader } from "../components/common/MobileHeader",
-import { BottomNavigation } from "../components/common/BottomNavigation",
-import { BrowseFilters } from "../components/browse/BrowseFilters",
-import { BrowseCards } from "../components/browse/BrowseCards",
-import { Button } from "@/components/ui/button";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button",
-import { useAuth } from "@/hooks/useAuth",
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 // Mock data for demonstration
+
 
 
 const jobsData = [
@@ -351,17 +334,13 @@ export function MobileBrowse() {;
 
 
 
-<<<<<<< HEAD
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-      <BrowseFilters type={browseType} />;
-      <div className="py-4 px-4">;
-        <BrowseCards;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           items={browseType === "jobs" ? jobsData : talentsData}
           type={browseType}
           onViewDetails={handleViewDetails}

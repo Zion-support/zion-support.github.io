@@ -43,7 +43,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!tenantId || !rotateKey)
       return res && res.status(400).json({ error: 'tenantId and rotateKey required' });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const result = rotateTenantApiKey(tenantId);
     if (!result) return res && res.status(404).json({ error: 'Tenant not found' });
     return res && res.status(200).json({ tenant: result });
@@ -53,8 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
-<<<<<<< HEAD
-=======
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'GET').toUpperCase(),
 
@@ -82,7 +80,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
     if (!tenantId || !rotateKey)
@@ -99,21 +97,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
 
-<<<<<<< HEAD
-  return res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
-    if (!result) return res.status(404).json({ error: 'Tenant not found' });
-
-    return res.status(200).json({ tenant: result })
-  }
-return res.status(405).json({ error: 'Method not allowed' });
-}
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

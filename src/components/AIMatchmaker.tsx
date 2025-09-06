@@ -13,26 +13,8 @@ interface AIMatchmakerProps {
 
 
 
-<<<<<<< HEAD
-  serviceType?: string
-onMatchSelect?: (match: any) => void
-className?: string
-}if (!query.trim () ) {
-  toast ({
-  return;
-}setIsMatchmaking (true)
-setHasSearched (true)
-serviceType
-3)
-}catch (error) {'
-  logErrorToProduction ('Error during AI matching:', {
-  data: error
-})
-toast ({
-  //Set empty matches to show no results found UI setMatches ([])
-}finally {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   //Set empty matches to show no results found UI setMatches ([]) ;
 }finally {;
 
@@ -47,10 +29,8 @@ interface AIMatchmakerProps {
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
   const [query, setQuery] = useState(""),
@@ -65,74 +45,28 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
 
-<<<<<<< HEAD
+
+
+
+
       // Set empty matches to show no results found UI
       setMatches([])
     } finally {
+
       setIsMatchmaking(false)
 
-        variant: "destructive"}),
-      return
-    }
-
-    setIsMatchmaking(true),
-    setHasSearched(true),
-    
-    try {
-      logInfo("Starting AI matching", { data: { query, serviceType } }),
-      
-      // Get AI matches
-      const results = await findMatches(
-        query,
-        serviceType,
-        3
-      ),
-      
-      logInfo('AI matching results:', { data: results }),
-      setMatches(results),
-      
-      toast({
-        title: "Matches Found",
-        description: `Found ${results.length} matches based on your description.`})
-    } catch (error) {
-      logErrorToProduction('Error during AI matching:', { data: error }),
-      toast({
-        title: "Matching Error",
-        description: "We couldn't find matches for your request. Please try again.",
-        variant: "destructive"}),
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-      // Set empty matches to show no results found UI
-      setMatches([])
-    } finally {
-<<<<<<< HEAD
-      setIsMatchmaking(false)
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
 
-      setIsMatchmaking(false)
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
           AI Matchmaker;
         </CardTitle>;
         <p className='text-sm text-zion-slate-light'>;
           Describe what you&apos;re looking for and our AI will find the best
           matches
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 interface AIMatchmakerProps {;
@@ -261,11 +195,8 @@ if ( {) {
           <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           AI Matchmaker
         </CardTitle>
         <p className="text-sm text-zion-slate-light">
@@ -316,53 +247,17 @@ if ( {) {
 
           {hasSearched && (;
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-              matches={matchItems}
-              onSelectMatch={handleItemSelect}
-              isLoading={isMatchmaking}
-              serviceType={serviceType}
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 }
 }
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-              projectDescription={query}
-            />;
-          )}
-
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

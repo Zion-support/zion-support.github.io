@@ -1,22 +1,10 @@
-<<<<<<< HEAD
 
 
- 
-};
-) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>) 
-
-
-  if (!report) return <div>No knowledge graph yet.</div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function KnowledgeGraph({ report }: Props) {
   if (!report) return <div>No knowledge graph yet.</div>;
   return (
@@ -112,6 +100,8 @@ export default function KnowledgeGraph({ report }: Props) {
           {report.topTerms.map((t, i) => (
             <li key={i} className=&quot;px-2 py-1 rounded bg-gray-100 dark:bg-gray-800&quot;>{t.term} <span className=&quot;text-gray-500&quot;>({t.count})</span></li>
 =======
+
+
 
 
 

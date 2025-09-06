@@ -162,14 +162,8 @@ function EnterpriseFeatures() {
               <p className='text-muted-foreground'>{feature.description}</p>            </div>
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             </div>
 

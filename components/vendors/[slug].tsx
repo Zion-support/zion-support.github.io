@@ -1,24 +1,17 @@
 import type { GetServerSideProps } from 'next';
 
-<<<<<<< HEAD
 
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-export default function VendorProfilePage({ vendor }: Props) {
-=======
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
 export default function VendorProfilePage({ vendor }: Props) {;
-=======
-type Props = { vendor: Vendor | null };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function VendorProfilePage({ vendor }: Props) {
+
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
+export default function VendorProfilePage({ vendor }: Props) {;
+
+
+export default function VendorProfilePage({ vendor }: Props) {
+
 
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -54,8 +47,7 @@ export default function VendorProfilePage({ vendor }: Props) {
 
 
 
-<<<<<<< HEAD
-=======
+
               <div
                 key={sp && sp.id}
                 className='border border-gray-200 dark:border-gray-800 rounded overflow-hidden'>;
@@ -85,14 +77,16 @@ export default function VendorProfilePage({ vendor }: Props) {
                 </div>;
               </div>;
 
+
             ))}
           </div>;
         </div>;
       )}
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
@@ -123,7 +117,6 @@ export default function VendorProfilePage({ vendor }: Props) {
             {loading ? 'Submitting...' : 'Send'}
           </button>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {message && <div className="text-sm">{message}</div>}
 
         </form>;
@@ -132,6 +125,8 @@ export default function VendorProfilePage({ vendor }: Props) {
     </div>;
   );
 }
+
+
 
       set_loading (false);
     }
@@ -270,22 +265,8 @@ export const getServerSideProps: GetServerSideProps < Props> = async ctx => {
     </div>);
 }
 
-<<<<<<< HEAD
-export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
-  const slug = String(ctx.params?.slug |'');
-  const { getVendorBySlug } = await import('../../utils/vendor-store');
-  const vendor = slug ? getVendorBySlug(slug) |null : null;
-  return { props: { vendor } }
 
 
-export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
-  const slug = String(ctx.params?.slug || '');
-  const { getVendorBySlug } = await import('../../utils/vendor-store');
-  const vendor = slug ? getVendorBySlug(slug) || null : null;
-  return { props: { vendor } };
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 };            {loading ? 'Submitting...' : 'Send'}
           </button>
           {message && <div className="text-sm">{message}</div>}
@@ -313,13 +294,13 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
 };
 
 };
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

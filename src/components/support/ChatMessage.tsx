@@ -1,6 +1,7 @@
 import { useTheme } from "@/hooks/useTheme";
 
 
+
 interface ChatMessageProps {
   message: string;
   isUser: boolean;
@@ -25,6 +26,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
     () => ({ __html: formatMessageWithLinks(message) }),
     [message]
   ),
+
 
 
 
@@ -65,12 +67,13 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
       <div
         className={cn(
 
+
+
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
       </Avatar>
 
           'max-w-[80%] rounded-lg px-4 py-2 text-sm',
-<<<<<<< HEAD
-=======
+
 
           isUser
             ? 'bg-zion-purple text-white'
@@ -80,7 +83,8 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 
         )}
       >
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
       
@@ -106,11 +110,8 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
       </div>
     </div>
   )
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 },
 
 
@@ -128,12 +129,12 @@ function escapeHtml(unsafe: string): string {
 
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
     .replace(/&/g, "&amp,")
     .replace(/</g, "<")
     .replace(/>/g, ">")
@@ -230,6 +231,8 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy;
 // dependency like DOMPurify for now and instead escape the five critical;
 
+
+
 // characters. This ensures any user-supplied string is rendered harmless;
 // before we perform our link replacements below.;
 function escapeHtml(unsafe: string): string {;
@@ -283,8 +286,7 @@ function formatMessageWithLinks(message: string): string {;
 
   return formattedMessage;  return formattedMessage;
 }
-<<<<<<< HEAD
-=======
+
 
 
 
@@ -386,4 +388,5 @@ function formatMessageWithLinks (message: string): string {
   return formattedMessage; return formattedMessage
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

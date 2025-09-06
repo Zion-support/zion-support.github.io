@@ -4,39 +4,8 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
 
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Users
-  Briefcase
-  BookOpen
-  MessageCircle;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Users, Briefcase
-  BookOpen, MessageCircle
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   Menu,
@@ -71,10 +40,10 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
 const serviceCategories = [
@@ -307,10 +276,8 @@ const serviceCategories = [
       { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
     ]
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
@@ -347,12 +314,10 @@ import { motion, AnimatePresence } from 'framer-motion';
     color: 'from - teal - 600 to - cyan - 600',
     description: 'Healthcare innovation',
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home }
@@ -611,6 +576,9 @@ const UltraAdvancedNavigation2026 = () => {;
     }
 
 
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   const contactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -618,10 +586,14 @@ const UltraAdvancedNavigation2026 = () => {;
   }
 
 
+
+
   const contactInfo = {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
+
+
 
 
         { name: 'AI Autonomous Agents', href: '/services?category=ai-autonomous', description: 'Fully autonomous AI systems' },
@@ -632,13 +604,114 @@ const UltraAdvancedNavigation2026 = () => {;
         { name: 'AI Creative', href: '/services?category=ai-creative', description: 'Creative AI and content generation' }
       ]
 
+    }
+      name: 'Quantum Tech'
+      href: '/services?category=quantum'
+      icon: Atom
+      color: 'from-purple-500 to-indigo-500'
+      description: 'Quantum computing and space technology'
+      subItems: [
+        {
+          name: 'Quantum Space Tech'
+          href: '/services?category=quantum-space'
+          description: 'Space exploration and communication'
+        }
+        {
+          name: 'Quantum Computing'
+          href: '/services?category=quantum-computing'
+          description: 'Advanced quantum systems'
+        }
+        {
+          name: 'Quantum AI'
+          href: '/services?category=quantum-ai'
+          description: 'Quantum-powered AI'
+        }
+        {
+          name: 'Quantum Security'
+          href: '/services?category=quantum-security'
+          description: 'Quantum encryption and security'
+        }
+      ]
+    },    {        { name: 'Quantum Space Tech', href: '/services?category=quantum-space', description: 'Space exploration and communication' }
+        { name: 'Quantum Computing', href: '/services?category=quantum-computing', description: 'Advanced quantum systems' }
+        { name: 'Quantum AI', href: '/services?category=quantum-ai', description: 'Quantum-powered AI' }
+        { name: 'Quantum Security', href: '/services?category=quantum-security', description: 'Quantum encryption and security' }
+      ]
+    }
+      name: 'Metaverse'
+      href: '/services?category=metaverse'
+      icon: Globe
+      color: 'from-pink-500 to-rose-500'
+      description: 'Virtual worlds and digital reality'
+      subItems: [
+        {
+          name: 'Metaverse Platforms'
+          href: '/services?category=metaverse-platforms'
+          description: 'Virtual world platforms'
+        }
+        {
+          name: 'Digital Reality'
+          href: '/services?category=digital-reality'
+          description: 'Immersive experiences'
+        }
+        {
+          name: 'Holographic Tech'
+          href: '/services?category=holographic'
+          description: '3D holographic systems'
+        }
+        {
+          name: 'Consciousness Interface'
+          href: '/services?category=consciousness-interface'
+          description: 'Brain-computer interfaces'
+        }
+      ]
+    },    {        { name: 'Metaverse Platforms', href: '/services?category=metaverse-platforms', description: 'Virtual world platforms' }
+        { name: 'Digital Reality', href: '/services?category=digital-reality', description: 'Immersive experiences' }
+        { name: 'Holographic Tech', href: '/services?category=holographic', description: '3D holographic systems' }
+        { name: 'Consciousness Interface', href: '/services?category=consciousness-interface', description: 'Brain-computer interfaces' }
+      ]
+    }
+      name: 'Enterprise IT'
+      href: '/services?category=enterprise'
+      icon: Zap
+      color: 'from-green-500 to-emerald-500'
+      description: 'Enterprise solutions and infrastructure'
+      subItems: [
+        {
+          name: 'Cloud Solutions'
+          href: '/services?category=cloud'
+          description: 'Cloud infrastructure and services'
+        }
+        {
+          name: 'Cybersecurity'
+          href: '/services?category=security'
+          description: 'Advanced security solutions'
+        }
+        {
+          name: 'Data Analytics'
+          href: '/services?category=analytics'
+          description: 'Business intelligence and analytics'
+        }
+        {
+          name: 'DevOps',
+          href: '/services?category=devops',
+          description: 'Development and operations',
+        },
+      ],
+    },  ];        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' },
+        { name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' },
+        { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },
+        { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
+      ]
+    }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  ];
+
+
   const contactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 const company_links = [;
   { name: 'Home', href: '/', icon: Home },
@@ -811,8 +884,11 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
             {/* Logo */}
 
@@ -860,18 +936,19 @@ const UltraAdvancedNavigation2026 = () =>: any {
             : 'bg - transparent';
         }`}
 
+
+
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between h-20'>
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             {/* Logo */}
             <Link href='/' className='flex items - center space - x-3 group'>;
               <div className='relative'>;
@@ -975,15 +1052,11 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 
 
-<<<<<<< HEAD
-            {/* Desktop Navigation */}
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                                   {subItem.description}
                                 </div>
                               </Link>
@@ -1013,13 +1086,13 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   All Services
                 </Link>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
                 <Link
                   href='/pricing'
@@ -1137,7 +1210,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
               </Link>;
             </div>;
-<<<<<<< HEAD
+
 
 
 
@@ -1149,19 +1222,11 @@ const UltraAdvancedNavigation2026 = () =>: any {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
-=======
-              </Link>
-            </div>
 
 
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -1182,19 +1247,14 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 
 
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1211,14 +1271,12 @@ const UltraAdvancedNavigation2026 = () =>: any {
             onClick={() => setIsOpen(false)}
 
 
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           >
             <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1227,7 +1285,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
               exit={{ x: '100%' }}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Mobile Menu Header */}
               <div className="flex items-center justify-between mb-8">;
                 <div className="flex items-center space-x-3">;
@@ -1273,17 +1330,15 @@ const UltraAdvancedNavigation2026 = () =>: any {
                       <span className='font-medium'>{item && item.name}</span>;
                     </Link>;
 
-<<<<<<< HEAD
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                         >
                           {subItem.name}
                         </Link>
@@ -1519,44 +1574,31 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 
 
+      <div className="h-20"></div>
+    </>
+
+  );
+}
+export default UltraAdvancedNavigation2026;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
   );
 
-<<<<<<< HEAD
-}
-};
 
 
-export default UltraAdvancedNavigation2026;    </>
-  );
-}
-export default UltraAdvancedNavigation2026;
-
-export default UltraAdvancedNavigation2026;
-
-export default UltraAdvancedNavigation2026;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-};
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

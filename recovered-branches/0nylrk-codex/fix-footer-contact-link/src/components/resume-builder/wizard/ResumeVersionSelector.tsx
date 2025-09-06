@@ -1,8 +1,6 @@
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 
@@ -16,30 +14,25 @@ import {Resume} from '@/types/resume';
 import {useResume} from '@/hooks/useResume';
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void
 }
 
-<<<<<<< HEAD
-
-export function ResumeVersionSelector({
-  currentResume
-  onResumeChange
-}: ResumeVersionSelectorProps) {
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [newResumeTitle, setNewResumeTitle] = useState('');
@@ -55,27 +48,16 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
-<<<<<<< HEAD
 
-        setNewResumeTitle("");
 
-=======
-        setNewResumeTitle('');
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       setIsLoading(false);
     }
   }
 
-<<<<<<< HEAD
 
 
-=======
-        setNewResumeTitle('')
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from 'react',;
 import {;
   DropdownMenu,;
@@ -112,16 +94,12 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         setNewResumeTitle('');
 
 
-<<<<<<< HEAD
-      }
-      setIsLoading(false);
-    }
 
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
   };
   },
+
 
       }
       setIsLoading(false);
@@ -129,12 +107,10 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       }
       setIsLoading(false);
     }
@@ -216,12 +192,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
   )
 }
 
-<<<<<<< HEAD
-;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

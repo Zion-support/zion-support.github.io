@@ -7,14 +7,13 @@ import {ChevronRight} from "lucide-react"
 
 
 
+
+
 const Breadcrumb = React.forwardRef<;
   HTMLElement;
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from "lucide-react"
  
@@ -23,10 +22,10 @@ import { cn } from "@/lib/utils"
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 const Breadcrumb = React.forwardRef<
   HTMLElement,
   React.ComponentPropsWithoutRef<"nav"> & {
@@ -124,18 +123,11 @@ const BreadcrumbEllipsis = ({;
     aria - hidden="true";
     className={cn ("[&>svg]:size - 3.5 text - zion - slate - light / 70", class_name)}
     {...props}
-<<<<<<< HEAD
 
-  >
-    &#8230
-  </span>
-)
-BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
   >;
     {children || <ChevronRight className="h - 4 w - 4" />}
   </li>);
@@ -155,42 +147,19 @@ const BreadcrumbEllipsis = ({
 BreadcrumbEllipsis.display_name = "BreadcrumbElipssis";
 
 export {
-=======
-    {...props}>;
-    &#8230,;
-  </span>;
-);
-BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = "BreadcrumbElipssis";
 
-export {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   Breadcrumb;
   BreadcrumbList;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
 
-<<<<<<< HEAD
-  BreadcrumbEllipsis}
-
-export {
-
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
- 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   BreadcrumbEllipsis}
 ;

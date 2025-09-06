@@ -4,118 +4,9 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Users
-  Briefcase
-  BookOpen
-  MessageCircle
-  Star
-  TrendingUp
-  Target
-  Layers
-  Cpu
-  Database
-  Cloud
-  Lock
-  ShieldCheck
-  Earth
-  Factory
-  Car
-  Building
-  GraduationCap
-  Scale
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Eye
-  Network
-  Server
-  HardDrive
-  Monitor
-  Laptop
-  Watch
-  Headphones
-  Speaker
-  Mic
-  Keyboard
-  Mouse
-  CpuIcon
-  DatabaseIcon
-  CloudIcon
-  LockIcon
-  ShieldIcon
-  GlobeIcon
-  ZapIcon
-  SparklesIcon
-  BrainIcon
-  AtomIcon
-  HeartIcon
-  RocketIcon
-  ShieldIcon as ShieldIcon2
-  TargetIcon
-  MicroscopeIcon
-  StarIcon
-  ArrowRight
-  Infinity
-  Crown
-  Gem
-  Sparkles as SparklesIcon2
-  ShoppingCart
-  UserCheck
-  FileText
-  BarChart
-  PaletteIcon
-  VideoIcon
-  LockIcon as LockIcon2
-  GlobeIcon as GlobeIcon2
-  CpuIcon as CpuIcon2
-  Handshake
-  LifeBuoy
-  Activity
-  Linkedin
-  Twitter
-  Facebook
-  Instagram
-  Youtube
-  Github;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Users, Briefcase
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
+
 
 
 class ErrorBoundary extends React.Component {
@@ -144,12 +35,10 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
-import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   Menu,
   X,
   ChevronDown,
@@ -253,17 +142,16 @@ import {
   Instagram,
 
 
+
   Youtube,;
   Github,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -516,10 +404,8 @@ import {
       { name: 'AI Climate Modeling', href: '/ai - climate - modeling - platform', description: 'Predict climate change with AI', price: '$1, 299 / month' }
     ];
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     title: '🏙️ Enterprise IT Solutions',
     icon: CpuIcon,
@@ -640,11 +526,8 @@ import {
     color: 'from - orange - 600 via - red - 600 to - pink - 600',
     description: 'Breakthrough research solutions',
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home }
@@ -667,57 +550,18 @@ const quickLinks = [
 
   { name: 'Status', href: '/status', icon: Activity }
 ];
-<<<<<<< HEAD
-
-const socialLinks = [
-  {
-    name: 'LinkedIn'
-    href: 'https://linkedin.com/company/ziontechgroup'
-    icon: Linkedin
-  }
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
-  {
-    name: 'Instagram'
-    href: 'https://instagram.com/ziontechgroup'
-    icon: Instagram
-  }
-  {
-    name: 'YouTube'
-    href: 'https://youtube.com/@ziontechgroup'
-    icon: Youtube
-  }
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
-];
-const certifications = [
-  'ISO 27001 Certified'
-  'SOC 2 Type II Compliant'
-  'GDPR Compliant'
-  'HIPAA Compliant'
-  'PCI DSS Level 1'
-  'FedRAMP Authorized'
-  'Quantum Security Certified'
-  'AI Ethics Compliant',];];
-const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin }
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
-  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
-];
-const certifications = [
-  'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
-];
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 export default function UltraFuturisticNavigation2034() {;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -832,15 +676,15 @@ export default function UltraFuturisticNavigation2034() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 {contactInfo.mobile}
               </span>
             </div>
@@ -857,101 +701,7 @@ export default function UltraFuturisticNavigation2034() {;
             </div>
           </div>                {contactInfo.mobile}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                {contactInfo.mobile}
-              </span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Mail className="w-4 h-4 text-blue-400" />
-              <span className="hover:text-blue-400 transition-colors">
-                {contactInfo.email}
-              </span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4 text-purple-400" />
-              <span className="hover:text-purple-400 transition-colors">
-                {contactInfo.address}
-              </span>
-            </div>
-          </div>
 
-          <div className="flex items-center space-x-4">
-
-            <div className="flex items-center space-x-2">
-              <Star className="w-4 h-4 text-yellow-400" />
-              <span className="text-yellow-400 font-semibold">5.0 Rating</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Users className="w-4 h-4 text-green-400" />
-              <span className="text-green-400 font-semibold">50K+ Customers</span>
-
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-
-      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>;
-        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;
-          <div className='flex items-center space-x-6'>;
-            <div className='flex items-center space-x-2'>;
-              <Phone className='w-4 h-4 text-cyan-400' />;
-              <span className='hover:text-cyan-400 transition-colors'>;
-                {contactInfo && contactInfo.mobile}
-              </span>;
-            </div>;
-            <div className='flex items-center space-x-2'>;
-              <Mail className='w-4 h-4 text-blue-400' />;
-              <span className='hover:text-blue-400 transition-colors'>;
-                {contactInfo && contactInfo.email}
-              </span>;
-            </div>;
-            <div className='flex items-center space-x-2'>;
-              <MapPin className='w-4 h-4 text-purple-400' />;
-              <span className='hover:text-purple-400 transition-colors'>                {contactInfo && contactInfo.address}
-              </span>;
-            </div>;
-          </div>                {contactInfo && contactInfo.mobile}
-              </span>;
-            </div>;
-            <div className="flex items-center space-x-2">;
-              <Mail className="w-4 h-4 text-blue-400" />;
-              <span className="hover:text-blue-400 transition-colors">;
-                {contactInfo && contactInfo.email}
-              </span>;
-            </div>;
-            <div className="flex items-center space-x-2">;
-              <MapPin className="w-4 h-4 text-purple-400" />;
-              <span className="hover:text-purple-400 transition-colors">;
-                {contactInfo && contactInfo.address}
-              </span>;
-            </div>;
-          </div>;
-          <div className='flex items-center space-x-4'>;
-            <div className='flex items-center space-x-2'>;
-              <Star className='w-4 h-4 text-yellow-400' />;
-              <span className='text-yellow-400 font-semibold'>5 && 5.0 Rating</span>;
-            </div>;
-            <div className='flex items-center space-x-2'>;
-              <Users className='w-4 h-4 text-green-400' />;
-              <span className='text-green-400 font-semibold'>;
-                50K+ Customers;
-              </span>            </div>          <div className="flex items-center space-x-4">;
-            <div className="flex items-center space-x-2">;
-              <Star className="w-4 h-4 text-yellow-400" />;
-              <span className="text-yellow-400 font-semibold">5 && 5.0 Rating</span>;
-            </div>;
-            <div className="flex items-center space-x-2">;
-              <Users className="w-4 h-4 text-green-400" />;
-              <span className="text-green-400 font-semibold">50K+ Customers</span>;
-          </div>;
-        </div>;
-      </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Main Navigation */}
 
         }`}>;
@@ -973,15 +723,16 @@ export default function UltraFuturisticNavigation2034() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             >
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
@@ -998,7 +749,6 @@ export default function UltraFuturisticNavigation2034() {;
                 </p>              </div>
             </motion.div>
             {/* Desktop Navigation */}            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
                   <Rocket className="w-7 h-7 text-white" />
@@ -1060,6 +810,7 @@ export default function UltraFuturisticNavigation2034() {;
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
 
 
+
                   {link.name}
                 </Link>
               ))}
@@ -1067,6 +818,7 @@ export default function UltraFuturisticNavigation2034() {;
                   {link.name}
                 </Link>
               ))}
+
 
 
 
@@ -1319,13 +1071,12 @@ function UltraFuturisticNavigation2034() {
                             <Link;
                               key={service.name}
                               href={service.href}
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
                               className='block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors'                            >              {/* Services Dropdown */}
               <div className="relative group">;
                 <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium">;
@@ -1352,11 +1103,8 @@ function UltraFuturisticNavigation2034() {
                               {service.name}
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                             >
                               {service.name}
                             </Link>
@@ -1451,19 +1199,14 @@ function UltraFuturisticNavigation2034() {
 
 
 
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -1471,38 +1214,12 @@ function UltraFuturisticNavigation2034() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
 
-              transition={{ duration: 0.3 }}
-              className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'
-            >
-              <div className='px-4 py-6 space-y-4'>
-                {quickLinks.map(link => (                  <Link
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className='block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'                  >
-                    {link.name}
-                  </Link>
-                ))}
-              className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20"
-            >
-              <div className="px-4 py-6 space-y-4">
-                {quickLinks.map((link) => (
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className='block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'                    className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
-                  >
-                    {link.name}
-                  </Link>
-                ))}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                     </button>
@@ -1604,61 +1321,15 @@ function UltraFuturisticNavigation2034() {
                   onClick={() => setIsOpen(false)}
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center";
 
-                  href="/contact"
-                  onClick={() => setIsOpen(false)}
-                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center"
-                >
-                  Get Started
-                </Link>
-              </div>
-            </motion.div>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-          )}
-        </AnimatePresence>
-      </nav>
-      {/* Spacer for fixed navigation */}
-      <div className='h-20'></div>
-    </>
-        </AnimatePresence>;
-      </nav>;
 
 
-      {/* Spacer for fixed navigation */}
-      <div className='h-20'></div>;
-    </>;
-  );      <div className="h-20"></div>;
-    </>;
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  );
-<<<<<<< HEAD
 
 
 }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-
-}
-
-=======
-            </motion.div>)}
-        </AnimatePresence>;
-      </nav>;
-      {/* Spacer for fixed navigation */}
-      <div className='h - 20'></div>;
-    </>);      <div className="h - 20"></div>;
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

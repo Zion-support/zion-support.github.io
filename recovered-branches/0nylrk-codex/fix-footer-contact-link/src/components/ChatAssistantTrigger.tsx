@@ -1,19 +1,5 @@
 
 
-<<<<<<< HEAD
-
-import { useState } from "react",
-import { MessageSquare } from "lucide-react",
-import { Button } from "@/components/ui/button";
-import { ChatAssistant } from "@/components/ChatAssistant";
-export function ChatAssistantTrigger() {
-  const [isOpen, setIsOpen] = useState(false);
-import { Button } from "@/components/ui/button",
-import { ChatAssistant } from "@/components/ChatAssistant",
-export function ChatAssistantTrigger() {
-  const [isOpen, setIsOpen] = useState(false),
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   // Handle sending messages to the AI chat assistant
@@ -80,14 +66,15 @@ export function ChatAssistantTrigger() {;
       <Button;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         onClick={() => setIsOpen(true)}
 
         size="icon";

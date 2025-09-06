@@ -1,59 +1,18 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { supabase } from '../../../utils/supabase/client';
-import {
 
-
-  NotificationItem
-  NotificationType;
 
 } from '../../../utils/notifications';
 function getUserId(req: NextApiRequest): string {
 
-  const cookie = req.headers.cookie |'';
+  const cookie = req && req.headers.cookie || '';
+
   const match = cookie
     .split(';')
-    .map(c => c.trim())
-    .find(c => c.startsWith('user_id='));
-  if (match) return decodeURIComponent(match.split('=')[1]);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  return 'demo-user-1';
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
+    .map(c => c && c.trim())
+    .find(c => c && c.startsWith('user_id='));
+  if (match) return decodeURIComponent(match && match.split('=')[1]);
 
-import { supabase } from '../../../utils / supabase / client';
-import {
-  NotificationItem,
-  NotificationType,
-} from '../../../utils / notifications';
-;
-function getUserId (req: NextApiRequest): string {
-  const cookie = req.headers.cookie || '';
-  const match = cookie;
-    .split (';');
-    .map (c => c.trim ());
-    .find (c => c.starts_with ('user_id='));
-  if (return decodeURIComponent (match.split ('=')[1])) {
-  $2
-}
-  return 'demo - user - 1';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  try {
-    const user_id = getUserId (req);
-    const {
-
-      filter = 'all',
-      count_only,
-      limit = '50',
-      offset = '0',
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return 'demo-user-1'
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -141,3 +100,4 @@ return res.status (500).json ({ error: 'Unexpected error' });
 }
   };
 }
+

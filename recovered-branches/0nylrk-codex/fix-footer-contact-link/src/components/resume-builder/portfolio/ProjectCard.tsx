@@ -1,13 +1,7 @@
 
-<<<<<<< HEAD
 
 
-=======
-import { useState  } from './react';
-import { Card, CardContent, CardFooter  } from '@/components / ui / card';
-import { Button  } from '@/components / ui / button';
-import { Badge  } from '@/components / ui / badge';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import {
   AlertDialog,
   AlertDialogAction,
@@ -52,6 +46,8 @@ if ( {) {
 
 
 
+
+
 import {useState} from 'react';
 import {Card, CardContent, CardFooter} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -61,46 +57,30 @@ import {Edit, Trash2, Github, Link, FileText} from 'lucide-react';
 import {PortfolioProject} from '@/types/resume';
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 interface ProjectCardProps {
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void
 }
 
-<<<<<<< HEAD
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const handleDelete = () => {
     if (project.id) {
-<<<<<<< HEAD
-
-      onDelete(project.id);
-    }
-    setDeleteDialogOpen(false);
-  }
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 import { useState } from 'react',;
 import { Card, CardContent, CardFooter } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -124,15 +104,17 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
       onDelete(project.id);
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     }
     setDeleteDialogOpen(false)
   },
@@ -185,26 +167,20 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
                   {tech}
                 </Badge>
               ))}
-<<<<<<< HEAD
-            </div>
-=======
-            </div>;
-=======
-                  {tech}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 </Badge>;
               ))}
             </div>;
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           )}
 
             </p>)}

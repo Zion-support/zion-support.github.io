@@ -1,15 +1,11 @@
 import { useState } from 'react';
 
-<<<<<<< HEAD
 
 
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 import { Copy, Send } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import type { Prompt } from '@/types/prompts';
@@ -45,22 +41,26 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
           onClick={handleCopy}
 
 
+
           aria-label='Copy prompt'
         >
+
           {copied ? 'Copied' : <Copy className='w-4 h-4' />}
 
 
 }
-<<<<<<< HEAD
-=======
+
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { useState } from 'react';
 import { Copy, Send } from 'lucide-react';
+
+
 
 import type { Prompt } from '@/types / prompts';
 import { Button } from '@/components / ui / button';
@@ -110,18 +110,9 @@ function PromptCard() {
         </Button>;
       </div>;
     </div>);
-<<<<<<< HEAD
 
 
 }
 
-import { useState } from 'react';
-import { Copy, Send } from 'lucide-react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-}
 
-=======
-}
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;

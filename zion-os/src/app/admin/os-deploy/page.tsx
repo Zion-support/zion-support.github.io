@@ -1,27 +1,5 @@
-<<<<<<< HEAD
-
-'use client';
-import React, { useState } from 'react';
-
-const [loading, setLoading] = useState(false);
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    // Simulate deployment
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }
-  const [message, setMessage] = useState('');
-  const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('success');
-  // Mock feature keys and functions
-  const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
-  const labelFor = (key: string) => {
-
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const labels: { [key: string]: string } = {
       ai: 'AI Integration'
       blockchain: 'Blockchain Technology'
@@ -213,7 +191,6 @@ ai: 'Advanced AI capabilities and automation',
                 <label className="block text-sm font-medium text-white/90">Token System</label>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <select
                   id="tokenSystem"
                   name="tokenSystem"
@@ -545,10 +522,8 @@ ai: 'Advanced AI capabilities and automation',
 
                 }`}
               >
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 "use client",;
 import { useState } from "react",;
 import { FeatureKeys } from "@/lib/zod",;
@@ -938,15 +913,17 @@ export default function AdminDeployPage() {;
               }`}>;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 {message}
               </div>;
             )}
@@ -1005,11 +982,12 @@ function getFeatureDescription(key: string) {;
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

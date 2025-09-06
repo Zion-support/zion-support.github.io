@@ -22,51 +22,8 @@ return (
           </p>;
           <div className='relative w-full h-auto aspect-video mb-12 mx-auto rounded-lg shadow-xl overflow-hidden'>;
             <img
-<<<<<<< HEAD
 
 
-              src='https://placehold.co/800x400'
-              alt='Screenshot of ZionGPT content tool';
-              className='object-cover';
-            />;
-          </div>;
-          <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
-          <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>
-            <li>
-              Save time drafting marketing content for your products or
-              services.
-            </li>
-              src="https: //placehold.co/800x400"
-              alt="Screenshot of ZionGPT content tool"
-              className="object-cover"
-            />
-          </div>
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
-            <li>Save time drafting marketing content for your products or services.</li>
-            <li>Improve search rankings with keyword optimized text.</li>
-            <li>Create multilingual content to reach a global audience.</li>
-          </ul>
-          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4 mb-12">
-            <div>
-              <p className="font-semibold">How does ZionGPT generate content?</p>
-              <p className="text-zion-slate-light">Our fine-tuned AI model analyzes your prompts and produces human-like copy tailored for SEO.</p>
-            </div>
-            <div>
-              <p className="font-semibold">Can I edit the generated text?</p>
-              <p className="text-zion-slate-light">Yes, you can review and modify all suggestions before publishing.</p>
-            </div>
-          </div>
-          <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
-              <Link href='/open-app'>Try ZionGPT Now</Link>            </Button>          <div className="text-center">
-          <div className="text-center">
-=======
-              src='https://placehold && placehold.co/800x400'
-              alt='Screenshot of ZionGPT content tool'
-              className='object-cover'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             <Button size="lg" className="bg-zion-purple text-white" asChild>
@@ -76,21 +33,14 @@ return (
         </div>
       </main>
     </>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 ;
 }
-<<<<<<< HEAD
-=======
+
 
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
@@ -232,4 +182,5 @@ function AIPoweredContent() {
 
 
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

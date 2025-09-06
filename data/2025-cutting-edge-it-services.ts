@@ -1,27 +1,24 @@
 
 
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const cuttingEdgeITServices2025 = [
   {
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       'DevOps Best Practices',
       'Security Standards',
       'Quality Assurance Protocols',
     ],
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
   },;
+
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -30,30 +27,18 @@ export const cuttingEdgeITServices2025 = [
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
-<<<<<<< HEAD
 
 
 
-    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
-  }
-];
+
+    ];
+    integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
-=======
 
-
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const cuttingEdgeITServices2025 = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -261,12 +246,11 @@ export const cuttingEdgeITServices2025 = [;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
 ];

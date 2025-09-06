@@ -16,11 +16,13 @@ export function readJsonFile<T>(filePath: string, defaultValue: T): T {
   return default_value;
 }
 
+
 export function writeJsonFile<T>(fileName: string, data: T): void {
 
 export function writeJsonFile<T>(fileName: string, data: T): void {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   const filePath = getFilePath(fileName);
   const tmpPath = `${filePath}.tmp`;
   fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
@@ -36,45 +38,9 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
 }
 
 
-  }
-  return defaultValue;
-}
-
-// Default database configuration
-const defaultConfig: DatabaseConfig = {
-  host: process.env.DB_HOST || 'localhost',
-  port: parseInt(process.env.DB_PORT || '5432'),
-  database: process.env.DB_NAME || 'zion_tech_group',
-  username: process.env.DB_USER || 'postgres',
-  password: process.env.DB_PASSWORD || 'password',
-  ssl: process.env.DB_SSL === 'true'
-};
-// Singleton database instance
-export const db = new DatabaseManager(defaultConfig);
-
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
-=======
-=======
-export function writeJsonFile < T>(file_name: string, data: T): void {
-  const file_path = getFilePath (file_name);
-  const tmp_path = `${file_path}.tmp`;
-  fs.writeFileSync (tmp_path, JSON.stringify (data, null, 2), 'utf - 8');
-  fs.rename_sync (tmp_path, file_path);
-}
-export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
-  const items = readJsonFile < T[]>(file_name, []);
-  items.push (item);
-  writeJsonFile < T[]>(file_name, items);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   const items = readJsonFile<T[]>(fileName, []);
@@ -82,21 +48,18 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   writeJsonFile<T[]>(fileName, items);
 }
 
-<<<<<<< HEAD
-=======
-=======
-import fs from 'fs';
-import path from 'path';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

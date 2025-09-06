@@ -1,26 +1,6 @@
 
-<<<<<<< HEAD
 
 
-import { useState, useMemo } from "react",
-import { ProductListing } from "@/types/listings",
-import { SearchSuggestion, FilterOptions } from "@/types/search";
-import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
-export function useMarketplaceSearch() {
-  // Search state
-  const [searchQuery, setSearchQuery] = useState("");
-  // Filter states
-  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
-  const [selectedRating, setSelectedRating] = useState<number | null>(null);
-  // Generate search suggestions and filter options
-  const searchSuggestions: SearchSuggestion[] = useMemo(
-    () => generateSearchSuggestions();
-    [];
-  );
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const filterOptions: FilterOptions = useMemo(
@@ -216,9 +196,7 @@ function useMarketplaceSearch() {
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
   // Clear all filters
   const clearAllFilters = () => {
     setSearchQuery(""),
@@ -243,8 +221,10 @@ function useMarketplaceSearch() {
     clearAllFilters,
     filterOptions
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
 }
 ;

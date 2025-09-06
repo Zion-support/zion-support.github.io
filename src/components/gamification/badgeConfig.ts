@@ -17,11 +17,8 @@ export type BadgeKey =
   | 'profile_complete'
   | 'featured_creator'
   | 'first_action'
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   LucideIcon,
   BadgeCheck,
@@ -47,6 +44,8 @@ export interface BadgeMeta {
   color: string;
   bg: string;
 export const badge_list: BadgeMeta[] = [;
+
+
 
 
   {
@@ -82,18 +81,8 @@ export interface BadgeMeta {
   bg: string
 }
 
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const badgeList: BadgeMeta[] = [
   {
     key: "first_listing",
@@ -140,25 +129,8 @@ export const badgeList: BadgeMeta[] = [
     name: 'Monetized',
     description: 'Earned your first AI dollar in the marketplace.',
     icon: BadgeDollarSign,
-<<<<<<< HEAD
 
 
-    color: '#22C55E', // Soft Green
-    bg: '#F2FCE2', // Soft Green
-  },
-]
-export const getBadgeMeta = (key: BadgeKey) =>
-  badgeList.find(b => b.key === key);
-export const getBadgeMeta = (key: BadgeKey) =>;
-  badgeList.find((b) => b.key === key);
-}
-    color: "#22C55E", // Soft Green
-    bg: "#F2FCE2",    // Soft Green
-  }],
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export const getBadgeMeta = (key: BadgeKey) =>: any;
   badge_list.find (boolean => b.key === key);

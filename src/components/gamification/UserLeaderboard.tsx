@@ -7,33 +7,14 @@ import { Trophy } from 'lucide-react'
 } from '@/components / ui / card';
 import { Trophy } from 'lucide-react';
 export interface LeaderboardEntry {
-<<<<<<< HEAD
 
 
-  name: string
-  points: number
-interface UserLeaderboardProps {
-  entries: LeaderboardEntry[]
-  entries: LeaderboardEntry[]
-}
-export interface LeaderboardEntry {
-
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   name: string,
   points: number
 }
 
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
@@ -51,14 +32,8 @@ export interface LeaderboardEntry {;
 
 interface UserLeaderboardProps {;
   entries: LeaderboardEntry[];
-<<<<<<< HEAD
 
 
-
-
-=======
-  entries: LeaderboardEntry[];
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 export interface LeaderboardEntry {;
@@ -74,14 +49,8 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
   return (
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <Trophy className="h-5 w-5" /> Leaderboard
         </CardTitle>
         <CardDescription>Top users by points</CardDescription>
@@ -97,20 +66,8 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
           {entries.map((e, idx) => (
             <div
               key={e.name}
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
             >
               <span className="font-medium">
@@ -134,8 +91,7 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
     </Card>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
 export /**
  * UserLeaderboard - Function description
@@ -173,4 +129,5 @@ function UserLeaderboard() {
     </Card>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

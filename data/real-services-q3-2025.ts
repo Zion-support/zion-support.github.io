@@ -12,9 +12,7 @@
 
   link: string;
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
+
   marketPosition?: string;
   targetAudience?: string;
   trialDays?: number;
@@ -67,46 +65,15 @@ const contact = {;
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
 
-=======
 
-=======
-}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const realServicesQ32025: Q3Service[] = [
   {
-<<<<<<< HEAD
-
-    id: 'subscription-analytics-revenue-optimization',
-    name: 'Subscription Analytics & Revenue Optimization',
-
-    tagline:
-      'Churn insights, cohort analysis, and pricing experiments for SaaS growth'
-    price: '$599'
-    period: '/month'
-    description:
-      'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.'
-    features: [
 
 
-      'Churn and retention analysis'
-      'Cohort and funnel dashboards'
-      'Price testing and packaging experiments'
-      'Revenue leakage detection'
-      'Revenue forecasting models'
-      'Weekly executive summaries'
-    ]
-    popular: true
-    icon: '📊'
-    color: 'from-emerald-600 to-teal-700'
-    textColor: 'text-emerald-300'
-    link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization'
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       'Churn and retention analysis',
@@ -117,6 +84,8 @@ export const realServicesQ32025: Q3Service[] = [
       'Weekly executive summaries',
 
 
+
+
     tagline: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth',
     price: '$599',
     period: '/month',
@@ -125,6 +94,7 @@ export const realServicesQ32025: Q3Service[] = [
       'Churn and retention analysisCohort and funnel dashboards',
       'Price testing and packaging experimentsRevenue leakage detection',
       'Revenue forecasting modelsWeekly executive summaries'
+
 
     ],
     popular: true,
@@ -143,6 +113,7 @@ export const realServicesQ32025: Q3Service[] = [
     textColor: 'text-emerald-300';
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization';
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.'
+
 
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams';
     trialDays: 14;
@@ -188,60 +159,23 @@ export const realServicesQ32025: Q3Service[] = [
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
 
-  },];    contactInfo: contact
-  }
-];
 
-    color: 'from - amber - 600 to - rose - 600',
-    text_color: 'text - amber - 200',
-    link: 'https://ziontechgroup.com / services / ecommerce - reviews - ugc - activation',
-    market_position:;
-      'Managed alternative to do - it - yourself Yotpo / Judge.me setups.',
-    target_audience: 'Shopify and custom ecommerce brands',
-    setup_time: '3–6 days',
-    category: 'Quality & Monitoring',
-    real_service: true,
-    technology: ['Shopify', 'Klaviyo', 'Next.js'],
-    integrations: ['Yotpo', 'Judge.me', 'Loox', 'Stamped'],
-    use_cases: ['Increase trust', 'Lift CVR', 'Collect UGC for ads'],
-    roi: '2–10% CVR lift on PDPs post - deployment.',
-    competitors: ['Yotpo', 'Judge.me', 'Loox', 'Stamped.io'],
-    customers: 10,
-    rating: 4.8,
-    reviews: 12,
-    // @ts - expect - error augment common shape for UI components that expect contact_info;
-    contact_info: contact,
-  }, ];    contact_info: contact;
-<<<<<<< HEAD
 
-=======
-=======
-      'Churn and retention analysisCohort and funnel dashboards',
-      'Price testing and packaging experimentsRevenue leakage detection',
-      'Revenue forecasting modelsWeekly executive summaries'
-    ],
-    popular: true,
-    icon: '📊',
-    color: 'from-emerald-600 to-teal-700',
-    textColor: 'text-emerald-300',
-    link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
-    marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     contactInfo: contact,
   },
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14,
     setupTime: '1–2 weeks',
     category: 'AI & Data',
     realService: true,
 
-<<<<<<< HEAD
-=======
 
     marketSize: '$30B+ subscription economy tooling',
     growthRate: '30% YoY',
@@ -328,51 +262,19 @@ export const realServicesQ32025: Q3Service[] = [
     // @ts-expect-error augment common shape for UI components that expect contactInfo
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   }
 ];
 ;
-=======
 
-=======
-}
-};
-
-export const realServicesQ32025: Q3Service[] = [
-  {
-    id: 'subscription-analytics-revenue-optimization',
-    name: 'Subscription Analytics & Revenue Optimization',
-    tagline: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth',
-    price: '$599',
-    period: '/month',
-    description: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.',
-    features: [
-      'Churn and retention analysisCohort and funnel dashboards',
-      'Price testing and packaging experimentsRevenue leakage detection',
-      'Revenue forecasting modelsWeekly executive summaries'
-    ],
-    popular: true,
-    icon: '📊',
-    color: 'from-emerald-600 to-teal-700',
-    textColor: 'text-emerald-300',
-    link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
-    marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
-=======
-    contactInfo: contact,
-  },
-=======
-    marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14,
     setupTime: '1–2 weeks',
     category: 'AI & Data',
     realService: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     technology: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python'],
     integrations: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy'],
     useCases: [
@@ -571,142 +473,18 @@ export const realServicesQ32025: Q3Service[] = [
 ;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14,
     setupTime: '1–2 weeks',
     category: 'AI & Data',
     realService: true,
 
-
-
-
-
-    marketSize: '$30B+ subscription economy tooling',
-    growthRate: '30% YoY',
-    variant: 'ai-futuristic',
-    customers: 24,
-    rating: 4.9,
-    reviews: 31,
-    // @ts-expect-error augment common shape for UI components that expect contactInfo
-
-
-
-
-
-  },
-  {
-    id: 'digital-product-commerce-stack',
-    name: 'Digital Product Commerce Stack',
-
-
-
-
-
-    ],
-    icon: '🛒',
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-300',
-    link: 'https://ziontechgroup.com/services/digital-product-commerce-stack',
-
-
-
-
-
-    targetAudience: 'Indie SaaS, creators, agencies launching digital products',
-    setupTime: '5–7 days',
-    category: 'Developer Tools',
-    realService: true,
-
-
-
-
-
-    customers: 12,
-    rating: 4.8,
-    reviews: 18,
-    // @ts-expect-error augment common shape for UI components that expect contactInfo
-
-
-
-
-
-  },
-  {
-    id: 'wordpress-internal-linking-automation',
-    name: 'WordPress Internal Linking Automation',
-
-
-
-
-
-    ],
-    icon: '🔗',
-    color: 'from-purple-600 to-pink-600',
-    textColor: 'text-purple-200',
-    link: 'https://ziontechgroup.com/services/wordpress-internal-linking-automation',
-
-
-
-
-
-    targetAudience: 'Content sites, ecommerce, publishers on WordPress',
-    trialDays: 7,
-    setupTime: '2–4 days',
-    category: 'Growth & Marketing',
-    realService: true,
-
-
-
-
-
-    customers: 30,
-    rating: 4.7,
-    reviews: 22,
-    // @ts-expect-error augment common shape for UI components that expect contactInfo
-
-
-
-
-
-  },
-  {
-    id: 'reviews-ugc-activation',
-    name: 'Ecommerce Reviews & UGC Activation',
-
-
-
-
-
-    ],
-    icon: '⭐',
-    color: 'from-amber-600 to-rose-600',
-    textColor: 'text-amber-200',
-    link: 'https://ziontechgroup.com/services/ecommerce-reviews-ugc-activation',
-
-
-
-
-
-    targetAudience: 'Shopify and custom ecommerce brands',
-    setupTime: '3–6 days',
-    category: 'Quality & Monitoring',
-    realService: true,
-
-
-
-
-
-    customers: 10,
-    rating: 4.8,
-    reviews: 12,
-    // @ts-expect-error augment common shape for UI components that expect contactInfo
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    technology: ['dbtSnowflake/BigQuery', 'Segment/GA4Python'],
+    integrations: ['StripePaddle', 'ChargebeeLemon Squeezy'],
+    useCases: ['Reduce churnPrice optimization', 'Board-ready revenue KPIs'],
+    roi: '3–10% ARR lift from churn reduction and pricing wins.',
+    competitors: ['ProfitWell MetricsChartMogul', 'Baremetrics'],
 
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

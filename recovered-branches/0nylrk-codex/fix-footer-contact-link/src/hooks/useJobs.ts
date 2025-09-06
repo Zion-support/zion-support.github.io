@@ -1,12 +1,10 @@
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {Job, JobStatus} from "@/types/jobs";
@@ -14,17 +12,10 @@ import {toast} from "sonner";
 import {useAuth} from "./useAuth";
 import {createJob, updateJob, getJobById} from "@/services/jobService";
 
-<<<<<<< HEAD
-export const useJobs = (userId?: string, status?: JobStatus) => {
-export const useJobs = (userId?: string, status?: JobStatus) => {;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-export const useJobs = (userId?: string, status?: JobStatus) => {;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -32,10 +23,8 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { Job, JobStatus } from "@/types/jobs",
@@ -173,23 +162,9 @@ if (throw delete_error) {
     refetch: fetch_jobs;
     updateJobStatus;
 
-<<<<<<< HEAD
-    deleteJob;
-    createJob;
-    updateJob
-    getJobById
 
 
-=======
-    delete_job;
-    create_job;
-    update_job,
-    getJobById;
-=======
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Job, JobStatus } from "@/types/jobs",;
@@ -283,14 +258,16 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
     getJobById;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
 };

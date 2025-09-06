@@ -10,39 +10,8 @@ interface EmptyStateProps {
   onRetry?: () => void;
   showRetry?: boolean;
 
-<<<<<<< HEAD
 
 
-export function EmptyState({
-  text = 'No items available'
-  description
-  onRetry
-export function EmptyState({
-  text = "No items available"
-  description
-  onRetry
-  showRetry = false
-
-import { Package, RefreshCw } from 'lucide-react';
-import { Button } from './button',;
-interface EmptyStateProps {;
-  text?: string,;
-  description?: string,;
-  onRetry?: () => void,;
-  showRetry?: boolean,;
-  icon?: React.ReactNode;
-}
-
-export function EmptyState({ 
-  text = "No items available",
-  description,
-  onRetry,
-  showRetry = false,
-
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   icon
 }: EmptyStateProps) {
   return (
@@ -127,46 +96,16 @@ export function EmptyState({;
       )}
       {showRetry && onRetry && (;
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-          onClick={onRetry}
-          variant="outline"
-          className="flex items-center gap-2"
-        >
-          <RefreshCw className="h-4 w-4" />
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           Try Again
         </Button>
       )}
     </div>;
   );
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 } 
 

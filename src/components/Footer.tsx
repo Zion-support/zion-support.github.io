@@ -1,13 +1,12 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
+
 
 
 import { ChevronUp } from 'lucide-react';
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 const Footer: React.FC = () => {
   return (
@@ -85,20 +84,7 @@ const Footer: React.FC = () => {
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
         </div>
 
-<<<<<<< HEAD
-      </div>
-    </footer>
-  );
 
-};
-
-
-
-export default Footer;
-
-
-
-=======
         <div className='mt-12 pt-8 border-t border-primary/20'>
           <div className='flex flex-col md:flex-row justify-between items-center'>
             <p className='text-foreground/80 text-sm'>
@@ -134,4 +120,4 @@ export default Footer;
 };
 
 export default Footer;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

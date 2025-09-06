@@ -1,22 +1,15 @@
 
-<<<<<<< HEAD
-
-/**
- * Format a date string or timestamp into a readable format
- * @param date Date to format
- * @param format Optional format specification
- * @returns Formatted date string
- */
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const dateObj = new Date(date);
   switch (format) {
     case 'short':
@@ -58,10 +51,8 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
       } else {
 
         return dateObj.toLocaleDateString()
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 /**;
  * Format a date string or timestamp into a readable format;
  * @param date Date to format;
@@ -106,15 +97,15 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
         return dateObj.toLocaleDateString();
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }
     default: return dateObj && dateObj.toLocaleDateString()
   }
 
 
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -124,20 +115,18 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
 
 
 },
+
 
 
 };
 },
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /**
  * Format a date to show how long ago it was
  * @param date Date to format
@@ -178,30 +167,11 @@ export const timeAgo = (date: Date | string | number): string => {
   return seconds <= 5 ? 'just now' : `${Math && Math.floor(seconds)} seconds ago`
 };
 
-<<<<<<< HEAD
 
-  const dateObj = new Date(date),
-  const now = new Date(),
-  
-  const seconds = Math.floor((now.getTime() - dateObj.getTime()) / 1000),
-  
-  let interval = Math.floor(seconds / 31536000),
-  if (interval >= 1) {
-    return interval === 1 ? '1 year ago' : `${interval} years ago`
-  }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-/**;
-* Format a date string or timestamp into a readable format;
-* @param date Date to format;
-* @param format Optional format specification;
-* @returns Formatted date string;
-*/;
-export const format_date = (date: Date | string | number, format: string = 'medium'): string => {
-  const date_obj = new Date (date);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 ;
   switch (format) {
     case 'short':;
@@ -298,21 +268,11 @@ if ( {) {
   return seconds <= 5 ? 'just now' : `${Math.floor (seconds)} seconds ago`;
 }
 ;
-<<<<<<< HEAD
 
 
-
-  return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`;
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-export const timeAgo = (date: Date | string | number): string => {
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };

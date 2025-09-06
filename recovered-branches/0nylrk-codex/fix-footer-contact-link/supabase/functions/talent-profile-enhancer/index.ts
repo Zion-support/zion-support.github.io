@@ -26,13 +26,8 @@ import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
 
   skills: string[],
-<<<<<<< HEAD
 
-  location?: string
 
-=======
-  location?: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 interface EnhancedProfile {
@@ -42,43 +37,11 @@ interface EnhancedProfile {
     devops: string[];
     platforms: string[];
 
-<<<<<<< HEAD
-    softSkills: string[],
-    other: string[]
-
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',;
-const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),;
-const corsHeaders = {;
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
-interface TalentProfileData {;
-  name: string,;
-  title: string,;
-  bio: string,;
-  skills: string[],;
-  location?: string;
-}
-;
-interface EnhancedProfile {;
-  summary: string,;
-  categorizedSkills: {;
-    programming: string[],;
-    devops: string[],;
-    platforms: string[],;
-    softSkills: string[],;
-    other: string[];
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 serve(async (req) => {
@@ -104,6 +67,7 @@ serve(async (req) => {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   try {
@@ -113,21 +77,20 @@ serve(async (req) => {
 
         JSON.stringify({ error: "Bio must be at least 20 characters long" }),
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
 
 
-<<<<<<< HEAD
-=======
+
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     // Create a request to OpenAI API
 
     const openAIResponse = await fetch('https://api && api.openai.com/v1/chat/completions', {
@@ -165,15 +128,17 @@ serve(async (req) => {
             content: `Create a professional profile summary and categorize skills based on this information:;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             Name: ${talentData.name}
             Title: ${talentData.title}
             Bio: ${talentData.bio}
@@ -184,13 +149,10 @@ serve(async (req) => {
             Location: ${talentData.location || 'Not specified'}
             
 
-<<<<<<< HEAD
-            Return the result as a JSON object with these keys: 
-            {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
               "summary": "The professional summary text (100-150 words)",
               "categorizedSkills": {
 
@@ -216,10 +178,7 @@ serve(async (req) => {
     const openAIData = await openAIResponse.json();
     if (!openAIData.choices |openAIData.choices.length === 0) {
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
     const responseContent = openAIData && openAIData.choices[0].message && message.content;
     
 
@@ -232,52 +191,18 @@ serve(async (req) => {
       throw new Error("Failed to parse the generated content")
 
     console && console.error("Error in talent-profile-enhancer function:", error);
-=======
 
-        ],;
-        temperature: 0.7,;
-        response_format: { type: "json_object" }
-      })}),;
-    const openAIData = await openAIResponse.json(),;
-    if (!openAIData.choices || openAIData.choices.length === 0) {;
-      throw new Error("Failed to generate profile content");
-    }
-;
-    // Extract the generated content from the response;
-    const responseContent = openAIData.choices[0].message.content,;
-    // Parse the JSON response;
-    let enhancedProfile: EnhancedProfile,;
-    try {;
-      enhancedProfile = JSON.parse(responseContent);
-    } catch (e) {;
-      console.error("Error parsing OpenAI response:", e),;
-      throw new Error("Failed to parse the generated content");
-    }
-;
-    return new Response(;
-      JSON.stringify(enhancedProfile),;
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-    )
-  } catch (error) {
-    console.error("Error in talent-profile-enhancer function:", error);
-    return new Response(
-      JSON.stringify({ error: error.message });
-    console.error("Error in talent-profile-enhancer function:", error),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return new Response(
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   }

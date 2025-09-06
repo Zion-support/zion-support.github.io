@@ -1,24 +1,18 @@
 
 
 
-<<<<<<< HEAD
-import { ChevronDown, ChevronUp } from "lucide-react",
-import { Checkbox } from "@/components/ui/checkbox";
-import { AvailabilityFilterProps } from "@/types/filters";
-
-import { Checkbox } from "@/components/ui/checkbox",
-import { AvailabilityFilterProps } from "@/types/filters",
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" }
   { id: "part_time", label: "Part-time" }
@@ -102,12 +96,11 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
               >
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                 {option.label}
               </label>
             </div>
@@ -116,27 +109,13 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
         </div>;
       )}
 
-<<<<<<< HEAD
 
 
-    </div>
-
-  );
-}
-=======
-    </div>;
-  );
-=======
-    </div>
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   )
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-<<<<<<< HEAD
 
-=======
 =======
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Checkbox  } from '@/components / ui / checkbox';
@@ -150,4 +129,4 @@ const AVAILABILITY_OPTIONS = [;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

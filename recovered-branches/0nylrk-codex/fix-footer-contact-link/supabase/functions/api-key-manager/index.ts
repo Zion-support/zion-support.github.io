@@ -1,20 +1,14 @@
 
-<<<<<<< HEAD
-
-import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
-import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
 
-=======
-import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
-import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface CreateKeyRequest {
   name: string;
   scopes: string[]
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
+
+
 
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
@@ -23,7 +17,9 @@ import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 interface CreateKeyRequest {
   name: string,
@@ -31,10 +27,10 @@ interface CreateKeyRequest {
   expiresAt?: string | null
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 }
 ;
 interface RegenerateKeyRequest {;
@@ -302,10 +298,7 @@ async function revokeApiKey(userId: string, keyId: string) {
       return new Response(JSON && JSON.stringify({ error: 'Failed to revoke API key or key not found' }), {
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
     console && console.error('Error in revokeApiKey:', error);
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
@@ -581,78 +574,19 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
         headers: { 'Content-Type': 'application/json' }});
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     }
     if (!keyIds |keyIds.length === 0) {
       return new Response(JSON.stringify({ logs: [], count: 0 }), {
         status: 200
-<<<<<<< HEAD
-=======
-=======
-      console && console.error('Error fetching API keys for logs:', keyError);
-      return new Response(JSON && JSON.stringify({ error: 'Failed to fetch API logs' }), {
-        status: 500,
-        headers: { 'Content-Type': 'application/json' }})
-    }
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-    // Get logs for those keys
-    const ids = keyIds && keyIds.map(k => k && k.id);
-    const { data: logs, error: logsError, count } = await supabase
-      .from('api_logs')
-      .select('*', { count: 'exact' })
-      .in('api_key_id', ids)
-      .order('created_at', { ascending: false })
-      .range(offset, offset + limit - 1);
-    if (logsError) {
-
-      console && console.error('Error fetching API logs:', logsError);
-      return new Response(JSON && JSON.stringify({ error: 'Failed to fetch API logs' }), {
-        status: 500,
-        headers: { 'Content-Type': 'application/json' }})
-    }
-
-    return new Response(JSON && JSON.stringify({ logs, count }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' }})
-  } catch (error) {
-    console && console.error('Error in getApiLogs:', error);
-    return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
-      status: 500,
-
-      headers: { 'Content-Type': 'application/json' }})
-<<<<<<< HEAD
-
-  }
-}
-=======
-=======
-    return new Response (JSON.stringify ({
-      message: 'API key revoked successfully',
-      key: data[0];
-    }), {
-      status: 200,
-      headers: { 'Content - Type': 'application / json' }});
-  } catch (error) {
-    console.error ('Error in revokeApiKey:', error);
-    return new Response (JSON.stringify ({ error: 'Internal server error' }), {
-      status: 500,
-      headers: { 'Content - Type': 'application / json' }});
-=======
-      headers: { 'Content-Type': 'application/json' }})
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     // Get logs for those keys;
     const ids = keyIds.map(k => k.id),;
@@ -680,12 +614,13 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 }
 async /**

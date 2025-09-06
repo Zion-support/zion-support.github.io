@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-=======
-
-
-import {useEffect, useState} from 'react';
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   const { user } = useAuth();
   const { toast } = useToast();
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
@@ -80,7 +72,7 @@ if ( {) {
       });
       fetch_transactions ();
     } else {
-<<<<<<< HEAD
+
       const err = await res.json();
       toast({
         title: 'Error'
@@ -89,20 +81,7 @@ if ( {) {
       })
     }
 
-  }
-  };
 
-
-=======
-
-
-=======
-    }
-
-  };
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -187,12 +166,7 @@ export default function TokenManager() {;
             </Card>;
 
             <Tabs defaultValue="history">;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-=======
 =======
       const err = await res.json ();
       toast ({
@@ -203,7 +177,7 @@ export default function TokenManager() {;
     }
   }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
     <ProtectedRoute admin_only>;
       <div>;

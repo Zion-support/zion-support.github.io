@@ -390,7 +390,6 @@ export default EnhancedContactForm;
         company: ''
         service: ''
         message: ''
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       });
       set_errors ({});
     } catch (error) {
@@ -416,83 +415,6 @@ if ( {) {
       set_errors (new_errors);
     }
   }
-<<<<<<< HEAD
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <motion.div;
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="text - center py - 12";
-      >;
-        <div className="w - 20 h - 20 rounded - full bg - green - 500 / 20 mx - auto mb - 6 flex items - center justify - center">;
-          <CheckCircle className="w - 10 h - 10 text - green - 400" />;
-        </div>;
-        <h3 className="text - 2xl font - bold text - white mb - 4">Message Sent Successfully!</h3>;
-        <p className="text - white / 70 mb - 6">;
-          Thank you for reaching out. We'll get back to you within 24 hours.;
-        </p>;
-        <button;
-          on_click={() => setIsSubmitted (false)}
-          className="px - 6 py - 3 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover: from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold transition - all duration - 300 transform hover:scale - 105";
-        >;
-          Send Another Message;
-        </button>;
-      </div>);
-  }
-  return (
-    <div className="max - w-4xl mx - auto">;
-      <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12">;
-        {/* Contact Information */}
-        <div className="space - y-8">;
-          <div>;
-            <h3 className="text - 2xl font - bold text - white mb - 6">Get in Touch</h3>;
-            <p className="text - white / 70 leading - relaxed mb - 8">;
-              Ready to transform your business with cutting - edge technology? Let's discuss your project and explore how our solutions can drive innovation and growth.;
-            </p>;
-          </div>;
-          <div className="space - y-6">;
-            <div className="flex items - start space - x-4">;
-              <div className="w - 12 h - 12 rounded - xl bg - gradient - to - br from - blue - 500 to - cyan - 500 p - 3 flex items - center justify - center">;
-                <Mail className="w - 6 h - 6 text - white" />;
-              </div>;
-              <div>;
-                <h4 className="text - lg font - semibold text - white mb - 1">Email</h4>;
-                <p className="text - white / 70">contact@ziontechgroup.com</p>;
-              </div>;
-            </div>;
-            <div className="flex items - start space - x-4">;
-              <div className="w - 12 h - 12 rounded - xl bg - gradient - to - br from - purple - 500 to - pink - 500 p - 3 flex items - center justify - center">;
-                <Phone className="w - 6 h - 6 text - white" />;
-              </div>;
-              <div>;
-                <h4 className="text - lg font - semibold text - white mb - 1">Phone</h4>;
-                <p className="text - white / 70">+1 (555) 123 - 4567</p>;
-              </div>;
-            </div>;
-            <div className="flex items - start space - x-4">;
-              <div className="w - 12 h - 12 rounded - xl bg - gradient - to - br from - emerald - 500 to - teal - 500 p - 3 flex items - center justify - center">;
-                <MapPin className="w - 6 h - 6 text - white" />;
-              </div>;
-              <div>;
-                <h4 className="text - lg font - semibold text - white mb - 1">Location</h4>;
-                <p className="text - white / 70">San Francisco, CA</p>;
-
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-
-                  className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
-                    errors.name
-                      ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20'
-                    errors.name 
-                      ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
-                      : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-=======
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${;
                     errors && errors.name ;
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' ;

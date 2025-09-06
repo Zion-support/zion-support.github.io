@@ -1,9 +1,7 @@
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useAuth} from '@/hooks/useAuth';
@@ -15,8 +13,6 @@ import Rocket from 'lucide-react/dist/esm/icons/rocket';
 import { FileText, Users, Calendar, Eye, MessageSquare  } from 'lucide-react';
 import { cn } from '@/lib/utils';
 interface WizardStep {
-<<<<<<< HEAD
-=======
 
 import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
 import {cn} from '@/lib/utils';
@@ -69,12 +65,8 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const navigate = useNavigate();
   const { user } = useAuth();
 
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState, useEffect } from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -99,29 +91,10 @@ interface OnboardingWizardProps {;
   onComplete: () => void,;
   onSkip: () => void,;
   className?: string;
-<<<<<<< HEAD
-
-}
 
 
-    url: string
-  }
-  skipText?: string
-}
-interface OnboardingWizardProps {
-
-  type: 'client' | 'talent'
-  onComplete: () => void
-  onSkip: () => void
-
-  className?: string
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
   const [currentStep, setCurrentStep] = useState(0);
@@ -224,74 +197,10 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Let our AI find the perfect opportunities for you"
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />
       action: {
-<<<<<<< HEAD
-
-        text: "Enable Matchmaking"
-        url: "/talent-dashboard"
-      }
-    }
-
-  ];
-  const steps = type === 'client' ? clientSteps : talentSteps;
-  // Navigate to the specified URL
-  const handleAction = () => {
-    if (currentStep < steps.length - 1) {
-      navigate(steps[currentStep].action.url);
-      setCurrentStep(currentStep + 1)
-    } else {
-      // Last step
-      navigate(steps[currentStep].action.url);
-      onComplete()
-    }
-  }
-  // Skip the current step
-  const handleSkip = () => {
-    if (currentStep < steps.length - 1) {
-      setCurrentStep(currentStep + 1)
-    } else {
-      // Last step
-      onSkip()
-    }
-
-
-  }
-        text: "Enable Matchmaking",
-        url: "/talent-dashboard"
-      }
-    }
-
-
-  ],;
-  const steps = type === 'client' ? clientSteps : talentSteps,;
-  // Navigate to the specified URL;
-  const handleAction = () => {;
-    if (currentStep < steps.length - 1) {;
-      navigate(steps[currentStep].action.url),;
-      setCurrentStep(currentStep + 1);
-    } else {;
-      // Last step;
-      navigate(steps[currentStep].action.url),;
-      onComplete();
-    }
-  },;
-  // Skip the current step;
-  const handleSkip = () => {;
-    if (currentStep < steps.length - 1) {;
-      setCurrentStep(currentStep + 1);
-    } else {;
-      // Last step;
-      onSkip();
-    }
-  },
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>

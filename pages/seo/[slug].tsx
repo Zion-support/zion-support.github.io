@@ -33,12 +33,7 @@ export type LandingPayload = {
   body_html: string;
   region?: string;
 
-<<<<<<< HEAD
-  service?: string;
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
   const [payload, setPayload] = React.useState<LandingPayload | null>(null);
@@ -46,9 +41,7 @@ export type LandingPayload = {
     if (!router.isReady || !slug) return,;
     const dataParam = (router.query?.data as string) || '';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const router = useRouter();
   const { slug } = router && router.query as { slug?: string };
   const [payload, setPayload] = React && React.useState<LandingPayload | null>(null);
@@ -61,31 +54,9 @@ export type LandingPayload = {
         setPayload(JSON && JSON.parse(decodeURIComponent(dataParam)));
         return;
 
-<<<<<<< HEAD
-
-      } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-        return
-      } catch {}
-    }
-=======
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     // Fallback: render a basic placeholder until a generated page is deployed
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
   }, [router.isReady, slug]),
@@ -117,52 +88,24 @@ export type LandingPayload = {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!payload) return null;
 
   return (
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>
       <FAQ items={payload.faq} />
     </div>
-<<<<<<< HEAD
 
-=======
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-
-        dangerouslySetInnerHTML={{ __html: payload && payload.bodyHtml }}
-      />;
-
-      <div className='mt-8'>;
-        <h2 className='text-lg font-semibold mb-2'>Featured Talent</h2>        <TalentGrid region={payload && payload.region} service={payload && payload.service} />;
-      </div>;
-
-      <FAQ items={payload && payload.faq} />;
-    </div>;
-  );
-
-
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-=======
-=======
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

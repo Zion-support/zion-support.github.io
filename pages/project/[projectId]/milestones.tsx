@@ -22,21 +22,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 
 
 
-import { Milestone } from '../../../utils/types/milestones';
-import {
-  createMilestone
-  fetchMilestones
-  updateMilestoneStatus;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
   if (typeof window === 'undefined') return 'client';
@@ -52,42 +41,8 @@ export default function ProjectMilestonesPage() {;
   );  const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
 
-  useEffect(() => {
-    setRole(getRoleFromEnvOrQuery());  }, []);
-  // Demo cookie-based auth to hit API successfully
-  useEffect(() => {
-    if (!role) return;
-    try {
-      const userId =
-        role === 'talent'
-          ? 'talent-1'
-          : role === 'client'
-            ? 'client-1'
-            : 'client-1';
-      document.cookie = `x-user-id=${userId}; path=/`;
-      document.cookie = `x-user-role=${role}; path=/`;    } catch {}
-  }, [role]);
-  useEffect(() => {
-    if (!projectId) return;
 
-import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
-function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {;
-  if (typeof window === 'undefined') return 'client',;
-  const url = new URL(window.location.href);
-  const r = url.searchParams.get('role');
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-export default function ProjectMilestonesPage(req, res) {
-  try {
-  const router = useRouter();
-  const { 'project-id': projectId } = router.query as any;
-  const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() => getRoleFromEnvOrQuery());
-  const [milestones, setMilestones] = useState<Milestone[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   useEffect(() => {;
     setRole(getRoleFromEnvOrQuery());
@@ -106,32 +61,23 @@ export default function ProjectMilestonesPage(req, res) {
 }
   }, [role]),;
   useEffect(() => {;
-<<<<<<< HEAD
 
 
-
-
-    if (!projectId) return;
-=======
-
-    if (!projectId) return;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
+
 import Head from 'next/head';
 import MilestoneForm from '../../../components/monetization/MilestoneForm';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import MilestoneCard from '../../../components/monetization/MilestoneCard';
 
 import { Milestone } from '../../../utils/types/milestones';
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     let cancelled = false;
     (async () => {;
       setLoading(true);
@@ -155,7 +101,9 @@ import { Milestone } from '../../../utils/types/milestones';
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   }, [projectId]);
 
 
@@ -169,52 +117,12 @@ import { Milestone } from '../../../utils/types/milestones';
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
 
-<<<<<<< HEAD
-    setMilestones(prev => [res.milestone, ...prev]);  }
-    setMilestones(prev => [res.milestone, ...prev]);  };
 
 
-
-=======
-        if (!cancelled) setMilestones(data.milestones || [])
-      } catch (e: any) {
-        if (!cancelled) setError(e?.message || 'Failed to load milestones')
-      } finally {
-        if (!cancelled) setLoading(false)
-      }
-})();
-    return () => {
-      cancelled = true
-    }
-=======
-      try {
-        const data = await fetchMilestones(projectId as string);
-
-        if (!cancelled) setLoading(false);
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    })();
-    return () => {;
-      cancelled = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
-    };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }, [projectId]);
 
-=======
-
-    setMilestones(prev => [res.milestone, ...prev]);  };
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -230,14 +138,15 @@ import { Milestone } from '../../../utils/types/milestones';
   },
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   const handleAction = async (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
@@ -284,15 +193,17 @@ import { Milestone } from '../../../utils/types/milestones';
           <p className="text-sm text-gray-600">Project: {projectId as string}</p>
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         </div>
 
         {role !== 'talent' && (
@@ -308,65 +219,8 @@ import { Milestone } from '../../../utils/types/milestones';
         {loading && <div>Loading milestones...</div>}
 
 
+  }, [project_id]);
 
-
-
-
-        )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-;
-  const handle_create = async (payload: {
-    title: string;
-    description?: string;
-    due_date: string;
-    amount_usd: number;
-  }) => {
-    // Check condition
-if (return) {
-  $2
-}
-    const res = await create_milestone (project_id as string, payload);
-    set_milestones (prev => [res.milestone, ...prev]);  }
-;
-  const handle_action = async (
-    action: 'in_progress' | 'submitted' | 'approved' | 'paid',
-    milestone_id: string) => {
-    // Check condition
-if (return, ) {
-  $2
-}
-
-
-        {!loading && !error && (
-          <div className='space - y-4'>;
-            {milestones.length === 0 && (
-
-
-
-        {!loading && !error && (;
-          <div className='space-y-4'>;
-            {milestones && milestones.length === 0 && (;
-              <div className='text-gray-600'>;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                No milestones yet.{' '}
-                {role !== 'talent' ? 'Create the first one.' : ''}
-              </div>;
-            )}
-            {milestones && milestones.map(m => (;
-              <MilestoneCard
-                key={m && m.id}
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         {!loading && !error && (
           <div className="space-y-4">
             {milestones.length === 0 && (
@@ -380,6 +234,7 @@ if (return, ) {
             ))}
           </div>
         )}
+
 
         <div className='mt-12 text-xs text-gray-500'>
           Integration hooks ready: on Approved &rarr; trigger payout intent; on
@@ -409,6 +264,7 @@ if (return, ) {
   }
 }
 
+
         <div className="mt-12 text-xs text-gray-500">
           Integration hooks ready: on Approved &rarr, trigger payout intent, on Paid &rarr, capture via Stripe/PayPal/Escrow.
         </div>
@@ -419,10 +275,7 @@ if (return, ) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
     </div>;
   );
   } catch (error) {
@@ -433,5 +286,7 @@ if (return, ) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

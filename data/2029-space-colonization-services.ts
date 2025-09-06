@@ -46,6 +46,8 @@ export interface SpaceColonization2029Service {
 
   {
 
+
+
     color: 'from - blue - 600 to - cyan - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / interplanetary - communication - network',
@@ -329,8 +331,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
     reviews: 52;
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

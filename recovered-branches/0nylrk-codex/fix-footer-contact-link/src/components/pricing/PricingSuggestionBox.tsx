@@ -1,27 +1,18 @@
 
 
 
-<<<<<<< HEAD
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Loader2, Info, ThumbsUp } from "lucide-react";
-import { PricingSuggestion } from "@/services/pricingSuggestionService";
-import { Loader2, Info, ThumbsUp } from "lucide-react",
-import { PricingSuggestion } from "@/services/pricingSuggestionService",
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface PricingSuggestionBoxProps {
 
   suggestion: PricingSuggestion | null
@@ -31,12 +22,10 @@ interface PricingSuggestionBoxProps {
   rateType: "hourly" | "fixed"
 }
 
-<<<<<<< HEAD
 
-export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
-  suggestion;
-  isLoading;
-=======
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
+
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {TooltipProvider, Tooltip, TooltipTrigger, TooltipContent} from "@/components/ui/tooltip";
@@ -44,51 +33,7 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Loader2, Info, ThumbsUp} from "lucide-react";
 import {PricingSuggestion} from "@/services/pricingSuggestionService";
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-  onApplySuggestion
-  suggestion,
-  isLoading,
-  onApplySuggestion,
-  rateType}) => {
-  if (isLoading) {
-    return (
-      <Card className="border border-dashed border-muted">
-        <CardContent className="flex items-center justify-center p-6">
-          <div className="text-center">
-            <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4" />
-            <p className="text-sm text-muted-foreground">
-              Generating optimal pricing suggestion...
-            </p>
-          </div>
-        </CardContent>
-      </Card>
-    )
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Loader2, Info, ThumbsUp } from "lucide-react",;
-import { PricingSuggestion } from "@/services/pricingSuggestionService",;
-
-interface PricingSuggestionBoxProps {;
-  suggestion: PricingSuggestion | null,;
-  isLoading: boolean,;
-  onApplySuggestion: () => void,;
-  rateType: "hourly" | "fixed";
-}
-
-export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
-  suggestion;
-  isLoading;
-  onApplySuggestion,;
-  rateType}) => {;
-  if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <Card className="border border-dashed border-muted">;
         <CardContent className="flex items-center justify-center p-6">;
@@ -100,26 +45,21 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
             </p>;
           </div>;
         </CardContent>;
-<<<<<<< HEAD
 
-      </Card>;
-    );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
   if (!suggestion) {
     return null
   }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
   }
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const confidenceColor = {
     High: "bg-green-100 text-green-800"
@@ -172,19 +112,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   )
 
 
-<<<<<<< HEAD
 
-=======
-  if (!suggestion) {;
-    return null;
-  }
 
-=======
 
-};
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 },
 ;
 
@@ -245,13 +175,14 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 ;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
+
+
+
 export default PricingSuggestionBox;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

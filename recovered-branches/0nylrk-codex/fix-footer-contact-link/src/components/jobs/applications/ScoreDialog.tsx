@@ -2,31 +2,16 @@
 
 
 
-<<<<<<< HEAD
-import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-import {JobApplication} from "@/types/jobs";
-import {ApplicationScoreCard} from "../ApplicationScoreCard";
-
-import {
-  Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle
-} from "@/components/ui/dialog",
-import { JobApplication } from "@/types/jobs";
-import { ApplicationScoreCard } from "../ApplicationScoreCard";
-import { JobApplication } from "@/types/jobs",
-import { ApplicationScoreCard } from "../ApplicationScoreCard",
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 interface ScoreDialogProps {
 
   open: boolean
@@ -35,27 +20,8 @@ interface ScoreDialogProps {
 
   onScoreUpdated: (updatedApplication: JobApplication) => void
 }
-<<<<<<< HEAD
 
 
-export function ScoreDialog({
-  open,
-  onOpenChange,
-  application,
-  onScoreUpdated
-}: ScoreDialogProps) {
-  return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md">
-        <DialogHeader>
-          <DialogTitle>Application Match Score</DialogTitle>
-        </DialogHeader>
-        {application && (
-          <ApplicationScoreCard
-          <ApplicationScoreCard 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import {;
   Dialog,;
   DialogContent,;
@@ -65,12 +31,14 @@ import {;
 import { JobApplication } from "@/types/jobs",;
 import { ApplicationScoreCard } from "../ApplicationScoreCard",;
 
-=======
+
 
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {JobApplication} from "@/types/jobs";
 import {ApplicationScoreCard} from "../ApplicationScoreCard";
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface ScoreDialogProps {;
   open: boolean,;
   onOpenChange: (open: boolean) => void,;
@@ -108,7 +76,7 @@ export function ScoreDialog(): any ({;
         </DialogHeader>;
         {application && (;
 
-<<<<<<< HEAD
+
 
 
           <ApplicationScoreCard;
@@ -117,14 +85,10 @@ export function ScoreDialog(): any ({;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-          <ApplicationScoreCard
-=======
 
-          <ApplicationScoreCard 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             application={application}
             onScoreUpdated={onScoreUpdated}
           />;

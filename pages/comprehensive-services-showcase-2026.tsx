@@ -34,30 +34,17 @@ import React, { useState, useEffect } from 'react';
 interface Service {
 import { motion } from 'framer-motion';
 
+
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
 import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
 import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
-<<<<<<< HEAD
 
-import {;
-  Search, Filter, Star, Users, TrendingUp,;
-  Clock, Zap, Shield, Cloud, Brain,;
-  Database, Globe, Robot, Cube, Sparkles;
-} from 'lucide-react',;
-interface Service {;
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
 import {
   Search,
   Filter,
@@ -72,22 +59,17 @@ import {
   Database,
   Globe,
   Robot,
-<<<<<<< HEAD
+
   Cube,
   Sparkles,
 } from 'lucide-react';
 ;
 interface Service {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-import { motion } from 'framer-motion';
-import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
-import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
-import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   id: string;
   name: string;
   tagline: string;
@@ -135,8 +117,7 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
 const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
 
-<<<<<<< HEAD
-=======
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -152,7 +133,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
   const categories = [
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const allServices = [;
     ...innovativeMicroSaasServices2026,;
     ...specializedITSolutions2026,;
@@ -186,42 +167,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
     'Robotics & Automation',;
     'Digital Twin & Simulation',  ];
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-  const priceRanges = [
-    { value: 'all', label: 'All Prices' },
-    { value: '0-100', label: '$0 - $100' },
-    { value: '100-200', label: '$100 - $200' },
-    { value: '200-400', label: '$200 - $400' },
-    { value: '400-600', label: '$400 - $600' },
-    { value: '600+', label: '$600+' }
-  ];
-
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    
-    const matchesPrice = selectedPriceRange === 'all' || (() => {
-      const price = parseInt(service.price.replace('$', ''));
-      switch (selectedPriceRange) {
-        case '0-100': return price <= 100;
-        case '100-200': return price > 100 && price <= 200;
-        case '200-400': return price > 200 && price <= 400;
-        case '400-600': return price > 400 && price <= 600;
-        case '600+': return price > 600;
-        default: return true
-      }
-    })();
-    
-    return matchesSearch && matchesCategory && matchesPrice
-  });
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const priceRanges = [;
     { value: 'all', label: 'All Prices' },;
     { value: '0-100', label: '$0 - $100' },;
@@ -264,7 +211,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
       })();
 
 
-<<<<<<< HEAD
+
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'Business Intelligence & Analytics': <Database className="w-5 h-5" />,
@@ -383,13 +330,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                 <TrendingUp className='w-5 h-5 text-green-400' />
                 <span>Growing Rapidly</span>
   }),;
-=======
-        return b.rating - a.rating;
-      case 'customers':;
-        return b.customers - a.customers;
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const getCategoryIcon = (category: string) => {;
     const iconMap: { [key: string]: React.ReactNode } = {;
       'Business Intelligence & Analytics': <Database className="w-5 h-5" />;
@@ -425,182 +366,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 
-}
-        <div className="relative overflow-hidden">;
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>;
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="text-center";
-            >;
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">;
-                ZionTech Group;
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">;
-                  2026 Services;
-                </span>;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-                Discover our comprehensive suite of innovative micro SAAS services, IT solutions, and emerging technology platforms designed to transform your business.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
-                <div className="flex items-center space-x-2 text-white">;
-                  <Users className="w-5 h-5" />;
-                  <span>{allServices.length}+ Services</span>;
-                </div>;
-                <div className="flex items-center space-x-2 text-white">;
-                  <Star className="w-5 h-5 text-yellow-400" />;
-                  <span>4.5+ Average Rating</span>;
-                </div>;
-                <div className="flex items-center space-x-2 text-white">;
-                  <TrendingUp className="w-5 h-5 text-green-400" />;
-                  <span>Growing Rapidly</span>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </div>;
-        {/* Search and Filters */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">;
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">;
-              {/* Search */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              <div className="relative">;
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
-                <input;
-                  type="text";
-                  placeholder="Search services...";
-                  value={searchTerm  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  onChange={(e) => setSearchTerm(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="w-full pl-10 pr-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400";
-                />;
-              </div>;
-              {/* Category Filter */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              <div>;
-                <select;
-                  value={selectedCategory  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  onChange={(e) => setSelectedCategory(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                >
-                  {categories.map(category => (
-                    <option key={category} value={category} className="bg-gray-800 text-white">
-                      {category === 'all' ? 'All Categories' : category  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </option>;
-                  ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </select>;
-              </div>;
-              {/* Price Range Filter */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              <div>;
-                <select;
-                  value={selectedPriceRange  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  onChange={(e) => setSelectedPriceRange(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                >
-                  {priceRanges.map(range => (
-                    <option key={range.value} value={range.value} className="bg-gray-800 text-white">
-                      {range.label  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </option>;
-                  ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </select>;
-              </div>;
-              {/* Sort By */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              <div>;
-                <select;
-                  value={sortBy  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  onChange={(e) => setSortBy(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                >
-                  <option value="popularity" className="bg-gray-800 text-white">Sort by Popularity</option>
-                  <option value="price-low" className="bg-gray-800 text-white">Price: Low to High</option>
-                  <option value="price-high" className="bg-gray-800 text-white">Price: High to Low</option>
-                  <option value="rating" className="bg-gray-800 text-white">Sort by Rating</option>
-                  <option value="customers" className="bg-gray-800 text-white">Sort by Customers</option>
-                </select>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               </div>
             </div>
@@ -623,7 +390,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
               />
             </div>
 
-=======
+
 ;
   return (
     <div className='min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - indigo - 900'>;
@@ -656,7 +423,9 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
             </div>;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             {/* Category Filter */}
             <div>;
               <select
@@ -880,19 +649,22 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                   className="bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300"
                 >
                   Call Us
-<<<<<<< HEAD
+
                 </a>
               </div>
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             </div>
           </div>
         </div>
       </div>
+
 
 {/* Services Grid */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
@@ -920,19 +692,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                     className={`w-12 h-12 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}
                   >
                     {service.icon}
-=======
-<<<<<<< HEAD
-                </a>
-                Ready to Transform Your Business?
-              </h2>
-              <p className=&quot;text-xl text-gray-300 mb-8 max-w-2xl mx-auto&quot;>
-                Get in touch with our team to discuss how our innovative services can help you achieve your goals.
-              </p>
-              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mb-8&quot;>
-                <div className=&quot;text-center&quot;>
-                  <div className=&quot;w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
-                    <Users className=&quot;w-8 h-8 text-cyan-400&quot; />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   </div>
                   <div>
                     <h3 className='text-xl font-bold text-white'>
@@ -961,7 +721,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                   {service.trialDays} days free trial
                 </div>
               </div>
-<<<<<<< HEAD
+
               {/* Features */}
               <div className='mb-4'>
                 <h4 className='text-sm font-semibold text-white mb-2'>
@@ -1107,7 +867,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 }</div> </li>) )
 }</ul> </div> </div> {
 
-=======
+
 
 
 
@@ -1118,8 +878,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
       </div>
 
                 className='bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'>;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
   /* CTA Button */ 
 }<a > Learn More & Get Started </Link> </div> </div> </motion.div>) ) 
@@ -1127,27 +887,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 };
 
 
-<<<<<<< HEAD
-  )
-},
-export default ComprehensiveServicesShowcase2026,
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">;
-          <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30">;
-            <div className="text-center">;
-              <h2 className="text-3xl font-bold text-white mb-4">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
-                Get in touch with our team to discuss how our innovative services can help you achieve your goals.;
-              </p>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;
-                <div className="text-center">;
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">;
-                    <Users className="w-8 h-8 text-cyan-400" />;
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   </div>;
                   <div className='text - xs text - gray - 400'>Customers</div>;
                 </div>;
@@ -1246,7 +987,6 @@ export default ComprehensiveServicesShowcase2026,
                 className='bg - white / 10 text - white px - 8 py - 3 rounded - lg font - semibold border border - white / 30 hover:bg - white / 20 transition - all duration - 300';
               >;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Call Us;
               </a>            </div>;
           </div>;
@@ -1254,18 +994,9 @@ export default ComprehensiveServicesShowcase2026,
       </div>;
 
 
-<<<<<<< HEAD
-=======
-=======
-  );
-},;
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 export default ComprehensiveServicesShowcase2026;

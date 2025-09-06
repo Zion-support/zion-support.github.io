@@ -1,9 +1,7 @@
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Certification} from '@/types/resume';
@@ -12,10 +10,10 @@ import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeU
 export function useCertifications() {;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -27,10 +25,8 @@ export function useCertifications() {;
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Certification } from '@/types/resume',;
@@ -47,11 +43,11 @@ export function useCertifications() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     }
     
     setIsLoading(true),
@@ -86,22 +82,9 @@ export function useCertifications() {;
       return handleResumeError(e, 'Could not add certification')
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-
-    }
-  }
-  const updateCertification = async (certId: string, cert: Certification): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to update certifications')
-      return false
-
-
-=======
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     setIsLoading(true),;
     setError(null),;
@@ -132,11 +115,11 @@ export function useCertifications() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     }
     
     setIsLoading(true),
@@ -171,22 +154,9 @@ export function useCertifications() {;
       return handleResumeError(e, 'Could not update certification')
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-
-    }
-  }
-  const deleteCertification = async (certId: string): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to delete certifications')
-      return false
-
-
-=======
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     setIsLoading(true),;
     setError(null),;
@@ -217,11 +187,11 @@ export function useCertifications() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     }
     
     setIsLoading(true),
@@ -242,7 +212,7 @@ export function useCertifications() {;
       return handleResumeError(e, 'Could not delete certification')
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
+
     }
   }
   return {
@@ -252,53 +222,14 @@ export function useCertifications() {;
     updateCertification;
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
-<<<<<<< HEAD
-=======
-=======
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {Certification} from '@/types / resume';
-import {use_auth} from '@/hooks / use_auth';
-import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
-export /**
- * use_certifications - Function description
- */
-function use_certifications() {
-  const { user } = use_auth ();
-  const [is_loading, setIsLoading] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-;
-  const add_certification = async (resume_id: string, cert: Certification): Promise < boolean> => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ('You must be logged in to add certifications'),
-      return false;
-    }
-
-  },;
-  return {;
-    isLoading,;
-    error,;
-    addCertification;
-    updateCertification;
-    deleteCertification;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

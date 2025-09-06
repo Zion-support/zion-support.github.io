@@ -7,136 +7,8 @@ import Head from 'next / head';
 ;
 
 interface Partner {
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-  id: string;
-  code: string;
-  name: string;
-  status: 'active' | 'inactive' | 'pending';
-  commission: number;
 
 
-const mockPartners: Partner[] = [;
-  {;
-    id: '1',;
-    code: 'PART001',;
-    name: 'Tech Solutions Inc.',;
-    status: 'active',;
-    commission: 15,;
-    contactEmail: 'contact@techsolutions && techsolutions.com',;
-    contactPhone: '+1-555-0123',;
-    joinedAt: '2024-01-15T00:00:00Z',;
-    lastActivity: '2025-01-15T10:30:00Z',;
-    totalReferrals: 25,;
-    totalEarnings: 12500;
-  },;
-  {;
-    id: '2',;
-    code: 'PART002',;
-    name: 'Digital Marketing Pro',;
-    status: 'active',;
-    commission: 12,;
-    contactEmail: 'hello@digitalmarketingpro && digitalmarketingpro.com',;
-    contactPhone: '+1-555-0456',;
-    joinedAt: '2024-03-20T00:00:00Z',;
-    lastActivity: '2025-01-14T16:45:00Z',;
-    totalReferrals: 18,;
-    totalEarnings: 8750;
-  },;
-  {;
-    id: '3',;
-    code: 'PART003',;
-    name: 'Cloud Services LLC',;
-    status: 'pending',;
-    commission: 10,;
-    contactEmail: 'info@cloudservices && cloudservices.com',;
-    contactPhone: '+1-555-0789',;
-    joinedAt: '2025-01-10T00:00:00Z',;
-    lastActivity: '2025-01-10T00:00:00Z',;
-    totalReferrals: 0,;
-    totalEarnings: 0;
-  }
-];
-
-const AdminPartnersPage: React.FC = () => {;
-
-  const [partners, setPartners] = useState<Partner[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [statusFilter, setStatusFilter] = useState('all');
-<<<<<<< HEAD
-
-  useEffect(() => {
-    // Simulate loading partners
-    setTimeout(() => {
-      setPartners(mockPartners);
-      setLoading(false);
-    }, 1000);  }, []);
-  async function updatePartner(code: string, updates: any) {
-    await fetch('/api/admin/partners/update', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ code, ...updates })
-    });
-    const res = await fetch('/api/admin/partners/list');
-    const json = await res.json();
-    setPartners(json.partners |[]);  }
-  async function viewFlags(code: string) {
-    setSelected(code)
-    const res = await fetch(
-      `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
-    );
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-    const json = await res.json();
-    setFlags(json.flags |[]);
-
-
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-import { useEffect, useState } from 'react';
-
-export default function AdminPartners() {
-  const [partners, setPartners] = useState<any[]>([]);
-  const [selected, setSelected] = useState<string>('');
-  const [flags, setFlags] = useState<any[]>([]);
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const res = await fetch('/api/admin/partners/list');
-        const json = await res.json();
-        setPartners(json.partners || [])
-      } catch {}
-    })()
-  }, []);
-
-  async function updatePartner(code: string, updates: any) {
-    await fetch('/api/admin/partners/update', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ code, ...updates })});
-    const res = await fetch('/api/admin/partners/list');
-    const json = await res.json();
-    setPartners(json.partners || [])
-  }
-
-  async function viewFlags(code: string) {
-    setSelected(code);
-    const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
-    const json = await res.json();
-    setFlags(json.flags || [])
-  }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   useEffect(() => {;
     // Simulate loading partners;
@@ -167,27 +39,19 @@ export default function AdminPartners() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     const json = await res.json();
     setFlags(json.flags || []);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-
-}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Admin • Partners</h1>
@@ -249,11 +113,10 @@ export default function AdminPartners() {
                     className="w-24 border rounded px-2 py-1"
 
 
+
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     <div className='space-y-6'>;
       <h1 className='text-2xl font-semibold'>Admin • Partners</h1>;
       <div className='overflow-auto'>;
@@ -287,44 +150,11 @@ export default function AdminPartners() {
                     onClick={() =>;
                       updatePartner(p && p.code, { status: 'approved' });
 
-<<<<<<< HEAD
-=======
-=======
-                    on_blur={e =>;
-                      update_partner (p.code, {
-                        commission_rate: Number (e.target.value),
-                      });
-                    }
-                    className='w - 24 border rounded px - 2 py - 1';
-                  />;
-                </td>;
-                <td className='py - 2 pr - 4 space - x-2'>;
-                  <button;
-                    className='px - 2 py - 1 rounded border';
-                    on_click={() =>;
-                      update_partner (p.code, { status: 'approved' });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-                    }
-                  >;
-                    Approve;
-                  </button>;
 
 
-                    }
-                  >;
-                    Reject;
-                  </button>;
-
-
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                   />
                 </td>
                 <td className="py-2 pr-4 space-x-2">
@@ -670,22 +500,16 @@ export default function AdminPartners() {
   );
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 }
 }
 
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -701,9 +525,10 @@ export default function AdminPartners() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

@@ -28,27 +28,28 @@ serve(async (req) => {
     if (!bio || bio && bio.length < 20) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return new Response(
-<<<<<<< HEAD
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
 
 
-=======
+
+
 
 
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
+
 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     // Create a request to OpenAI API
 
     const openAIResponse = await fetch('https://api && api.openai.com/v1/chat/completions', {
@@ -91,11 +92,11 @@ serve(async (req) => {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             Name: ${name}
             Title: ${title}
             Bio: ${bio}
@@ -169,75 +170,17 @@ serve(async (req) => {
         
         parsedResponse = { summary, suggestedSkills }
       } else {
-<<<<<<< HEAD
-
-        throw new Error("Failed to parse the generated content")
-
-;
-            Also, suggest 3-5 additional relevant skills that would complement their existing skills.;
-            Return the result as a JSON object with these keys:;
-            {;
-              "summary": "The professional summary text",;
-              "suggestedSkills": ["Skill 1", "Skill 2", "Skill 3", ...];
-            }`;
-          }
-        ],;
-        temperature: 0.7})}),;
-    const openAIData = await openAIResponse.json(),;
-    if (!openAIData.choices || openAIData.choices.length === 0) {;
-      throw new Error("Failed to generate profile content");
-    }
-;
-    // Extract the generated content from the response;
-    const responseContent = openAIData.choices[0].message.content,;
-    // Parse the JSON response;
-    let parsedResponse,;
-    try {;
-      // Find the JSON object in the response;
-      const jsonMatch = responseContent.match(/\{[\s\S]*\}/),;
-      if (jsonMatch) {;
-        parsedResponse = JSON.parse(jsonMatch[0]);
-      } else {;
-        throw new Error("Could not extract JSON from response");
-      }
-    } catch (e) {;
-      console.error("Error parsing OpenAI response:", e),;
-      // Fallback parsing approach if the standard parsing fails;
-      const summaryMatch = responseContent.match(/"summary"\s*:\s*"([^"]*)"/),;
-      const skillsMatch = responseContent.match(/"suggestedSkills"\s*:\s*\[(.*?)\]/s),;
-      if (summaryMatch && skillsMatch) {;
-        const summary = summaryMatch[1],;
-        const skillsString = skillsMatch[1],;
-        const suggestedSkills = skillsString.split().map(s =>;
-          s.trim().replace(/"/g, '');
-        ).filter(Boolean),;
-        parsedResponse = { summary, suggestedSkills }
-      } else {;
-        throw new Error("Failed to parse the generated content");
-      }
-    }
-;
-    return new Response(;
-      JSON.stringify(parsedResponse),;
-
-        throw new Error ("Failed to parse the generated content");
-      }
-    }
-
-    console && console.error("Error in profile-summary-generator function:", error);
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
         throw new Error ("Failed to parse the generated content");
       }
     }
 
     console && console.error("Error in profile-summary-generator function:", error);
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
@@ -252,11 +195,11 @@ serve(async (req) => {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   }

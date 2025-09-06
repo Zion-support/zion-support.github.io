@@ -67,19 +67,11 @@ export default async function handler(
       console.log('[EmailSummary] Stub: no provider configured');
       return res.status(200).json({ status: 'queued', provider: 'stub' });
 
+
+
     }
     // TODO: Integrate with actual provider
     return res.status(200).json({ status: 'queued', provider });
   } catch (e: any) {
 return res
       .status(500)
-<<<<<<< HEAD
-      .json({ error: e.message |'Failed to queue emails' });
-  }    return res.status(500).json({ error: e.message |'Failed to queue emails' })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  }
-}
-      .json({ error: e.message || 'Failed to queue emails' });
-  }    return res.status(500).json({ error: e.message || 'Failed to queue emails' })
-  };
-}

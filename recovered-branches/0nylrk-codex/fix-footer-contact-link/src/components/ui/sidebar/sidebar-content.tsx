@@ -38,23 +38,14 @@ export const SidebarHeader = React.forwardRef<
 SidebarInput.displayName = "SidebarInput"
 
 export const SidebarHeader = React.forwardRef<
-<<<<<<< HEAD
-
-  HTMLDivElement,;
-  React.ComponentProps<&quot;div&quot;>
-  HTMLDivElement,
-  React.ComponentProps<"div">
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 >((props, ref) => {
   return (
     <div;
@@ -72,23 +63,14 @@ export const SidebarFooter = React.forwardRef<
 SidebarHeader.displayName = "SidebarHeader"
 
 export const SidebarFooter = React.forwardRef<
-<<<<<<< HEAD
-
-  HTMLDivElement,;
-  React.ComponentProps<&quot;div&quot;>
-  HTMLDivElement,
-  React.ComponentProps<"div">
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 >((props, ref) => {
   return (
     <div;
@@ -127,23 +109,14 @@ export const SidebarContent = React.forwardRef<
 SidebarSeparator.displayName = "SidebarSeparator"
 
 export const SidebarContent = React.forwardRef<
-<<<<<<< HEAD
-
-  HTMLDivElement,;
-  React.ComponentProps<&quot;div&quot;>
-  HTMLDivElement,
-  React.ComponentProps<"div">
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 >((props, ref) => {
   return (
     <div;
@@ -166,23 +139,14 @@ export const SidebarGroup = React.forwardRef<
 SidebarContent.displayName = "SidebarContent"
 
 export const SidebarGroup = React.forwardRef<
-<<<<<<< HEAD
-
-  HTMLDivElement,;
-  React.ComponentProps<&quot;div&quot;>
-  HTMLDivElement,
-  React.ComponentProps<"div">
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 >((props, ref) => {
   return (
     <div;

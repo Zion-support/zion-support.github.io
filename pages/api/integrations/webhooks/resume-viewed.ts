@@ -1,9 +1,9 @@
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -46,21 +46,8 @@ export default async function handler(
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
   }
-<<<<<<< HEAD
 
-  res.status(200).json({ ok: true, results });
-}
-res.status(200).json({ ok: true, results });
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-
-=======
-  res && res.status(200).json({ ok: true, results });
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
@@ -78,7 +65,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     results.push({ providerId: conn.providerId, ok: true })
   }
   res.status(200).json({ ok: true, results })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
@@ -94,34 +80,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     results.push ({ provider_id: conn.provider_id, ok: true });
   }
   res.status (200).json ({ ok: true, results });
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  res.status(200).json({ ok: true, results });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }

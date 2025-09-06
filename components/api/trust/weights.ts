@@ -9,10 +9,10 @@ import {
 } from '../../../utils/trust/weights';
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 
 import {
   getTrustWeights
@@ -28,9 +28,10 @@ export default async function handler(
     return res && res.status(200).json({ current, defaults: getDefaultWeights() });  }
 
 
+
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const current = await getTrustWeights();
 
 
@@ -74,6 +75,8 @@ if ( {) {
   return res.status (405).json ({ error: 'Method not allowed' });
 
 
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 

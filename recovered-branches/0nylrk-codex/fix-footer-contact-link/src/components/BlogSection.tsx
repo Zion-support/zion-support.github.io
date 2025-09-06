@@ -51,33 +51,17 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
           {recentPosts.map((post, index) => (
 
 
-<<<<<<< HEAD
 
-=======
-=======
-            <Card key={post.id} className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 overflow-hidden">
-              <div className="h-48 bg-zion-blue-dark relative overflow-hidden">
-                <img 
-                  src={post.featuredImage}
-                  alt={post.title}
-                  className="object-cover w-full h-full opacity-60 hover: opacity-80 transition-opacity duration-300"
-                  loading="lazy"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
-=======
-                    e: React.SyntheticEvent<HTMLImageElement, Event>,
-                  ) => {;
-                    const target = e.currentTarget as HTMLImageElement;
-=======
-                  onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
-                    const target = e.currentTarget as HTMLImageElement,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                     target.src =
                       "https://images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
                   }}
@@ -286,15 +270,11 @@ function BlogSection() {
     </section>);
 
 }
-<<<<<<< HEAD
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-=======
-}
-;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

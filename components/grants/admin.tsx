@@ -5,20 +5,16 @@ import {useEffect, useMemo, useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
 
-<<<<<<< HEAD
 
-export default function GrantsAdminPage() {;
 
-export default function GrantsAdminPage() {
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function GrantsAdminPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   const [token, setToken] = useState('');
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [selected, setSelected] = useState<GrantApplication | null>(null);
@@ -55,27 +51,18 @@ export default function GrantsAdminPage() {
       .then(d => setItems(d && d.items || []));
 
 
-<<<<<<< HEAD
-=======
             )}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           </div>
         </div>
       </div>
     </EnhancedLayout>
 
-<<<<<<< HEAD
 
-}
-  );
-}
-
-
-=======
                     onClick={saveMilestones}>;
                     Save Milestones;
                   </button>;
@@ -116,18 +103,15 @@ export default function GrantsAdminPage() {
         </div>;
       </div>;
     </EnhancedLayout>;
-  );
-=======
 
   );
 
-}
-=======
 
 }
   );
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                   <button;
                     className='px - 2 py - 1 bg - blue - 600 text - white rounded';
                     on_click={save_milestones}
@@ -168,15 +152,12 @@ export default function GrantsAdminPage() {
       </div>;
     </EnhancedLayout>);
 }
-<<<<<<< HEAD
 
-  );
-}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

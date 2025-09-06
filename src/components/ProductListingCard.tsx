@@ -33,14 +33,8 @@ import type { AppDispatch } from '@/store'
 import { addItem } from '@/store/cartSlice'
 import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
-<<<<<<< HEAD
 
 
-import Image from 'next/image'; // Import next/image
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import React, { useState } from 'react';
 import { log_debug, logErrorToProduction } from '@/utils / production_logger';
@@ -71,12 +65,8 @@ import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
 
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { RatingStars } from "@/components/RatingStars",
 import { FavoriteButton } from "@/components/FavoriteButton",
 import { useDispatch } from 'react-redux',
@@ -95,8 +85,8 @@ interface ProductListingCardProps {
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -105,93 +95,17 @@ interface ProductListingCardProps {
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 const ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
-<<<<<<< HEAD
 
 
-  detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) => {
-  const isGrid = view === 'grid',
-  const router = useRouter(),
-  const [loading, setLoading] = useState(false),
-  const [imageSrc, setImageSrc] = useState(
-    listing.images && listing.images.length > 0 && listing.images[0]
-    ? listing.images[0] 
-    : '/placeholder.svg'
-  ),
-  const [imageError, setImageError] = useState(false),
 
-  const stockStatus =
-    listing.stock === undefined
-      ? 'In stock'
-      : listing.stock <= 0
-  detailBasePath = '/marketplace/listing',
-}: ProductListingCardProps) => {
-  const isGrid = view === 'grid'
-  const router = useRouter()
-  const [loading, setLoading] = useState(false);  const [imageSrc, setImageSrc] = useState(
-    listing.images && listing.images.length > 0 && listing.images[0]
-      ? listing.images[0]
-      : '/placeholder.svg'
-  )
-  const [imageError, setImageError] = useState(false)
-  const stockStatus = null;
-    listing.stock === undefined
-      ? 'In stock'
-      : listing.stock <= 0
-        ? 'Out of stock'
-        : listing.stock <= 5
-          ? 'Low stock'
-          : 'In stock'
-      ? 'Out of stock'
-      : listing.stock <= 5
-      ? 'Low stock'
-      : 'In stock',
-
-  const stockVariant =
-    listing.stock === undefined
-      ? 'success'
-      : listing.stock <= 0
-  const stockVariant = null;
-    listing.stock === undefined
-      ? 'success'
-      : listing.stock <= 0
-        ? 'destructive'
-        : listing.stock <= 5
-          ? 'warning'
-          : 'success'
-  const { formatPrice } = useCurrency()
-  const getPrice = () => {
-    if (listing.price === null) return 'Custom pricing'
-    return formatPrice(listing.price)
-  }
-  const handleImageError = () => {
-    if (!imageError) {
-      // Prevent infinite loops if placeholder also fails
-      setImageSrc('/placeholder.svg')
-      setImageError(true)
-
-
-=======
-
-  const handleViewListing = () =>: any {
-    // Debug logging for development;
-    // Check condition
-if ( {) {
-  $2
-}
-      log_debug ('[ProductCard] Navigating to:', {
-        path: `${detailBasePath}/${listing.id}`,
-      });
-      log_debug ('[ProductCard] Listing ID:', { id: listing.id });
-      log_debug ('[ProductCard] Listing Title:', { title: listing.title });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     // Validate listing ID exists before navigation;
     // Check condition
@@ -244,82 +158,8 @@ if ( {) {
   }
   const imageContainerClasses = is_grid ? 'h - 48' : 'h - 32 w - 48';
       onKeyDown={e => {
-<<<<<<< HEAD
 
 
-        if (e.key === 'Enter' |e.key === ' ') {
-          e.preventDefault()
-          handleViewListing()
-        }      }}
-    >
-      {/* Image */}
-      <div
-        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
-  detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) => {
-  const isGrid = view === 'grid',
-  const router = useRouter(),
-  const [loading, setLoading] = useState(false),
-  const [imageSrc, setImageSrc] = useState(
-    listing.images && listing.images.length > 0 && listing.images[0]
-    ? listing.images[0] 
-    : '/placeholder.svg'
-  ),
-  const [imageError, setImageError] = useState(false),
-
-  const stockStatus =
-    listing.stock === undefined
-      ? 'In stock'
-      : listing.stock <= 0
-      ? 'Out of stock'
-      : listing.stock <= 5
-      ? 'Low stock'
-      : 'In stock',
-
-  const stockVariant =
-    listing.stock === undefined
-      ? 'success'
-      : listing.stock <= 0
-      ? 'destructive'
-      : listing.stock <= 5
-      ? 'warning'
-      : 'success',
-    
-  const { formatPrice } = useCurrency(),
-
-  const getPrice = () => {
-    if (listing.price === null) return "Custom pricing",
-    return formatPrice(listing.price)
-  },
-
-  const handleImageError = () => {
-    if (!imageError) { // Prevent infinite loops if placeholder also fails
-      setImageSrc('/placeholder.svg'),
-      setImageError(true)
-import React, { useState } from 'react',;
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
-import { useRouter } from 'next/router',;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { ProductListing } from "@/types/listings",;
-import { DollarSign } from 'lucide-react';
-import { RatingStars } from "@/components/RatingStars",;
-import { FavoriteButton } from "@/components/FavoriteButton",;
-import { useDispatch } from 'react-redux',;
-import type { AppDispatch } from '@/store',;
-import { addItem } from '@/store/cartSlice',;
-import { toast } from '@/hooks/use-toast',;
-import { useCurrency } from '@/hooks/useCurrency',;
-import Image from 'next/image', // Import next/image;
-interface ProductListingCardProps {;
-  listing: ProductListing,;
-  view?: 'grid' | 'list',;
-  onRequestQuote?: (id: string) => void,;
-
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   detailBasePath?: string;
 const ProductListingCardComponent = ({;
   listing,;
@@ -439,10 +279,8 @@ const ProductListingCardComponent = ({;
         }      }}
     >;
       {/* Image */}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
 
@@ -450,15 +288,9 @@ const ProductListingCardComponent = ({;
         onClick={handleViewListing} // Keep existing onClick for navigation
         role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
-<<<<<<< HEAD
-=======
 
-        onKeyDown={e => {;
-          if (e && e.key === 'Enter' || e && e.key === ' ') {;
-            e && e.preventDefault();
-            handleViewListing();
-          }  return ();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     <div
       data-testid= "equipment-link"'`
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
@@ -539,12 +371,8 @@ if ( {) {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
             handleViewListing()
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             priority={false} // Assuming these are not LCP images
             sizes={
               isGrid
@@ -587,11 +415,11 @@ if ( {) {
 
           <div className="flex justify-between items-center mb-2">
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
-<<<<<<< HEAD
-=======
+
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               {listing.category}
             </Badge>
             {listing.rating && (
@@ -731,11 +559,11 @@ if ( {) {
 
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
-<<<<<<< HEAD
-=======
+
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             {listing.price !== null ? (
               <div className="flex items-center text-primary">
                 <DollarSign className="h-4 w-4 mr-1" />
@@ -976,22 +804,19 @@ if ( {) {
 router.push ('/checkout');
 }disabled= {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
 }
 '";
 export const ProductListingCard = React.memo (ProductListingCardComponent);
 ProductListingCard.display_name = 'ProductListingCard';
                 Request Quote;
               </Button>) }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
-<<<<<<< HEAD
-=======
+
 
             
             {onRequestQuote && (
@@ -1081,4 +906,5 @@ ProductListingCard.display_name = 'ProductListingCard';
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

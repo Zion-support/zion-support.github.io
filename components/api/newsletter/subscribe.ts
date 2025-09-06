@@ -11,15 +11,13 @@ function ensure() {
 
 
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   if (req.method !== 'POST') return res.status(405).end();
   ensure()
   const { email } = req.body |{}
@@ -30,16 +28,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
-  res.status(200).json({ ok: true });  if (!email || typeof email !== 'string') return res.status(400).json({ error: 'Invalid email' });
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const list: string[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
   if (!list.includes(email)) list.push(email);
@@ -48,43 +43,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.status(200).json({ ok: true })
 }
 
-<<<<<<< HEAD
 
-}
-
-
-=======
-  if (req && req.method !== 'POST') return res && res.status(405).end();
-  ensure(),
-  const { email } = req && req.body || {};
-  if (!email || typeof email !== 'string')
-    return res && res.status(400).json({ error: 'Invalid email' });
-  const list: string[] = JSON && JSON.parse(fs && fs.readFileSync(FILE_PATH, 'utf8'));
-  if (!list && list.includes(email)) list && list.push(email);
-  fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify(list, null, 2), 'utf8');
-  res && res.status(200).json({ ok: true });  if (!email || typeof email !== 'string') return res && res.status(400).json({ error: 'Invalid email' });
-  const list: string[] = JSON && JSON.parse(fs && fs.readFileSync(FILE_PATH, 'utf8'));
-  if (!list && list.includes(email)) list && list.push(email);
-  fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify(list, null, 2), 'utf8');
-  res && res.status(200).json({ ok: true })
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-;
-const DATA_DIR = path.resolve (process.cwd (), 'data', 'newsletter');const FILE_PATH = path.resolve (DATA_DIR, 'subscribers.json');
-;
-/**
- * ensure - Function description
- */
-function ensure() {
-  if () fs.mkdir_sync (DATA_DIR, { recursive: true })) {
-  $2
-}
-  if ()) {
-  $2
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
     fs.writeFileSync (FILE_PATH, JSON.stringify ([], null, 2), 'utf8');const DATA_DIR = path.resolve (process.cwd (), 'datanewsletter');
 const FILE_PATH = path.resolve (DATA_DIR, 'subscribers.json');
@@ -133,12 +94,9 @@ function handler() {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

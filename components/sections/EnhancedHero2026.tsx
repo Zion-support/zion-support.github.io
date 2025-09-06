@@ -22,7 +22,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+} from 'lucide-react';
+
+interface EnhancedHero2026Props {;
+  contactInfo: {;
+
   ArrowRight,
   Star,
   TrendingUp,
@@ -34,7 +39,9 @@ import { motion } from 'framer-motion';
   Rocket,;
   CheckCircle,;
 
+
 } from 'lucide-react';
+
 
 
 
@@ -47,14 +54,8 @@ interface EnhancedHero2026Props {
     website: string;
   };
   serviceStats: {;
-<<<<<<< HEAD
 
-=======
-=======
-  Rocket,;
-  CheckCircle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 } from 'lucide-react';
 
 interface EnhancedHero2026Props {
@@ -81,11 +82,13 @@ interface EnhancedHero2026Props {
       opacity: 1,
       transition: {
 
+
         staggerChildren: 0.2
       }
         staggerChildren: 0.2,
       },;
     },  };        staggerChildren: 0.2
+
 
       }
     }
@@ -101,8 +104,7 @@ interface EnhancedHero2026Props {
   const stats_variants = {
     hidden: { scale: 0.8, opacity: 0 },
 
-<<<<<<< HEAD
-=======
+
     revolutionaryServices: number;
   }
 export default function EnhancedHero2026({
@@ -114,14 +116,8 @@ export default function EnhancedHero2026({
     visible: {
       opacity: 1
       transition: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        staggerChildren: 0.2
-      }
-=======
         staggerChildren: 0.2,
       },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     },  };        staggerChildren: 0.2
       }
     }
@@ -135,8 +131,8 @@ export default function EnhancedHero2026({
 
   const itemVariants = {
     hidden: { y: 30, opacity: 0 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     visible: {
       y: 0
       opacity: 1
@@ -225,22 +221,8 @@ export default function EnhancedHero2026(): any ({;
               opacity: [0.3, 0.8, 0.3]
               scale: [1, 1.5, 1],            }}
             transition={{
-<<<<<<< HEAD
-=======
 
-              left: `${Math && Math.random() * 100}%`,
-              top: `${Math && Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -30, 0],
-              opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],
-              scale: [1, 1 && 1.5, 1],            }}
-            transition={{
-              duration: 3 + Math && Math.random() * 2,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: Math && Math.random() * 2,            }}  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   return (
@@ -292,41 +274,21 @@ export default function EnhancedHero2026(): any ({;
               opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.5, 1];
 
+
+
+
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               ease: 'easeInOut',
               delay: Math.random() * 2,            }}  };
 
-<<<<<<< HEAD
 
 
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Enhanced Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.4),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.4),transparent_50%)]" />
-      {/* Floating Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        {Array.from({ length: 20 }).map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`
-              top: `${Math.random() * 100}%`}}
-            animate={{
-              y: [0, -30, 0];
-              opacity: [0.3, 0.8, 0.3];
-              scale: [1, 1.5, 1]
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             }}
             transition={{
               duration: 3 + Math.random() * 2
@@ -338,13 +300,14 @@ export default function EnhancedHero2026(): any ({;
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
             }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
+
 
 
 
@@ -366,13 +329,12 @@ export default function EnhancedHero2026(): any ({;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           />
 
         ))}
@@ -580,34 +542,11 @@ export default function EnhancedHero2026(): any ({;
                 className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 hover:border-slate-600/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'>;
                 <div
 
-<<<<<<< HEAD
-                  className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}
-                >
-                  <stat.icon className='w-6 h-6 text-white' />
-                </div>
-                <div className='text-2xl md:text-3xl font-bold text-white mb-1'>
-                  {stat.value.toLocaleString()}+
-                </div>
-                <div className='text-xs text-gray-400 leading-tight'>                  {stat.label}              >
-                <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
-                  <stat.icon className="w-6 h-6 text-white" />
-                </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1">
-                  {stat.value.toLocaleString()}+
-                </div>
-                <div className="text-xs text-gray-400 leading-tight">
-                  {stat.label}
 
 
-                  {stat.label}
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 </div>
               </motion.div>
             ))}
@@ -615,9 +554,9 @@ export default function EnhancedHero2026(): any ({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
           {/* Enhanced CTA Section */}
           <motion.div variants={itemVariants} className='space-y-6'>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -636,23 +575,8 @@ export default function EnhancedHero2026(): any ({;
 
               <Button
                 href="/contact"
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          {/* Enhanced CTA Section */}
-
-              
-              <Button 
-                href="/contact" 
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-              <Button 
-                href="/contact" 
-
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
           {/* Enhanced CTA Section */}
 
               
@@ -664,11 +588,13 @@ export default function EnhancedHero2026(): any ({;
                 href="/contact" 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                 variant="secondary"
                 size="xl"
                 className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
@@ -726,6 +652,8 @@ export default function EnhancedHero2026(): any ({;
           </motion.div>
 
 
+
+
                 className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl'>;
                 <span className='flex items-center'>;
                   <Shield className='mr-3 w-7 h-7' />                  Get Expert Consultation                <span className="flex items-center">;
@@ -762,12 +690,13 @@ export default function EnhancedHero2026(): any ({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           {/* Contact Information */}
 
           <motion.div 
@@ -801,13 +730,13 @@ export default function EnhancedHero2026(): any ({;
 }
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
+
+
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

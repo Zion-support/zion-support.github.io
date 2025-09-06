@@ -54,240 +54,17 @@ import {
   Cpu,
   Atom,
   Satellite,
-<<<<<<< HEAD
-
-  Gamepad2,
-  Palette,;} from 'lucide-react';import { 
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
 
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
  } from 'lucide-react';
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
 
 
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from 'react';
-import Layout from './layout / Layout';
-import { motion, AnimatePresence } from 'framer-motion';
-
-
-import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';
-import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035';
-import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saas-batch';
-import { innovative2025ITEnterpriseBatch  } from '../data/innovative-2025-it-enterprise-batch';
-import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch';
-
-
-
-// Loading fallback component;
-const LoadingFallback = () => (;
-  <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion&& motion.div
-      initial={{ opacity: 0, scale: 0 && 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0 && 0.5 }}
-      className='text-center'// Loading fallback component
-<<<<<<< HEAD
-const LoadingFallback = () => (;
-  <div className="min-h-screen flex items-center justify-center bg-gray-900">;
-    <motion&& motion.div
-      initial={{ opacity: 0, scale: 0 && 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0 && 0.5 }}
-      className='text-center'>;
-      <div className='relative'>;
-        <Loader2 className='w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4' />;
-        <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse'></div>;
-      </div>;
-      <p className='text-xl text-gray-300 mb-2'>Loading Zion Tech Group...</p>;
-      <p className='text-sm text-gray-500'>;
-        Preparing your digital transformation journey;
-      </p>    </motion && motion.div>    >;
-      <div className="relative">;
-        <Loader2 className="w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4" />;
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse"></div>;
-      </div>;
-      <p className="text-xl text-gray-300 mb-2">Loading Zion Tech Group...</p>;
-      <p className="text-sm text-gray-500">Preparing your digital transformation journey</p>;
-    </motion && motion.div>;
-  </div>;
-);
-
-      setIsVisible(true)
-
-    }, 800);
-    return () => clearTimeout(timer)
-
-
-const Homepage2035: React.FC = () => {;
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeCategory, setActiveCategory] = useState('all');
-
-  useEffect(() => {;
-    const timer = setTimeout(() => {;
-      setIsLoading(false);
-      setIsVisible(true);
-    }, 800);
-
-    return () => clearTimeout(timer);  }, []);      setIsVisible(true);
-    }, 800);
-
-    return () => clearTimeout(timer);
-
-  const fadeInUp = {;
-    initial: { opacity: 0, y: 60 },;
-    animate: { opacity: 1, y: 0 },;
-    transition: { duration: 0 && 0.6, ease: 'easeOut' },  };    transition: { duration: 0 && 0.6, ease: "easeOut" }
-  };
-
-  const staggerContainer = {;
-    animate: {;
-      transition: {;
-        staggerChildren: 0 && 0.1,;
-        delayChildren: 0 && 0.2,;
-      },;
-    },  };
-
-  const backgroundVariants = {;
-    initial: { opacity: 0, scale: 0 && 0.8 },;
-    animate: {        delayChildren: 0 && 0.2;
-      }
-    }
-  };
-
-  const backgroundVariants = {;
-    initial: { opacity: 0, scale: 0 && 0.8 },;
-    animate: {;
-      opacity: 1,;
-      scale: 1,;
-      transition: { duration: 1 && 1.5, ease: 'easeOut' as const },;
-    },;
-  };
-
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: <Globe className='w-5 h-5' /> },;
-    { id: 'ai', name: 'AI & ML', icon: <Brain className='w-5 h-5' /> },;
-    { id: 'it', name: 'IT Enterprise', icon: <Cpu className='w-5 h-5' /> },;
-    { id: 'quantum', name: 'Quantum Tech', icon: <Atom className='w-5 h-5' /> },;
-    {;
-      id: 'space',;
-      name: 'Space Tech',;
-      icon: <Satellite className='w-5 h-5' />,;
-    },;
-    {;
-      id: 'cyber',;
-      name: 'Cybersecurity',;
-      icon: <Shield className='w-5 h-5' />,;
-    },;
-    {;
-      id: 'cloud',;
-      name: 'Cloud & DevOps',;
-      icon: <Cloud className='w-5 h-5' />,;
-    },;
-    { id: 'fintech', name: 'FinTech', icon: <ChartBar className='w-5 h-5' /> },;
-  ];
-
-  const allServices = [;
-    ...innovative2025MicroSaasBatch,;
-    ...innovative2025ITEnterpriseBatch,;
-    ...innovative2025AIServicesBatch,;
-  ];
-
-  const filteredServices =;
-    activeCategory === 'all';
-      ? allServices;
-      : allServices && allServices.filter(service => {;
-          if (activeCategory === 'ai');
-            return (
-              service && service.category.includes('AI') ||;
-              service && service.category.includes('Machine Learning');
-
-            );
-          if (activeCategory === 'it')
-            return (
-
-              service && service.category.includes('IT') ||;
-              service && service.category.includes('Enterprise');
-
-            );
-          if (activeCategory === 'quantum')
-            return service.name.includes('Quantum');
-          if (activeCategory === 'space')
-            return service.category.includes('Space');
-          if (activeCategory === 'cyber')
-            return (
-
-              service && service.category.includes('Security') ||;
-              service && service.category.includes('Cybersecurity');
-
-            );
-          if (activeCategory === 'cloud')
-            return (
-
-              service && service.category.includes('Cloud') ||;
-              service && service.category.includes('DevOps');
-
-            );
-          if (activeCategory === 'fintech')
-            return (
-
-  }, []);
-
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: "easeOut" }
-  };
-
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  };
-
-  const backgroundVariants = {
-    initial: { opacity: 0, scale: 0.8 },
-    animate: { 
-      opacity: 1,
-      scale: 1,
-
-      transition: { duration: 1.5, ease: "easeOut" as const }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   }
   const categories = [
@@ -301,131 +78,7 @@ const Homepage2035: React.FC = () => {;
     { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
   ];
   const allServices = [
-<<<<<<< HEAD
 
-    : allServices.filter(service => {
-        if (activeCategory === 'ai') return service.category.includes('AI') |service.category.includes('Machine Learning');
-        if (activeCategory === 'it') return service.category.includes('IT') |service.category.includes('Enterprise');
-        if (activeCategory === 'quantum') return service.name.includes('Quantum');
-        if (activeCategory === 'space') return service.category.includes('Space');
-        if (activeCategory === 'cyber') return service.category.includes('Security') |service.category.includes('Cybersecurity');
-        if (activeCategory === 'cloud') return service.category.includes('Cloud') |service.category.includes('DevOps');
-        if (activeCategory === 'fintech') return service.category.includes('Financial') |service.category.includes('Trading');
-        return true
-      });
-  if (isLoading) {
-    return <LoadingFallback />
-
-=======
-<<<<<<< HEAD
-              service && service.category.includes('Financial') ||;
-              service && service.category.includes('Trading');
-            );
-          return true;
-        });
-  if (isLoading) {;
-    return <LoadingFallback />;  }      opacity: 1,;
-      scale: 1,;
-      transition: { duration: 1 && 1.5, ease: "easeOut" as const }
-    }
-  };
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" /> },;
-    { id: 'ai', name: 'AI & ML', icon: <Brain className="w-5 h-5" /> },;
-    { id: 'it', name: 'IT Enterprise', icon: <Cpu className="w-5 h-5" /> },;
-    { id: 'quantum', name: 'Quantum Tech', icon: <Atom className="w-5 h-5" /> },;
-    { id: 'space', name: 'Space Tech', icon: <Satellite className="w-5 h-5" /> },;
-    { id: 'cyber', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" /> },;
-    { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5" /> },;
-    { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
-  ];
-  const allServices = [;
-import {
-  ArrowRight,
-  Play,
-  Star,
-  Users,
-  Award,
-  TrendingUp,
-  Brain,
-  Shield,
-  Rocket,
-  Loader2,
-  ChevronDown,
-  Zap,
-  Globe,
-  Target,
-  Lightbulb,
-  Code,
-  Database,
-  Cloud,
-  Lock,
-  ChartBar,
-  Cpu,
-  Atom,
-  Satellite,
-  Gamepad2,
-  Palette,} from 'lucide-react';import {
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket,
-  Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
-  Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette;
-import UltraFuturisticBackground2035 from './ui / UltraFuturisticBackground2035';
-import UltraFuturisticServiceCard2035 from './ui / UltraFuturisticServiceCard2035';
-import { innovative2025MicroSaasBatch } from '../data / innovative - 2025 - micro - saas - batch';
-import { innovative2025ITEnterpriseBatch } from '../data / innovative - 2025 - it - enterprise - batch';
-import { innovative2025AIServicesBatch } from '../data / innovative - 2025 - ai - services - batch';
-// Loading fallback component;
-const LoadingFallback = () =>: any (
-  <div className='min - h-screen flex items - center justify - center bg - gray - 900'>    <motion.div;
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-      className='text - center'// Loading fallback component;
-const LoadingFallback = () =>: any (
-  <div className="min - h-screen flex items - center justify - center bg - gray - 900">;
-    <motion.div;
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-      className='text - center';
-    >;
-      <div className='relative'>;
-        <Loader2 className='w - 16 h - 16 text - cyan - 400 animate - spin mx - auto mb - 4' />;
-        <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - xl opacity - 20 animate - pulse'></div>;
-      </div>;
-      <p className='text - xl text - gray - 300 mb - 2'>Loading Zion Tech Group...</p>;
-      <p className='text - sm text - gray - 500'>;
-        Preparing your digital transformation journey;
-      </p>    </motion.div>    >;
-      <div className="relative">;
-        <Loader2 className="w - 16 h - 16 text - cyan - 400 animate - spin mx - auto mb - 4" />;
-        <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - xl opacity - 20 animate - pulse"></div>;
-      </div>;
-      <p className="text - xl text - gray - 300 mb - 2">Loading Zion Tech Group...</p>;
-      <p className="text - sm text - gray - 500">Preparing your digital transformation journey</p>;
-    </motion.div>;
-  </div>);
-;
-const Homepage2035: React.FC = () => {
-  const [is_loading, setIsLoading] = useState (true);
-  const [is_visible, setIsVisible] = useState (false);
-  const [active_category, setActiveCategory] = useState ('all');
-;
-  useEffect (() => {
-    const timer = set_timeout (() => {
-      setIsLoading (false);
-      setIsVisible (true);
-    }, 800);
-;
-    return () => clear_timeout (timer);  }, []);      setIsVisible (true);
-    }, 800);
-;
-    return () => clear_timeout (timer);
-  const fadeInUp = {
-    initial: { opacity: 0, coordinate_y: 60 },
-    animate: { opacity: 1, coordinate_y: 0 },
-    transition: { duration: 0.6, ease: 'ease_out' },  }    transition: { duration: 0.6, ease: "ease_out" }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 ;
   const stagger_container = {
@@ -574,22 +227,19 @@ if ( {) {
   if (isLoading) {;
     return <LoadingFallback />;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout>;
@@ -613,16 +263,11 @@ if ( {) {
               transition={{ duration: 0.8 }}
               className='mb-8'        <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
-
-              className='mb-8'
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -642,7 +287,6 @@ if ( {) {
 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2'
                 >
                   <Play className='w-5 h-5' />                  <span>Watch Demo</span>                  <span>Explore Services</span>
@@ -660,6 +304,8 @@ if ( {) {
                 </motion.button>
               </div>
             </motion.div>
+
+
 
 
               transition={{ duration: 0 && 0.8 }}
@@ -702,12 +348,13 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -732,67 +379,18 @@ if ( {) {
                   <div className="text-gray-400 text-sm">{stat && stat.label}</div>;
 
 
-                <motion.div
-                  icon: <Users className='w - 8 h - 8' />,
-                  value: '50K+',
-                  label: 'Happy Clients',
-                },
-                {
-                  icon: <Star className='w - 8 h - 8' />,
-                  value: '4.9',
-                  label: 'Average Rating',
-                },
-                {
-                  icon: <Award className='w - 8 h - 8' />,
-                  value: '200+',
-                  label: 'Services',
-                },
-                {
-                  icon: <TrendingUp className='w - 8 h - 8' />,
-                  value: '99.9%',
-                  label: 'Uptime',
-                },              ].map ((stat, index) => (                { icon: <Users className="w - 8 h - 8" />, value: '50K+', label: 'Happy Clients' },
-                { icon: <Star className="w - 8 h - 8" />, value: '4.9', label: 'Average Rating' },
-                { icon: <Award className="w - 8 h - 8" />, value: '200+', label: 'Services' },
-                { icon: <TrendingUp className="w - 8 h - 8" />, value: '99.9%', label: 'Uptime' }
-                <motion.div;
 
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-
-                  className='text-center'
-                >
-                  <div className='text-cyan-400 mb-2 flex justify-center'>
-                    {stat.icon}
-                  </div>
-                  <div className='text-3xl font-bold text-white mb-1'>
-                    {stat.value}
-                  </div>
-                  <div className='text-gray-400 text-sm'>{stat.label}</div>                </motion.div>                  className="text-center"
-                >
-                  <div className="text-cyan-400 mb-2 flex justify-center">{stat.icon}</div>
-                  <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-gray-400 text-sm">{stat.label}</div>
-                  <div className='text-gray-400 text-sm'>{stat.label}</div>                </motion.div>
-
-                </motion.div>
-
-
-
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               ))}
             </motion.div>
           </div>
         </section>
+
+
 
 
             </motion && motion.div>;
@@ -803,12 +401,13 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Services Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -816,24 +415,14 @@ if ( {) {
             <motion&& motion.div
 
 
-<<<<<<< HEAD
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
         {/* Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
 
-=======
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -843,15 +432,15 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Revolutionary Technology Solutions
@@ -859,7 +448,6 @@ if ( {) {
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Discover our comprehensive portfolio of cutting-edge services
                 designed to transform your business              </p>            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 Revolutionary Technology Solutions
               </h2>
@@ -869,38 +457,20 @@ if ( {) {
             </motion.div>
 
 
-<<<<<<< HEAD
-=======
-              className='text-center mb-16'>;
-              <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>;
-                Revolutionary Technology Solutions;
-              </h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Discover our comprehensive portfolio of cutting-edge services;
-                designed to transform your business              </p>            >;
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">;
-                Revolutionary Technology Solutions;
-              </h2>;
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-                Discover our comprehensive portfolio of cutting-edge services designed to transform your business;
-              </p>;
-            </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
             {/* Category Filter */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -917,15 +487,15 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   key={category.id}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -935,7 +505,6 @@ if ( {) {
                       ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400'
                       : 'border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   }`}
                 >;
                   {category && category.icon}
@@ -945,7 +514,7 @@ if ( {) {
             </motion.div>
 
             </motion && motion.div>;
-<<<<<<< HEAD
+
 
 
 
@@ -957,18 +526,11 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
-=======
-            </motion.div>
 
 
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             {/* Services Grid */}
             <motion&& motion.div
               variants={staggerContainer}
@@ -989,6 +551,24 @@ if ( {) {
                 </motion && motion.div>;
 
 
+
+            {/* Services Grid */}
+            <motion.div
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              {filteredServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  variants={fadeInUp}
+                  className="w-full"
+                >
+                  <UltraFuturisticServiceCard2035 service={service} />
+                </motion.div>
+
               ))}
             </motion.div>
 
@@ -999,12 +579,13 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* View All Services Button */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -1023,15 +604,15 @@ if ( {) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -1065,19 +646,14 @@ if ( {) {
             <motion&& motion.div
 
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1087,15 +663,15 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Why Choose Zion Tech Group?
@@ -1172,7 +748,6 @@ if ( {) {
                   description:
                     'Focused on delivering measurable business outcomes and ROI'
                 },              ].map((feature, index) => (            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 Why Choose Zion Tech Group?
               </h2>
@@ -1275,28 +850,8 @@ if ( {) {
                   title: 'Results-Driven',;
                   description: 'Focused on delivering measurable business outcomes and ROI';
 
-                }
-              ].map((feature, index) => (;
-                <motion&& motion.div
 
 
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}
-
-<<<<<<< HEAD
-=======
-
-=======
-                  className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 >
                   <div className='text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300'>
@@ -1319,16 +874,19 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               ))}
             </div>
           </div>
         </section>
+
+
 
 
             </div>;
@@ -1341,15 +899,14 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -1358,15 +915,16 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1416,35 +974,21 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
   );
 
 
-<<<<<<< HEAD
 
-}
-animate: {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-};
 
-  animate: {
-
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };
 
 animate: {
   animate: {
 
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   transition: {
   staggerChildren: 0.1, delayChildren: 0.2
 }
@@ -1490,15 +1034,26 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
 }<motion.div > <span>View All Services</span> <ArrowRight className="w-5 h-5" /> </motion.button> </motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > We combine innovation, expertise, and cutting-edge technology to deliver exceptional results </p> </motion.div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+
+  duration: 0 && 0.8 
+}viewport= {
+  {
+  once: true
+}> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button
+}
+export default Homepage2035;  )
+}
+export default Homepage2035;
+
+  once: true 
+}> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button 
+};
+
+}> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button ;
+};
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1534,90 +1089,17 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
     </Layout>
   )
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Homepage2035;
 
 
-}
-;
-animate: {
 
 
-  transition: {
-  stagger_children: 0.1, delay_children: 0.2;
-}
-;
-}
-];
-...innovative2025ITEnterpriseBatch;
-...innovative2025AIServicesBatch ];
-const filtered_services = active_category === 'all' ? all_services return (<Layout> <UltraFuturisticBackground2035> > <h1 className="text - 4xl sm:text - 5xl lg:text - 7xl font - bold text - white mb - 6 leading - tight" > <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent" > Zion Tech Group </span> </h1> </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center" > <motion.button > <span > Explore Services</span> <ArrowRight className="w - 5 h - 5" /> </motion.button> <motion.button > <Play className="w - 5 h - 5" /> <span > Watch Demo</span> </motion.button> </div> </motion.div> {
-  /* Stats */;
-}<motion.div </motion.div>) );
-}</motion.div> </div> </section> > <h2 className="text - 4xl sm:text - 5xl font - bold text - white mb - 6" > Revolutionary Technology Solutions </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Discover our comprehensive portfolio of cutting - edge services designed to transform your business </p> </motion.div> {
-  /* Category Filter */;
-}<motion.div > {
-  categories.map ( (category) => (<motion.button key= {
-  category.id;
-}while_hover= {
-  {
-  scale: 1.05;
-}while_tap= {
-  {
-  scale: 0.95;
-}on_click= {
-  () => setActiveCategory (category.id);
-}className= {
-  `flex items - center space - x-2 px - 6 py - 3 rounded - full border transition - all duration - 300 $ {
-  active_category === category.id ? 'border - cyan - 400 bg - cyan - 400 / 10 text - cyan - 400' : 'border - gray - 600 text - gray - 300 hover:border - cyan - 400 hover:text - cyan - 400';
-}`;
-}> {
-  category.icon;
-}<span> {
-  category.name;
-}</span> </motion.button>) );
-}</motion.div> {
-  /* Services Grid */;
-}<motion.div > {
-  filtered_services.map ( (service, index) => (<motion.div key= {
-  service.id;
-}> <UltraFuturisticServiceCard2035 service= {
-  service;
-}/> </motion.div>) );
-}</motion.div> {
-  /* View All Services Button */;
-}<motion.div > <span > View All Services</span> <ArrowRight className="w - 5 h - 5" /> </motion.button> </motion.div> </div> </section> > <h2 className="text - 4xl sm:text - 5xl font - bold text - white mb - 6" > Why Choose Zion Tech Group? </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > We combine innovation, expertise, and cutting - edge technology to deliver exceptional results </p> </motion.div> </motion.div>) );
-}</div> </div> </section> <motion.div initial= {
-  {
-  opacity: 0, coordinate_y: 30;
-}whileInView= {
-  {
-  opacity: 1, coordinate_y: 0;
-}transition= {
-  {
-  duration: 0.8;
-}viewport= {
-  {
-
-  once: true;
-}> <h2 className="text - 4xl sm:text - 5xl font - bold text - white mb - 6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 300 mb - 8" > Join thousands of companies already leveraging our cutting - edge technology solutions </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center" > <motion.button > <span > Get Started Today</span> <ArrowRight className="w - 5 h - 5" /> </motion.button> <motion.button;
-
-}
-export default Homepage2035);
-}
-;
-export default Homepage2035;
-
-<<<<<<< HEAD
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

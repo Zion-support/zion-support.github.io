@@ -1,41 +1,21 @@
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {Button} from "@/components/ui/button";
 import {X} from "lucide-react";
-<<<<<<< HEAD
 
 
-import React from "react",
-import { ClickableBadge } from "@/components/ui/clickable-badge",
-import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
-interface ActiveFiltersProps {
 
-=======
-interface ActiveFiltersProps {;
-  selectedSkills: string[],;
-  toggleSkill: (skill: string) => void,;
-  selectedAvailability: string[],;
-  toggleAvailability: (status: string) => void,;
-  selectedRegions: string[],;
-  toggleRegion: (region: string) => void,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   priceRange: [number, number];
 
   setPriceRange: (range: [number, number]) => void;
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   clearFilters: () => void;
 }
 
@@ -55,12 +35,10 @@ export function ActiveFilters(): any ({;
 
 
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 interface ActiveFiltersProps {
   selectedSkills: string[],
   toggleSkill: (skill: string) => void,
@@ -74,28 +52,16 @@ interface ActiveFiltersProps {
   setExperienceRange: (range: [number, number]) => void,
   clearFilters: () => void
 }
-<<<<<<< HEAD
 
 
-export function ActiveFilters({
-  selectedSkills,
-  toggleSkill,
-  selectedAvailability,
-  toggleAvailability,
-  selectedRegions,
-  toggleRegion,
-  priceRange,
-  setPriceRange,
-  experienceRange,
-  setExperienceRange,
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   clearFilters
 }: ActiveFiltersProps) {
   // Check if any filters are active
@@ -132,14 +98,15 @@ export function ActiveFilters({
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           onClick={() => toggleSkill(skill)}
         >;
           {skill}
@@ -201,27 +168,9 @@ export function ActiveFilters({
 
 
       <Button
-<<<<<<< HEAD
-
-        variant="ghost"
-        size="sm"
-        onClick={clearFilters}
-        className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
-      >
-        Clear All
-      </Button>
-    </div>
-  )
 
 
-=======
-        variant="ghost" 
-        size="sm" 
-=======
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
@@ -258,16 +207,18 @@ export function ActiveFilters({
   );
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

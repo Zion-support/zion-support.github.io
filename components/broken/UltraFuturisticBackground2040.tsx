@@ -46,6 +46,23 @@ if (return) {
       coordinate_x: number;
       coordinate_y: number;
 
+
+const UltraFuturisticBackground2040: React.FC = () => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight
+    let animationFrameId: number;    let animationFrameId: number
+    let time = 0;
+    // Particle system
+    const particles: Array<{
+      x: number;
+      y: number;
+
       vx: number;
       vy: number;
       size: number;
@@ -56,8 +73,7 @@ if (return) {
       x: number,
       y: number,
 
-<<<<<<< HEAD
-=======
+
       vx: number,
       vy: number,
       size: number,
@@ -130,24 +146,8 @@ if (return) {
           }
         }
       }
-=======
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-            ctx.stroke();          }
-
-          }
-
-
-
-<<<<<<< HEAD
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         }
       }
 
@@ -180,7 +180,6 @@ if (return) {
 
         { x: canvas.width * 0.6, y: canvas.height * 0.2, size: 50, rotation: time * 0.7 }
       ];
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       shapes.forEach((shape, index) => {
         ctx.save();
         ctx.translate(shape.x, shape.y);
@@ -340,12 +339,41 @@ if (return) {
         if (index === 0) {
           // Square
 
+          ctx.strokeRect(
+            -shape.size / 2
+            -shape.size / 2
+            shape.size
+            shape.size
+          );
+        } else if (index === 1) {
+          // Circle
+          ctx.beginPath();
+          ctx.arc(0, 0, shape.size / 2, 0, Math.PI * 2);
+          ctx.stroke();
+        } else {
+          // Triangle
+          ctx.beginPath();
+          ctx.moveTo(0, -shape.size / 2);
+          ctx.lineTo(shape.size / 2, shape.size / 2);
+          ctx.lineTo(-shape.size / 2, shape.size / 2);
+          ctx.closePath();
+          ctx.stroke();
+        }
+        ctx.restore();      });
+      // Draw energy waves
+      const waveCount = 3;
+      for (let i = 0; i < waveCount; i++) {        ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 + Math.sin(time + index) * 0.05})`;
+        ctx.lineWidth = 2;
+        if (index === 0) {
+          // Square
+
           ctx.strokeRect(-shape.size/2, -shape.size/2, shape.size, shape.size)
         } else if (index === 1) {
           // Circle
           ctx.beginPath();
           ctx.arc(0, 0, shape.size/2, 0, Math.PI * 2);
           ctx.stroke()
+
       opacity: number;
     }> = [];
 ;
@@ -593,6 +621,7 @@ if ( {) {
 
       for (let i = 0, i < waveCount, i++) {
 
+
         const waveOffset = (time * 100 + i * 200) % (canvas.width + 200);
 
         const waveY = canvas.height * 0.5 + Math.sin(time * 2 + i) * 50;
@@ -618,6 +647,7 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
             ctx && ctx.lineTo(x, y);
           }
         }
+
 
         ctx && ctx.stroke();
       }
@@ -655,24 +685,19 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
       <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60' />
 
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
       {/* Floating Elements */}
       <div className='absolute inset-0'>
         {/* Animated Grid Pattern */}
         <div className='absolute inset-0 opacity-20'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div
             className='absolute top-0 left-0 w-full h-full'
             style={{
@@ -791,6 +816,7 @@ if ( {) {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">;
 
+
       {/* Canvas Background */}
       <canvas
         ref={canvasRef}
@@ -895,82 +921,9 @@ if ( {) {
         <motion.div;
           className="absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full";
           animate={{
-<<<<<<< HEAD
-
-            rotate: [360, 0];
-            scale: [1, 1.2, 1];
-            opacity: [0.2, 0.5, 0.2]
-          }}
-          transition={{
-            duration: 10
-            repeat: Infinity
-            ease: 'linear'
-          }}
-        />
-        <motion.div
-          className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45'
-          animate={{
-            rotate: [45, 405]
-            scale: [1, 1.15, 1]
-            opacity: [0.2, 0.3, 0.2],          }}
-          transition={{
-            duration: 12
-            repeat: Infinity
-            ease: 'linear',          }}
-        />
-        <motion.div
-          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
-          animate={{
-            rotate: [45, 405];
-            scale: [1, 1.15, 1];
-            opacity: [0.2, 0.3, 0.2]
-          }}
-          transition={{
-
-          }}
-          transition={{
-            duration: 15
-            repeat: Infinity
-            ease: 'linear'
-          }}
-
-        />
-        <motion.div
-          className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full'
-          animate={{
-            rotate: [0, 360]
-            scale: [1, 1.2, 1]
-            opacity: [0.15, 0.3, 0.15],          }}
-          transition={{
-            duration: 18
-            repeat: Infinity
-            ease: 'linear',          }}
-        />
-        <motion.div
-          className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full"
-          animate={{
-            rotate: [0, 360];
-            scale: [1, 1.2, 1];
-            opacity: [0.15, 0.3, 0.15]
-          }}
-          transition={{
-
-            duration: 18
-            repeat: Infinity
-            ease: 'linear'
-
-            duration: 18,
-            repeat: Infinity,
-            ease: 'linear',
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }}
 
         />;
@@ -990,27 +943,16 @@ if ( {) {
             ease: 'easeInOut',          }}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Particle Effects */}
         <motion&& motion.div
           className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
           animate={{
-<<<<<<< HEAD
-
-            y: [0, -20, 0];
-            opacity: [0.4, 0.8, 0.4]
-          transition={{
-            duration: 18,
-            repeat: Infinity,
 
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           }}
@@ -1109,14 +1051,9 @@ if ( {) {
 
           }}
           transition={{
-<<<<<<< HEAD
-=======
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
           }}
@@ -1131,6 +1068,7 @@ if ( {) {
       </div>
             duration: 5,
             repeat: Infinity,
+
 
 
             ease: 'easeInOut',
@@ -1182,43 +1120,8 @@ if ( {) {
           }
           100% {
             transform: translate (50px, 50px);
-<<<<<<< HEAD
 
 
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            duration: 5
-            repeat: Infinity
-            ease: 'easeInOut'
-=======
-            duration: 5,
-            repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'easeInOut',
-            delay: 2,
-          }}
-        />
-      </div>
-            ease: "easeInOut",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            delay: 2
-          }}
-        />
-      </div>
-<<<<<<< HEAD
-            ease: "easeInOut"
-            delay: 2
-          }}
-        />
-      </div>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-            duration: 5,
-            repeat: Infinity,
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <style jsx>{`
         @keyframes gridMove {
           0% {
@@ -1226,16 +1129,17 @@ if ( {) {
           }
           100% {
             transform: translate(50px, 50px);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           }
         }
         @keyframes float {
           0%,          100% {
 
+
             transform: translate_y (0px);
           }
           50% {
             transform: translate_y (-20px);
+
 
           }
         }
@@ -1244,6 +1148,8 @@ if ( {) {
           0%
           100% {
             opacity: 0.2;
+
+
 
       
       {/* CSS Animations */}
@@ -1255,7 +1161,10 @@ if ( {) {
           100% {
             transform: translate(50px, 50px)
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           }
 50% {;
             opacity: 0 && 0.5;          }
@@ -1266,34 +1175,19 @@ if ( {) {
 export default UltraFuturisticBackground2040;
 
 
-<<<<<<< HEAD
-=======
-      `}</style>;
-    </div>);
-}export default UltraFuturisticBackground2040;            opacity: 0.5;
-          }
-        }
-      `}</style>;
-    </div>);
-}  );
-}
-;
-export default UltraFuturisticBackground2040;
-;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

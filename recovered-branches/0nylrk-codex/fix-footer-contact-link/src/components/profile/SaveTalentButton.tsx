@@ -1,24 +1,8 @@
 
-<<<<<<< HEAD
-
-
-import React from 'react',
-import { Button } from "@/components/ui/button";
-import { Star } from "lucide-react";
-interface SaveTalentButtonProps {
-  talentId: string;
-  onSave: (talentId: string) => void;
-  isSaved: boolean
-import { Button } from "@/components/ui/button",
-import { Star } from "lucide-react",
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface SaveTalentButtonProps {
   talentId: string,
   onSave: (talentId: string) => void,
@@ -26,11 +10,11 @@ interface SaveTalentButtonProps {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 }
 export function SaveTalentButton({
   talentId
@@ -56,15 +40,9 @@ export function SaveTalentButton({
     >
       <Star className={`h-4 w-4 ${isSaved ? 'fill-current' : ''} mr-1`} />
       {isSaved ? 'Saved' : 'Save'}
-<<<<<<< HEAD
-
-    </Button>;
-  );
-}
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

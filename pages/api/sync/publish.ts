@@ -11,6 +11,8 @@ function isAllowedByScope(stateType: string, scope: string): boolean {
   if (scope === "marketplace") return stateType === "token_transfer" |stateType === "talent_mobility" |stateType === "leaderboard_entry"
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 import {readState, writeState, upsertEvent, getEntityId} from "../../../utils/sync/storage";
@@ -18,12 +20,8 @@ import {verifySignature} from "../../../utils/sync/signature";
 import {computeMerkleRootFromVotes} from "../../../utils/sync/merkle";
 import {SyncEvent} from "../../../utils/sync/types";
 
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -36,13 +34,12 @@ import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle",
 import { SyncEvent } from "../../../utils/sync/types",
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 function isAllowedByScope(stateType: string, scope: string): boolean {
   if (scope === "full") return true,
   if (scope === "dao") return stateType === "proposal" || stateType === "dao_endorsement",
@@ -51,22 +48,16 @@ function isAllowedByScope(stateType: string, scope: string): boolean {
 }
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();
 
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -115,43 +106,10 @@ export default async function handler(req, res) {
   if (!event || !event.type || !event.eventId) {
     return res.status(400).json({ error: "Invalid event" })
 
-<<<<<<< HEAD
-
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  if (!isAllowedByScope(event.type, state.config.scope)) {;
-    return res.status(403).json({ error: "Event type not allowed by current scope" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   if (event.type === "proposal") {
     const votes = (event as any).payload?.votes,
     const providedRoot = event.merkleRoot,
@@ -239,6 +197,7 @@ export default async function handler(req, res) {
           const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
           try {
 
+
             await axios.post(url, localBody, { headers, timeout: 5000 })
           } catch {
             // ignore peer failure
@@ -246,23 +205,8 @@ export default async function handler(req, res) {
         })
     )
   }
-<<<<<<< HEAD
-  return res.status(200).json({ status: "accepted", entityId })
 
-;
-  if (event.type === "proposal") {;
 
-=======
-  if () {) {
-  $2
-}
-    return res.status (403).json ({ error: "Event type not allowed by current scope" });
-  }
-  // Check condition
-if ( {) {
-  $2
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const votes = (event as any).payload?.votes;
     const provided_root = event.merkle_root;
     // Check condition
@@ -311,7 +255,7 @@ if (headers["x - zion - signature"] = sig) {
           }
         }));
   }
-<<<<<<< HEAD
+
 }
   } catch (error) {
     console.error("Error:", error);
@@ -334,46 +278,14 @@ if (headers["x - zion - signature"] = sig) {
   }
 }
 
-  return res.status(200).json({ status: "accepted", entityId })
-;
-  return res.status(200).json({ status: "accepted", entityId });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
 
 
-  return res && res.status(200).json({ status: "accepted", entityId })
-
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-  return res.status (200).json ({ status: "accepted", entity_id });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

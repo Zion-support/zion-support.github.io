@@ -1,34 +1,16 @@
-<<<<<<< HEAD
+
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
 
-
-  Dialog
-  DialogContent
-  DialogHeader
-  DialogTitle
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-import React from 'react'
-import FocusLock from 'react-focus-lock'
-import {
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Dialog,
   DialogContent,
   DialogHeader,;
   DialogTitle;
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -321,10 +303,8 @@ import { LoginModal } from '@/components/auth/LoginModal';
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -360,11 +340,8 @@ import { LoginModal } from '@/components/auth/LoginModal';
                 <FormItem>
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input
@@ -390,11 +367,8 @@ import { LoginModal } from '@/components/auth/LoginModal';
                 <FormItem>
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
@@ -413,35 +387,17 @@ import { LoginModal } from '@/components/auth/LoginModal';
               disabled = {!form.formState.isValid |isSubmitting,}            >
               <SendIcon className="mr-2" />
               {isSubmitting ? 'Sending...' : 'Send Message'}
-<<<<<<< HEAD
 
 
 
-            </Button>
-          </form>
-        </Form>
-        </DialogContent>
-      </FocusLock>
-    </Dialog>
-    <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </>;
   ) </>;
   );
 };
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />    <Dialog open={is_open} onOpenChange={on_close}>;
@@ -509,12 +465,12 @@ import { LoginModal } from '@/components/auth/LoginModal';
         </DialogContent>;
       </FocusLock>;
     </Dialog>;
-<<<<<<< HEAD
-=======
+
 
 
     <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>) </>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

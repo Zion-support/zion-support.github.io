@@ -1,42 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 
 
-
-import type {
-  GrantApplication
-  UpdateGrantPayload;
-  GrantApplication,;
-  UpdateGrantPayload,;
-
-} from '../../../types/grants';
-const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
-function ensureDir() {
-  if (!fs.existsSync(GRANTS_DIR)) {
-    fs.mkdirSync(GRANTS_DIR, { recursive: true });
-  }
-function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
-  if (!fs.existsSync(GRANTS_DIR)) {
-    fs.mkdirSync(GRANTS_DIR, { recursive: true })
-  }
-}
-function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`);
-}
-function readGrant(id: string): GrantApplication | null {
-  ensureDir();
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
@@ -51,7 +22,7 @@ function grantPath(id: string) {
   if (!fs && fs.existsSync(file)) return null;
   return JSON && JSON.parse(fs && fs.readFileSync(file, 'utf8')) as GrantApplication;
 
-<<<<<<< HEAD
+
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
@@ -59,60 +30,18 @@ function grantPath(id: string) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-
-function readGrant(id: string): GrantApplication | null {
-  ensureDir();
-  const file = grantPath(id);
-
-  if (!fs.existsSync(file)) return null;
-  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
-}
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 function writeGrant(record: GrantApplication) {
 
   ensureDir(),
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
-=======
-  ensureDir()
-=======
-
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  const { id } = req && req.query as { id: string };
-
-  if (!id) {
-    res && res.status(400).json({ error: 'Missing id' });
-    return;  }    return
-
-=======
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id } = req.query as { id: string };
-=======
-  ensureDir(),
-
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
-}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
     return
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
 

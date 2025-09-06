@@ -4,12 +4,8 @@ import { useNavigate  } from 'react-router-dom';
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 interface ProjectHeaderProps {
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   title: string;
 }
 export /**
@@ -36,12 +32,9 @@ function ProjectHeader() {
 
 
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   title: string
 }
 
@@ -49,18 +42,9 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {;
   const navigate = useNavigate();
 
 
-<<<<<<< HEAD
-import React from 'react',;
-import { useNavigate } from 'react-router-dom',;
-import { Button } from '@/components/ui/button',;
-import { ArrowLeft } from 'lucide-react',;
 
-=======
-=======
-import {useNavigate} from 'react-router-dom';
-import {Button} from '@/components/ui/button';
-import {ArrowLeft} from 'lucide-react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 interface ProjectHeaderProps {;
   title: string;
 }

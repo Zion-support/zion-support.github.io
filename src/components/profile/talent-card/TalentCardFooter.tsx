@@ -19,19 +19,8 @@
               <span className="text-zion-slate-light">{profile.years_experience} years exp.</span>
             </div>
           )}
-<<<<<<< HEAD
 
 
-        </div>
-        </div>
-        </div>;
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Action Buttons */}
         <div className="flex gap-2">
           <Button
@@ -41,14 +30,8 @@
           <Button 
             variant="default" 
             size="sm" 
-<<<<<<< HEAD
 
 
-            onClick={handleRequestHire}
-            onClick = {handleRequestHire,}
-            onClick={handleRequestHire}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -57,40 +40,22 @@
           </Button>
 
 
-<<<<<<< HEAD
-          <Button
-            variant="outline"
-            size="sm"
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           <Button 
             variant="outline" 
             size="sm" 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             onClick = {handleViewProfile,}
           
           <Button 
             variant="outline" 
             size="sm" 
             onClick={handleViewProfile}
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
             View
@@ -118,8 +83,7 @@
     </>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
 
 
@@ -224,4 +188,5 @@ if ( {) {
     </>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

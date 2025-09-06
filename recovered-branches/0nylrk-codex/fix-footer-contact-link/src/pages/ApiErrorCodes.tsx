@@ -1,22 +1,8 @@
 
-<<<<<<< HEAD
-
-
-import React from "react",
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import { CodeBlock } from "@/components/developers/CodeBlock";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-import { CodeBlock } from "@/components/developers/CodeBlock",
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function ApiErrorCodes() {
 
   const errorExample = `{
@@ -563,11 +549,7 @@ export function ApiErrorCodes() {;
 
 export default ApiErrorCodes;
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 =======
         <div className="overflow - x-auto mb - 8">;
           <table className="w - full border - collapse">;
@@ -612,5 +594,5 @@ export default ApiErrorCodes;
       </div>;
     </ApiDocsLayout>);
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default ApiErrorCodes;

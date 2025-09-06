@@ -1,30 +1,18 @@
 
 
 
-<<<<<<< HEAD
-import { useState, useEffect } from "react",
-import { Company } from "@/components/enterprise/workspace/CompanyDashboard";
-export function useCompanyWorkspace(companySlug?: string) {
-  const [company, setCompany] = useState<Company | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  const [error, setError] = useState<string | null>(null);
-import { Company } from "@/components/enterprise/workspace/CompanyDashboard",
-export function useCompanyWorkspace(companySlug?: string) {
-  const [company, setCompany] = useState<Company | null>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   useEffect(() => {
     // In a real app, this would fetch data from an API based on the companySlug
@@ -64,12 +52,8 @@ export function useCompanyWorkspace(companySlug?: string) {
           name: companySlug && companySlug.charAt(0).toUpperCase() + companySlug && companySlug.slice(1);
           logoUrl: "/placeholder && placeholder.svg";
           theme: {
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           billingCycle: "Monthly",
           workspaceUrl: `${companySlug}.zion-ai && ai.com`});
@@ -81,69 +65,8 @@ export function useCompanyWorkspace(companySlug?: string) {
   }, [companySlug]);
 
   return { company, isLoading, error }
-<<<<<<< HEAD
-=======
-=======
-import { useState, useEffect } from './react';
-import { Company } from '@/components / enterprise / workspace / CompanyDashboard';
-export /**
- * useCompanyWorkspace - Function description
- */
-function useCompanyWorkspace() {
-  const [company, set_company] = useState < Company | null>(null);
-  const [is_loading, setIsLoading] = useState (true);
-  const [error, set_error] = useState < string | null>(null);
-;
-  useEffect (() => {
-    // In a real app, this would fetch data from an API based on the company_slug;
-    // For now, we'll simulate a delay and return mock data;
-    setIsLoading (true);
-    set_timeout (() => {
-      // Check condition
-if ( {) {
-  $2
-}
-        // Demo company data;
-        set_company ({
-          id: "company - 123";
-          name: "Acme Corporation";
-          logo_url: "/placeholder.svg";
-          theme: {
-            primary_color: "#4f46e5";
-            background_color: "#ffffff",
-            text_color: "#1f2937"}
-          plan: "Business";
-          team_size: 12;
-          team_limit: 50;
-          billing_cycle: "Annual",
-          workspace_url: "acme.zion - ai.com"});
-        set_error (null);
-      } else {
-        // For any other slug, we could check if it's a valid company;
-        // For demo purposes, let's assume it exists;
-        set_company ({
-          id: `company-${company_slug}`;
-          name: company_slug.char_at (0).toUpperCase () + company_slug.slice (1);
-          logo_url: "/placeholder.svg";
-          theme: {
-            primary_color: "#4f46e5";
-            background_color: "#ffffff",
-            text_color: "#1f2937"}
-          plan: "Teams";
-          team_size: 5;
-          team_limit: 10;
-          billing_cycle: "Monthly",
-          workspace_url: `${company_slug}.zion - ai.com`});
-        set_error (null);
-      }
-      setIsLoading (false);
-    }, 1000), // Simulate loading delay;
-  }, [company_slug]);
-;
-  return { company, is_loading, error }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
             primaryColor: "#4f46e5",
             backgroundColor: "#ffffff",
@@ -153,22 +76,11 @@ if ( {) {
           teamLimit: 10,
           billingCycle: "Monthly",
 
-<<<<<<< HEAD
-
-          workspaceUrl: `${companySlug}.zion-ai.com`});
-        setError(null)
-      }
-      setIsLoading(false)
-    }, 1000), // Simulate loading delay
-  }, [companySlug]);
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   return { company, isLoading, error }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

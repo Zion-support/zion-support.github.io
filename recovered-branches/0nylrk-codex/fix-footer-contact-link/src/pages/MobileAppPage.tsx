@@ -1,8 +1,6 @@
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -28,11 +26,12 @@ class ErrorBoundary extends React.Component {
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -54,11 +53,11 @@ import { DownloadSection } from "@/components/mobile-app/DownloadSection",
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 const MobileAppPage: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -81,38 +80,9 @@ const MobileAppPage: React.FC = () => {
 }
 export default MobileAppPage;
 
-<<<<<<< HEAD
-
-},
 
 
-export default MobileAppPage,
-import React from "react",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { SEO } from "@/components/SEO",;
-import { MobileAppHero } from "@/components/mobile-app/MobileAppHero",;
-import { AppFeatures } from "@/components/mobile-app/AppFeatures",;
-import { AppScreenshots } from "@/components/mobile-app/AppScreenshots",;
-import { AppTestimonials } from "@/components/mobile-app/AppTestimonials",;
-import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",;
-import { DownloadSection } from "@/components/mobile-app/DownloadSection",;
-const MobileAppPage: React.FC = () => {;
-  return (;
 
-=======
-=======
-import React from './react';
-import { AppLayout } from '@/layout / AppLayout';
-import { SEO } from '@/components / SEO';
-import { MobileAppHero } from '@/components / mobile - app / MobileAppHero';
-import { AppFeatures } from '@/components / mobile - app / AppFeatures';
-import { AppScreenshots } from '@/components / mobile - app / AppScreenshots';
-import { AppTestimonials } from '@/components / mobile - app / AppTestimonials';
-import { AppStoreBanner } from '@/components / mobile - app / AppStoreBanner';
-import { DownloadSection } from '@/components / mobile - app / DownloadSection';
-const MobileAppPage: React.FC = () => {
-  return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     <AppLayout>;
       <SEO;
         title="Zion AI Marketplace App";
@@ -125,23 +95,14 @@ const MobileAppPage: React.FC = () => {
       <AppTestimonials />;
       <DownloadSection />;
       <AppStoreBanner />;
-<<<<<<< HEAD
-
-    </AppLayout>;
-  );
-},;
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
     </AppLayout>);
 }
 ;
-=======
-
-},
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default MobileAppPage;

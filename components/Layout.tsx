@@ -1,10 +1,9 @@
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
@@ -105,6 +104,9 @@ const Layout: React.FC < LayoutProps> = ({
         {canonical && <link rel="canonical" href={canonical} />}
 
 
+
+
+
 interface LayoutProps {
   children: ReactNode,
 }
@@ -119,51 +121,9 @@ origin/automation-improvements-final
   );
 }
 export default Layout;
-<<<<<<< HEAD
 
 
-import React, { ReactNode } from "react";
-interface LayoutProps {
-  children: ReactNode;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 
-=======
-=======
-        {no_index && <meta name="robots" content="noindex, nofollow" />}
-        {/* Open Graph */}
-        <meta property="og:title" content={og_title || title} />;
-        <meta;
-          property="og:description";
-          content={og_description || description}
-        />;
-        <meta property="og:image" content={og_image} />;
-        <meta property="og:url" content={canonical} />;
-        <meta property="og:type" content="website" />;
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={og_title || title} />;
-        <meta;
-          name="twitter:description";
-          content={og_description || description}
-        />;
-        <meta name="twitter:image" content={og_image} />;
-        {/* JSON - LD */}
-        <script;
-          type="application / ld + json";
-          dangerouslySetInnerHTML={{ __html: JSON.stringify (json_ld) }}
-        />;
-      </Head>;
-      <Header />;
-      <main>{children}</main>;
-      <Footer />;
-    </div>);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
   } catch (error) {
@@ -191,11 +151,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   );
 };
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

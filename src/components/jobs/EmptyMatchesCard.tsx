@@ -2,16 +2,8 @@ export function EmptyMatchesCard(): any ({;
   onRefresh,;
   isProcessing,;
 }: EmptyMatchesCardProps) {;
-<<<<<<< HEAD
 
-import { Sparkles, RefreshCcw } from 'lucide-react'
-export interface EmptyMatchesCardProps {
-  onRefresh: () => void;
-  isProcessing: boolean
-export function EmptyMatchesCard({
-  onRefresh
-  isProcessing
-}: EmptyMatchesCardProps) {
+
   return (
     <Card className='p-6 text-center border-dashed border-2 bg-muted/30'>
       <div className='mb-4 flex justify-center'>
@@ -28,10 +20,7 @@ export function EmptyMatchesCard({
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
-=======
-  return (
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
       <div className="mb-4 flex justify-center">
         <Sparkles className="h-12 w-12 text-muted-foreground" />
@@ -40,19 +29,8 @@ export function EmptyMatchesCard({
       <p className="text-muted-foreground mb-6">
         Run AI matching to find talents that match this job&apos,s requirements.
       </p>
-<<<<<<< HEAD
 
 
-      <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Button
-        onClick = {onRefresh,}
-        disabled = {isProcessing,}
-      <Button 
-        onClick={onRefresh} 
-        disabled={isProcessing}
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <Button 
         onClick={onRefresh} 
         disabled={isProcessing}
@@ -71,28 +49,16 @@ export function EmptyMatchesCard({
             <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             Processing...
           </>
         ) : (
           <>
-<<<<<<< HEAD
 
-}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
 
-
-
-}
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <Sparkles className="mr-2 h-4 w-4" />
             Find AI Matches
           </>
@@ -102,8 +68,7 @@ export function EmptyMatchesCard({
     </Card>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
 import { Card } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -145,4 +110,5 @@ function EmptyMatchesCard() {
     </Card>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

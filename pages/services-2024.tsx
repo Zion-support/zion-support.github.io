@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 
+
 import {
   Search
   Filter
@@ -23,27 +24,17 @@ import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
-<<<<<<< HEAD
-import {;
-  Search, Filter, Star, Users, TrendingUp,;
-  Brain, Atom, Cpu, Shield, Database, Cloud,;
-  ArrowRight, CheckCircle, Zap, Sparkles;
-} from 'lucide-react',;
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
@@ -57,76 +48,9 @@ const Services2024Page: React.FC = () => {
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
 
 
-<<<<<<< HEAD
-=======
-  // Combine all services;
-  const allServices = [;
-    ...realMicroSaasServices2024,;
-    ...innovativeITServices2024,;
-  ];
-
-  // Filter and sort services;
-  const filteredServices = useMemo(() => {;
-    let filtered = allServices && allServices.filter(service => {;
-      const matchesSearch =;
-        service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        service && service.features.some(feature =>;
-          feature && feature.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
-        );
-
-      const matchesCategory =;
-        selectedCategory === 'all' ||;
-        (selectedCategory === 'ai' && service && service.variant.includes('ai')) ||;
-        (selectedCategory === 'quantum' &&;
-          service && service.variant.includes('security')) ||;
-        (selectedCategory === 'it' && service && service.variant.includes('it')) ||;
-        (selectedCategory === 'api' && service && service.variant.includes('api')) ||;
-        (selectedCategory === 'cloud' && service && service.variant.includes('cloud')) ||;
-        (selectedCategory === 'marketing' &&;
-          service && service.variant.includes('marketing')) ||;
-        (selectedCategory === 'project' &&;
-          service && service.variant.includes('project')) ||;
-        (selectedCategory === 'customer' &&;
-          service && service.variant.includes('customer'));
-
-      return matchesSearch && matchesCategory;    });
-
-    // Sort services;
-    filtered && filtered.sort((a, b) => {;
-
-      let aValue: any, bValue: any;
-      switch (sortBy) {;
-        case 'price':;
-          aValue = parseFloat(a && a.price.replace(/[^0-9.]/g, ''));
-          bValue = parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
-
-          break;
-        case 'rating':
-          aValue = a.rating;
-          bValue = b.rating;
-          break;
-        case 'customers':
-          aValue = parseInt(a.customers.replace(/[^0-9]/g, ''));
-          bValue = parseInt(b.customers.replace(/[^0-9]/g, ''));
-          break;
-        default:
-          aValue = a.name.toLowerCase();
-          bValue = b.name.toLowerCase();
-      }
-
-          break;
-        case 'rating':;
-          a_value = a.rating;
-          b_value = b.rating;
-          break;
-        case 'customers':;
-          a_value = parse_int (a.customers.replace (/[^0 - 9]/g, ''));
-          b_value = parse_int (b.customers.replace (/[^0 - 9]/g, ''));
-          break;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain;
     if (variant.includes('security')) return Shield;
@@ -150,12 +74,8 @@ const Services2024Page: React.FC = () => {
     if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500';
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
-<<<<<<< HEAD
-=======
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 const Services2024Page: React.FC = () => {;
@@ -260,93 +180,12 @@ const Services2024Page: React.FC = () => {;
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return 'from-gray-500 to-slate-500'
-<<<<<<< HEAD
+
   },
-=======
-  };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-const Services2024Page: React.FC = () => {;
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'customers'>('name');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
-  // Combine all services;
-  const allServices = [...realMicroSaasServices2024, ...innovativeITServices2024],;
-  // Filter and sort services;
-  const filteredServices = useMemo(() => {;
-    const filtered = allServices.filter(service => {;
-      const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                           service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                           service.features.some(feature => feature.toLowerCase().includes(searchQuery.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' ||;
-                             (selectedCategory === 'ai' && service.variant.includes('ai')) ||;
-                             (selectedCategory === 'quantum' && service.variant.includes('security')) ||;
-                             (selectedCategory === 'it' && service.variant.includes('it')) ||;
-                             (selectedCategory === 'api' && service.variant.includes('api')) ||;
-                             (selectedCategory === 'cloud' && service.variant.includes('cloud')) ||;
-                             (selectedCategory === 'marketing' && service.variant.includes('marketing')) ||;
-                             (selectedCategory === 'project' && service.variant.includes('project')) ||;
-                             (selectedCategory === 'customer' && service.variant.includes('customer'));
-      return matchesSearch && matchesCategory;
-    });
-    // Sort services;
-    filtered.sort((a, b) => {;
-      let aValue: any, bValue: any,;
-      switch (sortBy) {;
-        case 'price':;
-          aValue = parseFloat(a.price.replace(/[^0-9.]/g, '')),;
-          bValue = parseFloat(b.price.replace(/[^0-9.]/g, '')),;
-          break,;
-        case 'rating':;
-          aValue = a.rating;
-          bValue = b.rating;
-          break,;
-        case 'customers':;
-          aValue = parseInt(a.customers.replace(/[^0-9]/g, '')),;
-          bValue = parseInt(b.customers.replace(/[^0-9]/g, '')),;
-          break,;
-        default: aValue = a.name.toLowerCase();
-          bValue = b.name.toLowerCase();
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-      if (sortOrder === 'asc') {;
-        return aValue > bValue ? 1 : -1;
-      } else {;
-        return aValue < bValue ? 1 : -1;
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    });
-    return filtered;
-  }, [allServices, searchQuery, selectedCategory, sortBy, sortOrder]),;
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: Sparkles, count: allServices.length },;
-    { id: 'ai', name: 'AI & ML', icon: Brain, count: allServices.filter(s => s.variant.includes('ai')).length },;
-    { id: 'quantum', name: 'Quantum & Security', icon: Shield, count: allServices.filter(s => s.variant.includes('security')).length },;
-    { id: 'it', name: 'Enterprise IT', icon: Cpu, count: allServices.filter(s => s.variant.includes('it')).length },;
-    { id: 'api', name: 'API & Development', icon: Database, count: allServices.filter(s => s.variant.includes('api')).length },;
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.variant.includes('cloud')).length },;
-    { id: 'marketing', name: 'Marketing & SEO', icon: TrendingUp, count: allServices.filter(s => s.variant.includes('marketing')).length },;
-    { id: 'project', name: 'Project Management', icon: Users, count: allServices.filter(s => s.variant.includes('project')).length },;
-    { id: 'customer', name: 'Customer Success', icon: CheckCircle, count: allServices.filter(s => s.variant.includes('customer')).length   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain,
     if (variant.includes('security')) return Shield,
@@ -377,10 +216,7 @@ const Services2024Page: React.FC = () => {;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/services-2024' />;
       </Head>;
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
         {/* Hero Section */}
 
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -418,7 +254,7 @@ const Services2024Page: React.FC = () => {;
 }
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             >
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
                 <Sparkles className="w-5 h-5 text-cyan-400" />
@@ -428,15 +264,12 @@ const Services2024Page: React.FC = () => {;
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Future-Ready
@@ -452,7 +285,9 @@ const Services2024Page: React.FC = () => {;
               
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                   Future-Ready
                 </span>
@@ -483,15 +318,17 @@ const Services2024Page: React.FC = () => {;
                   <div className="text-gray-400">Revolutionary Services</div>
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">17</div>
@@ -511,6 +348,7 @@ const Services2024Page: React.FC = () => {;
           </div>
         </section>
         {/* Search and Filters */}
+
 
         <section className='px-4 sm:px-6 lg:px-8 mb-16'>
           <div className='max-w-7xl mx-auto'>
@@ -541,6 +379,7 @@ const Services2024Page: React.FC = () => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                     <input
                       type="text"
                       placeholder="Search services by name, features, or description..."
@@ -556,7 +395,6 @@ const Services2024Page: React.FC = () => {;
                     value={selectedCategory}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
                   </select>
                 </div>
@@ -567,7 +405,7 @@ const Services2024Page: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
+
                 <div>;
                   <select;
                     value={selectedCategory  } catch (error) {
@@ -591,12 +429,10 @@ const Services2024Page: React.FC = () => {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-                <div className="flex space-x-2">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   <select
                     value={sortBy}
                     onChange={e => setSortBy(e && e.target.value as any)}
@@ -608,10 +444,8 @@ const Services2024Page: React.FC = () => {;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         {/* Services Grid */}
         <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;
@@ -651,14 +485,11 @@ const Services2024Page: React.FC = () => {;
                           <div className='text - 2xl font - bold text - cyan - 400'>;
                             {service.price}
 
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             {filteredServices.length === 0 ? (
               <div className="text-center py-20">
                 <div className="text-6xl mb-4">🔍</div>
@@ -755,64 +586,8 @@ const Services2024Page: React.FC = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </p>
 
-                        <div className='text-right'>;
-                          <div className='text-2xl font-bold text-cyan-400'>;
-                            {service && service.price}
-                          </div>;
-                          <div className='text-sm text-gray-400'>per month</div>                        </div>;
-                      </div>;
-
-                      {/* Service Info */}
-                      <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>;
-                        {service && service.name}
-                      </h3>;
-                      <p className='text-gray-300 mb-4 leading-relaxed'>                        {service && service.tagline}
-                      </p>;
 
 
-
-                      {/* Features */}
-
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-                      {/* Service Info */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
-                        {service.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </h3>
-                      <p className="text-gray-300 mb-4 leading-relaxed">
-                        {service.tagline  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </p>;
-                      {/* Features */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                      <div className="mb-6">
-                        <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Key Features</h4>
-                        <div className="space-y-2">
-                          {service.features.slice(0, 3).map((feature, featureIndex) => (
-                            <div key={featureIndex} className="flex items-center space-x-2">
-                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                              <span className="text-sm text-gray-300">{feature}</span>
-                            </div>
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           {service.features.length > 3 && (
                             <div className="text-sm text-cyan-400">
                               +{service.features.length - 3} more features
@@ -858,13 +633,11 @@ const Services2024Page: React.FC = () => {;
                             <Star className="w-4 h-4 text-yellow-400 fill-current" />
                             <span className="text-sm font-semibold text-white">{service.rating}</span>
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                           </div>
                           <div className="text-xs text-gray-400">Rating</div>
                         </div>
@@ -888,14 +661,15 @@ const Services2024Page: React.FC = () => {;
                       <div className="flex items-center justify-between">
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                         <Link
                           href={service.link} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group">
                           <span className="font-medium">Learn More</span>
@@ -975,6 +749,7 @@ const Services2024Page: React.FC = () => {;
           </div>;
         </section>;
 
+
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1001,10 +776,12 @@ const Services2024Page: React.FC = () => {;
               viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm">
               <h2 className="text-4xl font-bold text-white mb-6">
 
+
                 Join thousands of businesses already leveraging our;
                 revolutionary 2024 services. Get started today and experience;
                 the future of technology.;
               </p>;
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -1012,6 +789,7 @@ const Services2024Page: React.FC = () => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -1038,43 +816,13 @@ const Services2024Page: React.FC = () => {;
     </>
 
 
-<<<<<<< HEAD
-  )
-}
-=======
-                  className='flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold'>;
-                  <span>View Pricing Plans</span>;
-                  <ArrowRight className='w-4 h-4' />                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
-  ),;
-};
-export default Services2024Page;
 
 
-=======
-              <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>;
-                <Link;
-                  href='/contact';
-                  className='flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 200 shadow - lg hover:shadow - cyan - 500 / 25 font - semibold';
-                >;
-                  <Zap className='w - 5 h - 5' />;
-                  <span > Get Started Today</span>;
-                </Link>;
-                <Link;
-                  href='/pricing - 2033';
-                  className='flex items - center space - x-2 border border - cyan - 500 / 30 text - cyan - 400 px - 8 py - 4 rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 200 font - semibold';
-                >;
-                  <span > View Pricing Plans</span>;
-                  <ArrowRight className='w - 4 h - 4' />                </Link>;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 export default Services2024Page;
 
 },
@@ -1124,22 +872,14 @@ export default Services2024Page,
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
-
-    </>;
-  );
-},;
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-<<<<<<< HEAD
+
     </>),
 }
 ;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default Services2024Page;

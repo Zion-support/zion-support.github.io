@@ -4,51 +4,47 @@
     defaultValues: {
 
 
+
+
       company_name: initialData?.company_name || "",
       role_title: initialData?.role_title || "",
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
       end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
       is_current: initialData?.is_current || false,
-<<<<<<< HEAD
-
-
-      description: initialData?.description || "",
-      location: initialData?.location || ""}}),
-  
-  const { isSubmitting } = form.formState,
-  const watchIsCurrent = form.watch("is_current"),
-  const watchRoleTitle = form.watch("role_title"),
-  const watchCompanyName = form.watch("company_name"),
-
-  const handleFormSubmit = async (values: FormValues) => {
+      description: initialData?.description || '',
+      location: initialData?.location || '',
+    },
+  })
+  const { isSubmitting } = form.formState
+  const watchIsCurrent = form.watch('is_current')
+  const watchRoleTitle = form.watch('role_title')
+  const watchCompanyName = form.watch('company_name')
+  const handleFormSubmit = async (values: FormValues,) => {
     // Create a properly typed WorkExperience object with all required fields
     const workExperience: WorkExperience = {
-      id: initialData?.id,
-      company_name: values.company_name,  // Required
-      role_title: values.role_title,      // Required
-      start_date: values.start_date,      // Required
-      end_date: values.end_date,          // Optional
-      is_current: values.is_current,      // Required
-      description: values.description,    // Optional
-      location: values.location,          // Optional
-    },
-    
+      id: initialData?.id
+      company_name: values.company_name, // Required
+      role_title: values.role_title, // Required
+      start_date: values.start_date, // Required
+      end_date: values.end_date, // Optional
+      is_current: values.is_current, // Required
+      description: values.description, // Optional
+      location: values.location, // Optional
+    }
     await onSubmit(workExperience)
-  },
-
+  }
   const handleAIEnhancement = (content: string) => {
-    form.setValue("description", content, { shouldDirty: true }),
+    form.setValue('description', content, { shouldDirty: true })
     setIsEnhancementDialogOpen(false)
-  },
-
-
+  }
 
       company_name: initialData?.company_name || "",
       role_title: initialData?.role_title || "",
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
       end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
       is_current: initialData?.is_current || false,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
   })
   const { isSubmitting } = form.formState
   const watchIsCurrent = form.watch('is_current')
@@ -92,11 +88,11 @@
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
     <>
       <Form {...form}>
@@ -111,11 +107,8 @@
                 <FormItem>
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <FormLabel>Company Name</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. Acme Corporation" {...field} />
@@ -365,11 +358,8 @@ export function WorkExperienceItemForm({;
                 <FormItem>
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <FormLabel>Role Title</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. Senior Developer" {...field} />
@@ -395,11 +385,8 @@ export function WorkExperienceItemForm({;
                 <FormItem>
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <FormLabel>Location</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. New York, NY (Remote)" {...field} />
@@ -426,11 +413,8 @@ export function WorkExperienceItemForm({;
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       I currently work here
                     </label>
                   </div>
@@ -453,11 +437,8 @@ export function WorkExperienceItemForm({;
                   <FormLabel>Start Date</FormLabel>
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
@@ -474,125 +455,9 @@ export function WorkExperienceItemForm({;
                           )}
                         >
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                          {field.value ? (
-                            format(field.value, "MMM yyyy")
-                          ) : (
-                            <span>Select date</span>
-                            'w-full pl-3 text-left font-normal',
-                            !field && field.value && 'text-muted-foreground'
-                          )}>;
-                          {field && field.value ? (;
-                            format(field && field.value, 'MMM yyyy');
-                          ) : (;
-                            <span>Select date</span>;
-                          )}
-
-                </FormItem>)}
-            />;
-          </div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-            <FormField;
-              control={form.control}
-              name='start_date';
-              render={({ field }: { field: any }) => (
-                <FormItem className='flex flex - col'>                  <FormLabel > Start Date</FormLabel>;
-                  <Popover>;
-                    <PopoverTrigger as_child>;
-                      <FormControl>;
-                        <Button;
-                          variant={'outline'}
-                          className={cn (
-                            'w - full pl - 3 text - left font - normal',
-                            !field.value && 'text - muted - foreground')}                        >;
-                          {field.value ? (
-                            format (field.value, 'MMM yyyy')) : (
-                            <span > Select date</span>)}
-                          <CalendarIcon;
-                            className='ml - auto h - 4 w - 4 opacity - 50';
-                            aria - hidden='true';
-
-                          />;
-                        </Button>;
-                      </FormControl>;
-                    </PopoverTrigger>;
-
-                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />
-                        </Button>
-                      </FormControl>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0" align="start">
-                      <Calendar
-                        mode='single'
-                        selected={field.value}
-                        onSelect={field.onChange}
-                        initialFocus
-                        captionLayout='dropdown-buttons'
-                        fromYear={1990}
-                        toYear={new Date().getFullYear()}                      />
-                    </PopoverContent>
-                  </Popover>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            {!watchIsCurrent && (
-              <FormField
-                control={form.control}
-                name='end_date'
-                render={({ field }: { field: any }) => (
-                  <FormItem className='flex flex-col'>                    <FormLabel>End Date</FormLabel>
-                        mode="single"
-                        selected={field.value}
-                        onSelect={field.onChange}
-                        initialFocus
-                        captionLayout="dropdown-buttons"
-                        fromYear={1990}
-                        toYear={new Date().getFullYear()}
-                      />;
-
-                    </PopoverContent>;
-                  </Popover>;
-                  <FormMessage />;
-                </FormItem>;
-              )}
-
-            />;
-            {!watchIsCurrent && (;
-
-              <FormField
-                control={form && form.control}
-                name='end_date'
-                render={({ field }: { field: any }) => (;
-                  <FormItem className='flex flex-col'>                    <FormLabel>End Date</FormLabel>;
-                    <Popover>;
-                      <PopoverTrigger asChild>;
-                        <FormControl>;
-                          <Button
-
-
-                            variant={'outline'}
-                            className={cn(
-
-            />;
-            {!watchIsCurrent && (;
-              <FormField;
-                control={form.control}
-                name="end_date"
-                render={({ field }: { field: any }) => (
-                  <FormItem className="flex flex-col">
-                    <FormLabel>End Date</FormLabel>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                     <Popover>
@@ -611,131 +476,9 @@ export function WorkExperienceItemForm({;
                             )}
                           >
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                            {field.value ? (
-                              format(field.value, "MMM yyyy")
-                            ) : (
-                              <span>Select date</span>
-                              'w-full pl-3 text-left font-normal',
-                              !field && field.value && 'text-muted-foreground'
-                            )}>;
-                            {field && field.value ? (;
-                              format(field && field.value, 'MMM yyyy');
-                            ) : (;
-                              <span>Select date</span>;
-                            )}
-
-                    <PopoverContent className='w - auto p - 0' align='start'>;
-                      <Calendar;
-                        mode='single';
-                        selected={field.value}
-                        on_select={field.on_change}
-                        initial_focus;
-                        caption_layout='dropdown - buttons';
-                        from_year={1990}
-                        to_year={new Date ().getFullYear ()}                      />;
-                    </PopoverContent>;
-                  </Popover>;
-                  <FormMessage />;
-                </FormItem>)}
-            />;
-            {!watchIsCurrent && (
-              <FormField;
-                control={form.control}
-                name='end_date';
-                render={({ field }: { field: any }) => (
-                  <FormItem className='flex flex - col'>                    <FormLabel > End Date</FormLabel>;
-                    <Popover>;
-                      <PopoverTrigger as_child>;
-                        <FormControl>;
-                          <Button;
-                            variant={'outline'}
-                            className={cn (
-                              'w - full pl - 3 text - left font - normal',
-                              !field.value && 'text - muted - foreground')}                          >;
-                            {field.value ? (
-                              format (field.value, 'MMM yyyy')) : (
-                              <span > Select date</span>)}
-                            <CalendarIcon;
-                              className='ml - auto h - 4 w - 4 opacity - 50';
-                              aria - hidden='true';
-
-                            />;
-                          </Button>;
-                        </FormControl>;
-                      </PopoverTrigger>;
-
-                          selected={field && field.value || undefined}
-                          onSelect={field && field.onChange}
-
-                          initialFocus
-                          captionLayout='dropdown-buttons'
-                          fromYear={1990}
-                          toYear={new Date().getFullYear()}
-                          disabled={date => date > new Date()}                        />;
-                            <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />
-                          </Button>
-                        </FormControl>
-                      </PopoverTrigger>
-                      <PopoverContent className="w-auto p-0" align="start">
-                        <Calendar
-                          mode='single'
-                          selected={field.value |undefined}
-                          onSelect={field.onChange}
-                          initialFocus
-                          captionLayout='dropdown-buttons'
-                          fromYear={1990}
-                          toYear={new Date().getFullYear()}
-                          disabled={date => date > new Date()}                        />
-                      </PopoverContent>
-                    </Popover>
-                    <FormMessage />
-                  </FormItem>
-                          mode="single"
-                          selected={field.value || undefined}
-                          onSelect={field.onChange}
-                          initialFocus
-                          captionLayout="dropdown-buttons"
-                          fromYear={1990}
-                          toYear={new Date().getFullYear()}
-                          disabled={(date) => date > new Date()}
-                        />;
-                      </PopoverContent>;
-                    </Popover>;
-                    <FormMessage />;
-                  </FormItem>;
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-
-
-
-                )}
-              />
-            )}
-          </div>
-=======
-
-
-
-                )}
-              />
-            )}
-
-          </div>;
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <FormField
             control={form && form.control}
             name='description'
@@ -833,48 +576,16 @@ export function WorkExperienceItemForm({;
 
 
 
+
+
                   <FormLabel>Description</FormLabel>
                   <div className="flex gap-2">
                     <AIEnhancementButton
                       options={{
 
 
-<<<<<<< HEAD
-                        enhancementType: 'work-description'
-                        content: field.value |''
-                        context: `${watchRoleTitle} at ${watchCompanyName}`
-                      }}
-                      onEnhanced={content =>
-                        form.setValue('description', content, {
-                          shouldDirty: true
-                        })
-                      }
-                      buttonText='Enhance with AI'
-                    />
-                    <Button
-                      type='button'
-                      variant='outline'
-                      size='sm'
-                      onClick={() => setIsEnhancementDialogOpen(true)}
-                      className='text-xs'                    >
-                        enhancementType: "work-description",
-                        content: field.value || "",
-                        context: `${watchRoleTitle} at ${watchCompanyName}`
-                      }}
-                      onEnhanced={(content) => form.setValue("description", content, { shouldDirty: true })}
-                      buttonText="Enhance with AI"
-                    />
-                    <Button
-                      type="button"
-                      variant="outline"
-                      size="sm"
-                      onClick={() => setIsEnhancementDialogOpen(true)}
-                      className="text-xs"
-                    >
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       AI Writer
                     </Button>
                   </div>
@@ -886,99 +597,16 @@ export function WorkExperienceItemForm({;
                     placeholder="Describe your responsibilities, achievements, and skills used in this role..."
                     className="min-h-[150px]"
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <div className='flex justify-end gap-2'>
-            <Button type='button' variant='outline' onClick={onCancel}>
-          
-          <div className="flex justify-end gap-2">
-            <Button type="button" variant="outline" onClick={onCancel}>
-
-              Cancel
-            </Button>
-            <Button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Saving...
-                </>
-              ) : (
-                <>Save</>
-              )}
-            </Button>
-          </div>
-        </form>
-      </Form>
-          />;
-
-          <div className='flex justify-end gap-2'>;
-            <Button type='button' variant='outline' onClick={onCancel}>;
-              Cancel;
-            </Button>;
-            <Button type='submit' disabled={isSubmitting}>;
-              {isSubmitting ? (;
-                <>;
-                  <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
-                  Saving...;
-                </>;
-              ) : (;
-                <>Save</>;
-              )}
-              </FormItem>)}
-          />;
-          <div className='flex justify - end gap - 2'>;
-            <Button type='button' variant='outline' on_click={on_cancel}>;
-              Cancel;
-            </Button>;
-            <Button type='submit' disabled={is_submitting}>;
-              {is_submitting ? (
-                <>;
-                  <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />;
-                  Saving...;
-                </>) : (
-                <>Save</>)}
-            </Button>;
-          </div>;
-        </form>;
-      </Form>;
-
-
-        title="Enhance Work Experience Description"
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
 
 
-<<<<<<< HEAD
-        defaultOptions={{
-          enhancementType: 'work-description'
-          content: form.getValues('description') |''
-          context: `${watchRoleTitle} at ${watchCompanyName}`
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           enhancementType: 'work-description',
           content: form.getValues('description') || '',
           context: `${watchRoleTitle} at ${watchCompanyName}`,
@@ -1068,31 +696,8 @@ setIsEnhancementDialogOpen (false);
 }<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" aria - hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
 }/> {
   !watchIsCurrent && (<FormField control= {
-<<<<<<< HEAD
 
 
-  form.control
-}<FormLabel>End Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Select date</span>) "
-}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
-}/>) "
-}</div> <FormField <FormLabel>Description</FormLabel> <div className="flex gap-2" > <AIEnhancementButton > AI Writer </Button> </div> </div> <FormControl> <Textarea placeholder="Describe your responsibilities, achievements, and skills used in this role..." className="min-h-[150px]" {
-  ...field
-}/> </FormControl> <FormMessage /> </FormItem>) "
-}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>)
-}</Button> </div> </form> </Form> <AIEnhancementDialog /> </>)
-}"
-=======
-  form.control;
-}<FormLabel > End Date</FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button) : (<span > Select date</span>) ";
-}<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" aria - hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
-}/>) ";
-}</div> <FormField <FormLabel > Description</FormLabel> <div className="flex gap - 2" > <AIEnhancementButton > AI Writer </Button> </div> </div> <FormControl> <Textarea placeholder="Describe your responsibilities, achievements, and skills used in this role..." className="min - h-[150px]" {
-  ...field;
-}/> </FormControl> <FormMessage /> </FormItem>) ";
-}/> <> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : (<>Save</>);
-}</Button> </div> </form> </Form> <AIEnhancementDialog /> </>);
-}";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 }
 
@@ -1101,12 +706,11 @@ setIsEnhancementDialogOpen (false);
 }";
 };
 };
-<<<<<<< HEAD
+
 <<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           enhancementType: "work-description",
           content: form.getValues("description") || "",

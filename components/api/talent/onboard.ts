@@ -51,7 +51,8 @@ import { randomUUID } from 'crypto';
     try {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
       }
     } catch (_) {
       // fall through to heuristic;
@@ -120,6 +121,31 @@ if ( {) {
       timezone,
 
       const ext = path.extname(profilePicture.name) |'.png';
+
+
+
+    const uploadsDir = path && path.join(process && process.cwd(), 'public', 'uploads');
+    const dataDir = path && path.join(process && process.cwd(), 'data', 'talent-submissions');
+    await fse && fse.ensureDir(uploadsDir);
+    await fse && fse.ensureDir(dataDir);
+
+
+    let savedCvPath: string | null = null;    if (cvFile?.base64 && cvFile?.name) {
+
+      if (base64Data) {
+        await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'));
+        savedProfileImagePath = `/uploads/${filename}`
+      }
+    }
+
+
+    let savedCvPath: string | null = null,
+    if (cvFile?.base64 && cvFile?.name) {
+      const ext = path.extname(cvFile.name) || '.pdf';
+      const filename = `${id}-cv${ext}`;
+      const filePath = path.join(uploadsDir, filename);
+      const base64Data = cvFile.base64.split()[1];
+
 
       if (base64Data) {
         await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
@@ -227,6 +253,21 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
         if (Array && Array.isArray(content)) aggregate = content;        if (Array && Array.isArray(content)) aggregate = content
 
 
+
+    let aggregate: any[] = [];
+    if () {) {
+  $2
+}
+      try {
+
+        const content = await fse.readJSON (aggregate_path);
+        if () aggregate = content) {
+  $2
+}        if () aggregate = content) {
+  $2
+}
+
+
       } catch (_) {
         // ignore;
       }
@@ -237,31 +278,8 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-    return res.status(500).json({ error: 'Internal server error' });
 
-  }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    aggregate.push (record);
-    await fse.writeJSON (aggregate_path, aggregate, { spaces: 2 });
-;
-    // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup);
-    // For now, just return success with AI data;
-    return res.status (200).json ({ ok: true, id, summary, tags });
-  } catch (error) {
-    return res.status (500).json ({ error: 'Internal server error' });
-  }    return res.status (200).json ({ ok: true, id, summary, tags });
-  } catch (error) {
-    return res.status (500).json ({ error: 'Internal server error' });
-}
-  }
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

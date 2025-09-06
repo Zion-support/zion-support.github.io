@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -29,21 +26,18 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import EnhancedButton from "../../components/ui/EnhancedButton";
 import { TrustBadge, MicroTestimonial } from "../../components/ui/Badges";
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import type { NextPage } from './next';
 import Head from './next / head';
@@ -52,11 +46,8 @@ import { useState  } from './react';
 import EnhancedButton from "../../components / ui / EnhancedButton";
 import { TrustBadge, MicroTestimonial  } from '../../components / ui / Badges';
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const TalentProfile: NextPage = () => {
   const router = use_router ();
   const { slug } = router.query;
@@ -77,23 +68,13 @@ const TalentProfile: NextPage = () => {;
 
     ]);
   }
-<<<<<<< HEAD
 
 
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import { useRouter } from 'next/router',
-import { useState } from 'react',
-import EnhancedButton from '../../components/ui/EnhancedButton',
-import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges',
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const TalentProfile: NextPage = () => {
   const router = useRouter(),
   const { slug } = router.query,
 
-=======
+
   return (
     <div className="space-y-6 pb-20">;
       {" "}
@@ -125,15 +106,15 @@ const TalentProfile: NextPage = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),
   const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
     setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
     <div className="space-y-6 pb-20">
       <Head>
@@ -188,6 +169,8 @@ const TalentProfile: NextPage = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 export default TalentProfile;

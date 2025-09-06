@@ -1,17 +1,9 @@
 
-<<<<<<< HEAD
-const { spawn } = require('child_process');
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-const { spawn } = require ('child_process'),
-console.log ('🚀 Starting development server...'),
-=======
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 console.log('🚀 Starting development server...'),;
 
 // Start the development server;

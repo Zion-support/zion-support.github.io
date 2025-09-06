@@ -149,24 +149,17 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 
         disabled={!message.trim() |disabled}
 
-<<<<<<< HEAD
 
 
-    }
-  },
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
       <textarea
@@ -185,11 +178,8 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         placeholder="Type your message..."
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -197,8 +187,9 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
@@ -224,22 +215,13 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         <Send className="h-5 w-5" />
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       </Button>
     </form>
   )
 }
-<<<<<<< HEAD
 
-
-        disabled={!message.trim() |disabled}
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         disabled={!message.trim() || disabled}
 

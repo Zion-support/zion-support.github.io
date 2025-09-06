@@ -128,14 +128,8 @@ const GuidedTour = dynamic (
   }
 
 
-<<<<<<< HEAD
-)
-// Lazy load notification functions
-const loadNotificationFunctions = () => import('@/utils/notifications')
-export default function Dashboard() {
-  const { logout } = useAuth()
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 const loadNotificationFunctions = () => import('@/utils/notifications');
 export default function Dashboard() {;
   const { logout } = useAuth();
@@ -150,18 +144,8 @@ export default function Dashboard() {;
   const { favorites } = useFavorites()
   // Type assertion to work around Supabase User type limitations
   const userWithExtendedProps = user as any
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const userType = null;
     userWithExtendedProps?.userType ||
     user?.user_metadata?.userType ||
@@ -203,12 +187,8 @@ const GuidedTour = dynamic(() => import("@/components/onboarding/GuidedTour").th
 
 // Lazy load notification functions
 
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const loadNotificationFunctions = () => import("@/utils/notifications"),
 
 export default function Dashboard() {
@@ -226,20 +206,8 @@ export default function Dashboard() {
   const userType = userWithExtendedProps?.userType || user?.user_metadata?.userType || 'talent',
   const roleForTour = userType === 'client' || userType === 'admin' ? 'client' : 'talent',
 
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (loading) {
 );
 // Lazy load notification functions;
@@ -595,18 +563,8 @@ if ( {) {
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                     onClick={() => window.location.href = "/profile"}
                   >
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     <UserCheck size={16} />
                     Edit Profile
                   </Button>
@@ -676,11 +634,8 @@ if ( {) {
               
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Stats & Metrics */}
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
                 <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3>
@@ -698,30 +653,9 @@ if ( {) {
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Points</span>
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                    <PointsBadge />
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-zion-slate-light">ZION$ Balance</span>
-                    <span className="text-zion-cyan font-medium">
-                      <Link href="/wallet" className="hover:underline">View Wallet</Link>
-                    </span>
-                  </div>
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                       style={{ width: '65%' }}></div>;
                   </div>;
@@ -790,38 +724,9 @@ if ( {) {
                       onClick={async () => {
                         try {
                           const { createOnboardingNotification } = await loadNotificationFunctions(),
-<<<<<<< HEAD
 
 
-                          await createOnboardingNotification({
-                            userId: user?.id ?? "",
-                            missingMilestone: 'profile_completed',
-                          await createOnboardingNotification({
-                            userId: user?.id ?? "",
-                            missingMilestone: 'profile_completed',
-                            userRole: roleForTour,
-                          })
-                          toast({
-                            title: 'Onboarding notification sent',
-                            description: 'Check your notification center',
-                          })
-                        } catch (error) {
-                          toast({
-                            title: 'Error sending notification',
-                            description: 'Please try again',
-                            variant: 'destructive',
-                          })
 
-
-=======
-
-
-                          await createOnboardingNotification({
-                            userId: user?.id ?? "",
-                            missingMilestone: 'profile_completed',
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                             userRole: roleForTour
                           }),
                           toast({
@@ -833,20 +738,8 @@ if ( {) {
                             title: "Error sending notification",
                             description: "Please try again",
                             variant: "destructive"})
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         }
                       }}
                     >
@@ -1004,11 +897,8 @@ if ( {) {
                   <Bell size={18} className="mr-2 text-zion-cyan" />
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   Recent Notifications
                 </h3>
                 <div className="space-y-4">
@@ -1053,11 +943,8 @@ if ( {) {
             
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Main Content - Dashboard */}
             <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
@@ -1251,11 +1138,8 @@ if ( {) {
                         <UserCheck size={24} className="text-white" />
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       </div>
                       <span className="text-xs text-center text-zion-slate-light">Newcomer</span>
                     </div>
@@ -1281,76 +1165,9 @@ if ( {) {
                 </div>
                 
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                {/* Community Section */}
-                <div id="community-section">
-                  <h3 className="text-lg font-bold text-white mb-4">Community</h3>
-                  <CommunityDiscussion />
-                </div>
-                {/* User Overview */}
-                <div className="mt-8 space-y-8">
-                  <div className="bg-zion-blue-dark rounded-xl p-6">
-                    <h3 className="text-lg font-bold text-white mb-4 flex items-center">
-                      <FileText className="mr-2" size={18} /> Recent Orders
-                    </h3>
-                    {ordersLoading ? (
-                      <p className="text-zion-slate-light">Loading...</p>
-                    ) : orders.length === 0 ? (
-                      <EmptyState
-                        icon={<ShoppingBag className='h-8 w-8' />}
-                        title='No Orders'                        description="You haven't purchased anything yet."
-                        action={{
-                          text: 'Visit Marketplace'
-                          href: '/marketplace'
-                        }}
-                        className='border-none bg-transparent text-center'
-                      />
-                    ) : (
-                      <ul className='space-y-1'>
-                        {orders.slice(0, 3).map(o => (
-                          <li key={o.orderId} className='flex justify-between'>
-                            <span>#{o.orderId}</span>
-                            <Link
-                              href={`/orders/${o.orderId}`}
-                              className='text-zion-purple underline'
-                            >
-                              View
-                            </Link>
-                          </li>
-                        icon={<ShoppingBag className="h-8 w-8" />}
-                        title="No Orders"
-                        description="You haven't purchased anything yet."
-                        action={{ text: 'Visit Marketplace', href: '/marketplace' }}
-                        className="border-none bg-transparent text-center";
-                      />;
-                    ) : (;
-                      <ul className="space-y-1">;
-                        {orders.slice(0, 3).map(o => (;
-                          <li key={o.orderId} className="flex justify-between">;
-                            <span>#{o.orderId}</span>;
-                            <Link href={`/orders/${o.orderId}`} className="text-zion-purple underline">View</Link>;
-                          </li>;
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         ))}
                       </ul>
                     )}
@@ -1406,18 +1223,8 @@ if ( {) {
                       <ul className="space-y-1">;
                         {favorites.slice(0, 3).map(f => (;
                           <li key={f.item_id}>{f.item_id}</li>;
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         ))}
                       </ul>
                     )}
@@ -1469,22 +1276,15 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className
 }className="text-zion-purple" /> async () => {
   try {
   const {
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                         className='text-zion-purple underline'>;
                         View all;
                       </Link>;
 
 ;
-<<<<<<< HEAD
-=======
+
 
                     <div className="mt-2 text-right">;
                       <Link href="/wishlist" className="text-zion-purple underline">View all</Link>;
@@ -1587,4 +1387,5 @@ function Dashboard() { const stats = [{ name: 'Active Services', value: '12', ic
 ));
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

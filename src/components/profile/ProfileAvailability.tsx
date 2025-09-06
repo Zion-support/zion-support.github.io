@@ -3,11 +3,11 @@ import { Calendar } from 'lucide-react'
 interface ProfileAvailabilityProps {
   availability: Availability
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 
 
 
@@ -49,19 +49,9 @@ function ProfileAvailability() {
         return '' }
   }
 
-<<<<<<< HEAD
-=======
 
 
 
-  return (
-
-
-        <Badge 
-          variant="outline" 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         >
           {getStatusText(availability.status)}
         </Badge>
@@ -78,13 +68,9 @@ function ProfileAvailability() {
         <p className='text-zion-slate mb-4'>{availability.message}</p>
       )}
 
-<<<<<<< HEAD
-=======
 
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {availability.availableHours &&
         availability.availableHours.length > 0 && (
           <div className='mt-4'>
@@ -171,9 +157,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
                 <div className="flex items-center gap-1">
                   <Clock className="h-4 w-4 text-zion-cyan" />
                   <span>{slot.hours}</span>
-<<<<<<< HEAD
-                </div>
-=======
+
 
 interface ProfileAvailabilityProps {;
   availability: Availability;
@@ -272,7 +256,7 @@ export function ProfileAvailability(): any ({;
                   <span>{slot && slot.hours}</span>;
                 </div>;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               ))}
             </div>
           </div>
@@ -287,29 +271,21 @@ export function ProfileAvailability(): any ({;
           </div>
         </div>
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </div>
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       )};
 

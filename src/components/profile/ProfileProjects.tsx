@@ -35,38 +35,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ProfileProject } from "@/types/profile";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-<<<<<<< HEAD
 
 
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { ProfileProject } from '@/types/profile'
-import { AspectRatio } from '@/components/ui/aspect-ratio'
-import { FileText } from 'lucide-react'
-interface ProfileProjectsProps {
-  projects: ProfileProject[]
-export function ProfileProjects({ projects }: ProfileProjectsProps) {
-  return (
-    <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
-      <h3 className='text-xl font-bold text-white mb-4'>Projects</h3>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-        {projects.map(project => (
-          <Card
-            key={project.id}
-            className='bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300'
-          >    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
-      <h3 className="text-xl font-bold text-white mb-4">Projects</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {projects.map((project,) => (
-
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { ProfileProject } from "@/types/profile",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { FileText } from 'lucide-react'
 
 interface ProfileProjectsProps {
@@ -80,15 +50,8 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (
-<<<<<<< HEAD
 
 
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -96,27 +59,15 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
             {project.imageUrl ? (
               <AspectRatio ratio={16/9}>
                 <img
-<<<<<<< HEAD
 
 
-                  src={project.imageUrl}
-                  alt={project.title}
-                  className='w-full h-full object-cover'
-                  loading='lazy'                />
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               </AspectRatio>
@@ -125,12 +76,8 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                 <FileText className="text-zion-purple h-12 w-12 opacity-50" />
               </div>
             )}
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -180,18 +127,8 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
             {project.imageUrl ? (;
               <AspectRatio ratio={16/9}>;
                 <img;
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   src={project.imageUrl}
                   alt={project.title}
                   className="w-full h-full object-cover"
@@ -203,17 +140,8 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                 <FileText className="text-zion-purple h-12 w-12 opacity-50" />
               </div>
             )}
-<<<<<<< HEAD
 
 
-            
-
-
-=======
-
-            
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <CardContent className="p-4">
               <h4 className="text-white font-medium mb-2">{project.title}</h4>
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>
@@ -233,14 +161,8 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
                       {tag}
                     </Badge>;
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -248,36 +170,10 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                   ))}
 
 
+
                 </div>
               )}
-<<<<<<< HEAD
 
-
-
-              
-
-
-
-              <div className='text-xs text-zion-slate-light mt-2'>                {project.date}              
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-              <div className="text-xs text-zion-slate-light mt-2">
-                {project.date}
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>
-  )
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     </div>;
@@ -289,11 +185,8 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 }
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
               <div className='text-xs text-zion-slate-light mt-2'>                {project && project.date}              ;
@@ -307,8 +200,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
   );
 }
@@ -383,4 +275,5 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
     </div>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

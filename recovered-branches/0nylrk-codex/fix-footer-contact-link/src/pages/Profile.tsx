@@ -1,32 +1,7 @@
 
-<<<<<<< HEAD
 
 
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -36,25 +11,8 @@ import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
 export default function Profile() {;
 
-<<<<<<< HEAD
-import React, { useEffect } from 'react',
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { useNavigate } from "react-router-dom";
-import { toast } from "sonner";
-export default function Profile() {
-  const { user, isLoading, logout } = useAuth();
-import { useNavigate } from "react-router-dom",
-import { toast } from "sonner",
-export default function Profile() {
-  const { user, isLoading, logout } = useAuth(),
-  const navigate = useNavigate(),
-=======
-  const { user, isLoading, logout } = useAuth();
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -63,7 +21,6 @@ export default function Profile() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   const navigate = useNavigate();
@@ -238,19 +195,12 @@ if ( {) {
 
     </>);
 }
-<<<<<<< HEAD
-;
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
 
-=======
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

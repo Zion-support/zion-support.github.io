@@ -1,24 +1,18 @@
 
 
-<<<<<<< HEAD
-import React, { ReactNode } from "react",
-import { cn } from "@/lib/utils",
-import { slugify } from "@/lib/slugify";
-import { Link } from "react-router-dom";
-import { slugify } from "@/lib/slugify",
-import { Link } from "react-router-dom",
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface CategoryCardProps {
 
   title: string
@@ -36,13 +30,10 @@ import {cn} from "@/lib/utils";
 import {slugify} from "@/lib/slugify";
 import {Link} from "react-router-dom";
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-  // Create a URL-friendly slug from the category title
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
   const slug = slugify(title);
   return (
@@ -115,16 +106,13 @@ export function CategoryCard(): any ({ title, description, icon, color, count, c
     </Link>;
   );
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
         className={cn(;
           "mb-4 p-3 bg-zion-blue-dark rounded-full";
           !color && "text-zion-cyan";
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         )}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         style={color ? { color } : undefined}

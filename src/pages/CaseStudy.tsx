@@ -1,31 +1,6 @@
 import { ArrowLeft } from 'lucide-react'
-<<<<<<< HEAD
 
 
-
-import {  Breadcrumb
-  BreadcrumbList
-  BreadcrumbItem
-  BreadcrumbLink
-  BreadcrumbSeparator
-} from '@/components/ui/breadcrumb'
-import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
-import { getBreadcrumbsForPath } from '@/utils/routeUtils'
-export default function CaseStudy() {
-  const router = useRouter()
-  const slug = router.query.slug as string
-  const study = CASE_STUDIES.find(s => s.slug === slug);  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);  Breadcrumb
-  BreadcrumbList
-  BreadcrumbItem
-  BreadcrumbLink
-  BreadcrumbSeparator} from '@/components/ui/breadcrumb'
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function CaseStudy() {;
   const router = useRouter();
   const slug = router.query.slug as string;
@@ -36,11 +11,8 @@ export default function CaseStudy() {;
   BreadcrumbSeparator} from '@/components/ui/breadcrumb',
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function CaseStudy() {
   const router = useRouter()
   const slug = router.query.slug as string
@@ -80,10 +52,8 @@ export default function CaseStudy() {;
   if (!study) {
     return (
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   if (!study) {
     return (
@@ -108,11 +78,8 @@ export default function CaseStudy() {;
     );
   }
   return (
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
           <Breadcrumb className="mb-4 text-sm text-muted-foreground">
             <BreadcrumbList>
@@ -201,11 +168,8 @@ export default function CaseStudy() {;
             className="prose prose-invert"
             dangerouslySetInnerHTML={{ __html: study.content }}
           />
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 }
 
@@ -216,22 +180,19 @@ export default function CaseStudy() {;
             dangerouslySetInnerHTML={{ __html: study && study.content }}
           />;
           <p className="mt-8 text-white font-semibold">;
-<<<<<<< HEAD
-          <p className="mt-8 text-white font-semibold">
-            — {study.author}, {study.role}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
           </p>;
         </div>;
       </div>;
     </>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
   );
 }
@@ -374,4 +335,5 @@ if ( {) {
     </>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

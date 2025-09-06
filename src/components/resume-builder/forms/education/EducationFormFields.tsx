@@ -2,24 +2,8 @@
   })
   const handleSubmit = async (data: EducationFormValues) => {
     setIsLoading(true)
-<<<<<<< HEAD
 
 
-      institution: '',
-      degree: '',
-      field_of_study: '',
-      start_date: format(new Date(), 'yyyy-MM-dd'),
-      is_current: false,
-      description: '',
-      location: '',
-    },;
-  });
-  const handleSubmit = async (data: EducationFormValues) => {;
-    setIsLoading(true);
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     setError(null);    try {
       await onSubmit(data)
     } catch (err: any) {
@@ -85,23 +69,18 @@ function EducationFormFields() {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   return (
     <Form {...form}>;
 
@@ -128,11 +107,8 @@ function EducationFormFields() {
               <FormItem>
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <FormLabel>Institution</FormLabel>
                 <FormControl>
                   <Input placeholder="University of California, MIT, etc." {...field} />
@@ -161,11 +137,8 @@ function EducationFormFields() {
               <FormItem>
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <FormLabel>Degree</FormLabel>
                 <FormControl>
                   <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />
@@ -196,11 +169,8 @@ function EducationFormFields() {
             <FormItem>
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <FormLabel>Field of Study</FormLabel>
               <FormControl>
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />
@@ -217,28 +187,16 @@ function EducationFormFields() {
           <FormField
 
             control={form.control}
-<<<<<<< HEAD
 
 
-            name="start_date"
-            name='start_date'
-            name="start_date"
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
                 <FormControl>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             render={({ field }: { field: any }) => (;
               <FormItem>;
@@ -252,27 +210,8 @@ function EducationFormFields() {
                 <FormMessage />
               </FormItem>
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                  <Input 
-                    type="date" 
-                    {...field}
-                    value={field.value || ''} ;
-                  />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            )}
-          />
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -283,23 +222,8 @@ function EducationFormFields() {
             <FormField
 
               control={form.control}
-<<<<<<< HEAD
 
 
-              name='is_current'
-              render={({ field }: { field: any }) => (
-                <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                  <FormControl>
-              name="is_current"
-              render={({ field }: { field: any }) => (
-                <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
-                  <FormControl>
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     <Checkbox
                       checked={field.value}
                       onCheckedChange={field.onChange}
@@ -320,28 +244,14 @@ function EducationFormFields() {
               <FormField;
                 control={form.control}
                 name="end_date"
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>End Date</FormLabel>
                     <FormControl>
-<<<<<<< HEAD
 
 
-                      <Input type='date' {...field} value={field.value |''} />                    </FormControl>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
@@ -352,20 +262,8 @@ function EducationFormFields() {
                         value={field.value || ''} 
                       />
                     </FormControl>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     <FormMessage />
                   </FormItem>
                 render={({ field }: { field: any }) => (;
@@ -464,78 +362,8 @@ function EducationFormFields() {
             <FormItem>
 
 
-<<<<<<< HEAD
 
 
-
-              <FormLabel>Location (Optional)</FormLabel>
-              <FormControl>
-                <Input placeholder="Cambridge, MA" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name='description'
-          render={({ field }: { field: any }) => (            <FormItem>
-              <FormLabel>Description (Optional)</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder='Notable achievements, courses, activities...'
-                  className='min-h-[100px]'
-        />;
-        <FormField;
-          control={form.control}
-          name="description"
-          render={({ field }: { field: any }) => (
-            <FormItem>
-              <FormLabel>Description (Optional)</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder="Notable achievements, courses, activities..."
-                  className="min-h-[100px]"
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        {error && (
-          <Alert variant='destructive'>
-            <AlertDescription>{error}</AlertDescription>
-          </Alert>
-        )}
-        <div className='flex justify-between pt-2'>
-          <Button type='button' variant='outline' onClick={onCancel}>            {isEditing ? 'Cancel' : 'Back'}
-          </Button>
-          <Button type='submit' disabled={isLoading}>
-            {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
-
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
-
-          <Button type="submit" disabled={isLoading}>
-            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-=======
-                  {...field}
-                />;
-              </FormControl>;
-              <FormMessage />;
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             {isEditing ? 'Update' : 'Add'} Education

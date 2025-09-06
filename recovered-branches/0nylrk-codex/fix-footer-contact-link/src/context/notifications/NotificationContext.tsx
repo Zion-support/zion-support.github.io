@@ -8,39 +8,9 @@ import { NotificationContextType } from './types';
 // `createContext` call returns `{}` instead of the expected shape.
 
 
-<<<<<<< HEAD
-const defaultContext: NotificationContextType = {
-  notifications: []
-  filteredNotifications: []
-  unreadCount: 0
-  loading: false
-  filter: 'all'
-  markAsRead: async () => {}
-  markAllAsRead: async () => {}
-  dismissNotification: async () => {}
-  setFilter: () => {}
-  fetchNotifications: async () => {}}
-// Cast the default context value to avoid issues when React types are missing.
-const NotificationContext = createContext(
-  defaultContext as NotificationContextType
-);
 
 
-=======
-import {supabase} from '@/integrations/supabase/client';
-import {useAuth} from '@/hooks/useAuth';
-import {useNotificationOperations} from './useNotificationOperations';
-import {NotificationContextType} from './types';
-=======
 
-
-export const useNotifications = (): NotificationContextType => {;
-  const context = useContext(NotificationContext) as NotificationContextType;
-  if (!context) {
-    throw new Error('useNotifications must be used within a NotificationProvider')
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -75,12 +45,11 @@ export const useNotifications = (): NotificationContextType => {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
   }
   return context
 },
@@ -108,34 +77,14 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
             table: 'notifications'
             filter: `user_id=eq.${user.id}`
 
+
           }
           },
           (payload) => {
             console.log('Notification change received:', payload);
             notificationOps.fetchNotifications()
-<<<<<<< HEAD
-          }
-        )
-        .subscribe();
-      return () => {
-        supabase.removeChannel(channel)
-      }
-    }
-  }, [user]);
-  return (
-    <NotificationContext.Provider value={notificationOps}>
-      {children}
-    </NotificationContext.Provider>
-  )
-
-=======
 
 
-};
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return context;
 };
 
@@ -251,18 +200,13 @@ if ( {) {
     </NotificationContext && NotificationContext.Provider>;
   );
 };
-<<<<<<< HEAD
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

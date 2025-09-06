@@ -1,16 +1,15 @@
 
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 /**
  * Creates an onboarding notification for a user
  */
@@ -81,19 +80,9 @@ export async function createOnboardingNotification({
     action_text;
   });
 
-<<<<<<< HEAD
-
-    actionText
-  })
 
 
-=======
-}
-=======
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { createNotification } from './createNotification',;
 import { OnboardingNotificationParams } from './types',;
 /**;
@@ -163,12 +152,11 @@ export async function createOnboardingNotification({;
   });
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 ;

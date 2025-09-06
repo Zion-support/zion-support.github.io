@@ -39,23 +39,9 @@ serve(async (req) => {
       systemPrompt = "You are a professional translator specializing in job descriptions. Translate the content accurately while maintaining the professional tone and technical terminology."
     } else if (contentType === "profile") {
       systemPrompt = "You are a professional translator specializing in professional profiles. Translate the content accurately while maintaining the professional tone and highlighting skills appropriately."
-<<<<<<< HEAD
-
-    }
-    // Create translations for each target language
-    const translations = {}
-    for (const targetLang of targetLanguages) {
-      if (targetLang === sourceLanguage) {
-        translations[targetLang] = content;
-        continue
-
-
-=======
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     // Prepare system prompt based on content type;
     let systemPrompt = "You are a professional translator. Translate the content accurately while maintaining the original meaning, tone, and format.",;
@@ -74,15 +60,13 @@ serve(async (req) => {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
       }
       
-=======
-      }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST"
         headers: {
@@ -119,23 +103,10 @@ serve(async (req) => {
               ${content}
 
 
-<<<<<<< HEAD
-;
-              Only provide the translated text, no explanations or additional comments.`}],;
-          temperature: 0.3})}),;
-      if (!response.ok) {;
-        const errorData = await response.json(),;
-        throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
-      }
-;
-      const data = await response.json(),;
-      translations[targetLang] = data.choices[0].message.content.trim();
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     }
 
     return new Response(
@@ -156,11 +127,9 @@ serve(async (req) => {
 
 
 
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 ;
       // Check condition
 if ( {) {
@@ -189,15 +158,17 @@ if ( {) {
     );
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
 });

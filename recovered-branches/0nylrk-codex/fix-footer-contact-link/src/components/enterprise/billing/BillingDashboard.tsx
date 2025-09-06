@@ -30,14 +30,15 @@ import {
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       <Tabs defaultValue="subscription" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="subscription">Subscription</TabsTrigger>
@@ -69,40 +70,21 @@ import {
         
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         <TabsContent value="usage" className="space-y-8">
           <UsageOverview />
         </TabsContent>
       </Tabs>
-<<<<<<< HEAD
 
-    </div>
-  );
-}
 
-  )
-import React from "react",;
-import { BillingHeader } from "./BillingHeader",;
-import { CurrentSubscription } from "./CurrentSubscription",;
-import { PaymentMethods } from "./PaymentMethods",;
-import { InvoiceHistory } from "./InvoiceHistory",;
-import { UsageOverview } from "./UsageOverview",;
-import {;
-  Tabs,;
-  TabsContent,;
-  TabsList,;
-  TabsTrigger} from "@/components/ui/tabs";
-export function BillingDashboard() {;
-  return (;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;
       <BillingHeader />;
@@ -110,10 +92,7 @@ export function BillingDashboard() {;
       <Tabs defaultValue="subscription" className="mt-8">;
         <TabsList className="grid w-full grid-cols-4 mb-8">;
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
           <TabsTrigger value="subscription">Subscription</TabsTrigger>;
           <TabsTrigger value="payment">Payment Methods</TabsTrigger>;
           <TabsTrigger value="invoices">Invoice History</TabsTrigger>;
@@ -136,9 +115,5 @@ export function BillingDashboard() {;
     </div>);
 
 }
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

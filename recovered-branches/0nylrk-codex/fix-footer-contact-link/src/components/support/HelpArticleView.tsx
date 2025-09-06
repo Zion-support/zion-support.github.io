@@ -1,18 +1,6 @@
 
-<<<<<<< HEAD
 
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
-import { ThumbsUp, ThumbsDown } from "lucide-react",
-import { toast } from "@/components/ui/use-toast",
-import { HELP_CATEGORIES } from "./help-content";
-interface HelpArticleViewProps {
-import { HELP_CATEGORIES } from "./help-content",
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from './react';
 import { Button  } from '@/components / ui / button';
 import { Card  } from '@/components / ui / card';
@@ -26,12 +14,10 @@ interface HelpArticleViewProps {
 
 
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 interface HelpArticleViewProps {
   articleId: string
 }
@@ -71,16 +57,18 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
       break;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     }
   }
   if (!article) {
@@ -231,11 +219,8 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
                 Contact Support;
               </Button>;
             </div>;
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         </div>
       </Card>
@@ -246,12 +231,14 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
+
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           )}
         </div>;
       </Card>;
@@ -264,26 +251,13 @@ function formatDate(date: string): string {
     year: "numeric"
     month: "long"
     day: "numeric"
-<<<<<<< HEAD
 
 
-
-  });
-}
-
-
-  })
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
   })
-=======
-  })
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

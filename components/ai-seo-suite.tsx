@@ -1,111 +1,26 @@
 
-<<<<<<< HEAD
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-
-
-
-
-import {
-  Search
-  TrendingUp
-  Target
-  BarChart3
-  Globe
-  Zap
-  Users
-  CheckCircle
-  ArrowRight
-  Play
-  Star
-  Eye
-  Brain
-  Shield
-  Lock
-  Sparkles
-  ChartBar
-  Lightbulb
-  Rocket
-  Settings;
-} from 'lucide-react';
-export default function AISeosuitePage() {
-  const features = [
-    {
-      icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
-
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Rocket,;
   Settings,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 export default function AISeosuitePage() {
   const features = [
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 export default function AISeosuitePage() {
   const features = [
     {
@@ -152,15 +67,8 @@ export default function AISeosuitePage() {
       icon: <Zap className='w-8 h-8 text-white' />
       title: 'Automated Reports'
       description:
-<<<<<<< HEAD
 
-        'Generate comprehensive SEO reports automatically with actionable insights and recommendations.'
-      color: 'bg-gradient-to-br from-pink-500 to-rose-600'
-      gradient: 'from-pink-400 to-rose-500'
-    }
-  ];
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
@@ -169,118 +77,10 @@ export default function AISeosuitePage() {
     },;
   ];
 
-<<<<<<< HEAD
 
 
-  const seoTools = [
-    {
-      category: 'Keyword Research'
-      icon: <Search className='w-6 h-6 text-blue-400' />
-      tools: [
-        'Long-tail keyword finder'
-        'Competitor keyword analysis'
-        'Search volume estimation'
-        'Keyword difficulty scoring'
-        'Trending keywords'
-      ]
-    }
-    {
-      category: 'On-Page SEO'
-      icon: <Target className='w-6 h-6 text-green-400' />
-      tools: [
-        'Content optimization'
-        'Meta tag generator'
-        'Schema markup builder'
-        'Internal linking suggestions'
-        'Image optimization'
-      ]
-    }
-    {
-      category: 'Technical SEO'
-      icon: <Settings className='w-6 h-6 text-purple-400' />
-      tools: [
-        'Site audit tool'
-        'Page speed analyzer'
-        'Mobile optimization'
-        'Core Web Vitals'
-        'XML sitemap generator'
-      ]
-    }
-    {
-      category: 'Analytics & Reporting'
-      icon: <BarChart3 className='w-6 h-6 text-orange-400' />
-      tools: [
-        'Ranking tracker'
-        'Traffic analysis'
-        'Conversion tracking'
-        'Competitor monitoring'
-        'Custom dashboards'
-      ]
-    },  ];      title: 'AI Keyword Research'
-      description: 'Discover high-value keywords using advanced AI algorithms that analyze search patterns and competition.'
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
-      gradient: 'from-blue-400 to-cyan-500'}
-    {
-      icon: <TrendingUp className="w-8 h-8 text-white" />
-      title: 'Ranking Analytics'
-      description: 'Track your search rankings in real-time with comprehensive analytics and competitor insights.'
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      gradient: 'from-green-400 to-emerald-500'}
-    {
-      icon: <Target className="w-8 h-8 text-white" />
-      title: 'Content Optimization'
-      description: 'AI-powered content analysis and optimization suggestions to improve search visibility.'
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
-      gradient: 'from-purple-400 to-indigo-500'}
-    {
-      icon: <BarChart3 className="w-8 h-8 text-white" />
-      title: 'Technical SEO'
-      description: 'Comprehensive technical SEO audits with actionable recommendations for improvement.'
-      color: 'bg-gradient-to-br from-orange-500 to-red-600'
-      gradient: 'from-orange-400 to-red-500'}
-    {
-      icon: <Globe className="w-8 h-8 text-white" />
-      title: 'Local SEO'
-      description: 'Optimize for local search with location-based keyword research and citation management.'
-      color: 'bg-gradient-to-br from-teal-500 to-blue-600'
-      gradient: 'from-teal-400 to-blue-500'}
-    {
-      icon: <Zap className="w-8 h-8 text-white" />
-      title: 'Automated Reports'
-      description: 'Generate comprehensive SEO reports automatically with actionable insights and recommendations.'
-      color: 'bg-gradient-to-br from-pink-500 to-rose-600'
-      gradient: 'from-pink-400 to-rose-500'}]
-  const seoTools = [
-    {
-      category: 'Keyword Research'
-      icon: <Search className="w-6 h-6 text-blue-400" />
-      tools: ['Long-tail keyword finderCompetitor keyword analysisSearch volume estimationKeyword difficulty scoringTrending keywords']
-    }
-    {
-      category: 'On-Page SEO'
-      icon: <Target className="w-6 h-6 text-green-400" />
-      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
-    }
-    {
-      category: 'Technical SEO'
-      icon: <Settings className="w-6 h-6 text-purple-400" />
-      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator']
-    }
-    {
-      category: 'Analytics & Reporting'
-      icon: <BarChart3 className="w-6 h-6 text-orange-400" />
-      tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
-    }
-
-      icon: <Search className='w-8 h-8 text-white' />,
-  ];
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default function AISeosuitePage() {
   const features = [
@@ -302,432 +102,11 @@ export default function AISeosuitePage() {
       buttonColor: 'bg-gray-600 hover:bg-gray-700'
     };
     {
-<<<<<<< HEAD
-
-    { metric: 'ROI', value: '400%', description: 'Average return on investment' }
-
-  ];
 
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-=======
-=======
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
-  Search,
-  TrendingUp,
-  Target,
-  BarChart3,
-  Globe,
-  Zap,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  Star,
-  Eye,
-  Brain,
-  Shield,
-  Lock,
-  Sparkles,
-  ChartBar,
-  Lightbulb,
-<<<<<<< HEAD
-  Rocket,
-  Settings,
-} from 'lucide-react';
-export default /**
- * AISeosuitePage - Function description
- */
-function AISeosuitePage() {
-  const features = [;
-    {
-      icon: <Search className='w - 8 h - 8 text - white' />, import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
-export default /**
- * AISeosuitePage - Function description
- */
-function AISeosuitePage() {
-  const features = [;
-    {
-      icon: <Search className='w - 8 h - 8 text - white' />,
-      title: 'AI Keyword Research',
-      description:;
-        'Discover high - value keywords using advanced AI algorithms that analyze search patterns and competition.',
-      color: 'bg - gradient - to - br from - blue - 500 to - cyan - 600',
-      gradient: 'from - blue - 400 to - cyan - 500',
-    },
-    {
-      icon: <TrendingUp className='w - 8 h - 8 text - white' />,
-      title: 'Ranking Analytics',
-      description:;
-        'Track your search rankings in real - time with comprehensive analytics and competitor insights.',
-      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
-      gradient: 'from - green - 400 to - emerald - 500',
-    },
-    {
-      icon: <Target className='w - 8 h - 8 text - white' />,
-      title: 'Content Optimization',
-      description:;
-        'AI - powered content analysis and optimization suggestions to improve search visibility.',
-      color: 'bg - gradient - to - br from - purple - 500 to - indigo - 600',
-      gradient: 'from - purple - 400 to - indigo - 500',
-    },
-    {
-      icon: <BarChart3 className='w - 8 h - 8 text - white' />,
-      title: 'Technical SEO',
-      description:;
-        'Comprehensive technical SEO audits with actionable recommendations for improvement.',
-      color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
-      gradient: 'from - orange - 400 to - red - 500',
-    },
-    {
-      icon: <Globe className='w - 8 h - 8 text - white' />,
-      title: 'Local SEO',
-      description:;
-        'Optimize for local search with location - based keyword research and citation management.',
-      color: 'bg - gradient - to - br from - teal - 500 to - blue - 600',
-      gradient: 'from - teal - 400 to - blue - 500',
-    },
-    {
-      icon: <Zap className='w - 8 h - 8 text - white' />,
-      title: 'Automated Reports',
-      description:;
-        'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
-      color: 'bg - gradient - to - br from - pink - 500 to - rose - 600',
-      gradient: 'from - pink - 400 to - rose - 500',
-    },
-  ];
-;
-  const seo_tools = [;
-    {
-      category: 'Keyword Research',
-      icon: <Search className='w - 6 h - 6 text - blue - 400' />,
-      tools: [;
-        'Long - tail keyword finder',
-        'Competitor keyword analysis',
-        'Search volume estimation',
-        'Keyword difficulty scoring',
-        'Trending keywords',
-      ],
-    },
-    {
-      category: 'On - Page SEO',
-      icon: <Target className='w - 6 h - 6 text - green - 400' />,
-      tools: [;
-        'Content optimization',
-        'Meta tag generator',
-        'Schema markup builder',
-        'Internal linking suggestions',
-        'Image optimization',
-      ],
-    },
-    {
-      category: 'Technical SEO',
-      icon: <Settings className='w - 6 h - 6 text - purple - 400' />,
-      tools: [;
-        'Site audit tool',
-        'Page speed analyzer',
-        'Mobile optimization',
-        'Core Web Vitals',
-        'XML sitemap generator',
-      ],
-    },
-    {
-      category: 'Analytics & Reporting',
-      icon: <BarChart3 className='w - 6 h - 6 text - orange - 400' />,
-      tools: [;
-        'Ranking tracker',
-        'Traffic analysis',
-        'Conversion tracking',
-        'Competitor monitoring',
-        'Custom dashboards',
-      ],
-    },  ];      title: 'AI Keyword Research',
-      description: 'Discover high - value keywords using advanced AI algorithms that analyze search patterns and competition.',
-      color: 'bg - gradient - to - br from - blue - 500 to - cyan - 600',
-      gradient: 'from - blue - 400 to - cyan - 500'},
-    {
-      icon: <TrendingUp className="w - 8 h - 8 text - white" />,
-      title: 'Ranking Analytics',
-      description: 'Track your search rankings in real - time with comprehensive analytics and competitor insights.',
-      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
-      gradient: 'from - green - 400 to - emerald - 500'},
-    {
-      icon: <Target className="w - 8 h - 8 text - white" />,
-      title: 'Content Optimization',
-      description: 'AI - powered content analysis and optimization suggestions to improve search visibility.',
-      color: 'bg - gradient - to - br from - purple - 500 to - indigo - 600',
-      gradient: 'from - purple - 400 to - indigo - 500'},
-    {
-      icon: <BarChart3 className="w - 8 h - 8 text - white" />,
-      title: 'Technical SEO',
-      description: 'Comprehensive technical SEO audits with actionable recommendations for improvement.',
-      color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
-      gradient: 'from - orange - 400 to - red - 500'},
-    {
-      icon: <Globe className="w - 8 h - 8 text - white" />,
-      title: 'Local SEO',
-      description: 'Optimize for local search with location - based keyword research and citation management.',
-      color: 'bg - gradient - to - br from - teal - 500 to - blue - 600',
-      gradient: 'from - teal - 400 to - blue - 500'},
-    {
-      icon: <Zap className="w - 8 h - 8 text - white" />,
-      title: 'Automated Reports',
-      description: 'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
-      color: 'bg - gradient - to - br from - pink - 500 to - rose - 600',
-      gradient: 'from - pink - 400 to - rose - 500'}],
-  const seo_tools = [;
-    {
-      category: 'Keyword Research',
-      icon: <Search className="w - 6 h - 6 text - blue - 400" />,
-      tools: ['Long - tail keyword finder_competitor keyword analysis_search volume estimation_keyword difficulty scoring_trending keywords'];
-    }
-    {
-      category: 'On - Page SEO',
-      icon: <Target className="w - 6 h - 6 text - green - 400" />,
-      tools: ['Content optimization_meta tag generator_schema markup builder_internal linking suggestions_image optimization'];
-    }
-    {
-      category: 'Technical SEO',
-      icon: <Settings className="w - 6 h - 6 text - purple - 400" />,
-      tools: ['Site audit tool_page speed analyzer_mobile optimization_core Web VitalsXML sitemap generator'];
-    }
-    {
-      category: 'Analytics & Reporting',
-      icon: <BarChart3 className="w - 6 h - 6 text - orange - 400" />,
-      tools: ['Ranking tracker_traffic analysis_conversion tracking_competitor monitoring_custom dashboards'];
-    }
-  ];
-;
-  const pricing_plans = [;
-    {
-      name: 'Starter',
-      price: '$39',
-      period: '/month',
-      description: 'Perfect for small websites and blogs',
-      features: [;
-        'Up to 5 websites',
-        'Basic keyword research',
-        'Monthly site audits',
-        'Email support',
-        'Basic reporting',
-        'Mobile app access',
-      ],
-      popular: false,
-      color: 'border - gray - 600',
-      button_color: 'bg - gray - 600 hover:bg - gray - 700',
-    },    {        'Up to 5 websites_basic keyword research_monthly site audits_email support_basic reporting_mobile app access';
-      ];
-      popular: false,
-      color: 'border - gray - 600',
-      button_color: 'bg - gray - 600 hover:bg - gray - 700';
-    }
-
-      name: 'Professional',
-      price: '$129',
-      period: '/month',
-      description: 'Ideal for growing businesses and agencies',
-
-    };
-    {
-=======
-      features: [;
-        'Up to 25 websites',
-        'Advanced keyword research',
-        'Weekly site audits',
-        'Priority support',
-        'Advanced reporting',
-        'Competitor analysis',
-        'API access',
-        'White - label reports',
-      ],
-      popular: true,
-      color: 'border - blue - 500',
-      button_color: 'bg - blue - 600 hover:bg - blue - 700',
-    },    {        'Up to 25 websites_advanced keyword research_weekly site audits_priority support_advanced reporting_competitor analysisAPI access_white - label reports';
-      ];
-      popular: true,
-      color: 'border - blue - 500',
-      button_color: 'bg - blue - 600 hover:bg - blue - 700';
-    }
-
-      name: 'Enterprise',
-      price: '$399',
-      period: '/month',
-      description: 'For large organizations and enterprises',
-
-=======
-      features: [;
-        'Unlimited websites',
-        'Full SEO suite',
-        'Daily site audits',
-        'Dedicated support',
-        'Custom reporting',
-        'Advanced analytics',
-        'SLA guarantee',
-        'On - premise option',
-      ],
-      popular: false,
-      color: 'border - purple - 600',
-      button_color: 'bg - purple - 600 hover:bg - purple - 700',
-    },
-  ];
-;
-  const integrations = [;
-    {
-      name: 'Google Analytics',
-      icon: '📊',
-      description: 'Traffic data integration',
-    },
-    {
-      name: 'Google Search Console',
-      icon: '🔍',
-      description: 'Search performance data',
-    },    { name: 'WordPress', icon: '🔌', description: 'Plugin integration' },      popular: false,
-      color: 'border - purple - 600',
-      button_color: 'bg - purple - 600 hover:bg - purple - 700';
-    }
-  ];
-;
-  const integrations = [;
-
-    { name: 'Google Analytics', icon: '📊', description: 'Traffic data integration' },
-    { name: 'Google Search Console', icon: '🔍', description: 'Search performance data' },
-    { name: 'WordPress', icon: '🔌', description: 'Plugin integration' },
-    { name: 'Shopify', icon: '🛒', description: 'E - commerce optimization' },
-    { name: 'HubSpot', icon: '📈', description: 'Marketing automation sync' },
-    { name: 'Slack', icon: '💬', description: 'Team notifications' },
-    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },
-    { name: 'API Access', icon: '🔑', description: 'Custom integrations' }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-  ];
-
-;
-  const use_cases = [;
-    {
-      title: 'E - commerce Websites',
-      description:;
-        'Optimize product pages, category pages, and search functionality for better conversions.',
-      benefits: [;
-        'Higher search rankings',
-        'Increased organic traffic',
-        'Better conversion rates',
-        'Competitive advantage',
-      ],
-    },
-    {
-      title: 'Content Marketing',
-      description:;
-        'Optimize blog posts, articles, and content for search engines and user engagement.',
-      icon: '📝',
-      benefits: [;
-        'Better content visibility',
-        'Higher engagement rates',
-        'More organic traffic',
-        'Authority building',
-      ],
-    },
-    {
-      title: 'Local Businesses',
-      description:;
-        'Improve local search visibility and attract customers in your area.',
-      icon: '📍',
-      benefits: [;
-        'Local search dominance',
-        'Increased foot traffic',
-        'Better customer acquisition',
-        'Competitive positioning',
-      ],
-    },
-    {
-      title: 'SaaS Companies',
-      description:;
-        'Optimize landing pages, feature pages, and documentation for better user acquisition.',
-      icon: '💻',
-      benefits: [;
-        'Higher conversion rates',
-        'Better user experience',
-        'Reduced acquisition costs',
-        'Market expansion',
-      ],
-    },
-  ];
-;
-  const success_metrics = [;
-
-    {
-      metric: 'Organic Traffic'
-      value: '+150%'
-      description: 'Average increase in organic traffic'
-    }
-    {
-      metric: 'Search Rankings'
-      value: '+45%'
-      description: 'Improvement in search rankings'
-    }
-    {
-      metric: 'Conversion Rate'
-      value: '+80%'
-      description: 'Increase in conversion rates'
-    }
-    {
-      metric: 'ROI'
-      value: '400%'
-      description: 'Average return on investment'
-    },  ];    { metric: 'Organic Traffic', value: '+150%', description: 'Average increase in organic traffic' }
-    { metric: 'Search Rankings', value: '+45%', description: 'Improvement in search rankings' }
-    { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' }
-=======
-
-
-=======
-      title: 'E-commerce Websites',
-      description: 'Optimize product pages, category pages, and search functionality for better conversions.',
-    icon: '🛍️',
-      benefits: ['Higher search rankingsIncreased organic trafficBetter conversion ratesCompetitive advantage']
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    };
-    {;
-      category: 'On-Page SEO',;
-      icon: <Target className="w-6 h-6 text-green-400" />,;
-      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization'];
-    };
-    {;
-      category: 'Technical SEO',;
-      icon: <Settings className="w-6 h-6 text-purple-400" />,;
-      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator'];
-    };
-    {;
-      category: 'Analytics & Reporting',;
-      icon: <BarChart3 className="w-6 h-6 text-orange-400" />,;
-      tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards'];
-    }
-  ];
-
-
-  const successMetrics = [
-    { metric: 'Organic Traffic', value: '+150%', description: 'Average increase in organic traffic' },
-    { metric: 'Search Rankings', value: '+45%', description: 'Improvement in search rankings' },
-    { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' },
-    { metric: 'ROI', value: '400%', description: 'Average return on investment' }
-
-    { metric: 'ROI', value: '400%', description: 'Average return on investment' }
-
-=======
-
-  ];
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
 
         />;
@@ -881,18 +260,18 @@ function AISeosuitePage() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                 </p>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
@@ -900,19 +279,21 @@ function AISeosuitePage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       {/* SEO Tools Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -980,18 +361,13 @@ function AISeosuitePage() {
 
 
                           {toolName}
-<<<<<<< HEAD
 
 
-
-=======
-<<<<<<< HEAD
-                        </div>;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                           {toolName}
+
+
 
 
 
@@ -1009,19 +385,21 @@ function AISeosuitePage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       {/* Success Metrics Section */}
 
       <section className="py-24 bg-gray-900 relative overflow-hidden">
@@ -1079,19 +457,15 @@ function AISeosuitePage() {
               </Card>;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
             ))}
           </div>
         </div>
       </section>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-              </Card>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1102,14 +476,14 @@ function AISeosuitePage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       {/* Use Cases Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -1183,18 +557,13 @@ function AISeosuitePage() {
 
 
                           {benefit}
-<<<<<<< HEAD
 
 
-
-=======
-<<<<<<< HEAD
-                        </div>;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                           {benefit}
+
+
 
 
 
@@ -1212,19 +581,21 @@ function AISeosuitePage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       {/* Pricing Section */}
 
       <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
@@ -1499,11 +870,7 @@ function AISeosuitePage() {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
                     <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
@@ -1521,50 +888,10 @@ function AISeosuitePage() {
                   </div>;
                   <p className='text-gray-400'>{plan && plan.description}</p>;
                 </div>;
-                <ul className='space-y-4 mb-8'>;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'>;
-                      <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
-                  <p className="text-gray-400">{plan && plan.description}</p>;
-                </div>;
-                <ul className="space-y-4 mb-8">;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center text-gray-300">;
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />;
-
-                      {feature}
-                    </li>;
-                  ))}
-
-                </ul>;
 
 
-                <Button
-                  href='/contact'
-                  className={`w-full ${plan && plan.buttonColor} text-white`}
-                  size='lg'>;
-                  Get Started;
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan && plan.buttonColor} text-white`}
-                  size="lg";
-                >;
-                  Get Started;
-                  <ArrowRight className="w-5 h-5 ml-2" />;
-                </Button>;
-              </Card>;
-
-=======
-                      {feature}
-=======
-
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                     </li>
                   ))}
                 </ul>
@@ -1579,7 +906,6 @@ function AISeosuitePage() {
                 </Button>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
@@ -1587,19 +913,21 @@ function AISeosuitePage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       {/* Integrations Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -1659,23 +987,18 @@ function AISeosuitePage() {
               </Card>;
 
 
-<<<<<<< HEAD
             ))}
           </div>
         </div>
       </section>
 
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-              </Card>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -1690,11 +1013,11 @@ function AISeosuitePage() {
       {/* CTA Section */}
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1703,14 +1026,14 @@ function AISeosuitePage() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
             Ready to Dominate Search Rankings?
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1741,40 +1064,8 @@ function AISeosuitePage() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">;
 
 
-          <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Join thousands of businesses who are already ranking higher and driving more organic traffic.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            <Button
-              href="/contact"
-              variant="secondary"
-              size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100 shadow-2xl">;
-              Start Free Trial;
-              <ArrowRight className="w-5 h-5 ml-2" />;
-            </Button>;
-            <Button
-              href="#demo"
-              variant="outline"
-              size="lg"
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-}
-    </>);
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
             >
               <Play className="w-5 h-5 mr-2" />
@@ -1784,13 +1075,8 @@ function AISeosuitePage() {
         </div>
       </section>
     </>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

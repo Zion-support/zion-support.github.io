@@ -1,19 +1,15 @@
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 export interface WhitelabelTenant {
-=======
 
-import {useState, useEffect} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-export interface WhitelabelTenant {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   id: string;
   brand_name: string;
   subdomain: string;
@@ -35,18 +31,16 @@ export interface WhitelabelTenant {;
 
 
 
-<<<<<<< HEAD
-  email_template_override: Record<string, any> | null
-}
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 export function useWhitelabelTenant(externalSubdomain?: string) {;
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const [isLoading, setIsLoading] = useState(true);
 
   const [error, setError] = useState<string | null>(null);
@@ -161,11 +155,11 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (data.tenant) {
@@ -252,12 +246,11 @@ if ( {) {
   }, [tenantId]);
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   return { isAdmin, isLoading }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

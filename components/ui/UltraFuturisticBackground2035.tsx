@@ -25,7 +25,6 @@ import { motion } from 'framer-motion';
   intensity?: 'low' | 'medium' | 'high';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   intensity?: 'low' | 'medium' | 'high';
 
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
@@ -36,7 +35,6 @@ import { motion } from 'framer-motion';
   enableNeonEffects?: boolean;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   intensity = 'medium';
   colorScheme = 'quantum-fusion';
   particleCount = 200;
@@ -101,6 +99,108 @@ import { motion } from 'framer-motion';
           glow: 'rgba(0, 255, 255, 0 && 0.3)',;
         };    }          background: 'rgba(0, 0, 0, 0 && 0.95)';
           glow: 'rgba(0, 255, 255, 0 && 0.3)';
+
+
+
+
+          background: 'rgba (0, 0, 0, 0.95)',
+          glow: 'rgba (0, 255, 255, 0.3)',        }          background: 'rgba (0, 0, 0, 0.95)';
+          glow: 'rgba (0, 255, 255, 0.3)';
+        }
+      case 'neon - cyber':;
+
+        return {
+          primary: '#ff0080',
+          secondary: '#00ff80',
+          accent: '#8000ff',
+
+          background: 'rgba (0, 0, 0, 0.9)',
+          glow: 'rgba (255, 0, 128, 0.4)',        }          background: 'rgba (0, 0, 0, 0.9)';
+          glow: 'rgba (255, 0, 128, 0.4)';
+        }
+      case 'holographic - matrix':;
+
+        return {
+          primary: '#00ff41',
+          secondary: '#ff0040',
+          accent: '#0040ff',
+
+          background: 'rgba (0, 0, 0, 0.92)',
+          glow: 'rgba (0, 255, 65, 0.35)',        }          background: 'rgba (0, 0, 0, 0.92)';
+          glow: 'rgba (0, 255, 65, 0.35)';
+        }
+      case 'space - time':;
+
+        return {
+          primary: '#ff6b35',
+          secondary: '#4ecdc4',
+          accent: '#45b7d1',
+
+          background: 'rgba (0, 0, 0, 0.88)',
+          glow: 'rgba (255, 107, 53, 0.3)',        }          background: 'rgba (0, 0, 0, 0.88)';
+          glow: 'rgba (255, 107, 53, 0.3)';
+        }
+      default:;
+
+        return {
+          primary: '#00ffff',
+          secondary: '#ff00ff',
+          accent: '#ffff00',
+
+      canvas.height = window.innerHeight
+    };
+
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    // Initialize particles
+    const initParticles = () => {
+      particlesRef.current = [];
+
+      for (let i = 0, i < particleCount, i++) {
+        particlesRef.current.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2 * animationSpeed,
+          vy: (Math.random() - 0.5) * 2 * animationSpeed,
+          size: Math.random() * 3 + 1,
+          life: Math.random() * 100 + 50,
+          maxLife: Math.random() * 100 + 50,
+          type: Math.random() > 0.7 ? 'quantum' : 'normal',
+
+          color: Math.random() > 0.5 ? colors.primary : colors.secondary
+        });      }          color: Math.random() > 0.5 ? colors.primary : colors.secondary
+        })
+
+
+  useEffect(() => {;
+    const canvas = canvasRef && canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas && canvas.getContext('2d');
+    if (!ctx) return;
+    const resizeCanvas = () => {;
+      canvas && canvas.width = window && window.innerWidth;
+      canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
+
+    };
+    resizeCanvas();
+    window && window.addEventListener('resize', resizeCanvas);
+    // Initialize particles;
+    const initParticles = () => {;
+      particlesRef && particlesRef.current = [];
+      for (let i = 0; i < particleCount; i++) {        particlesRef && particlesRef.current.push({      for (let i = 0, i < particleCount, i++) {;
+        particlesRef && particlesRef.current.push({;
+          x: Math && Math.random() * canvas && canvas.width,;
+          y: Math && Math.random() * canvas && canvas.height,;
+          vx: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,;
+          vy: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,;
+          size: Math && Math.random() * 3 + 1,;
+          life: Math && Math.random() * 100 + 50,;
+          maxLife: Math && Math.random() * 100 + 50,;
+          type: Math && Math.random() > 0 && 0.7 ? 'quantum' : 'normal',;
+          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary,;
+        });      }          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary;
+        });
 
 
 
@@ -279,7 +379,6 @@ import { motion } from 'framer-motion';
       ctx.beginPath();
 
       ctx.moveTo(x, 0);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       ctx.lineTo(x, ctx.canvas.height);
       ctx.stroke()
     }
@@ -312,7 +411,6 @@ import { motion } from 'framer-motion';
     
 
     // Neon orbs
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     for (let i = 0, i < 3, i++) {
       const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
       const y = (Math.cos(time * 0.3 + i) * 0.3 + 0.5) * ctx.canvas.height;
@@ -774,7 +872,6 @@ if ( {) {
               animate={{
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Holographic scan lines */}
         <div className="absolute inset-0 opacity-20">;
           {[...Array(20)].map((_, i) => (;
@@ -797,35 +894,14 @@ if ( {) {
               animate={{
                 opacity: [0, 1, 0]
                 scaleX: [0, 1, 0]
-<<<<<<< HEAD
 
 
 
-=======
-=======
-                top: `${(i / 20) * 100}%`,
-                color: colors.primary;
-              }}
-              animate={{
-                opacity: [0, 1, 0];
-                scale_x: [0, 1, 0];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-              }}
-
-=======
-
-
-=======
-=======
-
-
-
-              transition={{
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 duration: 3,
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
+
 
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
@@ -836,24 +912,21 @@ if ( {) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
             />
 
           ))}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-              transition={{
-                duration: 3,
-                delay: i * 0.1,
-                repeat: Infinity,
+                ease: "easeInOut"
 
+              }}
+            />;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           ))}
 
 
@@ -862,47 +935,27 @@ if ( {) {
 export default UltraFuturisticBackground2035;  );
 };
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 export default UltraFuturisticBackground2035;
 
 
-<<<<<<< HEAD
-=======
-=======
-                ease: 'easeInOut',              }}                ease: "easeInOut";
-              }}
-            />))}
-        </div>;
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2035);
-}
-;
-export default UltraFuturisticBackground2035;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
+
+
+
 export default UltraFuturisticBackground2035;  )
 }
 export default UltraFuturisticBackground2035;
 
 
-export default UltraFuturisticBackground2035;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

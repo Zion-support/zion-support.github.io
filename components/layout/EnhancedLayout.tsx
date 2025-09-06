@@ -28,6 +28,7 @@ import React, { useEffect } from 'react';
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
 
+
 import i18n, { isRtl } from '../../utils/i18n';
 import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
 export type EnhancedLayoutProps = {
@@ -54,6 +55,7 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
     const lng = i18n.resolvedLanguage || i18n.language;
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng);
+
 
   }, []);
 
@@ -88,6 +90,12 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
 
   return (
 
+import React, { useEffect } from 'react';
+import EnhancedNavigation from './EnhancedNavigation';
+import EnhancedFooter from './EnhancedFooter';
+import i18n, { isRtl } from '../../utils/i18n';
+import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
+
 
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng);
@@ -103,7 +111,9 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
 
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 
 }
 }
@@ -112,14 +122,12 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
 
 }
 
-<<<<<<< HEAD
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

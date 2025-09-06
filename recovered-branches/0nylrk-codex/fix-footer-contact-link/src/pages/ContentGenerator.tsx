@@ -1,32 +1,7 @@
 
-<<<<<<< HEAD
 
 
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -45,28 +20,8 @@ import {useAuth} from "@/hooks/useAuth";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {useNavigate} from "react-router-dom";
 export default function ContentGenerator() {;
-<<<<<<< HEAD
 
-import React, { useState } from 'react',
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { Button } from "@/components/ui/button",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Textarea } from "@/components/ui/textarea",
-import { Input } from "@/components/ui/input",
-import { Switch } from "@/components/ui/switch",
-import { Label } from "@/components/ui/label",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { toast } from "sonner",
-import { Loader2 } from "lucide-react",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { useNavigate } from "react-router-dom";
-export default function ContentGenerator() {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const { user, isLoading } = useAuth();
 
@@ -98,33 +53,9 @@ export default function ContentGenerator() {
     if (!isLoading && !user) {
       toast.error("You must be logged in to access this page");
       navigate("/login?redirect=/content-generator")
-<<<<<<< HEAD
-
-    }
-  }, [user, isLoading, navigate]);
-  const generateContent = async () => {
-    setIsGenerating(true);
-    setPreviewContent(null);
-    try {
-      const { data, error } = await supabase.functions.invoke('generate-content', {
-        body: {
-          contentType
-          prompt: customPrompt |undefined
-          topic: topic |undefined
-          autoPublish;
-          includeImage: contentType === 'blog' ? includeImage : false
-        }
-      });
 
 
-=======
 
-
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -194,19 +125,17 @@ export default function ContentGenerator() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       
       if (error) throw error,
       
       setPreviewContent(data),
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)
     } catch (error) {
       console.error("Error generating content:", error),
@@ -226,28 +155,9 @@ export default function ContentGenerator() {;
       toast.error("Generate newsletter content first");
       return
 
-<<<<<<< HEAD
-    }
-    try {
-      const { data, error } = await supabase.functions.invoke('send-newsletter', {
-        body: {
-          subject: previewContent.subject
-          previewText: previewContent.previewText
-          body: previewContent.body
-          testMode: true
-          testEmail
-        }
-      });
 
 
-=======
-  };
 
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }),;
       if (error) throw error,;
       setPreviewContent(data),;
@@ -285,17 +195,14 @@ export default function ContentGenerator() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-      
-      if (error) throw error,
-      
-=======
-      
-      if (error) throw error,
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+      
+      if (error) throw error,
+      
+
       toast.success(`Test newsletter sent to ${testEmail}!`)
     } catch (error) {
       console.error("Error sending test newsletter:", error),
@@ -374,12 +281,11 @@ export default function ContentGenerator() {;
                           id="includeImage";
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

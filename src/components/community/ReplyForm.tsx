@@ -8,56 +8,25 @@ import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 
 
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
-<<<<<<< HEAD
-
-
-  FormMessage,
-} from '@/components/ui/form'
-import { Card, CardContent } from '@/components/ui/card'
-
-import { useState } from "react",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage
-} from "@/components/ui/form",
-import { Card, CardContent } from "@/components/ui/card",
 
 
 
-
-
-
-=======
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
@@ -66,28 +35,16 @@ interface ReplyFormValues {
 
 
 
-<<<<<<< HEAD
-export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const form = useForm<ReplyFormValues>({
-    defaultValues: {
-      content: ''
-    }
-  })
-  const handleSubmit = async (values: ReplyFormValues) => {
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       content: '',;
     },;
   });
   const handleSubmit = async (values: ReplyFormValues) => {;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     setIsSubmitting(true);    try {
       await onSubmit(values.content)
       form.reset()
@@ -164,12 +121,12 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
     }
   },
 
-<<<<<<< HEAD
-=======
+
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
     <Card>
       <CardContent className="pt-6">
@@ -247,8 +204,10 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
       </CardContent>;
     </Card>);
 
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               )}
             />
             <div className="mt-4 flex justify-end">
@@ -263,14 +222,10 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
   )
 
 
+
 }
-<<<<<<< HEAD
-export default ReplyForm
 
 
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default ReplyForm;

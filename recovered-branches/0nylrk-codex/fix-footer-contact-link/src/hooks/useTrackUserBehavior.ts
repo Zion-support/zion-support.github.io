@@ -1,17 +1,16 @@
 
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 import {useRef, useEffect} from 'react';
 import {useAnalytics} from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const { trackEvent } = useAnalytics();
 
   const componentRef = useRef<HTMLDivElement>(null);
@@ -62,25 +61,9 @@ export function useTrackUserBehavior(componentName: string) {;
   }, [trackEvent, componentName]);
 
   return componentRef
-<<<<<<< HEAD
 
 
 
-=======
-
-import {useRef, useEffect} from 'react';
-import {use_analytics} from '@/context / AnalyticsContext';
-export /**
- * useTrackUserBehavior - Function description
- */
-function useTrackUserBehavior() {
-  const { track_event } = use_analytics ();
-  const component_ref = useRef < HTMLDivElement>(null);
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useRef, useEffect } from 'react',;
 import { useAnalytics } from '@/context/AnalyticsContext',;
 export function useTrackUserBehavior(componentName: string) {;
@@ -125,11 +108,11 @@ export function useTrackUserBehavior(componentName: string) {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;

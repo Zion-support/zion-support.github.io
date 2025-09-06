@@ -1,27 +1,18 @@
 
 
 
-<<<<<<< HEAD
-import React from "react",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { FraudFlag } from "@/types/fraud",
-import { SeverityDisplay } from "./SeverityDisplay",
-import { ActionButtons } from "./ActionButtons";
-import { EmptyFraudState } from "./EmptyFraudState";
-import { ActionButtons } from "./ActionButtons",
-import { EmptyFraudState } from "./EmptyFraudState",
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface FraudFlagsTableProps {
 
   flags: FraudFlag[]
@@ -32,14 +23,6 @@ interface FraudFlagsTableProps {
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
 
-
-<<<<<<< HEAD
-export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
-  flags;
-  isLoading;
-  hasFilters;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -88,11 +71,11 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   }
   if (flags.length === 0) {
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
@@ -149,6 +132,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
                   ? 'outline'
                   : 'default'
 
+
               }>
                 {flag.status}
               </Badge>
@@ -162,30 +146,16 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
             </TableCell>
           </TableRow>
         ))}
-<<<<<<< HEAD
-      </TableBody>
-    </Table>
-  )
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-      </TableBody>;
-    </Table>;
-  );
-=======
 
-
-=======
       </TableBody>;
     </Table>;
   );
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 };

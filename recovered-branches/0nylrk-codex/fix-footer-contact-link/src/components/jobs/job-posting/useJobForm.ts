@@ -1,15 +1,6 @@
 
-<<<<<<< HEAD
-=======
-import {useState, useEffect} from 'react';
-import {use_form} from 'react - hook - form';
-import { zod_resolver } from '@hookform / resolvers / zod';
-import {format} from 'date - fns';
-import { toast } from './sonner';
-import {use_navigate} from 'react-router-dom';
-import {job_schema, JobSchemaType} from './validation';
-import { use_auth } from '@/hooks / use_auth';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 import {useState, useEffect} from 'react';
@@ -29,12 +20,8 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
   const { user } = useAuth();
   const navigate = useNavigate();
 
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -45,13 +32,14 @@ import { jobSchema, JobSchemaType } from './validation',
 import { useAuth } from "@/hooks/useAuth",
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 export interface JobPostingProps {
   job_id?: string;
   on_success?: () => void;
@@ -145,80 +133,14 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       toast.error("You must be logged in to post a job"),
       navigate("/login"),
       return
-<<<<<<< HEAD
 
 
-import { useState, useEffect } from 'react',;
-import { useForm } from 'react-hook-form',;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { format } from 'date-fns',;
-import { toast } from "sonner",;
-import { useNavigate } from 'react-router-dom',;
-import { jobSchema, JobSchemaType } from './validation',;
-import { useAuth } from "@/hooks/useAuth",;
-export interface JobPostingProps {;
-  jobId?: string,;
-  onSuccess?: () => void;
-}
-;
-export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
-  const { user } = useAuth(),;
-  const navigate = useNavigate(),;
-  const [startDate, setStartDate] = useState<Date | undefined>(undefined),;
-  const [endDate, setEndDate] = useState<Date | undefined>(undefined),;
-  const [isRemote, setIsRemote] = useState(false),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null),;
-  const form = useForm<JobSchemaType>({;
-    resolver: zodResolver(jobSchema),;
-    defaultValues: {;
-      title: '',;
-      company: '',;
-      location: '',;
-      job_type: '',;
-      salary_range: '',;
-      description: '',;
-      responsibilities: '',;
-      qualifications: '',;
-      benefits: '',;
-      application_instructions: '',;
-      contact_email: '',;
-      published_date: '',;
-      expiry_date: '',;
-      is_remote: false,;
-      category: '',;
-      status: '',;
-      external_apply_link: ''},;
-    mode: "onChange"}),;
-  // Function to create/update jobs that will be implemented by parent component;
-  const submitJob = async (values: JobSchemaType) => {;
-    if (!user) {;
-      toast.error("You must be logged in to post a job"),;
-      navigate("/login"),;
-      return;
-    }
-;
-    setIsLoading(true),;
-    try {;
-      const publishedDate = startDate ? startDate.toString() : '',;
-      const expiryDate = endDate ? endDate.toString() : '',;
-      const jobData = {;
-        ...values,;
-        published_date: publishedDate,;
-        expiry_date: expiryDate,;
-        is_remote: isRemote,;
-        user_id: user.id},;
-      if (onSuccess) {;
-        onSuccess();
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       }
       return job_data;
     } catch (error: any) {
@@ -228,12 +150,9 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
 
-<<<<<<< HEAD
-      setIsLoading(false)
 
-=======
-;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
   return {
     form;
@@ -248,44 +167,13 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
     setIsRemote;
     initial_values;
     setInitialValues;
-<<<<<<< HEAD
 
-    submitJob
 
-;
-      return jobData;
-    } catch (error: any) {;
-      console.error("Error in job form submission:", error),;
-      toast.error(error.message || "Failed to process form"),;
-      throw error;
-    } finally {;
-      setIsLoading(false);
-    }
-  },;
-  return {;
-    form,;
-    isLoading,;
-    startDate,;
-    setStartDate,;
-    endDate,;
-    setEndDate,;
-    isRemote,;
-    setIsRemote,;
-    initialValues,;
-    setInitialValues;
-    submitJob;
 
     submit_job;
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-    submit_job;
-=======
-      setIsLoading(false)
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
 };

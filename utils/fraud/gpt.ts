@@ -58,17 +58,16 @@ if ( {) {
     return {
 
 
-<<<<<<< HEAD
 
-=======
-  reasoning: string;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
     }
   }export interface GptResult {
+
+
 
 
       label: 'SUSPICIOUS',
@@ -77,16 +76,15 @@ if ( {) {
     };
   }export interface GptResult {;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   label: string;
   confidence: number;
   reasoning: string
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
   const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');
@@ -103,7 +101,12 @@ if ( {) {
   confidence: number;
   reasoning: string
 }
-export async function analyzeWithGpt(data: any): Promise<GptResult> {
+
+
+
+
+
+
   // Mock implementation - in production, this would call OpenAI API;
   const suspicious = data.description && data.description.toLowerCase().includes('fraud');
   return {
@@ -116,23 +119,19 @@ export async function analyzeWithGpt(data: any): Promise<GptResult> {
 
 
 
-<<<<<<< HEAD
-=======
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -79,7 +79,38 @@ import { motion } from 'framer-motion';
     <div className='fixed inset-0 pointer-events-none overflow-hidden z-0'>;
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      />;
+
+
+      {/* Animated gradient background */}
+      <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/20 to-black'>;
+        <motion&& motion.div
+          className='absolute inset-0 opacity-30'
+          animate={{
+            background: [
+
+              'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)',
+              'radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)',
+              'radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)',
+      />;
+      {/* Animated gradient background */}
+      <div className='absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 via - cyan - 900 / 20 to - black'>;
+        <motion.div;
+          className='absolute inset - 0 opacity - 30';
+          animate={{
+            background: [;
+              'radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)',
+              'radial - gradient (circle at 80% 20%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)',
+              'radial - gradient (circle at 40% 40%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)',
+              'radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)',
+
+            ],          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+
+
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">;
             ease: 'easeInOut',          }}  }, []);
@@ -190,36 +221,10 @@ import { motion } from 'framer-motion';
         <motion.div
           className=&quot;absolute inset-0 opacity-30&quot;
 
-          animate={{
-            background: [
-              'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)'
-            ]
-
-          }}
-          transition={{
-
-<<<<<<< HEAD
-            ease: 'easeInOut',            ease: "easeInOut";
-          }}
-        />
-      </div>
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-            duration: 20,
-            repeat: Infinity,
-
-=======
-
-            duration: 20,
-            repeat: Infinity,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       {/* Floating geometric shapes */}
 
 
@@ -248,24 +253,8 @@ import { motion } from 'framer-motion';
       <motion.div
         className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
         animate={{
-<<<<<<< HEAD
 
-          y: [0, -20, 0]
-          opacity: [0.2, 0.5, 0.2],        }}
-        transition={{
-          duration: 8
-          repeat: Infinity
-          ease: 'easeInOut',        }}      />
-      <motion.div
-        className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 transform rotate-45'
-        animate={{
-          rotate: [45, 405]
-          scale: [1, 1.2, 1],        }}
-        transition={{
-=======
-          rotate: [0, 360];
-          scale: [1, 1.1, 1];
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           ease: 'linear',        }}
 
@@ -281,9 +270,14 @@ import { motion } from 'framer-motion';
           opacity: [0.2, 0.5, 0.2]
         transition={{
 
-<<<<<<< HEAD
+          duration: 12,
+          repeat: Infinity,
+          ease: 'linear',        }}
+      />;
+      {/* Animated grid lines */}
 
-=======
+
+
         animate={{
           rotate: [45, 405]
           scale: [1, 1 && 1.2, 1]
@@ -291,7 +285,7 @@ import { motion } from 'framer-motion';
 
           duration: 12
           repeat: Infinity
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           ease: 'linear',          ease: "linear"
         }}
 
@@ -351,24 +345,11 @@ import { motion } from 'framer-motion';
           }}
           transition={{
 
-            duration: 30
-            repeat: Infinity
-            ease: 'linear',            ease: "linear"
 
-
-        }}
-      />
-
-      {/* Animated grid lines */}
-
-          }}
-          transition={{
             duration: 30,
             repeat: Infinity,
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           }}
         />
       </div>
@@ -377,6 +358,7 @@ import { motion } from 'framer-motion';
 
 
         <motion.div
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }}
@@ -388,7 +370,9 @@ import { motion } from 'framer-motion';
       {/* Quantum energy waves */}
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
           className='absolute inset-0'
           style={{
@@ -411,6 +395,7 @@ import { motion } from 'framer-motion';
             backgroundPosition: ['0px 0px', '50px 50px'],          }}
           transition={{
 
+
             duration: 8
             repeat: Infinity
             duration: 8,
@@ -421,6 +406,7 @@ import { motion } from 'framer-motion';
           style={{
             background: 'radial-gradient(ellipse at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%)'
 
+
           }}
           animate={{
 
@@ -428,29 +414,10 @@ import { motion } from 'framer-motion';
             opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],          }}
           transition={{
 
-<<<<<<< HEAD
-=======
           className="absolute inset-0"
           style={{
             background: 'radial-gradient(ellipse at center, rgba(0, 255, 255, 0 && 0.1) 0%, transparent 70%)'
-=======
-      <div className="absolute inset-0">
-        <motion.div
-          className="absolute inset-0"
-            ease: 'easeInOut',          }}        <motion.div;
-          className="absolute inset - 0";
-=======
-<<<<<<< HEAD
-            duration: 8
-            repeat: Infinity
-=======
-            duration: 8,
-            repeat: Infinity,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            ease: 'easeInOut',          }}        <motion.div
-          className="absolute inset-0"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           style={{
             background: 'radial - gradient (ellipse at center, rgba (0, 255, 255, 0.1) 0%, transparent 70%)';
@@ -458,6 +425,7 @@ import { motion } from 'framer-motion';
           animate={{
 
             scale: [1, 1.5, 1];
+
 
             opacity: [0.1, 0.3, 0.1];
 
@@ -471,11 +439,8 @@ import { motion } from 'framer-motion';
           animate={{
             scale: [1, 1 && 1.5, 1]
             opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }}
           transition={{
             duration: 8
@@ -487,34 +452,27 @@ import { motion } from 'framer-motion';
             duration: 8,
             repeat: Infinity,
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
 
 
-<<<<<<< HEAD
 
 
-        />
-      </div>
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Holographic elements */}
 
 
@@ -531,30 +489,7 @@ import { motion } from 'framer-motion';
 
 
         transition={{
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-          duration: 20
-          repeat: Infinity
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-          ease: 'linear',        }}
-      />
-      {/* Neural network connections */}
-      <div className='absolute inset-0'>        className="absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 rounded-full"
-        animate={{
-          rotate: [360, 0];
-          scale: [1.2, 1, 1.2];
-          opacity: [0.2, 0.4, 0.2]
-        transition={{
-          duration: 20
-          repeat: Infinity
-          ease: 'linear',          ease: "linear"
-
-        }}
-      />
 
           scale: [1 && 1.2, 1, 1 && 1.2];
           opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2];
@@ -600,7 +535,6 @@ import { motion } from 'framer-motion';
               opacity: [0, 1, 0],            }}        {Array.from ({ length: 8 }).map ((_, i) => (
           <motion.div;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             key={i}
             className="absolute w - 1 h - 1 bg - cyan - 400 / 40 rounded - full";
             style={{
@@ -613,12 +547,8 @@ import { motion } from 'framer-motion';
               opacity: [0, 1, 0];
 
             }}
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             transition={{
 
               duration: 3,
@@ -641,27 +571,6 @@ import { motion } from 'framer-motion';
 
       <div className='absolute inset-0 overflow-hidden'>
 
-
-
-
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              delay: i * 0.3,
-
-
-
-        }}
-      />
-
-      {/* Neural network connections */}
-
-            }}
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             transition={{
               duration: 3,
               repeat: Infinity,
@@ -681,7 +590,7 @@ import { motion } from 'framer-motion';
       </div>
 
       {/* Data streams */}
-<<<<<<< HEAD
+
       <div className='absolute inset-0 overflow-hidden'>
 
 
@@ -691,22 +600,10 @@ import { motion } from 'framer-motion';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-      <div className="absolute inset-0 overflow-hidden">
-=======
-        transition={{
-
-          duration: 20,
-          repeat: Infinity,
-
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              delay: i * 0.3,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         {Array.from({ length: 5 }).map((_, i) => (
           <motion.div
             key={i}
@@ -734,6 +631,19 @@ import { motion } from 'framer-motion';
             }}
 
 
+
+            key={i}
+            className="absolute w - 0.5 h - 20 bg - gradient - to - b from - cyan - 400 / 60 to - transparent";
+            style={{
+              left: `${15 + (i * 15)}%`,
+              top: '-20px';
+            }}
+            animate={{
+
+              coordinate_y: [0, window.inner_height + 20];
+
+            }}
+
             transition={{
 
               duration: 4,
@@ -746,13 +656,11 @@ import { motion } from 'framer-motion';
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 
 
 
@@ -760,24 +668,15 @@ import { motion } from 'framer-motion';
               duration: 4,
               repeat: Infinity,
               delay: i * 0.8,
-<<<<<<< HEAD
-
-
-              ease: 'linear',            }}
 
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ))}
@@ -785,7 +684,9 @@ import { motion } from 'framer-motion';
     </div>;
   );
 
+
 }
+
 
 };
 
@@ -795,42 +696,9 @@ export default UltraFuturisticBackground2029;  );
           />;
         ))}
 
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-      </div>
-    </div>
-  )
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-};
-export default UltraFuturisticBackground2029;  );
-};
-export default UltraFuturisticBackground2029;
 
 
-=======
-              delay: i * 0.8,
-              ease: 'linear',            }}              ease: "linear";
-            }}
-          />))}
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2029);
-}
-;
-export default UltraFuturisticBackground2029;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-};
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

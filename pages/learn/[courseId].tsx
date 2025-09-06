@@ -1,32 +1,5 @@
-<<<<<<< HEAD
 
 
-  const router = useRouter();
-  const { courseId } = router.query as { courseId: string }
-  const [course, setCourse] = useState<any>(null);
-  const [progress, setProgress] = useState<any>({
-    percent: 0
-    completedLessons: []
-  });  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
-  const [finalPassed, setFinalPassed] = useState(false);
-  useEffect(() => {
-    if (!courseId) return;
-    async function load() {
-      const [courseResp, progResp] = await Promise.all([
-        fetch(`/api/learn/courses/${courseId}`)
-        fetch(`/api/learn/progress?userId=demo-user`),      ]);
-      const courseData = await courseResp.json();
-      const progData = await progResp.json();
-      setCourse(courseData.course);
-      const cp = (progData.progress && progData.progress[courseId]) |{
-        percent: 0
-        completedLessons: []
-      }
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       setProgress(cp);
       setCurrentLessonId(courseData?.course?.lessons?.[0]?.id |null);
     }
@@ -35,6 +8,63 @@
 
   async function onFinalQuizComplete(score: number) {
     const needed = course?.finalQuiz?.passThreshold |0;
+
+
+  const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]);
+
+  async function markLessonComplete(lessonId: string) {
+    const completedCount = (progress.completedLessons || []).includes(lessonId)
+      ? (progress.completedLessons || []).length
+      : (progress.completedLessons || []).length + 1;
+    const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100);
+    const resp = await fetch('/api/learn/progress', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId: 'demo-user', courseId, lessonId, percent })
+    });
+    const data = await resp.json();
+    setProgress(data.progress)
+  }
+
+  function onModuleQuizComplete(score: number) {
+    // For demo, simply mark as completed when quiz attempted
+    if (currentLessonId) markLessonComplete(currentLessonId)
+  }
+
+  async function onFinalQuizComplete(score: number) {
+    const needed = course?.finalQuiz?.passThreshold || 0;
+    const passed = score >= needed;
+    setFinalPassed(passed)
+  }
+
+
+  const currentLesson = useMemo(;
+    () => course?.lessons?.find((l: any) => l && l.id === currentLessonId),;
+    [course, currentLessonId];
+  );
+  async function markLessonComplete(): any (lessonId: string) {;
+    const completedCount = (progress && progress.completedLessons || []).includes(lessonId);
+      ? (progress && progress.completedLessons || []).length;
+      : (progress && progress.completedLessons || []).length + 1;
+    const percent = Math && Math.round(;
+      (completedCount / (course?.lessons?.length || 1)) * 100;
+    );
+    const resp = await fetch('/api/learn/progress', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON && JSON.stringify({;
+        userId: 'demo-user',;
+        courseId,;
+        lessonId,;
+        percent,;
+      }),;
+    });
+    const data = await resp && resp.json();
+    setProgress(data && data.progress);  }
+
+  function onModuleQuizComplete(): any (score: number) {;
+    // For demo, simply mark as completed when quiz attempted;
+    if (currentLessonId) markLessonComplete(currentLessonId);  }
 
 
   async function onFinalQuizComplete(): any (score: number) {;
@@ -46,6 +76,8 @@
   if (!course) return <div>Loading...</div>;
 
 
+
+
   return (
 
                   <button
@@ -55,103 +87,10 @@
                   </button>;
                 </li>;
 
-<<<<<<< HEAD
-
-=======
-=======
-    <div className="grid lg:grid-cols-3 gap-6">
-      <div className="lg:col-span-2 space-y-4">
-        <div>
-=======
-
-import {useEffect, useMemo, useState} from 'react';
-import {useRouter} from 'next/router';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-import { useEffect, useMemo, useState } from 'react';
-import { useRouter } from 'next/router';
-
-import ProgressBar from '../../components/learn/ProgressBar';
-import Quiz from '../../components/learn/Quiz';
-import CertificatePreview from '../../components/learn/CertificatePreview';
-import CoachWidget from '../../components/learn/CoachWidget';
-
-<<<<<<< HEAD
-export default function CourseView(req, res) {
-  try {
-  const router = useRouter();
-  const { courseId } = router.query as { courseId: string };
-  const [course, setCourse] = useState<any>(null);
-  const [progress, setProgress] = useState<any>({ percent: 0, completedLessons: [] }),;
-  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
-  const [finalPassed, setFinalPassed] = useState(false);
-  useEffect(() => {;
-    if (!courseId) return,;
-    async function load() {;
-      const [courseResp, progResp] = await Promise.all([;
-        fetch(`/api/learn/courses/${courseId}`);
-        fetch(`/api/learn/progress?userId=demo-user`);
-      ]),;
-      const courseData = await courseResp.json();
-      const progData = await progResp.json();
-      setCourse(courseData.course);
-      const cp = (progData.progress && progData.progress[courseId]) || { percent: 0, completedLessons: [] },;
-      setProgress(cp);
-      setCurrentLessonId(courseData?.course?.lessons?.[0]?.id || null);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    load();
-  }, [courseId]),;
-  const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]),;
-  async function markLessonComplete(lessonId: string) {;
-    const completedCount = (progress.completedLessons || []).includes(lessonId);
-      ? (progress.completedLessons || []).length;
-      : (progress.completedLessons || []).length + 1;
-    const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100);
-    const resp = await fetch('/api/learn/progress', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON.stringify({ userId: 'demo-user', courseId, lessonId, percent });
-    }),;
-    const data = await resp.json();
-    setProgress(data.progress);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  function onModuleQuizComplete(score: number) {;
-    // For demo, simply mark as completed when quiz attempted;
-    if (currentLessonId) markLessonComplete(currentLessonId);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  async function onFinalQuizComplete(score: number) {;
-    const needed = course?.finalQuiz?.passThreshold || 0;
-    const passed = score >= needed;
-    setFinalPassed(passed);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  if (!course) return <div>Loading...</div>,
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">
@@ -167,7 +106,7 @@ export default function CourseView(req, res) {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
+
         <div className='grid lg:grid-cols-5 gap-4'>
           <aside className='lg:col-span-2 border rounded p-3 h-max'>
             <div className='font-medium mb-2'>Lessons</div>
@@ -192,47 +131,7 @@ export default function CourseView(req, res) {
           </div>
         </div>
 
-        <div className='grid lg:grid-cols-5 gap-4'>
-          <aside className='lg:col-span-2 border rounded p-3 h-max'>
-            <div className='font-medium mb-2'>Lessons</div>
-            <ul className='space-y-2'>
-              {course.lessons?.map((l: any) => (
-                <li key={l.id}>
 
-                  <button className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick={() => setCurrentLessonId(l.id)}>
-                    {l.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-=======
-
-
-            </ul>;
-          </aside>;
-          <section className='lg:col-span-3 space-y-4'>;
-            {currentLesson ? (;
-              <div className='border rounded p-4'>;
-                <div className='font-medium'>{currentLesson && currentLesson.title}</div>;
-                <div className='mt-2 text-sm whitespace-pre-line'>;
-                  {currentLesson && currentLesson.content}
-                </div>;
-                {currentLesson && currentLesson.quiz?.questions?.length ? (;
-                  <div className='mt-4'>;
-
-                    <Quiz
-                      questions={currentLesson && currentLesson.quiz.questions}
-                      onComplete={onModuleQuizComplete}
-                    />;
-                  </div>;
-                ) : (;
-                  <button
-                    className='mt-3 px-4 py-2 bg-green-600 text-white rounded'
-                    onClick={() => markLessonComplete(currentLesson && currentLesson.id)}
-                  >;
-                    Mark Complete;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </button>;
                 </li>;
               ))  } catch (error) {
@@ -240,16 +139,7 @@ export default function CourseView(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-            </ul>
-          </aside>
-          <section className="lg:col-span-3 space-y-4">
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
     async /**
  * load - Function description
  */
@@ -398,12 +288,9 @@ if (return <div > Loading...</div>) {
       </div>;
 
 
-=======
 
-          <section className="lg:col-span-3 space-y-4">
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             {currentLesson ? (
               <div className="border rounded p-4">
                 <div className="font-medium">{currentLesson.title}</div>
@@ -467,15 +354,17 @@ if (return <div > Loading...</div>) {
       <div className="space-y-4">
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         <CoachWidget />
         <div className="border rounded p-3">
           <div className="font-medium">Profile Boost</div>
@@ -485,37 +374,15 @@ if (return <div > Loading...</div>) {
       </div>
     </div>
 
-<<<<<<< HEAD
-);
-
-  )
-}
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
 
 
-}
-
-=======
-
-  )
-}
-
-    </div>);
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

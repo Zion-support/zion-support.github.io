@@ -12,6 +12,7 @@ import Layout from './components/Layout';
 origin/automation-improvements-final
 import {
 
+
   Mail,
   Lock,
   Eye,
@@ -186,19 +187,11 @@ import {
   TiredFace2,
   SleepyFace2,
   YawningFace2,
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  DizzyFace2,
-=======
-  DizzyFace2,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 } from "lucide-react";
   DizzyFace2
 } from 'lucide-react';
@@ -380,12 +373,8 @@ origin/automation-improvements-final
   YawningFace2
   DizzyFace2
 } from "lucide-react";
-<<<<<<< HEAD
 
-export default function LoginPage() {
-  const [formData, setFormData] = useState({
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   });
   const [showPassword, setShowPassword] = useState(false);
@@ -413,10 +402,8 @@ origin/automation-improvements-final
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     setError("");
     try {
       // Simulate API call

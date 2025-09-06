@@ -1,19 +1,6 @@
 
-<<<<<<< HEAD
-=======
-import { Badge  } from '@/components / ui / badge';
-import { Button  } from '@/components / ui / button';
-import { Trash2  } from './lucide-react';
-import { SkillItemProps  } from './types';
-export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: any {
 
-  return (
-    <Badge;
-      key={skill.id}
 
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import {Badge} from '@/components/ui/badge';
@@ -22,11 +9,8 @@ import {Trash2} from 'lucide-react';
 import {SkillItemProps} from './types';
 
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import { Badge } from '@/components/ui/badge',
 import { Button } from '@/components/ui/button',
 import { Trash2 } from 'lucide-react',
@@ -34,11 +18,11 @@ import { SkillItemProps } from './types',
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -61,48 +45,13 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
       </Button>
     </Badge>
   );
-<<<<<<< HEAD
-
-}
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-  )
-},
-
-<<<<<<< HEAD
-};
-  )
-},
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-      variant="secondary";
-      className="flex items - center gap - 1 py - 1.5 px - 3";
-    >;
-      {skill.name}
-      {skill.proficiency && (
-        <span className="ml - 1 text - xs opacity - 60">({skill.proficiency}/5)</span>)}
-      <Button;
-        variant="ghost";
-        size="icon";
-        className="h - 5 w - 5 p - 0 ml - 1";
-        on_click={() => on_delete (skill.id!, category)}
-      >;
-        <Trash2 className="h - 3 w - 3" />;
-      </Button>;
-    </Badge>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

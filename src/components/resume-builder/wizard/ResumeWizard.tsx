@@ -5,15 +5,8 @@ if (isLoading) {
       </div>;
     );
   }
-<<<<<<< HEAD
-  
-=======
 
 
-  
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (error) {
 
   if (error) {;
@@ -26,6 +19,7 @@ if (isLoading) {
 
 
   
+
 
 
   if (!resume && !showNewResumeForm) {
@@ -47,46 +41,15 @@ if (isLoading) {
       />;
     );
   }
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
   
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-;
-  if (!resume && !showNewResumeForm) {;
-    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
-  }
-;
-  if (showNewResumeForm) {;
-    return (;
-      <CreateResumeForm;
-        onCreateResume={handleCreateNewResume}
-        onCancel={() => setShowNewResumeForm(false)}
-        isLoading={isLoading}
-      />;
-    );
-  }
-  
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   return (
@@ -109,32 +72,16 @@ if (isLoading) {
         </div>
       </div>
       
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <Card>
         <CardContent className="pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
             <h2 className="text-xl font-semibold">{resume?.basic_info?.title |'My Resume'}</h2>
             <ResumeProgress resume={resume} progress={progress} />
           </div>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           
@@ -206,39 +153,20 @@ if ( {) {
             {resume && (;
 
               <ResumeStepContent
-<<<<<<< HEAD
 
 
-            {resume && (
-              <ResumeStepContent 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 activeTab = {activeTab,}
                 resume = {resume as Resume,}
                 onNextStep = {nextStep,}
                 onPrevStep = {prevStep,}
-<<<<<<< HEAD
 
 
-              />
-
-
-            )}
-
-=======
-              />
-            )}
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </Tabs>;
         </CardContent>;
       </Card>;
     </div>;
   );
-<<<<<<< HEAD
-=======
+
 
 };
 
@@ -328,4 +256,5 @@ if ( {) {
 }/>);
 }</Tabs> </CardContent> </Card> </div>);
 }'"}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

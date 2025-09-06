@@ -1,36 +1,17 @@
 
-<<<<<<< HEAD
 
 
-import React from "react",
-import { Apple, GithubIcon } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Apple, GithubIcon } from "lucide-react",
-import { cn } from "@/lib/utils",
-=======
-import React from "react";
-import {Apple, GithubIcon} from "lucide-react";
-import {cn} from "@/lib/utils";
-interface AppStoreButtonsProps {;
-
-  className?: string;
-=======
-import React from './react';
-import { Apple, GithubIcon } from './lucide-react';
-import { cn } from '@/lib / utils';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 interface AppStoreButtonsProps {
   class_name?: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -85,30 +66,9 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
 
 
   return (
-<<<<<<< HEAD
-
-    <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
-      <a
-        href={appStoreUrl}
-        className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
-        onClick={handleAppStoreClick}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Apple className="h-8 w-8 mr-3" />
-        <div>
-          <div className="text-xs">Download on the</div>
-          <div className="text-xl font-semibold">App Store</div>
-        </div>
-      </a>
-
-
-=======
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       </Link>
 
       <a 
@@ -137,13 +97,9 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   )
 
 
-<<<<<<< HEAD
 
-=======
-};
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 },
 import React from "react",;
 import { Apple, GithubIcon } from "lucide-react",;
@@ -217,15 +173,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
   );
 };
 
-<<<<<<< HEAD
-export default AppStoreButtons;
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-=======
 export const AppStoreButtons: React.FC < AppStoreButtonsProps> = ({
   class_name;
   appStoreUrl = "#";
@@ -296,11 +244,7 @@ if ( {) {
 }
 ;
 
-=======
-
-export default AppStoreButtons;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

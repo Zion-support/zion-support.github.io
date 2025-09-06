@@ -1,29 +1,19 @@
 
-<<<<<<< HEAD
-
-import React from "react";
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
 
-=======
-import React from "react",
-import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 const features = [
   {
     title: "Private Hiring Portal"
@@ -53,8 +43,7 @@ const features = [
   {
 
 
-<<<<<<< HEAD
-=======
+
 export function EnterpriseFeatures() {
   return (
     <section className="py-20 px-4 md:px-6 bg-muted/50">
@@ -82,37 +71,7 @@ export function EnterpriseFeatures() {
 
 };
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-import React from "react",;
-import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",;
 
-const features = [;
-  {;
-    title: "Private Hiring Portal",;
-    description: "Create a secure, private hiring portal accessible only to your team members.";
-    icon: Shield},;
-  {;
-    title: "Dedicated Talent Pool",;
-    description: "Access to a curated pool of pre-vetted talent matched to your industry and needs.",;
-    icon: Users},;
-  {;
-    title: "Custom SLA",;
-    description: "Get guaranteed response times and dedicated support with our custom SLAs.",;
-    icon: Award},;
-  {;
-    title: "Branded Onboarding",;
-    description: "Customize the onboarding experience with your company branding and messaging.",;
-    icon: Briefcase},;
-  {;
-    title: "Admin Dashboards",;
-    description: "Powerful analytics and management tools for team leaders and administrators.",;
-    icon: Settings},;
-  {;
-    title: "Global Access",;
-    description: "Connect with talent across multiple regions with localized interfaces.",;
-    icon: Globe}],;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 export function EnterpriseFeatures() {;
   return (
@@ -130,19 +89,8 @@ export function EnterpriseFeatures() {;
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
 
-<<<<<<< HEAD
-=======
-=======
-          {features.map((feature) => (;
-            <div;
-}
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-<<<<<<< HEAD
-=======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

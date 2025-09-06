@@ -37,10 +37,8 @@ export function AppSidebar() {
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 import {;
@@ -137,7 +135,9 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-reac
     </Sidebar>;
   );
 
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 }
   );
 }

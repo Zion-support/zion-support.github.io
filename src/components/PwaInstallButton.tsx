@@ -5,8 +5,7 @@ const in_standalone = window.match_media ('(display - mode: standalone)').matche
     const inStandalone = window.matchMedia('(display-mode: standalone)').matches,
         description: 'Your browser does not support app installation.'}),
       return;
-<<<<<<< HEAD
-=======
+
 
 import React, { useEffect, useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -74,4 +73,5 @@ export const PwaInstallButton: React.FC = () => {;
 },
 
 export default PwaInstallButton,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

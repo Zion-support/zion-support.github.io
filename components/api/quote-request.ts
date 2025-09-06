@@ -69,15 +69,11 @@ export default async function handler(
               .filter(Boolean)
           : [];
       }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
 
-=======
+
+
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import { create_client  } from '@supabase / supabase - js';
@@ -149,7 +145,7 @@ if ( {) {
               .filter (Boolean);
           : [];
       }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       let saved: any = null;
       // Check condition
 if ( {) {
@@ -187,28 +183,18 @@ if (throw error) {
 
 
 
+
   }
 }
-<<<<<<< HEAD
 
-    return res
-      .status(200)
-      .json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id });
-  } catch (e: any) {
-    console.error('quote-request error', e);
-    return res.status(500).json({ message: 'Server error' });
-  }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+

@@ -60,10 +60,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   } else {
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
   }
   const navItems = [
@@ -122,68 +120,53 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       name: "Home",
       href: "/",
       icon: Home,
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     {
       name: "Browse",
       href: "/talent",
       icon: Search,
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       name: "Community",
       href: "/community",
       icon: MessageCircle,
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       name: "Wishlist",
       href: "/wishlist",
       icon: Heart,
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     },
     {
       name: "Messages",
       href: "/messages",
       icon: MessageSquare,
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     },
     {
       name: "Cart",
       href: "/cart",
       icon: ShoppingCart,
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       name: "Dashboard",
       href: "/dashboard",
       icon: User,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">
@@ -330,32 +313,9 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
               {item.badge && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">;
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                  {item.badge > 9 ? '9+' : item.badge}
-                </span>
-              )}
-            </div>;
-            <span className='hidden sm:block text-xs font-medium'>;
-              {item && item.name}
-            </span>;
-          </Link>;
-        ))}
-<<<<<<< HEAD
-
-
-      </div>
-    </nav>
-  )
-}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 ;
@@ -366,8 +326,7 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
     </nav>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
 
 
@@ -444,4 +403,5 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
     </nav>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

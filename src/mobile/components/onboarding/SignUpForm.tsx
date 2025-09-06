@@ -12,10 +12,8 @@ import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function SignUpForm() {
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 ;
 import { use_router } from 'next / router';
@@ -36,12 +34,11 @@ function SignUpForm() {
     email: "",
     password: "",
     name: ""}),
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     }
     if (!formData.email.trim()) {
       errors.email = 'Email is required'
@@ -54,7 +51,7 @@ function SignUpForm() {
       errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
     }
 
-<<<<<<< HEAD
+
 
   const [is_loading, setIsLoading] = useState (false);
   const [signup_mode, setSignupMode] = useState (true);
@@ -111,8 +108,9 @@ export function SignUpForm() {
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors)
       setIsLoading(false)
@@ -125,13 +123,8 @@ export function SignUpForm() {
           name: formData.name})
         if (result?.error) {
           throw new Error(result.error as any), // Cast to any if type is AuthError
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     if (Object.keys(errors).length > 0) {;
       setFieldErrors(errors),;
@@ -146,13 +139,8 @@ export function SignUpForm() {
           name: formData.name}),;
         if (result?.error) {;
           throw new Error(result.error as any), // Cast to any if type is AuthError;
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         }
 
         if (result?.emailVerificationRequired) {
@@ -176,56 +164,14 @@ export function SignUpForm() {
         router.push("/mobile")
 ;
         router.push("/mobile");
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
     } catch (err: any) {
       logErrorToProduction('Signup/Login error:', { data: err })
       setError(err.message |'An unexpected error occurred. Please try again.')
-<<<<<<< HEAD
 
 
-        router.push ("/mobile");
-      }
-    } catch (err: any) {
-      logErrorToProduction ('Signup / Login error:', { data: err }),
-      set_error (err.message || 'An unexpected error occurred. Please try again.');
-    } finally {
-      setIsLoading (false);
-    }
-
-  const router = useRouter();
-  const { signUp, login, loginWithGoogle } = useAuth();
-
-  const [formData, setFormData] = useState({;
-    email: "",;
-    password: "",;
-    name: ""}),;
-  const [isLoading, setIsLoading] = useState(false);
-  const [signupMode, setSignupMode] = useState(true);
-  const [error, setError] = useState("");
-  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({});
-  const [showVerificationMessage, setShowVerificationMessage] = useState(false);
-
-  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    const { name, value } = e && e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    setError("");    setFieldErrors(prev => ({ ...prev, [name]: "" }));
-
-
-
-
-
-=======
-    } finally {
-      setIsLoading(false)
-    }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   };
   const handleGoogleLogin = async () => {;
     try {;
@@ -239,10 +185,8 @@ export function SignUpForm() {
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">
@@ -265,15 +209,9 @@ export function SignUpForm() {
           </svg>
           Continue with Google
         </Button>
-<<<<<<< HEAD
-=======
 
 
-        <Button 
-          variant="outline" 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -341,11 +279,11 @@ export function SignUpForm() {
 
 
       
-<<<<<<< HEAD
-=======
+
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -353,11 +291,8 @@ export function SignUpForm() {
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       )}
       
 
@@ -382,12 +317,11 @@ export function SignUpForm() {
               required;
               aria-invalid={!!fieldErrors.name}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
               placeholder="Enter your full name"
             />
             {fieldErrors.name && (
@@ -400,7 +334,10 @@ export function SignUpForm() {
 
 
 
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
 
 
               placeholder="Enter your full name"
@@ -428,18 +365,8 @@ export function SignUpForm() {
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.email}
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             placeholder="Enter your email"
           />;
           {fieldErrors && fieldErrors.email && (;
@@ -463,18 +390,8 @@ export function SignUpForm() {
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.password}
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             placeholder="Create a password"
           />;
           <PasswordStrengthMeter password={formData && formData.password} />;
@@ -488,41 +405,9 @@ export function SignUpForm() {
 
         
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-        <Button
-          type="submit"
-          className="w-full py-6"
-          disabled = {isLoading,}>;
-          {isLoading ? (;
-            <>;
-              <LoadingSpinner size="sm" className="mr-2" />;
-              Please wait...;
-            </>;
-          ) : (;
-            signupMode ? "Create Account" : "Sign In";
-          )}
-        </Button>
-      </form>
-      
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <p className="text-center text-sm">
         {signupMode
           ? "Already have an account? "

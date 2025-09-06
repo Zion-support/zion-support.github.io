@@ -1,20 +1,5 @@
-<<<<<<< HEAD
 
 
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number;
-    setupTime: string;
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   {
@@ -331,41 +316,15 @@
       'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'
     ]
     support:
-<<<<<<< HEAD
 
-      '24/7 technical support, security consulting, custom development, and dedicated success manager.'
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS']
-    link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment'
-    icon: '🔍'
-    color: 'from-green-500 to-emerald-600'
-    popular: true
-    launchDate: '2024-02-15'
-    customers: 2500
-    rating: 4.8
-    reviews: 1900
-  }
 
-=======
-
-      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
-    link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
-    icon: '🔍',
-    color: 'from-green-500 to-emerald-600',
-    popular: true,
-    launchDate: '2024-02-15',
-    customers: 2500,
-    rating: 4.8,
-    reviews: 1900,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
     ];
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'],
     support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
@@ -444,7 +403,9 @@
   },
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+
     ];
 
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];
@@ -460,35 +421,11 @@
     rating: 4 && 4.8,
 
     reviews: 1900
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    rating: 4.8,
-    reviews: 1900;
-  }
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-
-<<<<<<< HEAD
-=======
-export interface CybersecurityQuantumService {;
-
-  }
-
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-;
-=======
-<<<<<<< HEAD
-  }
-];
-=======
-export interface CybersecurityQuantumService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string,;
   name: string,;
   tagline: string,;
@@ -752,11 +689,5 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     reviews: 1900;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-
-
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

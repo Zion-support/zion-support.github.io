@@ -1,26 +1,14 @@
 
-<<<<<<< HEAD
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import {corsHeaders} from "../_shared/cors.ts";
 console.log("Track Referral function started!");
-=======
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.131.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.20.0",
 import {corsHeaders} from "../_shared/cors ;
 console && console.log("Track Referral function started!");
-=======
 
-
-import {serve} from "https: //deno.land/std@0.131.0/http/server.ts",
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.20.0",;
-
-import {corsHeaders} from "../_shared/cors.ts";
-console.log("Track Referral function started!");
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { serve } from "https: //deno.land/std@0.131.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.20.0",
 import { corsHeaders } from "../_shared/cors.ts",
@@ -28,7 +16,10 @@ import { corsHeaders } from "../_shared/cors.ts",
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 
 
@@ -89,23 +80,21 @@ serve(async (req) => {;
       return new Response(;
         JSON.stringify({ error: 'Invalid referral code' }),;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
       )
     }
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
     // Check if this user has already been referred
     const { data: existingReferral } = await supabase
       .from('referrals')
@@ -116,10 +105,8 @@ serve(async (req) => {;
       return new Response(
 
         JSON.stringify({ message: 'User already has a referral' });
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 ;
     // Check if this user has already been referred;
     const { data: existingReferral } = await supabase;
@@ -130,8 +117,6 @@ serve(async (req) => {;
     if (existingReferral) {;
       return new Response(;
         JSON.stringify({ message: 'User already has a referral' }),;
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -142,8 +127,8 @@ serve(async (req) => {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
@@ -151,9 +136,10 @@ serve(async (req) => {;
     }
 
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
     // Create the referral record
     const { data, error } = await supabase
       .from('referrals')
@@ -171,10 +157,8 @@ serve(async (req) => {;
       return new Response(
 
         JSON.stringify({ error: 'Failed to create referral' });
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 ;
     // Create the referral record;
     const { data, error } = await supabase;
@@ -192,8 +176,6 @@ serve(async (req) => {;
       console.error('Error creating referral:', error),;
       return new Response(;
         JSON.stringify({ error: 'Failed to create referral' }),;
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -204,8 +186,8 @@ serve(async (req) => {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
@@ -213,9 +195,10 @@ serve(async (req) => {;
     }
 
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
     return new Response(
       JSON && JSON.stringify({ success: true, data });
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
@@ -225,10 +208,8 @@ serve(async (req) => {;
     return new Response(
 
       JSON.stringify({ error: 'Internal server error' });
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 ;
     return new Response(;
       JSON.stringify({ success: true, data }),;
@@ -240,15 +221,17 @@ serve(async (req) => {;
       JSON.stringify({ error: 'Internal server error' }),;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
     )
   }

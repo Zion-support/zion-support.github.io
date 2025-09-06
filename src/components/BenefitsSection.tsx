@@ -1,44 +1,13 @@
 const getBenefits = (t: any) => [
-<<<<<<< HEAD
 
 
 
-  {
-
-    title: t('benefits.ai_matchmaking')
-    description: t('benefits.ai_matchmaking_desc')
-    icon: <Bot className='w-8 h-8' />
-  }
-  {
-    title: t('benefits.global_availability')
-    description: t('benefits.global_availability_desc')
-    icon: <Globe className='w-8 h-8' />
-  }
-  {
-    title: t('benefits.support_24_7')
-    description: t('benefits.support_24_7_desc')
-    icon: <Clock className='w-8 h-8' />
-  }
-  {
-    title: t('benefits.cost_reduction')
-    description: t('benefits.cost_reduction_desc')
-    icon: <TrendingDown className='w-8 h-8' />
-  }
-]
-export function BenefitsSection({ className, style }: BenefitsSectionProps) {
-  const { t } = useTranslation()
-  const benefits = getBenefits(t)
-    >
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-16'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
   {
@@ -83,25 +52,8 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
   {
     title: t('benefits.cost_reduction'),
     description: t('benefits.cost_reduction_desc'),
-<<<<<<< HEAD
 
 
-    icon: <TrendingDown className='w-8 h-8' />,
-  },
-]
-export function BenefitsSection({ className, style }: BenefitsSectionProps) {
-  const { t } = useTranslation()
-  const benefits = getBenefits(t)
-    >
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-16'>
-    icon: <TrendingDown className="w-8 h-8" />}],
-
-
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <GradientHeading>{t('home.benefits_title')}</GradientHeading>
           <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
             {t('home.benefits_subtitle')}
@@ -109,10 +61,8 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
         </div>
 
 
-<<<<<<< HEAD
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (        
 
 
@@ -241,18 +191,8 @@ function BenefitsSection() {
 
           {benefits.map((benefit, index) => (;
             <FeatureCard;
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               key={index}
 
               title={benefit.title}
@@ -280,31 +220,20 @@ export default /**
  */
 function Page() {
   {
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       "Direct provider connections",";
       "Competitive pricing",";
       "Bulk discount options",";
       "Transparent cost structure" ];
 
+
+
 <<<<<<< HEAD
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
             />
           ))}

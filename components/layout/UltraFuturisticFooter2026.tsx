@@ -4,34 +4,8 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-
-  Phone
-  Mail
-  MapPin
-  Globe
-  ArrowRight
-  Star
-  Shield
-  Brain
-  DollarSign
-  Dna
-  Rocket
-  Users
-  Award
-  Zap
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Youtube
-  Github;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield
-
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Phone,
   Mail,
   MapPin,
@@ -55,10 +29,10 @@ import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, ;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
 const contactInfo = {
@@ -488,6 +462,8 @@ const resource_links = [;
 
 const socialLinks = [
 
+
+
 export default function UltraFuturisticFooter2026() {
   return (
     <footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800'>  { name: 'GitHub', href: '#', icon: Github };
@@ -523,9 +499,23 @@ export default function UltraFuturisticFooter2026() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 
+              transition={{ duration: 0.6 }}
+            >
+              <div className='flex items-center mb-6'>
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4'>
+                  <Zap className='w-6 h-6 text-white' />
+                </div>
+                <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
+                  Zion Tech Group
+                </h3>
+              </div>
+              <p className='text-gray-300 mb-6 leading-relaxed'>
+                Leading provider of revolutionary AI automation, quantum
+                cybersecurity, fintech blockchain, and healthcare biotech
+                solutions. Transforming businesses with cutting-edge technology.
 
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               </p>
               {/* Contact Info */}
               <div className='space-y-3'>
@@ -549,33 +539,28 @@ export default function UltraFuturisticFooter2026() {
             </motion.div>
           </div>
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </p>
               {/* Contact Info */}
 
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
           {/* Service Categories */}
           {serviceCategories && serviceCategories.map((category, index) => (;
             <motion&& motion.div
@@ -624,11 +609,11 @@ export default function UltraFuturisticFooter2026() {
           <motion&& motion.div
 
 
-<<<<<<< HEAD
-=======
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
@@ -655,25 +640,9 @@ export default function UltraFuturisticFooter2026() {
               ))}
             </ul>;
           </motion && motion.div>;
-<<<<<<< HEAD
-
-
-=======
-=======
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* Resources */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -700,25 +669,9 @@ export default function UltraFuturisticFooter2026() {
               ))}
             </ul>;
           </motion && motion.div>;
-<<<<<<< HEAD
-
-
-=======
-=======
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* Social Media */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -756,16 +709,19 @@ export default function UltraFuturisticFooter2026() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               ))}
             </div>
           </motion.div>
         </div>
+
+
 
 
             </div>;
@@ -776,12 +732,13 @@ export default function UltraFuturisticFooter2026() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Newsletter Signup */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -791,8 +748,8 @@ export default function UltraFuturisticFooter2026() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         >
           <div className='text-center'>
@@ -805,8 +762,8 @@ export default function UltraFuturisticFooter2026() {
               breakthrough solutions and industry trends.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
               <input
                 type='email'
@@ -839,7 +796,6 @@ export default function UltraFuturisticFooter2026() {
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -854,6 +810,8 @@ export default function UltraFuturisticFooter2026() {
 
 
 
+
+
                 Subscribe;
               </button>;
             </div>;
@@ -861,7 +819,10 @@ export default function UltraFuturisticFooter2026() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Bottom Bar */}
         <motion&& motion.div
 
@@ -873,7 +834,9 @@ export default function UltraFuturisticFooter2026() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
         >
@@ -881,24 +844,15 @@ export default function UltraFuturisticFooter2026() {
             <div className='text-gray-400 text-sm mb-4 md:mb-0'>
               © 2026 Zion Tech Group. All rights reserved.
 
+
+
           transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
           className='border-t border-gray-800 pt-8'>;
           <div className='flex flex-col md:flex-row justify-between items-center'>;
             <div className='text-gray-400 text-sm mb-4 md:mb-0'>;
               © 2026 Zion Tech Group. All rights reserved. |;
-<<<<<<< HEAD
-=======
-=======
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </motion.div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         {/* Bottom Bar */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -908,12 +862,13 @@ export default function UltraFuturisticFooter2026() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         >
           <div className='flex flex-col md:flex-row justify-between items-center'>
             <div className='text-gray-400 text-sm mb-4 md:mb-0'>
               © 2026 Zion Tech Group. All rights reserved.
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Link
                 href='/privacy'
                 className='hover:text-cyan-400 transition-colors duration-300 ml-2'>;
@@ -951,10 +906,8 @@ export default function UltraFuturisticFooter2026() {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 className='hover:text-cyan-400 transition-colors duration-300'>;
                 Terms of Service;
@@ -991,6 +944,8 @@ export default function UltraFuturisticFooter2026() {
           </div>;
         </motion && motion.div>;
       </div>;
+
+
 
     </footer>;
   );
@@ -1049,35 +1004,14 @@ export default function UltraFuturisticFooter2026() {
         </motion.div>;
       </div>;
     </footer>);
-<<<<<<< HEAD
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-<<<<<<< HEAD
-);
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-    </footer>;
-);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-  );
 
-=======
 
-    </footer>
-  );
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

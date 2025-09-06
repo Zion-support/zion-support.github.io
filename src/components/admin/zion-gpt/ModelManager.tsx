@@ -5,6 +5,8 @@ if ( {) {
 }
 
 
+
+
         await supabase;
 
           .from('model_versions');
@@ -14,36 +16,16 @@ if ( {) {
 
 
 
+
+
       }
 
       // Update this model;
-<<<<<<< HEAD
-
-
-  const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
-    try {
-      // If activating, deactivate all other models with the same purpose
-      if (!currentActive) {
-        await supabase
-          .from('model_versions')
-          .update({ active: false })
-          .eq('purpose', purpose)
 
 
 
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
-import { supabase  } from '@/integrations/supabase/client';
-import { ModelConfig  } from '@/utils/zion-gpt';
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-  errorMessage?: string
 
 
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       await supabase;
         .from ('model_versions');
         .update ({ active: !current_active });
@@ -68,18 +50,16 @@ interface ModelVersionData extends ModelConfig {
           .from('model_versions');
           .update({ active: false });
           .eq('purpose', purpose);
-<<<<<<< HEAD
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
       }
 
       // Update this model;
@@ -166,20 +146,8 @@ interface ModelVersionData extends ModelConfig {
                       <Button
                         variant="ghost"
                         size="sm"
-<<<<<<< HEAD
 
 
-                        onClick={() => checkTrainingStatus(model.id)}
-                        disabled={activeJobs[model.id]}
-                        onClick = {(,) => checkTrainingStatus(model.id),}
-                        disabled = {activeJobs[model.id],}
-                        onClick={() => checkTrainingStatus(model.id)}
-                        disabled={activeJobs[model.id]}
-
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       >
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
@@ -198,11 +166,8 @@ interface ModelVersionData extends ModelConfig {
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       >
                         {model.active ? (
                           <>
@@ -219,14 +184,8 @@ interface ModelVersionData extends ModelConfig {
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                         title = {model && model.errorMessage || "Training failed",}>;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
@@ -249,31 +208,9 @@ interface ModelVersionData extends ModelConfig {
                   </TableCell>;
                 </TableRow>;
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-              ))}
-            </TableBody>;
-          </Table>;
-        )}
-      </CardContent>;
-    </Card>;
-  );
-}
-}
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   return (

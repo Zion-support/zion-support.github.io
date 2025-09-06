@@ -3,17 +3,22 @@ import { Button } from '@/components/ui/button';
 import { type Company } from './CompanyDashboard';
 import { Bell, Users, Settings } from 'lucide-react';
 interface WorkspaceHeaderProps {;
-<<<<<<< HEAD
+
+import React from 'react'
+import { Button } from '@/components/ui/button'
+import { type Company } from './CompanyDashboard'
 
 import { Bell, Users, Settings } from 'lucide-react'
 interface WorkspaceHeaderProps {
   company: Company
 interface WorkspaceHeaderProps {
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   company: Company;
 
 
@@ -29,10 +34,8 @@ interface WorkspaceHeaderProps {
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
     <div className='space-y-6'>;
@@ -42,10 +45,8 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
             <img
 
 
-<<<<<<< HEAD
-              src={company.logoUrl |'/placeholder.svg'}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
               src={company.logoUrl || '/placeholder.svg'}
 
 
@@ -141,52 +142,25 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
           </div>
           <div>
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-              src={company.logoUrl || "/placeholder.svg"}
-              alt={company.name}
-              className="max-h-10 max-w-10"
-              loading="lazy"
-            />
-          </div>
-          <div>
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
               {company.plan} Plan · {company.teamSize} team members
             </p>
           </div>
         </div>
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
         
         <div className="flex items-center gap-2">
           <Button variant="outline" size="icon" aria-label="Notifications">
@@ -220,12 +194,8 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
         </div>
       </div>
     </div>
-<<<<<<< HEAD
 
 
-  )
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }          </Button>
@@ -256,11 +226,8 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
 };
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
               src={company && company.logoUrl || "/placeholder && placeholder.svg"}
               alt={company && company.name}
@@ -337,8 +304,7 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
   );
 }
@@ -424,4 +390,5 @@ function WorkspaceHeader() {
     </div>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

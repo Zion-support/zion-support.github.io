@@ -1,51 +1,15 @@
 
-<<<<<<< HEAD
-
-import React from "react";
-
-
-=======
-
-
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {HELP_CATEGORIES} from "./help-content";
-
-=======
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { HELP_CATEGORIES } from "./help-content",
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface HelpArticleListProps {
   categoryId: string,
   onArticleSelect: (articleId: string) => void,
   searchQuery: string
-<<<<<<< HEAD
-
-
-import React from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { HELP_CATEGORIES } from "./help-content",;
-interface HelpArticleListProps {;
-  categoryId: string,;
-  onArticleSelect: (articleId: string) => void,;
-  searchQuery: string;
-}
-;
-export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
-  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
-  if (!category) {;
-    return <div>Category not found</div>;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   
   // Filter articles based on search query
@@ -106,10 +70,12 @@ function formatDate(date: string): string {
 
 
 
+
   });
 }
 
   })
+
 
   return new Date(date).toLocaleDateString("en-US", {;
     year: "numeric",;
@@ -119,10 +85,8 @@ function formatDate(date: string): string {
   });
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import React from './react';
 import {
   Card,
@@ -142,10 +106,8 @@ export /**
  */
 function HelpArticleList() {
   const category = HELP_CATEGORIES.find ((cat) => cat.id === category_id);
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 ;
   // Check condition
 if ( {) {
@@ -204,23 +166,15 @@ function format_date (date: string): string {
     day: "numeric",
   });
 }
-<<<<<<< HEAD
-
-;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-  })
-=======
-  })
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

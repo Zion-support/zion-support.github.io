@@ -1,28 +1,6 @@
-<<<<<<< HEAD
 
 
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormDescription
-  FormMessage
 
-=======
-
-
-import {;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormControl,;
-  FormDescription,;
-  FormMessage,;
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   FormField,
   FormItem,
   FormLabel,
@@ -30,13 +8,14 @@ import {;
   FormDescription,
   FormMessage,;
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
@@ -61,8 +40,7 @@ export function DescriptionFields(): any ({;
     <>;
       <FormField
 
-<<<<<<< HEAD
-=======
+
         control={control}
         name="description"
         render={({ field }) => (;
@@ -70,13 +48,8 @@ export function DescriptionFields(): any ({;
             <FormLabel>Job Description</FormLabel>;
             <FormControl>;
               <Textarea
-=======
-
-=======
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react',
 import { Control } from 'react-hook-form',
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
@@ -104,11 +77,11 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         control={control}
         name="description"
         render={({ field }) => (
@@ -117,11 +90,12 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
             <FormControl>
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 value={editorContent}
                 onChange={(e) => {;
                   handleEditorChange(e.target.value);
@@ -253,13 +227,15 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
     </>;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  );
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
 

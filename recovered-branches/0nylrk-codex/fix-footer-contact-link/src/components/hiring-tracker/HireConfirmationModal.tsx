@@ -1,9 +1,7 @@
 
 
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 import React, { useState } from 'react',
 import {
@@ -23,7 +21,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { JobApplication } from "@/types/jobs";
 export interface HireConfirmationModalProps {
 
-<<<<<<< HEAD
+
   isOpen: boolean
   onClose: () => void
   candidateData?: TalentProfile;
@@ -31,13 +29,6 @@ export interface HireConfirmationModalProps {
   onConfirm: () => void
 
 
-  isSubmitting?: boolean
-}
-export function HireConfirmationModal({
-=======
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -58,14 +49,13 @@ export interface HireConfirmationModalProps {;
   isSubmitting?: boolean;
 }
 
-<<<<<<< HEAD
+
 export function HireConfirmationModal({ ;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   isOpen;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export function HireConfirmationModal({ ;
 
@@ -84,35 +74,9 @@ export function HireConfirmationModal({ ;
   const [isLoading, setIsLoading] = useState(false);
   const { user } = useAuth();
 
-<<<<<<< HEAD
-  // Get talent information from either candidateData or application
-  const talentData = candidateData |(application?.talent_profile as TalentProfile);
-  const handleHireCandidate = async () => {
-    if (!projectName |!projectDescription) {
-      toast({
-        title: 'Required fields missing'
-        description: 'Please fill in both project name and description.'
-        variant: 'destructive'})
-      return
 
-=======
-=======
 
-import React, { useState } from 'react',
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import { useAuth } from "@/hooks/useAuth",
 import { JobApplication } from "@/types/jobs",
@@ -172,15 +136,17 @@ export function HireConfirmationModal({;
       return;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     }
     if (!user) {
       toast({
@@ -195,6 +161,8 @@ export function HireConfirmationModal({;
         description: 'Talent information is missing.'
         variant: 'destructive'})
       return
+
+
 
 
 
@@ -226,17 +194,9 @@ export function HireConfirmationModal({;
       return;
 
     }
-<<<<<<< HEAD
-
-
-=======
-=======
-    }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     setIsLoading(true);
 
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components / ui / dialog';
@@ -391,7 +351,7 @@ if ( {) {
           return;
         }
       }
-<<<<<<< HEAD
+
       toast({
         title: 'Candidate hired successfully'
         description: `${talentData.full_name} has been hired for the project.`})
@@ -407,20 +367,7 @@ if ( {) {
       setIsLoading(false)
     }
 
-  }
-  };
 
-
-=======
-
-
-=======
-    }
-
-  };
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     setIsLoading(true),;
     // Create a new project;
@@ -513,12 +460,13 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 
   return (
 

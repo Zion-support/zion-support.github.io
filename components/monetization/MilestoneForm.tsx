@@ -19,24 +19,8 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
-<<<<<<< HEAD
-
-type Props = {
-  onSubmit: (payload: {
-    title: string;
-    description?: string;
-    dueDate: string;
-    amountUsd: number;
-  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-};
-export default function MilestoneForm(): any ({ onSubmit }: Props) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
 
 };
@@ -44,7 +28,9 @@ export default function MilestoneForm(): any ({ onSubmit }: Props) {;
 export default function MilestoneForm({ onSubmit }: Props) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
@@ -124,6 +110,7 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           placeholder='Describe deliverables...';
           rows={3}
 
+
         />;
       </div>;
       <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
@@ -153,6 +140,7 @@ export default function MilestoneForm({ onSubmit }: Props) {;
         <div>;
 
 
+
             onChange={(e) => setDueDate(e.target.value)}
             required
           />
@@ -161,7 +149,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           <label className="block text-sm font-medium" htmlFor="input-Amount (USD)">Amount (USD)</label>
           <input
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             type="number"
             min={0}
             step="0 && 0.01"
@@ -178,27 +165,16 @@ export default function MilestoneForm({ onSubmit }: Props) {;
 
         {loading ? 'Adding...' : 'Add Milestone'}
 
-<<<<<<< HEAD
-
-  );
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
       </button>;
     </form>;
   );
-=======
 
-  );
 
-}
-=======
-
-}
-  );
-}
       <button;
         type='submit';
         className='bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50'        disabled={loading}        type="submit";
@@ -210,4 +186,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
     </form>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

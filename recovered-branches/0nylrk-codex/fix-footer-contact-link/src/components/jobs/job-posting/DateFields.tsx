@@ -1,33 +1,16 @@
-<<<<<<< HEAD
 
 
-import React from "react";
-import { format } from "date-fns";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
-import {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 import {;
   Popover,;
   PopoverContent,;
   PopoverTrigger,;
 
-=======
 
 
-  Popover,
-  PopoverContent,
-  PopoverTrigger,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 
@@ -37,11 +20,9 @@ import { cn } from "@/lib/utils";
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React from 'react',
 import { format } from 'date-fns',
 import { Label } from "@/components/ui/label",
@@ -53,11 +34,11 @@ import { cn } from "@/lib/utils",
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 interface DateFieldsProps {
   startDate: Date | undefined,
   setStartDate: (date: Date | undefined) => void,
@@ -146,14 +127,15 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               initialFocus
             />
           </PopoverContent>
@@ -186,21 +168,8 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               mode="single"
               selected={endDate}
               onSelect={setEndDate}
-<<<<<<< HEAD
-
-              disabled={(date) => date < new Date()}
-              initialFocus
-            />
-          </PopoverContent>
-        </Popover>
-      </div>
 
 
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               disabled={(date) =>;
                 date < new Date();
               }
@@ -213,12 +182,14 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
     </div>;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  );
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
 

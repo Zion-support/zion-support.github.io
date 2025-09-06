@@ -3,90 +3,18 @@ import Head from 'next/head',
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
 import {
 
-<<<<<<< HEAD
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Target
-  Crown
-  Star
-  TrendingUp
-  ArrowRight
-  CheckCircle
-  DollarSign
-  Users
-  Clock
-  Award
-  Zap as ZapIcon
-  Search
-  Phone
-  Mail
-  MapPin
-  Heart
-  Leaf
-  Car
-  GraduationCap
-  Scale
-  Building
-  Factory
-  Camera
-  Video
-  Music
-  Gamepad2
-  Eye
-  Globe2
-  Satellite
-  Dna
-  Battery
-  Gamepad
-  Cpu as CpuIcon;} from 'lucide-react';import {
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
 
-=======
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import Head from 'next / head';
-import Link from 'next / link';
-import { motion, AnimatePresence } from 'framer-motion';
 
-=======
-import {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   Rocket,
   Brain,
   Atom,
@@ -127,15 +55,14 @@ import {
   Battery,
 
 
+
   Gamepad,;
   Cpu as CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   Target, Crown, Star, TrendingUp, ArrowRight;
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
@@ -151,7 +78,6 @@ import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovati
 
 export default function UltimateServicesShowcase2029() {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -447,15 +373,15 @@ export default function UltimateServicesShowcase2029() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               >
                 Get Started Today
               </Link>
@@ -470,17 +396,19 @@ export default function UltimateServicesShowcase2029() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             {/* Stats */}
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
@@ -505,6 +433,7 @@ export default function UltimateServicesShowcase2029() {
           </motion.div>
         </div>
       </section>
+
 
 className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg">;
                 View Pricing;
@@ -568,6 +497,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />;
 
 
+
               <input
                 type="text"
                 placeholder="Search services..."
@@ -577,35 +507,8 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
             {/* Category Filter */}
 
 
-            {/* Category Filter */}
-            <div className="flex flex-wrap items-center space-x-2">
-              {categories.map((category) => (
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                <button
-                  key={category && category.id}
-                  onClick={() => setSelectedCategory(category && category.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${;
-                    selectedCategory === category && category.id;
-                      ? `bg-gradient-to-r ${category && category.color} text-white shadow-lg`;
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';
-<<<<<<< HEAD
 
 
-
-=======
-=======
-            {/* Category Filter */}
-            <div className='flex flex-wrap items-center space-x-2'>
-              {categories.map(category => (            <div className="flex flex-wrap items-center space-x-2">
-              {categories.map((category) => (
-                <button
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
@@ -619,14 +522,9 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
               ))}
             </div>
 
-<<<<<<< HEAD
-=======
-            </div>;
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -636,6 +534,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
               {priceRanges.map(range => (                <button            <div className="flex items-center space-x-2">
               {priceRanges.map((range) => (
                 <button
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Price Filter */}
@@ -648,32 +547,11 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
               ))}
 
 
-                  key={range.id}
-                  onClick={() => setSelectedPriceRange(range.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
-                    selectedPriceRange === range.id
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg'
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'                  }`}                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';
-                  }`}
-                >
-                  {range.name}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
 
-
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Services Grid */}
 
 
@@ -684,6 +562,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
                   {/* Categories */}
+
 
 
                     <div className="flex flex-wrap gap-2">
@@ -710,8 +589,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                       ))}
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   {/* Features Preview */}
                   <div className='mb-6'>
@@ -742,31 +620,28 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                         </li>
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                       )}
                     </ul>
                   </div>
+
+
 
 
                     </div>;
                   </div>;
 
 
-<<<<<<< HEAD
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Features Preview */}
 
 
@@ -777,7 +652,9 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   {/* Market Info */}
 
                   <div className="mb-6 space-y-2">
@@ -829,60 +706,27 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                     </Link>
                   </div>
 
-                  </div>
-                      href={`/services/${service && service.id}`}
-                      className='w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 text-center block group-hover:scale-105 transform transition-transform duration-200'>;
-                      Learn More;
-                      <ArrowRight className='inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200' />                    </Link>;
-                  </div>;
-                  {/* Hover Effect */}
-                  <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-                  {/* Action Button */}
-
-                    </Link>
-                  </div>
-
-                  {/* Hover Effect */}
-
-
-
-<<<<<<< HEAD
-=======
-                </div>
-              </motion.div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ))}
           </motion.div>
 
           </motion && motion.div>;
 
 
-<<<<<<< HEAD
-
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
 
 
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           {/* No Results */}
           {filteredServices && filteredServices.length === 0 && (;
             <div className='text-center py-20'>;
@@ -900,6 +744,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                   setSearchTerm('');
                   setSelectedPriceRange('all');
                 }}
+
 
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'              >            <div className="text-center py-20">;
               <div className="w-24 h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6">;
@@ -923,19 +768,16 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
             </div>;
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'              >
-
-              <button
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 onClick={() => {
                   setSelectedCategory('all');
                   setSearchTerm('');
@@ -947,10 +789,11 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
               </button>
             </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
         </div>
       </section>
+
+
 
 
         </div>;
@@ -960,12 +803,13 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Contact CTA */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20'>;
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">;
@@ -974,15 +818,17 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 
@@ -1001,7 +847,6 @@ Join the future of technology with our revolutionary services.
               >
                 Get Started Today
               </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="flex items-center space-x-4 text-gray-300">
                 <div className="flex items-center space-x-2">
                   <Phone className="h-5 w-5 text-cyan-400" />
@@ -1239,9 +1084,10 @@ Join the future of technology with our revolutionary services.
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

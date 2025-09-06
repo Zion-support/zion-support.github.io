@@ -24,27 +24,16 @@ canvas.height = dimensions.height;
   coordinate_x: number;
 coordinate_y: number;
 
-<<<<<<< HEAD
-=======
-useEffect ( () => {
-  const updateDimensions = () => {
-  setDimensions ({
-  updateDimensions ();
-window.addEventListener ('resize', updateDimensions);
-setIsVisible (true);
-}, []);
-canvas.width = dimensions.width;
-canvas.height = dimensions.height;
-// Particle system class Particle {
-  x: number;
-y: number;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 vx: number;
 vy: number;
 size: number;
 color: string;
 life: number;
+
 
 max_life: number;
 type: 'quantum' | 'holographic' | 'energy' | 'matrix';
@@ -76,6 +65,7 @@ ctx.global_alpha = alpha * 0.5;
 ctx.stroke_rect (this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
 break;
 
+
   children,
   intensity = 'high',
   colorScheme = 'quantum',
@@ -85,7 +75,13 @@ break;
 }: UltraQuantumHolographicBackgroundProps) {;
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
+export default function UltraQuantumHolographicBackground(): any ({;
+
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
 export default function UltraQuantumHolographicBackground(): any ({;
@@ -94,6 +90,7 @@ export default function UltraQuantumHolographicBackground(): any ({;
   intensity = 'high';
   colorScheme = 'quantum';
   particleCount = 300;
+
 
   animationSpeed = 1 && 1.5;
   className = '';
@@ -172,6 +169,7 @@ if (return) {
       coordinate_x: number;
       coordinate_y: number;
 
+
       vx: number;
       vy: number;
       size: number;
@@ -181,21 +179,17 @@ if (return) {
       x: number,
       y: number,
 
+
+
         if (this.type === 'matrix') {
           this.vy += 0.1;
           if (this.y > dimensions.height) {
             this.y = -10;
 
-<<<<<<< HEAD
-            this.vy = Math.random() * 2 + 1;          }            this.vy = Math.random() * 2 + 1
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-            this.vy = Math.random() * 2 + 1
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }
         }
       }
@@ -222,7 +216,6 @@ if (return) {
             
 
             // Wave function rings
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             for (let i = 1, i <= 3, i++) {
               ctx.beginPath();
               ctx.arc(this.x, this.y, this.size * i, 0, Math.PI * 2);
@@ -414,6 +407,7 @@ if (return) {
       }
     }
 
+
     // Create particles;
     const particles: Particle[] = [];
 
@@ -424,10 +418,9 @@ if (return) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
           particles[index] = new Particle()
 
         }
@@ -548,25 +541,11 @@ if (return) {
   }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]);
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Quantum Holographic Canvas Background */}
       <canvas
         ref={canvasRef}
-<<<<<<< HEAD
 
-        className='fixed inset-0 w-full h-full pointer-events-none z-0'
-        style={{
-          background: colors.background
-          filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`,        }}
-      />
-      {/* Holographic Overlay Effects */}
-      <div className='fixed inset-0 z-10 pointer-events-none'>        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{
-          background: colors.background
-          filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`;
-      />
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         <motion.div
           className='absolute inset-0'
           animate={{
@@ -576,10 +555,8 @@ if (return) {
               `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`
               `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
 
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ],          }}
           transition={{
             duration: 8
@@ -654,7 +631,10 @@ if (return) {
             <motion&& motion.div
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               key={i}
               className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
               style={{
@@ -675,60 +655,19 @@ if (return) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }}
               transition={{
-<<<<<<< HEAD
-
-                duration: 2
-                delay: i * 0.1
-                repeat: Infinity
-                ease: "easeInOut"
-              }}
-            />
-          ))}
-        {/* Quantum Fluctuations */}
-        <motion.div
-          className='absolute inset-0'
-          animate={{
-            boxShadow: [
-              `inset 0 0 100px ${colors.primary}20`
-              `inset 0 0 200px ${colors.secondary}20`
-              `inset 0 0 150px ${colors.tertiary}20`
-              `inset 0 0 100px ${colors.primary}20`
-            ],          }}
-          transition={{
-            duration: 6
-            repeat: Infinity
-            ease: 'easeInOut',          }}              `inset 0 0 100px ${colors.primary}20`;
-              `inset 0 0 200px ${colors.secondary}20`;
-              `inset 0 0 150px ${colors.tertiary}20`;
-              `inset 0 0 100px ${colors.primary}20`
-            ]
-          transition={{
-            duration: 6
-            repeat: Infinity
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-          }}
-
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         />
       </div>
 
@@ -743,7 +682,7 @@ if (return) {
 
 
 
-<<<<<<< HEAD
+
 
 
             ease: 'easeInOut',            ease: "easeInOut"
@@ -764,18 +703,16 @@ if (return) {
 );  )
 }
     </div>
-=======
-            duration: 4,
-            repeat: Infinity,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

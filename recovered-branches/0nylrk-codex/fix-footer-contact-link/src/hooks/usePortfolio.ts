@@ -1,9 +1,7 @@
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import {useState, useCallback} from 'react';
 import {PortfolioProject} from '@/types/resume';
 import {supabase} from '@/integrations/supabase/client';
@@ -12,10 +10,10 @@ import {toast} from '@/hooks/use-toast';
 export function usePortfolio() {;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -99,11 +97,11 @@ export function usePortfolio() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     
     try {
       const { data, error } = await supabase
@@ -163,56 +161,9 @@ export function usePortfolio() {;
 
         description: `Could not add project: ${e.message}`,
         variant: "destructive"
-<<<<<<< HEAD
-      }),
-      return null
-    } finally {
-      setIsLoading(false)
-
-    }
-  }
-  const updateProject = async (projectId: string, project: PortfolioProject): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to update a portfolio project')
-      return false
 
 
-=======
-=======
-          demo_url: project.demo_url,
-          pdf_url: project.pdf_url;
-        });
-        .select ('id');
-        .single ();
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      toast ({
-        title: "Project added",
-        description: "Your project has been added to your portfolio";
-      });
-;
-      await fetch_projects ();
-      return data.id;
-    } catch (e: any) {
-      console.error ('Error adding portfolio project:', e);
-      set_error (e.message);
-      toast ({
-        title: "Error",
-        description: `Could not add project: ${e.message}`;
-        variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-      });
-      return null;
-    } finally {
 
-      setIsLoading(false)
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     setIsLoading(true),;
     setError(null),;
@@ -258,11 +209,11 @@ if (throw error) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     }
     
     setIsLoading(true),
@@ -317,56 +268,9 @@ if (throw error) {
 
         description: `Could not update project: ${e.message}`,
         variant: "destructive"
-<<<<<<< HEAD
-      }),
-      return false
-    } finally {
-      setIsLoading(false)
-
-    }
-  }
-  const deleteProject = async (projectId: string): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to delete a portfolio project')
-      return false
 
 
-=======
-=======
-          demo_url: project.demo_url,
-          pdf_url: project.pdf_url;
-        });
-        .eq ('id', project_id);
-        .eq ('user_id', user.id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      toast ({
-        title: "Project updated",
-        description: "Your portfolio project has been updated";
-      });
-;
-      await fetch_projects ();
-      return true;
-    } catch (e: any) {
-      console.error ('Error updating portfolio project:', e);
-      set_error (e.message);
-      toast ({
-        title: "Error",
-        description: `Could not update project: ${e.message}`;
-        variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-      });
-      return false;
-    } finally {
 
-      setIsLoading(false)
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     setIsLoading(true),;
     setError(null),;
@@ -411,11 +315,11 @@ if (throw error) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     }
     
     setIsLoading(true),
@@ -537,11 +441,12 @@ if (throw error) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 }

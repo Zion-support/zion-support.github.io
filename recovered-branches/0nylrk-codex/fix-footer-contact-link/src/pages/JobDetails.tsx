@@ -1,20 +1,6 @@
 
-<<<<<<< HEAD
 
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate  } from 'react-router-dom';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Calendar, Clock, DollarSign, Tag, Users, Briefcase  } from '@/components/icons';
-import { formatDistanceToNow  } from 'date-fns';
-import { toast  } from 'sonner';
-import { useAuth  } from '@/hooks/useAuth';
-import useJobDetails from '@/hooks/useJobDetails';
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { job, isLoading, error } = useJobDetails(jobId);
   const { user, isAuthenticated } = useAuth();
 
@@ -22,10 +8,10 @@ import useJobDetails from '@/hooks/useJobDetails';
   const { isWhitelabel, brandName } = useWhitelabel();
 
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   const { job, isLoading, error } = useJobDetails(jobId);
   const { user, isAuthenticated } = useAuth();
 
@@ -33,12 +19,8 @@ import useJobDetails from '@/hooks/useJobDetails';
   const { isWhitelabel, brandName } = useWhitelabel();
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React, { useState, useEffect } from 'react',
 import { useParams, useNavigate } from 'react-router-dom',
 import { Header } from '@/components/Header',
@@ -278,15 +260,17 @@ export default function JobDetails() {;
                       <Badge key={i} variant="secondary">;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                         {skill}
                       </Badge>;
                     ))}

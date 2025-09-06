@@ -1,9 +1,7 @@
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation, ConversationContextData} from '@/types/messaging';
 import {useConversationState} from './useConversationState';
@@ -11,10 +9,10 @@ import {useConversations} from './useConversations';
 import {useMessages} from './useMessages';
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
@@ -164,18 +162,12 @@ function useMessagingOperations() {
     send_message;
     create_conversation;
     markAsRead;
-<<<<<<< HEAD
-
-    fetchConversations;
-    loadMessages;
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 }

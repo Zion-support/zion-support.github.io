@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 
+
 interface ProfileRatingsProps {
 
   userId: string
@@ -80,6 +81,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 
 
+
 interface ProfileRatingsProps {
   userId: string,
   averageRating?: number;
@@ -118,8 +120,10 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   return (
 
 
+
     <div className='space-y-6'>
       <div className='flex flex-col md:flex-row gap-6'>
+
 
 
         <div className='md:w-1/3'>          <ReviewStats
@@ -127,6 +131,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 
 
   return (
+
 
 
 import { Button } from "@/components/ui/button",
@@ -177,46 +182,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
           <ReviewStats
             averageRating={averageRating}
             totalReviews={ratingCount}
-<<<<<<< HEAD
-            ratingDistribution={ratingDistribution}          />
-        </div>
-        <div className='md:w-2/3'>
-          <Tabs defaultValue='all'>
-            <TabsList className='mb-4'>
-              <TabsTrigger value='all'>
-                All Reviews ({reviews.length})
-              </TabsTrigger>
-              <TabsTrigger value='positive'>Positive</TabsTrigger>
-              <TabsTrigger value='critical'>Critical</TabsTrigger>
-            </TabsList>
-            <TabsContent value='all'>              <ReviewsList
-            <TabsContent value='all'>              <ReviewsList        
-        <div className="md:w-2/3">
-          <Tabs defaultValue="all">
-            <TabsList className="mb-4">
-              <TabsTrigger value="all">All Reviews ({reviews.length})</TabsTrigger>
-              <TabsTrigger value="positive">Positive</TabsTrigger>
-              <TabsTrigger value="critical">Critical</TabsTrigger>
-            </TabsList>
-            <TabsContent value="all">
-                reviews={reviews}
-                isLoading={isLoading}
-                onReportReview={reportReview}              />
-            </TabsContent>
-            <TabsContent value='positive'>
-              <ReviewsList
-                reviews={reviews.filter(r => r.rating >= 4)}                isLoading={isLoading}
-                onReportReview={reportReview}
-              />
-            </TabsContent>
-            <TabsContent value='critical'>
-              <ReviewsList
-                reviews={reviews.filter(r => r.rating < 4)}                isLoading={isLoading}                reviews={reviews.filter((r) => r.rating >= 4)}
-            
-            <TabsContent value="positive">
-              <ReviewsList
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             ratingDistribution={ratingDistribution}
@@ -269,24 +235,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             <TabsContent value="positive">
               <ReviewsList
 
-<<<<<<< HEAD
 
 
-
-                reviews={reviews.filter((r) => r.rating >= 4)}
-                isLoading={isLoading}
-=======
-                reviews={reviews.filter((r) => r.rating >= 4)}
-                isLoading={isLoading}
-                onReportReview={reportReview}              />;
-            </TabsContent>;
-
-            <TabsContent value='positive'>;
-
-
-              <ReviewsList
-                reviews={reviews && reviews.filter(r => r && r.rating >= 4)}                isLoading={isLoading}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 onReportReview={reportReview}
               />
             </TabsContent>
@@ -307,10 +257,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               />;
             </TabsContent>;
@@ -327,25 +275,19 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 onReportReview={reportReview}
 
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   reportReview ;
 }/> </TabsContent> </Tabs> </div> </div> </div>) ;
 }"};
 }
 }
 }
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import { useState, useEffect } from 'react';

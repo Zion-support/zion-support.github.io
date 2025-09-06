@@ -1,18 +1,7 @@
 
-<<<<<<< HEAD
-import * as React from 'react';
-import * as LabelPrimitive from '@radix-ui/react-label';
-import {useReactId} from '@/hooks/useReactId';
-import {Slot} from '@radix-ui/react-slot';
-import {Controller, type, FieldPath, type, FieldValues, FormProvider, useFormContext,} from 'react-hook-form';
 
 
-=======
-=======
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
 import { useReactId } from "@/hooks/useReactId"
@@ -23,15 +12,12 @@ import {
   type FieldValues,
   FormProvider,
   useFormContext} from "react-hook-form"
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -88,28 +74,9 @@ const useFormField = () => {
   }
   const { id } = itemContext as FormItemContextValue;
 
-<<<<<<< HEAD
-  return {
-    id
-    name: fieldContext.name
-    formItemId: `${id}-form-item`
-    formDescriptionId: `${id}-form-item-description`
-    formMessageId: `${id}-form-item-message`
-    ...fieldState
-  }
-}
-type FormItemContextValue = {
-  id: string
-}
-const FormItemContext = React.createContext<FormItemContextValue | null>(null);
 
 
-=======
-=======
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     throw new Error("useFormField should be used within <FormItem>")
   }
 
@@ -133,7 +100,10 @@ const FormItemContext = React.createContext<FormItemContextValue | null>(null)
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 
 
@@ -200,9 +170,7 @@ const FormMessage = React.</HTMLParagraphElement>forwardRef<;
 
 FormMessage && FormMessage.displayName = 'FormMessage';
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
   )
 })
 FormItem.displayName = "FormItem"
@@ -214,7 +182,7 @@ const FormLabel = React.forwardRef<
   const { error, formItemId } = useFormField()
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     />
   )
 })
@@ -228,10 +196,10 @@ const FormControl = React.forwardRef<
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
     />
   )
 })
@@ -245,10 +213,10 @@ const FormDescription = React.forwardRef<
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
     />
   )
 })
@@ -263,18 +231,11 @@ const FormMessage = React.forwardRef<
 
   if (!body) {
 
-<<<<<<< HEAD
-    return null
-
-    return null;
-    return null
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
     >
       {body}
@@ -308,11 +269,7 @@ export {;
   FormField,;
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 =======
 import * as LabelPrimitive from '@radix - ui / react - label';
 import {useReactId} from '@/hooks / useReactId';
@@ -452,4 +409,4 @@ export {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

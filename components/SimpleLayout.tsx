@@ -51,7 +51,9 @@ interface SimpleLayoutProps {,
   description?: string,
   children: React.ReactNode;
 =======
+
 <<<<<<< HEAD
+
 
 import React from 'react;';
 import * as React from 'react';
@@ -60,20 +62,3 @@ interface SimpleLayoutProps {
   title: string
   description?: string
   children: React.ReactNode
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
-export default /**
- * SimpleLayout - Function description
- */
-function SimpleLayout() {,
-  return (,
-    <>,
-      <Head>,
-        <title>{title}</title>,
-        {description && <meta name="description" content={description} />}
-      </Head>,
-
-      {children};
-    </>)
-};

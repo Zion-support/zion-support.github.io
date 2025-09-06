@@ -20,17 +20,8 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 
 
-} from 'lucide-react';
-import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
-import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
-type Service = CuttingEdgeInnovation2029 | any;
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   ChevronDown,
@@ -51,7 +42,9 @@ type Service = CuttingEdgeInnovation2029 | any;
   Sparkles,;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 } from 'lucide-react';
 import UltraFuturisticServiceCard from '../ui / UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data / 2029 - cutting - edge - innovations';
@@ -157,12 +150,21 @@ type Service = CuttingEdgeInnovation2029 | any;
 interface UltraFuturistic2029ServiceShowcaseProps {
   services: Service[]
 
-import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
-type Service = CuttingEdgeInnovation2029 | any;
 
-interface UltraFuturistic2029ServiceShowcaseProps {;
-  services: Service[],;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  // Get unique categories;
+  const categories = [;
+    'all',;
+    ...Array && Array.from(new Set(services && services.map(service => service && service.category))),;
+  ];
+
+  // Filter and sort services;
+  const filteredServices = services;
+    .filter(;
+      service =>;
+        selectedCategory === 'all' || service && service.category === selectedCategory;
+    )    .sort((a, b) => {import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
+
+
   title?: string;
   subtitle?: string;
 
@@ -188,84 +190,30 @@ const categoryIcons: { [key: string]: any } = {;
 const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceShowcaseProps> = ({;
 
 
-      }
 
-    })
-    .slice(0, maxServices);
-  const containerVariants = {
-    hidden: { opacity: 0 }
-    visible: {
-      opacity: 1
-      transition: {
-        staggerChildren: 0.1
-      }
-    },  };        staggerChildren: 0.1
-      }
-    }
-  }
-        staggerChildren: 0.1,
-      },
-    },  };
+    .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
 
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 }
-    visible: {
-      opacity: 1
-      y: 0
-      transition: {
+    .sort((a, b) => {
+      switch (sortBy) {
+        case 'innovation':
+          // Default to 'Advanced' if innovationLevel is not available
+          const aLevel = (a as any).innovationLevel |'Advanced';
+          const bLevel = (b as any).innovationLevel |'Advanced';
+          const innovationOrder = {
+            Revolutionary: 4
+            Breakthrough: 3
+            Advanced: 2
+            Emerging: 1
+          }
+          return (
+            (innovationOrder[bLevel] |0) - (innovationOrder[aLevel] |0)
+          const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 };
+          return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0);
+        case 'price':
 
 
-  const containerVariants = {;
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0 && 0.1,;
-      },;
-    },  };        staggerChildren: 0 && 0.1;
-      }
-    }
-  };
-
-  const itemVariants = {;
-    hidden: { opacity: 0, y: 20 },;
-    visible: {;
-      opacity: 1,;
-      y: 0,;
-      transition: {;
-        duration: 0 && 0.6,;
-        ease: 'easeOut' as const,;
-      },;
-    },;
-  };
-
-
-  return (
-    <section className='py-20 relative overflow-hidden'>
-      {/* Background Elements */}
-
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-      <div className='absolute inset-0 pointer-events-none'>;
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>;
-        <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>;
-        <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>;
-      </div>;
-=======
-        duration: 0.6,
-        ease: "easeOut" as const
-      }
-    }
-  };
-
-
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
     <section className="py-20 relative overflow-hidden">;
       {/* Background Elements */}
@@ -278,39 +226,16 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-        {/* Header */}
-<<<<<<< HEAD
-
-
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
-
-
-  return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
-      </div>
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
-
         {/* Header */}
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-        <motion&& motion.div
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 
         <motion.div
@@ -324,15 +249,15 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -343,17 +268,19 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             {title}
           </motion && motion.h2>;
           <motion&& motion.p
@@ -376,12 +303,13 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Filters and Controls */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -406,12 +334,13 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${;
@@ -453,15 +382,14 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
-<<<<<<< HEAD
-=======
+
           {/* Sort Options */}
           <div className='flex items-center space-x-2'>
             <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             <select
               value={sortBy}
               onChange={e => setSortBy(e.target.value as any)}
@@ -490,12 +418,13 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
@@ -533,12 +462,13 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -549,15 +479,15 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         >
           <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -603,6 +533,8 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
+
+
                 View Pricing;
               </a>;
             </div>;
@@ -610,7 +542,10 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Innovation Stats */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -619,7 +554,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           className='mt-20'
 
 
+
         >
+
 
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[
@@ -645,20 +582,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
                 color: 'from-yellow-500 to-orange-500'
               }
 
-        {/* Innovation Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className='mt-20'
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-        >
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[
               {
@@ -688,6 +612,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
                   services.reduce((sum, s) => sum + s.rating, 0) /
                   services.length
 
+
                 ).toFixed(1)
                 icon: TrendingUp
                 color: 'from-green-500 to-teal-500'
@@ -698,18 +623,17 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-            ].map((stat, index) => (
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               <motion.div
 <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
             {[;
@@ -757,12 +681,11 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
               >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div
@@ -784,14 +707,15 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
             ))}
           </div>
         </motion.div>
@@ -799,29 +723,14 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
     </section>
   );
 
-<<<<<<< HEAD
-}
-};
 
 
-export default UltraFuturistic2029ServiceShowcase;  )
-}
-export default UltraFuturistic2029ServiceShowcase;
-
-export default UltraFuturistic2029ServiceShowcase;
-
-export default UltraFuturistic2029ServiceShowcase;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-};
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

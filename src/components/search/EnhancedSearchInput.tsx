@@ -16,10 +16,8 @@ import { logInfo, logWarn } from '@/utils/productionLogger',
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -31,15 +29,15 @@ interface EnhancedSearchInputProps {
   placeholder?: string;  /**
    */
 
-<<<<<<< HEAD
-=======
+
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
   placeholder?: string,
   /**
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
   placeholder?: string,
   /**
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
    */
@@ -53,11 +51,8 @@ export function EnhancedSearchInput({
   placeholder = "Search..."
   searchSuggestions
 }: EnhancedSearchInputProps) {
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   searchSuggestions;
 }: EnhancedSearchInputProps) {;
 
@@ -75,18 +70,17 @@ export function EnhancedSearchInput({
   searchSuggestions
 }: EnhancedSearchInputProps) {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
   const debouncedFetchSuggestions = useMemo(
     () =>
       debounce(async (query: string) => {
         if (!query.trim()) {
-<<<<<<< HEAD
+
           setApiSuggestions([])
           return
           setApiSuggestions([]),
@@ -117,14 +111,8 @@ interface EnhancedSearchInputProps {;
   value: string,;
   onChange: (value: string) => void,;
 
-=======
 
-;
-import { log_info, log_warn } from '@/utils / production_logger';
-interface EnhancedSearchInputProps {
-  value: string,
-  on_change: (value: string, ) => void,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   /**;
    * Optional callback when a suggestion is selected. This allows parent;
    * components to perform actions such as navigation.;
@@ -163,10 +151,8 @@ export function EnhancedSearchInput({;
           setApiSuggestions([]),;
           return;
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         set_loading (true);
 
         try {
@@ -325,8 +311,10 @@ function handleClickOutside() {
         setIsFocused (false),
         // setHighlightedIndex (-1), // Already handled in on_blur generally;
 
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       if (suggestionObj.id) {
         router.push(`/marketplace/listing/${suggestionObj.id}`)
       } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
@@ -339,8 +327,10 @@ function handleClickOutside() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
       }
     }
     document.addEventListener ("mousedown", handleClickOutside);
@@ -757,47 +747,14 @@ if ( {) {
         break
     }
   }
-<<<<<<< HEAD
+
 
     switch(e && e.key) {;
 
-;
-    document.addEventListener("mousedown", handleClickOutside),;
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []),;
-  const router = useRouter(),;
-  const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {;
-    logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),;
-    onChange(suggestionObj.text),;
-    if (onSelectSuggestion) {;
-      logInfo('Calling onSelectSuggestion with:', { data: suggestionObj }),;
-      onSelectSuggestion(suggestionObj);
-    } else {;
-      // Provide a sensible default navigation if the parent did not supply a handler;
-      logWarn('onSelectSuggestion callback not provided'),;
-      if (suggestionObj.id) {;
-        router.push(`/marketplace/listing/${suggestionObj.id}`);
-      } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {;
-        router.push(suggestionObj.slug);
-      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {;
-        router.push(`/blog/${suggestionObj.slug}`);
-      } else {;
-        router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`);
-      }
-    }
-    setIsFocused(false),;
-    inputRef.current?.blur(),;
-    setHighlightedIndex(-1);
-  },;
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
-    switch (e.key) {;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
 
-    switch(e && e.key) {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       case 'ArrowDown':;
         if (isFocused && filteredSuggestions.length > 0) {;
           e.preventDefault(),;
@@ -839,14 +796,8 @@ if ( {) {
         setEnterHandledPostFocus(false),;
         break;
     }
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   };
 
       // Provide a sensible default navigation if the parent did not supply a handler
@@ -878,18 +829,8 @@ if ( {) {
         <Input
           ref = {inputRef,}
           ref={inputRef}
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           type="text"
           id="enhanced-search-input"
           name="search"
@@ -968,11 +909,8 @@ if ( {) {
           aria-label={t('general.search')}
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
@@ -1001,93 +939,17 @@ if ( {) {
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-        highlightedIndex={highlightedIndex} // Pass highlightedIndex
-        listId="autocomplete-suggestions-list" // Pass ID for aria-controls
-      />
-    </div>
-  )
-}setIsFocused (false)
-inputRef.current?.blur ()
-setHighlightedIndex (-1)
-}
-  };
-
-  return (<div
-      className="relative w-full"
-      ref={containerRef}
-      role="combobox"
-
-      aria-expanded={isFocused && filteredSuggestions && filteredSuggestions.length> 0}
-      aria-haspopup="listbox";
-      aria-controls="autocomplete-suggestions-list">;
-      <div className="relative">;
-        <Search
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
-        />;
-
-        <Input
-          ref={inputRef}
-          type="text"
-          value={value}
-
-          onChange={(e) => {;
-            onChange(e && e.target.value);
-
-}}
-          onFocus={() => setIsFocused(true)}
-          onKeyDown={handleKeyDown}
-          placeholder={placeholder}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
-          aria-autocomplete="list"
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-
-        />;
-        {value && (;
-
-          <button
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick={() => onChange('')}
-          >
-            <X className="h-4 w-4" />
-          </button>
-        )}
-
-      </div>;
-
-      <AutocompleteSuggestions
-        suggestions={filteredSuggestions}
-        searchTerm={value}
-        onSelectSuggestion={handleSelectSuggestion}
-        visible={isFocused}
-
-        highlightedIndex={highlightedIndex} 
-        listId="autocomplete-suggestions-list" 
-      />;
-    </div>;
-  );
-}
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           on_blur={(e) => {
             const related_target = e.related_target as HTMLElement;            if () {) {
   $2
 }
+
+
 
 
               setIsFocused (false);
@@ -1123,6 +985,8 @@ setHighlightedIndex (-1)
 }setIsFocused (false);
 input_ref.current?.blur ();
 setHighlightedIndex (-1);
+
+
 
 
 }

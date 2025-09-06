@@ -95,7 +95,7 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
             {isSelected ? 'Selected' : 'Select'}
           </Button>
         </div>
-<<<<<<< HEAD
+
 
         
         {resume.basic_info.summary && (
@@ -138,23 +138,8 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
         {resume.basic_info.summary && (;
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">;
 
-            {resume.basic_info.summary}
-          </p>
-        )}
 
 
-
-        {resume.skills && resume.skills.length > 0 && (
-          <div className="flex flex-wrap gap-1 mt-2">
-            {resume.skills.slice(0, 5).map((skill, index) => (
-            className='h-8 w-8 p-0'>;
-            <Download className='h-4 w-4 text-zion-cyan' />;
-            <span className='sr-only'>Download Resume</span>;
-          </Button>;
-        </div>;
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
         {resume.skills && resume.skills.length > 0 && (
           <div className='flex flex-wrap gap-1 mt-2'>
             {resume.skills.slice(0, 5).map((skill, index) => (
@@ -165,10 +150,14 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
 
 
 
+
+
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs">;
                 +{resume && resume.skills.length - 5} more;
               </Badge>;
+
+
 
 
 
@@ -182,6 +171,8 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
 
 
 
+
+
             {resume.skills.slice(0, 5).map((skill, index) => (
               <Badge 
                 key={index} 
@@ -189,8 +180,10 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
 
 
+
               >
               >
+
 
 
                 {skill.name}
@@ -199,9 +192,11 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
             {resume.skills.length > 5 && (
 
 
+
               <Badge
                 variant='outline'
                 className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge
+
 
 
               <Badge 
@@ -222,11 +217,11 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
 
 
       </CardContent>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </Card>;
   );
 };
 }
+
 
 
 }
@@ -248,9 +243,5 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
 ;
 
 
-=======
-      </CardContent>
-    </Card>
-  );
-};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

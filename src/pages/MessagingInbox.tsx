@@ -7,36 +7,11 @@ import { useIsMobile } from '@/hooks / use - mobile';
 import { toast } from 'sonner';
 
 
+
 import { Button } from '@/components/ui/button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
 import { useRouter } from 'next/router'; // Changed from react-router-dom
-<<<<<<< HEAD
 
-import { useRouter } from 'next/router', // Changed from react-router-dom;
-
-import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video } from 'lucide-react'
-import { useMessaging  } from '@/context/MessagingContext';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { ConversationsList, ConversationDetailView  } from '@/components/messaging';
-import { useIsMobile  } from '@/hooks/use-mobile';
-import { toast  } from 'sonner';
-import { Button  } from '@/components/ui/button';
-import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
-
-
-import {logErrorToProduction} from '@/utils/productionLogger';
-export default function MessagingInbox() {;
-import { useRouter } from 'next/router'; // Changed from react-router-dom
-
-import {logErrorToProduction} from '@/utils/productionLogger';
-
-
-=======
-
-import {logErrorToProduction} from '@/utils/productionLogger';
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useEffect, useState } from 'react',
 import { MessageSquare, Video } from 'lucide-react'
 import { useMessaging } from '@/context/MessagingContext',
@@ -48,14 +23,13 @@ import { Button } from '@/components/ui/button',
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
 import { useRouter } from 'next/router', // Changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger',
-<<<<<<< HEAD
 
-export default function MessagingInbox() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 export default function MessagingInbox() {
@@ -76,32 +50,8 @@ export default function MessagingInbox() {
   useEffect((,) => {
   const { 
     conversations,
-<<<<<<< HEAD
 
 
-    activeConversation, ;
-    setActiveConversation;
-    markAsRead;
-    fetchConversations;
-    activeConversation, 
-    setActiveConversation, 
-    markAsRead,
-    fetchConversations,
-    isLoading
-  } = useMessaging(),
-  const isMobile = useIsMobile(),
-  const router = useRouter(), // Changed from navigate
-  const [activeCall, setActiveCall] = useState<string | null>(null),
-  
-  useEffect(() => {
-  const [activeCall, setActiveCall] = useState<string | null>(null);
-  
-  useEffect((,) => {
-  const [activeCall, setActiveCall] = useState<string | null>(null),
-  
-  useEffect(() => {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     // Fetch conversations when component mounts
@@ -132,17 +82,8 @@ function MessagingInbox() {
       try {
         await fetchConversations()
       } catch (error) {
-<<<<<<< HEAD
 
 
-        logErrorToProduction('Failed to load conversations:', { data: error })
-        toast.error("Failed to load messages. Please try again.")
-      }
-    }
-    loadData()
-  }, [fetchConversations]);
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     };
@@ -159,40 +100,9 @@ function MessagingInbox() {
     const roomId = `msg-${activeConversation.id}`;
     setActiveCall(roomId);
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-    },
-    
-    loadData()
-  }, [fetchConversations]),
-  
-  const startVideoCall = () => {
-    if (!activeConversation) {
-      toast.error("Please select a conversation first"),
-      return
-    }
-<<<<<<< HEAD
-
-
-    const roomId = `msg-${activeConversation.id}`;
-    setActiveCall(roomId);
-    // Show toast notification
-    toast.success("Starting video call", {
-      description: "Initializing video call connection..."
-    });
-    // Navigate to video call page
-    router.push(`/call/${roomId}`), // Changed from navigate
-  }
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     
     const roomId = `msg-${activeConversation.id}`,
@@ -201,33 +111,9 @@ function MessagingInbox() {
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-    
-    // Show toast notification
-    toast.success("Starting video call", {
-      description: "Initializing video call connection..."
-<<<<<<< HEAD
-
-
-    });
-    
-    // Navigate to video call page
-    router.push(`/call/${roomId}`), // Changed from navigate
-  };
-    }),
-    
-    // Navigate to video call page
-    router.push(`/call/${roomId}`), // Changed from navigate
-  },
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   
@@ -240,14 +126,8 @@ function MessagingInbox() {
               <MessageSquare className="h-6 w-6" />
               Messages
             </h1>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   useEffect((,) => {;
@@ -266,35 +146,8 @@ function MessagingInbox() {
           </div>
           
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-          <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
-            <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
-              {/* Conversations List */}
-              {isLoading ? (
-                <div className="flex-1 flex items-center justify-center p-8">
-                  <LoadingSpinner variant="primary" />
-                </div>
-              ) : (
-                <ConversationsList
-<<<<<<< HEAD
-
-
-                  conversations = {conversations,}
-                  activeConversation = {activeConversation,}
-                  setActiveConversation = {setActiveConversation,}
-                  markAsRead = {markAsRead,}
-                />
-              )}
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               
 
@@ -385,20 +238,8 @@ export default function MessagingInbox() {;
               )}
 
 ;
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Conversation Detail */}
               <ConversationDetailView />
             </div>

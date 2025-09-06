@@ -12,15 +12,11 @@ import { cn } from "@/lib/utils"
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
 
 
-<<<<<<< HEAD
-;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
@@ -44,11 +40,10 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
 }
 
 
-<<<<<<< HEAD
-export const SidebarProvider = React.forwardRef<
-  HTMLDivElement,
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 
-=======
+
+
 const SidebarContext = React && React.createContext<SidebarContextType | null>(null);
 
 export function useSidebar(): any (): SidebarContextType {;
@@ -78,7 +73,7 @@ export const SidebarProvider = React && React.forwardRef<;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   SidebarProviderProps
 >(
   (
@@ -108,57 +103,14 @@ export const SidebarProvider = React && React.forwardRef<;
     const [_open, _setOpen] = React.useState(defaultOpen)
     const open = openProp ?? _open
     const setOpen = React.useCallback(
-<<<<<<< HEAD
-      (value: boolean | ((value: boolean) => boolean)) => {
-        const openState = typeof value === "function" ? value(open) : value
-        if (setOpenProp) {
-          setOpenProp(openState)
-        } else {
-          _setOpen(openState)
-=======
-=======
-export const SidebarProvider = React.forward_ref<;
-  HTMLDivElement;
-  SidebarProviderProps;
->(
-  (
-    {
-      default_open = true;
-      open: open_prop,
-      onOpenChange: setOpenProp,
-      class_name;
-      style;
-      children;
-      ...props;
-    }
-    ref) => {
-    const is_mobile = useIsMobile ();
-    const [open_mobile, setOpenMobile] = React.useState (false);
-    // This is the internal state of the sidebar.;
-    // We use open_prop and setOpenProp for control from outside the component.;
-    const [_open, _setOpen] = React.useState (default_open);
-    const open = open_prop ?? _open;
-    const set_open = React.useCallback (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-      (value: boolean | ((value: boolean) => boolean)) => {
-        const open_state = typeof value === "function" ? value (open) : value;
-        // Check condition
-if ( {) {
-  $2
-}
-          setOpenProp (open_state);
-        } else {
-          _setOpen (open_state);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         }
 
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         // This sets the cookie to keep the sidebar state.
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`
       }
@@ -182,10 +134,8 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 ;
         // This sets the cookie to keep the sidebar state.;
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
@@ -210,11 +160,11 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         }
       }
 
@@ -268,20 +218,15 @@ SidebarProvider.displayName = "SidebarProvider"
 export { SidebarContext }
 
 
-<<<<<<< HEAD
-export { SidebarContext };
-;
-export { SidebarContext }
-;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+

@@ -25,16 +25,6 @@ export function TalentCardHeader(): any ({;
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-            {fullName}
-            {/* AI score could be used for verification badge */}
-            {yearsExperience > 5 && (
-              <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
 
 
             )}
@@ -56,8 +46,7 @@ export function TalentCardHeader(): any ({;
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
 
 import React from 'react';
@@ -98,4 +87,5 @@ function TalentCardHeader() {
     </div>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

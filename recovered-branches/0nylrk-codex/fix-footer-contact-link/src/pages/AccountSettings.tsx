@@ -1,14 +1,12 @@
 
-<<<<<<< HEAD
-=======
-=======
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 import {useState, useEffect} from 'react';
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
@@ -22,16 +20,10 @@ import {Separator} from '@/components / ui / separator';
 import {Switch} from '@/components / ui / switch';
 import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
-<<<<<<< HEAD
-
-export default function AccountSettings() {;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
@@ -40,21 +32,9 @@ export default function AccountSettings() {;
 
 
 
-<<<<<<< HEAD
-=======
-  useEffect(() => {;
-    try {;
-      const saved = localStorage && localStorage.getItem('account_settings');
-      if (saved) {;
-        const parsed = JSON && JSON.parse(saved);
-        setDisplayWeb3(!!parsed && parsed.displayWeb3);
-        setDidHandle(parsed && parsed.didHandle || '');
-        setEnableBackup(!!parsed && parsed.enableBackup);
 
-=======
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import { useState, useEffect } from 'react',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -85,34 +65,26 @@ export default function AccountSettings() {
         setEnableBackup(!!parsed.enableBackup)
 
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       }
     } catch (e) {;
       console && console.error('Error loading account settings', e);
     }
-<<<<<<< HEAD
 
-  }, []);
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
   }, []),
-=======
-=======
-  }, []),
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const handleSave = () => {
     setIsSubmitting(true),
@@ -159,10 +131,7 @@ export default function AccountSettings() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
       // Request accounts;
       const accounts = await ethereum && ethereum.request({ method: 'eth_requestAccounts' }),;
       const address = accounts[0];
@@ -183,8 +152,10 @@ export default function AccountSettings() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         }
       } catch (error) {;
         console && console.error('ENS lookup error:', error);
@@ -197,24 +168,15 @@ export default function AccountSettings() {
 
     }
 
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
   },
 
-=======
-  };
-=======
-  },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   },
+
 
 
   };
@@ -222,9 +184,9 @@ export default function AccountSettings() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
     <>;

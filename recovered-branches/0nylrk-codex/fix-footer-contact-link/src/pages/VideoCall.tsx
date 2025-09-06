@@ -11,10 +11,10 @@ import {Button} from '@/components/ui/button';
 import {toast} from 'sonner';
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
@@ -85,14 +85,10 @@ export default function VideoCall() {;
       isVideoEnabled: true,;
       isMuted: false;
     }
-<<<<<<< HEAD
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const handleJoinCall = () => {;
@@ -116,7 +112,6 @@ export default function VideoCall() {;
       description: "You have left the meeting";
     });
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleJoinCall = () => {
     setIsJoining(true),
@@ -166,55 +161,16 @@ export default function VideoCall() {;
     const mockUsers = [
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
-<<<<<<< HEAD
 
 
-  ]),;
-  const handleJoinCall = () => {;
-    setIsJoining(true),;
-    // Simulate connection delay;
-    setTimeout(() => {;
-      setHasJoined(true),;
-      setIsJoining(false),;
-      toast.success("Call joined", {;
-        description: `You have joined meeting room ${roomId}`;
-      });
-    }, 1500);
-  },;
-  const handleLeaveCall = () => {;
-    setHasJoined(false),;
-    toast.info("Call ended", {;
-      description: "You have left the meeting";
-    }),;
-    // Navigate back after a short delay;
-    setTimeout(() => {;
-      navigate(-1);
-    }, 1500);
-  },;
-  const simulateUserJoining = () => {;
-    // This is just for demo purposes - in a real app, this would be handled by the video call service;
-    const mockUsers = [;
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-    ],;
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],;
-    if (!participants.find(p => p.id === randomUser.id)) {;
-      setParticipants(prev => [...prev, randomUser]);
-      toast(`${randomUser.name} joined the call`);
-    }
-  },
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 
   return (
 
@@ -253,32 +209,9 @@ export default function VideoCall() {;
           </div>
         )}
 
-<<<<<<< HEAD
-      </main>
-      <Footer />
-    </>
-  )
-}
 
 
-=======
-=======
 
-
-      </main>;
-      <Footer />;
-    </>;
-  );
-}
-
-      id: 'user - 1',
-      name: 'You',
-      isVideoEnabled: true,
-      is_muted: false;
-    }
-  ]);
-;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const handleJoinCall = () =>: any {
     setIsJoining (true);
     // Simulate connection delay;
@@ -357,18 +290,11 @@ export default function VideoCall() {;
     </>);
 }
 
-<<<<<<< HEAD
-=======
-=======
-;
+
+
+
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-<<<<<<< HEAD
-=======
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

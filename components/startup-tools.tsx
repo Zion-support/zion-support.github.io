@@ -1,29 +1,6 @@
-<<<<<<< HEAD
 
 
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
 
-
-import {
-
-  Rocket
-  DollarSign
-  Users
-  BarChart3
-  Mail
-  Calendar
-  Shield
-  Globe
-  ArrowRight
-  Star
-  Check
-  ExternalLink
-  TrendingUp
-  Zap
-  Target
-  Lightbulb
-  BookOpen;} from 'lucide-react';import {
 
   Rocket,
   DollarSign,
@@ -42,66 +19,6 @@ import {
   Target,
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-
-  Rocket;
-  DollarSign, ;
-  Users, ;
-  BarChart3, ;
-  Mail, ;
-  Calendar, ;
-  Shield, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
-  Rocket,
-  DollarSign,
-  Users,
-  BarChart3,
-  Mail,
-  Calendar,
-  Shield,
-  Globe,
-  ArrowRight,
-  Star,
-  Check,
-  ExternalLink,
-  TrendingUp,
-  Zap,
-  Target,
-<<<<<<< HEAD
-  Lightbulb,
-  BookOpen,} from 'lucide-react';import {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Rocket;
   DollarSign,
   Users,
@@ -141,7 +58,6 @@ import {
 
       bestFor: 'B2B startups, SaaS companies, marketing teams'
     }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       name: 'Mailchimp'
       description:
@@ -251,6 +167,23 @@ function StartupToolsPage() {
 
       name: 'Canva',
       description: 'Graphic design platform that makes it easy to create professional designs without design skills.',
+
+
+      category: 'Design',
+      pricing: 'Free - $12.99 / month',
+      rating: 4.6,
+      users: '100M+',
+
+      name: 'Buffer',
+      description: 'Social media management platform that helps businesses schedule posts, analyze performance, and manage multiple accounts.',
+    category: 'Social Media',
+      pricing: 'Free - $15/month',
+      rating: 4.4,
+      users: '140K+',
+      icon: <Globe className="w-8 h-8 text-green-400" />,
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      features: [
+        'Live chatCustomer messagingHelp deskUser onboardingAnalytics & reportingIntegration ecosystem';
 
       ];
       website: 'https://buffer.com',
@@ -484,7 +417,6 @@ function StartupToolsPage() {
                 {startupTools.length}+
 
               </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="text-gray-400 text-sm">Essential Tools</div>
             </div>
             <div className="text-center group">
@@ -877,18 +809,13 @@ function StartupToolsPage() {
       </section>
 
 
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-import React from 'react';
 
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

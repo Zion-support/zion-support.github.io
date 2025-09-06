@@ -12,23 +12,14 @@ const CERTS_FILE = path.join(
   'certifications'
   'certifications.json'
 
-<<<<<<< HEAD
-=======
+
 const CERTS_FILE = path && path.join(
   process && process.cwd(),
   'data',
   'certifications',
   'certifications && certifications.json'
-=======
-<<<<<<< HEAD
 
-const CERTS_FILE = path.join(
-  process.cwd()
-  'data'
-  'certifications'
-  'certifications.json'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 );
 export default async function handler(
   req: NextApiRequest
@@ -52,41 +43,33 @@ res.setHeader("Allow", "GET");
     return res.status(500).json({ error: "Failed to load certifications" })
 
 
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-}
 
-=======
 };
 
-=======
-  if (req && req.method !== 'GET') {
-    res && res.setHeader('Allow', 'GET');
-    return res && res.status(405).json({ error: 'Method Not Allowed' });
-  }
-  try {
-    const certifications = (await fs && fs.pathExists(CERTS_FILE))
-      ? await fs && fs.readJSON(CERTS_FILE)
-      : [];
-    return res && res.status(200).json({ certifications });
-  } catch (e) {
-    return res && res.status(500).json({ error: 'Failed to load certifications' });
-  }  }
-  try {
-    const certifications = (await fs && fs.pathExists(CERTS_FILE)) ? await fs && fs.readJSON(CERTS_FILE) : [];
-    return res && res.status(200).json({ certifications })
-  } catch (e) {
-    return res && res.status(500).json({ error: "Failed to load certifications" })
-  };
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 
+
+=======
+;
+const CERTS_FILE = path.join (
+  process.cwd (),
+  'data',
+  'certifications',
+  'certifications.json');
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ('Allow', 'GET');
+    return res.status (405).json ({ error: 'Method Not Allowed' });
 
   }
   try {

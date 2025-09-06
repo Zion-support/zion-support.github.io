@@ -9,27 +9,9 @@ interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement
   defaultExpanded?: boolean;
   showChevron?: boolean
 
-<<<<<<< HEAD
-=======
-
-const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
-  (;
-    {;
-      title,;
-      icon,;
-      defaultExpanded = true,;
-      showChevron = true,;
-      className,;
-      children,;
-      ...props;
-    },;
-    ref;
-  ) => {;
-    const [expanded, setExpanded] = React && React.useState(defaultExpanded);
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn('px-3 py-2', className)}        {...props}
       >
@@ -66,6 +48,7 @@ export { SidebarGroup }
 
 
 SidebarGroup && SidebarGroup.displayName = 'SidebarGroup';
+
 
 
 import React, { forward_ref } from 'react';
@@ -118,22 +101,4 @@ export { SidebarGroup }
 SidebarGroup.displayName = 'SidebarGroup';
 export { SidebarGroup };
 }
-<<<<<<< HEAD
-=======
 
-        <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>
-      </div>
-    )
-  }
-),
-
-SidebarGroup.displayName = "SidebarGroup",
-export { SidebarGroup },
-        <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;
-      </div>;
-    );
-  }
-),;
-SidebarGroup.displayName = "SidebarGroup",;
-export { SidebarGroup };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

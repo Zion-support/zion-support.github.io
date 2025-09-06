@@ -1,12 +1,9 @@
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import Link from 'next/link';
 import Head from 'next/head';
 import {useState, useEffect, Suspense} from 'react';
@@ -14,19 +11,8 @@ import {ContactInfo, AnimationState} from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
-<<<<<<< HEAD
-
-export default function Home() {
-  const [animationState, setAnimationState] = useState<AnimationState>({
-
-    isLoaded: false
-    hasError: false
 
 
-=======
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState, useEffect, Suspense } from 'react';
 import Head from 'next/head';
 import { useState, useEffect, Suspense } from 'react';
@@ -40,7 +26,9 @@ export default function Home() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   });
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -65,10 +53,8 @@ export default function Home() {
 
     ),
   };
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (;
     <>;
       <Head>;
@@ -832,10 +818,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           </div>
         </section>
         {/* Services Overview */}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         <section className="py-16 px-4" role="main">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" id="service-categories">
@@ -935,11 +919,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       </ErrorBoundary>
     </>
   )
-<<<<<<< HEAD
-origin/automation-improvements-final
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+origin/automation-improvements-final
+
 }
 import {Button} from '../src/components/ui/button';
 
@@ -1030,26 +1012,19 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 
 
 
+
           </div>
         </section>
 origin/main
 }
           </div>
-<<<<<<< HEAD
-}          </div>
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
-
-}          </div>
-
-        </section>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         {/* Services Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -1072,22 +1047,20 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
               </p>
             </motion.div>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
               </p>
             </motion.div>
 
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
@@ -1121,12 +1094,6 @@ origin/automation-improvements-final
                 </motion && motion.div>;
               ))}
 
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
         {/* Services Preview */}
@@ -1134,10 +1101,10 @@ origin/automation-improvements-final
             </motion.div>
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 
         {/* Featured Services */}
         <section className="py-16 bg-white">
@@ -1157,11 +1124,10 @@ origin/automation-improvements-final
             </motion.div>
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredServices.map((service, index) => (
                 <motion.div
@@ -1212,19 +1178,10 @@ origin/automation-improvements-final
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-                  </ul>;
-                  <div className="mt-4">;
-                    <span className="text-2xl font-bold text-blue-600">{service && service.price}</span>;
-                  </div>;
-                </motion && motion.div>;
-              ))}
-            </div>;
-          </div>;
-        </section>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 
@@ -1233,7 +1190,6 @@ origin/automation-improvements-final
         {/* Why Choose Us */}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 origin/automation-improvements-final
         {/* Why Choose Us */}
@@ -1332,9 +1288,7 @@ origin/automation-improvements-final
                 <motion&& motion.div
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
+
 
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -1361,20 +1315,10 @@ origin/automation-improvements-final
                   </Card>
 
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<p className="text-gray-600">{item.description}</p>
-
-                </motion.div>
-              ))}
-
-            </div>
-          </div>
-        </section>
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => (
@@ -1509,17 +1453,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 <p className="text-gray-600">{item.description}</p>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 </motion.div>
                   <p className="text-gray-600">{item.description}</p>
                 </motion.div>
                   <p className="text-gray-600">{item.description}</p>                </motion.div>
 ursor/fix-lint-push-and-merge-to-main-ae4e
               ))}
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
             </div>
           </div>
         </section>
@@ -1556,28 +1497,9 @@ origin/automation-improvements-final
                 </Link>;
                 <Link
                   href="tel:+13024640950"
-<<<<<<< HEAD
 
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Now
 
-=======
 
-=======
-<<<<<<< HEAD
-        <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Transform Your Business?
               </h2>
@@ -1597,14 +1519,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
               </div>
-<<<<<<< HEAD
+
                 </Link>              </div>
 ursor/fix-lint-push-and-merge-to-main-ae4e
-=======
 
-                </Link>              </div>
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </motion.div>
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
@@ -1622,14 +1540,12 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
               </Link>
             </div>
 
+
 origin/main
 
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 </Link>
     );
@@ -1899,27 +1815,18 @@ origin/main
               </div>
             </section>
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-          </div>
-        </section>
-=======
+
+
           </div>
         </section>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>
         </section>
 origin/automation-improvements-final
       </div>
-<<<<<<< HEAD
 
-    </>
-  );
-}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     </MainLayout>
   );
@@ -1938,7 +1845,9 @@ origin/automation-improvements-final
 </main>
     </>
 
+
 origin/main
+
 
 
 
@@ -1949,8 +1858,10 @@ origin/main
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

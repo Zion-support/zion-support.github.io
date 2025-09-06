@@ -2,26 +2,15 @@
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {ArrowRight, Check, ExternalLink} from "lucide-react";
-<<<<<<< HEAD
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Check, ExternalLink } from "lucide-react";
-interface IntegrationCardProps {
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface IntegrationCardProps {;
   title: string,;
@@ -35,17 +24,17 @@ import { ArrowRight, Check, ExternalLink } from "lucide-react",
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 export function IntegrationCard(): any ({;
   title;
   description;
   icon;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 interface IntegrationCardProps {
   title: string,
   description: string,
@@ -54,32 +43,18 @@ interface IntegrationCardProps {
   href?: string,
   onConnect?: () => void
 }
-<<<<<<< HEAD
 
 
-export function IntegrationCard({
-  title;
-  description;
-  icon;
-  status;
-  title,
-  description,
-  icon,
-  status = "disconnected",
-  href,
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   onConnect}: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">
@@ -184,11 +159,8 @@ export function IntegrationCard({;
             <span>Connect</span>;
             <ArrowRight className="ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5" />;
           </Button>;
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
       </CardFooter>
     </Card>
@@ -198,12 +170,14 @@ export function IntegrationCard({;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
+
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         )}
       </CardFooter>;
     </Card>;
@@ -215,25 +189,16 @@ export function IntegrationCards() {
   return (
     <div className="grid md:grid-cols-3 gap-6">;
       {/* Integration cards would go here */}
-<<<<<<< HEAD
 
-    </div>
-  )
 
-=======
-
-    </div>;
-  );
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

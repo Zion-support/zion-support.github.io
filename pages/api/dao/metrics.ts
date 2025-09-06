@@ -1,11 +1,9 @@
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -31,11 +29,11 @@ async function fetchJson(url: string) {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   return resp.json();
@@ -46,11 +44,10 @@ async function fetchJson(url: string) {;
 }
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
-=======
 
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
@@ -66,12 +63,13 @@ function readJson(p: string) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 }
 function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2));
@@ -82,13 +80,10 @@ function writeJson(p: string, v: any) {
 }
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
@@ -96,32 +91,15 @@ export default async function handler(
 
 
 
-
-<<<<<<< HEAD
-=======
-export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-;
-export default async function handler(req, res) {
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   try {;
 ;
 export default async function handler(req, res) {
-<<<<<<< HEAD
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   try {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   try {
 
@@ -136,7 +114,6 @@ export default async function handler(req, res) {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
     const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`;
     const transfersJson = await fetchJson(transfersUrl);
@@ -169,7 +146,6 @@ export default async function handler(req, res) {
       percent:
         total > 0n ? Number((BigInt(e && e.amount) * 10000n) / total) / 100 : 0,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }));
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
     const activeProposals: any[] = [];
@@ -319,24 +295,17 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
-<<<<<<< HEAD
 
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

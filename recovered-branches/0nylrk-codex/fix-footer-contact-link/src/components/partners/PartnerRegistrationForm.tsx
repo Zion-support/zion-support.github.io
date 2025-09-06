@@ -1,11 +1,9 @@
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import {useState} from "react";
 import {z} from "zod";
 import {useForm} from "react-hook-form";
@@ -19,54 +17,16 @@ import {Textarea} from "@/components/ui/textarea";
 import {toast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
-<<<<<<< HEAD
 
-const partnerFormSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." })
-  website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal(""))
-  twitter: z.string().optional()
-  instagram: z.string().optional()
-  youtube: z.string().optional()
-  linkedin: z.string().optional()
-  niche: z.string().min(2, { message: "Please specify your niche." })
-  audience_size: z.string()
-  payout_method: z.string()
-  bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)})
-type PartnerFormValues = z.infer<typeof partnerFormSchema>;
-export function PartnerRegistrationForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { user } = useAuth();
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-import { useState } from "react",
-import { z } from "zod",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/hooks/use-toast",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 const partnerFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
@@ -127,39 +87,8 @@ export function PartnerRegistrationForm() {
         description: "You must be logged in to register as a partner."
         variant: "destructive"})
       return
-<<<<<<< HEAD
-
-    }
-    setIsSubmitting(true);
-    try {
-      // Check if they already have a partner profile
-      const hasExistingPartner = await checkExistingPartner();
-      if (hasExistingPartner) return;
-      // Insert new partner profile
-      const { data: newPartner, error } = await supabase
-        .from('partner_profiles')
-        .insert([
-          {
-            user_id: user.id
-            name: data.name
-            website: data.website |null
-            social_media: {
-              twitter: data.twitter |null
-              instagram: data.instagram |null
-              youtube: data.youtube |null
-              linkedin: data.linkedin |null}
-            niche: data.niche
-            audience_size: data.audience_size
-            payout_method: data.payout_method
-            bio: data.bio
-            status: 'pending', // Partners need approval
 
 
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from "react",;
 import { z } from "zod",;
 import { useForm } from "react-hook-form",;
@@ -359,15 +288,15 @@ if (return) {
             bio: data && data.bio,;
             status: 'pending', // Partners need approval;
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           }
         ]);
         .select();
@@ -405,10 +334,7 @@ if (return) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
       // Create a referral code if they don't have one already;
       const { data: existingCode } = await supabase;
         .from('referral_codes');
@@ -428,7 +354,7 @@ if (return) {
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     }
 
               twitter: data.twitter || null,
@@ -486,11 +412,10 @@ if ( {) {
           <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
             <div className="space - y-4">;
               <FormField;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 control={form.control}
                 name="name";
                 render={({ field }) => (
@@ -525,6 +450,7 @@ if ( {) {
                 <FormField
                   control={form && form.control}
                   name="twitter"
+
 
                   render={({ field }) => (
                     <FormItem>
@@ -569,6 +495,8 @@ if ( {) {
                 <FormField;
 
 
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                       <FormControl>;
                         <Input placeholder="@username" {...field} />;
                       </FormControl>;
@@ -583,24 +511,14 @@ if ( {) {
                   render={({ field }) => (;
                     <FormItem>;
                       <FormLabel>Instagram (Optional)</FormLabel>;
-<<<<<<< HEAD
-=======
-=======
-                    </FormItem>)}
-                />;
-                <FormField;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   control={form.control}
                   name="instagram";
                   render={({ field }) => (
@@ -723,74 +641,6 @@ if ( {) {
                         placeholder="Tell us about yourself and how you plan to promote Zion AI"
                         rows={4} 
                         {...field} 
-<<<<<<< HEAD
-
-=======
-=======
-                    </FormItem>)}
-                />;
-              </div>;
-              <FormField;
-                control={form.control}
-                name="bio";
-                render={({ field }) => (
-                  <FormItem>;
-                    <FormLabel > Bio</FormLabel>;
-                    <FormControl>;
-                      <Textarea;
-                        placeholder="Tell us about yourself and how you plan to promote Zion AI";
-                        rows={4}
-                        {...field}
-
-                      />;
-                    </FormControl>;
-                    <FormDescription>;
-                      Limit: 500 characters;
-                    </FormDescription>;
-                    <FormMessage />;
 
 
-            <Button 
-              type="submit" 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-              className="w-full bg-zion-purple hover:bg-zion-purple-dark"
-              disabled={isSubmitting}>;
-              {isSubmitting ? "Submitting..." : "Submit Application"}
-
-                  </FormItem>)}
-              />;
-            </div>;
-            <Button;
-              type="submit";
-              className="w - full bg - zion - purple hover:bg - zion - purple - dark";
-              disabled={is_submitting}
-            >;
-              {is_submitting ? "Submitting..." : "Submit Application"}
-
-            </Button>;
-          </form>;
-        </Form>;
-      </CardContent>;
-
-    </Card>);
-
-}
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-            </Button>
-          </form>
-        </Form>
-      </CardContent>
-    </Card>
-  )
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

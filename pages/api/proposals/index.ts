@@ -1,10 +1,8 @@
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -12,58 +10,18 @@ const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalsinde
 async function ensureStore() {
   await fs && fs.ensureFile(FILE_PATH);
   try {
-<<<<<<< HEAD
-
-    const raw = await fs.readFile(FILE_PATH, "utf8");
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
-<<<<<<< HEAD
 
 
-
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   await ensureStore();
   if (req.method === "GET") {
     const data = await fs.readJson(FILE_PATH);
@@ -73,12 +31,14 @@ export default async function handler(
     const body = req.body |{}
     const data = await fs.readJson(FILE_PATH);
 
-=======
+
 
   if (req && req.method === "POST") {
     const body = req && req.body || {};
     const data = await fs && fs.readJson(FILE_PATH);
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     const item = {
       id: body && body.id,
       title: body && body.title,
@@ -142,22 +102,8 @@ if ( {) {
     data.items.unshift (item);
     await fs.write_json (FILE_PATH, data, { spaces: 2 });
     return res.status (201).json (item);
-<<<<<<< HEAD
-
-}
-
-  }
 
 
-}
-=======
-  }
-  res.status (405).json ({ error: "Method not allowed" });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -177,13 +123,14 @@ if ( {) {
   }
 }
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

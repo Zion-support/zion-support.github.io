@@ -1,12 +1,8 @@
 
 
-<<<<<<< HEAD
-=======
-=======
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }}}};
 ;
 ;
@@ -56,45 +52,10 @@ ursor/add-new-services-and-deploy-updates-0462
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 
-
-
-// Message channel handler for real-time communication
-export class MessageChannelHandler {;
-  private channels: Map<string, MessageChannel> = new Map();
-  createChannel(id: string): MessageChannel {
-    const channel = new MessageChannel();
-    this.channels.set(id, channel);
-    return channel;
-  }
-  getChannel(id: string): MessageChannel | undefined {
-    return this.channels.get(id);
-  }
-  removeChannel(id: string): boolean {
-    return this.channels.delete(id);
-  }
-  broadcast(message: any, excludeChannel?: string): void {
-    this.channels.forEach((channel, id) => {
-      if (id !== excludeChannel) {
-        channel.port1.postMessage(message);
-      }
-    });
-  }
-}
-export default MessageChannelHandler;
-
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 
 ;
@@ -103,12 +64,14 @@ export default MessageChannelHandler;
 ,;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

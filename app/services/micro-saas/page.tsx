@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 
 
@@ -9,14 +9,12 @@ export const metadata = {
 
 
 };
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default function MicroSaasPage() {
   return (
 
-<<<<<<< HEAD
+
     <div className="animate-fade-in">
       <section className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -472,52 +470,14 @@ function BenefitCard({ title, description, icon }: {
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600">{description}</p>
-=======
-=======
-export const metadata = { title: 'Micro SaaS Development | Zion Tech Group' } export default /**
- * MicroSaaSPage - Function description
- */
-function MicroSaaSPage() { return ( <section> <h1 style={{font_size: 26, font_weight: 800}}>Micro SaaS Development</h1> <p style={{margin_top: 8, color: '#374151'}}>We design, build, launch and operate revenue - generating micro SaaS products end - to - end.</p> <div style={{display: 'grid', gap: 12, margin_top: 16}}> <Item title="Core features" details={["Multi - tenant architecture", "Auth (email, OAuth)", "Billing (Stripe)", "Admin + analytics", "In - app onboarding"]} /> <Item title="Growth stack" details={["SEO - ready marketing site", "Blog + docs", "Email campaigns", "Referral + affiliates"]} /> <Item title="Ops & reliability" details={["CI / CD", "Observability", "Error budgets", "SLOs", "On - call setup"]} /> </div> <Pricing /> </section> )} /**
- * Item - Function description
- */
-function Item() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h3 style={{font_weight: 700}}>{title}</h3> <ul style={{padding_left: 18, color: '#4b5563'}}>{details.map (d => (<li key={d} style={{list_style: 'disc'}}>{d}</li>))}</ul> </div> )} /**
- * Pricing - Function description
- */
-function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat (auto - fit, minmax (260px, 1fr))'}}> <Plan name="MVP Sprint" price="$8k–$20k" features={["2–4 weeks", "MVP scope", "Stripe billing", "Basic analytics"]} /> <Plan name="Growth" price="$20k–$60k" features={["6–10 weeks", "SEO + content", "CRM + email", "Observability"]} /> <Plan name="Scale" price="$60k+" features={["Custom roadmap", "SRE + security", "Multi - region", "SLAs"]} /> </div> )} /**
- * Plan - Function description
- */
-function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
-=======
-export const metadata = { title: 'Micro SaaS Development | Zion Tech Group' };
 
-export default function MicroSaaSPage() {
-  return (
-    <section>
-      <h1 style={{fontSize: 26, fontWeight: 800}}>Micro SaaS Development</h1>
-      <p style={{marginTop: 8, color: '#374151'}}>We design, build, launch and operate revenue-generating micro SaaS products end-to-end.</p>
-      <div style={{display: 'grid', gap: 12, marginTop: 16}}>
-        <Item title="Core features" details={["Multi-tenant architecture", "Auth (email, OAuth)", "Billing (Stripe)", "Admin + analytics", "In-app onboarding"]} />
-        <Item title="Growth stack" details={["SEO-ready marketing site", "Blog + docs", "Email campaigns", "Referral + affiliates"]} />
-        <Item title="Ops & reliability" details={["CI/CD", "Observability", "Error budgets", "SLOs", "On-call setup"]} />
-      </div>
-      <Pricing />
-    </section>
-  );
-}
-
-function Item({ title, details }: { title: string; details: string[] }) {
-  return (
-    <div style={{border: '1px solid #e5e7eb', borderRadius: 12, padding: 16}}>
-      <h3 style={{fontWeight: 700}}>{title}</h3>
-      <ul style={{paddingLeft: 18, color: '#4b5563'}}>{details.map(d => (<li key={d} style={{listStyle: 'disc'}}>{d}</li>))}</ul>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </div>
   );
 }
 
 function Pricing() {
   return (
-<<<<<<< HEAD
+
     <section className="mb-16">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -542,106 +502,4 @@ function Pricing() {
       </div>
     </section>
   );
-}
-
-function Plan({ name, price, features, popular }: { 
-  name: string; 
-  price: string; 
-  features: string[]; 
-  popular: boolean; 
-}) {
-  return (
-    <div className={`border rounded-xl p-8 relative ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'}`}>
-      {popular && (
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
-        </div>
-      )}
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-blue-600 mb-4">{price}</div>
-      <ul className="space-y-3 mb-6">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center">
-            <span className="text-blue-500 mr-3">✓</span> {feature}
-
-          </li>
-        ))}
-      </ul>
-      <a 
-        href="tel:+13024640950" 
-        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-
-          popular 
-            ? 'bg-blue-600 text-white hover:bg-blue-700' 
-
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-
-        }`}
-      >
-        Get Started
-      </a>
-    </div>
-  );
-
-}
-
-
-function CTASection() {
-  return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Build Your Micro SaaS?
-      </h3>
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your idea and create a custom solution that drives real business value. 
-        Our team of experts is ready to help you launch your next successful micro SaaS product.
-
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-        >
-          Email Us
-        </a>
-      </div>
-
-      <div className="mt-6 text-sm text-gray-600">
-        <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
-
-      </div>
-=======
-    <div style={{marginTop: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))'}}>
-      <Plan name="MVP Sprint" price="$8k–$20k" features={["2–4 weeks", "MVP scope", "Stripe billing", "Basic analytics"]} />
-      <Plan name="Growth" price="$20k–$60k" features={["6–10 weeks", "SEO + content", "CRM + email", "Observability"]} />
-      <Plan name="Scale" price="$60k+" features={["Custom roadmap", "SRE + security", "Multi-region", "SLAs"]} />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-    </div>
-  );
-}
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-function Plan({ name, price, features }: { name: string; price: string; features: string[] }) {
-  return (
-    <div style={{border: '1px solid #e5e7eb', borderRadius: 12, padding: 16}}>
-      <h4 style={{fontWeight: 700}}>{name}</h4>
-      <div style={{color: '#111827', fontWeight: 800, marginTop: 4}}>{price}</div>
-      <ul style={{paddingLeft: 18, color: '#4b5563', marginTop: 8}}>{features.map(f => (<li key={f} style={{listStyle: 'disc'}}>{f}</li>))}</ul>
-<<<<<<< HEAD
-      <a href="tel:+13024640950" style={{display: 'inline-block', marginTop: 12, padding: '8px 16px', backgroundColor: '#3b82f6', color: 'white', textDecoration: 'none', borderRadius: 6}}>Call +1 302 464 0950</a>
-=======
-      <a href="https://ziontechgroup.com" style={{display: 'inline-block', marginTop: 12, padding: '8px 16px', backgroundColor: '#3b82f6', color: 'white', textDecoration: 'none', borderRadius: 6}}>Get Started</a>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-    </div>
-  );
-}
 

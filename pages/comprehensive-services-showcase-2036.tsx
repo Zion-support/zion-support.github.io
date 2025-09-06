@@ -1,33 +1,6 @@
 
-<<<<<<< HEAD
-import React from 'react',
-import SEO from '../components/SEO',
-import React from 'react';
-import SEO from '../components/SEO';
 
-import Layout from '../components/layout/Layout';
-=======
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {real2036InnovativeServices} from '../data/real-2036-innovative-services';
 import {real2036ITServices} from '../data/real-2036-it-services';
@@ -35,37 +8,16 @@ import {real2036AIServices} from '../data/real-2036-ai-services';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import {motion} from 'framer-motion';
 
-<<<<<<< HEAD
-const ComprehensiveServicesShowcase2036: React.FC = () => {
-  const allServices = [
-    ...real2036InnovativeServices
-    ...real2036ITServices
-    ...real2036AIServices,  ];
-  const categories = [...new Set(allServices.map(service => service.category))]
 
-import Layout from '../components/layout/Layout',
-import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
-import { real2036ITServices } from '../data/real-2036-it-services',
-import { real2036AIServices } from '../data/real-2036-ai-services',
-import { motion } from 'framer-motion',
-=======
-  const categories = [...new Set(allServices.map(service => service.category))]
-=======
-=======
-import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
-import { real2036ITServices } from '../data/real-2036-it-services';
-import { real2036AIServices } from '../data/real-2036-ai-services';
-import { motion } from 'framer-motion';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const categories = [...new Set(allServices.map(service => service.category))]
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 const ComprehensiveServicesShowcase2036: React.FC = () => {
   const allServices = [
     ...real2036InnovativeServices;
@@ -74,6 +26,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   ],
   const categories = [...new Set(allServices.map(service => service.category))],
   return (
+
 
     <Layout>
       <SEO
@@ -115,6 +68,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   }
 }
 
+
               className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
             >
               2036 Services Showcase
@@ -144,19 +98,8 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
           </div>
         </section>
         {/* Services Overview */}
-<<<<<<< HEAD
 
-        <section className='py-16 px-4'>
-          <div className='max-w-7xl mx-auto'>
-        {/* Services Overview */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             <motion.div
               initial={{ opacity: 0, y: 30 }  } catch (error) {
@@ -175,7 +118,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   }
 }
 
-=======
+
 
 
             {/* Category Cards */}
@@ -211,7 +154,9 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 
               ))}
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -260,14 +205,15 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 >
                   <h3 className="text-2xl font-bold mb-4 text-cyan-400">{category}</h3>
                   <p className="text-gray-300 mb-4">
@@ -331,56 +277,12 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   }
 }
               className="text-center mb-16"
-<<<<<<< HEAD
-
-=======
-=======
-
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-400">Starting from</span>
-                    <span className="text-lg font-bold text-green-400">
-                      ${Math.min(...allServices.filter(service => service.category === category).map(s => parseInt(s.price.replace(/[^0-9]/g, ''))))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </span>;
-                  </div>;
-                </motion.div>;
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-            {/* Featured Services */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="text-center mb-16"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Featured Revolutionary Services
@@ -399,6 +301,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+
 
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
@@ -509,12 +412,10 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 }
               className="text-center mb-16"
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Complete Service Portfolio
@@ -531,44 +432,11 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
-<<<<<<< HEAD
-                transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-                className='mb-16'
-            {/* Services by Category */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            {categories.map((category, categoryIndex) => (;
-              <motion.div;
-                key={category  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="mb-16"
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               >
                 <h3 className="text-3xl font-bold mb-8 text-center text-cyan-400">{category}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -607,14 +475,15 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                         className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700 rounded-lg p-4 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                       >
                         <div className="flex items-center justify-between mb-3">
                           <span className="text-2xl">{service.icon}</span>
@@ -654,73 +523,26 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                         </div>
                         <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm">
                           View Details
                         </button>
                       </motion.div>
 
-<<<<<<< HEAD
-                    ))}
-                </div>
-              </motion.div>
-            ))}
-            {/* Call to Action */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20'
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </div>;
-              </motion.div>;
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-            {/* Call to Action */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20"
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             >
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Ready to Transform Your Business?
@@ -742,20 +564,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
         </section>
       </div>
     </Layout>
-<<<<<<< HEAD
 
-
-  )
-}
-export default ComprehensiveServicesShowcase2036;
-
-},
-export default ComprehensiveServicesShowcase2036,
-              className="text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20";
-            >;
-              <h2 className="text-4xl font-bold mb-6 text-white">;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 Ready to Transform Your Business?;
               </h2>;
@@ -783,40 +592,7 @@ export default ComprehensiveServicesShowcase2036;
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-},
-export default ComprehensiveServicesShowcase2036,
-              className="text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20";
-            >;
-              <h2 className="text-4xl font-bold mb-6 text-white">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
-                Join the future of technology with our revolutionary services. Get in touch to discuss how we can help you achieve your goals.;
-              </p>;
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">;
-                  Contact Us Today;
-                </button>;
-                <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">;
-                  Schedule Demo;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                </button>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-<<<<<<< HEAD
-    </Layout>),
-}
-;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default ComprehensiveServicesShowcase2036;

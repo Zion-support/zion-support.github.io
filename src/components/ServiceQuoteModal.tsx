@@ -1,27 +1,8 @@
 ...formData;            startDate: startDate?.toISOString(),
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-            endDate: endDate?.toISOString()}
-        }
-      })
-
-}
-}
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -35,8 +16,7 @@
 
 
 ;
-<<<<<<< HEAD
-=======
+
 
 import { useState } from 'react',
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
@@ -516,4 +496,5 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   );
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

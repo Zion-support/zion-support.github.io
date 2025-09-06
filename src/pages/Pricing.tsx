@@ -1,5 +1,6 @@
 
 
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Check, Star, Phone, Mail, MapPin } from 'lucide-react';
@@ -55,6 +56,7 @@ const Pricing = () => {
         'Quarterly Reviews'
       ],
       popular: false
+
     }
   ];
 
@@ -122,6 +124,7 @@ const Pricing = () => {
             Choose the perfect plan for your business needs. All plans include our core services with flexible pricing options.
           </p>
         </div>
+
 
         {/* Pricing Plans */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
@@ -329,5 +332,6 @@ const Pricing = () => {
     </div>
   );
 };
+
 
 export default Pricing;

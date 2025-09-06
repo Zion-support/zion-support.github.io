@@ -1,30 +1,6 @@
 
-<<<<<<< HEAD
 
 
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
-import { Loader, Sparkles } from "lucide-react",
-import { supabase } from "@/integrations/supabase/client",
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { useForm } from "react-hook-form",
-import z from "zod";
-
-import {zodResolver} from "@hookform/resolvers/zod";
-const formSchema = z.object({
-  title: z.string().min(3, "Title must be at least 3 characters");
-  keyFeatures: z.string()
-  targetAudience: z.string()})
-type FormData = z.infer<typeof formSchema>;
-import z from "zod",
-import { zodResolver } from "@hookform/resolvers/zod",
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -43,118 +19,11 @@ const form_schema = z.object ({
   target_audience: z.string ()}),
 type FormData = z.infer < typeof form_schema>;
 ;
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-const formSchema = z.object({
-  title: z.string().min(3, "Title must be at least 3 characters"),
-  keyFeatures: z.string(),
-  targetAudience: z.string()}),
-
-type FormData = z.infer<typeof formSchema>,
-
-interface ServiceDescriptionFormProps {
-  onDescriptionGenerated: (description: string) => void;
-}
-<<<<<<< HEAD
-
-
-export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-  const { toast } = useToast(),
-  const [isLoading, setIsLoading] = useState(false),
-  
-
-=======
 
 
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-  const form = useForm<FormData>({
-    resolver: zodResolver(formSchema)
-    defaultValues: {
-      title: ""
-      keyFeatures: ""
-      targetAudience: ""}})
-  const handleSubmit = async (data: FormData) => {
-    setIsLoading(true)
-    try {
-      const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
-        body: {
-          title: data.title
-          keyFeatures: data.keyFeatures
-          targetAudience: data.targetAudience
-        }
-      });
-      if (error) {
-        throw new Error(error.message)
-        body: { 
-          title: data.title, 
-          keyFeatures: data.keyFeatures, 
-          targetAudience: data.targetAudience 
-
-
-<<<<<<< HEAD
-import React, { useState } from "react",;
-import { useToast } from "@/hooks/use-toast",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",;
-import { Loader, Sparkles } from "lucide-react",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
-import { useForm } from "react-hook-form",;
-import z from "zod",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-const formSchema = z.object({;
-  title: z.string().min(3, "Title must be at least 3 characters"),;
-  keyFeatures: z.string(),;
-  targetAudience: z.string()}),;
-type FormData = z.infer<typeof formSchema>,;
-interface ServiceDescriptionFormProps {;
-  onDescriptionGenerated: (description: string) => void;
-}
-;
-export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {;
-  const { toast } = useToast(),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const form = useForm<FormData>({;
-    resolver: zodResolver(formSchema),;
-    defaultValues: {;
-      title: "",;
-      keyFeatures: "",;
-      targetAudience: ""}}),;
-  const handleSubmit = async (data: FormData) => {;
-    setIsLoading(true),;
-    try {;
-      const { data: response, error } = await supabase.functions.invoke('generate-service-description', {;
-        body: {;
-          title: data.title,;
-          keyFeatures: data.keyFeatures,;
-          targetAudience: data.targetAudience;
-        }
-      }),;
-      if (error) {;
-        throw new Error(error.message);
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       if (response.error) {
         throw new Error(response.error)
@@ -261,26 +130,8 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>
                   <FormControl>
-<<<<<<< HEAD
-
-                    <Input
-                      {...field}
-                      placeholder="e.g. Professional Web Design Services"
-                      className="bg-zion-blue border border-zion-blue-light text-white"
-
-                      disabled={isLoading}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
 
 
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>;
@@ -300,18 +151,14 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
             />;
 
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
             <FormField
               control={form && form.control}
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="keyFeatures"

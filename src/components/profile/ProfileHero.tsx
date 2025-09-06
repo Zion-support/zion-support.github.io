@@ -18,12 +18,8 @@ avatarUrl?: string;
               loading='lazy'
 
 
-<<<<<<< HEAD
-export function ProfileHero({
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   name
   title
   avatarUrl
@@ -131,18 +127,8 @@ export function ProfileHero({
 
         </AspectRatio>
         
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">
             <Avatar className="h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30">
@@ -268,11 +254,8 @@ export function ProfileHero({;
               <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>
               
               <div className="flex flex-wrap items-center gap-3 mt-2">
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                 {location && (
@@ -312,8 +295,7 @@ export function ProfileHero({;
                   <div className='px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan'>                    AI Match: {aiScore}%                {location && (;
                   <span className="text-sm text-zion-slate-light">{location}</span>;
                 )}
-<<<<<<< HEAD
-=======
+
 
                 {rating && (;
                   <div className="flex items-center gap-1">;
@@ -327,4 +309,5 @@ export function ProfileHero({;
 
 
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

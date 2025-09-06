@@ -2,22 +2,16 @@ import { ServiceVariant } from '../types/service-variants';
 
 
 
+
 export interface EmergingTechService {
 
 export interface EmergingTechService {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-<<<<<<< HEAD
 
-
-
-=======
-=======
-export interface EmergingTechService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   id: string;
   name: string;
   tagline: string;
@@ -591,49 +585,14 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
 
-    }
-    realImplementation: true
-    implementationDetails:
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     },
     realImplementation: true, implementationDetails: 'Quantum metaverse platform with enhanced graphics and AI capabilities.',
     launchDate: '2024-04-30', customers: 18,
     rating: 4.8,
-<<<<<<< HEAD
-
-    reviews: 11,
-  },;
-
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
 
 
-    realImplementation: true;
-    implementationDetails: 'Quantum metaverse platform with enhanced graphics and AI capabilities.';
-    launchDate: '2024-04-30';
-    customers: 18;
-
-
-    rating: 4.8
-
-    reviews: 11
-
-
-=======
-    reviews: 11;
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechService2025 {;
   id: string,;
@@ -1295,11 +1254,12 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 ];

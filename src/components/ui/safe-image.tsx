@@ -1,13 +1,10 @@
 interface SafeImageProps {
-<<<<<<< HEAD
 
-import { ImageIcon } from 'lucide-react'
-interface SafeImageProps {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   src: string;
   alt: string;  width?: number;interface SafeImageProps {
 
@@ -28,18 +25,9 @@ interface SafeImageProps {;
     )
   }
 
-<<<<<<< HEAD
-
-    />
-;
-    />;
 
 
-=======
-;
-    />;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );        aria-label={alt}
 'use client',;
 import Image from 'next/image',;
@@ -124,33 +112,9 @@ export function SafeImage({
         role="img"
         aria-label={alt}
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-      >
-        <ImageIcon className="w-6 h-6" />
-      </div>
-    )
-  }
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-
-=======
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     />
   ); return (
         aria-label = {alt,}>;
@@ -184,11 +148,8 @@ export function SafeImage({
       unoptimized = {hasError,}
 
 
-<<<<<<< HEAD
-    />
-  )
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 } 
 
 }
@@ -197,8 +158,7 @@ export function SafeImage({
 }
     />;
   );
-<<<<<<< HEAD
-=======
+
 
 
   src: string,
@@ -269,4 +229,5 @@ if ( {) {
     />);
 }
 } ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

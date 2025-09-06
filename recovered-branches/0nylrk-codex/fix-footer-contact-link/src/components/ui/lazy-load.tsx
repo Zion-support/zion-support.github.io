@@ -1,31 +1,14 @@
 
-<<<<<<< HEAD
-
-
-import { useEffect, useState, useRef, ReactNode } from "react",
-import { cn } from "@/lib/utils";
-import { Skeleton } from "@/components/ui/skeleton";
-interface LazyLoadProps {
-
-=======
 
 
 
-
-import {useEffect, useState, useRef, ReactNode} from "react";
-import {cn} from "@/lib/utils";
-import {Skeleton} from "@/components/ui/skeleton";
-interface LazyLoadProps {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   height?: string | number;
   width?: string | number;
   children: ReactNode,;
 
   loadingComponent?: ReactNode;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   className?: string;
 }
 
@@ -41,12 +24,10 @@ export function LazyLoad(): any ({;
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 interface LazyLoadProps {
   height?: string | number,
   width?: string | number,
@@ -55,75 +36,15 @@ interface LazyLoadProps {
   className?: string
 }
 
-<<<<<<< HEAD
 
-export function LazyLoad({
-
-  height = "200px";
-  width = "100%";
-  children;
-  loadingComponent;
-  className}: LazyLoadProps) {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-  height = "200px",
-  width = "100%",
-  children,
-  loadingComponent,
-  className}: LazyLoadProps) {
-  const [isVisible, setIsVisible] = useState(false),
-  const [isLoaded, setIsLoaded] = useState(false),
-  const containerRef = useRef<HTMLDivElement>(null),
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-<<<<<<< HEAD
-
-          setIsVisible(true),
-          observer.disconnect()
-        }
-      }
-      {
-        rootMargin: "200px", // Start loading when element is within 200px of viewport
-        threshold: 0.1}
-    );
-    if (containerRef.current) {
-      observer.observe(containerRef.current)
-      },
-      {
-        rootMargin: "200px", // Start loading when element is within 200px of viewport
-
-import { useEffect, useState, useRef, ReactNode } from "react",;
-import { cn } from "@/lib/utils",;
-import { Skeleton } from "@/components/ui/skeleton",;
-interface LazyLoadProps {;
-  height?: string | number,;
-  width?: string | number,;
-  children: ReactNode,;
-  loadingComponent?: ReactNode,;
-  className?: string;
-}
-;
-export function LazyLoad({;
-  height = "200px",;
-  width = "100%",;
-  children,;
-  loadingComponent,;
-  className}: LazyLoadProps) {;
-  const [isVisible, setIsVisible] = useState(false),;
-  const [isLoaded, setIsLoaded] = useState(false),;
-  const containerRef = useRef<HTMLDivElement>(null),;
-
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   useEffect(() => {;
     const observer = new IntersectionObserver(;
       (entries) => {;
@@ -136,10 +57,8 @@ export function LazyLoad({;
       {;
         rootMargin: "200px", // Start loading when element is within 200px of viewport;
         threshold: 0.1}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     );
 
 ;
@@ -151,13 +70,14 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     }
     return () => {
       if (containerRef.current) {
@@ -165,44 +85,9 @@ if ( {) {
       }
     }
 
-<<<<<<< HEAD
-  }, []);
-  useEffect(() => {
-    if (isVisible) {
-      // Simulate loading delay (remove in production)
-      const timer = setTimeout(() => {
-        setIsLoaded(true)
-      }, 500);
-      return () => clearTimeout(timer)
-    }
-  }, [isVisible]);
-  const defaultLoadingComponent = (
-    <Skeleton
 
 
-=======
-      };
-      {;
-        rootMargin: "200px", // Start loading when element is within 200px of viewport;
-        threshold: 0 && 0.1}
-    );
 
-    if (containerRef && containerRef.current) {;
-      observer && observer.observe(containerRef && containerRef.current);
-    }
-
-    return () => {;
-      if (containerRef && containerRef.current) {;
-        observer && observer.unobserve(containerRef && containerRef.current);
-      }
-    }
-  }, []);
-
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }, []),;
 
   useEffect(() => {;
@@ -221,15 +106,17 @@ if ( {) {
     <Skeleton;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       style={{ height, width }}
       className="rounded-md bg-zion-blue-light/20"
     />;

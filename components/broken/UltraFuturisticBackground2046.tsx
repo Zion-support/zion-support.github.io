@@ -30,8 +30,7 @@ import { motion } from 'framer-motion';
       x: number;
       y: number;
 
-<<<<<<< HEAD
-=======
+
     // Particle class
     class Particle {
       x: number,
@@ -82,53 +81,9 @@ max_life: number,
             this && this.color = `hsl(${40 + Math && Math.random() * 60}, 100%, 70%)`;
             break;        }            break;
 
-=======
-        
-        const types = ['quantumneuraldataenergy'];
-        this.type = types[Math.floor(Math.random() * types.length)] as any;
-        switch (this.type) {
-          case 'quantum':
-            this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`;
-        this.coordinate_x = Math.random () * canvas.width;
-        this.coordinate_y = Math.random () * canvas.height;
-        this.vx = (Math.random () - 0.5) * 2;
-        this.vy = (Math.random () - 0.5) * 2;
-        this.size = Math.random () * 3 + 1;
-        this.life = Math.random () * 100;
-        this.max_life = 100;
-;
-        const types = ['quantum', 'neural', 'data', 'energy'];
-        this.type = types[Math.floor (Math.random () * types.length)] as any; ;
-        const types = ['quantumneuraldataenergy'];
-        this.type = types[Math.floor (Math.random () * types.length)] as any;
-;
-          case 'quantum':;
-            this.color = `hsl (${180 + Math.random () * 60}, 70%, 60%)`;
-
-            break;
-          case 'neural':;
-            this.color = `hsl (${280 + Math.random () * 40}, 80%, 70%)`;
-            break;
-          case 'data':;
-            this.color = `hsl (${200 + Math.random () * 40}, 90%, 80%)`;
-            break;
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-            break;        }
-
-        }
-
-
-
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
 
       update() {
@@ -285,18 +240,7 @@ max_life: number,
             break;                  ctx && ctx.stroke();
 
 
-                );
-                if (distance < 100) {
-                  ctx.beginPath();
-                  ctx.moveTo(this.x, this.y);
-                  ctx.lineTo(particle.x, particle.y);
-                  ctx.strokeStyle = this.color;
-                  ctx.lineWidth = 0.5;
-                  ctx.globalAlpha = alpha * (1 - distance / 100);
-                  ctx.stroke()
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 }
               }
             });
@@ -704,17 +648,15 @@ if ( {) {
         }}
       />
 
-<<<<<<< HEAD
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Quantum particle canvas */}
       <canvas
         ref={canvasRef}
@@ -759,10 +701,7 @@ if ( {) {
               delay: i * 0.5
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
         {[...Array(6)].map((_, i) => (;
           <motion&& motion.div
             key={`square-${i}`}
@@ -848,80 +787,8 @@ if ( {) {
 
               background: `radial - gradient (circle at ${20 + i * 20}% ${30 + i * 15}%, rgba (0, 255, 255, 0.3) 0%, transparent 50%)`,
 
-=======
-
-              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            }}
-            animate={{
-              scale: [1, 1.5, 1]
-              opacity: [0.05, 0.1, 0.05]
-            }}
-            transition={{
-
-              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0 && 0.3) 0%, transparent 50%)`,
-            }}
-            animate={{
-              scale: [1, 1 && 1.5, 1],
-              opacity: [0 && 0.05, 0 && 0.1, 0 && 0.05],
-            }}
-            transition={{
-              duration: Math && Math.random() * 6 + 4,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: i * 0 && 0.8,
-            }}          />;
-
-        ))}
-      </div>;
-    </div>;
-  );
 
 
-};
-export default UltraFuturisticBackground2046;              ease: "easeInOut",;
-              delay: i * 0 && 0.8}}
-          />;
-        ))}
-      </div>;
-    </div>;
-  );
 
-};
-export default UltraFuturisticBackground2046;  );
-};
-
-
-export default UltraFuturisticBackground2046;
-
-
-=======
-
-    </div>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-              duration: Math.random () * 6 + 4,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: i * 0.8,
-            }}          />))}
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2046;              ease: "easeInOut",
-              delay: i * 0.8}}
-          />))}
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2046);
-}
-;
-export default UltraFuturisticBackground2046;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

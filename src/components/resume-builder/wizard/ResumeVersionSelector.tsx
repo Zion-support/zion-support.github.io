@@ -74,116 +74,41 @@ if ( {) {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-
-
-import { useState } from 'react',;
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuSeparator,;
-  DropdownMenuTrigger;
-} from '@/components/ui/dropdown-menu',;
-import { Button } from '@/components/ui/button',;
-import { Input } from '@/components/ui/input',;
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog',;
-import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react';
-import { Resume } from '@/types/resume',;
-import { useResume } from '@/hooks/useResume',;
-interface ResumeVersionSelectorProps {;
-  currentResume: Resume,;
-  onResumeChange: (resumeId: string) => void;
-}
-;
-export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
-  const { createResume, fetchResume } = useResume(),;
-  const [saveDialogOpen, setSaveDialogOpen] = useState(false),;
-  const [newResumeTitle, setNewResumeTitle] = useState(''),;
-  const [existingResumes, setExistingResumes] = useState<Resume[]>([]),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const handleCreateNewVersion = async () => {;
-    if (newResumeTitle.trim()) {;
-      setIsLoading(true),;
-      const resumeId = await createResume({ title: newResumeTitle.trim() }),;
-      if (resumeId) {;
-        await fetchResume(resumeId),;
-        onResumeChange(resumeId),;
-        setSaveDialogOpen(false);
-        setNewResumeTitle('');
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
 
 
 
 
-
-
-
-
-  return (
-
-        setNewResumeTitle('')
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       setIsLoading(false)
     }
   },
 
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   return (
     <div className="flex items-center gap-2">
       <span className="text-sm text-muted-foreground">Resume:</span>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-<<<<<<< HEAD
 
 
-          <Button variant='outline' size='sm' className='gap-2'>
-            {currentResume?.basic_info?.title |'My Resume'}
-            <ChevronDown className='h-4 w-4' />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align='end'>
-          {existingResumes.map(resume => (
-            <DropdownMenuItem
-              key={resume.id}
-              onClick={() => onResumeChange(resume.id!)}
-              className='cursor-pointer'            >              className="cursor-pointer"
-        <DropdownMenuContent align="end">
-          {existingResumes.map((resume) => (
-            <DropdownMenuItem
-              key={resume.id}
-              onClick={() => onResumeChange(resume.id!)}
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <Button variant="outline" size="sm" className="gap-2">
             {currentResume?.basic_info?.title || 'My Resume'}
             <ChevronDown className="h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
 
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <DropdownMenuContent align="end">
           {existingResumes.map((resume) => (
             <DropdownMenuItem
@@ -211,19 +136,8 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             >;
 
 
-<<<<<<< HEAD
 
 
-
-
-        <DropdownMenuContent align="end">
-          {existingResumes.map((resume) => (
-            <DropdownMenuItem 
-              key={resume.id}
-              onClick={() => onResumeChange(resume.id!)}
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -233,8 +147,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
               className="cursor-pointer"
             >
               {resume.basic_info.title}
@@ -272,30 +187,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
           <DropdownMenuSeparator />;
           <DropdownMenuItem;
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-            onClick={() => setSaveDialogOpen(true)}
-            className="cursor-pointer"
-          >
-            <Plus className="h-4 w-4 mr-2" />
-            Save as new version
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             className='cursor-pointer'          >;
             <Plus className='h-4 w-4 mr-2' />            Save as new version;
@@ -341,21 +235,16 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             <Input
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
               placeholder="Enter resume title (e.g. DevOps Resume)"
             />
           </div>
@@ -363,37 +252,8 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 
             <Button 
               variant="outline" 
-<<<<<<< HEAD
 
 
-              onClick = {() => setSaveDialogOpen(false),}
-            >
-              Cancel
-            </Button>
-            <Button 
-              onClick = {handleCreateNewVersion,}
-              disabled = {!newResumeTitle.trim() || isLoading,}
-              className="gap-2"
-            >
-              {isLoading && <Loader2 className='h-4 w-4 animate-spin' />}
-              <Save className='h-4 w-4' />              Save              {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
-              onClick={() => setSaveDialogOpen(false)}
-            >;
-              Cancel;
-            </Button>;
-            <Button;
-              onClick={handleCreateNewVersion}
-              disabled={!newResumeTitle.trim() || isLoading}
-              className="gap-2"
-            >
-              {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <Save className="h-4 w-4" />
               Save
             </Button>
@@ -480,14 +340,8 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
     </div>);
 }
 > {
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   resume.basic info.title;
 }</DropdownMenuItem>) );
 }<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h - 4 w - 4 mr - 2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle > Save as new resume version</DialogTitle> </DialogHeader> <div className="py - 4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>);

@@ -1,90 +1,9 @@
 
 
-<<<<<<< HEAD
-      if (parts.length > 1) {
-        // Take the content after the conflict resolution
-        backupContent = parts[1].split('>>>>>>>')[0]
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-// Function to find the best backup file for a given page;
-function findBestBackup(pagePath) {;
-  const dir = path.dirname(pagePath);
-  const baseName = path.basename(pagePath, path.extname(pagePath)),;
-  const ext = path.extname(pagePath);
-  // Look for backup files;
-  const backupPattern = new RegExp(`^${baseName}\\.tsx\\.backup\\.\\d+$`);
-  const files = fs.readdirSync(dir).filter(file => backupPattern.test(file));
-  if (files.length === 0) return null,;
-  // Sort by timestamp (newest first) and find the first valid one;
-  files.sort((a, b) => {;
-    const timestampA = parseInt(a.match(/\.backup\.(\d+)$/)[1]);
-    const timestampB = parseInt(b.match(/\.backup\.(\d+)$/)[1]);
-    return timestampB - timestampA;
-  }),;
-  for (const backupFile of files) {;
-    const backupPath = path.join(dir, backupFile);
-    try {;
-      const content = fs.readFileSync(backupPath, 'utf8'),;
-      // Check if this backup has proper content;
-      if (content.includes('export default') &&;
-          (content.includes('function') || content.includes('const') || content.includes('class')) &&;
-          content.includes('return') &&;
-          content.length > 100) {;
-        return backupPath;
-      }
-    } catch (error) {
-      // // // console.log(`Error reading backup ${backupPath}:`, error.message)
-    } catch (error) {;
-      // // // console.log(`Error reading backup ${backupPath}:`, error.message);
-    }
-  }
-;
-  return null;
-}
-;
-// Function to restore a corrupted page;
-function restorePage(pagePath) {;
-  try {;
-    const currentContent = fs.readFileSync(pagePath, 'utf8'),;
-    // Check if the page is corrupted;
-    const isCorrupted = !currentContent.includes('export default') ||;
-                        currentContent.length < 100 ||;
-                        !currentContent.includes('return');
-    if (!isCorrupted) {;
-      return { restored: false, reason: 'Page is not corrupted' }
-    }
-;
-    // Find backup;
-    const backupPath = findBestBackup(pagePath);
-    if (!backupPath) {;
-      return { restored: false, reason: 'No valid backup found' }
-    }
-;
-    // Read backup content;
-    let backupContent = fs.readFileSync(backupPath, 'utf8'),;
-    // Handle merge conflicts by taking the content after the conflict markers;
-    if (backupContent.includes('')) {;
-      const parts = backupContent.split('');
-      if (parts.length > 1) {;
-        // Take the content after the conflict resolution;
-        backupContent = parts[1].split('>>>>>>>')[0];
 
 
-
-'),
-
-
-      if (parts.length > 1) {
-        // Take the content after the conflict resolution
-        backupContent = parts[1].split('>>>>>>>')[0]
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 '),
 
 
@@ -92,12 +11,10 @@ function restorePage(pagePath) {;
         // Take the content after the conflict resolution
         backupContent = parts[1].split('>>>>>>>')[0]
 
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       }
     }
     // Clean up the content
@@ -111,11 +28,10 @@ function restorePage(pagePath) {;
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
     // Create a backup of the current corrupted file
 
     const timestamp = Date.now()
@@ -142,15 +58,17 @@ function restorePage(pagePath) {;
       corruptedBackup: corruptedBackupPath;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
@@ -158,13 +76,10 @@ function restorePage(pagePath) {;
 }
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 // Function to scan and restore all corrupted pages
 function restoreAllCorruptedPages() {
   const pagesDir = path.join(process.cwd(), 'pages')
@@ -186,16 +101,9 @@ function restoreAllCorruptedPages() {
         }
 
 
-<<<<<<< HEAD
 
-=======
-      } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
-        results.total++,
-        
-        console.log(`\n🔍 Checking: ${fullPath}`),
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 ;
 // Function to scan and restore all corrupted pages;
 function restoreAllCorruptedPages() {;
@@ -220,11 +128,11 @@ function restoreAllCorruptedPages() {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         const result = restorePage(fullPath),
         if (result.restored) {
           results.restored++
@@ -232,53 +140,11 @@ function restoreAllCorruptedPages() {;
           console.log(`   Used backup: ${result.backupUsed}`)
           console.log(`   Corrupted backup: ${result.corruptedBackup}`)
         } else {
-<<<<<<< HEAD
 
 
-
-          results.failed++
-          console.log(`❌ Failed: ${fullPath}`)
-
-
-          console.log(`   Reason: ${result.reason}`)
-          results.failed++,
-
-
-          results.failed++,
-
-          console.log(`❌ Failed: ${fullPath}`),
-          console.log(`   Reason: ${result.reason}`)
-
-          // // // console.log(`❌ Failed: ${fullPath}`),
-          // // // console.log(`   Reason: ${result.reason}`)
-      } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {;
-        results.total++,;
-        // // // console.log(`\n🔍 Checking: ${fullPath}`),;
-        const result = restorePage(fullPath);
-        if (result.restored) {;
-          results.restored++,;
-          // // // console.log(`✅ Restored: ${fullPath}`),;
-          // // // console.log(`   Used backup: ${result.backupUsed}`),;
-          // // // console.log(`   Corrupted backup: ${result.corruptedBackup}`);
-        } else {;
-          results.failed++,;
-          // // // console.log(`❌ Failed: ${fullPath}`),;
-          // // // console.log(`   Reason: ${result.reason}`);
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
-          results.failed++,
-=======
-          results.failed++,
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         }
         results.details.push({
           file: fullPath
@@ -291,10 +157,14 @@ function restoreAllCorruptedPages() {;
 
 
 
+
+
   return results
   // // // console.log('🚀 Starting page restoration process...'),
   scanDirectory(pagesDir),
   // Generate summary
+
+
 
 
   
@@ -302,27 +172,10 @@ function restoreAllCorruptedPages() {;
   // // // console.log('🚀 Starting page restoration process...'),
   scanDirectory(pagesDir),
   // Generate summary
-<<<<<<< HEAD
-
-  console.log('\n📊 Restoration Summary: '),
-  console.log(`   Total pages: ${results.total}`),
-  console.log(`   Restored: ${results.restored}`),
-  console.log(`   Failed: ${results.failed}`),
-  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),
-  
-  // Save detailed report
-  const reportPath = path.join(process.cwd(), 'page-restoration-report.json'),
-  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),
-  console.log(`\n📄 Detailed report saved to: ${reportPath}`),
-  
-  return results
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // // // console.log('\n📊 Restoration Summary: '),
   // // // console.log(`   Total pages: ${results.total}`),
   // // // console.log(`   Restored: ${results.restored}`),
@@ -349,28 +202,27 @@ function restoreAllCorruptedPages() {;
   return results;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 // Run the restoration if this script is executed directly
 if ({
   restoreAllCorruptedPages()
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
-<<<<<<< HEAD
-=======
+
         // Check condition
 if ( {) {
   $2
@@ -424,26 +276,12 @@ if ( {) {
 }
   restoreAllCorruptedPages ();
 }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-;
-module.exports = {;
-  restorePage,;
-  restoreAllCorruptedPages,;
-  findBestBackup;
-};
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 module.exports = {
@@ -454,14 +292,15 @@ module.exports = {
 
 };
 
+
 main
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

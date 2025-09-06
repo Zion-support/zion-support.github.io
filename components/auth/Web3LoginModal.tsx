@@ -242,36 +242,17 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message, signature: bs58.encode(signature), publicKey })});
       if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
-<<<<<<< HEAD
-
-      onLoggedIn?.({ address: publicKey, chain: 'sol' });
-      onClose();
-    } catch (e: any) {
-      console.error(e);
-      setError(e?.message |'Phantom connection failed');
-    } finally {
-      setLoading(false);    }      if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
-
-=======
-=======
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-      setLoading(false);    }
-
-      onLoggedIn?.({ address: publicKey, chain: 'sol' }),
-<<<<<<< HEAD
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       onClose()
     } catch (e: any) {
       console.error(e);
@@ -306,29 +287,31 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
     } finally {;
       setLoading(false);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
   return (
 
 
-            {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
-          </button>
-        </div>
-        <div className="mt-4 flex justify-end">
 
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            Cancel;
+          </button>;
+        </div>;
+      </div>;
+
+
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

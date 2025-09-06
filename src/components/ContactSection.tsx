@@ -1,11 +1,10 @@
-<<<<<<< HEAD
+
 
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 fetch("/api/contact", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -22,6 +21,7 @@ fetch("/api/contact", {
         toast({
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
+
         setSubmitted(true)
         setTimeout(() => setSubmitted(false), 2000)
         setFormData({ name: "", email: "", subject: "", message: "" })
@@ -31,6 +31,8 @@ fetch("/api/contact", {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
         setIsSubmitting(false),
         if (!res.ok) {
           const data = await res.json().catch(() => ({})),
@@ -43,11 +45,14 @@ fetch("/api/contact", {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
         setSubmitted(true),
         setTimeout(() => setSubmitted(false), 2000),
         setFormData({ name: "", email: "", subject: "", message: "" })
@@ -58,15 +63,20 @@ fetch("/api/contact", {
 
 
 
+
+
           title: "Submission Error",
           description: err.message,
           variant: "destructive"})
       })
   },
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
 
 
 
@@ -424,9 +434,11 @@ if ( {) {
                     name="message";
 
 
+
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
+
 
 
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
@@ -446,6 +458,8 @@ if ( {) {
                   >;
 
 
+
+
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
@@ -461,8 +475,7 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
-=======
+
 
     </section>);
 }set_errors (field_errors);
@@ -488,4 +501,4 @@ description: err.message;
 }'"}
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

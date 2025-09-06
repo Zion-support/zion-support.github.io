@@ -6,14 +6,8 @@ export interface Achievement {
   achieved: boolean
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 
 export interface Achievement {
@@ -33,25 +27,14 @@ export interface Achievement {
   description: string;
   achieved: boolean;
 interface AchievementBadgesProps {
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-  achievements: Achievement[];
-}
 
 export interface Achievement {
   id: string
   title: string
   description: string
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   achieved: boolean
 }
@@ -94,36 +77,8 @@ interface AchievementBadgesProps {;
 
 export function AchievementBadges(): any ({ achievements }: AchievementBadgesProps) {;
   return (
-<<<<<<< HEAD
 
 
-    <Card>
-      <CardHeader>
-        <CardTitle>Achievements</CardTitle>
-      </CardHeader>
-      <CardContent className='space-y-3'>
-        {achievements.map(a => (
-          <div key={a.id} className='flex items-start gap-3'>
-              className={`h-5 w-5 mt-1 ${a.achieved ? 'text-green-600' : 'text-muted-foreground'}`}
-            />
-            <div>
-              <p className='font-medium'>{a.title}</p>
-              <p className='text-sm text-muted-foreground'>{a.description}</p>            </div>
-              <p className="font-medium">{a.title}</p>
-              <p className="text-sm text-muted-foreground">{a.description}</p>
-            <BadgeCheck
-              className={`h-5 w-5 mt-1 ${a.achieved ? "text-green-600" : "text-muted-foreground"}`}
-            />
-            <div>
-      <CardContent className="space-y-3">
-        {achievements.map((a) => (
-          <div key={a.id} className="flex items-start gap-3">
-            <BadgeCheck
-              className={`h-5 w-5 mt-1 ${a.achieved ? "text-green-600" : "text-muted-foreground"}`}
-            />
-            <div>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               <p className="font-medium">{a.title}</p>
@@ -138,8 +93,7 @@ export function AchievementBadges(): any ({ achievements }: AchievementBadgesPro
     </Card>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
   );
 }
@@ -180,4 +134,5 @@ function AchievementBadges() {
     </Card>);
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

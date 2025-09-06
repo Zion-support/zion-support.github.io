@@ -2,6 +2,9 @@
 
 
 
+
+
+
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {NavigationButtonsProps} from "./types";
@@ -13,19 +16,11 @@ export const NavigationButtons = ({;
   nextLabel = "Next";
 
 
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-import { Button } from "@/components/ui/button",
-import { Loader2 } from "lucide-react",
-import { NavigationButtonsProps } from "./types",
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const NavigationButtons = ({
   onBack,
   onNext,
@@ -54,8 +49,8 @@ export const NavigationButtons = ({;
         <Button variant="outline" onClick={onBack}>;
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           {backLabel}
         </Button>;
@@ -82,7 +77,7 @@ export const NavigationButtons = ({;
           {backLabel}
         </Button>;
       )}
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {backLabel}
@@ -104,20 +99,15 @@ export const NavigationButtons = ({;
     </div>;
   );
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-=======
-    </div>;
-  );
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 };

@@ -4,69 +4,9 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
 
-  Menu
-  X
-  Search
-  ChevronDown
-  ChevronRight
-  Home
-  Users
-  Settings
-  HelpCircle
-  Mail
-  Phone
-  MapPin
-  BookOpen
-  MessageCircle
-  Star
-  TrendingUp
-  Layers
-  Cpu
-  Database
-  Cloud
-  Lock
-  Shield
-  Globe
-  Factory
-  Car
-  Building
-  GraduationCap
-  Scale
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Eye
-  Globe2
-  Zap
-  Rocket
-  Brain
-  Sparkles
-  ShieldCheck
-  Target
-  Users2
-  Briefcase
-  Lightbulb
-  Award
-  Clock
-  CheckCircle;} from 'lucide-react';import {
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
+
 
 
 class ErrorBoundary extends React.Component {
@@ -95,12 +35,10 @@ import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
-import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   Menu,
   X,
   Search,
@@ -162,13 +100,12 @@ import {
   CheckCircle,;} from 'lucide-react';import { ;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   Menu, X, Search, ChevronDown, ChevronRight;
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Home, Users, Settings, HelpCircle, Mail, Phone, MapPin;
   BookOpen, MessageCircle, Star, TrendingUp;
   Layers, Cpu, Database, Cloud, Lock, Shield;
@@ -191,7 +128,6 @@ const serviceCategories = [
       },
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     title: '⚛️ 2029 Quantum & Emerging Tech',
     icon: Globe,
     color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
@@ -207,7 +143,6 @@ const serviceCategories = [
       },
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     title: '🏙️ 2029 Enterprise IT Solutions',
     icon: Cpu,
     color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
@@ -223,7 +158,6 @@ const serviceCategories = [
       },
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     title: '🌌 2029 Space & Metaverse Tech',
     icon: Rocket,
     color: 'from - teal - 600 via - emerald - 600 to - green - 600',
@@ -255,7 +189,6 @@ const serviceCategories = [
       },
     ],
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     title: '🔬 2029 Research & Development',
     icon: Eye,
     color: 'from - orange - 600 via - red - 600 to - pink - 600',
@@ -286,18 +219,12 @@ const mainNavigation = [
 
 const quickLinks = [
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default function UltraFuturisticNavigation2029V2() {
   const [isOpen, setIsOpen] = useState(false)
-=======
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [isOpen, setIsOpen] = useState(false);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -321,15 +248,15 @@ export default function UltraFuturisticNavigation2029V2() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
@@ -345,7 +272,6 @@ export default function UltraFuturisticNavigation2029V2() {
                 <p className='text-xs text-gray-400'>
                   Future Technology Solutions
                 </p>              </div>          >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -515,58 +441,8 @@ function UltraFuturisticNavigation2029V2() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
 
-            {mainNavigation.map((item) => (
-              <motion.div
-                key={item.name}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
 
-                transition={{ duration: 0.5, delay: mainNavigation.indexOf(item) * 0.1 }}
-className="relative group"
-              >
-                <Link
-                  href={item.href}
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 rounded-lg hover:bg-cyan-500/10"
-                >
-                  <item.icon className="w-4 h-4" />
 
-                  <span>{item.name}</span>
-                </Link>
-                {/* Hover effect */}
-                <div className='absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300' />              </motion.div>                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300" />
-              </motion.div>
-            ))}
-          </div>
-          {/* Right side - Contact & Search */}
-          <div className='hidden lg:flex items-center space-x-4'>
-
-              </motion.div>
-
-            ))}
-          </div>
-          {/* Right side - Contact & Search */}
-<<<<<<< HEAD
-
-          <div className='hidden lg:flex items-center space-x-4'>
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-<<<<<<< HEAD
-          <div className="hidden lg:flex items-center space-x-4">
-            {/* Search */}
-=======
-          <div className='hidden lg:flex items-center space-x-4'>
-=======
-
-              </motion.div>
-
-            ))}
-          </div>
-
-          {/* Right side - Contact & Search */}
-
-          <div className="hidden lg:flex items-center space-x-4">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Search */}
             <div className='relative'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
@@ -575,6 +451,7 @@ className="relative group"
                 placeholder='Search services...'
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
+
 
                 className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'              />            {/* Search */}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -597,13 +474,13 @@ className="relative group"
             </div>
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* Contact Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -631,19 +508,14 @@ className="relative group"
 
 
 
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -657,15 +529,15 @@ className="relative group"
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           >
             <div className='px-4 py-6 space-y-4'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -687,7 +559,6 @@ className="relative group"
                 {mainNavigation.map(item => (                  <Link
                     key={item.name}
                     href={item.href}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     onClick={closeMenu}
                     className='flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'>;
                     <item && item.icon className='w-5 h-5' />                    <span>{item && item.name}</span>          >;
@@ -728,12 +599,13 @@ className="relative group"
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               {/* Quick Links */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -767,23 +639,19 @@ className="relative group"
 
 
 
+
                   ))}
                 </div>
               </div>
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Contact Info */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -796,15 +664,16 @@ className="relative group"
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   </div>
                   <div className="flex items-center space-x-3 text-gray-400">
                     <Mail className="w-4 h-4" />
@@ -965,26 +834,20 @@ className="relative group"
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Service Categories Dropdown */}
       <AnimatePresence>;
         {activeCategory && (;
           <motion&& motion.div
-<<<<<<< HEAD
-=======
-=======
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       {/* Service Categories Dropdown */}
       <AnimatePresence>
         {activeCategory && (
           <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -994,15 +857,15 @@ className="relative group"
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           >
             <div className='max-w-7xl mx-auto px-4 py-8'>
               <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
@@ -1022,6 +885,7 @@ className="relative group"
             animate={{ opacity: 1, coordinate_y: 0 }}
             exit={{ opacity: 0, coordinate_y: -20 }}
             transition={{ duration: 0.3 }}
+
 
             className='absolute top - full left - 0 right - 0 bg - gray - 900 / 95 backdrop - blur - xl border - t border - cyan - 500 / 20 z - 40';
           >;
@@ -1124,20 +988,18 @@ className="relative group"
                         </Link>;
 
 
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
                         </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
                     </div>;
                   </div>;
@@ -1147,27 +1009,16 @@ className="relative group"
           </motion && motion.div>;
         )}
 
-<<<<<<< HEAD
-
-  );
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
       </AnimatePresence>;
     </nav>;
   );
-=======
 
-  );
 
-}
-=======
-
-}
-  );
-}
                         </p>;
                       </div>;
                     </div>;
@@ -1227,4 +1078,6 @@ className="relative group"
     </nav>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

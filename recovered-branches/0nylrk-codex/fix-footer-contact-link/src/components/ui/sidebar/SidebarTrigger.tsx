@@ -1,10 +1,8 @@
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Menu, X} from "lucide-react";
@@ -12,11 +10,8 @@ import {useSidebar} from "./sidebar-context";
 import {cn} from "@/lib/utils";
 
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Menu, X } from "lucide-react",
@@ -25,11 +20,11 @@ import { cn } from "@/lib/utils",
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string
 }
@@ -45,12 +40,10 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
       size="icon"
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       className={cn("", className)}
       onClick={toggleSidebar}
       {...props}>;

@@ -6,54 +6,7 @@ project_name: string, goals: string,
 
 
 
+
 export interface ProjectBrief {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  projectName: string, goals: string
-  timeline: string, budget: string
-  techStack?: string[]
-  talentFilters?: { verifiedOnly?: boolean; regions?: string[] }
 
-}
-
-
-  projectName: string, goals: string,
-  timeline: string, budget: string,;
-  techStack?: string[];
-  talentFilters?: { verifiedOnly?: boolean; regions?: string[] }
-
-
-}
-
-  projectName: string, goals: string,
-  timeline: string, budget: string,;
-  techStack?: string[];
-  talentFilters?: { verifiedOnly?: boolean; regions?: string[] }
-
-
-
-export interface ProjectBrief {;
-  projectNam: e: string,;
-  goal: s: string,;
-  timelin: e: string,;
-  budge: t: string,;
-  techStack?: string[];
-  talentFilters?: { verifiedOnly?: boolean, regions?: string[] }
-
-
-<<<<<<< HEAD
-
-
-
-
-
-=======
-  projectName: string;
-  goals: string;
-  timeline: string;
-  budget: string;
-  techStack?: string[];
-  talentFilters?: { verifiedOnly?: boolean; regions?: string[] };
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }

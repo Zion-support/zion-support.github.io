@@ -4,64 +4,9 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-
-  Phone
-  Mail
-  MapPin
-  Globe
-  ArrowRight
-  Brain
-  Rocket
-  Target
-  Shield
-  Cpu
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Youtube
-  Github
-  MessageCircle
-  Star
-  Zap
-  Sparkles
-  Home
-  Users
-  Briefcase
-  BookOpen
-  TrendingUp
-  MessageSquare
-  Calendar
-  GraduationCap
-  ShieldCheck
-  Eye
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Globe2
-  Bot
-  Crown
-  Infinity;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, ArrowRight
-  Brain, Rocket, Target, Shield, Cpu
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
+
 
 
 class ErrorBoundary extends React.Component {
@@ -90,12 +35,10 @@ import React from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
 
-=======
-import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   Phone,
   Mail,
   MapPin,
@@ -146,16 +89,15 @@ import {
   Bot,
 
 
+
   Crown,;
   Infinity,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, 
   Brain, Rocket, Target, Shield, Cpu, ;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, MessageCircle, Star, Zap, Sparkles;
   Home, Users, Briefcase, BookOpen, TrendingUp;
@@ -250,11 +192,13 @@ const serviceCategories = [
   }
 
 
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 const mainNavigation = [
 
 
-<<<<<<< HEAD
-=======
+
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
   { name: 'AI Solutions', href: '/ai - solutions', icon: Brain },
@@ -308,11 +252,10 @@ const company = [;
 
 
 ];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -324,7 +267,6 @@ const mainNavigation = [
   { name: 'Innovations', href: '/innovations', icon: Sparkles }
   { name: 'About', href: '/about', icon: Users }
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ];
 const footerSections = [
   {
@@ -383,8 +325,7 @@ const footerSections = [
     links: [
 
 
-<<<<<<< HEAD
-=======
+
   }
   {
     title: 'Resources',
@@ -400,31 +341,20 @@ const footerSections = [
     <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>;
       { name: 'Research', href: '/research' }
     ]
-<<<<<<< HEAD
-  }, ];
-;
-export default /**
- * UltraFuturisticFooter2029V2 - Function description
- */
-function UltraFuturisticFooter2029V2() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   return (
     <footer className='relative bg - black / 90 backdrop - blur - xl border - t border - cyan - 500 / 20'>      { name: 'Research', href: '/research' }
     ];
   }
 ];
-<<<<<<< HEAD
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-export default function UltraFuturisticFooter2029V2() {
-=======
 ;
 export default /**
  * UltraFuturisticFooter2029V2 - Function description
  */
 function UltraFuturisticFooter2029V2() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
     <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>
       {/* Main Footer Content */}
@@ -448,12 +378,13 @@ export default function UltraFuturisticFooter2029V2() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -575,24 +506,23 @@ export default function UltraFuturisticFooter2029V2() {
           </div>;
 
 
-<<<<<<< HEAD
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           {/* Service Categories */}
           {footerSections && footerSections.map((section, index) => (;
             <motion&& motion.div
@@ -634,16 +564,16 @@ export default function UltraFuturisticFooter2029V2() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Service Showcase */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -655,15 +585,15 @@ export default function UltraFuturisticFooter2029V2() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         >
           <h3 className="text-2xl font-bold text-white text-center mb-8">
             Featured 2029 Services
@@ -703,6 +633,8 @@ export default function UltraFuturisticFooter2029V2() {
                 className='group'
 
 
+
+
               >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div
@@ -739,16 +671,8 @@ export default function UltraFuturisticFooter2029V2() {
                         </Link>;
                       </li>;
 
-<<<<<<< HEAD
-=======
-=======
-                className="group"
-              >
-=======
-                className='group'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               >
                 <div
                   className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}
@@ -769,7 +693,6 @@ export default function UltraFuturisticFooter2029V2() {
                         <Link
                           href={service.href}
                           className='text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block'                        >              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>
                   <div className="flex items-center space-x-3 mb-3">
                     <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
@@ -830,13 +753,18 @@ export default function UltraFuturisticFooter2029V2() {
       </div>
 
 
+
+
           </div>;
         </motion && motion.div>;
       </div>;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Bottom Footer */}
       <div className='border-t border-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
@@ -845,20 +773,18 @@ export default function UltraFuturisticFooter2029V2() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {/* Copyright */}
             <motion&& motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -887,13 +813,13 @@ export default function UltraFuturisticFooter2029V2() {
             </motion.div>
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             {/* Social Links */}
             <motion&& motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -901,6 +827,7 @@ export default function UltraFuturisticFooter2029V2() {
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
               className='flex items-center space-x-4'
+
 
 
 
@@ -914,17 +841,16 @@ export default function UltraFuturisticFooter2029V2() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             >
               {socialLinks.map(social => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -938,7 +864,6 @@ export default function UltraFuturisticFooter2029V2() {
                   <social.icon className='w-4 h-4' />                </Link>            >
               {socialLinks.map((social) => (
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <Link
                   key={social && social.name}
                   href={social && social.href}
@@ -949,19 +874,20 @@ export default function UltraFuturisticFooter2029V2() {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
+
                 </Link>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               ))}
             </motion.div>
           </div>
         </div>
       </div>
+
+
 
 
             </motion && motion.div>;
@@ -973,12 +899,13 @@ export default function UltraFuturisticFooter2029V2() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Newsletter Signup */}
       <motion&& motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -990,15 +917,15 @@ export default function UltraFuturisticFooter2029V2() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
           <div className='text-center'>
@@ -1034,6 +961,7 @@ export default function UltraFuturisticFooter2029V2() {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
 
+
               />
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                 Subscribe
@@ -1043,33 +971,13 @@ export default function UltraFuturisticFooter2029V2() {
         </div>
       </motion.div>
     </footer>
-<<<<<<< HEAD
-);
 
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-<<<<<<< HEAD
-  )
 
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-  );
 
-}
-=======
-
-    </footer>
-  );
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -1,13 +1,8 @@
 
-<<<<<<< HEAD
-=======
-  return completeSitemap && completeSitemap.find(route => route && route.path === path)
-};
-=======
 
-import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 import {completeSitemap, SitemapItem} from "@/config/sitemap";
@@ -15,18 +10,12 @@ import {completeSitemap, SitemapItem} from "@/config/sitemap";
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path);
 };
-<<<<<<< HEAD
-import { completeSitemap, SitemapItem } from "@/config/sitemap",
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 // Find a route by path in the complete sitemap
 
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
@@ -36,11 +25,8 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
-<<<<<<< HEAD
 
-  const route = findRouteByPath(path)
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const route = findRouteByPath(path),
@@ -48,17 +34,7 @@ export const isProtectedRoute = (path: string): boolean => {
 };
 
 
-<<<<<<< HEAD
-// Check if a route is accessible by a specific user type
-export const canAccessRoute = (;
-  path: string;
-  isAuthenticated: boolean;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-  return route?.requiredAuth === true
-}
-},
 
 
 // Check if a route is accessible by a specific user type
@@ -107,28 +83,9 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
     }
   }
   return breadcrumbs
-<<<<<<< HEAD
 
 
 
-=======
-}
-
-=======
-import { complete_sitemap, SitemapItem } from '@/config / sitemap';
-=======
-
-  if (route.requiredAuth && !isAuthenticated) return false,
-  
-
-  // If route requires specific roles and user doesn't have one
-  if (route.requiredRoles && route.requiredRoles.length > 0) {
-    if (!userType) return false,
-    return route.requiredRoles.includes(userType as any)
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Find a route by path in the complete sitemap;
@@ -208,10 +165,9 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
 };

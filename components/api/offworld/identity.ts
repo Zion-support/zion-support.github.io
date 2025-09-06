@@ -5,20 +5,13 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
 
-  try {
-    const { address } = req.query as { address?: string }
-    const profile = await buildIdentityProfile(address);
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     return res.status(200).json(profile);
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
   try {
     const { address } = req.query as { address?: string };
     const profile = await buildIdentityProfile(address);
@@ -48,15 +41,7 @@ function handler() {
     const { address } = req.query as { address?: string }
     const profile = await buildIdentityProfile (address);
     return res.status (200).json (profile);
-=======
 
-  try {;
-    const { address } = req.query as { address?: string };
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-    const profile = await buildIdentityProfile(address);
-    return res.status(200).json(profile);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (e: any) {
     return res.status (500).json ({ error: e.message });
   }

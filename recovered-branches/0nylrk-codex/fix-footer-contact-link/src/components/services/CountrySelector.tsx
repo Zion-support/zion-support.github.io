@@ -1,25 +1,18 @@
 
 
 
-<<<<<<< HEAD
-import { useState, useEffect } from "react",
-import { Globe } from "lucide-react",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface CountrySelectorProps {
 
   onCountryChange: (country: CountryPricing | null) => void
@@ -28,14 +21,10 @@ interface CountrySelectorProps {
 }
 
 
-<<<<<<< HEAD
-export function CountrySelector({ onCountryChange, selectedCountry }: CountrySelectorProps) {
-  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);
-  // Set top/popular countries
-  useEffect(() => {
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
     const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"];
@@ -66,20 +55,10 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
         {selectedCountry ? `IT Onsite Service in ${selectedCountry.country}` : "Select Country for IT Onsite Service"}
       </h3>
 
-<<<<<<< HEAD
-      <Select
-        onValueChange={handleCountryChange}
-      <Select 
-        onValueChange={handleCountryChange} 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
-      <Select 
-        onValueChange={handleCountryChange} 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         value={selectedCountry?.country}
       >
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
@@ -139,12 +118,11 @@ export function CountrySelector(): any ({ onCountryChange, selectedCountry }: Co
               <SelectItem key={item.country} value={item.country} className="text-white">;
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}

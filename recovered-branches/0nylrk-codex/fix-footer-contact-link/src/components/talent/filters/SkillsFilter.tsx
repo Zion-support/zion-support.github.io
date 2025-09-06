@@ -1,34 +1,16 @@
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {Checkbox} from "@/components/ui/checkbox";
 import {SkillsFilterProps} from "@/types/filters";
-<<<<<<< HEAD
 
 
-import { ChevronDown, ChevronUp } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Checkbox } from "@/components/ui/checkbox";
-import { SkillsFilterProps } from "@/types/filters";
-import { Checkbox } from "@/components/ui/checkbox",
-import { SkillsFilterProps } from "@/types/filters",
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Common skills in AI and tech
 
 const POPULAR_SKILLS = [
@@ -125,39 +107,31 @@ const POPULAR_SKILLS = [;
               >
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 {skill}
               </label>;
             </div>;
           ))}
         </div>;
       )}
-<<<<<<< HEAD
 
-    </div>
-  )
 
-=======
-
-    </div>;
-  );
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 };
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -1,15 +1,8 @@
 
 import React from "react";
 import {
-<<<<<<< HEAD
 
-  Dialog
-  DialogContent
-  DialogDescription
-  DialogHeader
-  DialogTitle
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   Dialog,
   DialogContent,
@@ -18,10 +11,10 @@ import {
 DialogTitle,;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 } from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
 import { ApplyToJobModalProps } from "./types";
@@ -42,36 +35,9 @@ export function ApplyToJobModal({
           </DialogDescription>
         </DialogHeader>
 
-<<<<<<< HEAD
-        <ApplyForm
-          job={job}
-          onClose={onClose}
-          onApplySuccess={onApplySuccess}
-        />
-      </DialogContent>
-=======
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogDescription,;
-  DialogHeader,;
-  DialogTitle,;
-} from "@/components/ui/dialog";
-import { ApplyForm } from "./ApplyForm";
-import { ApplyToJobModalProps } from "./types";
-export function ApplyToJobModal(): any ({;
-  job,;
-  isOpen,;
-  onClose,;
-  onApplySuccess,;
-}: ApplyToJobModalProps) {;
-  return (
-    <Dialog open={isOpen} onOpenChange={onClose}>;
-      <DialogContent className="sm:max-w-[600px]">;
-        <DialogHeader>;
-          <DialogTitle>Apply to Job: {job && job.title}</DialogTitle>;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
 
 
@@ -93,12 +59,14 @@ export function ApplyToJobModal(): any ({;
     </Dialog>;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  );
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
 

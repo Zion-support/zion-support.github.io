@@ -52,6 +52,7 @@ export default async function handler(
   res: NextApiResponse<UrlShortenerResponse>
 ) {
 
+
   if (req && req.method === 'POST') {
     // Create short URL
     try {
@@ -80,6 +81,7 @@ if ( {) {
           success: false,
           error: 'Original URL is required',
         });      }
+
 
 
           error: 'Original URL is required'
@@ -220,7 +222,6 @@ if ( {) {
         data: short_url;
       });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     } catch (error) {
       console.error ('URL shortening error:', error);
       res.status (500).json ({
@@ -235,12 +236,14 @@ if ( {) {
     });
   }
 
+
 // Handle redirects for short URLs
 export async function getServerSideProps({
   params
 }: {
   params: { shortCode: string }
 }) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
+
 
   params,
 }: {;
@@ -252,50 +255,19 @@ export async function getServerSideProps({
   const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
 
-      permanent: false
-    }
-}
-}
 
-    return {
-      not_found: true,    }      not_found: true;
-    }
-  }
-  // Increment click count;
-  short_url.clicks++;
-  url_storage.set (short_code, short_url);
-;
-  // Redirect to original URL;
-  return {
-    redirect: {
 
-      destination: short_url.original_url,
-      permanent: false,
-    },
-  }      destination: short_url.original_url;
-      permanent: false;
-    }
-}
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
-<<<<<<< HEAD
 
-  };      destination: shortUrl.originalUrl;
-      permanent: false
-    }
-};
-}
-  };
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
       destination: shortUrl.originalUrl,
       permanent: false,
     },
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

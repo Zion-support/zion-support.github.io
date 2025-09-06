@@ -28,12 +28,7 @@ import {
   Shield,
   Clock,;
   TrendingUp,;
-<<<<<<< HEAD
 
-
-} from 'lucide-react';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export default function CodeQualityCheckerPage() {
@@ -144,18 +139,15 @@ export default function CodeQualityCheckerPage() {
     { name: 'C++', icon: '⚙️', features: ['Clang - tidy_static analysis_memory leak detection'] },
     { name: 'Go', icon: '🟢', features: ['Golangci - lint_go vet_performance analysis'] },
     { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const pricing = [
     {
       name: 'Developer'
@@ -368,13 +360,20 @@ export default function CodeQualityCheckerPage() {
           'Consider adding JSDoc comments for better documentation',;
         ],;
 
+
+        metrics: {
+          complexity: 'Medium',
+          maintainability: 'Good',
+          testCoverage: '85%',
+          securityScore: '92%',
+        },
+
         recommendations: [
           'Use const for immutable variables to improve code clarity'
           'Break down large functions into smaller, more focused functions'
           'Add proper error handling for better robustness'
           'Consider adding JSDoc comments for better documentation'
         ]
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       });
       setIsAnalyzing(false);
     }, 3000);  };      setIsAnalyzing(false);
@@ -499,6 +498,24 @@ export default function CodeQualityCheckerPage() {
               View Pricing;
             </Button>;
             <Button
+
+
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button
+              href="#pricing"
+              variant="outline"
+              size="lg"
+              className="border-teal-500 text-teal-400 hover:bg-teal-500 hover:text-white shadow-2xl"
+            >
+              View Pricing
+            </Button>
+            <Button
+href="/contact"
+              variant="outline"
+              size="lg"
+              className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
+            >
 
 
               Schedule Demo
@@ -640,81 +657,17 @@ export default function CodeQualityCheckerPage() {
         </div>;
       </section>;
 
-      {/* Features Section */}
-      <section className='section - padding bg - gradient - cursor - accent'>;
-        <div className='container - cursor'>;
-          <div className='text - center mb - 20'>;
-            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
-              Powerful Analysis Features;
-            </h2>;
-            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
 
-              Our code quality checker provides comprehensive analysis and;
-              improvement suggestions for better code.;
-            </p>;
-          </div>;
-
-      <section className="section-padding bg-gradient-cursor-accent">
-        <div className="container-cursor">
-          <div className="text-center mb-20">
-            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
-              Powerful Analysis Features
-
-            </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Our code quality checker provides comprehensive analysis and improvement suggestions for better code.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-                      className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
-                    />;
-                  </div>;
-                  <div className='flex-1'>;
-                    <h3 className='text-2xl font-bold mb-4 text-white'>;
-                      {feature && feature.title}
-                    </h3>;
-                    <p className='text-gray-400 leading-relaxed'>                      {feature && feature.description}              Powerful Analysis Features;
-            </h2>;
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
-              Our code quality checker provides comprehensive analysis and improvement suggestions for better code.;
-            </p>;
-          </div>;
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {features && features.map((feature, index) => (;
-              <Card
-                key={index}
-                className="card-hover group border-gradient-teal"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-start space-x-6">
-                  <div className="relative">
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
-                      {feature.icon}
-                    </div>
-                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-4 text-white">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-400 leading-relaxed">
-                      {feature.description}
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
                     </p>
                   </div>
                 </div>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
@@ -722,7 +675,10 @@ export default function CodeQualityCheckerPage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Supported Languages Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -731,7 +687,10 @@ export default function CodeQualityCheckerPage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               Multi-Language Support
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -743,7 +702,9 @@ export default function CodeQualityCheckerPage() {
             {supportedLanguages.map((language, index) => (
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
                     </p>
                   </div>
@@ -756,7 +717,9 @@ export default function CodeQualityCheckerPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       {/* Supported Languages Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -765,7 +728,9 @@ export default function CodeQualityCheckerPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               Multi-Language Support
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -775,7 +740,6 @@ export default function CodeQualityCheckerPage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {supportedLanguages.map((language, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Card
                 key={index}
                 className='card-hover border-gradient-teal'
@@ -817,6 +781,7 @@ export default function CodeQualityCheckerPage() {
                 key={index}
                 className="card-hover border-gradient-teal"
 
+
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="text-center mb-4">
@@ -827,6 +792,7 @@ export default function CodeQualityCheckerPage() {
                   {language.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                       <CheckCircle className="w-4 h-4 text-teal-400 mr-3 flex-shrink-0" />
+
 
                       {feature}
                     </li>
@@ -840,7 +806,10 @@ export default function CodeQualityCheckerPage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Demo Analysis Results */}
       {analysisResults && (
 
@@ -922,22 +891,12 @@ export default function CodeQualityCheckerPage() {
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-=======
-=======
-          </div>
-        </div>
-      </section>
+
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Demo Analysis Results */}
       {analysis_results && (
         <section className='section - padding bg - gradient - cursor - accent'>;
@@ -1003,7 +962,6 @@ export default function CodeQualityCheckerPage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Quality Score */}
               <Card className="border-gradient-teal text-center">;
                 <h3 className="text-2xl font-bold mb-6 text-white">Overall Quality Score</h3>;
@@ -1046,19 +1004,21 @@ export default function CodeQualityCheckerPage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               {/* Quality Metrics */}
               <Card className='border-gradient-teal'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -1073,19 +1033,21 @@ export default function CodeQualityCheckerPage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Maintainability</span>
@@ -1104,7 +1066,6 @@ export default function CodeQualityCheckerPage() {
                     <span className='text-green-400 font-bold'>
                       {analysisResults.metrics.securityScore}
                     </span>                  </div>                  </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400">Maintainability</span>
                     <span className="text-green-400 font-bold">{analysisResults.metrics.maintainability}</span>
@@ -1134,16 +1095,13 @@ export default function CodeQualityCheckerPage() {
                   </div>
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-                  </div>
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 ))}
               </div>
             </Card>
@@ -1160,14 +1118,15 @@ export default function CodeQualityCheckerPage() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1177,13 +1136,14 @@ export default function CodeQualityCheckerPage() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
             </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the code quality analysis plan that best fits your development needs.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
+
+
 
       <section id='pricing' className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
@@ -1389,8 +1349,7 @@ export default function CodeQualityCheckerPage() {
                       {plan.price}
 
 
-<<<<<<< HEAD
-=======
+
                 className={`card-hover border-gradient-teal ${plan.popular ? 'ring-2 ring-teal-500 scale-105' : ''}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -1421,28 +1380,8 @@ export default function CodeQualityCheckerPage() {
                   </div>;
                   <p className='text-gray-400'>{plan && plan.description}</p>;
                 </div>;
-                <ul className='space-y-4 mb-8'>;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'>;
-                      <CheckCircle className='w-5 h-5 text-teal-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
-                  <p className="text-gray-400">{plan && plan.description}</p>;
-                </div>;
-                <ul className="space-y-4 mb-8">;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center text-gray-300">;
-                      <CheckCircle className="w-5 h-5 text-teal-400 mr-3 flex-shrink-0" />;
-
-                      {feature}
-                    </li>;
-=======
 
 
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -1458,43 +1397,12 @@ export default function CodeQualityCheckerPage() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                    </li>
-                  ))}
-                </ul>
 
-                <Button
-                  href="/contact"
-                  size="lg"
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-                >
-                  Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>
-
-                </Button>
-
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -1505,11 +1413,11 @@ export default function CodeQualityCheckerPage() {
       {/* CTA Section */}
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1518,15 +1426,14 @@ export default function CodeQualityCheckerPage() {
 
             Ready to Improve Your Code Quality?
 
-<<<<<<< HEAD
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
           </h2>
           <p className='text-responsive-md text-teal-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of developers using our code quality checker to write
@@ -1546,6 +1453,7 @@ export default function CodeQualityCheckerPage() {
               variant='outline'
               size='lg'
 
+
               className='border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl'            >              href="/contact"
               variant="outline"
               size="lg"
@@ -1558,6 +1466,7 @@ export default function CodeQualityCheckerPage() {
     </>
 );
 
+
               Schedule Demo;
             </Button>;
           </div>;
@@ -1566,26 +1475,11 @@ export default function CodeQualityCheckerPage() {
 
 
 
+
+
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-    </>);
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

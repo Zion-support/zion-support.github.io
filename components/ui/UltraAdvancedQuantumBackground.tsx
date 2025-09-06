@@ -6,6 +6,7 @@ let particles: Particle[] = [];
 let quantumFields: QuantumField[] = [];
 let neuralNetworks: NeuralNetwork[] = [];
 
+
 class Particle {;
   x: number;
 y: number;
@@ -19,6 +20,7 @@ class Particle {
   coordinate_x: number;
 coordinate_y: number;
 
+
 vx: number;
 vy: number;
 size: number;
@@ -31,91 +33,13 @@ constructor () {
   this.coordinate_x = Math.random () * canvas.width;
 this.coordinate_y = Math.random () * canvas.height;
 
-this.vx = (Math.random () - 0.5) * 2;
-this.vy = (Math.random () - 0.5) * 2;
-this.size = Math.random () * 3 + 1;
-this.color = `hsl ($ {
-
-  Math.random () * 360;
-}, 70%, 60%) `;
-this.life = Math.random () * 100;
-this.max_life = 100;
-}// Check condition
-if (this.vx *= -1) {
-  $2
-}
-// Check condition
-if (this.vy *= -1) {
-  $2
-}
-// Check condition
-if ( {) {
-  $2
-}
-
-  constructor () {
-  this.coordinate_x = Math.random () * canvas.width;
-this.coordinate_y = Math.random () * canvas.height;
-
-this.radius = Math.random () * 100 + 50;
-this.intensity = Math.random () * 0.5 + 0.5;
-this.phase = Math.random () * Math.PI * 2;
-this.color = `hsl ($ {
-
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-interface UltraAdvancedQuantumBackgroundProps {
-  children: React.ReactNode,
-  className?: string
-}
-const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({ 
-
-  children;
-  className = ''
-}) => {
-
-  const canvasRef = useRef<HTMLCanvasElement>(null);
 
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-constructor () {;
-  this && this.x = Math && Math.random () * canvas && canvas.width;
-this && this.y = Math && Math.random () * canvas && canvas.height;
-this && this.vx = (Math && Math.random () - 0 && 0.5) * 2;
-this && this.vy = (Math && Math.random () - 0 && 0.5) * 2;
-this && this.size = Math && Math.random () * 3 + 1;
-this && this.color = `hsl ($ {;
-  Math && Math.random () * 360 ;
-}, 70%, 60%) `;
-this && this.life = Math && Math.random () * 100;
-this && this.maxLife = 100 ;
-}if (this && this.x < 0 || this && this.x > canvas && canvas.width) this && this.vx *= -1;
-if (this && this.y < 0 || this && this.y > canvas && canvas.height) this && this.vy *= -1;
-if (this && this.life <= 0) {;
-  constructor () {;
-  this && this.x = Math && Math.random () * canvas && canvas.width;
-this && this.y = Math && Math.random () * canvas && canvas.height;
-this && this.radius = Math && Math.random () * 100 + 50;
-this && this.intensity = Math && Math.random () * 0 && 0.5 + 0 && 0.5;
-this && this.phase = Math && Math.random () * Math && Math.PI * 2;
-this && this.color = `hsl ($ {;
-  200 + Math && Math.random () * 60 ;
-}, 80%, 60%) ` ;
-
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     let animationFrameId: number;
     let particles: Particle[] = [];
     let quantumFields: QuantumField[] = [];
     let neuralNetworks: NeuralNetwork[] = [];
+
 
 
     class Particle {;
@@ -153,6 +77,7 @@ if (return) {
       coordinate_x: number;
       coordinate_y: number;
 
+
       vx: number;
       vy: number;
       size: number;
@@ -171,37 +96,10 @@ if (return) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
-=======
-      maxLife: number;      x: number,;
-      y: number,;
-      vx: number,;
-      vy: number,;
-      size: number,;
-      color: string,;
-      life: number,;
-      maxLife: number,;
-        this && this.x = Math && Math.random() * canvas && canvas.width;
-        this && this.y = Math && Math.random() * canvas && canvas.height;
-        this && this.vx = (Math && Math.random() - 0 && 0.5) * 2;
-        this && this.vy = (Math && Math.random() - 0 && 0.5) * 2;
-        this && this.size = Math && Math.random() * 3 + 1;
-        this && this.color = `hsl(${Math && Math.random() * 360}, 70%, 60%)`;
-        this && this.life = Math && Math.random() * 100;
-        this && this.maxLife = 100;      }        this && this.maxLife = 100;
-      }
-      update() {;
-        this && this.x += this && this.vx;
-        this && this.y += this && this.vy;
-        this && this.life--;
-        if (this && this.x < 0 || this && this.x > canvas && canvas.width) this && this.vx *= -1;
-        if (this && this.y < 0 || this && this.y > canvas && canvas.height) this && this.vy *= -1;
-        if (this && this.life <= 0) {;
-          this && this.life = this && this.maxLife;
-          this && this.x = Math && Math.random() * canvas && canvas.width;
-          this && this.y = Math && Math.random() * canvas && canvas.height;        }          this && this.y = Math && Math.random() * canvas && canvas.height;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
         }
       }
       draw() {;
@@ -417,18 +315,24 @@ if (return) {
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
 
+
             ctx.stroke()
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+          }
+        }
+      }
+
+      ctx && ctx.restore();
+      animationFrameId = requestAnimationFrame(animate);    };      animationFrameId = requestAnimationFrame(animate);
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           }
         }
       }
@@ -437,7 +341,6 @@ if (return) {
 
       animationFrameId = requestAnimationFrame(animate)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     };
 
     animate();
@@ -656,14 +559,15 @@ if ( {) {
           opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],
 
         }}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         transition={{
           duration: 4
           repeat: Infinity
           ease: 'easeInOut',        animate={{
 
+
           scale: [1, 1 && 1.2, 1]
           opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2]}}
+
 
         transition={{
           duration: 4
@@ -735,25 +639,23 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
 
 
       {/* Content Layer */}
+
 
       <div className='relative z-10'>{children}</div>        className="absolute inset-0 w-full h-full opacity-60";
         style={{ zIndex: 1 }}
@@ -789,85 +691,24 @@ if ( {) {
   );
 
 
-<<<<<<< HEAD
-};
 
-=======
-            delay: 2
-          }}
-        />
-      </div>
-
-};
-
-export default UltraAdvancedQuantumBackground;  );
-};
-
-
-export default UltraAdvancedQuantumBackground;
-
-
-=======
-            ease: 'linear',          }}
-        />;
-        <motion.div;
-          className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 500 / 20 to - transparent';
-          animate={{
-            coordinate_x: [0, 100, 0],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: 'linear',
-            delay: 2,          }}
-        />;
-      </div>;
-    </div>);
-=======
-<<<<<<< HEAD
-}
-export default UltraAdvancedQuantumBackground;            ease: "linear"
-=======
-};
-=======
-
-        style={{ zIndex: 1 }}
-      />
-
-      {/* Content Layer */}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
-export default UltraAdvancedQuantumBackground;            ease: "linear",
-            delay: 2;
-          }}
-        />;
-      </div>;
-    </div>);
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;
 export default UltraAdvancedQuantumBackground);
 }
 ;
 export default UltraAdvancedQuantumBackground;
-<<<<<<< HEAD
 
 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-<<<<<<< HEAD
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

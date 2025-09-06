@@ -1,19 +1,5 @@
 
 
-<<<<<<< HEAD
-
-import { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { GradientHeading } from "@/components/GradientHeading",
-import { AIMatchmaker } from "@/components/AIMatchmaker",
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-import { toast } from "@/hooks/use-toast";
-import { MatchResult } from "@/lib/ai-matchmaking";
-export default function AIMatcherPage() {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const navigate = useNavigate();
@@ -83,47 +69,9 @@ export default function AIMatcherPage() {
                 </SelectContent>
               </Select>
             </div>
-<<<<<<< HEAD
 
 
 
-            <AIMatchmaker
-              serviceType={selectedCategory === "all" ? "" : selectedCategory}
-              onMatchSelect={handleMatchSelect}
-            />
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
-            
-            <AIMatchmaker 
-
-              serviceType={selectedCategory === "all" ? "" : selectedCategory}
-import { useState } from "react",;
-import { useNavigate } from "react-router-dom",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { AIMatchmaker } from "@/components/AIMatchmaker",;
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
-import { toast } from "@/hooks/use-toast",;
-import { MatchResult } from "@/lib/ai-matchmaking",;
-
-=======
-
-import {useState} from "react";
-import {useNavigate} from "react-router-dom";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {GradientHeading} from "@/components/GradientHeading";
-import {AIMatchmaker} from "@/components/AIMatchmaker";
-import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
-import {toast} from "@/hooks/use-toast";
-import {MatchResult} from "@/lib/ai-matchmaking";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function AIMatcherPage() {;
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -183,44 +131,9 @@ export default function AIMatcherPage() {;
               </Select>;
             </div>;
 
-<<<<<<< HEAD
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
             <AIMatchmaker
-=======
-
-            
-            <AIMatchmaker 
-=======
-            <AIMatchmaker 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-              serviceType={selectedCategory === "all" ? "" : selectedCategory}
-              onMatchSelect={handleMatchSelect}
 
-            />;
-          </div>;
-        </div>;
-      </div>;
-      <Footer />;
-
-    </>);
-}
-
-<<<<<<< HEAD
-;
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

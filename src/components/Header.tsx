@@ -1,9 +1,11 @@
-<<<<<<< HEAD
+
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Button from './Button';
+
 
 import React from 'react';
-=======
-import React, { useState } from 'react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import { Link } from 'react-router-dom';
 
 import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
@@ -18,19 +20,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-<<<<<<< HEAD
 
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Contact', href: '/contact' }
-  ];
-
-  return (
-    <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 sticky top-0 z-50">
-=======
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     onMenuClick();
@@ -38,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
 
   return (
     <header className="bg-gray-900 text-white shadow-lg fixed w-full top-0 z-40">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -50,16 +40,24 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8 ml-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="text-gray-300 hover:text-white transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
+
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+              Home
+            </Link>
+            <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+              Services
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+              About
+            </Link>
+            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+              Contact
+            </Link>
+            <Button variant="primary" size="small">
+              Get Started
+            </Button>
+
           </nav>
 
           {/* Mobile menu button */}
@@ -75,35 +73,31 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-16 left-0 right-0 bg-slate-900 py-4 border-t border-slate-700">
-            <nav className="flex flex-col space-y-4 px-4">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="text-gray-300 hover:text-white transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+
+          <div className="md:hidden py-4 border-t border-slate-700">
+            <nav className="flex flex-col space-y-4">
+              <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                Home
+              </Link>
+              <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                Services
+              </Link>
+              <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                About
+              </Link>
+              <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+                Contact
+              </Link>
+              <Button variant="primary" size="small" className="w-full">
+                Get Started
+              </Button>
+
             </nav>
           </div>
         )}
-<<<<<<< HEAD
 
       </div>
     </header>
   );
-
 };
 
-
-export default Header;
-
-=======
-      </div>
-    </header>
-  );
-};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

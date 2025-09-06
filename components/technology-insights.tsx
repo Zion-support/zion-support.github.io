@@ -9,27 +9,18 @@ export default function TechnologyInsightsPage() {
       id: 'quantum-computing'
       title: 'Quantum Computing in 2025'
       description:
-<<<<<<< HEAD
-
-        'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech'
-      readTime: '15 min read'
-      featured: true
-    }
-
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
       readTime: '15 min read',
       featured: true;
     };
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
     {
       id: 'edge-ai'
       title: 'Edge AI Revolution'
@@ -245,14 +236,12 @@ class ErrorBoundary extends React.Component {
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
 
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
         <main className='container mx-auto px-6 py-12'>;
           <section className='text-center mb-16'>;
@@ -260,51 +249,22 @@ class ErrorBoundary extends React.Component {
               Technology Insights;
             </h1>;
             <p className='text-xl text-white/80 max-w-3xl mx-auto'>;
-=======
-        <meta;
-          name='description';
-          content="Explore Zion Tech Group's technology insights, research, and thought leadership in AI, automation, and emerging technologies.";
-        />;
-        <meta;
-          property='og:title';
-          content='Technology Insights | Zion Tech Group';
-        />;
-        <meta;
-          property='og:description';
-          content='Research insights, technology trends, and thought leadership in AI and automation.';
-        />;
-        <meta name='twitter:card' content='summary_large_image' />;
-      </Head>;
-      <div className='min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white'>;
-        <main className='container mx - auto px - 6 py - 12'>;
-          <section className='text - center mb - 16'>;
-            <h1 className='text - 5xl font - extrabold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip - text text - transparent'>;
-              Technology Insights;
-            </h1>;
-            <p className='text - xl text - white / 80 max - w-3xl mx - auto'>;
-
-              Research insights, technology trends, and thought leadership in;
-              AI, automation, and emerging technologies;
-            </p>;
-          </section>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   </div>
                 ))}
               </div>
             </div>
 
-<<<<<<< HEAD
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 
             {/* Research Areas */}
@@ -316,14 +276,14 @@ class ErrorBoundary extends React.Component {
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                 {researchAreas.map((area, index) => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div
@@ -351,10 +311,9 @@ class ErrorBoundary extends React.Component {
                           <span className="text-cyan-400 mr-2">•</span>;
 
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
                           {focus}
                         </li>
                       ))}
@@ -367,16 +326,17 @@ class ErrorBoundary extends React.Component {
 
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             {/* Whitepapers */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -386,14 +346,14 @@ class ErrorBoundary extends React.Component {
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                 {whitepapers.map((paper, index) => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div
@@ -437,12 +397,13 @@ class ErrorBoundary extends React.Component {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   </div>
                 ))}
               </div>
@@ -450,17 +411,19 @@ class ErrorBoundary extends React.Component {
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             {/* Innovation Lab */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
@@ -471,19 +434,21 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   <div>
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
                       Cutting-Edge Research
@@ -496,7 +461,6 @@ class ErrorBoundary extends React.Component {
                       state of the art.
                     </p>
                     <ul className='space-y-2 text-white/70'>                      <li>• Advanced AI research and development</li>                  <div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cutting-Edge Research</h3>
                     <p className="text-white/80 mb-6">
                       Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems, AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
@@ -517,6 +481,7 @@ class ErrorBoundary extends React.Component {
                 </div>
               </div>
             </div>
+
 
 href={paper && paper.downloadUrl}
                       className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'>;
@@ -777,15 +742,17 @@ href={paper && paper.downloadUrl}
 }
     </>);
 }
-<<<<<<< HEAD
 
-  );
-}
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+}
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/feature/merge-conflicts-and-improvements

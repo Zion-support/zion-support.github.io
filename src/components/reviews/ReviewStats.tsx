@@ -34,20 +34,8 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                   key={i}
                   className={`h-4 w-4 ${;
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   }`}
                 />
               ))}
@@ -55,43 +43,16 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
             <span className='text-sm text-muted-foreground'>
               {totalReviews} {totalReviews === 1 ? 'review' : 'reviews'}            <span className="text-sm text-muted-foreground">
             <span className="text-sm text-muted-foreground">
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
             </span>
           </div>
         </div>
       </div>
       {ratingDistribution && (
-<<<<<<< HEAD
 
 
-        <div className='space-y-2'>
-          {[5, 4, 3, 2, 1].map(rating => (
-            <div key={rating} className='flex items-center gap-2'>
-              <div className='w-6 text-sm text-right'>{rating}</div>
-              <Star className='h-3 w-3 text-yellow-400' />
-              <Progress
-                value={getPercentage(ratingDistribution[rating] |0)}
-                className='h-2'        <div className="space-y-2">
-          {[5, 4, 3, 2, 1].map((rating,) => (
-
-
-=======
-        <div className="space-y-2">
-          {[5, 4, 3, 2, 1].map((rating) => (
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <div key={rating} className="flex items-center gap-2">
               <div className="w-6 text-sm text-right">{rating}</div>
               <Star className="h-3 w-3 text-yellow-400" />
@@ -165,45 +126,21 @@ if (return 0) {
       {ratingDistribution && (
         <div className="space-y-2">
           {[5, 4, 3, 2, 1].map((rating) => (
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <div key={rating} className="flex items-center gap-2">
               <div className="w-6 text-sm text-right">{rating}</div>
               <Star className="h-3 w-3 text-yellow-400" />
               <Progress 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
 
-          ))}
-        </div>;
-      )}
 
-
-    </div>
-  )
-}</div>)
-}</div>)
-=======
-          ))}
-        </div>;
-      )}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+}</div>) ;
+}</div>) ;
 
 }"}
 
@@ -237,11 +174,11 @@ if (return 0) {
 }</div>) ;
 }</div>) ;
 }"};
-<<<<<<< HEAD
-=======
+
 
     </div>;
   );
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

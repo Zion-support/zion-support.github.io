@@ -10,76 +10,27 @@ if ( {) {
     window.gtag ('event', event, data);
   }
 }
-<<<<<<< HEAD
 
-export const trackPageView = (url: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', 'GA_MEASUREMENT_ID', {
 
-    });
-  }
-}
-// Track events
-export const trackEvent = (
-  eventName: string
-  properties?: Record<string, string | number | boolean>
-) => {
-  if (typeof window !== 'undefined' && window.gtag) {;
-    window.gtag('event', eventName, properties);
-  }
-}
-export const trackPageView = (url: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', GA_TRACKING_ID, {
-=======
-;
-export const trackPageView = (url: string) =>: any {
-  // Check condition
-if ( {) {
-  $2
-}
-    window.gtag ('config', 'GA_MEASUREMENT_ID', {
+
+
+
+
 
       page_path: url,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
-      page_path: url,;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-<<<<<<< HEAD
-
-      page_path: url,;
-
 
     });
   }
 }
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-  if (typeof window !== 'undefined' && window && window.gtag) {
-    window && window.gtag('config', GA_TRACKING_ID, {
-      page_path: url,
-
-    });
-  }
-}
-=======
-
-      page_path: url,;
-
-=======
-      page_path: url,
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     });
   }
 };
 
 export const measurePerformance = () => {
+
+
 
 };
 // Track events
@@ -129,6 +80,8 @@ if ( {) {
       firstContentfulPaint: performance.getEntriesByName ('first - contentful - paint')[0]?.start_time || 0,
     }
 
+
+
   }
   return null;
 
@@ -140,22 +93,17 @@ interface WebVitalMetric {
   value: number;
   id: string;
 }
-<<<<<<< HEAD
-
-export const trackWebVitals = (metric: WebVitalMetric) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', metric.name, {
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
       event_category: 'Web Vitals',
       event_label: metric.id,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       non_interaction: true,
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     });
   }
 
@@ -164,17 +112,23 @@ export const trackWebVitals = (metric: WebVitalMetric) => {
 // Track events;
 
 export const event = ({
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   action
   category
   label
   value
 }: {
+
+
+
+
+
+    });
+  }
+}
+// Track events
+export const event = ({
 
 
   action,
@@ -183,13 +137,14 @@ export const event = ({
   value,
 }: {;
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   action: string;
   category: string;
   label?: string;
@@ -264,7 +219,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 // Declare global types
 
 
-
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 // Declare global types

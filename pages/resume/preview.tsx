@@ -1,30 +1,7 @@
 
 
-<<<<<<< HEAD
-}</div> </div> <PdfExportButton targetRef= {
-  targetRef
-}fileName= {
-  `resume-$ {
-  activeData.name.replace (/\s+/g, '-') .toLowerCase ()
-}.pdf`
-}/> </div> </div>)
-}if (!user) {
-  return {
-  redirect: {
-}//Placeholder: fetch resume data for the logged-in user and versions if any const initialData: ResumeData = {
-  name: 'Your Name', contact: {
-  email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com'
-}
-export default function ResumePreviewPage({
 
-  initialData
-  versions = []
-}: ResumePreviewPageProps) {
-  initialData,
-  versions = [],
-}: ResumePreviewPageProps) {;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [selectedVersionId, setSelectedVersionId] = useState<string>(
     versions[0]?.id |'current'
@@ -36,7 +13,7 @@ export default function ResumePreviewPage({
     const found = versions.find(v => v.id === selectedVersionId);
     return found?.data |initialData;
   }, [selectedVersionId, initialData, versions]);
-=======
+
   }, [selectedVersionId, initialData, versions]);
   return (
     <div className='relative'>;
@@ -69,32 +46,18 @@ import { createServerClient } from '../../utils/supabase/server',
               </select>;
             </>;
 
-<<<<<<< HEAD
 
-=======
-=======
-import { GetServerSideProps } from 'next',
-import React, { useMemo, useRef, useState } from 'react',
-import PdfExportButton from '../../components/ui/PdfExportButton',
-import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview',
-import { createServerClient } from '../../utils/supabase/server',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export type ResumePreviewPageProps = {
   initialData: ResumeData,
   versions?: Array<{ id: string, label: string, data: ResumeData }>
 };
 
 export default function ResumePreviewPage({ initialData, versions = [] }: ResumePreviewPageProps) {
-<<<<<<< HEAD
 
-  const [theme, setTheme] = useState<'light' | 'dark'>('light'),
-  const [selectedVersionId, setSelectedVersionId] = useState<string>(versions[0]?.id || 'current'),
-  const targetRef = useRef<HTMLDivElement>(null),
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const activeData = useMemo(() => {
     if (selectedVersionId === 'current') return initialData;
     const found = versions.find(v => v.id === selectedVersionId);
@@ -117,15 +80,17 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
           </select>
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           {versions.length > 0 && (
             <>
               <label className="text-sm ml-4">Version</label>
@@ -136,22 +101,9 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
               >
                 <option value="current">Current</option>
                 {versions.map(v => (
-<<<<<<< HEAD
-
-                  <option value={v.id} key={v.id}>
-                    {v.label}
-                  </option>                ))}
-              </select>
-            </>
-          )}
-
-=======
 
 
-      <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
 
-      <div className="mx-auto">
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
@@ -201,14 +153,10 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         </div>
       </div>
       <PdfExportButton
@@ -219,10 +167,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   );
@@ -324,11 +270,10 @@ return { props: { initialData, versions } };
       </div>
     </div>
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   )
   } catch (error) {
     console.error("Error:", error);
@@ -410,28 +355,12 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
 return { props: { initialData, versions } }
 }
-<<<<<<< HEAD
-};
 
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-          'Built multi-agent automation systems improving throughput by 40%.Designed AI-driven dashboards and PDF export workflows.']}];
-    education: [
-      { institution: 'University of Example', degree: 'B.Sc. Computer Science', start: '2016', end: '2020' }],
-    certifications: ['AWS Certified Solutions Architect – AssociateTensorFlow Developer Certificate'],
-    portfolio: [
-      { title: 'Agentic Resume Builder', description: 'Automated resume generation using LLMs and vector search.', link: 'https://example.com' },
-      { title: 'AI Marketplace', description: 'Talent dashboard with export features.' }]},
-  const versions = [] as Array<{ id: string, label: string, data: ResumeData }>,
-  return { props: { initialData, versions } }
 
-};
+
 > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) );
 }</select> </>);
 }</div> </div> <PdfExportButton target_ref= {
@@ -507,123 +436,5 @@ if (return initial_data) {
       </div>;
     </div>);
 ;
-=======
-                value={selectedVersionId  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                onChange={(e) => setSelectedVersionId(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
-              >
-                <option value="current">Current</option>
-                {versions.map(v => (
-<<<<<<< HEAD
-                  <option value={v.id} key={v.id}>
-                    {v.label}
-                  </option>                ))}
-              </select>
-            </>
-          )}
-<<<<<<< HEAD
-        </div>
-      </div>
-      <PdfExportButton
-        targetRef={targetRef}
-        fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
-      />
-      <div className='mx-auto'>
-        <ResumePreview ref={targetRef} data={activeData} theme={theme} />
-      </div>
-    </div>
-  );
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-export const getServerSideProps: GetServerSideProps = async ctx => {
-  // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient ();
-  const user = await (supabase as any).auth.get_user?.();
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return {
-      redirect: {
-        destination: '/auth',
-        permanent: false,
-      },
-    }  }
-  // Placeholder: fetch resume data for the logged - in user and versions if any;
-  const initial_data: ResumeData = {
-    name: 'Your Name',
-    contact: {
-      email: 'you@example.com',
-      phone: '+1 555 - 123 - 4567',
-      location: 'City, Country',
-      website: 'https://example.com',
-    },
-    summary:;
-      'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud - native systems.',
-    skills: [;
-      'AI Engineering',
-      'Prompt Design',
-      'TypeScript',
-      'Node.js',
-      'Next.js',
-    ],
-    technologies: ['OpenAI', 'Supabase', 'Postgres', 'Vercel', 'Docker'],    experience: [;
-      {
-        title: 'Senior AI Engineer',
-        company: 'Zion AI',
-        start: '2023',
-        end: 'Present',
-        location: 'Remote',
-        bullets: [;
-          'Built multi - agent automation systems improving throughput by 40%.',
-          'Designed AI - driven dashboards and PDF export workflows.',
-        ],
-      },
-    ],
-    education: [;
-      {
-        institution: 'University of Example',
-        degree: 'B.Sc. Computer Science',
-        start: '2016',
-        end: '2020',
-      },
-    ],
-    certifications: [;
-      'AWS Certified Solutions Architect – Associate',
-      'TensorFlow Developer Certificate',
-    ],
-    portfolio: [;
-      {
-        title: 'Agentic Resume Builder',
-        description:;
-          'Automated resume generation using LLMs and vector search.',
-        link: 'https://example.com',
-      },
-      {
-        title: 'AI Marketplace',
-        description: 'Talent dashboard with export features.',
-      },
-    ],
-  }
-;
-  const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
-;
-return { props: { initial_data, versions } }
-}
-<<<<<<< HEAD
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-};
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

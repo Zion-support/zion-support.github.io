@@ -11,21 +11,10 @@ export function UploadSection({
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Upload, FileText } from "lucide-react";
-<<<<<<< HEAD
-
-
-
-import React from 'react',
-import { Button } from "@/components/ui/button",
-import { Upload, FileText } from 'lucide-react',
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface UploadSectionProps {
   customFile: File | null,
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
@@ -53,14 +42,15 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
       
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {customFile && (
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
           <div className="flex items-center justify-between">
@@ -73,17 +63,9 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             </span>
           </div>
         </div>
-<<<<<<< HEAD
 
 
 
-=======
-
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Upload, FileText } from 'lucide-react',;
@@ -151,15 +133,10 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
     </div>);
 
 }
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

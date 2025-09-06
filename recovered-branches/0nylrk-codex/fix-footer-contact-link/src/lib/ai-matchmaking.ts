@@ -1,26 +1,20 @@
 
-<<<<<<< HEAD
 
-// AI Matchmaking utility functions
 
-=======
-// AI Matchmaking utility functions;
 
-export interface MatchResultItem {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 export interface MatchResultItem {;
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   id: string;
   title: string;
   description: string;
@@ -31,27 +25,15 @@ export interface MatchResultItem {;
   image?: string;
 
 }
-<<<<<<< HEAD
-=======
-export interface MatchResult {
-=======
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
 
 export interface MatchResult {
 
-export interface MatchResult {;
-
-<<<<<<< HEAD
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   item: MatchResultItem;
   score: number;
 
@@ -67,15 +49,8 @@ const sample_data: MatchResultItem[] = [;
     description: "Experienced AI engineer with expertise in machine learning and computer vision";
     category: "Talent - Engineering";
 
-<<<<<<< HEAD
 
-    price: 120,
-    skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
 
-=======
-    price: 120,
-    skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   }
   {
@@ -97,12 +72,8 @@ const sample_data: MatchResultItem[] = [;
 
 
 
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // AI Matchmaking utility functions;
 export interface MatchResultItem {;
   id: string,;
@@ -124,11 +95,11 @@ export interface MatchResult {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
   {
@@ -207,11 +178,10 @@ export async function findMatches(
     console.error("Error in matchmaking:", error),
     return []
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

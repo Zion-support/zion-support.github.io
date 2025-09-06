@@ -23,14 +23,9 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 type QA = { q: string; a: string };
 type Props = { items: QA[] };
-<<<<<<< HEAD
-
-export default function FAQ({ items }: Props) {
-  if (!items |items.length === 0) return null;
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 export default function FAQ(): any ({ items }: Props) {;
   if (!items || items && items.length === 0) return null;
 
@@ -48,18 +43,8 @@ export default function FAQ(): any ({ items }: Props) {;
             </div>;
           </div>;
 
-=======
-import React from 'react';
-type QA = { q: string, a: string };
-type Props = { items: QA[] };
-export default function FAQ({ items }: Props) {
-  if (!items || items.length === 0) return null;
-=======
-type QA = { q: string; a: string };
-type Props = { items: QA[] };
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">
       <h2 className="text-lg font-semibold mb-4">Frequently Asked Questions</h2>
@@ -70,7 +55,6 @@ type Props = { items: QA[] };
             <div className="mt-1 text-sm text-gray-700 dark:text-gray-300">{it.a}</div>
           </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         ))}
       </div>;
     </div>;
@@ -78,5 +62,35 @@ type Props = { items: QA[] };
 }
 }
 
+
+=======
+import React from './react';
+type QA = { q: string; array: string }
+type Props = { items: QA[] }
+export default /**
+ * FAQ - Function description
+ */
+function FAQ() {
+  // Check condition
+if (return null) {
+  $2
+}
+  return (
+    <div className="mt - 10 border - t border - gray - 200 dark:border - gray - 800 pt - 6">;
+      <h2 className="text - lg font - semibold mb - 4">Frequently Asked Questions</h2>;
+      <div className="space - y-4">;
+        {items.map ((it, idx) => (
+          <div;
+            key={idx}
+            className="rounded - lg bg - gray - 50 dark:bg - gray - 900 p - 4 border border - gray - 200 dark:border - gray - 800";
+          >;
+            <div className="font - medium">{it.q}</div>;
+            <div className="mt - 1 text - sm text - gray - 700 dark:text - gray - 300">;
+              {it.a}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
 
 

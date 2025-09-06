@@ -15,14 +15,8 @@ const shareToTwitter = () => {
       '_blank');
 
   }
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const copy_link = () =>: any {
     // Check condition
 if (return) {
@@ -172,11 +166,8 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
     if (typeof window === 'undefined') return,
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
@@ -207,41 +198,20 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 
 
 
-<<<<<<< HEAD
-  return (
-    <div className='mt-12 flex flex-wrap gap-2'>
-      {buttons.map(btn => (
-        <Button
-          key={btn.label}
-          variant='outline'
-          size='sm'
-          onClick={btn.onClick}
-          aria-label={btn.label}
-        >          {btn.icon}
-          <span>{btn.label}</span>
-        </Button>
-      ))}
-    </div>
-  )
-}
-}
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </div>;
   );
 };
 };
 
+
+
 <<<<<<< HEAD
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   },
 
   const buttons = [

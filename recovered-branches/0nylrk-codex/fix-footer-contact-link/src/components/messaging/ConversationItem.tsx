@@ -1,23 +1,7 @@
 
-<<<<<<< HEAD
-
-import React from 'react';
-import { format  } from 'date-fns';
-import { cn  } from '@/lib/utils';
-import { Conversation  } from '@/types/messaging';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-interface ConversationItemProps {
 
 
-=======
 
-
-  conversation: Conversation,
-  isActive: boolean,
-  onClick: () => void
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react',;
 import { format } from 'date-fns',;
 import { cn } from '@/lib/utils',;
@@ -30,11 +14,11 @@ interface ConversationItemProps {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 }
 
   conversation: Conversation
@@ -46,26 +30,20 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
   return (
 
 
-<<<<<<< HEAD
-      className={cn(
-        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
-        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30"
-
-        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",
-        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover:bg-zion-blue-dark/30",
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
     <div 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}

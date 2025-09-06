@@ -4,54 +4,24 @@
       description: "Get matched with the perfect talent or jobs using our advanced AI algorithm."
     }
     },
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />
       title: "Track Milestones"
       description: "Monitor project progress and approve milestones directly from your phone."
     }
     },
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       icon: <Mail className="h-8 w-8 text-zion-purple" />
       title: "Instant Messaging"
       description: "Chat with candidates or clients and receive notifications in real-time."
     }
     },
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       icon: <Smartphone className="h-8 w-8 text-zion-cyan" />
       title: "Biometric Security"
@@ -116,14 +86,8 @@ export const MobileFeatureShowcase: React.FC = () => {;
 
   ],
 
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
 
@@ -136,14 +100,8 @@ export const MobileFeatureShowcase: React.FC = () => {;
               key={index} 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <div className="mb-4">
     <section id="features" className="py - 16 bg - zion - blue">;
       <div className="container mx - auto px - 4">;
@@ -167,21 +125,8 @@ export const MobileFeatureShowcase: React.FC = () => {;
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-zion-slate-light">{feature.description}</p>
             </div>
-<<<<<<< HEAD
 
 
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-'"}
-}
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 '"},
 ;
@@ -247,14 +192,8 @@ export const MobileFeatureShowcase: React.FC = () => {;
     </section>;
   );
 };
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

@@ -25,6 +25,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const merged = {
 
+
     ...existing,
     ...body,
     updatedAt: new Date().toISOString(),
@@ -48,8 +49,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const statusPath = path && path.join(dataDir, 'agents-status && status.json');
   const existing = fs && fs.existsSync(statusPath) ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8')) : { agents: [] };
 
-<<<<<<< HEAD
-=======
+
+
 
   const merged = {
     ...existing;
@@ -60,86 +61,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 
-=======
-import { isInternalAgentRequest } from '../../../utils / admin_auth';
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-}
-    res.status (405).json ({ error: 'Method Not Allowed' });
-    return;
-  }
-  if () {) {
-  $2
-}
-    res.status (401).json ({ error: 'Unauthorized' });
-    return;
-  }
-  const body = req.body || {}
-  const data_dir = path.join (process.cwd (), 'data', 'admin');
-  if () fs.mkdir_sync (data_dir, { recursive: true })) {
-  $2
-}
-  const status_path = path.join (data_dir, 'agents - status.json');
-  const existing = fs.exists_sync (status_path);
-    ? JSON.parse (fs.readFileSync (status_path, 'utf8'));
-    : { agents: [] }
-;
-  const merged = {
-    ...existing,
-    ...body,
-    updated_at: new Date ().toISOString (),
-  }
-  fs.writeFileSync (status_path, JSON.stringify (merged, null, 2));
-  res.status (200).json ({ ok: true });export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.status (405).json ({ error: 'Method Not Allowed' });
-    return;
-  }
-  if () {) {
-  $2
-}
-    res.status (401).json ({ error: 'Unauthorized' });
-    return;
-  }
-  const body = req.body || {}
-  const data_dir = path.join (process.cwd (), 'dataadmin');
-  if () fs.mkdir_sync (data_dir, { recursive: true })) {
-  $2
-}
-  const status_path = path.join (data_dir, 'agents - status.json');
-  const existing = fs.exists_sync (status_path) ? JSON.parse (fs.readFileSync (status_path, 'utf8')) : { agents: [] }
-;
-  const merged = {
-    ...existing;
-    ...body;
-    updated_at: new Date ().toISOString ()}
-  fs.writeFileSync (status_path, JSON.stringify (merged, null, 2));
-  res.status (200).json ({ ok: true });
 
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-
-  res.status(200).json({ ok: true })
-
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

@@ -26,24 +26,8 @@ export const mockNextRouter = () =>: any ({
   back: jest.fn (),
   beforePopState: jest.fn (),
   events: {
-<<<<<<< HEAD
 
-    on: jest.fn()
-    off: jest.fn()
-    emit: jest.fn()
-=======
-    on: jest.fn (),
-    off: jest.fn (),
-    emit: jest.fn ();
-  },
-  is_fallback: false,
-  is_locale: false,
-  is_ready: true,
-  default_locale: 'en',
-  domain_locales: [],
-  is_preview: false;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   },
   isFallback: false,
@@ -52,18 +36,9 @@ export const mockNextRouter = () =>: any ({
   defaultLocale: 'en',
   domainLocales: [],
   isPreview: false;
-<<<<<<< HEAD
 
 
 
-=======
-
-});
-export const createMockProps = (overrides = {}) => ({
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </ThemeProvider>;
   );
 },;
@@ -94,13 +69,12 @@ export const mockNextRouter = () => ({;
 });
 export const createMockProps = (overrides = {}) => ({;
 
+
   ...overrides;
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 });

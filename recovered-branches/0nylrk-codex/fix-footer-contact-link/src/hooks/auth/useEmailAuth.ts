@@ -1,27 +1,18 @@
 
 
 
-<<<<<<< HEAD
-import { useState } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast";
-import type { UserProfile } from "@/types/auth";
-
-import {cleanupAuthState} from "@/utils/authUtils";
-import { toast } from "@/hooks/use-toast",
-import type { UserProfile } from "@/types/auth",
-import { cleanupAuthState } from "@/utils/authUtils",
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void
   setIsLoading: (loading: boolean) => void
@@ -55,19 +46,15 @@ export const useEmailAuth = (
           title: "Login failed",
           description: error.message,
 
-<<<<<<< HEAD
-          variant: "destructive"}),
 
-          variant: "destructive"});
-          variant: "destructive"}),
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         return { error }
       }
       return { data }
@@ -123,13 +110,11 @@ export const useEmailAuth = (
           title: "Signup failed",
           description: error.message,
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           variant: "destructive"});
         return { error };
       }
@@ -155,14 +140,11 @@ export const useEmailAuth = (
         description: error.message || "An unexpected error occurred",
         variant: "destructive"});
 
-<<<<<<< HEAD
-      return { error };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     } finally {
       setIsLoading(false)
     }
@@ -184,13 +166,11 @@ export const useEmailAuth = (
           title: "Password reset failed",
           description: error.message,
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           variant: "destructive"});
         return { error };
       }
@@ -222,23 +202,20 @@ export const useEmailAuth = (
         description: error.message || "An unexpected error occurred",
         variant: "destructive"});
 
-<<<<<<< HEAD
-      return { error };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     } finally {
       setIsLoading(false)
     }
   };
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
   return { login, signup, resetPassword }
 };

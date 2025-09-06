@@ -1,33 +1,26 @@
 
-<<<<<<< HEAD
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
-=======
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-=======
 
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -35,102 +28,33 @@ const corsHeaders = {
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-<<<<<<< HEAD
-interface ContentGenerationRequest {
 
-  contentType: 'blog' | 'newsletter';
-  prompt?: string;
-  topic?: string;
-  autoPublish?: boolean
-  includeImage?: boolean
 
-=======
-=======
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
-import "https://deno.land / x/xhr@0.1.0 / mod.ts";
-const cors_headers = {
-  "Access - Control - Allow - Origin": "*",
-  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface ContentGenerationRequest {
 
   auto_publish?: boolean,
   include_image?: boolean;
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 interface GeneratedBlogContent {
   title: string;
   meta_description: string;
   body: string;
   tags: string[];
-<<<<<<< HEAD
-
-  tweetSummary?: string
-  imagePrompt?: string
-}
-interface GeneratedNewsletterContent {
-  subject: string;
-  previewText: string;
-  body: string
-  cta: string
-}
-
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-import "https://deno.land/x/xhr@0.1.0/mod.ts",;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin": "*",;
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
-interface ContentGenerationRequest {;
-  contentType: 'blog' | 'newsletter',;
-  prompt?: string,;
-  topic?: string,;
-  autoPublish?: boolean,;
-  includeImage?: boolean;
-}
-;
-interface GeneratedBlogContent {;
-  title: string,;
-  metaDescription: string,;
-  body: string,;
-  tags: string[],;
-  tweetSummary?: string,;
-  imagePrompt?: string;
-}
-;
-interface GeneratedNewsletterContent {;
-  subject: string,;
-  previewText: string,;
-  body: string,;
-  cta: string;
-}
 
 
-  tweetSummary?: string
-  imagePrompt?: string
-}
-interface GeneratedNewsletterContent {
-  subject: string;
-  previewText: string;
-  body: string
-  cta: string
-}
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -252,10 +176,8 @@ serve(async (req) => {
             };
             { 
               role: "user", 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 ;
     // Check condition
@@ -289,11 +211,9 @@ if ( {) {
               role: "user",
               content: `Create a DALL - E prompt for a thumbnail image for this blog post title: "${generated_content.title}"`;
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
             }
           ];
           temperature: 0 && 0.7,
@@ -302,7 +222,9 @@ if ( {) {
               content: `Create a DALL-E prompt for a thumbnail image for this blog post title: "${generatedContent.title}"` 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     // If autoPublish is true, save the content to the database
     if (autoPublish && contentType === 'blog') {
@@ -437,12 +359,13 @@ if ( {) {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
 });

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export async /**
  * fetch_milestones - Function description
@@ -13,9 +11,7 @@ function fetch_milestones() {
   if (throw new Error ('Failed to load milestones'), ) {
   $2
 }
-<<<<<<< HEAD
-  return res.json ();
-=======
+
 ;
 export async function createMilestone(projectId: string, payload: any) {;
   const res = await fetch(`/api/projects/${projectId}/milestones`, {;
@@ -25,19 +21,7 @@ export async function createMilestone(projectId: string, payload: any) {;
     body: JSON.stringify(payload)}),;
   if (!res.ok) throw new Error(await res.text()),;
   return res.json();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 export async /**
@@ -70,6 +54,12 @@ function updateMilestoneStatus() {
 }
 
 
+
+export async function fetchMilestones(projectId: string) {;
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
+    headers: { 'Content-Type': 'application/json' },;
+
+
 }
 ;
 export async function createMilestone(projectId: string, payload: any) {;
@@ -81,8 +71,10 @@ export async function createMilestone(projectId: string, payload: any) {;
   if (!res.ok) throw new Error(await res.text()),;
   return res.json();
 
-
-<<<<<<< HEAD
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
 }
 export async function updateMilestoneStatus() {
@@ -121,8 +113,8 @@ export async function createMilestone(projectId: string, payload: any) {;
   }
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 }
 ;
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {;
@@ -137,10 +129,11 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

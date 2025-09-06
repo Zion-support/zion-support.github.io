@@ -1,6 +1,9 @@
-<<<<<<< HEAD
 
 export function SelectResumeSection({
+  resumeOptions;
+  selectedResume;
+  handleResumeSelect;
+  handleDownloadResume;
 
   isLoading
 }: SelectResumeSectionProps) {
@@ -39,12 +42,17 @@ export function SelectResumeSection({
           ))}
 
 
+
+
+
           
 
           
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
           {resumeOptions.map((option) => (
             <button
               key={option.id}
@@ -78,11 +86,10 @@ export function SelectResumeSection({
 
 
 
+
 }
 
-=======
-import React from 'react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import { FileText } from 'lucide-react';
 
 interface ResumeOption {
@@ -107,6 +114,7 @@ interface Resume {
           )}
         </>
       )}
+
 
 
   );

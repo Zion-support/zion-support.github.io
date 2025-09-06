@@ -5,6 +5,7 @@ status;
 
 
 
+
   status: "incomplete" | "current" | "complete"
   label: string
   description?: string
@@ -20,18 +21,7 @@ interface StepProps {
   className?: string
 }
 export function Step({
-<<<<<<< HEAD
-  status,
-  label,
-  description,
-  status
-  label
-  description
-  status,
-  label,
-  description,
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   className}: StepProps) {
@@ -47,10 +37,8 @@ export function Step({
           "opacity-60": status === "incomplete"},
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         className
       )}
     >
@@ -135,12 +123,16 @@ export function Step({;
 
 
 
+
             "text-zion-slate-light": status === "incomplete",
             "text-zion-slate-light": status === "incomplete",
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
+
             "text-white": status === "current" || status === "complete"})}
         >
       </div>;
@@ -151,6 +143,7 @@ export function Step({;
             "text-zion-slate-light": status === "incomplete"
             "text-white": status === "current" || status === "complete"})}>;
           {label}
+
 
 
         </h3>
@@ -164,11 +157,7 @@ export function Step({;
 
 
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface StepsProps {
   currentStep: number
   className?: string
@@ -187,35 +176,14 @@ interface StepsProps {;
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children),
   
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
-<<<<<<< HEAD
 
 
-          if (!React.isValidElement(child)) return null
-          let status: "incomplete" | "current" | "complete" = "incomplete"
-          if (index < currentStep) status = "complete"
-          if (index === currentStep) status = "current"
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -227,51 +195,22 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           
 
 
-<<<<<<< HEAD
 
 
-
-          if (!React.isValidElement(child)) return null,
-          
-          let status: "incomplete" | "current" | "complete" = "incomplete",
-          if (index < currentStep) status = "complete",
-          if (index === currentStep) status = "current",
-          
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
       </ol>
       
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className="hidden md:flex md:mt-4">
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 interface StepsProps {;
@@ -288,8 +227,7 @@ export function Steps(): any ({ currentStep, className, children }: StepsProps) 
 }/> </div> </div> </div>) 
 }"};
 ;
-<<<<<<< HEAD
-=======
+
 
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
@@ -421,4 +359,5 @@ if (status = "current") {
 }"}
 }
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

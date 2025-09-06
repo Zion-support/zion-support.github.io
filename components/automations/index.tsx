@@ -1,12 +1,13 @@
 
+import React from 'react';
+import Link from 'next/link';
 
-<<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   return (
 
     <main className='mx-auto max-w-5xl px-4 py-12'>;
@@ -113,6 +114,12 @@ import Link from 'next / link';
 
   );
 }
+
+=======
+          </div>
+        </div>
+      </div>
+    </main>
 
   );
 }

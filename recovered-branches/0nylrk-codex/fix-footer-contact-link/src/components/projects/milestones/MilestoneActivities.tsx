@@ -22,22 +22,18 @@ interface Activity {
   milestone: {
 
 
-<<<<<<< HEAD
-
-    avatar_url: string | null
-  }
-}
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
   const [activities, setActivities] = useState<Activity[]>([]);
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     async function fetchActivities() {
@@ -115,13 +111,11 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
       } finally {;
         setIsLoading(false);
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
       }
     }
     if (projectId) {
@@ -133,22 +127,10 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
       case 'created':
 
 
+
         return 'created a new milestone'
 
-<<<<<<< HEAD
-      case 'status_changed':
-        return `changed status from ${activity.previous_status |'none'} to ${activity.new_status}`;
-      case 'updated':
-        return 'updated milestone details';
-      case 'deliverable_added':
-        return 'added a deliverable';
-      default:
-        return activity.action.replace(/_/g, ' ')
 
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
     switch (activity.action) {;
@@ -163,19 +145,13 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
       case 'deliverable_added':;
         return 'added a deliverable';
       default:;
-<<<<<<< HEAD
-=======
+
 
 
   if (isLoading) {;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-        return activity.action.replace(/_/g, ' ');
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     }
   }

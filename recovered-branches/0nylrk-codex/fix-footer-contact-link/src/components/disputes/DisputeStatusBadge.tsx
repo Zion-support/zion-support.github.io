@@ -1,25 +1,27 @@
 
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 }
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
-=======
+
+
 import { Badge } from '@/components / ui / badge';
 import { ShieldAlert } from './lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components / ui / tooltip';
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   let message = "This item has an open dispute";
+
+
 
   switch (status) {
     case 'under_review':
@@ -38,6 +40,7 @@ export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) 
 
   switch (status) {;
     case 'under_review':;
+
 
 
       variant = "secondary";
@@ -83,17 +86,9 @@ export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) 
       </TooltipContent>
     </Tooltip>
   )
-<<<<<<< HEAD
 
 
 
-=======
-
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from "lucide-react",;
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
@@ -134,19 +129,16 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
-<<<<<<< HEAD
-
-    </Tooltip>;
-  );
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 ;

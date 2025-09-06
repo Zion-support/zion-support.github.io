@@ -159,11 +159,10 @@ async: function handlePageRequest(request) {;
       // Cache successful responses;
       const cache = await caches.open(DYNAMIC_CACHE);
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
       cache.put(request, networkResponse.clone())};
 
     "return": networkResponse} catch (error) {;
@@ -269,19 +268,17 @@ origin/automation-improvements-final
     event.waitUntil(,
       self.registration.showNotification(data.title, options))}),
 // "Notification": click,
-<<<<<<< HEAD
+
 ;// "Notification": click,
 ursor/fix-lint-push-and-merge-to-main-ae4e
-=======
 
-;// "Notification": click,
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 self.addEventListener('notificationclick', (event) => {',
   event.notification.close(),
   "if": (event.action === 'explore') {',
     event.waitUntil(,
       clients.openWindow('/'))}'}),
+
+
 
   // In a real app, you would store these in IndexedDB;    event && event.waitUntil(,      self && self.registration.showNotification(data && data.title, options))}),
 // "Notification": click,
@@ -300,11 +297,11 @@ function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
 
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
+
 
 
 async: function getPendingSubmissions() {
@@ -349,27 +346,20 @@ self.addEventListener('notificationclick', (event) => {'
 async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;  "return": []}
   "return": []}
-<<<<<<< HEAD
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-<<<<<<< HEAD
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 }),;
 // Check if request is for a static asset,;
 "function": isStaticAsset(url) {,;
@@ -427,5 +417,7 @@ asyn: c: function getPendingSubmissions() {,;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

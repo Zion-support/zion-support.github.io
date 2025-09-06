@@ -1,10 +1,4 @@
 
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-import { MultiverseState, InstanceConfig, SyncEvent } from './types';
-const defaultState: SyncState = {
-=======
 
     );
   }
@@ -13,17 +7,8 @@ const defaultState: SyncState = {
   state = { ...defaultState }
 
 }
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-const default_state: SyncState = {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   config: {
     instanceId: 'default-instance'
     peers: []
@@ -34,18 +19,9 @@ const default_state: SyncState = {
   lastSyncedAt: new Date().toISOString()
 
 }
-<<<<<<< HEAD
-export function upsertEvent(
-  state: MultiverseState
-  event: SyncEvent
-): MultiverseState {;
-  if (state.seenEventIds[event.eventId]) return state;
-  const entityId = getEntityId(event);
-  const currentVersion = state.latestVersionByEntityId[entityId] |0;
-  const isNewer = event.version > currentVersion;
-  if (event.type === 'proposal' && event.merkleRoot && isNewer) {
-    state.proposalMerkleById[entityId] = event.merkleRoot;
-=======
+
+
+
 }
 }
   const entity_id = getEntityId (event);
@@ -57,6 +33,7 @@ if ( {) {
   $2
 }
     state.proposalMerkleById[entity_id] = event.merkle_root;
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   if (isNewer) {
@@ -103,34 +80,67 @@ export function filterEventsByScope(
         e.type === 'leaderboard_entry'
     );
   }
-<<<<<<< HEAD
 
-  return events;export function resetState(): void {
-  state = { ...defaultState }
-}
-
-  return events;export function resetState(): void {;
-  state = { ...defaultState };
-}
-
-
-=======
-  return events;export function reset_state (): void {
-  state = { ...default_state }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-}
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    state.latestVersionByEntityId[entity_id] = event.version;
+  }
+  state.events.push (event);
+  state.seenEventIds[event.event_id] = true;
+  state.lastSyncedAt = Math.max (state.lastSyncedAt || 0, event.timestamp || 0);
+  return state;
+;
+export function getEntityId (event: SyncEvent): string {
+  switch (event.type) {
+    case 'proposal':;
+      return (event.payload as any).proposal_id;
+    case 'token_transfer':;
+      return (event.payload as any).tx_id;
+    case 'talent_mobility':;
+      return (
+        (event.payload as any).person_id + ':' + (event.payload as any).start_date);
+    case 'dao_endorsement':;
+      return (event.payload as any).resolution_id;
+    case 'leaderboard_entry':;
+      return (
+        (event.payload as any).subject_id + ':' + (event.payload as any).period);
+    default:;
+      return (event.payload as any).id || event.event_id;
+  }
+export function filterEventsByScope (
+  events: SyncEvent[],
+  scope: InstanceConfig['scope']): SyncEvent[] {
+  // Check condition
+if (return events) {
+  $2
+}
+  // Check condition
+if ( {) {
+  $2
+}
+    return events.filter (
+      e => e.type === 'proposal' || e.type === 'dao_endorsement');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return events.filter (
+      e =>;
+        e.type === 'token_transfer' ||;
+        e.type === 'talent_mobility' ||;
+        e.type === 'leaderboard_entry');
+  }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+

@@ -1,31 +1,6 @@
 
-<<<<<<< HEAD
 
-import React from "react";
-import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react";
-import { 
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow 
-} from "@/components/ui/table",
-import { Button } from "@/components/ui/button";
-import { 
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger 
-} from "@/components/ui/dropdown-menu",
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 
-=======
-import {formatDate} from "@/utils/dateUtils";
-interface QuotesTableProps {;
-  quotes: QuoteRequest[],;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   isArchived?: boolean;
   isLoading: boolean
   updateStatus: (id: string, status: QuoteStatus) => void
@@ -33,14 +8,9 @@ interface QuotesTableProps {;
   deleteQuote: (id: string) => void
 
 
-
-<<<<<<< HEAD
-
-=======
 import {formatDate} from "@/utils/dateUtils";
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
 import { 
@@ -64,11 +34,11 @@ import { formatDate } from "@/utils/dateUtils",
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 interface QuotesTableProps {
   quotes: QuoteRequest[],
   isArchived?: boolean,
@@ -76,35 +46,20 @@ interface QuotesTableProps {
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   onViewDetails: (quote: QuoteRequest) => void
 }
 
 
-<<<<<<< HEAD
-export const QuotesTable: React.FC<QuotesTableProps> = ({
-  quotes;
 
-  isArchived = false;
-  isLoading;
-  updateStatus;
-  toggleArchive;
-  deleteQuote
-  quotes,
-  isArchived = false,
-  isLoading,
-  updateStatus,
-  toggleArchive,
-  deleteQuote,
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   onViewDetails
 }) => {
   return (
@@ -259,10 +214,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                     )}
                   </div>
@@ -278,7 +231,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 }
 
 
-=======
+
 
 
 
@@ -294,26 +247,24 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 
 
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </TableBody>;
       </Table>;
     </div>;
   );
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 };

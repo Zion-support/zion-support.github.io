@@ -11,7 +11,7 @@ const nextConfig = {
   },
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   trailingSlash: true,
-<<<<<<< HEAD
+
 
   
   // Performance optimizations
@@ -36,19 +36,7 @@ const nextConfig = {
   env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
 
-=======
-  images: {
-    domains: [
-      "localhost",
-      "ziontechgroup.com",
-      "images.unsplash.com",
-      "via.placeholder.com"
-    ],
-    formats: ["image/webp", "image/avif"],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   },
   experimental: {
     optimizeCss: true,
@@ -93,10 +81,9 @@ const nextConfig = {
           "**/apps/**"
         ],
         poll: 1000,
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
         aggregateTimeout: 300
       }
     }
@@ -114,10 +101,9 @@ const nextConfig = {
       };
     }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
     // Exclude apps directory from compilation
     config.module.rules.push({
       test: /\.(ts|tsx|js|jsx)$/,
@@ -150,7 +136,7 @@ const nextConfig = {
           }
         ]
       }
-<<<<<<< HEAD
+
     ];
   }
 
@@ -159,10 +145,5 @@ const nextConfig = {
 
 
 
-=======
-    ]
-  }
-}
 
-export default nextConfig
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

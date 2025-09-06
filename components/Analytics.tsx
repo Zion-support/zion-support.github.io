@@ -211,30 +211,6 @@ if ( {) {
 
       <script;
         dangerouslySetInnerHTML={{
-<<<<<<< HEAD
-          __html: `;
-            // Performance monitoring;
-            // Check condition
-if ( {) {
-  $2
-}
-              window.addEventListener ('load', function () {
-                set_timeout (function () {
-                  const perf_data = performance.getEntriesByType ('navigation')[0];
-                  // Check condition
-if ( {) {
-  $2
-}
-                    const load_time = perf_data.loadEventEnd - perf_data.loadEventStart;
-                    // Check condition
-if ( {) {
-  $2
-}
-                      window.gtag ('event', 'timing_complete', {
-                        name: 'load',
-                        value: Math.round (load_time),
-
-=======
 
                         name: 'load',
                         value: Math.round(loadTime),
@@ -250,14 +226,8 @@ if ( {) {
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
                     if (window.gtag) {
                       window.gtag('event', 'timing_complete', {
-<<<<<<< HEAD
-                        name: 'load'
-                        value: Math.round(loadTime)
-=======
                         name: 'load',
                         value: Math.round(loadTime),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       });
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart
                     if (window && window.gtag) {
@@ -267,17 +237,3 @@ if ( {) {
                       })
                     }
                   }
-<<<<<<< HEAD
-                }, 0)
-              })
-            }
-          `
-          `,
-        }}
-      />
-    </Head>
-  );
-}
-};
-
-export default Analytics;

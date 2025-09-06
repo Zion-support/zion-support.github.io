@@ -1,55 +1,25 @@
 
-<<<<<<< HEAD
-export type MediaBundle = 'general' | 'web3' | 'institutional';
-export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale';
-export interface MediaGenerationResponse {;
-  ok: boolean;
-  text?: string;
-  error?: string
-}
-export async function generateMediaContent(request: MediaGenerationRequest): Promise<MediaGenerationResponse> {
-  // Mock implementation - in production, this would call OpenAI or other AI service
-  return {
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   };
 
 
   }
 
-<<<<<<< HEAD
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
 
-<<<<<<< HEAD
-      path: ''
-      filename: 'legal/terms-of-use.md'
-      type: 'text'
-      content: `# Terms of Use\n\nBy using Zion products, you agree to these terms. Replace with counsel-approved language.`
-    }
-    {
-      path: ''
-      filename: 'legal/privacy-policy.md'
-      type: 'text'
-      content: `# Privacy Policy\n\nWe respect your privacy. Replace with counsel-approved language.`
-    }
-    {
-=======
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
       path: '',
 
@@ -60,11 +30,10 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
     },;
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
   ];
   const web3Extras: MediaAsset[] = [
 
@@ -99,15 +68,14 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
 export function buildPressRelease(
 
-<<<<<<< HEAD
+  type: PressReleaseType
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
   type: PressReleaseType,
   params: {;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     companyName: string;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     date: string;
@@ -132,6 +100,8 @@ export function buildPressRelease(
 
 
 
+
+
 export function buildTimeline(startDate: Date) {
   const addDays = (d: Date, days: number) =>;
     new Date(d.getFullYear(), d.getMonth(), d.getDate() + days);
@@ -146,6 +116,8 @@ export function buildTimeline(startDate: Date) {
     { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) }
   ];
 
+
+
 function titleCase(s: string) {
   return s.replace(
     /\w\S*/g
@@ -154,24 +126,19 @@ function titleCase(s: string) {
 
 
 
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
+
 function titleCase(s: string) {
   return s.replace(
     /\w\S*/g
     w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
 
-  );}
 
 
+function titleCase(s: string) {
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 }
@@ -204,14 +171,13 @@ function title_case() {
     /\w\S*/g,
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

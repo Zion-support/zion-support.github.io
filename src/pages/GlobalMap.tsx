@@ -1,21 +1,6 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 
 
-import { Header  } from '@/components/Header';
-import { NextSeo  } from '@/components/NextSeo';
-import React, { useEffect, useState } from 'react'
-import { Header } from '@/components/Header'
-import { NextSeo } from '@/components/NextSeo'
-import { Globe, MapPin } from 'lucide-react'
-
-
-
-=======
-import { Header } from '@/components / Header';
-import { NextSeo } from '@/components / NextSeo';
-import { Globe, MapPin } from 'lucide-react';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {
   Tooltip,
   TooltipContent,
@@ -73,21 +58,8 @@ interface FeedItem {;
   id: number;
 
 
-<<<<<<< HEAD
 
-  const [feed, setFeed] = useState<FeedItem[]>([])
-  useEffect((,) => {
-    const interval = setInterval((,) => {
-      const messages = [
-        'ZionGPT upgraded to v1.7 in Egypt'
-        'Proposal #121 passed in Zion DevOps'
-        'New franchise deployed: Zion Indonesia'
-      ]
-      const id = Date.now()
-      const text =
-        messages[Math.floor(Math.random() * messages.length)] |
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       const text = null;
         messages[Math.floor(Math.random() * messages.length)] ||
 
@@ -107,10 +79,8 @@ interface FeedItem {;
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React, { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { NextSeo } from '@/components/NextSeo',;
@@ -188,34 +158,20 @@ export default function GlobalMapPage() {;
 
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
 
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 
   return (
     <div className="min-h-screen bg-background">
       <NextSeo title="Global Zion Map" description="Overview of Zion deployments" />
       <Header />
-<<<<<<< HEAD
 
 
-      <main className='py-10 container mx-auto space-y-8'>
-        <h1 className='text-3xl font-bold'>Global Instances</h1>
-        <div className='flex flex-col lg:flex-row gap-8'>
-          <div className='relative' style={{ width, height }}>
-            <Globe className='w-full h-full text-secondary' />
-            {INSTANCES.map(i => {
-              const { x, y } = project(i.lat, i.lng)
-              const color = null;
-                i.governance === 'admin';
-                  ? 'bg-red-500';
-                  : i.governance === 'hybrid';
-                    ? 'bg-yellow-500';
-                    : 'bg-green-500'; return (
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       <main className="py-10 container mx-auto space-y-8">
@@ -229,26 +185,8 @@ export default function GlobalMapPage() {;
               return (
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-      <main className="py-10 container mx-auto space-y-8">
-        <h1 className="text-3xl font-bold">Global Instances</h1>
-        <div className="flex flex-col lg:flex-row gap-8">
-          <div className="relative" style={{ width, height }}>
-            <Globe className="w-full h-full text-secondary" />
-            {INSTANCES.map((i) => {
-              const { x, y } = project(i.lat, i.lng),
-              const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
-              return (
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <TooltipProvider key={i.id}>
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -325,38 +263,15 @@ export default function GlobalMapPage() {;
                     <span>{r.region}</span>
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     <span>{r.talent}</span>
                   </li>
                 ))}
               </ul>
             </section>
             <section>
-<<<<<<< HEAD
 
-
-              <h2 className='text-xl font-semibold mb-2'>Live Feed</h2>
-              <ul className='space-y-1'>
-                {feed.map(f => (
-                  <li key={f.id} className='text-sm'>
-                    {f.text}
-                  </li>                ))}
-              </ul>
-            </section>
-          </div>
-        </div>
-      </main>
-    </div>
-  )
-}
-}
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 ;
@@ -375,8 +290,7 @@ export default function GlobalMapPage() {;
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
+
 
 
   votes_passed: number;
@@ -523,4 +437,5 @@ function project() {
 }
 ;
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

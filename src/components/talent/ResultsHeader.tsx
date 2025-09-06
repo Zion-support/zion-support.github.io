@@ -4,12 +4,8 @@ interface ResultsHeaderProps {;
   resultCount: number;
 }
 
-<<<<<<< HEAD
 
 
-export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   return (
@@ -60,14 +56,15 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
             : `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`}          {resultCount === 0 ? (
           {resultCount === 0 ? (
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             "No talents found. Try adjusting your filters."
           ) : (
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
           )}
+
+
   );
 };
 };
@@ -92,12 +89,8 @@ function ResultsHeader() {
             ? 'No talents found. Try adjusting your filters.';
             : `Found ${result_count} talent${result_count !== 1 ? 's' : ''}`}        </span>)}
     </div>);
-        </span>;
-      )}
-    </div>;
-  );
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 }
         <div className="flex items - center">;
           <Loader2 className="h - 4 w - 4 animate - spin mr - 2" />;

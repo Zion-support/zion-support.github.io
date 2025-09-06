@@ -296,49 +296,14 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
 
-    }
-    realImplementation: true
-    implementationDetails:
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     },
     realImplementation: true, implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',
     launchDate: '2026-05-15', customers: 30,
     rating: 4.8,
-<<<<<<< HEAD
-
-    reviews: 25,
-  },;
-
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
 
 
-    realImplementation: true;
-    implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.';
-    launchDate: '2026-05-15';
-    customers: 30;
-
-
-    rating: 4.8
-
-    reviews: 25
-
-
-=======
-    reviews: 25;
-=======
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026ServiceV4 {;
   id: string,;
@@ -736,11 +701,12 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 ];

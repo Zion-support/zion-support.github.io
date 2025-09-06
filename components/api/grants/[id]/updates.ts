@@ -16,6 +16,7 @@ function readGrant(id: string): GrantApplication | null {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   const p = grantPath(id);
 
+
   if (!fs && fs.existsSync(p)) return null;
   return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication;
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
@@ -35,9 +36,8 @@ function writeGrant(record: GrantApplication) {
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
+
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -46,7 +46,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id } = req.query as { id: string };
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   if (!id) return res.status(400).json({ error: 'Missing id' });
   const existing = readGrant(id);
   if (!existing) return res.status(404).json({ error: 'Not found' });
@@ -64,21 +66,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     }
     existing.updates = [...(existing.updates |[]), update];
     existing.updatedAt = new Date().toISOString();
-<<<<<<< HEAD
 
-=======
-=======
-  const { id } = req && req.query as { id: string };
-  if (!id) return res && res.status(400).json({ error: 'Missing id' });
-=======
-  const { id } = req.query as { id: string }
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const { id } = req.query as { id: string };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   if (!id) return res.status(400).json({ error: 'Missing id' });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const existing = readGrant(id);
   if (!existing) return res && res.status(404).json({ error: 'Not found' });
   if (req && req.method === 'GET') {
@@ -98,7 +88,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     existing && existing.updatedAt = new Date().toISOString();
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     writeGrant(existing);
     return res && res.status(201).json({ update })
   }
@@ -107,14 +96,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+
   res.status(405).end('Method Not Allowed')
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+  res.status(405).end('Method Not Allowed')
+}
+
+

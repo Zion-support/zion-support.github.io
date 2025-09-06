@@ -19,9 +19,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 import React from "react";
 import SEO from "../components/SEO";
@@ -122,7 +120,7 @@ function SecretsRotationAutomationPage() {
             {features.map ((f) => (
               <div;
 =======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     <>
       <SEO
         title="Secrets Rotation Automation"

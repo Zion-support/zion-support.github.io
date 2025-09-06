@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
-import React, { useState, useEffect, useRef, ReactNode } from 'react';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 import {ChatMessage} from './ChatMessage';
@@ -10,6 +7,8 @@ import {ChatInput} from './ChatInput';
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
 import {X} from "lucide-react";
+
+
 
 
 import React, { useState, useEffect, useRef, ReactNode } from 'react',
@@ -20,6 +19,8 @@ import { Button } from "@/components/ui/button",
 import { X } from "lucide-react",
 
 
+
+
 export interface Message {
   id: string,
   role: 'user' | 'assistant',
@@ -27,36 +28,16 @@ export interface Message {
   timestamp: Date,
   read?: boolean
 
-<<<<<<< HEAD
-}
 
 
-  id: string
-  role: 'user' | 'assistant'
-  message: string
-  timestamp: Date
-
-  read?: boolean
-}
-export interface ChatAssistantProps {
-
-  isOpen: boolean
-  onClose: () => void
-  recipient: {
-
-    id: string
-    name: string
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     id: string,
     name: string,;
 
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
     avatarUrl?: string;
     role?: string
   }
@@ -66,19 +47,16 @@ export interface ChatAssistantProps {
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
   contextHeader?: ReactNode
 }
-<<<<<<< HEAD
 
-export function ChatAssistant({
 
-export function ChatAssistant({;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   isOpen;
   onClose;
   recipient;
@@ -86,57 +64,8 @@ import {ChatInput} from './ChatInput';
 
   initialMessages = [];
   onSendMessage;
-<<<<<<< HEAD
 
-  contextHeader
-}: ChatAssistantProps) {
-  const [messages, setMessages] = useState<Message[]>(initialMessages);
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
-  useEffect(() => {
-    if (initialMessages.length > 0) {
-      setMessages(initialMessages)
-    }
-  }, [initialMessages]);
 
-import React, { useState, useEffect, useRef, ReactNode } from 'react',;
-import { ChatMessage } from './ChatMessage',;
-import { ChatInput } from './ChatInput',;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { X } from "lucide-react",;
-export interface Message {;
-  id: string,;
-  role: 'user' | 'assistant',;
-  message: string,;
-  timestamp: Date,;
-  read?: boolean;
-}
-;
-export interface ChatAssistantProps {;
-  isOpen: boolean,;
-  onClose: () => void,;
-  recipient: {;
-    id: string,;
-    name: string,;
-    avatarUrl?: string,;
-    role?: string;
-  },;
-  conversationId?: string,;
-  initialMessages?: Message[],;
-  onSendMessage: (message: string, conversationId?: string) => Promise<void>,;
-  contextHeader?: ReactNode;
-}
-;
-export function ChatAssistant({;
-  isOpen,;
-  onClose,;
-  recipient,;
-  conversationId,;
-  initialMessages = [],;
-  onSendMessage,;
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   contextHeader;
 }: ChatAssistantProps) {;
 
@@ -147,15 +76,12 @@ export function ChatAssistant({;
       setMessages(initialMessages);
     }
   }, [initialMessages]),
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -404,20 +330,6 @@ if (return null) {
     </div>);
 
 }
-<<<<<<< HEAD
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
-          <ChatInput onSend={handleSendMessage} />
-        </div>
-      </div>
-    </div>
-  )
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

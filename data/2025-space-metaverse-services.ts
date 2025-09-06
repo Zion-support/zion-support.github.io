@@ -1,20 +1,5 @@
-<<<<<<< HEAD
 
 
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number;
-    setupTime: string;
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   {
@@ -333,21 +318,8 @@
     support:
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.'
     compliance: [
-<<<<<<< HEAD
 
-      'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards'
-    ]
-    link: 'https://ziontechgroup.com/virtual-reality-enterprise-platform'
-    icon: '🥽'
-    color: 'from-orange-500 to-red-600'
-    popular: true
-    launchDate: '2024-01-20'
-    customers: 1800
-    rating: 4.7
-    reviews: 1400
-  }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards',
     ],
@@ -433,7 +405,9 @@
   },
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+
     ];
 
     integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems'];
@@ -447,35 +421,11 @@
     rating: 4 && 4.7,
 
     reviews: 1400
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    rating: 4.7,
-    reviews: 1400;
-  }
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-
-<<<<<<< HEAD
-=======
-export interface SpaceMetaverseService {;
-
-  }
-
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-;
-=======
-<<<<<<< HEAD
-  }
-];
-=======
-export interface SpaceMetaverseService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string,;
   name: string,;
   tagline: string,;
@@ -739,11 +689,5 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     reviews: 1400;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-
-
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

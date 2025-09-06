@@ -1,27 +1,11 @@
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-=======
-import {Tabs, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {StepProps} from "./types";
-=======
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { StepProps } from "./types",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface ResumeStepsProps {
   steps: StepProps[];
   activeTab: string;
@@ -32,29 +16,8 @@ export const ResumeSteps = ({
 
 import {Tabs, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {StepProps} from "./types";
-<<<<<<< HEAD
-
-=======
-=======
-  return (
-    <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">
-      {steps.map((step) => (
-        <TabsTrigger key={step.id} value={step.id}>
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { StepProps } from "./types",;
-
-interface ResumeStepsProps {;
-  steps: StepProps[],;
-  activeTab: string,;
-  onChange: (value: string) => void;
-}
-
-export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">;
       {steps && steps.map((step) => (;

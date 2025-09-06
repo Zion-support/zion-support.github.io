@@ -11,16 +11,8 @@ const options: RequestInit = {
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json"},
       // Add timeout to prevent hanging
-<<<<<<< HEAD
 
 
-      signal: AbortSignal.timeout(15000)},
-
-
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       try {
         options.body = JSON.stringify (JSON.parse (body));
       } catch {
@@ -180,18 +172,8 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 
   },
 
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className='space-y-4'>;
       <Input
@@ -202,16 +184,11 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
         placeholder="API Key"
 
 
+
       />
       {params.map(p => (
         <Input
-<<<<<<< HEAD
-          key={p.name}
-          value={paramValues[p.name] |''}
-=======
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           value={paramValues[p.name] || ''}
 
 
@@ -293,17 +270,8 @@ if () {) {
   try {
   /> {
   params.map ( (p) => (<Input key= {
-<<<<<<< HEAD
 
 
-  p.name
-}</div>)
-}export default ApiPlayground
-'"
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     </div>;
@@ -347,14 +315,13 @@ if (contentType?.includes ('application/json') ) {;
 '";
 }
 
+
+
 <<<<<<< HEAD
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           value={paramValues[p.name] || ""}
           onChange={(e) => handleParamChange(p.name, e.target.value)}
         />;

@@ -7,10 +7,10 @@ import {Sparkles, Loader2} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 interface AIEnhancementButtonProps {
 
   currentContent: string
@@ -18,16 +18,8 @@ interface AIEnhancementButtonProps {
   context?: string;
   onEnhanced: (enhancedContent: string) => void
 
-<<<<<<< HEAD
 
-  buttonText?: string;
-  className?: string
-}
 
-=======
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
@@ -36,23 +28,18 @@ import {Sparkles, Loader2} from 'lucide-react';
 export function AIEnhancementButton({;
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   currentContent;
   enhancementType;
   context;
   onEnhanced;
-<<<<<<< HEAD
 
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   buttonText = "Enhance with AI";
 
@@ -73,11 +60,8 @@ export function AIEnhancementButton({;
       context;
     );
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     if (enhancedContent) {;
       onEnhanced(enhancedContent);
@@ -86,13 +70,8 @@ export function AIEnhancementButton({;
 
 
 
-<<<<<<< HEAD
-  buttonText = "Enhance with AI";
 
 
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2 } from 'lucide-react',;
@@ -112,10 +91,8 @@ export function AIEnhancementButton({
   context,
   onEnhanced,
   buttonText = "Enhance with AI",
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   className
 }: AIEnhancementButtonProps) {
   const { enhanceContent, isEnhancing } = useResumeEnhancer(),
@@ -126,28 +103,10 @@ export function AIEnhancementButton({
       setError('Please enter at least some basic content before enhancing'),
       return
     }
-<<<<<<< HEAD
-
-
-;
-    setError(null),;
-    const enhancedContent = await enhanceContent(;
-      currentContent,;
-      enhancementType,;
-      context;
-    );
-    if (enhancedContent) {;
-      onEnhanced(enhancedContent);
-    }
-  },
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   
   return (
     <Button

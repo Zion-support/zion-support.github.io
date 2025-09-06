@@ -4,67 +4,9 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Users
-  Briefcase
-  BookOpen
-  MessageCircle
-  Star
-  TrendingUp
-  Target
-  Layers
-  Cpu
-  Database
-  Cloud
-  Lock
-  ShieldCheck
-  Earth
-  Factory
-  Car
-  Building
-  GraduationCap
-  Scale
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Code
-  Wrench
-  Smartphone
-  BarChart3;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Users, Briefcase
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
+
 
 
 class ErrorBoundary extends React.Component {
@@ -93,12 +35,10 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
-import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   Menu,
   X,
   ChevronDown,
@@ -151,17 +91,16 @@ import {
   Wrench,
 
 
+
   Smartphone,;
   BarChart3,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -198,111 +137,15 @@ import {
 
       { name: 'Corporate Training AI', href: '/corporate-training-ai', description: 'Intelligent employee training', price: '$2,499/month' };
       { name: 'Language Learning AI', href: '/language-learning-ai', description: 'AI-powered language acquisition', price: '$1,299/month' }
-<<<<<<< HEAD
-
-    ]
-  }
-    title: '⚖️ Legal & Compliance'
-    icon: Scale
-    color: 'from-slate-600 to-gray-600'
-    description: 'Legal technology solutions'
-    services: [
-      {
-        name: 'Contract Analysis AI'
-        href: '/contract-analysis-ai'
-        description: 'Intelligent contract review'
-        price: '$2,999/month'
-      }
-      {
-        name: 'Compliance Monitoring Platform'
-        href: '/compliance-monitoring-platform'
-        description: 'Automated compliance tracking'
-        price: '$3,999/month'
-      }
-      {
-        name: 'Legal Document Automation'
-        href: '/legal-document-automation'
-        description: 'Automated legal documents'
-        price: '$1,999/month'
-      }
-      {
-        name: 'Regulatory Change Tracker'
-        href: '/regulatory-change-tracker'
-        description: 'Monitor regulatory updates'
-        price: '$1,499/month'
-      }
-    ]
-  },  {      { name: 'Contract Analysis AI', href: '/contract-analysis-ai', description: 'Intelligent contract review', price: '$2,999/month' }
-      { name: 'Compliance Monitoring Platform', href: '/compliance-monitoring-platform', description: 'Automated compliance tracking', price: '$3,999/month' }
-      { name: 'Legal Document Automation', href: '/legal-document-automation', description: 'Automated legal documents', price: '$1,999/month' }
-      { name: 'Regulatory Change Tracker', href: '/regulatory-change-tracker', description: 'Monitor regulatory updates', price: '$1,499/month' }
-    ]
-  }
-    title: '🌍 Sustainability & Green Tech'
-    icon: Leaf
-    color: 'from-emerald-600 to-green-600'
-    description: 'Environmental solutions'
-    services: [
-      {
-        name: 'Carbon Footprint Tracking'
-        href: '/carbon-footprint-tracking'
-        description: 'Monitor environmental impact'
-        price: '$1,499/month'
-      }
-      {
-        name: 'Renewable Energy Management'
-        href: '/renewable-energy-management'
-        description: 'Optimize green energy'
-        price: '$2,999/month'
-      }
-      {
-        name: 'Waste Management AI'
-        href: '/waste-management-ai'
-        description: 'Intelligent waste optimization'
-        price: '$1,999/month'
-      }
-      {
-        name: 'Sustainable Supply Chain'
-        href: '/sustainable-supply-chain'
-        description: 'Green supply chain solutions'
-        price: '$3,999/month'
-      }
-    ]
-  },];      { name: 'Carbon Footprint Tracking', href: '/carbon-footprint-tracking', description: 'Monitor environmental impact', price: '$1,499/month' }
-      { name: 'Renewable Energy Management', href: '/renewable-energy-management', description: 'Optimize green energy', price: '$2,999/month' }
-      { name: 'Waste Management AI', href: '/waste-management-ai', description: 'Intelligent waste optimization', price: '$1,999/month' }
-      { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
-    ]
-  }
-        name: 'Sustainable Supply Chain',
-        href: '/sustainable-supply-chain',
-        description: 'Green supply chain solutions',
-        price: '$3,999/month',
-      },
-    ],
-  },];      { name: 'Carbon Footprint Tracking', href: '/carbon-footprint-tracking', description: 'Monitor environmental impact', price: '$1,499/month' };
-      { name: 'Renewable Energy Management', href: '/renewable-energy-management', description: 'Optimize green energy', price: '$2,999/month' };
-      { name: 'Waste Management AI', href: '/waste-management-ai', description: 'Intelligent waste optimization', price: '$1,999/month' };
-      { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
-    ]
-  }
-
-];
-
-];
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
-    ];
-  };
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home }
   { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket }
@@ -346,17 +189,24 @@ const companyLinks = [
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-export default function UltraFuturisticNavigation2028() {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+  { name: '📖 Documentation', href: '/docs', icon: BookOpen },
+  { name: '🎥 Video Tutorials', href: '/tutorials', icon: Video },
+  { name: '💡 API Reference', href: '/api', icon: Code },
+  { name: '🛠️ Developer Tools', href: '/dev - tools', icon: Wrench },
+  { name: '📱 Mobile Apps', href: '/mobile', icon: Smartphone },
+  { name: '☁️ Cloud Services', href: '/cloud', icon: Cloud },
+  { name: '🔐 Security Center', href: '/security', icon: Shield },
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -367,9 +217,7 @@ export default function UltraFuturisticNavigation2028() {
   const handleCategoryHover = (categoryTitle: string) => {;
     setActiveCategory(categoryTitle);
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
   const handleCategoryHover = (categoryTitle: string) => {
     setActiveCategory(categoryTitle)
 
@@ -388,13 +236,8 @@ export default function UltraFuturisticNavigation2028() {
 
 
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
-=======
-    <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const handleCategoryLeave = () => {
     setActiveCategory(null)
   }
@@ -559,18 +402,19 @@ function UltraFuturisticNavigation2028() {
         <div className="flex items-center justify-between h-20">
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           {/* Logo */}
           <div className='flex items-center'>;
             <Link href='/' className='flex items-center space-x-3 group'>;
@@ -667,7 +511,6 @@ function UltraFuturisticNavigation2028() {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Mega Menu */}
               <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">;
                 <div className="p-6">;
@@ -701,17 +544,17 @@ function UltraFuturisticNavigation2028() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
                             </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           ))}
                         </div>
                       </div>
@@ -756,22 +599,8 @@ function UltraFuturisticNavigation2028() {
             <div className="relative">;
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-=======
-=======
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Company Links */}
             {companyLinks.slice(1, 5).map((link) => (
               <Link
@@ -788,26 +617,19 @@ function UltraFuturisticNavigation2028() {
           <div className='hidden lg:flex items-center space-x-4'>
 
 
-<<<<<<< HEAD
-            ))}
-          </div>
-
-          {/* Search and Actions */}
-          <div className='hidden lg:flex items-center space-x-4'>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <input
                 type="text"
                 placeholder="Search services..."
@@ -842,19 +664,14 @@ function UltraFuturisticNavigation2028() {
 
 
 
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -867,15 +684,15 @@ function UltraFuturisticNavigation2028() {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           >
             <div className='px-4 py-6 space-y-6'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -898,12 +715,13 @@ function UltraFuturisticNavigation2028() {
             <div className="px-4 py-6 space-y-6">;
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
           >
             <div className="px-4 py-6 space-y-6">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Mobile Search */}
               <div className="relative">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
@@ -940,13 +758,13 @@ function UltraFuturisticNavigation2028() {
                         </Link>
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                       ))}
                     </div>;
                   </div>;
@@ -954,11 +772,13 @@ function UltraFuturisticNavigation2028() {
               </div>
 
 
+
+
               </div>;
 
 
 
-<<<<<<< HEAD
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -971,14 +791,13 @@ function UltraFuturisticNavigation2028() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               {/* Mobile Company Links */}
               <div className='space-y-4'>
                 <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>
@@ -1013,7 +832,6 @@ function UltraFuturisticNavigation2028() {
               <div className='pt-4 border-t border-purple-500/30'>
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
                 </div>;
@@ -1024,7 +842,10 @@ function UltraFuturisticNavigation2028() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 <Link
                   href='/contact'
                   onClick={closeMenu}
@@ -1034,14 +855,13 @@ function UltraFuturisticNavigation2028() {
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">;
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 <Link
                   href="/contact"
                   onClick={closeMenu}
@@ -1053,20 +873,18 @@ function UltraFuturisticNavigation2028() {
             </div>
           </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
       </AnimatePresence>
 
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-      </AnimatePresence>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       {/* Search Results Dropdown */}
@@ -1106,19 +924,17 @@ function UltraFuturisticNavigation2028() {
                     </span>                  </div>
 
 
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
             </div>;
           </div>;
@@ -1130,19 +946,9 @@ function UltraFuturisticNavigation2028() {
 
 }
 
-<<<<<<< HEAD
 
-=======
 }
-=======
-    </nav>;
-  );
-}
-    </nav>
-<<<<<<< HEAD
-  );
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           </motion.div>)}
       </AnimatePresence>;
       {/* Search Results Dropdown */}
@@ -1185,15 +991,12 @@ function UltraFuturisticNavigation2028() {
         </div>)}
     </nav>);
 }
-<<<<<<< HEAD
 
-  );
-}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

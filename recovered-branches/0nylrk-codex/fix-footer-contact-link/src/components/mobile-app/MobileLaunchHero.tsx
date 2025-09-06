@@ -1,28 +1,13 @@
 
-<<<<<<< HEAD
-
-
-import React from "react",
-import { Link } from "react-router-dom",
-import { ArrowRight, Smartphone } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { AppStoreButtons } from "./AppStoreButtons";
-import { Card, CardContent } from "@/components/ui/card";
-import { AppStoreButtons } from "./AppStoreButtons",
-import { Card, CardContent } from "@/components/ui/card",
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const MobileLaunchHero: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#"; // Replace with actual App Store URL
@@ -77,37 +62,23 @@ export const MobileLaunchHero: React.FC = () => {
               
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">
                 <CardContent className="p-0">
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
                     <Smartphone className="w-40 h-40 text-white opacity-40" />
 
-<<<<<<< HEAD
-                    {/* In production, replace with actual app screenshot */}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
 
-=======
-=======
 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ArrowRight, Smartphone } from "lucide-react",;

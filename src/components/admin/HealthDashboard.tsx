@@ -39,23 +39,14 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / ca
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-<<<<<<< HEAD
 
 
-
-
-import React, { useState, useEffect } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import {
   AlertTriangle,
   CheckCircle,
@@ -236,10 +227,8 @@ const HealthDashboard: React.FC = () => {;
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   if (loading) {
     return (
       <div className='flex items-center justify-center p-8'>
@@ -295,10 +284,11 @@ const HealthDashboard: React.FC = () => {;
 
   if (!healthData) return null,
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
 
   if (!healthData) return null
   if (!healthData) return null,
@@ -306,16 +296,16 @@ const HealthDashboard: React.FC = () => {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -334,10 +324,9 @@ const HealthDashboard: React.FC = () => {;
             onClick={() => setAutoRefresh(!autoRefresh)}
           >
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
           </Button>
           <Button onClick={fetchHealthData} size="sm">
@@ -650,10 +639,8 @@ const HealthDashboard: React.FC = () => {;
                 </CardTitle>;
               </CardHeader>;
               <CardContent>;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                       </li>
                     ))}
                   </ul>;
@@ -828,19 +815,17 @@ export default HealthDashboard, ;
 export default HealthDashboard;
 }
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 
       const response = await fetch ('/api / admin / health');
       // Check condition
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-=======
+
         throw new Error (`HTTP ${response.status}`);
       }
       const data = await response.json ();
@@ -1204,4 +1189,5 @@ if (return null) {
 export default HealthDashboard;
 export default HealthDashboard,
 export default HealthDashboard,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

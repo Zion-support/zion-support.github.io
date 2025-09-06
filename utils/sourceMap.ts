@@ -2,9 +2,6 @@
 export function getSourceMapWithExistence() {
   return {
 
-
-<<<<<<< HEAD
-=======
 function buildZionSourceMap(): SourceNode[] {
   return [
     {
@@ -49,23 +46,8 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
   };
 }
 
-=======
-export function getSourceMapWithExistence(): SourceNode[] {
-  const nodes = buildZionSourceMap();
-  return nodes.map(markExistenceRecursive);
-}
-export interface DeployTemplateResult {
-=======
 
-    nodes: [],
-    edges: [];
-  };
 
-}
-export function getGitStatus() {
-  return {
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     connected: false,
     branch: 'main';
   };
@@ -78,16 +60,16 @@ export function getSourceMapWithExistence(): SourceNode[] {;
 
 export interface DeployTemplateResult {;
 
-<<<<<<< HEAD
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   createdPaths: string[];
   skippedPaths: string[];
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function ensureDirectory(dirPath: string): void {
   if (!fs && fs.existsSync(dirPath)) {
     fs && fs.mkdirSync(dirPath, { recursive: true });
@@ -123,53 +105,17 @@ export function deployBasicTemplateForPath(
     skippedPaths.push(readmeFile);
   }
 
-<<<<<<< HEAD
 
-
-
-
-
-=======
   return { createdPaths, skippedPaths }
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return { createdPaths, skippedPaths };
 
 }
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
 
 
-  created_paths: string[];
-  skipped_paths: string[];
-;
-export function ensure_directory (dir_path: string): void {
-  if () {) {
-  $2
-}
-}
-}
-    const readme = `# ${path.basename (absolute_dir)}\n\n_this module is part of the Zion OS modular source tree. Customize as needed.\n`;
-    fs.writeFileSync (readme_file, readme);
-    created_paths.push (readme_file);
-  } else {
-    skipped_paths.push (readme_file);
-  }
-  return { created_paths, skipped_paths }
-;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

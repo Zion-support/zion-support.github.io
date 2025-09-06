@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react';
 import Head from 'next / head';
 import {
@@ -12,15 +9,8 @@ import {
   Globe,
   Server,
   Database,
-<<<<<<< HEAD
 
-import React from 'react',
-import Head from 'next/head';
 
-=======
-  ArrowRight,
-  Check,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 } from 'lucide-react';
 export default /**
@@ -60,6 +50,8 @@ export default function CloudPlatformPage() {
     }
   ];
   const benefits = [
+
+
 
 
 
@@ -119,7 +111,9 @@ export default function CloudPlatformPage() {;
       description: 'SOC 2 compliant with advanced threat protection',;
     },;
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 export default function CloudPlatformPage() {
   const features = [
     {
@@ -140,19 +134,7 @@ export default function CloudPlatformPage() {
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Enterprise Security',
-<<<<<<< HEAD
-      description: 'SOC 2 compliant with advanced threat protection',
-    },;
-  ];
 
-      description: 'SOC 2 compliant with advanced threat protection'
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-=======
 
       description: 'SOC 2 compliant with advanced threat protection'
       } catch (error) {
@@ -200,22 +182,7 @@ export default function CloudPlatformPage() {_const _features = [
   const benefits = [
     '99.99% uptime guaranteeGlobal edge locationsReal-time monitoringAutomated scalingPay-as-you-go pricing24/7 expert support'
   ],
-=======
-    '99.99% uptime guarantee'
-    'Global edge locations'
-    'Real-time monitoring'
-    'Automated scaling'
-    'Pay-as-you-go pricing'
-    '24/7 expert support',  ];
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
-=======
-import Head from 'next/head',
-import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function CloudPlatformPage() {
   const features = [
     {
@@ -242,25 +209,20 @@ export default function CloudPlatformPage() {
 
     '99.99% uptime guaranteeGlobal edge locationsReal-time monitoringAutomated scalingPay-as-you-go pricing24/7 expert support'
   ],
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
       <div className="min-h-screen bg-black">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
         <section className="pt-32 pb-20 relative overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
@@ -278,7 +240,9 @@ export default function CloudPlatformPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               Cloud Platform
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
@@ -292,15 +256,17 @@ export default function CloudPlatformPage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               <a
                 href="/contact" className="shadow-2xl shadow-blue-500/25">
                 Deploy Now
@@ -331,15 +297,17 @@ export default function CloudPlatformPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 Cloud Infrastructure Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -350,15 +318,17 @@ export default function CloudPlatformPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               {features.map((feature, index) => (
                 <div
                   key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
@@ -413,12 +383,7 @@ export default function CloudPlatformPage() {
                         <Check className='w-4 h-4 text-blue-500' />;
                       </div>;
                       <span className='text-gray-300 text-lg'>{benefit}</span>                    </div>;
-<<<<<<< HEAD
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
         {/* Benefits Section */}
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -426,8 +391,10 @@ export default function CloudPlatformPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                   Why Choose Our Cloud Platform?
@@ -459,15 +426,17 @@ export default function CloudPlatformPage() {
                     <h3 className="text-2xl font-bold text-white mb-4">
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                       Global Infrastructure
                     </h3>
                     <p className="text-gray-300 mb-6">
@@ -498,12 +467,11 @@ export default function CloudPlatformPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
               Ready to Scale Your Infrastructure?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -523,18 +491,9 @@ export default function CloudPlatformPage() {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-
-);
 
 
-=======
 
-
-}
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   )
         <section className="py-24 bg-gray-900">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -583,6 +542,19 @@ export default function CloudPlatformPage() {
         </section>;
 
 
+
+        {/* CTA Section */}
+        <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
+          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Ready to Scale Your Infrastructure?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Deploy your applications on enterprise-grade cloud infrastructure
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+
               <a
                 href='/contact'
                 className='bg-white text-blue-600 hover:bg-gray-100'>;
@@ -599,21 +571,12 @@ export default function CloudPlatformPage() {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
-=======
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

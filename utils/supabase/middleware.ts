@@ -1,37 +1,5 @@
-<<<<<<< HEAD
-
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
-export function middleware(request: NextRequest) {const { pathname } = request.nextUrl;
-  if (pathname === '/dashboard' |pathname === '/dashboard/') {const role = request.cookies.get('userRole')?.value |'talent';
-
-    const target = role === 'client' ? '/dashboard/client' : '/dashboard/talent';
-    return NextResponse.redirect(new URL(target, request.url));
-  }
-  return NextResponse.next();
-}
 
 
-export function middleware(request: NextRequest) {;
-  const { pathname } = request.nextUrl;
-  if (pathname === '/dashboard' || pathname === '/dashboard/') {;
-    const role = request.cookies.get('userRole')?.value || 'talent';
-    const target = role === 'client' ? '/dashboard/client' : '/dashboard/talent';
-    return NextResponse.redirect(new URL(target, request.url));
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  return NextResponse.next();
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { NextResponse } from 'next / server',
 import type { NextRequest } from 'next / server',
@@ -54,11 +22,10 @@ export const config = {
   matcher: ['/dashboard / dashboard/']}
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
 ;
 export const config = {;
   matcher: ['/dashboard/dashboard/']};

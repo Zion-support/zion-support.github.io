@@ -35,19 +35,12 @@ import {
 
 
 
-<<<<<<< HEAD
-=======
-  Search;
-  Filter,
-  TrendingUp,
-  DollarSign,
-  Users,
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   Globe,
   Rocket,;} from 'lucide-react';import { 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
   Search;
   Filter
@@ -55,7 +48,6 @@ import {
   DollarSign
   Users
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Star;
   Check;
   X;
@@ -68,13 +60,12 @@ import {
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-export default function ToolComparisonPage() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
@@ -502,19 +493,21 @@ function ToolComparisonPage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 {allTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>Tools Analyzed</div>
@@ -537,7 +530,6 @@ function ToolComparisonPage() {
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {allTools.length}+
               </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="text-gray-400 text-sm">Tools Analyzed</div>
             </div>
             <div className="text-center group">
@@ -561,6 +553,7 @@ function ToolComparisonPage() {
           </div>
         </div>
       </section>
+
 
 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
                 Get Expert Advice;
@@ -644,6 +637,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               {categories && categories.map((category) => (;
 
 
+
                 <button
               {categories.map(category => (                <button
 
@@ -657,12 +651,13 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -683,23 +678,24 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               <Filter className='w-5 h-5 text-gray-400' />;
             </div>
 
-            {/* Sort */}
-            <div className='flex items-center space-x-2'>
-              <Filter className='w-5 h-5 text-gray-400' />
-
 
             {/* Sort */}
             <div className='flex items-center space-x-2'>
               <Filter className='w-5 h-5 text-gray-400' />
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+            {/* Sort */}
+            <div className='flex items-center space-x-2'>
+              <Filter className='w-5 h-5 text-gray-400' />
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e && e.target.value)}
@@ -879,7 +875,10 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -889,7 +888,10 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               Detailed Analysis
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Deep dive into each tool's pros, cons, and use cases to make the
@@ -898,71 +900,8 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {sortedTools.slice(0, 6).map((tool, index) => (
-<<<<<<< HEAD
-=======
-=======
-              </tbody>;
-            </table>;
-          </div>;
-          {sortedTools && sortedTools.length === 0 && (;
-            <div className='text-center py-20'>;
-              <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />;
-              <h3 className='text-xl font-semibold text-gray-400 mb-2'>;
-                No tools found;
-              </h3>;
-              <p className='text-gray-500'>;
-                Try adjusting your search criteria or category filter.;
-              </p>            </div>            <div className="text-center py-20">;
-              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />;
-              <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>;
-              <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>;
-          )}
-        </div>;
-      </section>;
-      {/* Detailed Comparison Cards */}
-      <section className='py-24 bg-gray-900'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='text-center mb-20'>;
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
-            </h2>;
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-              Deep dive into each tool's pros, cons, and use cases to make the;
-              best decision for your business.;
-            </p>;
-          </div>;
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
-            {sortedTools && sortedTools.slice(0, 6).map((tool, index) => (;
-=======
-              </tbody>
-            </table>
-          </div>
-          {sortedTools.length === 0 && (
-            <div className='text-center py-20'>
-              <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />
-              <h3 className='text-xl font-semibold text-gray-400 mb-2'>
-                No tools found
-              </h3>
-              <p className='text-gray-500'>
-                Try adjusting your search criteria or category filter.
-              </p>            </div>            <div className="text-center py-20">
-              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
-              <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-      {/* Detailed Comparison Cards */}
-      <section className='py-24 bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-              Detailed Analysis
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Deep dive into each tool's pros, cons, and use cases to make the
@@ -971,7 +910,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {sortedTools.slice(0, 6).map((tool, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
@@ -1008,6 +946,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                       <span className="px-2 py-1 bg-gray-800 rounded-full">{tool.category}</span>
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
+
 
                         <span>{tool.rating}</span>
 
@@ -1088,12 +1027,12 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                       ))}
 
 
+
                     <ul className="space-y-1">
                       {tool.cons.slice(0, 3).map((con, conIndex) => (
                         <li key={conIndex} className="text-xs text-gray-400 flex items-start">
                           <span className="w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           {con}
                         </li>;
                       ))}
@@ -1126,17 +1065,10 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                 </div>;
               </Card>;
 
-<<<<<<< HEAD
-=======
-=======
-
-                <div className="flex items-center justify-between">
-                  <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 
                 <div className='flex items-center justify-between'>
@@ -1152,12 +1084,13 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                     {tool.pricing}
                   </span>
                   <Button
@@ -1178,18 +1111,18 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 </div>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
@@ -1198,11 +1131,12 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
           </div>;
         </div>;
       </section>;
@@ -1211,11 +1145,8 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
       {/* CTA Section */}
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1224,15 +1155,14 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
             Need Help Choosing?
 
-<<<<<<< HEAD
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our experts can analyze your business needs and recommend the
@@ -1253,23 +1183,9 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               variant='outline'
               size='lg'
 
-<<<<<<< HEAD
-              className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'            >              href="/saas-marketplace"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
-              Explore All Tools
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-);
 
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               Explore All Tools;
             </Button>;
           </div>;
@@ -1277,21 +1193,24 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
       </section>;
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 }
-<<<<<<< HEAD
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

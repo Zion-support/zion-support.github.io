@@ -33,25 +33,9 @@ import {
   FormMessage 
 } from "@/components/ui/form",
 
-<<<<<<< HEAD
-
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Button } from "@/components/ui/button"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { Calendar } from "@/components/ui/calendar"
-import { ContractFormValues } from "./ContractForm"
-
-interface ProjectDetailsFieldsProps {
-import { ContractFormValues } from "./ContractForm";
-interface ProjectDetailsFieldsProps {;
 
 
-=======
-import { ContractFormValues } from "./ContractForm";
-interface ProjectDetailsFieldsProps {;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
 }
 
@@ -72,15 +56,12 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 
 
 
-<<<<<<< HEAD
 
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Button } from "@/components/ui/button",
@@ -120,10 +101,8 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
@@ -179,28 +158,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
       />;
       <FormField;
         control={form.control}
-<<<<<<< HEAD
-=======
-        name='scope_summary';
-
-        render={({
-          field
-        }: {
-
-          field: ControllerRenderProps<ContractFormValues, 'scopeSummary'>;
-        }) => (          <FormItem>;
-            <FormLabel>Scope Summary</FormLabel>;
-            <FormControl>;
-              <Textarea
-                placeholder='Describe the project scope, deliverables, and expectations...'
-                className='min-h-[120px]'                {...field}        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "scopeSummary"> },) => (;
 
 
-      <FormField
-        control={form && form.control}
-        name="scopeSummary"
-        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "scopeSummary"> }) => (;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           <FormItem>;
             <FormLabel>Scope Summary</FormLabel>;
             <FormControl>;
@@ -316,41 +276,21 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
 
 
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
         )}
       />
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
           control={form.control}
-<<<<<<< HEAD
 
 
-          name='startDate'
-          render={({
-            field,
-          }: {
-            field: ControllerRenderProps<ContractFormValues, 'startDate'>
-          }) => (
-            <FormItem className='flex flex-col'>              <FormLabel>Start Date</FormLabel>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <FormField
-          control = {form.control,}
-          name="startDate"
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues, "startDate"> },) => (
-            <FormItem className="flex flex-col">
-          name="startDate"
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues "startDate"> }) => (
-            <FormItem className="flex flex-col">
-              <FormLabel>Start Date</FormLabel>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               <Popover>
@@ -363,153 +303,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                      {field.value ? (
-                        format(field.value, "PPP")
-                      ) : (
-                        <span>Pick a date</span>
-                      )}
-                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                    </Button>
-                  </FormControl>
-                </PopoverTrigger>
-                <PopoverContent className="w-auto p-0" align="start">
-                  <Calendar
-                    mode='single'
-                    selected={field.value}
-                    onSelect={field.onChange}
-                    disabled={date => date < new Date()}                    initialFocus                    mode="single"
-                    selected = {field.value,}
-                    onSelect = {field.onChange,}
-                    disabled = {(date,) => date < new Date(),}
-                    >
-                      {field.value ? (
-                        format(field.value, "PPP")
-                      ) : (
-                        <span>Pick a date</span>
-                      )}
-                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                    </Button>
-                  </FormControl>
-                </PopoverTrigger>
-                <PopoverContent className="w-auto p-0" align="start">
-                  <Calendar
-                    mode="single"
-                    selected={field.value}
-                    onSelect={field.onChange}
-                    disabled={(date) => date < new Date()}
-                    mode="single"
-      />;
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-        <FormField;
-          control = {form.control, }
-          name="start_date";
-          render={({ field }: { field: ControllerRenderProps < ContractFormValues, "start_date"> }, ) => (
-            <FormItem className="flex flex - col">;
-              <Popover>;
-                <PopoverTrigger as_child>;
-                  <FormControl>;
-                    <Button;
-                      variant={'outline'}
-                      className={`w - full pl - 3 text - left font - normal ${!field.value && 'text - muted - foreground'}`}
-                      {field.value ? (
-                        format (field.value, 'PPP')) : (
-                        <span > Pick a date</span>)}
-                      <CalendarIcon className='ml - auto h - 4 w - 4 opacity - 50' />;
-                    </Button>;
-                  </FormControl>;
-                </PopoverTrigger>;
-                <PopoverContent className='w - auto p - 0' align='start'>;
-                  <Calendar;
-                    mode='single';
-                    selected={field.value}
-                    on_select={field.on_change}
-                    disabled={date => date < new Date ()}                    initial_focus                    mode="single";
-                    selected = {field.value, }
-                    on_select = {field.on_change, }
-                    disabled = {(date, ) => date < new Date (), }
-                    >;
-
-        />;
-
-
-        <FormField
-          control={form && form.control}
-          name='endDate'
-          render={({
-            field
-          }: {
-
-            field: ControllerRenderProps<ContractFormValues, 'endDate'>;
-          }) => (;
-            <FormItem className='flex flex-col'>              <FormLabel>End Date (Optional)</FormLabel>        ;
-
-        <FormField
-          control = {form && form.control,}
-          name="endDate"
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> },) => (;
-                      {field.value ? (;
-                        format(field.value, "PPP");
-                      ) : (;
-                        <span>Pick a date</span>;
-                      )}
-                      <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />
-                    </Button>
-                  </FormControl>
-                </PopoverTrigger>
-                <PopoverContent className='w-auto p-0' align='start'>
-                  <Calendar
-
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                    initialFocus
-                  />
-                </PopoverContent>
-              </Popover>
-              <FormMessage />
-            </FormItem>
-          )}
-<<<<<<< HEAD
-
-
-        />
-        <FormField
-          control={form.control}
-          name='endDate'
-          render={({
-            field
-          }: {
-            field: ControllerRenderProps<ContractFormValues, 'endDate'>
-          }) => (
-            <FormItem className='flex flex-col'>              <FormLabel>End Date (Optional)</FormLabel>
-        <FormField
-          control = {form.control,}
-          name="endDate"
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> },) => (
-            <FormItem className="flex flex-col">
-        />;
-        <FormField;
-          control={form.control}
-          name="endDate"
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> }) => (
-            <FormItem className="flex flex-col">
-              <FormLabel>End Date (Optional)</FormLabel>
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               <Popover>
@@ -522,14 +318,13 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
 
+
+
 <<<<<<< HEAD
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       {field.value ? (
                         format(field.value, "PPP")
                       ) : (

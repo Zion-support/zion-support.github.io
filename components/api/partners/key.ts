@@ -1,36 +1,8 @@
 
 
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import {
-
-} from '../../../utils/api/partnerAuth';
-import { v4 as uuidv4 } from 'uuid';
-
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST') {;
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method Not Allowed' });
-  }
-  const auth = await authenticateRequest(req);
-  if (!auth) {
-    return res.status(401).json({ error: 'Unauthorized' });  }
-  const { apiKey } = auth;
-  const keys = await listApiKeys();
-  // Deactivate old key
-  const existing = keys.find(k => k.id === apiKey.id);  if (existing) existing.active = false;
-  // Create new key
-  const now = new Date().toISOString();
-  const newKey = {import type { NextApiRequest, NextApiResponse } from "next";
 
 
-=======
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -55,33 +27,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     createdAt: now,
     rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60};
   keys.push(newKey as any);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   await saveApiKeys(keys);
   return res.status(201).json({ apiKey: newKey.key })
 }
-<<<<<<< HEAD
-
-  const newKey = {
 
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-  authenticate_request,
-  listApiKeys,
-  saveApiKeys,
-} from '../../../utils / api / partner_auth';
-import { v4 as uuidv4 } from 'uuid';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
     res.set_header ('Allow', 'POST');
     return res.status (405).json ({ error: 'Method Not Allowed' });
@@ -91,6 +43,7 @@ if ( {) {
 if ( {) {
   $2
 }
+
 
     return res.status (401).json ({ error: 'Unauthorized' });  }
   const { api_key } = auth;
@@ -173,12 +126,8 @@ if (existing.active = false) {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,20 +1,11 @@
-<<<<<<< HEAD
 
 
-import React from 'react',;
-import SEO from '../components/SEO',;
-import React from 'react'
-import SEO from '../components/SEO'
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
 export default function AIHealthcareDiagnosticsPage() {
   return (
     <div className="min-h-[60vh] px-6 py-24">

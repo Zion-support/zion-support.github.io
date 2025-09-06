@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { ensureAdminFromApi } from '../../../../utils/auth';
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { ensureAdminFromApi } from '../../../../utils/auth',;
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const { allowed } = await ensureAdminFromApi(req)
@@ -38,14 +28,17 @@ function escapeHtml(str: string) {
     .replace(/>/g, '&gt,')
     .replace(/"/g, '&quot,')
 
+    .replace(/'/g, '&#039,')
+}
 
-<<<<<<< HEAD
+
+
+
     .replace(/'/g, '&#039,');
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -79,10 +72,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -1,22 +1,5 @@
-<<<<<<< HEAD
 
 
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
-  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users;
-  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings;
-  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon;
-  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon;
-  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon;
-  Wifi, Building, Cpu as CpuIcon
- } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 class ErrorBoundary extends React.Component {
@@ -43,26 +26,9 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-<<<<<<< HEAD
-=======
-import Layout from '../components/layout/Layout';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,
-  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,
-  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings,
-  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon,
-  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,
-  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon,
-  Wifi, Building, Cpu as CpuIcon
-} from 'lucide-react',
-import Layout from '../components/layout/Layout',
-import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -117,36 +83,7 @@ const serviceCategories = [
     services: advancedITInfrastructureServices2025.filter(s => s.category === 'Quantum Networking'),
     icon: Network,
     color: 'from-purple-500 to-pink-600',
-<<<<<<< HEAD
 
-
-    features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring']
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {;
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,;
-  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,;
-  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings,;
-  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon,;
-  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,;
-  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon,;
-  Wifi, Building, Cpu as CpuIcon;
-} from 'lucide-react',;
-import Layout from '../components/layout/Layout';
-import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
-const contactInfo = {;
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
-const heroStats = [;
-  { label: 'Infrastructure Projects', value: '150+', icon: <Server className="w-5 h-5" /> },;
-  { label: 'Enterprise Clients', value: '300+', icon: <Building className="w-5 h-5" /> },;
-  { label: 'Uptime Guarantee', value: '99.99%', icon: <Award className="w-5 h-5" /> },;
-=======
     features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring']
   }
 ];
@@ -166,148 +103,13 @@ const contactInfo = {;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
-=======
-];
 
-=======
-import Head from 'next / head';
-import Link from 'next / link';
-import {motion} from 'framer-motion';
-import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon, } from 'lucide-react';
-import Layout from '../components / layout / Layout';
-const contact_info = {
-=======
-
-
-const contactInfo = {
-
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
-const heroStats = [
-  { label: 'Infrastructure Projects', value: '150+', icon: <Server className="w-5 h-5" /> },
-  { label: 'Enterprise Clients', value: '300+', icon: <Building className="w-5 h-5" /> },
-  { label: 'Uptime Guarantee', value: '99.99%', icon: <Award className="w-5 h-5" /> },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   { label: 'Cost Reduction', value: '60%', icon: <TrendingUp className="w-5 h-5" />   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-],;
-const serviceCategories = [;
-  {;
-    title: 'Quantum Cloud Computing';
-    description: 'Next-generation cloud infrastructure with quantum processing capabilities';
-    services: advancedITInfrastructureServices2025.filter(s => s.category === 'Quantum Cloud Computing');
-    icon: Cloud;
-    color: 'from-indigo-500 to-purple-600';
-    features: ['Quantum ProcessingHybrid ComputingAI Acceleration'];
-  },;
-  {;
-    title: 'Edge Computing & IoT',;
-    description: 'Autonomous edge infrastructure with intelligent optimization',;
-    services: advancedITInfrastructureServices2025.filter(s => s.category === 'Edge Computing & IoT');
-    icon: Wifi,;
-    color: 'from-green-500 to-emerald-600',;
-    features: ['Edge ProcessingIoT Orchestration5G Optimization'];
-  },;
-  {;
-    title: 'Cybersecurity',;
-    description: 'Comprehensive security framework with continuous verification',;
-    services: advancedITInfrastructureServices2025.filter(s => s.category === 'Cybersecurity');
-    icon: SecurityIcon,;
-    color: 'from-red-500 to-orange-600',;
-    features: ['Zero TrustThreat DetectionCompliance Automation'];
-  },;
-  {;
-    title: 'Data Center Infrastructure',;
-    description: 'Self-managing data center infrastructure with AI optimization',;
-    services: advancedITInfrastructureServices2025.filter(s => s.category === 'Data Center Infrastructure');
-    icon: Building,;
-    color: 'from-blue-500 to-cyan-600',;
-    features: ['AI ManagementPredictive MaintenanceCost Optimization'];
-  },;
-  {;
-    title: 'Quantum Networking',;
-    description: 'Next-generation networking with quantum encryption and optimization',;
-    services: advancedITInfrastructureServices2025.filter(s => s.category === 'Quantum Networking');
-    icon: Network,;
-    color: 'from-purple-500 to-pink-600',;
-    features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring'];
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-],;
-const heroFeatures = [;
-  {;
-    title: 'Quantum Computing';
-    description: 'Revolutionary quantum processing capabilities that provide 1000x performance for specific workloads.';
-    icon: Atom;
-    gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600';
-  };
-  {;
-    title: 'AI-Powered Automation',;
-    description: 'Intelligent automation that reduces operational costs by up to 70% while improving reliability.',;
-    icon: Brain,;
-    gradient: 'bg-gradient-to-r from-purple-500 to-pink-600';
-  },;
-  {;
-    title: 'Edge Computing',;
-    description: 'Distributed edge infrastructure that reduces latency and provides real-time processing capabilities.',;
-    icon: Wifi,;
-    gradient: 'bg-gradient-to-r from-green-500 to-emerald-600';
-  },;
-  {;
-    title: 'Zero Trust Security',;
-    description: 'Continuous verification and monitoring that provides comprehensive protection against modern threats.',;
-    icon: Shield,;
-    gradient: 'bg-gradient-to-r from-orange-500 to-red-600';
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-],;
-const testimonials = [;
-  {;
-    name: 'Dr. Jennifer Martinez';
-    role: 'CTO, QuantumTech Industries',;
-    company: 'QuantumTech Industries',;
-    content: 'Zion Tech Group\'s quantum cloud infrastructure has revolutionized our research capabilities. We\'ve achieved computational breakthroughs that were previously impossible.',;
-    rating: 5,;
-    avatar: '👩‍🔬';
-  },;
-  {;
-    name: 'Robert Thompson',;
-    role: 'Infrastructure Director, EdgeNet Solutions',;
-    company: 'EdgeNet Solutions',;
-    content: 'The autonomous edge computing network has transformed our IoT operations. We now have real-time processing with 90% lower latency and 70% cost reduction.',;
-    rating: 5,;
-    avatar: '👨‍💼';
-  },;
-  {;
-    name: 'Lisa Chang',;
-    role: 'Security CISO, SecureCorp International',;
-    company: 'SecureCorp International',;
-    content: 'Their zero-trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',;
-    rating: 5,;
-    avatar: '👩‍🔒';
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-],
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export default function AdvancedITInfrastructureServices() {
   return (
@@ -329,14 +131,13 @@ export default function AdvancedITInfrastructureServices() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
-],
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 const serviceCategories = [
   {
     title: 'Quantum Cloud Computing',
     description: 'Next-generation cloud infrastructure with quantum processing capabilities',
     services: advancedITInfrastructureServices2025.filter(s => s.category === 'Quantum Cloud Computing'),
+
     icon: Cloud,
     color: 'from - indigo - 500 to - purple - 600',
     features: ['Quantum Processing', 'Hybrid Computing', 'AI Acceleration'],
@@ -413,8 +214,8 @@ export default function AdvancedITInfrastructureServices() {
 
       {/* Hero Section */}
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -444,14 +245,15 @@ export default function AdvancedITInfrastructureServices() {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
           >
 
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
@@ -470,6 +272,8 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
+
+
             transition={{ duration: 0 && 0.8 }}>;
             <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6'>;
               Advanced IT Infrastructure Services;
@@ -485,8 +289,10 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                 >
                   {stat.icon}
                   <span className="text-blue-400 font-semibold">{stat.value}</span>
@@ -525,40 +331,11 @@ export default function AdvancedITInfrastructureServices() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="text-center mb-16"
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our IT Infrastructure Services?
@@ -575,44 +352,11 @@ export default function AdvancedITInfrastructureServices() {
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
-<<<<<<< HEAD
-                className='relative group'
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {heroFeatures.map((feature, index) => (
-              <motion.div
-                key={index  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="relative group"
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -666,17 +410,15 @@ export default function AdvancedITInfrastructureServices() {
             </h2>
 
             className="text-center mb-16"
-<<<<<<< HEAD
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               IT Infrastructure Service Categories
@@ -698,10 +440,8 @@ export default function AdvancedITInfrastructureServices() {
               Comprehensive infrastructure solutions covering quantum computing, edge computing, security, and data centers
             </p>
           </motion.div>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -719,15 +459,14 @@ export default function AdvancedITInfrastructureServices() {
               <motion&& motion.div
 
 
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -794,11 +533,8 @@ export default function AdvancedITInfrastructureServices() {
                       </div>;
                     </motion && motion.div>;
 
-=======
-                className="relative"
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -847,14 +583,15 @@ export default function AdvancedITInfrastructureServices() {
                       className="relative group"
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -906,14 +643,15 @@ export default function AdvancedITInfrastructureServices() {
 }
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
@@ -971,7 +709,19 @@ export default function AdvancedITInfrastructureServices() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -987,6 +737,7 @@ export default function AdvancedITInfrastructureServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+
 
                 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1022,6 +773,7 @@ export default function AdvancedITInfrastructureServices() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -1068,6 +820,7 @@ export default function AdvancedITInfrastructureServices() {
         </div>;
       </section>;
 
+
       {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1100,6 +853,7 @@ export default function AdvancedITInfrastructureServices() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Infrastructure?
@@ -1133,14 +887,15 @@ export default function AdvancedITInfrastructureServices() {
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300"
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -1154,16 +909,8 @@ export default function AdvancedITInfrastructureServices() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 
-    </Layout>
-);
 
-  )
-}
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                 href={`mailto:${contactInfo && contactInfo.email}`}
@@ -1182,170 +929,15 @@ export default function AdvancedITInfrastructureServices() {
   );
 
 
-<<<<<<< HEAD
 
-=======
-=======
-  )
-}
-                      className='relative group';
-                    >;
-                      <div className={`${service.color} p - 1 rounded - xl`}>;
-                        <div className='bg - gray - 900 rounded - xl p - 6 h - full'>;
-                          <div className='flex items - center justify - between mb - 4'>;
-                            <span className='text - 3xl'>{service.icon}</span>;
-                            {service.popular && (
-                              <span className='bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full'>                                Popular;
-                              </span>)}
-                          </div>;
-                          <h4 className='text - xl font - semibold text - white mb - 2'>;
-                            {service.name}
-                          </h4>;
-                          <p className='text - gray - 300 text - sm mb - 4'>;
-                            {service.tagline}
-                          </p>;
-                          <div className='flex items - center justify - between mb - 4'>;
-                            <span className='text - 2xl font - bold text - white'>;
-                              {service.price}
-                            </span>;
-                            <span className='text - gray - 400'>;
-                              {service.period}
-                            </span>;
-                          </div>;
-                          <p className='text - gray - 300 text - sm mb - 4'>;
-                            {service.description}
-                          </p>;
-                          <div className='space - y-2 mb - 6'>;
-                            {service.features;
-                              .slice (0, 3);
-                              .map ((feature, feature_index) => (
-                                <div;
-                                  key={feature_index}
-                                  className='flex items - center text - sm text - gray - 300';
-                                >;
-                                  <CheckCircle className='w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0' />;
-                                  {feature}
-                                </div>))}
-                          </div>;
-                          <div className='flex items - center justify - between'>;
-                            <Link;
-                              href={service.link}
-                              className='inline - flex items - center text - blue - 400 hover:text - blue - 300 transition - colors duration - 300';
-                            >;
-                              Learn More;
-                              <ArrowRight className='ml - 1 w - 4 h - 4' />;
-                            </Link>;
-                            <Link;
-                              href={`tel:${contact_info.mobile}`}
-                              className='inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - indigo - 500 to - blue - 600 text - white text - sm font - semibold rounded - lg hover:from - indigo - 600 hover:to - blue - 700 transition - all duration - 300'                            >;
-                              Get Started;
-                            </Link>;
-                          </div>;
-                        </div>;
-                      </div>;
-                    </motion.div>))}
-                </div>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Testimonials Section */}
-      <section className='py - 20 bg - gradient - to - b from - gray - 900 to - black'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text - center mb - 16';
-          >;
-            <h2 className='text - 3xl lg:text - 4xl font - bold text - white mb - 4'>;
-              What Our Clients Say;
-            </h2>;
-            <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
-              Real feedback from organizations that have transformed their;
-              infrastructure with our advanced services;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {testimonials.map ((testimonial, index) => (
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='bg - white / 5 backdrop - blur - lg rounded - xl p - 6 border border - blue - 500 / 20';
-              >;
-                <div className='flex items - center mb - 4'>;
-                  <span className='text - 3xl mr - 3'>{testimonial.avatar}</span>;
-                  <div>;
-                    <h4 className='text - white font - semibold'>;
-                      {testimonial.name}
-                    </h4>;
-                    <p className='text - blue - 400 text - sm'>{testimonial.role}</p>;
-                    <p className='text - gray - 400 text - sm'>;
-                      {testimonial.company}
-                    </p>;
-                  </div>;
-                </div>;
-                <p className='text - gray - 300 mb - 4'>{testimonial.content}</p>;
-                <div className='flex items - center'>;
-                  <div className='flex text - yellow - 400'>;
-                    {[...Array (testimonial.rating)].map ((_, i) => (
-                      <Star key={i} className='w - 4 h - 4 fill - current' />                    ))}
-                  </div>;
-                </div>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className='py - 20 bg - gradient - to - r from - indigo - 900 / 20 via - blue - 900 / 20 to - cyan - 900 / 20'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >;
-            <h2 className='text - 3xl lg:text - 4xl font - bold text - white mb - 6'>;
-              Ready to Transform Your Infrastructure?;
-            </h2>;
-            <p className='text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto'>;
-              Join hundreds of organizations that have already revolutionized;
-              their IT infrastructure with our advanced services;
-            </p>;
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-              <Link;
-                href={`tel:${contact_info.mobile}`}
-                className='inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - indigo - 500 to - blue - 600 text - white font - semibold rounded - lg hover:from - indigo - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30';
-              >;
-                <Phone className='mr - 2 w - 5 h - 5' />                Call Now: {contact_info.mobile}
-              </Link>;
-              <Link;
-                href={`mailto:${contact_info.email}`}
-                className='inline - flex items - center px - 8 py - 4 bg - white / 10 backdrop - blur - lg text - white font - semibold rounded - lg border border - blue - 500 / 30 hover:bg - white / 20 transition - all duration - 300';
-              >;
-                <Mail className='mr - 2 w - 5 h - 5' />;
-                Email Us;
-              </Link>;
-            </div>;
-            <div className='mt - 8 text - center'>;
-              <p className='text - gray - 300 mb - 2'>📍 {contact_info.address}</p>;
-              <p className='text - gray - 300'>🌐 {contact_info.website}</p>            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </Layout>);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

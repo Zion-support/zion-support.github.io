@@ -21,43 +21,18 @@ import React from 'react';
 import EnhancedButton from './EnhancedButton';
 
 
-<<<<<<< HEAD
-=======
+
   page: number;
   page_size: number;
   total: number;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 export type PaginationProps = {
   on_change: (next_page: number) => void;
 }
-<<<<<<< HEAD
 
 
-
-export default function Pagination({
-  page
-  pageSize
-  total
-  onChange
-}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
-  page: number
-  pageSize: number
-  total: number
-  onChange: (nextPage: number) => void
-}
-export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
-=======
-;
-export default /**
- * Pagination - Function description
- */
-function Pagination() {  const total_pages = Math.max (1, Math.ceil (total / page_size));export type PaginationProps = {
-
-  page: number,
-  page_size: number,
-  total: number,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   page,
@@ -74,32 +49,29 @@ function Pagination() {  const total_pages = Math.max (1, Math.ceil (total / pag
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
 
 
-  page: number;
-  pageSize: number;
-  total: number;
-  onChange: (nextPage: number) => void;
-}
-export default function Pagination({
 
-  page
-  pageSize
-  total
-  onChange
-}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
-  page: number
-  pageSize: number
-  total: number
-  onChange: (nextPage: number) => void
-}
-export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
-
-<<<<<<< HEAD
-=======
-export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  const canPrev = page > 1;
+  const canNext = page < totalPages;
+  const goTo = (p: number) => {
+
+};
+
+export default function Pagination(): any ({;
+  page,;
+  pageSize,;
+  total,;
+  onChange,;
+}: PaginationProps) {  const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));export type PaginationProps = {;
+  page: number,;
+  pageSize: number,;
+  total: number,;
+  onChange: (nextPage: number) => void;
+};
+export default function Pagination(): any ({ page, pageSize, total, onChange }: PaginationProps) {;
+  const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));
+
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
   const goTo = (p: number) => {;
@@ -133,7 +105,6 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
     if (p >= 1 && p <= totalPages) onChange(p)
   };
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
@@ -416,16 +387,10 @@ if ( {) {
 export default Pagination;
 }
   );
-<<<<<<< HEAD
 
 
 
 
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </span>)}
     </nav>);
@@ -434,10 +399,8 @@ export default Pagination;
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+

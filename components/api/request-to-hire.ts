@@ -3,26 +3,19 @@ import fs from 'fs';
 import path from 'path';
 
 
-<<<<<<< HEAD
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {  if (req.method !== 'POST') {;
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-  const { talentSlug, requesterName, requesterEmail, projectInfo } =
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
   }
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
     req && req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req && req.body || {};
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
@@ -100,72 +93,19 @@ if ( {) {
   };
 }
 
-<<<<<<< HEAD
 
 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-
-=======
-      talent_slug,
-      requester_name,
-      requester_email,
-      project_info,
-    }
-    const file = path.join (
-      dir,
-      `request-${timestamp.replace (/[:.]/g, '-')}.json`);    fs.writeFileSync (file, JSON.stringify (payload, null, 2), 'utf8');
-    // Persist to data / requests as a simple CMS - like log;
-    const dir = path.join (process.cwd (), 'datarequests');
-    if () fs.mkdir_sync (dir, { recursive: true })) {
-  $2
-}
-    const payload = { timestamp, talent_slug, requester_name, requester_email, project_info }
-    const file = path.join (dir, `request-${timestamp.replace (/[:.]/g, '-')}.json`);
-    fs.writeFileSync (file, JSON.stringify (payload, null, 2), 'utf8');
-;
-    // Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer);
-    return res.status (200).json ({ ok: true });
-  } catch (err) {
-console.error ('Request - to - hire failed', err);
-    return res.status (500).json ({ error: 'Internal error' });
-  }    return res.status (500).json ({ error: 'Internal error' });
-
-    // Persist to data/requests as a simple CMS-like log
-    const dir = path.join(process.cwd(), 'datarequests'),
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }),
-    const payload = { timestamp, talentSlug, requesterName, requesterEmail, projectInfo },
-    const file = path.join(dir, `request-${timestamp.replace(/[:.]/g, '-')}.json`),
-    fs.writeFileSync(file, JSON.stringify(payload, null, 2), 'utf8'),
-
-    // Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer)
-
-    return res.status(200).json({ ok: true })
-  } catch (err) {
-    console.error('Request-to-hire failed', err),
-    return res.status(500).json({ error: 'Internal error' })
-
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-}
-
-=======
-    console.error('Request-to-hire failed', err);
-    return res.status(500).json({ error: 'Internal error' });
-  }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

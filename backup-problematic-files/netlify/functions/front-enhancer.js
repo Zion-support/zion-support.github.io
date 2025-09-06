@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 :netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
 const path = require('path'),;
@@ -31,10 +31,7 @@ exports.handler = async () => {;
 },;
 :backup-problematic-files/netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const path = require('path');
 const { spawnSync } = require('child_process');
@@ -71,7 +68,7 @@ exports.handler = async () => {
   );
   // Attempt to sync changes back to main (best-effort)
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-<<<<<<< HEAD
+
 :netlify/functions/front-enhancer.js
   return { statusCode: 200, body: logs.join('\n') }
 };function runNode(relPath, args = []) {
@@ -101,9 +98,7 @@ exports.handler = async () => {
   return { statusCode: 200, body: logs.join('\n') }
 }
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return { statusCode: 200, body: logs.join('\n') };
 };function runNode(relPath, args = []) {
@@ -115,10 +110,7 @@ exports.handler = async () => {
 exports.config = {
   schedule: '*/20 * * * *', // every 20 minutes
 },
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -134,9 +126,5 @@ exports.config = {
 main:netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
-=======
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

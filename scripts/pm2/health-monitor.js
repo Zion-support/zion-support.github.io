@@ -148,250 +148,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         }
 
 
-<<<<<<< HEAD
-};
-};
-;
-  async checkSystemResources() {;
-    try {;
-      this.log('💻 Checking system resources...');
-;
-      const memInfo = execSync('free -m', { encoding: 'utf8' });
-      const diskInfo = execSync('df -h', { encoding: 'utf8' });
-      const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' });
-;
-      // Parse memory info;
-      const memLines = memInfo.split('\n');
-      const memTotal = memLines[1].split(/\s+/)[1];
-      const memUsed = memLines[1].split(/\s+/)[2];
-      const memFree = memLines[1].split(/\s+/)[3];
-;
-      // Parse disk info;
-      const diskLines = diskInfo.split('\n');
-      const rootDisk = diskLines.find(line => line.includes('/'));
-      const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', '') : '0';
-;
-      // Parse CPU info;
-      const cpuUsage = cpuInfo.includes('id') ?;
-        (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())) : 0;
-;
-ursor/integrate-build-improve-and-re-verify-8f7d
-      return {;
-        success: true, memory: {,
-          total: parseInt(memTotal), used: parseInt(memUsed),
-          free: parseInt(memFree), usagePercent: Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100),
-        ;
-        disk: {, usagePercent: parseInt(diskUsage),
-        ;
-        cpu: {, usagePercent: Math.round(cpuUsage),
-        ;
-      };
-    } catch (error) {;
-      return {;
-        success: false, error: error.message,
-        memory: null, disk: null,
-        cpu: null, ,
-};
-        success: false,
-        error: error.message;
-        memory: null,
-        disk: null,
-        cpu: null
-      }
-origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-};
-;
-  async checkProcessHealth() {;
-    try {;
-      this.log('🔄 Checking process health...');
-;
-      const pm2List = execSync('pm2 list --json', { encoding: 'utf8' });
-      const processes = JSON.parse(pm2List);
-;
-      const processHealth = {;
-        total: processes.length, online: 0,
-        stopped: 0, errored: 0,
-        processes: [], ,
-;
-      processes.forEach(proc => {;
-        const status = proc.pm2_env?.status || 'unknown';
-        processHealth.processes.push({;
-          name: proc.name, status: status,
-          memory: proc.monit?.memory || 0, cpu: proc.monit?.cpu || 0,
-          uptime: proc.pm2_env?.uptime || 0,
-        });
-;
-        if (status === 'online') processHealth.online++;
-        else if (status === 'stopped') processHealth.stopped++;
-        else if (status === 'errored') processHealth.errored++;
-      });
-;
-      return {;
-        success: true, health: processHealth,
-      ;
-    } catch (error) {;
-      return {;
-        success: false, error: error.message,
-        health: null, ,
-};
-};
-;
-  async checkApplicationHealth() {;
-    try {;
-      this.log('🌐 Checking application health...');
-;
-      const healthChecks = [];
-;
-      // Check if the application is running;
-      try {;
-        const pm2List = execSync('pm2 list', { encoding: 'utf8' });
-        const hasRunningApp = pm2List.includes('bolt-zion-app') && pm2List.includes('online');
-;
-        healthChecks.push({;
-          name: 'PM2 App Status', status: hasRunningApp ? 'healthy' : 'unhealthy',
-          message: hasRunningApp ? 'Application is running' : 'Application is not running',
-        });
-      } catch (error) {;
-        healthChecks.push({;
-          name: 'PM2 App Status', status: 'error',
-          message: 'Could not check PM2 status',
-        });
-      };
-;
-      // Check if build files exist;
-      const buildExists = fs.existsSync('dist') || fs.existsSync('.next');
-      healthChecks.push({;
-        name: 'Build Files', status: buildExists ? 'healthy' : 'unhealthy',
-        message: buildExists ? 'Build files exist' : 'Build files missing',
-      });
-;
-      // Check if package.json exists and is valid;
-      try {;
-        const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-        healthChecks.push({;
-          name: 'Package.json', status: 'healthy',
-          message: 'Package.json is valid',
-        });
-      } catch (error) {;
-        healthChecks.push({;
-          name: 'Package.json', status: 'unhealthy',
-          message: 'Package.json is invalid or missing',
-        });
-      };
-;
-      return {;
-        success: true, checks: healthChecks,
-      ;
-    } catch (error) {;
-      return {;
-        success: false, error: error.message,
-        checks: [], ,
-};
-};
-;
-  async checkLogHealth() {;
-    try {;
-      this.log('📝 Checking log health...');
-;
-      const logsDir = path.join(this.projectRoot, 'logs/pm2');
-      const logFiles = [];
-;
-      if (fs.existsSync(logsDir)) {;
-        const files = fs.readdirSync(logsDir);
-        files.forEach(file => {;
-          if (file.endsWith('.log')) {;
-            const filePath = path.join(logsDir, file);
-            const stats = fs.statSync(filePath);
-            logFiles.push({;
-              name: file, size: stats.size,
-              sizeMB: Math.round(stats.size / (1024 * 1024) * 100) / 100, lastModified: stats.mtime,
-            });
-          };
-        });
-              name: file,
-              size: stats.size;
-              sizeMB: Math.round(stats.size / (1024 * 1024) * 100) / 100;
-              lastModified: stats.mtime})
-      return health;
-    } catch (error) {}
-      this.error(`System health check failed: ${error.message}`);,
-      return { success: false, error: error.message };,
-    }
-  }
-  async getSystemInfo() {}
-    try {}
-      const uptime = os.uptime();,
-      const loadAvg = os.loadavg();,
-      return {}
-        platform: os.platform(),
-        arch: os.arch(),
-        release: os.release(),
-        uptime: uptime,
-        uptimeFormatted: this.formatUptime(uptime),
-        loadAverage: {
-          '1min': loadAvg[0],',
-          '5min': loadAvg[1],',
-          '15min': loadAvg[2]',
-        },
-        hostname: os.hostname(),
-        nodeVersion: process.version,
-        totalMemory: os.totalmem(),
-        freeMemory: os.freemem(),
-        cpus: os.cpus().length,
-      };,
-    } catch (error) {}
-      this.error(`Failed to get system info: ${error.message}`);,
-      return null;,
-    }
-  }
-  async getProcessInfo() {}
-    try {}
-      const processes = [];,
-      // Get PM2 processes;
-      try {}
-        const pm2List = execSync('pm2 list --json', { encoding: 'utf8' });',
-        const pm2Processes = JSON.parse(pm2List);,
-        for (const proc of, pm2Processes) {}
-          processes.push({}),
-            name: proc.name,
-            pid: proc.pid,
-            status: proc.pm2_env?.status,
-            memory: proc.monit?.memory,
-            cpu: proc.monit?.cpu,
-            uptime: proc.pm2_env?.pm_uptime,
-            restarts: proc.pm2_env?.restart_time,
-          });,
-        }
-      } catch (error) {}
-        this.log(`Failed to get PM2 processes: ${error.message}`, 'WARNING');',
-      }
-      // Get system processes (top 10 by memory, usage),
-      try {}
-        const psOutput = execSync('ps aux --sort=-%mem | head -11', { encoding: 'utf8' });',
-        const lines = psOutput.split('\n').slice(1); // Skip header';,
-        for (const line of, lines) {}
-          if (line.trim()) {}
-            const parts = line.trim().split(/\s+/);,
-            if (parts.length >= 11) {}
-              processes.push({}),
-                name: parts[10],
-                pid: parseInt(parts[1]),
-                memory: parseFloat(parts[3]),
-                cpu: parseFloat(parts[2]),
-                command: parts.slice(10).join(' '),
-              });,
-            }
-          }
-        })
-origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 
-=======
 
-module.exports = HealthMonitor;
-
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }};
 ; async checkSystemResources() {; try {; this && this.log('💻 Checking system resources...');
 ; const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' });
@@ -399,16 +157,7 @@ module.exports = HealthMonitor;
 }}; async checkSystemResources() {try {; this.log('💻 Checking system resources...'); const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' }); // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3]; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0'; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0; return {success: true, memory: {
       , total: parseInt(memTotal), used: parseInt(memUsed), free: parseInt(memFree)
 
-=======
-; // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3];
-; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0';
-; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0;
 
-=======
-}}; async checkSystemResources() {try {; this.log('💻 Checking system resources...'); const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' }); // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3]; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0'; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0; return {success: true, memory: {
-      , total: parseInt(memTotal), used: parseInt(memUsed), free: parseInt(memFree)
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     usagePercent: Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100)
     }
@@ -429,6 +178,7 @@ const healthMonitor = new HealthMonitor();
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       };
 ;
       return {;
@@ -2048,12 +1798,14 @@ healthMonitor.run().catch(error => {,;
 }),;
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -1,23 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 
 
-
-import type {
-  GrantApplication
-  StatusUpdatePayload;
-  GrantApplication,;
-  StatusUpdatePayload,;
-
-} from '../../../../types/grants';
-const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
@@ -58,6 +43,7 @@ function isAuthorized(req: NextApiRequest) {
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+
   if (!isAuthorized(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
     return;  }  return token && process && process.env.ZION_ADMIN_TOKEN && token === process && process.env.ZION_ADMIN_TOKEN
@@ -66,6 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
+
 
     return;    return
   }
@@ -108,10 +95,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

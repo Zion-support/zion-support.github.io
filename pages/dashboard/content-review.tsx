@@ -1,77 +1,13 @@
-<<<<<<< HEAD
-
-import useSWR from 'swr',
-import React, { useMemo, useState } from 'react',
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import type { GetServerSideProps } from 'next';
-import ModerationModal from '../../components/admin/ModerationModal';
-
-    (acc: any, part: string) => {
-      const [k, v] = part.trim().split('=');
-      if (k) acc[k] = decodeURIComponent(v |'');
-      return acc;
-
-=======
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     }
     
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-
-export default function ContentReviewPage() {
-  const [filters, setFilters] = useState<{;
-    status?: string;
-    reason?: string;
-    userEmail?: string;
-    contentType?: string;
-  }>({ status: 'pending' });  const query = useMemo(() => {
-
-const fetcher = (url: string) => fetch(url).then(r => r.json());
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
-  const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {;
-    const [k, v] = part.trim().split('=');
-    if (k) acc[k] = decodeURIComponent(v || '');
-    return acc;
-  }, {} as Record<string, string>),;
-  let role = 'guest';
-  try { role = cookies['x-user'] ? JSON.parse(cookies['x-user']).role : 'guest' } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  if (role !== 'admin') return { redirect: { destination: '/', permanent: false } },;
-  return { props: {}   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-},;
-export default function ContentReviewPage(req, res) {
-  try {
-  const [filters, setFilters] = useState<{ status?: string, reason?: string, userEmail?: string, contentType?: string }>({ status: 'pending' }),;
-  const query = useMemo(() => {;
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     const p = new URLSearchParams();
     if (filters.status) p.set('status', filters.status);
@@ -118,8 +54,8 @@ export default function ContentReviewPage(req, res) {
   }
 }
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 
@@ -127,14 +63,11 @@ import React, { useMemo, useState } from 'react';
     );
     set_selected (null);
     mutate ();  }
-<<<<<<< HEAD
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   return (
     <EnhancedLayout>;
 
@@ -313,41 +246,9 @@ import React, { useMemo, useState } from 'react';
                 </tr>
               ))}
               {flags.length === 0 && (
-<<<<<<< HEAD
-
-                <tr>
-                  <td
-                    colSpan={8}
-                    className='px-3 py-6 text-center text-gray-500'
-                  >
-                    No results
-                  </td>
-                </tr>              )}
-            </tbody>
-          </table>
-        </div>
-      </div>
-      {selected && (
-        <ModerationModal
-          flag={selected}
-          onClose={() => setSelected(null)}
-          onAction={handleAction}
-        />
-      )}
-    </EnhancedLayout>
-);
 
 
-=======
 
-
-=======
-
-
-}
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
               )  } catch (error) {
     console.error("Error:", error);
@@ -371,21 +272,12 @@ import React, { useMemo, useState } from 'react';
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
-=======
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

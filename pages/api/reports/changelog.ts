@@ -1,11 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
 
-import fs from 'fs';
-import path from 'path';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 const p = path.join(
@@ -64,70 +59,17 @@ if (req.method === 'POST') {
       return res && res.status(500).json({ error: 'Failed to update changelog' });
     }
   }
-<<<<<<< HEAD
 
-  res.setHeader('Allow', 'GET, POST');
-  res.status(405).end('Method Not Allowed');
 
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-      const new_entry = {
-        version,
-        changes,
-        date: date || new Date ().toISOString ();
-      }
-;
-      changelog.unshift (new_entry);
-;
-      fs.writeFileSync (p, JSON.stringify (changelog, null, 2));
-      return res.status (201).json (new_entry);
-    } catch (error) {
-      return res.status (500).json ({ error: 'Failed to update changelog' });
-    }
-  }
-  res.set_header ('Allow', 'GET, POST');
-  res.status (405).end ('Method Not Allowed');
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

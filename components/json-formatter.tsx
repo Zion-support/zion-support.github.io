@@ -22,37 +22,17 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-<<<<<<< HEAD
+
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {
 
-  Code
-  Copy
-  RefreshCw
-  CheckCircle
-  XCircle
-  ArrowRight
-  Download
-  Upload
-  Settings
-  Eye;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
 
-=======
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
-=======
-import {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   Code,
   Copy,
   RefreshCw,
@@ -66,10 +46,10 @@ import {
   Eye,;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
 } from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Star } from 'lucide-react';
@@ -96,7 +76,6 @@ import { Star } from 'lucide-react';
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       setFormattedJson(formatted);
       setIsValid(true);
       setErrorMessage('')
@@ -599,18 +578,20 @@ import { Star } from 'lucide-react';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                     </div>
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                     </div>
                   }`}>;
                   </span>;
@@ -644,15 +625,14 @@ import { Star } from 'lucide-react';
                 )}
 
 
-<<<<<<< HEAD
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
-                <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                     <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}
@@ -753,7 +733,6 @@ import { Star } from 'lucide-react';
                     className='border - gray - 600 text - gray - 300 hover:bg - gray - 700 disabled:opacity - 50'                  >                    variant="outline";
                     className="border - gray - 600 text - gray - 300 hover:bg - gray - 700 disabled:opacity - 50";
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   >;
                     Validate;
                   </Button>;
@@ -771,6 +750,18 @@ import { Star } from 'lucide-react';
                 </h3>;
                 {formattedJson && (;
                   <div className='flex items-center space-x-2'>;
+
+
+
+            {/* Output Section */}
+            <Card className="p-8 bg-gray-800 border border-gray-700">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-2xl font-bold text-white flex items-center">
+                  <CheckCircle className="w-6 h-6 mr-3 text-cyan-400" />
+                  Formatted Output
+                </h3>
+                {formattedJson && (
+                  <div className="flex items-center space-x-2">
 
 
                     <Button
@@ -834,16 +825,15 @@ import { Star } from 'lucide-react';
                     </p>                  </div>
 
 
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
                 )}
               </div>
             </Card>
@@ -853,17 +843,19 @@ import { Star } from 'lucide-react';
 
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -873,15 +865,16 @@ import { Star } from 'lucide-react';
               Professional JSON Formatting Features
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to work with JSON data efficiently and
@@ -947,7 +940,6 @@ import { Star } from 'lucide-react';
               <p className='text-gray-400'>
                 Adjust indentation size, toggle compact mode, and customize
                 display options.              </p>            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="text-4xl mb-4">⚙️</div>
               <h3 className="text-xl font-bold text-white mb-4">Customizable</h3>
               <p className="text-gray-400">
@@ -968,7 +960,6 @@ import { Star } from 'lucide-react';
               Perfect For Every JSON Need
 
             </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From development to data analysis, our JSON formatter serves all your formatting needs.
             </p>
@@ -1040,43 +1031,8 @@ import { Star } from 'lucide-react';
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
-      {/* CTA Section */}
-      <section className='py-20 bg-gradient-to-r from-teal-600 to-cyan-600'>
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-          </h2>
-          <p className='text-xl text-teal-100 mb-8'>
-            Join thousands of developers and professionals who trust our JSON
-            formatter for their data needs.
-          </p>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <Button
-              href='/contact'
-              size='lg'
-              className='bg-white text-teal-600 hover:bg-gray-100'
-            >
-              Get Started Today
-              <ArrowRight className='w-5 h-5 ml-2' />
-            </Button>
-            <Button
-              href='/pricing'
-              variant='outline'
-              size='lg'
-              className='border-white text-white hover:bg-white hover:text-teal-600'            >              href="/pricing"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-teal-600"
-              View Pricing
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 {formattedJson && (;
@@ -1461,7 +1417,6 @@ import { Star } from 'lucide-react';
       </section>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               View Pricing;
             </Button>;
           </div>;
@@ -1469,20 +1424,14 @@ import { Star } from 'lucide-react';
       </section>;
 
 
-<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

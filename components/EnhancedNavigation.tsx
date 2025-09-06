@@ -99,14 +99,12 @@ const EnhancedNavigation: React.FC = () => {
               
 
 
-<<<<<<< HEAD
-              {activeDropdown === 'services' && (
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
               {activeDropdown === 'services' && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -182,18 +180,18 @@ const EnhancedNavigation: React.FC = () => {
             </div>
 
 
+
+
             </div>;
 
 
 
-<<<<<<< HEAD
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             {/* Company Dropdown */}
             <div className="relative">;
               <button
@@ -246,19 +244,16 @@ const EnhancedNavigation: React.FC = () => {
 
 
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -269,6 +264,8 @@ const EnhancedNavigation: React.FC = () => {
         </div>
 
 
+
+
           </button>;
         </div>;
 
@@ -276,12 +273,13 @@ const EnhancedNavigation: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Mobile Menu */}
         {isOpen && (;
           <motion&& motion.div
@@ -341,13 +339,7 @@ const EnhancedNavigation: React.FC = () => {
                   className="block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
                   onClick={closeAllDropdowns}>;
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-=======
           </motion.div>)}
       </div>;
     </nav>);
@@ -356,15 +348,7 @@ const EnhancedNavigation: React.FC = () => {
 export default EnhancedNavigation;
 ;
 
-=======
 
-export default EnhancedNavigation;
-
-=======
-export default EnhancedNavigation;
-=======
-export default EnhancedNavigation;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements

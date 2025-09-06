@@ -160,10 +160,8 @@ interface InterviewRequestFormProps {
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 const formSchema = z.object({
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
@@ -173,25 +171,8 @@ const formSchema = z.object({
   duration: z.string().min(1, "Please select the interview duration."),
   platform: z.string().min(1, "Please select a meeting platform."),
   meetingLink: z.string().optional(),
-<<<<<<< HEAD
 
 
-  title: z.string().min(3, 'Please provide a brief title for the interview.'),
-  notes: z.string().optional(),
-})
-export function InterviewRequestForm({
-  talent,
-  onClose,
-  userDetails,
-}: InterviewRequestFormProps) {
-  const { requestInterview } = useInterviews()
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  title: z.string().min(3, "Please provide a brief title for the interview."),
-  notes: z.string().optional()}),
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -219,6 +200,7 @@ export function InterviewRequestForm({
       const scheduledDate = new Date(dateTimeString)
       // Calculate end time based on duration
       const durationMinutes = parseInt(values.duration)
+
       duration: "30",
       platform: "zoom",
       notes: "",
@@ -243,20 +225,14 @@ export function InterviewRequestForm({
       // Calculate end time based on duration
       const durationMinutes = parseInt(values.duration),
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-=======
 
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema)
-    defaultValues: {
-
-      title: `Interview with ${talent.full_name}`,
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       await requestInterview({
         talent_id: talent.id,
         client_id: user_details.id,
@@ -265,59 +241,15 @@ export function InterviewRequestForm({
         notes: values.notes,
         meeting_platform: values.platform as any,
 
-<<<<<<< HEAD
-
-        meeting_link: values.meetingLink,
-        interview_type: 'video',
-        title: values.title,
-      })
-      toast({
-        title: 'Interview requested',
-        description: `Your interview request with ${talent.full_name} has been sent.`,
-      })
-      onClose()
-    } catch (error) {
-      logErrorToProduction('Failed to schedule interview:', { data: error })
-      toast({
-        title: 'Failed to schedule interview',
-        description:
-          'An error occurred while scheduling the interview. Please try again.',
-        variant: 'destructive',
-      })
-        interview_type: "video",
-        title: values.title
-      }),
-
-      toast({
-        title: "Interview requested",
-        description: `Your interview request with ${talent.full_name} has been sent.`}),
-      onClose()
-    } catch (error) {
-      logErrorToProduction('Failed to schedule interview:', { data: error }),
-      toast({
-        title: "Failed to schedule interview",
-        description: "An error occurred while scheduling the interview. Please try again.",
-        variant: "destructive"})
-
-
-=======
-        meeting_link: values.meetingLink,
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     } finally {
       setIsSubmitting (false);
     }
   }
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const formSchema = z && z.object({;
   date: z;
@@ -466,11 +398,8 @@ export function InterviewRequestForm(): any ({;
     '20:00',
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ]
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
@@ -481,10 +410,8 @@ export function InterviewRequestForm(): any ({;
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
@@ -492,16 +419,9 @@ export function InterviewRequestForm(): any ({;
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">
             <img
 
-<<<<<<< HEAD
-
-              src={talent.profile_picture_url |'/placeholder.svg'}
-              src={talent.profile_picture_url || '/placeholder.svg'}
 
 
-=======
-              src={talent.profile_picture_url || '/placeholder.svg'}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               alt={talent.full_name}
               className='h-full w-full object-cover'
               loading='lazy'            />
@@ -510,18 +430,8 @@ export function InterviewRequestForm(): any ({;
               className="h-full w-full object-cover"
               loading="lazy"
             />
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>
           <div>
             <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>
@@ -559,18 +469,8 @@ export function InterviewRequestForm(): any ({;
           name="title"
           render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "title"> }) => (
             <FormItem>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
                 <Input placeholder='Brief title for the interview' {...field} />
@@ -579,6 +479,7 @@ export function InterviewRequestForm(): any ({;
             </FormItem>
           )}
         />
+
 
 
 
@@ -599,78 +500,22 @@ export function InterviewRequestForm(): any ({;
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
           <FormField;
             control={form.control}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            name='date'
-            render={({
-              field
-            }: {
-              field: ControllerRenderProps<z.infer<typeof formSchema>, 'date'>
-            }) => (
-              <FormItem className='flex flex-col'>                <FormLabel>Date</FormLabel>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
-            control={form.control}
-            name="date"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> }) => (
-              <FormItem className="flex flex-col">
-                <FormLabel>Date</FormLabel>
 
 
-=======
-            name='date';
-
-            render={({
-              field
-            }: {
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
                       <Button
-<<<<<<< HEAD
 
 
-                        variant='outline'
-                        className={cn(
-                          'w-full pl-3 text-left font-normal'
-                          !field.value && 'text-muted-foreground'
-                        )}                      >
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         variant="outline"
                         className={cn(
                           "w-full pl-3 text-left font-normal",
                           !field.value && "text-muted-foreground"
                         )}
                       >
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         {field.value ? (
                           format(field.value, 'PPP')
                         ) : (
@@ -711,18 +556,8 @@ export function InterviewRequestForm(): any ({;
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus
                       className="p-3 pointer-events-auto"
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     />
                   </PopoverContent>
                 </Popover>
@@ -943,11 +778,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <FormLabel>Time</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
@@ -961,44 +793,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                     {timeSlots.map((time) => (
                       <SelectItem key={time} value={time}>
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                        {time}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
-<<<<<<< HEAD
-
-
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <FormField
-            control={form.control}
-            name='duration'
-            render={({
-              field
-            }: {
-              field: ControllerRenderProps<
-                z.infer<typeof formSchema>
-                'duration'
-              >
-            }) => (              <FormItem>
-
-
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
@@ -1083,18 +880,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name="platform"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform"> }) => (
               <FormItem>
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <FormLabel>Platform</FormLabel>
                 z && z.infer<typeof formSchema>,;
                 'platform';
@@ -1183,11 +970,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
                   <Input
@@ -1200,20 +984,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             )}
           />
         )}
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <FormField
           control={form && form.control}
           name='notes'
@@ -1249,10 +1021,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   {...field}
                 />
               </FormControl>
@@ -1275,20 +1045,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       </form>
     </Form>
   )
-<<<<<<< HEAD
 
 
-}setIsSubmitting (true)
-}catch (error) {
-  logErrorToProduction ('Failed to schedule interview:', {
-  data: error
-})
-toast ({
-}finally {
-  setIsSubmitting (false)
-}"
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 toast ({;
@@ -1297,11 +1055,8 @@ toast ({;
 }";
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";"
 "12:00", "12:30", "13:00", "13:30", "14:00", "14:30";"
 "15:00", "15:30", "16:00", "16:30", "17:00", "17:30";"

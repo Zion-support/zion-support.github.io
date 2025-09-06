@@ -1,20 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
 
-
-import {
-  createSessionCookie
-  validateCredentials;
-  createSessionCookie,;
-  validateCredentials,;
-
-} from '../../../utils/auth-utils';import { createSessionCookie, validateCredentials } from '../../../utils/auth-utils';
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });
@@ -26,7 +12,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const result = validateCredentials(email, password, code);
 
   const cookie = createSessionCookie({ email, role: result.role, twofaVerified: true });
@@ -62,6 +47,8 @@ if ( {) {
   return res.status (200).json ({ ok: true });
 
 
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 

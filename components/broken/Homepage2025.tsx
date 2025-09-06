@@ -1,11 +1,11 @@
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 };
+
 
 const allServices = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
 ...innovative2035AIServices;
@@ -86,36 +86,8 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   service.id
 }initial= {
   {
-<<<<<<< HEAD
 
-  opacity: 0, y: 50
-}whileInView= {
-  {
-  opacity: 1, y: 0
 
-}transition= {
-  {
-  duration: 0.8, delay: index * 0.1
-}viewport= {
-  {
-  once: true
-}> <UltraFuturisticServiceCard2026 /> </motion.div>) )
-  once: true 
-
-}> <UltraFuturisticServiceCard2026 /> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent" > Advanced AI Automation </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Intelligent automation solutions that learn, adapt, and continuously optimize your business processes. </p> </motion.div> <motion.div key= {
-  service.id
-}initial= {
-  {
-  opacity: 0, y: 50
-  opacity: 0, y: 50 
-
-}whileInView= {
-  {
-  opacity: 1, y: 0
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }transition= {
   {
   duration: 0.8, delay: index * 0.1
@@ -137,7 +109,9 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }initial= {
   {
 
+
   opacity: 0, y: 50
+
 
 }whileInView= {
   {
@@ -255,6 +229,8 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 
 
 
+
+
   duration: 0 && 0.8 
 
 }viewport= {
@@ -282,41 +258,18 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>) ;
 
 
-<<<<<<< HEAD
-
-}export default Homepage2025;export default Homepage2025;
 
 
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-}export default Homepage2025;export default Homepage2025;
 
-
-export default Homepage2025;
-
-=======
 }export default Homepage2025;export default Homepage2025;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-}
-}
-}
-}
-}
-{
-  title: 'Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊';
-}].map ( (feature, index) => (<motion.div </p> </motion.div>) );
-}</div> </div> </div> </footer> </UltraFuturisticBackground2035>);
-}export default Homepage2025;export default Homepage2025;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

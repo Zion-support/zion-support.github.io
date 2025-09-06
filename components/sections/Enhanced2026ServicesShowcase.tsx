@@ -22,20 +22,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 
-<<<<<<< HEAD
-=======
-import Link from 'next/link';
-const Enhanced2026ServicesShowcase = () => {
-  const featuredServices = [
-    {
 
-      id: 'ai-business-intelligence-elite-2026',
-      name: 'AI Business Intelligence Elite 2026',
-      description: 'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
   ArrowRight,
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Brain,
   Zap,
   Shield,
@@ -45,6 +35,7 @@ const Enhanced2026ServicesShowcase = () => {
   TrendingUp,
   Globe,
   Cpu,
+
 
   Lock,
   Cloud,
@@ -206,6 +197,7 @@ import {;
   Cpu,;
   Lock,;
   Cloud,;
+
 
 
 
@@ -371,6 +363,27 @@ const Enhanced2026ServicesShowcase = () => {;
     },;
   ];
 
+
+  return (
+    <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
+      {/* Background Effects */}
+
+      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10'></div>;
+      <div className='max-w-7xl mx-auto relative z-10'>        {/* Section Header */}  ];
+
+  const categories = [;
+    { name: 'AI Services', count: '150+', icon: Brain, color: 'from-purple-500 to-pink-500' },;
+    { name: 'Quantum Tech', count: '75+', icon: Sparkles, color: 'from-blue-500 to-cyan-500' },;
+    { name: 'Emerging Tech', count: '100+', icon: Rocket, color: 'from-green-500 to-emerald-500' },;
+
+    { name: 'IT Solutions', count: '200+', icon: Cloud, color: 'from-yellow-500 to-orange-500' }
+  ];
+  return (
+    <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
+      {/* Background Effects */}
+
+
+
         {/* Section Header */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -382,15 +395,15 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         >
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -403,19 +416,12 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         {/* Category Overview */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -428,15 +434,15 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         >
           {categories.map((category, index) => (
             <motion.div
@@ -501,6 +507,7 @@ const Enhanced2026ServicesShowcase = () => {;
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
 
+
           className='text - center mb - 16';
         >;
           <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
@@ -541,12 +548,10 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
             >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div
@@ -568,10 +573,7 @@ const Enhanced2026ServicesShowcase = () => {;
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
         {/* Featured Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices && featuredServices.map((service, index) => (        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
           {featuredServices && featuredServices.map((service, index) => (;
@@ -579,19 +581,8 @@ const Enhanced2026ServicesShowcase = () => {;
               key={service && service.id}
               initial={{ opacity: 0, scale: 0 && 0.8, y: 20 }}
 
-=======
-=======
 
 
-
-        {/* Featured Services Grid */}
-
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices.map((service, index) => (
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -606,12 +597,11 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
             >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div
@@ -675,10 +665,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
+
                   {service.description}
                 </p>
 
@@ -688,25 +675,28 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                       </li>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
+
 
                   </ul>
                 </div>
 
-<<<<<<< HEAD
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 {/* Price and CTA */}
                 <div className='flex items-center justify-between'>
+
 
 
 
@@ -715,6 +705,8 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 
                   <div>
@@ -747,6 +739,8 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
         </div>
 
 
+
+
                     href={`/${service && service.id}`}
                     className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200'>;
                     Learn More <ArrowRight className='w-4 h-4 ml-1' />                  </Link>                  <div>;
@@ -768,12 +762,13 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -785,15 +780,15 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         >
           <div className="bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -836,34 +831,13 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
     </section>
   );
 
-<<<<<<< HEAD
-}
-};
 
 
-export default Enhanced2026ServicesShowcase;  )
-}
-export default Enhanced2026ServicesShowcase;
-
-export default Enhanced2026ServicesShowcase;
-
-
-
-
-}
-}
-export default Enhanced2026ServicesShowcase;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-=======
-};
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

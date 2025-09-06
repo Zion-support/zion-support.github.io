@@ -19,50 +19,9 @@ interface MobileChatViewProps {;
   onBack: () => void;
   onSendMessage: (content: string) => void
 
-<<<<<<< HEAD
 
 
-export function MobileChatView({
-  contact
-  messages
-  onBack
-  onSendMessage
-}: MobileChatViewProps) {
-  const [newMessage, setNewMessage] = useState('')
-  const router = useRouter()
-  const handleSend = () => {
-    if (newMessage.trim() !== '') {
-      onSendMessage(newMessage)
-      setNewMessage('')
 
-import React, { useState } from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useRouter } from 'next/router',
-import { toast } from "sonner",
-
-
-=======
-
-import React, { useState } from 'react';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import {
-  Send,
-  PaperclipIcon,
-  ChevronLeft,
-  MoreVertical,
-  Video,
-  Phone,
-} from 'lucide-react';
-import { cn } from '@/lib / utils';
-import { use_router } from 'next / router';
-import { toast } from 'sonner';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface Message {
   id: string;
   content: string;
@@ -135,15 +94,11 @@ export function MobileChatView(): any ({;
   const [newMessage, setNewMessage] = useState('');
   const router = useRouter();
   const handleSend = () => {;
-<<<<<<< HEAD
+
     if (newMessage.trim() !== "") {;
       onSendMessage(newMessage),;
       setNewMessage("");
-=======
-    if (newMessage && newMessage.trim() !== '') {;
-      onSendMessage(newMessage);
-      setNewMessage('');
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     }
   };
 
@@ -200,11 +155,8 @@ export function MobileChatView(): any ({;
   
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -227,95 +179,9 @@ export function MobileChatView(): any ({;
           
           <div className="flex items-center flex-1 gap-3 mx-2">
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-            <Avatar>
-              <AvatarImage src={contact.avatar} alt={contact.name} />
-              <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>
-            </Avatar>
-            <div>
-              <h3 className='font-medium'>{contact.name}</h3>
-              <p className='text-xs text-muted-foreground'>
-                {contact.status |'Online'}
-              </p>
-            </div>
-          </div>
-          <div className='flex'>
-            <Button
-              variant='ghost'
-              size='icon'
-              onClick={startAudioCall}
-
-              aria-label='Start audio call'>;
-              <Phone className='h-5 w-5' />;
-            </Button>;
-
-
-            <Button
-              variant='ghost'
-              size='icon'
-              onClick={startVideoCall}
-              aria-label='Start video call'            >
-              <Video className='h-5 w-5' />
-            </Button>
-            <Button variant='ghost' size='icon' aria-label='More options'>
-              <MoreVertical className='h-5 w-5' />
-              <h3 className="font-medium">{contact.name}</h3>
-              <p className="text-xs text-muted-foreground">
-                {contact.status || "Online"}
-              </p>
-            </div>
-          </div>
-<<<<<<< HEAD
-
-
-          <div className='flex'>
-            <Button
-              variant='ghost'
-              size='icon'
-              onClick={startAudioCall}
-              aria-label='Start audio call'            >
-              <Phone className='h-5 w-5' />
-            </Button>
-            <Button
-              variant='ghost'
-              size='icon'
-              onClick={startVideoCall}
-              aria-label='Start video call'            >
-              <Video className='h-5 w-5' />
-            </Button>
-            <Button variant='ghost' size='icon' aria-label='More options'>
-              <MoreVertical className='h-5 w-5' />
-          
-          <div className="flex">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={startAudioCall}
-              aria-label="Start audio call"
-            >
-              <Phone className="h-5 w-5" />
-            </Button>
-            
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={startVideoCall}
-              aria-label="Start video call"
-            >
-              <Video className="h-5 w-5" />
-            </Button>
-            
-            <Button variant="ghost" size="icon" aria-label="More options">
-              <MoreVertical className="h-5 w-5" />
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             </Button>
@@ -518,18 +384,8 @@ export function MobileChatView(): any ({;
 
                 {message.isMe && message.status && (;
                   <span className="ml-1">;
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {message.status === 'read' ? '✓✓' : '✓'}
 
               </div>;
@@ -546,6 +402,8 @@ export function MobileChatView(): any ({;
           </Button>
           <Input
             value={newMessage}
+
+
 
 
 
@@ -623,6 +481,8 @@ export function MobileChatView(): any ({;
 
 
 
+
+
             onChange={(e) => setNewMessage(e.target.value)}
 
             onKeyDown={handleKeyDown}
@@ -634,10 +494,8 @@ export function MobileChatView(): any ({;
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
           </Button>
         </div>
       </div>
