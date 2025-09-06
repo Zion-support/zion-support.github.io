@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   ArrowRight,
   Star,
@@ -20,19 +21,27 @@ import {
   List,
   ChevronDown,;
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { 
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom, 
   Rocket, Shield, Target, CheckCircle, ExternalLink;
   Search, Filter, Grid, List, ChevronDown
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 } from 'lucide-react';
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const Enhanced2027ServicesShowcase: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -41,6 +50,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
   // Combine all 2027 services
   const all2027Services = [
+<<<<<<< HEAD
 <<<<<<< HEAD
     ...cuttingEdge2027Innovations,
     ...practicalMicroSaas2027,
@@ -61,10 +71,20 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
   // Get unique categories
   const categories = ['all', ...Array.from(new Set(all2027Services.map(service => service.category)))];
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    ...cuttingEdge2027Innovations;
+    ...practicalMicroSaas2027;
+    ...emergingTech2027Services
+  ];
+
+  // Get unique categories
+  const categories = ['all', ...Array.from(new Set(all2027Services.map(service => service.category)))];
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   // Filter and sort services
   const filteredServices = all2027Services
     .filter(service => {
+<<<<<<< HEAD
 <<<<<<< HEAD
       const matchesSearch =
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -76,18 +96,24 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         selectedCategory === 'all' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       return matchesSearch && matchesCategory
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'name':
           return a.name.localeCompare(b.name);
         case 'price':
+<<<<<<< HEAD
 <<<<<<< HEAD
           return (
             parseFloat(a.price.replace(/[^0-9.]/g, '')) -
@@ -106,11 +132,18 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
           return parseFloat(a.roi.replace(/[^0-9.]/g, '')) - parseFloat(b.roi.replace(/[^0-9.]/g, ''));
         default: return 0
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+        case 'roi':
+          return parseFloat(a.roi.replace(/[^0-9.]/g, '')) - parseFloat(b.roi.replace(/[^0-9.]/g, ''));
+        default: return 0
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
     });
 
   const getCategoryColor = (category: string) => {
     const colors = {
+<<<<<<< HEAD
 <<<<<<< HEAD
       'AI & Machine Learning': 'from-purple-500 to-indigo-600',
       'Quantum Computing': 'from-blue-500 to-cyan-600',
@@ -133,10 +166,16 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
     };
     return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      'AI & Machine Learning': 'from-purple-500 to-indigo-600Quantum Computing': 'from-blue-500 to-cyan-600Emerging Technology': 'from-green-500 to-emerald-600Business Operations': 'from-orange-500 to-red-600Cybersecurity': 'from-red-500 to-pink-600Enterprise IT': 'from-indigo-500 to-purple-600Healthcare & Biotechnology': 'from-emerald-500 to-teal-600Financial Technology': 'from-yellow-500 to-orange-600Space Technology': 'from-violet-500 to-purple-600Neural Technology': 'from-pink-500 to-rose-600Materials Science': 'from-cyan-500 to-blue-600Environmental Technology': 'from-teal-500 to-green-600'
+    };
+    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const getCategoryIcon = (category: string) => {
     const icons = {
+<<<<<<< HEAD
 <<<<<<< HEAD
       'AI & Machine Learning': <Brain className='w-5 h-5' />,
       'Quantum Computing': <Atom className='w-5 h-5' />,
@@ -150,14 +189,29 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
       'Neural Technology': <Brain className='w-5 h-5' />,
       'Materials Science': <Atom className='w-5 h-5' />,
       'Environmental Technology': <Rocket className='w-5 h-5' />,
+=======
+      'AI & Machine Learning': <Brain className="w-5 h-5" />;
+      'Quantum Computing': <Atom className="w-5 h-5" />;
+      'Emerging Technology': <Rocket className="w-5 h-5" />;
+      'Business Operations': <Target className="w-5 h-5" />;
+      'Cybersecurity': <Shield className="w-5 h-5" />;
+      'Enterprise IT': <Zap className="w-5 h-5" />;
+      'Healthcare & Biotechnology': <Brain className="w-5 h-5" />;
+      'Financial Technology': <TrendingUp className="w-5 h-5" />;
+      'Space Technology': <Rocket className="w-5 h-5" />;
+      'Neural Technology': <Brain className="w-5 h-5" />;
+      'Materials Science': <Atom className="w-5 h-5" />;
+      'Environmental Technology': <Rocket className="w-5 h-5" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     };
-    return icons[category as keyof typeof icons] || <Zap className='w-5 h-5' />;
+    return icons[category as keyof typeof icons] || <Zap className="w-5 h-5" />
   };
 
   return (
-    <section className='py-20 bg-gray-900'>
-      <div className='container mx-auto px-4'>
+    <section className="py-20 bg-gray-900">
+      <div className="container mx-auto px-4">
         {/* Header */}
+<<<<<<< HEAD
         <motion.div
           className='text-center mb-16'
 =======
@@ -184,10 +238,15 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         <motion.div 
           className="text-center mb-16"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        <motion.div 
+          className="text-center mb-16"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
+<<<<<<< HEAD
 <<<<<<< HEAD
           <h2 className='text-5xl font-bold mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -205,15 +264,26 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               2027 Revolutionary Services
             </span>
           </h2>
+=======
+          <h2 className="text-5xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              2027 Revolutionary Services
+            </span>
+          </h2>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Discover our cutting-edge portfolio of 500+ innovative services spanning AI consciousness,
             quantum computing, synthetic biology, and beyond. Each service delivers measurable ROI 
             and transforms your business into a future-ready powerhouse.
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </p>
         </motion.div>
 
         {/* Search and Filters */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <motion.div
           className='mb-12'
@@ -221,21 +291,31 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         <motion.div 
           className="mb-12"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        <motion.div 
+          className="mb-12"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6'>
             <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
+=======
+          <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6">
+            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               {/* Search */}
-              <div className='flex-1 max-w-md'>
-                <div className='relative'>
-                  <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+              <div className="flex-1 max-w-md">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
-                    type='text'
-                    placeholder='Search services, features, or use cases...'
+                    type="text"
+                    placeholder="Search services, features, or use cases..."
                     value={searchTerm}
+<<<<<<< HEAD
                     onChange={e => setSearchTerm(e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50'
 =======
@@ -252,19 +332,29 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   />
                 </div>
               </div>
 
               {/* Category Filter */}
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className='flex items-center space-x-4'>
                 <div className='relative'>
+=======
+              <div className="flex items-center space-x-4">
+                <div className="relative">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   <select
                     value={selectedCategory}
-                    onChange={e => setSelectedCategory(e.target.value)}
-                    className='appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10'
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10"
                   >
+<<<<<<< HEAD
                     {categories.map(category => (
 =======
               <div className="flex items-center space-x-4">
@@ -276,39 +366,47 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   >
                     {categories.map((category) => (
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                    {categories.map((category) => (
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       <option key={category} value={category}>
                         {category === 'all' ? 'All Categories' : category}
                       </option>
                     ))}
                   </select>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />
+=======
+                  <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </div>
 
                 {/* Sort */}
-                <div className='relative'>
+                <div className="relative">
                   <select
                     value={sortBy}
-                    onChange={e => setSortBy(e.target.value)}
-                    className='appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10'
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10"
                   >
-                    <option value='name'>Sort by Name</option>
-                    <option value='price'>Sort by Price</option>
-                    <option value='roi'>Sort by ROI</option>
+                    <option value="name">Sort by Name</option>
+                    <option value="price">Sort by Price</option>
+                    <option value="roi">Sort by ROI</option>
                   </select>
-                  <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />
+                  <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
                 </div>
 
                 {/* View Mode */}
-                <div className='flex bg-gray-700/50 rounded-xl p-1'>
+                <div className="flex bg-gray-700/50 rounded-xl p-1">
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded-lg transition-all duration-200 ${
-                      viewMode === 'grid'
-                        ? 'bg-cyan-500/20 text-cyan-400'
+                      viewMode === 'grid' 
+                        ? 'bg-cyan-500/20 text-cyan-400' 
                         : 'text-gray-400 hover:text-white'
                     }`}
                   >
+<<<<<<< HEAD
                     <Grid className='w-5 h-5' />
 =======
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
@@ -340,10 +438,14 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   >
                     <Grid className="w-5 h-5" />
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                    <Grid className="w-5 h-5" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </button>
                   <button
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-lg transition-all duration-200 ${
+<<<<<<< HEAD
 <<<<<<< HEAD
                       viewMode === 'list'
                         ? 'bg-cyan-500/20 text-cyan-400'
@@ -359,6 +461,14 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   >
                     <List className="w-5 h-5" />
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                      viewMode === 'list' 
+                        ? 'bg-cyan-500/20 text-cyan-400' 
+                        : 'text-gray-400 hover:text-white'
+                    }`}
+                  >
+                    <List className="w-5 h-5" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </button>
                 </div>
               </div>
@@ -368,16 +478,22 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
         {/* Results Count */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <motion.div
           className='mb-8'
 =======
         <motion.div 
           className="mb-8"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        <motion.div 
+          className="mb-8"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
+<<<<<<< HEAD
 <<<<<<< HEAD
           <p className='text-gray-400'>
             Showing{' '}
@@ -394,10 +510,16 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '}
             <span className="text-cyan-400 font-semibold">{all2027Services.length}</span> services
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          <p className="text-gray-400">
+            Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '}
+            <span className="text-cyan-400 font-semibold">{all2027Services.length}</span> services
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </p>
         </motion.div>
 
         {/* Services Grid/List */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <AnimatePresence mode='wait'>
           {viewMode === 'grid' ? (
@@ -409,15 +531,25 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             <motion.div
               key="grid"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        <AnimatePresence mode="wait">
+          {viewMode === 'grid' ? (
+            <motion.div
+              key="grid"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
 =======
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -426,16 +558,19 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className='group'
+=======
+                  className="group"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 >
-                  <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2'>
+                  <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2">
                     {/* Header */}
-                    <div className='flex items-start justify-between mb-4'>
-                      <div
-                        className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service.category)} shadow-lg`}
-                      >
+                    <div className="flex items-start justify-between mb-4">
+                      <div className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service.category)} shadow-lg`}>
                         {getCategoryIcon(service.category)}
                       </div>
+<<<<<<< HEAD
                       <div className='text-right'>
                         <div className='text-2xl font-bold text-cyan-400'>
                           {service.price}
@@ -456,10 +591,16 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                         <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
                         <div className="text-sm text-gray-400">ROI: {service.roi}</div>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                      <div className="text-right">
+                        <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                        <div className="text-sm text-gray-400">ROI: {service.roi}</div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       </div>
                     </div>
 
                     {/* Content */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors'>
                       {service.name}
@@ -471,10 +612,17 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     </h3>
                     <p className="text-gray-300 mb-4 leading-relaxed">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                      {service.name}
+                    </h3>
+                    <p className="text-gray-300 mb-4 leading-relaxed">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       {service.description}
                     </p>
 
                     {/* Features */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-400 mb-2'>
@@ -495,6 +643,14 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           <li key={idx} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
+                      <ul className="space-y-1">
+                        {service.features.slice(0, 3).map((feature, idx) => (
+                          <li key={idx} className="flex items-center text-sm text-gray-300">
+                            <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                             {feature}
                           </li>
                         ))}
@@ -502,6 +658,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     </div>
 
                     {/* Tags */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <div className='flex flex-wrap gap-2 mb-6'>
                       {service.tags.slice(0, 3).map((tag, idx) => (
@@ -515,6 +672,13 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           key={idx}
                           className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {service.tags.slice(0, 3).map((tag, idx) => (
+                        <span
+                          key={idx}
+                          className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         >
                           {tag}
                         </span>
@@ -524,6 +688,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     {/* CTA */}
                     <Link
                       href={service.link}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'
                     >
@@ -535,6 +700,12 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                      className="inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+                    >
+                      <span>Learn More</span>
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </Link>
                   </div>
                 </motion.div>
@@ -543,19 +714,27 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
           ) : (
             <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
               key='list'
 =======
               key="list"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+              key="list"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='space-y-4'
 =======
               className="space-y-4"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+              className="space-y-4"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -564,18 +743,21 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className='group'
+=======
+                  className="group"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 >
-                  <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'>
-                    <div className='flex flex-col lg:flex-row items-start lg:items-center gap-6'>
+                  <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300">
+                    <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
                       {/* Icon and Category */}
-                      <div className='flex items-center space-x-4'>
-                        <div
-                          className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service.category)} shadow-lg`}
-                        >
+                      <div className="flex items-center space-x-4">
+                        <div className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service.category)} shadow-lg`}>
                           {getCategoryIcon(service.category)}
                         </div>
                         <div>
+<<<<<<< HEAD
                           <div className='text-sm text-gray-400'>
                             {service.category}
                           </div>
@@ -596,22 +778,32 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           <div className="text-sm text-gray-400">{service.category}</div>
                           <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                          <div className="text-sm text-gray-400">{service.category}</div>
+                          <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         </div>
                       </div>
 
                       {/* Content */}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <div className='flex-1'>
                         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
+=======
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           {service.name}
                         </h3>
-                        <p className='text-gray-300 mb-3 leading-relaxed'>
+                        <p className="text-gray-300 mb-3 leading-relaxed">
                           {service.description}
                         </p>
-                        <div className='flex flex-wrap gap-2 mb-3'>
+                        <div className="flex flex-wrap gap-2 mb-3">
                           {service.tags.slice(0, 4).map((tag, idx) => (
                             <span
                               key={idx}
+<<<<<<< HEAD
                               className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'
 =======
                       <div className="flex-1">
@@ -627,6 +819,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                               key={idx}
                               className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                              className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                             >
                               {tag}
                             </span>
@@ -636,18 +831,26 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
                       {/* Stats and CTA */}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <div className='flex flex-col items-end space-y-3'>
                         <div className='text-right'>
                           <div className='text-sm text-gray-400'>ROI</div>
                           <div className='text-lg font-bold text-green-400'>
                             {service.roi}
                           </div>
+=======
+                      <div className="flex flex-col items-end space-y-3">
+                        <div className="text-right">
+                          <div className="text-sm text-gray-400">ROI</div>
+                          <div className="text-lg font-bold text-green-400">{service.roi}</div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         </div>
                         <Link
                           href={service.link}
-                          className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'
+                          className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                         >
                           <span>Learn More</span>
+<<<<<<< HEAD
                           <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />
 =======
                       <div className="flex flex-col items-end space-y-3">
@@ -662,6 +865,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           <span>Learn More</span>
                           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         </Link>
                       </div>
                     </div>
@@ -675,16 +881,22 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         {/* No Results */}
         {filteredServices.length === 0 && (
 <<<<<<< HEAD
+<<<<<<< HEAD
           <motion.div
             className='text-center py-20'
 =======
           <motion.div 
             className="text-center py-20"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          <motion.div 
+            className="text-center py-20"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='text-6xl mb-4'>🔍</div>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -694,15 +906,21 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               Try adjusting your search terms or category filter to find what
               you're looking for.
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
             <p className="text-gray-400 mb-8">
               Try adjusting your search terms or category filter to find what you're looking for.
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </p>
             <button
               onClick={() => {
                 setSearchTerm('');
+<<<<<<< HEAD
 <<<<<<< HEAD
                 setSelectedCategory('all');
               }}
@@ -712,6 +930,11 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               }}
               className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                setSelectedCategory('all')
+              }}
+              className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
               Clear Filters
             </button>
@@ -720,39 +943,49 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
         {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <motion.div
           className='mt-20 text-center'
 =======
         <motion.div 
           className="mt-20 text-center"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        <motion.div 
+          className="mt-20 text-center"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+=======
+          <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">
+            <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Ready to Transform Your Business?
             </h3>
-            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Our team of experts is ready to help you implement these
-              revolutionary services and achieve unprecedented growth. Let's
-              build the future together.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Our team of experts is ready to help you implement these revolutionary services 
+              and achieve unprecedented growth. Let's build the future together.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-              <Link
-                href='/contact'
-                className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25'
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link 
+                href="/contact"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25"
               >
                 <span>Get Started Today</span>
-                <ArrowRight className='w-5 h-5' />
+                <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link
-                href='/pricing'
-                className='inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50'
+              <Link 
+                href="/pricing"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50"
               >
                 <span>View Pricing</span>
+<<<<<<< HEAD
                 <TrendingUp className='w-5 h-5' />
 =======
           <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">
@@ -778,12 +1011,16 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                 <span>View Pricing</span>
                 <TrendingUp className="w-5 h-5" />
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                <TrendingUp className="w-5 h-5" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </Link>
             </div>
           </div>
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 };
@@ -845,3 +1082,9 @@ export default Enhanced2027ServicesShowcase;
 
 export default Enhanced2027ServicesShowcase;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  )
+};
+
+export default Enhanced2027ServicesShowcase;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

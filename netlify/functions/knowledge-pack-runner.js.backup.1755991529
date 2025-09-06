@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -61,6 +64,7 @@ Generated: ${timestamp}
       })
     };
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 =======
@@ -135,3 +139,6 @@ exports.handler = async () => {
 =======
 };
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

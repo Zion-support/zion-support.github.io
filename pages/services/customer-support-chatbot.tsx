@@ -3,31 +3,36 @@ import Head from 'next/head';
 import Link from 'next/link';
 import UseTokensButton from '../../components/tokens/UseTokensButton';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const CustomerSupportChatbot: NextPage = () => {
   return (
     <div>
       <Head>
         <title>CustomerSupportChatbot - Zion Tech Solutions</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <meta name='description' content='CustomerSupportChatbot service' />
+=======
+        <meta name="description" content="CustomerSupportChatbot service" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       </Head>
-
-      <main className='space-y-4'>
+      
+      <main className="space-y-4">
         <h1>CustomerSupportChatbot</h1>
         <p>Service details coming soon...</p>
-        <UseTokensButton
-          serviceId='customer-support-chatbot'
-          defaultType='premium_support'
-        />
-        <Link href='/services'>Back to Services</Link>
+        <UseTokensButton serviceId="customer-support-chatbot" defaultType="premium_support" />
+        <Link href="/services">Back to Services</Link>
       </main>
     </div>
-  );
+  )
 };
 
+<<<<<<< HEAD
 export default CustomerSupportChatbot;
 =======
         <meta name="description" content="CustomerSupportChatbot service" />
@@ -45,3 +50,6 @@ export default CustomerSupportChatbot;
 
 export default CustomerSupportChatbot;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export default CustomerSupportChatbot;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

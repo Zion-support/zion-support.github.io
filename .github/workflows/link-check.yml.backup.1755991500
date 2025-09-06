@@ -3,8 +3,11 @@ name: Link Check
 on:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   push:
     branches: [ main, master ]
   schedule:
@@ -38,6 +41,7 @@ jobs:
             git push
           else
             echo "No changes to commit"
+<<<<<<< HEAD
 <<<<<<< HEAD
           fi
 =======
@@ -96,3 +100,6 @@ jobs:
 =======
           fi
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          fi
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

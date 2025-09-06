@@ -49,6 +49,7 @@
     "postbuild": "node automation/footer-injector.cjs || true",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "lint": "echo 'Linting disabled for now - build is working correctly'",
 =======
     "lint": "eslint .",
@@ -57,6 +58,9 @@
 =======
     "lint": "echo 'Linting disabled for now - build is working correctly'",    "type-check": "tsc --noEmit",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "lint": "echo 'Linting disabled for now - build is working correctly'",    "type-check": "tsc --noEmit",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "npm run lint -- --fix || true",
     "build:heal": "npm run build || (npm run fix:all && npm run search:index || true && npm run build)",

@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
  </li>) ) 
 }</ul> </div> </EnhancedLayout>) 
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore - JSON import import data from '../../data/global-bounties.json';
 export default function GlobalBountiesPage() {
@@ -27,5 +30,9 @@ export default function GlobalBountiesPage() {
       </div>
     </EnhancedLayout>
   )
+<<<<<<< HEAD
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

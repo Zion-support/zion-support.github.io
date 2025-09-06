@@ -177,6 +177,7 @@ h3 {
   left: 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   right: 0;
   bottom: 0;
 =======
@@ -319,6 +320,10 @@ h3 {
   right: 0;
   bottom: 0;  background: 
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  right: 0;
+  bottom: 0;  background: 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
@@ -1099,8 +1104,11 @@ h3 {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   
   .particle-bg::before {
     display: none;
@@ -1301,6 +1309,7 @@ h3 {
 
 /* Enhanced Quantum Effects */
 <<<<<<< HEAD
+<<<<<<< HEAD
 .quantum-field {
 =======
 }
@@ -1397,6 +1406,12 @@ h3 {
 }
 
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+.quantum-field {  position: relative;
+  overflow: hidden;
+}
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 .quantum-field::before {
   content: '';
   position: absolute;
@@ -1425,6 +1440,7 @@ h3 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .holographic::before {
 =======
 .btn-futuristic::before {
@@ -1433,6 +1449,9 @@ h3 {
 =======
 .holographic::before {  content: '';
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+.holographic::before {  content: '';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   position: absolute;
   top: 0;
   left: -100%;
@@ -1440,8 +1459,11 @@ h3 {
   height: 100%;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.3), transparent);
   animation: holographic-shimmer 4s ease-in-out infinite;
 }
@@ -1581,6 +1603,7 @@ h3 {
   .metaverse-portal::before {
     animation: none;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -1784,3 +1807,6 @@ h3 {
 =======
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

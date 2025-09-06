@@ -41,7 +41,11 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
         { name: 'Robotics & Automation', href: '/services?category=robotics', icon: <Bot className="w-4 h-4" /> },
         { name: 'Manufacturing', href: '/services?category=manufacturing', icon: <Factory className="w-4 h-4" /> },
         { name: 'Autonomous Vehicles', href: '/services?category=vehicles', icon: <Car className="w-4 h-4" /> }
+<<<<<<< HEAD
       ];
+=======
+      ],
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       hasDropdown: true,
       dropdownItems: [
         { name: 'AI & Machine Learning', href: '/services?category=ai-ml' },
@@ -54,7 +58,11 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
         { name: 'Blockchain', href: '/services?category=blockchain' },
         { name: 'View All Services', href: '/services' }
       ]
+<<<<<<< HEAD
     };
+=======
+    },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     {
       name: 'Solutions',
       href: '/solutions',
@@ -66,7 +74,11 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
         { name: 'Healthcare Solutions', href: '/solutions?type=healthcare' },
         { name: 'Financial Solutions', href: '/solutions?type=financial' }
       ]
+<<<<<<< HEAD
     };
+=======
+    },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     { name: 'Pricing', href: '/pricing' },
     { name: 'Resources', href: '/resources' },
     { name: 'Blog', href: '/blog' },

@@ -1,23 +1,20 @@
-import fs from 'fs';
-import path from 'path';
+// Placeholder for fsDb utilities
+export const getSupportTickets = async () => {
+  // Placeholder implementation
+  return [];
+};
 
-const dataRoot = path.join(process.cwd(), 'data');
+export const createSupportTicket = async (ticket: any) => {
+  // Placeholder implementation
+  return { id: Date.now().toString(), ...ticket };
+};
 
-function ensureDir(dirPath: string) {
-  if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true });
-  }
+export const updateSupportTicket = async (id: string, updates: any) => {
+  // Placeholder implementation
+  return { id, ...updates };
+};
 
-export function readJson<T>(relativePath: string, fallback: T): T {
-  const full = path.join(dataRoot, relativePath);
-  try {
-    const raw = fs.readFileSync(full, 'utf-8');
-    return JSON.parse(raw) as T;
-  } catch (_) {
-    return fallback;
-  }
-
-export function writeJson<T>(relativePath: string, value: T): void {
-  const full = path.join(dataRoot, relativePath);
-  ensureDir(path.dirname(full));
-  fs.writeFileSync(full, JSON.stringify(value, null, 2), 'utf-8');
+export const deleteSupportTicket = async (id: string) => {
+  // Placeholder implementation
+  return { success: true };
+};

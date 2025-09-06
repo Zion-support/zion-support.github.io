@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 
 export default function AccessibilityScannerPage() {
@@ -40,6 +41,10 @@ export default function AccessibilityScannerPage() {
 =======
 import SEO from '../components/SEO';
 export default function AccessibilityScannerPage() {
+=======
+import SEO from '../components/SEO';
+export default function AccessibilityScannerPage() {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<>
 			<SEO title="Accessibility Scanner" description="Automated WCAG scanning and remediation guidance." canonical="/accessibility-scanner" />
@@ -56,4 +61,7 @@ export default function AccessibilityScannerPage() {
 		</>
 	)
 }
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

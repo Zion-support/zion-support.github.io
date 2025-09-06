@@ -4,8 +4,11 @@ const path = require('path');
 const nextConfig = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
@@ -26,6 +29,7 @@ const nextConfig = {
 			{ source: '/smart-crm-intelligence-suite', destination: '/services/smart-crm-intelligence-suite', permanent: true },
 			{ source: '/affiliate-attribution-suite', destination: '/services/affiliate-attribution-suite', permanent: true }
 		];
+<<<<<<< HEAD
 <<<<<<< HEAD
 	}
 =======
@@ -776,5 +780,8 @@ const nextConfig = {
 =======
 	}};
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+	}};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 module.exports = nextConfig;

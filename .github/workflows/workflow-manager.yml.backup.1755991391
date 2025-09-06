@@ -31,8 +31,11 @@ jobs:
         run: |
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           {
             echo "## 🔍 Workflow Health Analysis";
             echo "Analyzing workflow performance and health...";
@@ -57,6 +60,7 @@ jobs:
             fi
 
             echo "Health analysis completed";
+<<<<<<< HEAD
 <<<<<<< HEAD
           } >> "$GITHUB_STEP_SUMMARY"
 =======
@@ -88,6 +92,9 @@ jobs:
 =======
           } >> "$GITHUB_STEP_SUMMARY"  workflow-optimization:
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          } >> "$GITHUB_STEP_SUMMARY"  workflow-optimization:
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     name: Workflow Optimization
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -116,6 +123,7 @@ jobs:
           - High frequency workflows: $(grep -r "cron.*\*/[0-9]" .github/workflows/ | wc -l)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           - Workflows without error handling: $(grep -L "continue-on-error\|if: always()" .github/workflows/*.yml 2>/dev/null | wc -l)
 =======
           - Workflows without error handling: $(grep -L "continue-on-error\|if: always()" .github/workflows/*.yml | wc -l)
@@ -124,6 +132,9 @@ jobs:
 =======
           - Workflows without error handling: $(grep -L "continue-on-error\|if: always()" .github/workflows/*.yml 2>/dev/null | wc -l)
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          - Workflows without error handling: $(grep -L "continue-on-error\|if: always()" .github/workflows/*.yml 2>/dev/null | wc -l)
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           ## Recommendations
 
           ### 1. Schedule Optimization
@@ -132,6 +143,7 @@ jobs:
           - Implement staggered scheduling to avoid resource conflicts
 
           ### 2. Error Handling
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           - Add `continue-on-error: true` to non-critical steps
@@ -145,6 +157,10 @@ jobs:
           - Add `continue-on-error: true` to non-critical steps
           - Use `if: always()` for cleanup and reporting steps          - Implement proper retry mechanisms for flaky operations
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          - Add `continue-on-error: true` to non-critical steps
+          - Use `if: always()` for cleanup and reporting steps          - Implement proper retry mechanisms for flaky operations
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
           ### 3. Resource Management
           - Use concurrency groups to prevent overlapping runs
@@ -182,8 +198,11 @@ jobs:
         run: |
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           {
             echo "## 📅 Current Workflow Schedule Analysis";
             echo "";
@@ -211,6 +230,7 @@ jobs:
             echo "- Afternoon: Security scans and dependency updates";
             echo "- Evening: Maintenance and optimization";
             echo "- Night: Light monitoring and cleanup";
+<<<<<<< HEAD
 <<<<<<< HEAD
           } >> "$GITHUB_STEP_SUMMARY"
 =======
@@ -245,6 +265,9 @@ jobs:
 =======
           } >> "$GITHUB_STEP_SUMMARY"  workflow-summary:
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          } >> "$GITHUB_STEP_SUMMARY"  workflow-summary:
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     name: Workflow Summary
     runs-on: ubuntu-latest
     needs:
@@ -257,8 +280,11 @@ jobs:
         run: |
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           {
             echo "## 🎯 Workflow Management Summary";
             echo "";
@@ -282,6 +308,7 @@ jobs:
             echo "2. Implement suggested improvements";
             echo "3. Monitor workflow performance";
             echo "4. Schedule next review";
+<<<<<<< HEAD
 <<<<<<< HEAD
           } >> "$GITHUB_STEP_SUMMARY"
 =======
@@ -312,3 +339,6 @@ jobs:
 =======
           } >> "$GITHUB_STEP_SUMMARY"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          } >> "$GITHUB_STEP_SUMMARY"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

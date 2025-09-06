@@ -1,14 +1,10 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: true,
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true
   },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: true
   },
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
@@ -19,17 +15,11 @@ const nextConfig = {
       'localhost',
       'ziontechgroup.com',
       'images.unsplash.com',
-      'via.placeholder.com',
-    ],
+      'via.placeholder.com'],
     formats: ['image/webp', 'image/avif'],
-    minimumCacheTTL: 60,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
-  },
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
-  },
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000},
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
@@ -65,26 +55,13 @@ const nextConfig = {
           '**/performance-*.sh',
           '**/performance-*.html',
           '**/performance-*.md',
-          '**/performance-*.txt',
+          '**/performance-*.txt'
         ],
         poll: 1000,
-        aggregateTimeout: 300,
-      };
-    }
-    if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-        },
-      };
+        aggregateTimeout: 300};
     }
     return config;
-  },
+  }
 };
 
 export default nextConfig;

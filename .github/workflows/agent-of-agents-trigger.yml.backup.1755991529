@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 name: Agent Of Agents Trigger
 
 on:
@@ -23,6 +26,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 name: Agent of Agents Trigger
@@ -53,6 +57,8 @@ jobs:
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -60,6 +66,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         run: npm ci --no-audit --no-fund
@@ -83,3 +90,8 @@ jobs:
       - name: Run workflow
         run: echo "Workflow completed successfully"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        run: npm ci --no-audit --no-fund
+      - name: Run workflow
+        run: echo "Workflow completed successfully"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,9 +1,12 @@
 {
   "summary": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "totalFiles": 0,
     "filesWithIssues": 0,
     "totalIssues": 0,
@@ -15,6 +18,7 @@
   "buildBreakingFiles": [],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "generatedAt": "2025-08-21T00:25:44.309Z"
 =======
   "generatedAt": "2025-08-20T22:03:55.516Z"
@@ -23,3 +27,6 @@
 =======
   "generatedAt": "2025-08-21T00:25:44.309Z"}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  "generatedAt": "2025-08-21T00:25:44.309Z"}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

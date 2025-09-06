@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function YouTubeRedirect() {
   useEffect(() => {
@@ -31,6 +32,9 @@ export default function YouTubeRedirect() {
   );
 =======
 export default function YouTubeRedirect() {
+=======
+export default function YouTubeRedirect() {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //youtube.com/@ziontechgroup')
@@ -51,5 +55,9 @@ export default function YouTubeRedirect() {
 			</div>
 		</>
 	)
+<<<<<<< HEAD
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

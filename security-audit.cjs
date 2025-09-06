@@ -154,7 +154,11 @@ const securityHeaders = [
   },
   {
     key: 'Strict-Transport-Security',
+<<<<<<< HEAD
     value: 'max-age=63072000, includeSubDomains, preload'
+=======
+    value: 'max-age=63072000; includeSubDomains; preload'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   },
   {
     key: 'X-XSS-Protection',
@@ -206,19 +210,31 @@ module.exports = {
     this.log('');
     
     if (this.vulnerabilities.length > 0) {
+<<<<<<< HEAD
       this.log('⚠️ Security Vulnerabilities: '),
+=======
+      this.log('⚠️ Security Vulnerabilities:');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       this.vulnerabilities.forEach(vuln => this.log(`   • ${vuln}`));
       this.log('');
     }
     
     if (this.fixes.length > 0) {
+<<<<<<< HEAD
       this.log('✅ Security Fixes Applied: '),
+=======
+      this.log('✅ Security Fixes Applied:');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       this.fixes.forEach(fix => this.log(`   • ${fix}`));
       this.log('');
     }
     
     if (this.errors.length > 0) {
+<<<<<<< HEAD
       this.log('❌ Errors: '),
+=======
+      this.log('❌ Errors:');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       this.errors.forEach(error => this.log(`   • ${error}`));
       this.log('');
     }

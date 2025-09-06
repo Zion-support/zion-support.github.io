@@ -1,13 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs-extra';
 import path from 'path';
 
 export interface WarningEmailPayload {
   toUserId: string;
   toAddress?: string | null;
+=======
+export interface EmailOptions {
+  to: string;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   subject: string;
   body: string;
+}
 
+<<<<<<< HEAD
 export async function sendWarningEmail(
   payload: WarningEmailPayload
 ): Promise<void> {
@@ -390,3 +397,9 @@ export const COMMON_TEMPLATES = {
   SECURITY_NOTIFICATION: 'security_notification'
 };
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export async function sendWarningEmail(options: EmailOptions): Promise<void> {
+  // Mock implementation - in production, this would send actual emails
+  console.log('Email would be sent:', options);
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

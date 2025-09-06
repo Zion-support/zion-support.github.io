@@ -30,8 +30,11 @@ jobs:
           fetch-depth: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -59,6 +62,7 @@ jobs:
             python3 -c "import yaml; yaml.safe_load(open('$file'))" && echo "✅ $file is valid" || echo "❌ $file has errors"
           done
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       - name: Create Auto-Heal Report
 =======
@@ -105,6 +109,11 @@ PY
           echo "📊 Auto-Heal Report" > auto-heal-report.md
           echo "=====" >> auto-heal-report.md
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      - name: Create Auto-Heal Report        run: |
+          echo "📊 Auto-Heal Report" > auto-heal-report.md
+          echo "=====" >> auto-heal-report.md
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           echo "" >> auto-heal-report.md
           echo "**Timestamp:** $(date)" >> auto-heal-report.md
           echo "**Workflows Checked:** $(ls .github/workflows/*.yml | wc -l)" >> auto-heal-report.md

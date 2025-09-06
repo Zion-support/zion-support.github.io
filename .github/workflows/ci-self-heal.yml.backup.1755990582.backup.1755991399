@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 ---
 name: ci-self-heal
 on:
@@ -27,6 +30,7 @@ jobs:
           fetch-depth: 0
       - name: Setup Node.js
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 name: CI Self-Heal
 
@@ -49,6 +53,8 @@ concurrency:
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 jobs:
   attempt-fix:
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
@@ -60,22 +66,29 @@ jobs:
 
       - name: Setup Node
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-continuous-development-processes-4d04
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: npm
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Run workflow
         run: |
           echo "Workflow completed successfully"
+<<<<<<< HEAD
 <<<<<<< HEAD
           
 =======
@@ -112,3 +125,6 @@ jobs:
 =======
           
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

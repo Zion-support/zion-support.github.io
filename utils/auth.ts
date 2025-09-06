@@ -1,53 +1,38 @@
-<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
 
-export function getRequestUserEmail(req: NextApiRequest): string | null {
-  const emailHeader = req.headers['x-user-email'];
-  if (Array.isArray(emailHeader)) return emailHeader[0] || null;
-  return (emailHeader as string) || null;
-
-export function isAdminEmail(email: string | null | undefined): boolean {
-  if (!email) return false;
-  const admins = (process.env.ADMIN_EMAILS || '')
-    .split(',')
-    .map(e => e.trim().toLowerCase())
-    .filter(Boolean);
-  return admins.includes(email.toLowerCase());
-=======
-// Authentication utilities
 export interface User {
-  id: string, email: string,
-  name: string, role: 'admin' | 'user' | 'moderator',
+  id: string;
+  email: string;
+  role: string;
 }
 
-export interface AuthSession {
-  user: User, token: string,
-  expiresAt: number,
-}
-
-export function createAuthSession(user: User, token: string): AuthSession {
+export function parseUserFromRequest(req: NextApiRequest): User | null {
+  // Mock implementation - in a real app, this would parse JWT or session
+  const authHeader = req.headers.authorization;
+  if (!authHeader) return null;
+  
+  // Simple mock user for development
   return {
-    user,
-    token,
-    expiresAt: Date.now() + 24 * 60 * 60 * 1000, // 24 hours
+    id: 'mock-user-id',
+    email: 'admin@zion.os',
+    role: 'admin'
   };
 }
 
-export function isAuthenticated(session: AuthSession | null): boolean {
-    if (!session) return false,
-    return Date.now() < session.expiresAt
+export function ensureAdmin(user: User | null): void {
+  if (!user || user.role !== 'admin') {
+    const error = new Error('Forbidden');
+    (error as any).statusCode = 403;
+    throw error;
   }
-
-export function hasRole(session: AuthSession | null, role: string): boolean {
-    if (!session || !isAuthenticated(session)) return false,
-    return session.user.role === role
-  }
-
-export function isAdmin(session: AuthSession | null): boolean {
-  return hasRole(session, 'admin');
 }
 
-export function isModerator(session: AuthSession | null): boolean {
-  return hasRole(session, 'moderator') || isAdmin(session);
+export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
+  try {
+    const user = parseUserFromRequest(req);
+    ensureAdmin(user);
+    return { allowed: true };
+  } catch {
+    return { allowed: false };
+  }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

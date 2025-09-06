@@ -26,6 +26,7 @@
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@prisma/client": "^6.14.0",
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.39.0",
@@ -46,6 +47,12 @@
     "@supabase/supabase-js": "^2.39.0",
     "@tailwindcss/postcss": "^4.1.12",    "@types/react-datepicker": "^6.2.0",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "@prisma/client": "^6.14.0",
+    "@supabase/ssr": "^0.6.1",
+    "@supabase/supabase-js": "^2.39.0",
+    "@tailwindcss/postcss": "^4.1.12",    "@types/react-datepicker": "^6.2.0",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "axios": "^1.11.0",
     "chalk": "^5.5.0",
     "chart.js": "^4.5.0",
@@ -76,6 +83,7 @@
     "path": "^0.12.7",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "pdfkit": "^0.17.1",
 =======
     "pdfkit": "^0.15.0",
@@ -85,6 +93,9 @@
 =======
     "pdfkit": "^0.17.1",    "postcss": "^8.4.32",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "pdfkit": "^0.17.1",    "postcss": "^8.4.32",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "react": "^19.1.1",
     "react-chartjs-2": "^5.3.0",
     "react-datepicker": "^8.4.0",

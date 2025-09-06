@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -11,37 +12,51 @@ import {
 import { PricingSuggestionBox } from './PricingSuggestionBox';
 import { useAuth } from '@/hooks/useAuth';
 import { Sparkles } from 'lucide-react';
+=======
+
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
+import { 
+  getClientBudgetSuggestion;
+  PricingSuggestion;
+  ClientBudgetParams;
+  trackPricingSuggestion
+} from "@/services/pricingSuggestionService";
+import { PricingSuggestionBox } from "./PricingSuggestionBox";
+import { useAuth } from "@/hooks/useAuth";
+import { Sparkles } from 'lucide-react'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface ClientBudgetRecommenderProps {
-  jobTitle: string;
-  category: string;
+  jobTitle: string,
+  category: string,
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
-  onSuggestionApplied: (minValue: number, maxValue: number) => void;
+  onSuggestionApplied: (minValue: number, maxValue: number) => void
+}
 
-export const ClientBudgetRecommender: React.FC<
-  ClientBudgetRecommenderProps
-> = ({
-  jobTitle,
-  category,
-  timeline,
-  scope,
-  experienceLevel,
-  onSuggestionApplied,
-}) => {
+export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
+  jobTitle;
+  category;
+  timeline;
+  scope;
+  experienceLevel;
+  onSuggestionApplied}) => {
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
   const { user } = useAuth();
 
   const generateSuggestion = async () => {
     if (!jobTitle || !category) {
-      return;
+      return
     }
 
     setIsLoading(true);
     try {
       const params: ClientBudgetParams = {
+<<<<<<< HEAD
         jobTitle,
         category,
       };
@@ -50,6 +65,10 @@ export const ClientBudgetRecommender: React.FC<
 <<<<<<< HEAD
 
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        jobTitle;
+        category};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
       if (timeline) params.timeline = timeline;
       if (scope) params.scope = scope;
@@ -57,58 +76,57 @@ export const ClientBudgetRecommender: React.FC<
 
 <<<<<<< HEAD
       const result = await getClientBudgetSuggestion(params);
-      setSuggestion(result);
+      setSuggestion(result)
     } catch (error) {
-      logErrorToProduction('Error generating budget suggestion:', {
-        data: error,
-      });
+      logErrorToProduction('Error generating budget suggestion:', { data: error })
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
   };
 
   const handleApplySuggestion = () => {
     if (suggestion) {
       onSuggestionApplied(suggestion.minRate, suggestion.maxRate);
-
+      
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
           userId: user.id,
-          suggestionType: 'client',
+          suggestionType: "client",
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
-          accepted: true,
-        });
+          accepted: true
+        })
       }
     }
   };
 
   return (
-    <div className='space-y-4'>
+    <div className="space-y-4">
       <div>
         {!suggestion && !isLoading ? (
           <Button
-            type='button'
-            variant='outline'
+            type="button"
+            variant="outline"
             onClick={generateSuggestion}
             disabled={!jobTitle || !category}
-            className='w-full'
+            className="w-full"
           >
-            <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation
+            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
           </Button>
         ) : (
           <PricingSuggestionBox
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
-            rateType='hourly'
+            rateType="hourly"
           />
         )}
       </div>
     </div>
-  );
+  )
 };
+<<<<<<< HEAD
 if (scope) params.scope = scope;
 if (experienceLevel) params.experienceLevel = experienceLevel;
 //Track this suggestion application if (user && user.id) {;
@@ -128,3 +146,5 @@ return (<div className="space-y-4" > <div> {";
 
 
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

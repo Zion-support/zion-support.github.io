@@ -1,8 +1,11 @@
 const nextConfig = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   assetPrefix,
   poweredByHeader: false,
   trailingSlash: false,
@@ -242,9 +245,12 @@ const nextConfig = {
     'remark-rehype',
     'formik',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     'lodash',
     'lodash-es',
     'lodash/isPlainObject',
@@ -323,9 +329,12 @@ const nextConfig = {
       );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
     
     // Development optimizations to prevent memory leaks with 176+ pages

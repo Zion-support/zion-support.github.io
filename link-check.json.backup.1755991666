@@ -16,8 +16,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/site.webmanifest",
       "status": 200,
       "state": "OK",
@@ -32,6 +35,7 @@
       "failureDetails": []
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
     {
 =======
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-e72a
@@ -39,12 +43,16 @@
 =======
     {      "url": "https://ziontechgroup.com/_next/static/chunks/polyfills-42372ed130431b0a.js",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    {      "url": "https://ziontechgroup.com/_next/static/chunks/polyfills-42372ed130431b0a.js",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "status": 200,
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://ziontechgroup.com/_next/static/chunks/webpack-e219339f62a4a96e.js",
@@ -52,11 +60,15 @@
 =======
       "url": "https://ziontechgroup.com/_next/static/chunks/3038-59068d5170b3df77.js",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/_next/static/chunks/3038-59068d5170b3df77.js",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-e72a
@@ -65,11 +77,15 @@
 =======
       "url": "https://ziontechgroup.com/_next/static/chunks/framework-1548034a53843b9f.js",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/_next/static/chunks/framework-1548034a53843b9f.js",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://ziontechgroup.com/_next/static/chunks/3038-59068d5170b3df77.js",
@@ -80,11 +96,15 @@
 =======
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/_app-ce4a9b89497d7597.js",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/_next/static/chunks/pages/_app-ce4a9b89497d7597.js",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://ziontechgroup.com/_next/static/chunks/framework-1548034a53843b9f.js",
@@ -95,11 +115,15 @@
 =======
       "url": "https://ziontechgroup.com/_next/static/chunks/3448-0eacbbd6bb32b4fb.js",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/_next/static/chunks/3448-0eacbbd6bb32b4fb.js",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/_app-ce4a9b89497d7597.js",
@@ -126,6 +150,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/_next/static/chunks/6848-ec9a105383c44fe7.js",
       "status": 200,
       "state": "OK",
@@ -148,6 +174,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://ziontechgroup.com/_next/static/uNcGLLZ_mHV6V-7WcblMJ/_ssgManifest.js",
 =======
       "url": "https://ziontechgroup.com/_next/static/css/5d55a64fc96a0bf7.css",
@@ -156,6 +183,9 @@
 =======
       "url": "https://ziontechgroup.com/_next/static/uNcGLLZ_mHV6V-7WcblMJ/_ssgManifest.js",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/_next/static/uNcGLLZ_mHV6V-7WcblMJ/_ssgManifest.js",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
@@ -170,6 +200,7 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://ziontechgroup.com/ai-content-marketing-automation",
 =======
       "url": "https://ziontechgroup.com/fonts/Inter-Variable.woff2",
@@ -178,10 +209,14 @@
 =======
       "url": "https://ziontechgroup.com/ai-content-marketing-automation",      "status": 404,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/ai-content-marketing-automation",      "status": 404,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "BROKEN",
       "parent": "https://ziontechgroup.com/"
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://ziontechgroup.com/ai-supply-chain-optimization",
@@ -192,6 +227,9 @@
 =======
       "url": "https://ziontechgroup.com/ai-supply-chain-optimization",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/ai-supply-chain-optimization",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
@@ -199,8 +237,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/ai-consciousness-evolution",
       "status": 404,
       "state": "BROKEN",
@@ -353,6 +394,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://ziontechgroup.com/ai-healthcare-diagnostics",
 =======
       "url": "https://ziontechgroup.com/contact/",
@@ -360,11 +402,21 @@
 =======
       "url": "https://ziontechgroup.com/ai-healthcare-diagnostics",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/ai-healthcare-diagnostics",      "status": 200,
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
     },
     {
+      "url": "https://ziontechgroup.com/ai-sustainability-platform",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      "state": "OK",
+      "parent": "https://ziontechgroup.com/",
+      "failureDetails": []
+    },
+    {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/_app-88853fa38f064c91.js",
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-e72a
@@ -372,11 +424,15 @@
 =======
       "url": "https://ziontechgroup.com/ai-sustainability-platform",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/ai-financial-intelligence",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://ziontechgroup.com/ai-sustainability-platform",
@@ -407,6 +463,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/ai-legal-document-analysis/",
       "status": 200,
       "state": "OK",
@@ -1187,6 +1245,7 @@
       "status": 200,
       "state": "OK",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "parent": "https://ziontechgroup.com/pricing/",
 =======
       "url": "https://ziontechgroup.com/chat/",
@@ -1247,6 +1306,9 @@
 =======
       "parent": "https://ziontechgroup.com/pricing/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/pricing/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://ziontechgroup.com/intelligent-supply-chain-optimization/",
@@ -1254,8 +1316,11 @@
       "state": "OK",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "parent": "https://ziontechgroup.com/pricing/",
       "failureDetails": []
     },
@@ -1506,6 +1571,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/quote-e1b4b5e7f7ba0a74.js",
 =======
       "parent": "https://ziontechgroup.com/",
@@ -1518,6 +1584,9 @@
 =======
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/quote-e1b4b5e7f7ba0a74.js",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/_next/static/chunks/pages/quote-e1b4b5e7f7ba0a74.js",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/quote/",
       "failureDetails": []
@@ -1525,8 +1594,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/space-resource-mining-platform/",
       "status": 200,
       "state": "OK",
@@ -1571,6 +1643,7 @@
       "url": "https://ziontechgroup.com/quantum-financial-trading/",
       "status": 200,
       "state": "OK",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "parent": "https://ziontechgroup.com/pricing/",
 =======
@@ -1646,6 +1719,9 @@
 =======
       "parent": "https://ziontechgroup.com/pricing/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/pricing/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://ziontechgroup.com/quote",
@@ -1657,9 +1733,12 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/demo-1b19abc7821fddb8.js",
       "status": 200,
       "state": "OK",
@@ -1758,9 +1837,12 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-e72a
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/chat",
       "status": 200,
       "state": "OK",
@@ -1770,8 +1852,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/quantum-bio-computing-platform/",
       "status": 200,
       "state": "OK",
@@ -1789,6 +1874,7 @@
       "url": "https://ziontechgroup.com/autonomous-vehicle-ai-platform/",
       "status": 200,
       "state": "OK",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "parent": "https://ziontechgroup.com/pricing/",
 =======
@@ -1836,6 +1922,9 @@
 =======
       "parent": "https://ziontechgroup.com/pricing/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/pricing/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://ziontechgroup.com/quantum-materials-discovery-platform/",
@@ -1843,8 +1932,11 @@
       "state": "OK",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "parent": "https://ziontechgroup.com/pricing/",
       "failureDetails": []
     },
@@ -1852,6 +1944,7 @@
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/chat-9df611ddfb06181e.js",
       "status": 200,
       "state": "OK",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "parent": "https://ziontechgroup.com/chat/",
 =======
@@ -1896,6 +1989,9 @@
 =======
       "parent": "https://ziontechgroup.com/chat/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/chat/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://ziontechgroup.com/autonomous-it-operations-center/",
@@ -1903,8 +1999,11 @@
       "state": "OK",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "parent": "https://ziontechgroup.com/pricing/",
       "failureDetails": []
     },
@@ -2046,6 +2145,7 @@
       "status": 200,
       "state": "OK",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "parent": "https://ziontechgroup.com/pricing/",
 =======
       "parent": "https://ziontechgroup.com/",
@@ -2061,6 +2161,9 @@
 =======
       "parent": "https://ziontechgroup.com/pricing/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/pricing/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://ziontechgroup.com/blockchain-infrastructure-platform/",
@@ -2068,8 +2171,11 @@
       "state": "OK",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "parent": "https://ziontechgroup.com/pricing/",
       "failureDetails": []
     },
@@ -2119,6 +2225,7 @@
       "url": "https://ziontechgroup.com/services/log-archive-search",
       "status": 200,
       "state": "OK",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "parent": "https://ziontechgroup.com/services/",
 =======
@@ -2218,6 +2325,9 @@
 =======
       "parent": "https://ziontechgroup.com/services/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/services/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://ziontechgroup.com/ai-sales-automation/",
@@ -2225,8 +2335,11 @@
       "state": "OK",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "parent": "https://ziontechgroup.com/pricing/",
       "failureDetails": []
     },
@@ -2269,6 +2382,7 @@
       "url": "https://ziontechgroup.com/soc2-compliance-automation",
       "status": 200,
       "state": "OK",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "parent": "https://ziontechgroup.com/services/",
 =======
@@ -2341,11 +2455,15 @@
 =======
       "parent": "https://ziontechgroup.com/services/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/services/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://ziontechgroup.com/retail-technology-solutions/",
       "status": 200,
       "state": "OK",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "parent": "https://ziontechgroup.com/pricing/",
@@ -2398,6 +2516,9 @@
 =======
       "parent": "https://ziontechgroup.com/pricing/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/pricing/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://ziontechgroup.com/education-technology-solutions/",
@@ -2405,8 +2526,11 @@
       "state": "OK",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "parent": "https://ziontechgroup.com/pricing/",
       "failureDetails": []
     },
@@ -2464,6 +2588,7 @@
       "status": 200,
       "state": "OK",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "parent": "https://ziontechgroup.com/market-pricing/",
 =======
       "parent": "https://ziontechgroup.com/",
@@ -2479,6 +2604,9 @@
 =======
       "parent": "https://ziontechgroup.com/market-pricing/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/market-pricing/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://openrouter.ai/models",
@@ -2486,8 +2614,11 @@
       "state": "OK",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "parent": "https://ziontechgroup.com/market-pricing/",
       "failureDetails": []
     },
@@ -3085,6 +3216,7 @@
       "url": "https://ziontechgroup.com/services/gdpr-dsar-portal-lite",
       "status": 200,
 <<<<<<< HEAD
+<<<<<<< HEAD
       "state": "OK",
 =======
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-e72a
@@ -3104,12 +3236,16 @@
 =======
       "state": "OK",      "url": "https://aws.amazon.com/rds/postgresql/pricing/",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "state": "OK",      "url": "https://aws.amazon.com/rds/postgresql/pricing/",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "status": 200,
       "state": "OK",
       "parent": "https://ziontechgroup.com/services-advertising/",
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://ziontechgroup.com/services/ai-red-teaming-suite",
       "status": 200,
@@ -3417,6 +3553,12 @@
       "state": "OK",
       "parent": "https://ziontechgroup.com/market-pricing/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://owasp.org/www-project-api-security/",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://ziontechgroup.com/market-pricing/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://www.atlassian.com/software/statuspage/pricing",
@@ -3428,8 +3570,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://www.jasper.ai/pricing",
       "status": 200,
       "state": "OK",
@@ -3437,6 +3582,7 @@
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://letsencrypt.org/",
 =======
@@ -3453,6 +3599,9 @@
 =======
       "url": "https://letsencrypt.org/",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://letsencrypt.org/",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/services-advertising/",
       "failureDetails": []
@@ -3467,9 +3616,12 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://www.anthropic.com/pricing",
       "status": 200,
       "state": "OK",
@@ -3485,9 +3637,12 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-e72a
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://www.checklyhq.com/pricing/",
       "status": 200,
       "state": "OK",
@@ -3497,14 +3652,18 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://www.cloudflare.com/plans/zero-trust/",
       "status": 404,
       "state": "BROKEN",
       "parent": "https://ziontechgroup.com/market-pricing/"
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://www.loopreturns.com/pricing/",
 =======
@@ -3549,6 +3708,9 @@
 =======
       "url": "https://www.loopreturns.com/pricing/",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://www.loopreturns.com/pricing/",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/market-pricing/",
       "failureDetails": []
@@ -3556,8 +3718,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://www.pdfmonkey.io/pricing",
       "status": 200,
       "state": "OK",
@@ -3568,6 +3733,7 @@
       "url": "https://workers.cloudflare.com/",
       "status": 200,
       "state": "OK",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "parent": "https://ziontechgroup.com/market-pricing/",
 =======
@@ -3587,6 +3753,9 @@
 =======
       "parent": "https://ziontechgroup.com/market-pricing/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/market-pricing/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://partnerstack.com/",
@@ -3596,6 +3765,7 @@
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://www.cloudzero.com/pricing",
@@ -3622,6 +3792,12 @@
       "state": "OK",
       "parent": "https://ziontechgroup.com/market-pricing/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://www.cloudzero.com/pricing",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://ziontechgroup.com/market-pricing/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://teachable.com/pricing",
@@ -3633,8 +3809,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://drata.com/pricing",
       "status": 403,
       "state": "BROKEN",
@@ -3675,6 +3854,7 @@
       "parent": "https://ziontechgroup.com/services-advertising/",
       "failureDetails": []
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
     {
 =======
@@ -3883,6 +4063,9 @@
 =======
     {      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    {      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/services-advertising/",
       "failureDetails": []
@@ -3897,6 +4080,7 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://www.gmass.co/pricing",
 =======
       "url": "https://www.ssllabs.com/ssltest/",
@@ -3905,11 +4089,15 @@
 =======
       "url": "https://www.gmass.co/pricing",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://www.gmass.co/pricing",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/services-advertising/",
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://aws.amazon.com/backup/pricing/",
@@ -3920,6 +4108,9 @@
 =======
       "url": "https://aws.amazon.com/backup/pricing/",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://aws.amazon.com/backup/pricing/",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/services-advertising/",
       "failureDetails": []
@@ -3927,8 +4118,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://segment.com/pricing",
       "status": 200,
       "state": "OK",
@@ -3939,6 +4133,7 @@
       "url": "https://docs.getdbt.com/docs/build/tests",
       "status": 200,
       "state": "OK",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "parent": "https://ziontechgroup.com/market-pricing/",
 =======
@@ -3986,6 +4181,9 @@
 =======
       "parent": "https://ziontechgroup.com/market-pricing/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/market-pricing/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://stoplight.io/",
@@ -3995,6 +4193,7 @@
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://aws.amazon.com/eks/pricing/",
@@ -4011,6 +4210,9 @@
 =======
       "url": "https://aws.amazon.com/eks/pricing/",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://aws.amazon.com/eks/pricing/",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/services-advertising/",
       "failureDetails": []
@@ -4018,8 +4220,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://returnly.com/",
       "status": 200,
       "state": "OK",
@@ -4027,6 +4232,7 @@
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://www.intercom.com/pricing",
 =======
@@ -4078,6 +4284,9 @@
 =======
       "url": "https://www.intercom.com/pricing",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://www.intercom.com/pricing",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/services-advertising/",
       "failureDetails": []
@@ -4092,6 +4301,7 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://www.postgresql.org/docs/current/auto-explain.html",
 =======
       "url": "https://www.gmass.co/pricing",
@@ -4100,11 +4310,15 @@
 =======
       "url": "https://www.postgresql.org/docs/current/auto-explain.html",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://www.postgresql.org/docs/current/auto-explain.html",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/services-advertising/",
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://clickhouse.com/pricing",
@@ -4115,11 +4329,15 @@
 =======
       "url": "https://clickhouse.com/pricing",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://clickhouse.com/pricing",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/market-pricing/",
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://ti.to/pricing",
@@ -4130,6 +4348,9 @@
 =======
       "url": "https://ti.to/pricing",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ti.to/pricing",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/services-advertising/",
       "failureDetails": []
@@ -4137,14 +4358,18 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://www.pigment.com/pricing",
       "status": 404,
       "state": "BROKEN",
       "parent": "https://ziontechgroup.com/services-advertising/"
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://www.onetrust.com/products/privacy-management/",
 =======
@@ -4182,6 +4407,9 @@
 =======
       "url": "https://www.onetrust.com/products/privacy-management/",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://www.onetrust.com/products/privacy-management/",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/market-pricing/",
       "failureDetails": []
@@ -4194,6 +4422,7 @@
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://sendgrid.com/pricing/",
@@ -4224,6 +4453,9 @@
 =======
       "url": "https://sendgrid.com/pricing/",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://sendgrid.com/pricing/",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/market-pricing/",
       "failureDetails": []
@@ -4231,8 +4463,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://www.copy.ai/pricing",
       "status": 200,
       "state": "OK",
@@ -4283,6 +4518,7 @@
       "status": 200,
       "state": "OK",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "parent": "https://ziontechgroup.com/services-advertising/",
 =======
       "url": "https://langfuse.com/pricing",
@@ -4301,6 +4537,9 @@
 =======
       "parent": "https://ziontechgroup.com/services-advertising/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/services-advertising/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://www.zoho.com/crm/pricing.html",
@@ -4312,8 +4551,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://www.talentlms.com/pricing",
       "status": 200,
       "state": "OK",
@@ -4364,6 +4606,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://plausible.io/pricing",
 =======
       "url": "https://github.com/shreyashankar/gpt-guardrails",
@@ -4372,14 +4615,20 @@
 =======
       "url": "https://plausible.io/pricing",      "status": 404,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://plausible.io/pricing",      "status": 404,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "BROKEN",
       "parent": "https://ziontechgroup.com/services-advertising/"
     },
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://www.lakera.ai/",
       "status": 200,
       "state": "OK",
@@ -4413,6 +4662,7 @@
       "parent": "https://ziontechgroup.com/services-advertising/",
       "failureDetails": []
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
     {
 =======
@@ -4463,12 +4713,19 @@
     },
     {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    {      "state": "BROKEN",
+      "parent": "https://ziontechgroup.com/services-advertising/"
+    },
+    {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://www.hubspot.com/pricing/starter",
       "status": 404,
       "state": "BROKEN",
       "parent": "https://ziontechgroup.com/services-advertising/"
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://www.kubecost.com/pricing",
 =======
@@ -4506,6 +4763,9 @@
 =======
       "url": "https://www.kubecost.com/pricing",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://www.kubecost.com/pricing",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/market-pricing/",
       "failureDetails": []
@@ -4513,8 +4773,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://www.soda.io/pricing",
       "status": 200,
       "state": "OK",
@@ -4557,6 +4820,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://www.cloudflare.com/products/zero-trust/pricing/",
 =======
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/ai-financial-planning-platform-3d931fc26bae4ae3.js",
@@ -4579,14 +4843,20 @@
 =======
       "url": "https://www.cloudflare.com/products/zero-trust/pricing/",      "status": 404,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://www.cloudflare.com/products/zero-trust/pricing/",      "status": 404,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "BROKEN",
       "parent": "https://ziontechgroup.com/services-advertising/"
     },
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://www.semrush.com/prices/",
       "status": 200,
       "state": "OK",
@@ -4594,6 +4864,7 @@
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://www.split.io/pricing/",
 =======
@@ -4610,6 +4881,9 @@
 =======
       "url": "https://www.split.io/pricing/",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://www.split.io/pricing/",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/market-pricing/",
       "failureDetails": []
@@ -4617,8 +4891,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://www.hubspot.com/pricing/sales",
       "status": 200,
       "state": "OK",
@@ -4650,6 +4927,7 @@
       "url": "https://ziontechgroup.com/services/finops-ri-sp-optimizer",
       "status": 200,
       "state": "OK",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "parent": "https://ziontechgroup.com/services-advertising/",
 =======
@@ -4697,6 +4975,9 @@
 =======
       "parent": "https://ziontechgroup.com/services-advertising/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/services-advertising/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://www.typeform.com/pricing/",
@@ -4708,8 +4989,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/services/vendor-security-questionnaire-ai",
       "status": 200,
       "state": "OK",
@@ -4898,6 +5182,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/ai-evaluation-orchestrator-c78156440cc68851.js",
 =======
       "url": "https://newrelic.com/pricing",
@@ -4962,6 +5247,9 @@
 =======
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/ai-evaluation-orchestrator-c78156440cc68851.js",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/_next/static/chunks/pages/ai-evaluation-orchestrator-c78156440cc68851.js",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/ai-evaluation-orchestrator/",
       "failureDetails": []
@@ -4969,8 +5257,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/energy-utilities-solutions-d0a2061b351572fa.js",
       "status": 200,
       "state": "OK",
@@ -5026,6 +5317,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/it-asset-discovery-agent-7e9c23b7b4ed35a0.js",
 =======
       "url": "https://ziontechgroup.com/ai-powered-decision-engine",
@@ -5076,6 +5368,9 @@
 =======
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/it-asset-discovery-agent-7e9c23b7b4ed35a0.js",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/_next/static/chunks/pages/it-asset-discovery-agent-7e9c23b7b4ed35a0.js",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/it-asset-discovery-agent/",
       "failureDetails": []
@@ -5083,9 +5378,12 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://scale.com/",
       "status": 200,
       "state": "OK",
@@ -5157,9 +5455,12 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-e72a
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/ai-evaluation-orchestrator",
       "status": 200,
       "state": "OK",
@@ -5169,8 +5470,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://humanloop.com/",
       "status": 200,
       "state": "OK",
@@ -5382,6 +5686,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://acuityscheduling.com/signup",
 =======
       "url": "https://thehive.ai/",
@@ -5390,6 +5695,9 @@
 =======
       "url": "https://acuityscheduling.com/signup",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://acuityscheduling.com/signup",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/market-pricing/",
       "failureDetails": []
@@ -5397,8 +5705,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://konghq.com/pricing",
       "status": 200,
       "state": "OK",
@@ -5414,6 +5725,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://postmaster.google.com/",
 =======
       "url": "https://circleci.com/pricing/",
@@ -5422,6 +5734,9 @@
 =======
       "url": "https://postmaster.google.com/",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://postmaster.google.com/",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/market-pricing/",
       "failureDetails": []
@@ -5429,8 +5744,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/quantum-secure-cloud-infrastructure-5a09044a66f666f6.js",
       "status": 200,
       "state": "OK",
@@ -5453,6 +5771,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://www.optic.dev/",
 =======
       "url": "https://www.semrush.com/prices/",
@@ -5461,6 +5780,9 @@
 =======
       "url": "https://www.optic.dev/",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://www.optic.dev/",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/services-advertising/",
       "failureDetails": []
@@ -5468,8 +5790,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/ai-emotional-intelligence-training-39d79f59b9e6d717.js",
       "status": 200,
       "state": "OK",
@@ -5509,6 +5834,7 @@
       "status": 200,
       "state": "OK",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "parent": "https://ziontechgroup.com/ai-emotional-intelligence-training/",
 =======
       "url": "https://labelbox.com/pricing/",
@@ -5527,6 +5853,9 @@
 =======
       "parent": "https://ziontechgroup.com/ai-emotional-intelligence-training/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/ai-emotional-intelligence-training/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://ziontechgroup.com/ai-content-personalization-engine",
@@ -5536,6 +5865,7 @@
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/ai-autonomous-business-operations-a0505f18af5f8676.js",
@@ -5560,6 +5890,9 @@
 =======
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/ai-autonomous-business-operations-a0505f18af5f8676.js",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/_next/static/chunks/pages/ai-autonomous-business-operations-a0505f18af5f8676.js",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/ai-autonomous-business-operations/",
       "failureDetails": []
@@ -5567,8 +5900,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/ai-powered-space-technology-c6ec6f4672d4c842.js",
       "status": 200,
       "state": "OK",
@@ -5654,6 +5990,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/space-resource-mining-platform-02c6253812bb6698.js",
 =======
       "url": "https://ziontechgroup.com/ai-quantum-neural-network",
@@ -5683,6 +6020,9 @@
 =======
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/space-resource-mining-platform-02c6253812bb6698.js",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/_next/static/chunks/pages/space-resource-mining-platform-02c6253812bb6698.js",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/space-resource-mining-platform/",
       "failureDetails": []
@@ -5690,8 +6030,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://www.anaplan.com/platform/overview",
       "status": 404,
       "state": "BROKEN",
@@ -5723,6 +6066,7 @@
       "status": 200,
       "state": "OK",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "parent": "https://ziontechgroup.com/quantum-financial-trading/",
 =======
       "url": "https://cloudconvert.com/pricing",
@@ -5741,6 +6085,9 @@
 =======
       "parent": "https://ziontechgroup.com/quantum-financial-trading/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/quantum-financial-trading/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://ziontechgroup.com/space-resource-mining-platform",
@@ -5752,8 +6099,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/quantum-bio-computing-platform-192fb3e6e236c3f8.js",
       "status": 200,
       "state": "OK",
@@ -5782,6 +6132,7 @@
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://ziontechgroup.com/ai-autonomous-ecosystem-manager",
 =======
@@ -5833,6 +6184,9 @@
 =======
       "url": "https://ziontechgroup.com/ai-autonomous-ecosystem-manager",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/ai-autonomous-ecosystem-manager",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/ai-autonomous-ecosystem-manager/",
       "failureDetails": []
@@ -5840,8 +6194,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/autonomous-vehicle-ai-platform-b23a1d05be4638af.js",
       "status": 200,
       "state": "OK",
@@ -5849,6 +6206,7 @@
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/quantum-internet-security-platform-28a64eb788f6447a.js",
 =======
@@ -5935,11 +6293,15 @@
 =======
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/quantum-internet-security-platform-28a64eb788f6447a.js",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/_next/static/chunks/pages/quantum-internet-security-platform-28a64eb788f6447a.js",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/quantum-internet-security-platform/",
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://aws.amazon.com/config/pricing/",
@@ -5979,6 +6341,12 @@
       "state": "OK",
       "parent": "https://ziontechgroup.com/services-advertising/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://aws.amazon.com/config/pricing/",
+      "status": 200,
+      "state": "OK",
+      "parent": "https://ziontechgroup.com/services-advertising/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://ziontechgroup.com/quantum-internet-security-platform",
@@ -5990,8 +6358,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://joinhomebase.com/pricing/",
       "status": 200,
       "state": "OK",
@@ -6133,6 +6504,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/edge-computing-orchestration-platform-1e09bd3069b61284.js",
 =======
       "url": "https://ziontechgroup.com/ai-autonomous-ecosystem-manager",
@@ -6148,6 +6520,9 @@
 =======
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/edge-computing-orchestration-platform-1e09bd3069b61284.js",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/_next/static/chunks/pages/edge-computing-orchestration-platform-1e09bd3069b61284.js",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/edge-computing-orchestration-platform/",
       "failureDetails": []
@@ -6155,8 +6530,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/ai-data-analytics/",
       "status": 200,
       "state": "OK",
@@ -6258,6 +6636,7 @@
       "status": 200,
       "state": "OK",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "parent": "https://ziontechgroup.com/blockchain-infrastructure-platform/",
 =======
       "url": "https://ziontechgroup.com/ai-powered-space-technology",
@@ -6269,6 +6648,9 @@
 =======
       "parent": "https://ziontechgroup.com/blockchain-infrastructure-platform/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/blockchain-infrastructure-platform/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://ziontechgroup.com/autonomous-it-operations-center",
@@ -6280,8 +6662,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/ai-legal-contract-analyzer-676849740ff7d624.js",
       "status": 200,
       "state": "OK",
@@ -6330,6 +6715,7 @@
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/quantum-cloud-infrastructure-platform-05afc2df6c307568.js",
 =======
@@ -6381,6 +6767,9 @@
 =======
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/quantum-cloud-infrastructure-platform-05afc2df6c307568.js",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/_next/static/chunks/pages/quantum-cloud-infrastructure-platform-05afc2df6c307568.js",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/quantum-cloud-infrastructure-platform/",
       "failureDetails": []
@@ -6388,8 +6777,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://github.com/leondz/garak",
       "status": 200,
       "state": "OK",
@@ -6470,6 +6862,7 @@
       "status": 200,
       "state": "OK",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "parent": "https://ziontechgroup.com/market-pricing/",
 =======
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/ai-content-generator-2839c4098d849a49.js",
@@ -6544,6 +6937,9 @@
 =======
       "parent": "https://ziontechgroup.com/market-pricing/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/market-pricing/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://ziontechgroup.com/blockchain-infrastructure-platform",
@@ -6555,8 +6951,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/docs/",
       "status": 200,
       "state": "OK",
@@ -6626,6 +7025,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://transcend.io/product/",
 =======
       "url": "https://ziontechgroup.com/ai-ethics-governance-framework",
@@ -6648,14 +7048,20 @@
 =======
       "url": "https://transcend.io/product/",      "status": 404,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://transcend.io/product/",      "status": 404,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "BROKEN",
       "parent": "https://ziontechgroup.com/services-advertising/"
     },
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://iabeurope.eu/transparency-consent-framework/",
       "status": 200,
       "state": "OK",
@@ -6799,6 +7205,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/retail-technology-solutions-54c0f71f4bb1d883.js",
 =======
       "url": "https://www.intercom.com/pricing",
@@ -6828,6 +7235,9 @@
 =======
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/retail-technology-solutions-54c0f71f4bb1d883.js",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/_next/static/chunks/pages/retail-technology-solutions-54c0f71f4bb1d883.js",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/retail-technology-solutions/",
       "failureDetails": []
@@ -6835,8 +7245,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/services/incident-statuspage-automation-pro/",
       "status": 200,
       "state": "OK",
@@ -6909,6 +7322,7 @@
       "url": "https://www.deque.com/axe/",
       "status": 200,
       "state": "OK",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "parent": "https://ziontechgroup.com/services-advertising/",
 =======
@@ -6998,6 +7412,9 @@
 =======
       "parent": "https://ziontechgroup.com/services-advertising/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/services-advertising/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://ziontechgroup.com/retail-technology-solutions",
@@ -7007,6 +7424,7 @@
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://ziontechgroup.com/education-technology-solutions",
@@ -7094,6 +7512,9 @@
 =======
       "url": "https://ziontechgroup.com/education-technology-solutions",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://ziontechgroup.com/education-technology-solutions",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/education-technology-solutions/",
       "failureDetails": []
@@ -7101,8 +7522,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://www.shopify.com/pricing",
       "status": 200,
       "state": "OK",
@@ -7444,6 +7868,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://www.kompyte.com/pricing",
 =======
       "url": "https://ziontechgroup.com/ai-legal-contract-analyzer",
@@ -7612,15 +8037,21 @@
 =======
       "url": "https://www.kompyte.com/pricing",      "status": 404,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://www.kompyte.com/pricing",      "status": 404,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "BROKEN",
       "parent": "https://ziontechgroup.com/services-advertising/"
     },
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://ziontechgroup.com/blog/autonomous-content-generation/",
       "status": 200,
       "state": "OK",
@@ -7863,9 +8294,12 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-e72a
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://arxiv.org/",
       "status": 200,
       "state": "OK",
@@ -7875,8 +8309,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://www.braze.com/pricing",
       "status": 404,
       "state": "BROKEN",
@@ -7947,6 +8384,7 @@
       "status": 200,
       "state": "OK",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "parent": "https://ziontechgroup.com/services-advertising/",
 =======
       "url": "https://freshdesk.com/pricing",
@@ -7972,6 +8410,9 @@
 =======
       "parent": "https://ziontechgroup.com/services-advertising/",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/services-advertising/",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://scholar.google.com/",
@@ -7983,8 +8424,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://aws.amazon.com/codeguru/pricing/",
       "status": 200,
       "state": "OK",
@@ -8205,6 +8649,7 @@
       "status": 200,
       "state": "OK",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "parent": "https://ziontechgroup.com/services/pii-discovery-scanner",
 =======
       "url": "https://ziontechgroup.com/manufacturing-ai-solutions",
@@ -8265,6 +8710,9 @@
 =======
       "parent": "https://ziontechgroup.com/services/pii-discovery-scanner",      "failureDetails": []
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "parent": "https://ziontechgroup.com/services/pii-discovery-scanner",      "failureDetails": []
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "url": "https://ziontechgroup.com/biotech-ai-research-platform",
@@ -8276,8 +8724,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://kirasystems.com/",
       "status": 200,
       "state": "OK",
@@ -8977,6 +9428,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "url": "https://www.vanta.com/pricing",
 =======
       "url": "https://ziontechgroup.com/ai-market-research",
@@ -9032,6 +9484,9 @@
 =======
       "url": "https://www.vanta.com/pricing",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://www.vanta.com/pricing",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/market-pricing/",
       "failureDetails": []
@@ -9039,8 +9494,11 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "url": "https://aiven.io/postgresql",
       "status": 200,
       "state": "OK",
@@ -9048,6 +9506,7 @@
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://azure.microsoft.com/pricing/details/active-directory/",
 =======
@@ -9776,6 +10235,9 @@
 =======
       "url": "https://azure.microsoft.com/pricing/details/active-directory/",      "status": 200,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://azure.microsoft.com/pricing/details/active-directory/",      "status": 200,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       "state": "OK",
       "parent": "https://ziontechgroup.com/market-pricing/",
       "failureDetails": []
@@ -9788,6 +10250,7 @@
       "failureDetails": []
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "url": "https://www.servicenow.com/",
@@ -9814,6 +10277,12 @@
       "state": "BROKEN",
       "parent": "https://ziontechgroup.com/services-advertising/"    }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "url": "https://www.servicenow.com/",
+      "status": 0,
+      "state": "BROKEN",
+      "parent": "https://ziontechgroup.com/services-advertising/"    }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ],
   "passed": false
 }

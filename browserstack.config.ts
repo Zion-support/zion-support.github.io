@@ -1,48 +1,47 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { defineConfig, devices } from "@playwright/test";
+=======
+import { defineConfig, devices } from '@playwright/test';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default defineConfig({
-  testDir: "tests/e2e",
+  testDir: 'tests/e2e';
   use: {
-    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
-    trace: 'on-first-retry',
-  },
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000';
+    trace: 'on-first-retry'};
   projects: [
     {
-      name: "Desktop Chrome",
+      name: 'Desktop Chrome';
       use: {
-        browserName: 'chromium',
-        channel: 'chrome',
-      },
-    },
+        browserName: 'chromium';
+        channel: 'chrome'}
+    };
     {
-      name: "Desktop Firefox",
+      name: 'Desktop Firefox';
       use: {
-        browserName: 'firefox',
-      },
-    },
+        browserName: 'firefox'}
+    };
     {
-      name: "Desktop Safari",
+      name: 'Desktop Safari';
       use: {
-        browserName: 'webkit',
-      },
-    },
+        browserName: 'webkit'}
+    };
     {
-      name: "Mobile Chrome",
+      name: 'Mobile Chrome';
       use: {
-        browserName: 'chromium',
-        ...devices['Pixel 5'],
-      },
-    },
+        browserName: 'chromium';
+        ...devices['Pixel 5']}
+    };
     {
-      name: "Mobile Safari",
+      name: 'Mobile Safari';
       use: {
-        browserName: 'webkit',
-        ...devices['iPhone 12'],
-      },
-    },
-  ],
+        browserName: 'webkit';
+        ...devices['iPhone 12']}
+    }
+  ];
   reporter: [
+<<<<<<< HEAD
     ['list'],
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }],
   ],
@@ -90,4 +89,8 @@ export default defineConfig({
     ['list'];
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    ['list'];
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 });

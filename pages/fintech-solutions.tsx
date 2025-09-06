@@ -1,6 +1,7 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function FintechSolutions() {
   
@@ -8,6 +9,9 @@ export default function FintechSolutions() {
   );
 =======
 export default function FintechSolutions() {
+=======
+export default function FintechSolutions() {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<ServiceLanding
 			title="Fintech AI Solutions"
@@ -29,5 +33,9 @@ export default function FintechSolutions() {
 			canonical="https: //ziontechgroup.com/fintech-solutions"
 		/>
 	)
+<<<<<<< HEAD
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

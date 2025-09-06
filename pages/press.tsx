@@ -1,6 +1,7 @@
 import React from 'react';
 import SEO from '../components/SEO';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function PressPage() {
   return (
@@ -20,6 +21,9 @@ export default function PressPage() {
   );
 =======
 export default function PressPage() {
+=======
+export default function PressPage() {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<>
 			<SEO title="Press | Zion Tech Group" description="News, media resources, and press inquiries." canonical="/press" />
@@ -30,4 +34,7 @@ export default function PressPage() {
 		</>
 	)
 }
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

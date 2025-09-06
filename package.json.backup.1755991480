@@ -642,6 +642,7 @@
     "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "talent:optimize": "node automation/talent-profile-optimizer.cjs"
 =======
     "deploy:ipfs": "ts-node scripts/deploy-zion-ipfs.ts"
@@ -653,6 +654,9 @@
 =======
     "talent:optimize": "node automation/talent-profile-optimizer.cjs"  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "talent:optimize": "node automation/talent-profile-optimizer.cjs"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
@@ -661,6 +665,7 @@
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     "@semaphore-protocol/contracts": "^4.13.0-beta.1",
@@ -676,6 +681,11 @@
     "@semaphore-protocol/identity": "^4.13.0-beta.1",
     "@semaphore-protocol/proof": "^4.13.0-beta.1",    "@supabase/ssr": "^0.6.1",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "@semaphore-protocol/contracts": "^4.13.0-beta.1",
+    "@semaphore-protocol/identity": "^4.13.0-beta.1",
+    "@semaphore-protocol/proof": "^4.13.0-beta.1",    "@supabase/ssr": "^0.6.1",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "@supabase/supabase-js": "^2.39.0",
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
@@ -687,6 +697,7 @@
     "cron-parser": "^5.3.0",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "ethers": "^6.14.0",
 =======
     "ethers": "^6.13.4",
@@ -695,6 +706,9 @@
 =======
     "ethers": "^6.14.0",    "events": "^3.3.0",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "ethers": "^6.14.0",    "events": "^3.3.0",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "formidable": "^3.5.4",
     "framer-motion": "^6.5.1",
     "fs": "^0.0.1-security",
@@ -709,6 +723,7 @@
     "node-cron": "^4.2.1",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "openai": "^5.12.2",
 =======
     "openai": "^5.11.0",
@@ -718,11 +733,15 @@
 =======
     "openai": "^5.12.2",    "path": "^0.12.7",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "openai": "^5.12.2",    "path": "^0.12.7",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "pdfkit": "^0.13.0",
     "postcss": "^8.4.32",
     "react": "^17.0.2",
     "react-datepicker": "^8.4.0",
     "react-dom": "^17.0.2",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     "react-json-view": "^1.21.3",
@@ -736,6 +755,10 @@
     "react-json-view": "^1.21.3",
     "uuid": "^11.1.0"  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "react-json-view": "^1.21.3",
+    "uuid": "^11.1.0"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
@@ -782,9 +805,12 @@
     ]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "name": "zion-sdk-monorepo",
   "private": true,
   "version": "0.1.0",
@@ -804,6 +830,7 @@
   "devDependencies": {
     "rimraf": "^6.0.1"
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   },
@@ -813,3 +840,6 @@
 =======
   }}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  }}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,8 +1,11 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "generatedAt": "2025-08-12T01:33:59.547Z",
   "functions": [
     "a11y-alt-text-runner",
@@ -11,6 +14,7 @@
     "ai-changelog-runner",
     "auto-scheduler",
     "automation-matrix",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "autonomous-cloud-brain",
 =======
@@ -25,12 +29,15 @@
     "autonomous-cloud-meta-orchestrator",
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-7783
     "autonomous-invention-orchestrator",
+=======
+    "autonomous-cloud-brain",    "autonomous-invention-orchestrator",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "autonomous-master-orchestrator",
     "broken-image-scanner",
     "broken-image-scanner-runner",
-<<<<<<< HEAD
     "canonical-auditor",
     "cloud-swarm-committer",
+<<<<<<< HEAD
     "cloud_orchestrator",
 =======
     "cloud_orchestrator",
@@ -48,6 +55,9 @@
     "cloud-swarm-committer",
     "cloud_orchestrator",    "continuous-front-runner",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "cloud_orchestrator",    "continuous-front-runner",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "continuous-orchestrator",
     "cron-heartbeat",
     "cron-hub",
@@ -97,6 +107,7 @@
     "orphan-pages-detector",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "pagespeed-insights-runner",
     "pm2-automation-redundancy",
 =======
@@ -115,11 +126,16 @@
     "pagespeed-insights-runner",
     "pm2-automation-redundancy",    "schedule-content-index",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "pagespeed-insights-runner",
+    "pm2-automation-redundancy",    "schedule-content-index",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "schedule-homepage",
     "schedule-knowledge-graph",
     "schedule-site-health",
     "security-audit",
     "security-audit-runner",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -128,6 +144,9 @@
 =======
     "seo-audit-runner",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "seo-audit-runner",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "site-crawler",
     "sitemap_runner",
     "todo-scanner-runner",

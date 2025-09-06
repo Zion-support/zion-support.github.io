@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 // Read the header navigation
 const headerContent = fs.readFileSync('pages/components/Header.tsx', 'utf8');
@@ -25,24 +25,24 @@ function scanDirectory(dir, prefix = '') {
     const stat = fs.statSync(fullPath);
 
     if (stat.isDirectory()) {
-      scanDirectory(fullPath, prefix + item + '/');
+      scanDirectory(fullPath, prefix + item + '/'),
     } else if (item.endsWith('.tsx') || item.endsWith('.jsx')) {
       let pagePath = prefix + item;
       if (pagePath.startsWith('pages/')) {
-        pagePath = pagePath.substring(6);
+        pagePath = pagePath.substring(6),
       }
       if (pagePath.endsWith('.tsx') || pagePath.endsWith('.jsx')) {
-        pagePath = pagePath.substring(0, pagePath.lastIndexOf('.'));
+        pagePath = pagePath.substring(0, pagePath.lastIndexOf('.')),
       }
       if (pagePath === 'index') {
-        pagePath = '';
+        pagePath = '',
       }
       if (pagePath.endsWith('/index')) {
-        pagePath = pagePath.substring(0, pagePath.lastIndexOf('/index'));
+        pagePath = pagePath.substring(0, pagePath.lastIndexOf('/index')),
       }
-      existingPages.push('/' + pagePath);
+      existingPages.push('/' + pagePath),
     }
-  });
+  }),
 }
 
 scanDirectory(pagesDir);
@@ -60,19 +60,19 @@ navigationLinks.forEach(link => {
     link.startsWith('mailto:') ||
     link.startsWith('tel:')
   ) {
-    workingLinks.push({ link, reason: 'External link' });
-    return;
+    workingLinks.push({ link, reason: 'External link' }),
+    return,
   }
 
   if (link === '/') {
-    workingLinks.push({ link, reason: 'Home page' });
-    return;
+    workingLinks.push({ link, reason: 'Home page' }),
+    return,
   }
 
   if (existingPages.includes(link)) {
-    workingLinks.push({ link, reason: 'Page exists' });
+    workingLinks.push({ link, reason: 'Page exists' }),
   } else {
-    brokenLinks.push({ link, reason: 'Page missing' });
+    brokenLinks.push({ link, reason: 'Page missing' }),
   }
 });
 

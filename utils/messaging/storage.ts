@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -10,193 +11,83 @@ import {
   NewMessageInput,
   UserSummary,;
 } from './types';
+=======
+export interface Conversation {
+  id: string;
+  participants: Array<{
+    type: 'client' | 'talent';
+    id: string;
+  }>;
+  messages: Message[];
+  createdAtIso: string;
+  updatedAtIso: string;
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-const DATA_DIR = path.join(process.cwd(), 'data', 'messaging');
-const CONVERSATIONS_FILE = path.join(DATA_DIR, 'conversations.json');
-const MESSAGES_FILE = path.join(DATA_DIR, 'messages.json');
-const USERS_FILE = path.join(DATA_DIR, 'users.json');
-const UPLOADS_DIR = path.join(process.cwd(), 'public', 'uploads');
-
-function ensureFiles() {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-  if (!fs.existsSync(CONVERSATIONS_FILE))
-    fs.writeFileSync(CONVERSATIONS_FILE, '[]', 'utf8');
-  if (!fs.existsSync(MESSAGES_FILE))
-    fs.writeFileSync(MESSAGES_FILE, '[]', 'utf8');
-  if (!fs.existsSync(USERS_FILE)) fs.writeFileSync(USERS_FILE, '[]', 'utf8');
-  if (!fs.existsSync(UPLOADS_DIR))
-    fs.mkdirSync(UPLOADS_DIR, { recursive: true });
-
-function readJson<T>(filePath: string): T {
-  ensureFiles();
-  return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T;
-
-function writeJson<T>(filePath: string, data: T): void {
-  ensureFiles();
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
-
-export function getUserById(userId: string): UserSummary | undefined {
-  const users = readJson<UserSummary[]>(USERS_FILE);
-  return users.find(u => u.id === userId);
-
-export function listUsers(): UserSummary[] {
-  return readJson<UserSummary[]>(USERS_FILE);
-
-export function listConversations(userId: string): InboxItem[] {
-  const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE);
-  const messages = readJson<Message[]>(MESSAGES_FILE);
-  const users = readJson<UserSummary[]>(USERS_FILE);
-
-  const items: InboxItem[] = conversations
-    .filter(c => c.participants.includes(userId))
-    .map(c => {
-      const convMessages = messages
-        .filter(m => m.conversationId === c.id)
-        .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
-      const lastMessage = convMessages[convMessages.length - 1];
-      const otherId = c.participants.find(p => p !== userId) as string;
-      const other = users.find(u => u.id === otherId) || {
-        id: otherId,
-        name: 'User',
-        role: 'client' as const,
-      };
-      const unreadCount = convMessages.filter(
-        m => m.recipientId === userId && m.status !== 'read'
-      ).length;
-      return {
-        conversation: c,
-        otherParticipant: other,
-        lastMessage,
-        unreadCount,
-      };
-    })
-    .sort((a, b) =>
-      (b.conversation.lastMessageAt || '').localeCompare(
-        a.conversation.lastMessageAt || ''
-      )
-    );
-
-  return items;
-
-export function getConversationById(
-  conversationId: string
-): Conversation | undefined {
-  const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE);
-  return conversations.find(c => c.id === conversationId);
-
-export function getMessages(conversationId: string): Message[] {
-  const messages = readJson<Message[]>(MESSAGES_FILE);
-  return messages
-    .filter(m => m.conversationId === conversationId)
-    .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
-
-export function markAsRead(conversationId: string, userId: string): void {
-  const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE);
-  const messages = readJson<Message[]>(MESSAGES_FILE);
-  const now = new Date().toISOString();
-
-  // Update message statuses
-  let changed = false;
-  
-  }
-  if (changed) writeJson(MESSAGES_FILE, messages);
-
-  // Update conversation unreadBy
-  const conv = conversations.find(c => c.id === conversationId);
-  if (conv) {
-    conv.unreadBy = conv.unreadBy.filter(id => id !== userId);
-    conv.lastMessageAt = now; // keep order fresh
-    writeJson(CONVERSATIONS_FILE, conversations);
-  }
-
-function saveAttachmentIfProvided(
-  base64?: string,
-  name?: string
-): string | undefined {
-  if (!base64) return undefined;
-  ensureFiles();
-  try {
-    const matches = base64.match(/^data:(.*?);base64,(.*)$/);
-    const buffer = Buffer.from(matches ? matches[2] : base64, 'base64');
-    const ext = name?.split('.').pop() || 'bin';
-    const filename = `${uuidv4()}.${ext}`;
-    const filepath = path.join(UPLOADS_DIR, filename);
-    fs.writeFileSync(filepath, buffer);
-    return `/uploads/${filename}`;
-  } catch (e) {
-    return undefined;
-  }
-
-export function createOrGetConversation(
-  senderId: string,
-  recipientId: string,
-  context?: ConversationContext
-): Conversation {
-  const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE);
-  const existing = conversations.find(
-    c =>
-      c.participants.includes(senderId) &&
-      c.participants.includes(recipientId) &&
-      JSON.stringify(c.context || {}) === JSON.stringify(context || {})
-  );
-  if (existing) return existing;
-
-  const conv: Conversation = {
-    id: uuidv4(),
-    participants: [senderId, recipientId],
-    context,
-    lastMessageAt: new Date().toISOString(),
-    unreadBy: [recipientId],
+export interface Message {
+  id: string;
+  conversationId: string;
+  sender: {
+    type: 'client' | 'talent';
+    id: string;
   };
-  conversations.push(conv);
-  writeJson(CONVERSATIONS_FILE, conversations);
-  return conv;
+  text?: string;
+  attachments?: any[];
+  createdAtIso: string;
+  readBy: Array<{
+    participantId: string;
+    readAtIso: string;
+  }>;
+}
 
-export function sendMessage(input: NewMessageInput): {
-  conversation: Conversation;
-  message: Message;
-} {
-  const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE);
-  const messages = readJson<Message[]>(MESSAGES_FILE);
+export interface SendMessageParams {
+  senderId: string;
+  recipientId: string;
+  body: string;
+  linkUrl?: string;
+  attachmentBase64?: string;
+  attachmentName?: string;
+  context?: any;
+}
 
-  let conversation: Conversation | undefined;
-  if (input.conversationId) {
-    conversation = conversations.find(c => c.id === input.conversationId);
-  }
-  if (!conversation) {
-    conversation = createOrGetConversation(
-      input.senderId,
-      input.recipientId,
-      input.context
-    );
-  }
+// Mock storage
+const conversations: Conversation[] = [];
 
-  const attachmentUrl = saveAttachmentIfProvided(
-    input.attachmentBase64,
-    input.attachmentName
+export function sendMessage(params: SendMessageParams): { conversation: Conversation; message: Message } {
+  // Find or create conversation
+  let conversation = conversations.find(c => 
+    c.participants.some(p => p.id === params.senderId) &&
+    c.participants.some(p => p.id === params.recipientId)
   );
+
+  if (!conversation) {
+    conversation = {
+      id: `conv_${Date.now()}`,
+      participants: [
+        { type: 'client', id: params.senderId },
+        { type: 'talent', id: params.recipientId }
+      ],
+      messages: [],
+      createdAtIso: new Date().toISOString(),
+      updatedAtIso: new Date().toISOString()
+    };
+    conversations.push(conversation);
+  }
 
   const message: Message = {
-    id: uuidv4(),
+    id: `msg_${Date.now()}`,
     conversationId: conversation.id,
-    senderId: input.senderId,
-    recipientId: input.recipientId,
-    body: input.body,
-    linkUrl: input.linkUrl,
-    attachmentUrl,
-    createdAt: new Date().toISOString(),
-    status: 'sent',
+    sender: { type: 'client', id: params.senderId },
+    text: params.body,
+    createdAtIso: new Date().toISOString(),
+    readBy: [{ participantId: params.senderId, readAtIso: new Date().toISOString() }]
   };
-  messages.push(message);
-  writeJson(MESSAGES_FILE, messages);
 
-  conversation.lastMessageAt = message.createdAt;
-  if (!conversation.unreadBy.includes(input.recipientId)) {
-    conversation.unreadBy.push(input.recipientId);
-  }
-  writeJson(CONVERSATIONS_FILE, conversations);
+  conversation.messages.push(message);
+  conversation.updatedAtIso = new Date().toISOString();
 
   return { conversation, message };
+<<<<<<< HEAD
 =======
 // Messaging storage utilities
 export interface Message {
@@ -797,3 +688,14 @@ export function formatMessageTime(isoString: string): string {
   }
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+
+export function getConversationById(id: string): Conversation | null {
+  return conversations.find(c => c.id === id) || null;
+}
+
+export function getAllConversations(): Conversation[] {
+  return conversations;
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -3,6 +3,7 @@ import { addPipelineItem, getVendorById } from '../../../utils/vendor-store';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
   const { vendorId, title } = req.body || {};
@@ -13,15 +14,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { vendorId, title } = req.body || {};
   if (!vendorId || !title) return res.status(400).json({ error: 'Missing required fields' });
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { vendorId, title } = req.body || {};
+  if (!vendorId || !title) return res.status(400).json({ error: 'Missing required fields' });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const vendor = getVendorById(vendorId);
   if (!vendor) return res.status(404).json({ error: 'Vendor not found' });
   try {
     const item = addPipelineItem(vendorId, title);
 <<<<<<< HEAD
+<<<<<<< HEAD
     res.status(201).json({ item });
+=======
+    res.status(201).json({ item })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   } catch (e: any) {
-    res.status(500).json({ error: e.message });
+    res.status(500).json({ error: e.message })
   }
+<<<<<<< HEAD
 =======
     res.status(201).json({ item })
   } catch (e: any) {
@@ -29,3 +40,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

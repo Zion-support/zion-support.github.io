@@ -12,9 +12,12 @@
   node_bundler = "esbuild"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -52,6 +55,7 @@
     Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
 
 [[redirects]]
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   from = "/services/*"
@@ -189,3 +193,9 @@
   status = 301
   force = true
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  from = "/services/*"
+  to = "/:splat"
+  status = 301
+  force = true
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,6 +1,7 @@
 import js from '@eslint/js';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import globals from 'globals';
 =======
 import react from 'eslint-plugin-react';
@@ -11,6 +12,9 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 =======
 import globals from 'globals';
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+import globals from 'globals';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default [
   js.configs.recommended,
   {
@@ -35,6 +39,7 @@ export default [
       parserOptions: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         ecmaVersion: 2020,
         sourceType: 'module',
 =======
@@ -43,6 +48,10 @@ export default [
         ecmaVersion: 2020,
         sourceType: 'module',
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        ecmaVersion: 2020,
+        sourceType: 'module',
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         ecmaFeatures: {
           jsx: true
         }

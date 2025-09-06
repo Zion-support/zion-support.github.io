@@ -13,7 +13,11 @@ interface State {
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
+<<<<<<< HEAD
     this.state = { hasError: false };
+=======
+    this.state = { hasError: false },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   static getDerivedStateFromError(error: Error): State {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   Check,
   Star,
@@ -65,10 +66,14 @@ import {
 =======
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react';
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {
   enhancedRealMicroSaasServices,
@@ -78,6 +83,9 @@ import {
 =======
 import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
@@ -88,6 +96,7 @@ import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function PricingEnhanced2026Page() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
@@ -97,6 +106,10 @@ export default function PricingEnhanced2026Page() {
 export default function PricingEnhanced2026Page() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export default function PricingEnhanced2026Page() {
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 
   const contactInfo = {
@@ -104,13 +117,18 @@ export default function PricingEnhanced2026Page() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
 <<<<<<< HEAD
+<<<<<<< HEAD
     website: 'https://ziontechgroup.com',
+=======
+    website: 'https://ziontechgroup.com'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const popularServices = getPopularServices();
-
+  
   // Combine all services for comprehensive pricing
   const allServices = [
+<<<<<<< HEAD
     ...enhancedRealMicroSaasServices,
     ...nextGenerationAIServices,
     ...cuttingEdgeITServices,
@@ -129,6 +147,8 @@ export default function PricingEnhanced2026Page() {
   
   // Combine all services for comprehensive pricing
   const allServices = [
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     ...enhancedRealMicroSaasServices;
     ...nextGenerationAIServices;
     ...cuttingEdgeITServices;
@@ -139,7 +159,10 @@ export default function PricingEnhanced2026Page() {
     ...innovative2026AIServicesV3;
     ...emergingTech2026ServicesV3;
     ...enterpriseIT2026ServicesV3
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   // Enhanced service categories with pricing for 2026
@@ -148,6 +171,7 @@ export default function PricingEnhanced2026Page() {
       name: 'ArrowRight-Generation AI 2026',
       description: 'Revolutionary AI platforms with quantum integration',
 <<<<<<< HEAD
+<<<<<<< HEAD
       services: [
         'AI Quantum Financial Trading',
         'AI Healthcare Diagnostics',
@@ -155,80 +179,58 @@ export default function PricingEnhanced2026Page() {
         'AI Cybersecurity Threat Intelligence',
       ],
       avgPrice: '$2,499/month',
+=======
+      services: ['AI Quantum Financial TradingAI Healthcare DiagnosticsAI Autonomous ManufacturingAI Cybersecurity Threat Intelligence'],
+      avgPrice: '$2,499/month';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       savings: 'Save 60-80% vs. competitors',
       icon: Brain,
-      color: 'from-purple-500 to-indigo-600',
-    },
+      color: 'from-purple-500 to-indigo-600'
+    };
     {
       name: 'Quantum & Emerging Tech 2026',
       description: 'Cutting-edge quantum and emerging technologies',
-      services: [
-        'Quantum Internet Security',
-        'Neuromorphic Computing',
-        'DNA Computing',
-        'Photonic Computing',
-        'Holographic Display',
-      ],
-      avgPrice: '$4,199/month',
+      services: ['Quantum Internet SecurityNeuromorphic ComputingDNA ComputingPhotonic ComputingHolographic Display'],
+      avgPrice: '$4,199/month';
       savings: 'Save 70-85% vs. competitors',
       icon: Atom,
-      color: 'from-blue-500 to-cyan-600',
-    },
+      color: 'from-blue-500 to-cyan-600'
+    };
     {
       name: 'Enterprise IT Solutions 2026',
       description: 'Advanced enterprise infrastructure and security',
-      services: [
-        'Zero Trust Network Architecture',
-        'Edge Computing Orchestration',
-        '5G Private Networks',
-        'Blockchain Infrastructure',
-        'AI DevOps Automation',
-      ],
-      avgPrice: '$5,199/month',
+      services: ['Zero Trust Network ArchitectureEdge Computing Orchestration5G Private NetworksBlockchain InfrastructureAI DevOps Automation'],
+      avgPrice: '$5,199/month';
       savings: 'Save 50-75% vs. competitors',
       icon: Shield,
-      color: 'from-red-500 to-pink-600',
-    },
+      color: 'from-red-500 to-pink-600'
+    };
     {
       name: 'Innovative Micro SaaS 2026',
       description: 'Creative and practical SaaS tools',
-      services: [
-        'AI Content Creation Studio',
-        'AI Business Intelligence Suite',
-        'AI Customer Success Platform',
-        'AI Meeting Transcriber',
-      ],
+      services: ['AI Content Creation StudioAI Business Intelligence SuiteAI Customer Success PlatformAI Meeting Transcriber'],
       avgPrice: '$299/month',
       savings: 'Save 40-60% vs. competitors',
       icon: Rocket,
-      color: 'from-green-500 to-emerald-600',
-    },
+      color: 'from-green-500 to-emerald-600'
+    };
     {
       name: 'Healthcare & Biotech 2026',
       description: 'AI-powered healthcare and biotechnology solutions',
-      services: [
-        'AI Healthcare Diagnostics',
-        'DNA Computing Platform',
-        'Neuromorphic Healthcare AI',
-        'Quantum Medical Imaging',
-      ],
-      avgPrice: '$3,999/month',
+      services: ['AI Healthcare DiagnosticsDNA Computing PlatformNeuromorphic Healthcare AIQuantum Medical Imaging'],
+      avgPrice: '$3,999/month';
       savings: 'Save 65-80% vs. competitors',
       icon: FlaskConical,
-      color: 'from-blue-500 to-teal-600',
-    },
+      color: 'from-blue-500 to-teal-600'
+    };
     {
       name: 'Financial Technology 2026',
       description: 'Advanced financial and trading solutions',
-      services: [
-        'AI Quantum Financial Trading',
-        'Blockchain Infrastructure',
-        'Quantum Internet Security',
-        'Photonic Computing',
-      ],
-      avgPrice: '$4,499/month',
+      services: ['AI Quantum Financial TradingBlockchain InfrastructureQuantum Internet SecurityPhotonic Computing'],
+      avgPrice: '$4,499/month';
       savings: 'Save 55-75% vs. competitors',
       icon: DollarSign,
+<<<<<<< HEAD
       color: 'from-green-500 to-emerald-600',
     },
 =======
@@ -284,6 +286,10 @@ export default function PricingEnhanced2026Page() {
       color: 'from-green-500 to-emerald-600'
     }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      color: 'from-green-500 to-emerald-600'
+    }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   // Enhanced pricing tiers with more realistic and comprehensive offerings
@@ -295,6 +301,7 @@ export default function PricingEnhanced2026Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
         'Access to 100+ Core Services',
         'Basic AI Integration',
@@ -324,6 +331,17 @@ export default function PricingEnhanced2026Page() {
       color: 'from-blue-500 to-indigo-600'
     };
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features';
+        'Mobile App AccessAPI Access (1000 calls/month)'
+      ];
+      icon: <Sparkles className="w-8 h-8" />,
+      variant: 'quantum' as const,
+      popular: false,
+      cta: 'Start Free Trial',
+      color: 'from-blue-500 to-indigo-600'
+    };
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
@@ -331,6 +349,7 @@ export default function PricingEnhanced2026Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
         'Access to 500+ Services',
         'Advanced AI & Quantum Features',
@@ -362,6 +381,17 @@ export default function PricingEnhanced2026Page() {
       color: 'from-purple-500 to-pink-600'
     };
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security Features';
+        'Custom IntegrationsAPI Access (10,000 calls/month)Users Collaboration ToolsAdvanced Workflow Automation'
+      ];
+      icon: <Star className="w-8 h-8" />,
+      variant: 'holographic' as const,
+      popular: true,
+      cta: 'Start Free Trial',
+      color: 'from-purple-500 to-pink-600'
+    };
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
@@ -369,6 +399,7 @@ export default function PricingEnhanced2026Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
         'Access to ALL Services (1000+)',
         'Full AI & Quantum Suite',
@@ -402,12 +433,24 @@ export default function PricingEnhanced2026Page() {
       color: 'from-yellow-500 to-orange-600'
     }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free TrialEnterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance';
+        'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite-label SolutionsCustom SLA AgreementsOn-site Implementation'
+      ];
+      icon: <Crown className="w-8 h-8" />,
+      variant: 'quantum-advanced' as const,
+      popular: false,
+      cta: 'Contact Sales',
+      color: 'from-yellow-500 to-orange-600'
+    }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   // Featured services showcase
   const featuredServices = [
     {
       name: 'AI Quantum Financial Trading',
+<<<<<<< HEAD
       price: '$2,999/month',
 <<<<<<< HEAD
       description:
@@ -417,102 +460,68 @@ export default function PricingEnhanced2026Page() {
         'Real-time market analysis',
         'Automated trading strategies',
       ],
+=======
+      price: '$2,999/month';
+      description: 'Revolutionary AI-powered quantum trading with 99.9% accuracy',
+      features: ['Quantum-inspired AI algorithmsReal-time market analysisAutomated trading strategies'],
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       link: 'https://ziontechgroup.com/services/ai-quantum-financial-trading',
       icon: '📈',
-      color: 'from-green-500 to-emerald-600',
-    },
+      color: 'from-green-500 to-emerald-600'
+    };
     {
       name: 'Zero Trust Network Architecture 2026',
-      price: '$6,999/month',
-      description:
-        'ArrowRight-generation network security with continuous verification',
-      features: [
-        'Continuous verification',
-        'Micro-segmentation',
-        'Real-time threat detection',
-      ],
+      price: '$6,999/month';
+      description: 'ArrowRight-generation network security with continuous verification',
+      features: ['Continuous verificationMicro-segmentationReal-time threat detection'],
       link: 'https://ziontechgroup.com/services/zero-trust-network-architecture-2026',
       icon: '🛡️',
-      color: 'from-red-500 to-pink-600',
-    },
+      color: 'from-red-500 to-pink-600'
+    };
     {
       name: 'AI Healthcare Diagnostics Platform',
-      price: '$1,499/month',
+      price: '$1,499/month';
       description: 'AI-powered medical diagnostics with 95% accuracy rate',
-      features: [
-        'Medical image analysis',
-        'Diagnosis prediction',
-        'Treatment recommendations',
-      ],
+      features: ['Medical image analysisDiagnosis predictionTreatment recommendations'],
       link: 'https://ziontechgroup.com/services/ai-healthcare-diagnostics',
       icon: '🏥',
-      color: 'from-blue-500 to-cyan-600',
-    },
+      color: 'from-blue-500 to-cyan-600'
+    };
     {
       name: 'Quantum Internet Security Platform',
-      price: '$4,999/month',
+      price: '$4,999/month';
       description: 'Unbreakable quantum encryption for the future internet',
-      features: [
-        'Quantum key distribution',
-        'Post-quantum cryptography',
-        'Real-time threat detection',
-      ],
+      features: ['Quantum key distributionPost-quantum cryptographyReal-time threat detection'],
       link: 'https://ziontechgroup.com/services/quantum-internet-security-platform',
       icon: '🔐',
-      color: 'from-blue-500 to-cyan-600',
-    },
+      color: 'from-blue-500 to-cyan-600'
+    }
   ];
 
   return (
-    <UltraFuturisticBackground variant='holographic' intensity='high'>
-      <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>
+    <UltraFuturisticBackground variant="holographic" intensity="high">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
         <Head>
           <title>Enhanced 2026 Pricing - Zion Tech Group</title>
-          <meta
-            name='description'
-            content='Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services. Achieve remarkable ROI with our cutting-edge solutions.'
-          />
-          <meta
-            name='keywords'
-            content='2026 pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SaaS pricing, ROI guarantee'
-          />
-          <link rel='icon' href='/favicon.svg' />
-
+          <meta name="description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services. Achieve remarkable ROI with our cutting-edge solutions." />
+          <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SaaS pricing, ROI guarantee" />
+          <link rel="icon" href="/favicon.svg" />
+          
           {/* Open Graph */}
-          <meta
-            property='og:title'
-            content='Enhanced 2026 Pricing - Zion Tech Group'
-          />
-          <meta
-            property='og:description'
-            content='Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services.'
-          />
-          <meta property='og:type' content='website' />
-          <meta
-            property='og:url'
-            content='https://ziontechgroup.com/pricing-enhanced-2026'
-          />
-          <meta
-            property='og:image'
-            content='https://ziontechgroup.com/og-image.svg'
-          />
-
+          <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
+          <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://ziontechgroup.com/pricing-enhanced-2026" />
+          <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
+          
           {/* Twitter */}
-          <meta name='twitter:card' content='summary_large_image' />
-          <meta
-            name='twitter:title'
-            content='Enhanced 2026 Pricing - Zion Tech Group'
-          />
-          <meta
-            name='twitter:description'
-            content='Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services.'
-          />
-          <meta
-            name='twitter:image'
-            content='https://ziontechgroup.com/og-image.svg'
-          />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
+          <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
+          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
         </Head>
         {/* Enhanced Header Section */}
+<<<<<<< HEAD
         <div className='relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8'>
 =======
     description: 'Revolutionary AI-powered quantum trading with 99.9% accuracy',
@@ -575,16 +584,24 @@ export default function PricingEnhanced2026Page() {
         {/* Enhanced Header Section */}
         <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             className='max-w-7xl mx-auto text-center'
+=======
+            className="max-w-7xl mx-auto text-center"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           >
-            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
               Enhanced 2026 Pricing
             </h1>
+<<<<<<< HEAD
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Transform your business with our comprehensive collection of
               innovative AI, quantum computing, and enterprise IT services.
@@ -597,10 +614,15 @@ export default function PricingEnhanced2026Page() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services. 
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services. 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Achieve remarkable ROI with transparent, competitive pricing.
             </p>
 
             {/* Billing Cycle Toggle */}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='flex items-center justify-center space-x-4 mb-8'>
               <span
@@ -620,12 +642,19 @@ export default function PricingEnhanced2026Page() {
               <button
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+            <div className="flex items-center justify-center space-x-4 mb-8">
+              <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
+              <button
+                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
                   billingCycle === 'yearly' ? 'bg-cyan-600' : 'bg-gray-600'
                 }`}
               >
                 <span
                   className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
+<<<<<<< HEAD
 <<<<<<< HEAD
                     billingCycle === 'yearly'
                       ? 'translate-x-8'
@@ -645,10 +674,19 @@ export default function PricingEnhanced2026Page() {
               <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
                 Yearly <span className="text-cyan-400 text-sm">(Save 20%)</span>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                    billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
+                  }`}
+                />
+              </button>
+              <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
+                Yearly <span className="text-cyan-400 text-sm">(Save 20%)</span>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </span>
             </div>
 
             {/* Contact Information */}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto'>
               <h3 className='text-xl font-semibold text-cyan-400 mb-4'>
@@ -657,12 +695,20 @@ export default function PricingEnhanced2026Page() {
               <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>
                 <div className='flex items-center justify-center space-x-2'>
                   <Phone className='w-4 h-4 text-purple-400' />
+=======
+            <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
+              <h3 className="text-xl font-semibold text-cyan-400 mb-4">Need Custom Pricing?</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div className="flex items-center justify-center space-x-2">
+                  <Phone className="w-4 h-4 text-purple-400" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   <span>{contactInfo.mobile}</span>
                 </div>
-                <div className='flex items-center justify-center space-x-2'>
-                  <Mail className='w-4 h-4 text-purple-400' />
+                <div className="flex items-center justify-center space-x-2">
+                  <Mail className="w-4 h-4 text-purple-400" />
                   <span>{contactInfo.email}</span>
                 </div>
+<<<<<<< HEAD
                 <div className='flex items-center justify-center space-x-2'>
                   <MapPin className='w-4 h-4 text-purple-400' />
                   <span className='text-center'>{contactInfo.address}</span>
@@ -682,6 +728,11 @@ export default function PricingEnhanced2026Page() {
                   <MapPin className="w-4 h-4 text-purple-400" />
                   <span className="text-center">{contactInfo.address}</span>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                <div className="flex items-center justify-center space-x-2">
+                  <MapPin className="w-4 h-4 text-purple-400" />
+                  <span className="text-center">{contactInfo.address}</span>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </div>
             </div>
@@ -689,6 +740,7 @@ export default function PricingEnhanced2026Page() {
         </div>
 
         {/* Enhanced Pricing Tiers */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className='relative z-10 px-4 sm:px-6 lg:px-8 mb-20'>
           <div className='max-w-7xl mx-auto'>
@@ -698,6 +750,11 @@ export default function PricingEnhanced2026Page() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               {pricingTiers.map((tier, index) => (
                 <motion.div
                   key={tier.name}
@@ -705,10 +762,14 @@ export default function PricingEnhanced2026Page() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className='relative'
 =======
                   className="relative"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                  className="relative"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 >
                   <UltraFuturisticCard
                     variant={tier.variant}
@@ -716,16 +777,22 @@ export default function PricingEnhanced2026Page() {
                   >
                     {tier.popular && (
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                         <div className='bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
 =======
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           Most Popular
                         </div>
                       </div>
                     )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     <div className='p-8 text-center'>
@@ -733,35 +800,36 @@ export default function PricingEnhanced2026Page() {
                         <div
                           className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}
                         >
+=======
+                    
+                    <div className="p-8 text-center">
+                      <div className="flex justify-center mb-4">
+                        <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           {tier.icon}
                         </div>
                       </div>
-
-                      <h3 className='text-2xl font-bold text-white mb-2'>
-                        {tier.name}
-                      </h3>
-                      <p className='text-gray-400 mb-6'>{tier.description}</p>
-
-                      <div className='mb-6'>
-                        <span className='text-4xl font-bold text-cyan-400'>
-                          ${tier.price}
-                        </span>
-                        <span className='text-gray-400'>{tier.period}</span>
+                      
+                      <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                      <p className="text-gray-400 mb-6">{tier.description}</p>
+                      
+                      <div className="mb-6">
+                        <span className="text-4xl font-bold text-cyan-400">${tier.price}</span>
+                        <span className="text-gray-400">{tier.period}</span>
                         {tier.savings && (
-                          <div className='text-sm text-green-400 mt-1'>
-                            {tier.savings}
-                          </div>
+                          <div className="text-sm text-green-400 mt-1">{tier.savings}</div>
                         )}
                       </div>
-
-                      <ul className='text-left space-y-3 mb-8'>
+                      
+                      <ul className="text-left space-y-3 mb-8">
                         {tier.features.map((feature, idx) => (
-                          <li key={idx} className='flex items-start'>
-                            <Check className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />
-                            <span className='text-gray-300'>{feature}</span>
+                          <li key={idx} className="flex items-start">
+                            <Check className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-300">{feature}</span>
                           </li>
                         ))}
                       </ul>
+<<<<<<< HEAD
 
                       <Button
                         variant='primary'
@@ -811,6 +879,8 @@ export default function PricingEnhanced2026Page() {
                           </li>
                         ))}
                       </ul>
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       
                                              <Button
                                                    variant="primary"
@@ -826,7 +896,10 @@ export default function PricingEnhanced2026Page() {
                        >
                          {tier.cta}
                        </Button>
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </div>
                   </UltraFuturisticCard>
                 </motion.div>
@@ -837,29 +910,38 @@ export default function PricingEnhanced2026Page() {
 
         {/* Enhanced Service Categories */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className='relative z-10 px-4 sm:px-6 lg:px-8 mb-20'>
           <div className='max-w-7xl mx-auto'>
 =======
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='text-center mb-12'
+=======
+              className="text-center mb-12"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Service Categories & Pricing
               </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Explore our comprehensive service categories with transparent
-                pricing and competitive advantages
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Explore our comprehensive service categories with transparent pricing and competitive advantages
               </p>
             </motion.div>
 
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 =======
               className="text-center mb-12"
@@ -874,6 +956,9 @@ export default function PricingEnhanced2026Page() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               {serviceCategories.map((category, index) => (
                 <motion.div
                   key={category.name}
@@ -882,6 +967,7 @@ export default function PricingEnhanced2026Page() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <UltraFuturisticCard
                     variant='quantum-advanced'
@@ -893,27 +979,27 @@ export default function PricingEnhanced2026Page() {
                           className={`p-3 rounded-full bg-gradient-to-r ${category.color} mr-4`}
                         >
                           <category.icon className='w-6 h-6 text-white' />
+=======
+                  <UltraFuturisticCard variant="quantum-advanced" className="h-full">
+                    <div className="p-6">
+                      <div className="flex items-center mb-4">
+                        <div className={`p-3 rounded-full bg-gradient-to-r ${category.color} mr-4`}>
+                          <category.icon className="w-6 h-6 text-white" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         </div>
-                        <h3 className='text-xl font-bold text-white'>
-                          {category.name}
-                        </h3>
+                        <h3 className="text-xl font-bold text-white">{category.name}</h3>
                       </div>
-
-                      <p className='text-gray-400 mb-4'>
-                        {category.description}
-                      </p>
-
-                      <div className='mb-4'>
-                        <span className='text-2xl font-bold text-cyan-400'>
-                          {category.avgPrice}
-                        </span>
-                        <div className='text-sm text-green-400'>
-                          {category.savings}
-                        </div>
+                      
+                      <p className="text-gray-400 mb-4">{category.description}</p>
+                      
+                      <div className="mb-4">
+                        <span className="text-2xl font-bold text-cyan-400">{category.avgPrice}</span>
+                        <div className="text-sm text-green-400">{category.savings}</div>
                       </div>
-
-                      <ul className='space-y-2 mb-4'>
+                      
+                      <ul className="space-y-2 mb-4">
                         {category.services.map((service, idx) => (
+<<<<<<< HEAD
                           <li
                             key={idx}
                             className='flex items-center text-sm text-gray-300'
@@ -941,24 +1027,28 @@ export default function PricingEnhanced2026Page() {
                           <li key={idx} className="flex items-center text-sm text-gray-300">
                             <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                          <li key={idx} className="flex items-center text-sm text-gray-300">
+                            <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                             {service}
                           </li>
                         ))}
                       </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+                      
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       <Button
-                        variant='primary'
-                        size='sm'
-                        className='w-full'
-                        onClick={() =>
-                          window.open(
-                            `/2026-services-showcase-enhanced`,
-                            '_blank'
-                          )
-                        }
+                        variant="primary"
+                        size="sm"
+                        className="w-full"
+                        onClick={() => window.open(`/2026-services-showcase-enhanced`, '_blank')}
                       >
                         View Services
+<<<<<<< HEAD
                         <ArrowRight className='w-4 h-4 ml-2' />
 =======
                       
@@ -971,6 +1061,9 @@ export default function PricingEnhanced2026Page() {
                         View Services
                         <ArrowRight className="w-4 h-4 ml-2" />
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                        <ArrowRight className="w-4 h-4 ml-2" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       </Button>
                     </div>
                   </UltraFuturisticCard>
@@ -982,29 +1075,38 @@ export default function PricingEnhanced2026Page() {
 
         {/* Featured Services Showcase */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className='relative z-10 px-4 sm:px-6 lg:px-8 mb-20'>
           <div className='max-w-7xl mx-auto'>
 =======
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='text-center mb-12'
+=======
+              className="text-center mb-12"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Featured Services
               </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Discover our most popular and innovative services that are
-                transforming businesses worldwide
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover our most popular and innovative services that are transforming businesses worldwide
               </p>
             </motion.div>
 
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
 =======
               className="text-center mb-12"
@@ -1019,6 +1121,9 @@ export default function PricingEnhanced2026Page() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               {featuredServices.map((service, index) => (
                 <motion.div
                   key={service.name}
@@ -1027,6 +1132,7 @@ export default function PricingEnhanced2026Page() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <UltraFuturisticCard variant='holographic' className='h-full'>
                     <div className='p-6'>
@@ -1039,18 +1145,24 @@ export default function PricingEnhanced2026Page() {
                           <div className='text-sm text-gray-400'>
                             Starting price
                           </div>
+=======
+                  <UltraFuturisticCard variant="holographic" className="h-full">
+                    <div className="p-6">
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="text-4xl">{service.icon}</div>
+                        <div className="text-right">
+                          <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                          <div className="text-sm text-gray-400">Starting price</div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         </div>
                       </div>
-
-                      <h3 className='text-xl font-bold text-white mb-2'>
-                        {service.name}
-                      </h3>
-                      <p className='text-gray-400 mb-4'>
-                        {service.description}
-                      </p>
-
-                      <ul className='space-y-2 mb-4'>
+                      
+                      <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+                      <p className="text-gray-400 mb-4">{service.description}</p>
+                      
+                      <ul className="space-y-2 mb-4">
                         {service.features.map((feature, idx) => (
+<<<<<<< HEAD
                           <li
                             key={idx}
                             className='flex items-center text-sm text-gray-300'
@@ -1075,23 +1187,33 @@ export default function PricingEnhanced2026Page() {
                           <li key={idx} className="flex items-center text-sm text-gray-300">
                             <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                          <li key={idx} className="flex items-center text-sm text-gray-300">
+                            <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                             {feature}
                           </li>
                         ))}
                       </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                       <div className='flex space-x-2'>
+=======
+                      
+                      <div className="flex space-x-2">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         <Button
-                          variant='primary'
-                          size='sm'
-                          className='flex-1'
+                          variant="primary"
+                          size="sm"
+                          className="flex-1"
                           onClick={() => window.open(service.link, '_blank')}
                         >
                           Learn More
-                          <ArrowRight className='w-4 h-4 ml-1' />
+                          <ArrowRight className="w-4 h-4 ml-1" />
                         </Button>
                         <Button
+<<<<<<< HEAD
                           variant='secondary'
                           size='sm'
                           onClick={() =>
@@ -1117,6 +1239,11 @@ export default function PricingEnhanced2026Page() {
                           size="sm"
                           onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`, '_blank')}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                          variant="secondary"
+                          size="sm"
+                          onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`, '_blank')}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         >
                           Contact
                         </Button>
@@ -1131,53 +1258,54 @@ export default function PricingEnhanced2026Page() {
 
         {/* Enhanced Footer CTA */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className='relative z-10 px-4 sm:px-6 lg:px-8 pb-20'>
           <div className='max-w-4xl mx-auto'>
 =======
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">
           <div className="max-w-4xl mx-auto">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">
+          <div className="max-w-4xl mx-auto">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center'
+=======
+              className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Transform Your Business?
               </h2>
-              <p className='text-xl text-gray-300 mb-8'>
-                Join thousands of businesses already using our innovative
-                services to gain competitive advantages and achieve remarkable
-                ROI.
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of businesses already using our innovative services to gain competitive advantages and achieve remarkable ROI.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
-                  variant='primary'
-                  size='lg'
-                  onClick={() =>
-                    window.open(
-                      `mailto:${contactInfo.email}?subject=Business Transformation Consultation`,
-                      '_blank'
-                    )
-                  }
+                  variant="primary"
+                  size="lg"
+                  onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')}
                 >
-                  <Mail className='w-5 h-5 mr-2' />
+                  <Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
                 </Button>
                 <Button
-                  variant='secondary'
-                  size='lg'
-                  onClick={() =>
-                    window.open(`tel:${contactInfo.mobile}`, '_blank')
-                  }
+                  variant="secondary"
+                  size="lg"
+                  onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')}
                 >
-                  <Phone className='w-5 h-5 mr-2' />
+                  <Phone className="w-5 h-5 mr-2" />
                   Call Now
                 </Button>
               </div>
+<<<<<<< HEAD
               <div className='mt-8 text-sm text-gray-400'>
                 <p>
                   Contact: {contactInfo.mobile} | {contactInfo.email}
@@ -1212,6 +1340,10 @@ export default function PricingEnhanced2026Page() {
               <div className="mt-8 text-sm text-gray-400">
                 <p>Contact: {contactInfo.mobile} | {contactInfo.email}</p>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+              <div className="mt-8 text-sm text-gray-400">
+                <p>Contact: {contactInfo.mobile} | {contactInfo.email}</p>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <p>{contactInfo.address}</p>
               </div>
             </motion.div>
@@ -1220,8 +1352,13 @@ export default function PricingEnhanced2026Page() {
       </div>
     </UltraFuturisticBackground>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 =======
   )
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  )
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

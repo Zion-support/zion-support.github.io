@@ -3,12 +3,16 @@
     "totalChecks": 6,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "passedChecks": 6,
     "failedChecks": 0,
     "criticalFailures": 0,
     "canBuild": true,
+<<<<<<< HEAD
 <<<<<<< HEAD
     "timestamp": "2025-08-19T17:38:03.158Z"
 =======
@@ -22,6 +26,9 @@
 =======
     "timestamp": "2025-08-19T17:38:03.158Z"  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "timestamp": "2025-08-19T17:38:03.158Z"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "results": [
     {
       "name": "Page Structure Validation",
@@ -45,6 +52,7 @@
       "name": "Environment Variables",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "status": "PASS",
       "result": "Environment variables check completed",
 =======
@@ -56,6 +64,10 @@
       "status": "PASS",
       "result": "Environment variables check completed",      "critical": false
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      "status": "PASS",
+      "result": "Environment variables check completed",      "critical": false
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     },
     {
       "name": "File Permissions",
@@ -72,6 +84,7 @@
   ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "recommendations": []
 =======
   "recommendations": [
@@ -82,3 +95,6 @@
 =======
   "recommendations": []}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  "recommendations": []}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

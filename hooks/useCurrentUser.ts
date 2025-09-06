@@ -1,11 +1,11 @@
 <<<<<<< HEAD
 import useSWR from 'swr';
-
-const fetcher = (url: string) => fetch(url).then(r => (r.ok ? r.json() : null));
+const fetcher = (url: string) => fetch(url).then((r) => (r.ok ? r.json() : null));
 
 export function useCurrentUser() {
   const { data, error, mutate } = useSWR('/api/auth/me', fetcher);
   return {
+<<<<<<< HEAD
     user: data?.user || null,
     loading: !data && !error,
     error,
@@ -81,3 +81,10 @@ export function useCurrentUser() {
 }
 >>>>>>> 7a79ab46aa7794ec396c2388b3c38de69cb877ae
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    user: data?.user || null;
+    loading: !data && !error;
+    error;
+    mutate}
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

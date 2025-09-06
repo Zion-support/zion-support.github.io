@@ -7,8 +7,11 @@ const nextConfig = {
   reactStrictMode: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   swcMinify: true,
   
   // Disable TypeScript and ESLint during build to avoid parsing errors
@@ -60,6 +63,7 @@ const nextConfig = {
     
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   eslint: {
@@ -68,6 +72,8 @@ const nextConfig = {
 >>>>>>> origin/cursor/website-audit-and-enhancement-ffd4
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   images: {
     domains: ["localhost"],
     unoptimized: true,

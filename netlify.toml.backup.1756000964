@@ -1,13 +1,17 @@
 [build]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   command = "npm ci && npm run build"
   publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   functions = "netlify/functions"
@@ -19,6 +23,8 @@
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 

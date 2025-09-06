@@ -17,6 +17,7 @@ grep '"ref":' prs.json | sed 's/.*"ref": "\([^"]*\)".*/\1/' | grep -v "^main$" |
     if [ -n "$branch_name" ]; then
         echo ""
 <<<<<<< HEAD
+<<<<<<< HEAD
         echo "=========================================="
         echo "🔄 Processing branch: $branch_name"
         echo "=========================================="
@@ -25,6 +26,11 @@ grep '"ref":' prs.json | sed 's/.*"ref": "\([^"]*\)".*/\1/' | grep -v "^main$" |
         echo "🔄 Processing branch: $branch_name"
         echo ""
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        echo ""
+        echo "🔄 Processing branch: $branch_name"
+        echo ""
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         
         # Fetch the latest version of the branch
         git fetch origin "$branch_name"
@@ -60,14 +66,19 @@ grep '"ref":' prs.json | sed 's/.*"ref": "\([^"]*\)".*/\1/' | grep -v "^main$" |
                         if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
                             echo "📦 Critical file detected, keeping main version..."
 <<<<<<< HEAD
+<<<<<<< HEAD
                             sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
                             sed -i '/>>>>>>> /d' "$file"
                         elif [[ "$file" == *".tsx" || "$file" == *".ts" || "$file" == *".js" || "$file" == *".jsx" ]]; then
+=======
+                            sed -i '//,//d' "$file"
+                            sed -i '/                        elif [[ "$file" == *".tsx" || "$file" == *".ts" || "$file" == *".js" || "$file" == *".jsx" ]]; then
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                             echo "📱 Code file detected, keeping incoming version..."
-                            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-                            sed -i '/>>>>>>> /d' "$file"
-                        else
+                            sed -i '//,//d' "$file"
+                            sed -i '/                        else
                             echo "📝 Regular file, attempting to merge both versions..."
+<<<<<<< HEAD
                             sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
                             sed -i '/>>>>>>> /d' "$file"
                         fi
@@ -81,6 +92,10 @@ grep '"ref":' prs.json | sed 's/.*"ref": "\([^"]*\)".*/\1/' | grep -v "^main$" |
                             sed -i '//,//d' "$file"
                             sed -i '/                        fi
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                            sed -i '//,//d' "$file"
+                            sed -i '/                        fi
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         
                         echo "✅ Resolved conflicts in $file"
                     fi
@@ -101,10 +116,14 @@ grep '"ref":' prs.json | sed 's/.*"ref": "\([^"]*\)".*/\1/' | grep -v "^main$" |
         fi
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         echo "=========================================="
 =======
         echo ""
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        echo ""
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         echo ""
         
         # Push changes every 3 successful merges to avoid losing work

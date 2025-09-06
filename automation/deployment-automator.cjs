@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
@@ -68,6 +69,8 @@ const { execSync } = require("child_process")
         this.log("Please review the errors and fix them manually.")
   this.log(`� Fatal error in "deployment": ${error.message}`, "ERROR"`)
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -202,9 +205,15 @@ class DeploymentAutomator {
       // Pre-deployment checks
       const preChecksPassed = await this.preDeploymentChecks();
       if (!preChecksPassed) {
+<<<<<<< HEAD
     this.log('❌ Pre-deployment checks failed. Aborting deployment.'),
     return
   }
+=======
+        this.log('❌ Pre-deployment checks failed. Aborting deployment.');
+        return;
+      }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
       // Build and optimize
       this.deploymentResults.push(await this.buildApplication());
@@ -236,5 +245,9 @@ class DeploymentAutomator {
 
 // Run the deployment automator
 const automator = new DeploymentAutomator();
+<<<<<<< HEAD
 automator.run().catch(console.error);
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+automator.run().catch(console.error);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

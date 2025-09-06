@@ -3,49 +3,42 @@ import type { NextPage, GetServerSideProps } from 'next';
 import ReviewForm from '../../components/reviews/ReviewForm';
 import { findProjectById } from '../../utils/dataStore';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 type Props = {
-  projectId: string;
-  fromRole: 'client' | 'talent';
-  fromId: string;
-  valid: boolean;
-  reason?: string;
+  projectId: string,
+  fromRole: 'client' | 'talent',
+  fromId: string,
+  valid: boolean,
+  reason?: string
 };
 
-const ReviewSubmitPage: NextPage<Props> = ({
-  projectId,
-  fromRole,
-  fromId,
-  valid,
-  reason,
-}) => {
+const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
   if (!valid) {
     return (
-      <main className='max-w-2xl mx-auto p-6'>
-        <h1 className='text-2xl font-semibold mb-3'>Review unavailable</h1>
-        <p className='text-sm text-gray-600'>
-          {reason || 'You cannot submit a review for this project.'}
-        </p>
+      <main className="max-w-2xl mx-auto p-6">
+        <h1 className="text-2xl font-semibold mb-3">Review unavailable</h1>
+        <p className="text-sm text-gray-600">{reason || 'You cannot submit a review for this project.'}</p>
       </main>
-    );
+    )
   }
 
   return (
-    <main className='max-w-2xl mx-auto p-6'>
-      <h1 className='text-2xl font-semibold mb-6'>Leave a review</h1>
+    <main className="max-w-2xl mx-auto p-6">
+      <h1 className="text-2xl font-semibold mb-6">Leave a review</h1>
       <ReviewForm initial={{ projectId, fromRole, fromId }} />
     </main>
-  );
+  )
 };
 
-export const getServerSideProps: GetServerSideProps = async ctx => {
-  const { projectId } = ctx.query as { projectId: string };
-  const { role, fromId } = ctx.query as {
-    role?: 'client' | 'talent';
-    fromId?: string;
-  };
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { projectId } = ctx.query as { projectId: string },
+  const { role, fromId } = ctx.query as { role?: 'client' | 'talent', fromId?: string };
 
   if (!projectId || !role || !fromId) {
+<<<<<<< HEAD
     return {
       props: {
         projectId: projectId || '',
@@ -89,10 +82,14 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   if (!projectId || !role || !fromId) {
     return { props: { projectId: projectId || '', fromRole: role || 'client', fromId: fromId || '', valid: false, reason: 'Missing parameters' } }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    return { props: { projectId: projectId || '', fromRole: role || 'client', fromId: fromId || '', valid: false, reason: 'Missing parameters' } }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   const project = await findProjectById(projectId);
   if (!project) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     return {
       props: {
@@ -103,34 +100,21 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         reason: 'Project not found',
       },
     } as any;
+=======
+    return { props: { projectId, fromRole: role, fromId, valid: false, reason: 'Project not found' } } as any
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
   if (project.status !== 'Completed') {
-    return {
-      props: {
-        projectId,
-        fromRole: role,
-        fromId,
-        valid: false,
-        reason: 'Project is not completed yet',
-      },
-    } as any;
+    return { props: { projectId, fromRole: role, fromId, valid: false, reason: 'Project is not completed yet' } } as any
   }
 
-  const expectedFromId =
-    role === 'client' ? project.clientId : project.talentSlug;
+  const expectedFromId = role === 'client' ? project.clientId : project.talentSlug;
   const valid = expectedFromId === fromId;
 
-  return {
-    props: {
-      projectId,
-      fromRole: role,
-      fromId,
-      valid,
-      reason: valid ? null : 'Invalid reviewer for this project',
-    },
-  } as any;
+  return { props: { projectId, fromRole: role, fromId, valid, reason: valid ? null : 'Invalid reviewer for this project' } } as any
 };
 
+<<<<<<< HEAD
 export default ReviewSubmitPage;
 =======
     return { props: { projectId, fromRole: role, fromId, valid: false, reason: 'Project not found' } } as any
@@ -147,3 +131,6 @@ export default ReviewSubmitPage;
 
 export default ReviewSubmitPage;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export default ReviewSubmitPage;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

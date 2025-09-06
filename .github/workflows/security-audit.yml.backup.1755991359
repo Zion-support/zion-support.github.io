@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 name: Security Audit
 
 on:
@@ -36,6 +39,7 @@ jobs:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -79,3 +83,5 @@ jobs:
 >>>>>>> origin/cursor/build-zion-ai-marketplace-service-listing-9ebf
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

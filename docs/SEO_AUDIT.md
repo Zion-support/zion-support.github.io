@@ -1,10 +1,14 @@
 # SEO Audit (Autonomous)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Generated: 2025-09-06T00:57:27.834Z
 =======
 Generated: 2025-09-06T01:35:54.611Z
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+Generated: 2025-09-06T01:35:54.611Z
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 | File | Title | Meta | Links | Images |
 |---|---:|---:|---:|---:|

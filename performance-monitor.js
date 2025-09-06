@@ -1,28 +1,41 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Performance monitoring utility
 export class PerformanceMonitor {
+=======
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+
+class PerformanceMonitor {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   constructor() {
-    this.metrics = new Map();
+    this.metrics = {
+      bundleSize: 0,
+      loadTime: 0,
+      memoryUsage: 0,
+      timestamp: new Date().toISOString()
+    };
   }
 
-  startTiming(name) {
-    this.metrics.set(name, { start: performance.now() }
-});
-  }
-
-  endTiming(name) {
-    const metric = this.metrics.get(name);
-    if (metric) {
-      metric.end = performance.now();
-      metric.duration = metric.end - metric.start;
-      console.log(`⏱️ ${name}: ${metric.duration.toFixed(2)}ms`);
+  async measureBundleSize() {
+    try {
+      const buildDir = path.join(process.cwd(), '.next');
+      if (fs.existsSync(buildDir)) {
+        const stats = fs.statSync(buildDir);
+        this.metrics.bundleSize = stats.size;
+      }
+    } catch(error) {
+      console.error('Error measuring bundle size:', error);
     }
   }
 
-  getMetrics() {
-    return Object.fromEntries(this.metrics);
+  async measureMemoryUsage() {
+    const usage = process.memoryUsage();
+    this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024; // MB
   }
 
+<<<<<<< HEAD
 export const performanceMonitor = new PerformanceMonitor();
 =======
 #!/usr/bin/env node
@@ -56,6 +69,8 @@ class PerformanceMonitor {
     this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024; // MB
   }
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   generateReport() {
     const report = {
       timestamp: this.metrics.timestamp,
@@ -82,4 +97,7 @@ const report = monitor.generateReport();
 const reportPath = path.join(process.cwd(), 'performance-report.json');
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 console.log('Performance report generated:', reportPath);
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -142,6 +145,7 @@
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script type="module" src="%BASE_URL%src/main.tsx"></script>
   </body>
+<<<<<<< HEAD
 <<<<<<< HEAD
 </html>
 =======
@@ -353,3 +357,6 @@
 =======
 </html>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+</html>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

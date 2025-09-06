@@ -11,8 +11,11 @@
   "buildBreakingFiles": [],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "totalFiles": 1,
     "filesWithIssues": 1,
     "totalIssues": 3,
@@ -61,6 +64,7 @@
     "pages/enhanced-services.tsx"
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
   "generatedAt": "2025-08-21T00:41:50.318Z"
 =======
   "generatedAt": "2025-08-20T22:28:10.605Z"
@@ -71,3 +75,6 @@
 =======
   "generatedAt": "2025-08-21T00:41:50.318Z"}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  "generatedAt": "2025-08-21T00:41:50.318Z"}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -12,12 +12,16 @@
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/about",
     "title": "About Us — Zion Tech Group | Leading-Edge Technology Solutions",
     "h1": "About Zion Tech Group"
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   {
 =======
@@ -40,6 +44,9 @@
 =======
   {  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  {  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   {
     "route": "/",
     "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",
@@ -53,8 +60,11 @@
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "route": "/resources",
     "title": "Resources — Zion Tech Group | Documentation, Tools & Community",
     "h1": "Resources Hub"
@@ -68,6 +78,7 @@
     "route": "/solutions",
     "title": "Solutions — Zion Tech Group | Industry-Specific Technology Solutions",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "h1": "Industry Solutions"
 =======
     "route": "/services-advertising-2026",
@@ -78,4 +89,7 @@
 =======
     "h1": "Industry Solutions"  }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "h1": "Industry Solutions"  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 ]

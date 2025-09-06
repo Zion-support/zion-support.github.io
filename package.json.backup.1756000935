@@ -16,6 +16,7 @@
   "devDependencies": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@types/node": "^20.0.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
@@ -47,6 +48,12 @@
     "@types/react-dom": "^18.2.0",
     "autoprefixer": "^10.4.16",    "eslint": "^8.57.0",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.16",    "eslint": "^8.57.0",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "eslint-config-next": "^14.0.0",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0"

@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 exports.config = { schedule: '*/1 * * * *' };
 
 exports.handler = async function () {
@@ -148,6 +151,7 @@ exports.handler = async function () {
   const results = await runConcurrent(plan, maxConcurrent);
   const commitResult = await commitStatusArtifact(results);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const path = require('path');
 const fs = require('fs');
@@ -239,14 +243,19 @@ exports.handler = async () => {
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   return {
     statusCode: 200,
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       runAt: nowIso,
       baseUrl,
       planned: plan,
@@ -258,6 +267,7 @@ exports.handler = async () => {
       commitResult
     })
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 =======
@@ -278,3 +288,6 @@ exports.handler = async () => {
 =======
 };
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

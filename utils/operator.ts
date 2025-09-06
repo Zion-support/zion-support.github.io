@@ -1,18 +1,26 @@
-type OperatorEvent = {
-  type: string;
-  sessionId: string;
-  payload?: any;
+// Placeholder for operator utilities
+export const logSupportEventToOperator = async (event: any) => {
+  // Placeholder implementation
+  console.log('Support event logged:', event);
+  return { success: true };
 };
 
-export async function logSupportEventToOperator(
-  event: OperatorEvent
-): Promise<void> {
-  // Placeholder for real Operator integration; could POST to external service
-  // For now, we just no-op to avoid failures
-  return Promise.resolve();
+export const getSupportSessions = async () => {
+  // Placeholder implementation
+  return [];
+};
 
-export async function tagOperatorSession(
-  sessionId: string,
-  tag: string
-): Promise<void> {
-  return Promise.resolve();
+export const createSupportSession = async (session: any) => {
+  // Placeholder implementation
+  return { id: Date.now().toString(), ...session };
+};
+
+export const updateSupportSession = async (id: string, updates: any) => {
+  // Placeholder implementation
+  return { id, ...updates };
+};
+
+export const deleteSupportSession = async (id: string) => {
+  // Placeholder implementation
+  return { success: true };
+};

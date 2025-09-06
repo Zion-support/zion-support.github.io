@@ -1,29 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-name: Autonomous Automations
+<<<<<<< HEAD
 =======
-name: Scheduled Automations
->>>>>>> origin/cursor/enhance-and-automate-web-app-with-ai-ae0d
-
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+name: Autonomous Automations
 on:
   schedule:
     - cron: '*/30 * * * *'
-<<<<<<< HEAD
   push:
     branches: [ main ]
   workflow_dispatch: {}
-=======
-  workflow_dispatch:
-
-permissions:
-  contents: write
->>>>>>> origin/cursor/enhance-and-automate-web-app-with-ai-ae0d
-
 jobs:
   run-automations:
     runs-on: ubuntu-latest
-<<<<<<< HEAD
     permissions:
+<<<<<<< HEAD
       contents: write
 =======
 >>>>>>> origin/cursor/enhance-and-automate-web-app-with-ai-ae0d
@@ -115,3 +106,6 @@ jobs:
     permissions:
       contents: write
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      contents: write
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

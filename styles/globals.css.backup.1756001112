@@ -36,13 +36,17 @@
   --quantum-entanglement: 0 0 50px rgba(139, 92, 246, 0.3);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   --quantum-ripple: 0 0 60px rgba(0, 255, 255, 0.2);
   --holographic-matrix: 0 0 80px rgba(139, 92, 246, 0.15);
   --neural-cyberpunk: 0 0 70px rgba(236, 73, 153, 0.25);
   --quantum-space: 0 0 90px rgba(0, 255, 255, 0.1);
   --holographic-neural: 0 0 100px rgba(139, 92, 246, 0.08);
+<<<<<<< HEAD
 <<<<<<< HEAD
   --quantum-matrix: 0 0 120px rgba(0, 255, 255, 0.05);
 =======
@@ -227,6 +231,9 @@ body {
 =======
   --quantum-matrix: 0 0 120px rgba(0, 255, 255, 0.05);}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  --quantum-matrix: 0 0 120px rgba(0, 255, 255, 0.05);}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
@@ -263,8 +270,11 @@ body {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 .text-high-contrast-warning {
   color: var(--text-warning);
   text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
@@ -419,6 +429,7 @@ input, textarea, select {
   background: rgba(0, 255, 255, 0.4);
   color: white;
 <<<<<<< HEAD
+<<<<<<< HEAD
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
 =======
 /* 2026 Revolutionary Animations */
@@ -499,6 +510,9 @@ input, textarea, select {
 =======
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 /* Enhanced Body Styles */
 body {
@@ -547,6 +561,7 @@ body {
   z-index: -1;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   animation: backgroundFloat 30s ease-in-out infinite;
 =======
   animation: backgroundFloat 20s ease-in-out infinite;
@@ -555,6 +570,9 @@ body {
 =======
   animation: backgroundFloat 30s ease-in-out infinite;}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  animation: backgroundFloat 30s ease-in-out infinite;}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 /* Futuristic Grid Pattern */
 body::after {
@@ -566,12 +584,16 @@ body::after {
   height: 100%;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   background: 
     radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.15) 0%, transparent 50%),
+<<<<<<< HEAD
 <<<<<<< HEAD
     radial-gradient(circle at 60% 60%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
 =======
@@ -588,6 +610,9 @@ body::after {
 =======
     radial-gradient(circle at 60% 60%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);  pointer-events: none;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    radial-gradient(circle at 60% 60%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);  pointer-events: none;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   z-index: -1;
   animation: backgroundFloat 25s ease-in-out infinite;
 }
@@ -628,12 +653,16 @@ body::after {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 /* Enhanced Background Animations */
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 =======
 /* Enhanced Background Animations */
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+/* Enhanced Background Animations */
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 @keyframes backgroundFloat {
   0%, 100% {
     transform: translate(0, 0) rotate(0deg);
@@ -641,14 +670,18 @@ body::after {
   25% {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     transform: translateY(-20px) rotate(1deg);
   }
   50% {
     transform: translateY(-10px) rotate(-1deg);
   }
   75% {
+<<<<<<< HEAD
 <<<<<<< HEAD
     transform: translateY(-15px) rotate(0.5deg);
 =======
@@ -664,6 +697,9 @@ body::after {
 =======
     transform: translateY(-15px) rotate(0.5deg);  }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    transform: translateY(-15px) rotate(0.5deg);  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 
 @keyframes quantumFlow {
@@ -677,8 +713,11 @@ body::after {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 @keyframes matrixFlow {
   0% {
     transform: translateX(0) translateY(0);
@@ -775,6 +814,7 @@ body::after {
 
 /* Enhanced Button Animations */
 <<<<<<< HEAD
+<<<<<<< HEAD
 .btn-quantum {
 =======
 /* Enhanced Typography */
@@ -801,6 +841,9 @@ a:hover {
 =======
 .btn-quantum {  position: relative;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+.btn-quantum {  position: relative;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   overflow: hidden;
   background: linear-gradient(45deg, #00ffff, #0080ff);
   border: none;
@@ -808,9 +851,12 @@ a:hover {
   transition: all 0.3s ease;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   border: 2px solid transparent;
   background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
   border: none;
@@ -822,9 +868,12 @@ a:hover {
   transition: all 0.3s ease;
   box-shadow: var(--quantum-glow);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 
 .btn-quantum::before {
@@ -846,12 +895,16 @@ a:hover {
   transform: translateY(-2px);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   box-shadow: var(--quantum-glow);
 }
 
 /* Enhanced Card Animations */
+<<<<<<< HEAD
 <<<<<<< HEAD
 .card-quantum {
 =======
@@ -871,6 +924,9 @@ a:hover {
 =======
 .card-quantum {  position: relative;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+.card-quantum {  position: relative;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   overflow: hidden;
   transition: all 0.3s ease;
 }
@@ -883,8 +939,11 @@ a:hover {
   right: 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   bottom: 0;
   background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
   transform: translateX(-100%);
@@ -989,6 +1048,7 @@ a:hover {
 .font-holographic {
   font-family: 'Rajdhani', 'Inter', sans-serif;
   font-weight: 600;
+<<<<<<< HEAD
 <<<<<<< HEAD
   letter-spacing: 0.05em;
 =======
@@ -1449,6 +1509,12 @@ pre code {
 /* Enhanced Responsive Design */
 @media (max-width: 768px) {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  letter-spacing: 0.05em;}
+
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   .text-gradient-rainbow,
   .text-gradient-quantum {
     background-size: 200% 200%;
@@ -1456,6 +1522,7 @@ pre code {
   
   .particle-quantum,
   .particle-holographic {
+<<<<<<< HEAD
 <<<<<<< HEAD
     display: none;
 =======
@@ -1486,6 +1553,9 @@ pre code {
 =======
     display: none;  }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    display: none;  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 
 /* Enhanced Accessibility */
@@ -1501,12 +1571,16 @@ pre code {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 /* Enhanced Focus States */
 .focus-quantum:focus {
   outline: 2px solid #00ffff;
   outline-offset: 2px;
+<<<<<<< HEAD
 <<<<<<< HEAD
   box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.1);
 =======
@@ -1529,6 +1603,9 @@ pre code {
 =======
   box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.1);}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.1);}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 /* Enhanced Dark Mode Support */
 @media (prefers-color-scheme: dark) {
@@ -1538,8 +1615,11 @@ pre code {
     --neon-pink: #ec4899;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
   50% { 
     box-shadow: 
@@ -2037,6 +2117,7 @@ pre code {
   
   .grid-bg {
 <<<<<<< HEAD
+<<<<<<< HEAD
     background-size: 25px 25px;
 =======
   }
@@ -2061,6 +2142,9 @@ pre code {
 =======
     background-size: 25px 25px;  }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    background-size: 25px 25px;  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 
 /* Enhanced Accessibility */

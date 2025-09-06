@@ -8,16 +8,21 @@ const localeToFlag: Record<string, string> = {
   pt: 'br',
   es: 'es',
 <<<<<<< HEAD
+<<<<<<< HEAD
   ar: 'sa',
 };
 
 =======
   ar: 'sa'},
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  ar: 'sa'},
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const localeLabelKey: Record<string, string> = {
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
+<<<<<<< HEAD
 <<<<<<< HEAD
   ar: 'lang.arabic',
 };
@@ -25,6 +30,9 @@ const localeLabelKey: Record<string, string> = {
 =======
   ar: 'lang.arabic'},
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  ar: 'lang.arabic'},
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function LanguageSwitcher() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
@@ -36,43 +44,33 @@ export default function LanguageSwitcher() {
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng);
 <<<<<<< HEAD
+<<<<<<< HEAD
     setOpen(false);
+=======
+    setOpen(false)
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
-    <div className='relative'>
+    <div className="relative">
       <button
-        aria-haspopup='listbox'
+        aria-haspopup="listbox"
         aria-expanded={open}
-        className='flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800'
-        onClick={() => setOpen(v => !v)}
+        className="flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
+        onClick={() => setOpen((v) => !v)}
       >
         <span className={`fi fi-${localeToFlag[current] || 'us'}`}></span>
         <span>{t(localeLabelKey[current] || 'lang.english')}</span>
-        <svg
-          width='16'
-          height='16'
-          viewBox='0 0 20 20'
-          fill='currentColor'
-          className='opacity-70'
-        >
-          <path
-            fillRule='evenodd'
-            d='M5.23 7.21a.75.75 0 011.06.02L10 11.187l3.71-3.955a.75.75 0 011.08 1.04l-4.24 4.52a.75.75 0 01-1.08 0l-4.24-4.52a.75.75 0 01.02-1.06z'
-            clipRule='evenodd'
-          />
-        </svg>
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" className="opacity-70"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.187l3.71-3.955a.75.75 0 011.08 1.04l-4.24 4.52a.75.75 0 01-1.08 0l-4.24-4.52a.75.75 0 01.02-1.06z" clipRule="evenodd" /></svg>
       </button>
       {open && (
-        <ul
-          role='listbox'
-          className='absolute right-0 mt-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded shadow-lg z-50'
-        >
-          {supportedLocales.map(lng => (
+        <ul role="listbox" className="absolute right-0 mt-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded shadow-lg z-50">
+          {supportedLocales.map((lng) => (
             <li key={lng}>
               <button
-                role='option'
+                role="option"
                 aria-selected={current.startsWith(lng)}
+<<<<<<< HEAD
                 className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'
 =======
     setOpen(false)
@@ -99,6 +97,9 @@ export default function LanguageSwitcher() {
                 aria-selected={current.startsWith(lng)}
                 className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+                className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 onClick={() => changeLanguage(lng)}
               >
                 <span className={`fi fi-${localeToFlag[lng]}`}></span>
@@ -111,6 +112,10 @@ export default function LanguageSwitcher() {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -12,9 +12,12 @@
   node_bundler = "esbuild"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -46,8 +49,11 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 [[scheduled.functions]]
   name = "frontpage-enhancer"
   schedule = "*/20 * * * *" # every 20 minutes
@@ -63,6 +69,7 @@
 [[scheduled.functions]]
   name = "sitemap_runner"
   schedule = "0 */12 * * *" # twice per day
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 [[redirects]]
@@ -93,6 +100,8 @@
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 [[redirects]]
   from = "/autonomous-vehicle-ai"
   to = "/autonomous-vehicle-ai-platform"

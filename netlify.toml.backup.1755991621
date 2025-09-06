@@ -12,9 +12,12 @@
   node_bundler = "esbuild"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -54,8 +57,11 @@
 [[redirects]]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   from = "/ai-customer-success-automation"
   to = "/ai-customer-success-platform"
   status = 301
@@ -154,6 +160,7 @@
   from = "/quantum-internet-security"
   to = "/quantum-internet-security-platform"
 <<<<<<< HEAD
+<<<<<<< HEAD
   status = 301
 =======
   from = "/rag-evaluation-lab"
@@ -194,3 +201,6 @@
 =======
   status = 301
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  status = 301
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

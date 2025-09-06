@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
@@ -10,6 +11,10 @@ export default function AIAutonomousBusinessOperations() {
 =======
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIAutonomousBusinessOperations() {
+=======
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function AIAutonomousBusinessOperations() {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<ServiceLanding
 			title="AI‑Powered Autonomous Business Operations"
@@ -31,5 +36,9 @@ export default function AIAutonomousBusinessOperations() {
 			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
 		/>
 	)
+<<<<<<< HEAD
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

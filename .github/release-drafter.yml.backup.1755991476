@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
 
@@ -17,6 +20,7 @@ categories:
   - title: '⚡ Performance'
     labels:
       - 'perf'
+<<<<<<< HEAD
 <<<<<<< HEAD
       - 'performance'
 =======
@@ -43,6 +47,12 @@ categories:
       - 'chore'
       - 'dependencies'
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      - 'performance'  - title: '🧰 Maintenance'
+    labels:
+      - 'chore'
+      - 'dependencies'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   - title: '📝 Documentation'
     labels:
       - 'docs'
@@ -68,6 +78,7 @@ template: |
 
   ## Contributors
 <<<<<<< HEAD
+<<<<<<< HEAD
   $CONTRIBUTORS
 =======
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
@@ -76,3 +87,6 @@ no-changes-template: 'No user-facing changes.'
 =======
   $CONTRIBUTORS
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  $CONTRIBUTORS
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

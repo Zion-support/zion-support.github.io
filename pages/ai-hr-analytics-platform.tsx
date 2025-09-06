@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ServicePage, {
   getStaticProps as getSlugStaticProps,;
 } from './services/[slug]';
@@ -11,6 +12,11 @@ export default function AiHrAnalyticsPlatform() {
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 
 export default function AiHrAnalyticsPlatform() {
+=======
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+
+export default function AiHrAnalyticsPlatform() {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<ServiceLanding
 			title="AI HR Analytics Platform"
@@ -33,5 +39,9 @@ export default function AiHrAnalyticsPlatform() {
 			canonical="https: //ziontechgroup.com/ai-hr-analytics-platform"
 		/>
 	)
+<<<<<<< HEAD
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

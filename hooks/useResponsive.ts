@@ -1,4 +1,5 @@
         "isDesktop": width >= 1024})};
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 interface ResponsiveState {
@@ -41,6 +42,10 @@ export const useResponsive = (): ResponsiveState => {
 
 export default useResponsive;
     updateDimensions();
+=======
+
+    updateDimensions();
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     window.addEventListener(;
   'resize', updateDimensions);
     return () => window.removeEventListener(;

@@ -12,9 +12,12 @@
   node_bundler = "esbuild"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -42,8 +45,11 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 [[scheduled.functions]]
   name = "front-index-orchestrator"
   schedule = "*/5 * * * *" # every 5 minutes
@@ -160,6 +166,7 @@
 
 # Section placeholders to existing hubs
 <<<<<<< HEAD
+<<<<<<< HEAD
 [[redirects]]
 =======
 [[headers]]
@@ -204,14 +211,20 @@
 =======
 [[redirects]]  from = "/team"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+[[redirects]]  from = "/team"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   to = "/about"
   status = 301
 
 [[redirects]]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   from = "/ai-autonomous-ecosystem"
   to = "/ai-autonomous-ecosystem-manager"
   status = 301
@@ -279,6 +292,7 @@
 [[redirects]]
   from = "/quantum-encryption-gateway"
 <<<<<<< HEAD
+<<<<<<< HEAD
   to = "/quantum-internet-security-platform"
 =======
   from = "/press"
@@ -293,3 +307,6 @@
 =======
   to = "/quantum-internet-security-platform"  status = 301
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  to = "/quantum-internet-security-platform"  status = 301
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

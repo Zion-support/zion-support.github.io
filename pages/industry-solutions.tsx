@@ -2,14 +2,18 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function IndustrySolutions() {
   return (
     <>
       <Head>
         <title>Industry Solutions | Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <meta
           name='description'
@@ -86,6 +90,11 @@ export default function IndustrySolutions() {
         <meta name="description" content="Industry-specific AI, quantum, and micro SaaS solutions for healthcare, finance, manufacturing, retail, education, government, energy, biotech and more." />
         <link rel="canonical" href="https: //ziontechgroup.com/industry-solutions" />
       </Head>
+=======
+        <meta name="description" content="Industry-specific AI, quantum, and micro SaaS solutions for healthcare, finance, manufacturing, retail, education, government, energy, biotech and more." />
+        <link rel="canonical" href="https: //ziontechgroup.com/industry-solutions" />
+      </Head>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <div className="min-h-screen bg-black text-white">
         <section className="container mx-auto px-4 py-20">
           <h1 className="text-4xl font-bold mb-6">Industry Solutions</h1>
@@ -100,14 +109,22 @@ export default function IndustrySolutions() {
             <Link className="p-5 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-cyan-600 transition" href="/energy-utilities-solutions">Energy & Utilities</Link>
             <Link className="p-5 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-cyan-600 transition" href="/biotech-ai">Biotech & Healthcare AI</Link>
             <Link className="p-5 rounded-xl bg-gray-900/60 border border-gray-800 hover:border-cyan-600 transition" href="/space-technology">Space Technology</Link>
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </section>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 =======
   )
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  )
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

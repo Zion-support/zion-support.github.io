@@ -193,8 +193,11 @@ h3 {
   left: 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 
 /* Custom scrollbar */
@@ -300,6 +303,7 @@ h3 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .particle-bg::before {
 =======
   width: 100%;
@@ -343,6 +347,9 @@ body::after {
 =======
 .particle-bg::before {  content: '';
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+.particle-bg::before {  content: '';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   position: absolute;
   top: 0;
   left: 0;
@@ -362,14 +369,18 @@ body::after {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 /* Futuristic Card Effects */
 .futuristic-card {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
+<<<<<<< HEAD
 <<<<<<< HEAD
   transition: all 0.3s ease;
 =======
@@ -513,6 +524,9 @@ h3 {
 =======
   transition: all 0.3s ease;  position: relative;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  transition: all 0.3s ease;  position: relative;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   overflow: hidden;
 }
 
@@ -594,9 +608,12 @@ h3 {
   border: none;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 
 /* Futuristic Utility Classes */
@@ -645,9 +662,12 @@ h3 {
   color: white;
   padding: 12px 24px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-98d9
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   border-radius: 12px;
   padding: 12px 24px;
   color: white;

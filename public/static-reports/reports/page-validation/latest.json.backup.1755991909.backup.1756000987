@@ -1,10 +1,14 @@
 {
   "summary": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:public/static-reports/reports/page-validation/latest.json.backup.1755991909
 =======
 :public/static-reports/reports/page-validation/latest.json.backup.1755991909
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+:public/static-reports/reports/page-validation/latest.json.backup.1755991909
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "totalFiles": 4,
     "filesWithIssues": 4,
     "totalIssues": 0,
@@ -70,12 +74,16 @@
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-20T18:47:22.457Z"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   "generatedAt": "2025-08-20T19:01:37.088Z"
 =======
 =======
   "generatedAt": "2025-08-20T19:01:37.088Z"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  "generatedAt": "2025-08-20T19:01:37.088Z"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "totalFiles": 0,
     "filesWithIssues": 0,
     "totalIssues": 0,
@@ -85,6 +93,7 @@
   },
   "results": [],
   "buildBreakingFiles": [],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   "generatedAt": "2025-08-21T00:47:56.731Z"
@@ -98,3 +107,6 @@
 =======
   "generatedAt": "2025-08-21T00:47:56.731Z"}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  "generatedAt": "2025-08-21T00:47:56.731Z"}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 name: Cloud Autonomous Automations
 
 on:
@@ -24,6 +27,7 @@ jobs:
   run-automations:
     runs-on: ubuntu-latest
 <<<<<<< HEAD
+<<<<<<< HEAD
     timeout-minutes: 25
 =======
 name: Cloud Autonomous Automation
@@ -45,6 +49,9 @@ jobs:
 =======
     timeout-minutes: 25    steps:
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    timeout-minutes: 25    steps:
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -52,13 +59,17 @@ jobs:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: 'npm'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       - name: Setup Node.js
@@ -77,6 +88,11 @@ jobs:
         run: npm ci
 
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      - name: Install dependencies
+        run: npm ci
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       - name: Run cloud autonomous automations
         run: node automation/cloud-autonomous-runner.cjs
 
@@ -101,6 +117,7 @@ jobs:
             git push origin HEAD:${{ github.ref_name }}
           else
             echo "No new commits to push"
+<<<<<<< HEAD
 <<<<<<< HEAD
           fi
 =======
@@ -136,3 +153,6 @@ jobs:
 =======
           fi
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          fi
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

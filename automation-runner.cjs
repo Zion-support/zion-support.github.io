@@ -61,9 +61,15 @@ class AutomationRunner {
     if (testResult.success) {
       this.results.tests.passed++;
     } else {
+<<<<<<< HEAD
     this.results.tests.failed++,
     this.results.tests.errors.push(testResult.error)
   }
+=======
+      this.results.tests.failed++;
+      this.results.tests.errors.push(testResult.error);
+    }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     // Run type checking
     const typeResult = await this.runCommand(
@@ -74,9 +80,15 @@ class AutomationRunner {
     if (typeResult.success) {
       this.results.tests.passed++;
     } else {
+<<<<<<< HEAD
     this.results.tests.failed++,
     this.results.tests.errors.push(typeResult.error)
   }
+=======
+      this.results.tests.failed++;
+      this.results.tests.errors.push(typeResult.error);
+    }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   async runLinting() {
@@ -165,9 +177,15 @@ class PerformanceMonitor {
     try {
       const buildDir = path.join(process.cwd(), '.next');
       if (fs.existsSync(buildDir)) {
+<<<<<<< HEAD
     const stats = fs.statSync(buildDir),
     this.metrics.bundleSize = stats.size
   }
+=======
+        const stats = fs.statSync(buildDir);
+        this.metrics.bundleSize = stats.size;
+      }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     } catch(error) {
       console.error('Error measuring bundle size:', error);
     }

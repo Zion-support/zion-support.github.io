@@ -1,12 +1,16 @@
 const nextConfig = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	reactStrictMode: true,
 	swcMinify: true,
 	optimizeFonts: false,
 	output: 'export',
+<<<<<<< HEAD
 <<<<<<< HEAD
 	trailingSlash: true
 =======
@@ -40,5 +44,8 @@ const nextConfig = {
 =======
 	trailingSlash: true};
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+	trailingSlash: true};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 module.exports = withSentryConfig(baseConfig);

@@ -7,8 +7,11 @@ const nextConfig = {
   reactStrictMode: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   bundlePagesRouterDependencies: true,
   // Temporarily disable ESLint during build to handle unescaped entities
   eslint: {
@@ -17,6 +20,7 @@ const nextConfig = {
   // Temporarily disable TypeScript checking during build
   typescript: {
     ignoreBuildErrors: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
 =======
@@ -53,6 +57,9 @@ const nextConfig = {
 =======
   },  modularizeImports: {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  },  modularizeImports: {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     'lucide-react': {
       transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
       skipDefaultConversion: true,
@@ -81,6 +88,7 @@ const nextConfig = {
     workerThreads: false, // Disable worker threads to reduce memory usage
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     cpus: Math.min(2, 2), // Adaptive CPU limit
     // Bundle analysis optimizations moved to root level
 =======
@@ -91,6 +99,10 @@ const nextConfig = {
     cpus: Math.min(2, 2), // Adaptive CPU limit
     // Bundle analysis optimizations moved to root level    // Disable profiling for faster builds
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    cpus: Math.min(2, 2), // Adaptive CPU limit
+    // Bundle analysis optimizations moved to root level    // Disable profiling for faster builds
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     swcTraceProfiling: false,
   },
 
@@ -129,6 +141,7 @@ const nextConfig = {
     'axios-retry',
   ],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   webpack: (config, { dev, isServer }) => {
@@ -431,6 +444,10 @@ const nextConfig = {
   webpack: (config, { dev, isServer }) => {
     // Handle problematic packages    config.resolve.fallback = {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  webpack: (config, { dev, isServer }) => {
+    // Handle problematic packages    config.resolve.fallback = {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       ...config.resolve.fallback,
       fs: false,
       net: false,
@@ -467,8 +484,11 @@ const nextConfig = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     // Optimize bundle size for production
     if (!dev) {
       config.optimization = {
@@ -493,6 +513,7 @@ const nextConfig = {
             },
           },
         },
+<<<<<<< HEAD
 <<<<<<< HEAD
       };
 =======
@@ -550,6 +571,9 @@ const nextConfig = {
 =======
       };    }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      };    }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     
     return config;
   },

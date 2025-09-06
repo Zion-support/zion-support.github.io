@@ -1,13 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
 exports.handler = async function(event, context) {
   console.log('🤖 Starting fast-front-promoter...');
+<<<<<<< HEAD
 <<<<<<< HEAD
   
 =======
@@ -25,6 +29,9 @@ exports.handler = async function() {
 =======
     try {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    try {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     const timestamp = new Date().toISOString();
     const reportPath = path.join(process.cwd(), 'fast-front-promoter-report.md');
     

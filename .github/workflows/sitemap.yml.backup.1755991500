@@ -1,13 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 name: Nightly Sitemap
 
 on:
   schedule:
     - cron: '0 3 * * *'
   workflow_dispatch: {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 name: Generate Sitemap
@@ -22,10 +26,13 @@ on:
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 permissions:
   contents: write
 
 jobs:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   build-sitemap:
@@ -43,6 +50,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  build-sitemap:    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         with:
           persist-credentials: true
 
@@ -68,6 +81,7 @@ jobs:
             git commit -m "chore(automation): update sitemap [skip ci]"
             git push
 <<<<<<< HEAD
+<<<<<<< HEAD
           fi
 =======
       - name: Setup Node.js
@@ -87,3 +101,6 @@ jobs:
 =======
           fi
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          fi
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

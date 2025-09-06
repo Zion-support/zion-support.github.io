@@ -18,9 +18,12 @@ This file stores project-specific knowledge, conventions, and decisions that sho
 - React 17 compatibility
 - TailwindCSS configured
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 - Next.js config present
 
@@ -28,14 +31,18 @@ This file stores project-specific knowledge, conventions, and decisions that sho
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 - Always start, test, follow, and fix the automation scripts
 
 - Create new scripts to automate recurring workflows
 
 - Prefer schedulers (cron/systemd/node-cron) that run independent of Cursor
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 - Use local tools and install required software responsibly to support automation
 =======
@@ -47,3 +54,6 @@ This file stores project-specific knowledge, conventions, and decisions that sho
 =======
 - Use local tools and install required software responsibly to support automation
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+- Use local tools and install required software responsibly to support automation
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 'use client';
 
@@ -30,13 +31,67 @@ import {
 } from 'lucide-react';
 
 const Header: React.FC = () => {
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap } from 'lucide-react';
+import { useRouter } from 'next/router';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { Zap } from 'lucide-react';
+
+const servicesDropdown = [
+  {
+    icon: Brain,
+    title: 'AI & Machine Learning',
+    description: 'Intelligent solutions for business automation',
+    href: '/ai-services',
+  };
+  {
+    icon: Shield,
+    title: 'Cybersecurity',
+    description: 'Advanced security and threat protection',
+    href: '/it-services',
+  };
+  {
+    icon: Cloud,
+    title: 'Cloud Infrastructure',
+    description: 'Scalable cloud solutions and migration',
+    href: '/it-services',
+  };
+  {
+    icon: Code,
+    title: 'Custom Software Development',
+    description: 'Tailored applications to meet your specific business needs',
+    href: '/services',
+  };
+  {
+    icon: Network,
+    title: 'System Integration',
+    description: 'Seamless integration of existing systems',
+    href: '/services',
+  };
+  {
+    icon: Zap,
+    title: 'Digital Transformation',
+    description: 'Complete digital overhaul of your business processes',
+    href: '/services',
+  }
+
+];
+
+const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const router = useRouter();
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
 
+<<<<<<< HEAD
   const servicesDropdown = [
     {
       title: 'Web Development',
@@ -73,9 +128,20 @@ const Header: React.FC = () => {
       description: 'Speed and efficiency improvements',
       href: '/services/performance',
       icon: Zap
-    }
-  ];
+=======
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    if (onMenuClick) {
+      onMenuClick();
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    }
+  };
+
+<<<<<<< HEAD
   const solutionsDropdown = [
     {
       title: 'Enterprise Solutions',
@@ -202,127 +268,99 @@ const Header: React.FC = () => {
       {/* Main Navigation */}
       <nav className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
+=======
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setIsServicesOpen(false);
+  };
+
+  const handleServiceClick = (href: string) => {
+    router.push(href);
+    closeMenu();
+  };
+
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Z</span>
+              <Zap className="h-6 w-6 text-white" />
             </div>
-            <div>
-              <div className="text-xl font-bold text-gray-900">Zion Tech Group</div>
-              <div className="text-xs text-gray-500">Technology Solutions</div>
-            </div>
+            <span className={`text-2xl font-bold transition-colors duration-300 ${
+              isScrolled ? 'text-gray-900' : 'text-white'
+            }`}>
+              Zion Tech Group
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {/* Services Dropdown */}
-            <div className="relative group">
+          <nav className="hidden lg:flex items-center space-x-8">
+            <Link
+              href="/"
+              className={`font-medium transition-colors duration-200 ${
+                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
+              }`}
+            >
+              Home
+            </Link>
+
+            <div className="relative">
               <button
-                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                className={`flex items-center space-x-1 font-medium transition-colors duration-200 ${
+                  isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
+                }`}
               >
-                Services <ChevronDown className="w-4 h-4 ml-1" />
+                <span>Services</span>
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
+                  isServicesOpen ? 'rotate-180' : ''
+                }`} />
               </button>
+
               <AnimatePresence>
                 {isServicesOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
+                    initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border z-50"
-                    onMouseEnter={() => setIsServicesOpen(true)}
-                    onMouseLeave={() => setIsServicesOpen(false)}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
                   >
-                    <div className="p-6">
-                      <div className="grid grid-cols-2 gap-4">
-                        {servicesDropdown.map((service) => (
-                          <Link key={service.title} href={service.href} className="group">
-                            <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                              <service.icon className="w-6 h-6 text-blue-600 mt-1" />
-                              <div>
-                                <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">{service.title}</h3>
-                                <p className="text-sm text-gray-600">{service.description}</p>
-                              </div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* Solutions Dropdown */}
-            <div className="relative group">
-              <button
-                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                onMouseEnter={() => setIsSolutionsOpen(true)}
-                onMouseLeave={() => setIsSolutionsOpen(false)}
-              >
-                Solutions <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              <AnimatePresence>
-                {isSolutionsOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border z-50"
-                    onMouseEnter={() => setIsSolutionsOpen(true)}
-                    onMouseLeave={() => setIsSolutionsOpen(false)}
-                  >
-                    <div className="p-6">
-                      {solutionsDropdown.map((solution) => (
-                        <Link key={solution.title} href={solution.href} className="group block mb-4 last:mb-0">
-                          <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                            <solution.icon className="w-6 h-6 text-blue-600 mt-1" />
-                            <div>
-                              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">{solution.title}</h3>
-                              <p className="text-sm text-gray-600">{solution.description}</p>
-                            </div>
+                    {servicesDropdown.map((service) => (
+                      <button
+                        key={service.title}
+                        onClick={() => handleServiceClick(service.href)}
+                        className="w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors"
+                      >
+                        <div className="flex items-start space-x-3">
+                          <service.icon className="h-5 w-5 text-blue-600 mt-0.5" />
+                          <div>
+                            <div className="font-medium text-gray-900">{service.title}</div>
+                            <div className="text-sm text-gray-500">{service.description}</div>
                           </div>
-                        </Link>
-                      ))}
-                    </div>
+                        </div>
+                      </button>
+                    ))}
+
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
 
-            {/* Industries Dropdown */}
-            <div className="relative group">
-              <button
-                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                onMouseEnter={() => setIsIndustriesOpen(true)}
-                onMouseLeave={() => setIsIndustriesOpen(false)}
-              >
-                Industries <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              <AnimatePresence>
-                {isIndustriesOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border z-50"
-                    onMouseEnter={() => setIsIndustriesOpen(true)}
-                    onMouseLeave={() => setIsIndustriesOpen(false)}
-                  >
-                    <div className="p-4">
-                      {industriesDropdown.map((industry) => (
-                        <Link key={industry.name} href={industry.href} className="group flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors">
-                          <industry.icon className="w-5 h-5 text-blue-600" />
-                          <span className="text-gray-700 group-hover:text-blue-600">{industry.name}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+            <Link
+              href="/about"
+              className={`font-medium transition-colors duration-200 ${
+                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
+              }`}
+            >
+              About
+            </Link>
 
+<<<<<<< HEAD
             {/* Regular Navigation Items */}
             {navigation.slice(0, 2).map((item) => (
               <Link
@@ -360,12 +398,36 @@ const Header: React.FC = () => {
       </nav>
 
       {/* Mobile Menu */}
+=======
+            <Link
+              href="/contact"
+              className={`font-medium transition-colors duration-200 ${
+                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
+              }`}
+            >
+              Contact
+            </Link>
+          </nav>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={toggleMenu}
+            className="lg:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors"
+          >
+            <Menu className="h-6 w-6" />
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
             className="md:hidden"
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
@@ -383,14 +445,71 @@ const Header: React.FC = () => {
                   href="/contact"
                   onClick={() => setIsMenuOpen(false)}
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+=======
+            className="lg:hidden bg-white border-t border-gray-200"
+          >
+            <div className="px-4 py-2 space-y-1">
+              <Link
+                href="/"
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
+                onClick={closeMenu}
+              >
+                Home
+              </Link>
+              
+              <div className="px-3 py-2">
+                <button
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className="flex items-center justify-between w-full text-left text-gray-700 hover:text-blue-600 transition-colors"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 >
-                  Get Started
-                </Link>
+                  <span>Services</span>
+                  <ChevronDown className={`h-4 w-4 transition-transform ${
+                    isServicesOpen ? 'rotate-180' : ''
+                  }`} />
+                </button>
+                
+                {isServicesOpen && (
+                  <div className="mt-2 space-y-1">
+                    {servicesDropdown.map((service) => (
+                      <button
+                        key={service.title}
+                        onClick={() => handleServiceClick(service.href)}
+                        className="block w-full text-left px-6 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
+                      >
+                        {service.title}
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
+<<<<<<< HEAD
             </motion.div>
           )}
         </AnimatePresence>
       </nav>
+=======
+              
+              <Link
+                href="/about"
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
+                onClick={closeMenu}
+              >
+                About
+              </Link>
+              
+              <Link
+                href="/contact"
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
+                onClick={closeMenu}
+              >
+                Contact
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     </header>
   );

@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   setVendorApproval,
   setVendorCommission,
@@ -15,6 +16,12 @@ import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const { action, vendorId, value } = req.body || {};
   try {
     if (action === 'approve') setVendorApproval(String(vendorId), true);
@@ -22,11 +29,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     else if (action === 'suspend') suspendVendor(String(vendorId), true);
     else if (action === 'unsuspend') suspendVendor(String(vendorId), false);
 <<<<<<< HEAD
+<<<<<<< HEAD
     else if (action === 'commission')
       setVendorCommission(String(vendorId), Number(value));
+=======
+    else if (action === 'commission') setVendorCommission(String(vendorId), Number(value));
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     else return res.status(400).json({ error: 'Unknown action' });
-    res.status(200).json({ ok: true });
+    res.status(200).json({ ok: true })
   } catch (e: any) {
+<<<<<<< HEAD
     res.status(500).json({ error: e.message });
   }
 =======
@@ -38,3 +50,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   };
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    res.status(500).json({ error: e.message })
+  };
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

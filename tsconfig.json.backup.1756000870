@@ -18,8 +18,11 @@
       "@/*": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         "./*"
       ],
       "@/pages/*": [
@@ -42,6 +45,7 @@
       ]
     },
     /* Bundler mode */
+<<<<<<< HEAD
 <<<<<<< HEAD
     "moduleResolution": "bundler",
 =======
@@ -91,6 +95,9 @@
 =======
     "moduleResolution": "bundler",    "esModuleInterop": true,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "moduleResolution": "bundler",    "esModuleInterop": true,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "resolveJsonModule": true,
     "strict": false,
     "noUnusedLocals": false,
@@ -128,8 +135,11 @@
     "zion.app/recovered-content/**",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "contracts/**",
     "dao/**",
     "zion-os/**",
@@ -138,6 +148,7 @@
     "monitoring/**",
     "scripts/**",
     "server/**",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "cypress/**"
 =======
@@ -152,4 +163,7 @@
 =======
     "cypress/**"  ]
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "cypress/**"  ]
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }

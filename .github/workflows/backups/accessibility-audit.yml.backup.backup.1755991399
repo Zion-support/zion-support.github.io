@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:.github/workflows/backups/accessibility-audit.yml.backup
 =======
   pull-requests: write
@@ -16,6 +17,10 @@ permissions:
 :.github/workflows/backups/accessibility-audit.yml.backup
   pull-requests: write
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+:.github/workflows/backups/accessibility-audit.yml.backup
+  pull-requests: write
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   actions: read
 
 jobs:

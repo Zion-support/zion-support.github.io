@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const os = require('os');
 const path = require('path');
 
@@ -166,9 +169,12 @@ const nextConfig = {
       );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
     
     // Development optimizations to prevent memory leaks with 176+ pages
@@ -754,6 +760,7 @@ const nextConfig = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = nextConfig;
 =======
 /** @type {import('next').NextConfig} */
@@ -776,3 +783,6 @@ module.exports = nextConfig
 =======
 module.exports = nextConfig;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+module.exports = nextConfig;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

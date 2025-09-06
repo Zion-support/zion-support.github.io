@@ -3,6 +3,7 @@ module.exports = {
     ['@babel/preset-env', {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       modules: 'commonjs', // Use CommonJS instead of ESM
       targets: {
 =======
@@ -15,6 +16,10 @@ module.exports = {
       modules: 'commonjs', // Use CommonJS instead of ESM
       targets: {        node: '18'
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      modules: 'commonjs', // Use CommonJS instead of ESM
+      targets: {        node: '18'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
     }],
     ['@babel/preset-react', {
@@ -24,6 +29,7 @@ module.exports = {
   ],
   plugins: [
     ['@babel/plugin-transform-runtime', {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       useESModules: false, // Use CommonJS
@@ -42,6 +48,12 @@ module.exports = {
       regenerator: false
     }]
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      useESModules: false, // Use CommonJS      corejs: false,
+      helpers: true,
+      regenerator: false
+    }]
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ],
   env: {
     test: {
@@ -78,8 +90,11 @@ module.exports = {
       ]
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ]
 };

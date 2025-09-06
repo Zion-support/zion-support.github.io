@@ -1,7 +1,14 @@
 import { useState, useEffect, useCallback } from 'react';
 
+interface ApiState<T> {
+  data: T | null;
+  loading: boolean;
+  error: string | null;
+}
+
 interface UseApiOptions {
   immediate?: boolean;
+<<<<<<< HEAD
   onSuccess?: (data: any) => void, onError?: (error: Error) => void,
 }
 
@@ -23,10 +30,19 @@ export const useApi = <T = unknown>(
   apiFunction: (...args: unknown[]) => Promise<T>,
   options: UseApiOptions<T> = {}
 ) => {
+=======
+}
+
+export function useApi<T>(
+  apiCall: () => Promise<T>;
+  options: UseApiOptions = {}
+): ApiState<T> & { refetch: () => void } {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<Error | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
+<<<<<<< HEAD
   const execute = useCallback(async (...args: unknown[]) => {
     try {
       setLoading(true);
@@ -40,17 +56,29 @@ export const useApi = <T = unknown>(
       setError(error);
       options.onError?.(error);
       throw error;
+=======
+  const fetchData = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    
+    try {
+      const result = await apiCall();
+      setData(result);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     } finally {
       setLoading(false);
     }
-  }, [apiFunction, options]);
+  }, [apiCall]);
 
   useEffect(() => {
-    if (options.immediate) {
-      execute();
+    if (options.immediate !== false) {
+      fetchData();
     }
-  }, [execute, options.immediate]);
+  }, [fetchData, options.immediate]);
 
+<<<<<<< HEAD
   return { data, loading, error, execute };
 };
 
@@ -99,3 +127,12 @@ export function useApi<T>(
   return state;
 
 }
+=======
+  return {
+    data;
+    loading;
+    error;
+    refetch: fetchData;
+  };
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

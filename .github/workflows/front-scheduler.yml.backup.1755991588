@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 name: Front Scheduler
 
 on:
@@ -12,6 +15,7 @@ on:
 permissions:
   contents: write
   actions: read
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -33,6 +37,8 @@ concurrency:
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -44,12 +50,16 @@ jobs:
           fetch-depth: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           persist-credentials: true
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
           persist-credentials: true
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+          persist-credentials: true
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -58,6 +68,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         run: npm ci --no-audit --no-fund
@@ -103,3 +114,8 @@ jobs:
       - name: Run workflow
         run: echo "Workflow completed successfully"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        run: npm ci --no-audit --no-fund
+      - name: Run workflow
+        run: echo "Workflow completed successfully"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

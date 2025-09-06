@@ -4,9 +4,12 @@
   "private": true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "version": "0.0.0",
   "type": "module",
   "bin": {
@@ -432,9 +435,12 @@
     "test": "tests"
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/check-logs-and-improve-project-quality-a28f
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "repository": {
     "type": "git",
     "url": "https://github.com/Zion-Holdings/zion.app.git"
@@ -719,9 +725,12 @@
       "eslint --fix"
     ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   "name": "zion-sdk-monorepo",
   "private": true,
   "version": "0.1.0",

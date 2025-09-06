@@ -5,6 +5,7 @@
 // NOTE: This file should not be edited
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // see https://nextjs.org/docs/basic-features/typescript for more information.
 =======
 // see https://nextjs.org/docs/pages/api-reference/config/typescript for more information.
@@ -12,3 +13,6 @@
 =======
 // see https://nextjs.org/docs/basic-features/typescript for more information.
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+// see https://nextjs.org/docs/basic-features/typescript for more information.
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

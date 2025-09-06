@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Jest setup file
 import '@testing-library/jest-dom';
 
@@ -78,3 +79,6 @@ beforeEach(() => {
   // Reset all mocks before each test
   jest.clearAllMocks();
 });
+=======
+import '@testing-library/jest-dom';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

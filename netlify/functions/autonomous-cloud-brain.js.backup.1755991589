@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 // netlify/functions/autonomous-cloud-brain.js
 // An intelligent, ultra-fast orchestrator that selectively triggers key automations
 // and ensures repository sync via build hook or GitHub API, fully cloud-native.
@@ -190,6 +193,7 @@ exports.handler = async function() {
       syncResult = { method: 'none', ok: false, error: 'No NETLIFY_BUILD_HOOK_URL or GITHUB_TOKEN' };
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 exports.handler = async function(event, context) {
   const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/, '');
@@ -335,6 +339,11 @@ exports.handler = async function(event, context) {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    return {
+      statusCode: 200,
+      headers: { 'Content-Type': 'application/json' },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       body: JSON.stringify({
         ok: true,
         triggeredAt: new Date().toISOString(),
@@ -350,6 +359,7 @@ exports.handler = async function(event, context) {
   } catch (err) {
     log(String(err));
 <<<<<<< HEAD
+<<<<<<< HEAD
     return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ok: false, error: String(err) }) };
 =======
       body: JSON.stringify({ heartbeat, results: invoked, commitResult })
@@ -362,4 +372,7 @@ exports.handler = async function(event, context) {
 =======
     return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ok: false, error: String(err) }) };  }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ok: false, error: String(err) }) };  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };

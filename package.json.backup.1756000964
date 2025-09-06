@@ -21,13 +21,17 @@
   "devDependencies": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "@types/node": "^18.0.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "autoprefixer": "^10.4.16",
     "eslint": "^9.34.0",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "lucide-react": "^0.541.0",
 =======
@@ -55,6 +59,9 @@
 =======
     "lucide-react": "^0.541.0",    "postcss": "^8.4.32",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    "lucide-react": "^0.541.0",    "postcss": "^8.4.32",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     "tailwindcss": "^3.4.0",
     "typescript": "^5.0.0"
   }

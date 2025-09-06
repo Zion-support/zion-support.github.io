@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 node_modules
 .DS_Store
 .env
 server/.env
 npm-debug.log*
+<<<<<<< HEAD
 <<<<<<< HEAD
 yarn-error.log
 =======
@@ -50,3 +54,6 @@ Thumbs.db
 =======
 yarn-error.log
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+yarn-error.log
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

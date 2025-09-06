@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { authenticateRequest } from '@/utils/auth';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   createTenant,
   getTenants,
@@ -10,6 +11,9 @@ import {
 =======
 import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'GET').toUpperCase();
@@ -24,6 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === 'POST') {
     const { branding } = req.body || {};
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (!branding?.name)
       return res.status(400).json({ error: 'branding.name required' });
     const tenant = createTenant(branding);
@@ -33,6 +38,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const tenant = createTenant(branding);
     return res.status(201).json({ tenant })
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    if (!branding?.name) return res.status(400).json({ error: 'branding.name required' });
+    const tenant = createTenant(branding);
+    return res.status(201).json({ tenant })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   if (method === 'PUT') {
@@ -41,23 +51,32 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const result = updateTenant(tenantId, update || {});
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res.status(200).json({ tenant: result });
 =======
     return res.status(200).json({ tenant: result })
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    return res.status(200).json({ tenant: result })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (!tenantId || !rotateKey)
       return res.status(400).json({ error: 'tenantId and rotateKey required' });
+=======
+    if (!tenantId || !rotateKey) return res.status(400).json({ error: 'tenantId and rotateKey required' });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     const result = rotateTenantApiKey(tenantId);
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
-    return res.status(200).json({ tenant: result });
+    return res.status(200).json({ tenant: result })
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
 =======
     if (!tenantId || !rotateKey) return res.status(400).json({ error: 'tenantId and rotateKey required' });
     const result = rotateTenantApiKey(tenantId);
@@ -68,3 +87,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(405).json({ error: 'Method not allowed' });
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
