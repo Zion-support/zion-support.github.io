@@ -1,4 +1,21 @@
+import React, { useState, Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ErrorBoundary from './components/ErrorBoundary';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
+import LoadingSpinner from './components/LoadingSpinner';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
+// Lazy load pages
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const Services = React.lazy(() => import('./pages/Services'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+
+function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <ErrorBoundary>
@@ -25,6 +42,6 @@
       </Router>
     </ErrorBoundary>
   );
+}
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+export default App;
