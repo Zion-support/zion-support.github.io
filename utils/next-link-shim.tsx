@@ -35,9 +35,9 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
     const mergedClassName = [existingClass, className].filter(Boolean).join(' ');
     
     return React.cloneElement(children as React.ReactElement<{ href?: string; className?: string }>, {
-      href: resolved,
-      className: mergedClassName,
-      ...rest,
+      href: resolved;
+      className: mergedClassName;
+      ...rest;
     });
   }
 

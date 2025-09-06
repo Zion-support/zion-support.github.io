@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react',
-;
+
+import { useEffect, useState  } from 'react';
+
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([]),
 
@@ -8,8 +9,7 @@ export default function CloudAutomationHub() {
       .then((r) => r.json())
       .then((d) => setLogs(d.logs || []))
       .catch(() => setLogs([]))
-  }, []),
-
+  }, []);
   return (
     <div className="space-y-6">
       <div>

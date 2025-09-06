@@ -1,5 +1,6 @@
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
-;
+
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+
 export async function getStaticProps() {
 	return (getSlugStaticProps as any)({ params: { slug: 'automated-financial-analytics-platform' } })
 }

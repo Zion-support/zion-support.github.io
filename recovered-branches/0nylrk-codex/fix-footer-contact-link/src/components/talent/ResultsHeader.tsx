@@ -1,7 +1,9 @@
 
-import {Loader2} from "lucide-react";
+
+import { Loader2 } from "lucide-react";
+
 interface ResultsHeaderProps {
-  isLoading: boolean,
+  isLoading: boolean;
   resultCount: number
 }
 

@@ -1,30 +1,27 @@
-onboardingStatus.responseReceived;
+
+import { useState, useEffect } from "react",
+import { JobsList } from "@/components/jobs/JobsList",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import Link from "next/link",
+import { JobStatus } from "@/types/jobs",
+import { SEO } from "@/components/SEO",
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from 'lucide-react'
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { SuggestedTalents } from "@/components/jobs/SuggestedTalents",
+import { useJobs } from "@/hooks/useJobs",
+import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps",
+import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps",
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
+import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
+import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
-  const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
-  const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
-  const isMobile = useIsMobile();
-  const onboardingStatus = useOnboardingStatus();
-  const showAdvanced =
-    onboardingStatus.jobPosted &&
-    onboardingStatus.inviteSent &&
-    onboardingStatus.responseReceived;
-
-  // Set the first job as selected when jobs are loaded (if any)
-  useEffect((,) => {
-    if (jobs.length > 0 && !selectedJobId) {
-      const firstJob = jobs[0];
-      if (firstJob) {
-        setSelectedJobId(firstJob.id);
-        setSelectedJobTitle(firstJob.title)
-      }
-    }
-  }, [jobs, selectedJobId]);
-
-  const handleJobSelect = (jobId: string, jobTitle: string) => {
-    setSelectedJobId(jobId);    setSelectedJobTitle(jobTitle)
-  };
+  const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
+  const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
+  const isMobile = null;
 
   return (
     <>

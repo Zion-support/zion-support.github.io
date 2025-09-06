@@ -1,47 +1,25 @@
 import React from 'react';
-import { AlertTriangle, RefreshCw } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { logErrorToProduction } from '@/utils/productionLogger';
-interface Props {
-  children: React.ReactNode;
 
-interface State {
-  hasError: boolean;
-  error?: Error;
-export class EquipmentErrorBoundary extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  hasError: boolean,
-  error?: Error
-}
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { AlertTriangle, RefreshCw } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface Props {
   children: React.ReactNode
 }
 
 interface State {
-  hasError: boolean,
+  hasError: boolean;
   error?: Error
 }
 
 export class EquipmentErrorBoundary extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
+    this.state = { hasError: false }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    logErrorToProduction('Equipment page error:', error, {
-      componentStack: errorInfo.componentStack,
-    });  }
-    logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack })
   }
 
   static getDerivedStateFromError(error: Error): State {

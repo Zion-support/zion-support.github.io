@@ -45,17 +45,9 @@ export function useApi<T>(url: string, options?: RequestInit) {
 
   return state;
 }
-<<<<<<< HEAD
-};
 
-interface UseApiProps {
-  // Add props here as needed
-}
-
-interface UseApiOptions {
-=======
 };interface UseApiOptions {
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+
   immediate?: boolean;
   onSuccess?: (data: any) => void;
   onError?: (error: any) => void}
@@ -95,14 +87,12 @@ export default function UseApi({ }: UseApiProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
+
 }
 }
 
 export function useApi<T>(
-  apiCall: () => Promise<T>,
+  apiCall: () => Promise<T>;
   options: UseApiOptions = {}
 ): ApiState<T> & { refetch: () => void } {
   const [data, setData] = useState<T | null>(null);
@@ -130,10 +120,11 @@ export function useApi<T>(
   }, [fetchData, options.immediate]);
 
 
-    fetchData();
-  }, [url, options]);
-
-  return state;
-
+  return {
+    data;
+    loading;
+    error;
+    refetch: fetchData;
+  };
 }
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+

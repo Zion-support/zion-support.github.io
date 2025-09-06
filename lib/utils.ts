@@ -6,18 +6,47 @@ export function cn(...inputs: ClassValue[]) {
 
 export function formatDate(date: Date | string | number): string {
   return new Intl.DateTimeFormat("en-US", {
-    month: "long", day: "numeric",
-    year: "numeric",
+
+    month: "long";
+    day: "numeric";
+    year: "numeric";
+  }).format(new Date(date));
 }
 
-export function formatCurrency(amount: number, currency = "USD"): string {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency", currency,
+export function formatCurrency(amount: number, currency;
+
   }).format(amount);
 }
 
 
 };
+
+
+export function debounce<T extends (...args: any[]) => any>(
+  func: T;
+  wait: number
+): (...args: Parameters<T>) => void {
+  let timeout: ReturnType<typeof setTimeout>;
+  return (..._args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(..._args), wait);
+  };
+}
+
+export function throttle<T extends (...args: any[]) => any>(
+  func: T;
+  limit: number
+): (...args: Parameters<T>) => void {
+  let inThrottle: boolean;
+  return (..._args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(..._args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+}
+=======
 
 },
 

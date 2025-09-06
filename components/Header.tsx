@@ -1,25 +1,32 @@
-"use client";
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Code,
-  Smartphone,
-  Cloud,
-  Database,
-  Shield,
-  Zap,
-  Building,
-  ShoppingCart,
-  Heart,
-  GraduationCap,
-  Factory,
-  Truck,
-  CreditCard,
-} from "lucide-react";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Phone;
+  Mail;
+  Facebook;
+  Twitter;
+  Linkedin;
+  Instagram;
+  ChevronDown;
+  Menu;
+  X;
+  Code;
+  Smartphone;
+  Cloud;
+  Database;
+  Shield;
+  Zap;
+  Building;
+  ShoppingCart;
+  Heart;
+  GraduationCap;
+  Factory;
+  Truck;
+  CreditCard
+} from 'lucide-react';
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,97 +46,24 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const servicesDropdown = [
-    {
-      title: "Web Development",
-      description: "Custom websites and web applications",
-      href: "/services/web-development",
-      icon: Code,
-    },
-    {
-      title: "Mobile Development",
-      description: "iOS and Android applications",
-      href: "/services/mobile-development",
-      icon: Smartphone,
-    },
-    {
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure",
-      href: "/services/cloud-solutions",
-      icon: Cloud,
-    },
-    {
-      title: "Database Management",
-      description: "Database design and optimization",
-      href: "/services/database-management",
-      icon: Database,
-    },
-    {
-      title: "Security Services",
-      description: "Cybersecurity and data protection",
-      href: "/services/security",
-      icon: Shield,
-    },
-    {
-title: "Performance Optimization",
-      description: "Speed and efficiency improvements",
-      href: "/services/performance",
-      icon: Zap,
-    },
+
+  const servicesDropdown = null;
+      icon: Zap
+    }
   ];
 
-  const solutionsDropdown = [
-    {
-      title: "Enterprise Solutions",
-      description: "Comprehensive business technology solutions",
-      href: "/solutions/enterprise",
-      icon: Building,
-    },
-    {
-      title: "E-commerce Platforms",
-      description: "Online store development and management",
-      href: "/solutions/ecommerce",
-      icon: ShoppingCart,
-    },
-    {
-      title: "Healthcare Technology",
-      description: "Specialized healthcare IT solutions",
-      href: "/solutions/healthcare",
-      icon: Heart,
-    },
-    {
-title: "Educational Platforms",
-      description: "Learning management systems",
-      href: "/solutions/education",
-      icon: GraduationCap,
-    },
+  const solutionsDropdown = null;
+      icon: GraduationCap
+    }
   ];
 
-  const industriesDropdown = [
-    { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory },
-    { name: "Logistics", href: "/industries/logistics", icon: Truck },
-    { name: "Finance", href: "/industries/finance", icon: CreditCard },
-    { name: "Healthcare", href: "/industries/healthcare", icon: Heart },
-    { name: "Education", href: "/industries/education", icon: GraduationCap },
-    { name: "Retail", href: "/industries/retail", icon: ShoppingCart },
+  const industriesDropdown = null;
+    { name: 'Retail', href: '/industries/retail', icon: ShoppingCart }
   ];
 
-  const navigation = [
-    { name: "Home", href: "/" },
-    {
-      name: "Services",
-      href: "/services",
-      submenu: [
-        { name: "AI Services", href: "/ai-services", icon: Brain },
-        { name: "IT Services", href: "/it-services", icon: Network },
-        { name: "Micro SAAS", href: "/micro-saas", icon: Cloud },
-      ],
-    },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Solutions", href: "/solutions" },
-    { name: "Industries", href: "/industries" },
-    { name: "Contact", href: "/contact" },
+  const navigation = null;
+    { name: 'Contact', href: '/contact' }
+
   ];
 
   const handleServiceClick = (href: string) => {

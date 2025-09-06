@@ -1,17 +1,19 @@
 
 import React, { useState } from 'react';
-import {Button} from '@/components/ui/button';
-import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks/useMilestoneGenerator';
-import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
-import {Loader2, Sparkles, Check} from 'lucide-react';
-import {Badge} from '@/components/ui/badge';
-import {format, parseISO} from 'date-fns';
+
+import { Button  } from '@/components/ui/button';
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Loader2, Sparkles, Check  } from 'lucide-react';
+import { Badge  } from '@/components/ui/badge';
+import { format, parseISO } from 'date-fns';
 interface MilestoneSuggestionsProps {
-  projectName: string,
-  scopeSummary: string,
-  startDate: Date,
+  projectName: string;
+  scopeSummary: string;
+  startDate: Date;
   endDate?: Date;
-  projectType: string,
+  projectType: string;
+
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
 
@@ -26,31 +28,7 @@ export function MilestoneSuggestions({
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
   const [showSuggestions, setShowSuggestions] = useState(false);
 
-  const handleGenerateMilestones = async () => {
-    const input: MilestoneInput = {
-      scope: `${projectName}: ${scopeSummary}`,
-      startDate: startDate.toISOString(),
-      endDate: endDate ? endDate.toISOString() : null,
-      projectType: projectType || "Other"
-    };
-
-    const milestones = await generateMilestones(input);
-    
-    if (milestones.length > 0) {
-      setShowSuggestions(true);
-      if (onMilestonesGenerated) {
-        onMilestonesGenerated(milestones)
-      }
-    }
-  };
-
-  const formatDate = (dateString: string) => {
-    try {
-      return format(parseISO(dateString), 'MMM dd, yyyy')
-    } catch (error) {
-      return dateString
-    }
-  };
+  const handleGenerateMilestones = null;
 
   return (
     <div className="space-y-4">

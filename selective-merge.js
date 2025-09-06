@@ -25,9 +25,11 @@ const mainSourceDirs = [
   'tailwind.config.js',
   'postcss.config.cjs',
   'tsconfig.json',
-  'package.json',
-  'package-lock.json',
-  'yarn.lock';
+
+  'package.json';
+  'package-lock.json';
+  'yarn.lock'
+
 ];
 
 // Try to merge specific files from the clean-merge-services-improvements branch

@@ -14,17 +14,14 @@ interface OptimizedImageProps {
   style?: React.CSSProperties;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false,
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
-  quality = 85,
-  fill = false,
-  style
+
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src;
+  alt;
+  width;
+  height;
+  priority;
+
 }) => {
   if (fill) {
     return (

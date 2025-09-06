@@ -1,14 +1,16 @@
 
-import {useState, useEffect} from "react";
-import {useAuth} from "@/hooks/useAuth";
-import {supabase} from "@/integrations/supabase/client";
-import {Job, JobStatus} from "@/types/jobs";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Loader2, Edit, X, Eye} from "lucide-react";
-import {format} from "date-fns";
-import {Link} from "react-router-dom";
+
+import { useState, useEffect } from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { supabase } from "@/integrations/supabase/client",
+import { Job, JobStatus } from "@/types/jobs",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Loader2, Edit, X, Eye } from "lucide-react",
+import { format } from "date-fns";
+import { Link } from "react-router-dom";
+
 interface JobsListProps {
   filter?: JobStatus;
   onSelectJob?: (jobId: string, jobTitle: string) => void
@@ -16,75 +18,11 @@ interface JobsListProps {
 
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const { user } = useAuth();
-  const [jobs, setJobs] = useState<Job[]>([]);
+
+  const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
-    const fetchJobs = async () => {
-      if (!user) return;
-
-      try {
-        let query = supabase
-          .from("jobs")
-          .select("*")
-          .eq("client_id", user.id)
-          .order("created_at", { ascending: false }),
-
-        if (filter) {
-          query = query.eq("status", filter)
-        }
-
-        const { data, error } = await query;
-
-        if (error) throw error;
-        setJobs(data as Job[])
-      } catch (error) {
-        console.error("Error fetching jobs:", error)
-      } finally {
-        setIsLoading(false)
-      }
-    };
-
-    fetchJobs()
-  }, [user, filter]);
-
-  if (isLoading) {
-    return (
-      <div className="flex justify-center items-center p-8">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
-      </div>
-    )
-  }
-
-  if (jobs.length === 0) {
-    return (
-      <div className="text-center p-8 border rounded-md bg-muted/20">
-        <p className="text-lg text-muted-foreground">
-          {filter 
-            ? `No jobs with status "${filter}" found.` 
-            : "You haven't posted any jobs yet."
-          }
-        </p>
-        <Button asChild className="mt-4">
-          <Link to="/post-job">Post Your First Job</Link>
-        </Button>
-      </div>
-    )
-  }
-
-  const getStatusColor = (status: JobStatus) => {
-    switch (status) {
-      case "new": return "bg-blue-100 text-blue-800";
-      case "in_progress":
-        return "bg-yellow-100 text-yellow-800";
-      case "filled":
-        return "bg-green-100 text-green-800";
-      case "closed":
-        return "bg-gray-100 text-gray-800",
-      default:
-        return "bg-gray-100 text-gray-800"
-    }
-  };
+    const fetchJobs = null;
 
   return (
     <div className="grid gap-6 md:grid-cols-2">

@@ -1,4 +1,7 @@
-import { GradientHeading } from "@/components/GradientHeading";
+
+
+import { GradientHeading } from "@/components/GradientHeading",
+
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 export function ContactSection() {

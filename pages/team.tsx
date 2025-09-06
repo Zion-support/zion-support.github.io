@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+
   ArrowRight,
   Phone,
   Mail,
@@ -168,6 +162,10 @@ const stats = [
   { number: "25+", label: "Countries Represented" },
   { number: "95%", label: "Employee Satisfaction" },
 ];
+=======
+import React from 'react';
+import SEO from '../components/SEO';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-e9d8
 export default function TeamPage() {
   return (
     <Layout
@@ -464,16 +462,11 @@ export default function TeamPage() {
       </section>
     </Layout>
   );
-<<<<<<< HEAD
-}
-import Head from "next/head";
-import { motion } from "framer-motion";
-import { Brain, Cloud, Shield, Users } from "lucide-react";
-=======
+
 }import Head from 'next/head';
 import {motion} from 'framer-motion';
 import {Brain, Cloud, Shield, Users} from 'lucide-react';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+
 
 const teamMembers = [
   {
@@ -541,8 +534,7 @@ export default function TeamPage() {
       </div>
     </>
   );
-<<<<<<< HEAD
-=======
+
 import SEO from '../components/SEO';
 export default function TeamPage() {	return (
 		<>
@@ -553,5 +545,5 @@ export default function TeamPage() {	return (
 			</div>
 		</>
 	)
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+
 }

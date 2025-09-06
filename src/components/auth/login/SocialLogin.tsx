@@ -1,15 +1,13 @@
-import { Facebook, Twitter, Loader2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Web3Login } from './Web3Login';
-import { useState } from 'react';
-import { openAuthPopup } from '@/api/authSocial';
+
+
+import { Facebook, Twitter, Loader2 } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+import { Web3Login } from "./Web3Login",
+import { useState } from "react";
+import { openAuthPopup } from "@/api/authSocial";
 export function SocialLogin() {
   const [isLoading, setIsLoading] = useState(false);
-
-  const handleGoogle = () => {
-    setIsLoading(true);
-    window.location.href = '/auth/google';
-  };
+  const handleGoogle = null;
 
   return (
     <div className='mt-6'>

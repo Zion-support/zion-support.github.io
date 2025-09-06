@@ -111,9 +111,11 @@ const main = () => {;
   const fixes = [
     fixAccessibility,
     fixApi,
-    fixCareers,
-    fixSupport,
-    fixWebinars;
+
+    fixCareers;
+    fixSupport;
+    fixWebinars
+
   ];
   
   let successCount = 0;

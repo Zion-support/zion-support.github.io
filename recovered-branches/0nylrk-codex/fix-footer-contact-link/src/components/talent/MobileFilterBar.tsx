@@ -1,17 +1,21 @@
 
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {Search, Sliders} from "lucide-react";
-import {Input} from "@/components/ui/input";
+
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Search, Sliders } from "lucide-react";
+import { Input } from "@/components/ui/input";
+
 interface MobileFilterBarProps {
-  searchTerm: string,
-  setSearchTerm: (value: string) => void,
+  searchTerm: string;
+  setSearchTerm: (value: string) => void;
   setIsMobileFilterOpen: (isOpen: boolean) => void
 }
 
 export function MobileFilterBar({ 
   searchTerm;
-  setSearchTerm, 
+
+  setSearchTerm;
+
   setIsMobileFilterOpen 
 }: MobileFilterBarProps) {
   return (

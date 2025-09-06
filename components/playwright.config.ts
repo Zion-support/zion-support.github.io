@@ -38,3 +38,6 @@ reporter: [ ['list'], ['json', {
   //   {
   //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   };
   // ]
+
+});
+

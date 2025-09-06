@@ -1,5 +1,18 @@
 import Head from 'next/head';
 import Link from 'next/link';
+
+export default function GovernanceTrustPage() {
+  return (
+    <>
+      <Head>
+        <title>Zion Governance & Trust</title>
+        <meta name;
+              desc: 'LLC/wrapper (e.g., Otoco) for on-chain governance with minimized off-chain overhead.'
+            }].map((opt) => (
+              <div key={opt.title} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+                <div className="font-medium">{opt.title}</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">{opt.desc}</div>
+
               </div>
             ))}
           </div>

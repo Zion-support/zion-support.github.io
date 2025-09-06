@@ -1,36 +1,25 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import { ChevronLeft, Bell, Settings } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/router';
-import { ChevronLeft, Bell, Settings } from 'lucide-react';
+
+import React from "react";
+import { useRouter  } from 'next/router';
+import { ChevronLeft, Bell, Settings } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
-  title: string;  showBack?: boolean;  title: string,
+  title: string;
+
   showBack?: boolean;
   showNotifications?: boolean;
   showSettings?: boolean;
   className?: string;
   onNotificationsClick?: () => void;
-  onSettingsClick?: () => void;
 
-export function MobileHeader({
-  title,
+  onSettingsClick?: () => void
+}
+
 export function MobileHeader({
   title;
-  showBack = false;
-  showNotifications = false;
-  showSettings = false;
-  className;
-  onNotificationsClick;
-  onSettingsClick}: MobileHeaderProps) {
-  const router = useRouter();
+  showBack;
 
-  return (
-    <header className={cn(
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
       className
     )}>
       <div className="flex items-center justify-between h-14 px-4">

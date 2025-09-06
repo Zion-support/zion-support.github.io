@@ -1,15 +1,14 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import { randomUUID } from "crypto";
-import { promises as fs } from "fs";
-import { Epub } from "epub-gen";
 
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: "10mb",
-    },
-  },
-};
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { randomUUID } from '[^']*';
+import { promises as fs } from '[^']*';
+const Epub = null;
+  return text
+    .split(/\n\n+/)
+    .map((p) => `<p>${escapeHtml(p)}</p>`)
+    .join('\n')
+}
+
 
 function escapeHtml(s: string): string {
   return s

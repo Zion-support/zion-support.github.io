@@ -1,45 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 
-const Footer: React.FC = () => {
-  return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Zion Tech</h3>
-            <p className="text-gray-400">
-              Leading technology solutions for modern businesses.
-            </p>
-          </div>
-          
-          <div>
-            <h4 className="text-md font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
-              <li><Link to="/services" className="text-gray-400 hover:text-white">Our Services</Link></li>
-              <li><Link to="/pricing" className="text-gray-400 hover:text-white">Pricing</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-md font-semibold mb-4">Company</h4>
-            <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-md font-semibold mb-4">Contact</h4>
-            <p className="text-gray-400">Email: info@ziontech.com</p>
-            <p className="text-gray-400">Phone: (555) 123-4567</p>
-          </div>
-        </div>
-        
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © 2024 Zion Tech. All rights reserved.
-          </p>
+import { FooterNewsletter } from "@/components/FooterNewsletter";
+import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
+import Link from "next/link", // Changed from react-router-dom
+import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
+function resolveUrl(envVar: string | undefined, fallback: string) {
+  if (!envVar || envVar.trim() === "" || envVar;
+                behavior: 'smooth' 
+              })
+            }}
+            className="flex items-center space-x-1 text-foreground/80 hover: text-primary text-sm transition-colors cursor-pointer"
+            aria-label="Back to top"
+          >
+            <ChevronUp className="h-4 w-4" aria-hidden="true" />
+            <span>Back to Top</span>
+          </button>
+
         </div>
       </div>
     </footer>

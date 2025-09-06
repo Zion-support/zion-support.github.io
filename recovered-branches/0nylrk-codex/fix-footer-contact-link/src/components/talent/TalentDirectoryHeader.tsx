@@ -1,7 +1,7 @@
 
 import React from "react";
 interface TalentDirectoryHeaderProps {
-  title: string,
+  title: string;
   description: string
 }
 

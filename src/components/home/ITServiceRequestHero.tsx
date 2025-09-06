@@ -1,127 +1,27 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
-import axios from 'axios';
-import { Loader2 } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import { logErrorToProduction } from '@/utils/productionLogger';export function ITServiceRequestHero() {
-;export function ITServiceRequestHero(...args[]):  {;
 
-  const [location, setLocation] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const handleSubmit = async e: React.FormEvent {;    e.preventDefault();
-    if(location.trim()) {;
-
-      setIsSubmitting(true);
-      // Simulate API call;
-      setTimeout(: unknown {;
-        setIsSubmitting(false);
-        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}};
-  const containerVariants = {;
-  hidden: { opacity: 0,
-  y: 20;
-},
-    visible: {;
-      opacity: 1,
-      y: 0,
-      transition: {;
-        duration: 0.6,
-        staggerChildren: 0.2;
-};
-};
-};
-  const itemVariants = {;
-  hidden: { opacity: 0,
-  y: 20;
-},
-    visible: {;
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 };
-};
-};
-  const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
-    { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
-    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },
-    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
-  ];
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-import { Link  } from 'react-router-dom';";
-    { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },";
-    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },";
-    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
-  ];
-export function ITServiceRequestHero() {;
-  return (";
-    <section className="py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">;
-      {/* Background Elements */}";
-      <div className="absolute inset-0">";
-        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>";
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>;
-      </div>;
-
+import React, { useState } from "react",
+import Image from "next/image",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { useToast } from "@/hooks/use-toast",
+import axios from "axios",
+import { Loader2 } from 'lucide-react'
+import { useTranslation } from "react-i18next";
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function ITServiceRequestHero() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [company, setCompany] = useState('');
-  const [location, setLocation] = useState('');
-  const [details, setDetails] = useState('');
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [company, setCompany] = useState("");
+  const [location, setLocation] = useState("");
+  const [details, setDetails] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   const { t } = useTranslation();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!name || !email || !location) {
-      toast({
-        title: 'Missing Information',
-        description: 'Name, email and location are required.',
-        variant: 'destructive',
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-    try {
-      const res = await axios.post('/api/onsite-request', {
-        name,
-        email,
-        phone,
-        company,
-        location,
-        details,
-      });
-
-      if (res.status === 200) {
-        toast({
-          title: 'Request received',
-          description:
-            "We've received your request. Our team will reach out shortly.",
-        });
-        setName('');
-        setEmail('');
-        setPhone('');
-        setCompany('');
-        setLocation('');
-        setDetails('');
-      }
-    } catch (err: any) {
-      logErrorToProduction(err),
-      toast({
-        title: 'Submission Failed',
-        description: 'There was an error submitting your request.',
-        variant: 'destructive',
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  const handleSubmit = null;
 
   return (
     <section className='py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a,_#020617)]'>

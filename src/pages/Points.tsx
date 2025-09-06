@@ -1,33 +1,14 @@
 import React, { useState } from 'react';
-import {
-  Gift,
-  Star,
-  Users,
-  ShoppingBag,
-  MessageSquare,
-  TrendingUp,
-  History,;
-} from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-import { usePoints } from '@/hooks/usePoints';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth';
-import { usePoints } from '@/hooks/usePoints';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-import { usePoints } from '@/hooks/usePoints';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { formatDistanceToNow } from 'date-fns';
+
+import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
+import { useAuth  } from '@/hooks/useAuth';
+import { usePoints  } from '@/hooks/usePoints';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
+import { ScrollArea  } from '@/components/ui/scroll-area';
+import { formatDistanceToNow  } from 'date-fns';
+
 import Link from 'next/link';
 import { LoginModal } from '@/components/auth/LoginModal';
 export default function PointsPage() {
@@ -36,16 +17,13 @@ export default function PointsPage() {
   const [loginOpen, setLoginOpen] = useState(false);
   const [redeeming, setRedeeming] = useState(false);
 
-  async function handleRedeem(reward: {
-    id: string;
-    cost: number;
-    title: string;
-  }) {    if (!user?.id) return;  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
+  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
+
     if (!user?.id) return;
     setRedeeming(true);
     try {
       await fetch('/api/points/redeem', {
-        method: 'POST',
+        method: 'POST';
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           userId: user.id,
@@ -62,63 +40,8 @@ export default function PointsPage() {
     }
   }
 
-  const earningOpportunities = [
-    {
-      icon: <Users className='h-5 w-5' />,
-      title: 'Sign Up & Profile Setup',
-      description: 'Complete your profile and verify your email',
-      points: '50 pts',
-      action: isAuthenticated ? '✓ Completed' : 'Get Started',
-    },
-      icon: <ShoppingBag className='h-5 w-5' />,
-      title: 'First Purchase',
-      description: 'Make your first purchase on the marketplace',
-      points: '100 pts',
-      action: 'Browse Marketplace',
-    },
-    {
-      icon: <MessageSquare className='h-5 w-5' />,
-      title: 'Community Engagement',
-      description: 'Post in the community or comment on discussions',
-      points: '25 pts per post',
-      action: 'Join Community',
-    },
-    {
-      icon: <Users className='h-5 w-5' />,
-      title: 'Refer Friends',
-      description: 'Invite friends to join Zion marketplace',
-      points: '200 pts per referral',
-      action: 'Share Referral Link',
-    },  ];
 
-  const upcomingRewards = [
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
-      description: "Invite friends to join Zion marketplace",
-      points: "200 pts per referral",
-      action: "Share Referral Link"
-    }
-
-  const upcomingRewards = [
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
-    {
-      id: 'premium1',
-      title: 'Premium Features (1 month)',
-      cost: 1000,
-      category: 'Subscription',
-    },
-    {
-      id: 'swag',
-      title: 'Zion Swag Pack',
-      cost: 1500,
-      category: 'Merchandise',
-    },
-    {
-      id: 'coupon25',
-      title: '$25 Off Coupon',
-      cost: 2000,
-      category: 'Discount',
-    },
-    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },
+  const earningOpportunities = null;
 
   if (!isAuthenticated) {
     return (

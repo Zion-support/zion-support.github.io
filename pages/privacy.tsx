@@ -1,27 +1,11 @@
-<<<<<<< HEAD
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
-  Shield,
-  Lock,
-  Eye,
-  Database,
-  Mail,
-  Phone,
-  MapPin,
-  Users,
-} from "lucide-react";
-import MainLayout from "../components/layout/MainLayout";
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Mail, Phone, MapPin, Users } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+
 
 export default function PrivacyPage() {
   return (
@@ -169,7 +153,18 @@ export default function PrivacyPage() {
     </MainLayout>
   );
 }
-<<<<<<< HEAD
-=======
+
  
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+
+=======
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import SEOOptimizer from '../components/SEOOptimizer',
+import AnalyticsTracker from '../components/AnalyticsTracker',
+import ErrorBoundary from '../components/ErrorBoundary';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, Database, Globe;
+  User, Settings, AlertTriangle, CheckCircle, Mail
+ } from 'lucide-react';
+const PrivacyPage: React.FC;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-e9d8

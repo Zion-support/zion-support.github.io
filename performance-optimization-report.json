@@ -1,11 +1,13 @@
 {
-  "timestamp": "2025-09-06T09:02:41.637Z",
-  "totalDuration": 9112,
-  "results": {
-    "bundleAnalysis": {
-      "success": false,
-      "size": 0,
-      "recommendations": []
+
+  "timestamp": "2025-09-06T04:57:30.817Z",
+  "issues": [],
+  "optimizations": [
+    {
+      "file": "/workspace/pages_minimal/_app.tsx",
+      "type": "memo_optimization",
+      "message": "Consider using React.memo for performance"
+
     },
     "imageOptimization": {
       "success": true,

@@ -1,6 +1,8 @@
 export interface BlogAuthor {
   name: string;
-  title: string,
+
+  title: string;
+
   avatarUrl: string
 }
 
@@ -18,7 +20,9 @@ export interface BlogPost {
   featuredImage: string;
   isFeatured?: boolean;
   isPublished?: boolean;
-  createdBy?: string,
+
+  createdBy?: string;
+
   updatedAt?: string
 }
 
@@ -28,7 +32,9 @@ export interface GeneratedBlogContent {
   metaDescription: string;
   body: string;
   tags: string[];
-  tweetSummary?: string,
+
+  tweetSummary?: string;
+
   imagePrompt?: string
 }
 
@@ -36,6 +42,8 @@ export interface GeneratedBlogContent {
 export interface GeneratedNewsletterContent {
   subject: string;
   previewText: string;
-  body: string,
+
+  body: string;
+
   cta: string
 }

@@ -4,18 +4,29 @@ import { ResumePreviewCard } from './ResumePreviewCard';
 import { Resume } from '@/types/resume';
 
 
+
+import React from 'react';
+import { FileText } from 'lucide-react'
+import { ResumeOption  } from '../resume-selector/types';
+import { ResumePreviewCard  } from './ResumePreviewCard';
+import { Resume } from '@/types/resume';
+
 interface SelectResumeSectionProps {
   resumeOptions: ResumeOption[];
   selectedResume: ResumeOption | null;
   handleResumeSelect: (resumeId: string) => void;
   handleDownloadResume: () => void;
-  isLoading: boolean;
+
+  isLoading: boolean
+}
+
 export function SelectResumeSection({
-  resumeOptions,
-  selectedResume,
-  handleResumeSelect,
-  handleDownloadResume,
-  isLoading,
+  resumeOptions;
+  selectedResume;
+  handleResumeSelect;
+  handleDownloadResume;
+  isLoading
+
 }: SelectResumeSectionProps) {
   return (
     <div className='space-y-2'>

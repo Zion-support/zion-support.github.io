@@ -74,6 +74,15 @@ files.forEach((file) => {
   } catch (error) {
     console.error(`Error processing ${file}:`, error.message);
   }
-});
 
-console.log(`\nTotal files fixed: ${totalFixed}`);
+}},
+,
+// Run all fixes,
+fixFooter();
+fixAccessibility();
+fixAiServices();
+fixApiDocs();
+fixCareers();
+,
+console.log('🎉 Syntax error fixes completed');
+

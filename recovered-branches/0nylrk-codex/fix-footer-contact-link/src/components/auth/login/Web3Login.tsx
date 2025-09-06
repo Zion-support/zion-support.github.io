@@ -1,35 +1,14 @@
 
-import {useState} from "react";
-import {Button} from "@/components/ui/button";
-import {useAuth} from "@/hooks/useAuth";
-import {Wallet} from "@/components/icons";
-import {toast} from "sonner";
+
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { useAuth } from "@/hooks/useAuth",
+import { Wallet } from "@/components/icons";
+import { toast } from "sonner";
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-
-  const handleWeb3Login = async () => {
-    try {
-      setIsLoading(true);
-      
-      // Check if wallet is available
-      const ethereum = (window as any).ethereum;
-      if (!ethereum) {
-        toast("Web3 wallet not found", {
-          description: "Please install MetaMask or another compatible wallet"}),
-        return
-      }
-      
-      await loginWithWeb3()
-      
-    } catch (error: any) {
-      toast("Login failed", {
-        description: error.message || "Failed to connect wallet"}),
-      console.error("Web3 login error:", error)
-    } finally {
-      setIsLoading(false)
-    }
-  };
+  const handleWeb3Login = null;
 
   return (
     <Button

@@ -7,17 +7,13 @@ interface EmptyStateProps {
   description?: string;
   onRetry?: () => void;
   showRetry?: boolean;
-  icon?: React.ReactNode;
 
-export function EmptyState({
-  text = 'No items available',
-  description,
-  onRetry,
+  icon?: React.ReactNode
+}
+
 export function EmptyState({ 
-  text = "No items available";
-  description;
-  onRetry;
-  showRetry = false;
+  text;
+
   icon
 }: EmptyStateProps) {
   return (

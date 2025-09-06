@@ -9,19 +9,21 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  pageExtensions: ["tsx", "ts", "jsx", "js"],
+
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
   images: {
     domains: [
-      "localhost",
-      "ziontechgroup.com",
-      "images.unsplash.com",
-      "via.placeholder.com",
+      'localhost',
+      'ziontechgroup.com',
+      'images.unsplash.com',
+      'via.placeholder.com'
     ],
-    formats: ["image/webp", "image/avif"],
+    formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000,
+    minimumCacheTTL: 31536000
+
   },
   webpack: (config, { dev, isServer }) => {
     if (dev) {
@@ -61,8 +63,10 @@ const nextConfig = {
           "**/performance-*.txt",
           "**/apps/**",
         ],
-poll: 1000,
-        aggregateTimeout: 300,
+
+        poll: 1000,
+        aggregateTimeout: 300
+
       };
     }
 

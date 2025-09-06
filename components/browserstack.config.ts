@@ -25,4 +25,6 @@ default defineConfig({
   ];
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
+
 });
+

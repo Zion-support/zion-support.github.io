@@ -1,9 +1,11 @@
 
-import React from "react";
+
+import React from "react",
 import ReactMarkdown from "react-markdown";
-import {cn} from "@/lib/utils";
+import { cn } from "@/lib/utils";
+
 interface MarkdownProps {
-  content: string,
+  content: string;
   className?: string
 }
 

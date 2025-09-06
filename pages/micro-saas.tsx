@@ -1,131 +1,6 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import {
-  ArrowRight,
-  Building2,
-  Rocket,
-  Factory,
-  Brain,
-  Cloud,
-  Shield,
-  CheckCircle,
-  Star,
-  Users,
-  Clock,
-  DollarSign,
-  Award,
-  Globe,
-  Lock,
-  Cpu,
-  Bot,
-  FileText,
-  Image,
-  Video,
-  Mic,
-  Code,
-  Settings,
-  Monitor,
-  Smartphone,
-  Server,
-  Network,
-  Car,
-  Rocket as RocketIcon,
-  Heart,
-  Building,
-  Database,
-  Sprout
-} from 'lucide-react';
 
-const microSaasProducts = [
-  {
-    id: 1,
-    title: "AI-Powered Voice Assistant Builder",
-    description: "Create custom voice assistants for your business with our no-code platform",
-    icon: Mic,
-    category: "Voice Technology",
-    pricing: "$99/month",
-    features: ["No-code voice assistant creation", "Multi-language support", "Custom wake words", "Analytics dashboard"],
-    benefits: ["95% accuracy rate", "24/7 availability", "Easy integration", "Custom branding"]
-  },
-  {
-    id: 2,
-    title: "Smart IoT Device Manager",
-    description: "Centralized management platform for all your IoT devices and sensors",
-    icon: Cpu,
-    category: "IoT Management",
-    pricing: "$149/month",
-    features: ["Device monitoring", "Remote control", "Data visualization", "Alert system"],
-    benefits: ["Real-time monitoring", "Energy savings", "Predictive maintenance", "Scalable solution"]
-  },
-  {
-    id: 3,
-    title: "AI-Powered Cybersecurity Monitor",
-    description: "Advanced threat detection and response system for small to medium businesses",
-    icon: Shield,
-    category: "Cybersecurity",
-    pricing: "$199/month",
-    features: ["Threat detection", "Automated response", "Compliance reporting", "Security dashboard"],
-    benefits: ["99.9% threat detection", "Automated response", "Compliance ready", "24/7 monitoring"]
-  }
-];
-
-const categories = [
-  'Voice Technology',
-  'IoT Management', 
-  'Cybersecurity',
-  'Supply Chain',
-  'HR Technology',
-  'Environmental',
-  'Maintenance',
-  'Education',
-  'Fleet Management',
-  'Energy Management',
-  'Quality Assurance',
-  'Customer Analytics',
-  'Document Intelligence',
-  'API Management',
-  'Recommendation Engine',
-  'Data Engineering',
-  'Chat Analytics'
-];
-
-export default function MicroSaasPage() {
-  return (
-    <Layout
-      title="Micro SaaS Solutions - Zion Tech Group"
-      description="Discover our innovative micro SaaS solutions designed to solve specific business problems with powerful, focused tools."
-      keywords="micro saas, saas solutions, business tools, automation, productivity"
-    >
-      <div className="min-h-screen">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Micro SaaS Solutions
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Powerful, focused tools that solve specific business problems with precision and efficiency
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Get Started
-                </Link>
-                <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                  View Demo
-<<<<<<< HEAD
-                </Link>
-import React from 'react';
-=======
                 </Link>import React from 'react';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -387,6 +262,18 @@ export default function MicroSaaS() {
       : products.filter(product => product.category === selectedCategory);
 
 export default function MicroSaas() {
+=======
+import Link from 'next/link',
+import Head from 'next/head';
+import { useState, useEffect  } from 'react';
+import { ContactInfo  } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+export default function MicroSaaS() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  useEffect(() => {
+    const timer = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-e9d8
   return (
     <Layout>
       <Head>
@@ -743,12 +630,9 @@ export default function MicroSaas() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-<<<<<<< HEAD
-                Ready to Transform Your Business?
-              </h2>
-=======
+
                 Ready to Transform Your Business?              </h2>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+
               <p className="text-xl mb-8 max-w-3xl mx-auto">
                 Discover how our micro SaaS solutions can solve your specific business challenges
               </p>
@@ -766,18 +650,13 @@ export default function MicroSaas() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
-}
-          </section>
-=======
+
 }          </section>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+
         </main>
       </ErrorBoundary>
     </>
   )
 }
-<<<<<<< HEAD
-}
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+
+

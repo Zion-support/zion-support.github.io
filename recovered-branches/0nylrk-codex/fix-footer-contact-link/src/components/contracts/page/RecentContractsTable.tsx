@@ -1,3 +1,6 @@
+
+
+
 import { Button } from "@/components/ui/button";
 interface Contract {
   id: string;
@@ -5,12 +8,16 @@ interface Contract {
   client: string;
   talent: string;
   date: string;
-  isSmartContract: boolean;
+
+  isSmartContract: boolean
+
 }
 
 interface RecentContractsTableProps {
   contracts: Contract[];
-  onViewContract: (contractId: string) => void;
+
+  onViewContract: (contractId: string) => void
+
 }
 
 export function RecentContractsTable({

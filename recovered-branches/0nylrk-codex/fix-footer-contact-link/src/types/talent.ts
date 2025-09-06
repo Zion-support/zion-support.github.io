@@ -17,17 +17,19 @@ export interface TalentProfile {
   rating_count?: number;
   is_verified?: boolean;
   key_projects?: {
-    title: string,
+    title: string;
     description: string
   }[]
 }
 
 export interface TalentProfileFilters {
   search?: string;
-  skills?: string[];
-  availabilities?: string[];
-  regions?: string[];
-  priceRange?: [number, number];
+
+  skills?: string[],
+  availabilities?: string[],
+  regions?: string[],
+  priceRange?: [number, number],
+
   experienceRange?: [number, number]
 }
 
@@ -39,14 +41,18 @@ export interface HireRequest {
   projectDescription: string;
   budget: {
     min: number;
-    max: number,
+
+    max: number;
+
     currency: string
   };
   timeline: {
     startDate: string;
-    endDate?: string,
+
+    endDate?: string;
     estimatedDuration?: string
-  };
-  status: 'pending' | 'accepted' | 'rejected' | 'completed',
+  },
+  status: 'pending' | 'accepted' | 'rejected' | 'completed';
+
   createdAt: string
 }

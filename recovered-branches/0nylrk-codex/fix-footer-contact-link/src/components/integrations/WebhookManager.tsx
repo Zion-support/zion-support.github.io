@@ -1,18 +1,20 @@
 
-import React, { useEffect, useState } from "react";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {ClickableBadge} from "@/components/ui/clickable-badge";
-import {PlusCircle, Save, Trash, Play} from "lucide-react";
-import {useWebhooks, WebhookEventType} from "@/hooks/useWebhooks";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {toast} from "sonner";
+
+import React, { useEffect, useState } from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { ClickableBadge } from "@/components/ui/clickable-badge",
+import { PlusCircle, Save, Trash, Play } from "lucide-react",
+import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { toast } from "sonner";
 export function WebhookManager() {
   const { 
     webhooks;
-    loading, 
+    loading;
+
     error;
     testResult;
     fetchWebhooks;
@@ -21,15 +23,17 @@ export function WebhookManager() {
     deleteWebhook;
     testWebhook
   } = useWebhooks();
-  
+
+
   const [newWebhook, setNewWebhook] = useState({
-    name: "",
-    url: "",
-    selectedEvent: "" as WebhookEventType,
-    eventTypes: [] as WebhookEventType[],
+    name: "";
+    url: "";
+    selectedEvent: "" as WebhookEventType;
+    eventTypes: [] as WebhookEventType[];
     secret: ""
   });
-  
+
+
   const eventOptions: { value: WebhookEventType, label: string }[] = [
     { value: "new_application", label: "New Application Received" },
     { value: "quote_received", label: "Quote Request Received" },
@@ -41,55 +45,9 @@ export function WebhookManager() {
     fetchWebhooks()
   }, []);
   
-  const handleAddEvent = () => {
-    if (!newWebhook.selectedEvent) return;
-    
-    if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
-      toast.error("This event is already added");
-      return
-    }
-    
-    setNewWebhook({
-      ...newWebhook;
-      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent];
-      selectedEvent: "" as WebhookEventType
-    })
-  };
-  
-  const handleRemoveEvent = (event: WebhookEventType) => {
-    setNewWebhook({
-      ...newWebhook,
-      eventTypes: newWebhook.eventTypes.filter(e => e !== event)
-    })
-  };
-  
-  const handleCreateWebhook = async () => {
-    if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
-      toast.error("Please fill in all required fields");
-      return
-    }
-    
-    await createWebhook(
-      newWebhook.name, 
-      newWebhook.url, 
-      newWebhook.eventTypes, 
-      newWebhook.secret || undefined
-    );
-    
-    // Reset form
-    setNewWebhook({
-      name: "",
-      url: "",
-      selectedEvent: "" as WebhookEventType,
-      eventTypes: [],
-      secret: ""
-    })
-  };
-  
-  const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
-    await testWebhook(webhookId, eventType)
-  };
-  
+
+  const handleAddEvent = null;
+
   return (
     <div className="space-y-8">
       <Card>

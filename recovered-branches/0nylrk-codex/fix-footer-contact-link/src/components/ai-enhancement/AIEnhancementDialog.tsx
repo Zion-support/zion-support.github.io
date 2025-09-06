@@ -1,14 +1,19 @@
 
 import React from 'react';
-import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components/ui/dialog';
-import {AIEnhancementPanel} from './AIEnhancementPanel';
-import {AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
+
+import { Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle } from '@/components/ui/dialog';
+import { AIEnhancementPanel  } from './AIEnhancementPanel';
+import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
+
 interface AIEnhancementDialogProps {
-  title: string,
-  isOpen: boolean,
-  onClose: () => void,
-  onApply: (content: string) => void,
-  defaultOptions: AIEnhancementOptions,
+  title: string;
+  isOpen: boolean;
+  onClose: () => void;
+  onApply: (content: string) => void;
+  defaultOptions: AIEnhancementOptions;
   initialContent?: string
 }
 
@@ -20,10 +25,8 @@ export function AIEnhancementDialog({
   defaultOptions;
   initialContent
 }: AIEnhancementDialogProps) {
-  const handleApply = (content: string) => {
-    onApply(content),
-    onClose()
-  };
+
+  const handleApply = null;
 
   return (
     <Dialog open={isOpen} onOpenChange={() => onClose()}>

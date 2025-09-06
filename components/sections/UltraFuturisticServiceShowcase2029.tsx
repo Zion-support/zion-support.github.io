@@ -1,7 +1,9 @@
-import React from 'react';
+
+import React from 'react',
 import Link from 'next/link';
-import {motion} from 'framer-motion';
-import {ArrowRight, Star, Zap, Shield, Brain} from 'lucide-react';
+import { motion  } from 'framer-motion';
+import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
+
 interface Service {
   id: string;
   name: string;
@@ -9,33 +11,25 @@ interface Service {
   price: string;
   description: string;
   features: string[];
-  link: string;
+
+  link: string
+}
+
 
 interface UltraFuturisticServiceShowcase2029Props {
   services: Service[];
   title?: string;
-  subtitle?: string;
 
-export default function UltraFuturisticServiceShowcase2029({
-  services,
-  title = '2029 Cutting-Edge Services',
-  subtitle = 'Experience the future of technology with our revolutionary solutions',
-}: UltraFuturisticServiceShowcase2029Props) {
-  return (
-    <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className='text-center mb-16'
-interface UltraFuturisticServiceShowcase2029Props {
-  services: Service[],
-  title?: string;
+
   subtitle?: string
 }
 
 export default function UltraFuturisticServiceShowcase2029({ 
-  services, title = "2029 Cutting-Edge Services", subtitle = "Experience the future of technology with our revolutionary solutions" 
+
+  services;
+  title;
+  subtitle = "Experience the future of technology with our revolutionary solutions" 
+
 }: UltraFuturisticServiceShowcase2029Props) {
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">

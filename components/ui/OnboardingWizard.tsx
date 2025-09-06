@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+
+import React, { useEffect, useState } from 'react',
+
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
 export default function OnboardingWizard() {
@@ -7,30 +9,7 @@ export default function OnboardingWizard() {
 
   useEffect(() => {
     try {
-      const has =
-        typeof window !== 'undefined'
-          ? window.localStorage.getItem('zion_has_onboarded')
-          : 'true';
-      if (!has) {
-        setOpen(true);      const has = typeof window !== 'undefined' ? window.localStorage.getItem('zion_has_onboarded') : 'true';
-      if (!has) {
-        setOpen(true)
-      }
-    } catch {}
-  }, []);
-
-  function completeOnboarding() {
-    try {
-      if (typeof window !== 'undefined') {
-        window.localStorage.setItem('zion_has_onboarded', '1');
-      }
-    } catch {}
-    setOpen(false);  }        window.localStorage.setItem('zion_has_onboarded1')
-      }
-    } catch {}
-    setOpen(false)
-
-  if (!open) return null;
+      const has = null;
 
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4'>

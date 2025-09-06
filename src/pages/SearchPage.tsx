@@ -1,125 +1,34 @@
-const pageKey = `search-${routeKey}-${router.asPath}`;
-import { useRouter } from 'next/router';
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
+
+import { useEffect, useState } from "react";
+import { useRouter  } from 'next/router';
+import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { generateSearchSuggestions } from "@/data/marketplaceData",
+
 import { SearchSuggestion } from "@/types/search";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
   Tabs;
   TabsContent;
   TabsList;
-  TabsTrigger} from "@/components/ui/tabs";
+
+  TabsTrigger} from "@/components/ui/tabs",
+
 import { Loader2 } from 'lucide-react'
 
 interface SearchResult {
-  id: string,
-  type: "product" | "service" | "talent" | "blog" | "doc",
-  title: string,
+  id: string;
+  type: "product" | "service" | "talent" | "blog" | "doc";
+  title: string;
   description: string
 }
 
 function highlight(text: string, term: string) {
-  if (!term) return text,
-  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const regex = new RegExp(`(${escaped})`, "gi");
-  const parts = text.split(regex);
-  return (
-    <>
-      {parts.map((part, i,) =>
-        regex.test(part) ? (
-          <mark key={i} className="bg-yellow-200 text-black">
-            {part}
-          </mark>
-        ) : (
-          part
-        )
-      )}
-    </>
-  );
-}
 
-export default function SearchPage() {
-  const router = useRouterReady(), // Use our custom hook
-  const [query, setQuery] = useState("");
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [loading, setLoading] = useState(false);
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
-  // Force re-render and reset state when route changes
-  const routeKey = useRouteChange(() => {
-    setResults([]);    setLoading(false)
-  });
+  if (!term) return text;
+  const escaped = null;
+              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
 
-  const productResults = results.filter(
-    r => r.type === 'product' || r.type === 'service'
-  );
-  const talentResults = results.filter(r => r.type === 'talent');
-  const docResults = results.filter(r => r.type === 'doc');
-  const blogResults = results.filter(r => r.type === 'blog');
-  const marketplaceResults = [...productResults, ...talentResults];
-
-  // Sync query with URL parameter changes
-  useEffect(() => {
-    if (!router.isReady) return;    
-    const urlQuery = (router.query.q as string) || "";
-    if (urlQuery !== query) {
-      setQuery(urlQuery)
-    }
-  }, [router.isReady, router.query.q]), // Fixed dependency array
-
-  // Fetch results when query changes
-  useEffect(() => {
-    if (!router.isReady) return;    
-    if (query.trim()) {
-      fetchResults(query.trim())
-    } else {
-      setResults([])
-    }
-  }, [router.isReady, query]), // Fixed dependency array
-
-  const fetchResults = async (term: string,) => {
-    if (!term.trim()) {
-      setResults([]),
-      return
-    }
-
-    setLoading(true);
-    try {
-      const res = await fetch(`/api/search?query=${encodeURIComponent(term)}`);
-      const data = await res.json();
-      if (data && data.results && Array.isArray(data.results)) {
-        setResults(data.results)
-      } else {
-        setResults([]);
-        logErrorToProduction('Search API response structure is not as expected:', { data: data })
-      }
-    } catch (error) {
-      logErrorToProduction('Search failed:', { data: error }),
-      setResults([])
-    } finally {
-      setLoading(false)
-    }
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();    if (query.trim()) {
-      router.push(`/search?q=${encodeURIComponent(query.trim())}`)
-    }
-  };
-
-  // Add key prop to force re-render when route changes
-  const pageKey = `search-${routeKey}-${router.asPath}`;
-
-  return (
-    <div key={pageKey}>
-      <main className="container mx-auto px-4 py-8">
-        <form onSubmit={handleSubmit} className="mb-6">
-          <EnhancedSearchInput
-            value={query}
-            onChange={setQuery}
-            onSelectSuggestion={(suggestion) => {
-              const searchTerm = suggestion.text.trim();
-              setQuery(searchTerm);              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
             }}
             searchSuggestions = {suggestions,}
             placeholder="Search talent, jobs, and projects..."

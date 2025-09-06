@@ -1,11 +1,5 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-      <main>
-        <h1>Verify</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
-  ),
-};
 
-export default Verify;
+const Verify: NextPage;
+

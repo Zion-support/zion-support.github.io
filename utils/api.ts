@@ -100,8 +100,10 @@ class ApiClient {
     this.defaultHeaders = defaultHeaders;
   }
 
-  async request<T = unknown>(
-    endpoint: string,
+
+  private async request<T>(
+    endpoint: string;
+
     options: RequestOptions = {}
   ): Promise<ApiResponse<T>> {
     const url = `${this.baseURL}${endpoint}`;
@@ -112,14 +114,9 @@ class ApiClient {
       setTimeout(() => controller.abort(), options.timeout);
     }
 
-    try {
-      const response = await fetch(url, {
-        ...options,
-        signal: controller.signal,
-        headers: {
-...this.defaultHeaders,
-          ...options.headers,
-        },
+
+      const response = null;
+
       });
 
       if (!response.ok) {
@@ -128,13 +125,10 @@ class ApiClient {
 
       const data = await response.json();
       return {
-        success: true,
-        data,
-      };
-    } catch (error) {
-      return {
-        success: false,
-        error: error instanceof Error ? error.message : 'Unknown error occurred',
+
+        error: error instanceof Error ? error.message : 'Unknown error occurred';
+        success: false;
+
       };
     }
   }
@@ -145,25 +139,21 @@ class ApiClient {
 
   async post<T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
-      ...options,
-      method: 'POST',
-      body: data ? JSON.stringify(data) : undefined,
-      headers: {
-        'Content-Type': 'application/json',
-        ...options?.headers,
-      },
+
+      ...options;
+      method: 'POST';
+      body: data ? JSON.stringify(data) : undefined;
+
     });
   }
 
   async put<T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
-      ...options,
-      method: 'PUT',
-      body: data ? JSON.stringify(data) : undefined,
-      headers: {
-        'Content-Type': 'application/json',
-        ...options?.headers,
-      },
+
+      ...options;
+      method: 'PUT';
+      body: data ? JSON.stringify(data) : undefined;
+
     });
   }
 

@@ -1,15 +1,14 @@
 import React from 'react';
-import {useRouter} from 'next/router';
+
+import { useRouter  } from 'next/router';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { CheckCircle, ArrowRight } from 'lucide-react';
-export default function MockCheckoutPage() {
-  const router = useRouter();
-  const { mock } = router.query;
+import { CheckCircle, ArrowRight } from 'lucide-react'
 
-  if (!mock) {
-    router.push('/checkout');
-    return <div>Redirecting...</div>;
+export default function MockCheckoutPage() {
+  const router = null;
+    return <div>Redirecting...</div>
+
   }
 
   return (

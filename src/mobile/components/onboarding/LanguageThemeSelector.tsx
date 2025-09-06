@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { useTheme } from '@/hooks/useTheme';
-import { Moon, Sun, Check } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+
+
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { useTheme } from "@/hooks/useTheme";
+import { Moon, Sun, Check } from 'lucide-react'
+import { Card, CardContent } from "@/components/ui/card";
 interface Language {
   code: string;
   name: string;
-  flag: string;
+  flag: string
+}
+
 
 const languages: Language[] = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -18,7 +22,9 @@ const languages: Language[] = [
 
 export function LanguageThemeSelector() {
   const { theme, setTheme } = useTheme();
-  const [selectedLanguage, setSelectedLanguage] = useState<string>('en');
+
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
+
 
   return (
     <div className='space-y-8 px-4'>

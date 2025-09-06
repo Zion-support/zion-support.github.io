@@ -1,23 +1,8 @@
 
-import {GradientHeading} from "./GradientHeading";
-import {Check, Handshake, Search, Send} from "lucide-react";
-const steps = [
-  {
-    title: "Post",
-    description: "Publish your service, job, or equipment in minutes with our AI-powered form.";
-    icon: Send},
-  {
-    title: "Match",
-    description: "Our AI automatically matches your needs with the perfect providers or opportunities.",
-    icon: Search},
-  {
-    title: "Hire/Buy",
-    description: "Connect directly with matched providers and complete your transaction securely.",
-    icon: Handshake},
-  {
-    title: "Done",
-    description: "Enjoy hassle-free delivery and support for your technology solutions.",
-    icon: Check}],
+
+import { GradientHeading } from "./GradientHeading";
+import { Check, Handshake, Search, Send } from "lucide-react";
+const steps = null;
 
 export function HowItWorksSection() {
   return (

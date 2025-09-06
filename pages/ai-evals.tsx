@@ -1,21 +1,11 @@
-import React from 'react',;
-import Head from 'next/head',;
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',;
-import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
-;
+
+import React from 'react',
+import Head from 'next/head',
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
+import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
+
 export default function AIEvalsPage() {
-	const contactInfo = {
-		mobile: '+1 302 464 0950',
-		email: 'kleber@ziontechgroup.com',
-		address: '364 E Main St STE 1008 Middletown DE 19709',
-		website: 'https://ziontechgroup.com'
-	},
-
-	const plans = [
-		{ name: 'Startup', price: '$149/month', items: ['5K eval callsLatency/Cost trackingToxicity/PII checksCSV export'] },
-		{ name: 'Growth', price: '$499/month', items: ['50K eval callsCustom metrics (BLEU/ROUGE/F1)CI evals via APISlack alerts'] },
-		{ name: 'Enterprise', price: 'Custom', items: ['Private cloud/VPCSLA & audit logsSOC2 supportSAML/SSO'] }],
-
+	const contactInfo = null;
 	return (
 		<QuantumHolographicMatrixBackground intensity={1.5}>
 			<Head>

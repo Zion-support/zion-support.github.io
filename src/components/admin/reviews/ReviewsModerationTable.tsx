@@ -1,154 +1,81 @@
-import { useState } from 'react';
-import { useMutation } from '@tanstack/react-query';
-import { Check, X, User, Star, MoreHorizontal } from 'lucide-react';
-import { format } from 'date-fns';
-import { toast } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
-import { Review, ReviewStatus } from '@/types/reviews';
+
+import { useState } from "react",
+import { useMutation } from "@tanstack/react-query",
+import { Check, X, User, Star, MoreHorizontal } from 'lucide-react'
+import { format } from "date-fns",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client";
+import { Review, ReviewStatus } from "@/types/reviews";
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-TableRow,;
-} from '@/components/ui/table';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,;
-} from '@/components/ui/dialog';
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-DropdownMenuTrigger,;
-} from '@/components/ui/dropdown-menu';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogFooter;
+  DialogHeader;
+  DialogTitle} from "@/components/ui/dialog",
+import {
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 interface ReviewsModerationTableProps {
   reviews: Review[];
-isLoading: boolean;
-onRefresh: () => void ;
-}export function ReviewsModerationTable ({;
-  reviews;
-isLoading;
-onRefresh ;
-}: ReviewsModerationTableProps) {;
-  const [selectedReview, setSelectedReview] = useState<Review | null> (null);
-const [viewDetailsOpen,  setViewDetailsOpen] = useState (false);
-const {;
-  mutate: updateReviewStatus, isPending ;
-}= useMutation ({;
-  mutationFn: async ({;
-  reviewId;
-status ;
-}: {;
-  reviewId: string;
-status: ReviewStatus ;
-}) => {;
-  const {;
-  error ;
-}= await supabase .from ("reviews") .update ({;
-  status ;
-}) if (error) throw error;
-return {;
-  reviewId, status ;
+  isLoading: boolean;
+  onRefresh: () => void
+}
 
 export function ReviewsModerationTable({
-  reviews,
-  isLoading,
-  onRefresh,
-}: ReviewsModerationTableProps) {
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null);
+  reviews;
+  isLoading;
+  onRefresh}: ReviewsModerationTableProps) {
+  const [selectedReview, setSelectedReview] = useState<Review | null>(null),
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
-
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
-      reviewId,
-      status,
-    }: {
+      reviewId;
+      status}: {
       reviewId: string;
-      status: ReviewStatus;
-    }) => {      const { error } = await supabase
-        .from('reviews')
+      status: ReviewStatus
+    }) => {
+      const { error } = await supabase
+        .from("reviews")
         .update({ status })
-        .eq('id', reviewId);
-
+        .eq("id", reviewId);
       if (error) throw error;
-      return { reviewId, status };
-    },
-    onSuccess: data => {      toast({
-        title: 'Review updated',
-        description: `Review has been ${data.status}.`,
-      });
+      return { reviewId, status }
+    };
+    onSuccess: (data) => {
+      toast({
+        title: "Review updated";
+        description: `Review has been ${data.status}.`});
       onRefresh();
-      setViewDetailsOpen(false);
+      setViewDetailsOpen(false)
+
     },
     onError: (error: Error,) => {
       toast({
-        title: 'Error',
+
+        title: "Error";
+
         description: `Failed to update review: ${error.message}`,
         variant: 'destructive',
       });
     },
   });
 
-  const getInitials = (name: string,) => {
-    return name
-      .split(' ')
-      .map(n => n[0])
-      .join('')
-      .toUpperCase();
-  };
-  if (isLoading) {
-    return (
-      <div className='space-y-4'>
-        <div className='h-12 w-full bg-muted rounded animate-pulse' />
-        <div className='h-16 w-full bg-muted rounded animate-pulse' />
-        <div className='h-16 w-full bg-muted rounded animate-pulse' />
-        <div className='h-16 w-full bg-muted rounded animate-pulse' />
-      </div>
-    );
-  }
 
-  if (reviews.length === 0) {
-    return (
-      <div className='py-10 text-center'>
-        <h3 className='text-lg font-medium mb-2'>No reviews to moderate</h3>
-        <p className='text-muted-foreground'>
-          All reviews have been processed. Check back later for new submissions.
-        </p>
-      </div>
-    );
-  }
 
-  const handleApprove = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: 'approved' });
-  };
-
-  const handleReject = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: 'rejected' });
-  };
-
-  const handleViewDetails = (review: Review) => {
-    setSelectedReview(review);
-    setViewDetailsOpen(true);
-  };
-  const renderStars = (rating: number,) => {
-    return (
-      <div className='flex'>
-        {[1, 2, 3, 4, 5].map(star => (
-          <Star
-            key={star}
-            className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}          />
-        ))}
-      </div>
-    );
-  };
+  const getInitials = null;
 
   return (
     <>

@@ -20,52 +20,23 @@ import {
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear(),
 
-  const services = [
-    { name: 'Web Development', href: '/services/web-development' },
-{ name: 'Mobile Apps', href: '/services/mobile-apps' },
-    { name: 'AI Solutions', href: '/services/ai-solutions' },
-    { name: 'Cloud Services', href: '/services/cloud-services' },
+
+  const services = null;
   ];
 
-  const solutions = [
-    { name: 'E-commerce', href: '/solutions/ecommerce' },
-    { name: 'CRM Systems', href: '/solutions/crm' },
-    { name: 'Data Analytics', href: '/solutions/analytics' },
-    { name: 'Automation', href: '/solutions/automation' },
+  const company = null;
   ];
 
-  const company = [
-    { name: 'About Us', href: '/about' },
-{ name: 'Our Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' }
+  const resources = null;
   ];
 
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'Instagram', href: '#', icon: Instagram },
+  const socialLinks = null;
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className;
+              with cutting-edge AI, cloud architecture, and innovative development services.
 
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <Code className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-400 mb-6 max-w-sm">
-              Transforming businesses through innovative technology solutions. 
-              We deliver cutting-edge software, AI, and cloud services.
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">

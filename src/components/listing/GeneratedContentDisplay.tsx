@@ -1,30 +1,27 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ArrowRight } from 'lucide-react';
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
+
+
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight } from 'lucide-react'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 interface GeneratedContent {
   description: string;
-tags: string[];
-suggestedPrice: {;
-  min: number;
-max: number ;
-};
-keyPoints: string[] ;
-}interface GeneratedContentDisplayProps {;
-  content: GeneratedContent;
-  onApply: () => void;
+  tags: string[];
+  suggestedPrice: {
+    min: number;
+    max: number
+  },
+  keyPoints: string[]
+}
 
-export function GeneratedContentDisplay({
-  content,
-  onApply,
-}: GeneratedContentDisplayProps) {
+interface GeneratedContentDisplayProps {
+  content: GeneratedContent;
+  onApply: () => void
+}
+
+export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
+
   return (
     <Card className='border border-zion-blue-light bg-zion-blue-dark'>
       <CardHeader>

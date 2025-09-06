@@ -9,7 +9,9 @@ export interface Message {
   read: boolean;
   sender_name?: string;
   sender_avatar?: string;
-  attachment_url?: string,
+
+  attachment_url?: string;
+
   attachment_name?: string
 }
 
@@ -20,19 +22,23 @@ export interface Conversation {
   other_user: {
     id: string;
     name: string;
-    avatar_url?: string,
+
+    avatar_url?: string;
     user_type?: string
-  };
+  },
+
   name: string;
   avatar_url?: string;
   last_message?: {
-    content: string,
+    content: string;
     created_at: string
-  };
+
+  },
   updated_at: string;
   unread_count: number;
   context_type?: 'job' | 'talent' | 'general';
-  context_id?: string,
+  context_id?: string;
+
   context_data?: ConversationContextData
 }
 
@@ -50,11 +56,13 @@ export interface MessagingContextType {
   unreadCount: number;
   activeConversation: Conversation | null;
   activeMessages: Message[];
-  isLoading: boolean,
-  sendMessage: (conversationId: string, content: string) => Promise<void>,
+
+  isLoading: boolean;
+  sendMessage: (conversationId: string, content: string) => Promise<void>;
   createConversation: (
-    recipientId: string, 
-    initialMessage: string, 
+    recipientId: string;
+    initialMessage: string;
+
     contextType?: 'job' | 'talent' | 'general';
     contextId?: string;
     contextData?: ConversationContextData
@@ -65,6 +73,8 @@ export interface MessagingContextType {
    * selection.
    */
   setActiveConversation: (value: Conversation | null) => void;
-  fetchConversations: () => Promise<void>,
+
+  fetchConversations: () => Promise<void>;
+
   loadMessages: (conversationId: string) => Promise<void>
 }

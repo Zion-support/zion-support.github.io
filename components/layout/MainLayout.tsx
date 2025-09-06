@@ -12,16 +12,10 @@ interface MainLayoutProps {
   url?: string;}
 
 const MainLayout: React.FC<MainLayoutProps> = ({
-  children,
-  title = 'Zion Tech Group - Technology Solutions',
-  description = 'Leading technology solutions provider specializing in web development, mobile applications, AI integration, and cloud services.',
-  keywords = 'technology, web development, mobile apps, AI, cloud services, software solutions',
-  canonical,
-  noindex = false,
-  nofollow = false,
-  type = 'website',
-  image = '/og-image.jpg',
-  url
+
+  children;
+  title;
+}) => {
 
   return (
     <>

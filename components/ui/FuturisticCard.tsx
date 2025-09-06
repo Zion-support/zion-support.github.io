@@ -1,9 +1,6 @@
-import React from "react";
-type Props = {
-  title: string;
-  description: string;
-  cta?: React.ReactNode;
-};
+
+import React from 'react';
+type Props = any;
 
 export default function FuturisticCard({ title, description, cta }: Props) {
   return (

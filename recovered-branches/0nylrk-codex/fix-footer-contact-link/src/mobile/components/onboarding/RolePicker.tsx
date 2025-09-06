@@ -1,22 +1,10 @@
 
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent} from "@/components/ui/card";
-import {Briefcase, Users, Check} from "lucide-react";
 
-type UserRole = "talent" | "client" | null;
-
-interface RolePickerProps {
-  onSelect: (role: UserRole) => void
-}
-
-export function RolePicker({ onSelect }: RolePickerProps) {
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null);
-
-  const handleSelect = (role: UserRole) => {
-    setSelectedRole(role),
-    onSelect(role)
-  };
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card";
+import { Briefcase, Users, Check } from "lucide-react";
+type UserRole = any;
 
   return (
     <div className="space-y-4 px-4">
