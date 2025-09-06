@@ -1,25 +1,15 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { logWarn } from '@/utils/productionLogger'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { SEO } from "@/components/SEO",
 import { useState, useEffect } from "react",
 import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { logWarn } from '@/utils/productionLogger';
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { logWarn } from '@/utils/productionLogger',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface ServiceStatus {
 
   name: string
@@ -27,11 +17,7 @@ interface ServiceStatus {
   description: string
   lastChecked: string
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         return <CheckCircle className="h-5 w-5 text-green-500" />
         return <Clock className="h-5 w-5 text-blue-500" />
       default:;
@@ -41,13 +27,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
 
   )
 }
-<<<<<<< HEAD
-=======
-
-=======
-;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
     name: "Marketplace API",
@@ -431,8 +411,4 @@ export default function Status() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

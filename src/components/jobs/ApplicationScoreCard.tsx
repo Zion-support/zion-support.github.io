@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -9,50 +6,33 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { supabase } from "@/integrations/supabase/client"
 import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'import { toast } from "sonner"
 import { JobApplication } from "@/types/jobs"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { supabase } from "@/integrations/supabase/client",
 import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'
-<<<<<<< HEAD
 import { toast } from "sonner";
 import { JobApplication } from "@/types/jobs";
 interface ApplicationScoreCardProps {
-=======
 import { toast } from "sonner",
 import { JobApplication } from "@/types/jobs",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ApplicationScoreCardProps {
   application: JobApplication,
   onScoreUpdated?: (updatedApplication: JobApplication) => void
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   application: JobApplication
   onScoreUpdated?: (updatedApplication: JobApplication,) => void
 
 }
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [isScoring, setIsScoring] = useState(false);
-=======
-  const [isScoring, setIsScoring] = useState(false)
-  // Determine if application has been scored
-  const hasScore = typeof application.match_score === 'number'
-      let attempts = 0
-      const maxAttempts = 10
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isScoring, setIsScoring] = useState(false),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Determine if application has been scored
   const hasScore = typeof application.match_score === 'number',
   
@@ -61,32 +41,21 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     ? new Date(application.scored_at).toLocaleDateString() 
     : null,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const hasScore = typeof application.match_score === 'number'
       let attempts = 0
       const maxAttempts = 10
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined,) => {
     switch (suggestion) {
-<<<<<<< HEAD
       case "Strongly Recommended": return "bg-green-100 text-green-800"
-=======
-      case "Strongly Recommended": return "bg-green-100 text-green-800",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       case "Recommended for Review":
         return "bg-blue-100 text-blue-800"
       case "Low Match":
         return "bg-orange-100 text-orange-800"
       default:
         return "bg-gray-100 text-gray-800"
-<<<<<<< HEAD
-=======
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -118,11 +87,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         return "bg-orange-100 text-orange-800",;
       default:;
         return "bg-gray-100 text-gray-800";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
   }
   // Trigger the scoring process
@@ -133,18 +98,10 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       const { error } = await supabase.rpc(
         'trigger_resume_scoring'
         { application_id: application.id }
-<<<<<<< HEAD
       )
       if (error) throw error
       toast.success("Resume scoring has been initiated")
-=======
-      ),
-      
-      if (error) throw error,
-      
-      toast.success("Resume scoring has been initiated"),
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Poll for results every 3 seconds for up to 30 seconds
       let attempts = 0
       const maxAttempts = 10
@@ -156,33 +113,22 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           .eq("id", application.id)
           .single()
         if (error) {
-<<<<<<< HEAD
           setIsScoring(false)
           toast.error("Failed to check scoring status")
           return
-=======
-          setIsScoring(false),
-          toast.error("Failed to check scoring status"),
-          return;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
         if (data.scored_at) {
-<<<<<<< HEAD
           setIsScoring(false)
           toast.success("Resume scoring completed")
           if (onScoreUpdated) onScoreUpdated(data as JobApplication)
-=======
           setIsScoring(false),
           toast.success("Resume scoring completed"),
           if (onScoreUpdated) onScoreUpdated(data as JobApplication),
-<<<<<<< HEAD
           return;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           return
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
-<<<<<<< HEAD
         if (attempts < maxAttempts) {
           setTimeout(checkScore, 3000)
         } else {
@@ -196,16 +142,12 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       toast.error(`Failed to score resume: ${error.message}`)
     }
   }
-=======
         
         if (attempts < maxAttempts) {
           setTimeout(checkScore, 3000)
         } else {
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         }
       },
       
@@ -214,8 +156,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     } catch (error: any) {
       setIsScoring(false),
       toast.error(`Failed to score resume: ${error.message}`)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       ),;
       if (error) throw error,;
       toast.success("Resume scoring has been initiated"),;
@@ -253,13 +194,9 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     } catch (error: any) {;
       setIsScoring(false);
       toast.error(`Failed to score resume: ${error.message}`);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   // Render the score result or button to score
   return (
@@ -329,20 +266,11 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                         {application.match_breakdown.skills_match.missing && (
                           <p>Missing skills: {application.match_breakdown.skills_match.missing.join(", ")}</p>
                         )}
-<<<<<<< HEAD
                       </div>
-<<<<<<< HEAD
                     )}
-=======
-                      </div>;
-=======
-=======
-                      </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     )}
                     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     {application.match_breakdown.experience_match && (
                       <div>
                         <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>
@@ -358,20 +286,11 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                         {application.match_breakdown.certifications_match.missing && (
                           <p>Missing certs: {application.match_breakdown.certifications_match.missing.join(", ")}</p>
                         )}
-<<<<<<< HEAD
                       </div>
-<<<<<<< HEAD
                     )}
-=======
-                      </div>;
-=======
-=======
-                      </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     )}
                     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     {application.match_breakdown.education_match && (
                       <div>
                         <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>
@@ -388,26 +307,14 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
             <p className="text-muted-foreground mb-4">
               Analyze how well this resume matches your job requirements.
             </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <Button
               onClick = {handleScore,}
               disabled = {isScoring,}
-=======
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <Button 
-              onClick={handleScore} 
-              disabled={isScoring}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-            <Button 
-<<<<<<< HEAD
               onClick = {handleScore,}
               disabled = {isScoring,}
-=======
-              onClick={handleScore} 
-              disabled={isScoring}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               className="w-full"
             >
               {isScoring ? (
@@ -421,23 +328,10 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
             </Button>
           </div>
         )}
-<<<<<<< HEAD
       </CardContent>
     </Card>;
   );
-<<<<<<< HEAD
 };
-=======
 }
-<<<<<<< HEAD
-=======
-      </CardContent>;
-    </Card>;
-  );
-}
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

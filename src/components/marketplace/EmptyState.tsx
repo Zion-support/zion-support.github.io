@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import * as React from 'react'
 import {
   RefreshCw
@@ -26,7 +23,6 @@ export interface EmptyStateProps {
     onClick: () => void
   }
   icon?: React.ReactNode
-<<<<<<< HEAD
 
 const defaultContent = {
   products: {
@@ -105,9 +101,7 @@ export function EmptyState({
           variant='outline'
           className='flex items-center gap-2'        >
           <RefreshCw className='w-4 h-4' />
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import * as React from 'react',;
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -124,10 +118,7 @@ export interface EmptyStateProps {;
   icon?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const defaultContent = {
   products: {
     icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,
@@ -160,9 +151,6 @@ const defaultContent = {
   loading: {
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,
     title: 'Loading...',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     description:
       "We're fetching the latest data for you. This should only take a moment.",
   },
@@ -194,8 +182,7 @@ export function EmptyState({
           variant='outline'
           className='flex items-center gap-2'        >
           <RefreshCw className='w-4 h-4' />
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     description: 'We\'re fetching the latest data for you. This should only take a moment.'}},
 
 export function EmptyState({
@@ -231,38 +218,22 @@ export function EmptyState({
           className="flex items-center gap-2"
         >
           <RefreshCw className="w-4 h-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {action.label}
         </Button>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-=======
       
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {type === 'error' && (
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
-<<<<<<< HEAD
-=======
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {type === 'network' && (
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>
-<<<<<<< HEAD
             {t('general.check_status_page')}{' '}
             <Link href='https://status.zion.ai' className='underline'>
               {t('general.status_page')}
@@ -294,39 +265,7 @@ export function ProductsEmptyState({
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!"
       />
-<<<<<<< HEAD
-=======
-  )
-export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-} 
-};
-;
-}
-}
-}
-}
-}
-}
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {t('general.check_status_page')}
             {" "}
             <Link href="https://status.zion.ai" className="underline">
@@ -378,11 +317,9 @@ export function ProductsEmptyState({;
     />;
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
-<<<<<<< HEAD
       />
   )
 export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
@@ -402,7 +339,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
   )
 }
 }
-=======
   return (
     <EmptyState
       type="categories"
@@ -455,8 +391,4 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
     />;
   );
 } ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

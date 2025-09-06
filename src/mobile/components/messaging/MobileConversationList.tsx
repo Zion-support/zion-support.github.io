@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -7,21 +6,7 @@ import { Search } from 'lucide-react'
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 interface Conversation {
-<<<<<<< HEAD
-=======
-  id: string
-name: string
-avatar?: string
-lastMessage: string
-timestamp: string
-unreadCount: number
-isTyping?: boolean 
-}interface MobileConversationListProps {
-  conversations: Conversation[]
-  activeConversation?: string
-  onSelectConversation: (id: string) => void
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from "react",
 import { Card } from "@/components/ui/card",
@@ -60,9 +45,7 @@ interface MobileConversationListProps {;
   activeConversation?: string,;
   onSelectConversation: (id: string) => void;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
   id: string
 name: string
 avatar?: string
@@ -74,17 +57,11 @@ isTyping?: boolean
   conversations: Conversation[]
   activeConversation?: string
   onSelectConversation: (id: string) => void
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function MobileConversationList({
-<<<<<<< HEAD
   conversations
   activeConversation
-=======
-  conversations,
-  activeConversation,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onSelectConversation
 }: MobileConversationListProps) {
   return (
@@ -98,7 +75,6 @@ export function MobileConversationList({
           />
         </div>
       </div>
-<<<<<<< HEAD
       <div className='px-4 pb-4 space-y-2'>
         <div className='flex space-x-2'>
           <Badge variant='secondary' className='rounded-full px-3'>
@@ -134,7 +110,6 @@ export function MobileConversationList({
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>                <AvatarImage src={conversation.avatar} alt={conversation.name} />
-=======
       
       <div className="px-4 pb-4 space-y-2">
         <div className="flex space-x-2">
@@ -158,16 +133,11 @@ export function MobileConversationList({
             <div className="flex items-center gap-3 py-3 cursor-pointer">
               <Avatar>
                 <AvatarImage src={conversation.avatar} alt={conversation.name} />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
-<<<<<<< HEAD
               <div className='flex-1 min-w-0'>
                 <div className='flex justify-between items-baseline'>
                   <h3 className='font-medium truncate'>{conversation.name}</h3>
@@ -181,7 +151,6 @@ export function MobileConversationList({
                     ) : (
                       conversation.lastMessage
                     )}
-=======
               
               <div className="flex-1 min-w-0">
                 <div className="flex justify-between items-baseline">
@@ -196,31 +165,20 @@ export function MobileConversationList({
                     {conversation.isTyping 
                       ? <em>Typing...</em> 
                       : conversation.lastMessage}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </p>
                   {conversation.unreadCount > 0 && (
-<<<<<<< HEAD
                     <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>                      {conversation.unreadCount}                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>
-=======
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   )}
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
             <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>
           </div>
         ))}
@@ -229,7 +187,6 @@ export function MobileConversationList({
   );
 };
 }
-=======
             <div className="border-t border-border ml-12"></div>
           </div>
         ))}
@@ -238,8 +195,4 @@ export function MobileConversationList({
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

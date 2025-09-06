@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react'
 import Link from 'next/link'
 import {
@@ -14,7 +11,6 @@ import {
   Zap
 } from 'lucide-react'
 import ApiDocsLayout from '@/components/developers/ApiDocsLayout'
-<<<<<<< HEAD
 export function ApiDocsHub() {
   const sections = [
     {
@@ -53,19 +49,12 @@ export function ApiDocsHub() {
       color: 'from-red-500 to-rose-500'
     }
   ]
-=======
-=======
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import Link from "next/link",
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react'
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function ApiDocsHub() {
   const sections = [
     {
@@ -96,23 +85,15 @@ export function ApiDocsHub() {
       title: "Error Codes & Rate Limits",
       description: "Understanding API errors and rate limiting",
       icon: AlertCircle,
-<<<<<<< HEAD
       path: "/developers/docs/errors",
       color: "from-red-500 to-rose-500"}],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       path: '/developers/docs/errors',
       color: 'from-red-500 to-rose-500',
     },
   ]
-=======
-      path: "/developers/docs/errors",
-      color: "from-red-500 to-rose-500"}],
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <ApiDocsLayout>
       <div className="max-w-4xl">
@@ -120,7 +101,6 @@ export function ApiDocsHub() {
         <p className="text-zinc-400 text-lg mb-12">
           Welcome to the Zion AI Marketplace API documentation. Here you'll find comprehensive guides and documentation to help you start working with our API as quickly as possible.
         </p>
-<<<<<<< HEAD
         <div className='grid gap-6 md:grid-cols-2'>
           {sections.map(section => (
             <Link
@@ -131,7 +111,6 @@ export function ApiDocsHub() {
                 className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}
               >
                 <section.icon className='h-6 w-6 text-white' />
-=======
 
         <div className="grid gap-6 md:grid-cols-2">
           {sections.map((section) => (
@@ -142,11 +121,7 @@ export function ApiDocsHub() {
             >
               <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}>
                 <section.icon className="h-6 w-6 text-white" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </div>
               <h2 className="text-xl font-semibold text-white mb-2">{section.title}</h2>
               <p className="text-zinc-400 mb-4">{section.description}</p>
@@ -157,7 +132,6 @@ export function ApiDocsHub() {
             </Link>
           ))}
         </div>
-<<<<<<< HEAD
         <div className='mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800'>
           <h2 className='text-xl font-semibold text-white mb-4'>
             Ready to get started?
@@ -165,17 +139,12 @@ export function ApiDocsHub() {
           <p className='text-zinc-400 mb-6'>
             To use the Zion AI Marketplace API, you'll need an API key. Visit
             your developer portal to create one.
-=======
 
         <div className="mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800">
           <h2 className="text-xl font-semibold text-white mb-4">Ready to get started?</h2>
           <p className="text-zinc-400 mb-6">
             To use the Zion AI Marketplace API, you'll need an API key. Visit your developer portal to create one.
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </p>
           <Link
             href="/developers/portal"
@@ -186,21 +155,15 @@ export function ApiDocsHub() {
           </Link>
         </div>
       </div>
-<<<<<<< HEAD
     </ApiDocsLayout>;
   );
 export default ApiDocsHub;
 }
-=======
     </ApiDocsLayout>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default ApiDocsHub
 
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import Link from "next/link",;
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react';
@@ -282,8 +245,4 @@ export function ApiDocsHub() {;
 }
 ;
 export default ApiDocsHub;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

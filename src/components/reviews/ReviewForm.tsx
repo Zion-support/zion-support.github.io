@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useState } from "react"
 import { Star } from 'lucide-react'import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
@@ -34,12 +31,10 @@ interface ReviewFormProps {
   }
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { Star } from 'lucide-react'
 import { useForm } from "react-hook-form",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -54,22 +49,7 @@ import {
   RadioGroupItem} from "@/components/ui/radio-group",
 import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
-=======
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form",
-import {
-  RadioGroup,
-  RadioGroupItem} from "@/components/ui/radio-group",
-import { Switch } from "@/components/ui/switch",
-import { Review } from "@/types/reviews",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -78,7 +58,6 @@ interface ReviewFormValues {
   timeliness_rating?: number,
   would_work_again?: boolean,
   is_anonymous?: boolean
-<<<<<<< HEAD
 }
 interface ReviewFormProps {
 
@@ -90,7 +69,6 @@ interface ReviewFormProps {
 
   )
 }
-=======
 import { useState } from "react",;
 import { Star } from 'lucide-react';
 import { useForm } from "react-hook-form",;
@@ -403,8 +381,4 @@ export function ReviewForm({
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

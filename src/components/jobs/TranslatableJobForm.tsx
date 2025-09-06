@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -24,8 +21,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage)
   // Form fields with translations
   const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -36,7 +32,6 @@ import { Loader2, Globe } from 'lucide-react'
 import { useTranslation } from "react-i18next",
 import { useTranslationService } from "@/hooks/useTranslationService",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
-<<<<<<< HEAD
 import { toast } from "@/components/ui/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface TranslatableJobFormProps {
@@ -49,21 +44,16 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const { supportedLanguages, currentLanguage } = useLanguage()
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage)
   // Form fields with translations
-<<<<<<< HEAD
   const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
     en: ""
     es: ""
     fr: ""
     pt: ""
-=======
-  const [title, setTitle] = useState<Record<SupportedLanguage string>>({
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     en: "",
     es: "",
     fr: "",
     pt: "",
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ar: ""
   })
     ar: ""
@@ -87,13 +77,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       return;
           variant: "destructive"
       })
-<<<<<<< HEAD
       return
         title: t('translation.translation_success')
-=======
-      return;
-        title: t('translation.translation_success'),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         description: t('translation.content_translated')
       })
     } catch (error) {
@@ -103,39 +89,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         description: error instanceof Error ? error.message : t('translation.unknown_error')
         variant: "destructive"
       })
-<<<<<<< HEAD
-=======
-import { toast } from "@/components/ui/use-toast",
-import {logErrorToProduction} from '@/utils/productionLogger',
-interface TranslatableJobFormProps {
-  onSubmit: (formData: any) => void,
-  isSubmitting?: boolean
-}
-
-export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
-  const { t } = useTranslation(),
-  const { translateContent, isTranslating } = useTranslationService(),
-  const { supportedLanguages, currentLanguage } = useLanguage(),
-  
-  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage),
-  
-  // Form fields with translations
-  const [title, setTitle] = useState<Record<SupportedLanguage string>>({
-    en: "",
-    es: "",
-    fr: "",
-    pt: "",
-=======
-    }
-  }
-  // Ensure all translations are available
-  const ensureAllTranslations = async () => {
-    const promises = [];
-};
-  );
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ar: ""}),
   
   const [description, setDescription] = useState<Record<SupportedLanguage string>>({
@@ -344,7 +298,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         title: t('translation.translation_failed'),;
         description: error instanceof Error ? error.message : t('translation.unknown_error'),;
         variant: "destructive"});
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
   }
   // Ensure all translations are available
@@ -543,21 +496,15 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
           ) : (
             t('jobs.post_job_button')
           )}
-<<<<<<< HEAD
         </Button>
       </div>
     </form>
   )
 }
-=======
         </Button>;
       </div>;
     </form>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

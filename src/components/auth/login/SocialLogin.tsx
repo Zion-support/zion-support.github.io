@@ -1,21 +1,12 @@
-<<<<<<< HEAD
 import { Facebook, Twitter, Loader2 } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Web3Login } from "./Web3Login",
 import { useState } from "react";
 import { openAuthPopup } from "@/api/authSocial";
 export function SocialLogin() {
-<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(false);
   const handleGoogle = null;
-=======
-  const [isLoading, setIsLoading] = useState(false)
-  const handleGoogle = () => {
-    setIsLoading(true)
-    window.location.href = '/auth/google'
-  }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { Facebook, Twitter, Loader2 } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -30,11 +21,7 @@ export function SocialLogin() {
     window.location.href = '/auth/google'
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="mt-6">
       <div className="relative">
@@ -45,7 +32,6 @@ export function SocialLogin() {
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>
         </div>
       </div>
-<<<<<<< HEAD
       <div className='mt-6 grid grid-cols-4 gap-3'>
         <Button
           type='button'
@@ -54,7 +40,6 @@ export function SocialLogin() {
           onClick={handleGoogle}
           disabled={isLoading}        >
           <span className='sr-only'>Sign in with Google</span>
-=======
 
       <div className="mt-6 grid grid-cols-4 gap-3">
         <Button
@@ -65,11 +50,7 @@ export function SocialLogin() {
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Google</span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
@@ -82,7 +63,6 @@ export function SocialLogin() {
           )}
         </Button>
         <Button
-<<<<<<< HEAD
           type='button'
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
@@ -99,16 +79,7 @@ export function SocialLogin() {
           disabled={isLoading}        >
           <span className='sr-only'>Sign in with Twitter</span>
           <Twitter className='h-5 w-5' />
-<<<<<<< HEAD
-=======
-        </Button>
-        <Web3Login />
-      </div>
-    </div>;
-  );
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
@@ -127,21 +98,14 @@ export function SocialLogin() {
         >
           <span className="sr-only">Sign in with Twitter</span>
           <Twitter className="h-5 w-5" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         </Button>
         <Web3Login />
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Web3Login } from "./Web3Login",;
@@ -209,8 +173,4 @@ export function SocialLogin() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

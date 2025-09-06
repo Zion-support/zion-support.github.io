@@ -1,34 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
-=======
-import { useState, useEffect } from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { WifiOff, Wifi } from 'lucide-react'
-=======
 import { useState, useEffect } from 'react',
 import { WifiOff, Wifi } from 'lucide-react'
 import { Alert, AlertDescription } from '@/components/ui/alert',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import { Alert, AlertDescription } from '@/components/ui/alert'
 export const OfflineIndicator = () => {
-<<<<<<< HEAD
   const [isOnline, setIsOnline] = useState(true)
   const [showOfflineAlert, setShowOfflineAlert] = useState(false)
   useEffect((,) => {
     const updateOnlineStatus = () => {
       const online = navigator.onLine
       setIsOnline(online)
-=======
-<<<<<<< HEAD
-=======
-import { useState, useEffect } from 'react',
-import { WifiOff, Wifi } from 'lucide-react'
-import { Alert, AlertDescription } from '@/components/ui/alert',
-
-export const OfflineIndicator = () => {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isOnline, setIsOnline] = useState(true),
   const [showOfflineAlert, setShowOfflineAlert] = useState(false),
 
@@ -37,19 +22,13 @@ export const OfflineIndicator = () => {
       const online = navigator.onLine,
       setIsOnline(online),
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (!online) {
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
         // Show brief "back online" message then hide
-<<<<<<< HEAD
         setTimeout(() => setShowOfflineAlert(false), 3000) }        setTimeout((,) => setShowOfflineAlert(false), 3000)
         setTimeout(() => setShowOfflineAlert(false), 3000)
-=======
         setTimeout(() => setShowOfflineAlert(false), 3000)
 import { useState, useEffect } from 'react',;
 import { WifiOff, Wifi } from 'lucide-react';
@@ -66,14 +45,9 @@ export const OfflineIndicator = () => {;
       } else if (showOfflineAlert) {;
         // Show brief "back online" message then hide;
         setTimeout(() => setShowOfflineAlert(false), 3000);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       }
     }
-<<<<<<< HEAD
     // Set initial status
     updateOnlineStatus()
     // Listen for online/offline events
@@ -107,11 +81,8 @@ export const OfflineIndicator = () => {;
     </div>
   )
 } }
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }, [showOfflineAlert]),
 
   if (!showOfflineAlert) return null,
@@ -137,8 +108,4 @@ export const OfflineIndicator = () => {;
     </div>;
   );
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

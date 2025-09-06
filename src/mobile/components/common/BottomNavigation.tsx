@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 import React from "react",
 import { useRouter } from "next/router",
 import Link from "next/link";
-=======
-<<<<<<< HEAD
 import React from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Home, ShoppingBag, Users, User } from 'lucide-react'
-<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 export function BottomNavigation() {
 
@@ -34,17 +29,8 @@ export function BottomNavigation() {
                 className: cn(
                   'h-5 w-5'
                   isActive ? 'stroke-primary' : 'stroke-muted-foreground'
-<<<<<<< HEAD
                 )
-=======
-=======
-                ),
-=======
-import React from "react",
-import { useRouter } from "next/router",
-import Link from "next/link",
-import { Home, ShoppingBag, Users, User } from 'lucide-react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { cn } from "@/lib/utils",
 export function BottomNavigation() {
   const router = useRouter(),
@@ -71,17 +57,12 @@ export function BottomNavigation() {
             <div className="h-5 w-5">
               {React.cloneElement(item.icon as React.ReactElement, { 
                 className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground") 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               })}
             </div>
             <span className="text-xs mt-1">{item.label}</span>
           </Link>
         )
-<<<<<<< HEAD
       })}
     </div>
   )
@@ -107,18 +88,11 @@ export function BottomNavigation() {
             <span className="text-xs mt-1">{item.label}</span>
           </Link>
         )
-<<<<<<< HEAD
       })}
     </div>
   )
 }
-=======
-      })};
-    </div>;
-  );
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { useRouter } from "next/router",;
 import Link from "next/link",;
@@ -157,8 +131,4 @@ export function BottomNavigation() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

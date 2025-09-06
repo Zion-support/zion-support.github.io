@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -29,8 +26,7 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from "react",
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
@@ -40,18 +36,13 @@ import { useProjects } from "@/hooks/useProjects",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { Project, ProjectStatus } from "@/types/projects",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
-=======
 import { Button } from "@/components/ui/button",
 import {logErrorToProduction} from '@/utils/productionLogger',
 import {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -60,7 +51,6 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-<<<<<<< HEAD
   AlertDialogTrigger} from "@/components/ui/alert-dialog",
 import { Avatar } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
@@ -69,7 +59,6 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   Card
   CardContent
@@ -88,10 +77,26 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
   AlertDialogHeader
   AlertDialogTitle
   AlertDialogTrigger
-=======
-<<<<<<< HEAD
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+  AlertDialog
+  AlertDialogAction
+  AlertDialogCancel
+  AlertDialogContent
+  AlertDialogDescription
+  AlertDialogFooter
+  AlertDialogHeader
+  AlertDialogTitle
+  AlertDialogTrigger
   AlertDialogTrigger,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/alert-dialog'
 import { Avatar } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
@@ -111,7 +116,6 @@ import { ProjectReviewSection } from '@/components/projects/reviews/ProjectRevie
   XCircle
 } from 'lucide-react'
 function ProjectDetailsContent() {
-<<<<<<< HEAD
   const router = useRouter()
   // Get projectId from Next.js router query params
   const { projectId } = router.query as { projectId?: string }
@@ -123,20 +127,7 @@ function ProjectDetailsContent() {
   const [newNote, setNewNote] = useState('')
   const [isSubmittingNote, setIsSubmittingNote] = useState(false)
   const [activeTab, setActiveTab] = useState('details')
-=======
-<<<<<<< HEAD
-=======
-  AlertDialogTrigger} from "@/components/ui/alert-dialog",
-import { Avatar } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",
-import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
-
-function ProjectDetailsContent() {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter(),
   // Get projectId from Next.js router query params
   const { projectId } = router.query as { projectId?: string },
@@ -150,25 +141,16 @@ function ProjectDetailsContent() {
   const [isSubmittingNote, setIsSubmittingNote] = useState(false),
   const [activeTab, setActiveTab] = useState("details"),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Load project data
   useEffect(() => {
     async function loadProject() {
-<<<<<<< HEAD
-<<<<<<< HEAD
       if (!projectId) return
-=======
-      if (!projectId) return;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       setIsLoading(true)
       const projectData = await getProjectById(projectId)
       if (projectData) {
         setProject(projectData)
-=======
       if (!projectId) return,
       
       setIsLoading(true),
@@ -177,38 +159,17 @@ function ProjectDetailsContent() {
       if (projectData) {
         setProject(projectData),
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
         toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
           title: 'Project not found'
           description: 'The requested project could not be found.'
           variant: 'destructive'
         })
         router.push('/dashboard')
-=======
-          title: 'Project not found',
-          description: 'The requested project could not be found.',
-          variant: 'destructive',
-        })
-        router.push('/dashboard')
-      }
-
-      setIsLoading(false)
-    }
-
-    loadProject()
-  }, [projectId])
-  const fetchProjectNotes = async (projectId: string) => {    try {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           title: "Project not found",
           description: "The requested project could not be found.",
           variant: "destructive"}),
@@ -281,11 +242,9 @@ function ProjectDetailsContent() {;
           description: "The requested project could not be found.",;
           variant: "destructive"}),;
         router.push("/dashboard");
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       }
       setIsLoading(false)
     }
-<<<<<<< HEAD
     loadProject()
   }, [projectId])
   const fetchProjectNotes = async (projectId: string) => {    try {
@@ -314,25 +273,18 @@ function ProjectDetailsContent() {;
   const handleSubmitNote = async () => {
     if (!newNote.trim() |!project |!user) return
     setIsSubmittingNote(true)
-=======
     
     loadProject()
   }, [projectId]),
   
   const fetchProjectNotes = async (projectId: string) => {
     try {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       const { data, error } = await supabase
         .from("project_notes")
         .select(`
           *,
           created_by_profile:profiles!user_id(display_name, avatar_url)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         `
         )
         .eq('project_id', projectId)
@@ -352,8 +304,7 @@ function ProjectDetailsContent() {;
   const handleSubmitNote = async () => {
     if (!newNote.trim() || !project || !user) return;
     setIsSubmittingNote(true)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         `)
         .eq("project_id", projectId)
         .order("created_at", { ascending: false }),
@@ -375,26 +326,17 @@ function ProjectDetailsContent() {;
     
     setIsSubmittingNote(true),
     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       const { data, error } = await supabase
         .from("project_notes")
         .insert({
-<<<<<<< HEAD
-<<<<<<< HEAD
           project_id: project.id
           user_id: user.id
           content: newNote
-=======
           project_id: project.id,
           user_id: user.id,
-<<<<<<< HEAD
           content: newNote,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         })
         .select()
       if (error) throw error
@@ -424,12 +366,39 @@ function ProjectDetailsContent() {;
         ...project
         status: newStatus
       })
-=======
-<<<<<<< HEAD
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        })
+        .select()
+      if (error) throw error
+      // Refresh notes
+      fetchProjectNotes(project.id)
+      setNewNote('')
+      toast({
+        title: 'Note added'
+        description: 'Your note has been added to the project.'
+      })
+    } catch (err: any) {
+      logErrorToProduction('Error adding note:', { data: err })
+      toast({
+        title: 'Failed to add note'
+        description: err.message |'An error occurred while adding note.'
+        variant: 'destructive'
+      })
+    } finally {
+      setIsSubmittingNote(false)
+    }
+  }
+  const handleStatusChange = async (newStatus: ProjectStatus) => {
+    if (!project) return;
+    const success = await updateProjectStatus(project.id, newStatus)
+    if (success) {
+      setProject({
+        ...project
+        status: newStatus
+      })
           project_id: project.id,
           user_id: user.id,
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           content: newNote})
         .select(),
       
@@ -463,22 +432,13 @@ function ProjectDetailsContent() {;
         ...project,
         status: newStatus}),
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // If offer was accepted, show a special toast
       if (newStatus === "offer_accepted") {
         toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
           title: 'Offer Accepted! 🎉'
           description: 'The project is now in progress. Congratulations!'
-=======
-          title: 'Offer Accepted! 🎉',
-          description: 'The project is now in progress. Congratulations!',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         })
       }
     }
@@ -502,7 +462,6 @@ function ProjectDetailsContent() {;
         return <Badge variant='outline'>{status}</Badge>
     }
   }
-=======
           title: "Offer Accepted! 🎉",
           description: "The project is now in progress. Congratulations!"})
       }
@@ -527,11 +486,7 @@ function ProjectDetailsContent() {;
     }
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <div className="container mx-auto py-8">
@@ -544,10 +499,7 @@ function ProjectDetailsContent() {;
       </div>
     )
   }
-<<<<<<< HEAD
-=======
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!project) {
     return (
       <div className="container mx-auto py-8">
@@ -558,28 +510,17 @@ function ProjectDetailsContent() {;
             <p className="text-muted-foreground mb-4">
               The project you're looking for doesn't exist or you don't have access to it.
             </p>
-<<<<<<< HEAD
             <Button onClick={() => router.push('/dashboard')}>              Return to Dashboard
-=======
             <Button onClick={() => router.push("/dashboard")}>
               Return to Dashboard
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </Button>
           </CardContent>
         </Card>
       </div>
     )
   }
-<<<<<<< HEAD
   // Check if user is either the client or the talent
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const isClient = user?.id === project.client_id
   const isTalent = user?.id === project.talent_id
   if (!isClient && !isTalent) {
@@ -595,19 +536,13 @@ function ProjectDetailsContent() {;
   const isActiveProject = ['offer_accepted', 'in_progress'].includes(
     project.status
   )
-<<<<<<< HEAD
 
   return (
     <>
       <SEO
         title={`Project: ${project.job?.title |'Project Details'} | Zion AI Marketplace`}
         description='View and manage your project details and collaboration.'
-=======
-  
-  // Check if user is either the client or the talent
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
   
@@ -620,44 +555,30 @@ function ProjectDetailsContent() {;
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
   
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <>
       <SEO 
         title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
         description="View and manage your project details and collaboration."
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       />
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">
             <div>
-<<<<<<< HEAD
               <h1 className='text-3xl font-bold'>
                 {project.job?.title |'Project'}
               </h1>
               <div className='flex items-center gap-2 mt-1'>
-=======
-              <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>
-              <div className="flex items-center gap-2 mt-1">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {getStatusBadge(project.status)}
                 <span className="text-muted-foreground">
                   Started on {format(new Date(project.start_date), "PPP")}
                 </span>
               </div>
             </div>
-<<<<<<< HEAD
-=======
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* Action Buttons Based on Role and Status */}
             <div className="space-x-2">
               {isTalent && isOfferPending && (
@@ -678,46 +599,34 @@ function ProjectDetailsContent() {;
                       </AlertDialogHeader>
                       <AlertDialogFooter>
                         <AlertDialogCancel>Cancel</AlertDialogCancel>
-<<<<<<< HEAD
                         <AlertDialogAction
                           onClick={() => handleStatusChange('offer_accepted')}
                         >                          Accept Offer
-=======
                         <AlertDialogAction onClick={() => handleStatusChange("offer_accepted")}>
                           Accept Offer
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
-<<<<<<< HEAD
                   <Button
                     variant='outline'
                     onClick={() => handleStatusChange('changes_requested')}
                   >
                     <MessageSquare className='mr-2 h-4 w-4' /> Request Changes
-<<<<<<< HEAD
                   </Button>
                 </>
               )}
               {(isClient |isTalent) && project.status === 'in_progress' && (
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
                     <MessageSquare className="mr-2 h-4 w-4" /> Request Changes
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </Button>
                 </>
               )}
               
               {(isClient || isTalent) && project.status === "in_progress" && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
                     <Button variant="default">
@@ -734,27 +643,18 @@ function ProjectDetailsContent() {;
                     </AlertDialogHeader>
                     <AlertDialogFooter>
                       <AlertDialogCancel>Cancel</AlertDialogCancel>
-<<<<<<< HEAD
                       <AlertDialogAction
                         onClick={() => handleStatusChange('completed')}
                       >                        Mark as Completed
-=======
                       <AlertDialogAction onClick={() => handleStatusChange("completed")}>
                         Mark as Completed
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       </AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
                 </AlertDialog>
               )}
-<<<<<<< HEAD
-=======
-              
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {isActiveProject && (
                 <Button variant="default" asChild>
                   <Link href={`/project/[id]/milestones`}>
@@ -769,13 +669,8 @@ function ProjectDetailsContent() {;
                   </Link>
                 </Button>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
               {(isClient |isTalent) &&
-=======
-
-              {(isClient || isTalent) &&
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ['offer_sent', 'offer_accepted', 'in_progress'].includes(
                   project.status
                 ) && (
@@ -809,7 +704,6 @@ function ProjectDetailsContent() {;
                 )}
               </TabsList>
               <TabsContent value='details'>
-=======
               
               {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (
                 <Button 
@@ -837,11 +731,7 @@ function ProjectDetailsContent() {;
               </TabsList>
               
               <TabsContent value="details">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Scope</CardTitle>
@@ -857,28 +747,16 @@ function ProjectDetailsContent() {;
                           <p className="whitespace-pre-wrap">{project.scope_summary}</p>
                         </div>
                       </div>
-<<<<<<< HEAD
-=======
                       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       <div>
                         <h3 className="font-semibold mb-2">Payment Terms</h3>
                         <Badge variant="outline" className="capitalize">
                           {project.payment_terms} Payment
                         </Badge>
                       </div>
-<<<<<<< HEAD
-=======
                       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       <div>
                         <h3 className="font-semibold mb-2">Job Details</h3>
                         <div className="bg-muted/30 p-4 rounded-md">
@@ -889,16 +767,10 @@ function ProjectDetailsContent() {;
                   </CardContent>
                 </Card>
               </TabsContent>
-<<<<<<< HEAD
               <TabsContent value='timeline'>
-=======
               
               <TabsContent value="timeline">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Timeline</CardTitle>
@@ -915,18 +787,12 @@ function ProjectDetailsContent() {;
                           <p>{format(new Date(project.start_date), "PPP")}</p>
                         </div>
                       </div>
-<<<<<<< HEAD
                       <div className='flex items-start gap-3 p-3 bg-muted/30 rounded-md'>
                         <Clock className='h-5 w-5 text-primary mt-0.5' />
-=======
                       
                       <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">
                         <Clock className="h-5 w-5 text-primary mt-0.5" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         <div>
                           <h3 className="font-semibold">Project Status</h3>
                           <div className="mt-1">
@@ -938,16 +804,10 @@ function ProjectDetailsContent() {;
                   </CardContent>
                 </Card>
               </TabsContent>
-<<<<<<< HEAD
               <TabsContent value='documents'>
-=======
               
               <TabsContent value="documents">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Documents</CardTitle>
@@ -985,16 +845,10 @@ function ProjectDetailsContent() {;
                   </CardContent>
                 </Card>
               </TabsContent>
-<<<<<<< HEAD
               <TabsContent value='notes'>
-=======
               
               <TabsContent value="notes">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Notes</CardTitle>
@@ -1006,7 +860,6 @@ function ProjectDetailsContent() {;
                     <div className="space-y-4">
                       <div className="space-y-4 max-h-[400px] overflow-y-auto mb-4">
                         {notes.length > 0 ? (
-<<<<<<< HEAD
                           notes.map(note => (
                             <div
                               key={note.id}
@@ -1014,42 +867,27 @@ function ProjectDetailsContent() {;
                             >
                               <div className='flex items-center gap-2 mb-2'>
                                 <Avatar className='h-6 w-6'>
-=======
                           notes.map((note) => (
                             <div key={note.id} className="bg-muted/30 p-3 rounded-md">
                               <div className="flex items-center gap-2 mb-2">
                                 <Avatar className="h-6 w-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                                   {note.created_by_profile?.avatar_url ? (
                                     <img
                                       src={note.created_by_profile.avatar_url}
                                       alt={note.created_by_profile.display_name}
-<<<<<<< HEAD
                                       loading='lazy'                                    />
-=======
                                       loading="lazy"
                                     />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                                   ) : (
                                     <User className="h-4 w-4" />
                                   )}
                                 </Avatar>
-<<<<<<< HEAD
                                 <span className='font-medium text-sm'>
                                   {note.created_by_profile?.display_name |
                                     'User'}
-=======
-                                <span className="font-medium text-sm">
-                                  {note.created_by_profile?.display_name || "User"}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                                 </span>
                                 <span className="text-xs text-muted-foreground">
                                   {format(new Date(note.created_at), "PPp")}
@@ -1067,7 +905,6 @@ function ProjectDetailsContent() {;
                           </div>
                         )}
                       </div>
-<<<<<<< HEAD
                       {isOfferAccepted && (
                         <div>
                           <Textarea
@@ -1075,13 +912,10 @@ function ProjectDetailsContent() {;
                             value={newNote}
                             onChange={e => setNewNote(e.target.value)}
                             className='min-h-[100px] mb-2'                          />
-<<<<<<< HEAD
                           <Button
                             onClick = {handleSubmitNote,}
                             disabled = {!newNote.trim() |isSubmittingNote,}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       
                       {isOfferAccepted && (
                         <div>
@@ -1091,14 +925,10 @@ function ProjectDetailsContent() {;
                             onChange={(e) => setNewNote(e.target.value)}
                             className="min-h-[100px] mb-2"
                           />
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           <Button
                             onClick={handleSubmitNote}
                             disabled={!newNote.trim() || isSubmittingNote}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           >
                             {isSubmittingNote ? "Posting..." : "Post Note"}
                           </Button>
@@ -1108,30 +938,18 @@ function ProjectDetailsContent() {;
                   </CardContent>
                 </Card>
               </TabsContent>
-<<<<<<< HEAD
               <TabsContent value='reviews'>
-=======
               
               <TabsContent value="reviews">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <ProjectReviewSection project={project} />
               </TabsContent>
             </Tabs>
           </div>
-<<<<<<< HEAD
           <div className='order-1 lg:order-2 lg:col-span-1'>
-=======
           
           <div className="order-1 lg:order-2 lg:col-span-1">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <Card>
               <CardHeader>
                 <CardTitle>Project Participants</CardTitle>
@@ -1144,22 +962,15 @@ function ProjectDetailsContent() {;
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
-<<<<<<< HEAD
                           loading='lazy'                        />
-=======
                           loading="lazy"
                         />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       ) : (
                         <User className="h-6 w-6" />
                       )}
                     </Avatar>
                     <div>
-<<<<<<< HEAD
                       <h3 className='font-semibold'>
                         {project.talent_profile?.full_name |'Talent'}
                       </h3>
@@ -1169,10 +980,6 @@ function ProjectDetailsContent() {;
                       </p>
                       {isClient && (
                         <Button
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           variant='outline'
                           size='sm'
                           className='mt-2'
@@ -1182,8 +989,16 @@ function ProjectDetailsContent() {;
                             )
                           }                        >
                           <MessageSquare className='mr-1 h-3 w-3' /> Message
-=======
-<<<<<<< HEAD
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                          variant='outline'
+                          size='sm'
+                          className='mt-2'
+                          onClick={() =>
+                            router.push(
+                              `/messages?talentId=${project.talent_id}`
+                            )
+                          }                        >
+                          <MessageSquare className='mr-1 h-3 w-3' /> Message
                       <h3 className="font-semibold">
                         {project.talent_profile?.full_name || "Talent"}
                       </h3>
@@ -1192,66 +1007,44 @@ function ProjectDetailsContent() {;
                       </p>
                       {isClient && (
                         <Button
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           variant="outline"
                           size="sm"
                           className="mt-2"
                           onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         </Button>
                       )}
                     </div>
                   </div>
-<<<<<<< HEAD
                   <div className='flex items-start gap-4'>
                     <Avatar className='h-10 w-10'>
-=======
                   
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       {project.talent_profile?.profile_picture_url ? (
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
-<<<<<<< HEAD
                           loading='lazy'                        />
-=======
                           loading="lazy"
                         />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       ) : (
                         <User className="h-6 w-6" />
                       )}
                     </Avatar>
                     <div>
-<<<<<<< HEAD
                       <h3 className='font-semibold'>
                         {project.talent_profile?.full_name |'Client'}
-=======
-                      <h3 className="font-semibold">
-                        {project.talent_profile?.full_name || "Client"}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       </h3>
                       <p className="text-sm text-muted-foreground">Project Owner</p>
                       {isTalent && (
                         <Button
-<<<<<<< HEAD
                           variant='outline'
                           size='sm'
                           className='mt-2'
@@ -1270,7 +1063,6 @@ function ProjectDetailsContent() {;
             </Card>
             {/* Project Status Card */}
             <Card className='mt-6'>
-=======
                           variant="outline"
                           size="sm"
                           className="mt-2"
@@ -1760,11 +1552,7 @@ function ProjectDetailsContent() {;
             </Card>;
             {/* Project Status Card */}
             <Card className="mt-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               <CardHeader>
                 <CardTitle>Project Status</CardTitle>
               </CardHeader>
@@ -1774,7 +1562,6 @@ function ProjectDetailsContent() {;
                     <span className="text-sm font-medium">Current Status:</span>
                     <div>{getStatusBadge(project.status)}</div>
                   </div>
-<<<<<<< HEAD
                   <div className='flex justify-between items-center'>
                     <span className='text-sm font-medium'>Creation Date:</span>
                     <span className='text-sm'>
@@ -1785,7 +1572,6 @@ function ProjectDetailsContent() {;
                     <span className='text-sm font-medium'>Start Date:</span>
                     <span className='text-sm'>
                       {format(new Date(project.start_date), 'PPP')}
-=======
                   
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Creation Date:</span>
@@ -1798,30 +1584,19 @@ function ProjectDetailsContent() {;
                     <span className="text-sm font-medium">Start Date:</span>
                     <span className="text-sm">
                       {format(new Date(project.start_date), "PPP")}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     </span>
                   </div>
                 </div>
               </CardContent>
-<<<<<<< HEAD
-=======
               
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Conditional Footer Based on Status */}
               {project.status === "changes_requested" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
-<<<<<<< HEAD
                   <Button
                     variant='outline'
                     onClick={() =>
@@ -1829,26 +1604,20 @@ function ProjectDetailsContent() {;
                     }
                     className='w-full'                  >
                     <MessageSquare className='mr-2 h-4 w-4' /> Discuss Changes
-<<<<<<< HEAD
                   </Button>
                 </CardFooter>
               )}
               {project.status === 'offer_sent' && isClient && (
                 <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
                   <p className='text-sm text-muted-foreground'>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Button 
                     variant="outline"
                     onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
                     className="w-full"
                   >
                     <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </Button>
                 </CardFooter>
               )}
@@ -1856,12 +1625,10 @@ function ProjectDetailsContent() {;
               {project.status === "offer_sent" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-muted-foreground">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     Waiting for the talent to accept your offer.
                   </p>
                 </CardFooter>
               )}
-<<<<<<< HEAD
               {project.status === 'completed' && (
                 <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
                   <p className='text-sm text-green-600 flex items-center gap-1'>
@@ -1878,10 +1645,6 @@ function ProjectDetailsContent() {;
                   </p>
                 </CardFooter>
               )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </Card>
           </div>
         </div>
@@ -1917,11 +1680,8 @@ case "in progress": return <Badge className="bg-blue-100 text-blue-800">In Progr
 case "completed": return <Badge variant="default">Completed</Badge>;"
 case "canceled": return <Badge variant="destructive">Canceled</Badge>;"
 default: return <Badge variant="outline"> {
-<<<<<<< HEAD
   status
-=======
-  status 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</Badge>
 };'"
 <p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick={"
@@ -2026,35 +1786,11 @@ const ProjectDetails = () => {
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
                 Contact Us
               </Link>
-<<<<<<< HEAD
             </div>
     </>
   )
 }
-=======
-              
-              {project.status === "completed" && (
-                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
-                  <p className="text-sm text-green-600 flex items-center gap-1">
-                    <CheckCircle2 className="h-4 w-4" /> This project has been completed.
-                  </p>
-                </CardFooter>
-              )}
-              
-              {project.status === "canceled" && (
-                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
-                  <p className="text-sm text-red-600 flex items-center gap-1">
-                    <XCircle className="h-4 w-4" /> This project has been canceled.
-                  </p>
-                </CardFooter>
-              )}
-=======
-            </div>;
-    </>;
-  );
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </Card>;
           </div>;
         </div>;
@@ -2071,8 +1807,4 @@ export default function ProjectDetails() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

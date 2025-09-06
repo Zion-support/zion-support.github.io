@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect, useMemo } from 'react'
 import { useRouter } from 'next/router'
 import {
@@ -80,7 +77,6 @@ const HighlightText: React.FC<{
     <span className={className}>
       {parts.map((part, index) =>        part.toLowerCase() === searchTerm.toLowerCase() ? (
           <mark key={index} className='bg-yellow-200 text-black px-1 rounded'>
-=======
 import React, { useState, useEffect, useMemo } from 'react',;
 import { useRouter } from 'next/router',;
 import { Search, Filter, X, SortAsc, SortDesc, GridIcon, List, Loader2 } from 'lucide-react';
@@ -145,18 +141,13 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
       {parts.map((part, index) => 
         part.toLowerCase() === searchTerm.toLowerCase() ? (
           <mark key={index} className="bg-yellow-200 text-black px-1 rounded">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {part}
           </mark>
         ) : (
           part
         )
       )}
-<<<<<<< HEAD
     </span>
   )
 }
@@ -188,14 +179,11 @@ const SearchResultCard: React.FC<{
                 ? 'w-full h-48 object-cover rounded'
                 : 'w-20 h-20 object-cover rounded'
             }          />
-<<<<<<< HEAD
         </div>
       )}
       <div className='flex-1'>
         <div className='flex items-start justify-between mb-2'>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </span>;
   );
 },;
@@ -225,16 +213,12 @@ const SearchResultCard: React.FC<{;
             alt={result.title}
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </div>
       )}
       
       <div className="flex-1">
         <div className="flex items-start justify-between mb-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <div>
             <h3 className="font-semibold text-lg mb-1">
               <HighlightText text={result.title} searchTerm={searchTerm} />
@@ -252,7 +236,6 @@ const SearchResultCard: React.FC<{;
             </div>
           )}
         </div>
-<<<<<<< HEAD
         <p className='text-muted-foreground mb-3 line-clamp-2'>
           <HighlightText text={result.description} searchTerm={searchTerm} />
         </p>
@@ -260,7 +243,6 @@ const SearchResultCard: React.FC<{;
           <div className='flex gap-2 flex-wrap'>
             {result.category && (
               <Badge variant='outline' className='text-xs'>
-=======
 
         <p className="text-muted-foreground mb-3 line-clamp-2">
           <HighlightText text={result.description} searchTerm={searchTerm} />
@@ -312,39 +294,28 @@ const SearchResultCard: React.FC<{;
           <div className="flex gap-2 flex-wrap">;
             {result.category && (;
               <Badge variant="outline" className="text-xs">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {result.category}
               </Badge>
             )}
             {result.tags?.slice(0, 3).map((tag, index) => (
-<<<<<<< HEAD
               <Badge key={index} variant='outline' className='text-xs'>                <HighlightText text={tag} searchTerm={searchTerm} />
               </Badge>
             ))}
           </div>
-=======
               <Badge key={index} variant="outline" className="text-xs">
                 <HighlightText text={tag} searchTerm={searchTerm} />
               </Badge>
             ))}
           </div>
           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {result.rating && (
             <div className="flex items-center gap-1">
               <span className="text-yellow-500">★</span>
               <span className="text-sm">{result.rating.toFixed(1)}</span>
             </div>
           )}
-<<<<<<< HEAD
         </div>
       </div>
     </div>
@@ -373,7 +344,6 @@ const FilterSidebar: React.FC<{
       maxPrice: values[1] ?? 10000
     })
   }
-=======
         </div>;
       </div>;
     </div>;
@@ -408,11 +378,7 @@ const FilterSidebar: React.FC<{;
     })
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       <div>
@@ -423,20 +389,14 @@ const FilterSidebar: React.FC<{;
               <Checkbox
                 id={option.id}
                 checked={filters.types.includes(option.id)}
-<<<<<<< HEAD
                 onCheckedChange={checked =>
                   handleTypeChange(option.id, !!checked)
                 }              />
               <label htmlFor={option.id} className='text-sm'>
-=======
                 onCheckedChange={(checked) => handleTypeChange(option.id, !!checked)}
               />
               <label htmlFor={option.id} className="text-sm">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {option.label}
               </label>
             </div>
@@ -445,7 +405,6 @@ const FilterSidebar: React.FC<{;
       </div>
       <Separator />
       <div>
-<<<<<<< HEAD
         <h3 className='font-semibold mb-3'>Category</h3>
         <Select
           value={filters.category}
@@ -457,18 +416,13 @@ const FilterSidebar: React.FC<{;
           }
         >          <SelectTrigger>
             <SelectValue placeholder='All Categories' />
-=======
         <h3 className="font-semibold mb-3">Category</h3>
         <Select value={filters.category} onValueChange={(value) => 
           onFiltersChange({ ...filters, category: value === 'all' ? '' : value })
         }>
           <SelectTrigger>
             <SelectValue placeholder="All Categories" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="all">All Categories</SelectItem>
@@ -490,18 +444,12 @@ const FilterSidebar: React.FC<{;
             min={0}
             max={10000}
             step={50}
-<<<<<<< HEAD
             className='mb-2'          />
           <div className='flex justify-between text-sm text-muted-foreground'>
-=======
             className="mb-2"
           />
           <div className="flex justify-between text-sm text-muted-foreground">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <span>${filters.minPrice}</span>
             <span>${filters.maxPrice}</span>
           </div>
@@ -509,7 +457,6 @@ const FilterSidebar: React.FC<{;
       </div>
       <Separator />
       <div>
-<<<<<<< HEAD
         <h3 className='font-semibold mb-3'>Minimum Rating</h3>
         <Select
           value={filters.minRating.toString()}
@@ -517,17 +464,12 @@ const FilterSidebar: React.FC<{;
             onFiltersChange({ ...filters, minRating: parseFloat(value) })
           }
         >          <SelectTrigger>
-=======
         <h3 className="font-semibold mb-3">Minimum Rating</h3>
         <Select value={filters.minRating.toString()} onValueChange={(value) => 
           onFiltersChange({ ...filters, minRating: parseFloat(value) })
         }>
           <SelectTrigger>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
@@ -542,7 +484,6 @@ const FilterSidebar: React.FC<{;
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
 // No Results Component
 const NoResultsState: React.FC<{
@@ -556,7 +497,6 @@ const NoResultsState: React.FC<{
     'UI/UX Design'
     'Blockchain Development'
   ]
-=======
 },
 
 // No Results Component
@@ -573,11 +513,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
     "Blockchain Development"
   ],
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="text-center py-12">
       <div className="mb-6">
@@ -587,7 +523,6 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
           We couldn't find anything matching "{searchTerm}". Try adjusting your search or filters.
         </p>
       </div>
-<<<<<<< HEAD
       <div className='max-w-md mx-auto space-y-4'>
         <div>
           <h3 className='font-semibold mb-3'>Search Suggestions:</h3>
@@ -598,7 +533,6 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
                 variant='outline'
                 size='sm'
                 onClick={() => onNewSearch(suggestion)}              >
-=======
 
       <div className="max-w-md mx-auto space-y-4">
         <div>
@@ -672,30 +606,20 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
                 size="sm";
                 onClick={() => onNewSearch(suggestion)}
               >;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {suggestion}
               </Button>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
         <div className='text-sm text-muted-foreground'>
           <p>Tips for better results:</p>
           <ul className='mt-2 space-y-1'>
-=======
 
         <div className="text-sm text-muted-foreground">
           <p>Tips for better results: </p>
           <ul className="mt-2 space-y-1">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <li>• Try different keywords</li>
             <li>• Check your spelling</li>
             <li>• Use fewer filters</li>
@@ -705,7 +629,6 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
 // Main Search Results Page Component
 export const AdvancedSearchResults: React.FC = () => {
@@ -718,7 +641,6 @@ export const AdvancedSearchResults: React.FC = () => {
   const [hasMore, setHasMore] = useState(false)
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [showFilters, setShowFilters] = useState(false)
-<<<<<<< HEAD
   const [filters, setFilters] = useState<SearchFilters>({
     types: []
     category: ''
@@ -735,9 +657,7 @@ export const AdvancedSearchResults: React.FC = () => {
     })
     return Array.from(categories).sort()
   }, [results])
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 },
 
 // Main Search Results Page Component
@@ -752,19 +672,13 @@ export const AdvancedSearchResults: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [showFilters, setShowFilters] = useState(false),
   
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [filters, setFilters] = useState<SearchFilters>({
     types: [],
     category: '',
     minPrice: 0,
     maxPrice: 10000,
     minRating: 0,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     sort: 'relevance',
   });
   const suggestions = generateSearchSuggestions();
@@ -775,8 +689,7 @@ export const AdvancedSearchResults: React.FC = () => {
     })
     return Array.from(categories).sort()
   }, [results])
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     sort: 'relevance'
   }),
 
@@ -791,15 +704,10 @@ export const AdvancedSearchResults: React.FC = () => {
     return Array.from(categories).sort()
   }, [results]),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Sync search term with URL
   useEffect(() => {
     if (router.isReady && router.query.q) {
-<<<<<<< HEAD
       const urlTerm = router.query.q as string
       setSearchTerm(urlTerm)
     }
@@ -888,19 +796,12 @@ export const AdvancedSearchResults: React.FC = () => {
     }
   }
   // Active filters count
-<<<<<<< HEAD
   const activeFiltersCount =
     filters.types.length +
     (filters.category ? 1 : 0) +
     (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) +
-=======
-  const activeFiltersCount = null;
-    filters.types.length +
-    (filters.category ? 1 : 0) +
-    (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     (filters.minRating > 0 ? 1 : 0)
-=======
       const urlTerm = router.query.q as string,
       setSearchTerm(urlTerm)
           </div>;
@@ -1041,11 +942,7 @@ export const AdvancedSearchResults: React.FC = () => {;
     (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
     (filters.minRating > 0 ? 1 : 0),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="container mx-auto px-4 py-6">
       {/* Search Header */}
@@ -1057,16 +954,10 @@ export const AdvancedSearchResults: React.FC = () => {;
               onChange={setSearchTerm}
               onSelectSuggestion={suggestion => handleSearch(suggestion.text)}
               searchSuggestions={suggestions}
-<<<<<<< HEAD
               placeholder='Search products, talent, services, and more...'            />
-=======
               placeholder="Search products, talent, services, and more..."
             />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </div>
           <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
             <Search className="h-4 w-4" />
@@ -1080,7 +971,6 @@ export const AdvancedSearchResults: React.FC = () => {;
                 {loading ? 'Searching...' : `${totalCount} results for "${searchTerm}"`}
               </p>
             </div>
-<<<<<<< HEAD
             <div className='flex items-center gap-2'>
               {/* Sort Options */}
               <Select
@@ -1088,7 +978,6 @@ export const AdvancedSearchResults: React.FC = () => {;
                 onValueChange={value => setFilters({ ...filters, sort: value })}
               >
                 <SelectTrigger className='w-40'>                  <SelectValue />
-=======
 
             <div className="flex items-center gap-2">
               {/* Sort Options */}
@@ -1097,11 +986,7 @@ export const AdvancedSearchResults: React.FC = () => {;
               }>
                 <SelectTrigger className="w-40">
                   <SelectValue />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="relevance">Relevance</SelectItem>
@@ -1114,7 +999,6 @@ export const AdvancedSearchResults: React.FC = () => {;
               <div className="flex border rounded-md">
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'ghost'}
-<<<<<<< HEAD
                   size='sm'
                   onClick={() => setViewMode('grid')}                >
                   <GridIcon className='h-4 w-4' />
@@ -1124,7 +1008,6 @@ export const AdvancedSearchResults: React.FC = () => {;
                   size='sm'
                   onClick={() => setViewMode('list')}                >
                   <List className='h-4 w-4' />
-=======
                   size="sm"
                   onClick={() => setViewMode('grid')}
                 >
@@ -1136,11 +1019,7 @@ export const AdvancedSearchResults: React.FC = () => {;
                   onClick={() => setViewMode('list')}
                 >
                   <List className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </Button>
               </div>
               {/* Mobile Filter Toggle */}
@@ -1157,7 +1036,6 @@ export const AdvancedSearchResults: React.FC = () => {;
                   </SheetHeader>
                   <div className="mt-6">
                     <FilterSidebar
-<<<<<<< HEAD
                       filters = {filters,}
                       onFiltersChange = {handleFiltersChange,}
                       availableCategories = {availableCategories,}
@@ -1167,7 +1045,6 @@ export const AdvancedSearchResults: React.FC = () => {;
               </Sheet>
             </div>
           </div>
-=======
                       filters={filters}
                       onFiltersChange={handleFiltersChange}
                       availableCategories={availableCategories}
@@ -1177,11 +1054,7 @@ export const AdvancedSearchResults: React.FC = () => {;
               </Sheet>;
             </div>;
           </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         )}
       </div>
       {searchTerm && (
@@ -1193,7 +1066,6 @@ export const AdvancedSearchResults: React.FC = () => {;
                 <h2 className="font-semibold">Filters</h2>
                 {activeFiltersCount > 0 && (
                   <Button
-<<<<<<< HEAD
                     variant='ghost'
                     size='sm'
                     onClick={() =>
@@ -1219,7 +1091,6 @@ export const AdvancedSearchResults: React.FC = () => {;
           </div>
           {/* Main Content */}
           <div className='flex-1'>
-=======
                     variant="ghost"
                     size="sm"
                     onClick={() => setFilters({
@@ -1244,17 +1115,12 @@ export const AdvancedSearchResults: React.FC = () => {;
           </div>;
           {/* Main Content */}
           <div className="flex-1">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {loading && results.length === 0 ? (
               <div className="flex justify-center py-12">
                 <Loader2 className="h-8 w-8 animate-spin" />
               </div>
             ) : results.length === 0 && searchTerm ? (
-<<<<<<< HEAD
               <NoResultsState
                 searchTerm={searchTerm}
                 onNewSearch={handleSearch}              />
@@ -1274,7 +1140,6 @@ export const AdvancedSearchResults: React.FC = () => {;
                       searchTerm = {searchTerm,}
                       viewMode = {viewMode,}
                     />
-=======
               <NoResultsState 
                 searchTerm={searchTerm} 
                 onNewSearch={handleSearch}
@@ -1293,33 +1158,23 @@ export const AdvancedSearchResults: React.FC = () => {;
                       searchTerm={searchTerm}
                       viewMode={viewMode}
                     />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   ))}
                 </div>
                 {/* Load More Button */}
                 {hasMore && (
-<<<<<<< HEAD
                   <div className='text-center'>
                     <Button
                       onClick={loadMore}
                       disabled={loading}
                       variant='outline'                    >
-=======
                   <div className="text-center">
                     <Button 
                       onClick={loadMore} 
                       disabled={loading}
                       variant="outline"
                     >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       {loading ? (
                         <>
                           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
@@ -1336,7 +1191,6 @@ export const AdvancedSearchResults: React.FC = () => {;
           </div>
         </div>
       )}
-<<<<<<< HEAD
     </div>
   )
 }
@@ -1346,15 +1200,10 @@ export default AdvancedSearchResults
 }</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>)
 }
 //Main Search Results Page Component setTotalCount (data.totalCount)
-<<<<<<< HEAD
 setCurrentPage (data.page)
 setHasMore (data.hasMore)
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
-=======
-setCurrentPage (data.page);
-setHasMore (data.hasMore);
-//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {
   /* Mobile Filter Toggle */
 }<Sheet open= {
@@ -1405,21 +1254,12 @@ setHasMore (data.hasMore);
 }
 export default AdvancedSearchResults
 '"
-<<<<<<< HEAD
 export default AdvancedSearchResults
 export default AdvancedSearchResults
 
-=======
-export default AdvancedSearchResults, ;
-export default AdvancedSearchResults;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>;
   );
 };
 export default AdvancedSearchResults;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

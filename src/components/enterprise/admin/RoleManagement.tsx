@@ -1,23 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react";
 import {
-=======
-=======
-import React from 'react'
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   TableRow,
 } from '@/components/ui/table'
 import { Badge } from '@/components/ui/badge';
@@ -28,8 +18,7 @@ import { toast } from '@/hooks/use-toast'; import { InfoIcon } from 'lucide-reac
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from "react",
 import {
@@ -48,9 +37,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger} from "@/components/ui/tooltip",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
   Table
   TableBody
   TableCell
@@ -66,14 +53,11 @@ import { toast } from '@/hooks/use-toast'; import { InfoIcon } from 'lucide-reac
   TooltipProvider
   TooltipTrigger
 } from '@/components/ui/tooltip'
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
     {
-<<<<<<< HEAD
       id: 1
       name: 'Alex Johnson'
       email: 'alex@example.com'
@@ -146,7 +130,6 @@ export function RoleManagement() {
     Manager: 'Can view candidates and create jobs'
     Viewer: 'Read-only access to candidates'
   }
-=======
       id: 1,
       name: "Alex Johnson",
       email: "alex@example.com",
@@ -193,9 +176,6 @@ export function RoleManagement() {
         createJobs: false,
         manageTeam: false,
         viewBilling: false,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         manageBilling: false,
       },
     },
@@ -216,8 +196,7 @@ export function RoleManagement() {
     Manager: 'Can view candidates and create jobs',
     Viewer: 'Read-only access to candidates',
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         manageBilling: false}}],
 
   const handlePermissionChange = (_memberId: number, permission: string, value: boolean) => {
@@ -232,16 +211,11 @@ export function RoleManagement() {
     "Recruiter": "Can manage candidates and job postings",
     "Manager": "Can view candidates and create jobs",
     "Viewer": "Read-only access to candidates"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-6">
       <div>
-<<<<<<< HEAD
         <h3 className='text-xl font-medium mb-4'>Role Permissions</h3>
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-6'>
           {Object.entries(roleDescriptions).map(([role, description]) => (
@@ -254,7 +228,6 @@ export function RoleManagement() {
                   {role}
                 </Badge>              </div>
               <p className='text-sm text-muted-foreground'>{description}</p>
-=======
         <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           {Object.entries(roleDescriptions).map(([role, description]) => (
@@ -263,25 +236,15 @@ export function RoleManagement() {
                 <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>
               </div>
               <p className="text-sm text-muted-foreground">{description}</p>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </div>
           ))}
         </div>
       </div>
-<<<<<<< HEAD
       <div className='rounded-md border'>
-=======
 
       <div className="rounded-md border">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <Table>
           <TableHeader>
             <TableRow>
@@ -365,16 +328,10 @@ export function RoleManagement() {
             </TableRow>
           </TableHeader>
           <TableBody>
-<<<<<<< HEAD
             {teamMembers.map(member => (              <TableRow key={member.id}>
-=======
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <TableCell>
                   <div className="font-medium">{member.name}</div>
                   <div className="text-sm text-muted-foreground">
@@ -382,7 +339,6 @@ export function RoleManagement() {
                   </div>
                 </TableCell>
                 <TableCell>
-<<<<<<< HEAD
                   <select
                     className='w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring'
                     defaultValue={member.role}                  >
@@ -390,7 +346,6 @@ export function RoleManagement() {
                     <option value='Recruiter'>Recruiter</option>
                     <option value='Manager'>Manager</option>
                     <option value='Viewer'>Viewer</option>
-=======
                   <select 
                     className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                     defaultValue={member.role}
@@ -399,18 +354,12 @@ export function RoleManagement() {
                     <option value="Recruiter">Recruiter</option>
                     <option value="Manager">Manager</option>
                     <option value="Viewer">Viewer</option>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </select>
                 </TableCell>
                 <TableCell className="text-center">
                   <Switch
-<<<<<<< HEAD
                     aria-label='View candidates'
-=======
                     aria-label="View candidates"
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={(checked) =>
@@ -651,11 +600,7 @@ export function RoleManagement() {;
                 <TableCell className="text-center">;
                   <Switch;
                     aria-label="View candidates";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={checked =>
                       handlePermissionChange(
@@ -697,7 +642,6 @@ export function RoleManagement() {;
                   <Switch
                     aria-label='View billing'
                     checked={member.permissions.viewBilling}
-<<<<<<< HEAD
                     onCheckedChange={checked =>
                       handlePermissionChange(member.id, 'viewBilling', checked)
                     }                  />
@@ -706,18 +650,11 @@ export function RoleManagement() {;
             ))}
           </TableBody>
         </Table>
-<<<<<<< HEAD
       </div>
     </div>
   )
 }
-=======
-      </div>;
-    </div>;
-  );
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
                     }
@@ -732,8 +669,4 @@ export function RoleManagement() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -27,13 +24,11 @@ export default function SearchFeature() {
         description='Find exactly what you need with fast, filterable search powered by Elasticsearch.'
         keywords='search engine, filtering, tech marketplace search'
         canonical='https://app.ziontechgroup.com/features/search'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function SearchFeature() {
@@ -50,37 +45,20 @@ export default function SearchFeature() {
     "description": "Quickly locate products, services and talent using intelligent search filters."
     "url": "https://app.ziontechgroup.com/features/search"
   }
-=======
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
-export default function SearchFeature() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Advanced Search",
-    "description": "Quickly locate products, services and talent using intelligent search filters.",
-    "url": "https://app.ziontechgroup.com/features/search"
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <>
       <SEO
-<<<<<<< HEAD
         title='Advanced Search'
         description='Find exactly what you need with fast, filterable search powered by Elasticsearch.'
         keywords='search engine, filtering, tech marketplace search'
         canonical='https://app.ziontechgroup.com/features/search'
-=======
         title="Advanced Search"
         description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
         keywords="search engine, filtering, tech marketplace search"
         canonical="https://app.ziontechgroup.com/features/search"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
@@ -118,7 +96,6 @@ export default function SearchFeature() {
               <p className="text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p>
             </div>
           </div>
-<<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/search'>Try Search</Link>            </Button>      />
@@ -158,12 +135,7 @@ export default function SearchFeature() {
               <p className="text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p>
             </div>
           </div>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/search">Try Search</Link>
@@ -173,13 +145,8 @@ export default function SearchFeature() {
       </main>
     </>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -249,8 +216,4 @@ export default function SearchFeature() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

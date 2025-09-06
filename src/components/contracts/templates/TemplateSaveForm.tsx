@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react'
 import { useForm, type ControllerRenderProps } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -68,11 +67,8 @@ export function TemplateSaveForm({
       setSaving(false)
     }
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { useState } from "react",
 import { useForm, type ControllerRenderProps } from "react-hook-form",
@@ -159,39 +155,28 @@ export function TemplateSaveForm({;
     }
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
-<<<<<<< HEAD
           name='title'
           render={({
             field
           }: {
             field: ControllerRenderProps<FormValues, 'title'>
           }) => (            <FormItem>
-=======
           name="title"
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               <FormLabel>Template Name</FormLabel>
               <FormControl>
                 <Input {...field} placeholder="Enter template name" />
               </FormControl>
               <FormMessage />
             </FormItem>
-<<<<<<< HEAD
           )}
         />
         <FormField
@@ -218,7 +203,6 @@ export function TemplateSaveForm({;
         />
         <div className='flex gap-2 justify-end'>
           <Button type='button' variant='outline' onClick={onCancel}>
-=======
   };
   return (;
     <Form {...form}>;
@@ -263,11 +247,7 @@ export function TemplateSaveForm({;
         
         <div className="flex gap-2 justify-end">
           <Button type="button" variant="outline" onClick={onCancel}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             Cancel
           </Button>
           <Button type="submit" disabled={saving}>
@@ -277,7 +257,6 @@ export function TemplateSaveForm({;
                 Saving...
               </>
             ) : (
-<<<<<<< HEAD
               `${editTemplate ? 'Update' : 'Save'} Template`
             )}
           </Button>
@@ -294,18 +273,11 @@ try {
 }placeholder="Enter template name" />
 }/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) "
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {"
-<<<<<<< HEAD
   editTemplate ? "Update" : "Save"
 }Template`)
 }</Button> </div> </form> </Form>)
 }"}
-=======
-  editTemplate ? "Update" : "Save" 
-}Template`) ;
-}</Button> </div> </form> </Form>) ;
-}"};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               `${editTemplate ? "Update" : "Save"} Template`
             )}
           </Button>;
@@ -315,8 +287,4 @@ try {
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

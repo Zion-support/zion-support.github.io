@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -27,13 +24,11 @@ export default function InstantMessaging() {
         description='Negotiate deals and collaborate instantly with real-time chat.'
         keywords='real-time messaging, Socket.IO chat, project communication'
         canonical='https://app.ziontechgroup.com/features/instant-messaging'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function InstantMessaging() {
@@ -50,37 +45,20 @@ export default function InstantMessaging() {
     "description": "Chat in real time with clients and freelancers using Socket.IO based messaging."
     "url": "https://app.ziontechgroup.com/features/instant-messaging"
   }
-=======
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
-export default function InstantMessaging() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Instant Messaging",
-    "description": "Chat in real time with clients and freelancers using Socket.IO based messaging.",
-    "url": "https://app.ziontechgroup.com/features/instant-messaging"
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <>
       <SEO
-<<<<<<< HEAD
         title='Instant Messaging'
         description='Negotiate deals and collaborate instantly with real-time chat.'
         keywords='real-time messaging, Socket.IO chat, project communication'
         canonical='https://app.ziontechgroup.com/features/instant-messaging'
-=======
         title="Instant Messaging"
         description="Negotiate deals and collaborate instantly with real-time chat."
         keywords="real-time messaging, Socket.IO chat, project communication"
         canonical="https://app.ziontechgroup.com/features/instant-messaging"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
@@ -118,7 +96,6 @@ export default function InstantMessaging() {
               <p className="text-zion-slate-light">You can mute rooms or disable notifications in your account settings.</p>
             </div>
           </div>
-<<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/open-app'>Start Chatting</Link>            </Button>      />
@@ -158,12 +135,7 @@ export default function InstantMessaging() {
               <p className="text-zion-slate-light">You can mute rooms or disable notifications in your account settings.</p>
             </div>
           </div>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Start Chatting</Link>
@@ -173,13 +145,8 @@ export default function InstantMessaging() {
       </main>
     </>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -249,8 +216,4 @@ export default function InstantMessaging() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Heart } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -10,7 +9,6 @@ interface TalentCardSaveButtonProps {
   isSaved: boolean;
   onToggleSave?: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean
-<<<<<<< HEAD
 export function TalentCardSaveButton({
 
   profileId
@@ -35,9 +33,7 @@ export function TalentCardSaveButton({
       const returnTo = encodeURIComponent(router.asPath)
       router.push(`/auth/login?returnTo=${returnTo}`)
       return
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from "react",
 import { Heart } from 'lucide-react'
@@ -52,10 +48,7 @@ interface TalentCardSaveButtonProps {
   isAuthenticated: boolean
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function TalentCardSaveButton({
   profileId,
   profileName,
@@ -63,9 +56,6 @@ export function TalentCardSaveButton({
   onToggleSave,
   isAuthenticated
 }: TalentCardSaveButtonProps) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const { toast } = useToast()
   const router = useRouter()
   // Using router.asPath for current path
@@ -81,8 +71,7 @@ export function TalentCardSaveButton({
       })
       const returnTo = encodeURIComponent(router.asPath)
       router.push(`/auth/login?returnTo=${returnTo}`)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { toast } = useToast(),
   const router = useRouter(),
   // Using router.asPath for current path
@@ -136,22 +125,14 @@ export function TalentCardSaveButton({;
       }),;
       const returnTo = encodeURIComponent(router.asPath),;
       router.push(`/auth/login?returnTo=${returnTo}`),;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       return;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
     setLocalIsSaved(!localIsSaved)
     if (onToggleSave) {
       onToggleSave(profileId, !localIsSaved)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     toast({
       title: localIsSaved ? 'Removed from favorites' : 'Added to favorites'
       description: localIsSaved
@@ -169,22 +150,13 @@ export function TalentCardSaveButton({;
 
     </button>
   )
-<<<<<<< HEAD
 }variant: "default"
 })
 }
 }/> </button>)
 }"
 }
-=======
-}variant: "default" 
-}) 
-};
-}/> </button>) ;
-}";
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     
     toast({
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",
@@ -234,8 +206,4 @@ export function TalentCardSaveButton({;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

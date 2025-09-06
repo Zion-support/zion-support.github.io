@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { ChevronRight } from 'lucide-react'
@@ -23,11 +22,8 @@ Breadcrumb.displayName = 'Breadcrumb'
     ref = {ref,}
     aria-label="breadcrumb"
     className = {cn(
-<<<<<<< HEAD
       "inline-flex items-center gap-1 text-sm text-zion-slate-light"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
@@ -45,18 +41,13 @@ const Breadcrumb = React.forwardRef<
     ref={ref}
     aria-label="breadcrumb"
     className={cn(
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       "inline-flex items-center gap-1 text-sm text-zion-slate-light",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       className
     )}
     {...props}
   />
 ))
-<<<<<<< HEAD
 Breadcrumb.displayName = 'Breadcrumb'
   HTMLOListElement
   React.ComponentPropsWithoutRef<'ol'>
@@ -88,7 +79,6 @@ const BreadcrumbLink = React.forwardRef<
   )
 })
 BreadcrumbLink.displayName = 'BreadcrumbLink'
-=======
 Breadcrumb.displayName = "Breadcrumb"
  
 const BreadcrumbList = React.forwardRef<
@@ -133,42 +123,24 @@ const BreadcrumbLink = React.forwardRef<
 })
 BreadcrumbLink.displayName = "BreadcrumbLink"
  
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const BreadcrumbSeparator = ({
   children
   className
   ...props
-<<<<<<< HEAD
 }: React.ComponentProps<'li'>) => (
   <li
     role='presentation'
     aria-hidden='true'
     className={cn('[&>svg]:size-3.5 text-zion-slate-light/70', className)}    {...props}
-<<<<<<< HEAD
-=======
-=======
-}: React.ComponentProps<"li">) => (
-  <li
-    role="presentation"
-    aria-hidden="true"
-    className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
-    {...props}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   >
     {children |<ChevronRight className='h-4 w-4' />}
   </li>
 )
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 BreadcrumbSeparator.displayName = 'BreadcrumbSeparator'
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+BreadcrumbSeparator.displayName = 'BreadcrumbSeparator'
 }: React.ComponentProps<"li">) => (
   <li
     role="presentation"
@@ -181,11 +153,9 @@ BreadcrumbSeparator.displayName = 'BreadcrumbSeparator'
 )
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const BreadcrumbEllipsis = ({
   className
   ...props
-<<<<<<< HEAD
 }: React.ComponentProps<'span'>) => (  <span
     role='presentation'
     aria-hidden='true'
@@ -221,7 +191,6 @@ const BreadcrumbEllipsis = ({
 )
 BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis'
 export {
-<<<<<<< HEAD
   Breadcrumb
   BreadcrumbList
   BreadcrumbItem
@@ -230,37 +199,16 @@ export {
   BreadcrumbEllipsis
 };)
 BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
-=======
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,;
-  BreadcrumbLink,;
-  BreadcrumbSeparator;
-  BreadcrumbEllipsis;
-};)
-BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
- 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export {
   Breadcrumb
   BreadcrumbList
   BreadcrumbItem
   BreadcrumbLink
-<<<<<<< HEAD
   BreadcrumbSeparator
   BreadcrumbEllipsis}
 
-=======
-=======
-  BreadcrumbSeparator;
-  BreadcrumbEllipsis};
-=======
-BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
- 
-const BreadcrumbEllipsis = ({
-  className,
-  ...props
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }: React.ComponentProps<"span">) => (
   <span
     role="presentation"
@@ -281,8 +229,4 @@ export {
   BreadcrumbSeparator,
   BreadcrumbEllipsis}
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

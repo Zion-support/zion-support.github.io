@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useEffect, useState } from "react",
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
@@ -14,34 +10,25 @@ import { captureException } from "@/utils/sentry",
 import Skeleton from "@/components/ui/skeleton",
 import { useDebounce } from "@/hooks/useDebounce",
 import { useIsMounted } from "@/hooks/useIsMounted",
-<<<<<<< HEAD
 import { z } from "zod";
 import {logErrorToProduction} from '@/utils/productionLogger';
 const listingSchema = null;
-=======
 import { z } from "zod",
 import {logErrorToProduction} from '@/utils/productionLogger',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const listingSchema = z.object({
   id: z.string(),
   title: z.string(),
   category: z.string(),
   image: z.string().optional()}),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       const maxRetries = 3
   const sourceListings = listings
 }
   )
 }
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const listingsSchema = z.array(listingSchema),
 
 interface ServiceTypeStepProps {
@@ -168,7 +155,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
            item.category.toLowerCase().includes(searchQuery.toLowerCase())
   }),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       <div>
@@ -219,7 +205,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
-<<<<<<< HEAD
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -239,7 +224,6 @@ const listingSchema = z.object({
 
   )
 }
-=======
     },;
     fetchServices();
   }, [formData.serviceType, debouncedQuery, isMounted]),;
@@ -360,8 +344,4 @@ const listingSchema = z.object({
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

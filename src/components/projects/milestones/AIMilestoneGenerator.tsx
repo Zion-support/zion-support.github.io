@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -46,13 +43,9 @@ export function AIMilestoneGenerator({
     Record<string, boolean>
   >({})
   const handleGenerateMilestones = async () => {
-<<<<<<< HEAD
     if (!scope |!startDate |!projectType) {
       return
-=======
-    if (!scope || !startDate || !projectType) {
-      return;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     const input: MilestoneInput = {
       scope
@@ -92,11 +85,7 @@ export function AIMilestoneGenerator({
       return dateString
     }
   }
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -172,11 +161,7 @@ export function AIMilestoneGenerator({;
     }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -185,24 +170,15 @@ export function AIMilestoneGenerator({;
           AI Milestone Generator
         </h3>
         <Button
-<<<<<<< HEAD
           variant='outline'
           onClick={handleGenerateMilestones}
-<<<<<<< HEAD
           disabled={isGenerating |!scope |!startDate |!projectType}        >
-=======
-          disabled={isGenerating || !scope || !startDate || !projectType}        >
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           variant="outline"
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {isGenerating ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -223,7 +199,6 @@ export function AIMilestoneGenerator({;
               <p className="text-sm text-muted-foreground">
                 {generatedMilestones.length} milestones generated based on your project scope
               </p>
-<<<<<<< HEAD
               <Button
                 onClick={handleAddToProject}
                 disabled={!Object.values(selectedMilestones).some(Boolean)}              >
@@ -252,7 +227,6 @@ export function AIMilestoneGenerator({;
                             className='ml-2 flex items-center'
                           >
                             <Sparkles className='w-3 h-3 mr-1' />
-=======
               <Button 
                 onClick={handleAddToProject}
                 disabled={!Object.values(selectedMilestones).some(Boolean)}
@@ -278,29 +252,21 @@ export function AIMilestoneGenerator({;
                           <span className="font-medium">{milestone.title}</span>
                           <Badge variant="secondary" className="ml-2 flex items-center">
                             <Sparkles className="w-3 h-3 mr-1" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                             AI Suggested
                           </Badge>
                         </div>
                       </AccordionTrigger>
                     </div>
                     <Button
-<<<<<<< HEAD
                       variant='ghost'
                       size='sm'
                       onClick={e => {
                         e.stopPropagation()
                         handleAddSingleMilestone(milestone) }}
                       className='mr-2'
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       variant="ghost"
                       size="sm"
                       onClick={(e) => {
@@ -308,11 +274,7 @@ export function AIMilestoneGenerator({;
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     >
                       <Plus className="h-4 w-4" />
                     </Button>
@@ -331,7 +293,6 @@ export function AIMilestoneGenerator({;
                   </AccordionContent>
                 </AccordionItem>
               ))}
-<<<<<<< HEAD
             </Accordion>
           </CardContent>
         </Card>
@@ -339,25 +300,16 @@ export function AIMilestoneGenerator({;
     </div>;
   );
 };
-=======
             </Accordion>;
           </CardContent>;
         </Card>;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
     </div>
   )
 }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

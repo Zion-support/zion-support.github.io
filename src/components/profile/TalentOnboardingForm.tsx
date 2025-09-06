@@ -1,27 +1,16 @@
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod";
 import { useRouter  } from 'next/router';
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import { useForm, useFieldArray } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useRouter } from 'next/router'
 import { logErrorToProduction } from '@/utils/productionLogger'
-=======
-import React, { useState } from "react",
-import { useForm, useFieldArray } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { useRouter } from 'next/router',
-import {logErrorToProduction} from '@/utils/productionLogger',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import {
   Form
   FormControl
@@ -72,17 +61,12 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Separator } from "@/components/ui/separator"
 import { toast } from "@/components/ui/use-toast"
 import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2 } from 'lucide-react'
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
 import { supabase } from "@/integrations/supabase/client";
-=======
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth"
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer"
 import { supabase } from "@/integrations/supabase/client"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Define the form schema with validation
 
 const talentSchema = z.object({
@@ -139,22 +123,73 @@ export function TalentOnboardingForm() {
   const [showSuccessScreen, setShowSuccessScreen] = useState(false)
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer()
   const totalSteps = 4
-=======
-<<<<<<< HEAD
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// Define the form schema with validation
+
+const talentSchema = z.object({
+  // Step 1: Basic Info
+  basicInfo: z.object({
+    fullName: z.string().min(2, 'Full Name must be at least 2 characters')
+    professionalTitle: z.string().min(2, 'Professional title is required')
+    profilePicture: z.any().optional()
+  })
+  // Step 2: Experience
+  experience: z.object({
+    bio: z.string().min(50, 'Bio must be at least 50 characters')
+    keyProjects: z
+      .array(
+        z.object({
+          title: z.string().min(2, 'Project title is required')
+          description: z.string().min(10, 'Project description is required')
+        })
+      )
+      .min(1, 'Add at least one key project')
+    yearsOfExperience: z.string().min(1, 'Years of experience is required')
+  })
+  // Step 3: Skills & Tech Stack
+  skills: z.object({
+    skillsList: z.string().min(2, 'Add at least one skill')
+    toolsUsed: z.string().optional()
+  })
+  // Step 4: Availability & Preferences
+  availability: z.object({
+    availabilityType: z.string().min(1, 'Select your availability')
+    timezone: z.string().min(1, 'Timezone is required')
+    hourlyRate: z.string().optional()
+    portfolioLinks: z
+      .array(
+        z.object({
+          url: z.string().url('Must be a valid URL').min(5, 'URL is required')
+        })
+      )
+      .optional()
+      .default([])
+    cv: z.any().optional()
+  })
+})
+type TalentFormValues = z.infer<typeof talentSchema>
+export function TalentOnboardingForm() {
+  const { user } = useAuth()
+  const router = useRouter()
+  const [currentStep, setCurrentStep] = useState(1)
+  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(
+    null
+  )
+  const [cvFileName, setCvFileName] = useState<string | null>(null)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [showSuccessScreen, setShowSuccessScreen] = useState(false)
+  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer()
+  const totalSteps = 4
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { useAuth } from "@/hooks/useAuth",
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentSchema)
     defaultValues: {
       basicInfo: {
-<<<<<<< HEAD
         fullName: user?.displayName |''
         professionalTitle: ''
         profilePicture: undefined
@@ -200,7 +235,6 @@ import { supabase } from "@/integrations/supabase/client",
   ) => {
     const file = e.target.files?.[0]
     if (!file) return
-=======
         fullName: user?.displayName || "",
         professionalTitle: "",
         profilePicture: undefined},
@@ -212,9 +246,6 @@ import { supabase } from "@/integrations/supabase/client",
         skillsList: "",
         toolsUsed: ""},
       availability: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         availabilityType: '',
         timezone: '',
         hourlyRate: '',
@@ -246,8 +277,7 @@ import { supabase } from "@/integrations/supabase/client",
   ) => {
     const file = e.target.files?.[0]
     if (!file) return;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         availabilityType: "",
         timezone: "",
         hourlyRate: "",
@@ -270,16 +300,11 @@ import { supabase } from "@/integrations/supabase/client",
     const file = e.target.files?.[0],
     if (!file) return,
     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
-<<<<<<< HEAD
     }
     reader.readAsDataURL(file)
     // Store the file in the form data
@@ -331,7 +356,6 @@ return publicUrl
 }
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null
 }'}
-=======
     },
     reader.readAsDataURL(file),
     
@@ -475,8 +499,4 @@ export function TalentOnboardingForm() {;
   // [Previous implementation continues...];
   return null;
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

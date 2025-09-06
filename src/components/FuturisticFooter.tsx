@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }; ]; const socialLinks = ['] { name: 'LinkedIn', href: 'https: //linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'' { name: 'Twitter', href: 'https: //twitter.com/ziontechgroup', icon: 'Twitter' },'' { name: 'GitHub', href: 'https: //github.com/zion-tech-group', icon: 'GitHub' }']; ]; return (') <footer className = "bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">"
 </footer>" <div className = "absolute inset-0 opacity-30">"
 </div>" <div className = "absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-900/20"></div>"" <div className = "absolute top-20 left-10 w-4 h-4 bg-cyan-400 rounded-full opacity-60 animate-pulse"></div>"" <div className = "absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full opacity-60 animate-pulse"></div>"" <div className = "absolute bottom-40 left-20 w-2 h-2 bg-purple-400 rounded-full opacity-60 animate-pulse"></div>" </div>
@@ -164,7 +163,6 @@
         </div>
       </div>
     </footer>"
-=======
 import React from 'react';
 
 export default function FuturisticFooter() {
@@ -497,8 +495,4 @@ export default function FuturisticFooter() {
         </div>,;
       </div>,;
     </footer>",;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

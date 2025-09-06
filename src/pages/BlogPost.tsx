@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -49,14 +46,10 @@ import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
 import { logErrorToProduction } from '@/utils/productionLogger';
 // Importing the sample blog posts - in a real app, you would fetch this from an API
-<<<<<<< HEAD
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
-=======
-import { BLOG_POSTS } from "@/data/blog-posts"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import Link from 'next/link',
@@ -73,11 +66,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 import { BLOG_POSTS } from "@/data/blog-posts",
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
 import { fetchWithRetry } from '@/utils/fetchWithRetry',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function BlogPost() {
 
   const router = useRouter()
@@ -90,7 +79,6 @@ export default function BlogPost() {
   const timedOut = useSkeletonTimeout(20000)
   useEffect((,) => {
     const fetchPost = async () => {
-<<<<<<< HEAD
       setIsLoading(true)
       setError(null)
       try {
@@ -105,15 +93,10 @@ export default function BlogPost() {
         setRelatedPosts(related)
         setIsLoading(false)
         return } catch (err) {
-<<<<<<< HEAD
         logErrorToProduction('Failed to fetch blog post', { data: err })
         setError('Failed to load article')
       }
-=======
-        logErrorToProduction('Failed to fetch blog post', { data: err });
-        setError('Failed to load article');
-      };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
         setPost(currentPost)
         const related = BLOG_POSTS.filter(
@@ -130,7 +113,6 @@ export default function BlogPost() {
     fetchPost()
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router])
-=======
       setIsLoading(true),
       setError(null),
       try {
@@ -214,11 +196,7 @@ export default function BlogPost() {;
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router]),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading && !timedOut) {
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
@@ -243,11 +221,7 @@ export default function BlogPost() {;
       </div>
     )
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
     if (!post) return ''
@@ -265,7 +239,6 @@ export default function BlogPost() {;
       default:
         return '#'
   }
-<<<<<<< HEAD
   const articleLd = {
     '@context': 'https://schema.org'
     '@type': 'BlogPosting'
@@ -286,9 +259,7 @@ export default function BlogPost() {;
         description={post.excerpt}
         keywords={post.tags.join(', ')}
         ogImage={post.featuredImage}        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
   // Helper function to get share URL;
   const getShareUrl = (platform: string) => {;
@@ -306,10 +277,7 @@ export default function BlogPost() {;
     }
   },
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const articleLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -318,9 +286,6 @@ export default function BlogPost() {;
     image: post.featuredImage,
     datePublished: post.publishedDate,
     author: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       '@type': 'Person',
       name: post.author.name,
     },
@@ -332,8 +297,7 @@ export default function BlogPost() {;
         description={post.excerpt}
         keywords={post.tags.join(', ')}
         ogImage={post.featuredImage}        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       "@type": "Person",
       name: post.author.name}},
   
@@ -359,11 +323,7 @@ export default function BlogPost() {;
         keywords={post.tags.join(", ")}
         ogImage={post.featuredImage}
         canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       />
       <JsonLd data={articleLd} />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
@@ -381,14 +341,8 @@ export default function BlogPost() {;
               </Link>
             </Button>
           </div>
-<<<<<<< HEAD
-=======
           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Article header */}
           <div className="mb-8 max-w-4xl mx-auto">
             <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
@@ -397,7 +351,6 @@ export default function BlogPost() {;
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {post.title}
             </h1>
-<<<<<<< HEAD
             <p className='text-xl text-zion-slate-light mb-8'>{post.excerpt}</p>
             {/* Author and metadata */}
             <div className='flex flex-col sm:flex-row sm:items-center justify-between mb-8'>
@@ -491,7 +444,6 @@ export default function BlogPost() {;
                 <span
                   key={tag}
                   className='text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full'                >
-=======
             <p className="text-xl text-zion-slate-light mb-8">
               {post.excerpt}
             </p>;
@@ -597,33 +549,22 @@ export default function BlogPost() {;
                   key={tag} 
                   className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
                 >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   #{tag}
                 </span>
               ))}
             </div>
-<<<<<<< HEAD
             <Separator className='my-12 bg-zion-blue-light' />
-=======
             
             <Separator className="my-12 bg-zion-blue-light" />
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* Related articles */}
             {relatedPosts.length > 0 && (
               <div className="mt-12">
                 <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {relatedPosts.map(relatedPost => (
-<<<<<<< HEAD
                     <Link
                       key={relatedPost.id}                      href={`/blog/${relatedPost.slug}`}
                       className='bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300'
@@ -644,7 +585,6 @@ export default function BlogPost() {;
                         <h4 className='text-white font-bold mt-1 line-clamp-2'>
                           {relatedPost.title}
                         </h4>
-=======
                     <Link 
                       key={relatedPost.id}
                       href={`/blog/${relatedPost.slug}`}
@@ -661,50 +601,31 @@ export default function BlogPost() {;
                       <div className="p-4">
                         <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       </div>
                     </Link>
                   ))}
                 </div>
               </div>
             )}
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className='mt-12 text-center'>
               <p className='text-zion-slate-light'>
-=======
-<<<<<<< HEAD
 
             <div className="mt-12 text-center">
               <p className="text-zion-slate-light">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <div className="mt-12 text-center">
               <p className="text-zion-slate-light">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Ready to put these ideas into action? Explore our{' '}
                 <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
                 or browse expert{' '}
-<<<<<<< HEAD
                 <Link href='/talent' className='text-zion-cyan underline'>
                   talent
                 </Link>{' '}
                 to accelerate your projects.
-=======
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </p>
             </div>
             {/* Navigation */}
@@ -725,7 +646,6 @@ export default function BlogPost() {;
       </div>
     </>
   )
-<<<<<<< HEAD
 }
 outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"asChild > <Link href=" /blog"> <ArrowLeft className=" mr-2 h-4 w-4"/> Back to all articles </Link> </Button> </div> </div> <div className=" relative"> <Button > <Share2 className=" h-4 w-4 mr-1"/> <span className=" text-sm">Share</span> </Button> <a href= {'
   getShareUrl ('facebook') "
@@ -1024,18 +944,11 @@ export default function BlogPost() {return ("
           Professional BlogPost services to help your business grow.
         </p>
       </div>
-<<<<<<< HEAD
   )
 }
 }
 }
-=======
-  );
-};
-};
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.;
               </p>;
             </div>;
@@ -1059,8 +972,4 @@ export default function BlogPost() {return ("
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

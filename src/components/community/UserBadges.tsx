@@ -1,20 +1,13 @@
 
-<<<<<<< HEAD
-=======
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react'
 import { Badge } from "@/types/community",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 interface UserBadgesProps {
   badges: Badge[]
 }
 const iconMap = {
-<<<<<<< HEAD
   Trophy
   Award
   BadgeCheck
@@ -23,7 +16,6 @@ const iconMap = {
 }
 export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null
-=======
   Trophy,
   Award,
   BadgeCheck,
@@ -34,28 +26,15 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
 export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null,
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="flex flex-wrap gap-2">
       {badges.map((badge) => {
         // Get the correct icon component based on the badge's icon name
-<<<<<<< HEAD
-<<<<<<< HEAD
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] |Trophy
 export default UserBadges
 
-=======
-        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
-export default UserBadges;
-}
-}
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
         
         return (
@@ -130,8 +109,4 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
   );
 };
 export default UserBadges;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

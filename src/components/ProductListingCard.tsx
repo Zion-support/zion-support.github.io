@@ -1,37 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
 import { useRouter  } from 'next/router';
-=======
-import React, { useState } from 'react',
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
-import { useRouter } from 'next/router',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
-<<<<<<< HEAD
 
 import { RatingStars } from '@/components/RatingStars'
-=======
-import React, { useState } from 'react'
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
-import { useRouter } from 'next/router'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { ProductListing } from '@/types/listings'
-import { DollarSign } from 'lucide-react';
-import { RatingStars } from '@/components/RatingStars';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
 import type { AppDispatch } from '@/store'
 import { addItem } from '@/store/cartSlice'
 import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
 import Image from 'next/image'; // Import next/image
-<<<<<<< HEAD
 
 interface ProductListingCardProps {
   listing: ProductListing;
@@ -53,17 +36,7 @@ const ProductListingCardComponent = ({
       : '/placeholder.svg'
   )
   const [imageError, setImageError] = useState(false)
-=======
-=======
-=======
-import React, { useState } from 'react',
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
-import { useRouter } from 'next/router',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { ProductListing } from "@/types/listings",
-import { DollarSign } from 'lucide-react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { RatingStars } from "@/components/RatingStars",
 import { FavoriteButton } from "@/components/FavoriteButton",
 import { useDispatch } from 'react-redux',
@@ -79,16 +52,12 @@ interface ProductListingCardProps {
   onRequestQuote?: (id: string) => void,
   detailBasePath?: string
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
-<<<<<<< HEAD
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid',
@@ -101,14 +70,10 @@ const ProductListingCardComponent = ({
   ),
   const [imageError, setImageError] = useState(false),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const stockStatus =
     listing.stock === undefined
       ? 'In stock'
       : listing.stock <= 0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   detailBasePath = '/marketplace/listing',
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid'
@@ -123,30 +88,16 @@ const ProductListingCardComponent = ({
     listing.stock === undefined
       ? 'In stock'
       : listing.stock <= 0
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ? 'Out of stock'
         : listing.stock <= 5
           ? 'Low stock'
           : 'In stock'
-<<<<<<< HEAD
-=======
-      ? 'Out of stock'
-      : listing.stock <= 5
-      ? 'Low stock'
-      : 'In stock',
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const stockVariant =
     listing.stock === undefined
       ? 'success'
       : listing.stock <= 0
-<<<<<<< HEAD
-=======
-  const stockVariant = null;
-    listing.stock === undefined
-      ? 'success'
-      : listing.stock <= 0
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ? 'destructive'
         : listing.stock <= 5
           ? 'warning'
@@ -225,35 +176,7 @@ const ProductListingCardComponent = ({
       {/* Image */}
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
-=======
-<<<<<<< HEAD
-=======
-  detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) => {
-  const isGrid = view === 'grid',
-  const router = useRouter(),
-  const [loading, setLoading] = useState(false),
-  const [imageSrc, setImageSrc] = useState(
-    listing.images && listing.images.length > 0 && listing.images[0]
-    ? listing.images[0] 
-    : '/placeholder.svg'
-  ),
-  const [imageError, setImageError] = useState(false),
-
-  const stockStatus =
-    listing.stock === undefined
-      ? 'In stock'
-      : listing.stock <= 0
-      ? 'Out of stock'
-      : listing.stock <= 5
-      ? 'Low stock'
-      : 'In stock',
-
-  const stockVariant =
-    listing.stock === undefined
-      ? 'success'
-      : listing.stock <= 0
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       ? 'destructive'
       : listing.stock <= 5
       ? 'warning'
@@ -404,29 +327,18 @@ const ProductListingCardComponent = ({;
       {/* Image */}
       <div;
         className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         onClick={handleViewListing} // Keep existing onClick for navigation
         role="button"
         tabIndex={-1} // Remove from tab order as parent is focusable
-<<<<<<< HEAD
         onKeyDown={e => {
-<<<<<<< HEAD
           if (e.key === 'Enter' |e.key === ' ') {
             e.preventDefault()
             handleViewListing()
-=======
-=======
-        onKeyDown={(e) => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
             handleViewListing()
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }  return ()
     <div
       data-testid= "equipment-link";'`
@@ -458,14 +370,43 @@ const ProductListingCardComponent = ({;
             fill = {true,}
             style={{ objectFit: 'cover' }}
             onError = {handleImageError,}
-=======
-<<<<<<< HEAD
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          }  return ()
+    <div
+      data-testid= "equipment-link";'`
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+      onClick={handleViewListing}
+      tabIndex={0};"
+      onKeyDown={(e) => {
+        if(e.key === 'Enter' |e.key === ' ') {
+          e.preventDefault ()
+          handleViewListing () }
+      }}
+      {/* Image */}
+      <div'
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+        onClick={handleViewListing} // Keep existing onClick for navigation;"
+        tabIndex={-1} // Remove from tab order as parent is focusable
+        onKeyDown={(e) => {
+          if(e.key === 'Enter' |e.key === ' ') {
+            e.preventDefault ()
+            handleViewListing () }
+        }}
+      >
+        <div className={`relative ${imageContainerClasses}`}>
+          {' '}
+          {/* Ensure this container has dimensions */}
+          <Image
+            src = {imageSrc,}
+            alt = {listing.title,}
+            fill = {true,}
+            style={{ objectFit: 'cover' }}
+            onError = {handleImageError,}
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault(),
             handleViewListing()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }}
       >;
@@ -476,11 +417,7 @@ const ProductListingCardComponent = ({;
             fill={true}
             style={{ objectFit: 'cover' }}
             onError={handleImageError}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             priority={false} // Assuming these are not LCP images
             sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
           />
@@ -489,26 +426,19 @@ const ProductListingCardComponent = ({;
               Featured
             </Badge>
           )}
-<<<<<<< HEAD
           {stockStatus && (
             <Badge
               variant={stockVariant as any}
               className='absolute top-2 left-2'            >
-=======
           {stockStatus && (;
             <Badge;
               variant={stockVariant as any}
               className="absolute top-2 left-2"
             >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {stockStatus}
             </Badge>
           )}
-<<<<<<< HEAD
           <FavoriteButton itemId={listing.id} />
         </div>
       </div>
@@ -523,7 +453,6 @@ const ProductListingCardComponent = ({;
               variant='outline'
               className='bg-background text-foreground/80 border-primary/10'
             >
-=======
            <FavoriteButton itemId={listing.id} />;
         </div>;
       </div>;
@@ -533,37 +462,26 @@ const ProductListingCardComponent = ({;
           {/* Category & Rating */}
           <div className="flex justify-between items-center mb-2">
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {listing.category}
             </Badge>
             {listing.rating && (
               <RatingStars value={listing.rating} count={listing.reviewCount} />
             )}
-<<<<<<< HEAD
           </div>
           {/* Title & Description */}
           <div onClick={handleViewListing} className='block'>
             {listing.uspHeadline && (
               <p className='text-primary font-semibold text-sm mb-1'>
-=======
           </div>;
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             {listing.uspHeadline && (
               <p className="text-primary font-semibold text-sm mb-1">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {listing.uspHeadline}
               </p>
             )}
-<<<<<<< HEAD
             <h3 className='font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]'>
               {listing.title}
             </h3>
@@ -578,7 +496,6 @@ const ProductListingCardComponent = ({;
                 <span
                   key={idx}
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'                >
-=======
             <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
               {listing.title}
             </h3>
@@ -594,38 +511,27 @@ const ProductListingCardComponent = ({;
                   key={idx} 
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   {tag}
                 </span>
               ))}
             </div>
           )}
-<<<<<<< HEAD
         </div>
         {/* Footer with price and button */}
         <div className='flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20'>
           <div className='text-sm font-medium'>
-=======
         </div>;
         {/* Footer with price and button */}
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {listing.price !== null ? (
               <div className="flex items-center text-primary">
                 <DollarSign className="h-4 w-4 mr-1" />
                 {getPrice()}
               </div>
             ) : (
-<<<<<<< HEAD
               <span className='text-foreground/80'>{getPrice()}</span>
             )}
           </div>
@@ -637,7 +543,6 @@ const ProductListingCardComponent = ({;
                 e.stopPropagation(); // Prevent card click event
                 addToCart() }}
               disabled = {loading,}
-=======
               <span className="text-foreground/80">
                 {getPrice()}
               </span>;
@@ -653,11 +558,7 @@ const ProductListingCardComponent = ({;
                 addToCart()
               }}
               disabled={loading}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             >
               {loading ? (
                 <>
@@ -671,7 +572,6 @@ const ProductListingCardComponent = ({;
                 "Add to Cart"
               )}
             </Button>
-<<<<<<< HEAD
             <Button
               size='sm'
               variant='default'
@@ -685,7 +585,6 @@ const ProductListingCardComponent = ({;
                     price: listing.price ?? 0
                   })
                 )
-=======
             
             <Button
               size="sm"
@@ -697,18 +596,13 @@ const ProductListingCardComponent = ({;
                 dispatch(
                   addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
                 ),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 router.push('/checkout')
               }}
               disabled={loading}
             >
               Buy Now
             </Button>
-<<<<<<< HEAD
             {onRequestQuote && (
               <Button
                 size='sm'
@@ -807,15 +701,10 @@ export default ProductListingCard
 export default ProductListingCard
 export default ProductListingCard
 '"`
-<<<<<<< HEAD
 export const ProductListingCard = React.memo(ProductListingCardComponent)
 ProductListingCard.displayName = 'ProductListingCard'
 
-=======
-export const ProductListingCard = React.memo(ProductListingCardComponent);
-ProductListingCard.displayName = 'ProductListingCard';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             
             {onRequestQuote && (
               <Button 
@@ -883,8 +772,4 @@ ProductListingCard.displayName = 'ProductListingCard';
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

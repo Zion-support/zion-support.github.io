@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Header } from '@/components/Header'
@@ -8,24 +5,17 @@ import { ShieldAlert } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 export default function Unauthorized() {
   const { t } = useTranslation()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import Link from "next/link",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header";
 import { ShieldAlert } from 'lucide-react'
-<<<<<<< HEAD
 import { useTranslation } from "react-i18next";
-=======
-import { useTranslation } from "react-i18next",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Unauthorized() {
   const { t } = useTranslation(),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <>
       <Header />
@@ -42,7 +32,6 @@ export default function Unauthorized() {
           </p>
           <div className="flex flex-col gap-3">
             <Link
-<<<<<<< HEAD
               href='/'
               className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center'            >
               {t('errors.return_home')}
@@ -50,19 +39,13 @@ export default function Unauthorized() {
             <Link
               href='/auth/login'
               className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'            >              href="/"
-=======
               href="/"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
             >
               {t('errors.return_home')}
             </Link>
             <Link
-<<<<<<< HEAD
               href='/auth/login'
               className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'              href="/auth/login"
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center"
@@ -71,18 +54,11 @@ export default function Unauthorized() {
             </Link>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
     </>
   )
 }
-=======
-      </div>;
-    </>;
-  );
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               href="/auth/login"
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center"
             >
@@ -127,8 +103,4 @@ export default function Unauthorized() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

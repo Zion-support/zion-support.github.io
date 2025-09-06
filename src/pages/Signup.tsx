@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useRouter } from 'next/router', // Changed from react-router-dom
 import { useFormik  } from 'formik';
@@ -12,19 +10,7 @@ import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { PasswordStrengthMeter  } from '@/components/PasswordStrengthMeter';
 import { AuthButtons  } from '@/components/AuthButtons';
-=======
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router'; // Changed from react-router-domimport { useFormik } from 'formik'
-import * as Yup from 'yup'
-import axios from 'axios'
-import Link from 'next/link'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states'
-import { Alert, AlertDescription } from '@/components/ui/alert'
-import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'
-import { AuthButtons } from '@/components/AuthButtons'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
 
 import { toast } from '@/hooks/use-toast'
@@ -45,15 +31,10 @@ const SignupSchema = Yup.object({
   terms: Yup.boolean().oneOf(
     [true]
     'You must accept the terms and conditions'
-<<<<<<< HEAD
   )
 })
 export default function Signup() {
-=======
-  ),
-});
-export default function Signup() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
@@ -79,13 +60,10 @@ export default function Signup() {;
       logErrorToProduction('Auth service health check failed', { data: err })
       setAuthServiceAvailable(false)
       // Set a more specific error message based on the error type
-<<<<<<< HEAD
       if (
         err.code === 'NETWORK_ERROR' |
         err.message?.includes('Network Error')
-=======
-      if (true) {}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       ) {
         setHealthCheckError('Network connection issues detected')
       } else if (err.response?.status === 500) {
@@ -200,15 +178,10 @@ export default function Signup() {;
         })
         const status = err.response?.status
         // Try both 'error' and 'message' fields for compatibility
-<<<<<<< HEAD
         const errorMsg =
           err.response?.data?.error |
           err.response?.data?.message |
-=======
-        const errorMsg = null;
-          err.response?.data?.error ||
-          err.response?.data?.message ||
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           'Signup failed. Please try again.'
         logInfo('Processed error message:', { data: errorMsg })
         if (status === 409) {
@@ -273,7 +246,6 @@ export default function Signup() {;
       return () => clearTimeout(timer) }
     return undefined
   }, [emailVerificationRequired, formik.values.email, router])
-=======
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from react-router-dom;
 import { useFormik } from 'formik',;
@@ -496,11 +468,7 @@ export default function Signup() {;
     return undefined
   }, [emailVerificationRequired, formik.values.email, router]),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Show loading state only during initial health check
   if (healthCheckLoading) {
     return (
@@ -526,7 +494,6 @@ export default function Signup() {;
               </p>
             </div>
           )}
-<<<<<<< HEAD
           <form onSubmit={handleFormSubmit} className='space-y-4' noValidate>
             {/* Show Health Check Warning */}
             {healthCheckError && (
@@ -680,7 +647,6 @@ export default function Signup() {;
               <div className='text-red-500 text-sm'>{formik.errors.terms}</div>
             )}
             {!emailVerificationRequired ? (
-=======
           <form onSubmit={handleFormSubmit} className="space-y-4" noValidate>
           {/* Show Health Check Warning */}
           {healthCheckError && (
@@ -845,11 +811,7 @@ export default function Signup() {;
               >
                 Go to Login
               </Button>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               <Button
                 type="button"
                 variant="outline"
@@ -860,7 +822,6 @@ export default function Signup() {;
               >
                 Check Verification Status
               </Button>
-<<<<<<< HEAD
             ) : (
               <div className='space-y-2'>
                 <Button
@@ -906,11 +867,8 @@ export default function Signup() {;
                 </p>
               </div>
             )}
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Button
                 type="button"
                 variant="ghost"
@@ -932,18 +890,13 @@ export default function Signup() {;
               <p>If signup fails, please try again in a few minutes or contact support.</p>
             </div>
           )}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </form>
           {!emailVerificationRequired && (
             <div className="mt-6">
               <AuthButtons providers={["google", "github"]} />
             </div>
           )}
-<<<<<<< HEAD
         </div>
       </div>
     </AuthLayout>
@@ -1051,7 +1004,6 @@ export default function Signup() {
   const form = useForm({
     resolver: zodResolver(signupSchema)
     defaultValues: {
-<<<<<<< HEAD
       displayName: "
       email: "
       password: "
@@ -1061,17 +1013,7 @@ export default function Signup() {
 }) as UseFormReturn<SignupFormValues>
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
-=======
-      displayName: ",
-      email: ",
-      password: ",
-      confirmPassword: ",
-      termsAccepted: false,,
-},,;
-}) as UseFormReturn<SignupFormValues>;
-  // Form submission handler;
-  const onSubmit = async (data: SignupFormValues) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (isSubmitting) return; // Prevent multiple submissions
     setIsSubmitting(true)
     try {
@@ -1101,15 +1043,10 @@ export default function Signup() {
         const { error: sessionError } = await supabase.auth.setSession(resData.session)
         if (sessionError) {
           console.error("Error setting session:", sessionError)
-<<<<<<< HEAD
           form.setError("root", { message: sessionError.message |"Failed to set session. Please try logging in." })
           toast.error(sessionError.message |"Failed to set session. Please try logging in.")
           return
-=======
-          form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
-          toast.error(sessionError.message || "Failed to set session. Please try logging in.")
-          return;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
         // The onAuthStateChange listener in AuthProvider should now handle
         // updating user state and navigating if necessary for other cases.
@@ -1208,22 +1145,13 @@ const Signup = () => {
             </div>
     </>  )
 }
-<<<<<<< HEAD
 }}
 }
-=======
-}};
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>;
       </div>;
     </AuthLayout>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

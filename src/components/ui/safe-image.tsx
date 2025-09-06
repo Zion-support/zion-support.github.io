@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client',
 
 import Image from 'next/image';
 import { useState } from 'react';
-=======
-'use client'
-import Image from 'next/image'
-import { useState } from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { ImageIcon } from 'lucide-react'
 interface SafeImageProps {;
   src: string;
@@ -64,14 +58,9 @@ export function SafeImage({
         <ImageIcon className='w-6 h-6' />      </div>
     )
   }
-<<<<<<< HEAD
     />
-=======
-;
-    />;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );        aria-label={alt}
-=======
 'use client',;
 import Image from 'next/image',;
 import { useState } from 'react',;
@@ -121,21 +110,13 @@ export function SafeImage({;
         style={{ width, height }}
         role="img"
         aria-label={alt}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       >
         <ImageIcon className="w-6 h-6" />
       </div>
     )
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     />
   ); return (
     <Image
@@ -150,14 +131,8 @@ export function SafeImage({;
       unoptimized = {hasError,}
     />
   )
-<<<<<<< HEAD
-=======
-} 
-
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
-=======
 ;
   return (;
     <Image;
@@ -173,8 +148,4 @@ export function SafeImage({;
     />;
   );
 } ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import { useState  } from 'react';
-=======
-<<<<<<< HEAD
 import { useState } from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Check, Copy } from 'lucide-react'
 import { cn } from "@/lib/utils";
 interface CodeBlockProps {
@@ -25,17 +20,11 @@ const handleCopyClick = async () => {
   await navigator.clipboard.writeText (code)
 setCopied (true)
 setTimeout ( () => {
-<<<<<<< HEAD
   setCopied (false)
 }, 2000)
 }
 }> <pre className= {"
-=======
-  setCopied (false) ;
-}, 2000) ;
-};
-}> <pre className= {";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   cn ("p-4 overflow-auto";"
 showLineNumbers && "pl-12 relative")
 }> {"
@@ -45,34 +34,17 @@ showLineNumbers && "pl-12 relative")
 }className="h-6 leading-6" > {
   i + 1
 export function CodeBlock({
-<<<<<<< HEAD
   code
   language = 'bash'
   showLineNumbers = false
   className
 }: CodeBlockProps) {
-=======
-=======
-
-import { useState } from 'react',
-import { Check, Copy } from 'lucide-react'
-import { cn } from "@/lib/utils",
-interface CodeBlockProps {
-  code: string,
-  language?: string,
-  showLineNumbers?: boolean,
-  className?: string
-}
-
-export function CodeBlock({ 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   code,
   language = 'bash',
   showLineNumbers = false,
   className
 }: CodeBlockProps) {
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [copied, setCopied] = useState(false)
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code)
@@ -90,8 +62,24 @@ export function CodeBlock({
             {code.split('\n').map((_, i) => (
               <div key={i} className='h-6 leading-6'>                {i + 1}
               </div>
-=======
-<<<<<<< HEAD
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [copied, setCopied] = useState(false)
+  const handleCopyClick = async () => {
+    await navigator.clipboard.writeText(code)
+    setCopied(true)
+    setTimeout(() => {
+      setCopied(false)
+    }, 2000)
+  }
+    >
+      <pre
+        className={cn('p-4 overflow-auto', showLineNumbers && 'pl-12 relative')}
+      >
+        {showLineNumbers && (
+          <div className='absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500'>
+            {code.split('\n').map((_, i) => (
+              <div key={i} className='h-6 leading-6'>                {i + 1}
+              </div>
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -108,8 +96,7 @@ export function CodeBlock({
   showLineNumbers = false,
   className
 }: CodeBlockProps) {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [copied, setCopied] = useState(false),
 
   const handleCopyClick = async () => {
@@ -172,15 +159,10 @@ export function CodeBlock({;
               <div key={i} className="h-6 leading-6">;
                 {i + 1}
               </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             ))}
           </div>
         )}
-<<<<<<< HEAD
         <code className='language-javascript'>{code}</code>
       </pre>
       <button
@@ -191,7 +173,6 @@ export function CodeBlock({;
       </button>
       {language && (
         <div className='absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400'>
-=======
         <code className="language-javascript">{code}</code>
       </pre>
       <button
@@ -203,36 +184,18 @@ export function CodeBlock({;
       </button>
       {language && (
         <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {language}
         </div>
       )}
-<<<<<<< HEAD
     </div>
   )
-<<<<<<< HEAD
 export default CodeBlock
 
-=======
-export default CodeBlock;
-;
-}
-}
-}
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>;
   );
 }
 ;
 export default CodeBlock;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

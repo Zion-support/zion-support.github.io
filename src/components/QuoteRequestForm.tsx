@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react";
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useToast } from "@/hooks/use-toast";
@@ -38,11 +34,7 @@ import { QuoteFormData } from "@/types/quotes",
 import { Sparkles, Loader2 } from 'lucide-react'
 import { z } from "zod",
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import {useState} from "react"
 import {logDebug, logErrorToProduction} from '@/utils/productionLogger'
@@ -63,15 +55,10 @@ import {Sparkles, Loader2} from 'lucide-react'
 import {z} from "zod"
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary"
 const serviceStepSchema = z.object({
-<<<<<<< HEAD
-<<<<<<< HEAD
   serviceType: z.string().min(1)
   specificItem: z.object({ id: z.string() })})
-=======
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function QuoteRequestForm() {
   const router = useRouter()
   const { toast } = useToast()
@@ -79,12 +66,17 @@ export function QuoteRequestForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [autoFillLoading, setAutoFillLoading] = useState(false)
   const [autoFillOpen, setAutoFillOpen] = useState(false)
-=======
-<<<<<<< HEAD
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function QuoteRequestForm() {
+  const router = useRouter()
+  const { toast } = useToast()
+  const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [autoFillLoading, setAutoFillLoading] = useState(false)
+  const [autoFillOpen, setAutoFillOpen] = useState(false)
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export function QuoteRequestForm() {
   const router = useRouter(),
@@ -94,11 +86,7 @@ export function QuoteRequestForm() {
   const [autoFillLoading, setAutoFillLoading] = useState(false),
   const [autoFillOpen, setAutoFillOpen] = useState(false),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -111,22 +99,15 @@ export function QuoteRequestForm() {
     budget: {
       amount: 0
       type: "fixed"
-<<<<<<< HEAD
     }
-=======
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     contactInfo: {
       name: ""
       email: ""
       phone: ""
       company: ""
     }
-<<<<<<< HEAD
   })
   const updateFormData = (data: Partial<QuoteFormData>,) => {
     setFormData(prev => ({
@@ -135,13 +116,10 @@ export function QuoteRequestForm() {
   );
 };
 }
-<<<<<<< HEAD
 
   )
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }),
   
   const updateFormData = (data: Partial<QuoteFormData>) => {
@@ -496,8 +474,4 @@ export function QuoteRequestForm() {
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

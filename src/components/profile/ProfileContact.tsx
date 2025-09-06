@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -31,86 +30,34 @@ export function ProfileContact({
       })
     }, 1000)
   }
-=======
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Mail, Send } from 'lucide-react'
-import { useState } from "react",
-import { toast } from "@/hooks/use-toast",
-interface ProfileContactProps {
-  email?: string,
-  profileName: string,
-  profileType: 'service' | 'talent'
-}
-
-export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
-  const [message, setMessage] = useState(""),
-  const [subject, setSubject] = useState(""),
-  const [isSending, setIsSending] = useState(false),
-  
-  const handleSendMessage = (e: React.FormEvent) => {
-    e.preventDefault(),
-    setIsSending(true),
-    
-    // Here would be the actual API call to send the message
-    setTimeout(() => {
-      setIsSending(false),
-      setMessage(""),
-      setSubject(""),
-      toast({
-        title: "Message Sent",
-        description: `Your message has been sent to ${profileName}.`})
-    }, 1000)
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4 flex items-center">
         <Mail className="mr-2 h-5 w-5 text-zion-cyan" />
         Contact
       </h3>
-<<<<<<< HEAD
-=======
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {email && (
         <div className="mb-4 text-zion-slate-light">
           <span className="block">Email: </span>
           <a
             href={`mailto:${email}`}
             className="text-zion-cyan hover:underline truncate block"
-<<<<<<< HEAD
-=======
           >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {email}
           </Link>
         </div>
       )}
-<<<<<<< HEAD
-=======
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <form onSubmit={handleSendMessage}>
         <div className="space-y-4">
           <div>
             <Input
-<<<<<<< HEAD
               placeholder='Subject'
               value={subject}
               onChange={e => setSubject(e.target.value)}
@@ -119,12 +66,7 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         <div className="space-y-4">
           <div>
             <Input
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               placeholder="Subject"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
@@ -136,7 +78,6 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
             <Textarea
               placeholder={`Message to ${profileName}...`}
               value={message}
-<<<<<<< HEAD
               onChange={e => setMessage(e.target.value)}
               className='bg-zion-blue border-zion-blue-light text-white min-h-[120px]'
               required
@@ -156,7 +97,6 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
             <Send className='mr-2 h-4 w-4' />
             {isSending ? 'Sending...' : 'Send Message'}          </Button>            disabled={isSending}
           >
-=======
               onChange={(e) => setMessage(e.target.value)}
               className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
               required
@@ -167,11 +107,7 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
             disabled={isSending}
           >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <Send className="mr-2 h-4 w-4" />
             {isSending ? "Sending..." : "Send Message"}
           </Button>
@@ -179,13 +115,11 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
       </form>
     </div>
   )
-<<<<<<< HEAD
   `mailto:$ {
   email
 }` "
 }className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>)
 }'"}
-=======
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -267,8 +201,4 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

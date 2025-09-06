@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -13,21 +10,13 @@ import { Input } from '@/components/ui/input'
 import { Checkbox } from '@/components/ui/checkbox'
 import { format } from 'date-fns'
 import {
-<<<<<<< HEAD
   Form
   FormControl
   FormField
   FormItem
   FormLabel
   FormMessage
-=======
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,;
-  FormMessage;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/form'; import { WorkExperience } from '@/types/resume'
 
 import { Loader2, Edit, Trash2 } from 'lucide-react'
@@ -113,17 +102,11 @@ export function WorkExperienceForm({
         setEditingId(null)
       }
     } catch (err: any) {
-<<<<<<< HEAD
       setError(err.message |'An error occurred')
     }
   }
   const handleEdit = (work: WorkExperience) => {
-=======
-      setError(err.message || 'An error occurred');
-    };
-  };
-  const handleEdit = (work: WorkExperience) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setEditingId(work.id!);    form.reset({
       ...work
   const handleEdit = (work: WorkExperience) => {
@@ -144,7 +127,6 @@ export function WorkExperienceForm({
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
   }
-=======
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -252,11 +234,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     form.setValue('description', enhancedContent)
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       <div>
@@ -266,7 +244,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         </p>
       </div>
       {workExperiences.length > 0 && (
-<<<<<<< HEAD
         <div className='space-y-4'>
           <h3 className='text-md font-medium'>Added Experience</h3>
           {workExperiences.map(work => (
@@ -289,7 +266,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                             ? work.end_date
                             : format(work.end_date, 'MMM yyyy')
                           : ''}
-=======
         <div className="space-y-4">
           <h3 className="text-md font-medium">Added Experience</h3>
           {workExperiences.map((work) => (
@@ -307,11 +283,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                         : (work.end_date ? (typeof work.end_date === 'string' 
                           ? work.end_date 
                           : format(work.end_date, 'MMM yyyy')) : '')}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
@@ -319,7 +291,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   </div>
                   <div className="flex gap-2">
                     <Button
-<<<<<<< HEAD
                       variant='ghost'
                       size='icon'
                       onClick={() => handleEdit(work)}
@@ -332,7 +303,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       onClick={() => handleDelete(work.id!)}
                       aria-label='Delete experience'                    >
                       <Trash2 className='h-4 w-4' />
-=======
                       variant="ghost"
                       size="icon"
                       onClick={() => handleEdit(work)}
@@ -347,40 +317,25 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       aria-label="Delete experience"
                     >
                       <Trash2 className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     </Button>
                   </div>
                 </div>
                 {work.description && (
-<<<<<<< HEAD
                   <p className='text-sm mt-3 line-clamp-2'>
                     {work.description}
                   </p>
-=======
                   <p className="text-sm mt-3 line-clamp-2">{work.description}</p>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 )}
               </CardContent>
             </Card>
           ))}
         </div>
       )}
-<<<<<<< HEAD
       <div className='bg-muted/40 p-6 rounded-lg'>
         <h3 className='text-md font-medium mb-4'>
-=======
-
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {editingId ? 'Update Experience' : 'Add Experience'}
         </h3>
         <Form {...form}>
@@ -388,18 +343,12 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormField
                 control={form.control}
-<<<<<<< HEAD
                 name='company_name'
                 render={({ field }: { field: any }) => (                  <FormItem>
-=======
                 name="company_name"
                 render={({ field }: { field: any }) => (
                   <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     <FormLabel>Company Name</FormLabel>
                     <FormControl>
                       <Input placeholder="Google, Microsoft, etc." {...field} />
@@ -407,24 +356,18 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     <FormMessage />
                   </FormItem>
                 )}
-<<<<<<< HEAD
               />
               <FormField
                 control={form.control}
                 name='role_title'
                 render={({ field }: { field: any }) => (                  <FormItem>
-=======
               />;
               <FormField;
                 control={form.control}
                 name="role_title"
                 render={({ field }: { field: any }) => (
                   <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     <FormLabel>Job Title</FormLabel>
                     <FormControl>
                       <Input placeholder="Software Engineer, Product Manager, etc." {...field} />
@@ -434,28 +377,20 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 )}
               />
             </div>
-<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
               <FormField
                 control={form.control}
                 name='start_date'
-=======
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormField
                 control={form.control}
                 name="start_date"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
                     <FormControl>
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <Input type='date' {...field} value={field.value |''} />                    </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -467,12 +402,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   name='is_current'
                   render={({ field }: { field: any }) => (
                     <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                      <FormControl>
-=======
-                      <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <Input 
                         type="date" 
                         {...field} 
@@ -481,33 +411,22 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     </FormControl>;
                     <FormMessage />;
                   </FormItem>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 )}
               />
 
               <div className="space-y-4">
                 <FormField
                   control={form.control}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   name='is_current'
                   render={({ field }: { field: any }) => (
                     <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                      <FormControl>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   name="is_current"
                   render={({ field }: { field: any }) => (
                     <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
                       <FormControl>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         <Checkbox
                           checked={field.value}
                           onCheckedChange={field.onChange}
@@ -518,91 +437,62 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       </div>
                     </FormItem>
                   )}
-<<<<<<< HEAD
                 />
                 {!form.watch('is_current') && (
                   <FormField
                     control={form.control}
                     name='end_date'
-=======
                 />;
                 {!form.watch('is_current') && (;
                   <FormField;
                     control={form.control}
                     name="end_date"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     render={({ field }: { field: any }) => (
                       <FormItem>
                         <FormLabel>End Date</FormLabel>
                         <FormControl>
-<<<<<<< HEAD
                           <Input
                             type='date'
                             {...field}
-<<<<<<< HEAD
                             value={field.value |''}                          />
-=======
-                            value={field.value || ''}                          />
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <Input 
                             type="date" 
                             {...field} 
                             value={field.value || ''} 
                           />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
                   />
                 )}
-<<<<<<< HEAD
               </div>
             </div>
             <FormField
               control={form.control}
               name='location'
-=======
               </div>;
             </div>;
             <FormField;
               control={form.control}
               name="location"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>Location (Optional)</FormLabel>
                   <FormControl>
-<<<<<<< HEAD
                     <Input
                       placeholder='San Francisco, CA (Remote)'                      {...field}
                     />
-=======
                     <Input placeholder="San Francisco, CA (Remote)" {...field} />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
             />
             <FormField
               control={form.control}
@@ -635,9 +525,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
               </Alert>
             )}
             <div className='flex justify-between pt-2'>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />;
             <FormField;
               control={form.control}
@@ -663,21 +551,17 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   <FormMessage />;
                 </FormItem>;
               )}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             />
 
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
             <div className="flex justify-between pt-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               <Button
                 type="button"
                 variant="outline"
                 onClick={() => {
                   if (editingId) {
-<<<<<<< HEAD
                     setEditingId(null)
-<<<<<<< HEAD
                     form.reset({
                       company_name: ''
                       role_title: ''
@@ -687,30 +571,18 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       location: ''
                     })
 
-=======
-                    setEditingId(null),
-=======
-=======
-                    setEditingId(null),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     form.reset({
                       company_name: '',
                       role_title: '',
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
-<<<<<<< HEAD
                       location: ''})
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       location: '',
                     })
-=======
-                      location: ''})
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   } else {
                     onBack()
                   }
@@ -718,22 +590,16 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
               >
                 {editingId ? 'Cancel' : 'Back'}
               </Button>
-<<<<<<< HEAD
               <div className='flex gap-2'>
                 <Button type='submit' disabled={isLoading}>
                   {isLoading && (
                     <Loader2 className='mr-2 h-4 w-4 animate-spin' />
                   )}
-=======
 
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   {editingId ? 'Update' : 'Add'} Experience
                 </Button>
                 {!editingId && workExperiences.length > 0 && (
@@ -741,7 +607,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     Next
                   </Button>
                 )}
-<<<<<<< HEAD
               </div>
             </div>
           </form>
@@ -755,11 +620,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 }</div> </div> </form> </Form> </div> </div>)
 }'"  )
 }
-<<<<<<< HEAD
-=======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>;
             </div>;
           </form>;
@@ -769,8 +630,4 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

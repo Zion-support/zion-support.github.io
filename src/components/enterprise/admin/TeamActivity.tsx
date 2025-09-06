@@ -1,19 +1,9 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react";
-=======
-<<<<<<< HEAD
     return <Badge variant={style.variant}>{category}</Badge>
   }
 import React from "react"
-=======
-return <Badge variant={style.variant}>{category}</Badge>
-  };
-
-import React from "react",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import {
 
   Table
@@ -32,7 +22,6 @@ import { CalendarIcon, Search } from 'lucide-react'
   TableRow} from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-=======
 import React from "react",
 import {
   Table,
@@ -41,22 +30,14 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Badge } from "@/components/ui/badge",
 import { CalendarIcon, Search } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function TeamActivity() {
   // Mock activity data
   const activities = [
@@ -96,7 +77,6 @@ export function TeamActivity() {
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2)
       category: "candidates"}
     {
-<<<<<<< HEAD
       id: 6
       user: "Jamie Smith"
       action: "Updated budget"
@@ -110,7 +90,6 @@ export function TeamActivity() {
     const diffMins = Math.floor(diffMs / (1000 * 60))
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60))
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24))
-=======
       id: 6,
       user: "Jamie Smith",
       action: "Updated budget",
@@ -120,27 +99,19 @@ export function TeamActivity() {
 
   // Function to format the date in a readable way
   const formatDate = (date: Date) => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     const now = new Date()
     const diffMs = now.getTime() - date.getTime()
     const diffMins = Math.floor(diffMs / (1000 * 60))
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60))
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24))
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const now = new Date(),
     const diffMs = now.getTime() - date.getTime(),
     const diffMins = Math.floor(diffMs / (1000 * 60)),
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60)),
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (diffMins < 60) {
       return `${diffMins} minutes ago`
     } else if (diffHrs < 24) {
@@ -150,11 +121,9 @@ export function TeamActivity() {
     } else {
       return date.toLocaleDateString()
     }
-<<<<<<< HEAD
   }
   const getCategoryBadge = (category: string,) => {
     const categoryStyles: Record<string, { variant: "default" | "outline" | "secondary" | "destructive" }> = {
-<<<<<<< HEAD
       jobs: { variant: "default" }
       candidates: { variant: "outline" }
       team: { variant: "secondary" }
@@ -162,17 +131,12 @@ export function TeamActivity() {
     const style = categoryStyles[category] |{ variant: "default" as const }
     return <Badge variant={style.variant}>{category}</Badge>
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },
 
   const getCategoryBadge = (category: string) => {
     const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       jobs: { variant: "default" },
       candidates: { variant: "outline" },
       team: { variant: "secondary" },
@@ -180,19 +144,11 @@ export function TeamActivity() {
 
     const style = categoryStyles[category] || { variant: "default" as const },
     return <Badge variant={style.variant}>{category}</Badge>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -232,8 +188,6 @@ export function TeamActivity() {
                 </TableCell>
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>
                 <TableCell className="text-muted-foreground">
-<<<<<<< HEAD
-=======
 import React from "react",;
 import {;
   Table,;
@@ -356,11 +310,7 @@ export function TeamActivity() {;
                 </TableCell>;
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>;
                 <TableCell className="text-muted-foreground">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
@@ -368,14 +318,8 @@ export function TeamActivity() {;
           </TableBody>
         </Table>
       </div>
-<<<<<<< HEAD
-=======
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -387,33 +331,29 @@ export function TeamActivity() {;
           Next
         </Button>
       </div>
-<<<<<<< HEAD
     </div>
   )
 }
-<<<<<<< HEAD
 const getCategoryBadge = (category: string) => {
 };"
-=======
-<<<<<<< HEAD
     </div>;
   );
 };
 const getCategoryBadge = (category: string) => {};"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   activities.map ( (activity) => (<TableRow key= {
   activity.id
 }> </TableCell> </TableRow>) ) "
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>)
 }"}
-=======
-<<<<<<< HEAD
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  activities.map ( (activity) => (<TableRow key= {
+  activity.id
+}> </TableCell> </TableRow>) ) "
+}</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>)
+}"}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     </div>
   )
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

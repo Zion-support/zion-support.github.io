@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {  Dialog
@@ -25,7 +22,6 @@ interface RaiseDisputeButtonProps {
   className?: string
 
 export function RaiseDisputeButton({
-<<<<<<< HEAD
   projectId
   milestoneId
   variant = 'outline'
@@ -49,9 +45,7 @@ export function RaiseDisputeButton({
         <ShieldAlert className='h-4 w-4 mr-2' />
         Raise Dispute
       </Button>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 Dialog,
   DialogContent,
   DialogHeader,
@@ -78,19 +72,13 @@ interface RaiseDisputeButtonProps {
 }
 
 export function RaiseDisputeButton({ 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   projectId,
   milestoneId, 
   variant = "outline", 
   size,
   className 
 }: RaiseDisputeButtonProps) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const router = useRouter()
   const handleDisputeCreated = (disputeId: string) => {
@@ -107,8 +95,7 @@ export function RaiseDisputeButton({
         <ShieldAlert className='h-4 w-4 mr-2' />
         Raise Dispute
       </Button>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const router = useRouter(),
   
@@ -129,11 +116,7 @@ export function RaiseDisputeButton({
         Raise Dispute
       </Button>
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className="sm:max-w-[550px]">
           <DialogHeader>
@@ -142,9 +125,7 @@ export function RaiseDisputeButton({
               Please provide details about the issue you're experiencing with this project.
             </DialogDescription>
           </DialogHeader>
-<<<<<<< HEAD
           <DisputeForm
-<<<<<<< HEAD
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
@@ -154,9 +135,7 @@ export function RaiseDisputeButton({
     </>
   )
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           
           <DisputeForm 
 import React, { useState } from "react",;
@@ -211,7 +190,6 @@ export function RaiseDisputeButton({;
             </DialogDescription>;
           </DialogHeader>;
           <DisputeForm;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
@@ -220,13 +198,7 @@ export function RaiseDisputeButton({;
       </Dialog>;
     </>;
   );
-<<<<<<< HEAD
 };
-=======
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

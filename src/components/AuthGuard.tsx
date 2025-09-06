@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      const redirectTo = options?.redirectTo || '/login'
-      const returnUrl = options?.returnUrl || router.asPath
-          if (!requireAuth({ showToast: false })) return false,
-
-    const userRoles = user?.role ? [user.role] : []
-    requireAuth
-    requireRole
-    checkPermission
-    isAuthenticated
-    user
-    isLoading}
-}
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -30,7 +13,6 @@ interface AuthGuardProps {;
   showToast?: boolean,;
   allowGuest?: boolean;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
       const redirectTo = options?.redirectTo |'/login'
       const returnUrl = options?.returnUrl |router.asPath
@@ -42,10 +24,8 @@ interface AuthGuardProps {;
     isAuthenticated
     user
 
-<<<<<<< HEAD
     isLoading}
 }
-=======
   useEffect(() => {
     // Don't redirect while auth is still loading
     if (isLoading) return,
@@ -283,8 +263,4 @@ export function useAuthGuard() {;
     isLoading}
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

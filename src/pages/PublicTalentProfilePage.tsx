@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useRouter } from "next/router",
 import { supabase } from "@/integrations/supabase/client",
@@ -8,13 +7,9 @@ import { SEO } from "@/components/SEO",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
-<<<<<<< HEAD
 import { logErrorToProduction } from '@/utils/productionLogger'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Star } from 'lucide-react'
@@ -31,18 +26,24 @@ export default function ProfilePage() {
     const fetchProfile = async () => {
       setIsLoading(true)
       setIsError(false)
-=======
-<<<<<<< HEAD
-=======
-import { useState, useEffect } from "react",
-import { useRouter } from "next/router",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/components/ui/use-toast",
-import { SEO } from "@/components/SEO",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
+import { Badge } from '@/components/ui/badge'
+import { Star } from 'lucide-react'
+export default function ProfilePage() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+
+  const router = useRouter()
+  const profileId = router.query.profileId as string
+  const [profileData, setProfileData] = useState<any>(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const [isError, setIsError] = useState(false)
+  useEffect((,) => {
+    const fetchProfile = async () => {
+      setIsLoading(true)
+      setIsError(false)
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { HireNowCTA } from "@/components/profile/HireNowCTA",
 import { logErrorToProduction } from '@/utils/productionLogger',
 import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
@@ -60,61 +61,39 @@ export default function ProfilePage() {
     const fetchProfile = async () => {
       setIsLoading(true),
       setIsError(false),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       try {
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
-<<<<<<< HEAD
           .single()
-=======
           .single(),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         if (error) {
           throw error
         }
         setProfileData(data)
       } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' })
         setIsError(true)
-=======
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
-        setIsError(true),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
-<<<<<<< HEAD
         setIsError(true)
-=======
-        setIsError(true),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         toast({
           title: "Error"
           description: "Failed to load profile. Please try again later."
           variant: "destructive"})
       } finally {
         setIsLoading(false)
-<<<<<<< HEAD
       }
     }
     if (profileId) {
       fetchProfile()
     }
   }, [profileId])
-=======
 import { useState, useEffect } from "react",;
 import { useRouter } from "next/router",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -165,11 +144,7 @@ export default function ProfilePage() {;
     }
   }, [profileId]),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -184,32 +159,20 @@ export default function ProfilePage() {;
       </div>
     )
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO
         title={`${profileData.full_name} | Talent Profile`}
-<<<<<<< HEAD
         description = {profileData.bio |"View the profile of this talented individual.",}
-=======
-        description = {profileData.bio || "View the profile of this talented individual.",}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
   return (;
     <>;
       <SEO;
         title={`${profileData.full_name} | Talent Profile`}
         description={profileData.bio || "View the profile of this talented individual."}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
@@ -256,19 +219,13 @@ export default function ProfilePage() {;
                         <span>{profileData.availability}</span>
                       </div>
                     )}
-<<<<<<< HEAD
                   </div>
                 </div>
               </div>
-=======
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Skills */}
               {profileData.skills && profileData.skills.length > 0 && (
                 <div className="mt-4">
@@ -284,11 +241,8 @@ export default function ProfilePage() {;
             {/* Bio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
-<<<<<<< HEAD
               <p className="text-zion-slate-light">{profileData.bio |"No bio provided."}</p>
-=======
-              <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </div>
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
@@ -315,11 +269,8 @@ export default function ProfilePage() {;
             {/* Experience Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
-<<<<<<< HEAD
               <p className="text-zion-slate-light">{profileData.experience |"No experience provided."}</p>
-=======
-              <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </div>
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
@@ -335,23 +286,17 @@ export default function ProfilePage() {;
                     title="GitHub"
                   >
                     <Github className="h-6 w-6" />
-<<<<<<< HEAD
                   </a>
                 )}
                 {profileData.twitter_link && (
                   <a
                     href = {profileData.twitter_link,}
-=======
                   </Link>
                 )}
                 {profileData.twitter_link && (;
                   <a;
                     href={profileData.twitter_link}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
@@ -371,15 +316,9 @@ export default function ProfilePage() {;
                     title="LinkedIn"
                   >
                     <Linkedin className="h-6 w-6" />
-<<<<<<< HEAD
                   </a>
-=======
                   </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 )}
               </div>
             </div>
@@ -388,30 +327,21 @@ export default function ProfilePage() {;
           <div className="col-span-12 lg:col-span-4 space-y-6">
             <HireNowCTA
               talentProfile={{
-<<<<<<< HEAD
                 id: profileData?.id |''
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
 
-=======
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
-<<<<<<< HEAD
                 hourly_rate: profileData?.hourly_rate || 0
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 hourly_rate: profileData?.hourly_rate || 0,
-=======
-                hourly_rate: profileData?.hourly_rate || 0
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               }}
             />
             {/* Placeholder for other sidebar elements */}
-<<<<<<< HEAD
           </div>
         </div>
       </div>
@@ -451,16 +381,10 @@ if (isLoading) {"
   {'
   id: profileData?.id |'', full name: profileData?.full name |'',  professional title: profileData?.professional title |'', hourly rate: profileData?.hourly rate |0
 }/> {
-<<<<<<< HEAD
   /* Placeholder for other sidebar elements */
 }</div> </div> </div> </>)
 }'"}
-=======
-  /* Placeholder for other sidebar elements */ ;
-}</div> </div> </div> </>) ;
-}'"};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>;
         </div>;
       </div>;
@@ -468,8 +392,4 @@ if (isLoading) {"
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

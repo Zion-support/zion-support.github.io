@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
@@ -7,7 +6,6 @@ import { HelpCategoryList } from './HelpCategoryList'
 import { HelpArticleList } from './HelpArticleList'
 import { HelpArticleView } from './HelpArticleView'
 import { HELP_CATEGORIES } from './help-content'
-=======
 
 import React, { useState } from "react",
 import { Input } from "@/components/ui/input",
@@ -17,11 +15,7 @@ import { HelpCategoryList } from "./HelpCategoryList",
 import { HelpArticleList } from "./HelpArticleList",
 import { HelpArticleView } from "./HelpArticleView",
 import { HELP_CATEGORIES } from "./help-content",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Search } from 'lucide-react'
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
@@ -42,7 +36,6 @@ export default function HelpCenter() {
   const handleCategorySelect = (categoryId: string,) => {
     setSelectedCategory(categoryId)
     setSelectedArticle(null)
-<<<<<<< HEAD
   }
   const handleArticleSelect = (articleId: string,) => {
     setSelectedArticle(articleId)
@@ -50,30 +43,19 @@ export default function HelpCenter() {
   const handleBackToCategories = () => {
     setSelectedCategory(null)
     setSelectedArticle(null)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   const handleBackToArticles = () => {
     setSelectedArticle(null)
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },
   
   const handleBackToArticles = () => {
     setSelectedArticle(null)
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <div className="container mx-auto px-4 py-8">
@@ -84,7 +66,6 @@ export default function HelpCenter() {
           <p className="text-zion-slate-light mb-6">
             Find answers to common questions or get in touch with our support team.
           </p>
-<<<<<<< HEAD
           <div className='relative mb-8'>
             <Input
               placeholder='Search for help articles...'
@@ -103,7 +84,6 @@ export default function HelpCenter() {
               {!selectedCategory && !selectedArticle && (
                 <HelpCategoryList
                   categories={HELP_CATEGORIES}
-=======
           
           <div className="relative mb-8">
             <Input
@@ -182,19 +162,11 @@ export default function HelpCenter() {;
               {!selectedCategory && !selectedArticle && (;
                 <HelpCategoryList;
                   categories={HELP_CATEGORIES} ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}                />
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -216,7 +188,6 @@ export default function HelpCenter() {;
                     variant='ghost'
                     onClick={handleBackToArticles}
                     className='mb-4'                  >
-=======
               
               {selectedCategory && !selectedArticle && (
                 <>
@@ -242,25 +213,19 @@ export default function HelpCenter() {;
                     onClick={handleBackToArticles}
                     className="mb-4"
                   >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     ← Back to Articles
                   </Button>
                   <HelpArticleView articleId={selectedArticle} />
                 </>
               )}
             </TabsContent>
-<<<<<<< HEAD
             <TabsContent value='faq'>
               <div className='bg-zion-blue-light/20 rounded-lg p-6'>
                 <h2 className='text-xl font-semibold mb-4'>
                   Frequently Asked Questions
                 </h2>
                 <div className='space-y-6'>
-<<<<<<< HEAD
                   <div>
                     <h3 className='font-medium text-zion-cyan mb-2'>
                       How does the AI matching work?
@@ -273,58 +238,37 @@ export default function HelpCenter() {;
                       optimal results.
                     </p>
                   </div>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             
             <TabsContent value="faq">
               <div className="bg-zion-blue-light/20 rounded-lg p-6">
                 <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
                 
                 <div className="space-y-6">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">How does the AI matching work?</h3>
                     <p className="text-zion-slate-light">
                       Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results.
                     </p>
                   </div>
-<<<<<<< HEAD
-=======
                   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">How do I hire someone on Zion?</h3>
                     <p className="text-zion-slate-light">
                       To hire talent on Zion, post a job or project, review matches or applications, interview candidates through our platform, and extend an offer. Our secure payment system protects both parties throughout the engagement.
                     </p>
                   </div>
-<<<<<<< HEAD
-=======
                   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">What are the payment terms?</h3>
                     <p className="text-zion-slate-light">
                       Zion offers flexible payment options including milestone-based payments, hourly rates, or fixed project fees. Funds are held in escrow until deliverables are approved, ensuring security for both clients and talent.
                     </p>
                   </div>
-<<<<<<< HEAD
-=======
                   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>
                     <p className="text-zion-slate-light">
@@ -334,7 +278,6 @@ export default function HelpCenter() {;
                 </div>
               </div>
             </TabsContent>
-<<<<<<< HEAD
             <TabsContent value='contact'>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                 <div className='bg-zion-blue-light/20 rounded-lg p-6'>
@@ -356,7 +299,6 @@ export default function HelpCenter() {;
                         >
                           <path d='M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z' />
                           <path d='M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z' />
-=======
             
             <TabsContent value="contact">
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
@@ -372,18 +314,13 @@ export default function HelpCenter() {;
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">
                           <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                           <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         </svg>
                       </div>
                       <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
                         support@ziontechgroup.com
                       </Link>
                     </div>
-<<<<<<< HEAD
                     <div className='flex items-center'>
                       <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>
                         <svg
@@ -393,23 +330,17 @@ export default function HelpCenter() {;
                           fill='currentColor'
                         >
                           <path d='M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z' />
-=======
                     
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">
                           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         </svg>
                       </div>
                       <span className="text-zion-slate-light">+1 302 464 0950</span>
                     </div>
                   </div>
-<<<<<<< HEAD
                   <Button className='w-full mt-6 bg-zion-purple hover:bg-zion-purple-light'>
                     Open Live Chat
                   </Button>
@@ -423,7 +354,6 @@ export default function HelpCenter() {;
                     our platform.
                   </p>
                   <form className='space-y-4'>
-=======
                   
                   <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">
                     Open Live Chat
@@ -437,11 +367,7 @@ export default function HelpCenter() {;
                   </p>
                   
                   <form className="space-y-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     <div>
                       <Input
                         placeholder="Your email"
@@ -458,16 +384,10 @@ export default function HelpCenter() {;
                         placeholder="Your feedback or suggestion"
                       />
                     </div>
-<<<<<<< HEAD
                     <Button className='w-full bg-zion-cyan hover:bg-zion-cyan/80'>
-=======
                     
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       Submit Feedback
                     </Button>
                   </form>
@@ -476,22 +396,16 @@ export default function HelpCenter() {;
             </TabsContent>
           </Tabs>
         </div>
-<<<<<<< HEAD
       </div>;
     </>;
   );
 };
 }
-=======
       </div>
     </>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
               {selectedArticle && (;
                 <>;
@@ -605,8 +519,4 @@ export default function HelpCenter() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

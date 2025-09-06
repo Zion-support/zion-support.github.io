@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from 'react'; import {
   Table
@@ -17,11 +15,7 @@ import {
   DialogHeader
   DialogTitle
   DialogTrigger
-=======
-import React, { useState } from 'react'; import {
-=======
-import {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   Table,
   TableBody,
   TableCell,
@@ -36,9 +30,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
   DialogTrigger,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -55,7 +47,6 @@ import { toast } from "@/hooks/use-toast"
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false)
   const [newMemberEmail, setNewMemberEmail] = useState('')
-<<<<<<< HEAD
   // Mock team members data
   const teamMembers = [
     {
@@ -91,25 +82,7 @@ export function TeamManagement() {
       lastActive: '3 days ago'
     }
   ]
-=======
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,;
-} from '@/components/ui/table';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React, { useState } from "react",
 import {
@@ -137,10 +110,7 @@ export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false),
   const [newMemberEmail, setNewMemberEmail] = useState(""),
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   // Mock team members data
   const teamMembers = [
     {
@@ -166,9 +136,6 @@ export function TeamManagement() {
       lastActive: "Never"},
     {
       id: 4,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       name: 'Taylor Brown',
       email: 'taylor@example.com',
       role: 'Viewer',
@@ -176,52 +143,34 @@ export function TeamManagement() {
       lastActive: '3 days ago',
     },
   ]
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       name: "Taylor Brown",
       email: "taylor@example.com",
       role: "Viewer",
       status: "active",
       lastActive: "3 days ago"}],
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleAddMember = () => {
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
         title: 'Email required'
         description: 'Please enter an email address for the new team member.'
         variant: 'destructive'
       })
-=======
-        title: "Email required",
-        description: "Please enter an email address for the new team member.",
-        variant: "destructive"}),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return
-=======
         title: 'Email required',
         description: 'Please enter an email address for the new team member.',
         variant: 'destructive',
       })
       return;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: 'Invitation sent'
       description: `An invitation has been sent to ${newMemberEmail}`
-=======
-      title: 'Invitation sent',
-      description: `An invitation has been sent to ${newMemberEmail}`,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     })
     setNewMemberEmail('')
     setIsAddingMember(false)
@@ -240,17 +189,7 @@ export function TeamManagement() {
       description: `A new invitation has been sent to ${memberEmail}`
     })
   }
-=======
-<<<<<<< HEAD
-=======
-        title: "Email required",
-        description: "Please enter an email address for the new team member.",
-        variant: "destructive"}),
-      return
-    }
-
-    toast({
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
@@ -271,12 +210,8 @@ export function TeamManagement() {
       title: "Invitation resent",
       description: `A new invitation has been sent to ${memberEmail}`})
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -301,14 +236,12 @@ export function TeamManagement() {
                   Email
                 </Label>
                 <Input
-<<<<<<< HEAD
                   id='email'
                   type='email'
                   placeholder='colleague@company.com'
                   className='col-span-3'
                   value={newMemberEmail}
                   onChange={e => setNewMemberEmail(e.target.value)}                />
-=======
                   id="email"
                   type="email"
                   placeholder="colleague@company.com"
@@ -316,11 +249,7 @@ export function TeamManagement() {
                   value={newMemberEmail}
                   onChange={(e) => setNewMemberEmail(e.target.value)}
                 />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </div>
               <div className="grid grid-cols-4 items-center gap-4">
                 <Label htmlFor="role" className="text-right">
@@ -346,16 +275,10 @@ export function TeamManagement() {
           </DialogContent>
         </Dialog>
       </div>
-<<<<<<< HEAD
       <div className='rounded-md border'>
-=======
 
       <div className="rounded-md border">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <Table>
           <TableHeader>
             <TableRow>
@@ -367,35 +290,23 @@ export function TeamManagement() {
             </TableRow>
           </TableHeader>
           <TableBody>
-<<<<<<< HEAD
             {teamMembers.map(member => (              <TableRow key={member.id}>
-=======
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <TableCell>
                   <div className="flex items-center gap-2">
                     <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
                       <span className="text-sm font-medium">
                         {member.name
-<<<<<<< HEAD
                           .split(' ')
                           .map(n => n[0])
                           .join('')}                      </span>
-=======
                           .split(" ")
                           .map((n) => n[0])
                           .join("")}
                       </span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     </div>
                     <div>
                       <div className="font-medium">{member.name}</div>
@@ -408,16 +319,10 @@ export function TeamManagement() {
                 <TableCell>{member.role}</TableCell>
                 <TableCell>
                   <Badge
-<<<<<<< HEAD
                     variant={member.status === 'active' ? 'default' : 'outline'}                  >
-=======
                     variant={member.status === "active" ? "default" : "outline"}
                   >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     {member.status}
                   </Badge>
                 </TableCell>
@@ -426,34 +331,26 @@ export function TeamManagement() {
                   <div className="flex justify-end gap-2">
                     {member.status === "pending" ? (
                       <Button
-<<<<<<< HEAD
                         variant='ghost'
                         size='sm'
                         onClick={() => handleResendInvite(member.email)}                      >
                         <Mail className='h-4 w-4 mr-1' />
-=======
                         variant="ghost"
                         size="sm"
                         onClick={() => handleResendInvite(member.email)}
                       >
                         <Mail className="h-4 w-4 mr-1" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         Resend
                       </Button>
                     ) : (
                       <Button
-<<<<<<< HEAD
                         variant='ghost'
                         size='sm'
                         className='text-destructive hover:text-destructive'
                         onClick={() => handleRemoveMember(member.id)}                      >
                         <Trash className='h-4 w-4' />
                       </Button>
-=======
                         variant="ghost"
                         size="sm"
                         className="text-destructive hover:text-destructive"
@@ -657,17 +554,12 @@ export function TeamManagement() {;
                       >;
                         <Trash className="h-4 w-4" />;
                       </Button>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     )}
                   </div>
                 </TableCell>
               </TableRow>
             ))}
-<<<<<<< HEAD
           </TableBody>
         </Table>
       </div>
@@ -695,7 +587,6 @@ export function TeamManagement() {;
 }</div> </TableCell> </TableRow>) )
 }</TableBody> </Table> </div> </div>)
 }'"}
-=======
           </TableBody>;
         </Table>;
       </div>;
@@ -703,8 +594,4 @@ export function TeamManagement() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

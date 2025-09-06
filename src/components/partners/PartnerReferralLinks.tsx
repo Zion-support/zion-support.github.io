@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -10,15 +9,9 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
-=======
-import { useRef, useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Copy, Download, Link, Plus } from 'lucide-react'
 
-<<<<<<< HEAD
 import { toast } from '@/hooks/use-toast'
 import { useReferrals } from '@/hooks/useReferrals'
   Dialog
@@ -64,7 +57,6 @@ export function PartnerReferralLinks() {
       // Add custom campaign parameter if selected
       if (selectedCampaign !== 'default') {
         url.searchParams.append('campaign', selectedCampaign)
-<<<<<<< HEAD
       }
       // Add custom parameter if provided
       if (customParam) {
@@ -95,21 +87,7 @@ export function PartnerReferralLinks() {
     link.click()
     document.body.removeChild(link)
   }
-=======
-=======
-=======
-import { useRef, useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Copy, Download, Link, Plus } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
-import { useReferrals } from "@/hooks/useReferrals",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Label } from "@/components/ui/label",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function PartnerReferralLinks() {
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
   const [isDialogOpen, setIsDialogOpen] = useState(false),
@@ -136,29 +114,20 @@ export function PartnerReferralLinks() {
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
         url.searchParams.append("campaign", selectedCampaign)
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       
       // Add custom parameter if provided
       if (customParam) {
-<<<<<<< HEAD
         url.searchParams.append("source", customParam)
       }
       
       const newLink = {
-=======
-<<<<<<< HEAD
         url.searchParams.append('source', customParam)
-=======
-        url.searchParams.append("source", customParam)
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       
       const newLink = {
-<<<<<<< HEAD
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ''}`,
         link: url.toString(),
       }
@@ -183,8 +152,7 @@ export function PartnerReferralLinks() {
     link.click()
     document.body.removeChild(link)
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,
         link: url.toString()
       },
@@ -216,19 +184,14 @@ export function PartnerReferralLinks() {
     link.click(),
     document.body.removeChild(link)
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>Your Referral Link</span>
-<<<<<<< HEAD
             <Button
               variant='outline'
               size='sm'
@@ -255,7 +218,6 @@ export function PartnerReferralLinks() {
         <h3 className='text-lg font-semibold text-white'>
           Custom Campaign Links
         </h3>
-=======
             <Button 
               variant="outline" 
               size="sm" 
@@ -361,11 +323,7 @@ export function PartnerReferralLinks() {;
 
       <div className="flex justify-between items-center">
         <h3 className="text-lg font-semibold text-white">Custom Campaign Links</h3>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
             <Button variant="outline" size="sm" className="flex items-center gap-2">
@@ -380,7 +338,6 @@ export function PartnerReferralLinks() {;
                 Generate a trackable link for specific marketing campaigns
               </DialogDescription>
             </DialogHeader>
-<<<<<<< HEAD
             <div className='grid gap-4 py-4'>
               <div className='grid gap-2'>
                 <Label htmlFor='campaign'>Campaign Type</Label>
@@ -389,7 +346,6 @@ export function PartnerReferralLinks() {;
                   onValueChange={setSelectedCampaign}                >
                   <SelectTrigger id='campaign'>
                     <SelectValue placeholder='Select campaign type' />
-=======
             <div className="grid gap-4 py-4">
               <div className="grid gap-2">
                 <Label htmlFor="campaign">Campaign Type</Label>
@@ -399,11 +355,7 @@ export function PartnerReferralLinks() {;
                 >
                   <SelectTrigger id="campaign">
                     <SelectValue placeholder="Select campaign type" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="default">General (Default)</SelectItem>
@@ -415,7 +367,6 @@ export function PartnerReferralLinks() {;
                   </SelectContent>
                 </Select>
               </div>
-<<<<<<< HEAD
               <div className='grid gap-2'>
                 <Label htmlFor='custom'>Custom Parameter (Optional)</Label>
                 <Input
@@ -430,7 +381,6 @@ export function PartnerReferralLinks() {;
                 type='button'
                 variant='secondary'
                 onClick={() => setIsDialogOpen(false)}
-=======
               <div className="grid gap-2">
                 <Label htmlFor="custom">Custom Parameter (Optional)</Label>
                 <Input 
@@ -453,11 +403,7 @@ export function PartnerReferralLinks() {;
                 type="button" 
                 onClick={handleGenerateLink}
                 className="bg-zion-purple hover:bg-zion-purple-dark"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               >
                 Cancel
               </Button>
@@ -471,7 +417,6 @@ export function PartnerReferralLinks() {;
           </DialogContent>
         </Dialog>
       </div>
-<<<<<<< HEAD
       <div className='grid gap-4'>
         {generatedLinks.length > 0 ? (
           generatedLinks.map((item, index) => (
@@ -483,12 +428,8 @@ export function PartnerReferralLinks() {;
                 <CardTitle className='text-base flex items-center justify-between'>
                   <div className='flex items-center gap-2'>
                     <Link className='h-4 w-4 text-zion-purple' />
-<<<<<<< HEAD
                     <span>{item.name |'Campaign Link'}</span>                  </div>
-=======
-                    <span>{item.name || 'Campaign Link'}</span>                  </div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
       <div className="grid gap-4">
         {generatedLinks.length > 0 ? (
@@ -500,11 +441,7 @@ export function PartnerReferralLinks() {;
                     <Link className="h-4 w-4 text-zion-purple" />
                     <span>{item.name || "Campaign Link"}</span>
                   </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </CardTitle>
               </CardHeader>
               <CardContent className="pb-4">
@@ -514,14 +451,12 @@ export function PartnerReferralLinks() {;
                     readOnly
                     className="font-mono text-xs"
                   />
-<<<<<<< HEAD
                   <Button
                     variant='outline'
                     size='sm'
                     onClick={() => handleCopyLink(item.link)}                  >
                     <Copy className='h-4 w-4' />
                     <span className='sr-only'>Copy</span>
-=======
                   <Button 
                     variant="outline" 
                     size="sm" 
@@ -529,11 +464,7 @@ export function PartnerReferralLinks() {;
                   >
                     <Copy className="h-4 w-4" />
                     <span className="sr-only">Copy</span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </Button>
                 </div>
               </CardContent>
@@ -545,7 +476,6 @@ export function PartnerReferralLinks() {;
               <p className="text-zion-slate-light text-center mb-4">
                 Create custom campaign links to track different marketing efforts
               </p>
-<<<<<<< HEAD
               <Button
                 variant='outline'
                 onClick={() => setIsDialogOpen(true)}
@@ -589,7 +519,6 @@ document.body.removeChild (link)
 }readOnly className="font-mono text-xs"/> <Button > <Copy className="h-4 w-4"/> <span className="sr-only">Copy</span> </Button> </div> </CardContent> </Card>) ) ) : (<Card className="bg-zion-blue/20 border-dashed border-zion-blue-light"> <CardContent className="flex flex-col items-center justify-center p-6"> <p className="text-zion-slate-light text-center mb-4"> Create custom campaign links to track different marketing efforts </p> <Button className="flex items-center gap-2"> <Plus className="h-4 w-4" /> Create First Link </Button> </CardContent> </Card>)
 }</div> </div>)
 }'"}
-=======
               <Button 
                 variant="outline"
                 onClick={() => setIsDialogOpen(true)}
@@ -605,8 +534,4 @@ document.body.removeChild (link)
     </div>;
   );
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

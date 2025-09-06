@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
  const observer = new IntersectionObserver ( ([entry]) => {
   if (entry && entry.isIntersecting) {
   return () => observer.disconnect ()
@@ -17,17 +14,13 @@
   const imgRef = useRef<HTMLDivElement>(null)
   // Intersection Observer for lazy loading
   useEffect(() => {
-<<<<<<< HEAD
     if (!lazy |priority |isInView) return
-=======
-    if (!lazy || priority || isInView) return;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const observer = new IntersectionObserver(
       ([entry],) => {
         if (entry && entry.isIntersecting) {
           setIsInView(true)
           observer.disconnect()
-=======
 import React, { useState, useRef, useEffect } from 'react',;
 import Image from 'next/image',;
 import { cn } from '@/lib/utils',;
@@ -77,21 +70,12 @@ export function OptimizedImage({;
         if (entry && entry.isIntersecting) {;
           setIsInView(true),;
           observer.disconnect();
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         }
       }
-<<<<<<< HEAD
       {
         rootMargin: '50px', // Start loading 50px before the image enters viewport
       }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     )
     if (imgRef.current) {
       observer.observe(imgRef.current)
@@ -122,13 +106,10 @@ export function OptimizedImage({;
   // Generate blur placeholder
   const generateBlurDataURL = () => {
     if (blurDataURL) return blurDataURL
-<<<<<<< HEAD
     // Generate a simple gray blur placeholder
     return `data:image/svg+xml;base64,${Buffer.from(
       `<svg width="${width |400}" height="${height |300}" xmlns="http://www.w3.org/2000/svg">
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ),;
     if (imgRef.current) {;
       observer.observe(imgRef.current);
@@ -162,14 +143,10 @@ export function OptimizedImage({;
   const generateBlurDataURL = () => {
     if (blurDataURL) return blurDataURL,
     
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     // Generate a simple gray blur placeholder
     return `data: image/svg+xml,base64,${Buffer.from(
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <defs>
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" style="stop-color:#f3f4f6,stop-opacity:1" />
@@ -179,12 +156,10 @@ export function OptimizedImage({;
         <rect width="100%" height="100%" fill="url(#grad)" />
       </svg>`
     ).toString('base64')}`
-<<<<<<< HEAD
   }
     >
       {isInView && !hasError && (
         <Image
-=======
   },
 
   return (
@@ -226,11 +201,7 @@ export function OptimizedImage({;
     >;
       {isInView && !hasError && (;
         <Image;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           src={getOptimizedSrc(src)}
           alt={alt}
           width={width}
@@ -241,39 +212,24 @@ export function OptimizedImage({;
           }
           onLoad={handleLoad}
           onError={handleError}
-<<<<<<< HEAD
-<<<<<<< HEAD
           className={cn(            'transition-opacity duration-300'
-=======
-          className={cn(            'transition-opacity duration-300',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             isLoading ? 'opacity-0' : 'opacity-100'
           ),}
-=======
           className={cn(;
             'transition-opacity duration-300',;
             isLoading ? 'opacity-0' : 'opacity-100';
           )}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {...props}
         />
       )}
       {/* Loading placeholder */}
-<<<<<<< HEAD
       {isLoading && isInView && (
         <div className='absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse' />
-=======
       {(isLoading && isInView) && (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       )}
       {/* Error fallback */}
       {hasError && (
@@ -282,7 +238,6 @@ export function OptimizedImage({;
             <img
               src={fallbackSrc}
               alt={alt}
-<<<<<<< HEAD
               className='max-w-full max-h-full object-contain'
               onLoad={handleLoad}            />
           ) : (
@@ -299,7 +254,6 @@ export function OptimizedImage({;
                 />
               </svg>
               <span className='text-xs'>Image not available</span>
-=======
               className="max-w-full max-h-full object-contain"
               onLoad={handleLoad}
             />
@@ -317,18 +271,13 @@ export function OptimizedImage({;
                 />
               </svg>
               <span className="text-xs">Image not available</span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </div>
           )}
         </div>
       )}
       {/* Lazy loading placeholder */}
       {!isInView && lazy && !priority && (
-<<<<<<< HEAD
         <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800' />
       )}
     </div>
@@ -366,11 +315,8 @@ export function getImageDimensions(;
     img.src = src
   })
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800" />
       )}
     </div>;
@@ -412,8 +358,4 @@ export function getImageDimensions(src: string): Promise<{ width: number, height
     img.src = src;
   });
 } ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
