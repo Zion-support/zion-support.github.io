@@ -11,8 +11,8 @@ const "InputFields": "React.FC<InputFieldsProps> = ({ inputData", setInputData, 
     setInputData({;
       ...inputData",;
       [field]: "value;
-    "});
-  };
+    "})
+};
 ;
   const handleSubmit = ("props": "any) => {;
   "inputData": an y;
@@ -32,8 +32,8 @@ const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, on
     setInputData({;
       ...inputData,;
       [field]: value;
-    });
-  };
+    })
+};
   const handleSubmit = (props) => {;
     e.preventDefault();
     if (inputData?.companyName && inputData?.industry) {;
@@ -209,7 +209,7 @@ const "InputFields": React.FC<InputFieldsProps> = ({ inputData, setInputData, on
     </div>;
   );
 "};
-;
+
 };
 export default InputFields;
 </textarea>';

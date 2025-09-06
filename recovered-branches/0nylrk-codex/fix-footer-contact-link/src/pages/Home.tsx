@@ -12,8 +12,7 @@ import { QuickAccess } from "@/components/home/QuickAccess",
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs",
-import { FeatureHighlights } from "@/components/home/FeatureHighlights",
-export default function Home() {
+import { FeatureHighlights } from "@/components/home/FeatureHighlights",export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -56,7 +55,6 @@ import {QuickAccess} from "@/components/home/QuickAccess";
 import {FeatureCTAs} from "@/components/home/FeatureCTAs";
 import {FeatureHighlights} from "@/components/home/FeatureHighlights";
 
-
 import React from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -88,10 +86,6 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
       <NewsletterSection />;
       <Footer />;
     </div>);
-}
-}
+}}
 ;
 
-
-    </div>);
-}

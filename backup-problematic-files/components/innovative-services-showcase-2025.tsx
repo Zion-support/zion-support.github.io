@@ -29,8 +29,8 @@ const contactInfo = {;
 const serviceCategories = [;
   {;
     id: 'financial-technology',;
-    title: ' Financial Technology',;
-    description: 'Innovative fintech, DeFi, and financial services',;
+    title: ' Financial Technology',,
+  description: 'Innovative fintech, DeFi, and financial services',;
     icon: TrendingUp,;
     color: 'from-green-500 to-emerald-500',;
     services: [...innovativeFinancialServices2025],;
@@ -39,8 +39,8 @@ const serviceCategories = [;
   },;
   {;
     id: 'healthcare-biotech',;
-    title: ' Healthcare & Biotech',;
-    description: 'AI-powered healthcare and biotechnology solutions',;
+    title: ' Healthcare & Biotech',,
+  description: 'AI-powered healthcare and biotechnology solutions',;
     icon: Stethoscope,;
     color: 'from-blue-500 to-indigo-500',;
     services: [...innovativeHealthcareServices2025],;
@@ -49,8 +49,8 @@ const serviceCategories = [;
   },;
   {;
     id: 'education-technology',;
-    title: ' Education Technology',;
-    description: 'AI-powered learning and educational innovation',;
+    title: ' Education Technology',,
+  description: 'AI-powered learning and educational innovation',;
     icon: GraduationCap,;
     color: 'from-purple-500 to-pink-500',;
     services: [...innovativeEducationServices2025],;
@@ -59,8 +59,8 @@ const serviceCategories = [;
   },;
   {;
     id: 'sustainability-green-tech',;
-    title: ' Sustainability & Green Tech',;
-    description: 'Environmental technology and sustainability solutions',;
+    title: ' Sustainability & Green Tech',,
+  description: 'Environmental technology and sustainability solutions',;
     icon: Leaf,;
     color: 'from-emerald-500 to-teal-500',;
     services: [...innovativeSustainabilityServices2025],;
@@ -69,8 +69,8 @@ const serviceCategories = [;
   },;
   {;
     id: 'logistics-supply-chain',;
-    title: ' Logistics & Supply Chain',;
-    description: 'Autonomous logistics and supply chain optimization',;
+    title: ' Logistics & Supply Chain',,
+  description: 'Autonomous logistics and supply chain optimization',;
     icon: Truck,;
     color: 'from-orange-500 to-red-500',;
     services: [...innovativeLogisticsServices2025],;
@@ -79,8 +79,8 @@ const serviceCategories = [;
   },;
   {;
     id: 'ai-consciousness',;
-    title: ' AI & Consciousness',;
-    description: 'Revolutionary AI consciousness and emotional intelligence platforms',;
+    title: ' AI & Consciousness',,
+  description: 'Revolutionary AI consciousness and emotional intelligence platforms',;
     icon: Brain,;
     color: 'from-violet-500 to-purple-500',;
     services: [...innovativeAIServices2025],;
@@ -89,8 +89,8 @@ const serviceCategories = [;
   },;
   {;
     id: 'quantum-emerging',;
-    title: ' Quantum & Emerging Tech',;
-    description: 'Quantum computing, DNA computing, and beyond',;
+    title: ' Quantum & Emerging Tech',,
+  description: 'Quantum computing, DNA computing, and beyond',;
     icon: Atom,;
     color: 'from-indigo-500 to-blue-500',;
     services: [...emergingTechServices2025],;
@@ -99,8 +99,8 @@ const serviceCategories = [;
   },;
   {;
     id: 'enterprise-it',;
-    title: ' Enterprise IT',;
-    description: 'Autonomous operations and zero-trust security',;
+    title: ' Enterprise IT',,
+  description: 'Autonomous operations and zero-trust security',;
     icon: Shield,;
     color: 'from-blue-500 to-cyan-500',;
     services: [...innovativeITServices2025],;
@@ -109,8 +109,8 @@ const serviceCategories = [;
   },;
   {;
     id: 'micro-saas',;
-    title: ' Micro SAAS',;
-    description: 'Innovative solutions for every business need',;
+    title: ' Micro SAAS',,
+  description: 'Innovative solutions for every business need',;
     icon: Target,;
     color: 'from-teal-500 to-green-500',;
     services: [...realMicroSaasServices2025],;

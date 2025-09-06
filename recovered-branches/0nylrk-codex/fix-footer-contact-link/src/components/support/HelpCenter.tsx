@@ -22,8 +22,7 @@ import { HelpArticleList } from "./HelpArticleList",
 import { HelpArticleView } from "./HelpArticleView",
 import { HELP_CATEGORIES } from "./help-content",
 import { AppLayout } from "@/layout/AppLayout",
-import { Search } from "lucide-react",
-export default function HelpCenter() {
+import { Search } from "lucide-react",export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -45,8 +44,7 @@ export default function HelpCenter() {
   const handleBackToArticles = () => {
     setSelectedArticle(null)
   },
-  
-  return (
+    return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
@@ -97,11 +95,11 @@ export default function HelpCenter() {;
   },;
   const handleBackToCategories = () => {;
     setSelectedCategory(null),;
-    setSelectedArticle(null);
-  };
+    setSelectedArticle(null)
+};
   const handleBackToArticles = () => {;
-    setSelectedArticle(null);
-  };
+    setSelectedArticle(null)
+};
   return (;
     <AppLayout>;
       <div className="container mx-auto px-4 py-8">;
@@ -131,16 +129,6 @@ export default function HelpCenter() {;
             </TabsList>;
             <TabsContent value="articles">;
               {!selectedCategory && !selectedArticle && (;
-
-            <TabsContent value="articles">
-              {!selectedCategory && !selectedArticle && (
-                <HelpCategoryList
-                  categories={HELP_CATEGORIES}
-                  onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
-                />
-              )}
-
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -150,6 +138,7 @@ export default function HelpCenter() {;
                   >
                     ← All Categories
                   </Button>
+                  <HelpArticleList
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
@@ -166,11 +155,6 @@ export default function HelpCenter() {;
                     variant="ghost"
                     onClick={handleBackToArticles}
                     className="mb-4">;
-                    ← Back to Articles;
-                  </Button>;
-                  <HelpArticleView articleId={selectedArticle} />;
-                </>;
-              )}
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
@@ -178,8 +162,7 @@ export default function HelpCenter() {;
                     </h3>
                     <p className="text-zion-slate-light">
                       Our AI matching algorithm analyzes your requirements and
-                      preferences to match you with the most compatible talent
-                      experience, availability, and past performance to ensure
+                      preferences to match you with the most compatible talent                      experience, availability, and past performance to ensure
                       optimal results.
                     </p>
                   </div>
@@ -252,8 +235,7 @@ export default function HelpCenter() {;
                         className="text-zion-cyan hover:underline"
                       >
                         support@ziontechgroup.com
-                      </Link>
-                    </div>
+                      </Link>                    </div>
 
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
@@ -314,11 +296,7 @@ export default function HelpCenter() {;
   );
 }
     </AppLayout>);
-}
-  );
-  );
-}
-    </AppLayout>);
+}    </AppLayout>);
 }
     </AppLayout>;
   );}
@@ -372,3 +350,4 @@ const handleBackToArticles = () => {
 
 }
 ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

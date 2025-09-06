@@ -1,11 +1,10 @@
 // Index utility
 export const Index = () => {
   // Implementation here
-  return null;
+  return null
 };
 
 export * from './useReactId';
-
 
 // Export all hooks from messaging directory;
 export * from './messaging',;

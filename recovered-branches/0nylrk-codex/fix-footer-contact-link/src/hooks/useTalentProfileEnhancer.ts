@@ -1,47 +1,14 @@
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 
-export interface TalentProfileData {
-export interface TalentProfileData {
+export interface TalentProfileData {export interface TalentProfileData {
 
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface TalentProfileData {;
-
-  name: string;
-  title: string;
-  bio: string;
-
-  skills: string[],
-  location?: string;
-
-}
-export interface CategorizedSkills {
-  name: string;
-  title: string;
-  bio: string;
-  skills: string[],
-  location?: string;
-}
-export interface CategorizedSkills {
-}
-
-
-export interface CategorizedSkills {;
-
-export interface TalentProfileData {
-  name: string;
-  title: string;
-  bio: string;
-}
-export interface CategorizedSkills {
-
-export interface CategorizedSkills {;
-  programming: string[];
   devops: string[];
   platforms: string[];
 
-
 export interface EnhancedProfile {
   summary: string,
   categorizedSkills: CategorizedSkills
@@ -50,28 +17,7 @@ export interface EnhancedProfile {
   const [error, setError] = useState<string | null>(null);
   const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
     setIsGenerating(true);
-    setError(null)
-
-export interface EnhancedProfile {
-  summary: string,
-  categorizedSkills: CategorizedSkills
-}
-
-export function useTalentProfileEnhancer() {;
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  
-  const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
-    setIsGenerating(true);
-    setError(null),
-    
-    try {
-      // Call the Supabase Edge Function
-      const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {
-        body: { talentData: profileData }
-      });
-
-      if (error) {
+    setError(null)      if (error) {
         throw new Error(error.message)
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -118,25 +64,7 @@ export function useTalentProfileEnhancer() {;
 export interface CategorizedSkills {
   programming: string[];
   devops: string[];
-  platforms: string[];
-      return null
-    } finally {
-      setIsGenerating(false)
-    }
-
-
-
-  };
-  
-
-
-  }
-  return {
-    enhanceProfile;
-    isGenerating;
-
-    error
-  soft_skills: string[],
+  platforms: string[];  soft_skills: string[],
   other: string[];
 }
 export interface EnhancedProfile {
@@ -178,9 +106,6 @@ if ( {) {
     enhance_profile;
     is_generating;
     error;
-
-
-
 
   }
 }

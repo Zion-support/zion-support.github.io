@@ -168,36 +168,36 @@ const ServicesIndex: NextPage = () => {
   ];
   const itServices = [;
     {;
-      name: "Cloud Migration & Architecture",;
-      description: "Complete cloud transformation with AWS, Azure, and Google Cloud expertise",;
+      name: "Cloud Migration & Architecture",,
+  description: "Complete cloud transformation with AWS, Azure, and Google Cloud expertise",;
       features: ["Multi-cloud strategy", "Security implementation", "Cost optimization", "24/7 monitoring"],;
       pricing: "Starting at $5,000/project",;
       link: "/services/cloud-migration";
     },;
     {;
-      name: "Cybersecurity Solutions",;
-      description: "Comprehensive security assessment, implementation, and ongoing protection",;
+      name: "Cybersecurity Solutions",,
+  description: "Comprehensive security assessment, implementation, and ongoing protection",;
       features: ["Security audits", "Penetration testing", "Compliance management", "Incident response"],;
       pricing: "Starting at $3,000/month",;
       link: "/services/cybersecurity-solutions";
     },;
     {;
-      name: "DevOps & CI/CD Implementation",;
-      description: "Automated deployment pipelines and infrastructure as code solutions",;
+      name: "DevOps & CI/CD Implementation",,
+  description: "Automated deployment pipelines and infrastructure as code solutions",;
       features: ["CI/CD pipelines", "Infrastructure automation", "Monitoring setup", "Performance optimization"],;
       pricing: "Starting at $4,000/month",;
       link: "/services/devops-implementation";
     },;
     {;
-      name: "Database Design & Optimization",;
-      description: "High-performance database architecture and optimization services",;
+      name: "Database Design & Optimization",,
+  description: "High-performance database architecture and optimization services",;
       features: ["Database design", "Performance tuning", "Backup strategies", "Scalability planning"],;
       pricing: "Starting at $2,500/project",;
       link: "/services/database-optimization";
     },;
     {;
-      name: "API Development & Integration",;
-      description: "Custom API development and third-party system integration",;
+      name: "API Development & Integration",,
+  description: "Custom API development and third-party system integration",;
       features: ["RESTful APIs", "GraphQL", "Microservices", "Documentation"],;
       pricing: "Starting at $3,500/project",;
       link: "/services/api-development";
@@ -205,42 +205,41 @@ const ServicesIndex: NextPage = () => {
   ];
   const aiServices = [;
     {;
-      name: "Custom AI Model Development",;
-      description: "Tailored machine learning models for your specific business needs",;
+      name: "Custom AI Model Development",,
+  description: "Tailored machine learning models for your specific business needs",;
       features: ["Custom model training", "Data preprocessing", "Model deployment", "Performance monitoring"],;
       pricing: "Starting at $8,000/project",;
       link: "/services/custom-ai-models";
     },;
     {;
-      name: "Natural Language Processing",;
-      description: "Advanced NLP solutions for text analysis, chatbots, and content generation",;
+      name: "Natural Language Processing",,
+  description: "Advanced NLP solutions for text analysis, chatbots, and content generation",;
       features: ["Text analysis", "Chatbot development", "Content generation", "Sentiment analysis"],;
       pricing: "Starting at $4,500/project",;
       link: "/services/nlp-solutions";
     },;
     {;
-      name: "Computer Vision Solutions",;
-      description: "Image and video analysis with object detection and recognition capabilities",;
+      name: "Computer Vision Solutions",,
+  description: "Image and video analysis with object detection and recognition capabilities",;
       features: ["Object detection", "Image classification", "Video analysis", "Real-time processing"],;
       pricing: "Starting at $6,000/project",;
       link: "/services/computer-vision";
     },;
     {;
-      name: "Predictive Analytics Platform",;
-      description: "Advanced forecasting and predictive modeling for business intelligence",;
+      name: "Predictive Analytics Platform",,
+  description: "Advanced forecasting and predictive modeling for business intelligence",;
       features: ["Time series forecasting", "Risk assessment", "Trend analysis", "Automated insights"],;
       pricing: "Starting at $5,500/month",;
       link: "/services/predictive-analytics";
     },;
     {;
-      name: "AI-Powered Automation",;
-      description: "Intelligent process automation to streamline business operations",;
+      name: "AI-Powered Automation",,
+  description: "Intelligent process automation to streamline business operations",;
       features: ["Process mapping", "Workflow automation", "Decision trees", "Integration capabilities"],;
       pricing: "Starting at $3,000/month",;
       link: "/services/ai-automation";
     }
-  ];
-  return (
+  ];  return (
     <>
       <Head>
         <title>Services - Zion Tech Group</title>
@@ -266,7 +265,6 @@ const ServicesIndex: NextPage = () => {
             </Link>
           </div>
         </section>
-
 
                     Learn More
                   </Link>
@@ -295,7 +293,7 @@ const ServicesIndex: NextPage = () => {
         </section>;
       </main>;
     </div>;
-  );
+  )
 };
 export default ServicesIndex;
 
@@ -507,8 +505,7 @@ export default ServicesIndex;
                   <span className="text-lg font-semibold text-green-600">{service && service.pricing}</span>;
                   <Link href={service && service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">;
 
-      <div className="min-h-screen bg-gray-50">;
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gray-50">;        {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
@@ -555,11 +552,10 @@ export default ServicesIndex;
                   <Link
       </main>;
     </div>;
-  ),;
+  ),
 };
 
 export default ServicesIndex;
       </div>;
     </>;
   );
-

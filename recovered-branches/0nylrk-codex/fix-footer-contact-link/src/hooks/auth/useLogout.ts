@@ -3,8 +3,7 @@ import { cleanupAuthState } from "@/utils/authUtils";
 import type { UserProfile } from "@/types/auth";
 
 import { cleanupAuthState } from "@/utils/authUtils",
-import type { UserProfile } from "@/types/auth",
-export const useLogout = (setUser: (user: UserProfile | null) => void) => {
+import type { UserProfile } from "@/types/auth",export const useLogout = (setUser: (user: UserProfile | null) => void) => {
   const logout = async () => {
     try {
       // Clean up existing auth state
@@ -62,7 +61,6 @@ export const use_logout = (set_user: (user: UserProfile | null) =>: any void) =>
     }
   };
 
-
 import { supabase } from "@/integrations/supabase/client",;
 import { cleanupAuthState } from "@/utils/authUtils",;
 import type { UserProfile } from "@/types/auth",;
@@ -73,17 +71,17 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
       cleanupAuthState(),;
       // Sign out;
       await supabase.auth.signOut({ scope: 'global' }),;
-      // Update state;
-      setUser(null);
+      // Update state;      setUser(null);
     } catch (error) {
       console.error("Error during logout:", error);
     }
   };
-    }
-  }
-    }
-  };
+
+  return { logout }
+};
+
   return { logout }
 }
 
 };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

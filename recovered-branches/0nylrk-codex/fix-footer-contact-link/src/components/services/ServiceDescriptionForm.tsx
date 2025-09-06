@@ -55,10 +55,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
   const [isLoading, setIsLoading] = useState(false),
   
 
-
-
-
-
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -158,10 +154,8 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
               )}
             />;
 
-
             <FormField
               control={form && form.control}
-
 
               control={form.control}
             <FormField

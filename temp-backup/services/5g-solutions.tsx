@@ -12,4 +12,3 @@ export default function 5gsolutions(): any ({ }: 5gsolutionsProps) {;
     </div>;
   );
 
-

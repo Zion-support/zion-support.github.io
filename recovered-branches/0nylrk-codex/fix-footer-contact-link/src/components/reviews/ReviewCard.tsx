@@ -23,8 +23,7 @@ import {
   const [reportReason, setReportReason] = useState("");
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
-import {
-  Dialog,
+import {  Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -60,6 +59,18 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
   const renderStars = (rating?: number) => {
     if (!rating) return null;
 
+    return (
+      <div className="flex">;
+        {[1, 2, 3, 4, 5].map((star) => (;
+          <Star
+            key={star}
+            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+          />;
+        ))}
+
+      </div>
+    )
+};
   const renderStars = (rating?: number) => {
     if (!rating) return null;
 
@@ -68,14 +79,13 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
         {[1, 2, 3, 4, 5].map ((star) => (
           <Star;
             key={star}
-  const getInitials = (name: string) => {
-    return name
-      .split(" ")
-      .map((n) => n[0])
-      .join("")
-      .toUpperCase()
-  return (
-    <div className="border rounded-lg p-4 bg-card">
+            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+          />
+        ))}
+      </div>
+    )
+  },
+      <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">
         <div className="flex items-center gap-3">
           {review.is_anonymous ? (
@@ -93,7 +103,6 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
                 />
               ) : (
                 <AvatarFallback>
-                </AvatarFallback>
               )}
             </Avatar>;
           )}
@@ -103,8 +112,7 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
               {review.is_anonymous
                 ? "Anonymous"
           {renderStars(review.rating)}
-        </div>
-        <div className="flex">{renderStars(review.rating)}</div>
+        </div>        <div className="flex">{renderStars(review.rating)}</div>
       </div>
 
       <div className="mb-4">
@@ -126,7 +134,6 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
               </Badge>
             )}
 
-        <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
@@ -278,12 +285,9 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
 
             )}
 
-
           </div>;
         </div>;
-          </div>;
         </div>;
-
 
       )}
 
@@ -387,11 +391,5 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 }
 }
 ;
-
-  );
-}
-  )
-}
-
 ;
-
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

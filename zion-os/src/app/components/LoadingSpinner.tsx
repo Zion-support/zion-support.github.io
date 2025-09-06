@@ -8,6 +8,9 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
   }
   return (
     <div className={`flex items-center gap-3 ${className}`}>
+
+      <svg 
+
         />
       </svg>
       {text && <span className="text-sm">{text}</span>}
@@ -18,7 +21,7 @@ interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
   text?: string,
   class_name?: string;
-  className?: string;
+=======  className?: string;
 }
 export default /**
  * LoadingSpinner - Function description
@@ -30,7 +33,6 @@ function LoadingSpinner() {
     lg: 'w - 8 h - 8';
   },
   return (
-      >
         <circle 
           className="opacity-25" 
           cx="12" 

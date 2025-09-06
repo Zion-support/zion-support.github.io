@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { ServiceVariant } from '../types/service-variants';
+export interface AdvancedInnovativeService {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
   name: string;
   tagline: string;
@@ -28,11 +41,48 @@
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    website: string;
+  }
+
+  real_implementation: boolean;
+  implementation_details: string;
+  launch_date: string;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    website: string
+  },
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+  market_advantage: string;
+;
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }  mobile: '+1 302 464 0950';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -44,8 +94,18 @@
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'ai-autonomous-devops-orchestrator'
     name: 'AI Autonomous DevOps Orchestrator'
+=======
+  marketAdvantage: string
+}
+
+const contact = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     tagline:
       'Self-healing DevOps with intelligent automation and predictive maintenance'
     price: '$1,299'
@@ -555,13 +615,10 @@
       'Custom model development'
     ]
     marketAdvantage:
-      'Most advanced AI climate prediction platform with research-grade accuracy'
-  }
-];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
-    ];
-    marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
-  }
+      'Most advanced AI climate prediction platform with research-grade accuracy',
+  },
 ];
+<<<<<<< HEAD
 
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },;
@@ -1082,12 +1139,53 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
 
 
 
+<<<<<<< HEAD
 
     ];
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
+=======
+=======
+
+=======
+export interface AdvancedInnovativeService {
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: ServiceVariant,
+  contactInfo: {
+    mobile: string, email: string,
+    address: string,
+    website: string
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number, reviews: number,
+  benefits: string[], capabilities: string[],
+  marketAdvantage: string
+}
+const contact = {
+  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     ];
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },;
@@ -1095,6 +1193,12 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {;
   id: string,;
@@ -1608,8 +1712,16 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
 
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {;
   id: string,;
@@ -1700,6 +1812,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     customers: 89,;
     rating: 4.8,;
     reviews: 67,;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     benefits: [;
       '30% improvement in prediction accuracy',
       '50% reduction in modeling time',
@@ -1719,9 +1832,24 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
   },
 ];      'AI climate modeling_environmental monitoring_weather forecasting_sustainability analytics_custom model development';
     ];
+<<<<<<< HEAD
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
   }
 ];
 ;
+<<<<<<< HEAD
+=======
+=======
+    marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

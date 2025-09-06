@@ -113,7 +113,7 @@ isPopular?: boolean
   country, onSelect, isPopular 
 }: CountryServiceCardProps) {
   //Get region flag based on country name (for demo purposes) const getRegionEmoji = (countryName: string) : string => {
-  return emojiMap[countryName] || emojiMap["default" ];
+  return emojiMap[countryName] || emojiMap["default" ]
 };
 //Get response time estimate based on country return (<Card className= {
   `h-full transition-all duration-300 hover:shadow-lg $ {

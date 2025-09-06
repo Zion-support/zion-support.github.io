@@ -25,7 +25,6 @@ import React from 'react';
 interface HRPlatformProps {
   // Add props here as needed
 
-
 }
 
 export default function HRPlatform({ }: HRPlatformProps) {
@@ -35,6 +34,8 @@ export default function HRPlatform({ }: HRPlatformProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
+}
 :src.pages.disabled/HRPlatform.jsx
 }
 }

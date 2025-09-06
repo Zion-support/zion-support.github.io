@@ -3,5 +3,4 @@ const type { NextPage } from "next"; import Head from "next/head"; import { Brai
 import React from 'react';
 interface AidevelopmentProps {
   // Add props here as needed
-<=
->
+=>

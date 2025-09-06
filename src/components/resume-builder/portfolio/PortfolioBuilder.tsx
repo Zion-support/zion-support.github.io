@@ -1,7 +1,5 @@
+<<<<<<< HEAD
 }
-
-
-  
 
   return (
     <div className="space-y-6">
@@ -20,7 +18,6 @@
           Add Project
         </Button>
       </div>
-      
 
           Add Project
         </Button>
@@ -30,26 +27,42 @@
       {(showAddProject |editingProject) && (
         <Card>
 
-
           <CardContent className='pt-6'>
             <h2 className='text-xl font-semibold mb-6'>
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>
 
-
             <ProjectForm              project={editingProject || undefined}
-
 
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
                 setShowAddProject(false)
                 setEditingProject(null) }}
+=======
+import { useState, useEffect } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { FilePlus, Loader2 } from 'lucide-react';
+import { ProjectCard } from './ProjectCard';
+import { ProjectForm } from './ProjectForm';
+import { PortfolioProject } from '@/types/resume';
+import { usePortfolio } from '@/hooks/usePortfolio';
+
+export function PortfolioBuilder() {
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             <ProjectForm
+              project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
+<<<<<<< HEAD
                 setShowAddProject(false)
                 setEditingProject(null);                setEditingProject(null)
 
+=======
+                setShowAddProject(false);
+setEditingProject(null);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 setEditingProject(null)
           className='gap-2';
           disabled={showAddProject || !!editingProject}        >;
@@ -102,7 +115,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
   const [ showAddProject, setShowAddProject ] = useState(false),
   const [ editingProject, setEditingProject ] = useState<PortfolioProject | null>(null),
 
-  
   useEffect(() => {
     fetchProjects()
   }, [fetchProjects]);
@@ -143,7 +155,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
 
-
         <Button 
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
@@ -158,28 +169,19 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
       {(showAddProject || editingProject) && (
         <Card>
 
-
-
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
-            </h2>
-            
-            <ProjectForm 
-              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {
+
                 setShowAddProject(false);
 
                 setEditingProject(null)
 
               }}
-            />
-          </CardContent>
-        </Card>
-      )}
 
-      
+      )}
+<<<<<<< HEAD
+
       {/* Projects List */}
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -188,7 +190,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
 
               key={project.id}
               project={project}
-
 
             <CardContent>
               <div className="flex flex-col items-center gap-4">
@@ -200,12 +201,47 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
                   Add your best work to showcase your skills and experience to potential employers.
                 </p>
 
-
-
-
                 <Button 
                   onClick={() => setShowAddProject(true)} 
                   className="mt-2"
+=======
+{/* Projects List */}
+      {projects.length > 0 ? (
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+          {projects.map(project => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onEdit={() => setEditingProject(project)}
+              onDelete={handleDeleteProject}
+          {projects.map((project,) => (
+            <ProjectCard
+              key = {project.id,}
+              project = {project,}
+              onEdit = {(,) => setEditingProject(project),}
+              onDelete = {handleDeleteProject,}
+            />
+          ))}
+        </div>
+      ) : (
+        !showAddProject && (
+<Card className='text-center py-12'>
+            <CardContent>
+              <div className='flex flex-col items-center gap-4'>
+                <div className='bg-muted/50 p-6 rounded-full'>
+                  <FilePlus className='h-12 w-12 text-muted-foreground' />
+                </div>
+                <h3 className='text-xl font-medium'>
+                  No portfolio projects yet
+                </h3>
+                <p className='text-muted-foreground max-w-md mx-auto'>
+                  Add your best work to showcase your skills and experience to
+                  potential employers.
+                </p>
+                <Button
+                  onClick={() => setShowAddProject(true)}
+                  className='mt-2'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Add Your First Project
                 </Button>
@@ -214,6 +250,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           </Card>
         )
       )}
+<<<<<<< HEAD
 
                   className='mt-2'                >            <CardContent>;
               <div className="flex flex-col items-center gap-4">;
@@ -288,3 +325,8 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
   );
 }
 ;
+=======
+    </div>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

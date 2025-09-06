@@ -47,4 +47,3 @@ export default function Cloudmigration(): any ({ }: CloudmigrationProps) {;
     </div>;
   );
 
-

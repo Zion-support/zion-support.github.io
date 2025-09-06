@@ -6,6 +6,6 @@ const ServiceCard.js = ({ className }) => {
       <h1>ServiceCard.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

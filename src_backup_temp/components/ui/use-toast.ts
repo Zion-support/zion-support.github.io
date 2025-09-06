@@ -8,7 +8,7 @@ interface ToastOptions {
 }
 export function useToast() {
   const showToast = (&quot;message&quot;: string, options?: ToastOptions) => {
-    return toast(message, options);
-  };
-  return { showToast };
+    return toast(message, options)
+};
+  return { showToast }
 };

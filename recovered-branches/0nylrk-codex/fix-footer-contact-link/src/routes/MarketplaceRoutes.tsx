@@ -23,8 +23,7 @@ import ProjectRoom from "@/pages/ProjectRoom",
 import VideoCall from "@/pages/VideoCall",
 const MarketplaceRoutes = () => {
   return (
-    <Routes>
-  return (
+    <Routes>  return (
     <Routes>;
       {/* Marketplace Routes */}
       <Route path="/marketplace" element={<Marketplace />} />
@@ -62,7 +61,6 @@ const MarketplaceRoutes = () => {
           </ProtectedRoute>
         }
       />
-
       {/* Service Routes */}
       <Route path="/services" element={<ServicesPage />} />
       <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />
@@ -136,20 +134,14 @@ const MarketplaceRoutes = () => {;
           </ProtectedRoute>;
         } ;
       />;
-    </Routes>;
+    </Routes>
 };
 
-
+}
 };
-};
-
-
 
 },
 
-
-export default MarketplaceRoutes;
-  ),;
 },;
 ;
 export default MarketplaceRoutes,; const MarketplaceRoutes = () => {
@@ -189,5 +181,4 @@ export default MarketplaceRoutes,; const MarketplaceRoutes = () => {
 export default MarketplaceRoutes;
   );
 },;
-export default MarketplaceRoutes;
 export default MarketplaceRoutes;

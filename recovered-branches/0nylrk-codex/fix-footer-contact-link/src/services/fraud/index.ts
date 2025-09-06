@@ -1,11 +1,10 @@
 // Index utility
 export const Index = () => {
   // Implementation here
-  return null;
+  return null
 };
 
 export * from './signupCheck';
-
 
 // This file re-exports all fraud detection functionality;
 // to maintain backward compatibility;

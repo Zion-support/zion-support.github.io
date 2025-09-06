@@ -1,5 +1,4 @@
 
-export interface Version {
   major: number;
   minor: number;
   patch: number;
@@ -16,7 +15,7 @@ export function parseVersion(versionString: string): Version {
   };
 }
 
-}
+=======}
 export function nextVersionFor(
   state: MultiverseState,
   entityKey: string

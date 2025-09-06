@@ -13,11 +13,9 @@ import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
 
-
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
-
 
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download  } from '@/components/icons';
@@ -28,8 +26,6 @@ import { FontFamily } from '@/utils/pdf/fontConfig';
 interface PdfExportButtonProps {
   resume: Resume
 }
-
-
 
 export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [isExporting, setIsExporting] = useState(false);
@@ -64,11 +60,6 @@ interface PdfExportButtonProps {;
 
   const [includePortfolio, setIncludePortfolio] = useState(true),
   const [fontFamily, setFontFamily] = useState<FontFamily>('default'),
-
-
-
-
-
 
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
   const handleExport = async () => {
@@ -140,8 +131,6 @@ interface PdfExportButtonProps {;
             <FileText className="h-4 w-4" />;
           )}
 
-
-
 ;
 export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [isExporting, setIsExporting] = useState(false),;
@@ -170,13 +159,13 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
       document.body.removeChild(link),;
       URL.revokeObjectURL(url),;
       toast({;
-        title: "Success!",;
-        description: "Your resume has been downloaded as a PDF."});
+        title: "Success!",,
+  description: "Your resume has been downloaded as a PDF."});
     } catch (error) {;
       console.error('Error exporting PDF:', error),;
       toast({;
-        title: "Export failed",;
-        description: "There was an error exporting your resume to PDF.";
+        title: "Export failed",,
+  description: "There was an error exporting your resume to PDF.";
         variant: "destructive";
       });
     } finally {;
@@ -224,9 +213,6 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
-
-
-
 
 }
 import {useState} from 'react';

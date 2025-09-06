@@ -5,7 +5,6 @@ import {Toaster, as, SonnerToaster} from "sonner";
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
 
-
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
 
@@ -18,8 +17,7 @@ export function Toaster() {
 
 import {Toaster, as, SonnerToaster} from "sonner";
 export function Toaster() {;
-  return (
-    <SonnerToaster
+  return (    <SonnerToaster
       position="top-right"
       toastOptions={{
         className:
@@ -31,8 +29,6 @@ export function Toaster() {;
         duration: 4000
 
         descriptionClassName: "text-zion-slate-light"}}
-
-
 
 import * as React from "react",;
 import { Toaster as SonnerToaster } from "sonner",;
@@ -67,11 +63,9 @@ function Toaster() {
         duration: 4000,
         descriptionClassName: "text - zion - slate - light"}}
     />);
-}
-}
+}}
 
 ;
-
 
     />;
   );

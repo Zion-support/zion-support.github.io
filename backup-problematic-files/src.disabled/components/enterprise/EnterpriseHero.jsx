@@ -24,6 +24,6 @@ const EnterpriseHero = ({ className }) => {
       <h1>EnterpriseHero</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

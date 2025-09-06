@@ -25,13 +25,13 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'; // Async thunk
     ); // Clear localStorage localStorage.removeItem('token');" localStorage.removeItem('user'); return null';
   } catch (error) { return rejectWithValue(error.message);';';
   } }
-    ); // Async thunk for checking auth status export const checkAuthStatus = createAsyncThunk(" 'auth/checkAuthStatus', async (_, { rejectWithValue }) => { try { const token = localStorage.getItem('token'); const user = localStorage.getItem('user'); if (token && user) { return { user JSON.parse(user), token';
-  };';';
+    ); // Async thunk for checking auth status export const checkAuthStatus = createAsyncThunk(" 'auth/checkAuthStatus', async (_, { rejectWithValue }) => { try { const token = localStorage.getItem('token'); const user = localStorage.getItem('user'); if (token && user) { return { user JSON.parse(user), token'
+};';';
   } else {" throw new Error('No auth data found');
   } } catch (error) { return rejectWithValue(error.message);';
   } }
-    ); const initialState = { user: null, token: null, isAuthenticated: false, isLoading: false, error: null';';
-  }; const authSlice = createSlice({" name: 'auth', initialState, reducers: { clearError (state) => { state.error = null
+    ); const initialState = { user: null, token: null, isAuthenticated: false, isLoading: false, error: null';'
+}; const authSlice = createSlice({" name: 'auth', initialState, reducers: { clearError (state) => { state.error = null
   }, setUser: ({ state.user = action.payload) => $3 state.isAuthenticated = !!action.payload
   }, setLoggedIn: (state, action) => { state.isAuthenticated = action.payload
   } }, extraReducers (builder) => { // Login builder .addCase(loginUser.pending, (state) => { state.isLoading = true; state.error = null

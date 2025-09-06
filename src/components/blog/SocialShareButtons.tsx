@@ -1,11 +1,51 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 export function SocialShareButtons({ title }: SocialShareButtonsProps) {
 
   const shareUrl =
   const shareToTwitter = () => {
+=======
+const shareToTwitter = () => {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     window.open(
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
     )
+<<<<<<< HEAD
+=======
+
+import React from 'react';
+import { Button } from '@/components / ui / button';
+import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
+import { toast } from '@/hooks / use - toast';
+interface SocialShareButtonsProps {
+  title: string;
+export /**
+ * SocialShareButtons - Function description
+ */
+function SocialShareButtons() {
+  const share_url =;
+    typeof window !== 'undefined';
+      ? encodeURIComponent (window.location.href);
+      : '';
+  const share_text = encodeURIComponent (title);
+  const shareToTwitter = () =>: any {
+    window.open (
+      `https://twitter.com / intent / tweet?url=${share_url}&text=${share_text}`,
+      '_blank');
+  }
+  const shareToFacebook = () =>: any {
+    window.open (
+      `https://www.facebook.com / sharer / sharer.php?u=${share_url}`,
+      '_blank');
+  }
+  const shareToLinkedIn = () =>: any {
+    window.open (
+      `https://www.linkedin.com / sharing / share - offsite/?url=${share_url}`,
+      '_blank');
+
+  }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const copy_link = () =>: any {
     // Check condition
 if (return) {
@@ -93,6 +133,20 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
           <span>{btn && btn.label}</span>;
         </Button>;
       ))}
+<<<<<<< HEAD
+=======
+
+    </div>;
+  );
+}
+
+}
+
+}
+
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       icon: <Twitter className='h - 4 w - 4' />,
       label: 'Twitter',
       on_click: shareToTwitter,
@@ -128,6 +182,11 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
     </div>);
 }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   },
 
   const shareToFacebook = () => {
@@ -140,10 +199,19 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 
   const copyLink = () => {
     if (typeof window === 'undefined') return,
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
       .catch(() => toast.error('Failed to copy link'))
+<<<<<<< HEAD
+=======
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </div>;
   );
 };
@@ -157,6 +225,16 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
     { icon: <Linkedin className="h-4 w-4" />, label: 'LinkedIn', onClick: shareToLinkedIn },
     { icon: <LinkIcon className="h-4 w-4" />, label: 'Copy Link', onClick: copyLink }],
 
+=======
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react'
+import { toast } from '@/hooks/use-toast';
+interface SocialShareButtonsProps {
+  title: string
+export function SocialShareButtons({ title }: SocialShareButtonsProps) {
+  const shareUrl = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="mt-12 flex flex-wrap gap-2">
       {buttons.map((btn) => (
@@ -198,6 +276,15 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
           <span>{btn.label}</span>;
         </Button>;
       ))}
+<<<<<<< HEAD
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

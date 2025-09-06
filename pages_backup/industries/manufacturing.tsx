@@ -4,8 +4,7 @@ import Layout from '../../components/Layout';
 import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrench, Activity, Database, FileText, Users } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
+import { motion } from 'framer-motion';import Layout from '../../components/Layout';
 const services = [
   {
     title: 'Smart Factory Solutions',
@@ -15,34 +14,42 @@ const services = [
       'Real-time production monitoring,',
       'Automated quality control',',
       'Predictive maintenance',',
-    title: 'Smart Factory Solutions,',;
-    description: 'IoT-enabled manufacturing systems for intelligent production management.,',;
+    title: 'Smart Factory Solutions,',,
+  description: 'IoT-enabled manufacturing systems for intelligent production management.,',;
 import Layout from '../../components/Layout';
 const services = [;
   {;
-    title: 'Smart Factory Solutions',;
-    description: 'IoT-enabled manufacturing systems for intelligent production management.',;
+    title: 'Smart Factory Solutions',,
+  description: 'IoT-enabled manufacturing systems for intelligent production management.',;
     icon: Settings,;
     features: [,;
       'Real-time production monitoring,',;
       'Automated quality control',',;
-      'Predictive maintenance',',;
-      'Supply chain integration'';
+      'Predictive maintenance',',;      'Cost optimization'';
     ];
   },
   {}
-      'Cost optimization'';
-    ];
-  },
-  {}
+    title: 'IoT Sensor Networks,',
+    description: 'Connected sensor systems for comprehensive factory monitoring.,',
+    icon: Cpu,
+    features: [;
+      'Environmental monitoring,',
+      'Equipment status tracking',',
+      'Data collection systems',',
       'Real-time alerts'';
     ];
   },
   {}
-      'Automated reporting'';
     ];
   },
   {}
+    title: 'Supply Chain Optimization,',
+    description: 'AI-driven supply chain management for improved efficiency.,',
+    icon: BarChart3,
+    features: [;
+      'Demand forecasting,',
+      'Inventory optimization',',
+      'Supplier management',',
       'Logistics coordination'';
     ];
   },
@@ -50,10 +57,9 @@ const services = [;
 ;];
 const benefits = [;
   {}
-    title: 'Increased Efficiency,',;
-    description: 'Automated processes and AI optimization improve production efficiency.,',;
-    icon: Activity;
-  {}
+    title: 'Increased Efficiency,',,
+  description: 'Automated processes and AI optimization improve production efficiency.,',;
+    icon: Activity;  {}
     title: 'Reduced Downtime,',
     description: 'Predictive maintenance prevents unexpected equipment failures.,',
     icon: Wrench;
@@ -104,28 +110,7 @@ export default function ManufacturingPage() {;
               </div>;
             </motion && motion.div>;
           </div>;
-        </section>;
-];
-export default function ManufacturingPage() {
-  return (
-    <Layout
-      title="Manufacturing Technology Solutions - Zion Tech Group"
-      description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."
-      keywords="manufacturing technology, smart factory, IoT manufacturing, predictive maintenance, digital twin, Industry 4.0"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-center mb-16"
+        </section>;              className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Manufacturing Technology Services
@@ -152,48 +137,7 @@ export default function ManufacturingPage() {
                   <ul className="space-y-3">";
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                  <ul className="space-y-3">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>,
-                    ))}
-                  </ul>,
-                </motion.div>;
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Benefits Section */}
-        <section className="py-20 bg-gray-50">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16""
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Why Choose Our Manufacturing Solutions?;
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Our manufacturing technology solutions deliver measurable improvements in efficiency, 
-                quality, and cost reduction.,
-              </p>;
-            </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
-              {benefits.map((benefit, index) => (,
-                <motion.div}),
-              className="text-center mb-16"
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";              className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Our Manufacturing Solutions?
@@ -420,48 +364,3 @@ export default function ManufacturingPage() {
         </section>;
       </div>;
     </Layout>;
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Ready to Transform Manufacturing?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Let our manufacturing technology experts help you implement Industry 4.0 solutions
-                that improve efficiency and reduce costs.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Start Your Manufacturing Project
-                </Link>
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  Learn About Our Expertise
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
-            >;
-              <h2 className="text-4xl md: text-5xl font-bold mb-6">;
-                Ready to Transform Manufacturing?;
-              </h2>;
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;
-                Let our manufacturing technology experts help you implement Industry 4 && 4.0 solutions;
-                that improve efficiency and reduce costs.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
-                  Start Your Manufacturing Project;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
-                  Learn About Our Expertise;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-  ),;
-}

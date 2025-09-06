@@ -1,13 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{js,ts,jsx,tsx}'
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
         primary: {
           50: '#eff6ff',
           500: '#3b82f6',
@@ -128,12 +128,13 @@ module.exports = {
       borderRadius: {
         '4xl': '2rem',
         '5xl': '2.5rem'
+=======
+        'zion-slate-dark': '#1e293b',
+        'zion-slate': '#334155',
+        'zion-slate-light': '#475569',
+>>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
-  ],
-};
+  plugins: [],
+}

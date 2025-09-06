@@ -1,5 +1,18 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const r = null;
+    res.status(200).json({ summary, timestamp: new Date().toISOString() })
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+    const r = await fetch(
+      `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.host}/api/metrics`
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     );
     const metrics = await r && r.json();
     const jobs24 =
@@ -20,6 +33,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       `Multiverse scale: ${instances} active sub-instances with cross-instance flows`
       `Treasury stable and contributors earning consistently across regions`
     ];
+<<<<<<< HEAD
 ;
 export default async /**
  * handler - Function description
@@ -50,7 +64,13 @@ function handler() {
     ];
 ;
     res.status (200).json ({ summary, timestamp: new Date ().toISOString () });
+=======
+    res.status(200).json({ summary, timestamp: new Date().toISOString() });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {
     res.status (200).json ({ summary: [], error: 'Failed to compute summary' });
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

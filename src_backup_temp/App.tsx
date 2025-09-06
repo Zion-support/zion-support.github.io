@@ -41,7 +41,7 @@ const createLazyComponent = ("importFn": "() => Promise<any>", fallback?: "React
     <Suspense fallback={fallback || <LoadingSpinner />"}>;
       <LazyComponent {...props} />;
     </Suspense>;
-  );
+  )
 };
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
@@ -793,7 +793,7 @@ export default function App() {
         </div>
       </Router>
     </ErrorBoundary>
-  );';
+  );'
 };';;';
     </EnhancedErrorBoundary>
   );

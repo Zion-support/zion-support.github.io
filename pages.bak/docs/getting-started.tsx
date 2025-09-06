@@ -4,8 +4,6 @@ import React from 'react';
 interface GettingstartedProps {
   // Add props here as needed
 
-
-
 export default function Gettingstarted({ }: GettingstartedProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -47,8 +45,7 @@ export default function Gettingstarted(): any ({ }: GettingstartedProps) {;
       <h1>Gettingstarted</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-  );
-import React from 'react';
+  );import React from 'react';
 import React from 'react';
 import * as React from 'react';
 
@@ -62,6 +59,5 @@ export default function Gettingstarted({ }: GettingstartedProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
-}
-}
+}}
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

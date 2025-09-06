@@ -10,6 +10,6 @@ const Login.test: React.FC<Login.testProps> = ({ className }) => {
       <h1>Login.test</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

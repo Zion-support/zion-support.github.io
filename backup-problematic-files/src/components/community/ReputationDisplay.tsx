@@ -60,7 +60,7 @@ size = 'md' ;
 const nextMilestone = (currentLevel + 1) * 100;
 const progress = ( (reputation % 100) /100) * 100;
 sm: {;
-  </div> </div>) ;
+  </div> </div>) 
 };
 export default ReputationDisplay;
 '

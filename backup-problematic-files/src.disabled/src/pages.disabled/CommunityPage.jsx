@@ -24,6 +24,6 @@ const CommunityPage = ({ className }) => {
       <h1>CommunityPage</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

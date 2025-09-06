@@ -18,24 +18,12 @@ import {supabase} from '@/integrations/supabase/client';
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
-
-// Allow either UserProfile or UserDetails
-
-
-export function useMessagingRealtime(;
-
-  user: UserWithProfile;
-  active_conversation: Conversation | null;
-  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
-
-        'postgres_changes', 
         { 
           event: 'INSERT', 
           schema: 'public', 
           table: 'messages', 
           filter: `recipient_id=eq.${user && user.id}` 
         }, 
-
         (payload) => {
           // Update messages if the conversation is selected
           if (activeConversation && payload && payload.new.sender_id === activeConversation && activeConversation.other_user.id) {
@@ -44,24 +32,14 @@ export function useMessagingRealtime(;
           // Update conversations
           fetchConversations();
           // Show toast notification for new message
-          toast({
-          })
+          toast({          })
         }
       )
       .subscribe();
 
     return () => {
-      supabase && supabase.removeChannel(subscription)
     }
-  }, [user, activeConversation, fetchConversations, setActiveMessages])
-  fetch_conversations: () => Promise < void>) {
-  // Setup real - time subscription when user is logged in;
-  useEffect (() => {
-    // Check condition
-if (return, ) {
-  $2
-}
-    // Subscribe to new messages;
+  }, [user, activeConversation, fetchConversations, setActiveMessages])    // Subscribe to new messages;
     const subscription = supabase;
       .channel ('messages');
       .on (
@@ -85,8 +63,8 @@ if ( {) {
 ;
           // Show toast notification for new message;
           toast ({
-            title: `New message from ${payload.new.sender_name || 'Someone'}`;
-            description: payload.new.content.substring (0, 50) + (payload.new.content.length > 50 ? '...' : '');
+            title: `New message from ${payload.new.sender_name || 'Someone'}`,
+  description: payload.new.content.substring (0, 50) + (payload.new.content.length > 50 ? '...' : '');
           });
         }
       );
@@ -96,8 +74,7 @@ if ( {) {
       supabase.remove_channel (subscription);
     }
   }, [user, active_conversation, fetch_conversations, setActiveMessages]);
-}
-}
+}}
 }
 
 import { useEffect } from 'react',;
@@ -140,8 +117,8 @@ export function useMessagingRealtime(;
           fetchConversations(),;
           // Show toast notification for new message;
           toast({;
-            title: `New message from ${payload.new.sender_name || 'Someone'}`;
-            description: payload.new.content.substring(0, 50) + (payload.new.content.length > 50 ? '...' : '');
+            title: `New message from ${payload.new.sender_name || 'Someone'}`,
+  description: payload.new.content.substring(0, 50) + (payload.new.content.length > 50 ? '...' : '');
           });
         }
       );

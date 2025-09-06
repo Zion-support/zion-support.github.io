@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className='enhanced-card flex items-center justify-between'>import React from 'react';
 import React from 'react';
@@ -12,12 +16,15 @@ const ReviewSummary: React.FC < Props> = ({ summary }) => {
 import type { ReviewsSummary } from '../../types / reviews';
 import StarRating from './StarRating';
 import {Star} from 'lucide-react';
+<<<<<<< HEAD
 
 type Props = {;
   summary: ReviewsSummary;
 
 const ReviewSummary: React.FC<Props> = ({ summary }) => {;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className='enhanced-card flex items-center justify-between'>;
       <div>;
@@ -37,6 +44,7 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 
 };
 
@@ -45,16 +53,40 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
     <div className="enhanced-card flex items-center justify-between">
       <div>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="flex items-center gap-3">
           <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>
           <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />
         </div>
         <div className="text-sm text-gray-600 mt-1">
           <span className="mr-3">{summary.totalReviews} reviews</span>
+=======
+import React from 'react';
+import type { ReviewsSummary } from '../../types/reviews';
+import StarRating from './StarRating';
+type Props = any;
+export default ReviewSummary;
+      <div>
+        <div className='flex items-center gap-3'>
+          <span className='text-2xl font-semibold'>
+            {summary.averageRating.toFixed(1)}
+          </span>
+          <StarRating
+            value={Math.round(summary.averageRating)}
+            onChange={() => {}}
+            readOnly
+          />
+        </div>
+        <div className='text-sm text-gray-600 mt-1'>
+          <span className='mr-3'>{summary.totalReviews} reviews</span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           <span>{summary.totalCompletedProjects} completed projects</span>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 };
 
@@ -76,9 +108,16 @@ export default ReviewSummary;  );
 
 };
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ReviewSummary;
 
 
+=======
+=======
+};
+
+export default ReviewSummary;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   summary: ReviewsSummary;
 const ReviewSummary: React.FC < Props> = ({ summary }) => {
   return (
@@ -119,3 +158,13 @@ export default ReviewSummary);
 ;
 export default ReviewSummary;
 ;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+);
+};
+
+export default ReviewSummary;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

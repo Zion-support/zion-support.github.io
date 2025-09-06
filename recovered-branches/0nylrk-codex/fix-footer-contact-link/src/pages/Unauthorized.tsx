@@ -9,8 +9,7 @@ import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer";
 import { ShieldAlert } from "lucide-react";
 import { Footer } from "@/components/Footer",
-import { ShieldAlert } from "lucide-react",
-export default function Unauthorized() {
+import { ShieldAlert } from "lucide-react",export default function Unauthorized() {
   return (
     <>
       <Header />
@@ -74,10 +73,6 @@ export default function Unauthorized() {;
       </div>;
       <Footer />;
     </>);
-}
-}
+}}
 ;
 
-
-    </>);
-}

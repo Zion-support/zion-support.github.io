@@ -32,6 +32,7 @@
       </ul>
     </div>
   );
+<<<<<<< HEAD
 export async function getStaticProps() {;
   try{;
     const p = path && path.join(process && process.cwd(),'datagovernanceproposals && datagovernanceproposals.json');
@@ -47,3 +48,5 @@ export async function getStaticProps() {;
     return { props: { data: { updated_at: null, proposals: [] } } }
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

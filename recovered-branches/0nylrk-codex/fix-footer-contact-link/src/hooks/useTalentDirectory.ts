@@ -1,48 +1,10 @@
+
 import { useAuthStatus } from "./talent/useAuthStatus",
 import { useTalentData } from "./talent/useTalentData",
 import { useFilterTalents } from "./talent/useFilterTalents";
 import { useUIState } from "./talent/useUIState";
 export function useTalentDirectory() {
-  // Fetch auth status and saved talents
-import { useAuthStatus } from './talent / useAuthStatus';
-import { useTalentData } from './talent / useTalentData';
-import { useFilterTalents } from './talent / useFilterTalents';
-import { useUIState } from './talent / useUIState';
-export /**
- * useTalentDirectory - Function description
- */
-function useTalentDirectory() {
-  // Fetch auth status and saved talents;
-
-  const {
-    is_authenticated;
-    user_details,
-    saved_talents,
-    handleToggleSave;
-  } = useAuthStatus ();
-;
-  // Fetch talent data;
-  const {
-    isMobileFilterOpen;
-    setIsMobileFilterOpen;
-    isHireModalOpen;
-    setIsHireModalOpen;
-
-    expanded_sections;
-
-
-  // Manage UI state
-  const {
-    isMobileFilterOpen,
-    setIsMobileFilterOpen,
-    isHireModalOpen,
-    setIsHireModalOpen,
-    selectedTalent,
-    setSelectedTalent,
-    expandedSections,
-    toggleSection
-
-  } = useUIState(),
+  // Fetch auth status and saved talents  } = useUIState(),
 
   return {
     // Talents and loading state
@@ -78,7 +40,6 @@ function useTalentDirectory() {
     savedTalents,
     
 
-
     // Actions
     toggleSkill;
     toggleAvailability;
@@ -87,8 +48,7 @@ function useTalentDirectory() {
     toggleSection;
     handleToggleSave
 
-    expanded_sections;
-import { useAuthStatus } from "./talent/useAuthStatus",;
+    expanded_sections;import { useAuthStatus } from "./talent/useAuthStatus",;
 import { useTalentData } from "./talent/useTalentData",;
 import { useFilterTalents } from "./talent/useFilterTalents",;
 import { useUIState } from "./talent/useUIState",;
@@ -175,7 +135,6 @@ export function useTalentDirectory() {;
 }
 ;
 
-
   }
 }
 ;
@@ -192,7 +151,6 @@ export function useTalentDirectory() {;
     toggle_section;
     handleToggleSave;
   }
-}
-  }
+}  }
 }
 ;

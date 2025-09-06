@@ -11,8 +11,7 @@ import CreateTalentProfile from "../pages/CreateTalentProfile",
 import ProfilePage from "../pages/ProfilePage",
 const TalentRoutes = () => {
   return (
-    <Routes>
-  return (
+    <Routes>  return (
     <Routes>;
       {/* Talent Routes */}
       <Route path="/talent" element={<TalentDirectory />} />
@@ -36,18 +35,14 @@ const TalentRoutes = () => {
       />
       <Route path="/profile/:id" element={<ProfilePage />} />
     </Routes>
-  );
+  )
 };
-
-
-
 
 const TalentRoutes = () => {
 const TalentRoutes = () => {;
   return (
     <Routes>;
       {/* Talent Routes */}
-
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '../components / ProtectedRoute';
 import TalentDirectory from "../pages / TalentDirectory";
@@ -84,24 +79,4 @@ const TalentRoutes = () =>: any {
 }
 ;
 export default TalentRoutes;
-  ),;
-},;
-;export default TalentRoutes,
- const TalentRoutes = () => {
-  return (<Routes> {
-  /* Talent Routes */ 
-}<Route path="/talent" element= {
-  <TalentDirectory /> 
-}/> <Route path="/talents" element= {
-  <TalentsPage /> 
-}/> <Route path="/talent/:id" element= {
-  <TalentProfilePage /> 
-}/> <Route path="/saved-talents" element= {
-  <ProtectedRoute> 
-}/> <Route <CreateTalentProfile /> </ProtectedRoute> 
-}/> </Routes>) 
-};
-export default TalentRoutes;
-  );
-},;
-export default TalentRoutes;
+;

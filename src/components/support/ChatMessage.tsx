@@ -1,7 +1,21 @@
+<<<<<<< HEAD
+=======
+import React, { useMemo } from 'react';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { cn } from '@/lib/utils';
+import { format } from 'date-fns';
+// Use the wrapper hook so TypeScript properly infers the return type
+// from the ThemeProvider context
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { useTheme } from "@/hooks/useTheme";
+<<<<<<< HEAD
 interface ChatMessageProps {;
+=======
+interface ChatMessageProps {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   message: string;
   isUser: boolean;
+<<<<<<< HEAD
 
   timestamp: Date;
 
@@ -49,6 +63,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 
       <div
         className={cn(
+<<<<<<< HEAD
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
       </Avatar>
 
@@ -355,3 +370,12 @@ function formatMessageWithLinks (message: string): string {
   return formatted_message; return formatted_message;
 }
 ;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  timestamp: Date
+export const ChatMessage: React.FC<ChatMessageProps> = ({
+  );
+
+  return formattedMessage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

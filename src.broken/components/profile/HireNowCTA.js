@@ -86,8 +86,7 @@ export function HireNowCTA("props": "any) {;
       </CardContent>;
     </Card>)}
 ;
-export default HireNowCTA;
-import React, { useState } from 'react';
+export default HireNowCTA;import React, { useState } from 'react';
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     const [isFormOpen, setIsFormOpen] = useState(false);
     const [formData, setFormData] = useState({
@@ -100,8 +99,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     );
     const handleSubmit = (props: any) => {
     });
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleSubmit = (e) => {        e.preventDefault();
         if (onHire) {
             onHire(formData);
         }
@@ -116,14 +114,13 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         setIsFormOpen(false)};
             message: ''
         });
-        setIsFormOpen(false);
-    };
-    const handleChange = (e) => {
+        setIsFormOpen(false)
+};    const handleChange = (e) => {
         setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value
-        }));
-    };
+        }))
+};
     return (<Card className="bg-zion-blue-light border-zion-blue-lighter">
       <CardHeader>
         <CardTitle className="text-white flex items-center gap-2">
@@ -185,5 +182,4 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
           </form>)}
       </CardContent>
     </Card>);
-}
 }

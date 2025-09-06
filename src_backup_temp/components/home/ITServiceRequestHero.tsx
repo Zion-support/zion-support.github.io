@@ -25,8 +25,8 @@
       "transition": "{;
         "duration": 0.6",;
         "staggerChildren": "0.2;
-      "};
-    };
+      "}
+};
   };
 ;
   const itemVariants = {;
@@ -36,8 +36,8 @@
     "visible": "{;
       "opacity": 1",;
       "y": "0",;
-      "transition": "{ "duration": 0.5 "};
-    };
+      "transition": "{ "duration": 0.5 "}
+};
   };
 ;
   const features = [{ icon: Cloc k, text: "24/7 Availability", color: "text-zion-cyan" },;
@@ -63,8 +63,8 @@ import { motion  } from 'framer-motion';
       transition: {
         duration: 0.6,
         staggerChildren: 0.2
-      };
-    };
+      }
+};
   };
   const itemVariants = {
   hidden: { opacity: 0,
@@ -73,8 +73,8 @@ import { motion  } from 'framer-motion';
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5 };
-    };
+      transition: { duration: 0.5 }
+};
   };
   const features = [{ icon: Cloc k, text: "24/7 Availability", color: "text-zion-cyan" },
     { icon: Glob e, text: "Global Coverage", color: "text-zion-purple" },

@@ -25,7 +25,6 @@ import React from 'react';
 interface PostJobProps {
   // Add props here as needed
 
-
 }
 
 export default function PostJob({ }: PostJobProps) {
@@ -35,6 +34,8 @@ export default function PostJob({ }: PostJobProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
+}
 :src.pages.disabled/PostJob.jsx
 }
 }

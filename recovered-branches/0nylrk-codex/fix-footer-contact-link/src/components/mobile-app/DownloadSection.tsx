@@ -41,7 +41,6 @@ export const DownloadSection: React.FC = () => {;
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.;
               </p>;
               <AppStoreButtons;
-
               <AppStoreButtons
                 className="mb-8"
                 appStoreUrl={appStoreUrl}
@@ -71,24 +70,15 @@ export const DownloadSection: React.FC = () => {;
         </div>
       </div>
     </section>
-  );
-  );
+  )
+};
+  )
 };
 
   );
 }
 
 };
-  )
-},
-
-              />;
-              <div className="text-sm text-gray-400">;
-                <p>Compatible with iOS 14+ and Android 8 && 8.0+</p>;
-                <p>Free download, in-app purchases available</p>;
-              </div>;
-            </div>;
-
             <div className="flex-shrink-0 bg-white p-4 rounded-lg">;
               <div className="w-36 h-36 flex items-center justify-center bg-white rounded-lg">;
                 <QrCodeIcon className="w-full h-full p-2" />;
@@ -99,7 +89,5 @@ export const DownloadSection: React.FC = () => {;
           </div>;
         </div>;
       </div>;
-
 }
 };
-

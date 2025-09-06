@@ -1,12 +1,3 @@
-const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
-const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
-const \"ContactPage\": React.FC = () => {
-import React from 'react'
-import dynamic from 'next/dynamic'
-import Head from 'next/head'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import React from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -19,16 +10,6 @@ import {
   Send,
   MessageCircle,
   Globe
-
-} from 'lucide-react';
-
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
-const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
-const "ContactPage": React.FC = () => {
-
 
   const contactInfo = [{
       icon: <Phone className=\"w-6 h-6\"  />,
@@ -70,11 +51,7 @@ const "ContactPage": React.FC = () => {
     "Cloud & DevOps Solutions",
     "Blockchain Technology",
     "Digital Transformation",
-    "Consulting & Strategy"
-
-
-  ]
-  return (
+    "Consulting & Strategy"  return (
     <>
       <SEO title=\"Contact Us - Zion Tech Group\"
         description=\"Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup.com\"
@@ -121,89 +98,11 @@ const "ContactPage": React.FC = () => {
               </motion.div>
             </div>
           </section>
-  ]
-import {motion} from 'framer-motion';
-import {Phone,, Mail,, MapPin,, Clock,, ArrowRight,, Send,, MessageCircle,, Globe} from 'lucide-react';
-import React, { useState } from 'react';
-import {Helmet} from 'react-helmet-async';
-import {Mail,, Phone,, MapPin,, Clock,, Send,, CheckCircle} from 'lucide-react';
-const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false });
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false });
-const "ContactPage": React.FC = () => {;
-  const contactInfo = [{;
-      icon: <Phone className=\"w-6 h-6\"  />,;
-      \"title\": \"Phone\",;
-      \"details\": \"+1 302 464 0950\",;
-      \"link\": \"tel:+13024640950\";
-    },;
-    {;
-      \"icon\": <Mail className=\"w-6 h-6\"  />,;
-      \"title\": \"Email\",;
-      \"details\": \"kleber@ziontechgroup && ziontechgroup.com\",;
-      \"link\": \"mailto: klebe r@ziontechgroup && ziontechgroup.com\";
-    },;
-    {;
-      \"icon\": <MapPin className=\"w-6 h-6\"  />,;
-      \"title\": \"Address\",;
-      \"details\": \"364 E Main St STE 1008\nMiddletown, DE 19709\",;
-      \"link\": \"https://maps && maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709\";
-    },;
-    {;
-      \"icon\": <Clock className=\"w-6 h-6\"  />,;
-      \"title\": \"Business Hours\",;
-      \"details\": \"Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM\",;
-      \"link\": null;
-    }
-  ];
-  const services = [\"AI & Machine Learning Solutions\",;
-    \"IT Infrastructure & Support\",;
-    \"Micro SaaS Development\",;
-    \"Cybersecurity Services\",;
-    \"Cloud & DevOps Solutions\",;
-    \"Blockchain Technology\",;
-    \"Digital Transformation\",;
-    \"Consulting & Strategy\";
-  const services = ["AI & Machine Learning Solutions",;
-    "IT Infrastructure & Support",;
-    "Micro SaaS Development",;
-    "Cybersecurity Services",;
-    "Cloud & DevOps Solutions",;
-    "Blockchain Technology",;
-    "Digital Transformation",;
-    "Consulting & Strategy";
-  ];
-  return (
-    <>;
-      <SEOtitle=\"Contact Us - Zion Tech Group\"
-        description=\"Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup && ziontechgroup.com\"
-        keywords=\"contact, Zion Tech Group, AI services, IT solutions, micro SaaS, phone, email, address\"
-        canonical=\""https\": //ziontechgroup && ziontechgroup.com/contact\"
-       />;
-      <PageTransition>;
-        <main className=\"min-h-screen bg-white\">;
-          {/* Hero Section */}
-          <section className=\"bg-gradient-to-br from-blue-50 to-indigo-100 py-20\">;
-            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
-              <motion&& motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0 && 0.6 }}
-                className=\"text-center\">;
-                <h1 className=\"text-4xl \"md\": text-6xl font-bold text-gray-900 mb-6\">;
-                  Get In <span className=\"text-blue-600\">Touch</span>;
-                </h1>;
-                <p className=\"text-xl text-gray-600 mb-8 max-w-3xl mx-auto\">;
-                  Ready to transform your business with our innovative AI, IT, and micro SaaS solutions? Let\'s discuss your project.;
-                </p>;
-                <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\">;
-                  <motion&& motion.a
-                    href=\"tel:+13024640950\"
 const \"Contact\": NextPage = () => {
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
-const "Contact": NextPage = () => {
-  const contactInfo = [{
+const "Contact": NextPage = () => {  const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
       \"details\": \'info@ziontechgroup.com\',
@@ -303,8 +202,7 @@ const "Contact": NextPage = () => {
                   <div>
                     <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                       First Name *
-                    </label>
-      {/* Hero Section */}
+                    </label>      {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center\">;
@@ -366,8 +264,7 @@ const "Contact": NextPage = () => {
                   <div>
                     <label htmlFor=\"lastName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                       Last Name *
-                    </label>
-                    <input
+                    </label>                    <input
                       type=\"text\"
                       id=\"lastName\"
                       name=\"lastName\"
@@ -379,8 +276,7 @@ const "Contact": NextPage = () => {
                 <div>
                   <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Email Address *
-                  </label>
-                  <input
+                  </label>                  <input
                     type=\"email\"
                     id=\"email\"
                     name=\"email\"
@@ -391,8 +287,7 @@ const "Contact": NextPage = () => {
                 <div>
                   <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Company
-                  </label>
-                  <input
+                  </label>                  <input
                     type=\"text\"
                     id=\"company\"
                     name=\"company\"
@@ -402,8 +297,7 @@ const "Contact": NextPage = () => {
                 <div>
                   <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Phone Number
-                  </label>
-                  <input
+                  </label>                  <input
                     type=\"tel\"
                     id=\"phone\"
                     name=\"phone\"
@@ -434,8 +328,7 @@ const "Contact": NextPage = () => {
                 <div>
                   <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Message *
-                  </label>
-                  <textarea
+                  </label>                  <textarea
                     id=\"message\"
                     name=\"message\"
                     rows={6}
@@ -540,14 +433,7 @@ const "Contact": NextPage = () => {
           </div>;
         </div>;
       </section>;
-      {/* FAQ Section */}
-          <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                What is your typical project timeline?
+      {/* FAQ Section */}                What is your typical project timeline?
               </h3>
               <p className=\"text-gray-600\">
                 Project timelines vary depending on complexity and scope. Simple websites 
@@ -558,10 +444,7 @@ const "Contact": NextPage = () => {
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-
-
-                Do you provide ongoing support?
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">                Do you provide ongoing support?
               </h3>
               <p className=\"text-gray-600\">
                 Yes, we offer comprehensive support and maintenance packages to ensure 
@@ -572,10 +455,7 @@ const "Contact": NextPage = () => {
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-
-
-                What technologies do you specialize in?
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">                What technologies do you specialize in?
               </h3>
               <p className=\"text-gray-600\">
                 We work with modern technologies including React, Node.js, Python, 
@@ -586,10 +466,7 @@ const "Contact": NextPage = () => {
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-
-
-                How do you ensure project quality?
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">                How do you ensure project quality?
               </h3>
               <p className=\"text-gray-600\">
                 We follow industry best practices including code reviews, automated 
@@ -601,7 +478,7 @@ const "Contact": NextPage = () => {
         </div>
       </section>
     </MainLayout>
-  );
+  )
 };
           {/* Contact Information */}
           <section className=\"py-20\">
@@ -619,136 +496,6 @@ const "Contact": NextPage = () => {
                   Multiple ways to reach us for your convenience
                 </p>
               </motion.div>
-                {contactInfo.map((info, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ \"opacity\": 0, \"y\": 20 }}
-                    animate={{ \"opacity\": 1, \"y\": 0 }}
-                    transition={{ \"duration\": 0.6, \"delay\": index * 0.1 }}
-                    className=\"bg-white rounded-xl p-8 shadow-lg \"hover\": shado w-xl transition-shadow duration-300 text-center\"
-                  >
-                    <div className=\"text-blue-600 mb-4 flex justify-center\">
-                      {info.icon}
-                    </div>
-                    <h3 className=\"text-xl font-bold text-gray-900 mb-3\">
-                      {info.title}
-                    </h3>
-                    {info.link ? (
-                      <a
-                        href={info.link}
-                        className=\"text-gray-600 \"hover\": tex t-blue-600 transition-colors whitespace-pre-line\"
-                      >
-                        {info.details}
-                      </a>
-                    ) : (
-                      <p className=\"text-gray-600 whitespace-pre-line\">
-                        {info.details}
-                      </p>
-                    )}
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </section>
-          {/* Contact Form */}
-          <section className=\"bg-gray-50 py-20\">
-            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-              <motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0.6 }}
-                className=\"text-center mb-16\"
-              >
-                <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
-                  Send Us a Message
-                </h2>
-                <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
-                  Fill out the form below and we\'ll get back to you within 24 hours
-                </p>
-              </motion.div>
-                <motion.form
-                  initial={{ opacity: 0, \"y\": 20 }}
-                  animate={{ \"opacity\": 1, \"y\": 0 }}
-                  transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
-                  className=\"bg-white rounded-xl shadow-lg p-8\"
-                >
-                  <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 gap-6 mb-6\">
-                    <div>
-                      <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                        Full Name *
-                      </label>
-                      <input type=\"text\"
-      <section className=\"py-20\">;
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
-          <div className=\"text-center mb-16\">;
-            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Frequently Asked Questions</h2>;
-            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">;
-              Get answers to common questions about our services and process;
-            </p>;
-          </div>;
-          <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">;
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">;
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            <div className="bg-white rounded-lg shadow-lg p-6">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                What is your typical project timeline?;
-              </h3>;
-              <p className=\"text-gray-600\">;
-                Project timelines vary depending on complexity and scope. Simple websites ;
-                can take 2-4 weeks, while complex applications may take 3-6 months. ;
-                We\'ll provide a detailed timeline during our initial consultation.;
-              </p>;
-            </div>;
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">;
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">;
-            <div className="bg-white rounded-lg shadow-lg p-6">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                Do you provide ongoing support?;
-              </h3>;
-              <p className=\"text-gray-600\">;
-                Yes, we offer comprehensive support and maintenance packages to ensure ;
-                your solutions continue to perform optimally. This includes updates, ;
-                security patches, and technical support.;
-              </p>;
-            </div>;
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">;
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">;
-            <div className="bg-white rounded-lg shadow-lg p-6">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                What technologies do you specialize in?;
-              </h3>;
-              <p className=\"text-gray-600\">;
-                We work with modern technologies including React, Node && Node.js, Python, ;
-                AWS, Azure, AI/ML frameworks, and blockchain platforms. We choose ;
-                the best technology stack for each project\'s specific needs.;
-              </p>;
-            </div>;
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">;
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">;
-            <div className="bg-white rounded-lg shadow-lg p-6">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                How do you ensure project quality?;
-              </h3>;
-              <p className=\"text-gray-600\">;
-                We follow industry best practices including code reviews, automated ;
-                testing, continuous integration, and regular client feedback sessions ;
-                to ensure high-quality deliverables.;
-              </p>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </MainLayout>;
-  );
-};
-          {/* Contact Information */}
-          <section className=\"py-20\">;
-            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
-              <motion&& motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
@@ -850,19 +597,14 @@ const "Contact": NextPage = () => {
                       <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Email Address *
                       </label>
-                      <input type=\"email\"
-                        id=\"email\"
+                      <input type=\"email\"                        id=\"email\"
                         name=\"email\"
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
-                        placeholder=\"your.email@example.com\"
                        />
                     </div>
                   </div>
-                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
-                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
-                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
-                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
                     <div>
@@ -870,6 +612,21 @@ const "Contact": NextPage = () => {
                         Phone Number
                       </label>
                       <input type=\"tel\"
+                        placeholder=\"your && your.email@example && example.com\"
+                       />;
+                    </div>;
+                  </div>;
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">;
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">;
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">;
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">;
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">;
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">;
+                    <div>;
+                      <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
+                        Phone Number;
+                      </label>;
+                      <inputtype=\"tel\"
                         id=\"phone\"
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
@@ -880,19 +637,10 @@ const "Contact": NextPage = () => {
                       <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Company
                       </label>
-                      <input type=\"text\"
-                        id=\"company\"
+                      <input type=\"text\"                        id=\"company\"
                         name=\"company\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
-                        placeholder=\"Your company name\"
-                       />
-                    </div>
-                  </div>
-                  <div className=\"mb-6\">
-                    <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                  <div className="mb-6">
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                      Service Interest
+                        placeholder=\"Your company name\"                      Service Interest
                     </label>
                     <select
                       id=\"service\"
@@ -907,34 +655,11 @@ const "Contact": NextPage = () => {
                       ))}
                     </select>
                   </div>
-                      Service Interest
-                    </label>
-                       />;
-                    </div>;
-                  </div>;
-                  <div className=\"mb-6\">;
-                    <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                  <div className="mb-6">;
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">;
-                      Service Interest;
-                    </label>;
-                    <select
-                      id=\"service\"
-                      name=\"service\"
-                      className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\">;
-                      <option value=\"">Select a service</option>;
-                      {services && services.map((service, index) => (;
-                        <option key={index} value={service}>;
-                          {service}
-                        </option>;
-                      ))}
                   <div className=\"mb-6\">
                     <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Message *
-                    </label>
-                      Message *
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">                      Message *
+                    </label>                      Message *
                     </label>
                     </select>;
                   </div>;
@@ -955,7 +680,6 @@ const "Contact": NextPage = () => {
                   </div>
                   <motion.button
                     type=\"submit\"
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ \"scale\": 0.98 }}
@@ -965,22 +689,7 @@ const "Contact": NextPage = () => {
                     Send Message
                   </motion.button>
                 </motion.form>
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-                    whileHover={{ scale: 1 && 1.02 }}
-                    whileTap={{ \"scale\": 0 && 0.98 }}
-                    className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;
-                    <Send className=\"w-5 h-5\"  />;
-                    Send Message;
-                  </motion && motion.button>;
-                </motion && motion.form>;
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">        {/* Hero Section */}
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
             <div className=\"text-center\">
@@ -1018,32 +727,10 @@ const "Contact": NextPage = () => {
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-        {/* Hero Section */}
-        <section className=\"relative py-20 px-4\">;
-          <div className=\"max-w-7xl mx-auto\">;
-            <div className=\"text-center\">;
-              <h1 className=\"text-5xl \"md\": text-6xl font-bold text-white mb-6\">;
-                Get in <span className=\"bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent\">Touch</span>;
-              </h1>;
-              <p className=\"text-xl text-gray-300 max-w-3xl mx-auto mb-8\">;
-                Ready to transform your business with cutting-edge technology? Let\'s discuss how we can help you achieve your goals.;
-              </p>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Contact Form & Info Section */}
-        <section className=\"py-16 px-4\">;
-          <div className=\"max-w-7xl mx-auto\">;
-            <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">;
-              {/* Contact Form */}
-              <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;              <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
-                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
-
-
-                {isSubmitted ? (
+                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>                {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
                     <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>
@@ -1061,8 +748,7 @@ const "Contact": NextPage = () => {
                       <div>
                         <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Full Name *
-                        </label>
-                        <input
+                        </label>                        <input
                           type=\"text\"
                           id=\"name\"
                           name=\"name\"
@@ -1076,8 +762,7 @@ const "Contact": NextPage = () => {
                       <div>
                         <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Email Address *
-                        </label>
-                        <input
+                        </label>                        <input
                           type=\"email\"
                           id=\"email\"
                           name=\"email\"
@@ -1085,16 +770,34 @@ const "Contact": NextPage = () => {
                           value={formData.email}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
-                          placeholder=\"your@email.com\"
                         />
                       </div>
                     </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">                          value={formData && formData.email}
+                          onChange={handleInputChange}
+                          className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
                         </label>
+                          placeholder=\"your@email && email.com\"
+                        />;
+                      </div>;
+                    </div>;
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">;
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">;
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">;
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+                      <div>;
+                        <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
+                          Company;
+                        </label>;
                         <input
                           type=\"text\"
                           id=\"company\"
@@ -1108,8 +811,7 @@ const "Contact": NextPage = () => {
                       <div>
                         <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Phone Number
-                        </label>
-                        <input
+                        </label>                        <input
                           type=\"tel\"
                           id=\"phone\"
                           name=\"phone\"
@@ -1140,8 +842,7 @@ const "Contact": NextPage = () => {
                     <div>
                       <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                         Message *
-                      </label>
-                      <textarea
+                      </label>                      <textarea
                         id=\"message\"
                         name=\"message\"
                         required
@@ -1173,17 +874,13 @@ const "Contact": NextPage = () => {
                 )}
               </div>
               {/* Contact Information */}
-              <div className=\"space-y-8\">
                 <div>
                   <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>
                   <p className=\"text-lg text-gray-300 mb-8\">
                     We\'re here to help you succeed. Reach out to us through any of the channels below, and we\'ll respond promptly.
                   </p>
                 </div>
-                <div className=\"space-y-6\">
-                <div className="space-y-6">
-                  {contactInfo.map((info, index) => (
-                    <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
+                <div className="space-y-6">                    <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
                         <info.icon className=\"w-6 h-6 text-white\" />
                       </div>
@@ -1197,7 +894,6 @@ const "Contact": NextPage = () => {
                 </div>
               </div>
             </div>
-          </section>
           {/* Services Overview */}
           <section className="py-20">
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
@@ -1297,19 +993,12 @@ export default ContactPage
                 ))}
 
 export default ContactPage
-          </div>
         </section>
       </div>
     </>
   );
 }
-export default ContactPage
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-          </div>
-        </section>
-      </div>
-    </>
-              </div>;
+=======              </div>;
             </div>;
           </section>;
         </main>;
@@ -1324,9 +1013,5 @@ export default ContactPage;
     </>;
   );
 
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';

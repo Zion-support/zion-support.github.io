@@ -6,6 +6,6 @@ const ModeToggle = ({ className }) => {
       <h1>ModeToggle</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

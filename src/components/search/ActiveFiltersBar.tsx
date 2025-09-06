@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -433,6 +434,7 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >
         Clear all
+<<<<<<< HEAD
       </button>
     </div>
   )}
@@ -447,3 +449,28 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
       </button>;
     </div>)}
 '";
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React from 'react';
+
+export default ActiveFiltersBar; import React from 'react'
+import { X } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+interface SearchFilters {
+  types: string[];
+  category: string;
+  minPrice: number;
+  maxPrice: number;
+  minRating: number;
+  sort: string
+}
+interface ActiveFiltersBarProps {
+  filters: SearchFilters;
+  onFiltersChange: (filters: SearchFilters) => void;
+  onClearAll: () => void;
+  className?: string
+}
+export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

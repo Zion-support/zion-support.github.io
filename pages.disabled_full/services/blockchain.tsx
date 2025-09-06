@@ -3,5 +3,4 @@ const Link from "next/link"; import Head from "next/head"; export default functi
 import React from 'react';
 interface BlockchainProps {
   // Add props here as needed
-<=
->
+=>

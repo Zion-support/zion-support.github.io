@@ -31,13 +31,13 @@ const services = [
       'Online service applications,',
       'Digital document submission',',
       'Status tracking systems',',
-    title: 'Citizen Service Portals,',;
-    description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',;
+    title: 'Citizen Service Portals,',,
+  description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',;
 import Layout from '../../components/Layout';
 const services = [;
   {;
-    title: 'Citizen Service Portals',;
-    description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.',;
+    title: 'Citizen Service Portals',,
+  description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.',;
     icon: Globe,;
     features: [,;
       'Online service applications,',;
@@ -47,8 +47,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Secure Data Management,',;
-    description: 'Government-grade data security and management systems for sensitive information.,',;
+    title: 'Secure Data Management,',,
+  description: 'Government-grade data security and management systems for sensitive information.,',;
     icon: Shield,;
     features: [,;
       'Encrypted data storage,',;
@@ -58,8 +58,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Digital Identity Solutions,',;
-    description: 'Secure digital identity verification and management systems for citizens.,',;
+    title: 'Digital Identity Solutions,',,
+  description: 'Secure digital identity verification and management systems for citizens.,',;
     icon: Users,;
     features: [,;
       'Biometric authentication,',;
@@ -69,8 +69,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Public Safety Systems,',;
-    description: 'Advanced systems for emergency response and public safety management.,',;
+    title: 'Public Safety Systems,',,
+  description: 'Advanced systems for emergency response and public safety management.,',;
     icon: Phone,;
     features: [,;
       'Emergency dispatch systems,',;
@@ -80,8 +80,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Government Analytics,',;
-    description: 'Data analytics platforms for informed policy-making and resource allocation.,',;
+    title: 'Government Analytics,',,
+  description: 'Data analytics platforms for informed policy-making and resource allocation.,',;
     icon: BarChart3,;
     features: [,;
       'Performance metrics,',;
@@ -91,8 +91,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Compliance Management,',;
-    description: 'Automated systems for regulatory compliance and policy enforcement.,',;
+    title: 'Compliance Management,',,
+  description: 'Automated systems for regulatory compliance and policy enforcement.,',;
     icon: FileText,;
     features: [,;
       'Regulatory tracking,',;
@@ -104,29 +104,29 @@ const services = [;
 ;];
 const benefits = [;
   {}
-    title: 'Enhanced Security,',;
-    description: 'Government-grade security measures protect sensitive citizen and government data.,',;
+    title: 'Enhanced Security,',,
+  description: 'Government-grade security measures protect sensitive citizen and government data.,',;
     icon: Shield;
 ];
 const benefits = [;
   {;
-    title: 'Enhanced Security',;
-    description: 'Government-grade security measures protect sensitive citizen and government data.',;
+    title: 'Enhanced Security',,
+  description: 'Government-grade security measures protect sensitive citizen and government data.',;
     icon: Shield;
   },;
   {}
-    title: 'Improved Efficiency,',;
-    description: 'Digital processes streamline government operations and reduce administrative burden.,',;
+    title: 'Improved Efficiency,',,
+  description: 'Digital processes streamline government operations and reduce administrative burden.,',;
     icon: BarChart3,;
   },;
   {}
-    title: 'Better Citizen Experience,',;
-    description: 'User-friendly digital services make government more accessible to citizens.,',;
+    title: 'Better Citizen Experience,',,
+  description: 'User-friendly digital services make government more accessible to citizens.,',;
     icon: Users,;
   },;
   {}
-    title: 'Transparency & Accountability,',;
-    description: 'Digital systems provide transparency and enable better accountability.,',;
+    title: 'Transparency & Accountability,',,
+  description: 'Digital systems provide transparency and enable better accountability.,',;
     icon: Globe,;
   }
 ;];
@@ -460,6 +460,6 @@ export default function GovernmentPage() {;
         </section>
       </div>
     </Layout>
-  );
+  )
 };
 

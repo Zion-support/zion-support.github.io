@@ -89,8 +89,7 @@ const benefits = [;
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Transform education with innovative technology solutions designed
-                for schools, universities, and educational institutions.
-              </p>
+                for schools, universities, and educational institutions.              </p>
             </motion.div>
           </div>
         </section>
@@ -108,6 +107,8 @@ const benefits = [;
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our education solutions are designed to enhance learning and improve outcomes.
               </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
@@ -126,40 +127,40 @@ const benefits = [;
                     {feature.description}
                   </p>
                 </div>
-    title: 'Virtual Classrooms,',;
-    description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
+    title: 'Virtual Classrooms,',,
+  description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
   },;
   {}
     icon: Globe,;
-    title: 'Accessibility Solutions,',;
-    description: 'ADA-compliant educational technology that ensures equal access for all students.'';
-    title: 'Learning Management Systems',;
-    description: 'Comprehensive LMS platforms for online and blended learning';
+    title: 'Accessibility Solutions,',,
+  description: 'ADA-compliant educational technology that ensures equal access for all students.'';
+    title: 'Learning Management Systems',,
+  description: 'Comprehensive LMS platforms for online and blended learning';
   },;
   {;
     icon: Users,;
-    title: 'Student Information Systems',;
-    description: 'Complete student data management and academic tracking';
+    title: 'Student Information Systems',,
+  description: 'Complete student data management and academic tracking';
   },;
   {;
     icon: BookOpen,;
-    title: 'Digital Content Management',;
-    description: 'Interactive digital content creation and distribution';
+    title: 'Digital Content Management',,
+  description: 'Interactive digital content creation and distribution';
   },;
   {;
     icon: CheckCircle,;
-    title: 'Assessment Tools',;
-    description: 'Advanced testing and evaluation platforms';
+    title: 'Assessment Tools',,
+  description: 'Advanced testing and evaluation platforms';
   },;
   {;
     icon: ArrowRight,;
-    title: 'Parent Portal',;
-    description: 'Communication and engagement tools for parents';
+    title: 'Parent Portal',,
+  description: 'Communication and engagement tools for parents';
   },;
   {;
     icon: Users,;
-    title: 'Teacher Resources',;
-    description: 'Professional development and teaching support tools';
+    title: 'Teacher Resources',,
+  description: 'Professional development and teaching support tools';
   }
 ;];
 const solutions = [;
@@ -236,8 +237,8 @@ const benefits = [;
   'Accessible learning for all students';
 ];
 export default function EducationSolutions() {;
-    title: 'Virtual Classrooms',;
-    description: 'Online learning platform with video conferencing and collaboration',;
+    title: 'Virtual Classrooms',,
+  description: 'Online learning platform with video conferencing and collaboration',;
     benefits: ['Video conferencing', 'Screen sharing', 'Breakout rooms', 'Recording'];
   }
 ];
@@ -425,8 +426,7 @@ export default function EducationSolutionsPage() {;
                 </button>
               </div>
 ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-            </div>
+ursor/fix-syntax-push-and-merge-to-main-40de            </div>
           </div>
         </section>
 

@@ -23,10 +23,7 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
     </Badge>
   )
 
-
-
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
-
 
   const config = statusConfig[status];
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {
@@ -48,9 +45,5 @@ const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
 interface QuoteStatusBadgeProps {;
   status: QuoteStatus;
 }
-
-
-
-
 
 };

@@ -16,14 +16,20 @@ export interface FilterSidebarProps {
   selected_regions: string[];
   toggle_region: (region: string) => void,
   price_range: [number, number];
-  setPriceRange: (range: [number, number]) => void;
-  experience_range: [number, number];
-
   setExperienceRange: (range: [number, number]) => void;
   expanded_sections: {
     skills: boolean;
     availability: boolean;
     region: boolean;
+    experience: boolean;
+    price: boolean
+};
+  toggleSection: (sectionName: string) => void;
+  sortOption: string;
+  setSortOption: (option: string) => void;
+  clearFilters: () => void;
+  isMobileFilterOpen?: boolean;
+}
     experience: boolean,
     price: boolean;
   }
@@ -38,7 +44,6 @@ export interface FilterComponentProps {
   toggleSection: () => void;
   isMobileFilterOpen?: boolean;
 }
-export interface SkillsFilterProps extends FilterComponentProps {
 
   selectedSkills: string[]
 
@@ -131,12 +136,20 @@ export interface RegionFilterProps extends FilterComponentProps {;
 ;
 export interface ExperienceFilterProps extends FilterComponentProps {;
   experienceRange: [number, number],;
-  experience_range: [number, number];
-  setExperienceRange: (range: [number, number]) => void;
+  experience_range: [number, number];  setExperienceRange: (range: [number, number]) => void;
 }
 export interface PriceFilterProps extends FilterComponentProps {
   priceRange: [number, number];
   setPriceRange: (range: [number, number]) => void;
+}
+
+export interface FilterSidebarProps {;
+
+}
+export interface SearchFilterProps {
+  searchTerm: string;
+  setSearchTerm: (term: string) => void;
+}
 
 export interface SortFilterProps {
   sortOption: string;
@@ -146,8 +159,7 @@ export interface SortFilterProps {
   sort_option: string,
   setSortOption: (option: string) => void;
 
-}
-  searchTerm: string
+}  searchTerm: string
 
 }
 export interface SearchFilterProps {
@@ -170,6 +182,3 @@ export interface SortFilterProps {;
 }
 export interface SearchFilterProps {
 }
-;
-;
-

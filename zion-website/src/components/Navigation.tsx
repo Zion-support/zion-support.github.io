@@ -19,8 +19,7 @@ export default function Navigation() {
             <span className=&quot;sr-only&quot;>Zion Tech Group</span>
             <div className=&quot;text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200&quot;>
 
-const Navigation: React.FC<NavigationProps> = ({ className }) => {
-  return (
+const Navigation: React.FC<NavigationProps> = ({ className }) => {  return (
     <header className="bg-white shadow-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">

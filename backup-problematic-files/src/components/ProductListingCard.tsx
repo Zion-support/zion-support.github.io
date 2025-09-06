@@ -81,8 +81,8 @@ const ProductListingCardComponent = ({;
     if (!listing.id) {;
       logErrorToProduction('[ProductCard] Missing listing ID, cannot navigate', new Error('Missing listing ID'), { component:'ProductListingCard' }),;
       toast({;
-        title:"Navigation Error",;
-        description:"Product information is incomplete",;
+        title:"Navigation Error",,
+  description:"Product information is incomplete",;
         variant:"destructive"}),;
       return,;
     }
@@ -353,6 +353,6 @@ router.push ('/checkout') ;
   onRequestQuote && (<Button size="sm" variant="outline" onClick={;
   handleRequestQuote ";
 }className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground" > Request Quote </Button>) ;
-}</div> </div> </div> </div>) ;
+}</div> </div> </div> </div>) 
 };
 '"

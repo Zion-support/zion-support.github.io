@@ -7,7 +7,6 @@ const ResizablePanelGroup = ({
   <ResizablePrimitive.PanelGroup
     className={cn(
 
-
       className
     )}
     {...props}
@@ -23,7 +22,6 @@ const ResizableHandle = ({
 }) => (
   <ResizablePrimitive.PanelResizeHandle
     className={cn(
-
 
       className
     )}
@@ -47,6 +45,7 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle };
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
+
 ;
 const ResizablePanelGroup = ({
   class_name,
@@ -77,4 +76,4 @@ const ResizableHandle = ({
         <GripVertical className=&quot;h - 2.5 w - 2.5 & quot; />;
       </div>)}
   </ResizablePrimitive.PanelResizeHandle>);
-export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
+

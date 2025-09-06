@@ -1,10 +1,9 @@
   };
 
-export async function parseQueryToFilters(
   query: string,
 ): Promise<SearchFilters> {
   const filters: SearchFilters = {};
-
+=======
   if (!query || query.trim().length === 0) {
     return filters;
   }
@@ -96,9 +95,8 @@ export async function parseQueryToFilters(
     filters.skills = skills;
   }
 
-  return filters;
-
-    keywords: [],
+  return filters,
+  keywords: [],
     skills: [],
     location: null,
     type: null;
@@ -106,23 +104,17 @@ export async function parseQueryToFilters(
     all: [],
     talent: [],
     jobs: [],
-    projects: [];
-
-  };
+    projects: []
 };
-
+};
 
 export const suggestDidYouMean = (query: string) => {
   // Add did you mean functionality here;
-  return null;
-
+  return null
 };
 
 }
-  }
-
-
-}
+  }}
 ;
 export const suggestDidYouMean = (query: string) =>: any {
   // Add did you mean functionality here;

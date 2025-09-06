@@ -40,8 +40,7 @@ import {
           </p>
           <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
             Our research spans the cutting edge of AI and technology, driving innovation
-            and advancing the state of the art.
-          </p>
+            and advancing the state of the art.          </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -311,11 +310,10 @@ import {
             <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               Research Careers <span aria-hidden="true">→</span>
             </Link>
-          </div>
-        </div>
+          </div>        </div>
       </div>
     </div>
-  );
+  )
 };
 
 export default Page;

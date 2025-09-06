@@ -1,6 +1,5 @@
   verified: boolean,
-  size?: 'sm' | 'md' | 'lg'
-}
+  size?: 'sm' | 'md' | 'lg'}
 
 export function VerifiedBadge({ verified, size = "sm" }: VerifiedBadgeProps) {
   if (!verified) return null;
@@ -19,8 +18,7 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
   const sizeClasses = {
     sm: 'h-3.5 w-3.5'
     md: 'h-4 w-4'
-    lg: 'h-5 w-5'
-  return (
+    lg: 'h-5 w-5'  return (
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
@@ -34,7 +32,6 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
       </Tooltip>
     </TooltipProvider>
   )
-
 
 }
 import React from 'react';
@@ -58,3 +55,4 @@ if (return null) {
     lg: 'h - 5 w - 5';
   }
 ;
+

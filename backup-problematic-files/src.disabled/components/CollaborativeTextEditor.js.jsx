@@ -6,6 +6,6 @@ const CollaborativeTextEditor.js = ({ className }) => {
       <h1>CollaborativeTextEditor.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

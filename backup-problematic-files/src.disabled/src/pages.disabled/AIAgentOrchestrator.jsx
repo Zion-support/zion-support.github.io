@@ -6,6 +6,6 @@ const AIAgentOrchestrator = ({ className }) => {
       <h1>AIAgentOrchestrator</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

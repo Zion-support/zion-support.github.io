@@ -1,9 +1,11 @@
 
+
 export const SidebarTrigger = React.forwardRef<
   React.ElementRef<typeof Button>
   React.ComponentProps<typeof Button>
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
+
       ref={ref}
       data - sidebar=&quot;trigger & quot;
       variant=&quot;ghost & quot;
@@ -12,14 +14,10 @@ export const SidebarTrigger = React.forwardRef<
       on_click={(event) => {
         props.on_click?.(event);
         toggle_sidebar ();
+
       onClick={(event) => {
         props.onClick?.(event)
         toggleSidebar()
       }}
       {...props}
-    >
-      <PanelLeft />
-      <span className="sr-only">Toggle Sidebar</span>
-    </Button>
-  )
-})
+

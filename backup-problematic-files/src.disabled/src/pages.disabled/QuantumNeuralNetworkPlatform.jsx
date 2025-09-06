@@ -6,6 +6,6 @@ const QuantumNeuralNetworkPlatform = ({ className }) => {
       <h1>QuantumNeuralNetworkPlatform</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

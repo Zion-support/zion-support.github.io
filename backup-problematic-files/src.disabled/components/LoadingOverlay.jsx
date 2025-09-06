@@ -6,6 +6,6 @@ const LoadingOverlay = ({ className }) => {
       <h1>LoadingOverlay</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

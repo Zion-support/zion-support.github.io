@@ -1,120 +1,88 @@
-const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {
-  useEffect (() => {
-    // Google Analytics 4;
-    // Check condition
-if ( {) {
-  $2
+import React, { useEffect } from 'react';
+
+// We avoid declaring global window.gtag types here to prevent conflicts
+
+interface AnalyticsProps {
+  trackingId?: string;
 }
-      // Load gtag script;
-      const script = document.create_element ('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com / gtag / js?id=${tracking_id}`;
-      document.head.append_child (script);
-;
-      // Initialize gtag;
-      window.data_layer = window.data_layer || [];
-      /**
- * gtag - Function description
- */
-function gtag() {
-        window.data_layer.push (args),
-      }
-      window.gtag = gtag;
-      gtag ('js', new Date ());
-      gtag ('config', tracking_id, {
+
+const Analytics: React.FC<AnalyticsProps> = ({
+  trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID
+}) => {
+  useEffect(() => {
+    if (!trackingId || typeof window === 'undefined') return;
+
+    const script1 = document.createElement('script');
+    script1.async = true;
+    script1.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+    document.head.appendChild(script1);
+
+    const script2 = document.createElement('script');
+    script2.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${trackingId}', {
         page_title: document.title,
         page_location: window.location.href,
+        send_page_view: true
       });
-;
-      // Track page views;
-      const trackPageView = () =>: any {
-        gtag ('event', 'page_view', {
+    `;
+    document.head.appendChild(script2);
+
+    const handleRouteChange = () => {
+      if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined') {
+        window.gtag('config', trackingId, {
           page_title: document.title,
           page_location: window.location.href,
-          page_path: window.location.pathname,
         });
       }
-;
-      // Track page view on load;
-      trackPageView ();
-;
-      // Track page view on route change (for SPA behavior);
-      const handleRouteChange = () =>: any {
-        trackPageView ();
+    };
+
+    window.addEventListener('popstate', handleRouteChange);
+    return () => window.removeEventListener('popstate', handleRouteChange);
+  }, [trackingId]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const trackPerformance = () => {
+      if (typeof window.gtag !== 'undefined' && 'performance' in window) {
+        const perf = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
+        if (perf) {
+          const loadTime = (perf.loadEventEnd || 0) - (perf.fetchStart || 0);
+          window.gtag('event', 'page_load_time', {
+            event_category: 'Performance',
+            event_label: 'Page Load',
+            value: Math.round(loadTime)
+          });
+        }
       }
-;
-      // Listen for popstate events (back / forward navigation);
-      window.addEventListener ('popstate', handleRouteChange);
-;
-      // Cleanup;
-      return () => {
-        window.removeEventListener ('popstate', handleRouteChange);
-      }
-    }
-  }, [tracking_id]);
-;
-  // Track custom events;
-  const track_event = (event_name: string, parameters?: Record < string, any>) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      window.gtag ('event', event_name, parameters);
-    }
-  }
-;
-  // Track button clicks;
-  const trackButtonClick = (button_name: string, location?: string) =>: any {
-    track_event ('button_click', {
-      button_name: button_name,
-      location: location || window.location.pathname,
+    };
+    window.addEventListener('load', trackPerformance);
+    return () => window.removeEventListener('load', trackPerformance);
+  }, []);
+
+  return null;
+};
+
+export const trackEvent = (action: string, category: string, label?: string, value?: number) => {
+  if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined') {
+    window.gtag('event', action, {
+      event_category: category,
+      event_label: label,
+      value: value,
     });
   }
-;
-  // Track form submissions;
-  const trackFormSubmission = (form_name: string) =>: any {
-    track_event ('form_submit', {
-      form_name: form_name,
-      page_location: window.location.href,
+};
+
+export const trackPageView = (url: string, title: string) => {
+  const id = process.env.NEXT_PUBLIC_GA_TRACKING_ID || '';
+  if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined' && id) {
+    window.gtag('config', id, {
+      page_title: title,
+      page_location: url,
     });
   }
-;
-  // Track external link clicks;
-  const trackExternalLink = (url: string, link_text: string) =>: any {
-    track_event ('external_link_click', {
-      link_url: url,
-      link_text: link_text,
-      page_location: window.location.href,
-    });
-  }
-;
-  // Expose tracking functions globally for use in other components;
-  // Check condition
-if ( {) {
-  $2
-}
-    (window as any).track_event = track_event;
-    (window as any).trackButtonClick = trackButtonClick;
-    (window as any).trackFormSubmission = trackFormSubmission;
-    (window as any).trackExternalLink = trackExternalLink;
-  }
-  return (
-    <Head>;
-          __html: `
-            // Performance monitoring
-            if ('performance' in window) {
-              window.addEventListener('load', function() {
-                setTimeout(function() {
-                  const perfData = performance.getEntriesByType('navigation')[0];
-                  if (perfData) {
-                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
-                    if (window.gtag) {
-                      window.gtag('event', 'timing_complete', {
-                      });
-                    const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart
-                    if (window && window.gtag) {
-                      window && window.gtag('event', 'timing_complete', {
-                        name: 'load',
-                        value: Math && Math.round(loadTime),
-                      })
-                    }
+};
+
+export default Analytics;

@@ -25,7 +25,6 @@ import React from 'react';
 interface ComprehensiveServicesProps {
   // Add props here as needed
 
-
 }
 
 export default function ComprehensiveServices({ }: ComprehensiveServicesProps) {
@@ -35,6 +34,8 @@ export default function ComprehensiveServices({ }: ComprehensiveServicesProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
+}
 :src.pages.disabled/ComprehensiveServices.jsx
 }
 }

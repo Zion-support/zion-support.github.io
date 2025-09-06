@@ -259,11 +259,10 @@ import {
             <a href="/services" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Services <span aria-hidden="true">→</span>
             </Link>
-          </div>
-        </div>
+          </div>        </div>
       </div>
     </div>
-  );
+  )
 };
 
 export default Page;

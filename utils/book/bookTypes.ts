@@ -1,2 +1,0 @@
-  visuals: Visuals;
-}

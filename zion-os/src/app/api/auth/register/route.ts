@@ -1,4 +1,3 @@
-    // Check if user already exists;
     const existing_user = await prisma.user.find_unique ({
       where: { email }}),
     // Check condition

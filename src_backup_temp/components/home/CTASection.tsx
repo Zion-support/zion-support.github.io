@@ -38,8 +38,8 @@ const CTASection: React.FC = (): JSX.Element => {
     }, {;
       "icon": "Sta r",;
       "title": "Proven Results",;
-      "description": "Trusted by industry leaders worldwide";
-    };
+      "description": "Trusted by industry leaders worldwide"
+};
   ];
   return (
     <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/90 to-zion-slate-dark relative overflow-hidden" role="region" aria-labelledby="cta-heading">
@@ -432,7 +432,7 @@ const CTASection: React.FC = (): JSX.Element => {
         </motion.div>;
       </div>;
     </section>;
-  );
+  )
 };
 export default CTASection;}};
 </motion>

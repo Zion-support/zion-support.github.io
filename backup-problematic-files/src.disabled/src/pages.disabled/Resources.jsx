@@ -6,6 +6,6 @@ const Resources = ({ className }) => {
       <h1>Resources</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

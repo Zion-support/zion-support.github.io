@@ -20,26 +20,26 @@ const contactInfo = {;
 },;
 ;
 const serviceCategories = [;
-  {;
-    description:'Beyond the future of technology',;
+  {,
+  description:'Beyond the future of technology',;
     icon:Rocket,;
     color:'from-violet-600 to-purple-600',;
     services:futuristic2028Services.slice(0, 4);
   },;
-  {;
-    description:'Real business solutions for today',;
+  {,
+  description:'Real business solutions for today',;
     icon:Target,;
     color:'from-blue-600 to-cyan-600',;
     services:futuristic2028Services.slice(4, 8);
   },;
-  {;
-    description:'Quantum computing and space exploration',;
+  {,
+  description:'Quantum computing and space exploration',;
     icon:Atom,;
     color:'from-indigo-600 to-blue-600',;
     services:emergingTech2028Services.slice(0, 4);
   },;
-  {;
-    description:'Next-generation AI solutions',;
+  {,
+  description:'Next-generation AI solutions',;
     icon:Brain,;
     color:'from-emerald-600 to-teal-600',;
     services:emergingTech2028Services.slice(4, 8);
@@ -49,23 +49,23 @@ const serviceCategories = [;
 const features = [;
   {;
     icon:Star,;
-    title:'Industry Leading',;
-    description:'First-to-market solutions with cutting-edge technology';
+    title:'Industry Leading',,
+  description:'First-to-market solutions with cutting-edge technology';
   },;
   {;
     icon:Zap,;
-    title:'Lightning Fast',;
-    description:'Optimized performance with quantum computing integration';
+    title:'Lightning Fast',,
+  description:'Optimized performance with quantum computing integration';
   },;
   {;
     icon:Shield,;
-    title:'Enterprise Secure',;
-    description:'Military-grade security with quantum encryption';
+    title:'Enterprise Secure',,
+  description:'Military-grade security with quantum encryption';
   },;
   {;
     icon:Users,;
-    title:'Customer Focused',;
-    description:'Dedicated support and personalized solutions';
+    title:'Customer Focused',,
+  description:'Dedicated support and personalized solutions';
   }
 ],;
 ;

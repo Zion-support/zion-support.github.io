@@ -4,13 +4,12 @@
 }
   logEvent: (event: any) => null,
   getArticles: () => [],
-  getArticleById: (id: string) => null;
+  getArticleById: (id: string) => null
 };
 
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here
   return null;
-
 
 export interface IntentMatch {
   intentMatched: boolean;
@@ -77,8 +76,8 @@ export function searchArticles(
   get_articles: () => [],
 }
 }
-}
-export const logSupportEventToOperator = (event: any) => {
+}export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;
+
 }

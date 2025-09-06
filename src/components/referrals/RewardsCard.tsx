@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReferralReward } from "@/types/referrals";
+import { formatDate } from "@/utils/referralUtils";
+import { BadgeDollarSign, Badge } from 'lucide-react'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface RewardsCardProps {
   rewards: ReferralReward[];
   is_loading: boolean;
@@ -43,14 +51,19 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 
 
 interface RewardsCardProps {
+<<<<<<< HEAD
 
   rewards: ReferralReward[]
 
+=======
+  rewards: ReferralReward[];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   isLoading: boolean
 }
 
 
     return (
+<<<<<<< HEAD
 
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
@@ -74,17 +87,11 @@ interface RewardsCardProps {
 
 
     )
-  }
-  if (rewards.length === 0) {
-    return (
+=======
       <Card>
         <CardHeader>
-
-
-          <CardTitle className="flex items-center gap-2">
-            <BadgeDollarSign className="h-5 w-5" />
-
-
+<CardTitle className='flex items-center gap-2'>
+            <BadgeDollarSign className='h-5 w-5' />
             Your Rewards
           </CardTitle>
           <CardDescription>
@@ -92,6 +99,37 @@ interface RewardsCardProps {
           </CardDescription>
         </CardHeader>
         <CardContent>
+          <div className='flex items-center justify-center p-4'>
+            <div className='h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent' />
+          </div>
+        </CardContent>
+      </Card>
+    );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+  if (rewards.length === 0) {
+    return (
+      <Card>
+        <CardHeader>
+<<<<<<< HEAD
+
+
+          <CardTitle className="flex items-center gap-2">
+            <BadgeDollarSign className="h-5 w-5" />
+
+
+=======
+<CardTitle className='flex items-center gap-2'>
+            <BadgeDollarSign className='h-5 w-5' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+            Your Rewards
+          </CardTitle>
+          <CardDescription>
+            Rewards earned from successful referrals
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+<<<<<<< HEAD
 
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
@@ -106,24 +144,38 @@ interface RewardsCardProps {
           <div className="flex flex-col items-center justify-center p-4 text-center">
             <p className="text-muted-foreground">No rewards yet</p>
             <p className="text-sm text-muted-foreground mt-1">
+=======
+          <div className='flex flex-col items-center justify-center p-4 text-center'>
+            <p className='text-muted-foreground'>No rewards yet</p>
+            <p className='text-sm text-muted-foreground mt-1'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               Refer users to earn rewards once they complete onboarding
             </p>
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
 
 
     )
 
 
+=======
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   return (
     <Card>
       <CardHeader>
+<<<<<<< HEAD
 
         <CardTitle className="flex items-center gap-2">
           <BadgeDollarSign className="h-5 w-5" />
 
+=======
+<CardTitle className='flex items-center gap-2'>
+          <BadgeDollarSign className='h-5 w-5' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           Your Rewards
         </CardTitle>
         <CardDescription>Rewards earned from successful referrals</CardDescription>
@@ -212,6 +264,7 @@ if ( {) {
     )
 
   }
+<<<<<<< HEAD
 
   if (rewards && rewards.length === 0) {;
     return (
@@ -229,6 +282,16 @@ if ( {) {
           <div className='flex flex-col items-center justify-center p-4 text-center'>;
             <p className='text-muted-foreground'>No rewards yet</p>;
             <p className='text-sm text-muted-foreground mt-1'>              Refer users to earn rewards once they complete onboarding            Your Rewards;
+=======
+;
+  if (rewards.length === 0) {;
+    return (;
+      <Card>;
+        <CardHeader>;
+          <CardTitle className="flex items-center gap-2">;
+            <BadgeDollarSign className="h-5 w-5" />;
+            Your Rewards;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </CardTitle>;
           <CardDescription>Rewards earned from successful referrals</CardDescription>;
         </CardHeader>;
@@ -332,17 +395,35 @@ if ( {) {
                   ) : (
                     <Badge className="h-4 w-4 text-blue-600" />
                   )}
+<<<<<<< HEAD
                   <p className="font-medium">
+=======
+                  <p className='font-medium'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     {reward.reward_type === 'credit'
                       ? `$${reward.amount?.toFixed(2)} Credit`
                       : 'Visibility Boost'}
                   </p>
                 </div>
+<<<<<<< HEAD
                 <p className="text-xs text-muted-foreground mt-1">
                   Earned on {formatDate(reward.created_at)}
+<<<<<<< HEAD
                 </p>
                 {reward.expires_at && (
                   <p className="text-xs text-muted-foreground">
+=======
+                </p>;
+                {reward.expires_at && (;
+                  <p className="text-xs text-muted-foreground">;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+<p className='text-xs text-muted-foreground mt-1'>
+                  Earned on {formatDate(reward.created_at)}
+                </p>
+                {reward.expires_at && (
+                  <p className='text-xs text-muted-foreground'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     Expires on {formatDate(reward.expires_at)}
                   </p>
 
@@ -350,6 +431,7 @@ if ( {) {
               </div>;
             </div>;
           ))}
+<<<<<<< HEAD
 
         </div>;
       </CardContent>;
@@ -396,3 +478,10 @@ if ( {) {
     </Card>);
 }
 ;
+=======
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -21,8 +21,6 @@ export default function CompanyWorkspace() {
   const { isWhitelabel, tenant, brandName } = useWhitelabel(),
   
 
-
-
   if (isLoading) {
     return (
 
@@ -100,8 +98,7 @@ import { useWhitelabel } from "@/context/WhitelabelContext",;
     <ProtectedRoute>;
       <SEO;
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
-        description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
-      />
+        description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}      />
       <Header
         customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}
         customTheme={effectiveTheme}
@@ -117,8 +114,7 @@ import { useWhitelabel } from "@/context/WhitelabelContext",;
       </main>
       <Footer />
     </ProtectedRoute>
-  )
-import React from './react';
+  )import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { CompanyDashboard } from '@/components / enterprise / workspace / CompanyDashboard';
@@ -142,8 +138,8 @@ if ( {) {
   $2
 }
     return (
-      <div className="flex items - center justify - center min - h-screen">;
-        <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion - cyan"></div>;
+      <div className="flex items - center justify - center min-h-screen">;
+        <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion-cyan"></div>;
       </div>);
   }
   // Check condition
@@ -177,13 +173,11 @@ if ( {) {
         custom_logo={is_whitelabel ? tenant?.logo_url : company.logo_url}
         custom_theme={effective_theme}
       />;
-      <main className="min - h-screen" style={{ background_color: effective_theme?.background_color || 'var (--background)' }}>;
+      <main className="min-h-screen" style={{ background_color: effective_theme?.background_color || 'var (--background)' }}>;
         <CompanyDashboard company={company} />;
       </main>;
       <Footer />;
     </ProtectedRoute>);
-}
-}
+}}
 }
 
-}

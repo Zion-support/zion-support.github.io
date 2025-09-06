@@ -6,6 +6,6 @@ const ChatBotPanel.js = ({ className }) => {
       <h1>ChatBotPanel.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

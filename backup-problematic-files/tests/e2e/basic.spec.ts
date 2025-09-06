@@ -1,7 +1,7 @@
 // Basic.spec utility
 export const Basic.spec = () => {
   // Implementation here
-  return null;
+  return null
 };
 
 interface Basic.specProps {

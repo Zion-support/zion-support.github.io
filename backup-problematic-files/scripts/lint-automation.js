@@ -6,10 +6,8 @@ import path from 'path';
 import {exec_sync} from 'child_process';
 import {fileURLToPath} from 'url';
 
-
 const __filename = fileURLToPath(import && import.meta.url);
 const __dirname = path && path.dirname(__filename);
-
 
 class LintAutomation {
   constructor() {

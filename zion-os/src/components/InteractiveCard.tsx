@@ -12,7 +12,7 @@ export default function InteractiveCard({title;
 import React, { useState } from 'react',;
 import Link from 'next/link',;
 interface InteractiveCardProps {;
-  title: string,;
+  title: string,,
   description: string,;
   icon: string,;
   href: string,;
@@ -30,15 +30,7 @@ export default function InteractiveCard({;
   className = '',;
   children;
 }: InteractiveCardProps) {;
-  const [isHovered, setIsHovered] = useState(false),;
-  return (;
-    <Link;
-      href={href}
-      className={`group block p-8 rounded-2xl border border-white/10 hover:border-white/30 bg-black/20 hover:bg-black/40 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm hover-lift ${className}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      aria-label={`Navigate to ${title} page`}
-    <Link;
+  const [isHovered, setIsHovered] = useState(false),;    <Link;
       href={href}
       className={`group block p - 8 rounded - 2xl border border - white / 10 hover:border - white / 30 bg - black / 20 hover:bg - black / 40 transition - all duration - 500 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm hover - lift ${class_name}`}
       onMouseEnter={() => setIsHovered (true)}
@@ -58,13 +50,11 @@ export default function InteractiveCard({;
           </p>;
           {/* Custom children or default arrow */}
 
-
 {children || (
 
             <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
           {children || (
-            <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
-              <span>Learn More</span>
+            <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">              <span>Learn More</span>
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
                   isHovered ? 'translate-x-2' : ''
@@ -107,11 +97,7 @@ export default function InteractiveCard({;
         ))}
       </div>;
       {/* Quote */}
-      </blockquote>
-      </blockquote>
-      <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
-        "{quote}"
-      </blockquote>
+      </blockquote>      </blockquote>      </blockquote>
       {/* Author info */}
       <div className="border-t border-white/10 pt-4">
         <div className="font-semibold text-white">{author}</div>
@@ -120,5 +106,4 @@ export default function InteractiveCard({;
       </div>
     </div>
   )
-}
 }

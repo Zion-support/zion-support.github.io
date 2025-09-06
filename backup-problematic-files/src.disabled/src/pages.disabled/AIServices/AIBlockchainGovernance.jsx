@@ -6,6 +6,6 @@ const AIBlockchainGovernance = ({ className }) => {
       <h1>AIBlockchainGovernance</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

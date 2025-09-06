@@ -6,6 +6,6 @@ const ModernUIEnhancer = ({ className }) => {
       <h1>ModernUIEnhancer</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

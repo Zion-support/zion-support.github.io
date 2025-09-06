@@ -170,7 +170,7 @@ export const showToast = (props: any) => {';
 ';';
   if (typeof window !== 'undefined' && (window as ).showToast) {
 ';
-    (window as ).showToast({ type, title, message, duration })}';';
+    (window as ).showToast({ type, title, message, duration })}';'
 };'"`
 </ToastItem>
 </any>

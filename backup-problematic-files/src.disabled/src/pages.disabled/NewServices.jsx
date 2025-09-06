@@ -6,6 +6,6 @@ const NewServices = ({ className }) => {
       <h1>NewServices</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 
