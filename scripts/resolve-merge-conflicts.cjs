@@ -1,9 +1,7 @@
-<<<<<<< HEAD
         conflictType = 'incoming';
         continue;
       }
       
-      if (line.includes('>>>>>>>')) {
         inConflict = false;
         conflictType = '';
         continue;
@@ -27,7 +25,6 @@
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return false;
   }
-=======
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("fs")
@@ -101,7 +98,6 @@ class MergeConflictResolver {
 }
           } catch (error) {
             // Skip files that can"t be read,,
->>>>>>> origin/automation-fixes
 }
 
 // Function to find all files with merge conflicts
@@ -120,7 +116,6 @@ function findConflictedFiles(dir) {
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
             conflictedFiles.push(fullPath);
           }
         } catch (error) {
@@ -128,37 +123,11 @@ function findConflictedFiles(dir) {
         }
       }
     }
-<<<<<<< HEAD
-=======
-    searchInDirectory(this.projectRoot)
-    return filesWithConflicts,,
-}
-  resolveAllConflicts() {
-    this.log("🔧 Starting merge conflict resolution...')
-    const filesWithConflicts = this.findFilesWithConflicts()
-    this.log(`Found ${filesWithConflicts.length} files with merge conflicts`)
-    for (const file of filesWithConflicts) {
-      this.fixFile(file),,
-}
-    this.log(`🎉 Merge conflict resolution completed. Fixed ${this.fixedFiles.length} files.`)
-    if (this.errors.length > 0) {
-      this.log(`❌ ${this.errors.length} errors encountered:`)
-      this.errors.forEach(err => {
-        this.log(`   - ${err.file}: ${err.error}`),,
-}),,
-}
-    return {
-      fixedFiles: this.fixedFiles,
-      errors: this.errors,
-      totalConflicts: filesWithConflicts.length,,
-}
->>>>>>> origin/automation-fixes
   }
   
   scanDirectory(dir);
   return conflictedFiles;
 }
-<<<<<<< HEAD
 
 // Main execution
 try {
@@ -194,11 +163,3 @@ try {
   console.error('❌ Error during merge conflict resolution:', error.message);
   process.exit(1);
 }
-=======
-// Run the resolver;
-if (require.main === module) {
-  const resolver = new MergeConflictResolver()
-  resolver.resolveAllConflicts(),,
-}
-module.exports = MergeConflictResolver
->>>>>>> origin/automation-fixes

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2025-cutting-edge-it-services.ts
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/data_backup/2025-cutting-edge-it-services.ts
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 export const cuttingEdgeITServices2025 = [{
     id:,
   quantum-cloud-infrastructure-platform',

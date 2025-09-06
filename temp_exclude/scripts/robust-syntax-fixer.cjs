@@ -103,8 +103,4 @@ if (require.main === module) {;}
     console.error("Robust syntax fixing "failed": ', error);
     process.exit(1),}),};
 ;
-<<<<<<< HEAD
 module.exports = RobustSyntaxFixer);module.exports = RobustSyntaxFixer);
-=======
-module.exports = RobustSyntaxFixer);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

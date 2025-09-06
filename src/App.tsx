@@ -3,15 +3,12 @@ import { Header } from './components/Header';
 import { Footer } from './components/layout/Footer';
 import { Sidebar } from './components/layout/Sidebar';
 import { ErrorBoundary } from './components/ErrorBoundary';
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import React from 'react';
 import {BrowserRouter, as, Router, Routes, Route} from 'react-router-dom';
 import {Header} from './components/Header';
 import {Footer} from './components/layout/Footer';
 import {Sidebar} from './components/layout/Sidebar';
 import {ErrorBoundary} from './components/ErrorBoundary';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 ;
 // Import pages;
 import HomePage from '../pages/index';

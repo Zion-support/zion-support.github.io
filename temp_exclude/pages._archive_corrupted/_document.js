@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/_document.js
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/_document.js
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import { Html, Head, Main, NextScript } from 'next/document';
 export default function Document() {
   return (

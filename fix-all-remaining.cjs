@@ -1,19 +1,11 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
-=======
-#!/usr/bin/env node;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
 
 const fs = require('fs');
 const path = require('path');
 
 console.log('🔧 Fixing all remaining syntax errors...');
 
-<<<<<<< HEAD
 // Fix help.tsx
-=======
-// Fix help.tsx;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
 const helpContent = `import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { BookOpen, MessageCircle, Phone, Mail, Search, ChevronRight } from 'lucide-react';
@@ -217,11 +209,7 @@ export default function Help() {
 fs.writeFileSync('/workspace/pages/help.tsx', helpContent);
 console.log('✅ Fixed help.tsx');
 
-<<<<<<< HEAD
 // Fix industries/education.tsx
-=======
-// Fix industries/education.tsx;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
 const educationContent = `import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 

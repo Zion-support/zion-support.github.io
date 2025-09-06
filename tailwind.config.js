@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 /** @type {import('tailwindcss').Config} */;
 module.exports = {;
   darkMode:"class",;
@@ -550,38 +547,25 @@ module.exports = {;
     extend:{}},;
   plugins:[]}
 ;module.exports = {
-=======
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
 /** @type {import('tailwindcss').Config} */
 module.exports = {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-=======
   darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}',
->>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
   ],
   theme: {
     extend: {
       colors: {
-<<<<<<< HEAD
-<<<<<<< HEAD
         'fade-in': 'fadeIn 0.6s ease-out forwardsfade-in-up': 'fadeInUp 0.6s ease-out forwardsfade-in-down': 'fadeInDown 0.6s ease-out forwardsslide-in-left': 'slideInLeft 0.6s ease-out forwardsslide-in-right': 'slideInRight 0.6s ease-out forwardsscale-in': 'scaleIn 0.6s ease-out forwardsfloat': 'float 6s ease-in-out infinitepulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinitebounce-slow': 'bounce 2s infiniteglow': 'glow 2s ease-in-out infinite alternateshimmer': 'shimmer 2.5s linear infinitematrix': 'matrix 20s linear infiniteneon-pulse': 'neonPulse 1.5s ease-in-out infinitecyber-float': 'cyberFloat 8s ease-in-out infinitehologram': 'hologram 3s ease-in-out infiniteenergy-wave': 'energyWave 4s ease-in-out infinitequantum-spin': 'quantumSpin 6s linear infiniteneural-network': 'neuralNetwork 10s linear infiniteplasma-flow': 'plasmaFlow 5s ease-in-out infinitecyber-grid': 'cyberGrid 15s linear infinite',
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -661,10 +645,7 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
-<<<<<<< HEAD
 };
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
         background: 'var(--background)',
         foreground: 'var(--foreground)',
       },
@@ -672,7 +653,4 @@ module.exports = {
   },
   plugins: [],
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
 };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-625a

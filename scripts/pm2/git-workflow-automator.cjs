@@ -1,5 +1,4 @@
             // Simple conflict resolution - take the incoming change
-            const resolved = content.replace(/\n<<<<<<<[\s\S]*?[\s\S]*?>>>>>>>\n/g, '\n');
             fs.writeFileSync(file, resolved);
             execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
             this.log(`✅ Auto-resolved conflicts in: ${file}`);

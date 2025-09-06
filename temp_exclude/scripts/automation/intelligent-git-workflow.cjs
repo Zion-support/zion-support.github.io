@@ -20,7 +20,6 @@ const path = require('path')
       autoCommit: process.env.AUTO_COMMIT === 'true'
       commitMessageTemplate: process.env.COMMIT_MESSAGE_TEMPLATE || 'feat: {type} - {description}'
       mergeStrategy: process.env.MERGE_STRATEGY || 'recursive'
-<<<<<<< HEAD
           conflictType = 'separator';
           continue;
         } else if (line.startsWith('>>>>>>')) {
@@ -34,9 +33,6 @@ const path = require('path')
         } else if (conflictType === 'separator') {
           // Use the version after the separator (incoming changes)
           resolvedLines.push(line);        }
-=======
-        }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       }
 
       // Check for merge opportunities
@@ -385,10 +381,7 @@ const path = require('path')
         if (line.startsWith('<<<<<<<')) {
           inConflict = true;
           conflictType = 'ours';
-<<<<<<< HEAD
         } else if (line.startsWith('')) {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           conflictType = 'theirs';
           inConflict = false;
           conflictType = '';
@@ -458,7 +451,6 @@ const path = require('path')
   }
 }
 
-<<<<<<< HEAD
 // Run the git workflow
 if (require.main === module) {
     const gitWorkflow = new IntelligentGitWorkflow(),
@@ -466,9 +458,6 @@ if (require.main === module) {
   }
 
 module.exports = IntelligentGitWorkflow;      await fs.mkdir(path.join(this.projectRoot, 'logs')
-=======
-      await fs.mkdir(path.join(this.projectRoot, 'logs')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
     fs.appendFile(this.logFile, logMessage + '\n')

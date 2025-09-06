@@ -1,10 +1,7 @@
 #!/usr/bin/env node;
 const fs = require('fs')
-<<<<<<< HEAD
 const path = require('path')#!/usr/bin/env node;
 const fs = require('fs')
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const path = require('path')
 const { execSync } = require('child_process')
 console.log(' Starting Enhanced Deployment Automation...')
@@ -27,8 +24,4 @@ console.log(' Starting Enhanced Deployment Automation...')
     execSync('node scripts/performance-monitor.cjs', { "stdio"})
     const status = execSync('git status --porcelain', { "encoding"})
     execSync(`tar -czf ${packageName} .next pages components public package.json package-lock.json next.config.js`, { "stdio"`})
-<<<<<<< HEAD
   console.error('� Deployment automation "failed")  console.error('� Deployment automation "failed")
-=======
-  console.error('� Deployment automation "failed")
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

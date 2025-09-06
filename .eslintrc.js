@@ -1,14 +1,9 @@
 /* eslint-env node */
-<<<<<<< HEAD
-=======
- 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
 module.exports = {
   env: {
     node: true,
     es2021: true
   },
-<<<<<<< HEAD
   extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
@@ -21,35 +16,11 @@ module.exports = {
     'react/no-unescaped-entities': 'off',
     '@next/next/no-html-link-for-pages': 'off',
     '@next/next/no-img-element': 'off'
-=======
-  globals: {
-    module: 'readonly',
-    require: 'readonly',
-    exports: 'readonly',
-    __dirname: 'readonly',
-    __filename: 'readonly',
-    global: 'readonly',
-    Buffer: 'readonly',
-    console: 'readonly'
-  },
-  extends: ['next/core-web-vitals'],
-  rules: {
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-    '@typescript-eslint/no-unused-vars': [
-      'warn',
-      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
-    ],
-    '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/no-empty-object-type': 'warn',
-    '@next/next/no-html-link-for-pages': 'warn'
->>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
   },
   ignorePatterns: [
     'node_modules/',
     '.next/',
     'out/',
-<<<<<<< HEAD
     'dist/',
     'build/',
     'coverage/',
@@ -203,16 +174,3 @@ module.exports = {
     'commit-and-push.js'
   ]
 };
-=======
-    'build/',
-    'dist/',
-    '*.config.js',
-    '*.config.ts',
-    'scripts/',
-    'automation/',
-    'netlify/',
-    'src/',
-    'apps/'
-  ]
-};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-625a

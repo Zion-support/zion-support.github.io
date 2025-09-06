@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
 };
@@ -10,12 +7,8 @@ export const apiClient = new ApiClient(),;
 export type { ApiResponse, RequestOptions };;
 
 };
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }};
 export const apiClient = new ApiClient();
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 };
 export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions };

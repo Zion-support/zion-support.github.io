@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     log('info', `CPU "usage": ${monitoringReport.metrics.cpu}%`);
     log('info', `Memory "usage": ${monitoringReport.metrics.memory}%`);
     log('info', `Disk "usage": ${monitoringReport.metrics.disk}%`);
@@ -32,14 +31,8 @@
     log('error', 'Fatal error in comprehensive monitoring and alerting', error.message);
     process.exit(1)}
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD:scripts/comprehensive-monitoring-alerting.cjs
 main();#!/usr/bin/env node;
-=======
-#!/usr/bin/env node;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -89,8 +82,4 @@ console.log('')
     "message"
     "action"
       log('warn', 'Alerts "generated")
-<<<<<<< HEAD
       log('info', 'Monitoring "Recommendations")
-=======
-      log('info', 'Monitoring "Recommendations")
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

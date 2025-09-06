@@ -24,7 +24,6 @@
     "out/",
     "dist/",
     "*.config.js",
-<<<<<<< HEAD
     "*.config.cjs",
     "*.config.mjs",
     "fix-critical-files.js",
@@ -181,10 +180,3 @@
     "backup-problematic-files/**"
   ]
 }
-=======
-    "*.config.ts",
-    "advanced-*.js",
-    "aggressive-fix.js"
-  ]
-}
->>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358

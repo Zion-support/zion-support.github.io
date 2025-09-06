@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
   };
@@ -12,11 +9,7 @@
 };
 };
 ;
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 };
 };
   return (;
@@ -25,7 +18,6 @@
 };
 };
 };
-<<<<<<< HEAD
   };
   };
   return (,
@@ -34,12 +26,6 @@
 };
 };
 };
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 type Href = string | { pathname?: string; href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -56,7 +42,6 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
     const existingClass = (children.props as any)?.className || '';
     const mergedClassName = [existingClass, className].filter(Boolean).join(' ');
     return React.cloneElement(children as any, {
-=======
 import React from 'react';
 
 // Define HTMLAnchorElement type if not available
@@ -88,17 +73,11 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
     const mergedClassName = [existingClass, className].filter(Boolean).join(' ');
     
     return React.cloneElement(children as React.ReactElement<{ href?: string; className?: string }>, {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
       href: resolved,
       className: mergedClassName,
       ...rest,
     });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 type Href = string | { pathname?: string; href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -119,9 +98,7 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
       "className": mergedClassName,
       ...rest});
   }
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
   return (
     <a href={resolved} className={className} {...rest}>
       {children}

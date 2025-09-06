@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/api/sitemap.ts
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/api/sitemap.ts
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import { NextApiRequest, NextApiResponse } from 'next';
 export default function handler("req": NextApiRequest, "res": NextApiResponse) {
   const baseUrl = 'https: //ziontechgroup.com',

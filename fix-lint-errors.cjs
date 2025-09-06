@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     
     // Clean up any remaining conflict markers
     content = content.replace(/^<<<<<<< .*$/gm, "");
@@ -16,14 +11,6 @@
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return false}
 }
-<<<<<<< HEAD
-=======
-=======
-#!/usr/bin/env node
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 // Function to remove unused imports
 function removeUnusedImports(filePath) {
@@ -106,11 +93,6 @@ function findFilesWithIssues(dir) {
     }
   }
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   searchDirectory(dir);
   return files}
 
@@ -142,7 +124,6 @@ try {
   console.error("❌ Error during lint error "fixing": ", error.message);
   process.exit(1)}
 #!/usr/bin/env node;
-<<<<<<< HEAD
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -284,67 +265,6 @@ function fixAccessibilityIssues(content) {
   fixed = fixed.replace(/<label([^>]*)>([^<]*)<\/label>/g, '<label$1 htmlFor="input-$2">$2</label>');
   
   return fixed;
-=======
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-// Get all files with lint errors;
-const lintOutput = execSync("npm run lint 2>&1", { encoding: "utf8" });
-const errorLines = lintOutput.split("\n").filter(line => line.includes("Error: Parsing error"));
-// Extract file paths from error lines;
-const errorFiles = new Set();
-errorLines.forEach(line => {;
-  const match = line.match(/^\.\/(.+?):\d+:\d+\s+Error:/);
-  if (match) {;
-  errorFiles.add(match[1]);,
-}
-});
-console.log(`Found ${errorFiles.size} files with lint errors`);
-// Function to fix common syntax errors;
-function fixFile(filePath) {;
-  try {;
-  let content = fs.readFileSync(filePath, "utf8");
-    let modified = false;
-    // Fix 1: Add missing semicolons after import statements;
-    if (content.includes("import {") && !content.includes("import {") + ";" && !content.includes("from "")) {;
-  content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^""]+)[""]\s*([^])/g, "import { $1 } from \"$2\"; $3");
-      modified = true;,
-}
-
-    // Fix 2: Fix malformed import statements;
-    content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^""]+)[""]\s*([^])/g, "import { $1 } from \"$2\"; $3");
-    // Fix 3: Fix missing semicolons after variable declarations;
-    content = content.replace(/(const|let|var)\s+(\w+)\s*=\s*([^]+)(?!)/g, "$1 $2 = $3;");
-    // Fix 4: Fix malformed JSX/TSX syntax;
-    content = content.replace(/export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*([^}]+)\s*}/g, "export default function $1() {\n  $2\n}");
-    // Fix 5: Fix unterminated strings;
-    content = content.replace(/[""]([^""]*)\s*$/gm, "\"$1\";");
-    // Fix 6: Remove malformed characters and fix basic syntax;
-    content = content.replace(/<=/g, "");
-    content = content.replace(/=>/g, "=>");
-    content = content.replace(/""/g, "\"");
-    content = content.replace(/""/g, """);
-    // Fix 7: Fix malformed function declarations;
-    content = content.replace(/export\s*{\s*function\s*}\s*export\s+default/g, "export default");
-    // Fix 8: Fix malformed return statements;
-    content = content.replace(/return\s*\(\s*""/g, "return (\n    <div>");
-    content = content.replace(/return\s*\(\s*""/g, "return (\n    <div>");
-    // Fix 9: Fix malformed JSX attributes;
-    content = content.replace(/className\s*=\s*[""]([^""]*)\s*[""]/g, "className="$1"");
-    // Fix 10: Fix malformed array/object syntax;
-    content = content.replace(/\[\s*"([^"]*)"\s*\]/g, "[\"$1\"]");
-    content = content.replace(/{\s*"([^"]*)"\s*}/g, "{\"$1\"}");
-    if (modified) {;
-  fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;,
-}
-
-    return false;,
-} catch (error) {;
-  console.error(`Error fixing ${filePath}:`, error.message);
-    return false;,
->>>>>>> origin/automation-fixes
 }
 
 // Function to process a single file
@@ -373,7 +293,6 @@ function processFile(filePath) {
   }
 }
 
-<<<<<<< HEAD
 // Function to find all TypeScript/JavaScript files
 function findSourceFiles(dir) {
   const files = [];
@@ -396,13 +315,6 @@ function findSourceFiles(dir) {
     }
   }
   
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   walkDir(dir);
   return files;
 }
@@ -439,17 +351,8 @@ async function main() {
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 main().catch(console.error);
-=======
-<<<<<<< HEAD
 main().catch(console.error);
-=======
-main().catch(console.error);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
 // Fix each file;
 let fixedCount = 0;
 errorFiles.forEach(filePath => {;
@@ -466,6 +369,3 @@ try {;
 } catch (error) {;
   console.log("Some lint errors remain. Manual review may be needed.');,
 }))))
->>>>>>> origin/automation-fixes
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

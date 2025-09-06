@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
     this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
     this.log(`Errors: ${this.results.errors.length}`);
@@ -12,13 +11,7 @@
 }
 // Run the comprehensive suite
 const suite = new ComprehensiveTestDeploy();
-<<<<<<< HEAD
-<<<<<<< HEAD:scripts/comprehensive-test-deploy.cjs
-<<<<<<< HEAD
 suite.runComprehensiveSuite().catch(console.error);#!/usr/bin/env node;
-=======
-#!/usr/bin/env node;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -55,8 +48,4 @@ console.log('=')
     this.log('\\n COMPREHENSIVE SUITE SUMMARY')
     this.log('===')
     this.log('\n Recommendations:')
-<<<<<<< HEAD
     this.log('\\n� Comprehensive test & deploy suite completed!')
-=======
-    this.log('\\n� Comprehensive test & deploy suite completed!')
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

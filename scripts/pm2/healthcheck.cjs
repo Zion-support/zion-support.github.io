@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
@@ -17,21 +16,7 @@ function pingPreview() {}
 	if (!ok) {}
 		console.error('Healthcheck failed');
 		process.exit(1)};
-<<<<<<< HEAD
 	console.log('Healthy')})();    // Check disk space
-=======
-	console.log('Healthy')})();
-=======
-#!/usr/bin/env node
-
-/**
- * Health Check Automation Script
- * Monitors system health and application status
- */
-
-const { execSync } = require('child_process');
-const fs = require('fs');
-<<<<<<< HEAD
 const path = require('path');
 
 class HealthChecker {
@@ -200,16 +185,8 @@ class HealthChecker {
 
   calculateOverallHealth(diskUsage, memoryUsage, pm2Status, buildStatus) {
     let score = 100;
-<<<<<<< HEAD
 
-=======
-    const issues = [];
-    
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     // Check disk space
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     if (diskUsage.percentage) {
       const diskPercent = parseInt(diskUsage.percentage);
       if (diskPercent > 90) {
@@ -271,29 +248,3 @@ if (require.main === module) {
 }
 
 module.exports = HealthChecker;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const http = require('http');
-const distOk = fs.existsSync('dist/index.html');
-function pingPreview() {}
-	return new Promise((resolve) => {}
-		const req = http.request({ host: '127.0.0.1', port: 4173, path: '/', timeout: 2000 }, (res) => {}
-			resolve(res.statusCode && res.statusCode < 500)}
-});
-		req.on('error', () => resolve(false));
-		req.end()})};
-(async () => {}
-	const ok = distOk && (await pingPreview());
-	if (!ok) {}
-		console.error('Healthcheck failed');
-		process.exit(1)}
-	})();
-		process.exit(1)};
-	console.log('Healthy')})();
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

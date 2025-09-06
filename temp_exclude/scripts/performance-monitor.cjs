@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -57,5 +56,3 @@ const { execSync } = require('child_process')
     if (this.metrics.performanceScore < 60) grade = 'F'
     this.log(' Starting Performance Monitor', 'PERFORMANCE')
       this.log(`Error during performance monitoring: ${error.message}`, 'ERROR'`)
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

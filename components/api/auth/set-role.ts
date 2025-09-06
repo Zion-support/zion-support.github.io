@@ -26,7 +26,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   headers['Set-Cookie'] = cookies.join(', ');
   res.writeHead(302, { ...headers, Location: '/' });
-  res.end();  };
+  res.end();  }
 
   if (role === 'admin' || role === 'talent' || role === 'guest') {
     set('role', role)

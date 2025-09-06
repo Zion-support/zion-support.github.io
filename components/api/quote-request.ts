@@ -82,5 +82,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error('quote-request error', e);
     return res.status(500).json({ message: 'Server error' });
   }    return res.status(500).json({ message: 'Server error' })
-  };
+  }
 }

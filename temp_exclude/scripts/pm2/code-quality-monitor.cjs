@@ -32,8 +32,4 @@ const fs = require(,"}),"
                 "type"
                 "severity"
         "type"
-<<<<<<< HEAD
         "message"        "message"
-=======
-        "message"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

@@ -82,5 +82,5 @@ export function SocialLogin() {
       </div>
     </div>
   );
-;
+
 }

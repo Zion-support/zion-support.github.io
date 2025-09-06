@@ -13,7 +13,7 @@ files.forEach(file => {
   try {
     const filePath = path.join(process.cwd(), file);
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    const modified = false;
     
     // Fix import statements with double punctuation
     content = content.replace(/import\s+.*?from\s+['"][^'"]+['"],\s*;/g, (match) => {
