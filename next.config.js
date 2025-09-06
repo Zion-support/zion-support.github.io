@@ -6,7 +6,10 @@ const nextConfig = {
   },
   typescript: {
     ignoreBuildErrors: true
+  },
+  experimental: {
+    esmExternals: false
   }
 };
 
-export default nextConfig;
+module.exports = nextConfig;
