@@ -23,6 +23,7 @@ interface ListingCardProps {
 }
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 interface ListingCardProps {
   id?: string;
@@ -148,3 +149,6 @@ export function ListingCard({
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+;"});})";
+>>>>>>> origin/automation-fixes

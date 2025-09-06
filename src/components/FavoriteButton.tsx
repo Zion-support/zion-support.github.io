@@ -14,7 +14,19 @@ import {
 
 interface FavoriteButtonProps {
   itemId: string;
+<<<<<<< HEAD
   className?: string;
+=======
+  itemType: 'product' | 'talent' | 'equipment' | 'service';
+  className?: string}
+
+export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {;
+  const [isFavorited, setIsFavorited] = useState(false);
+    e.stopPropagation () ;
+    setIsFavorited(!isFavorited) ;
+    // Here you would typically make an API call to save / remove from favorites;
+    if(isFavorited) {;
+>>>>>>> origin/automation-fixes
 
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
   const { isWishlisted, toggle } = useWishlist();
@@ -33,6 +45,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
       return;
     }
 
+<<<<<<< HEAD
     const wasWishlisted = isWishlisted(itemId);
     toggle(itemId);
 
@@ -93,3 +106,28 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      // Add to favorites`;
+      // console.log(`Added ${itemType} ${itemId} to favorites`)}  };
+  return ();
+    <button;
+      onClick = {handleToggleFavorite}`;
+      className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${isFavorited';
+          ? 'bg-red-500 hover:bg-red-600 text-white'';
+          : 'bg-zion-blue-dark/80 hover:bg-zion-cyan text-white'`;
+} ${className}`}
+      aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
+    >;
+      <Heart`;
+        className={`w-4 h-4 transition-all duration-300 ${;
+          isFavorited ? 'fill-current' : ''`;
+}`}
+      />    </button>;
+  )};`;
+className: {`w-4 h-4 transition-all duration-300 ${;
+          isFavorited ? 'fill-current' : '';`;
+}`} ;
+      />;
+    </button>;) }
+'`;
+>>>>>>> origin/automation-fixes

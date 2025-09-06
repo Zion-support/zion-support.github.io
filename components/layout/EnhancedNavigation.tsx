@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -89,6 +90,19 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
     } ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
+=======
+import React, { useState } from 'react;
+import Link from 'next/link;
+import { Menu, X, ChevronDown } from 'lucide-react;
+const EnhancedNavigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+const EnhancedNavigation = () => {;
+  return (;
+    <nav className="bg-white shadow-lg sticky top-0 z-50">;
+      <div className="container mx-auto px-4">;
+        <div className="flex justify-between items-center py-4">;
+>>>>>>> origin/automation-fixes
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -113,6 +127,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
           </motion.div>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item, index) => (
               <motion.div
@@ -168,6 +183,34 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
               </motion.div>
             ))}
           </div>
+=======
+          <div className="hidden lg:flex items-center space-x-8">;
+            <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors">Home</Link>;
+            {/* Services Dropdown */}
+            <div className="relative group">;
+              <button;
+                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors";
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >;
+                Services;
+                <ChevronDown className="ml-1 w-4 h-4" />;
+              </button>;
+              <div;
+                className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${servicesOpen ? 'block' : 'hidden'}`}
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >;
+                <Link href="/services/ai-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">AI Development</Link>;
+                <Link href="/services/cloud-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Cloud Services</Link>;
+                <Link href="/services/web-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Web Development</Link>;
+                <Link href="/services/mobile-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Mobile Development</Link>;
+                <Link href="/services/blockchain-solutions" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Blockchain Solutions</Link>;
+                <Link href="/services/iot-platforms" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">IoT Platforms</Link>;
+                <Link href="/services/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Cybersecurity</Link>;
+              </div>;
+            </div>;
+>>>>>>> origin/automation-fixes
 
           {/* Right side actions */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -296,9 +339,16 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
             </div>
           </motion.div>
         )}
+<<<<<<< HEAD
       </AnimatePresence>
     </nav>
   )
 };
 
+=======
+      </div>;
+    </nav>;
+  );
+};
+>>>>>>> origin/automation-fixes
 export default EnhancedNavigation;

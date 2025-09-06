@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface EnterpriseIT2026ServiceV2 {
+=======
+export interface EnterpriseIt2026ServiceV2 {
+>>>>>>> origin/automation-fixes
   id: string;
   name: string;
   tagline: string;
@@ -31,6 +35,7 @@ export interface EnterpriseIT2026ServiceV2 {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
     website: string;
   };
@@ -804,3 +809,24 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
 ];
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [;
+  {;
+    id: "2026-enterprise-it-v2",
+    name: "2026 Enterprise IT Solutions V2",
+    tagline: "Enhanced enterprise IT solutions",
+    price: "$449/month",
+    description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",
+    features[ "Enhanced enterprise IT",
+      "Advanced solutions",
+      "Improved infrastructure",
+      "Better security",
+      "Enhanced support" ],
+    link: "/services/2026-enterprise-it-v2",
+    category: "Enterprise IT 2026 V2",
+    realImplementation: true,
+    contactInfo: {;
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}}
+>>>>>>> origin/automation-fixes

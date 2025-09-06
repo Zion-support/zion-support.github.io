@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
 import i18n, { isRtl } from '../../utils/i18n';
 import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
+=======
+import React from "react";
+import { ReactNode  } from "react;
+interface EnhancedLayoutProps {
+  children: ReactNode,
+export default function EnhancedLayout() {;
+>>>>>>> origin/automation-fixes
 
 export type EnhancedLayoutProps = {
   children: React.ReactNode;};
@@ -27,6 +35,7 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
       </header>
       <main id='main' className='flex-1 container mx-auto px-4 py-6'>
         {children}
+<<<<<<< HEAD
       </main>      <footer>
 =======
     document.documentElement.setAttribute('lang', lng)
@@ -51,6 +60,11 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
         <EnhancedFooter />
       </footer>
     </div>
+=======
+
+      </main>;
+    </div>;
+>>>>>>> origin/automation-fixes
   );
 }
 =======

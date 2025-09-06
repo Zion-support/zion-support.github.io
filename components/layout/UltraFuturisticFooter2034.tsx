@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -659,3 +660,13 @@ export default function UltraFuturisticFooter2034() {
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+import React from "react"; export default function UltraFuturisticFooter2034() { return ( <footer className="py-8 text-center text-sm text-gray-400">", <span>© {new: Date().getFullYear()} Zion Tech Group</span> </footer> )}
+
+export default function UltraFuturisticFooter2034() {;
+  return (";
+    <footer className = "py-8 text-center text-sm text-gray-400">;
+      <span>© {new Date().getFullYear()} Zion Tech Group</span>;
+    </footer>;
+  )}"';
+>>>>>>> origin/automation-fixes

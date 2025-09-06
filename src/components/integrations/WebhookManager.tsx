@@ -26,6 +26,7 @@ import { toast } from 'sonner';
 <<<<<<< HEAD
 =======
 import React, { useEffect, useState } from "react";
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -226,6 +227,95 @@ export function WebhookManager() {
 <<<<<<< HEAD
                 <ClickableBadge
                   key={event}
+=======
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+export default function Page() {;
+    { value: "quote_received", label: "Quote Request Received" },
+    { value: "milestone_approved", label: "Milestone Approved" },
+    { value: "talent_hired", label: "Talent Hired" }
+  ];
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
+}, []);
+    fetchWebhooks();
+}, [fetchWebhooks]); // Added fetchWebhooks;
+  const handleAddEvent = () => {;
+    if(!newWebhook.selectedEvent) return;
+    if(newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {;
+      toast.error("This event is already added");
+      return;
+}
+
+    setNewWebhook({;
+      ...newWebhook,
+      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
+      selectedEvent: "" as WebhookEventType;
+});
+};
+  const handleRemoveEvent = (event: WebhookEventType) => {;
+    setNewWebhook({;
+      ...newWebhook,
+      eventTypes: newWebhook.eventTypes.filter(e => e !== event);
+});
+};
+  const handleCreateWebhook = async () => {;
+    if(!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {;
+      toast.error("Please fill in all required fields");
+      return;
+}
+
+    await createWebhook(newWebhook.name,
+      newWebhook.url,
+      newWebhook.eventTypes,
+      newWebhook.secret || undefined;
+    );
+    // Reset form;
+    setNewWebhook({;
+      name: ",
+      url: ",
+      selectedEvent: "" as WebhookEventType,
+      eventTypes: [],
+      secret: ;
+});
+};
+  const handleTestWebhook = async(webhookId: string, eventType: WebhookEventType) => {;
+    await testWebhook(webhookId, eventType);
+};
+  return (<div className="space-y-8">;
+      <Card>;
+        <CardHeader>;
+          <CardTitle>Create Webhook</CardTitle>;
+          <CardDescription>;
+            Define webhooks to notify external systems when events occur in Zion.</CardDescription>;
+        </CardHeader>;
+        <CardContent className="space-y-4">;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+            <div className="space-y-2">;
+              <Label htmlFor="webhook-name">Webhook Name</Label>;
+              <Input ;
+                id="webhook-name" ;
+                placeholder="e.g., Job Postings Webhook";
+                value={newWebhook.name}
+                onChange={(e) => setNewWebhook({...newWebhook, name: e.target.value})}
+              />;
+            </div>;
+            <div className="space-y-2">;
+              <Label htmlFor="webhook-url">URL</Label>;
+              <Input ;
+                id="webhook-url" ;
+                placeholder="https://example.com/webhook";
+                value={newWebhook.url}
+                onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value})}
+              />;
+            </div>;
+          </div>;
+          <div className="space-y-2">;
+            <Label>Events</Label>;
+            <div className="flex flex-wrap gap-2 mb-2">;
+              {newWebhook.eventTypes.map(event => (;
+                <ClickableBadge ;
+                  key={event} ;
+>>>>>>> origin/automation-fixes
                   onRemove={() => handleRemoveEvent(event)}
 =======
                 <ClickableBadge 
@@ -261,6 +351,7 @@ export function WebhookManager() {
                       {option.label}
                     </SelectItem>
                   ))}
+<<<<<<< HEAD
                 </SelectContent>
               </Select>
               <Button type='button' onClick={handleAddEvent} variant='outline'>
@@ -320,6 +411,50 @@ export function WebhookManager() {
                     <div>
                       <CardTitle className='text-lg'>{webhook.name}</CardTitle>
                       <CardDescription className='truncate max-w-md'>
+=======
+                </SelectContent>;
+              </Select>;
+              <Button type="button" onClick={handleAddEvent} variant="outline">;
+                <PlusCircle className="h-4 w-4 mr-2" /> Add;
+              </Button>;
+            </div>;
+          </div>;
+          <div className="space-y-2">;
+            <Label htmlFor="webhook-secret">Secret(optional)</Label>;
+            <Input ;
+              id="webhook-secret" ;
+              placeholder="A secret key to verify the webhook source";
+              value={newWebhook.secret}
+              onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
+            />;
+            <p className="text-xs text-muted-foreground">;
+              If provided, this secret will be used to sign the webhook payload.</p>;
+          </div>;
+        </CardContent>;
+        <CardFooter>;
+          <Button onClick={handleCreateWebhook}>;
+            <Save className="h-4 w-4 mr-2" /> Create Webhook;
+          </Button>;
+        </CardFooter>;
+      </Card>;
+      <div>;
+        <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>;
+        {loading ? (;
+          <p>Loading webhooks...</p>;
+        ) : error ? (;
+          <p className="text-red-500">{error}</p>;
+        ) : webhooks.length === 0 ? (;
+          <p>No webhooks configured yet.Create your first webhook above.</p>;
+        ) : (;
+          <div className="space-y-4">;
+            {webhooks.map(webhook => (;
+              <Card key={webhook.id}>;
+                <CardHeader className="pb-2">;
+                  <div className="flex justify-between items-start">;
+                    <div>;
+                      <CardTitle className="text-lg">{webhook.name}</CardTitle>;
+                      <CardDescription className="truncate max-w-md">;
+>>>>>>> origin/automation-fixes
                         {webhook.url}
                       </CardDescription>
                     </div>
@@ -388,6 +523,7 @@ export function WebhookManager() {
                     variant='outline'
                     size='sm'
                     onClick={() => deleteWebhook(webhook.id)}
+<<<<<<< HEAD
 =======
                     variant="outline"
                     size="sm"
@@ -422,6 +558,23 @@ export function WebhookManager() {
                           {eventOptions.find(e => e.value === event)?.label ||
                             event}
                         </SelectItem>
+=======
+                  >;
+                    <Trash className="h-4 w-4 mr-2" /> Delete;
+                  </Button>;
+                  <Select;
+                    onValueChange={(value) => handleTestWebhook(webhook.id, value as WebhookEventType)}
+                  >;
+                    <SelectTrigger className="w-[180px]">;
+                      <SelectValue placeholder="Test webhook" />;
+                    </SelectTrigger>;
+                    <SelectContent>;
+                      <SelectItem value="test_event">Test(generic)</SelectItem>;
+                      {webhook.event_types.map(event => (;
+                        <SelectItem key={event} value={event}>;
+                          Test {eventOptions.find(e => e.value === event)?.label || event}
+                        </SelectItem>;
+>>>>>>> origin/automation-fixes
                       ))}
                     </SelectContent>
                   </Select>
@@ -431,6 +584,7 @@ export function WebhookManager() {
           </div>
         )}
 
+<<<<<<< HEAD
         {testResult && (
           <Card className='mt-4 border-blue-200'>
             <CardHeader>
@@ -447,6 +601,18 @@ export function WebhookManager() {
                         : 'text-red-600'
                     }
                   >
+=======
+        {testResult && (;
+          <Card className="mt-4 border-blue-200">;
+            <CardHeader>;
+              <CardTitle className="text-lg">Webhook Test Result</CardTitle>;
+            </CardHeader>;
+            <CardContent>;
+              <div className="space-y-2">;
+                <div className="flex justify-between">;
+                  <span className="font-medium">Status:</span>;
+                  <span className={testResult.status >= 200 && testResult.status < 300 ? 'text-green-600' : 'text-red-600'}>;
+>>>>>>> origin/automation-fixes
                     {testResult.status} {testResult.statusText}
                   </span>
                 </div>
@@ -460,6 +626,7 @@ export function WebhookManager() {
             </CardContent>
           </Card>
         )}
+<<<<<<< HEAD
       </div>
     </div>
   );
@@ -536,6 +703,11 @@ newWebhook.secret || undefined);";
 }</div> </div>) ;
 }'"
 =======
+=======
+      </div>;
+    </div>;
+  );
+>>>>>>> origin/automation-fixes
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  export default function ServicesIndexPage () {
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (return (<UltraAdvancedFuturisticBackground> <Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) ) 
 }</div> </div> </section> />) ) 
@@ -34,6 +35,22 @@
 }</div> </section> <motion.div initial= {
   {
   opacity: 0, y: 20 
+=======
+import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const ServicesPage: NextPage = () => {;
+  return (;
+    <div>;
+      <Head>;
+        <title>Services - Zion Tech Group</title>;
+        <meta name="description" content="Explore our comprehensive AI micro SaaS, IT, and AI services with transparent pricing." />;
+      </Head>;
+      <main style={{ fontFamily: 'system-ui, sans-serif', lineHeight: 1.5, padding: '32px', maxWidth: 1120, margin: '0 auto' }}>;
+        <h1 style={{ marginTop: 0 }}>AI-Powered Micro SAAS Solutions</h1>;
+        <p>Discover our comprehensive suite of AI-powered micro SaaS services, IT solutions, and AI platforms with transparent pricing and rapid deployment.</p>;
+>>>>>>> origin/automation-fixes
 
 }animate= {
   {
@@ -43,6 +60,7 @@
   {
   duration: 0.8, delay: 0.4 
 
+<<<<<<< HEAD
 }> <h2 className="text-4xl font-bold text-white mb-6" >Ready to Get Started?</h2> <p className="text-xl text-gray-300 mb-8" > Contact us today to discuss how our services can transform your business. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Contact Sales </Link> <a href="/get-started" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300" > Get Started </Link> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 
 }<QuoteRequestModal open= {
   modalOpen 
@@ -53,3 +71,44 @@
 }onSubmit= {
   handleSubmit 
 }/> </div>) 
+=======
+        <h2>IT Services</h2>;
+        <ul>;
+          <li><Link href="/services/cloud-devops">Cloud DevOps & Infrastructure</Link> — from $4k/month</li>;
+          <li><Link href="/services/cybersecurity">Managed Cybersecurity</Link> — from $6k/month</li>;
+          <li><Link href="/services/digital-transformation">Digital Transformation</Link> — from $18k/project</li>;
+        </ul>;
+
+        <h2>Comprehensive Showcase</h2>;
+        <p>;
+          <Link href="/services/comprehensive-micro-saas-showcase" className="text-blue-600 underline">;
+            View our complete AI micro SaaS showcase with detailed features, benefits, and market pricing →;
+          </Link>;
+        </p>;
+
+        <h2 id="contact">Contact Information</h2>;
+        <div style={{ backgroundColor: '#f8f9fa', padding: '24px', borderRadius: '8px', marginTop: '24px' }}>;
+          <h3 style={{ marginTop: 0 }}>Get in Touch</h3>;
+          <p><strong>Mobile:</strong> <a href="tel:+13024640950">+1 302 464 0950</a></p>;
+          <p><strong>Email:</strong> <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>;
+          <p><strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>;
+          <p><strong>Website:</strong> <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer">https://ziontechgroup.com</a></p>;
+          <div style={{ marginTop: '16px' }}>;
+            <Link href="/contact" style={{ ;
+              backgroundColor: '#007bff',
+              color: 'white',
+              padding: '12px 24px',
+              borderRadius: '6px',
+              textDecoration: 'none',
+              display: 'inline-block';
+}}>;
+              Request a Quote;
+            </Link>;
+          </div>;
+        </div>;
+      </main>;
+    </div>;
+  );
+};
+export default ServicesPage;
+>>>>>>> origin/automation-fixes

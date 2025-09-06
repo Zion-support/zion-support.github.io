@@ -27,12 +27,46 @@ export function UpcomingInterviewsCard() {
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+<<<<<<< HEAD
 
   useEffect((,) => {
     const loadInterviews = async () => {
+=======
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
+
+  return () => {;
+    // Cleanup function;
+};
+}, []); []);
+    const loadInterviews = async () => {;
+>>>>>>> origin/automation-fixes
       setIsLoading(true);
       try {
         const interviews = await fetchInterviews();
+<<<<<<< HEAD
+=======
+        // const now = new Date(); // Not used here, can be removed if only for filtering future;
+        const upcoming = interviews;
+          .filter(interview => ;
+            interview.status === 'confirmed' && ;
+            !isPast(parseISO(interview.scheduled_date));
+          );
+          .sort((a, b) => ;
+            parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime();
+          );
+          .slice(0, 3);
+
+        setUpcomingInterviews(upcoming);
+} catch(error) {;
+        console.error("Error loading upcoming interviews:", error);
+} finally {;
+        setIsLoading(false);
+}
+    };
+    loadInterviews();
+}, [fetchInterviews]); // Added fetchInterviews;
+>>>>>>> origin/automation-fixes
 
         // Filter for confirmed interviews in the future
         const upcoming = interviews
@@ -86,6 +120,7 @@ export function UpcomingInterviewsCard() {
                 </div>
               </div>
             ))}
+<<<<<<< HEAD
           </div>
         </CardContent>
       </Card>
@@ -132,10 +167,53 @@ export function UpcomingInterviewsCard() {
             const formattedTime = format(interviewDate, 'h:mm a');
 
             // Determine if interview is happening soon (within 30 minutes)
+=======
+          </div>;
+        </CardContent>;
+      </Card>;
+    );
+}
+
+  if(upcomingInterviews.length === 0) {;
+    return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
+        <CardHeader>;
+          <CardTitle className="text-lg flex items-center">;
+            <Video className="h-5 w-5 mr-2 text-zion-purple" />;
+            Upcoming Interviews;
+          </CardTitle>;
+        </CardHeader>;
+        <CardContent>;
+          <div className="text-center py-6">;
+            <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground" />;
+            <p className="text-sm text-muted-foreground">No upcoming interviews scheduled</p>;
+            <Button asChild className="mt-4" variant="outline" size="sm">;
+              <Link to="/interviews">Schedule Interview</Link>;
+            </Button>;
+          </div>;
+        </CardContent>;
+      </Card>;
+    );
+}
+
+  return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
+      <CardHeader>;
+        <CardTitle className="text-lg flex items-center">;
+          <Video className="h-5 w-5 mr-2 text-zion-purple" />;
+          Upcoming Interviews;
+        </CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <div className="space-y-4">;
+          {upcomingInterviews.map(interview => {;
+            const interviewDate = parseISO(interview.scheduled_date);
+            const formattedDate = format(interviewDate, 'EEE, MMM d');
+            const formattedTime = format(interviewDate, 'h:mm a');
+>>>>>>> origin/automation-fixes
             const now = new Date();
             const isStartingSoon =
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime();
+<<<<<<< HEAD
 
             return (
               <div key={interview.id} className='flex items-center gap-3'>
@@ -160,6 +238,21 @@ export function UpcomingInterviewsCard() {
                         'U'
                       ).charAt(0)}
                     </div>
+=======
+            return (<div key={interview.id} className="flex items-center gap-3">;
+                <Avatar className="h-10 w-10 bg-zion-purple/10">;
+                  {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
+                  {/* For now, conditional rendering based on available image */}
+                  {interview.client_avatar || interview.talent_avatar ? (;
+                    <img ;
+                      src={interview.client_avatar || interview.talent_avatar || undefined} // Ensure src is string | undefined;
+                      alt={interview.client_name || interview.talent_name || "User"} // Ensure alt is string;
+                    />;
+                  ) : (;
+                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">;
+                      {(interview.client_name || interview.talent_name || "U").charAt(0)}
+                    </div>;
+>>>>>>> origin/automation-fixes
                   )}
                 </Avatar>
                 <div className='flex-1'>
@@ -176,6 +269,7 @@ export function UpcomingInterviewsCard() {
                   <div className='flex items-center text-sm text-muted-foreground'>
                     <Clock className='h-3 w-3 mr-1' />
                     {formattedDate} at {formattedTime}
+<<<<<<< HEAD
                   </div>
                 </div>
               </div>
@@ -192,6 +286,24 @@ export function UpcomingInterviewsCard() {
     </Card>
   );
 =======
+=======
+                  </div>;
+                </div>;
+              </div>;
+            );
+})}
+        </div>;
+        <div className="mt-4 pt-3 border-t border-zion-blue-light/40">;
+          <Button asChild size="sm" variant="outline" className="w-full">;
+            <Link to="/interviews">;
+              View All Interviews;
+            </Link>;
+          </Button>;
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+>>>>>>> origin/automation-fixes
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

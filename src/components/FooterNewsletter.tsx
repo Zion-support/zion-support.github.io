@@ -6,6 +6,7 @@ import { Loader2 } from 'lucide-react';
 <<<<<<< HEAD
 import { logErrorToProduction } from '@/utils/productionLogger';
 
+<<<<<<< HEAD
 =======
 import {logErrorToProduction} from '@/utils/productionLogger';
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
@@ -15,6 +16,12 @@ export function FooterNewsletter(): React.ReactElement {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [emailError, setEmailError] = useState('');
   const { toast } = useToast();
+=======
+      // // // // // // // console.error('Newsletter subscription failed:', error) ;
+} finally {;
+      setIsSubmitting(false) ;
+      // console.error('Newsletter subscription failed:', error)} finally {;
+>>>>>>> origin/automation-fixes
 
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -89,6 +96,22 @@ export function FooterNewsletter(): React.ReactElement {
       setIsSubmitting(false);
     }
   };
+<<<<<<< HEAD
+=======
+  return ();
+    <div className="bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">";
+      <div className="text-center">";
+        <div className="flex justify-center mb-4">";
+          <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full flex items-center justify-center">";
+            <Mail className="w-6 h-6 text-white"  />          </div>;
+        </div>;
+";
+        <h3 className="text-xl font-bold text-white mb-2">;
+          Stay Updated;
+        </h3>";
+        <p className="text-gray-300 mb-6 max-w-md mx-auto">;
+          Get the latest insights on AI technology, cybersecurity trends, and IT solutions delivered to your inbox.</p>;
+>>>>>>> origin/automation-fixes
 
 <<<<<<< HEAD
   

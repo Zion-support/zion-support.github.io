@@ -88,6 +88,7 @@ const ProductListingCardComponent = ({
     if (listing.price === null) return 'Custom pricing';
     return formatPrice(listing.price);
   };
+<<<<<<< HEAD
 
   const handleImageError = () => {
     if (!imageError) {
@@ -217,6 +218,29 @@ const ProductListingCardComponent = ({
             handleViewListing()
           ,}
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+=======
+  return ();
+    <div;
+      data-testid= "equipment-link";'`;
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`};
+      onClick={handleViewListing};
+      tabIndex={0};";
+      onKeyDown={(e) => {;
+        if(e.key === 'Enter' || e.key === ' ') {;
+          e.preventDefault () ;
+          handleViewListing () }
+      }}
+
+      {/* Image */}
+      <div';
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'};
+        onClick={handleViewListing} // Keep existing onClick for navigation;";
+        tabIndex={-1} // Remove from tab order as parent is focusable;
+        onKeyDown={(e) => {;
+          if(e.key === 'Enter' || e.key === ' ') {;
+            e.preventDefault () ;
+            handleViewListing () }
+>>>>>>> origin/automation-fixes
         }}
       >
         <div className={`relative ${imageContainerClasses}`}>
@@ -373,6 +397,7 @@ const ProductListingCardComponent = ({
               )}
             </Button>
 
+<<<<<<< HEAD
             <Button
 <<<<<<< HEAD
               size='sm'
@@ -503,3 +528,20 @@ export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+                Request Quote;
+              </Button>) };
+          </div>;
+        </div>;
+      </div>;
+    </div>;) }
+export default React.memo(ProductListingCard);
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+'"`;
+>>>>>>> origin/automation-fixes

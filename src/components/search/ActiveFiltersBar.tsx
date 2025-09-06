@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 export default ActiveFiltersBar;
@@ -151,3 +152,24 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
 
 export default ActiveFiltersBar,
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+=======
+interface Filter {
+  key: string;
+  value: string;
+  label: string;
+}
+
+interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {;
+
+  filters: Filter[];
+  onRemoveFilter: key: string void;
+  onClearAll: : unknown void}
+
+        className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline";
+      >;
+        Clear all;
+      </button>;
+    </div>;
+  )}
+'";
+>>>>>>> origin/automation-fixes
