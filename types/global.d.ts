@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+/// <reference types="next" />
+/// <reference types="next/image-types/global" />
+/// <reference types="next/navigation-types/navigation" />
+
+// Global window extensions
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+    dataLayer?: any[];
+  }
+}
+
+=======
 declare global {
   interface Window {
     performance: Performance;
@@ -203,6 +217,7 @@ export {}
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 // Module declarations
 declare module "*.svg" {
   const content: string;
@@ -239,6 +254,35 @@ declare module "*.css" {
   export default content;
 }
 
+<<<<<<< HEAD
+declare module "*.scss" {
+  const content: { [className: string]: string };
+  export default content;
+}
+
+declare module "*.module.css" {
+  const content: { [className: string]: string };
+  export default content;
+}
+
+declare module "*.module.scss" {
+  const content: { [className: string]: string };
+  export default content;
+}
+
+// Environment variables
+declare namespace NodeJS {
+  interface ProcessEnv {
+    NODE_ENV: "development" | "production" | "test";
+    NEXT_PUBLIC_SUPABASE_URL?: string;
+    NEXT_PUBLIC_SUPABASE_ANON_KEY?: string;
+    SUPABASE_SERVICE_ROLE_KEY?: string;
+    NEXT_PUBLIC_GA_TRACKING_ID?: string;
+  }
+}
+
+export {};
+=======
 
 export {};
 export {};
@@ -270,3 +314,4 @@ export {}
 // Re - export DOM types that might not be available;
 export {}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571

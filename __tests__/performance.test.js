@@ -24,7 +24,10 @@ test.describe('Performance Tests', () => {
         }
       });
     });
+<<<<<<< HEAD
+=======
     
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
     // Check performance score
     if (lighthouse.lhr && lighthouse.lhr.categories) {
       const performanceScore = lighthouse.lhr.categories.performance.score * 100;
@@ -43,6 +46,12 @@ test.describe('Performance Tests', () => {
     });
     
     await page.waitForTimeout(2000);
+<<<<<<< HEAD
+    // Should not have bundle size warnings
+    expect(consoleMessages.length).toBe(0);
+  });
+});
+=======
     expect(consoleMessages.length).toBe(0);
   });
   
@@ -72,3 +81,4 @@ test && test.describe('"Performance"
   test('"bundle"
     "await"
     page && page.on('console', "msg"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571

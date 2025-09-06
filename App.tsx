@@ -51,6 +51,10 @@ export default function App() {
     },
   ];
 
+<<<<<<< HEAD
+export default function App(): React.JSX.Element {
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <ParticleBackground />

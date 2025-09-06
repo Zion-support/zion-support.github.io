@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-// Export components from their respective files;
+// Export components from their respective files
 export * from "./Sidebar.tsx";
 
 <<<<<<< HEAD

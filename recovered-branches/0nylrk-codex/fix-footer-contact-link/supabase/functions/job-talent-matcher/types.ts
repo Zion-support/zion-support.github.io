@@ -1,29 +1,15 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 export interface JobData {
-export interface JobData {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   title: string;
   description: string;
   skills: string[];
   category: string;
   budget: {
-<<<<<<< HEAD
-
-    min: number
-
-    max: number
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    min: number,
+    min: number;
     max: number;
-  }
+  };
   deadline: string;
+}
 
 }
 export interface TalentProfile {
@@ -45,7 +31,9 @@ export interface TalentProfile {;
   bio?: string;
   skills: string[];
   years_experience: number;
-<<<<<<< HEAD
+  hourly_rate?: number;
+  availability_type?: string;
+}
 
 <<<<<<< HEAD
   hourly_rate?: number,
@@ -66,11 +54,15 @@ export interface TalentMatch {;
   talent_id: string;
   job_id: string;
   match_score: number;
-
-<<<<<<< HEAD
-  matched_skills: string[],
+  matched_skills: string[];
   created_at: string;
+}
 
+export interface MatchResult {
+  talentId: string;
+  score: number;
+  matchedSkills: string[];
+  reason?: string;
 }
 =======
   matched_skills: string[]

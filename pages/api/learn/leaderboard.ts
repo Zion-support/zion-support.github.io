@@ -3,8 +3,6 @@ import fs from 'fs',;
 import path from 'path',;
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
 
-
-
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -39,5 +37,6 @@ function handler() {
     const top = entries.sort ((array: any, boolean: any) => b.points - a.points).slice (0, 20),
     res.status (200).json ({ leaderboard: top });
   } catch (e: any) {
-
-
+    res.status (500).json ({ error: e?.message ?? 'Failed to load leaderboard' });
+  }
+};
