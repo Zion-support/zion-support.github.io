@@ -244,9 +244,15 @@ function resolveContentConflicts() {
         let content = fs.readFileSync(file, 'utf8');
         
         // Remove conflict markers and keep main branch version
-        content = content.replace(/[\s\S]*?[\s\S]*?        content = content.replace(/[\s\S]*?[\s\S]*?        
+
+        content = content.replace(/[\s\S]*?
+        content = content.replace(/[\s\S]*?
+        
         // Clean up any remaining conflict markers
-        content = content.replace(/[\s\S]*?[\s\S]*?        content = content.replace(/[\s\S]*?[\s\S]*?        
+        content = content.replace(/[\s\S]*?
+        content = content.replace(/[\s\S]*?
+        
+ (Resolve merge conflicts: clean up all conflict markers)
         // Write the cleaned content
         fs.writeFileSync(file, content);
         execSync(`git add ${file}`);
@@ -281,7 +287,10 @@ function resolveAddAddConflicts() {
         let content = fs.readFileSync(file, 'utf8');
         
         // Remove conflict markers and keep both versions
-        content = content.replace(/[\s\S]*?[\s\S]*?          const parts = match.split('');
+
+        content = content.replace(/[\s\S]*?
+          const parts = match.split('=======');
+ (Resolve merge conflicts: clean up all conflict markers)
           if (parts.length === 2) {
             const headPart = parts[0].replace(/\s*/, '');
             const mainPart = parts[1].replace(/\s*            return headPart + mainPart;

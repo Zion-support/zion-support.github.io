@@ -1,15 +1,9 @@
 
 
-
-
-
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
-
-
-
 
 const fs = require('fs');
 const path = require('path');
@@ -18,9 +12,42 @@ function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Split by lines and process
-// Function to resolve merge conflicts by choosing the newer version (after =======)
+)
 function resolveConflicts(filePath) {
+=======
+    // Remove all merge conflict markers and keep the main branch version (after =======)
+    content = content.replace(/([\s\S]*?)
+    
+    // Handle incomplete conflicts (missing closing markers)
+    content = content.replace(/([\s\S]*?)(?=\n|$)/g, '$1');
+    
+    // Clean up any remaining conflict markers
+    content = content.replace(/[\s\S]*?
+    content = content.replace(/[\s\S]*?
+    
+    // Remove any remaining conflict markers
+    content = content.replace(/[\s\S]*?
+    content = content.replace(/[\s\S]*?
+    
+    // Clean up multiple consecutive newlines
+    content = content.replace(/\n{3,}/g, '\n\n');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Resolved conflicts in ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Function to find all files with merge conflicts
+function findConflictedFiles() {
+ (Resolve merge conflicts: clean up all conflict markers)
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     
@@ -33,7 +60,6 @@ function resolveConflicts(filePath) {
     
     // Split by conflict markers and keep the newer version (after =======)
 
-
     const lines = content.split('\n');
     const resolvedLines = [];
     let inConflict = false;
@@ -44,18 +70,7 @@ function resolveConflicts(filePath) {
       
 if (line.trim().startsWith('<<<<<<<')) {
 
-      if (line.includes('<<<<<<< HEAD')) {
-
-
       if (line.includes('')) {
-
-        inConflict = true;
-        conflictStart = i;
-        continue;
-      }
-      
-
-      if (line.includes('=======')) {
 
       if (line.includes('')) {
 
@@ -69,7 +84,6 @@ if (line.trim().startsWith('=======')) {
       }
       
       if (line.trim().startsWith('>>>>>>>')) {
-
 
         inConflict = false;
         conflictStart = -1;
@@ -109,11 +123,9 @@ if (inConflict) {
   } catch (error) {
     console.error(`Error resolving conflicts in ${filePath}:`, error.message);
 
-
     return false;
   }
 }
-
 
 // Find all files with merge conflicts
 function findFilesWithConflicts(dir) {
@@ -158,7 +170,6 @@ function findConflictedFiles(dir) {
         } catch (error) {
           // Skip files that can't be read
 
-
         }
       }
     }
@@ -190,17 +201,15 @@ let resolvedCount = 0;
 for (const file of conflictedFiles) {
   if (resolveConflicts(file)) {
 
-
     resolvedCount++;
   }
 }
 
 console.log(`Resolved conflicts in ${resolvedCount} files`);
 
-
     // Remove all merge conflict markers and keep the content after =======
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n?/g, '');
-    content = content.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/
     
     // Clean up any remaining ======= markers
     content = content.replace(/=======\n?/g, '');
@@ -265,7 +274,4 @@ function resolveMergeConflicts() {
 
 resolveMergeConflicts();
 console.log('Merge conflict resolution completed!');
-
-
-
 
