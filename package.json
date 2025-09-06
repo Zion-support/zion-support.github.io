@@ -331,11 +331,15 @@
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@next/swc-linux-x64-gnu": "^15.5.2",
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
     "@next/swc-linux-x64-gnu": "^14.2.32",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-191f
+=======
+    "@next/swc-linux-x64-gnu": "^15.5.2",
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -458,6 +462,11 @@
     "@esbuild/linux-x64": "^0.25.9"
   },
   "devDependencies": {
+<<<<<<< HEAD
+=======
+    "@babel/core": "^7.28.3",
+    "@babel/plugin-transform-class-properties": "^7.27.1",
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",

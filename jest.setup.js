@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,21 +21,44 @@ jest.mock("next/router", () => ({
       pathname: "/",
       query: {},
       asPath: "/",
+=======
+
+// Jest setup file
+import '@testing-library/jest-dom';
+
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '/',
+      query: {},
+      asPath: '/',
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
       push: jest.fn(),
       pop: jest.fn(),
       reload: jest.fn(),
       back: jest.fn(),
+<<<<<<< HEAD
       prefetch: jest.fn(),
+=======
+      prefetch: jest.fn().mockResolvedValue(undefined),
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
       beforePopState: jest.fn(),
       events: {
         on: jest.fn(),
         off: jest.fn(),
         emit: jest.fn(),
       },
+<<<<<<< HEAD
+=======
+      isFallback: false,
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
     };
   },
 }));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -187,3 +211,12 @@ beforeEach(() => {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+// Mock Next.js Image component
+jest.mock('next/image', () => ({
+  __esModule: true,
+  default: (props) => {
+    return <img {...props} />;
+  },
+}));
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd

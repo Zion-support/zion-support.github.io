@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
@@ -13,6 +14,12 @@ import React from 'react';
 =======
 <<<<<<< HEAD
 import React from 'react';
+=======
+import { Phone, Mail, MapPin } from 'lucide-react';
+import Link from 'next/link';
+import React from 'react';
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 
 <<<<<<< HEAD
 export default function Footer() {

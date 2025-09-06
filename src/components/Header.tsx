@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -36,6 +37,12 @@ const Header: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+import { Menu, X } from 'lucide-react';
+import Link from 'next/link';
+import React from 'react';
+
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 
   return (
     <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 sticky top-0 z-50">

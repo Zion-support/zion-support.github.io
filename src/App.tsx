@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,6 +24,21 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Pricing from './pages/Pricing';
+=======
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { Suspense, lazy } from 'react';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import LoadingSpinner from './components/LoadingSpinner';
+
+
+// Lazy load pages
+const HomePage = lazy(() => import('./pages/index'));
+const AboutPage = lazy(() => import('./pages/about'));
+const ContactPage = lazy(() => import('./pages/contact'));
+const ServicesPage = lazy(() => import('./pages/services/index'));
+const ComprehensiveMicroSaasShowcase = lazy(() => import('./pages/services/comprehensive-micro-saas-showcase'));
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 
 function App() {
   return (
