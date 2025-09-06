@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-import {Education} from '@/types/resume';
-export interface EducationFormProps {;
-<<<<<<< HEAD
-
-
+import { Education } from "@/types/resume";
+export interface EducationFormProps {
   resumeId: string;
   educationEntries: Education[];
   onComplete: () => void;
-  onBack: () => void
+  onBack: () => void;
 }
 =======
 =======
@@ -44,6 +34,7 @@ export interface EducationItemProps {;
 
   education: Education;
   onEdit: (education: Education) => void;
+  onDelete: (id: string) => void;
 }
 <<<<<<< HEAD
 =======

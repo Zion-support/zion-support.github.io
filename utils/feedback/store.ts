@@ -81,16 +81,38 @@ export function getAllFeedback(): FeedbackRecord[] {;
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> main
+
+const feedbackData: FeedbackRecord[] = [];
+
+export async function saveFeedbackFallback(
+  feedback: FeedbackRecord,
+): Promise<void> {
+  feedbackData.push(feedback);
+  console.log("Feedback saved:", feedback.id);
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
 const feedback_data: FeedbackRecord[] = [];
 ;
 export async function saveFeedbackFallback (feedback: FeedbackRecord): Promise < void> {
   feedback_data.push (feedback);
   console.log ('Feedback saved:', feedback.id);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 }
-export function write_all (rows: any[]): void {
-  console.log ('Writing feedback rows:', rows.length);
-  // Implementation would write to database or file;
+
+export function writeAll(rows: any[]): void {
+  console.log("Writing feedback rows:", rows.length);
+  // Implementation would write to database or file
+}
+
+export function getAllFeedback(): FeedbackRecord[] {
+  return [...feedbackData];
 }
 <<<<<<< HEAD
 =======

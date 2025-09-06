@@ -1,4 +1,16 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+import {
+  addTransaction,
+  getAllTransactions,
+  getUserBalance,
+} from "./tokenStore";
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -8,6 +20,8 @@ export function issueTokens(userId: string, amount: number, reason: string) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 
   const actualAmount = Math && Math.min(amount, currentBalance);
   
@@ -46,34 +60,21 @@ export function revokeTokens(userId: string, amount: number, reason: string) {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return addTransaction({
-    userId
-    type: 'spend'
-    amount: actualAmount
-    description: reason
-import { add_transaction, getAllTransactions, getUserBalance } from './token_store';
-;
-export /**
- * issue_tokens - Function description
- */
-function issue_tokens() {
-  return add_transaction ({
-    user_id,
-    type: 'earn',
+    userId,
+    type: "earn",
     amount,
-    description: reason;
+    description: reason,
   });
 }
-export /**
- * revoke_tokens - Function description
- */
-function revoke_tokens() {
-  const current_balance = getUserBalance (user_id);
-  const actual_amount = Math.min (amount, current_balance);
-;
-  return add_transaction ({
-    user_id,
-    type: 'spend',
-    amount: actual_amount,
-    description: reason;
+
+export function revokeTokens(userId: string, amount: number, reason: string) {
+  const currentBalance = getUserBalance(userId);
+  const actualAmount = Math.min(amount, currentBalance);
+
+  return addTransaction({
+    userId,
+    type: "spend",
+    amount: actualAmount,
+    description: reason,
   });
 }

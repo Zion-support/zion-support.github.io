@@ -1,8 +1,17 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 console.log('🧪 Automated Testing Suite');
 console.log('==========================');
 
@@ -40,7 +49,14 @@ async function runTests() {
       failed: results.filter(r => r.status === 'failed').length
     }
   };
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
   
   console.log('\n📊 Test Summary:');
@@ -50,5 +66,13 @@ async function runTests() {
   
   return report;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 runTests().catch(console.error);
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+
+runTests().catch(console.error);
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

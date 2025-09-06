@@ -1,4 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+// Analytics and performance monitoring utilities;
+export const trackEvent = (;
+  eventName: string,;
+  properties?: Record<string, string | number | boolean>;
+) => {;
+  if (typeof window !== 'undefined' && window.gtag) {';
+    window.gtag('event', eventName, properties)}';,
+};
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
   if (typeof window !== 'undefined' && window && window.gtag) {
       page_path: url
@@ -117,6 +129,7 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 ;
 export const trackPageView = (url: string) =>: any {
   // Check condition
@@ -347,6 +360,9 @@ if ( {') {
       non_interaction: true;,
 })}
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 ;
 // Declare global types;
 declare global {
@@ -436,6 +452,7 @@ declare global {;
       config?: Record<string, unknown>;
     ) => void}
 }
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 export const trackEvent = ( eventName: 'string',properties?: Record<string,string | number | boolean> ) => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',eventName,properties)} }; export const trackPageView = (url: string) => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('config','GA_MEASUREMENT_ID',{ page_path: 'url',})} }; export const measurePerformance = () => { if (typeof window !== 'undefined' && 'performance' in window) { const navigation = performance.getEntriesByType( 'navigation' )[0] as PerformanceNavigationTiming; return { loadTime: 'navigation.loadEventEnd - navigation.loadEventStart domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart',firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0 }} return null}; interface WebVitalMetric { name: 'string; value: number; id: string;' } } export const trackWebVitals = (metric: WebVitalMetric) => { if (typeof window !== 'undefined' && window.gtag) { window.gtag('event',metric.name,{ value: Math.round(metric.value) event_category: 'Web Vitals',event_label: 'metric.id non_interaction: true' })} }; declare global { interface Window { gtag: ( command: string,targetId: 'string',config?: Record<string,unknown> ) => void} } }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -448,4 +465,18 @@ export const trackEvent = ( eventName: 'string',properties?: Record<string,strin
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+;
+// Declare global types;
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+    dataLayer: unknown[];
+  }
+}
+}
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

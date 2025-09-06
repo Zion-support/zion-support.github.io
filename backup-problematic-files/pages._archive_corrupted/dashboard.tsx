@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:corrupted_backup/dashboard.tsx
+=======
 <<<<<<< HEAD:backup-problematic-files/pages._archive_corrupted/dashboard.tsx
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/dashboard.tsx
@@ -14,7 +18,12 @@
 =======
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/dashboard.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/pages._archive_corrupted/dashboard.tsx
+=======
 >>>>>>> main:corrupted_backup/dashboard.tsx
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import React, { useState } from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
@@ -287,8 +296,12 @@ const "DashboardPage": React.FC = () => {
   )
 }
 export default DashboardPage
+<<<<<<< HEAD
+<<<<<<< HEAD:corrupted_backup/dashboard.tsx
+=======
 <<<<<<< HEAD:backup-problematic-files/pages._archive_corrupted/dashboard.tsx
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/dashboard.tsx
 <<<<<<< HEAD
@@ -318,4 +331,9 @@ import React,{ useState } from 'react' import dynamic from 'next/dynamic' import
 =======
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/dashboard.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/pages._archive_corrupted/dashboard.tsx
+=======
 >>>>>>> main:corrupted_backup/dashboard.tsx
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

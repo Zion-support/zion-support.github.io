@@ -1,3 +1,4 @@
+export type BlockchainNetwork = "ethereum" | "polygon" | "none";
 
 
 export interface SmartContractInfo {;
@@ -8,16 +9,11 @@ export interface SmartContractInfo {;
   networkName?: BlockchainNetwork;
   blockNumber?: number;
   deployedAddress?: string;
-  contractType: 'escrow' | 'milestone' | 'simpleAgreement';
+  contractType: "escrow" | "milestone" | "simpleAgreement";
   metadataUrl?: string;
   createdAt: string;
-  createdBy: string
-  status: 'draft' | 'deployed' | 'executed' | 'cancelled'
-;
-export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';
-}
-<<<<<<< HEAD
-export interface EscrowContractDetails {
+  createdBy: string;
+  status: "draft" | "deployed" | "executed" | "cancelled";
 }
 
 
@@ -41,6 +37,9 @@ export interface EscrowContractDetails {;
   amount: number;
   currency: string;
   deliverables: string;
+  completionDeadline: string;
+  arbitrator?: string;
+}
 
 
 
@@ -61,41 +60,8 @@ export interface DeploymentOptions {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   network: BlockchainNetwork;
   walletAddress?: string;
-  useEscrow: boolean
-
-  deployToChain: boolean
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-}
-;
-export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none',;
-export interface SmartContractInfo {;
-  id: string,;
-  transactionHash?: string,;
-  networkName?: BlockchainNetwork,;
-  blockNumber?: number,;
-  deployedAddress?: string,;
-  contractType: 'escrow' | 'milestone' | 'simpleAgreement',;
-  metadataUrl?: string,;
-  createdAt: string,;
-  createdBy: string,;
-  status: 'draft' | 'deployed' | 'executed' | 'cancelled';
-}
-;
-export interface EscrowContractDetails {;
-  client: string,;
-  talent: string,;
-  amount: number,;
-  currency: string,;
-  deliverables: string,;
-  completionDeadline: string,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  completion_deadline: string,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  arbitrator?: string;
+  useEscrow: boolean;
+  deployToChain: boolean;
 }
 export interface DeploymentOptions {
   network: BlockchainNetwork;

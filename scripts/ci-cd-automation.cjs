@@ -19,9 +19,18 @@ class CICDAutomation {}
     }};
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString(;);
+<<<<<<< HEAD
+<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
     
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
+    console.log(logMessage);
+    
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     this.report.steps.push({})
       timestamp,
       type,
@@ -108,4 +117,11 @@ if ( {})
      {}
   const automation = new CICDAutomation}(;);
   automation.run().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = CICDAutomation;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = CICDAutomation;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

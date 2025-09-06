@@ -3,7 +3,7 @@
 export interface OperatorSession {
   id: string;
   name: string;
-  status: 'active' | 'inactive' | 'busy';
+  status: "active" | "inactive" | "busy";
   currentSessions: string[];
   tags: string[];
   createdAt: Date;
@@ -18,6 +18,10 @@ export interface SupportEvent {
 }
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 =======
 // Operator utilities;
 export const operator = {
@@ -50,33 +54,43 @@ export const operator = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   tagOperatorSession(sessionId: string, tag: string): void {
     // Simple implementation - in a real app this would update a database
-    console && console.log(`Tagging session ${sessionId} with tag: ${tag}`);
+    console.log(`Tagging session ${sessionId} with tag: ${tag}`);
   }
 
   logSupportEvent(event: SupportEvent): void {
-    this && this.events.push(event);
-    console && console.log('Support event logged:', event);
+    this.events.push(event);
+    console.log("Support event logged:", event);
   }
 
   getOperatorSessions(): OperatorSession[] {
-    return Array && Array.from(this && this.sessions.values());
+    return Array.from(this.sessions.values());
   }
 
   getSupportEvents(): SupportEvent[] {
-    return [...this && this.events];
+    return [...this.events];
   }
 }
 
 const operatorManager = new OperatorManager();
 
-export const tagOperatorSession = (sessionId: string, tag: string) => 
-  operatorManager && operatorManager.tagOperatorSession(sessionId, tag);
+export const tagOperatorSession = (sessionId: string, tag: string) =>
+  operatorManager.tagOperatorSession(sessionId, tag);
 
-export const logSupportEventToOperator = (event: SupportEvent) => 
-  operatorManager && operatorManager.logSupportEvent(event);
+export const logSupportEventToOperator = (event: SupportEvent) =>
+  operatorManager.logSupportEvent(event);
 
+<<<<<<< HEAD
+export const getOperatorSessions = () => operatorManager.getOperatorSessions();
+export const getSupportEvents = () => operatorManager.getSupportEvents();
+=======
+<<<<<<< HEAD
+export const getOperatorSessions = () => operatorManager.getOperatorSessions();
+export const getSupportEvents = () => operatorManager.getSupportEvents();
+=======
 export const getOperatorSessions = () => operatorManager && operatorManager.getOperatorSessions();
 export async function logSupportEventToOperator(
   event: OperatorEvent
@@ -103,3 +117,5 @@ export const operator = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main

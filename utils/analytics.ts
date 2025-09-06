@@ -1,4 +1,28 @@
 <<<<<<< HEAD
+export type UserType = 'freelancer' | 'b2b' | 'hiring manager' | 'guest';
+
+export interface TrackEventPayload {
+  event: string;
+  properties?: Record<string, any>;
+  userId?: string;
+  userType?: UserType;
+}
+
+export async function trackEvent(payload: TrackEventPayload) {
+  try {
+    await fetch('/api/analytics/events/track', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+  } catch (error) {
+    console.error('Failed to track event:', error);
+  }
+}
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -124,3 +148,4 @@ export async function trackEvent(payload: TrackEventPayload) {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
