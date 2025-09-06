@@ -1,92 +1,301 @@
 import React from 'react';
+import { 
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Github,
+  ChevronUp,
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export const Footer: React.FC = () => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
+function resolveUrl(envVar: string | undefined, fallback: string) {
+  if (!envVar || envVar.trim() === '' || envVar === '#' || envVar === '/') {
+    return fallback;
+  }
+  return envVar;
+}
 
+const TWITTER_URL = resolveUrl(
+  process.env.NEXT_PUBLIC_SOCIAL_TWITTER_URL,
+  'https://twitter.com/ZionTechGroup'
+);
+const LINKEDIN_URL = resolveUrl(
+  process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN_URL,
+  'https://linkedin.com/company/ziontechgroup'
+);
+const FACEBOOK_URL = resolveUrl(
+  process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK_URL,
+  'https://facebook.com/ZionTechGroup'
+);
+const INSTAGRAM_URL = resolveUrl(
+  process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM_URL,
+  'https://instagram.com/ZionTechGroup'
+);
+const GITHUB_URL = resolveUrl(
+  process.env.NEXT_PUBLIC_SOCIAL_GITHUB_URL,
+  'https://github.com/ZionTechGroup'
+);
+
+const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-400 mb-4">
-              Empowering businesses with cutting-edge technology solutions.
+    <footer className='bg-card border-t border-primary/20 pt-12 pb-8'>
+      <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8'>
+          <div className='space-y-4'>
+            <div className='mb-4'>
+              <span className='text-2xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent'>
+                ZION
+              </span>
+            </div>
+            <p
+              className='text-foreground/80 mb-4'
+              style={{ maxWidth: 'clamp(16rem, 90%, 20rem)' }}
+            >
+              The world&apos;s first free marketplace dedicated to high-tech and
+              artificial intelligence.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <span className="sr-only">Facebook</span>
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
+            <div className='flex flex-wrap gap-3'>
+              <a
+                href={TWITTER_URL}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-foreground/80 hover:text-primary transition-colors'
+                aria-label='Twitter'
+                title='Twitter'              >
+                <Twitter className='h-5 w-5' aria-hidden='true' />
+                <span className='sr-only'>Twitter</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <span className="sr-only">Twitter</span>
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                </svg>
+              <a
+                href={LINKEDIN_URL}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-foreground/80 hover:text-primary transition-colors'
+                aria-label='LinkedIn'
+                title='LinkedIn'              >
+                <Linkedin className='h-5 w-5' aria-hidden='true' />
+                <span className='sr-only'>LinkedIn</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <span className="sr-only">LinkedIn</span>
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
+              <a
+                href={FACEBOOK_URL}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-foreground/80 hover:text-primary transition-colors'
+                aria-label='Facebook'
+                title='Facebook'              >
+                <Facebook className='h-5 w-5' aria-hidden='true' />
+                <span className='sr-only'>Facebook</span>
+              </a>
+              <a
+                href={INSTAGRAM_URL}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-foreground/80 hover:text-primary transition-colors'
+                aria-label='Instagram'
+                title='Instagram'              >
+                <Instagram className='h-5 w-5' aria-hidden='true' />
+                <span className='sr-only'>Instagram</span>
+              </a>
+              <a
+                href={GITHUB_URL}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-foreground/80 hover:text-primary transition-colors'
+                aria-label='GitHub'
+                title='GitHub'              >
+                <Github className='h-5 w-5' aria-hidden='true' />
+                <span className='sr-only'>GitHub</span>
               </a>
             </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li><Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
-              <li><Link to="/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</Link></li>
-              <li><Link to="/micro-saas" className="text-gray-400 hover:text-white transition-colors">Micro SaaS</Link></li>
-              <li><Link to="/cybersecurity" className="text-gray-400 hover:text-white transition-colors">Cybersecurity</Link></li>
+          <div className='space-y-4'>
+            <h3 className='text-foreground font-semibold mb-4 text-lg'>
+              Marketplace
+            </h3>
+            <ul className='space-y-2'>
+              <li>
+                <Link
+                  to='/marketplace'
+                  className='text-foreground/80 hover:text-primary transition-colors text-sm'
+                >
+                  Products
+                </Link>
+              </li>
+              {/* Ensure the services link routes to the main services page */}
+              <li>
+                <Link
+                  to='/services'
+                  className='text-foreground/80 hover:text-primary transition-colors text-sm'
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to='/talent'
+                  className='text-foreground/80 hover:text-primary transition-colors text-sm'
+                >
+                  Talent
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to='/equipment'
+                  className='text-foreground/80 hover:text-primary transition-colors text-sm'
+                >
+                  Equipment
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to='/categories'
+                  className='text-foreground/80 hover:text-primary transition-colors text-sm'
+                >
+                  Categories
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to='/green-it'
+                  className='text-foreground/80 hover:text-primary transition-colors text-sm'
+                >
+                  Green IT
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
-              <li><Link to="/pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link></li>
+          <div className='space-y-4'>
+            <h3 className='text-foreground font-semibold mb-4 text-lg'>
+              Company
+            </h3>
+            <ul className='space-y-2'>
+              <li>
+                <Link
+                  to='/about'
+                  className='text-foreground/80 hover:text-primary transition-colors text-sm'
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to='/blog'
+                  className='text-foreground/80 hover:text-primary transition-colors text-sm'
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to='/innovation'
+                  className='text-foreground/80 hover:text-primary transition-colors text-sm'
+                >
+                  Innovation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to='/partners'
+                  className='text-foreground/80 hover:text-primary transition-colors text-sm'
+                >
+                  Partners
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to='/careers'
+                  className='text-foreground/80 hover:text-primary transition-colors text-sm'
+                >
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to='/contact'
+                  className='text-foreground/80 hover:text-primary transition-colors text-sm'
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <a
+                  href='/sitemap'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-foreground/80 hover:text-primary transition-colors text-sm'
+                >
+                  Sitemap
+                </a>
+              </li>
             </ul>
           </div>
 
-          {/* Contact */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-2 text-gray-400">
-              <p>+1 302 464 0950</p>
-              <p>kleber@ziontechgroup.com</p>
-              <p>364 E Main St STE 1008<br />Middletown DE 19709</p>
+          <div className='space-y-4 sm:col-span-2 lg:col-span-1'>
+            <h3 className='text-foreground font-semibold mb-4 text-lg'>
+              Newsletter
+            </h3>
+            <p className='text-foreground/80 mb-4 text-sm'>
+              Stay updated with the latest news on tech, AI, and marketplace
+              opportunities.
+            </p>
+            <div className='max-w-sm'>
+              <div className='text-sm text-gray-500'>
+                Newsletter signup coming soon
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
-            © 2024 Zion Tech Group. All rights reserved.
-          </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Terms of Service
-            </Link>
+        <div className='mt-8 flex justify-end'>
+          <button
+            type='button'
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+              });
+            }}
+            className='flex items-center space-x-1 text-foreground/80 hover:text-primary text-sm transition-colors cursor-pointer'
+            aria-label='Back to top'
+          >
+            <ChevronUp className='h-4 w-4' aria-hidden='true' />
+            <span>Back to Top</span>
+          </button>
+        </div>
+
+        <div className='mt-12 pt-8 border-t border-primary/20'>
+          <div className='flex flex-col md:flex-row justify-between items-center'>
+            <p className='text-foreground/80 text-sm'>
+              &copy; {new Date().getFullYear()} Zion Tech Group. All rights
+              reserved.
+            </p>
+            <div className='flex space-x-6 mt-4 md:mt-0'>
+              <Link
+                to='/privacy'
+                className='text-foreground/80 hover:text-primary text-sm transition-colors'
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                to='/terms'
+                className='text-foreground/80 hover:text-primary text-sm transition-colors'
+              >
+                Terms of Service
+              </Link>
+              <Link
+                to='/status'
+                className='text-foreground/80 hover:text-primary text-sm transition-colors'
+              >
+                API Status
+              </Link>
+            </div>
           </div>
         </div>
       </div>
     </footer>
   );
 };
+
+export default Footer;
