@@ -379,7 +379,6 @@ function Pricing() {
       </div>
     </section>
   );
-<<<<<<< HEAD
 }
 
 function Plan({ name, price, features, popular }: { 
@@ -447,6 +446,5 @@ function CTASection() {
       </div>
     </div>
   );
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+}
 }

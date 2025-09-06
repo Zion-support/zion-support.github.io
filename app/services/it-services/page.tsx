@@ -56,13 +56,13 @@ export default function ITServicesPage() {
             icon="🌐"
           />
           <ITServiceCard
-<<<<<<< HEAD
             title="Data Management & Analytics"
             description="Data pipeline design and business intelligence solutions"
             features={["Data warehousing", "ETL pipelines", "Real-time analytics", "Data visualization", "Machine learning ops"]}
             price="$12,000-45,000"
             icon="📊"
-=======
+          />
+          <ITServiceCard
             title="API Development & Management"
             description="RESTful and GraphQL API development with comprehensive management"
             features={["API design", "Documentation", "Rate limiting", "Authentication", "Monitoring", "Version control"]}
@@ -75,13 +75,6 @@ export default function ITServicesPage() {
             features={["Service design", "Container orchestration", "Service mesh", "API gateway", "Monitoring", "Scaling"]}
             price="$25k–$70k"
             icon="🏗️"
-          />
-          <ITServiceCard
-            title="Data Center & Colocation"
-            description="Physical infrastructure management and data center optimization"
-            features={["Hardware management", "Power optimization", "Cooling systems", "Physical security", "Uptime monitoring", "Disaster recovery"]}
-            price="$15k–$45k"
-            icon="🏢"
           />
           <ITServiceCard
             title="IT Service Management (ITSM)"
@@ -103,7 +96,6 @@ export default function ITServicesPage() {
             features={["Backup strategies", "Recovery testing", "RTO/RPO planning", "Failover systems", "Documentation", "Training"]}
             price="$20k–$60k"
             icon="🔄"
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           />
         </div>
       </section>
@@ -366,7 +358,6 @@ function Pricing() {
       </div>
     </section>
   );
-<<<<<<< HEAD
 }
 
 function Plan({ name, price, features, popular }: { 
@@ -434,6 +425,5 @@ function CTASection() {
       </div>
     </div>
   );
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+}
 }
