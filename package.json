@@ -4,12 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-<<<<<<< HEAD
     "build": "vite build",
-=======
-    "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
-    "build:netlify": "node scripts/build-with-error-handling.js",
->>>>>>> main
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
     "start": "vite preview --port 4173",
@@ -267,10 +262,6 @@
     "ecosystem": "ecosystem.maintenance.cjs"
   },
   "dependencies": {
-<<<<<<< HEAD
-=======
-    "@babel/core": "^7.28.4",
->>>>>>> main
     "@fastify/cors": "^11.1.0",
     "@fastify/rate-limit": "^10.3.0",
     "@google-analytics/data": "^5.2.0",
@@ -306,10 +297,6 @@
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
     "@sendgrid/mail": "^8.1.5",
-<<<<<<< HEAD
-    "@stripe/stripe-js": "^7.9.0",
-=======
->>>>>>> main
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -416,12 +403,8 @@
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
-<<<<<<< HEAD
-    "vite": "^7.1.4"
-=======
     "vite": "^7.1.4",
     "web-vitals": "^5.1.0"
->>>>>>> main
   },
   "engines": {
     "node": ">=18.0.0",
@@ -448,8 +431,4 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> main
