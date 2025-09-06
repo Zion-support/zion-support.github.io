@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -66,37 +67,42 @@ import { useRouter } from 'next/router'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import React, { useState, useEffect, useMemo } from 'react'
+import { useRouter } from 'next/router'
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {
-  Search,
-  Filter,
-  X,
-  SortAsc,
-  SortDesc,
-  GridIcon,
-  List,
-  Loader2,
-} from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Badge } from '@/components / ui / badge';
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components / ui / select';
-import { Checkbox } from '@/components / ui / checkbox';
-import { Slider } from '@/components / ui / slider';
-import { Separator } from '@/components / ui / separator';
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '@/components / ui / sheet';
-import { EnhancedSearchInput } from './EnhancedSearchInput';
-import { generateSearchSuggestions } from '@/data / marketplace_data';
-import { logErrorToProduction, log_info } from '@/utils / production_logger';
+  Search
+  Filter
+  X
+  SortAsc
+  SortDesc
+  GridIcon
+  List
+  Loader2
+} from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Badge } from '@/components/ui/badge'
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+} from '@/components/ui/select'
+import { Checkbox } from '@/components/ui/checkbox'
+import { Slider } from '@/components/ui/slider'
+import { Separator } from '@/components/ui/separator'
+  Sheet
+  SheetContent
+  SheetHeader
+  SheetTitle
+  SheetTrigger
+} from '@/components/ui/sheet'
+import { EnhancedSearchInput } from './EnhancedSearchInput'
+import { generateSearchSuggestions } from '@/data/marketplaceData'
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
+
 interface SearchResult {
   id: string;
   title: string;
@@ -109,26 +115,22 @@ interface SearchResult {
   currency?: string;
   rating?: number;
   tags?: string[];
-
-  date?: string;
-
-interface SearchFilters {;
-
+  date?: string
+interface SearchFilters {
   types: string[];
   category: string;
   minPrice: number;
   maxPrice: number;
   minRating: number;
-
-  sort: string;
-
-interface SearchResponse {;
-
+  sort: string
+interface SearchResponse {
   results: SearchResult[];
   totalCount: number;
   page: number;
   limit: number;
   query: string;
+  hasMore: boolean
+// Highlight search terms in text
 
 const HighlightText: React.FC<{
   text: string
@@ -144,6 +146,10 @@ const HighlightText: React.FC<{
     <span className={className}>
       {parts.map((part, index) =>        part.toLowerCase() === searchTerm.toLowerCase() ? (
           <mark key={index} className='bg-yellow-200 text-black px-1 rounded'>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState, useEffect, useMemo } from 'react',;
 import { useRouter } from 'next/router',;
 import { Search, Filter, X, SortAsc, SortDesc, GridIcon, List, Loader2 } from 'lucide-react';
@@ -201,17 +207,14 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
     return <span className={className}>{text}</span>;
   }
 
-  const parts = text && text.split(;
-    new RegExp(`(${searchTerm && searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-  );
-
-
+  const parts = text.split(new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')),
+  
   return (
-
     <span className={className}>
       {parts.map((part, index) => 
         part.toLowerCase() === searchTerm.toLowerCase() ? (
           <mark key={index} className="bg-yellow-200 text-black px-1 rounded">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -219,12 +222,18 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {part}
           </mark>
         ) : (
           part
         )
       )}
+<<<<<<< HEAD
     </span>
   )
 }
@@ -286,6 +295,9 @@ const SearchResultCard: React.FC<{;
 
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     </span>;
   );
 },;
@@ -316,76 +328,30 @@ const SearchResultCard: React.FC<{;
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         </div>
       )}
       
       <div className="flex-1">
         <div className="flex items-start justify-between mb-2">
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <div>
-            <h3 className='font-semibold text-lg mb-1'>
+            <h3 className="font-semibold text-lg mb-1">
               <HighlightText text={result.title} searchTerm={searchTerm} />
             </h3>
-            <Badge variant='secondary' className='text-xs'>
-  const card_class =;
-    view_mode === 'grid';
-      ? 'bg - card border rounded - lg p - 4 hover:shadow - lg transition - shadow cursor - pointer';
-      : 'bg - card border rounded - lg p - 4 hover:shadow - lg transition - shadow cursor - pointer flex gap - 4';
-  return (
-    <div on_click={handle_click} className={card_class}>;
-      {result.image && (
-        <div className={view_mode === 'grid' ? 'mb - 3' : 'flex - shrink - 0'}>;
-          <img;
-            src={result.image}
-            alt={result.title}
-            className={
-              view_mode === 'grid';
-                ? 'w - full h - 48 object - cover rounded';
-                : 'w - 20 h - 20 object - cover rounded';
-            }          />;
-        </div>)}
-      <div className='flex - 1'>;
-        <div className='flex items - start justify - between mb - 2'>;
-          <div>;
-            <h3 className='font - semibold text - lg mb - 1'>;
-              <HighlightText text={result.title} search_term={search_term} />;
-            </h3>;
-            <Badge variant='secondary' className='text - xs'>;
+            <Badge variant="secondary" className="text-xs">
               {result.type}
-            </Badge>;
-          </div>;
+            </Badge>
+          </div>
           {result.price && (
-
-
-      <div className='flex-1'>;
-        <div className='flex items-start justify-between mb-2'>;
-          <div>;
-            <h3 className='font-semibold text-lg mb-1'>;
-              <HighlightText text={result && result.title} searchTerm={searchTerm} />;
-            </h3>;
-            <Badge variant='secondary' className='text-xs'>;
-              {result && result.type}
-            </Badge>;
-          </div>;
-          {result && result.price && (;
-            <div className='text-right'>;
-              <span className='font-bold text-primary'>;
-                {result && result.currency === 'USD' ? '$' : ''}
-                {result && result.price}
-              </span>;
-              {result && result.type === 'talent' && (;
-                <span className='text-sm text-muted-foreground'>/hr</span>;
-
-              )}
-            </div>;
-          )}
-
-                <span className='text - sm text - muted - foreground'>/hr</span>)}
-            </div>)}
             <div className="text-right">
               <span className="font-bold text-primary">
                 {result.currency === 'USD' ? '$' : ''}{result.price}
@@ -394,6 +360,7 @@ const SearchResultCard: React.FC<{;
             </div>
           )}
         </div>
+<<<<<<< HEAD
         <p className='text-muted-foreground mb-3 line-clamp-2'>
           <HighlightText text={result.description} searchTerm={searchTerm} />
         </p>
@@ -540,12 +507,25 @@ const FilterSidebar: React.FC<{
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {result.category}
+              </Badge>
+            )}
+            {result.tags?.slice(0, 3).map((tag, index) => (
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {result.rating && (
             <div className="flex items-center gap-1">
               <span className="text-yellow-500">★</span>
               <span className="text-sm">{result.rating.toFixed(1)}</span>
             </div>
           )}
+<<<<<<< HEAD
 
         </div>;
       </div>;
@@ -588,10 +568,22 @@ const FilterSidebar: React.FC<{;
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
-
+    <div className="space-y-6">
+      <div>
+        <h3 className="font-semibold mb-3">Content Type</h3>
+        <div className="space-y-2">
+          {typeOptions.map(option => (
+            <div key={option.id} className="flex items-center space-x-2">
+              <Checkbox
                 id={option.id}
                 checked={filters.types.includes(option.id)}
+<<<<<<< HEAD
                 onCheckedChange={checked =>
                   handleTypeChange(option.id, !!checked)
                 }              />
@@ -604,6 +596,11 @@ const FilterSidebar: React.FC<{;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {option.label}
               </label>
             </div>
@@ -612,6 +609,7 @@ const FilterSidebar: React.FC<{;
       </div>
       <Separator />
       <div>
+<<<<<<< HEAD
         <h3 className='font-semibold mb-3'>Category</h3>
         <Select
           value={filters && filters.category}
@@ -663,6 +661,11 @@ const FilterSidebar: React.FC<{;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="all">All Categories</SelectItem>
@@ -671,36 +674,20 @@ const FilterSidebar: React.FC<{;
                 {category}
               </SelectItem>
             ))}
-
-          </SelectContent>;
-        </Select>;
-      </div>;
-
-      <Separator />;
-
-      <div>;
-        <h3 className='font-semibold mb-3'>Price Range</h3>;
-        <div className='px-2'>;
-
+          </SelectContent>
+        </Select>
+      </div>
+      <Separator />
+      <div>
+        <h3 className="font-semibold mb-3">Price Range</h3>
+        <div className="px-2">
           <Slider
-            value={[filters && filters.minPrice, filters && filters.maxPrice]}
-            {available_categories.map (category => (
-              <SelectItem key={category} value={category}>;
-                {category}
-              </SelectItem>))}
-          </SelectContent>;
-        </Select>;
-      </div>;
-      <Separator />;
-      <div>;
-        <h3 className='font - semibold mb - 3'>Price Range</h3>;
-        <div className='px - 2'>;
-          <Slider;
-            value={[filters.min_price, filters.max_price]}
+            value={[filters.minPrice, filters.maxPrice]}
             onValueChange={handlePriceChange}
             min={0}
             max={10000}
             step={50}
+<<<<<<< HEAD
             className='mb-2'          />
           <div className='flex justify-between text-sm text-muted-foreground'>
             className="mb-2"
@@ -712,6 +699,11 @@ const FilterSidebar: React.FC<{;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <span>${filters.minPrice}</span>
             <span>${filters.maxPrice}</span>
           </div>
@@ -719,6 +711,7 @@ const FilterSidebar: React.FC<{;
       </div>
       <Separator />
       <div>
+<<<<<<< HEAD
         <h3 className='font-semibold mb-3'>Minimum Rating</h3>
         <Select
           value={filters && filters.minRating.toString()}
@@ -737,6 +730,11 @@ const FilterSidebar: React.FC<{;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
@@ -751,6 +749,7 @@ const FilterSidebar: React.FC<{;
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 // No Results Component;
 const NoResultsState: React.FC<{
@@ -786,6 +785,11 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="text-center py-12">
       <div className="mb-6">
@@ -795,6 +799,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
           We couldn't find anything matching "{searchTerm}". Try adjusting your search or filters.
         </p>
       </div>
+<<<<<<< HEAD
 
         >          <SelectTrigger>;
 
@@ -879,11 +884,17 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {suggestion}
-              </Button>;
+              </Button>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
         <div className='text-sm text-muted-foreground'>
           <p>Tips for better results:</p>
           <ul className='mt-2 space-y-1'>
@@ -897,6 +908,11 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <li>• Try different keywords</li>
             <li>• Check your spelling</li>
             <li>• Use fewer filters</li>
@@ -906,6 +922,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 // Main Search Results Page Component;
 export const SearchResultsPage: React.FC = () => {
@@ -916,6 +933,9 @@ export const SearchResultsPage: React.FC = () => {
 
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 },
 
 // Main Search Results Page Component
@@ -931,11 +951,15 @@ export const SearchResultsPage: React.FC = () => {
   const [showFilters, setShowFilters] = useState(false),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [filters, setFilters] = useState<SearchFilters>({
     types: [],
     category: '',
@@ -944,13 +968,32 @@ export const SearchResultsPage: React.FC = () => {
     minRating: 0,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    sort: 'relevance'
+  }),
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+  const suggestions = generateSearchSuggestions(),
 
+  // Extract available categories from results for filter
+  const availableCategories = useMemo(() => {
+    const categories = new Set<string>(),
+    results.forEach(result => {
+      if (result.category) categories.add(result.category)
+    }),
+    return Array.from(categories).sort()
+  }, [results]),
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Sync search term with URL
   useEffect(() => {
     if (router.isReady && router.query.q) {
+<<<<<<< HEAD
 
   const router = use_router ();
   const [search_term, setSearchTerm] = useState ('');
@@ -1141,7 +1184,12 @@ if ( {) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     (filters.minRating > 0 ? 1 : 0)
+=======
+      const urlTerm = router.query.q as string,
+      setSearchTerm(urlTerm)
           </div>;
         </div>;
         <div className="text-sm text-muted-foreground">;
@@ -1282,12 +1330,18 @@ export const SearchResultsPage: React.FC = () => {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="container mx-auto px-4 py-6">
       {/* Search Header */}
@@ -1299,6 +1353,7 @@ export const SearchResultsPage: React.FC = () => {;
               onChange={setSearchTerm}
               onSelectSuggestion={suggestion => handleSearch(suggestion.text)}
               searchSuggestions={suggestions}
+<<<<<<< HEAD
               placeholder='Search products, talent, services, and more...'            />
               placeholder="Search products, talent, services, and more..."
             />
@@ -1307,6 +1362,11 @@ export const SearchResultsPage: React.FC = () => {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </div>
           <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
             <Search className="h-4 w-4" />
@@ -1320,6 +1380,7 @@ export const SearchResultsPage: React.FC = () => {;
                 {loading ? 'Searching...' : `${totalCount} results for "${searchTerm}"`}
               </p>
             </div>
+<<<<<<< HEAD
             <div className='flex items-center gap-2'>
               {/* Sort Options */}
               <Select
@@ -1341,6 +1402,11 @@ export const SearchResultsPage: React.FC = () => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="relevance">Relevance</SelectItem>
@@ -1349,67 +1415,10 @@ export const SearchResultsPage: React.FC = () => {;
                   <SelectItem value="rating">Highest Rated</SelectItem>
                 </SelectContent>
               </Select>
-              >;
-                <SelectTrigger className='w-40'>                  <SelectValue />;
-  // Active filters count;
-  const activeFiltersCount =;
-    filters.types.length +;
-    (filters.category ? 1 : 0) +;
-    (filters.min_price > 0 || filters.max_price < 10000 ? 1 : 0) +;
-    (filters.min_rating > 0 ? 1 : 0);
-  return (
-    <div className='container mx - auto px - 4 py - 6'>;
-      {/* Search Header */}
-      <div className='mb - 6'>;
-        <div className='flex gap - 4 mb - 4'>;
-          <div className='flex - 1'>;
-            <EnhancedSearchInput;
-              value={search_term}
-              on_change={setSearchTerm}
-              onSelectSuggestion={suggestion => handle_search (suggestion.text)}
-              search_suggestions={suggestions}
-              placeholder='Search products, talent, services, and more...'            />;
-          </div>;
-          <Button;
-            on_click={() => handle_search (search_term)}
-            disabled={!search_term.trim ()}
-          >;
-            <Search className='h - 4 w - 4' />;
-          </Button>;
-        </div>;
-        {search_term && (
-          <div className='flex items - center justify - between'>;
-            <div>;
-              <h1 className='text - 2xl font - bold'>Search Results</h1>;
-              <p className='text - muted - foreground'>;
-                {loading;
-                  ? 'Searching...';
-                  : `${total_count} results for "${search_term}"`}
-              </p>;
-            </div>;
-            <div className='flex items - center gap - 2'>;
-              {/* Sort Options */}
-              <Select;
-                value={filters.sort}
-                onValueChange={value => set_filters ({ ...filters, sort: value })}
-              >;
-                <SelectTrigger className='w - 40'>                  <SelectValue />;
-                </SelectTrigger>;
-                <SelectContent>;
-                  <SelectItem value='relevance'>Relevance</SelectItem>;
-                  <SelectItem value='price_asc'>Price: Low to High</SelectItem>;
-                  <SelectItem value='price_desc'>Price: High to Low</SelectItem>;
-                  <SelectItem value='rating'>Highest Rated</SelectItem>;
-                </SelectContent>;
-              </Select>;
-
-
-                  size="sm"
-                  onClick={() => setViewMode('grid')}
-                >
-                  <GridIcon className="h-4 w-4" />
-                </Button>
+              {/* View Mode Toggle */}
+              <div className="flex border rounded-md">
                 <Button
+<<<<<<< HEAD
                   variant={viewMode === 'list' ? 'default' : 'ghost'}
                   size="sm"
                   onClick={() => setViewMode('list')}
@@ -1421,51 +1430,15 @@ export const SearchResultsPage: React.FC = () => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+                  variant={viewMode === 'grid' ? 'default' : 'ghost'}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 </Button>
               </div>
-                  onClick={() => setViewMode('list')}                >;
-                  <List className='h-4 w-4' />;
-                </Button>;
-              </div>;
-
               {/* Mobile Filter Toggle */}
-
-              {/* View Mode Toggle */}
-              <div className='flex border rounded - md'>;
-                <Button;
-                  variant={view_mode === 'grid' ? 'default' : 'ghost'}
-                  size='sm';
-                  on_click={() => setViewMode ('grid')}                >;
-                  <GridIcon className='h - 4 w - 4' />;
-                </Button>;
-                <Button;
-                  variant={view_mode === 'list' ? 'default' : 'ghost'}
-                  size='sm';
-                  on_click={() => setViewMode ('list')}                >;
-                  <List className='h - 4 w - 4' />;
-                </Button>;
-              </div>;
-              {/* Mobile Filter Toggle */}
-              <Sheet open={show_filters} onOpenChange={setShowFilters}>;
-                <SheetTrigger as_child>;
-                  <Button variant='outline' className='lg:hidden'>;
-                    <Filter className='h - 4 w - 4 mr - 2' />;
-
-                    Filters{' '}
-                    {activeFiltersCount > 0 && `(${activeFiltersCount})`}
-                  </Button>;
-                </SheetTrigger>;
-
-                <SheetContent side='left' className='w - 80'>;
-                  <SheetHeader>;
-                    <SheetTitle > Search Filters</SheetTitle>;
-                  </SheetHeader>;
-                  <div className='mt - 6'>;
-                    <FilterSidebar;
-                      filters = {filters, }
-                      onFiltersChange = {handleFiltersChange, }
-                      available_categories = {available_categories, }
-
               <Sheet open={showFilters} onOpenChange={setShowFilters}>
                 <SheetTrigger asChild>
                   <Button variant="outline" className="lg:hidden">
@@ -1479,6 +1452,7 @@ export const SearchResultsPage: React.FC = () => {;
                   </SheetHeader>
                   <div className="mt-6">
                     <FilterSidebar
+<<<<<<< HEAD
                       filters = {filters,}
                       onFiltersChange = {handleFiltersChange,}
                       availableCategories = {availableCategories,}
@@ -1504,13 +1478,15 @@ export const SearchResultsPage: React.FC = () => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         )}
-
-      </div>;
-
-      {searchTerm && (;
-        <div className='flex gap-6'>;
-
+      </div>
+      {searchTerm && (
+        <div className="flex gap-6">
           {/* Desktop Filters Sidebar */}
           <div className="hidden lg:block w-64 flex-shrink-0">
             <div className="bg-card border rounded-lg p-4 sticky top-4">
@@ -1518,6 +1494,7 @@ export const SearchResultsPage: React.FC = () => {;
                 <h2 className="font-semibold">Filters</h2>
                 {activeFiltersCount > 0 && (
                   <Button
+<<<<<<< HEAD
                     variant='ghost'
                     size='sm'
                     onClick={() =>
@@ -1595,11 +1572,17 @@ export const SearchResultsPage: React.FC = () => {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {loading && results.length === 0 ? (
               <div className="flex justify-center py-12">
                 <Loader2 className="h-8 w-8 animate-spin" />
               </div>
             ) : results.length === 0 && searchTerm ? (
+<<<<<<< HEAD
               <NoResultsState
                 searchTerm={searchTerm}
                 onNewSearch={handleSearch}              />
@@ -1642,10 +1625,16 @@ export const SearchResultsPage: React.FC = () => {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   ))}
                 </div>
                 {/* Load More Button */}
                 {hasMore && (
+<<<<<<< HEAD
                   <div className='text-center'>
                     <Button
                       onClick={loadMore}
@@ -1662,6 +1651,11 @@ export const SearchResultsPage: React.FC = () => {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       {loading ? (
                         <>
                           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
@@ -1678,6 +1672,7 @@ export const SearchResultsPage: React.FC = () => {;
           </div>
         </div>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
   )
@@ -1703,6 +1698,8 @@ setHasMore (data.hasMore);
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {
   /* Mobile Filter Toggle */
 }<Sheet open= {
@@ -1754,6 +1751,7 @@ setHasMore (data.hasMore);
 export default SearchResultsPage
 '"
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default SearchResultsPage
 export default SearchResultsPage
 =======
@@ -1764,10 +1762,14 @@ export default SearchResultsPage, ;
 export default SearchResultsPage;
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     </div>;
   );
 };
 export default SearchResultsPage;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1913,3 +1915,8 @@ export default SearchResultsPage;
 '";
 export default SearchResultsPage,
 export default SearchResultsPage,
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

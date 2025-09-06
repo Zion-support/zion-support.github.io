@@ -1,26 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-  const terms = readJsonFile('deal/terms && terms.json', {
-    round: 'Series A',
-    target: '$10,000,000',
-    valuationCap: '$80,000,000',
-    discount: '20%',
-
+    leadInvestor: 'TBD',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   });
   res && res.status(200).json(terms);export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
-
-  const terms = readJsonFile('deal/terms && terms.json', {
-    round: 'Series A',
-
     target: '$10,000,000';
     valuationCap: '$80,000,000';
-
-    discount: '20%'
-=======
-
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     leadInvestor: 'TBD'});
+<<<<<<< HEAD
 
   res.status(200).json(terms)
 }
@@ -30,6 +18,19 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import { readJsonFile } from '../../../../utils / api / storage';
+import { requireSuperadminApi } from '../../../../utils / api / auth';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if () return) {
+  $2
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
   const terms = readJsonFile ('deal / terms.json', {
     round: 'Series A',
@@ -52,9 +53,9 @@ function handler() {
     discount: '20%',
     lead_investor: 'TBD'});
   res.status (200).json (terms);
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,3 +83,5 @@ function handler() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

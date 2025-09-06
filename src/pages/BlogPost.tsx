@@ -1,7 +1,48 @@
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import { SEO } from '@/components/SEO'
+import JsonLd from '@/components/JsonLd'
+import { Button } from '@/components/ui/button'
+import ImageWithRetry from '@/components/ui/ImageWithRetry'
+import {
+  ArrowLeft
+  Calendar
+  Clock
+  ChevronLeft
+  ChevronRight
+  Share2
+  Facebook
+  Twitter
+  Linkedin
+} from 'lucide-react'
+import type { BlogPost as BlogPostType } from '@/types/blog'
+import { Separator } from '@/components/ui/separator'
+import ReactMarkdown from 'react-markdown'
+import { logErrorToProduction } from '@/utils/productionLogger'
+// Importing the sample blog posts - in a real app, you would fetch this from an API
+import { BLOG_POSTS } from '@/data/blog-posts'
+import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout'
+import { fetchWithRetry } from '@/utils/fetchWithRetry'
+export default function BlogPost() {
+  const router = useRouter()
+  const { slug } = router.query as { slug: string }
+  const [post, setPost] = useState<BlogPostType | null>(null)
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([])
+  const [showShareMenu, setShowShareMenu] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const timedOut = useSkeletonTimeout(20000)
+  useEffect(() => {import { useRouter } from 'next/router'
+import { SEO } from "@/components/SEO"
+import JsonLd from "@/components/JsonLd"
+import { Button } from "@/components/ui/button"
+
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { logErrorToProduction } from '@/utils/productionLogger';
 // Importing the sample blog posts - in a real app, you would fetch this from an API
@@ -19,6 +60,11 @@ export default function BlogPost() {;
 import { BLOG_POSTS } from "@/data/blog-posts"
 <<<<<<< HEAD
 
+=======
+import { logErrorToProduction } from '@/utils/productionLogger';
+// Importing the sample blog posts - in a real app, you would fetch this from an API
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import Link from 'next/link',
@@ -37,44 +83,19 @@ import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
 import { fetchWithRetry } from '@/utils/fetchWithRetry',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default function BlogPost() {
 
-
-import { useState, useEffect } from 'react';
-import { use_router } from 'next / router';
-import Link from 'next / link';
-import { SEO } from '@/components / SEO';
-import JsonLd from '@/components / JsonLd';
-import { Button } from '@/components / ui / button';
-import ImageWithRetry from '@/components / ui / ImageWithRetry';
-import {
-  ArrowLeft,
-  Calendar,
-  Clock,
-  ChevronLeft,
-  ChevronRight,
-  Share2,
-  Facebook,
-  Twitter,
-  Linkedin,
-} from 'lucide-react';
-import type { BlogPost as BlogPostType } from '@/types / blog';
-import { Separator } from '@/components / ui / separator';
-import ReactMarkdown from 'react - markdown';
-import { logErrorToProduction } from '@/utils / production_logger';
-// Importing the sample blog posts - in a real app, you would fetch this from an API;
-import { BLOG_POSTS } from '@/data / blog - posts';
-import { useSkeletonTimeout } from '@/hooks / useSkeletonTimeout';
-import { fetchWithRetry } from '@/utils / fetchWithRetry';
-export default /**
- * BlogPost - Function description
- */
-function BlogPost() {
-  const router = use_router ();
+  const router = useRouter()
   const { slug } = router.query as { slug: string }
   const [post, setPost] = useState<BlogPostType | null>(null)
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([])
@@ -84,6 +105,7 @@ function BlogPost() {
   const timedOut = useSkeletonTimeout(20000)
   useEffect((,) => {
     const fetchPost = async () => {
+<<<<<<< HEAD
       setIsLoading(true)
       setError(null)
       try {
@@ -117,6 +139,8 @@ function BlogPost() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
         setPost(currentPost)
         const related = BLOG_POSTS.filter(
@@ -127,25 +151,13 @@ function BlogPost() {
         ).slice(0, 3)
         setRelatedPosts(related) } else {
         router.replace('/blog')
-      const current_post = BLOG_POSTS.find (p => p.slug === slug);      // Check condition
-if ( {) {
-  $2
-}
-        set_post (current_post);
-        const related = BLOG_POSTS.filter (
-          p =>;
-            p.id !== current_post.id &&;
-            (p.category === current_post.category ||;
-              p.tags.some (tag => current_post.tags.includes (tag)))).slice (0, 3);
-        setRelatedPosts (related) } else {
-        router.replace ('/blog');
       }
       setIsLoading(false)
     }
-
     fetchPost()
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router])
+=======
       setIsLoading(true),
       setError(null),
       try {
@@ -230,11 +242,17 @@ export default function BlogPost() {;
   }, [slug, router]),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   if (isLoading && !timedOut) {
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
@@ -243,9 +261,6 @@ export default function BlogPost() {;
     )
   }
   if (!post && (error |timedOut)) {
-  if () {) {
-  $2
-}
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4">
         <p>Failed to load article.</p>
@@ -254,6 +269,9 @@ export default function BlogPost() {;
     )
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // If post is still null after loading, show not found
   if (!post) {
     return (
@@ -263,6 +281,7 @@ export default function BlogPost() {;
       </div>
     )
   }
+<<<<<<< HEAD
 
 =======
 
@@ -284,32 +303,26 @@ if ( {) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
     if (!post) return ''
     const url = encodeURIComponent(window.location.href)
     const title = encodeURIComponent(post.title)
-  // Helper function to get share URL;
-  const getShareUrl = (platform: string) =>: any {
-    // Check condition
-if (return '') {
-  $2
-}
-    const url = encodeURIComponent (window.location.href);
-    const title = encodeURIComponent (post.title);
     switch (platform) {
       case 'facebook':        return `https://www.facebook.com/sharer/sharer.php?u=${url}`
     switch (platform) {
-
-      case 'facebook':;
-        return `https://www.facebook.com / sharer / sharer.php?u=${url}`;
-      case 'twitter':;
-        return `https://twitter.com / intent / tweet?url=${url}&text=${title}`;
-      case 'linkedin':;
-        return `https://www.linkedin.com / share_article?mini = true & url=${url}&title=${title}`;
-      default:;
-        return '#';
+      case 'facebook':
+        return `https://www.facebook.com/sharer/sharer.php?u=${url}`
+      case 'twitter':
+        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`
+      case 'linkedin':
+        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`
+      default:
+        return '#'
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   const articleLd = {
     '@context': 'https://schema.org'
@@ -409,19 +422,27 @@ if (return '') {
 
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
   // Helper function to get share URL;
   const getShareUrl = (platform: string) => {;
-    if (!post) return '';
-
-    const url = encodeURIComponent(window && window.location.href);
-    const title = encodeURIComponent(post && post.title);
-    switch (platform) {;
-      case 'facebook':        return `https://www && www.facebook.com/sharer/sharer && sharer.php?u=${url}`;
-
+    if (!post) return '',;
+    const url = encodeURIComponent(window.location.href),;
+    const title = encodeURIComponent(post.title),;
     switch (platform) {;
       case 'facebook':;
+        return `https://www.facebook.com/sharer/sharer.php?u=${url}`,;
+      case 'twitter':;
+        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`,;
+      case 'linkedin':;
+        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`,;
+      default: return '#';
+    }
+  },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -429,6 +450,9 @@ if (return '') {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const articleLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -437,6 +461,7 @@ if (return '') {
     image: post.featuredImage,
     datePublished: post.publishedDate,
     author: {
+<<<<<<< HEAD
 <<<<<<< HEAD
       '@type': 'Person',
       name: post.author.name,
@@ -449,6 +474,8 @@ if (return '') {
         description={post.excerpt}
         keywords={post.tags.join(', ')}
         ogImage={post.featuredImage}        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       "@type": "Person",
       name: post.author.name}},
   
@@ -475,14 +502,20 @@ if (return '') {
         ogImage={post.featuredImage}
         canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       />
       <JsonLd data={articleLd} />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">
           {/* Back to blog button */}
+<<<<<<< HEAD
           <div className='mb-8'>;
             <Button
               variant='outline'
@@ -518,6 +551,23 @@ if (return '') {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+          <div className="mb-8">
+            <Button 
+              variant="outline" 
+              className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+              asChild
+            >
+              <Link href="/blog">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Back to all articles
+              </Link>
+            </Button>
+          </div>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {/* Article header */}
           <div className="mb-8 max-w-4xl mx-auto">
             <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
@@ -525,6 +575,7 @@ if (return '') {
             </span>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {post.title}
+<<<<<<< HEAD
             </h1>
             <p className='text-xl text-zion-slate-light mb-8'>{post.excerpt}</p>
             {/* Author and metadata */}
@@ -912,41 +963,35 @@ if (return '') {
                   key={tag} 
                   className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
                 >
+=======
+            </h1>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   #{tag}
                 </span>
               ))}
             </div>
-            
-            <Separator className="my-12 bg-zion-blue-light" />
-            
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Related articles */}
             {relatedPosts.length > 0 && (
               <div className="mt-12">
                 <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {relatedPosts.map(relatedPost => (
-                    <Link 
-                      key={relatedPost.id}
-                      href={`/blog/${relatedPost.slug}`}
-                      className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300"
-                    >
-                      <div className="aspect-[16/9] relative">
-                        <ImageWithRetry
-                          src={relatedPost.featuredImage}
-                          alt={relatedPost.featuredImageAlt || relatedPost.title}
-                          className="object-cover w-full h-full"
-                          fallbackSrc="/images/blog-placeholder.svg"
-                        />
-                      </div>
-                      <div className="p-4">
-                        <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
-                        <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>
                     </Link>
                   ))}
                 </div>
               </div>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -992,15 +1037,25 @@ if (return '') {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+            <div className="mt-12 text-center">
+              <p className="text-zion-slate-light">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                Ready to put these ideas into action? Explore our{' '}
+                <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
+                or browse expert{' '}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </p>
             </div>
-                to accelerate your projects.;
-              </p>;
-            </div>;
-
             {/* Navigation */}
             <div className="flex justify-between items-center mt-12">
               <Button
+<<<<<<< HEAD
                 variant='outline'
                 className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
 
@@ -1093,6 +1148,24 @@ if (return '') {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+                variant="outline"
+                className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
+                asChild
+              >
+                <Link href="/blog">
+                  <ChevronLeft className="mr-2 h-4 w-4" />
+                  All Articles
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.;
               </p>;
             </div>;
@@ -1105,15 +1178,6 @@ if (return '') {
               >;
                 <Link href="/blog">;
                   <ChevronLeft className="mr-2 h-4 w-4" />;
-
-                  All Articles;
-                </Link>;
-              </Button>;
-            </div>;
-
-                asChild>;
-                <Link href='/blog'>;
-                  <ChevronLeft className='mr-2 h-4 w-4' />;
                   All Articles;
                 </Link>;
               </Button>;
@@ -1123,6 +1187,7 @@ if (return '') {
       </div>;
     </>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 };
@@ -1555,49 +1620,10 @@ export default function Page() {;
         </div>;
       </section>;
     </div>) ;
-}
-
-            className="text - center max - w - 4xl mx -auto">;
-            <h2 className="text - 4xl font - bold text - white mb - 6">;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className="text - xl text - gray - 300 mb - 8">;
-              Let's discuss how our AI - powered solutions can drive innovation;
-              and growth for your organization.</p>;
-            <div className="flex flex - wrap justify - center gap - 4">;
-              <Link;
-                to="/contact";
-                className="px - 8 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration -300">;
-                Get Started Today;
-              </Link>;
-              <Link;
-                to="/services";
-                className="px - 8 py - 3 border border - cyan - 400 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 400 hover:text - white transition - all duration -300">;
-                Explore Our Services;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>);
-
-}
-export default /**
- * BlogPost - Function description
- */
-function BlogPost() {return (";
-    <div class_name = "min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950">";
-      <SEO title="BlogPost - Zion Tech Group" description="Professional BlogPost services by Zion Tech Group"  />";
-      <div className="container mx - auto px - 4 py - 20">";
-        <h1 className="text - 4xl font - bold text - white mb - 8">BlogPost</h1>";
-        <p className="text - gray - 300 text - lg">;
-          Professional BlogPost services to help your business grow.;
-        </p>;
-      </div>);
-}
-}
-
-
-
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 ;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Milestone  } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -5,6 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 }; import React from 'react'
 import { Milestone } from '@/hooks/useMilestones'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { CreditCard } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import React from 'react'
@@ -12,6 +15,7 @@ interface PaymentSummaryProps {
 
   milestones: Milestone[]
   paymentTerms: string | null
+<<<<<<< HEAD
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms },) => {;
@@ -68,6 +72,10 @@ interface PaymentSummaryProps {
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
+=======
+}
+export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms },) => {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const totalPayment = milestones.reduce(
     (sum, m) => sum + parseFloat(m.amount.toString()), 
     0
@@ -80,6 +88,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
       0
     ).toFixed(2),
 
+<<<<<<< HEAD
   const paidAmount = milestones;
     .filter(m => m && m.status === 'paid');
     .reduce(;
@@ -113,21 +122,27 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
-    <Card className="mb-8 bg-muted/30">;
-      <CardHeader className="pb-3">;
-        <CardTitle className="text-lg flex items-center">;
-          <CreditCard className="h-5 w-5 mr-2 text-primary" /> Payment Summary;
-        </CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <div className="grid grid-cols-1 md: grid-cols-3 gap-6">;
-          <div>;
-            <p className="text-sm text-muted-foreground mb-1">Total Payment</p>;
-            <p className="text-2xl font-semibold">;
+    <Card className="mb-8 bg-muted/30">
+      <CardHeader className="pb-3">
+        <CardTitle className="text-lg flex items-center">
+          <CreditCard className="h-5 w-5 mr-2 text-primary" /> Payment Summary
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div>
+            <p className="text-sm text-muted-foreground mb-1">Total Payment</p>
+            <p className="text-2xl font-semibold">
               ${totalPayment}
             </p>
           </div>
+<<<<<<< HEAD
           
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -135,12 +150,18 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <div>
             <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
             <p className="font-medium capitalize">
               {paymentTerms |"Not specified"}
             </p>
           </div>
+<<<<<<< HEAD
           
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -148,10 +169,16 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
             <p className="font-medium">
               ${paidAmount}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -193,6 +220,9 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </p>;
           </div>;
         </div>;
@@ -200,6 +230,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
     </Card>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -257,3 +288,8 @@ export const PaymentSummary: React.FC < PaymentSummaryProps> = ({ milestones, pa
     </Card>);
 }
 '";
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -45,12 +46,15 @@ export default function TalentProfilePage() {;
   // Cast to specify the expected route param type since useParams may be untyped;
   const { id } = useParams() as { id?: string };
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const navigate = useNavigate();
   const { profile, isLoading, error } = useTalentProfile(id);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
   const { isAuthenticated, user } = useAuth();
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",
@@ -360,10 +364,13 @@ export default function TalentProfilePage() {;
             Hire Now;
           </Button>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Button
             size="sm"
             variant="outline"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+<<<<<<< HEAD
             onClick={handleMessageTalent}
           >
             <MessageSquare className="mr-2 h-4 w-4" />
@@ -378,12 +385,19 @@ export default function TalentProfilePage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            Message;
+          </Button>;
+        </div>;
+      </StickyAction>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Request to Hire Modal */}
       <HireRequestModal
         talent={profile}
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
         userDetails={userProfile}
+<<<<<<< HEAD
       />
       {/* Message Talent Modal */}
       <MessageTalentModal
@@ -398,6 +412,8 @@ export default function TalentProfilePage() {;
 
 
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
       {/* Request to Hire Modal */}
       <HireRequestModal;
         talent={profile}
@@ -409,12 +425,16 @@ export default function TalentProfilePage() {;
       {/* Message Talent Modal */}
       <MessageTalentModal;
         talent={profile}
-
+=======
         is_open={isMessageModalOpen}
         on_close={() => setIsMessageModalOpen (false)}
       />;
     </div>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

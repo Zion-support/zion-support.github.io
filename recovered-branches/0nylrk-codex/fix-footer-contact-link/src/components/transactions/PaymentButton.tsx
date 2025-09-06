@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -35,6 +36,8 @@ interface PaymentButtonProps {;
   providerId: string,;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   buttonText?: string;
   className?: string;
   onPaymentInitiated?: () => void;
@@ -44,10 +47,6 @@ import { useNavigate } from "react-router-dom",
 =======
   redirectUrl?: string;
 }
-
-
-export function PaymentButton(): any ({;
-
   amount;
   serviceId;
   providerId;
@@ -59,20 +58,10 @@ export function PaymentButton(): any ({;
   const [isProcessing, setIsProcessing] = useState(false);
   const { isAuthenticated, user } = useAuth();
   const navigate = useNavigate();
-
-
-  const handlePaymentClick = async () => {;
-    if (!isAuthenticated) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please sign in to make a purchase."}),;
-
-      navigate("/login", { ;
-        state: { from: window && window.location.pathname } ;
-
       });
       return;
     }
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface PaymentButtonProps {
@@ -295,18 +284,14 @@ if ( {) {
         // Open Stripe checkout in a new tab;
         window.open (data.url, '_blank');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       } else {
         throw new Error ("No checkout URL returned");
       }
     } catch (error) {
-
-      console.error ("Payment error:", error);
-      toast ({
-        title: "Payment error",
-        description: "There was a problem initiating your payment. Please try again.",
-        variant: "destructive"});
-
     } finally {
+<<<<<<< HEAD
 
 
     try {;
@@ -366,11 +351,14 @@ if ( {) {
         description: "There was a problem initiating your payment. Please try again.",;
         variant: "destructive"});
     } finally {;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       // Reset button state after a short delay;
-      setTimeout(() => {;
-        setIsProcessing(false);
+      set_timeout (() => {
+        setIsProcessing (false);
       }, 1500);
     }
+<<<<<<< HEAD
   };
 
   return (;
@@ -386,6 +374,14 @@ if ( {) {
       disabled={isProcessing}
       className={cn(
         "relative min-w-[120px]",
+=======
+  }
+  return (
+    <Button
+      onClick={handlePaymentClick}
+      disabled={isProcessing}
+      className={cn(
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         className
       )}>;
       {isProcessing ? (;
@@ -396,6 +392,7 @@ if ( {) {
       ) : (;
         buttonText;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     >
       {isProcessing ? (
@@ -438,6 +435,8 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;

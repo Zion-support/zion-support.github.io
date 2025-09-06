@@ -1,3 +1,4 @@
+import { Twitter, Linkedin } from 'lucide-react'
 interface Speaker {
   name: string
   title: string
@@ -8,6 +9,7 @@ interface Speaker {
 }
 interface Speaker {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -20,6 +22,9 @@ interface Speaker {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import Image from "next/image",
 import { Twitter, Linkedin } from 'lucide-react'
 
@@ -28,6 +33,7 @@ interface Speaker {
   title: string,
   avatar: string,
   twitter?: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
   linkedin?: string
 }
@@ -53,6 +59,12 @@ interface Speaker {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   linkedin?: string
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  linkedin?: string
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   name: string
   title: string
@@ -62,6 +74,7 @@ interface Speaker {
   linkedin?: string
 }
 const speakers: Speaker[] = [
+<<<<<<< HEAD
 <<<<<<< HEAD
   {
 =======
@@ -156,6 +169,13 @@ interface Speaker {
 
 
 
+=======
+  {
+    linkedin: '#'}],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export function SpeakersSection() {
   return (
     <section className="py-12 bg-zion-blue-dark text-white" id="speakers">
@@ -164,6 +184,7 @@ export function SpeakersSection() {
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
           {speakers.map((sp) => (
             <div key={sp.name} className="text-center space-y-2">
+<<<<<<< HEAD
 
     linkedin: '#',
   },
@@ -214,10 +235,16 @@ export function SpeakersSection() {;
             <div key={sp.name} className="text-center space-y-2">;
               <Image;
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 src={sp.avatar}
                 alt={sp.name}
                 width={96}
                 height={96}
+<<<<<<< HEAD
 
 
 
@@ -238,11 +265,17 @@ export function SpeakersSection() {;
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     aria-label="Twitter"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center"
                   >
+<<<<<<< HEAD
 
                     href={sp.linkedin}
                     aria-label="LinkedIn"
@@ -257,12 +290,18 @@ export function SpeakersSection() {;
                     aria-label="LinkedIn"
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center"
                   >
                     <Linkedin className="h-4 w-4" aria-hidden="true" />
                     <span className="sr-only">LinkedIn</span>
+<<<<<<< HEAD
 
 
                   </Link>
@@ -322,3 +361,15 @@ export function SpeakersSection() {;
 }
 ;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                )}
+              </div>
+            </div>
+          ))}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

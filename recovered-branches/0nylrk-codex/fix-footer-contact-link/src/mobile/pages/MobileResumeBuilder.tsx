@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,11 +30,14 @@ export function MobileResumeBuilder() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function MobileResumeBuilder() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="min-h-screen">;
       <MobileHeader
         title="Resume Builder"
         showBack
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
       <main className="py-4">
@@ -78,3 +82,27 @@ export function MobileResumeBuilder() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+import React from './react';
+import { MobileHeader } from '../components / common / MobileHeader';
+import { BottomNavigation } from '../components / common / BottomNavigation';
+import { MobileResumeBuilder, as, ResumeBuilderComponent } from '../components / resume / MobileResumeBuilder';
+export /**
+ * MobileResumeBuilder - Function description
+ */
+function MobileResumeBuilder() {
+  return (
+    <div className="min - h-screen">;
+      <MobileHeader;
+        title="Resume Builder";
+        show_back;
+      />;
+      <main className="py - 4">;
+        <ResumeBuilderComponent />;
+      </main>;
+      <BottomNavigation />;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

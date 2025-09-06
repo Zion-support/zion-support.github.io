@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import FeatureCard from './components/FeatureCard'
 export default function HomePage() {
   const features = [;
@@ -566,6 +567,8 @@ export default function HomePage() {
             {features.map((feature, index) => (
               <FeatureCard
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 key={index}
                 icon={feature.icon}
                 title={feature.title}
@@ -577,6 +580,7 @@ export default function HomePage() {
         </div>;
       </section>;
       {/* CTA Section */}
+<<<<<<< HEAD
 <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
         <div className=&quot;max-w-4xl mx-auto text-center&quot;>
           <div className=&quot;glass-effect rounded-2xl p-12 animate-slide-up&quot;>
@@ -628,6 +632,8 @@ export default function HomePage() {
           </div>;
         </div>;
       </section>;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Stats Section */}
       <section className=&quot;py - 16 px - 4 sm:px - 6 lg:px - 8 bg - white / 5&quot;>;
         <div className=&quot;max - w-7xl mx - auto & quot;>;
@@ -652,62 +658,3 @@ export default function HomePage() {
         </div>;
       </section>;
     </div>);
-=======
-<<<<<<< HEAD
-<section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
-        <div className=&quot;max-w-4xl mx-auto text-center&quot;>
-          <div className=&quot;glass-effect rounded-2xl p-12 animate-slide-up&quot;>
-            <h2 className=&quot;text-4xl font-bold mb-6&quot;>
-=======
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="glass-effect rounded-2xl p-12 animate-slide-up">
-            <h2 className="text-4xl font-bold mb-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              Ready to Build the Future?
-            </h2>
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
-                🚀 Start Building Now
-              </Link>
-              <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📊 Explore Examples
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="animate-fade-in">
-              <div className="text-3xl font-bold text-blue-400 mb-2">100+</div>
-              <div className="text-white/70">Features Available</div>
-            </div>
-            <div className="animate-fade-in" style={{animationDelay: '0.1s'}}>
-              <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-              <div className="text-white/70">Deployment Options</div>
-            </div>
-            <div className="animate-fade-in" style={{animationDelay: '0.2s'}}>
-              <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-              <div className="text-white/70">AI Orchestration</div>
-            </div>
-            <div className="animate-fade-in" style={{animationDelay: '0.3s'}}>
-              <div className="text-3xl font-bold text-orange-400 mb-2">∞</div>
-              <div className="text-white/70">Scalability</div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}

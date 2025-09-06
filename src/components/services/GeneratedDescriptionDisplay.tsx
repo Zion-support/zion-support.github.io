@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -34,26 +35,35 @@ import { Textarea } from '@/components/ui/textarea'
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",
 import { Textarea } from "@/components/ui/textarea",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Check, Pencil } from 'lucide-react'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface GeneratedDescriptionDisplayProps {;
   description: string;
-  onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {;
-  description: string,;
-  onSave: (editedDescription: string,) => void;
+  onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {
+  description: string
+  onSave: (editedDescription: string,) => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -96,6 +106,16 @@ export function GeneratedDescriptionDisplay({
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+export function GeneratedDescriptionDisplay({ 
+  description, 
+  onSave 
+}: GeneratedDescriptionDisplayProps) {
+  const { toast } = useToast(),
+  const [isEditing, setIsEditing] = useState(false),
+  const [editedDescription, setEditedDescription] = useState(description),
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const handleSave = () => {
     onSave(editedDescription),
     setIsEditing(false),
@@ -104,6 +124,7 @@ export function GeneratedDescriptionDisplay({
       description: "Your edited description has been saved."
     })
   },
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -115,11 +136,17 @@ export function GeneratedDescriptionDisplay({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
         <CardTitle className="text-white flex items-center justify-between">
           Generated Description
+<<<<<<< HEAD
           <Button
             variant='outline'
             size='sm'
@@ -136,6 +163,11 @@ export function GeneratedDescriptionDisplay({
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {isEditing ? (
               <>
                 <Check className="h-4 w-4 mr-1" />
@@ -146,6 +178,7 @@ export function GeneratedDescriptionDisplay({
                 <Pencil className="h-4 w-4 mr-1" />
                 Edit
               </>
+<<<<<<< HEAD
             )}
           </Button>
         </CardTitle>
@@ -262,10 +295,22 @@ export function GeneratedDescriptionDisplay({;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {editedDescription}
+          </div>
+        )}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             Save Changes
           </Button>
         </CardFooter>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </Card>
   )
@@ -332,3 +377,13 @@ export function GeneratedDescriptionDisplay({;
 }'";
 }
 ;
+=======
+=======
+    </Card>;
+  );
+}
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

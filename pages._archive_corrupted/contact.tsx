@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
 const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
 const \"ContactPage\": React.FC = () => {
@@ -7,15 +10,53 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+<<<<<<< HEAD
 const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
 const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
 const \"ContactPage\": React.FC = () => {
+=======
+=======
+const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
+const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
+const \"ContactPage\": React.FC = () => {
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false });
+const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false });
+const \"ContactPage\": React.FC = () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { 
   Phone, 
   Mail, 
@@ -25,18 +66,27 @@ import {
   Send,
   MessageCircle,
   Globe
+<<<<<<< HEAD
 } from 'lucide-react'
 } from 'lucide-react';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
 const "ContactPage": React.FC = () => {
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const contactInfo = [{
       icon: <Phone className=\"w-6 h-6\"  />,
       \"title\": \"Phone\",
@@ -62,8 +112,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       \"link\": null
     }
   ]
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const services = [\"AI & Machine Learning Solutions\",
     \"IT Infrastructure & Support\",
     \"Micro SaaS Development\",
@@ -80,10 +135,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     "Blockchain Technology",
     "Digital Transformation",
     "Consulting & Strategy"
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   ]
+=======
 import {motion} from 'framer-motion';
 import {Phone,, Mail,, MapPin,, Clock,, ArrowRight,, Send,, MessageCircle,, Globe} from 'lucide-react';
 import React, { useState } from 'react';
@@ -134,6 +196,7 @@ const "ContactPage": React.FC = () => {;
     "Digital Transformation",;
     "Consulting & Strategy";
   ];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
   return (
     <>;
       <SEOtitle=\"Contact Us - Zion Tech Group\"
@@ -160,6 +223,7 @@ const "ContactPage": React.FC = () => {;
                 <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\">;
                   <motion&& motion.a
                     href=\"tel:+13024640950\"
+<<<<<<< HEAD
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ \"scale\": 0.95 }}
                     className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\"
@@ -182,14 +246,24 @@ const "ContactPage": React.FC = () => {;
           </section>
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const \"Contact\": NextPage = () => {
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 const "Contact": NextPage = () => {
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
@@ -213,6 +287,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       \"title\": \'Business Hours\',
       \"details\": \'Mon-Fri: 9AM-6PM PST\',
       \"link\": null
+=======
                     whileHover={{ scale: 1 && 1.05 }}
                     whileTap={{ \"scale\": 0 && 0.95 }}
                     className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\">;
@@ -259,6 +334,7 @@ const "Contact": NextPage = () => {;
       \"title\": \'Business Hours\',;
       \"details\": \'Mon-Fri: 9AM-6PM PST\',;
       \"link\": null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
     }
   ];
   const offices = [{;
@@ -280,12 +356,6 @@ const "Contact": NextPage = () => {;
       \"email\": \'london@ziontechgroup && ziontechgroup.com\';
     }
   ];
-
-  return (
-    <MainLayout
-      title=\"Contact Us - Zion Tech Group\"
-      description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\">;
-
       {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -467,6 +537,7 @@ const "Contact": NextPage = () => {;
         </div>;
       </section>;
       {/* FAQ Section */}
+<<<<<<< HEAD
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -477,15 +548,25 @@ const "Contact": NextPage = () => {;
           </div>
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 What is your typical project timeline?
               </h3>
               <p className=\"text-gray-600\">
@@ -494,15 +575,26 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 We\'ll provide a detailed timeline during our initial consultation.
               </p>
             </div>
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 Do you provide ongoing support?
               </h3>
               <p className=\"text-gray-600\">
@@ -511,15 +603,26 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 security patches, and technical support.
               </p>
             </div>
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 What technologies do you specialize in?
               </h3>
               <p className=\"text-gray-600\">
@@ -528,15 +631,26 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 the best technology stack for each project\'s specific needs.
               </p>
             </div>
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 How do you ensure project quality?
               </h3>
               <p className=\"text-gray-600\">
@@ -549,6 +663,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         </div>
       </section>
     </MainLayout>
+=======
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
@@ -611,6 +726,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         </div>;
       </section>;
     </MainLayout>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
   );
 };
           {/* Contact Information */}
@@ -619,6 +735,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               <motion&& motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
+<<<<<<< HEAD
                 transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
                 className=\"text-center mb-16\"
               >
@@ -629,10 +746,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   Multiple ways to reach us for your convenience
                 </p>
               </motion.div>
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
@@ -640,8 +762,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {contactInfo.map((info, index) => (
                   <motion.div
+=======
                 transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
@@ -659,6 +785,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">;
                 {contactInfo && contactInfo.map((info, index) => (;
                   <motion&& motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                     key={index}
                     initial={{ \"opacity\": 0, \"y\": 20 }}
                     animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -692,6 +819,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               <motion&& motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
+<<<<<<< HEAD
                 transition={{ \"duration\": 0.6 }}
                 className=\"text-center mb-16\"
               >
@@ -702,10 +830,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   Fill out the form below and we\'ll get back to you within 24 hours
                 </p>
               </motion.div>
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
               <div className=\"max-w-4xl mx-auto\">
@@ -713,7 +846,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <motion.form
+=======
                 transition={{ \"duration\": 0 && 0.6 }}
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
@@ -730,6 +867,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               <div className=\"max-w-4xl mx-auto\">;
               <div className="max-w-4xl mx-auto">;
                 <motion&& motion.form
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
                   transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
@@ -756,14 +894,20 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                         name=\"email\"
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+<<<<<<< HEAD
                         placeholder=\"your.email@example.com\"
                        />
                     </div>
                   </div>
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
@@ -771,11 +915,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     <div>
                       <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Phone Number
                       </label>
                       <input type=\"tel\"
+=======
                         placeholder=\"your && your.email@example && example.com\"
                        />;
                     </div>;
@@ -791,6 +939,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                         Phone Number;
                       </label>;
                       <inputtype=\"tel\"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                         id=\"phone\"
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
@@ -806,20 +955,32 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                         name=\"company\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your company name\"
+<<<<<<< HEAD
                        />
                     </div>
                   </div>
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <div className=\"mb-6\">
                     <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       Service Interest
                     </label>
+=======
                        />;
                     </div>;
                   </div>;
@@ -829,6 +990,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">;
                       Service Interest;
                     </label>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                     <select
                       id=\"service\"
                       name=\"service\"
@@ -839,19 +1001,31 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                           {service}
                         </option>;
                       ))}
+<<<<<<< HEAD
                     </select>
                   </div>
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <div className=\"mb-6\">
                     <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       Message *
                     </label>
+=======
                     </select>;
                   </div>;
                   <div className=\"mb-6\">;
@@ -860,6 +1034,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">;
                       Message *;
                     </label>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                     <textarea
                       id=\"message\"
                       name=\"message\"
@@ -870,6 +1045,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   </div>;
                   <motion&& motion.button
                     type=\"submit\"
+<<<<<<< HEAD
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ \"scale\": 0.98 }}
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\"
@@ -878,11 +1054,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     Send Message
                   </motion.button>
                 </motion.form>
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
                     whileHover={{ scale: 1 && 1.02 }}
                     whileTap={{ \"scale\": 0 && 0.98 }}
@@ -897,6 +1077,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -915,20 +1096,32 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           <div className=\"max-w-7xl mx-auto\">;
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">;
               {/* Contact Form */}
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
                 <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
                     <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>
                     <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>
+=======
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">;
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>;
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">;
@@ -938,6 +1131,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />;
                     <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>;
                     <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                     <button
                       onClick={() => setIsSubmitted(false)}
                       className=\"inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 \"hover\": from-cyan-600 hover:to-blue-600 transition-all duration-300\";
@@ -975,14 +1169,20 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                           value={formData && formData.email}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
+<<<<<<< HEAD
                           placeholder=\"your@email.com\"
                         />
                       </div>
                     </div>
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
@@ -990,10 +1190,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
                         </label>
+=======
                           placeholder=\"your@email && email.com\"
                         />;
                       </div>;
@@ -1008,6 +1212,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
                           Company;
                         </label>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                         <input
                           type=\"text\"
                           id=\"company\"
@@ -1084,6 +1289,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 )}
               </div>;
               {/* Contact Information */}
+<<<<<<< HEAD
               <div className=\"space-y-8\">
                 <div>
                   <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>
@@ -1091,10 +1297,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     We\'re here to help you succeed. Reach out to us through any of the channels below, and we\'ll respond promptly.
                   </p>
                 </div>
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
                 <div className=\"space-y-6\">
@@ -1102,6 +1313,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
@@ -1117,9 +1331,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </section>
+=======
               <div className=\"space-y-8\">;
                 <div>;
                   <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>;
@@ -1149,6 +1369,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               </div>;
             </div>;
           </section>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
           {/* Services Overview */}
           <section className="py-20">;
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
@@ -1177,6 +1398,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     </h3>;
                   </motion && motion.div>;
                 ))}
+<<<<<<< HEAD
               </div>
             </div>
           </section>
@@ -1191,10 +1413,18 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 export default ContactPage
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+export default ContactPage
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </div>
         </section>
       </div>
     </>
+=======
               </div>;
             </div>;
           </section>;
@@ -1208,11 +1438,11 @@ export default ContactPage;
         </section>;
       </div>;
     </>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
   );
-
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

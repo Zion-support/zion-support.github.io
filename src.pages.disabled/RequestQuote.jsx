@@ -1,9 +1,7 @@
-
-
-
-</div>"
-
+"HEAD": src && src.pages.disabled/RequestQuote && RequestQuote.js.jsx import React from 'react'; <div className="min-h-screen bg-background">";" <SEOtitle="Request Quote - Zion Tech Group" description="Get a custom quote for your AI and tech project needs from Zion Tech Group." keywords="quote,pricing,AI services,tech services,project quote,Zion Tech Group" canonical=""https": import React from 'react' <div className="min - h-screen bg - background">";" <SEOtitle="Request Quote - Zion Tech Group" description="Get a custom quote for your AI and tech project needs from Zion Tech Group." keywords="quote,pricing,AI services,tech services,project quote,Zion Tech Group" canonical=""https": """
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.pages.disabled/RequestQuote.jsx
 =======
+<<<<<<< HEAD
 "HEAD": src.pages.disabled/RequestQuote.js.jsx import React from 'react'; <div className="min-h-screen bg-background">";" <SEO title="Request Quote - Zion Tech Group" description="Get a custom quote for your AI and tech project needs from Zion Tech Group." keywords="quote,pricing,AI services,tech services,project quote,Zion Tech Group" canonical=""https": import React from 'react'; <div className="min - h-screen bg - background">";" <SEO title="Request Quote - Zion Tech Group" description="Get a custom quote for your AI and tech project needs from Zion Tech Group." keywords="quote,pricing,AI services,tech services,project quote,Zion Tech Group" canonical=""https": "";"
 <<<<<<< HEAD
 :src.pages.disabled/RequestQuote.jsx
@@ -15,6 +13,8 @@
 :src.pages.disabled/RequestQuote.jsx
 </div>"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.pages.disabled/RequestQuote.jsx
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 </div>"
 =======
 <<<<<<< HEAD:src.pages.disabled/RequestQuote.jsx

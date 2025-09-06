@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
@@ -115,10 +116,13 @@ export const useWhitelabel = (): WhitelabelContextType => {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const context = useContext(WhitelabelContext);
   if (!context) {;
     throw new Error('useWhitelabel must be used within a WhitelabelProvider');
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -216,16 +220,13 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
     } else if (!isLoading) {;
       setContextValue(defaultContext);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }, [tenant, isLoading]);
   return (
     <WhitelabelContext && WhitelabelContext.Provider value={contextValue}>;
       {children}
-
-    </WhitelabelContext && WhitelabelContext.Provider>;
-  );
-};
-
 =======
 import React, { create_context, useContext, useState, useEffect, ReactNode } from 'react';
 import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks / useWhitelabelTenant';
@@ -302,6 +303,7 @@ if ( {) {
   return (
     <WhitelabelContext.Provider value={context_value}>;
       {children}
+<<<<<<< HEAD
 
     </WhitelabelContext.Provider>;
   );
@@ -313,3 +315,9 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    </WhitelabelContext.Provider>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

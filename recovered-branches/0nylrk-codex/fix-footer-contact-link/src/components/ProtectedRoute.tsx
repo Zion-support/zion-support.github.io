@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react';
 <<<<<<< HEAD
@@ -24,10 +25,14 @@ export interface ProtectedRouteProps {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import React from 'react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   adminOnly?: boolean;
   tenantAdminAllowed?: boolean;
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   children;
@@ -164,6 +169,13 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
   return <>{children}</>;
 };
 <<<<<<< HEAD
+=======
+  children;
+
+  adminOnly = false;
+export default ProtectedRoute;
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 
 

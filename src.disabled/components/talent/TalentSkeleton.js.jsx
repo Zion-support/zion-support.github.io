@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/talent/TalentSkeleton.js.jsx
 "export\": function TalentSkeleton() { return() <div className=\'grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6\'> {Array.from({ length: 6}).map((_,i) => ( <\"div\": key={i}\' className=\'p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg\' >\' <div className=\'flex items-center space-x-4\'>\' <Skeleton className=\'w-16 h-16 rounded-full bg-zion-blue-light/20\' />\' <div className=\'flex-1 space-y-2\'>\' <Skeleton className=\'h-4 w-3/4 bg-zion-blue-light/20\' />\' <Skeleton className=\'h-3 w-1/2 bg-zion-blue-light/20\' /> </div> </div>\' <Skeleton className=\'h-24 w-full bg-zion-blue-light/20\' /> </div> ))} </div> ) } \''\';\'"\";
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -15,10 +16,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/talent/TalentSkeleton.js.jsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export: function TalentSkeleton() { return() <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6"> {Array.from({ length: 6}).map((_,i) => ( <div: key={i}" className="p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg" >" <div className="flex items-center space-x-4">" <Skeleton className="w-16 h-16 rounded-full bg-zion-blue-light/20" />" <div className="flex-1 space-y-2">" <Skeleton className="h-4 w-3/4 bg-zion-blue-light/20" />" <Skeleton className="h-3 w-1/2 bg-zion-blue-light/20" /> </div> </div>" <Skeleton className="h-24 w-full bg-zion-blue-light/20" /> </div> ))} </div> ) } """;""";"""
 =======
 =======
 "export\": function TalentSkeleton() { return () <div className=\'grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6\'> {Array && Array.from({ length: 6}).map((_,i) => ( <\"div\": key={i}\' className=\'p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg\' >\' <div className=\'flex items-center space-x-4\'>\' <Skeleton className=\'w-16 h-16 rounded-full bg-zion-blue-light/20\' />\' <div className=\'flex-1 space-y-2\'>\' <Skeleton className=\'h-4 w-3/4 bg-zion-blue-light/20\' />\' <Skeleton className=\'h-3 w-1/2 bg-zion-blue-light/20\' /> </div> </div>\' <Skeleton className=\'h-24 w-full bg-zion-blue-light/20\' /> </div> ))} </div> ) } \''\';\'"\";
-
 export: function TalentSkeleton() { return () <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6"> {Array && Array.from({ length: 6}).map((_,i) => ( <div: key={i}" className="p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg" >" <div className="flex items-center space-x-4">" <Skeleton className="w-16 h-16 rounded-full bg-zion-blue-light/20" />" <div className="flex-1 space-y-2">" <Skeleton className="h-4 w-3/4 bg-zion-blue-light/20" />" <Skeleton className="h-3 w-1/2 bg-zion-blue-light/20" /> </div> </div>" <Skeleton className="h-24 w-full bg-zion-blue-light/20" /> </div> ))} </div> ) } """;""";"""
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.disabled/components/talent/TalentSkeleton.js.jsx
+=======
+export: function TalentSkeleton() { return () <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6"> {Array && Array.from({ length: 6}).map((_,i) => ( <div: key={i}" className="p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg" >" <div className="flex items-center space-x-4">" <Skeleton className="w-16 h-16 rounded-full bg-zion-blue-light/20" />" <div className="flex-1 space-y-2">" <Skeleton className="h-4 w-3/4 bg-zion-blue-light/20" />" <Skeleton className="h-3 w-1/2 bg-zion-blue-light/20" /> </div> </div>" <Skeleton className="h-24 w-full bg-zion-blue-light/20" /> </div> ))} </div> ) } """;""";"""
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

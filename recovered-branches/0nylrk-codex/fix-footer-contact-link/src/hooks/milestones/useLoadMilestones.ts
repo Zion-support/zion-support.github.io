@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,11 +9,14 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneActivity} from './types';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const useLoadMilestones = (projectId?: string) => {;
   const { user } = useAuth();
@@ -53,10 +57,13 @@ export const useLoadMilestones = (projectId?: string) => {;
         activitiesMap[milestone && milestone.id] = activitiesData || []
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
       setActivities(activitiesMap);
       setError(null)
     } catch (err: any) {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -88,6 +95,22 @@ export const useLoadMilestones = (projectId?: string) => {;
     if (!projectId) {;
       setIsLoading(false),;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+export const useLoadMilestones = (project_id?: string) =>: any {
+  const { user } = use_auth ();
+  const [milestones, set_milestones] = useState < Milestone[]>([]);
+  const [activities, set_activities] = useState < Record < string, MilestoneActivity[]>>({});
+  const [is_loading, setIsLoading] = useState (true);
+  const [error, set_error] = useState < string | null>(null);
+;
+  const fetch_milestones = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      setIsLoading (false);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return;
     }
     try {
@@ -115,6 +138,7 @@ if (throw milestones_error) {
             *;
             created_by_profile:profiles ! user_id (display_name, avatar_url);
           `);
+<<<<<<< HEAD
 
           .eq('milestone_id', milestone.id);
           .order('created_at', { ascending: false }),;
@@ -139,6 +163,16 @@ if (throw milestones_error) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          .eq ('milestone_id', milestone.id);
+          .order ('created_at', { ascending: false });
+;
+        // Check condition
+if (throw activities_error) {
+  $2
+}
+        activities_map[milestone.id] = activities_data || [];
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
       set_activities (activities_map);
       set_error (null);
@@ -148,19 +182,9 @@ if (throw milestones_error) {
       toast.error ("Failed to fetch milestones");
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
-
-;
-  // Fetch milestones when component mounts or project_id changes;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      fetch_milestones ();
+      setIsLoading (false);
     }
-  }, [project_id]);
-;
-
+  }
   return {
     milestones;
     activities;
@@ -193,6 +217,7 @@ if ( {) {
     refetch: fetchMilestones;
 =======
     refetch: fetch_milestones;
+<<<<<<< HEAD
 =======
       setIsLoading(false)
 
@@ -201,3 +226,7 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
+=======
+  }
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

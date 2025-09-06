@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -35,6 +36,8 @@ import React from './react';
 import { use_theme } from '@/hooks / use_theme';
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface MobileThemeProviderProps {
   children: React.ReactNode
 import React from "react",;
@@ -43,6 +46,7 @@ interface MobileThemeProviderProps {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   children: React.ReactNode;
 }
+<<<<<<< HEAD
 
 
 
@@ -61,12 +65,11 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  return (
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {children}
-
-    </div>;
-  );
-}
-
 =======
 export /**
  * MobileThemeProvider - Function description

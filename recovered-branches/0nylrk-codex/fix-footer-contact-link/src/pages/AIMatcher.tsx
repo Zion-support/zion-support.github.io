@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState} from "react";
@@ -282,14 +283,17 @@ if (|| category === "hardware") {) {
               service_type={selected_category === "all" ? "" : selected_category}
               onMatchSelect={handleMatchSelect}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             />;
           </div>;
         </div>;
       </div>;
       <Footer />;
-
+=======
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 ;
@@ -300,3 +304,6 @@ if (|| category === "hardware") {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

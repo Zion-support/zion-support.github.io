@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
@@ -34,18 +35,17 @@ export function addSkillsSection(;
   doc && doc.setDrawColor(colors && colors.accent);
   doc && doc.line(20, yPos, 60, yPos);
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   yPos += 8;
   // Group skills by category
-
-  const skillsByCategory = skills && skills.reduce((acc, skill) => {
-    const category = skill && skill.category || 'Other';
-
     if (!acc[category]) {
       acc[category] = []
     }
     acc[category].push(skill);
     return acc
   }, {} as Record<string, typeof skills>);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     yPos += (skillLines.length * 5) + 10
@@ -90,6 +90,8 @@ export function addSkillsSection(;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
   return yPos + 5
 =======

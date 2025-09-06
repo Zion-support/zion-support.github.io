@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from 'react';
@@ -91,6 +92,34 @@ interface MilestonesListProps {;
   onReject?: (id: string) => Promise<void>
 }
 export const MilestonesList: React.FC<MilestonesListProps> = ({
+=======
+import React, { useState } from 'react';
+=======
+import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks / use_milestones';
+import {use_auth} from '@/hooks / use_auth';
+import {MilestoneCard} from './MilestoneCard';
+import {AddMilestoneForm} from './AddMilestoneForm';
+import {Button} from '@/components / ui / button';
+import {Card, CardContent} from '@/components / ui / card';
+// lucide-react doesn't export PlusIcon, use our icon wrapper;
+import {Plus} from '@/components / icons';
+import {EmptyState} from '@/components / ui / empty - state';
+interface MilestonesListProps {
+  milestones: Milestone[],
+  activities: Record < string, MilestoneActivity[]>;
+  is_loading: boolean,
+  is_client: boolean,
+  onCreateMilestone: (data: any) => Promise < Milestone | null>,
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise < boolean>;
+  onDeleteMilestone: (id: string) => Promise < boolean>,
+  onUploadDeliverable: (id: string, file: File) => Promise < any>,
+  is_submitting: boolean,
+  on_approve?: (id: string) => Promise < void>,
+  on_reject?: (id: string) => Promise < void>;
+}
+export const MilestonesList: React.FC < MilestonesListProps> = ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   milestones;
   activities;
   is_loading;
@@ -99,6 +128,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   onUpdateStatus;
   onDeleteMilestone;
   onUploadDeliverable;
+<<<<<<< HEAD
 
   onApprove
   onReject
@@ -125,6 +155,8 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   },
 
   if (isLoading) {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <div className="space-y-4">
         {[1, 2, 3].map((i) => (
@@ -139,6 +171,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       </div>
     )
   }
+<<<<<<< HEAD
   
   if (milestones.length === 0 && !showAddForm) {
     return (
@@ -169,16 +202,21 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             onClick: () => setShowAddForm(true);
           } : undefined;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         }
       />;
     );
   }
+<<<<<<< HEAD
 =======
         }
       />
     )
   }
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="space-y-6">;
       {isClient && !showAddForm && (;
@@ -189,12 +227,16 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           </Button>;
         </div>;
       )}
+<<<<<<< HEAD
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
             <AddMilestoneForm
             <AddMilestoneForm 
+=======
+            <AddMilestoneForm
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
@@ -202,6 +244,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           </CardContent>;
         </Card>;
       )}
+<<<<<<< HEAD
       
       <div className="space-y-4">
         {milestones.map((milestone) => (
@@ -210,6 +253,8 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       <div className="space-y-4">;
         {milestones && milestones.map((milestone) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <MilestoneCard
             key={milestone && milestone.id}
             id={milestone && milestone.id}
@@ -223,6 +268,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             onReject={onReject}
           />;
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
     </div>
@@ -248,3 +294,91 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+=======
+  is_submitting;
+  on_approve,
+  on_reject;
+}) => {
+  const [showAddForm, setShowAddForm] = useState (false);
+;
+  const handle_submit = async (data: any) => {
+    await onCreateMilestone (data),
+    setShowAddForm (false);
+  }
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="space - y-4">;
+        {[1, 2, 3].map ((i) => (
+          <Card key={i}>;
+            <CardContent className="p - 6">;
+              <div className="h - 6 w - 48 bg - muted rounded animate - pulse mb - 4"></div>;
+              <div className="h - 4 bg - muted rounded animate - pulse w - full mb - 2"></div>;
+              <div className="h - 4 bg - muted rounded animate - pulse w - 3/4"></div>;
+            </CardContent>;
+          </Card>))}
+      </div>);
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <EmptyState;
+        icon={<span className="text - 3xl">📊</span>}
+        title="No Milestones Yet";
+        description={is_client ?;
+          "Break down the project into manageable milestones to track progress and payments." :;
+          "No milestones have been created for this project yet."}
+        action={is_client ?;
+          {
+            text: "Create First Milestone",
+            on_click: () => setShowAddForm (true);
+          } : undefined;
+        }
+      />);
+  }
+  return (
+    <div className="space - y-6">;
+      {is_client && !showAddForm && (
+        <div className="flex justify - end">;
+          <Button on_click={() => setShowAddForm (true)}>;
+            <Plus className="h - 4 w - 4 mr - 2" />;
+            Add Milestone;
+          </Button>;
+        </div>)}
+      {showAddForm && (
+        <Card>;
+          <CardContent className="pt - 6">;
+            <h3 className="text - lg font - medium mb - 4">Create New Milestone</h3>;
+            <AddMilestoneForm;
+              on_submit={handle_submit}
+              is_submitting={is_submitting}
+              on_cancel={() => setShowAddForm (false)}
+            />;
+          </CardContent>;
+        </Card>)}
+      <div className="space - y-4">;
+        {milestones.map ((milestone) => (
+          <MilestoneCard;
+            key={milestone.id}
+            id={milestone.id}
+            project_id={milestone.project_id}
+            title={milestone.title}
+            description={milestone.description}
+            amount={parse_float (milestone.amount.to_string ())}
+            status={milestone.status}
+            due_date={milestone.due_date}
+            on_approve={on_approve}
+            on_reject={on_reject}
+          />))}
+      </div>;
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

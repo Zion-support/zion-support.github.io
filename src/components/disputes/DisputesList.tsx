@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 export /**
  * DisputesList - Function description
@@ -28,10 +29,18 @@ import { Badge  } from '@/components / ui / badge';
 import {
 <<<<<<< HEAD
   Table
+=======
+import React, { useState } from 'react'
+import { Dispute, DisputeStatus } from '@/types/disputes'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import {  Table,  Table
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   TableBody
   TableCell
   TableHead
   TableHeader
+<<<<<<< HEAD
   TableRow} from "@/components/ui/table"
 import Skeleton from "@/components/ui/skeleton"
 import { formatDistanceToNow } from "date-fns"
@@ -124,29 +133,70 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
   const getStatusBadgeVariant = (status: DisputeStatus,) => {;
     switch (status) {;
       case 'open':;
+=======
+  TableRow
+} from '@/components/ui/table'
+import Skeleton from '@/components/ui/skeleton'
+import { formatDistanceToNow } from 'date-fns'
+import { ShieldAlert } from 'lucide-react'
+import Link from 'next/link'
+type DisputesListProps = {
+  disputes: Dispute[]
+isLoading: boolean
+}
+export function DisputesList({ disputes, isLoading }: DisputesListProps) {
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | 'all'>(
+    'all'
+  )
+  const filteredDisputes = null;
+    statusFilter === 'all'
+      ? disputes
+      : disputes.filter(dispute => dispute.status === statusFilter)
+  const getStatusBadgeVariant = (status: DisputeStatus,) => {
+    switch (status) {
+      case 'open':
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         return 'default';
       case 'under_review':;
         return 'secondary';
       case 'resolved':;
-        return 'outline'; // Changed from "success" to "outline";
-      case 'closed':;
-        return 'outline';
-      default:;
-        return 'default';
-
-
-import React, { useState } from "react";
-import { Dispute, DisputeStatus } from "@/types/disputes";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+        return 'outline'; // Changed from "success" to "outline"
+      case 'closed':
+        return 'outline'
+      default:
+        return 'default'
+import React, { useState } from "react"
+import { Dispute, DisputeStatus } from "@/types/disputes"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
 import {
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow} from "@/components/ui/table"
+import Skeleton from "@/components/ui/skeleton"
+import { formatDistanceToNow } from "date-fns"
+import Link from "next/link"
+=======
+TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
 
+import React, { useState } from "react",
+import { Dispute, DisputeStatus } from "@/types/disputes",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
+<<<<<<< HEAD
 
 
 import React, { useState } from "react";
@@ -244,6 +294,19 @@ function DisputesList() {
         </div>
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import Skeleton from "@/components/ui/skeleton",
+import { formatDistanceToNow } from "date-fns",
+import { ShieldAlert } from 'lucide-react'
+import Link from "next/link",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+type DisputesListProps = {
+  disputes: Dispute[]
+  isLoading: boolean
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <div className="border rounded-md">
           <Table>
             <TableHeader>
@@ -253,6 +316,7 @@ function DisputesList() {
                 <TableHead>Parties</TableHead>
                 <TableHead>Created</TableHead>
                 <TableHead>Status</TableHead>
+<<<<<<< HEAD
                 <TableHead className='text-right'>Actions</TableHead>              </TableRow>                <TableHead className="text-right">Actions</TableHead>
                 <TableHead className="text-right">Actions</TableHead>
 <<<<<<< HEAD
@@ -261,6 +325,11 @@ function DisputesList() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -274,12 +343,16 @@ function DisputesList() {
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 </TableRow>
 import React, { useState } from "react",;
 import { Dispute, DisputeStatus } from "@/types/disputes",;
@@ -353,8 +426,8 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
           </Table>;
         </div>;
       </div>;
-
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 
@@ -408,6 +481,13 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+
+  if (disputes.length === 0) {
+    return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <div className="text-center py-12 border rounded-md bg-muted/20">
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
         <h3 className="text-xl font-medium">No disputes found</h3>
@@ -415,66 +495,55 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
           No active disputes match the selected filter
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         </p>
       </div>
     )
-
-  if (disputes && disputes.length === 0) {;
-    return (
-      <div className='text-center py-12 border rounded-md bg-muted/20'>;
-        <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
-        <h3 className='text-xl font-medium'>No disputes found</h3>;
-        <p className='text-muted-foreground mt-2'>      <div className="text-center py-12 border rounded-md bg-muted/20">;
-        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
-        <h3 className="text-xl font-medium">No disputes found</h3>;
-        <p className="text-muted-foreground mt-2">;
-        </p>;
-      </div>;
-    );
   }
-
-
-          size="sm";
-        >;
-          All;
-        </Button>;
-
-        <Button;
-          variant={status_filter === "open" ? "default" : "outline"}
-          on_click={() => setStatusFilter ("open")}
-
-          size="sm";
-          size="sm";
-        >;
-          Open;
-        </Button>;
-
-        <Button;
-          variant={status_filter === "under_review" ? "default" : "outline"}
-          on_click={() => setStatusFilter ("under_review")}
-
-          size="sm";
-          size="sm";
-        >;
-          Under Review;
-        </Button>;
-
-        <Button;
-          variant={status_filter === "resolved" ? "default" : "outline"}
-          on_click={() => setStatusFilter ("resolved")}
-
-          size="sm";
-          size="sm";
-        >;
-          Resolved;
-        </Button>;
-
+    <div className='space-y-4'>
+      <div className='flex gap-2 mb-4 overflow-x-auto pb-2'>
+        <Button
+          variant={statusFilter === 'all' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('all')}
+          size='sm'        >
+          All
+        </Button>
+        <Button
+          variant={statusFilter === 'open' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('open')}
+          size='sm'        >
+          Open
+        </Button>
+        <Button
+          variant={statusFilter === 'under_review' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('under_review')}
+          size='sm'        >
+          Under Review
+        </Button>
+        <Button
+          variant={statusFilter === 'resolved' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('resolved')}
+          size='sm'        >
+          Resolved
+        </Button>
+        <Button
+          variant={statusFilter === 'closed' ? 'default' : 'outline'}
+          onClick={() => setStatusFilter('closed')}
+          size='sm'        >    <div className="space-y-4">
+=======
+=======
     <div className="space-y-4">
+<<<<<<< HEAD
 
 
 
@@ -488,6 +557,10 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
         <Button
           variant={statusFilter === "all" ? "default" : "outline"}
@@ -501,12 +574,18 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
           onClick={() => setStatusFilter("open")}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           size="sm"
         >
           Open
@@ -516,12 +595,18 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
           onClick={() => setStatusFilter("under_review")}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           size="sm"
         >
           Under Review
@@ -531,12 +616,18 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
           onClick={() => setStatusFilter("resolved")}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           size="sm"
         >
           Resolved
@@ -546,17 +637,24 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
           onClick={() => setStatusFilter("closed")}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           size="sm"
         >
           Closed
         </Button>
       </div>
+<<<<<<< HEAD
       <div className='border rounded-md overflow-hidden'>        <Table>      <div className="border rounded-md overflow-hidden">
 
       <div className="border rounded-md overflow-hidden">
@@ -567,6 +665,11 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <Table>
           <TableHeader>
             <TableRow>
@@ -575,6 +678,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
               <TableHead>Parties</TableHead>
               <TableHead>Created</TableHead>
               <TableHead>Status</TableHead>
+<<<<<<< HEAD
               <TableHead className='text-right'>Actions</TableHead>
             </TableRow>
           </TableHeader>
@@ -592,12 +696,18 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {filteredDisputes.map((dispute) => (
               <TableRow key={dispute.id}>
-                <TableCell className='font-mono text-xs'>
+                <TableCell className="font-mono text-xs">
                   {dispute.id.split('-')[0]}
                 </TableCell>
                 <TableCell>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   {dispute.project?.title |'Unknown Project'}
                   {dispute.project?.title || 'Unknown Project'}
@@ -608,6 +718,8 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 </TableCell>
                 <TableCell>
                   <div className='flex flex-col text-sm'>
@@ -622,6 +734,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                 </TableCell>
                 <TableCell>
                   {formatDistanceToNow(new Date(dispute.created_at), {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -642,6 +755,9 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                   })}                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   {dispute.project?.title || "Unknown Project"}
                 </TableCell>
                 <TableCell>
@@ -653,16 +769,23 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                       Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     </span>
                   </div>
                 </TableCell>
                 <TableCell>
+<<<<<<< HEAD
 
           size="sm";
           size="sm";
@@ -777,6 +900,11 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <TableCell className="text-right">
                   <Button asChild size="sm">
                     <Link href={`/dashboard/disputes/${dispute.id}`}>View Details</Link>
@@ -784,6 +912,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                 </TableCell>
               </TableRow>
             ))}
+<<<<<<< HEAD
           </TableBody>
         </Table>
       </div>
@@ -831,25 +960,16 @@ if ( {") {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </TableBody>;
         </Table>;
       </div>;
     </div>;
   );
-
-
-  i ";
-}> <TableCell><Skeleton className="h - 4 w - 24" /></TableCell> <TableCell><Skeleton className="h - 4 w - 40" /></TableCell> <TableCell><Skeleton className="h - 4 w - 32" /></TableCell> <TableCell><Skeleton className="h - 4 w - 24" /></TableCell> <TableCell><Skeleton className="h - 6 w - 20" /></TableCell> <TableCell className="text - right" ><Skeleton className="h - 9 w - 20 ml - auto" /></TableCell> </TableRow>) );
-}</TableBody> </Table> </div> </div>) ";
-}> All </Button> <Button > Open </Button> <Button > Under Review </Button> <Button > Resolved </Button> <Button > Closed </Button> </div> <div className="border rounded - md overflow - hidden" > <Table> <TableHeader> <TableRow> <TableHead > Case ID</TableHead> <TableHead > Project</TableHead> <TableHead > Parties</TableHead> <TableHead > Created</TableHead> <TableHead > Status</TableHead> <TableHead className="text - right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
-  filtered_disputes.map ( (dispute) => (<TableRow key= {
-  dispute.id ";
-}> </TableCell> <TableCell> <div className="flex flex - col text - sm" > <span> </span> </div> </TableCell> <TableCell> {
-  formatDistanceToNow (new Date (dispute.created at), {
-  add_suffix: true;
-});
-}</TableCell> <TableCell> </Button> </TableCell> </TableRow>) );
-}</TableBody> </Table> </div> </div>);
-}"}
 }
 ;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

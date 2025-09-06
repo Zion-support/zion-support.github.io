@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState} from "react";
@@ -164,6 +165,8 @@ export default function ForgotPassword() {;
                   </p>;
                   <div className="mt-6">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     <Link
                       to="/login"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;
@@ -193,23 +196,15 @@ export default function ForgotPassword() {;
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
-
-                    />;
-
-
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                       disabled={isLoading}>;
                       {isLoading ? "Sending..." : "Reset Password"}
-
-                    </Button>;
-
-                    <div className="text-center">;
-
                       <Link
                         to="/login"
-
+                        className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light">;
+=======
 import { useState } from './react';
 import { Link } from './react-router-dom';
 import { use_form, type, UseFormReturn } from './react - hook - form';
@@ -311,33 +306,11 @@ function ForgotPassword() {
                         to="/login";
                         className="text - sm font - medium text - zion - cyan hover:text - zion - cyan - light";
                       >;
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         Back to login;
                       </Link>;
                     </div>;
                   </form>;
-
-            </div>;
-          </div>;
-        </div>;
-        <div className="hidden lg: block relative w-0 flex-1">;
-          <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">;
-            <div className="flex flex-col justify-center items-center h-full px-8">;
-              <div className="max-w-md text-center">;
-                <h3 className="text-3xl font-bold text-white mb-4">Account Recovery</h3>;
-                <p className="text-lg text-white/80">;
-=======
-                </Form>)}
-            </div>;
-          </div>;
-        </div>;
-        <div className="hidden lg: block relative w - 0 flex - 1">;
-          <div className="absolute inset - 0 h - full w - full object - cover bg - gradient - to - tr from - zion - blue - dark via - zion - purple to - zion - cyan opacity - 80">;
-            <div className="flex flex - col justify - center items - center h - full px - 8">;
-              <div className="max - w-md text - center">;
-                <h3 className="text - 3xl font - bold text - white mb - 4">Account Recovery</h3>;
-                <p className="text - lg text - white / 80">;
-
                   We'll help you get back into your account so you can continue your journey in the Zion marketplace.;
                 </p>;
               </div>;
@@ -346,9 +319,10 @@ function ForgotPassword() {
         </div>;
       </div>;
       <Footer />;
-
+=======
     </>);
 }
+<<<<<<< HEAD
 
 =======
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light"
@@ -466,3 +440,6 @@ export default function ForgotPassword() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

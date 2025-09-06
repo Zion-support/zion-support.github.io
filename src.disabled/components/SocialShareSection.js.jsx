@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/SocialShareSection.js.jsx
 "export\": function SocialShareSection () { const socialPlatforms = [\' { name: \'Twitter,\',\"icon\": \',\"url\": \',\"https\": \''\'";\",;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -7,6 +8,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 "export\": function SocialShareSection () { const socialPlatforms = [\' { name: \'Twitter,\',\"icon\": \',\"url\": \',\"https\": \''\'";\",;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/SocialShareSection.js.jsx

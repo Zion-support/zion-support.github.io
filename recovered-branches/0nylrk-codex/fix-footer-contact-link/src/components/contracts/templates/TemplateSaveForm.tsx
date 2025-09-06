@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -13,6 +16,7 @@ import {Button} from "@/components/ui/button";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Switch} from "@/components/ui/switch";
+<<<<<<< HEAD
 const formSchema = z.object({
   title: z.string().min(1, "Title is required");
   isDefault: z.boolean().default(false)})
@@ -32,13 +36,11 @@ interface TemplateSaveFormProps {;
   onComplete: () => void,;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   editTemplate?: ContractTemplate | null;
   currentValues?: ContractFormValues;
 }
-
-
-export function TemplateSaveForm(): any ({;
-
   onCancel;
   onComplete;
   editTemplate;
@@ -46,6 +48,7 @@ export function TemplateSaveForm(): any ({;
 }: TemplateSaveFormProps) {;
   const [saving, setSaving] = useState(false);
   const { createTemplate, updateTemplate } = useContractTemplates();
+<<<<<<< HEAD
 <<<<<<< HEAD
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
@@ -77,6 +80,8 @@ export function TemplateSaveForm(): any ({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -91,9 +96,12 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input",
 import { Switch } from "@/components/ui/switch",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const formSchema = z.object({
@@ -107,6 +115,7 @@ interface TemplateSaveFormProps {
   onComplete: () => void,
   editTemplate?: ContractTemplate | null,
   currentValues?: ContractFormValues
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -144,6 +153,8 @@ export function TemplateSaveForm({;
           title: values.title,
           templateData: currentValues,
           isDefault: values.isDefault})
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -199,9 +210,14 @@ export function TemplateSaveForm({;
           templateData: currentValues;
           isDefault: values.isDefault});
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
       onComplete()
     } finally {
@@ -213,6 +229,7 @@ export function TemplateSaveForm({;
   },
 =======
 
+<<<<<<< HEAD
 
   const form = useForm<FormValues>({;
     resolver: zodResolver(formSchema),;
@@ -247,6 +264,9 @@ export function TemplateSaveForm({;
     }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   },
 <<<<<<< HEAD
 =======
@@ -254,7 +274,7 @@ export function TemplateSaveForm({;
   };
 =======
   },
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
@@ -273,10 +293,6 @@ export function TemplateSaveForm({;
               <FormMessage />;
             </FormItem>;
           )}
-
-        />;
-
-
         <FormField
           control={form && form.control}
           name="isDefault"
@@ -292,29 +308,6 @@ export function TemplateSaveForm({;
               <FormMessage />;
             </FormItem>;
           )}
-
-        />;
-
-        <div className="flex gap-2 justify-end">;
-          <Button type="button" variant="outline" onClick={onCancel}>;
-            Cancel;
-          </Button>;
-          <Button type="submit" disabled={saving}>;
-            {saving ? (;
-              <>;
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-                Saving...;
-              </>;
-            ) : (;
-              `${editTemplate ? "Update" : "Save"} Template`;
-            )}
-          </Button>;
-        </div>;
-      </form>;
-    </Form>;
-  );
-}
-
 =======
 import { useState } from './react';
 import { use_form } from './react - hook - form';

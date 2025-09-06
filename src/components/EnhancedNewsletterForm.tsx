@@ -1,22 +1,32 @@
-export function EnhancedNewsletterForm() {;
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const { toast } = useToast();
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+=======
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { useState, useRef } from "react",
+import { Mail } from 'lucide-react'
+import { useToast } from "@/hooks/use-toast",
+import {logErrorToProduction} from '@/utils/productionLogger',
+export function EnhancedNewsletterForm() {
 
-  const lastSubmit = useRef(0);
+  const [email, setEmail] = useState(""),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSubmitted, setIsSubmitted] = useState(false),
+  const { toast } = useToast(),
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
 
-  const handleSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    const now = Date && Date.now();
-    if (now - lastSubmit && lastSubmit.current < 1000) return;
-    lastSubmit && lastSubmit.current = now;
-    const trimmed = email && email.trim();
-    if (!EMAIL_REGEX && EMAIL_REGEX.test(trimmed)) {;
-      toast && toast.error('Invalid email');
-      return;
+  const lastSubmit = useRef(0),
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    const now = Date.now(),
+    if (now - lastSubmit.current < 1000) return,
+    lastSubmit.current = now,
+
+    const trimmed = email.trim(),
+    if (!EMAIL_REGEX.test(trimmed)) {
+      toast.error("Invalid email"),
+      return
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     setIsSubmitting(true)
     try {
@@ -56,6 +66,15 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 export function EnhancedNewsletterForm() {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+    setIsSubmitting(true),
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: trimmed })}),
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -89,13 +108,13 @@ export function EnhancedNewsletterForm() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       const data = await res.json().catch(() => ({})),
 
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (res.ok) {
         // Handle different success statuses
         if (data.status === 'already_subscribed') {
           toast.success(data.message || "You're already subscribed!")
         } else {
+<<<<<<< HEAD
 <<<<<<< HEAD
           toast.success(data.message || 'Thanks for subscribing!')
         }
@@ -113,6 +132,8 @@ export function EnhancedNewsletterForm() {
       setIsSubmitting(false)
     }
   }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           toast.success(data.message || "Thanks for subscribing!")
         }
         setIsSubmitted(true),;
@@ -129,14 +150,16 @@ export function EnhancedNewsletterForm() {
       setIsSubmitting(false)
     }
   },
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
-
-
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
+<<<<<<< HEAD
 
     <div className='w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6'>;
       <div className='flex items-center mb-4'>;
@@ -209,6 +232,8 @@ export function EnhancedNewsletterForm() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
         <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">
@@ -219,6 +244,7 @@ export function EnhancedNewsletterForm() {
           <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -249,10 +275,16 @@ export function EnhancedNewsletterForm() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       
+=======
+=======
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
           <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
@@ -262,10 +294,14 @@ export function EnhancedNewsletterForm() {
           <Input
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             type="email"
             id="enhanced-newsletter-email"
             name="email"
@@ -353,6 +389,7 @@ export function EnhancedNewsletterForm() {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -407,3 +444,8 @@ export function EnhancedNewsletterForm() {
 
 
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

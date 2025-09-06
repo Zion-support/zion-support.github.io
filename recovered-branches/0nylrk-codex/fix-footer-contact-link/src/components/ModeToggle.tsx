@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -48,11 +49,14 @@ const useTheme = () => ({
 export function ModeToggle() {
   const { theme, setTheme } = useTheme(),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Button
       variant="ghost"
       size="icon"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+<<<<<<< HEAD
 
       <span className="sr-only">Toggle theme</span>;
     </Button>;
@@ -78,6 +82,8 @@ import { Button } from "@/components/ui/button";
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { Moon, Sun  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -100,6 +106,7 @@ function ModeToggle() {
       on_click={() => set_theme (theme === "dark" ? "light" : "dark")}
     >;
 <<<<<<< HEAD
+<<<<<<< HEAD
       {theme === "dark" ? (;
         <Sun className="h-5 w-5 text-yellow-300" />;
       ) : (;
@@ -117,3 +124,5 @@ function ModeToggle() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

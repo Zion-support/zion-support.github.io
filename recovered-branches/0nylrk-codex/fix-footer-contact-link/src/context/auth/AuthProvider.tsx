@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -39,6 +40,8 @@ export const AuthProvider = ({ children }: { children: React && React.ReactNode 
     login: loginImpl,;
     signup: signupImpl,;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     logout;
     resetPassword;
     updateProfile;
@@ -47,6 +50,7 @@ export const AuthProvider = ({ children }: { children: React && React.ReactNode 
     loginWithTwitter;
     loginWithWeb3;
   } = useAuthOperations(setUser, setIsLoading);
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Wrapper for login to match the AuthContextType interface
   const login = async (email: string, password: string) => {
@@ -214,6 +218,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
               if (event === 'SIGNED_IN') {;
                 handleSignedIn(mappedUser);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               }
             } else if (error) {;
               console && console.error("Error fetching user profile:", error);
@@ -225,6 +231,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
           }
         } else {;
           setUser(null);
+<<<<<<< HEAD
 
 
           // Show logout toast when user logs out;
@@ -235,11 +242,14 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           }
         }
         setIsLoading(false);
       }
     );
+<<<<<<< HEAD
     // Initial session check
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (!session) {
@@ -257,6 +267,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
     isLoading;
     isAuthenticated: !!user,;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     login;
     signup;
     logout;
@@ -294,6 +306,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: an
     loginWithFacebook;
     loginWithTwitter;
     loginWithWeb3;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -355,3 +368,115 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: an
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  return (
+    <AuthContext && AuthContext.Provider value={authContextValue}>;
+      {children}
+=======
+  } = useAuthOperations (set_user, setIsLoading);
+;
+  // Wrapper for login to match the AuthContextType interface;
+  const login = async (email: string, password: string) => {
+    return login_impl ({ email, password });
+  }
+;
+  // Wrapper for signup to match the AuthContextType interface;
+  const signup = async (email: string, password: string, user_data?: any) => {
+    return signup_impl ({ email, password, display_name: user_data });
+  }
+;
+  useEffect (() => {
+    // Clean up any potential stale auth state before setting up listeners;
+    cleanupAuthState ();
+;
+    const { data: { subscription } } = supabase.auth.onAuthStateChange (
+      async (event, session) => {
+        // Check condition
+if ( {) {
+  $2
+}
+          try {
+            const { data: profile, error } = await getFromProfiles ();
+              .select ('*');
+              .eq ('id', session.user.id);
+              .single ();
+;
+            // Check condition
+if ( {) {
+  $2
+}
+              const mapped_user = mapProfileToUser (session.user, profile);
+              set_user (mapped_user);
+;
+              // Show welcome toast when user logs in;
+              // Check condition
+if ( {) {
+  $2
+}
+                handleSignedIn (mapped_user);
+              }
+            } else // Check condition
+if ( {) {
+  $2
+}
+              console.error ("Error fetching user profile:", error);
+              set_user (null);
+            }
+          } catch (error) {
+            console.error ("Error fetching user profile:", error);
+            set_user (null);
+          }
+        } else {
+          set_user (null);
+;
+          // Show logout toast when user logs out;
+          // Check condition
+if ( {) {
+  $2
+}
+            handleSignedOut ();
+          }
+        }
+        setIsLoading (false);
+      }
+    );
+;
+    // Initial session check;
+    supabase.auth.get_session ().then (({ data: { session } }) => {
+      // Check condition
+if ( {) {
+  $2
+}
+        setIsLoading (false);
+      }
+    });
+;
+    return () => {
+      subscription.unsubscribe ();
+    }
+  }, [navigate]);
+;
+  const authContextValue = {
+    user;
+    is_loading;
+    is_authenticated: !!user,
+    login;
+    signup;
+    logout;
+    reset_password;
+    update_profile;
+    loginWithGoogle;
+    loginWithFacebook;
+    loginWithTwitter;
+    loginWithWeb3;
+    onboarding_step;
+  }
+;
+  return (
+    <AuthContext.Provider value={authContextValue}>;
+      {children}
+    </AuthContext.Provider>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

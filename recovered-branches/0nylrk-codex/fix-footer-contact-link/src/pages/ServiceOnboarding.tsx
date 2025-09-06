@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -131,19 +132,22 @@ if ( {) {
             <h1 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">Join Our Service Provider Network</h1>;
             <p className="text - zion - slate - light max - w-2xl mx - auto">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  }
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               Showcase your services to potential clients. Create a professional profile;
               to get discovered on the Zion Marketplace.;
             </p>;
           </div>;
-
-
           <ServiceProviderRegistrationForm />;
         </div>;
       </div>;
       <Footer />;
-
+=======
     </>);
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 =======
@@ -151,3 +155,6 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

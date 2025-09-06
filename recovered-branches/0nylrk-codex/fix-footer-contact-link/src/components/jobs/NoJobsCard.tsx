@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,8 @@ interface NoJobsCardProps {;
 
 export function NoJobsCard(): any ({ onUpdateProfile }: NoJobsCardProps) {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Card className="bg-muted/30 border border-dashed">;
       <CardContent className="p-6 text-center">;
@@ -64,6 +67,7 @@ function NoJobsCard() {
       </CardContent>;
     </Card>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 }
 =======
 
@@ -91,3 +95,6 @@ interface NoJobsCardProps {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,8 +1,21 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 export default function ServicesPage() {return (;
 export default function ServicesPage() {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
+=======
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
+=======
+import Link from 'next / link';
+export default /**
+ * ServicesPage - Function description
+ */
+function ServicesPage() {
+  return (
+    <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text - white">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Hero Section */}
       <div className="bg - gradient - to - r from - blue - 600 to - purple - 600 py - 20">;
         <div className="container mx - auto px - 6 text - center">;

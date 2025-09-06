@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import React from 'react';
@@ -21,19 +22,17 @@ interface ProductListingCardProps {
 interface ProductListingCardProps {;
   listing: ProductListing,;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
 }
-
-
-export function ProductListingCard(): any ({ ;
-  listing, ;
-
   view = 'grid';
   onRequestQuote;
 }: ProductListingCardProps) {;
   const isGrid = view === 'grid';
   const navigate = useNavigate();
+<<<<<<< HEAD
   // Get the first image or use a placeholder
   const imageUrl = listing.images && listing.images.length > 0
     ? listing.images[0]
@@ -168,50 +167,16 @@ if ( {) {
 }
       onRequestQuote (listing.id);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } else {
       // Default behavior if no handler provided;
       navigate (`/request - quote?listing=${listing.id}`);
     }
   }
-
-
-  // Get the first image or use a placeholder;
-  const imageUrl = listing && listing.images && listing && listing.images.length > 0 ;
-    ? listing && listing.images[0] ;
-    : '/placeholder && placeholder.svg';
-
-  // Format price display;
-  const formatPrice = () => {;
-    if (listing && listing.price === null) return "Custom pricing";
-    return `${listing && listing.currency}${listing && listing.price.toLocaleString()}`;
-  };
-
-  // Handle image loading errors;
-  const handleImageError = (e: React && React.SyntheticEvent<HTMLImageElement>) => {;
-    e && e.currentTarget.src = '/placeholder && placeholder.svg';
-  };
-
-  // Handle navigating to listing detail;
-  const handleViewListing = () => {;
-    navigate(`/listing/${listing && listing.id}`);
-  };
-
-  // Handle request quote button click;
-  const handleRequestQuote = (e: React && React.MouseEvent) => {;
-    e && e.preventDefault();
-    e && e.stopPropagation(),;
-
-    if (onRequestQuote) {;
-      onRequestQuote(listing && listing.id);
-    } else {;
-      // Default behavior if no handler provided;
-      navigate(`/request-quote?listing=${listing && listing.id}`);
-    }
-  };
-
-
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -219,14 +184,9 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Image */}
-
-      <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>;
-        <div className={`relative ${isGrid ? 'h-48' : 'h-full'}`}>;
-          <img
-            src={imageUrl} 
-            alt={listing && listing.title}
-
             className="w-full h-full object-cover"
             onError={handleImageError}
           />;
@@ -235,11 +195,6 @@ if ( {) {
               Featured;
             </Badge>;
           )}
-
-        </div>;
-      </div>;
-
-
       {/* Content */}
       <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>;
         <div>;
@@ -257,6 +212,7 @@ if ( {) {
                 )}
               </div>;
             )}
+<<<<<<< HEAD
           </div>
           </div>;
 <<<<<<< HEAD
@@ -311,6 +267,8 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {/* Title & Description */}
           <div on_click={handleViewListing} className="block">;
             <h3 className="text - lg font - semibold text - white mb - 2 hover:text - zion - cyan transition - colors">;
@@ -319,36 +277,11 @@ if ( {) {
           </div>;
           <p className="text - sm text - zion - slate line - clamp - 2 mb - 4">;
             {listing.description}
-
-          </div>;
-
-          {/* Title & Description */}
-          <div onClick={handleViewListing} className="block">;
-            <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">;
-              {listing && listing.title}
-            </h3>;
-          </div>;
-          <p className="text-sm text-zion-slate line-clamp-2 mb-4">;
-            {listing && listing.description}
-          </p>;
-
-          {/* Tags */}
-          {listing && listing.tags && listing && listing.tags.length > 0 && (;
-            <div className="flex flex-wrap gap-1 mb-4">;
-              {listing && listing.tags.map((tag, idx) => (;
-                <span
-                  key={idx} 
-                  className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full">;
-
                   {tag}
                 </span>;
               ))}
             </div>;
           )}
-
-        </div>;
-
-
         {/* Footer with price and button */}
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">;
           <div className="text-sm font-medium">;
@@ -360,13 +293,9 @@ if ( {) {
             ) : (;
               <span className="text-zion-slate-light">;
                 {formatPrice()}
-
-
               </span>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -395,6 +324,8 @@ if ( {) {
 
             {onRequestQuote && (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <Button
                 size="sm"
                 variant="outline"

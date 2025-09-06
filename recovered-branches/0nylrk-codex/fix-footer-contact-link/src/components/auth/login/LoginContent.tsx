@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { LoginCard } from "./LoginCard";
 
 import { LoginCard } from "./LoginCard";
@@ -24,6 +25,8 @@ function LoginContent() {
               </h3>;
               <p className="text - lg text - white / 80">;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 Connect with thousands of AI professionals, discover new;
                 opportunities, and showcase your services to a global audience.;
               </p>;
@@ -31,6 +34,7 @@ function LoginContent() {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
     </div>);
 
@@ -96,3 +100,6 @@ export function LoginContent() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

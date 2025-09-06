@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,6 +26,8 @@ import {ServiceIncludes} from "@/components/services/PageSections/ServiceInclude
 import {EnterpriseCallToAction} from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {;
 <<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [searchParams] = useSearchParams();
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -62,6 +65,7 @@ export default function ITOnsiteServicesPage() {
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
   const [searchQuery, setSearchQuery] = useState("");
 
+<<<<<<< HEAD
 
 
   
@@ -188,10 +192,13 @@ export default function ITOnsiteServicesPage() {;
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <AppLayout>;
       <section className="py-16 bg-zion-blue">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -207,20 +214,20 @@ export default function ITOnsiteServicesPage() {;
           <div className="mb-12">
             <CountryTabs
             <CountryTabs 
+=======
+          {/* Hero Section with Features */}
+            <CountryTabs
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               popularCountries={popularCountries}
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
-
-            />;
-          </div>;
-
-
           {/* Service Details Section */}
           <ServiceDetailsSection
             selectedCountry={selectedCountry}
             setSelectedCountry={setSelectedCountry}
+<<<<<<< HEAD
 
           />;
 
@@ -254,6 +261,8 @@ export default function ITOnsiteServicesPage() {;
 <<<<<<< HEAD
 ;
 ;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
       toast ({
         title: "Payment Successful",
@@ -338,9 +347,12 @@ if (return 1) {
     </AppLayout>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

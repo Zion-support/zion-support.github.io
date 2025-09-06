@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";
@@ -17,6 +18,8 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { supabase } from '@/integrations / supabase / client';
 import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export const quoteRequestService = {
   // Get all quote requests (for admin);
   get_all: async () => {
@@ -24,6 +27,7 @@ export const quoteRequestService = {
       .from ('quote_requests');
       .select (`;
         *;
+<<<<<<< HEAD
 =======
 
 
@@ -60,6 +64,9 @@ export const quoteRequestService = {
       talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
   };
   
+=======
+        talent:talent_id (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Get quote requests for a specific talent
   getByTalentId: async (talentId: string) => {
     const { data, error } = await supabase
@@ -68,6 +75,7 @@ export const quoteRequestService = {
       .eq('talent_id', talentId)
       .order('created_at', { ascending: false });
     if (error) throw error;
+<<<<<<< HEAD
     return data as QuoteRequest[]
   }
       .order('created_at', { ascending: false }),
@@ -76,6 +84,10 @@ export const quoteRequestService = {
     return data as QuoteRequest[]
   },
   
+=======
+    return data as QuoteRequest[]
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Get a single quote request by id
   getById: async (id: string) => {
     const { data, error } = await supabase
@@ -117,11 +129,6 @@ if (throw error) {
       .select (`;
         *;
         talent:talent_id (
-
-      talent_name: data && data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
-  };
-  
-
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
     const updates: any = { status }
@@ -136,11 +143,6 @@ if (throw error) {
         .select('viewed_at')
         .eq('id', id)
         .single();
-
-      
-      if (!data && data.viewed_at) {
-        updates && updates.viewed_at = new Date().toISOString()
-
       }
     }
     const { data, error } = await supabase
@@ -172,6 +174,7 @@ if (throw error) {
   }
 }
 
+<<<<<<< HEAD
       .single(),
     
     if (error) throw error,
@@ -332,5 +335,62 @@ export const quoteRequestService = {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+          display_name);
+      `);
+      .eq ('id', id);
+      .single ();
+;
+    // Check condition
+if (throw error) {
+  $2
+}
+    return {
+      ...data;
+      talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest;
+  }
+;
+  // Update quote request status;
+  update_status: async (id: string, status: QuoteStatus) => {
+    const updates: any = { status }
+;
+    // If marking as responded, set replied_at;
+    // Check condition
+if ( {) {
+  $2
+}
+      updates.replied_at = new Date ().toISOString ();
+    }
+    // If marking as in_review and viewed_at is null, set viewed_at;
+    // Check condition
+if ( {) {
+  $2
+}
+      const { data } = await supabase;
+        .from ('quote_requests');
+        .select ('viewed_at');
+        .eq ('id', id);
+        .single ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        updates.viewed_at = new Date ().toISOString ();
+      }
+    }
+    const { data, error } = await supabase;
+      .from ('quote_requests');
+      .update (updates);
+      .eq ('id', id);
+      .select ();
+;
+    // Check condition
+if (throw error) {
+  $2
+}
+    return data[0] as QuoteRequest;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 };

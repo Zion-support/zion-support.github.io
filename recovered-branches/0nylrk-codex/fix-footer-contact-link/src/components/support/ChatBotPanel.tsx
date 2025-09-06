@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState, useRef, useEffect } from "react";
@@ -49,20 +50,59 @@ export function ChatBotPanel() {
       content: "Hi! How can I help you?"
       sender: "bot"
       timestamp: new Date()}])
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [failedAttempts, setFailedAttempts] = useState(0);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const { theme } = useTheme();
+<<<<<<< HEAD
 },
 
 export function ChatBotPanel() {
   const [messages, setMessages] = useState<Message[]>([
+=======
+        }
+      } else {;
+        // Reset failed attempts if successful;
+        setFailedAttempts(0);
+=======
+import React, { useState, useRef, useEffect } from './react';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { ScrollArea } from '@/components / ui / scroll - area';
+import { Separator } from '@/components / ui / separator';
+import { toast } from '@/components / ui / use - toast';
+import { cn } from '@/lib / utils';
+import { ChatMessage } from './ChatMessage';
+import { QuickReplyButton } from './QuickReplyButton';
+import { Send, Loader2 } from './lucide-react';
+import { use_theme } from '@/hooks / use_theme';
+// Define suggested quick replies;
+const QUICK_REPLIES = [;
+  { id: "hire", text: "How do I hire?" },
+  { id: "match", text: "How do I get matched?" },
+  { id: "billing", text: "Billing help" }],
+type Message = {
+  id: string,
+  content: string,
+  sender: "user" | "bot",
+  timestamp: Date;
+}
+;
+export /**
+ * ChatBotPanel - Function description
+ */
+function ChatBotPanel() {
+  const [messages, set_messages] = useState < Message[]>([;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     {
       id: "welcome",
       content: "Hi! How can I help you?",
       sender: "bot",
+<<<<<<< HEAD
       timestamp: new Date()}]),;
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -230,24 +270,83 @@ export function ChatBotPanel() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      timestamp: new Date ()}]),
+  const [input_value, setInputValue] = useState ("");
+  const [is_loading, setIsLoading] = useState (false);
+  const [failed_attempts, setFailedAttempts] = useState (0);
+  const scrollAreaRef = useRef < HTMLDivElement>(null);
+  const input_ref = useRef < HTMLInputElement>(null);
+  const { theme } = use_theme ();
+;
+  // Auto - scroll to bottom when messages change;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      scrollAreaRef.current.scroll_top = scrollAreaRef.current.scroll_height;
+    }
+  }, [messages]);
+;
+  // Focus input when component mounts;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      input_ref.current.focus ();
+    }
+  }, []);
+;
+  const handleSendMessage = async (text: string = input_value) => {
+    if () return, ) {
+  $2
+}
+    const user_message: Message = {
+      id: `user-${Date.now ()}`,
+      content: text,
+      sender: "user",
+      timestamp: new Date ()},
+    set_messages ((prev) => [...prev, user_message]);
+    setInputValue ("");
+    setIsLoading (true);
+;
+    try {
+      // Call the OpenAI - powered support function;
+      const response = await sendToAIAssistant (text);
+;
+      const bot_message: Message = {
+        id: `bot-${Date.now ()}`,
+        content: response.message || "Sorry, I couldn't process your request. Please try again.";
+        sender: "bot",
+        timestamp: new Date ()},
+      set_messages ((prev) => [...prev, bot_message]);
+;
+      // Check if the request was successful;
+      // Check condition
+if ( {) {
+  $2
+}
+        setFailedAttempts ((prev) => prev + 1);
+;
+        // After 3 failed attempts, suggest escalation;
+        // Check condition
+if ( {) {
+  $2
+}
+          suggest_escalation ();
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         }
       } else {
         // Reset failed attempts if successful;
         setFailedAttempts (0);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
-
-    } catch (error) {;
-      console && console.error("Error in AI chat:", error);
-      toast({;
-        variant: "destructive",;
-        title: "Communication Error",;
-        description: "We're having trouble connecting to our support service."}),;
-
-
       setFailedAttempts((prev) => prev + 1);
       if (failedAttempts >= 2) {;
         suggestEscalation();
+<<<<<<< HEAD
 =======
     } catch (error) {
       console.error("Error in AI chat:", error),
@@ -279,10 +378,13 @@ export function ChatBotPanel() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   },
@@ -368,10 +470,13 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
     } catch (error) {
       console.error ("Error in AI chat:", error);
       return {
+<<<<<<< HEAD
 <<<<<<< HEAD
         success: false,
         message: "I'm experiencing technical difficulties. Please try again later."
@@ -469,10 +574,13 @@ if ( {) {
         }));
       });
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } catch (error) {
       console.error ("Failed to log support escalation:", error);
     }
   }
+<<<<<<< HEAD
 
     } catch (error) {
       console.error("Failed to log support escalation:", error)
@@ -622,10 +730,13 @@ if ( {) {
   };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="flex flex-col h-full">;
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>;
         <div className="flex flex-col gap-4">;
+<<<<<<< HEAD
 
           {messages.map((message) => (;
             <ChatMessage;
@@ -655,6 +766,16 @@ if ( {) {
           </p>
           <div className="flex flex-wrap gap-2">
             {QUICK_REPLIES.map((reply) => (
+=======
+          {messages && messages.map((message) => (;
+            <ChatMessage
+              key={message && message.id}
+              message={message && message.content}
+              isUser={message && message.sender === "user"}
+              timestamp={message && message.timestamp}
+            />;
+          ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <QuickReplyButton
                 key={reply.id}
                 text={reply.text}
@@ -664,6 +785,7 @@ if ( {) {
           </div>
         </div>
       )}
+<<<<<<< HEAD
       
       {failedAttempts >= 3 && (
         <div className="px-4 py-3 border-t border-zion-purple/10">
@@ -693,6 +815,8 @@ if ( {) {
               Chat with Live Agent;
             </Button>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <Button
               onClick={handleEmailSupport}
               size="sm"
@@ -702,23 +826,13 @@ if ( {) {
           </div>;
         </div>;
       )}
-
-
-      <divclassName={cn(
-        "p-4 border-t", 
-        theme === "dark" ? "border-zion-blue-light" : "border-gray-200"
-      )}>;
-        <form
-          onSubmit={(e) => {;
-            e && e.preventDefault();
-            handleSendMessage();
-
           }}
           className="flex items-center gap-2";
         >;
           <Input
             ref={inputRef}
             value={inputValue}
+<<<<<<< HEAD
 
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="Type your question..."
@@ -826,5 +940,11 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+            onChange={(e) => setInputValue(e && e.target.value)}
+            placeholder="Type your question...";
+            className={cn(;
+              "flex-1";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 ;

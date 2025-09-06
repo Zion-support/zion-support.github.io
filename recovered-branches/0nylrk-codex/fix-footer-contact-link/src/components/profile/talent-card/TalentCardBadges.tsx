@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -72,6 +73,8 @@ export function TalentCardBadges(): any ({ featured }: TalentCardBadgesProps) {;
 =======
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from './react';
 import { Badge  } from '@/components / ui / badge';
 import { Award  } from './lucide-react';
@@ -94,6 +97,7 @@ if (return null) {
       </Badge>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -103,3 +107,5 @@ if (return null) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -19,14 +20,14 @@ export interface ReferralCode {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface ReferralCode {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   user_id: string;
   code: string;
-
-  created_at: string,
-  updated_at: string;
-
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export interface Referral {
@@ -49,6 +50,9 @@ export interface Referral {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface Referral {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   referrer_id: string;
   referred_id: string | null;
@@ -60,6 +64,7 @@ export interface Referral {;
   referrer_user_type: string | null;
   created_at: string;
   completed_at: string | null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   reward_issued: boolean,
@@ -84,11 +89,16 @@ export interface ReferralReward {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+export interface ReferralReward {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   user_id: string;
   referral_id: string;
   reward_type: 'credit' | 'visibility';
   amount: number | null;
+<<<<<<< HEAD
 <<<<<<< HEAD
   created_at: string
   expires_at: string | null
@@ -160,3 +170,6 @@ export interface ReferralStats {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

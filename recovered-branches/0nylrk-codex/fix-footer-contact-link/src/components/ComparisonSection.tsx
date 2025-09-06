@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import {
@@ -80,6 +81,8 @@ export function ComparisonSection() {
                     savings: "45%",
                   },
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   {
                     service: "IT Equipment"
                     traditional: "Full Purchase"
@@ -87,6 +90,7 @@ export function ComparisonSection() {
                     savings: "60%"
                   }
                   {
+<<<<<<< HEAD
 
                   { service: "Server Hosting", traditional: "$1,200/mo", zion: "$650/mo", savings: "45%" },
                   { service: "IT Equipment", traditional: "Full Purchase", zion: "Flexible Rental", savings: "60%" },
@@ -255,21 +259,33 @@ export function ComparisonSection() {;
                 </span>;
                 <span className="block text - sm text - zion - slate - light mt - 1">;
 
+=======
+                      {item.service}
+                    </TableCell>;
+                    <TableCell className="text - center text - zion - slate - light">;
+                      {item.traditional}
+                    </TableCell>;
+                    <TableCell className="text - center text - zion - cyan font - semibold">;
+                      {item.zion}
+                    </TableCell>;
+                    <TableCell className="text - center text - green - 400 font - bold">;
+                      {item.savings}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   Results may vary based on specific requirements and service;
                   levels;
                 </span>;
               </p>;
             </div>;
-
-            <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white whitespace - nowrap">;
-
               Calculate Your Savings;
             </Button>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </section>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   );
 }
 ;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from "react";
@@ -19,11 +20,14 @@ import { TalentCardSkills  } from './TalentCardSkills';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;
   skills: string[] | undefined
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -76,6 +80,10 @@ export function TalentCardContent(): any ({ summary, bio, timezone, skills }: Ta
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Location */}
       {timezone && (;
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">;
@@ -83,6 +91,7 @@ export function TalentCardContent(): any ({ summary, bio, timezone, skills }: Ta
           <span>{timezone}</span>;
         </div>;
       )}
+<<<<<<< HEAD
 
       {/* Short bio or summary - longer on hover for desktop */}
       <div
@@ -136,6 +145,8 @@ export function TalentCardContent(): any ({ summary, bio, timezone, skills }: Ta
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export /**
  * TalentCardContent - Function description
  */
@@ -163,4 +174,3 @@ function TalentCardContent() {
       <TalentCardSkills skills={skills} />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

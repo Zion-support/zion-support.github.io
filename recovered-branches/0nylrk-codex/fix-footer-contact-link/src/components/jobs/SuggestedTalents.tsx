@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
@@ -27,6 +28,8 @@ export function SuggestedTalents(): any ({ jobId, jobTitle }: SuggestedTalentsPr
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [talents, setTalents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -87,15 +90,9 @@ function SuggestedTalents() {
             key_projects;
             skills;
             location;
-
-            category,;
-            company_name;
-          );
-        `,;
-        );
-
         .eq("job_id", jobId);
       if (error) throw error;
+<<<<<<< HEAD
       setTalents(data |[]);
         .select(`
           *,
@@ -163,31 +160,16 @@ function SuggestedTalents() {
   const handleRefresh = () => {
     setIsProcessing(true),
     fetchSuggestedTalents().finally(() => {
+=======
+      });
+    } finally {;
+      setIsLoading(false);
+    }
+    setIsProcessing(true);
+    fetchSuggestedTalents().finally(() => {;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       setIsProcessing(false);
     });
-
-  };
-
-  useEffect(() => {;
-    if (jobId) {;
-      fetchSuggestedTalents();
-    }
-  }, [jobId]);
-
-  // Transform data to match JobMatchCard component props;
-  const transformedTalents = talents && talents.map((talent) => {;
-    return {;
-      id: talent && talent.talent_profile?.id || "",;
-      name: talent && talent.talent_profile?.full_name || "Talent",;
-      title: talent && talent.talent_profile?.professional_title || "Talent",;
-      company: talent && talent.talent_profile?.company_name || "",;
-      avatar: talent && talent.talent_profile?.profile_picture_url || "",;
-      location: talent && talent.talent_profile?.location || "Remote",;
-      category: talent && talent.talent_profile?.category || "Technology",;
-      matchPercent: talent && talent.match_score || 85,;
-      skills: talent && talent.talent_profile?.skills || [],;
-    };
-
 =======
             category,
             company_name);
@@ -378,6 +360,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
   }),
 =======
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -424,6 +407,9 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
           <div>Loading suggested talents...</div>;
         ) : talents && talents.length === 0 ? (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <EmptyMatchesCard
             onRefresh={handleRefresh}
             isProcessing={isProcessing}
@@ -481,6 +467,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
                 category={talent.category}
                 match_percent={talent.match_percent}
                 skills={talent.skills}
+<<<<<<< HEAD
 
                 onApply={() => handleViewProfile(talent.id)}
                 onViewDetails={() => handleViewProfile(talent.id)}
@@ -504,3 +491,14 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                on_apply={() => handleViewProfile (talent.id)}
+                onViewDetails={() => handleViewProfile (talent.id)}
+                on_invite={() => handle_invite (talent.id)}
+              />))}
+          </div>)}
+      </CardContent>;
+    </Card>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

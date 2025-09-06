@@ -1,5 +1,6 @@
 import React from 'react';
 import * as LucideIcons from 'lucide-react';
+<<<<<<< HEAD
 // Alias for missing icons or for icons with different names
 const iconAliases: Record<string, keyof typeof LucideIcons> = {
   // Grid views
@@ -227,6 +228,8 @@ if ( {) {
 }
     icon_exports[alias] = createIconComponent (alias, lucide_name);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   } else {
     console.warn (`Icon '${lucide_name}' not found in lucide-react`);
     // Use a fallback icon;
@@ -370,6 +373,7 @@ Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
 
 export const {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 =======
 
 
@@ -377,6 +381,8 @@ export const {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   LayoutGrid;
   List;
   Zap;
@@ -441,6 +447,7 @@ export const {;
   BarChart;
   BookOpen;
   Key;
+<<<<<<< HEAD
 <<<<<<< HEAD
   Tag} = iconExports;
 // Also export all original icons from lucide-react
@@ -634,13 +641,20 @@ export * from 'lucide-react';
 
 
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
   Tag} = icon_exports;
 ;
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

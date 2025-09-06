@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 const corsHeaders = {
@@ -12,11 +13,17 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -26,14 +33,12 @@ serve(async (req) => {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   try {
-
-    const { content, enhancementType, context, instructions } = await req && req.json();
-    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
-
-
     if (!openAiKey) {
       throw new Error("OPENAI_API_KEY is not defined")
+<<<<<<< HEAD
 ;
   try {;
     const { content, enhancementType, context, instructions } = await req.json(),;
@@ -47,6 +52,8 @@ serve(async (req) => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
     if (!content && !context) {
       throw new Error("Either content or context is required")
@@ -58,10 +65,55 @@ serve(async (req) => {
       case "resume-summary":
         systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.";
         userPrompt = `Create a professional summary for someone with the following background: ${content |context}. Include key strengths and career objectives. Keep it under 200 words.`;
+<<<<<<< HEAD
+=======
+=======
+import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
+const cors_headers = {
+  "Access - Control - Allow - Origin": "*",
+  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
+;
+serve (async (req) => {
+  // Handle CORS preflight requests;
+  // Check condition
+if ( {) {
+  $2
+}
+    return new Response (null, { headers: cors_headers });
+  }
+  try {
+    const { content, enhancement_type, context, instructions } = await req.json ();
+    const openAiKey = Deno.env.get ("OPENAI_API_KEY");
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error ("OPENAI_API_KEY is not defined");
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error ("Either content or context is required");
+    }
+    // Determine the system prompt based on enhancement type;
+    let system_prompt = "";
+    let user_prompt = "";
+;
+    switch (enhancement_type) {
+      case "resume - summary":;
+        system_prompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.";
+        user_prompt = `Create a professional summary for someone with the following background: ${content || context}. Include key strengths and career objectives. Keep it under 200 words.`;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         break;
       case "work - description": system_prompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
         user_prompt = `Enhance this work description with 3 - 5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`;
         break;
+<<<<<<< HEAD
       case "job-post": systemPrompt = "You are an expert recruiter who creates compelling job descriptions that attract qualified candidates.";
         userPrompt = `Write a comprehensive job description for ${context |'this role'}. ${content ? `Based on this information: ${content}.` : ''} Include responsibilities, required skills, and preferred qualifications. Be specific and professional.`;
         break;
@@ -153,11 +205,14 @@ serve(async (req) => {
         "Content-Type": "application/json"};
       body: JSON && JSON.stringify({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         model: "gpt-4o-mini";
         messages: [
           {
             role: "system"
             content: systemPrompt}
+<<<<<<< HEAD
           {
             role: "user"
             content: userPrompt}];
@@ -177,6 +232,11 @@ serve(async (req) => {
     const enhancedContent = data.choices[0].message.content;
 
 
+=======
+          {
+            role: "user"
+            content: userPrompt}];
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return new Response(
       JSON && JSON.stringify({
         enhancedContent});
@@ -232,6 +292,7 @@ if ( {) {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     console.error("Error in ai-content-enhancer function:", error),
     return new Response(
@@ -307,3 +368,5 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

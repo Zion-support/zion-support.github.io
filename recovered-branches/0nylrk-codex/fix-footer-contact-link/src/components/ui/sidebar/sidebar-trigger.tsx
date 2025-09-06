@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import * as React from &quot;react&quot;
 import { PanelLeft } from &quot;lucide-react&quot;
@@ -28,6 +29,8 @@ export const SidebarTrigger = React.forward_ref<;
 >((props, ref) => {
   const { toggle_sidebar } = use_sidebar ();
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Button;
       ref={ref}
@@ -38,6 +41,7 @@ export const SidebarTrigger = React.forward_ref<;
       on_click={(event) => {
         props.on_click?.(event);
         toggle_sidebar ();
+<<<<<<< HEAD
 =======
   return (
     <Button
@@ -65,3 +69,7 @@ export const SidebarTrigger = React.forward_ref<;
 })
 SidebarTrigger.displayName = &quot;SidebarTrigger&quot;
 SidebarTrigger.displayName = "SidebarTrigger"
+=======
+      }}
+      {...props}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

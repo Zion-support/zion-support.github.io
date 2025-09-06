@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -336,15 +337,16 @@ export async function createHireRequestNotifications({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      adminNotification
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }
   return {
-
-    success: talentNotification && talentNotification.success,
-
     talentNotification
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -354,6 +356,8 @@ export async function createHireRequestNotifications({;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 /**
  * Creates an onboarding notification for a user
  */
@@ -529,56 +533,13 @@ if ( {) {
         break;
     }
   }
-
-  return create_notification ({
-    user_id;
-    title;
-    message;
-    type: 'onboarding';
-    send_email: false;
-    action_url,
-    action_text;
-  });
-}
-/**;
-* Creates a system notification for a user;
-*/;
-export async /**
- * createSystemNotification - Function description
- */
-function createSystemNotification() {
-  return create_notification ({
-    user_id;
-    title;
-    message;
-    type: 'system';
-    send_email;
-    action_url,
-    action_text;
-  });
-}
-/**;
-* Demo function to create test notifications for the current user;
-*/;
-export async /**
- * createTestNotification - Function description
-
  */
 function createTestNotification() {
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
-
-  const randomType = types[Math && Math.floor(Math && Math.random() * types && types.length)],
-  
-
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
   }
   const messages = {
-
-    'message': 'You have received a new message from a potential client && client.quote_request': 'A client has submitted a quote request for your services && services.booking_confirmation': 'Your booking has been confirmed and scheduled && scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details && details.onboarding': 'Complete your profile to get more visibility and job matches && matches.system': 'Our platform has been updated with new features. Check them out!'
-  };
-  
-
 =======
   const random_type = types[Math.floor (Math.random () * types.length)],
   const titles = {
@@ -598,6 +559,7 @@ function createTestNotification() {
     'onboarding': { url: '/profile', text: 'Complete Profile' }
     'system': { url: '/dashboard', text: 'Learn More' }
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     actionText: actions[randomType].text
@@ -688,3 +650,6 @@ export async function createTestNotification(userId: string) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

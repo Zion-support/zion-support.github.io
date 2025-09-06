@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,6 +61,11 @@ export default function SavedTalentsPage() {
 
   useEffect(() => {;
     const fetchSavedTalents = async () => {;
+=======
+  const { user } = useAuth();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
       setIsLoading(true);
       try {;
@@ -67,42 +73,6 @@ export default function SavedTalentsPage() {
           console && console.warn("User not authenticated.");
           return;
         }
-
-import { useState, useEffect } from './react';
-import { AppHeader } from '@/layout / AppHeader';
-import { Footer } from '@/components / Footer';
-import { SEO } from '@/components / SEO';
-import { TalentCard } from '@/components / talent / TalentCard';
-import { use_auth } from '@/hooks / use_auth';
-import { supabase } from '@/integrations / supabase / client';
-import { TalentProfile } from '@/types / talent';
-import { toast } from '@/components / ui / use - toast';
-import { use_navigate } from './react-router-dom';
-export default /**
- * SavedTalentsPage - Function description
- */
-function SavedTalentsPage() {
-  const { user } = use_auth ();
-  const [saved_talents, setSavedTalents] = useState < TalentProfile[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-  const navigate = use_navigate ();
-;
-  useEffect (() => {
-    const fetchSavedTalents = async () => {
-      setIsLoading (true);
-      try {
-        // Check condition
-if ( {) {
-  $2
-}
-          console.warn ("User not authenticated.");
-          return;
-        }
-        const { data, error } = await supabase;
-          .from ("saved_talents");
-          .select (
-            `;
-
             talent_profile (
 =======
 
@@ -124,6 +94,7 @@ if ( {) {
               skills;
               location;
               availability;
+<<<<<<< HEAD
               is_verified
             )
           `
@@ -147,6 +118,11 @@ if ( {) {
         }
           .eq("user_id", user.id),;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          );
+          .eq("user_id", user && user.id);
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         if (error) {;
           throw error;
 =======
@@ -160,6 +136,7 @@ if ( {) {
 }
           throw error;
         }
+<<<<<<< HEAD
       } catch (error) {
 
         console.error ("Error fetching saved talents:", error);
@@ -168,10 +145,23 @@ if ( {) {
           description: "Failed to load saved talents. Please try again later.",
           variant: "destructive"});
 
+=======
+        // Check condition
+if ( {) {
+  $2
+}
+          // Extract talent profiles and convert to TalentProfile type;
+          const talent_profiles = data.map (
+            item => item.talent_profile as unknown as TalentProfile);
+          setSavedTalents (talent_profiles);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       } finally {
         setIsLoading (false);
       }
     }
+<<<<<<< HEAD
     fetchSavedTalents()
   }, [user]);
   const handleViewProfile = (talentId: string) => {
@@ -407,12 +397,17 @@ if ( {) {
     }
   }
   },
+=======
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   return (
     <>;
       <SEO
         title="Saved Talents | Zion AI Marketplace"
         description="View and manage your saved talents in the Zion AI Marketplace"
+<<<<<<< HEAD
       />
       <AppHeader />
       <div className="container mx-auto px-4 py-8">
@@ -495,6 +490,11 @@ if ( {) {
         ) : (;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">;
 
+=======
+              <TalentCard
+                key={talent && talent.id}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
     fetchSavedTalents ();
   }, [user]);
@@ -607,6 +607,7 @@ if ( {) {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mt - 8">;
             {saved_talents.map ((talent) => (
               <TalentCard;
+<<<<<<< HEAD
 =======
             {savedTalents.map((talent) => (;
               <TalentCard;
@@ -616,6 +617,8 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 key={talent.id}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 talent={talent}
@@ -623,6 +626,7 @@ if ( {) {
                 onRequestHire={handleRequestHire}
                 is_saved={true}
                 onToggleSave={handleToggleSave}
+<<<<<<< HEAD
                 isAuthenticated={!!user}
               />
             ))}
@@ -633,10 +637,20 @@ if ( {) {
     </>
   )
 }
+=======
+=======
+                is_authenticated={!!user}
+              />))}
+          </div>)}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       </div>;
       <Footer />;
     </>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

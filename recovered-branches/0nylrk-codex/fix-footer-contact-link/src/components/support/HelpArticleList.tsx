@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -95,6 +96,8 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
       ) : (
         <div className="space-y-4">
           {filteredArticles.map((article) => (
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <Card
               key={article.id}
               className="cursor-pointer hover:border-zion-purple/50 transition-colors"
@@ -115,6 +118,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
           ))}
         </div>
       )}
+<<<<<<< HEAD
     </div>
   );
 }
@@ -143,10 +147,11 @@ function formatDate(): any (date: string): string {;
     month: "long",;
     day: "numeric";
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   });
 }
 
-=======
 import React from './react';
 import {
   Card,
@@ -226,6 +231,7 @@ function format_date (date: string): string {
   });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -237,3 +243,5 @@ function format_date (date: string): string {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

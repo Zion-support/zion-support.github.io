@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,14 +47,12 @@ export function WebhooksManager() {
 
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [showCreateDialog, setShowCreateDialog] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showTestDialog, setShowTestDialog] = useState<string | null>(null),
   const [showTestResult, setShowTestResult] = useState(false);
-
-
-  // Create webhook form state;
-
   const [webhookName, setWebhookName] = useState("");
   const [webhookUrl, setWebhookUrl] = useState("");
   const [webhookSecret, setWebhookSecret] = useState("");
@@ -66,6 +65,7 @@ export function WebhooksManager() {
     fetchWebhooks();
   }, []);
 
+<<<<<<< HEAD
 
 
 =======
@@ -426,10 +426,13 @@ export function WebhooksManager() {;
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <Input
                     id="webhook-secret"
                     type="password"
                     value={webhookSecret}
+<<<<<<< HEAD
 
 
                     onChange={(e) => setWebhookSecret(e.target.value)}
@@ -482,6 +485,8 @@ export function WebhooksManager() {;
                           onCheckedChange={() => toggleEvent(event.value)}
                         />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                         <Label
                           htmlFor={event.value}
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -517,6 +522,7 @@ export function WebhooksManager() {;
                         </Label>;
                       </div>;
                     ))}
+<<<<<<< HEAD
 
 import { useState, useEffect } from './react';
 import { format } from './date - fns';
@@ -734,35 +740,17 @@ function WebhooksManager() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {/* Webhooks List */}
         <div className="space - y-4">;
           {loading ? (
-
-            <div className="text - center py - 8 text - zinc - 500">Loading webhooks...</div>) : webhooks.length === 0 ? (
-            <div className="text - center py - 8 text - zinc - 500">;
-              <Webhook className="mx - auto mb - 2 opacity - 30" size={24} />;
-              <p > No webhooks found.</p>;
-              <p className="text - sm mt - 1">Create one to receive event notifications.</p>;
-            </div>) : (
-            webhooks.map ((webhook) => (
-              <div key={webhook.id} className="p - 4 border border - zinc - 800 rounded - lg">;
-                <div className="flex items - center justify - between">;
-                  <div>;
-                    <h3 className="font - medium">{webhook.name}</h3>;
-                    <div className="flex items - center text - sm text - zinc - 400 mt - 1">;
-                      <Globe size={14} className="mr - 1" />;
-                      <span className="max - w-md truncate">{webhook.url}</span>;
-                    </div>;
-                  </div>;
-                  <div className="flex items - center space - x-2">;
-                    <div className="flex items - center mr - 2">;
-                      <Switch;
-
                         checked={webhook.is_active}
                         onCheckedChange={() => handleToggleStatus (webhook.id, webhook.is_active)}
                       />;
                       <span className="ml - 2 text - sm">;
                         {webhook.is_active ? "Active" : "Inactive"}
+<<<<<<< HEAD
                       </span>
                     </div>
                     <DropdownMenu>
@@ -803,11 +791,35 @@ function WebhooksManager() {
                   <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>
                   {webhook.last_triggered_at && (
                     <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>
+=======
+                        <Button variant="ghost" size="icon">;
+                          <MoreVertical size={16} />;
+                        </Button>;
+                      </DropdownMenuTrigger>;
+                        <DropdownMenuItem
+                          onClick={() => setShowTestDialog(webhook && webhook.id)}
+                          className="cursor-pointer";
+                        >;
+                          <PlayCircle size={14} className="mr-2" /> Test;
+                        </DropdownMenuItem>;
+                        <DropdownMenuItem
+                        </DropdownMenuItem>;
+                      </DropdownMenuContent>;
+                    </DropdownMenu>;
+                  </div>;
+                </div>;
+                      variant="secondary"
+                      className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">;
+                      {event}
+                    </Badge>;
+                  ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   )}
                 </div>
               </div>
             ))
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>
       </CardContent>
@@ -846,11 +858,14 @@ function WebhooksManager() {
         onOpenChange={(open) => {;
           if (!open) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             setShowTestDialog(null);
             setTestEventType('new_application');
             if (showTestResult) {;
               setShowTestResult(false);
               clearTestResult();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -859,25 +874,11 @@ function WebhooksManager() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             }
           }
         }}
-
-      >;
-        <DialogContent className="bg-zinc-900 border-zinc-800 text-white">;
-          <DialogHeader>;
-            <DialogTitle>Test Webhook</DialogTitle>;
-            <DialogDescription className="text-zinc-400">;
-              Send a test webhook to your endpoint.;
-            </DialogDescription>;
-          </DialogHeader>;
-
-          {!showTestResult ? (;
-            <>;
-              <div className="space-y-4 py-4">;
-                <div className="space-y-2">;
-                  <Label htmlFor="test-event-type">Event Type</Label>;
-
                   <Select
                     value={testEventType}
                     onValueChange={(value) => setTestEventType(value as WebhookEventType)}
@@ -891,89 +892,11 @@ function WebhooksManager() {
                           {option && option.label}
                         </SelectItem>;
                       ))}
-
-                    </SelectContent>;
-                  </Select>;
-                  <p className="text-xs text-zinc-500">;
-=======
-                <div className="mt - 3 flex flex - wrap gap - 2">;
-                  {webhook.event_types.map ((event) => (
-                    <Badge;
-                      key={event}
-                      variant="secondary";
-                      className="bg - zinc - 800 text - zinc - 300 hover:bg - zinc - 800";
-                    >;
-                      {event}
-                    </Badge>))}
-                </div>;
-                <div className="mt - 3 text - xs text - zinc - 500 flex items - center space - x-4">;
-                  <span > Created: {format (new Date (webhook.created_at), 'MMM d, yyyy')}</span>;
-                  {webhook.last_triggered_at && (
-                    <span > Last triggered: {format (new Date (webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>)}
-                </div>;
-              </div>)))}
-        </div>;
-      </CardContent>;
-      <CardFooter className="justify - between border - t border - zinc - 800 py - 4">;
-        <div className="text - xs text - zinc - 500">;
-          Webhooks will be sent with HTTPS POST requests to your endpoint.;
-        </div>;
-        <Button variant="outline" size="sm" on_click={fetch_webhooks}>;
-          <RefreshCw size={14} className="mr - 1" /> Refresh;
-        </Button>;
-      </CardFooter>;
-      {/* Test Webhook Dialog */}
-      <Dialog;
-        open={showTestDialog !== null}
-        onOpenChange={(open) => {
-          // Check condition
-if ( {) {
-  $2
-}
-            setShowTestDialog (null);
-            setTestEventType ('new_application');
-            // Check condition
-if ( {) {
-  $2
-}
-              setShowTestResult (false);
-              clearTestResult ();
-            }
-          }
-        }}
-      >;
-        <DialogContent className="bg - zinc - 900 border - zinc - 800 text - white">;
-          <DialogHeader>;
-            <DialogTitle > Test Webhook</DialogTitle>;
-            <DialogDescription className="text - zinc - 400">;
-              Send a test webhook to your endpoint.;
-            </DialogDescription>;
-          </DialogHeader>;
-          {!showTestResult ? (
-            <>;
-              <div className="space - y-4 py - 4">;
-                <div className="space - y-2">;
-                  <Label html_for="test - event - type">Event Type</Label>;
-                  <Select;
-                    value={testEventType}
-                    onValueChange={(value) => setTestEventType (value as WebhookEventType)}
-                  >;
-                    <SelectTrigger className="bg - zinc - 800 border - zinc - 700">;
-                      <SelectValue placeholder="Select an event type" />;
-                    </SelectTrigger>;
-                    <SelectContent className="bg - zinc - 900 border - zinc - 800">;
-                      {event_options.map ((option) => (
-                        <SelectItem key={option.value} value={option.value}>;
-                          {option.label}
-                        </SelectItem>))}
-                    </SelectContent>;
-                  </Select>;
-                  <p className="text - xs text - zinc - 500">;
-
                     The event type will determine the structure of the test payload.;
                   </p>;
                 </div>;
               </div>;
+<<<<<<< HEAD
 
 =======
                   setShowTestDialog(null),
@@ -1016,29 +939,26 @@ if ( {) {
                   <div className="flex items - center justify - between">;
                     <Label > Response Status</Label>;
                     <Badge;
+=======
+                    <Badge
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       className={
-                        test_result && test_result.status >= 200 && test_result.status < 300;
-                          ? "bg - green - 700";
-                          : "bg - red - 700";
+                        testResult && testResult.status>= 200 && testResult.status < 300;
+                          ? "bg-green-700";
+                          : "bg-red-700";
                       }
                     >;
-                      {test_result?.status} {test_result?.status_text}
-                    </Badge>;
-                  </div>;
-                  <div className="space - y-2 mt - 4">;
-                    <Label > Response Body</Label>;
-                    <ScrollArea className="h-[200px] rounded border border - zinc - 800 bg - black p - 4">;
-                      <pre className="text - xs font - mono text - zinc - 300 whitespace - pre - wrap break - all">;
-                        {test_result?.response_body || "No response body"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                      {testResult?.status} {testResult?.statusText}
                       </pre>;
                     </ScrollArea>;
                   </div>;
                 </div>;
               </div>;
-
+                  setShowTestDialog(null);
+                  setShowTestResult(false);
                   clearTestResult();
                 }}>;
+<<<<<<< HEAD
                   Test Another Event;
                 </Button>;
               </DialogFooter>;
@@ -1090,15 +1010,30 @@ if ( {) {
               on_click={() => showDeleteConfirm && handleDeleteWebhook (showDeleteConfirm)}
               className="bg - red - 600 hover: bg - red - 700";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                  Close;
+                </Button>;
+                <Button variant="outline" onClick={() => {;
+                  setShowTestResult(false);
+              This action will permanently remove this webhook.;
+              You will no longer receive events at this endpoint.;
+            </AlertDialogDescription>;
+          </AlertDialogHeader>;
+          <AlertDialogFooter>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             >;
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-
+=======
     </Card>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

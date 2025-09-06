@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -158,12 +159,47 @@ export default function RequestsPanel() {;
   const archivedQuotes = quotes && quotes.filter(q => q && q.is_archived);
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+import React, { useState } from './react';
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { useTalentQuotes } from '@/hooks / useTalentQuotes';
+import { use_auth } from '@/hooks / use_auth';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { QuoteDetails } from '@/components / quotes / QuoteDetails';
+import { RequestsHeader, QuoteRequestsList } from '@/components / quotes';
+import type { QuoteRequest } from "@/types / quotes";
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+export default /**
+ * RequestsPanel - Function description
+ */
+function RequestsPanel() {
+  const { user } = use_auth ();
+  const is_talent = user?.user_type === 'creator' || user?.user_type === 'job_seeker';
+;
+  const [selected_quote, setSelectedQuote] = useState < QuoteRequest | null>(null);
+  const [show_details, setShowDetails] = useState (false);
+;
+  const {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    quotes;
+    unread_count;
+    is_loading;
+    status_filter;
+    setStatusFilter;
+    archive_filter;
+    setArchiveFilter;
+    markAsViewed;
+    markAsResponded;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <ProtectedRoute>;
       <div>;
         <Header />;
         <div className="min-h-screen bg-zion-blue px-4 py-8">;
           <div className="container mx-auto">;
+<<<<<<< HEAD
 
             <RequestsHeader;
 <<<<<<< HEAD
@@ -172,23 +208,14 @@ export default function RequestsPanel() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            <RequestsHeader
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
-
-            />;
-
-            {/* Main Content */}
-            <Tabs defaultValue="active" className="mb-6">;
-              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;
-                <TabsTrigger value="active">Active Requests</TabsTrigger>;
-                <TabsTrigger value="archived">Archived</TabsTrigger>;
-              </TabsList>;
-
-              <TabsContent value="active">;
-
                 <QuoteRequestsList
                   quotes={activeQuotes}
                   isLoading={isLoading}
@@ -196,12 +223,6 @@ export default function RequestsPanel() {;
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
-
-                />;
-              </TabsContent>;
-
-              <TabsContent value="archived">;
-
                 <QuoteRequestsList
                   quotes={archivedQuotes}
                   isLoading={isLoading}
@@ -209,18 +230,11 @@ export default function RequestsPanel() {;
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
-
-                />;
-              </TabsContent>;
-            </Tabs>;
-          </div>;
-        </div>;
-
-
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
+<<<<<<< HEAD
           onClose={() => {
             setShowDetails(false);
 
@@ -252,6 +266,10 @@ export default function RequestsPanel() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+          onClose={() => {;
+            setShowDetails(false);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
     toggle_archive;
   } = useTalentQuotes ();

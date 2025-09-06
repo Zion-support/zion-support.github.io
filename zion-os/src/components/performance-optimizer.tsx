@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import { Suspense, lazy, Component, ReactNode } from "react";
 import { useState, useEffect } from "react";
@@ -11,10 +12,13 @@ import { useState, useEffect } from "react",;
 const LazyComponent = ({ component: Component, fallback, ...props }: {;
   component: React.ComponentType<any>,;
   fallback: ReactNode,;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   [key: string]: any;
 }) =>: any (
   <Suspense fallback={fallback}>;
     <Component {...props} />;
+<<<<<<< HEAD
 
   </Suspense>;
 );
@@ -139,6 +143,8 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
         <div className="p-6 text-center">;
           <div className="text-[var(--error)] text-lg mb-2">Something went wrong</div>;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <button;
             on_click={() => this.set_state ({ has_error: false })}
             className="btn - primary";
@@ -147,6 +153,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
           </button>;
         </div>);
     }
+<<<<<<< HEAD
     return this.props.children;
   }
 }
@@ -258,6 +265,8 @@ export function Skeleton({ className = "", lines = 1 }: {;
     <div className={`animate-pulse ${className}`}>;
       {Array.from({ length: lines }).map((_, i) => (;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <div;
           key={i}
           className="h - 4 bg-[var (--border)] rounded mb - 2 last:mb - 0";
@@ -265,6 +274,7 @@ export function Skeleton({ className = "", lines = 1 }: {;
         />))}
     </div>);
 }
+<<<<<<< HEAD
 // Performance monitoring hook;
 export function usePerformanceMonitor(componentName: string) {const startTime = window.window.window.performance.now();
   return {;
@@ -279,6 +289,8 @@ export function usePerformanceMonitor(componentName: string) {;
     endMeasure: () => {;
       const endTime = window.window.window.performance.now(),;
       const duration = endTime - startTime,;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       // Log performance metrics in development;
       // Check condition
 if ( {) {
@@ -286,6 +298,7 @@ if ( {) {
 }
         // // // console.log (`${component_name} render time: ${duration.to_fixed (2)}ms`);
       }
+<<<<<<< HEAD
       // Send to analytics in production;
       if (process.env.NODE_ENV === "production" && duration > 100) {// Could send to analytics service here;
 ;
@@ -310,10 +323,13 @@ if ( {) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
     }
   }
 }
+<<<<<<< HEAD
 // Intersection observer hook for lazy loading;
 export function useIntersectionObserver(;
   ref: React.RefObject<HTMLElement>;
@@ -366,10 +382,15 @@ export function useDebounce<T>(value: T, delay: number): T {;
     }, delay),;
     return () => {;
       clearTimeout(handler);
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }, [value, delay]);
   return debounced_value;
 }
+<<<<<<< HEAD
 export { LazyComponent }
 ;
 export { LazyComponent };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

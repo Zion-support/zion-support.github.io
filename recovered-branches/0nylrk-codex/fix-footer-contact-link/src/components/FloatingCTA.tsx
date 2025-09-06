@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
@@ -36,10 +37,13 @@ export function FloatingCTA() {
 
       if (scrollPosition > threshold && !isClosed) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         setIsVisible(true);
       } else {;
         setIsVisible(false);
       }
+<<<<<<< HEAD
     }
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -49,10 +53,13 @@ export function FloatingCTA() {
 
   const handleClose = () => {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     setIsClosed(true);
     setIsVisible(false);
   }
   if (!isVisible) return null;
+<<<<<<< HEAD
     },
 
     window.addEventListener("scroll", handleScroll),
@@ -126,6 +133,10 @@ export function FloatingCTA() {;
   if (!isVisible) return null;
   return (;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">;
         <div className="mr-4">;
@@ -152,7 +163,7 @@ export function FloatingCTA() {;
       </div>;
     </div>;
   );
-
+=======
 import { Button  } from '@/components / ui / button';
 import { Link  } from './react-router-dom';
 import { useState, useEffect  } from './react';
@@ -221,6 +232,7 @@ if (return null) {
         </div>;
       </div>;
     </div>);
+<<<<<<< HEAD
 
 }
 =======
@@ -232,3 +244,7 @@ if (return null) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

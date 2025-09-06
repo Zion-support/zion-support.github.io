@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from 'react';
 import * as SliderPrimitive from '@radix-ui/react-slider';
 import {cn} from '@/lib/utils';
@@ -64,3 +65,44 @@ export { Slider }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import React from 'react';
+import * as React from 'react';
+    ref={ref}
+    className={cn(
+      'relative flex w-full touch-none select-none items-center'
+      className
+    )}
+    {...props}>;
+    <SliderPrimitive && SliderPrimitive.Track className='relative h-2 w-full grow overflow-hidden rounded-full bg-secondary'>;
+      <SliderPrimitive && SliderPrimitive.Range className='absolute h-full bg-primary' />;
+    </SliderPrimitive && SliderPrimitive.Track>;
+    <SliderPrimitive && SliderPrimitive.Thumb className='block h-5 w-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50' />;
+  </SliderPrimitive && SliderPrimitive.Root>;
+));
+=======
+import * as SliderPrimitive from '@radix - ui / react - slider';
+;
+import {cn} from '@/lib / utils';
+;
+const Slider = React.forward_ref<;
+  React.ElementRef < typeof SliderPrimitive.Root>,
+  React.ComponentPropsWithoutRef < typeof SliderPrimitive.Root>;
+></typeof>(({ class_name, ...props }, ref) => (
+  <SliderPrimitive.Root;
+    ref={ref}
+    className={cn (
+      'relative flex w - full touch - none select - none items - center',
+      class_name)}
+    {...props}
+  >;
+    <SliderPrimitive.Track className='relative h - 2 w - full grow overflow - hidden rounded - full bg - secondary'>;
+      <SliderPrimitive.Range className='absolute h - full bg - primary' />;
+    </SliderPrimitive.Track>;
+    <SliderPrimitive.Thumb className='block h - 5 w - 5 rounded - full border - 2 border - primary bg - background ring - offset - background transition - colors focus - visible: outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:pointer - events - none disabled:opacity - 50' />;
+  </SliderPrimitive.Root>));
+Slider.display_name = SliderPrimitive.Root.display_name,
+export { Slider }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

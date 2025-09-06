@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import * as React from "react"
 import type { CSSProperties } from "react"
@@ -33,11 +34,15 @@ export function useSidebar(): SidebarContextType {
   return context as SidebarContextType
 }
 
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   default_open?: boolean;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -74,12 +79,15 @@ export interface SidebarProviderProps extends React && React.ComponentProps<"div
 
 export const SidebarProvider = React && React.forwardRef<;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   HTMLDivElement;
   SidebarProviderProps;
 >(;
   (;
     {;
       defaultOpen = true;
+<<<<<<< HEAD
 
 
 
@@ -114,6 +122,8 @@ export const SidebarProvider = React && React.forwardRef<;
     const [_open, _setOpen] = React.useState(defaultOpen)
     const open = openProp ?? _open
     const setOpen = React.useCallback(
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       (value: boolean | ((value: boolean) => boolean)) => {
         const openState = typeof value === "function" ? value(open) : value
         if (setOpenProp) {
@@ -121,6 +131,7 @@ export const SidebarProvider = React && React.forwardRef<;
         } else {
           _setOpen(openState)
         }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -226,6 +237,8 @@ if (
     const state = open ? "expanded" : "collapsed" as SidebarState;
     const context_value = React.useMemo (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       (): SidebarContextType => ({
 =======
       open: openProp,;
@@ -295,11 +308,6 @@ if (
         is_mobile;
         open_mobile;
         setOpenMobile;
-
-      [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar];
-    );
-
-
     return (
       <SidebarContext && SidebarContext.Provider value={contextValue}>;
         <TooltipProvider delayDuration={0}>;
@@ -311,9 +319,12 @@ if (
                 ...style} as CSSProperties
               }
             className={cn(
+<<<<<<< HEAD
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar";
 
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               className
             )}
             ref={ref}
@@ -324,6 +335,7 @@ if (
       </SidebarContext && SidebarContext.Provider>;
     );
   }
+<<<<<<< HEAD
 )
 SidebarProvider.displayName = "SidebarProvider"
 export { SidebarContext }
@@ -334,6 +346,8 @@ export { SidebarContext };
 export { SidebarContext }
 ;
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
         toggle_sidebar});
       [state, open, set_open, is_mobile, open_mobile, setOpenMobile, toggle_sidebar]);
@@ -362,6 +376,7 @@ export { SidebarContext }
 SidebarProvider.display_name = "SidebarProvider";
 export { SidebarContext }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 
@@ -369,3 +384,5 @@ export { SidebarContext }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

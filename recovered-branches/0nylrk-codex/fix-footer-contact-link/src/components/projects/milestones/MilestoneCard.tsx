@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react',
@@ -126,17 +127,13 @@ export function MilestoneCard(): any ({ ;
   amount, ;
   status, ;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   dueDate;
   onApprove;
   onReject;
 }: MilestoneCardProps) {;
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
-
-
-  function getStatusBadgeColor() {;
-    switch (status) {;
-      case 'completed':;
-
         return 'bg-green-500';
       case 'in_progress':;
         return 'bg-blue-500';
@@ -146,6 +143,7 @@ export function MilestoneCard(): any ({ ;
         return 'bg-red-500';
       default: return 'bg-gray-500';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -153,6 +151,10 @@ export function MilestoneCard(): any ({ ;
     }
   }
   
+=======
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Card>;
       <CardHeader className="pb-2">;
@@ -164,40 +166,11 @@ export function MilestoneCard(): any ({ ;
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
               </p>;
             )}
-
-          </div>;
-          <div className="flex gap-2">;
-            <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
-              {status && status.replace('_ ')}
-            </Badge>;
-
-            {isUnderDispute && disputeStatus && (;
-              <DisputeStatusBadge status={disputeStatus} />;
-            )}
-          </div>;
-        </div>;
-      </CardHeader>;
-
-      <CardContent className="pb-2">;
-        {description && (;
-          <p className="text-muted-foreground">{description}</p>;
-        )}
-        <div className="mt-4">;
-          <p className="text-xl font-bold">${amount && amount.toFixed(2)}</p>;
-        </div>;
-      </CardContent>;
-
-      <CardFooter className="pt-2 flex justify-between">;
-        <div>;
-          {status !== 'completed' && status !== 'rejected' && (;
-            <RaiseDisputeButton
-              projectId={projectId} 
-              milestoneId={id} 
-
               variant="ghost"
               size="sm"
             />;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>
         <div className="flex gap-2">
@@ -292,6 +265,8 @@ export function MilestoneCard(): any ({ ;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';

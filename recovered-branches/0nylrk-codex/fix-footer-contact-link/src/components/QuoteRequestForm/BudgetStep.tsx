@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {QuoteFormData} from "@/types/quotes";
 import {Label} from "@/components/ui/label";
 import {Slider} from "@/components/ui/slider";
@@ -37,11 +38,14 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
           type,
           max_amount: form_data.budget.amount + 5000;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         }
       });
     } else {
       updateFormData ({
         budget: {
+<<<<<<< HEAD
 
 import {QuoteFormData} from "@/types/quotes";
 import {Label} from "@/components/ui/label";
@@ -244,6 +248,11 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
                 Fixed Budget: {formatCurrency(formData && formData.budget.amount)}
               </Label>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        }
+      });
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <Slider
                 defaultValue={[formData && formData.budget.amount]}
                 max={50000}
@@ -259,14 +268,6 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
               </div>;
             </div>;
           )}
-
-
-          {formData && formData.budget.type === "hourly" && (;
-            <div className="mt-6">;
-              <Label className="text-zion-slate-light mb-4 block">;
-                Hourly Rate: {formatCurrency(formData && formData.budget.amount)}/hour;
-              </Label>;
-
               <Slider
                 defaultValue={[formData && formData.budget.amount]}
                 max={500}
@@ -282,19 +283,11 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
               </div>;
             </div>;
           )}
-
-
-          {formData && formData.budget.type === "range" && (;
-            <div className="mt-6 space-y-8">;
-              <div>;
-                <Label className="text-zion-slate-light mb-4 block">;
-                  Minimum Budget: {formatCurrency(formData && formData.budget.amount)}
-                </Label>;
-
                 <Slider
                   defaultValue={[formData && formData.budget.amount]}
                   max={50000}
                   step={500}
+<<<<<<< HEAD
                   onValueChange={(value) => {
                     const newAmount = value[0];
                     const maxAmount = formData.budget.maxAmount |50000;
@@ -358,6 +351,13 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
                   defaultValue={[formData && formData.budget.maxAmount || formData && formData.budget.amount + 5000]}
                   min={formData && formData.budget.amount}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+                  onValueChange={(value) => {;
+                    const newAmount = value[0];
+                      }
+                    });
+                  }}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   max={100000}
                   step={500}
                   onValueChange={(value) => updateFormData({;

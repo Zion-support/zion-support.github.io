@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -19,10 +20,13 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Eye  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default function HolographicAICommunicationPage() {
@@ -49,6 +53,13 @@ export default function HolographicAICommunicationPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export default function HolographicAICommunicationPage() {
+
+  const contactInfo = {
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const features = [
     'AI-powered 3D holographic projection'
     'Real-time holographic rendering'
@@ -59,8 +70,6 @@ export default function HolographicAICommunicationPage() {
   }
   const features = [
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security'
-
-
 export default function HolographicAICommunicationPage() {;
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -161,12 +170,9 @@ export default function HolographicAICommunicationPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
-
-=======
-}
-
 =======
   ];
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -207,11 +213,17 @@ export default function HolographicAICommunicationPage() {;
     </UltraAdvancedFuturisticBackground>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
@@ -230,10 +242,13 @@ function HolographicAICommunicationPage() {
 <<<<<<< HEAD
 =======
 ;
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

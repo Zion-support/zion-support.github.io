@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { supabase } from "@/integrations/supabase/client";
 =======
@@ -13,12 +14,15 @@ interface PricingSuggestionAnalytics {
   suggestionsByCategory: { category: string, count: number, acceptance_rate: number }[];
   recent_suggestions: {
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     id: string;
     user_id: string;
     suggested_min: number;
     suggested_max: number;
     actual_value?: number;
     accepted: boolean;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     createdAt: string
@@ -117,11 +121,14 @@ export function usePricingSuggestionAnalytics(days = 30) {
         };
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         setAnalytics({
           ...mockData;
           isLoading: false
           error: null
         });
+<<<<<<< HEAD
         await new Promise(resolve => setTimeout(resolve, 1000)),
 
         // Mock data for demonstration
@@ -152,12 +159,15 @@ export function usePricingSuggestionAnalytics(days = 30) {
           error: null
         }),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
         //   .select(...)
         //   .gte('created_at', `now() - interval '${days} days'`);
         // if (error) throw error;
+<<<<<<< HEAD
         //   .gte('created_at', `now() - interval '${days} days'`),
         
         // if (error) throw error,
@@ -183,27 +193,24 @@ export function usePricingSuggestionAnalytics(days = 30) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         console.error("Error fetching pricing suggestion analytics:", error),
+=======
+        // Process data and setAnalytics({...})
+      } catch (error) {
+        console && console.error("Error fetching pricing suggestion analytics:", error);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         setAnalytics({
-          ...analytics,
-          isLoading: false,
+          ...analytics;
+          isLoading: false
           error: "Failed to load pricing analytics data."
         })
-import { useState, useEffect } from 'react',;
-import { supabase } from "@/integrations/supabase/client",;
-interface PricingSuggestionAnalytics {;
-  totalSuggestions: number,;
-  acceptanceRate: number,;
-  averagePriceGap: number,;
-  suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[],;
-  recentSuggestions: {;
-    id: string,;
-    userId: string,;
-    suggestedMin: number,;
-    suggestedMax: number,;
-    actualValue?: number,;
-    accepted: boolean,;
-    createdAt: string,;
+      }
+    }
+    fetchAnalytics()
+  }, [days]);
 
+  return analytics
+=======
+    created_at: string,
     type: 'client' | 'talent';
   }[];
   is_loading: boolean,
@@ -285,6 +292,7 @@ if (throw error) {
 ;
   return analytics;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 =======
@@ -295,3 +303,7 @@ if (throw error) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

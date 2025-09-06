@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -47,6 +48,18 @@ export default function ApiPerformanceTestingPage() {
   const features = [
     "k6/Gatling-compatible test runner",
     "SLO-aware latency reports",
+=======
+import React from './react';
+import SEO from "../components / SEO";
+import { Check, ExternalLink  } from './lucide-react';
+export default /**
+ * ApiPerformanceTestingPage - Function description
+ */
+function ApiPerformanceTestingPage() {
+  const features = [;
+    "k6 / Gatling - compatible test runner",
+    "SLO - aware latency reports",
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
@@ -109,6 +122,7 @@ export default function ApiPerformanceTestingPage() {
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
+<<<<<<< HEAD
 
 return (
   return (
@@ -186,10 +200,21 @@ return (
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
+=======
             </a>;
           </div>;
         </section>;
       </main>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+            </a>;
+          </div>;
+        </section>;
+      </main>;
+<<<<<<< HEAD
 
 }
 
+=======
+    </>);
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

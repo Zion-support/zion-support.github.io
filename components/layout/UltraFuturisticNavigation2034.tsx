@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -147,6 +148,9 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   Menu,
   X,
   ChevronDown,
@@ -249,6 +253,7 @@ import {
   Facebook,
   Instagram,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   Youtube,;
   Github,;} from 'lucide-react';import {
@@ -265,6 +270,8 @@ import {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -272,14 +279,6 @@ import {
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
   Code, Wrench, Smartphone, BarChart3, Eye;
   Network, Server, HardDrive, Monitor;
-
-  Laptop, Watch, Headphones, Speaker, Mic, ;
-  Keyboard, Mouse, CpuIcon, DatabaseIcon, ;
-
-=======
-  Laptop, Watch, Headphones, Speaker, Mic,
-  Keyboard, Mouse, CpuIcon, DatabaseIcon,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
   ZapIcon, SparklesIcon, BrainIcon, AtomIcon;
   HeartIcon, RocketIcon, ShieldIcon as ShieldIcon2;
@@ -289,12 +288,11 @@ import {
   PaletteIcon, VideoIcon, LockIcon as LockIcon2;
   GlobeIcon as GlobeIcon2, CpuIcon as CpuIcon2;
   Handshake, LifeBuoy, Activity;
-
-
     title: '⚛️ Quantum & Emerging Tech',
     icon: AtomIcon,
     color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
     description: 'Quantum computing and beyond',
+<<<<<<< HEAD
 
     services: [;
       {
@@ -528,124 +526,25 @@ import {
 ];
 =======
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     title: '🏙️ Enterprise IT Solutions',
     icon: CpuIcon,
     color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
     description: 'Autonomous enterprise infrastructure',
-
-    services: [;
-      {
-        name: 'API Security & Monitoring',
-        href: '/api - security - monitoring - suite',
-        description: 'Protect and monitor your APIs',
-        price: '$399 / month',
-      },
-      {
-        name: 'Customer Success Automation',
-        href: '/customer - success - automation',
-        description: 'Automate customer success workflows',
-        price: '$199 / month',
-      },
-      {
-        name: 'HR Automation Suite',
-        href: '/hr - automation - suite',
-        description: 'Streamline HR processes with AI',
-        price: '$179 / month',
-      },
-      {
-        name: 'Project Management AI',
-        href: '/project - management - ai - platform',
-        description: 'AI - powered project management',
-        price: '$199 / month',
-      },
-    ],
-  },  {      { name: 'API Security & Monitoring', href: '/api - security - monitoring - suite', description: 'Protect and monitor your APIs', price: '$399 / month' },
-      { name: 'Customer Success Automation', href: '/customer - success - automation', description: 'Automate customer success workflows', price: '$199 / month' },
-      { name: 'HR Automation Suite', href: '/hr - automation - suite', description: 'Streamline HR processes with AI', price: '$179 / month' },
-      { name: 'Project Management AI', href: '/project - management - ai - platform', description: 'AI - powered project management', price: '$199 / month' }
-    ];
-  }
-
     title: '🛒 Business Automation',
     icon: ShoppingCart,
     color: 'from - teal - 600 via - emerald - 600 to - green - 600',
     description: 'Streamline business operations',
-
-    services: [;
-      {
-        name: 'E - commerce Automation',
-        href: '/ecommerce - automation - platform',
-        description: 'Automate your entire e - commerce operation',
-        price: '$249 / month',
-      },
-      {
-        name: 'Marketing Automation Suite',
-        href: '/marketing - automation - suite',
-        description: 'Automate your entire marketing operation',
-        price: '$279 / month',
-      },
-      {
-        name: 'Financial Analytics Platform',
-        href: '/financial - analytics - platform',
-        description: 'Real - time financial insights',
-        price: '$349 / month',
-      },
-      {
-        name: 'Legal Document Automation',
-        href: '/legal - document - automation',
-        description: 'Automate legal document creation',
-        price: '$399 / month',
-      },
-    ],
-  },  {      { name: 'E - commerce Automation', href: '/ecommerce - automation - platform', description: 'Automate your entire e - commerce operation', price: '$249 / month' },
-      { name: 'Marketing Automation Suite', href: '/marketing - automation - suite', description: 'Automate your entire marketing operation', price: '$279 / month' },
-      { name: 'Financial Analytics Platform', href: '/financial - analytics - platform', description: 'Real - time financial insights', price: '$349 / month' },
-      { name: 'Legal Document Automation', href: '/legal - document - automation', description: 'Automate legal document creation', price: '$399 / month' }
-    ];
-  }
-
     title: '🤖 Robotics & Automation',
     icon: RocketIcon,
     color: 'from - green - 600 via - yellow - 600 to - orange - 600',
     description: 'Intelligent automation solutions',
-
-    services: [;
-      {
-        name: 'Autonomous Robotics Platform',
-        href: '/autonomous - robotics - platform',
-        description: 'Build and deploy intelligent robots',
-        price: '$2, 499 / month',
-      },
-      {
-        name: 'AI Content Generator Elite',
-        href: '/ai - content - generator - elite',
-        description: 'Professional AI content creation',
-        price: '$49 / month',
-      },
-      {
-        name: 'AI Guardrails Suite',
-        href: '/ai - guardrails - suite',
-        description: 'Policy and safety for LLM apps',
-        price: '$199 / month',
-      },
-      {
-        name: 'AI Business Intelligence',
-        href: '/ai - business - intelligence - suite',
-        description: 'Intelligent business insights',
-        price: '$299 / month',
-      },
-    ],
-  },  {      { name: 'Autonomous Robotics Platform', href: '/autonomous - robotics - platform', description: 'Build and deploy intelligent robots', price: '$2, 499 / month' }
-      { name: 'AI Content Generator Elite', href: '/ai - content - generator - elite', description: 'Professional AI content creation', price: '$49 / month' },
-      { name: 'AI Guardrails Suite', href: '/ai - guardrails - suite', description: 'Policy and safety for LLM apps', price: '$199 / month' },
-      { name: 'AI Business Intelligence', href: '/ai - business - intelligence - suite', description: 'Intelligent business insights', price: '$299 / month' }
-    ];
-  }
-
     title: '🔬 Research & Development',
     icon: MicroscopeIcon,
     color: 'from - orange - 600 via - red - 600 to - pink - 600',
     description: 'Breakthrough research solutions',
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -691,10 +590,13 @@ const quickLinks = [
       { name: 'Space Mining Automation', href: '/space - mining - automation - platform', description: 'Automated asteroid mining', price: '$45, 999 / month' }
       { name: 'Metaverse AI Development', href: '/metaverse - ai - development - platform', description: 'Build immersive virtual worlds', price: '$2, 999 / month' }
       { name: 'Holographic Event Platform', href: '/holographic - event - platform', description: 'Immersive holographic experiences', price: '$2, 999 / month' }
+=======
+      { name: 'Space Mining Automation', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/month' };
+      { name: 'Metaverse AI Development', href: '/metaverse-ai-development-platform', description: 'Build immersive virtual worlds', price: '$2,999/month' };
+      { name: 'Holographic Event Platform', href: '/holographic-event-platform', description: 'Immersive holographic experiences', price: '$2,999/month' }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     ];
   }
-const quick_links = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
   { name: 'Solutions', href: '/solutions', icon: Target },
@@ -702,21 +604,14 @@ const quick_links = [;
   { name: 'Resources', href: '/resources', icon: BookOpen },
   { name: 'Case Studies', href: '/case - studies', icon: FileText },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
-
-=======
-  { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
-;
-const company_links = [;
-
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Careers', href: '/careers', icon: Briefcase },
   { name: 'News', href: '/news', icon: FileText },
   { name: 'Partners', href: '/partners', icon: Handshake },
   { name: 'Support', href: '/support', icon: LifeBuoy },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   { name: 'Status', href: '/status', icon: Activity }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 const socialLinks = [
   {
@@ -776,6 +671,8 @@ export default function UltraFuturisticNavigation2034() {;
       setIsScrolled(window.scrollY > 50)
     };
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
@@ -784,8 +681,6 @@ export default function UltraFuturisticNavigation2034() {;
   }
   const closeDropdown = () => {
     setActiveDropdown(null)
-
-
 
 const quickLinks = [;
   { name: 'Home', href: '/', icon: Home },;
@@ -840,9 +735,6 @@ const socialLinks = [;
   { name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Youtube },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter }
 ];
-const certifications = [;
-  'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant';
-];
 export default function UltraFuturisticNavigation2034() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -854,23 +746,18 @@ export default function UltraFuturisticNavigation2034() {;
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
   }, []);
-  const toggleDropdown = (category: string) => {;
-    setActiveDropdown(activeDropdown === category ? null : category);
   };
+
   const closeDropdown = () => {;
     setActiveDropdown(null);  };    };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
   }, []);
-  const toggleDropdown = (category: string) => {;
-    setActiveDropdown(activeDropdown === category ? null : category);
-  };
-  const closeDropdown = () => {;
-    setActiveDropdown(null);
-  };
+
   return (
     <>;
       {/* Top Contact Bar */}
+<<<<<<< HEAD
       <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>
         <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>
           <div className='flex items-center space-x-6'>
@@ -928,6 +815,8 @@ export default function UltraFuturisticNavigation2034() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {contactInfo.mobile}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </span>
             </div>
             <div className="flex items-center space-x-2">
@@ -943,9 +832,6 @@ export default function UltraFuturisticNavigation2034() {;
               </span>
             </div>
           </div>
-
-          <div className="flex items-center space-x-4">
-
             <div className="flex items-center space-x-2">
               <Star className="w-4 h-4 text-yellow-400" />
               <span className="text-yellow-400 font-semibold">5.0 Rating</span>
@@ -953,6 +839,7 @@ export default function UltraFuturisticNavigation2034() {;
             <div className="flex items-center space-x-2">
               <Users className="w-4 h-4 text-green-400" />
               <span className="text-green-400 font-semibold">50K+ Customers</span>
+<<<<<<< HEAD
 
             </div>
 
@@ -963,6 +850,8 @@ export default function UltraFuturisticNavigation2034() {;
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>;
         <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;
           <div className='flex items-center space-x-6'>;
@@ -1020,18 +909,16 @@ export default function UltraFuturisticNavigation2034() {;
         </div>;
       </div>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Main Navigation */}
-
-        }`}>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='flex items-center justify-between h-20'>            {/* Logo */}      <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-
         isScrolled 
           ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20' 
           : 'bg-transparent'
+<<<<<<< HEAD
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
@@ -1066,6 +953,8 @@ export default function UltraFuturisticNavigation2034() {;
             </motion.div>
             {/* Desktop Navigation */}            >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
                   <Rocket className="w-7 h-7 text-white" />
@@ -1110,6 +999,7 @@ export default function UltraFuturisticNavigation2034() {;
               </div>;
             </motion && motion.div>;
             {/* Desktop Navigation */}
+<<<<<<< HEAD
             <div className='hidden lg:flex items-center space-x-8'>
               {quickLinks.map(link => (
                 <Link
@@ -1427,91 +1317,43 @@ function UltraFuturisticNavigation2034() {
                           {category.services.slice (0, 2).map ((service) => (
                             <Link;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                               key={service.name}
                               href={service.href}
                               className="block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors";
                             >;
                               {service.name}
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             >
                               {service.name}
                             </Link>
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                           ))}
-                        </div>
-                      </div>
+                        </div>;
+                      </div>;
                     ))}
-                  </div>
-                  <div className='mt-4 pt-4 border-t border-cyan-500/20'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  </div>;
+                  <div className='mt-4 pt-4 border-t border-cyan-500/20'>;
                     <Link
                       href='/services'
                       className='flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
                       View All Services;
                       <ArrowRight className='w-4 h-4 ml-2' />                    </Link>                    <Link
-=======
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-cyan-500/20">
-                    <Link
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       href="/services"
-
-                href="/contact"
-
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
               >
                 Get Started
               </Link>
             </div>
-
-                      className="flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">;
-                      View All Services;
-                      <ArrowRight className="w-4 h-4 ml-2" />;
-                    </Link>;
-                  </div>;
-                </div>;
-              </div>;
-              {/* Contact Button */}
-              <Link
-                href='/contact'
-                className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium'>                href="/contact";
-                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium";
-                            </Link>))}
-                        </div>;
-                      </div>))}
-                  </div>;
-                  <div className='mt - 4 pt - 4 border - t border - cyan - 500 / 20'>;
-                    <Link;
-                      href='/services';
-                      className='flex items - center justify - center w - full px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200';
-                    >;
-                      View All Services;
-                      <ArrowRight className='w - 4 h - 4 ml - 2' />                    </Link>                    <Link;
-                      href="/services";
-                      className="flex items - center justify - center w - full px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200";
-                    >;
-                      View All Services;
-                      <ArrowRight className="w - 4 h - 4 ml - 2" />;
-                    </Link>;
-                  </div>;
-                </div>;
-              </div>;
-              {/* Contact Button */}
-              <Link;
-                href='/contact';
-                className='px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 font - medium'              >                href="/contact";
-                className="px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 font - medium";
-
               >;
                 Get Started;
               </Link>;
             </div>;
-
-
-            {/* Mobile Menu Button */}
-            <div className="lg:hidden">
-
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className='text-gray-300 hover:text-cyan-400 transition-colors';
@@ -1525,6 +1367,7 @@ function UltraFuturisticNavigation2034() {
                 className="text-gray-300 hover:text-cyan-400 transition-colors";
               >;
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
               </button>
             </div>
           </div>
@@ -1533,11 +1376,14 @@ function UltraFuturisticNavigation2034() {
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </button>;
             </div>;
           </div>;
         </div>;
 
+<<<<<<< HEAD
 
 =======
 
@@ -1546,6 +1392,8 @@ function UltraFuturisticNavigation2034() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -1553,6 +1401,7 @@ function UltraFuturisticNavigation2034() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               transition={{ duration: 0.3 }}
               className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'
@@ -1737,10 +1586,13 @@ function UltraFuturisticNavigation2034() {
                     <AnimatePresence>;
                       {active_dropdown === category.title && (
                         <motion.div;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.2 }}
+<<<<<<< HEAD
                           className='mt-3 ml-4 space-y-2'
                         >
                           {category.services.map(service => (                            <Link
@@ -1765,6 +1617,14 @@ function UltraFuturisticNavigation2034() {
                   </div>
                 ))}
 
+=======
+                          ))}
+                        </motion && motion.div>;
+                      )}
+                    </AnimatePresence>;
+                  </div>;
+                ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <Link
                   href='/contact'
                   onClick={() => setIsOpen(false)}
@@ -1772,7 +1632,6 @@ function UltraFuturisticNavigation2034() {
                   href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center";
-=======
                           className='mt - 3 ml - 4 space - y-2';
                         >;
                           {category.services.map (service => (                            <Link;
@@ -1804,80 +1663,33 @@ function UltraFuturisticNavigation2034() {
                   Get Started;
                 </Link>;
               </div>;
-
-=======
-                
-                <Link
-=======
-                          className='mt-3 ml-4 space-y-2'
-                        >
-                          {category.services.map(service => (                            <Link
-                              key={service.name}
-                              href={service.href}
-                              onClick={() => setIsOpen(false)}
-                              className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'                            >                          className="mt-3 ml-4 space-y-2"
-                        >
-                          {category.services.map((service) => (
-                            <Link
-                              key={service.name}
-                              href={service.href}
-                              onClick={() => setIsOpen(false)}
-                              className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'                              className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                ))}
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-                <Link
-                  href='/contact'
-                  onClick={() => setIsOpen(false)}
-                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'                >                <Link
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                  href="/contact"
-                  onClick={() => setIsOpen(false)}
-                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center"
-                >
-                  Get Started
-                </Link>
-              </div>
-            </motion.div>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
+<<<<<<< HEAD
         </AnimatePresence>
       </nav>
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     </>
         </AnimatePresence>;
       </nav>;
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>;
     </>;
   );      <div className="h-20"></div>;
     </>;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 }
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </motion.div>)}
         </AnimatePresence>;
       </nav>;
@@ -1886,9 +1698,12 @@ function UltraFuturisticNavigation2034() {
     </>);      <div className="h - 20"></div>;
     </>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

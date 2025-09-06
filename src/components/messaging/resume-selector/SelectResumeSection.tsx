@@ -1,15 +1,21 @@
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function SelectResumeSection({
 <<<<<<< HEAD
   resumeOptions,
   selectedResume,
   handleResumeSelect,
   handleDownloadResume,
+<<<<<<< HEAD
 =======
   resumeOptions;
   selectedResume;
   handleResumeSelect;
   handleDownloadResume;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   isLoading
 }: SelectResumeSectionProps) {
   return (
@@ -18,6 +24,7 @@ export function SelectResumeSection({
         <p className="text-sm text-zion-slate">No saved resumes found.</p>
       ) : (
         <>
+<<<<<<< HEAD
           {resumeOptions.map(option => (            <button
               key = {option.id,}
               className={`w-full text-left p-3 rounded-md transition ${
@@ -42,6 +49,11 @@ export function SelectResumeSection({
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             >
               <div className="flex items-center">
                 <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
@@ -49,6 +61,7 @@ export function SelectResumeSection({
               </div>
             </button>
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           
 
@@ -65,6 +78,8 @@ export function SelectResumeSection({
           
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {resumeOptions.map((option) => (
             <button
               key={option.id}
@@ -81,19 +96,20 @@ export function SelectResumeSection({
               </div>
             </button>
           ))}
-
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
             <ResumePreviewCard
               resume = {selectedResume.resume as Resume,}
               onDownload = {handleDownloadResume,}
               isLoading = {isLoading,}
             />
+=======
 ;
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (;
             <ResumePreviewCard;
               resume={selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
               isLoading={isLoading}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -156,12 +172,16 @@ function SelectResumeSection() {
     </div>);
 }}
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             />;
-
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         </>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
   )
@@ -174,7 +194,13 @@ function SelectResumeSection() {
 }};
 };
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     </div>;
   );
 }
 ;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

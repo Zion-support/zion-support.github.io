@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export async function rewardOnboarding(userId: string) {
@@ -24,10 +25,13 @@ export async function rewardOnboarding(userId: string) {
     headers: { 'Content-Type': 'application/json' };
     body: JSON && JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })})
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 export async function rewardReferral(userId: string) {
   try {
   await fetch('/functions/v1/token-manager/earn', {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -47,10 +51,13 @@ export async function rewardReferral(userId: string) {
     headers: { 'Content-Type': 'application/json' };
     body: JSON && JSON.stringify({ userId, amount: 20, reason: 'Referral' })})
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 export async function rewardFiveStarReview(userId: string) {
   try {
   await fetch('/functions/v1/token-manager/earn', {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -68,6 +75,8 @@ export async function rewardFiveStarReview(userId: string) {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
@@ -89,6 +98,7 @@ function reward_referral() {
     headers: { 'Content - Type': 'application / json' }
     body: JSON.stringify ({ user_id, amount: 20, reason: 'Referral' })});
 }
+<<<<<<< HEAD
 
 ;
 export async function rewardFiveStarReview(userId: string) {;
@@ -103,5 +113,15 @@ export async function rewardFiveStarReview(userId: string) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export async /**
+ * rewardFiveStarReview - Function description
+ */
+function rewardFiveStarReview() {
+  await fetch ('/functions / v1 / token - manager / earn', {
+    method: 'POST',
+    headers: { 'Content - Type': 'application / json' }
+    body: JSON.stringify ({ user_id, amount: 10, reason: '5 - star review' })});
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 ;

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -47,6 +48,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 export default {
   extends: ['next/core-web-vitals', 'next/typescript'],
 ursor/add-new-services-and-deploy-updates-0462
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -63,14 +66,15 @@ ursor/add-new-services-and-deploy-updates-0462
     '@typescript-eslint/no-unused-vars': 'warn',
     'no-console': 'off',
     'no-undef': 'off',
+<<<<<<< HEAD
     'react/no-unescaped-entities': 'off',
     '@typescript-eslint/no-explicit-any': 'warn'
-  },
-
 =======
-
-
-
+    node: true,
+    browser: true,
+    es2021: true
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+  },
   env: {
 ursor/fix-syntax-push-and-merge-to-main-40de
   "extends": [
@@ -126,8 +130,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
   },
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   ignorePatterns: [
     'node_modules/',
     '.next/',
@@ -284,6 +291,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     'clean-conflicts.js',
     'commit-and-push.js'
   ]
+<<<<<<< HEAD
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -292,6 +300,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     }
   extends: ['next/core-web-vitals'],
 origin/automation-improvements-final
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   rules: {
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-explicit-any": "off",
@@ -303,19 +313,12 @@ origin/automation-improvements-final
     "@next/next/no-img-element": "off"
   },
   ignorePatterns: [
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     "node_modules/",
     ".next/",
     "out/",
     "dist/",
     "build/",
     "coverage/",
-
-    "*.config.js",
-    "*.config.cjs",
-    "*.config.mjs",
-    "fix - critical - files.js",
-
     "fix-*.js",
     "fix-*.cjs",
     "*-fix*.cjs",
@@ -323,37 +326,12 @@ origin/automation-improvements-final
     "advanced-*.cjs",
     "aggressive-*.cjs",
     "aggressive-*.js",
-    "app - improvement-*.cjs",
-    "analyze-*.cjs",
-    "code - quality-*.js",
     "automation/",
     "automation_backup/",
     "backup/",
     "lib_backup/",
     "data_backup/",
     "styles_backup/",
-    "api - backup/",
-    "temp_backup/",
-    "corrupted_files_backup_2/",
-
-    "ai - optimization - backups/",
-    "optimization - reports/",
-    "test - generation - reports/",
-    "test - reports/",
-    "test - results/",
-    "security - reports/",
-    "pages.__backup/",
-    "pages - disabled/",
-    "pages.disabled_auto/",
-
-    "zion_academy/",
-    "pm2 - automation/",
-    "scripts/",
-    "*.report && report.json",
-    "temp_*/",
-    "temp_exclude/",
-    "test_build/",
-
     "tests.disabled/",
     "pages.disabled/",
     "src.disabled/",
@@ -362,13 +340,6 @@ origin/automation-improvements-final
     "types.disabled/",
     "contracts.disabled/",
     "solutions.disabled/",
-    "zion - os.disabled/",
-
-    "src_backup_temp/",
-    "temp - backup/",
-    "tests/",
-    "supabase/",
-
     "*.test.js",
     "*.test.ts",
     "*.test.tsx",
@@ -376,39 +347,17 @@ origin/automation-improvements-final
     "*.spec.ts",
     "*.spec.tsx",
     "temp_footer_start.tsx",
-    "test - simple.js",
-    "test - utils.js",
-    "ultimate - automation - runner.js",
-    "vite.config - backup.ts",
-    "vite.config.ts",
-    "types / empty.ts",
-    "types / index.ts",
     "pages_backup_conflicts/",
     "pages_disabled/",
     "src.broken/",
     "src.corrupted/",
     "src.pages.disabled/",
-    "performance - monitor.js",
-    "performance - optimization.js",
-    "playwright.config.ts",
-    "postcss.config - backup.js",
-    "public/",
-    "resolve - conflicts.js",
-    "resolve - merge - conflicts.js",
-    "run - automation - safely.js",
-    "run - automation.js",
-    "run - complete - automation.js",
-    "security - config.js",
-    "server/",
-    "setup_tests.ts",
-    "simple - test.js",
-    "src / components / layout/",
-
     "types/",
     "utils/",
     "pages_backup/",
     "pages_backup_before_cleanup/",
     "services/",
+<<<<<<< HEAD
 
     "components.disabled_full/",
     "comprehensive - automation - runner.js",
@@ -467,20 +416,26 @@ origin/automation-improvements-final
     "ecosystem.simple.js",
     "ecosystem.working.js",
     "execute-automation.js",
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     "fix_all_function_names.js",
     "fix_corrupted_files.js",
     "fix_empty_pages.js",
     "fix_utils_files.js",
     "fix_variable_names.js",
+<<<<<<< HEAD
     "git-ops.js",
     "health-endpoint.js",
     "hooks/",
     "improve-app.js",
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     "jest.config.ts",
     "jest.setup.js",
     "lib.broken/",
     "lib.disabled/",
     "lib/",
+<<<<<<< HEAD
     "lint-stub.js",
     "lint-target/",
     "maintenance-scheduler.js",
@@ -491,16 +446,22 @@ origin/automation-improvements-final
     "monitoring-system.js",
     "netlify/",
     "next-env.d.ts",
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     "next.config.analyze.js",
     "next.config.analyzer.js",
     "next.config.optimized.js",
     "next.config.resolved.js",
+<<<<<<< HEAD
     "optimized-build.js",
     "pages-backup/",
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     "pages._quarantine/",
     "pages.disabled_full/",
     "pages.old/",
     "App.tsx",
+<<<<<<< HEAD
     "advanced-app-improvements.js",
     "analyze-missing-pages.js",
     "api-disabled/",
@@ -522,12 +483,13 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 };
 origin/main
 origin/automation-improvements-final
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     "commit-and-push.js"
   ]
 };
 };
 ;
-
 ;
 /* eslint-env node */;
 /* eslint-disable no-undef */;
@@ -561,9 +523,12 @@ module.exports = {;
   ];
 },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

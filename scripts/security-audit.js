@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -340,3 +341,14 @@ console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
 origin/main
 origin/automation-improvements-final
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+console.log('🔒 Security audit completed!');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

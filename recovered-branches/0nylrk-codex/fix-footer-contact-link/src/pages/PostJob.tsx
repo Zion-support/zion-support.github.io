@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,10 +33,13 @@ export default function PostJob() {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { isAuthenticated, isLoading } = useAuth();
 
   const isMobile = useIsMobile();
 
+<<<<<<< HEAD
 import { Navigate } from "react-router-dom",
 import { useIsMobile } from "@/hooks/use-mobile",
 export default function PostJob() {
@@ -43,12 +47,15 @@ export default function PostJob() {
   const isMobile = useIsMobile(),
   
   if (isLoading) {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-pulse">Loading...</div>
       </div>
     )
   }
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
     <>
@@ -150,6 +157,8 @@ if ( {) {
           <CardHeader>;
             <CardTitle className={`text-${is_mobile ? '2xl' : '3xl'} font - bold`}>Post a Job</CardTitle>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <CardDescription>;
               Fill out the form below to post your job and find the perfect talent.;
             </CardDescription>;
@@ -161,6 +170,7 @@ if ( {) {
       </main>;
       <Footer />;
       {/* Add extra bottom padding on mobile to account for the bottom nav */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       {isMobile && <div className="h-16"></div>}
     </>;
@@ -174,3 +184,10 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+=======
+      {is_mobile && <div className="h - 16"></div>}
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

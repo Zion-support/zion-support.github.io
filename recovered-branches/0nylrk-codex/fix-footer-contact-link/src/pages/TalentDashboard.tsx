@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -350,6 +351,11 @@ export default function TalentDashboard() {;
 =======
 
 
+=======
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("job-matches");
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import { useState, useEffect } from './react';
 import { AppHeader } from '@/layout / AppHeader';

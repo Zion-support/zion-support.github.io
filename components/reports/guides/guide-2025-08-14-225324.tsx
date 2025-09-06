@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import Head from 'next/head';
 export default function Page() {
+=======
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
@@ -27,15 +31,15 @@ export default function Page() {
           dangerouslySetInnerHTML={{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             __html:
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>'
             __html:;
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             __html:
-
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p>',;
-
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -44,11 +48,6 @@ export default function Page() {
       </main>;
     </div>;
   );export default function Page() {;
-
-=======
-export default function Page() {
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
@@ -65,10 +64,6 @@ export default function Page() {
       </main>;
     </div>;
   );
-
-}
-
-=======
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -127,6 +122,7 @@ function Page() {
       </main>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -207,3 +203,5 @@ export default function Page(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

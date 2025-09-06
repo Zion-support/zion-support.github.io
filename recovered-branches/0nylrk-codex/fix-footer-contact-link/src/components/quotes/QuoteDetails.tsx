@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 
@@ -232,6 +233,10 @@ if (return "Not specified") {
 },
 =======
 =======
+=======
+}
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return date_string;
     }
   }
@@ -311,6 +316,7 @@ if (return "Not specified") {
     </Dialog>);
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -318,3 +324,5 @@ if (return "Not specified") {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

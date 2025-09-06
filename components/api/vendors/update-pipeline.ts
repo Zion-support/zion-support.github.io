@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { updatePipelineItemStatus } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
@@ -51,28 +52,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { itemId, status } = req.body || {};
   if (!itemId || !status) return res.status(400).json({ error: 'Missing required fields' });
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   try {
     updatePipelineItemStatus(String(itemId), String(status) as any);
     res && res.status(200).json({ ok: true });
   } catch (e: any) {
-<<<<<<< HEAD
     res && res.status(500).json({ error: e && e.message });
   }export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-  const { itemId, status } = req && req.body || {};
-  if (!itemId || !status) return res && res.status(400).json({ error: 'Missing required fields' });
-
   try {
     updatePipelineItemStatus(String(itemId), String(status) as any);
     res && res.status(200).json({ ok: true })
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message })
   }
-
-}
-
-=======
 import { updatePipelineItemStatus } from '../../../utils / vendor - store';
 export default /**
  * handler - Function description
@@ -108,6 +101,7 @@ function handler() {
     res.status (200).json ({ ok: true });
   } catch (e: any) {
     res.status (500).json ({ error: e.message });
+<<<<<<< HEAD
 
 =======
     res.status(500).json({ error: e.message })
@@ -136,3 +130,5 @@ function handler() {
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

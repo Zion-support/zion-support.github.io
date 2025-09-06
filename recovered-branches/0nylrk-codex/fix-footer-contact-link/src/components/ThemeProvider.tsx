@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { createContext, useContext, useEffect, useState } from &quot;react&quot;
 type Theme = &quot;dark&quot; | &quot;light&quot; | &quot;system&quot;
@@ -117,10 +118,13 @@ if ( {) {
     }}
   return (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <ThemeProviderContext.Provider value={value}>;
       {children}
     </ThemeProviderContext.Provider>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -175,3 +179,6 @@ export const useTheme = () => {
   return context
 }
 ;
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

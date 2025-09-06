@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,12 +74,15 @@ type UpdatePasswordFormValues = z && z.infer<typeof updatePasswordSchema>;
 
 export default function UpdatePassword() {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [isLoading, setIsLoading] = useState(false);
   const [accessToken, setAccessToken] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+<<<<<<< HEAD
 
 
 
@@ -139,9 +143,12 @@ export default function UpdatePassword() {
     
     if (token) {
       setAccessToken(token)
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } else {
       setError("No access token found. Please request a new password reset link.")
     }
+<<<<<<< HEAD
     // Clean up auth state to prevent issues
     cleanupAuthState()
   }, [location]);
@@ -362,16 +369,15 @@ export default function UpdatePassword() {;
     } finally {;
       setIsLoading(false);
 
-    }
-  }
 =======
     }
-
-  },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    setIsLoading(true);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+    }
+  }
 
   return (
+<<<<<<< HEAD
 
     <>;
       <Header />;
@@ -403,22 +409,18 @@ export default function UpdatePassword() {;
               )}
 =======
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <Button
                     className="mt-3 text-xs"
                     variant="outline"
-=======
-
-                  <Button 
-                    className="mt-3 text-xs"
-                    variant="outline"
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     onClick={() => navigate('/forgot-password')}
                   >;
                     Request new reset link;
                   </Button>;
                 </div>;
               )}
+<<<<<<< HEAD
 
 
 
@@ -460,6 +462,8 @@ export default function UpdatePassword() {;
                 <Form {...form}>;
                   <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     <FormField
                       control={form && form.control}
                       name="password"
@@ -478,10 +482,6 @@ export default function UpdatePassword() {;
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
-
-                    />;
-
-
                     <FormField
                       control={form && form.control}
                       name="confirmPassword"
@@ -500,18 +500,6 @@ export default function UpdatePassword() {;
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
-
-                    />;
-
-                    <Button
-                      type="submit"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                      disabled={isLoading || !accessToken}>;
-                      {isLoading ? "Updating..." : "Update Password"}
-                    </Button>;
-
-                    <div className="text-center">;
-
                       <Button
                         variant="link"
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0"
@@ -698,6 +686,7 @@ if ( {) {
                       </Button>;
                     </div>;
                   </form>;
+<<<<<<< HEAD
 
 =======
 
@@ -744,6 +733,8 @@ if ( {) {
                 <h3 className="text - 3xl font - bold text - white mb - 4">Password Recovery</h3>;
                 <p className="text - lg text - white / 80">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   Set a strong password to secure your account and continue your journey in the Zion marketplace.;
                 </p>;
               </div>;
@@ -752,6 +743,7 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   );
@@ -764,3 +756,9 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+=======
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

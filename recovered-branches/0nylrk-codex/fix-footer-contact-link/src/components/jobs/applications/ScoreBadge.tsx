@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { JobApplication } from "@/types/jobs";
 interface ScoreBadgeProps {;
@@ -49,6 +50,8 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Determine color based on score;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   let className = "text-gray-700 bg-gray-100";
   if (score >= 80) className = "text-green-700 bg-green-100";
   else if (score >= 60) className = "text-blue-700 bg-blue-100";
@@ -60,7 +63,7 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {;
       {score ? `${score}%` : "Not scored"}
     </span>;
   );
-
+=======
 import { JobApplication  } from '@/types / jobs';
 interface ScoreBadgeProps {
   application: JobApplication;
@@ -93,6 +96,7 @@ if (class_name = "text - orange - 700 bg - orange - 100") {
     <span className={`rounded - full px - 2 py - 1 text - xs font - medium ${class_name}`}>;
       {score ? `${score}%` : "Not scored"}
     </span>);
+<<<<<<< HEAD
 
 }
 =======
@@ -104,3 +108,7 @@ if (class_name = "text - orange - 700 bg - orange - 100") {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/link\'; const \"Index\": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name=\'description\' content=\'Index blog post\' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href=\'/blog\'>Back to Blog</Link> </main> </div> )} export default Index
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/link\'; const \"Index\": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name=\'description\' content=\'Index blog post\' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href=\'/blog\'>Back to Blog</Link> </main> </div> )} export default Index
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
@@ -9,3 +10,8 @@ import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

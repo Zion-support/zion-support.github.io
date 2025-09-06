@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface Service {id: string;
   name: string;
   category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics';
@@ -20,11 +21,14 @@ export interface Service {id: string;
     email: string,
     phone: string,
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     address: string;
   }
 }
 export const services: Service[] = [;
   // AI Services;
+<<<<<<< HEAD
   {id: 'ai-code-assistant';
     name: 'ZionAI Code Assistant';
     category: 'AI Services';
@@ -704,3 +708,6 @@ export const getServiceById = (id: string) => {;
 export const getCategories = () => {;
   return Array.from(new Set(services.map(service => service.category)));
 };
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

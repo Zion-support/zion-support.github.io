@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export interface ProfileSkill {
 
@@ -9,6 +10,9 @@ export interface ProfileSkill {
   level: number, // 1 - 5;
   endorsements?: number;
 
+=======
+export interface ProfileSkill {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,10 +27,6 @@ export interface ProfileProject {
   description: string;
   image_url?: string;
   tags?: string[];
-
-  url?: string,
-  date: string;
-
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,6 +40,7 @@ export interface ProfileExperience {
   role: string;
   company: string;
   description: string;
+<<<<<<< HEAD
 
   start_date: string;
   end_date?: string,
@@ -58,6 +59,8 @@ export interface Availability {
   message?: string,
   available_hours?: { day: string, hours: string }[];
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,6 +85,7 @@ export interface ProfileData {
   projects: ProfileProject[];
   experience: ProfileExperience[];
   availability: Availability;
+<<<<<<< HEAD
 
   hourly_rate?: number,
   contact_email?: string;
@@ -145,3 +149,6 @@ export interface ProfileData {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

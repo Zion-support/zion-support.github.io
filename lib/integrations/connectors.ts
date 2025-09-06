@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 import { ProviderConnection, SyncLogEntry } from "./types";
@@ -12,6 +13,8 @@ import { v4 as uuidv4 } from 'uuid';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
 async function mockProviderCall<T>(
@@ -19,12 +22,79 @@ async function mockProviderCall<T>(
   action: string
   details: Record<string, any>
 ): Promise<{ log: SyncLogEntry; result: T }> {
+}
+// CRM actions
+export const crm = {
+  async syncContact(
+    connection: ProviderConnection
+    contact: Record<string, any>
+  ) {
+    return mockProviderCall(connection, "sync_contact", { contact });
+  }
+  async addEmailTouchpoint(
+    connection: ProviderConnection
+    touchpoint: Record<string, any>
+  ) {
+    return mockProviderCall(connection, "add_email_touchpoint", { touchpoint });
+  }
+  async addProjectNote(
+    connection: ProviderConnection
+    note: Record<string, any>
+  ) {
+    return mockProviderCall(connection, "add_project_note", { note });
+  }
+}
+// ATS actions
+export const ats = {
+  async updateStatus(
+    connection: ProviderConnection
+    status: Record<string, any>
+  ) {
+    return mockProviderCall(connection, "update_status", { status });
+  }
+}
 
+=======
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+export async function simulateAction<T = any>(
+  connection: ProviderConnection,
+  action: string,
+  details: Record<string, any> = {}
+): Promise<{ log: SyncLogEntry, result: T }> {
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const log: SyncLogEntry = {
-
+    id: uuidv4(),
+    timestamp: Date.now(),
+    providerId: connection.providerId,
+    level: 'info',
+    action,
+  return { log, result: { ok: true } as unknown as T };
+=======
+import { ProviderConnection, SyncLogEntry  } from './types';
+import { v4 as uuidv4  } from './uuid';
+;
+async function mockProviderCall < T>(
+  connection: ProviderConnection,
+  action: string,
+  details: Record < string, any>,
+): Promise<{ log: SyncLogEntry; result: T }> {
+  const log: SyncLogEntry = {
+    id: uuidv4 (),
+    timestamp: Date.now (),
+    provider_id: connection.provider_id,
+    level: "info",
+    action,
+    details,
+  }
+;
+  // In a real implementation, call provider SDK / API here using connection.access_token;
+  return { log, result: { ok: true } as unknown as T }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 // CRM actions;
 export const crm = {
+<<<<<<< HEAD
 <<<<<<< HEAD
   async syncContact(
     connection: ProviderConnection
@@ -41,10 +111,13 @@ export const crm = {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 };
 
 // ATS actions
 export const ats = {
+<<<<<<< HEAD
 <<<<<<< HEAD
   async updateStatus(
     connection: ProviderConnection
@@ -68,6 +141,8 @@ export const ats = {
     return simulateAction(connection, 'ats.updateStatus', { change })
   }};
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
   async sync_contact (
     connection: ProviderConnection,
@@ -101,6 +176,7 @@ export const ats = {
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -127,3 +203,5 @@ export const email = {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

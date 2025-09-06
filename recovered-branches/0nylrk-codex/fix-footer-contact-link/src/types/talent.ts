@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export interface TalentProfile {
 export interface TalentProfile {;
+=======
+export interface TalentProfile {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   user_id: string;
   full_name: string;
@@ -10,6 +14,7 @@ export interface TalentProfile {;
   bio?: string;
   summary?: string;
   location?: string;
+<<<<<<< HEAD
   skills?: string[];
   hourly_rate?: number;
   years_experience?: number;
@@ -87,12 +92,17 @@ export interface TalentProfile {;
 }
 export interface TalentProfileFilters {
   search?: string;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   skills?: string[];
-  availabilities?: string[];
-  regions?: string[];
-  price_range?: [number, number];
-  experience_range?: [number, number];
-
+  hourly_rate?: number;
+  years_experience?: number;
+  availability_type?: string;
+  timezone?: string;
+  average_rating?: number;
+  rating_count?: number;
+  is_verified?: boolean;
+  key_projects?: {
 }
 export interface HireRequest {
   id: string;
@@ -102,6 +112,7 @@ export interface HireRequest {
   project_description: string;
   budget: {
     min: number;
+<<<<<<< HEAD
 
     max: number,
     currency: string;
@@ -133,3 +144,6 @@ export interface TalentProfile {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

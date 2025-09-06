@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { BadgeEarned } from "./BadgeEarned";
 import { badgeList, BadgeKey } from "./badgeConfig";
@@ -94,6 +95,8 @@ import React from "react",;
 import { BadgeEarned } from "./BadgeEarned",;
 import { badgeList, BadgeKey } from "./badgeConfig",;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 // Dummy data for demo: what badges this user earned (with fake dates);
 const earned_badges: { badge: BadgeKey; date: string }[] = [;
   { badge: "first_listing", date: "2024 - 12 - 16" },
@@ -110,6 +113,7 @@ export const MyBadgesPreview: React.FC = () => {
           {earned_badges.length} earned;
         </span>;
       </div>;
+<<<<<<< HEAD
 
       <div className="flex flex-wrap gap-2">;
         {earnedBadges.map(({ badge, date }) => (;
@@ -121,3 +125,5 @@ export const MyBadgesPreview: React.FC = () => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

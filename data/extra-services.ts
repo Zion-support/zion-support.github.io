@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 export interface ExtraService {;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export interface ExtraService {
   id: string;
   name: string;
@@ -12,6 +15,7 @@ export interface ExtraService {
   contact_info: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
 <<<<<<< HEAD
@@ -69,61 +73,21 @@ export const extra_services: ExtraService[] = [;
     real_implementation: true,
     contact_info: {
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
   {
-  id: string, name: string,
-  tagline: string, price: string,
-  description: string, features: string[],
-  link: string, category: string,
-  realImplementation: boolean,
-  contactInfo: {
-    mobile: string, email: string,
-    address: string
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: {
-    mobile: string;
-    email: string;
-<<<<<<< HEAD
-=======
-    address: string;
-  };
-<<<<<<< HEAD
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-    address: string;
-  }
-export const extraServices: ExtraService[] = [
-  {
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
+<<<<<<< HEAD
 
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -182,15 +146,15 @@ export const extraServices: ExtraService[] = [
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
 =======
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
-
-];
-
-=======
 ;
+<<<<<<< HEAD
 =======
 =======
     id: "cloud-migration-expert",
@@ -258,3 +222,5 @@ export const extraServices: ExtraService[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useEffect, useState } from "react",
@@ -38,6 +39,8 @@ interface StickyActionProps {;
   className?: string;
   children: React && React.ReactNode,;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   showAfterScroll?: number;
 <<<<<<< HEAD
   position?: "bottom" | "top"
@@ -61,11 +64,14 @@ export function StickyAction({
 =======
   position?: "bottom" | "top";
 }
+<<<<<<< HEAD
 
 
 export function StickyAction(): any ({;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   className;
   children;
 
@@ -73,6 +79,7 @@ export function StickyAction(): any ({;
   position = "bottom";
 }: StickyActionProps) {;
   const [isVisible, setIsVisible] = useState(false);
+<<<<<<< HEAD
   className,
   children,
   showAfterScroll = 300,
@@ -108,15 +115,21 @@ if ( {) {
 }
         setIsVisible (true);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       } else {
         setIsVisible (false);
       }
     }
+<<<<<<< HEAD
     window.addEventListener("scroll", handleScroll);
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return () => {
       window.removeEventListener ("scroll", handle_scroll);
     }
   }, [showAfterScroll]);
+<<<<<<< HEAD
     },
 
     window.addEventListener("scroll", handleScroll),
@@ -189,11 +202,14 @@ export function StickyAction({;
   };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <AnimatePresence>;
       {isVisible && (;
         <motion&& motion.div
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -206,6 +222,12 @@ export function StickyAction({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+          transition={{ duration: 0 && 0.2 }}
+          className={cn(
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             className
           )}>;
           <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">;
@@ -213,11 +235,6 @@ export function StickyAction({;
           </div>;
         </motion && motion.div>;
       )}
-
-    </AnimatePresence>;
-  );
-}
-
 =======
 ;
   const position_classes = {

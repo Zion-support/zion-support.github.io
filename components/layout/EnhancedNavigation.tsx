@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -99,11 +100,14 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {;
   className?: string;
 }
+<<<<<<< HEAD
 
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   className = ""
@@ -258,36 +262,43 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
 
+=======
+  ];
+  return (
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-black/80 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10"
+          : "bg-transparent"
+      } ${className}`}>;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+        <div className="flex items-center justify-between h-20">;
+          {" "}
+          {/* Logo */}
+          <motion&& motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0 && 0.5 }}
+            className="flex items-center space-x-3">;
+            <Link href="/" className="flex items-center space-x-3 group">;
+              <div className="relative">;
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
+                  <Zap className="w-6 h-6 text-white" />;
+                </div>;
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />;
+              </div>;
+              <div className="hidden sm:block">;
+                <div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">;
+                  Zion Tech Group;
+                </div>;
+                <div className="text-xs text-cyan-400">;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
   const contact_info = {
     mobile: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709",
     website: "https://ziontechgroup.com",
-    {
-      name: "Solutions"
-      href: "/solutions"
-      hasDropdown: true
-      dropdownItems: [
-        { name: "Enterprise Solutions", href: "/solutions?type=enterprise" }
-        { name: "Startup Solutions", href: "/solutions?type=startup" }
-        { name: "Government Solutions", href: "/solutions?type=government" }
-        { name: "Healthcare Solutions", href: "/solutions?type=healthcare" }
-        { name: "Financial Solutions", href: "/solutions?type=financial" }
-      ]
-    }
-    { name: "Pricing", href: "/pricing" }
-    { name: "Resources", href: "/resources" }
-    { name: "Blog", href: "/blog" }
-    { name: "Contact", href: "/contact" }
-  ];
-
-  const contactInfo = {
-    mobile: "+1 302 464 0950"
-    email: "kleber@ziontechgroup.com"
-    address: "364 E Main St STE 1008 Middletown DE 19709"
-    website: "https://ziontechgroup.com"
-
   }
 ;
   return (
@@ -320,19 +331,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   Zion Tech Group;
                 </div>;
                 <div className="text - xs text - cyan - 400">;
-
                   Revolutionary Technology;
                 </div>;
               </div>;
             </Link>;
-
-                      />;
-                    </button>;
-                    <AnimatePresence>;
-                      {activeDropdown === item && item.name && (;
-                        <motion&& motion.div
-                          initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                           transition={{ duration: 0 && 0.2 }}
@@ -427,6 +429,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
               transition={{ duration: 0.5, delay: 0.6 }}
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300"
             >
@@ -448,6 +451,8 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* Notifications */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -459,6 +464,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
               transition={{ duration: 0.5, delay: 0.7 }}
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative"
             >
@@ -482,6 +488,8 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* CTA Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -503,6 +511,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
           </motion.button>
         </div>
       </div>
@@ -521,6 +530,8 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -538,32 +549,16 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   type="text"
                   placeholder="Search services..."
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-
-                />;
-              </div>;
-
-
               {/* Navigation Items */}
               {navigationItems && navigationItems.map((item) => (;
                 <div key={item && item.name} className="space-y-2">;
                   <Link
                     href={item && item.href}
                     onClick={() => setIsOpen(false)}
-
-                    className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2";
-                  >;
-                    {item && item.name}
-                  </Link>;
-
-                  {item && item.hasDropdown && item && item.dropdownItems && (;
-                    <div className="ml-4 space-y-1">;
-                      {item && item.dropdownItems.map((dropdownItem) => (;
-
                         <Link
                           key={dropdownItem && dropdownItem.name}
                           href={dropdownItem && dropdownItem.href}
                           onClick={() => setIsOpen(false)}
-className="block text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1 text-sm";
                         >;
                           {dropdownItem && dropdownItem.name}
                         </Link>;
@@ -572,6 +567,7 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
                   )}
                 </div>;
               ))}
+<<<<<<< HEAD
 =======
                         <Link
                           key={dropdownItem.name}
@@ -603,6 +599,8 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
               </div>;
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               {/* Mobile CTA */}
               <div className="pt-4">;
                 <Link
@@ -713,6 +711,7 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
                 </Link>;
               </div>;
             </div>;
+<<<<<<< HEAD
 
           </motion.div>)}
       </AnimatePresence>;
@@ -757,3 +756,5 @@ export default EnhancedNavigation;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

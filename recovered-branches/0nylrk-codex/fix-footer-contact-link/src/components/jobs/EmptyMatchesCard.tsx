@@ -1,11 +1,7 @@
-
-
-
-export interface EmptyMatchesCardProps {;
-
   onRefresh: () => void;
   isProcessing: boolean
 }
+<<<<<<< HEAD
 export function EmptyMatchesCard({
   onRefresh
   isProcessing
@@ -76,6 +72,9 @@ export interface EmptyMatchesCardProps {;
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {;
   return (;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">;
       <div className="mb-4 flex justify-center">;
         <Sparkles className="h-12 w-12 text-muted-foreground" />;
@@ -99,7 +98,7 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
       </Button>;
     </Card>;
   );
-
+=======
 import { Card  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import { Sparkles, RefreshCcw  } from './lucide-react';
@@ -132,6 +131,7 @@ function EmptyMatchesCard() {
           </>)}
       </Button>;
     </Card>);
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -143,3 +143,7 @@ function EmptyMatchesCard() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

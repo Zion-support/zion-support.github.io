@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   Card
   CardContent
@@ -40,27 +41,12 @@ import { Award } from "lucide-react",
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface LeaderboardEntry {
   rank: number;
   name: string;
   referrals: number
-}
-
-export /**
- * ReferralLeaderboard - Function description
- */
-function ReferralLeaderboard() {
-  // This would typically be fetched from the server;
-  // For now, we'll use mock data;
-  const leaderboard_data: LeaderboardEntry[] = [;
-    { rank: 1, name: "Alex Johnson", referrals: 24 },
-    { rank: 2, name: "Jamie Smith", referrals: 18 },
-    { rank: 3, name: "Taylor Wong", referrals: 15 },
-    { rank: 4, name: "Casey Brown", referrals: 12 },
-    { rank: 5, name: "Jordan Lee", referrals: 10 },
-  ];
-;
-
   return (
     <Card>;
       <CardHeader>;
@@ -75,6 +61,7 @@ function ReferralLeaderboard() {
           {leaderboard_data.map ((entry) => (
             <div;
               key={entry.rank}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
             >
@@ -132,10 +119,13 @@ export function ReferralLeaderboard() {;
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors">;
               <div className="flex items-center gap-3">;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <div
                   className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
                     entry && entry.rank === 1
                       ? "bg-yellow-200 text-yellow-800"
+<<<<<<< HEAD
 
               className="flex justify - between items - center p - 2 rounded - md hover:bg - muted / 50 transition - colors";
             >;
@@ -170,6 +160,8 @@ export function ReferralLeaderboard() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   }`}
                 >;
                   {entry.rank}
@@ -178,6 +170,7 @@ export function ReferralLeaderboard() {;
               </div>;
               <span className="text - sm">;
                 {entry.referrals} referral{entry.referrals !== 1 ? "s" : ""}
+<<<<<<< HEAD
 
                       : entry && entry.rank === 2
                       ? "bg-slate-200 text-slate-800"
@@ -211,12 +204,15 @@ export function ReferralLeaderboard() {;
 }
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </span>;
             </div>))}
         </div>;
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -226,3 +222,5 @@ export function ReferralLeaderboard() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

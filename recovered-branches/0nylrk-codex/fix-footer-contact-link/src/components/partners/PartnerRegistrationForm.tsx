@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -211,127 +212,23 @@ export function PartnerRegistrationForm() {;
         description: "You have already registered as a partner.",;
         variant: "destructive"}),;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       setIsSubmitting(false);
       return true;
     }
-
-    return false;
-  };
-
-  async function onSubmit(): any (data: PartnerFormValues) {;
-    if (!user) {;
-      toast({;
-        title: "Authentication required",;
-        description: "You must be logged in to register as a partner.",;
-        variant: "destructive"}),;
-      return;
-
     }
     setIsSubmitting(true);
     try {;
       // Check if they already have a partner profile;
       const hasExistingPartner = await checkExistingPartner();
       if (hasExistingPartner) return;
-
-import { useState } from './react';
-import { z } from './zod';
-import { use_form } from './react - hook - form';
-import { zod_resolver } from '@hookform / resolvers / zod';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-import { Textarea } from '@/components / ui / textarea';
-import { toast } from '@/hooks / use - toast';
-import { use_auth } from '@/hooks / use_auth';
-import { supabase } from '@/integrations / supabase / client';
-const partnerFormSchema = z.object ({
-  name: z.string ().min (2, { message: "Name must be at least 2 characters." }),
-  website: z.string ().url ({ message: "Please enter a valid URL." }).optional ().or (z.literal ("")),
-  twitter: z.string ().optional (),
-  instagram: z.string ().optional (),
-  youtube: z.string ().optional (),
-  linkedin: z.string ().optional (),
-  niche: z.string ().min (2, { message: "Please specify your niche." }),
-  audience_size: z.string (),
-  payout_method: z.string (),
-  bio: z.string ().min (10, { message: "Bio must be at least 10 characters." }).max (500)}),
-type PartnerFormValues = z.infer < typeof partnerFormSchema>;
-;
-export /**
- * PartnerRegistrationForm - Function description
- */
-function PartnerRegistrationForm() {
-  const [is_submitting, setIsSubmitting] = useState (false);
-  const { user } = use_auth ();
-;
-  const form = use_form < PartnerFormValues>({
-    resolver: zod_resolver (partnerFormSchema),
-    default_values: {
-      name: "",
-      website: "",
-      twitter: "",
-      instagram: "",
-      youtube: "",
-      linkedin: "",
-      niche: "",
-      audience_size: "",
-      payout_method: "paypal",
-      bio: ""}}),
-  const checkExistingPartner = async () => {
-    const { data: existing_partner } = await supabase;
-      .from ('partner_profiles');
-      .select ('id');
-      .eq ('user_id', user.id);
-      .single ();
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
-        title: "Already registered",
-        description: "You have already registered as a partner.",
-        variant: "destructive"}),
-      setIsSubmitting (false);
-      return true;
-    }
-    return false;
-  }
-;
-  async /**
- * on_submit - Function description
- */
-function on_submit() {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
-        title: "Authentication required",
-        description: "You must be logged in to register as a partner.",
-        variant: "destructive"}),
-      return;
-    }
-    setIsSubmitting (true);
-    try {
-      // Check if they already have a partner profile;
-      const hasExistingPartner = await checkExistingPartner ();
-      // Check condition
-if (return) {
-  $2
-}
-      // Insert new partner profile;
-      const { data: new_partner, error } = await supabase;
-        .from ('partner_profiles');
-        .insert ([;
-
           {
             user_id: user.id
             name: data.name
             website: data.website |null
             social_media: {
+<<<<<<< HEAD
 
 
       // Insert new partner profile;
@@ -357,10 +254,13 @@ if (return) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           }
         ]);
         .select();
       if (error) throw error;
+<<<<<<< HEAD
 
 
       toast({
@@ -390,21 +290,24 @@ if (return) {
 
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }
   return (
-    <Card className="bg-zion-blue-dark border-zion-blue-light">
-      <CardHeader>
-        <CardTitle>Partner Registration</CardTitle>
-        <CardDescription>Register to become a Zion AI partner and start earning rewards</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            <div className="space-y-4">
+    <Card className="bg-zion-blue-dark border-zion-blue-light">;
+      <CardHeader>;
+        <CardTitle>Partner Registration</CardTitle>;
+        <CardDescription>Register to become a Zion AI partner and start earning rewards</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <Form {...form}>;
+          <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
+            <div className="space-y-4">;
               <FormField
-                control={form.control}
+                control={form && form.control}
                 name="name"
+<<<<<<< HEAD
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Name / Brand</FormLabel>
@@ -449,6 +352,12 @@ if (return) {
 <<<<<<< HEAD
 =======
 
+=======
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Name / Brand</FormLabel>;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               twitter: data.twitter || null,
               instagram: data.instagram || null,
               youtube: data.youtube || null,
@@ -504,11 +413,14 @@ if ( {) {
           <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
             <div className="space - y-4">;
               <FormField;
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 control={form.control}
                 name="name";
                 render={({ field }) => (
@@ -519,10 +431,6 @@ if ( {) {
                       <Input placeholder="Your name or brand name" {...field} />;
                     </FormControl>;
                     <FormMessage />;
-
-              />;
-
-
               <FormField
                 control={form && form.control}
                 name="website"
@@ -535,11 +443,6 @@ if ( {) {
                     <FormMessage />;
                   </FormItem>;
                 )}
-
-              />;
-
-              <div className="grid sm:grid-cols-2 gap-4">;
-
                 <FormField
                   control={form && form.control}
                   name="twitter"
@@ -616,10 +519,6 @@ if ( {) {
                         <Input placeholder="@username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-
-                />;
-
-
                 <FormField
                   control={form && form.control}
                   name="instagram"
@@ -630,6 +529,7 @@ if ( {) {
                     </FormItem>)}
                 />;
                 <FormField;
+<<<<<<< HEAD
 =======
 
                 />;
@@ -638,6 +538,8 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   control={form.control}
                   name="instagram";
                   render={({ field }) => (
@@ -648,12 +550,6 @@ if ( {) {
                         <Input placeholder="@username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-
-                />;
-              </div>;
-
-              <div className="grid sm:grid-cols-2 gap-4">;
-
                 <FormField
                   control={form && form.control}
                   name="youtube"
@@ -676,10 +572,6 @@ if ( {) {
                         <Input placeholder="Channel name or URL" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-
-                />;
-
-
                 <FormField
                   control={form && form.control}
                   name="linkedin"
@@ -700,11 +592,6 @@ if ( {) {
                         <Input placeholder="Profile URL or username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-
-                />;
-              </div>;
-
-
               <FormField
                 control={form && form.control}
                 name="niche"
@@ -729,11 +616,6 @@ if ( {) {
                       What topics do you focus on in your content?;
                     </FormDescription>;
                     <FormMessage />;
-
-              />;
-
-              <div className="grid sm:grid-cols-2 gap-4">;
-
                 <FormField
                   control={form && form.control}
                   name="audience_size"
@@ -759,10 +641,6 @@ if ( {) {
                           </SelectTrigger>;
                         </FormControl>;
                         <SelectContent>;
-
-                />;
-
-
                 <FormField
                   control={form && form.control}
                   name="payout_method"
@@ -802,14 +680,10 @@ if ( {) {
                         </SelectContent>;
                       </Select>;
                       <FormMessage />;
-
-                />;
-              </div>;
-
-
               <FormField
                 control={form && form.control}
                 name="bio"
+<<<<<<< HEAD
 
                 render={({ field }) => (;
                   <FormItem>;
@@ -851,12 +725,15 @@ if ( {) {
               type="submit" 
 =======
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       />;
                     </FormControl>;
                     <FormDescription>;
                       Limit: 500 characters;
                     </FormDescription>;
                     <FormMessage />;
+<<<<<<< HEAD
 
 
             <Button 
@@ -864,10 +741,12 @@ if ( {) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               className="w-full bg-zion-purple hover:bg-zion-purple-dark"
               disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : "Submit Application"}
-
+=======
                   </FormItem>)}
               />;
             </div>;
@@ -877,11 +756,12 @@ if ( {) {
               disabled={is_submitting}
             >;
               {is_submitting ? "Submitting..." : "Submit Application"}
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
+<<<<<<< HEAD
 
     </Card>);
 
@@ -902,3 +782,6 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

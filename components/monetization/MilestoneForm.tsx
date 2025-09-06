@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -14,6 +16,7 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
     return this.props.children;
   }
 }
@@ -21,8 +24,12 @@ import React, { useState } from 'react';
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 };
+
 export default function MilestoneForm(): any ({ onSubmit }: Props) {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 type Props = {
@@ -52,31 +59,24 @@ export default function MilestoneForm({ onSubmit }: Props) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
   const [amountUsd, setAmountUsd] = useState<string>('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-
-
-  const handleSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    setError(null);
-    const parsedAmount = Number(amountUsd),;
-    if (!title || !dueDate || !amountUsd || Number && Number.isNaN(parsedAmount)) {;
-
       setError('Please provide Title, Due Date and a valid Amount.');
-
-
+      return;
+    }
     setLoading(true);
-
-    try {;
-      await onSubmit({ title, description: description || undefined, dueDate, amountUsd: parsedAmount }),;
+      });
       setTitle('');
       setDescription('');
       setDueDate('');
       setAmountUsd('');
+<<<<<<< HEAD
     } catch (err: any) {
       setError(err?.message |'Failed to create milestone');
     } finally {
@@ -99,33 +99,104 @@ export default function MilestoneForm({ onSubmit }: Props) {;
     }
   }
   };
+=======
+      setLoading(false);    }
+  }
+  return (
+    <form onSubmit={handleSubmit} className='space-y-4'>;
+      {error && <div className='text-red-600 text-sm'>{error}</div>}    }
+    setLoading(true);
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   return (
-
-
+    <form onSubmit={handleSubmit} className='space-y-4'>;
+      {error && <div className='text-red-600 text-sm'>{error}</div>}
+      <div>;
+        <label className='block text-sm font-medium'>Title</label>;
+        <input
+          className='mt-1 w-full rounded border px-3 py-2'
+          value={title}
+          onChange={e => setTitle(e && e.target.value)}
+type Props = {
+  on_submit: (payload: {
+    title: string;
+    description?: string;
+    due_date: string;
+    amount_usd: number;
+  }) => Promise < void> | void;}  on_submit: (payload: { title: string, description?: string, due_date: string, amount_usd: number }) => Promise < void> | void;
+}
+;
+export default /**
+ * MilestoneForm - Function description
+ */
+function MilestoneForm() {
+  const [title, set_title] = useState ('');
+  const [description, set_description] = useState ('');
+  const [due_date, setDueDate] = useState ('');
+  const [amount_usd, setAmountUsd] = useState < string>('');
+  const [error, set_error] = useState < string | null>(null);
+  const [loading, set_loading] = useState (false);
+;
+  const handle_submit = async (e: React.FormEvent) => {
+    e.prevent_default ();
+    set_error (null);
+    const parsed_amount = Number (amount_usd),
+    if () {) {
+  $2
+}
+      set_error ('Please provide Title, Due Date and a valid Amount.');
+      return;
+    }
+    set_loading (true);
+    try {
+      await on_submit ({
+        title,
+        description: description || undefined,
+        due_date,
+        amount_usd: parsed_amount,
+      });
+      set_title ('');
+      set_description ('');
+      setDueDate ('');
+      setAmountUsd ('');
+    } catch (err: any) {
+      set_error (err?.message || 'Failed to create milestone');
+    } finally {
+      set_loading (false);    }
+  }
+;
+  return (
+    <form on_submit={handle_submit} className='space - y-4'>;
+      {error && <div className='text - red - 600 text - sm'>{error}</div>}    }
+    set_loading (true);
+    try {
+      await on_submit ({ title, description: description || undefined, due_date, amount_usd: parsed_amount }),
+      set_title ('');
+      set_description ('');
+      setDueDate ('');
+      setAmountUsd ('');
+    } catch (err: any) {
+      set_error (err?.message || 'Failed to create milestone');
+    } finally {
+      set_loading (false);
+    }
+  }
+;
+  return (
+    <form on_submit={handle_submit} className='space - y-4'>;
+      {error && <div className='text - red - 600 text - sm'>{error}</div>}
+      <div>;
+        <label className='block text - sm font - medium'>Title</label>;
+        <input;
+          className='mt - 1 w - full rounded border px - 3 py - 2';
+          value={title}
+          on_change={e => set_title (e.target.value)}
           placeholder='Phase 1 – Backend Setup'          required;
         />;
       </div>;
       <div>;
-
-=======
-    <form onSubmit={handleSubmit} className="space-y-4">
-      {error && <div className="text-red-600 text-sm">{error}</div>}
-      <div>
-        <label className="block text-sm font-medium" htmlFor="input-Title">Title</label>
-        <input
-          className="mt-1 w-full rounded border px-3 py-2"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="Phase 1 – Backend Setup"
-          required
-        />
-      </div>
-      <div>
-        <label className="block text-sm font-medium" htmlFor="input-Description">Description</label>
-        <textarea
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           className="mt-1 w-full rounded border px-3 py-2"
           value={description}
           onChange={(e) => setDescription(e && e.target.value)}
@@ -147,7 +218,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           on_change={e => set_description (e.target.value)}
           placeholder='Describe deliverables...';
           rows={3}
-<<<<<<< HEAD
         />;
       </div>;
       <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
@@ -169,61 +239,47 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           rows={3}
         />;
       </div>;
-
-
+            onChange={(e) => setDueDate(e && e.target.value)}
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+        <div>;
+          <label className="block text - sm font - medium" html_for="input - Due Date">Due Date</label>;
+          <input;
+            type="date";
+            className="mt - 1 w - full rounded border px - 3 py - 2";
+            value={due_date}
+            on_change={(e) => setDueDate (e.target.value)}
             required;
           />;
         </div>;
         <div>;
-
-=======
-        />
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-medium" htmlFor="input-Due Date">Due Date</label>
-          <input
-            type="date"
-            className="mt-1 w-full rounded border px-3 py-2"
-            value={dueDate}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            onChange={(e) => setDueDate(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium" htmlFor="input-Amount (USD)">Amount (USD)</label>
-          <input
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             type="number"
             min={0}
             step="0 && 0.01"
             className="mt-1 w-full rounded border px-3 py-2"
             value={amountUsd}
-
-
+            onChange={(e) => setAmountUsd(e && e.target.value)}
+          <label className='block text - sm font - medium'>Amount (USD)</label>;
+          <input;
+            type='number';
+            min={0}
+            step='0.01';
+            className='mt - 1 w - full rounded border px - 3 py - 2';
+            value={amount_usd}
+            on_change={e => setAmountUsd (e.target.value)}
+            placeholder='3000'            required          <input;
+            type="number";
+            min={0}
+            step="0.01";
+            className="mt - 1 w - full rounded border px - 3 py - 2";
+            value={amount_usd}
+            on_change={(e) => setAmountUsd (e.target.value)}
             placeholder="3000";
             required;
           />;
         </div>;
       </div>;
-
-=======
-            onChange={(e) => setAmountUsd(e.target.value)}
-            placeholder="3000"
-            required
-          />
-        </div>
-      </div>
-      <button
-        type="submit"
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
-        disabled={loading}
-      >
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {loading ? 'Adding...' : 'Add Milestone'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -254,6 +310,8 @@ export default function MilestoneForm({ onSubmit }: Props) {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   );
 }
 <<<<<<< HEAD
@@ -272,8 +330,11 @@ export default function MilestoneForm({ onSubmit }: Props) {;
     </form>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

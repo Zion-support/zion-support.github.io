@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { UseFormReturn } from "react-hook-form";
@@ -124,6 +125,8 @@ export function PaymentTermsFields(): any ({ ;
   handleMilestonesGenerated ;
 }: PaymentTermsFieldsProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <>;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
@@ -159,6 +162,7 @@ function PaymentTermsFields() {
           control={form.control}
           name="payment_terms";
           render={({ field }) => (
+<<<<<<< HEAD
 
             <FormItem>
               <FormLabel>Payment Terms</FormLabel>
@@ -187,36 +191,37 @@ function PaymentTermsFields() {
         />;
 
 
+=======
+            <FormItem>;
+              <FormLabel > Payment Terms</FormLabel>;
+              <Select onValueChange={field.on_change} default_value={field.value}>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                <FormControl>;
+                  <SelectTrigger>;
+                    <SelectValue placeholder="Select payment terms" />;
+                  </SelectTrigger>;
+                </FormControl>;
+                <SelectContent>;
+                  <SelectItem value="hourly">Hourly Rate</SelectItem>;
+                  <SelectItem value="fixed">Fixed Price</SelectItem>;
+                  <SelectItem value="milestone">Milestone Payments</SelectItem>;
+                </SelectContent>;
+              </Select>;
+              <FormMessage />;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <FormField
           control={form && form.control}
           name="paymentAmount"
-
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Payment Amount</FormLabel>;
-              <FormControl>;
-                <Input
-                  placeholder={form && form.getValues("paymentTerms") === "hourly" ? "$X per hour" : "Total $X"} 
-                  {...field} 
-                />;
-              </FormControl>;
-              <FormDescription>;
-                {form && form.getValues("paymentTerms") === "milestone" && ;
-
                   "You can define specific milestone amounts in the contract text or use AI to suggest milestones"}
               </FormDescription>;
               <FormMessage />;
             </FormItem>;
           )}
-
-        />;
-      </div>;
-
-
       {/* Project Milestones */}
       {form && form.watch("paymentTerms") === "milestone" && (;
         <div className="pt-2">;
           <MilestoneSuggestions
+<<<<<<< HEAD
             projectName={form.getValues("projectName") |"Project"}
             scopeSummary={form.getValues("scopeSummary") |""}
             startDate={form.getValues("startDate") |new Date()}
@@ -236,15 +241,12 @@ function PaymentTermsFields() {
             projectType={form && form.getValues("projectName").includes("AI") ? "AI/ML" : 
                         form && form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             onMilestonesGenerated={handleMilestonesGenerated}
           />;
         </div>;
       )}
-
-    </>;
-  );
-}
-
 =======
             </FormItem>)}
         />;

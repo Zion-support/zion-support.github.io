@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -61,6 +62,8 @@ export default function PublishProduct() {
   // Show loading while checking authentication
   if (isLoading) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
         <div className="animate-pulse text-zion-purple text-lg">;
@@ -69,14 +72,9 @@ export default function PublishProduct() {
       </div>;
     );
   }
-
-
-  // Redirect to login if not authenticated;
-  if (!isAuthenticated) {;
-    return <Navigate to="/login" state={{ from: '/publish' }} replace />;
-
   }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO
@@ -198,11 +196,14 @@ if ( {) {
           </p>;
           <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 md: p - 8">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <ProductSubmissionForm />;
           </div>;
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -215,3 +216,9 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

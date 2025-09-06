@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -114,12 +115,15 @@ export function TemplateManager({
   const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null);
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { templates, isLoading } = useContractTemplates();
   const { toast } = useToast();
 
   const handleSelectTemplate = (template: ContractTemplate) => {;
     if (template && template.template_data) {;
       onSelectTemplate(template.template_data);
+<<<<<<< HEAD
       onClose()
   const { templates, isLoading } = useContractTemplates(),
   const { toast } = useToast(),
@@ -199,11 +203,15 @@ export function TemplateManager({;
     setSelectedTemplate(null);
   },;
   return (;
+=======
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle>;
             {mode === "list" ? "Contract Templates" : "Save Template"}
+<<<<<<< HEAD
           </DialogTitle>;
         </DialogHeader>;
         {mode === "list" ? (;
@@ -316,15 +324,13 @@ if ( {) {
                 on_click={() => set_mode ("save")}
                 disabled={!current_values}
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               >;
                 Save Current as Template;
               </Button>;
             </div>;
-
-
-            <TemplateList 
-
-
+            <TemplateList
               templates={templates}
               isLoading={isLoading}
               onSelect={handleSelectTemplate}
@@ -333,6 +339,7 @@ if ( {) {
                 setSelectedTemplate(template);
                 setMode("save");
               }}
+<<<<<<< HEAD
 
             />;
           </div>;
@@ -351,12 +358,15 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             }}
             onComplete={handleSaveComplete}
             editTemplate={selectedTemplate}
             currentValues={currentValues}
           />;
         )}
+<<<<<<< HEAD
       </DialogContent>
     </Dialog>
   )
@@ -366,6 +376,9 @@ if ( {) {
   );
 }
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <TemplateList;
               templates={templates}
               is_loading={is_loading}
@@ -388,6 +401,10 @@ if ( {) {
       </DialogContent>;
     </Dialog>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

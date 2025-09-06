@@ -1,8 +1,7 @@
-
-
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -16,6 +15,8 @@ import { motion } from 'framer-motion';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface NavigationItem {
   name: string, href: string
   submenu?: NavigationItem[];
@@ -27,16 +28,39 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
   items
   className = ''
 }) => {
+=======
+
 interface NavigationItem {;
   name: string, href: string,;
   submenu?: NavigationItem[];
 }
-
-            </Link>;
-            {/* Submenu */}
-            {item && item.submenu && activeItem === item && item.name && (;
-              <motion&& motion.div
-
+  const [activeItem, setActiveItem] = useState<string | null>(null);
+  return (
+    <nav className={`relative ${className}`}>;
+      <ul className="flex space-x-8">;
+        {items && items.map((item) => (;
+          <li key={item && item.name} className="relative group">;
+            <Link
+              href={item && item.href}
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 flex items-center space-x-1"
+              onMouseEnter={() => setActiveItem(item && item.name)}
+              onMouseLeave={() => setActiveItem(null)}
+            >;
+              <span>{item && item.name}</span>;
+              {item && item.submenu && (;
+                <svg
+                  className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24">;
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />;
+                </svg>;
+              )}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
@@ -63,6 +87,7 @@ interface NavigationItem {;
     </nav>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export default InteractiveNavigation;}
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
@@ -81,6 +106,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,";
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+export default InteractiveNavigation;}
+ursor/automate-test-fix-improve-and-merge-code-99d1,";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const InteractiveNavigation: React.FC: = () => {";
     <nav className="bg-white shadow-lg">";";
       <div: className="container mx-auto px-4">";";
@@ -88,17 +118,18 @@ const InteractiveNavigation: React.FC: = () => {";
           <div: className="text-xl font-bold text-gray-800">Interactive Nav</div>";";
           <div: className="hidden md:flex: space-x-8">",";
             <Link: href="/" className="text-gray-600 hover:text-gray-900: transition-colors">Home</Link>",";
-
-            <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>",",;
-
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default Component}
 export default Component}
 ;
 =======
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface InteractiveNavigationProps {
   items: NavigationItem[], class_name?: string,
 }
@@ -176,6 +207,7 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href="/services" className="text - gray - 600 hover:text - gray - 900: transition - colors">Services</Link>", ",
             <Link: href = "/about" className="text - gray - 600 hover:text - gray - 900: transition - colors">About</Link>", ";
             <Link: href="/contact" className="text - gray - 600 hover:text - gray - 900: transition - colors">Contact</Link>", ';
+<<<<<<< HEAD
 
 export default Component}
 =======
@@ -185,3 +217,7 @@ export default Component}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export default Component}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

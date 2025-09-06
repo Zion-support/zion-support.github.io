@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import {
@@ -26,12 +27,15 @@ import {;
   CardContent,;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 } from "@/components/ui/card";
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
 import { JobMatchCard } from "@/components/jobs/JobMatchCard";
 
 import { useJobMatches } from "@/hooks/useJobMatches";
 import { Skeleton } from "@/components/ui/skeleton";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from "react",
@@ -116,14 +120,11 @@ import { JobMatchCard } from "@/components/jobs/JobMatchCard",;
 import { useJobMatches } from "@/hooks/useJobMatches",;
 import { Skeleton } from "@/components/ui/skeleton",;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface JobMatchesProps {;
   jobId: string;
 }
-
-
-export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
-  const { matches, isLoading, isProcessing, triggerAIMatching } =;
-
     useJobMatches(jobId);
 
   if (isLoading) {;
@@ -151,10 +152,6 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
       </Card>;
     );
   }
-
-
-  if (matches && matches.length === 0) {;
-
     return (
       <EmptyMatchesCard
         onRefresh={triggerAIMatching}
@@ -162,6 +159,7 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
       />;
     );
   }
+<<<<<<< HEAD
 =======
 ;
   if (matches.length === 0) {;
@@ -175,10 +173,13 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="space-y-4">;
       {matches && matches.map((match) => (;
         <JobMatchCard
+<<<<<<< HEAD
           key={match.id}
           matchId={match.id}
           talentId={match.talent_profile?.id |""}
@@ -195,6 +196,77 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
     </div>
           talentId={match.talent_profile?.id || ""}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      ))}
+    </div>;
+  );
+=======
+import React from './react';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from '@/components / ui / card';
+import { EmptyMatchesCard  } from '@/components / jobs / EmptyMatchesCard';
+import { JobMatchCard  } from '@/components / jobs / JobMatchCard';
+import { useJobMatches  } from '@/hooks / useJobMatches';
+import { Skeleton  } from '@/components / ui / skeleton';
+interface JobMatchesProps {
+  job_id: string;
+}
+export /**
+ * JobMatches - Function description
+ */
+function JobMatches() {
+  const { matches, is_loading, is_processing, triggerAIMatching } =;
+    useJobMatches (job_id);
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <Card>;
+        <CardHeader>;
+          <CardTitle className="flex items - center gap - 2">;
+            <Skeleton className="h - 4 w - 24" />;
+          </CardTitle>;
+          <CardDescription>;
+            <Skeleton className="h - 4 w - full" />;
+          </CardDescription>;
+        </CardHeader>;
+        <CardContent className="space - y-4">;
+          {[1, 2, 3].map ((i) => (
+            <div key={i} className="flex items - center gap - 4">;
+              <Skeleton className="h - 12 w - 12 rounded - full" />;
+              <div className="space - y-2">;
+                <Skeleton className="h - 4 w - 48" />;
+                <Skeleton className="h - 4 w - 32" />;
+              </div>;
+            </div>))}
+        </CardContent>;
+      </Card>);
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <EmptyMatchesCard;
+        on_refresh={triggerAIMatching}
+        is_processing={is_processing}
+      />);
+  }
+  return (
+    <div className="space - y-4">;
+      {matches.map ((match) => (
+        <JobMatchCard;
+          key={match.id}
+          match_id={match.id}
+          talent_id={match.talent_profile?.id || ""}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           name={match.talent_profile?.full_name || ""}
           title={match.talent_profile?.professional_title || ""}
           company={match.talent_profile?.company_name || ""}
@@ -203,6 +275,7 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
           category={match.talent_profile?.category || "Development"}
           match_percent={match.match_score || 0}
           skills={match.talent_profile?.skills || []}
+<<<<<<< HEAD
 
         />
       ))}
@@ -215,4 +288,9 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 
+=======
+        />))}
+    </div>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -47,6 +48,40 @@ import {
   Server
   Network
   Cpu;
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+export default function UltraAdvancedNavigation2026V2() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  useEffect(() => {
+    const handleScroll = () => {
+import {;
+  Menu,;
+  X,;
+  ChevronDown,;
+  Search,;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Zap,;
+  Brain,;
+  Atom,;
+  Microscope,;
+  Gamepad2,;
+  Shield,;
+  Rocket,;
+  Database,;
+  TestTube,;
+  Car,;
+  Globe,;
+  Code,;
+  Palette,;
+  Cloud,;
+  Server,;
+  Network,;
+  Cpu,;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 } from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
 export default function UltraAdvancedNavigation2026V2() {;
   const [isOpen, setIsOpen] = useState(false);
@@ -179,6 +214,7 @@ export default function UltraAdvancedNavigation2026V2() {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
+<<<<<<< HEAD
 
 =======
       setIsScrolled(window.scrollY > 20)
@@ -437,13 +473,18 @@ function UltraAdvancedNavigation2026V2() {
       icon: <Mail className='w - 4 h - 4' />,
     },  ];      icon: <Mail className="w - 4 h - 4" />;
 
+=======
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   ];
 ;
   const contact_info = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
+  };
 
   return (
+<<<<<<< HEAD
     <>
       {/* Top Contact Bar */}
       <div className='bg-gradient-to-r from-purple-900/80 to-blue-900/80 backdrop-blur-sm border-b border-white/10'>
@@ -465,22 +506,48 @@ function UltraAdvancedNavigation2026V2() {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <span>{contactInfo.mobile}</span>
+=======
+    <>;
+      {/* Top Contact Bar */}
+      <div className='bg-gradient-to-r from-purple-900/80 to-blue-900/80 backdrop-blur-sm border-b border-white/10'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <div className='flex items-center justify-between py-2 text-sm'>;
+            <div className='flex items-center space-x-6 text-gray-300'>;
+              <div className='flex items-center space-x-2'>;
+                <Phone className='w-4 h-4 text-purple-400' />;
+                <span>{contactInfo && contactInfo.mobile}</span>;
+              </div>;
+              <div className='flex items-center space-x-2'>;
+                <Mail className='w-4 h-4 text-blue-400' />;
+                <span>{contactInfo && contactInfo.email}</span>;
+              </div>;
+              <div className='flex items-center space-x-2'>;
+                <MapPin className='w-4 h-4 text-green-400' />;
+                <span>{contactInfo && contactInfo.address}</span>;
+              </div>;
+            </div>;
+            <div className='flex items-center space-x-4'>;
+              <Link
+                href='/enhanced-services-showcase-2026-v2'
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </div>
-              <div className='flex items-center space-x-2'>
-                <Mail className='w-4 h-4 text-blue-400' />
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4 text-blue-400" />
                 <span>{contactInfo.email}</span>
               </div>
-              <div className='flex items-center space-x-2'>
-                <MapPin className='w-4 h-4 text-green-400' />
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-4 h-4 text-green-400" />
                 <span>{contactInfo.address}</span>
               </div>
             </div>
-            <div className='flex items-center space-x-4'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              <Link
-                href='/enhanced-services-showcase-2026-v2'
-
-
+            <div className="flex items-center space-x-4">
+              <Link href="/enhanced-services-showcase-2026-v2" className="text-purple-400 hover:text-purple-300 transition-colors">
+                🚀 New 2026 Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
                 className='text-purple-400 hover:text-purple-300 transition-colors'>                🚀 New 2026 Services                <span>{contactInfo && contactInfo.mobile}</span>;
               </div>;
               <div className="flex items-center space-x-2">;
@@ -494,58 +561,12 @@ function UltraAdvancedNavigation2026V2() {
             </div>;
             <div className="flex items-center space-x-4">;
               <Link href="/enhanced-services-showcase-2026-v2" className="text-purple-400 hover:text-purple-300 transition-colors">;
-
-=======
-    address: '364 E Main St STE 1008 Middletown DE 19709',  }    address: '364 E Main St STE 1008 Middletown DE 19709';
-  }
-;
-  return (
-    <>;
-      {/* Top Contact Bar */}
-      <div className='bg - gradient - to - r from - purple - 900 / 80 to - blue - 900 / 80 backdrop - blur - sm border - b border - white / 10'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-          <div className='flex items - center justify - between py - 2 text - sm'>;
-            <div className='flex items - center space - x-6 text - gray - 300'>;
-              <div className='flex items - center space - x-2'>;
-                <Phone className='w - 4 h - 4 text - purple - 400' />;
-                <span>{contact_info.mobile}</span>;
-              </div>;
-              <div className='flex items - center space - x-2'>;
-                <Mail className='w - 4 h - 4 text - blue - 400' />;
-                <span>{contact_info.email}</span>;
-              </div>;
-              <div className='flex items - center space - x-2'>;
-                <MapPin className='w - 4 h - 4 text - green - 400' />;
-                <span>{contact_info.address}</span>;
-              </div>;
-            </div>;
-            <div className='flex items - center space - x-4'>;
-              <Link;
-                href='/enhanced - services - showcase - 2026 - v2';
-                className='text - purple - 400 hover:text - purple - 300 transition - colors';
-              >                🚀 New 2026 Services                <span>{contact_info.mobile}</span>;
-              </div>;
-              <div className="flex items - center space - x-2">;
-                <Mail className="w - 4 h - 4 text - blue - 400" />;
-                <span>{contact_info.email}</span>;
-              </div>;
-              <div className="flex items - center space - x-2">;
-                <MapPin className="w - 4 h - 4 text - green - 400" />;
-                <span>{contact_info.address}</span>;
-              </div>;
-            </div>;
-            <div className="flex items - center space - x-4">;
-              <Link href="/enhanced - services - showcase - 2026 - v2" className="text - purple - 400 hover:text - purple - 300 transition - colors">;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 🚀 New 2026 Services;
               </Link>;
             </div>;
           </div>;
         </div>;
       </div>;
-
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>;
               {navigationItems && navigationItems.map(item => (;
@@ -553,8 +574,6 @@ function UltraAdvancedNavigation2026V2() {
                     <button
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}            {/* Logo */}
-
-
             <Link href="/" className="flex items-center space-x-3 group">;
               <div className="relative">;
                 <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-300">;
@@ -568,15 +587,10 @@ function UltraAdvancedNavigation2026V2() {
               </div>;
             </Link>;
             {/* Desktop Navigation */}
-
-            <div className="hidden lg:flex items-center space-x-8">
-              {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
-                  {item.dropdown ? (
-
                     <button
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'
                     >
@@ -605,12 +619,35 @@ function UltraAdvancedNavigation2026V2() {
                     </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2';
+                    >;
+                      {item && item.icon}
+                      <span>{item && item.name}</span>;
+                      <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                    </button>;
+                  ) : (;
+                    <Link
+                      href={item && item.href}
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'>                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2";
+                    >;
+                      {item && item.icon}
+                      <span>{item && item.name}</span>;
+                      <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />;
+                  ) : (;
+                    <Link
+                      href={item && item.href}
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2">;
+                      {item && item.icon}
+                      <span>{item && item.name}</span>;
+                    </Link>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   )}
                   {/* Dropdown Menu */}
                   {item && item.dropdown && activeDropdown === item && item.name && (;
                     <div
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
+<<<<<<< HEAD
                       className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-4'
 
 <<<<<<< HEAD
@@ -650,12 +687,15 @@ function UltraAdvancedNavigation2026V2() {
                           </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                         ))}
                       </div>;
                     </div>;
                   )}
                 </div>;
               ))}
+<<<<<<< HEAD
 
             </div>
             {/* CTA Button */}
@@ -671,17 +711,23 @@ function UltraAdvancedNavigation2026V2() {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   Get Started
                 </button>
               </Link>
             </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </div>;
+
             {/* CTA Button */}
             <div className='hidden lg:flex items-center space-x-4'>;
               <Link href='/contact'>;
@@ -806,6 +852,7 @@ function UltraAdvancedNavigation2026V2() {
                 </button>;
               </Link>;
             </div>;
+<<<<<<< HEAD
 
 
 
@@ -842,11 +889,14 @@ function UltraAdvancedNavigation2026V2() {
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </button>;
           </div>;
         </div>;
       </nav>;
 
+<<<<<<< HEAD
 
 =======
 
@@ -855,6 +905,8 @@ function UltraAdvancedNavigation2026V2() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -862,6 +914,7 @@ function UltraAdvancedNavigation2026V2() {
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
+<<<<<<< HEAD
             transition={{ duration: 0.3 }}
             className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden'
 
@@ -887,6 +940,8 @@ function UltraAdvancedNavigation2026V2() {
                     {item && item.dropdown ? (;
                       <div>;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                         <button
                           onClick={() =>;
                             setActiveDropdown(;
@@ -920,6 +975,7 @@ function UltraAdvancedNavigation2026V2() {
                             ))}
                           </div>;
                         )}
+<<<<<<< HEAD
 
 =======
             transition={{ duration: 0.3 }}
@@ -1092,35 +1148,17 @@ href={item && item.href}
                   <Link href='/contact' onClick={() => setIsOpen(false)}>
                     <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>                      Get Started                <div className="pt-6 border-t border-white/10">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+                    )}
+                  </div>;
+                ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <Link href="/contact" onClick={() => setIsOpen(false)}>
                     <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300">
                       Get Started
                     </button>
                   </Link>
                 </div>
-
-=======
-
-                {/* Mobile Contact Info */}
-                <div className="pt-6 border-t border-white/10 space-y-3 text-sm text-gray-400">
-                  <div className="flex items-center space-x-2">
-                    <Phone className="w-4 h-4 text-purple-400" />
-                    <span>{contactInfo.mobile}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Mail className="w-4 h-4 text-blue-400" />
-                    <span>{contactInfo.email}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="w-4 h-4 text-green-400" />
-                    <span className="text-xs">{contactInfo.address}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
                 {/* Mobile Contact Info */}
                 <div className='pt-6 border-t border-white/10 space-y-3 text-sm text-gray-400'>;
@@ -1245,6 +1283,7 @@ href={item && item.href}
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
 
       </AnimatePresence>;
 =======
@@ -1275,6 +1314,8 @@ href={item && item.href}
       {/* Overlay */}
       {isOpen && (;
         <motion&& motion.div
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </motion.div>)}
       </AnimatePresence>;
       {/* Overlay */}
@@ -1283,8 +1324,11 @@ href={item && item.href}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+<<<<<<< HEAD
           transition={{ duration: 0.3 }}
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           onClick={() => setIsOpen(false)}
 <<<<<<< HEAD
         />
@@ -1293,22 +1337,20 @@ href={item && item.href}
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
       {/* Spacer for fixed navigation */}
-
-
       <div className='h-32'></div>;
     </>;
   );      <div className="h-32"></div>;
     </>;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
 =======
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           className='fixed inset - 0 bg - black / 50 z - 40 lg:hidden'          on_click={() => setIsOpen (false)}          className="fixed inset - 0 bg - black / 50 z - 40 lg:hidden";
           on_click={() => setIsOpen (false)}
         />)}
@@ -1317,6 +1359,7 @@ href={item && item.href}
     </>);      <div className="h - 32"></div>;
     </>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -1353,3 +1396,5 @@ href={item && item.href}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import ReactDOM from 'react-dom/client',
 import App from './App.tsx',
@@ -100,6 +101,9 @@ ReactDOM && ReactDOM.createRoot(document && document.getElementById('root')!).re
 <<<<<<< HEAD
 =======
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from 'react';
 import ReactDOM from 'react-dom / client';
 import App from './App.tsx';
@@ -134,10 +138,13 @@ ReactDOM.create_root (document.getElementById ('root')!).render (<React.StrictMo
         </Router>;
       </WhitelabelProvider>;
     </HelmetProvider>;
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   </React.StrictMode>);

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Common constants used across fraud detection modules
@@ -10,6 +11,8 @@ export const suspiciousPhrases = [;
 export const suspicious_phrases = [;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   "whatsapp me";
   "contact me outside";
   "cashapp only";
@@ -39,16 +42,20 @@ export const suspiciousPhrases = [
   "deal outside";
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];
+<<<<<<< HEAD
 ],
 
 // Email domains often used for throwaway accounts
 export const suspiciousEmailDomains = [;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   "tempmail";
   "throwaway";
   "fakeemail";
   "mailinator";
   "guerrillamail";
+<<<<<<< HEAD
   "10minutemail"
 export const suspiciousEmailDomains = [
   "tempmail",
@@ -88,4 +95,7 @@ export const suspiciousEmailDomains = [;
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  "10minutemail";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ];

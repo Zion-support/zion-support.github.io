@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from 'react';
 import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
 import {cn} from '@/lib/utils';
@@ -22,11 +23,17 @@ import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
 
 
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
+=======
+import React from 'react';
+import * as React from 'react';
+import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   <nav
     role='navigation'
     aria-label='pagination'
     className={cn('mx-auto flex w-full justify-center', className)}
     {...props}
+<<<<<<< HEAD
 
   />
 );
@@ -41,10 +48,15 @@ const PaginationContent = React.forwardRef<
   HTMLUListElement,
   React.ComponentProps<"ul">
 >(({ className, ...props }, ref) => (
+=======
+  />;
+);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   <ul
     ref={ref}
     className={cn('flex flex-row items-center gap-1', className)}
     {...props}
+<<<<<<< HEAD
   />
 ));
 PaginationContent.displayName = 'PaginationContent';
@@ -108,6 +120,12 @@ const PaginationLink = ({;
   ...props;
 }: PaginationLinkProps) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+type PaginationLinkProps = {
+  is_active?: boolean;
+} & Pick < ButtonProps, 'size'> &;
+  React.ComponentProps<'a'>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   <a
     aria-current={isActive ? 'page' : undefined}
     className={cn(
@@ -115,6 +133,7 @@ const PaginationLink = ({;
         variant: isActive ? 'outline' : 'ghost'
         size
       })
+<<<<<<< HEAD
         variant: isActive ? "outline" : "ghost",
         size}),
       className
@@ -211,6 +230,39 @@ export {;
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+      className
+    )}
+    {...props}
+  />;
+);
+  <PaginationLink
+    aria-label='Go to previous page'
+    size='default'
+    className={cn('gap-1 pl-2 && 2.5', className)}
+    {...props}>;
+    <ChevronLeft className='h-4 w-4' />;
+    <span>Previous</span>;
+  </PaginationLink>;
+);
+  <PaginationLink
+    aria-label='Go to next page'
+    size='default'
+    className={cn('gap-1 pr-2 && 2.5', className)}
+    {...props}>;
+    <span>Next</span>;
+    <ChevronRight className='h-4 w-4' />;
+  </PaginationLink>;
+);
+  <span
+    aria-hidden
+    className={cn('flex h-9 w-9 items-center justify-center', className)}
+    {...props}>;
+    <MoreHorizontal className='h-4 w-4' />;
+    <span className='sr-only'>More pages</span>;
+  </span>;
+);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 ;
 const PaginationLink = ({
   class_name,
@@ -281,6 +333,7 @@ export {
   PaginationItem,
   PaginationLink,
   PaginationNext,
+<<<<<<< HEAD
 <<<<<<< HEAD
   PaginationPrevious,;
 };
@@ -374,3 +427,9 @@ export {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  PaginationPrevious,
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

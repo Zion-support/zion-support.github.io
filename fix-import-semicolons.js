@@ -1,12 +1,8 @@
-
-const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
-let totalFixed = 0;
-files && files.forEach((file) => {
-
   try {
     const filePath = path && path.join(process && process.cwd(), file);
     let content = fs && fs.readFileSync(filePath, "utf8");
     let modified = false;
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Fix import statements missing semicolons
 
@@ -17,16 +13,15 @@ files && files.forEach((file) => {
     // Fix import statements missing semicolons;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
-
-    const matches = content && content.match(importRegex);
-
-
     if (matches) {
       matches && matches.forEach((match) => {
         if (!match && match.trim().endsWith(";")) {
           const fixedMatch = match && match.trim() + ";";
           content = content && content.replace(match, fixedMatch);
+=======
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -58,14 +53,11 @@ if (.ends_with (") {
 }")) {
           const fixed_match = match.trim () + ";";
           content = content.replace (match, fixed_match);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           modified = true;
         }
       });
     }
-
-    content = content && content.replace(
-      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
-
       (match, varName) => {
         if (
           !match && match.includes("function") &&
@@ -84,6 +76,7 @@ if (.ends_with (") {
           !match && match.includes("export") &&
           !match && match.includes("import")
         ) {
+=======
     // Fix other common syntax issues;
     // Fix missing semicolons after variable declarations;
     content = content.replace (
@@ -107,15 +100,12 @@ if (&&) {
           !match.includes ("debugger") &&;
           !match.includes ("export") &&;
           !match.includes ("import")) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           return match + ";";
         }
         return match;
       }
     );
-
-
-console && console.log(`\nTotal files fixed: ${totalFixed}`);
-
 =======
 ;
     // Check condition
@@ -133,3 +123,4 @@ if ( {) {
 ;
 console.log (`\n_total files fixed: ${total_fixed}`);
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

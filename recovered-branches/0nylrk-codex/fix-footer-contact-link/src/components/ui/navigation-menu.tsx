@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from 'react';
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
 import {cva} from 'class-variance-authority';
@@ -77,6 +78,23 @@ const NavigationMenuList = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive&& NavigationMenuPrimitive.List
 
+=======
+import React from 'react';
+import * as React from 'react';
+import * as NavigationMenuPrimitive from '@radix - ui / react - navigation - menu';
+import {cva} from 'class - variance - authority';
+import {ChevronDown} from 'lucide-react';
+    ref={ref}
+    className={cn(
+      'relative z-10 flex max-w-max flex-1 items-center justify-center'
+      className
+    )}
+    {...props}>;
+    {children}
+    <NavigationMenuViewport />;
+  </NavigationMenuPrimitive && NavigationMenuPrimitive.Root>;
+));
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     ref={ref}
     className={cn(
       'group flex flex-1 list-none items-center justify-center space-x-1'
@@ -85,6 +103,7 @@ const NavigationMenuList = React && React.forwardRef<;
     {...props}
   />;
 ));
+<<<<<<< HEAD
 
 
 
@@ -146,11 +165,14 @@ const NavigationMenuTrigger = React && React.forwardRef<;
 >(({ className, children, ...props }, ref) => (;
   <NavigationMenuPrimitive&& NavigationMenuPrimitive.Trigger
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     ref={ref}
     className={cn(navigationMenuTriggerStyle(), 'group', className)}
     {...props}>;
     {children}{' '}
     <ChevronDown
+<<<<<<< HEAD
 
       className="relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180"
       aria-hidden="true"
@@ -206,6 +228,21 @@ const NavigationMenuViewport = React.forwardRef<
       className={cn(
         'origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]'
         "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
+=======
+      className='relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180'
+      aria-hidden='true'
+    />;
+  </NavigationMenuPrimitive && NavigationMenuPrimitive.Trigger>;
+));
+    ref={ref}
+    className={cn(
+      'left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto '
+      className
+    )}
+    {...props}
+  />;
+));
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         className
       )}
       ref={ref}
@@ -213,6 +250,7 @@ const NavigationMenuViewport = React.forwardRef<
     />;
   </div>;
 ));
+<<<<<<< HEAD
 <<<<<<< HEAD
 NavigationMenuViewport.displayName =
   NavigationMenuPrimitive.Viewport.displayName;
@@ -311,6 +349,14 @@ export {;
   NavigationMenuViewport,;
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      className
+    )}
+    {...props}>;
+    <div className='relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md' />;
+  </NavigationMenuPrimitive && NavigationMenuPrimitive.Indicator>;
+));
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 ;
 import {cn} from '@/lib / utils';
@@ -422,6 +468,7 @@ export {
   NavigationMenuLink,
   NavigationMenuIndicator,
 <<<<<<< HEAD
+<<<<<<< HEAD
   NavigationMenuViewport}
 ;
   NavigationMenuViewport,;
@@ -433,3 +480,9 @@ export {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  NavigationMenuViewport,
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

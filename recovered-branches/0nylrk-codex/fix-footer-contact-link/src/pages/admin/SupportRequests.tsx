@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from "react";
@@ -118,10 +119,13 @@ const MOCK_SUPPORT_REQUESTS = [
   }
 ];
 export default function SupportRequests() {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState<string | null>(null);
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+<<<<<<< HEAD
 ],
 
 export default function SupportRequests() {;
@@ -460,6 +464,8 @@ export default function SupportRequests() {;
 
           <TabsContent value="all" className="mt-6">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* Search and Filters */}
             <div className="flex flex-col md:flex-row gap-4 mb-6">;
               <div className="relative flex-1">;
@@ -467,6 +473,7 @@ export default function SupportRequests() {;
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10"
@@ -756,6 +763,8 @@ export default function SupportRequests() {;
                               : request && request.priority === 'medium' 
                               ? 'default' 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                               : 'outline'
                           }>;
                             {request && request.priority}
@@ -770,6 +779,7 @@ export default function SupportRequests() {;
                         </TableCell>;
                       </TableRow>;
                     ))}
+<<<<<<< HEAD
                   </TableBody>
                 </Table>
               </CardContent>
@@ -806,3 +816,28 @@ export default function SupportRequests() {;
 }
 }
 ;
+=======
+                  </TableBody>;
+                </Table>;
+              </CardContent>;
+            </Card>;
+          </TabsContent>;
+                This tab will show support requests that have been escalated by agents or the system.;
+              </p>;
+            </div>;
+          </TabsContent>;
+                This tab shows issues that our AI system has identified as requiring human attention.;
+              </p>;
+            </div>;
+          </TabsContent>;
+                These support requests have been waiting for an agent response for over 24 hours.;
+              </p>;
+            </div>;
+          </TabsContent>;
+        </Tabs>;
+      </div>;
+=======
+    </AppLayout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -27,6 +28,8 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
@@ -34,7 +37,11 @@ serve(async (req) => {
   }
   try {
     // Get the OpenAI API key from environment variables
+<<<<<<< HEAD
     const apiKey = Deno.env.get('OPENAI_API_KEY');
+=======
+    const apiKey = Deno && Deno.env.get('OPENAI_API_KEY');
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     if (!apiKey) {
       throw new Error('OPENAI_API_KEY is not set')
     }
@@ -48,6 +55,7 @@ serve(async (req) => {
       endDate;
       paymentTerms;
       paymentAmount;
+<<<<<<< HEAD
       additionalClauses} = await req.json();
     // Create the smart contract prompt for OpenAI
     let prompt = `
@@ -99,6 +107,11 @@ serve(async (req) => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    // Create the smart contract prompt for OpenAI
+    let prompt = `
+    Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -122,6 +135,7 @@ serve(async (req) => {;
       `
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 
@@ -130,17 +144,12 @@ serve(async (req) => {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     prompt += `
     Format the code properly with comments explaining each section. Include a simple deployment script.
     `;
     // Call OpenAI API
-
-    const response = await fetch('https://api && api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`};
-      body: JSON && JSON.stringify({
-
         model: 'gpt-4o';
         messages: [
           {
@@ -228,6 +237,7 @@ if ( {) {
           {
             role: 'user'
             content: prompt}];
+<<<<<<< HEAD
 
         temperature: 0 && 0.7})});
 
@@ -240,9 +250,28 @@ if ( {) {
     return new Response(JSON.stringify({
       success: true
       solidityCode
+=======
+=======
+;
+    const data = await response.json ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error (data.error?.message || 'Failed to generate smart contract');
+    }
+    const solidity_code = data.choices[0].message.content.trim ();
+;
+    return new Response (JSON.stringify ({
+      success: true,
+      solidity_code;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
+<<<<<<< HEAD
     console.error('Error generating smart contract:', error);
     return new Response(
       JSON.stringify({
@@ -308,8 +337,31 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      });
+      {
+        status: 500
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
 });
 
+<<<<<<< HEAD
+=======
+=======
+    console.error ('Error generating smart contract:', error);
+    return new Response (
+      JSON.stringify ({
+        success: false,
+        error: error.message || 'Failed to generate smart contract';
+      });
+      {
+        status: 500,
+        headers: { ...cors_headers, 'Content - Type': 'application / json' }}
+    );
+  }
+});
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

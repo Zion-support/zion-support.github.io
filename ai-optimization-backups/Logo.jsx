@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;,
 import _React from 'react';';,
 import { Link } from 'react-router-dom';,
@@ -23,6 +26,7 @@ export function Logo({ customLogo, customColor }) {};
         </span>;
         <span className="text-sm text-zinc-300 font-medium">Tech Group</span>";
       </div>;
+<<<<<<< HEAD
     </Link>;  return (
     <Link to="/" className="flex items-center space-x-3 group">
       <div
@@ -48,6 +52,13 @@ export function Logo({ customLogo, customColor }) {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+  
+  
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Link to="/" className="flex items-center space-x-3 group">
       <div
@@ -77,6 +88,7 @@ import _React from 'react'; import { Link } from 'react-router-dom'; export func
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
+<<<<<<< HEAD
 
 =======
 
@@ -86,15 +98,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 >>>>>>> origin/automation-improvements-final
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ,
 import _React from 'react'; import { Link } from 'react-router-dom'; export function Logo({ customLogo,customColor }) { const logoColor = customColor || '#22D3EE'; return ( <Link to="/" className="flex items-center space-x-3 group"> {' '} <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300" style={{ background: customColor ? `linear-gradient(135deg,${customColor},${customColor}dd)` : 'linear-gradient(135deg,#22D3EE,#A855F7)',}} > {' '} <span className="text-white font-bold text-xl">Z</span>{' '} </div>{' '} <div className="flex flex-col"> {' '} <span className="text-xl font-bold" style={{ color: logoColor }}> {' '} Zion{' '} </span>{' '} <span className="text-sm text-zinc-300 font-medium"> {' '} Tech Group{' '} </span>{' '} </div>{' '} </Link> )}',
 import _React from 'react'; import { Link } from 'react-router-dom'; export function Logo({ customLogo,customColor }) { const logoColor = customColor || '#22D3EE'; return ( <Link to="/" className="flex items-center space-x-3 group"> {' '} <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300" style={{ background: customColor ? `linear-gradient(135deg,${customColor},${customColor}dd)` : 'linear-gradient(135deg,#22D3EE,#A855F7)',}} > {' '} <span className="text-white font-bold text-xl">Z</span>{' '} </div>{' '} <div className="flex flex-col"> {' '} <span className="text-xl font-bold" style={{ color: logoColor }}> {' '} Zion{' '} </span>{' '} <span className="text-sm text-zinc-300 font-medium"> {' '} Tech Group{' '} </span>{' '} </div>{' '} </Link> )}',      >
-
-=======
-        style={{ backgroundColor: logoColor }}
-      >
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {customLogo ? (
           <img
             src={customLogo}
@@ -116,6 +124,7 @@ import _React from 'react'; import { Link } from 'react-router-dom'; export func
     </Link>
   );
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -131,3 +140,5 @@ import _React from 'react'; import { Link } from 'react-router-dom'; export func
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

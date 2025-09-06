@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Loader2 } from 'lucide-react';
 interface ResultsHeaderProps {;
   isLoading: boolean;
@@ -43,6 +44,11 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
           {resultCount === 0 ? (
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">
@@ -53,6 +59,7 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
         </div>
       ) : (
         <span>
+<<<<<<< HEAD
           {resultCount === 0
             ? 'No talents found. Try adjusting your filters.'
             : `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`}          {resultCount === 0 ? (
@@ -62,10 +69,16 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             "No talents found. Try adjusting your filters."
           ) : (
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
       )}
     </div>
@@ -145,8 +158,15 @@ function ResultsHeader() {
             : `Found ${result_count} talent${result_count !== 1 ? 's' : ''}`}          {result_count === 0 ? (
             "No talents found. Try adjusting your filters.") : (
             `Found ${result_count} talent${result_count !== 1 ? 's' : ''}`)}
+=======
+=======
+        </span>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       )}
-    </div>));
+    </div>;
+  );
 }
-
 ;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

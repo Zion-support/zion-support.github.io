@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>)
 =======
@@ -23,21 +24,19 @@ export default function AutomationStatusPage() {
 =======
 import { useEffect, useState } from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+ </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+}</div>) import { useEffect, useState } from 'react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function AutomationStatusPage() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
-
-
-  useEffect(() => {;
-    fetch('/automation/status && status.json');
-      .then((r) => r && r.json());
-      .then((j) => setStatus(j));
-      .catch(() => setStatus(null));
-
   }, []);
   return (
+<<<<<<< HEAD
 
     <div className="space-y-4">;
       <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>;
@@ -56,6 +55,10 @@ export default function AutomationStatusPage() {;
   );
 }
 
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 </div>) : (<div className="text - sm text - gray - 500" >No status available yet.</div>);
 }</div>) import { useEffect, useState } from 'react';
@@ -83,18 +86,5 @@ function AutomationStatusPage() {
         </div>) : (
         <div className="text - sm text - gray - 500">No status available yet.</div>)}
     </div>);
-        </div>
-      ) : (
-        <div className=&quot;text-sm text-gray-500&quot;>No status available yet.</div>
-      )}
-    </div>
-  )
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  );
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -162,16 +163,22 @@ export function ContractBuilderContent() {;
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useState} from 'react';
 import {SmartContractBuilder} from '@/components / contracts / SmartContractBuilder';
 import {ContractBuilder} from '@/components / contracts / ContractBuilder';
 import {ContractHeader} from './ContractHeader';
 import {ContractTypeCards} from './ContractTypeCards';
 import {RecentContractsTable} from './RecentContractsTable';
-
-
-      {showBuilderType === 'smart' && (;
-
+        <ContractBuilder
+          isOpen={true}
+          onClose={() => setShowBuilderType('none')}
+          talent={mockTalent}
+          clientName={user?.displayName |'Client'}
+          onContractGenerated={handleContractGenerated}
+        />;
+      )}
         <SmartContractBuilder
           isOpen={true}
           onClose={() => setShowBuilderType('none')}
@@ -180,11 +187,6 @@ import {RecentContractsTable} from './RecentContractsTable';
           onContractGenerated={handleContractGenerated}
         />;
       )}
-
-    </>;
-  );
-}
-
 =======
 import {TalentProfile} from '@/types / talent';
 import {use_auth} from '@/hooks / use_auth';

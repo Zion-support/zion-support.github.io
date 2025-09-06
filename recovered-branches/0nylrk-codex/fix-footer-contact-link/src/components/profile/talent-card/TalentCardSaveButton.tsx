@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -122,10 +123,16 @@ export function TalentCardSaveButton({;
 
 
 
+=======
+      });
+      return;
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     setLocalIsSaved(!localIsSaved);
     if (onToggleSave) {;
       onToggleSave(profileId, !localIsSaved);
     }
+<<<<<<< HEAD
 
 =======
       }),;
@@ -153,18 +160,18 @@ export function TalentCardSaveButton({;
   },
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <button
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors"
       onClick={handleSaveToggle}
-
-      aria-label={localIsSaved ? "Remove from favorites" : "Save to favorites"}>;
-
       <Heart
         className={cn(
           "h-4 w-4 transition-colors"
 
           localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
+<<<<<<< HEAD
 <<<<<<< HEAD
         )}
       />
@@ -214,6 +221,8 @@ export function TalentCardSaveButton({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import React from './react';
 import { Heart } from './lucide-react';

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Header} from "@/components/Header";
@@ -63,6 +64,8 @@ export default function Featured() {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { FeaturedListingsSection } from '@/components / FeaturedListingsSection';
@@ -85,6 +88,7 @@ function Featured() {
               These featured listings represent the best that the Zion Marketplace has to offer.;
             </p>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -109,3 +113,13 @@ function Featured() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          {/* Reuse the FeaturedListings component */}
+          <FeaturedListingsSection show_title={false} />;
+        </div>;
+      </div>;
+      <Footer />;
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

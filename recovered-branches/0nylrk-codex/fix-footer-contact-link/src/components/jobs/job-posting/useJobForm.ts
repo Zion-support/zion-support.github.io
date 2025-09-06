@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState, useEffect  } from 'react';
@@ -56,10 +57,13 @@ import { useAuth } from "@/hooks/useAuth",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export interface JobPostingProps {
   job_id?: string;
   on_success?: () => void;
 }
+<<<<<<< HEAD
 
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const { user } = useAuth();
@@ -81,6 +85,8 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const form = useForm<JobSchemaType>({
     resolver: zodResolver(jobSchema);
     defaultValues: {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       title: '';
       company: '';
       location: '';
@@ -96,33 +102,20 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       expiry_date: '';
       is_remote: false;
       category: '';
-
-      toast && toast.error("You must be logged in to post a job");
-      navigate("/login"),
-
       return
     }
     setIsLoading(true);
     try {
-
-      const publishedDate = startDate ? startDate && startDate.toString() : '';
-      const expiryDate = endDate ? endDate && endDate.toString() : '';
-
-
       const jobData = {
         ...values;
         published_date: publishedDate;
         expiry_date: expiryDate;
-
-        is_remote: isRemote,
-        user_id: user && user.id};
-
-
       if (onSuccess) {
         onSuccess()
       }
       return jobData
     } catch (error: any) {
+<<<<<<< HEAD
 
       title: '',
       company: '',
@@ -233,6 +226,42 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      throw error
+=======
+      status: '',
+      external_apply_link: ''}
+    mode: "on_change"});
+;
+  // Function to create / update jobs that will be implemented by parent component;
+  const submit_job = async (values: JobSchemaType) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast.error ("You must be logged in to post a job");
+      navigate ("/login"),
+      return;
+    }
+    setIsLoading (true);
+;
+    try {
+      const published_date = start_date ? start_date.to_string () : '';
+      const expiry_date = end_date ? end_date.to_string () : '';
+;
+      const job_data = {
+        ...values;
+        published_date: published_date;
+        expiry_date: expiry_date;
+        is_remote: is_remote,
+        user_id: user.id}
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        on_success ();
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
       return job_data;
     } catch (error: any) {
@@ -242,6 +271,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
 <<<<<<< HEAD
+<<<<<<< HEAD
       setIsLoading(false)
     }
   };
@@ -250,14 +280,16 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
 ;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+      setIsLoading (false);
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return {
     form;
     is_loading;
     start_date;
     setStartDate;
-
-    end_date,
-
     setEndDate;
     is_remote;
     setIsRemote;
@@ -289,6 +321,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
     submitJob;
 =======
     submit_job;
+<<<<<<< HEAD
 =======
       setIsLoading(false)
 
@@ -297,3 +330,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
+=======
+  }
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

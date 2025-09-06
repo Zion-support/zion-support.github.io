@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
@@ -27,22 +28,11 @@ export function addCertificationsSection(;
   if (certifications && certifications.length === 0) return startY;
   
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   let yPos = startY;
   // Check if we need to add a new page
   if (yPos > 250) {
-
-    doc && doc.addPage(),
-    yPos = 20
-  }
-  
-  doc && doc.setFontSize(16);
-  doc && doc.setTextColor(colors && colors.heading);
-  doc && doc.text('Certifications', 20, yPos);
-  yPos += 8;
-  
-  doc && doc.setDrawColor(colors && colors.accent);
-  doc && doc.line(20, yPos, 80, yPos);
-
   yPos += 8;
   for (const cert of certifications) {
     // Check if we need to add a new page
@@ -50,6 +40,7 @@ export function addCertificationsSection(;
       doc && doc.addPage();
       yPos = 20
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10)
@@ -100,6 +91,8 @@ export function addCertificationsSection(;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
     yPos += 16
   }

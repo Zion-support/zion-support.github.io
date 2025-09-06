@@ -1,46 +1,99 @@
-}
-      let success = false;
-      // Check condition
-if ( {) {
-  $2
-}
-        success = await update_project (project.id, project_data);
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { logErrorToProduction } from '@/utils/productionLogger'; import {
+} from '@/components/ui/form'; import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
+import { PortfolioProject } from '@/types/resume'
+import { usePortfolio } from '@/hooks/usePortfolio'
+import { useAuth } from '@/hooks/useAuth'
+// Define schema for form validation
+const projectSchema = z.object({
+  title: z.string().min(1, 'Project title is required')
+  description: z.string().optional()
+  technologies: z.string().optional()
+  image_url: z.string().optional()
+  github_url: z
+    .union([z.string().url('Please enter a valid URL'), z.literal('')])
+    .optional()
+  demo_url: z
+    .union([z.string().url('Please enter a valid URL'), z.literal('')])
+    .optional()
+  pdf_url: z.string().optional()
+})
+type ProjectFormValues = z.infer<typeof projectSchema>
+interface ProjectFormProps {
+  project?: PortfolioProject
+  onSuccess: () => void
+  onCancel: () => void
+export function ProjectForm({
+  project
+  onSuccess
+  onCancel
+}: ProjectFormProps) {
+  const { user } = useAuth()
+  const { addProject, updateProject } = usePortfolio()
+  const [isLoading, setIsLoading] = useState(false)
+  const isEditing = !!project
+  const form = useForm<ProjectFormValues>({
+    resolver: zodResolver(projectSchema)
+    defaultValues: {
+      title: project?.title |''
+      description: project?.description |''
+      technologies: project?.technologies
+        ? project.technologies.join(', ')
+        : ''
+      image_url: project?.image_url |''
+      github_url: project?.github_url |''
+      demo_url: project?.demo_url |''
+      pdf_url: project?.pdf_url |''
+    }
+  })
+  const onSubmit = async (data: ProjectFormValues) => {
+    if (!user) return;
+    setIsLoading(true)
+    try {
+      const projectData: PortfolioProject = {
+        title: data.title
+        description: data.description
+        technologies: data.technologies
+          ? data.technologies.split(',').map(tech => tech.trim())
+          : []
+        image_url: data.image_url
+        github_url: data.github_url |undefined
+        demo_url: data.demo_url |undefined
+        pdf_url: data.pdf_url
+      }
+      let success = false
+      if (isEditing && project?.id) {
+        success = await updateProject(project.id, projectData)
       } else {
         const projectId = await addProject(projectData)
         success = !!projectId
       }
-
-      // Check condition
-if ( {) {
-  $2
-}
-        on_success ();
-        form.reset ();
-
+      if (success) {
+        onSuccess()
+        form.reset()
       }
     } catch (error) {
       logErrorToProduction('Error saving project:', { data: error })
     } finally {
-
-
-import React from 'react';
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { logErrorToProduction } from '@/utils/productionLogger';import {;
       setIsLoading(false)
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -126,9 +179,9 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     } finally {;
       setIsLoading(false);
     }
-
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -136,16 +189,17 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
-
-        />;
-
-
-        <FormField
           control={form.control}
+<<<<<<< HEAD
           name='description'
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Project Description</FormLabel>
@@ -212,10 +266,16 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
+<<<<<<< HEAD
                 <Input
                   placeholder='E.g., AI Chatbot, E-commerce Website'
                   {...field}                />
@@ -225,10 +285,16 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
+<<<<<<< HEAD
         />
         <FormField
           control={form.control}
@@ -257,11 +323,17 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
+<<<<<<< HEAD
         />
         <FormField
           control={form.control}
@@ -373,11 +445,32 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             control={form.control}
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          render={({ field }: { field: any }) => (
+            <FormItem>
+              <FormLabel>Technologies Used</FormLabel>
+              <FormControl>
+                <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+            name='github_url'
+            render={({ field }: { field: any }) => (              <FormItem>
+                <FormLabel className='flex items-center gap-2'>
+                  <Github className='h-4 w-4' />
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             name="github_url"
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel className="flex items-center gap-2">
                   <Github className="h-4 w-4" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -386,6 +479,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   GitHub URL
                 </FormLabel>
                 <FormControl>
@@ -394,6 +492,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 <FormMessage />
               </FormItem>
             )}
+<<<<<<< HEAD
           />
           <FormField
             control={form.control}
@@ -414,6 +513,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   Demo URL
                 </FormLabel>
                 <FormControl>
@@ -422,6 +526,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 <FormMessage />
               </FormItem>
             )}
+<<<<<<< HEAD
 
           />;
         </div>;
@@ -453,6 +558,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 Screenshot URL
               </FormLabel>
               <FormControl>
@@ -461,6 +571,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               <FormMessage />
             </FormItem>
           )}
+<<<<<<< HEAD
         />
         {/* Future file upload field would go here */}
         <div className='flex justify-end space-x-2 pt-4'>
@@ -475,6 +586,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             Cancel
           </Button>
           <Button type="submit" disabled={isLoading}>
@@ -483,6 +599,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           </Button>
         </div>
       </form>
+<<<<<<< HEAD
     </Form>;
   );
 };
@@ -531,3 +648,9 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     </Form>);
 }
 }
+=======
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

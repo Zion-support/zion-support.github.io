@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import { useState, useEffect } from "react";
 interface Feature {id: string;
@@ -373,6 +374,8 @@ export function FeatureShowcase() {;
         <div className="text-center mb-16">;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             Explore Our Features;
           </h2>;
           <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
@@ -385,6 +388,7 @@ export function FeatureShowcase() {;
             {features.map ((feature, index) => (
               <div;
                 key={feature.id}
+<<<<<<< HEAD
                 className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${activeFeature === feature.id;
                 className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${;
                   activeFeature === feature.id;
@@ -414,6 +418,8 @@ export function FeatureShowcase() {;
                 style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               >;
                 <div className="flex items - start space - x-4">;
                   <div className={`w - 12 h - 12 bg - gradient - to - r ${getColorClasses (feature.color)} rounded - lg flex items - center justify - center text - white flex - shrink - 0`}>;
@@ -435,9 +441,12 @@ export function FeatureShowcase() {;
                           </div>))}
                       </div>)}
                   </div>;
+<<<<<<< HEAD
                   <div className={`transform transition-transform duration-300 ${activeFeature === feature.id ? 'rotate-180' : 'rotate-0';
                   <div className={`transform transition-transform duration-300 ${;
                     activeFeature === feature.id ? 'rotate-180' : 'rotate-0';
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   }`}>;
                     <svg className="w - 5 h - 5 text - gray - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                       <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 9l - 7 7 - 7-7" />;

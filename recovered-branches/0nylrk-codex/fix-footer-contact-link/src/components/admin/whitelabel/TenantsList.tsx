@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
@@ -122,10 +123,13 @@ DropdownMenuTrigger,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
 import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -145,6 +149,8 @@ export function TenantsList() {;
 
   useEffect(() => {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     loadTenants();
   }, []);
 
@@ -157,18 +163,11 @@ export function TenantsList() {;
         .order("created_at", { ascending: false });
       if (error) throw error;
       setTenants(data as WhitelabelTenant[]);
-
-    } catch (error: any) {;
-      console && console.error("Error loading tenants:", error);
-      toast({;
-        variant: "destructive",;
-        title: "Failed to load tenants",;
-        description: error && error.message,;
-
       });
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
 
   };
 
@@ -444,6 +443,8 @@ export function TenantsList() {;
               {tenants && tenants.length === 0 ? (;
                 <TableRow>;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <TableCell
                     colSpan={6}
                     className="text-center py-8 text-muted-foreground">;
@@ -502,7 +503,6 @@ export function TenantsList() {;
                           None;
                         </span>;
                       )}
-
 import React, { useState, useEffect } from './react';
 import { supabase  } from '@/integrations / supabase / client';
 import {
@@ -738,36 +738,15 @@ if (throw error) {
                           <Button variant="ghost" size="sm">;
                             <MoreHorizontal className="h - 4 w - 4" />;
                             <span className="sr - only">Actions</span>;
-
                           </Button>;
                         </DropdownMenuTrigger>;
                         <DropdownMenuContent align="end">;
                           <DropdownMenuItem>;
-
-                            <Edit className="mr - 2 h - 4 w - 4" />;
-                            Edit Tenant;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem>;
-                            <Users className="mr - 2 h - 4 w - 4" />;
-                            Manage Admins;
-                          </DropdownMenuItem>;
-                          <DropdownMenuItem;
-                            on_click={() => toggleTenantStatus (tenant)}
-                          >;
-                            {tenant.is_active ? (
-                              <>;
-                                <PowerOff className="mr - 2 h - 4 w - 4" />;
-                                Disable Tenant;
-                              </>) : (
-                              <>;
-                                <Power className="mr - 2 h - 4 w - 4" />;
-                                Enable Tenant;
-                              </>)}
-
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
                     </TableCell>;
+<<<<<<< HEAD
 
                   </TableRow>)))}
             </TableBody>;
@@ -837,3 +816,5 @@ if (throw error) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

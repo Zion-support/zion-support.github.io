@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -82,11 +83,16 @@ export function useSkills() {;
       
       if (error) throw error,
       
+=======
+        });
+      if (error) throw error;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return showSuccessToast("Skill added", "Your skill has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add skill')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -139,16 +145,30 @@ export function useSkills() {;
     setIsLoading(true),
     setError(null),
     
+=======
+    }
+  }
+  const deleteSkill = async (skillId: string): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to delete skills')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     try {
       const { error } = await supabase
         .from('resume_skills')
         .delete()
         .eq('id', skillId);
       if (error) throw error;
+<<<<<<< HEAD
         .eq('id', skillId),
       
       if (error) throw error,
       
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete skill')
@@ -162,6 +182,7 @@ export function useSkills() {;
     addSkill;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     deleteSkill
   }
 }
@@ -169,6 +190,9 @@ export function useSkills() {;
 
 
 
+=======
+    deleteSkill
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
@@ -192,6 +216,7 @@ if ( {) {
       set_error ('You must be logged in to add skills'),
       return false;
     }
+<<<<<<< HEAD
 
   },;
   return {;
@@ -208,4 +233,8 @@ if ( {) {
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    setIsLoading (true);
+    set_error (null);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;

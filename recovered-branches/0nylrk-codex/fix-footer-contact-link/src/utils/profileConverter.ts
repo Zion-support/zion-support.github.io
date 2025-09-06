@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { ProfileData } from "@/types/profile";
@@ -64,6 +65,13 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     summary: profile.bio?.substring(0, 150),;
     profile_picture_url: profile.avatarUrl,;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  return {
+=======
+    bio: profile.bio || '',
+    summary: profile.bio?.substring (0, 150);
+    profile_picture_url: profile.avatar_url,
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     years_experience: 3, // Default value;
     skills: profile.skills?.map ((skill: { name: string }) => skill.name) || [];
     availability_type: profile.availability?.status === 'available' ? 'full_time' :;
@@ -74,6 +82,7 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     average_rating: profile.rating || 0;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
+<<<<<<< HEAD
 
 }
 ;
@@ -83,3 +92,6 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

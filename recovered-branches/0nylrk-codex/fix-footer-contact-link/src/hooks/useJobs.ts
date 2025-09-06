@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,12 +168,19 @@ if (throw delete_error) {
   }, [client_id, status]);
 ;
 
+=======
+    } finally {
+      setIsLoading (false);
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return {
     jobs;
     is_loading;
     error;
     refetch: fetch_jobs;
     updateJobStatus;
+<<<<<<< HEAD
 <<<<<<< HEAD
     deleteJob;
     createJob;
@@ -292,3 +300,5 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

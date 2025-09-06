@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { WorkspaceHeader } from "./WorkspaceHeader";
 import { SharedInbox } from "./SharedInbox";
@@ -197,19 +198,21 @@ function CompanyDashboard() {
       <div className="mt - 8 grid grid - cols - 1 lg: grid - cols - 3 gap - 6">;
         <div className="lg:col - span - 2 space - y-6">;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <QuickActions />;
           <RecentActivity />;
           <TalentPool />;
         </div>;
-
-        <div className="space - y-6">;
-
           <TeamStats />;
           <SharedInbox />;
         </div>;
       </div>;
+<<<<<<< HEAD
     </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   );
 }
 ;

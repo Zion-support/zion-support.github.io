@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Referral, ReferralStatus} from "@/types/referrals";
 import {Badge} from "@/components/ui/badge";
@@ -55,10 +56,17 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
       </div>
     )
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      case "pending": return <Badge variant="outline" className="bg-yellow-50 text-yellow-800 border-yellow-200">Pending</Badge>;
+      case "completed":;
+        return <Badge variant="outline" className="bg-green-50 text-green-800 border-green-200">Completed</Badge>;
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 
   if (isLoading) {;
     return (
+<<<<<<< HEAD
 
       <div className="flex flex-col items-center justify-center p-8 text-center">
         <p className="text-muted-foreground mb-2">No referrals yet</p>
@@ -124,21 +132,14 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
   if (isLoading) {;
     return (;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <div className="flex items-center justify-center p-8">;
         <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />;
       </div>;
     );
   }
-
-
-  if (referrals && referrals.length === 0) {;
-
     return (
-=======
-;
-  if (referrals.length === 0) {;
-    return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="flex flex-col items-center justify-center p-8 text-center">;
         <p className="text-muted-foreground mb-2">No referrals yet</p>;
         <p className="text-sm text-muted-foreground">;
@@ -147,6 +148,7 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
       </div>;
     );
   }
+<<<<<<< HEAD
 
 =======
 ;
@@ -180,6 +182,9 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 : '-'}
             </TableCell>;
             <TableCell>{referral && referral.completed_at ? formatDate(referral && referral.completed_at) : '-'}</TableCell>;
@@ -198,12 +203,6 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
             </TableCell>;
           </TableRow>;
         ))}
-
-      </TableBody>;
-    </Table>;
-  );
-}
-
 =======
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Referral, ReferralStatus } from '@/types / referrals';

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -104,6 +105,8 @@ export function SmartContractBuilder(): any ({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function SmartContractBuilder({;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   isOpen;
   onClose;
   talent;
@@ -121,6 +124,7 @@ export function SmartContractBuilder({
 }: SmartContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
+<<<<<<< HEAD
 
 }
 
@@ -188,6 +192,8 @@ export function SmartContractBuilder({
     if (!formValues) return,;
     try {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       const generatedContractText = await generateSolidityContract(formValues, talent, clientName);
       setGeneratedContract(generatedContractText);
       setActiveTab("preview");
@@ -254,6 +260,7 @@ if ( {) {
         onContractGenerated (generatedContractText);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
+<<<<<<< HEAD
 
       const generatedContractText = await generateSolidityContract(formValues, talent, clientName),
       setGeneratedContract(generatedContractText),
@@ -303,11 +310,14 @@ if ( {) {
         setDeployStatus ('deployed');
         toast.success ("Smart contract deployed successfully!");
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       } else {
         setDeployStatus ('error');
         toast.error ("Failed to deploy smart contract");
       }
     } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       console.error("Error deploying contract:", error);
       setDeployStatus('error');
@@ -533,33 +543,22 @@ if ( {) {
     }
     setGeneratedContract (contract);
     setActiveTab ("preview");
+=======
+      console.error ("Error deploying contract:", error);
+      setDeployStatus ('error');
+      toast.error ("Failed to deploy smart contract");
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
-;
-  return (
-    <Dialog open={is_open} onOpenChange={on_close}>;
-      <DialogContent className="max - w-4xl max - h-[90vh] overflow - y-auto">;
-        <Tabs value={active_tab} onValueChange={setActiveTab} className="mt - 4">;
-          <div className="flex justify - between items - center">;
-            <TabsList className="grid grid - cols - 2">;
-              <TabsTrigger value="form">Contract Details</TabsTrigger>;
-              <TabsTrigger value="preview" disabled={!generated_contract}>Preview</TabsTrigger>;
-            </TabsList>;
-            <div className="flex gap - 2">;
-              <Button;
-                variant="outline";
-                size="sm";
-                on_click={() => setTemplateManagerOpen (true)}
-                className="flex gap - 1";
-              >;
-                <Save className="h - 4 w - 4" />;
-
                 Templates;
               </Button>;
             </div>;
           </div>;
-
+            <ContractForm
+=======
           <TabsContent value="form" className="pt - 4">;
             <ContractForm;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -569,6 +568,9 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               talent={talent}
               client_name={client_name}
               initial_values={form_values}
@@ -576,6 +578,7 @@ if ( {) {
               onContractGenerated={handleFormSubmit}
               deploy_options={deploy_options}
               onDeployOptionsChange={setDeployOptions}
+<<<<<<< HEAD
             />
           </TabsContent>
           <TabsContent value="preview" className="pt-4">
@@ -583,17 +586,14 @@ if ( {) {
               <div>
                 <ContractPreview
                 <ContractPreview 
+=======
+                <ContractPreview
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   generatedContract={generatedContract}
                   talent={talent}
                   onClose={onClose}
                   deployStatus={deployStatus}
                   deploymentInfo={deploymentInfo}
-
-                />;
-
-                {!deploymentInfo && deployOptions && deployOptions.deployToChain && (;
-                  <div className="mt-6 flex justify-center">;
-
                     <Button
                       onClick={handleDeployContract}
                       disabled={deployStatus === 'deploying'}
@@ -604,16 +604,12 @@ if ( {) {
                 )}
               </div>;
             )}
-
-          </TabsContent>;
-        </Tabs>;
-
-
         <TemplateManager
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
+<<<<<<< HEAD
         />
       </DialogContent>
     </Dialog>
@@ -625,6 +621,9 @@ if ( {) {
   );
 }
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             />;
           </TabsContent>;
           <TabsContent value="preview" className="pt - 4">;
@@ -659,6 +658,10 @@ if ( {) {
       </DialogContent>;
     </Dialog>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

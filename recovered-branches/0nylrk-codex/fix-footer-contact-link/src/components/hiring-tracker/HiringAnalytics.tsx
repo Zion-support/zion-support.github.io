@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState, useEffect } from "react",
@@ -154,10 +155,16 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
         statusDistribution;
         timeToHire: avgTimeToHire,;
 
+=======
+interface HiringAnalyticsProps {
+  job_id?: string;
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         conversionRate;
         funnelData});
     }
   }, [applications]);
+<<<<<<< HEAD
 
 
   if (isLoading) {;
@@ -169,6 +176,8 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
 
   if (!applications || applications.length === 0) {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <Card className="text-center py-16">;
         <CardContent>;
@@ -180,11 +189,9 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
       </Card>;
     );
   }
-
-
-
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
 
+<<<<<<< HEAD
 =======
 
 
@@ -208,6 +215,8 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
   
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
   
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
       {/* Status Distribution */}
@@ -231,45 +240,6 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
                 {analyticsData && analyticsData.statusDistribution.map((entry, index) => (;
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS && COLORS.length]} />;
                 ))}
-
-              </Pie>;
-              <Tooltip />;
-            </PieChart>;
-          </ResponsiveContainer>;
-        </CardContent>;
-      </Card>;
-
-      {/* Time to Hire */}
-      <Card>;
-        <CardHeader>;
-          <CardTitle>Time to Hire</CardTitle>;
-        </CardHeader>;
-        <CardContent className="flex flex-col items-center justify-center h-64">;
-          <div className="text-5xl font-bold text-primary">;
-            {analyticsData && analyticsData.timeToHire || "N/A"}
-          </div>;
-          <div className="text-sm text-muted-foreground mt-2">;
-            Average days from application to hire;
-          </div>;
-        </CardContent>;
-      </Card>;
-
-      {/* Conversion Rate */}
-      <Card>;
-        <CardHeader>;
-          <CardTitle>Application Conversion Rate</CardTitle>;
-        </CardHeader>;
-        <CardContent className="flex flex-col items-center justify-center h-64">;
-          <div className="text-5xl font-bold text-primary">;
-            {analyticsData && analyticsData.conversionRate}%;
-          </div>;
-          <div className="text-sm text-muted-foreground mt-2">;
-            Applications to hired ratio;
-          </div>;
-        </CardContent>;
-      </Card>;
-
-
       {/* Hiring Funnel */}
       <Card className="lg:col-span-3">;
         <CardHeader>;
@@ -287,6 +257,7 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
                 {analyticsData && analyticsData.funnelData.map((entry, index) => (;
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS && COLORS.length]} />;
                 ))}
+<<<<<<< HEAD
               </Bar>
             </BarChart>
           </ResponsiveContainer>
@@ -295,14 +266,20 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
     </div>
   )
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </Bar>;
             </BarChart>;
           </ResponsiveContainer>;
         </CardContent>;
       </Card>;
-
+=======
     </div>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

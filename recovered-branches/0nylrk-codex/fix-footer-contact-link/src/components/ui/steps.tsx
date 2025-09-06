@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -26,17 +27,16 @@ interface StepProps {;
   status: "incomplete" | "current" | "complete",;
   label: string,;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   description?: string;
   className?: string;
 }
-
-
-export function Step(): any ({;
-
   status;
   label;
   description;
   className}: StepProps) {;
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface StepProps {
@@ -63,6 +63,8 @@ export function Step({
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   className}: StepProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <li
 
@@ -70,7 +72,10 @@ export function Step({
         "relative flex items-center"
         {
           "opacity-60": status === "incomplete"}
+<<<<<<< HEAD
           "opacity-60": status === "incomplete"},
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         className
       )}>;
       <div
@@ -83,6 +88,7 @@ export function Step({
               status === "current"
             "bg-zion-purple border-zion-purple text-white":
               status === "complete"}
+<<<<<<< HEAD
 
         )}
       >
@@ -127,10 +133,14 @@ export function Step({;
         )}
       >;
 
+=======
+        )}>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {status === "complete" ? (;
           <CheckIcon className="h-5 w-5" />;
         ) : (;
           <span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -184,6 +194,11 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
             "text-zion-slate-light": status === "incomplete"
             "text-white": status === "current" || status === "complete"})}>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+            {/* Step number would go here */}
+          </span>;
+        )}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {label}
         </h3>;
         {description && (;
@@ -193,6 +208,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
     </li>;
   );
 }
+<<<<<<< HEAD
 
 
 
@@ -297,6 +313,11 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  className?: string;
+  children: React && React.ReactNode;
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import React from './react';
 import { cn } from '@/lib / utils';

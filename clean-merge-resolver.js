@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -53,11 +54,14 @@ const path = require('path');
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...'),;
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {;
   try {;
     let content = fs.readFileSync(filePath, 'utf8'),;
+<<<<<<< HEAD
 <<<<<<< HEAD
     const originalContent = content,;
     // Remove merge conflict markers and keep HEAD version;
@@ -156,14 +160,12 @@ function fixMergeConflicts(filePath) {;
     content = content.replace(/
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     const originalContent = content;
     // Remove merge conflict markers and keep HEAD version;
     content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, ''),;
     content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, ''),;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (content !== originalContent) {;
       fs.writeFileSync(filePath, content, 'utf8'),;
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
@@ -178,30 +180,14 @@ function fixMergeConflicts(filePath) {;
 ;
 // Function to get all files recursively;
 function getAllFiles(dir, extensions) {;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  let files = [],;
-  try {;
-    const items = fs.readdirSync(dir),;
-    for (const item of items) {;
-      const fullPath = path.join(dir, item),;
-      const stat = fs.statSync(fullPath),;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  let files = [];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   try {;
     const items = fs.readdirSync(dir);
     for (const item of items) {;
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== '.git') {;
         files = files.concat(getAllFiles(fullPath, extensions));
+<<<<<<< HEAD
 <<<<<<< HEAD
       } else if (extensions.some(ext => item.endsWith(ext))) {files.push(fullPath);
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -340,15 +326,37 @@ async function main() {;
               execSync(`git checkout --ours "${file}"`);
             } catch (e) {;
               execSync(`git checkout --theirs "${file}"`);
+=======
+        // Resolve conflicts by accepting our version;
+        for (const file of files) {;
+          if (file.trim()) {;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             }
-            exec_sync (`git add "${file}"`);
+            execSync(`git add "${file}"`);
           }
         }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         // Commit the merge;
-        exec_sync ('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
+        execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
       }
     }
+    let fixedCount = 0;
+    for (const file of files) {;
+      try {;
+        const content = fs.readFileSync(file, 'utf8'),;
+        if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {;
+          if (fixMergeConflicts(file)) {;
+            fixedCount++;
+          }
+        }
+      } catch (error) {;
+        // Skip files that can't be read;
+      }
+    }
+<<<<<<< HEAD
     // Now scan for and fix any remaining merge conflicts in files;
     console.log('🔍 Scanning for merge conflicts in files...');
     const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md.css']);
@@ -385,6 +393,9 @@ async function main() {;
       }
     }
 ;
+=======
+;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     if (fixedCount > 0) {;
       console.log(`✅ Fixed merge conflicts in ${fixedCount} files`),;
       execSync('git add .'),;
@@ -430,8 +441,11 @@ async function main() {;
 }
 ;
 main().catch(console.error),;
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

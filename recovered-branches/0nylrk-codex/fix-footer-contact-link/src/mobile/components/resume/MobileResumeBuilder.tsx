@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -180,6 +181,8 @@ export function MobileResumeBuilder() {;
     switch (currentStep) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -210,16 +213,6 @@ function MobileResumeBuilder() {
       default:;
         return <BasicsStep />;
     }
-
-  };
-
-
-=======
-
-  },
-  
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-6 px-4 pb-24">;
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
@@ -248,55 +241,6 @@ function MobileResumeBuilder() {
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
-
-        >;
-          Skills;
-        </Button>;
-      </div>;
-
-      {renderStepContent()}
-
-      <Button className="w-full flex gap-2" size="lg">;
-        <Zap className="h-5 w-5" /> Enhance with AI;
-      </Button>;
-
-      <Button variant="default" className="w-full" size="lg">;
-        Save & Preview;
-      </Button>;
-    </div>;
-  );
-}
-
-function BasicsStep() {;
-  return (
-    <Card>;
-      <CardContent className="p-4 space-y-4">;
-        <div className="space-y-2">;
-          <Label htmlFor="title">Resume Title</Label>;
-          <Input id="title" placeholder="e && e.g. Senior Frontend Developer" />;
-        </div>;
-        <div className="space-y-2">;
-          <Label htmlFor="fullName">Full Name</Label>;
-          <Input id="fullName" placeholder="Your full name" />;
-        </div>;
-        <div className="space-y-2">;
-          <Label htmlFor="email">Email Address</Label>;
-          <Input id="email" type="email" placeholder="you@example && example.com" />;
-        </div>;
-        <div className="space-y-2">;
-          <Label htmlFor="phone">Phone Number</Label>;
-          <Input id="phone" placeholder="Your phone number" />;
-        </div>;
-        <div className="space-y-2">;
-          <Label htmlFor="location">Location</Label>;
-          <Input id="location" placeholder="City, Country" />;
-        </div>;
-        <div className="space-y-2">;
-          <Label htmlFor="summary">Professional Summary</Label>;
-          <Textarea
-            id="summary" 
-            placeholder="Write a brief summary about yourself" 
-
             rows={4}
           />;
         </div>;
@@ -304,6 +248,7 @@ function BasicsStep() {;
     </Card>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -424,6 +369,8 @@ function ExperienceStep() {
   }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="space - y-4">;
       {experiences.map ((exp, index) => (
@@ -432,37 +379,13 @@ function ExperienceStep() {
             <div className="flex justify - between items - center">;
               <h3 className="font - medium">Work Experience {index + 1}</h3>;
               {experiences.length > 1 && (
-
-
-function ExperienceStep() {;
-  const [experiences, setExperiences] = useState([{ id: '1' }]),;
-
-  const addExperience = () => {;
-    const newId = (experiences && experiences.length + 1).toString();
-    setExperiences([...experiences, { id: newId }]);
-  };
-
-  const removeExperience = (id: string) => {;
-    setExperiences(experiences && experiences.filter(exp => exp && exp.id !== id));
-  };
-
-  return (
-    <div className="space-y-4">;
-      {experiences && experiences.map((exp, index) => (;
-        <Card key={exp && exp.id}>;
-          <CardContent className="p-4 space-y-4">;
-            <div className="flex justify-between items-center">;
-              <h3 className="font-medium">Work Experience {index + 1}</h3>;
-              {experiences && experiences.length > 1 && (;
-                <Button
-                  variant="ghost" 
-
                   size="icon"
                   onClick={() => removeExperience(exp && exp.id)}
                 >;
                   <Trash2 className="h-5 w-5 text-destructive" />;
                 </Button>;
               )}
+<<<<<<< HEAD
             </div>
             <div className="space-y-2">
               <Label htmlFor={`title-${exp.id}`}>Job Title</Label>
@@ -525,6 +448,45 @@ function EducationStep() {
     setEducations(educations.filter(edu => edu.id !== id))
   },
   
+=======
+=======
+                <Button;
+                  variant="ghost";
+                  size="icon";
+                  on_click={() => remove_experience (exp.id)}
+                >;
+                  <Trash2 className="h - 5 w - 5 text - destructive" />;
+                </Button>)}
+            </div>;
+            <div className="space - y-2">;
+              <Label html_for={`title-${exp.id}`}>Job Title</Label>;
+              <Input id={`title-${exp.id}`} placeholder="e.g. Frontend Developer" />;
+            </div>;
+            <div className="space - y-2">;
+              <Label html_for={`company-${exp.id}`}>Company</Label>;
+              <Input id={`company-${exp.id}`} placeholder="Company name" />;
+            </div>;
+            <div className="grid grid - cols - 2 gap - 3">;
+              <div className="space - y-2">;
+                <Label html_for={`start_date-${exp.id}`}>Start Date</Label>;
+                <Input id={`start_date-${exp.id}`} type="month" />;
+              </div>;
+              <div className="space - y-2">;
+                <Label html_for={`end_date-${exp.id}`}>End Date</Label>;
+                <Input id={`end_date-${exp.id}`} type="month" placeholder="Present" />;
+              </div>;
+            </div>;
+            <div className="space - y-2">;
+              <Label html_for={`description-${exp.id}`}>Description</Label>;
+              <Textarea;
+                id={`description-${exp.id}`}
+                placeholder="Describe your responsibilities and achievements";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                rows={3}
+              />;
+            </div>;
+          </CardContent>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="space-y-4">
       {educations.map((edu, index) => (
@@ -533,14 +495,18 @@ function EducationStep() {
             <div className="flex justify-between items-center">
               <h3 className="font-medium">Education {index + 1}</h3>
               {educations.length > 1 && (
+<<<<<<< HEAD
                 <Button
                   variant="ghost"
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   size="icon"
                   onClick={() => removeEducation(edu.id)}
                 >
                   <Trash2 className="h-5 w-5 text-destructive" />
                 </Button>
               )}
+<<<<<<< HEAD
             </div>
             <div className="space-y-2">
               <Label htmlFor={`institution-${edu.id}`}>Institution</Label>
@@ -577,9 +543,12 @@ function EducationStep() {
     </div>
   )
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 function SkillsStep() {
   const [skills, setSkills] = useState([
     { id: '1', name: "", proficiency: "beginner" }
+<<<<<<< HEAD
   ]);
   ]),
   
@@ -713,23 +682,9 @@ function EducationStep() {;
 function SkillsStep() {;
   const [skills, setSkills] = useState([;
     { id: '1', name: "", proficiency: "beginner" }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   ]);
-
-  const addSkill = () => {;
-    const newId = (skills && skills.length + 1).toString();
-    setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }]);
-  };
-
-  const removeSkill = (id: string) => {;
-    setSkills(skills && skills.filter(skill => skill && skill.id !== id));
-  };
-
-  const updateSkill = (id: string, field: string, value: string) => {;
-    setSkills(skills && skills.map(skill => ;
-      skill && skill.id === id ? { ...skill, [field]: value } : skill;
-    ));
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <div className="space-y-4">;
@@ -813,6 +768,7 @@ function SkillsStep() {;
                     <SelectItem value="expert">Expert</SelectItem>;
                   </SelectContent>;
                 </Select>;
+<<<<<<< HEAD
 
 
 
@@ -865,3 +821,17 @@ function SkillsStep() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            </Button>;
+          </div>;
+        </CardContent>;
+      </Card>;
+            </div>;
+          </div>;
+        </CardContent>;
+      </Card>;
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

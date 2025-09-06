@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Content monitoring functionality
@@ -77,6 +78,11 @@ export const monitorContent = async (;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
+=======
+    )) {
+      severity = 'dangerous'
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     await flagContent(
       userId;
       userEmail;
@@ -87,13 +93,17 @@ export const monitorContent = async (;
       analysis && analysis.reasons.join();
       undefined // IP address would be added in a real implementation
     );
+<<<<<<< HEAD
     ),
     
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // If this is a 'dangerous' flag, automatically hide content
     // This would be implemented in a real system with appropriate flags
     if (severity === 'dangerous') {
       console && console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -119,7 +129,13 @@ export const monitorContent = async (;
   }
 };
 =======
+=======
+    }
+  }
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+=======
 // Content monitoring functionality;
 import {FraudFlag, FraudSeverity} from '@/types / fraud';
 import {analyze_content} from './analyze_content';
@@ -158,11 +174,6 @@ if (||) {
       severity;
       analysis.reasons.join ();
       undefined // IP address would be added in a real implementation);
-=======
-
-
-=======
-
 ;
     // If this is a 'dangerous' flag, automatically hide content;
     // This would be implemented in a real system with appropriate flags;
@@ -172,11 +183,6 @@ if ( {) {
 }
       console.log ('Auto - hiding dangerous content:', content_id);
       // Code to hide content would go here;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
 }

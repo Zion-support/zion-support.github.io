@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/MobileNavigation.js.jsx
 import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(\') const location = useLocation() const menuRef = useRef(null)\'';\';
 const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''"
@@ -9,6 +10,8 @@ const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { con
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(\') const location = useLocation() const menuRef = useRef(null)\'';\';
 const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''"

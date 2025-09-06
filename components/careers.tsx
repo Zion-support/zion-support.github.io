@@ -7,6 +7,7 @@ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.fi
  const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -127,10 +128,13 @@ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.fi
 import React, { useState } from 'react';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import {motion} from 'framer-motion';
 import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckCircle, Briefcase} from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function Careers() {
 
@@ -228,52 +232,27 @@ function Careers() {
       requirements: [;
         'Advanced degree in Computer Science, AI, or related field_expertise in Python, TensorFlow, PyTorchExperience with large language models and neural networks_strong problem - solving and analytical skills';
       ];
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
     {
       id: 2
       title: 'Quantum Computing Researcher'
       department: 'quantum'
       location: 'Remote / Middletown, DE';
-
-      type: 'Full - time',
-      experience: '3+ years',
-      description: 'Research and develop quantum algorithms and quantum computing solutions.',
-      requirements: [;
-        'PhD in Physics, Computer Science, or related field_experience with quantum programming languages (Qiskit, Cirq)Knowledge of quantum algorithms and quantum information theory_strong mathematical and theoretical background';
-      ];
-    }
-    {
-      id: 3,
-      title: 'Space Technology Engineer',
-      department: 'space - tech',
-      location: 'Remote / Middletown, DE';
-      type: 'Full - time',
-      experience: '4+ years',
-      description: 'Design and develop innovative space technology solutions and satellite systems.',
-      requirements: [;
-        'Degree in Aerospace Engineering, Physics, or related field_experience with satellite design and space systems_knowledge of orbital mechanics and space environment_familiarity with space industry standards and regulations';
-      ];
-
     }
     {
       id: 4
       title: 'Full Stack Developer'
       department: 'engineering'
       location: 'Remote / Middletown, DE';
-
-      type: 'Full - time',
-      experience: '3+ years',
-      description: 'Build scalable web applications and cloud - based solutions.',
-      requirements: [;
-        'Experience with React, Node.js, and cloud platforms_knowledge of modern web technologies and APIsUnderstanding of software architecture and design patterns_experience with DevOps and CI / CD practices';
-      ];
-
     }
     {
       id: 5
       title: 'Business Development Manager'
       department: 'sales'
       location: 'Remote / Middletown, DE';
+<<<<<<< HEAD
       type: 'Full-time'
       experience: '5+ years'
       description: 'Drive business growth through strategic partnerships and client relationships.'
@@ -492,6 +471,8 @@ export default function Careers() {;
         </motion && motion.div>;
         {/* Company Culture */}
         <motion&& motion.div 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -507,6 +488,7 @@ export default function Careers() {;
                 <p className="text-gray-300 text-sm">{value && value.description}</p>;
               </div>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
         </motion.div>
@@ -525,6 +507,8 @@ export default function Careers() {;
 
         {/* Benefits */}
         <motion&& motion.div 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
@@ -538,6 +522,7 @@ export default function Careers() {;
                   <span className="text-gray-300">{benefit}</span>;
                 </div>;
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
             </div>
           </div>
@@ -574,6 +559,8 @@ export default function Careers() {;
           <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>;
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {/* Department Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">;
             {departments && departments.map((dept) => (;
@@ -589,6 +576,7 @@ export default function Careers() {;
                 {dept && dept.name}
               </button>;
             ))}
+<<<<<<< HEAD
 
           </div>;
 
@@ -618,6 +606,8 @@ export default function Careers() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {/* Job Listings */}
           <div className="space-y-6">;
             {filteredJobs && filteredJobs.map((job) => (;
@@ -645,6 +635,7 @@ export default function Careers() {;
                     </div>;
                   </div>;
                   <a
+<<<<<<< HEAD
 <<<<<<< HEAD
                     href={`/contact?position=${encodeURIComponent(job.title)}`}
                     className="mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
@@ -983,12 +974,22 @@ export default function Careers() {;
                 href="/about";
                 className="inline - flex items - center px - 6 py - 3 border - 2 border - blue - 500 text - blue - 400 font - semibold rounded - lg hover:bg - blue - 500 hover:text - white transition - all duration - 300";
               >;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 Learn More About Us;
               </a>;
             </div>;
           </div>;
-
-
 export default CareersPage;
 
+<<<<<<< HEAD
 export default CareersPage;
+=======
+        </motion.div>;
+      </div>;
+    </Layout>);
+}
+;
+export default CareersPage;
+;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

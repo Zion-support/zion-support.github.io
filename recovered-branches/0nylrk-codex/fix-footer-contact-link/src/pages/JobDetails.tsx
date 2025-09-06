@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
@@ -45,11 +46,14 @@ export default function JobDetails() {;
   // Cast to specify the expected route param type since useParams may be untyped;
   const { jobId } = useParams() as { jobId?: string };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { job, isLoading, error } = useJobDetails(jobId);
   const { user, isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
+<<<<<<< HEAD
 =======
 
 
@@ -81,13 +85,18 @@ export default function JobDetails() {
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
   if (isLoading) {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
       </div>
     )
   }
+<<<<<<< HEAD
   if (error |!job) {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <>
         <Header />
@@ -100,6 +109,7 @@ export default function JobDetails() {
       </>
     )
   }
+<<<<<<< HEAD
   const handleApply = () => {
     if (!isAuthenticated) {
       toast.error("Please log in to apply for this job"),
@@ -338,11 +348,20 @@ export default function JobDetails() {;
                     className="w-full mt-4"
                   <Button 
                     className="w-full mt-4" 
+=======
+      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
+      return;
+    }
+                        {skill}
+                      </Badge>;
+                    ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     onClick={handleApply}
                     disabled={isOwnJob}>;
                     Apply Now;
                   </Button>;
                 )}
+<<<<<<< HEAD
                 
                 {isOwnJob && (
                   <div className="text-center p-2 bg-muted rounded-md mt-4">
@@ -539,30 +558,23 @@ if (return "Not specified", ) {
                     <p className="text - sm text - muted - foreground">This is your job posting</p>;
                   </div>)}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </CardContent>;
             </Card>;
           </div>;
         </div>;
       </main>;
       <Footer />;
-
-            id: job && job.id,
-            title: job && job.title,
-            description: job && job.description,
-            company_name: job && job.company_name || "Company",
-            budget: job && job.budget,
-            client_id: job && job.client_id
-
+      {/* Job application modal */}
+      {job && (;
+        <ApplyToJobModal
+          job={{
           }}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}
         />;
       )}
-
-    </>;
-  );
-}
-
 =======
       {/* Job application modal */}
       {job && (

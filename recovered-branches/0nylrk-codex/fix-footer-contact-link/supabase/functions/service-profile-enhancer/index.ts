@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
 =======
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -12,6 +15,7 @@ interface ServiceProfileData {
   name: string;
   title: string;
   bio: string;
+<<<<<<< HEAD
 
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
@@ -67,6 +71,12 @@ interface ServiceProfileData {;
   bio: string,;
   services?: string[],;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      return new Response(
+        JSON && JSON.stringify({
+=======
+  services?: string[],
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   location: string;
 }
 serve (async (req) => {
@@ -99,6 +109,7 @@ if ( {) {
         { headers, status: 400 }
       );
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -153,10 +164,17 @@ if ( {) {
     ${providerData && providerData.services && providerData && providerData.services.length > 0 
       ? `Current Services: ${providerData && providerData.services.join(", ")}`
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+          error: "OpenAI API key not configured"});
+        { headers, status: 500 }
+      );
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       : "No services listed yet."}
     Focus on highlighting their unique value proposition, expertise, and professionalism.
     Only respond with JSON in this exact format: {
       "summary": "Professional summary goes here..."
+<<<<<<< HEAD
       "services": ["Service 1", "Service 2", "Service 3", ...]
     }
     `;
@@ -184,14 +202,53 @@ if ( {) {
         "Content-Type": "application/json"};
       body: JSON && JSON.stringify({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      "services": ["Service 1", "Service 2", "Service 3", ...]
+    }
+    `;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         model: "gpt-4";
         messages: [
           {
             role: "system"
+<<<<<<< HEAD
+=======
+=======
+    const prompt = `;
+    You are an expert in creating professional service profiles. Based on the following information about a service provider, create:;
+    1. A concise yet compelling professional summary (max 250 words);
+    2. A list of 5 - 10 specific services they could offer based on their description;
+    Service Provider Name: ${provider_data.name}
+    Business / Service Title: ${provider_data.title}
+    Location: ${provider_data.location}
+    Current Bio: ${provider_data.bio}
+    ${provider_data.services && provider_data.services.length > 0;
+      ? `Current Services: ${provider_data.services.join (", ")}`;
+      : "No services listed yet."}
+    Focus on highlighting their unique value proposition, expertise, and professionalism.;
+    Only respond with JSON in this exact format: {
+      "summary": "Professional summary goes here...",
+      "services": ["Service 1", "Service 2", "Service 3", ...];
+    }
+    `;
+;
+    const response = await fetch ("https://api.openai.com / v1 / chat / completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${api_key}`;
+        "Content - Type": "application / json"}
+      body: JSON.stringify ({
+        model: "gpt - 4";
+        messages: [;
+          {
+            role: "system",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             content: "You are an expert at creating professional service descriptions for marketplaces."}
           {
             role: "user"
             content: prompt}];
+<<<<<<< HEAD
         temperature: 0.7
         max_tokens: 800})});
     const responseData = await response.json();
@@ -241,6 +298,8 @@ if ( {) {
         JSON && JSON.stringify({
           error: "Failed to generate enhanced profile content",
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           details: responseData});
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -271,6 +330,7 @@ if ( {) {
           services: parsedContent.services}),;
 =======
     try {
+<<<<<<< HEAD
 
       const content = responseData && responseData.choices[0].message && message.content;
       const parsedContent = JSON && JSON.parse(content);
@@ -307,6 +367,8 @@ if ( {) {
           services: parsedContent && parsedContent.services});
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
       const content = response_data.choices[0].message.content;
       const parsed_content = JSON.parse (content);
 ;
@@ -318,27 +380,25 @@ if ( {) {
         { headers, status: 200 }
       );
     } catch (error) {
-
-        JSON && JSON.stringify({
-=======
-
-
-          error: "Failed to parse AI response",
-          raw: responseData && responseData.choices[0]?.message?.content});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
       console.error ("Error parsing AI response:", error);
       return new Response (
         JSON.stringify ({
           error: "Failed to parse AI response",
+<<<<<<< HEAD
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          raw: response_data.choices[0]?.message?.content});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         { headers, status: 500 }
       );
     }
   } catch (error) {
+<<<<<<< HEAD
     console.error("Function error:", error),
     return new Response(
       JSON.stringify({
@@ -369,8 +429,13 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
     );
   }
 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

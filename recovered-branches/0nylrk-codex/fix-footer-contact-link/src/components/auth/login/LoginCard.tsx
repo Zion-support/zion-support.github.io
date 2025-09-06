@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { LoginForm } from "./LoginForm";
 import { SocialLogin } from "./SocialLogin";
@@ -77,17 +78,12 @@ function LoginCard() {
             className="font - medium text - zion - cyan hover: text - zion - cyan - light";
           >;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             Sign up;
           </Link>;
         </p>;
       </div>;
-
-
-    </div>
-
-
-    </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 =======
       <div className="bg - zion - blue - dark rounded - lg p - 6">;

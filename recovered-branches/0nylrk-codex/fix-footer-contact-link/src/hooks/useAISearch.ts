@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState } from "react",
@@ -27,6 +28,8 @@ export interface SearchResult {
   title: string,
   description: string;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 interface SearchFilters {
   type?: string | null;
@@ -78,6 +81,7 @@ export function useAISearch() {
 =======
   availability?: string | null;
 }
+<<<<<<< HEAD
 
 
 
@@ -91,9 +95,12 @@ function useAISearch() {
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const search = async (query: string) => {
     setLoading(true),
     try {
+<<<<<<< HEAD
       const response = await fetch(
         "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search",
         {
@@ -114,9 +121,12 @@ function useAISearch() {
       const items: SearchResult[] = [],
       const matchSkill = (skills: string[] | undefined) => {
         if (!filters.skills |filters.skills.length === 0) return true
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         return skills?.some((s) =>
           filters.skills!.some((f) => s.toLowerCase().includes(f.toLowerCase()))
         )
+<<<<<<< HEAD
       }
       if (!filters.type |filters.type === "talent" |filters.type === "all") {
       },
@@ -159,6 +169,8 @@ function useAISearch() {
         PROJECTS && PROJECTS.forEach((p) => {
           items && items.push({ id: p && p.id, type: "project", title: p && p.job?.title || "Project", description: p && p.scope_summary })
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         })
       }
       setResults(items)
@@ -171,8 +183,11 @@ function useAISearch() {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return { results, loading, search }
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
       const response = await fetch (
         "https://ziontechgroup.functions.supabase.co / functions / v1 / ai - search";
@@ -192,6 +207,7 @@ if (return true, ) {
 }
         return skills?.some ((s) =>;
           filters.skills!.some ((f) => s.toLowerCase ().includes (f.toLowerCase ())));
+<<<<<<< HEAD
 =======
 
 
@@ -227,6 +243,8 @@ export function useAISearch() {;
           items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title });
         });
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
 ;
       // Check condition
@@ -269,6 +287,7 @@ if ( {) {
     } finally {
       set_loading (false);
     }
+<<<<<<< HEAD
 
   };
 <<<<<<< HEAD
@@ -280,4 +299,7 @@ if ( {) {
   return { results, loading, search }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;

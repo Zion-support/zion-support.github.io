@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 interface ChatMessageProps {
@@ -23,6 +24,8 @@ interface ChatMessageProps {;
   role: 'user' | 'assistant',;
   message: string,;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   timestamp?: Date;
 <<<<<<< HEAD
 import {cn} from "@/lib/utils";
@@ -33,6 +36,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 =======
   key?: string | number;
 }
+<<<<<<< HEAD
 
 
 export function ChatMessage(): any ({ role, message, timestamp }: ChatMessageProps) {;
@@ -73,6 +77,8 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <divclassName={cn(
       "flex items-start gap-2"
@@ -91,6 +97,7 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
           />;
         )}
         {!isUser && <AvatarFallback className="bg-zion-cyan/20 text-white">AI</AvatarFallback>}
+<<<<<<< HEAD
       </Avatar>
       <div className={cn(
         "max-w-[80%] px-4 py-2 rounded-lg";
@@ -155,6 +162,9 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
           ? "bg-zion-purple/20 text-white rounded-tr-none";
           : "bg-zion-cyan/10 text-white rounded-tl-none";
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          : "bg-zion-cyan/10 text-white rounded-tl-none"
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       )}>;
         <div className="whitespace-pre-wrap">{message}</div>;
         {timestamp && (;
@@ -166,10 +176,14 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 =======
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { cn } from '@/lib / utils';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 interface ChatMessageProps {
@@ -211,6 +225,7 @@ function ChatMessage() {
           </div>)}
       </div>;
     </div>);
+<<<<<<< HEAD
 
 }
 =======
@@ -220,3 +235,7 @@ function ChatMessage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

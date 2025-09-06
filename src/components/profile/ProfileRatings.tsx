@@ -1,12 +1,8 @@
-}
-
-      })
-
-import { useState, useEffect } from "react";
 import { Star } from 'lucide-react'
 import { ReviewStats } from "@/components/reviews/ReviewStats",
 import { ReviewsList } from "@/components/reviews/ReviewsList",
 import { useReviews } from "@/hooks/useReviews",
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 <<<<<<< HEAD
@@ -128,6 +124,11 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 
   return (
 <<<<<<< HEAD
+=======
+
+  return (
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
@@ -170,12 +171,16 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   }, [userId]),
   
   return (
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/3">
           <ReviewStats
             averageRating={averageRating}
             totalReviews={ratingCount}
+<<<<<<< HEAD
             ratingDistribution={ratingDistribution}          />
         </div>
         <div className='md:w-2/3'>
@@ -189,6 +194,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             </TabsList>
             <TabsContent value='all'>              <ReviewsList
             <TabsContent value='all'>              <ReviewsList        
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <div className="md:w-2/3">
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
@@ -210,6 +217,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             <TabsContent value='critical'>
               <ReviewsList
                 reviews={reviews.filter(r => r.rating < 4)}                isLoading={isLoading}                reviews={reviews.filter((r) => r.rating >= 4)}
+<<<<<<< HEAD
             
             <TabsContent value="positive">
               <ReviewsList
@@ -223,6 +231,11 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            <TabsContent value="positive">
+              <ReviewsList
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             ratingDistribution={ratingDistribution}
           />
         </div>
@@ -234,53 +247,33 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
               <TabsTrigger value="positive">Positive</TabsTrigger>
               <TabsTrigger value="critical">Critical</TabsTrigger>
             </TabsList>
+            
             <TabsContent value="all">
-
               <ReviewsList
-
                 reviews={reviews}
                 isLoading={isLoading}
-                onReportReview={reportReview}              />
+                onReportReview={reportReview}
+              />
             </TabsContent>
-
-
-            ratingDistribution={ratingDistribution}          />;
-        </div>;
-
-        <div className='md:w-2/3'>;
-          <Tabs defaultValue='all'>;
-            <TabsList className='mb-4'>;
-              <TabsTrigger value='all'>;
-                All Reviews ({reviews && reviews.length});
-              </TabsTrigger>;
-              <TabsTrigger value='positive'>Positive</TabsTrigger>;
-              <TabsTrigger value='critical'>Critical</TabsTrigger>;
-            </TabsList>;
-
-            <TabsContent value='all'>              <ReviewsList
-        <div className="md:w-2/3">;
-          <Tabs defaultValue="all">;
-            <TabsList className="mb-4">;
-              <TabsTrigger value="all">All Reviews ({reviews && reviews.length})</TabsTrigger>;
-              <TabsTrigger value="positive">Positive</TabsTrigger>;
-              <TabsTrigger value="critical">Critical</TabsTrigger>;
-            </TabsList>;
-
-            <TabsContent value="all">;
-                reviews={reviews}
-
             
             <TabsContent value="positive">
               <ReviewsList
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 reviews={reviews.filter((r) => r.rating >= 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
               />
             </TabsContent>
+<<<<<<< HEAD
             <TabsContent value='critical'>
               <ReviewsList
                 reviews={reviews && reviews.filter(r => r && r.rating < 4)}                isLoading={isLoading}                reviews={reviews && reviews.filter((r) => r && r.rating >= 4)}
@@ -292,12 +285,17 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 reviews={reviews && reviews.filter((r) => r && r.rating >= 4)}
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             
-            <TabsContent value="positive">
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+            <TabsContent value="critical">
               <ReviewsList
                 reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -506,40 +504,18 @@ if ( {) {
                 reviews={reviews.filter ((r) => r.rating < 4)}
                 is_loading={is_loading}
                 onReportReview={report_review}
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               />;
             </TabsContent>;
           </Tabs>;
         </div>;
       </div>;
-
-
-    </div>);
-}, [reviews]);
-//Fetch reviews when component mounts return (<div className="space - y-6" > <div className="flex flex - col md:flex - row gap - 6" > <div className="md:w - 1/3" > <ReviewStats average_rating= {
-  average_rating;
-}total_reviews= {
-  rating_count;
-}rating_distribution= {
-  rating_distribution ";
-}/> </div> </TabsList> <TabsContent value="all" > <ReviewsList reviews= {
-  reviews;
-}is_loading= {
-  is_loading;
-}onReportReview= {
-  report_review ";
-}/> </TabsContent> <TabsContent value="positive" > <ReviewsList reviews= {
-  reviews.filter ( (r) => r.rating >= 4);
-}is_loading= {
-  is_loading;
-}onReportReview= {
-  report_review ";
-}/> </TabsContent> <TabsContent value="critical" > <ReviewsList reviews= {
-  reviews.filter ( (r) => r.rating < 4);
-}is_loading= {
-  is_loading;
-}onReportReview= {
-  report_review;
-}/> </TabsContent> </Tabs> </div> </div> </div>);
-}"}
+    </div>;
+  );
 }
 ;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,5 +1,6 @@
 
 export type IntegrationCategory = 'crm' | 'ats';
+<<<<<<< HEAD
 export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export type IntegrationProviderId =;
@@ -47,28 +48,20 @@ export interface IntegrationProviderMeta {
 
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
 export interface IntegrationProviderMeta {
-<<<<<<< HEAD
   id: IntegrationProviderId, name: string,
   category: IntegrationCategory, description?: string,  oauth_scopes?: string[];
   icon?: string;
-=======
-<<<<<<< HEAD
-  id: IntegrationProviderId, name: string
-=======
-  id: IntegrationProviderId, name: string,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  category: IntegrationCategory, description?: string,  oauthScopes?: string[];
-  icon?: string
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
 export interface SyncRules {
   // CRM rules;
   autoCreateContacts?: boolean;
   pushNotesMode?: 'auto' | 'manual';
   // ATS rules;
   autoSyncApplicants?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
   autoUploadResumes?: boolean;
 export interface ProviderConnection {
@@ -80,22 +73,19 @@ export interface ProviderConnection {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   expiresAt?: number;
   connectedAt?: number;
   syncRules?: SyncRules;
   lastSyncAt?: number;
-
-
 export interface SyncLogEntry {
-=======
-  lastError?: string | null;
-export interface SyncLogEntry {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   id: string;
   timestamp: number;
   provider_id: IntegrationProviderId;
   level: 'info' | 'warn' | 'error';
   action: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   details?: Record<string, any>;
 =======
@@ -104,10 +94,13 @@ export interface SyncLogEntry {;
 ;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export interface ManualOverride {
   job_id: string;
   disableCrmSync?: boolean;
   disableAtsSync?: boolean;
+<<<<<<< HEAD
 
 ;
 
@@ -203,3 +196,5 @@ export interface IntegrationsState {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

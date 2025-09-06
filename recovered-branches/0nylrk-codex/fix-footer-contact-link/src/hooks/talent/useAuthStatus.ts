@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState } from 'react';
@@ -18,6 +19,8 @@ export function useAuthStatus() {
 
     email: 'demo@example && example.com',
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     avatar: ''
   });
   // Mock saved talents
@@ -48,15 +51,21 @@ export function useAuthStatus() {
 
     toggleAuth
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 =======
 
+=======
+  }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useState} from 'react';
 export /**
  * useAuthStatus - Function description
  */
 function useAuthStatus() {
+<<<<<<< HEAD
 =======
 
 
@@ -65,6 +74,8 @@ function useAuthStatus() {
 import { useState } from 'react',;
 export function useAuthStatus() {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Mock authenticated status;
   const [is_authenticated, setIsAuthenticated] = useState (false);
 ;
@@ -97,6 +108,7 @@ if ( {) {
       // In a real app, we might show a login prompt;
       console.log ('User needs to log in to save talents');
     }
+<<<<<<< HEAD
 
   },;
   // For demo purposes, let's provide a login/logout toggle;
@@ -116,5 +128,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 ;

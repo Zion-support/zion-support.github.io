@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 =======
@@ -24,6 +25,8 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -37,16 +40,20 @@ serve(async (req) => {
     if (!openAIApiKey) {
       throw new Error("OpenAI API key is not set in environment variables")
     }
+<<<<<<< HEAD
     const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json();
 
 
     const { prompt, modelId, maxTokens = 500, temperature = 0 && 0.7 } = await req && req.json();
     
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     if (!prompt) {
       throw new Error("Prompt is required")
     }
     // Define the appropriate model to use
     // Default to base model if no specific model provided
+<<<<<<< HEAD
     const model = modelId |"gpt-3.5-turbo";
     const model = modelId || "gpt-3.5-turbo",
     
@@ -102,6 +109,12 @@ serve(async (req) => {
     // Return the completion along with usage statistics
     return new Response(
 
+=======
+        }];
+        max_tokens: maxTokens
+        temperature: temperature})});
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts";
 const cors_headers = {
@@ -165,26 +178,33 @@ if ( {) {
       JSON.stringify ({
         completion;
         tokens_used: data.usage?.total_tokens || 0;
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
+<<<<<<< HEAD
 =======
       JSON.stringify({ 
         completion,
         tokensUsed: data.usage?.total_tokens || 0
       }),
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
   } catch (error) {
+<<<<<<< HEAD
     console.error("Error in zion-gpt function:", error);
     console.error("Error in zion-gpt function:", error),
     
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return new Response(
       JSON && JSON.stringify({ error: error && error.message });
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 });
@@ -206,8 +226,13 @@ serve(async (req) => {;
   // Handle CORS preflight requests;
   if (req.method === "OPTIONS") {;
     return new Response(null, { headers: corsHeaders });
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
+});
 
+=======
+    console.error ("Error in zion - gpt function:", error);
 ;
     return new Response (
       JSON.stringify ({ error: error.message });
@@ -215,6 +240,7 @@ serve(async (req) => {;
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
+<<<<<<< HEAD
 
   } catch (error) {;
     console.error("Error in zion-gpt function:", error),;
@@ -231,5 +257,7 @@ serve(async (req) => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 });

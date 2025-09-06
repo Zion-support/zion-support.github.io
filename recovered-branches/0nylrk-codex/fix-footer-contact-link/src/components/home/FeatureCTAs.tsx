@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,19 +42,17 @@ function FeatureCTAs() {
       badge: "Popular",
       details: "Leveraging advanced machine learning, our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities.";
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
     {
       title: "Talent Directory"
       description: "Browse our extensive database of verified AI and tech specialists, filtered by expertise and availability.";
-
-      icon: <Users className="h - 10 w - 10 p - 2 rounded - md bg - purple - 100 text - purple - 700" />,
-      link: "/talent",
-      details: "Every talent in our directory undergoes a rigorous verification process to ensure quality, authenticity, and reliability.";
-
     }
     {
       title: "Services Marketplace"
       description: "Discover professional tech and AI services for your business needs, from development to consulting.";
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />
       link: "/services"
@@ -179,28 +178,21 @@ export function FeatureCTAs() {
       link: "/enterprise",
       details: "Scale your talent acquisition with white - labeled solutions, analytics dashboards, and dedicated account managers.";
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
     {
       title: "Developer Tools"
       description: "Access our API documentation, SDKs, and integration guides to build on top of the Zion platform.";
-
-      icon: <Code className="h - 10 w - 10 p - 2 rounded - md bg - gray - 100 text - gray - 700" />,
-      link: "/developers",
-      details: "Leverage our robust API with comprehensive documentation, code examples, and developer support.";
-
     }
     {
       title: "Learning Resources"
       description: "Access tutorials, courses, and documentation to enhance your skills in AI and tech.";
-
-      icon: <BookOpen className="h - 10 w - 10 p - 2 rounded - md bg - teal - 100 text - teal - 700" />,
-      link: "/content / blog",
-      details: "From beginner guides to advanced technical content, our learning resources help you stay at the cutting edge of technology.";
-
     }
     {
       title: "Project Management"
       description: "Streamlined tools to manage projects, track milestones, and ensure successful delivery.";
+<<<<<<< HEAD
       icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />
       link: "/dashboard/projects"
       details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion."
@@ -327,6 +319,8 @@ export function FeatureCTAs() {;
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution.";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
       icon: <Calendar className="h - 10 w - 10 p - 2 rounded - md bg - red - 100 text - red - 700" />,
       link: "/dashboard / projects",
       details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion.";
@@ -343,23 +337,9 @@ export function FeatureCTAs() {;
   ];
 ;
   return (
-
-    <section className="py - 16 bg - gradient - to - b from - background to - background / 90">;
-      <div className="container mx - auto px - 4">;
-        <div className="mb - 12 text - center">;
-          <h2 className="text - 3xl font - bold tracking - tight mb - 3">Discover Zion's Powerful Features</h2>;
-          <p className="text - lg text - muted - foreground max - w-3xl mx - auto">;
-            Explore our comprehensive suite of tools designed to transform how you connect, collaborate, and create in the tech ecosystem.;
-          </p>;
-        </div>;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-          {features.map ((feature, index) => (
-            <Card key={index} className="overflow - hidden transition - all duration - 300 hover:shadow - lg hover:border - primary / 50">;
-              <CardHeader className="pb - 2">;
-                <div className="flex justify - between items - start">;
-
                   {feature.icon}
                   {feature.badge && (
+<<<<<<< HEAD
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -489,9 +469,10 @@ export function FeatureCTAs() {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
+=======
+                    <Badge variant="secondary" className="bg - primary / 20 text - primary">;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       {feature.badge}
-                    </Badge>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   )}
                 </div>;
                 <CardTitle className="mt-4">{feature && feature.title}</CardTitle>;
@@ -510,13 +491,6 @@ export function FeatureCTAs() {;
               </CardFooter>;
             </Card>;
           ))}
-
-        </div>;
-      </div>;
-    </section>;
-  );
-}
-
 =======
                     </Badge>)}
                 </div>;

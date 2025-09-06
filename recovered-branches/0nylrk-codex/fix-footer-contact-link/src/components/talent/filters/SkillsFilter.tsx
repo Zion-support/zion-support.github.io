@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,6 +84,8 @@ import { SkillsFilterProps } from "@/types/filters",;
 const POPULAR_SKILLS = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import { ChevronDown, ChevronUp } from './lucide-react';
 import { Button } from '@/components / ui / button';
 import { Checkbox } from '@/components / ui / checkbox';
@@ -107,14 +110,6 @@ const POPULAR_SKILLS = [;
   "DevOps";
   "Security";
 ];
-
-      </button>;
-
-      {expanded && (;
-        <div className="mt-4 space-y-2">;
-          {POPULAR_SKILLS && POPULAR_SKILLS.map(skill => (;
-            <div key={skill} className="flex items-center">;
-
               <Checkbox
                 id={`skill-${skill}`}
                 checked={selectedSkills && selectedSkills.includes(skill)}
@@ -123,6 +118,7 @@ const POPULAR_SKILLS = [;
               />;
               <label
                 htmlFor={`skill-${skill}`}
+<<<<<<< HEAD
 
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
@@ -132,12 +128,16 @@ const POPULAR_SKILLS = [;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer">;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {skill}
               </label>;
             </div>;
           ))}
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
   )
@@ -150,6 +150,8 @@ const POPULAR_SKILLS = [;
   );
 }
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 ;
 export /**
@@ -188,6 +190,7 @@ function SkillsFilter() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 };
@@ -195,3 +198,5 @@ function SkillsFilter() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

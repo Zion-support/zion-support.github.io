@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -92,11 +93,16 @@ export function useEducation() {;
       
       if (error) throw error,
       
+=======
+        });
+      if (error) throw error;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return showSuccessToast("Education added", "Your education has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add education')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -154,10 +160,22 @@ export function useEducation() {;
     setIsLoading(true),
     setError(null),
     
+=======
+    }
+  }
+  const updateEducation = async (eduId: string, education: Education): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to update education')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     try {
       const { error } = await supabase
         .from('education')
         .update({
+<<<<<<< HEAD
           institution: education.institution;
           degree: education.degree;
           field_of_study: education.field_of_study;
@@ -184,11 +202,17 @@ export function useEducation() {;
       
       if (error) throw error,
       
+=======
+        })
+        .eq('id', eduId);
+      if (error) throw error;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return showSuccessToast("Education updated", "Your education has been updated")
     } catch (e: any) {
       return handleResumeError(e, 'Could not update education')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -246,16 +270,30 @@ export function useEducation() {;
     setIsLoading(true),
     setError(null),
     
+=======
+    }
+  }
+  const deleteEducation = async (eduId: string): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to delete education')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     try {
       const { error } = await supabase
         .from('education')
         .delete()
         .eq('id', eduId);
       if (error) throw error;
+<<<<<<< HEAD
         .eq('id', eduId),
       
       if (error) throw error,
       
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return showSuccessToast("Education deleted", "Your education has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete education')
@@ -270,6 +308,7 @@ export function useEducation() {;
     updateEducation;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     deleteEducation
   }
 }
@@ -277,6 +316,9 @@ export function useEducation() {;
 
 
 
+=======
+    deleteEducation
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
@@ -300,6 +342,7 @@ if ( {) {
       set_error ('You must be logged in to add education'),
       return false;
     }
+<<<<<<< HEAD
 
   },;
   return {;
@@ -317,4 +360,8 @@ if ( {) {
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    setIsLoading (true);
+    set_error (null);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;

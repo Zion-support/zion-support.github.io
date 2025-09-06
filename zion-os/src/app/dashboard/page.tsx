@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
@@ -112,6 +113,8 @@ export default function DashboardPage() {;
         <h1 className="text-3xl font-bold text-white mb-2">;
           Welcome back, {user?.name |"User"}! 👋;
           Welcome back, {user?.name || "User"}! 👋;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         </h1>;
         <p className="text - zinc - 300 text - lg">;
           Ready to continue building your digital economy? Here's what you can do next.;
@@ -183,9 +186,12 @@ export default function DashboardPage() {;
         <h2 className="text - xl font - semibold text - white mb - 4">Account Information</h2>;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
           <div>;
+<<<<<<< HEAD
             <label className="block text-sm font-medium text-zinc-400 mb-1">Name</label>;
             <p className="text-white">{user?.name |"Not provided"}</p>;
             <p className="text-white">{user?.name || "Not provided"}</p>;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </div>;
           <div>;
             <label className="block text - sm font - medium text - zinc - 400 mb - 1">Email</label>;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { format } from "date-fns";
@@ -65,3 +66,11 @@ export const formatDate = (dateString: string): string => {;
     return dateString;
   }
 };
+=======
+  try {
+    return format (new Date (date_string), 'PP');
+  } catch (e) {
+    return date_string;
+  }
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

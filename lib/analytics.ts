@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   if (typeof window !== 'undefined' && window && window.gtag) {
     window && window.gtag('config', 'GA_MEASUREMENT_ID', {
@@ -69,43 +70,22 @@ if ( {) {
   }
 };
 
+=======
+    });
+  }
+    });
+  }
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export const measurePerformance = () => {
-<<<<<<< HEAD
   if (typeof window !== 'undefined' && 'performance' in window) {
     const navigation = performance && performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     return {
-
-      loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,
-      domContentLoaded: navigation && navigation.domContentLoadedEventEnd - navigation && navigation.domContentLoadedEventStart,
-      firstPaint: performance && performance.getEntriesByName('first-paint')[0]?.startTime || 0,
-      firstContentfulPaint: performance && performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
-    };
-
-  }
-  return null;
-}
-=======
-};
 // Track events
 export const trackEvent = (
   eventName: string,
   properties?: Record<string, string | number | boolean>
 ) => {
-
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', eventName, properties);
-}
-;
-// Track events;
-export const track_event = (
-  event_name: string,
-  properties?: Record < string, string | number | boolean>) =>: any {
-  // Check condition
-if ( {) {
-  $2
-}
-    window.gtag ('event', event_name, properties);
-
   }
 }
 ;
@@ -132,18 +112,16 @@ if ( {) {
       first_paint: performance.getEntriesByName ('first - paint')[0]?.start_time || 0,
       firstContentfulPaint: performance.getEntriesByName ('first - contentful - paint')[0]?.start_time || 0,
     }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   return null;
-
 }
 ;
-
 interface WebVitalMetric {
   name: string;
   value: number;
   id: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const trackWebVitals = (metric: WebVitalMetric) => {
   if (typeof window !== 'undefined' && window.gtag) {
@@ -159,18 +137,18 @@ export const trackWebVitals = (metric: WebVitalMetric) => {
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       event_category: 'Web Vitals',
       event_label: metric.id,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       non_interaction: true,
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     });
   }
-
+// Track events
 }
 ;
 // Track events;
-
 export const event = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -184,6 +162,7 @@ export const event = ({
   label
   value
 }: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -210,26 +189,17 @@ export const event = ({
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   action: string;
   category: string;
   label?: string;
   value?: number;
-
-  if (typeof window !== 'undefined' && window && window.gtag) {
-    window && window.gtag('event', action, {
-}) =>: any {
-  // Check condition
-if ( {) {
-  $2
-}
-    window.gtag ('event', action, {
-
       event_category: category,
       event_label: label,
       value: value,
     });
   }
-
 }
 ;
 export const measure_performance = () =>: any {
@@ -242,24 +212,12 @@ if ( {') {
 ;
     return {
       load_time: navigation.loadEventEnd - navigation.loadEventStart;
-
       domContentLoaded:;
-
-        navigation && navigation.domContentLoadedEventEnd -;
-        navigation && navigation.domContentLoadedEventStart,;
-      firstPaint:;
-        performance && performance.getEntriesByName('first-paint')[0]?.startTime || 0,';
-      firstContentfulPaint:;
-        performance && performance.getEntriesByName('first-contentful-paint')[0]?.startTime ||';
-        0;,
-}}
-  return null};
-
-
 // Web Vitals tracking;
 interface WebVitalMetric {name: string;
   value: number;
   id: string}
+<<<<<<< HEAD
 
 
 export const trackWebVitals = (metric: WebVitalMetric) => {;
@@ -301,6 +259,8 @@ export const trackEvent = ( eventName: 'string',properties?: Record<string,strin
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 // Declare global types
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         navigation.domContentLoadedEventStart,
       first_paint:;
         performance.getEntriesByName ('first - paint')[0]?.start_time || 0, ';
@@ -331,6 +291,7 @@ if ( {') {
 // Declare global types;
 declare global {
   interface Window {
+<<<<<<< HEAD
     gtag: (...args: any[]) => void;
     dataLayer: any[];
   }
@@ -346,4 +307,10 @@ export const trackEvent = ( eventName: 'string',properties?: Record<string,strin
 ursor/add-new-services-and-deploy-updates-0462
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
+=======
+    gtag: (...args: unknown[]) => void;
+    dataLayer: unknown[];
+  }
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }

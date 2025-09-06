@@ -2,6 +2,7 @@ import Link from 'next / link';
 import AnimatedBackground from './AnimatedBackground';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -16,6 +17,8 @@ export default function FuturisticHero() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function FuturisticHero() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <section className='relative py-20 sm:py-28'>;
       <AnimatedBackground />;
@@ -52,13 +55,11 @@ function FuturisticHero() {
             </a>;
           </Link>;
           <Link href='/services'>;
-
-            <a className='px - 5 py - 3 rounded - lg border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 900'>;
-
               Explore Services;
             </a>;
           </Link>;
         </div>;
+<<<<<<< HEAD
 
   );
 }
@@ -88,6 +89,8 @@ export default function FuturisticHero() {
     </section>;
   );
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <div className='mt - 10 mx - auto max - w-3xl p - 6 rounded - 2xl bg - white / 70 dark:bg - black / 40 backdrop - blur border border - gray - 200 dark:border - gray - 800 shadow'>;
           <p className='text - sm text - gray - 700 dark:text - gray - 300'>;
             Talent marketplace • Project accelerators • Secure contracts •;
@@ -117,6 +120,7 @@ function FuturisticHero() {
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -130,3 +134,5 @@ function FuturisticHero() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
 import { quoteRequestService  } from '@/services/quoteRequestService';
@@ -33,6 +34,8 @@ export const useTalentQuotes = () => {
 
     queryFn: () => quoteRequestService && quoteRequestService.getByTalentId(talentId),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     enabled: !!talentId});
   // Count unread quotes
   const unreadCount = allQuotes && allQuotes.filter(
@@ -43,6 +46,7 @@ export const useTalentQuotes = () => {
     // Status filter
     if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
       return false
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -78,6 +82,8 @@ export const useTalentQuotes = () => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -86,6 +92,7 @@ export const useTalentQuotes = () => {;
     if (archiveFilter === 'archived' && !quote && quote.is_archived) {
       return false
     }
+<<<<<<< HEAD
     return true
   });
   // Mark as viewed/responded mutation
@@ -93,13 +100,17 @@ export const useTalentQuotes = () => {;
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
       quoteRequestService.updateStatus(id, status);
     
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return true
-  }),
-
+  });
   // Mark as viewed/responded mutation
   const updateStatusMutation = useMutation({
+<<<<<<< HEAD
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService.updateStatus(id, status),
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     onSuccess: (_, variables) => {
       let message = "Status updated";
       if (variables && variables.status === 'in_review') {
@@ -110,6 +121,7 @@ export const useTalentQuotes = () => {;
       toast({
         title: message
         description: "The quote request status has been updated"
+<<<<<<< HEAD
       }),
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
     }
@@ -118,12 +130,16 @@ export const useTalentQuotes = () => {;
         title: "Error";
         description: "Failed to update status: " + error && error.message,
 
+=======
+      });
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         variant: "destructive"
       })
     }
   });
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
+<<<<<<< HEAD
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>
       quoteRequestService.toggleArchive(id, isArchived);
     },
@@ -179,6 +195,8 @@ export const useTalentQuotes = () => {;
         title: "Error";
         description: "Failed to update quote: " + error && error.message,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         variant: "destructive"
       })
     }
@@ -190,6 +208,7 @@ export const useTalentQuotes = () => {;
     error;
     statusFilter;
     setStatusFilter;
+<<<<<<< HEAD
 <<<<<<< HEAD
     archiveFilter;
     setArchiveFilter
@@ -297,6 +316,8 @@ export const useTalentQuotes = () => {;
       toggleArchiveMutation && toggleArchiveMutation.mutate({ id, isArchived })}
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
     archive_filter;
     setArchiveFilter,

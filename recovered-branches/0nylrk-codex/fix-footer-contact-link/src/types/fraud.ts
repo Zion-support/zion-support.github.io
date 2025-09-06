@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -19,6 +20,9 @@ export interface FraudFlag {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface FraudFlag {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   user_id: string;
   user_email?: string;
@@ -34,6 +38,7 @@ export interface FraudFlag {;
   reviewed_at?: string;
   action_taken?: 'none' | 'warning' | 'suspension' | 'ban';
   gpt_classification?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   gpt_explanation?: string,
@@ -58,10 +63,15 @@ export interface FraudStats {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+export interface FraudStats {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   total_flags: number;
   pending_flags: number;
   suspicious_count: number;
   dangerous_count: number;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   actioned_count: number
@@ -102,3 +112,6 @@ export interface FraudStats {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

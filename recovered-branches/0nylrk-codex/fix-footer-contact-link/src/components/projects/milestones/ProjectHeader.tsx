@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react';
 import { useNavigate  } from 'react-router-dom';
@@ -20,6 +21,8 @@ function ProjectHeader() {
   const navigate = use_navigate ();
 ;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="flex flex - col md:flex - row justify - between items - start md:items - center py - 4 border - b">;
       <div className="flex items - center">;
@@ -34,6 +37,7 @@ function ProjectHeader() {
         </Button>;
         <h1 className="text - 2xl md:text - 3xl font - bold truncate max - w-xl">;
           {title}
+<<<<<<< HEAD
 
 
 
@@ -78,10 +82,13 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
           className="mr-2"
           onClick={() => navigate(-1)}
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         </h1>;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 
 =======
         >
@@ -98,3 +105,5 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
   )
 }
 ;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

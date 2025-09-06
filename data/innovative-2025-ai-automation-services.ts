@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface InnovativeAIAutomationService {
 export interface InnovativeAIAutomationService {;
+=======
+export interface InnovativeAIAutomationService {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   name: string;
   tagline: string;
@@ -11,6 +15,7 @@ export interface InnovativeAIAutomationService {;
   popular: boolean;
   icon: string;
   color: string;
+<<<<<<< HEAD
   textColor: string;
   link: string;
   marketPosition: string;
@@ -399,11 +404,32 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+  text_color: string;
+  link: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
+  category: string;
+  real_service: boolean;
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
+  roi: string;
+  competitors: string[];
+  market_size: string;
+  growth_rate: string;
+  variant: string;
+  contact_info: {
+    mobile: string;
+    email: string;
+    address: string;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 
   }
 
-=======
 
 export interface InnovativeAIAutomationService {;
 
@@ -773,6 +799,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface InnovativeAIAutomationService {;
   id: string,;
   name: string,;
@@ -813,16 +840,12 @@ export interface InnovativeAIAutomationService {;
   rating: number,;
   reviews: number;
 }
-;
 =======
-<<<<<<< HEAD
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+;
   }
 ];
-=======
 export interface InnovativeAIAutomationService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1083,12 +1106,9 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     customers: 35,;
     rating: 4.9,;
     reviews: 28;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
@@ -1097,3 +1117,25 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    website: string;
+  }
+      '98% accurate medical diagnosisAutonomous patient monitoringTreatment recommendation engineMedical image analysis (X-ray, MRI, CT)Symptom analysis & triageDrug interaction checkingPatient history analysisReal-time health alerts';
+      'Comprehensive medical reportsHIPAA-compliant security'
+    ];
+    integrations: ['Epic, Cerner, Allscripts, Custom EMR systems, Medical devices, Insurance systems'];
+    useCases: ['Medical diagnosis, Patient monitoring, Treatment planning, Medical imaging analysis, Drug safety checking, Clinical research'];
+    roi: 'Average customer sees 700% ROI within 12 months through improved diagnosis accuracy and patient outcomes.'
+    competitors: ['IBM Watson Health, Google Health AI, Custom medical AI solutions'];
+    marketSize: '$35B AI healthcare market', growthRate: '400% annual growth'
+    variant: 'ai-healthcare'
+    contactInfo: {
+    reviews: 28
+    real_implementation: true,
+    implementation_details: 'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.',
+    launch_date: '2025 - 03 - 01', customers: 35,
+    rating: 4.9,
+    reviews: 28;
+  }
+;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

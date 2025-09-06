@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -17,6 +18,8 @@ import {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {
   getTrustWeights
   setTrustWeights
@@ -26,24 +29,19 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method === 'GET') {;
-    const current = await getTrustWeights();
-    return res && res.status(200).json({ current, defaults: getDefaultWeights() });  }
-
-=======
-import { getTrustWeights, setTrustWeights, getDefaultWeights } from '../../../utils/trust/weights';
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  try {
+  if (req && req.method === 'GET') {
     const current = await getTrustWeights();
+    return res && res.status(200).json({ current, defaults: getDefaultWeights() })
+  }
 
-
+  if (req && req.method === 'PUT') {
+    const incoming = req && req.body || {};
     const updated = await setTrustWeights(incoming);
     return res && res.status(200).json({ updated });
   }
+<<<<<<< HEAD
 
 
   res && res.setHeader('Allow', 'GET, PUT');
@@ -52,6 +50,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res && res.setHeader('AllowGET, PUT');
   return res && res.status(405).json({ error: 'Method not allowed' })
 }
+=======
+import {
+  getTrustWeights,
+  setTrustWeights,
+  getDefaultWeights,
+} from '../../../utils / trust / weights';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
     const current = await getTrustWeights ();
     return res.status (200).json ({ current, defaults: getDefaultWeights () });  }
@@ -79,12 +92,3 @@ if ( {) {
   }
   res.set_header ('AllowGET, PUT');
   return res.status (405).json ({ error: 'Method not allowed' });
-
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

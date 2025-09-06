@@ -30,6 +30,7 @@ import { ServiceVariant } from '../types/service-variants';
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
     website: string;
   }
 
@@ -731,10 +732,14 @@ export const getPopularInnovativeMicroSaasServices2026 = () => {;
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+  ];
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1456,3 +1461,23 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number,
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+;
+export const getInnovativeMicroSaasServices2026ByCategory = (
+  category: string) =>: any {
+  return innovativeMicroSaasServices2026.filter (
+    service => service.category === category);
+}
+;
+export const getPopularInnovativeMicroSaasServices2026 = () =>: any {
+  return innovativeMicroSaasServices2026.filter (service => service.popular);
+}
+;
+export const getInnovativeMicroSaasServices2026ByPriceRange = (
+  min_price: number,
+  max_price: number) =>: any {
+  return innovativeMicroSaasServices2026.filter (service => {
+    const price = parse_int (service.price.replace ('$', ''));
+    return price >= min_price && price <= max_price;
+  });
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

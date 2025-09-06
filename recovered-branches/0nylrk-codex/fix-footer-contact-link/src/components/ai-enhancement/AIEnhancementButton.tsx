@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -22,10 +23,13 @@ import {toast} from '@/hooks/use-toast';
   onEnhanced: (enhancedContent: string) => void
 
 <<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   buttonText?: string;
   className?: string;
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
+<<<<<<< HEAD
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components/icons';
@@ -34,6 +38,10 @@ import {toast} from '@/hooks/use-toast';
 =======
 export function AIEnhancementButton(): any ({;
 
+=======
+  contentLength?: number;
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   options;
   onEnhanced;
 
@@ -46,6 +54,7 @@ export function AIEnhancementButton(): any ({;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
   const [showActions, setShowActions] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<string | null>(null);
+<<<<<<< HEAD
 
 
 =======
@@ -176,18 +185,15 @@ export function AIEnhancementButton({;
         description: `Please enter at least ${contentLength} characters before enhancing.`,;
         variant: "destructive";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       });
       return;
     }
-
-
-    const enhancedContent = await enhanceContent(options);
-
-    if (enhancedContent) {;
-
       setGeneratedContent(enhancedContent);
       setShowActions(true);
     }
+<<<<<<< HEAD
 
   },
 <<<<<<< HEAD
@@ -291,6 +297,8 @@ export function AIEnhancementButton({;
 
   if (showActions) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <div className="flex gap-2 items-center">;
         <Button
@@ -328,9 +336,6 @@ export function AIEnhancementButton({;
       </div>;
     );
   }
-
-
-
 =======
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
@@ -446,6 +451,7 @@ if ( {) {
     <Button;
       type="button";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -469,3 +475,19 @@ if ( {) {
 }
 }
 ;
+=======
+      variant={variant}
+      size={size}
+=======
+      className={`gap - 1 ${class_name}`}
+      on_click={handle_enhance}
+      disabled={is_enhancing}
+    >;
+      {is_enhancing ? (
+        <Loader2 className="h - 4 w - 4 animate - spin" />) : (
+        <Sparkles className="h - 4 w - 4" />)}
+      <span className="text - xs">{button_text}</span>;
+    </Button>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

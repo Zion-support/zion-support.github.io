@@ -11,6 +11,7 @@ function ensureStorage() {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   ensureStorage()
   const { id } = req.query as { id?: string }
   ensureStorage(),;
@@ -35,6 +36,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+;
+const EPISODES_PATH = path.join (
+  process.cwd (),
+  'data',
+  'podcast',
+  'episodes.json');
+/**
+ * ensure_storage - Function description
+ */
+function ensure_storage() {
+  const dir = path.dirname (EPISODES_PATH);
+  if () fs.mkdir_sync (dir, { recursive: true })) {
+  $2
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,6 +92,7 @@ function handler() {
   $2
 }
   return res.status (200).json ({ episode });
+<<<<<<< HEAD
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -88,3 +105,5 @@ function handler() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

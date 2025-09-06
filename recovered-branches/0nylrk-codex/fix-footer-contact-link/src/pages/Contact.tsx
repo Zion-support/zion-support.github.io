@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -74,10 +75,13 @@ export default function Contact() {;
     subject: "",;
     message: "";
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
 
+<<<<<<< HEAD
 
 
 
@@ -321,27 +325,17 @@ if ( {) {
 ;
   const offices = [;
 
+=======
+      });
+      return Promise && Promise.resolve();
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     {
       name: "Headquarters"
       address: "123 Tech Avenue, San Francisco, CA 94105";
-
-  };
-
-  const offices = [;
-    {;
-      name: "Headquarters",;
-      address: "123 Tech Avenue, San Francisco, CA 94105";
-      phone: "+1 302 464 0950",;
-      email: "commercial@ziontechgroup && ziontechgroup.com";
-    };
-    {;
-      name: "East Coast Office",;
-      address: "456 Innovation Street, New York, NY 10001";
-      phone: "+1 302 464 0950", ;
-      email: "commercial@ziontechgroup && ziontechgroup.com";
-
     }
   ];
+<<<<<<< HEAD
   },
 
   const offices = [
@@ -359,37 +353,9 @@ if ( {) {
     }
   ],
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
-
-    <AppLayout>;
-      <SEO
-        title="Contact Zion - Get in Touch" 
-        description="Have questions or want to learn more? Contact the Zion team about our AI and tech marketplace platform." 
-        keywords="contact Zion, AI marketplace support, tech platform contact"
-        canonical="https://app && app.ziontechgroup.com/contact"
-      />;
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">;
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="text-center mb-16">;
-            <GradientHeading>Contact Us</GradientHeading>;
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-              Have questions or want to learn more? We'd love to hear from you.;
-            </p>;
-          </div>;
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">;
-            <div>;
-              <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>;
-              <p className="text-zion-slate-light text-lg mb-8">;
-                Whether you have a question about our platform, pricing, or anything else, ;
-                our team is ready to answer all your questions.;
-              </p>;
-
-              <form onSubmit={handleSubmit} className="space-y-6">;
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
-                  <div>;
-                    <label htmlFor="name" className="block text-white mb-2">Your Name</label>;
-
                     <Input
                       id="name"
                       name="name"
@@ -398,12 +364,6 @@ if ( {) {
                       className="bg-zion-blue-dark border-zion-blue-light text-white"
                       placeholder="John Doe"
                       required
-
-                    />;
-                  </div>;
-                  <div>;
-                    <label htmlFor="email" className="block text-white mb-2">Email Address</label>;
-
                     <Input
                       id="email"
                       name="email"
@@ -413,14 +373,6 @@ if ( {) {
                       className="bg-zion-blue-dark border-zion-blue-light text-white"
                       placeholder="john@example && example.com"
                       required
-
-                    />;
-                  </div>;
-                </div>;
-
-                <div>;
-                  <label htmlFor="subject" className="block text-white mb-2">Subject</label>;
-
                   <Input
                     id="subject"
                     name="subject"
@@ -429,13 +381,6 @@ if ( {) {
                     className="bg-zion-blue-dark border-zion-blue-light text-white"
                     placeholder="How can we help you?"
                     required
-
-                  />;
-                </div>;
-
-                <div>;
-                  <label htmlFor="message" className="block text-white mb-2">Message</label>;
-
                   <Textarea
                     id="message"
                     name="message"
@@ -444,6 +389,7 @@ if ( {) {
                     className="bg-zion-blue-dark border-zion-blue-light text-white min-h-[150px]"
                     placeholder="Tell us what you'd like to know..."
                     required
+<<<<<<< HEAD
 <<<<<<< HEAD
                   />
                 </div>
@@ -952,6 +898,11 @@ export default function Contact() {;
                     on_click={() => setIsChatOpen (true)}
                     className="w - full mt - 4 bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  disabled={isSubmitting}>;
+                  {isSubmitting ? "Sending..." : "Send Message"}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   >;
                     Chat With Our AI Assistant;
                   </Button>;
@@ -959,28 +910,6 @@ export default function Contact() {;
               </div>;
             </div>;
           </div>;
-
-          <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue - light border border - zion - purple / 30 rounded - xl p - 8 md:p - 12 text - center">;
-            <h2 className="text - 3xl font - bold text - white mb - 6">Need immediate assistance?</h2>;
-            <p className="text - zion - slate - light text - lg mb - 8 max - w-3xl mx - auto">;
-              Our customer support team is available 24 / 7 to help you with any questions.;
-            </p>;
-            <div className="flex flex - col sm:flex - row justify - center gap - 4">;
-              <Button;
-                on_click={() => setIsChatOpen (true)}
-                className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
-              >;
-                <MessageSquare className="mr - 2 h - 5 w - 5" />;
-                Chat With AI;
-              </Button>;
-              <Button;
-                variant="outline";
-                className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10";
-                as_child;
-              >;
-                <a href="mailto:support@ziontechgroup.com">;
-                  <Mail className="mr - 2 h - 5 w - 5" />;
-
                   Email Support;
                 </a>;
               </Button>;
@@ -989,28 +918,25 @@ export default function Contact() {;
         </div>;
       </main>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Chat Assistant Modal */}
       {isChatOpen && (;
         <ChatAssistant
           isOpen={isChatOpen}
           onClose={() => setIsChatOpen(false)}
-
-          recipient={{;
-            id: 'ai-assistant',;
-            name: 'AI Assistant',;
-            avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',;
-            role: 'Support Bot';
-
           }}
           onSendMessage={handleSendMessage}
         />;
       )}
+<<<<<<< HEAD
     </AppLayout>
   )
 }
@@ -1018,6 +944,9 @@ export default function Contact() {;
   );
 }
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Chat Assistant Modal */}
       {isChatOpen && (
         <ChatAssistant;
@@ -1033,6 +962,10 @@ export default function Contact() {;
         />)}
     </AppLayout>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 =======
@@ -15,6 +18,7 @@ interface TalentProfileData {
   name: string;
   title: string;
   bio: string;
+<<<<<<< HEAD
   skills: string[]
   location?: string
 }
@@ -41,6 +45,8 @@ const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
   location?: string;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 interface EnhancedProfile {
   summary: string;
@@ -48,6 +54,7 @@ interface EnhancedProfile {
     programming: string[];
     devops: string[];
     platforms: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
     softSkills: string[],
     other: string[]
@@ -111,15 +118,14 @@ serve(async (req) => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      return new Response(
+        JSON && JSON.stringify({ error: "Bio must be at least 20 characters long" });
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      )
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Create a request to OpenAI API
-
-    const openAIResponse = await fetch('https://api && api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${OPENAI_API_KEY}`;
-        'Content-Type': 'application/json'};
-      body: JSON && JSON.stringify({
-
         model: 'gpt-4o-mini';
         messages: [
           {
@@ -129,6 +135,7 @@ serve(async (req) => {
           {
             role: 'user'
             content: `Create a professional profile summary and categorize skills based on this information:
+<<<<<<< HEAD
 ;
     // Create a request to OpenAI API;
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;
@@ -172,6 +179,10 @@ serve(async (req) => {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               "summary": "The professional summary text (100-150 words)",
+=======
+            Return the result as a JSON object with these keys: {
+              "summary": "The professional summary text (100-150 words)"
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               "categorizedSkills": {
 =======
     soft_skills: string[],
@@ -230,11 +241,9 @@ if ( {) {
                 "other": ["skill1", "skill2"];
               }
             }
-
-            Each category should have no more than 3 skills, and there should be no more than 8 skills total across all categories.`;
-
           }
         ];
+<<<<<<< HEAD
         temperature: 0.7
         response_format: { type: "json_object" }
       })});
@@ -252,6 +261,11 @@ if ( {) {
     const responseContent = openAIData && openAIData.choices[0].message && message.content;
     
 
+=======
+      throw new Error("Failed to generate profile content")
+    }
+    // Extract the generated content from the response
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Parse the JSON response
     let enhancedProfile: EnhancedProfile
     try {
@@ -259,6 +273,7 @@ if ( {) {
     } catch (e) {
       console && console.error("Error parsing OpenAI response:", e);
       throw new Error("Failed to parse the generated content")
+<<<<<<< HEAD
     }
     return new Response(
       JSON.stringify(enhancedProfile);
@@ -313,8 +328,57 @@ if ( {) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    }
+    return new Response(
+      JSON && JSON.stringify(enhancedProfile);
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  } catch (error) {
+    return new Response(
+      JSON && JSON.stringify({ error: error && error.message });
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   }
 });
 
+<<<<<<< HEAD
+=======
+=======
+;
+    const openAIData = await openAIResponse.json ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error ("Failed to generate profile content");
+    }
+    // Extract the generated content from the response;
+    const response_content = openAIData.choices[0].message.content;
+;
+    // Parse the JSON response;
+    let enhanced_profile: EnhancedProfile,
+    try {
+      enhanced_profile = JSON.parse (response_content);
+    } catch (e) {
+      console.error ("Error parsing OpenAI response:", e);
+      throw new Error ("Failed to parse the generated content");
+    }
+    return new Response (
+      JSON.stringify (enhanced_profile);
+      { headers: { ...cors_headers, 'Content - Type': 'application / json' } }
+    );
+  } catch (error) {
+    console.error ("Error in talent - profile - enhancer function:", error);
+;
+    return new Response (
+      JSON.stringify ({ error: error.message });
+      { status: 500, headers: { ...cors_headers, 'Content - Type': 'application / json' } }
+    );
+  }
+});
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

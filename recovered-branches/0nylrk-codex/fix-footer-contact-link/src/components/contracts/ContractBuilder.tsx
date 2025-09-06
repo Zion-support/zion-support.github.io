@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -94,6 +95,8 @@ export function ContractBuilder(): any ({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function ContractBuilder({;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   isOpen;
   onClose;
   talent;
@@ -109,35 +112,11 @@ export function ContractBuilder({
 }: ContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
-
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
-    undefined;
-  );
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
-  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
-
-  const handleLoadTemplate = (templateData: ContractFormValues) => {;
-    setFormValues(templateData);
-  };
-
-  const handleContractGenerated = (contract: string) => {;
-    setGeneratedContract(contract);
-    setActiveTab("preview"),;
-    if (onContractGenerated) {;
-      onContractGenerated(contract);
-    }
-  };
-
-  if (showSmartContractBuilder) {;
-
     return (
       <SmartContractBuilder
         isOpen={isOpen}
         onClose={() => {;
           setShowSmartContractBuilder(false);
-
-          onClose();
-
 =======
 import { useState } from './react';
 import { Dialog, DialogContent } from '@/components / ui / dialog';
@@ -193,6 +172,7 @@ if ( {) {
           setShowSmartContractBuilder (false);
           on_close ();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 }
 
@@ -303,10 +283,13 @@ export function ContractBuilder({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         }}
         talent={talent}
         client_name={client_name}
         onContractGenerated={onContractGenerated}
+<<<<<<< HEAD
 
       />
     )
@@ -335,10 +318,13 @@ export function ContractBuilder({;
               </Button>;
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <Button
                 variant="secondary"
                 size="sm"
                 onClick={() => setShowSmartContractBuilder(true)}
+<<<<<<< HEAD
               >
                 Smart Contract Builder
               </Button>
@@ -347,18 +333,23 @@ export function ContractBuilder({;
           <TabsContent value="form" className="pt-4">
             <ContractForm
             <ContractForm 
+=======
+              >;
+                Smart Contract Builder;
+              </Button>;
+            </div>;
+          </div>;
+            <ContractForm
+=======
+          <TabsContent value="form" className="pt - 4">;
+            <ContractForm;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               talent={talent}
               client_name={client_name}
               initial_values={form_values}
               onFormValuesChange={setFormValues}
               onContractGenerated={handleContractGenerated}
-
-            />;
-          </TabsContent>;
-
-          <TabsContent value="preview" className="pt-4">;
-            {generatedContract && (;
-
               <ContractPreview
                 contractContent={generatedContract}
                 talent={talent}
@@ -366,16 +357,12 @@ export function ContractBuilder({;
                 status="ready"
               />;
             )}
-
-          </TabsContent>;
-        </Tabs>;
-
-
         <TemplateManager
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
+<<<<<<< HEAD
         />
       </DialogContent>
     </Dialog>
@@ -387,6 +374,9 @@ export function ContractBuilder({;
   );
 }
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             />;
           </TabsContent>;
           <TabsContent value="preview" className="pt - 4">;
@@ -408,6 +398,10 @@ export function ContractBuilder({;
       </DialogContent>;
     </Dialog>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

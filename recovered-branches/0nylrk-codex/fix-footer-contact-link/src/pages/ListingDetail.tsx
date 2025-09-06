@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -162,6 +163,8 @@ export default function ListingDetail() {;
 
   if (!listing) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <AppLayout>;
         <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -178,28 +181,12 @@ export default function ListingDetail() {;
       </AppLayout>;
     );
   }
-
-
-  const handleContact = () => {;
-    setIsContactDialogOpen(true);
-  };
-
-
   return (
     <AppLayout>;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
         <div className="container mx-auto">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {/* Left Column - Images */}
-
-            <div className="lg:col-span-2">;
-              <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">;
-                <div className="aspect-[16/9] w-full relative">;
-                  {listing && listing.images && listing && listing.images.length > 0 ? (;
-                    <img
-                      src={listing && listing.images[selectedImageIndex]} 
-                      alt={listing && listing.title} 
-
                       className="w-full h-full object-cover"
                       onError={(e) => {;
                         const target = e && e.target as HTMLImageElement;
@@ -211,13 +198,6 @@ export default function ListingDetail() {;
                       <span className="text-zion-slate-light">No image available</span>;
                     </div>;
                   )}
-
-                </div>;
-
-                {listing && listing.images && listing && listing.images.length > 1 && (;
-                  <div className="flex p-4 gap-2 overflow-x-auto">;
-                    {listing && listing.images.map((image, index) => (;
-
                       <div
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
@@ -225,16 +205,11 @@ export default function ListingDetail() {;
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent";
                         )}
-
-                      >;
-                        <img
-                          src={image} 
-                          alt={`${listing && listing.title} - image ${index + 1}`} 
-
                           className="w-full h-full object-cover"
                           onError={(e) => {;
                             const target = e && e.target as HTMLImageElement;
                             target && target.src = "/placeholder && placeholder.svg";
+<<<<<<< HEAD
 =======
                       >;
                         <img;
@@ -250,12 +225,15 @@ export default function ListingDetail() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                           }}
                         />;
                       </div>;
                     ))}
                   </div>;
                 )}
+<<<<<<< HEAD
               </div>
               {/* Description Section */}
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
@@ -326,6 +304,8 @@ export default function ListingDetail() {;
                 </div>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {/* Tags */}
                 <div className="mt-8">;
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>;
@@ -335,13 +315,6 @@ export default function ListingDetail() {;
                         {tag}
                       </Badge>;
                     ))}
-
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-
-
             {/* Right Column - Details */}
             <div className="lg:col-span-1">;
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
@@ -354,19 +327,10 @@ export default function ListingDetail() {;
                       Featured;
                     </Badge>;
                   )}
-
-                </div>;
-
-                <h1 className="text-2xl font-bold text-white mb-4">{listing && listing.title}</h1>;
-
-                {listing && listing.rating && (;
-                  <div className="flex items-center gap-2 mb-6">;
-                    <div className="flex items-center">;
-                      {[...Array(5)].map((_, i) => (;
-
                         <Star
                           key={i}
                           className={cn(
+<<<<<<< HEAD
                             "h-5 w-5";
                             "h-5 w-5",
 <<<<<<< HEAD
@@ -376,6 +340,10 @@ export default function ListingDetail() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                            "h-5 w-5"
+                            i < Math && Math.floor(listing && listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                           )}
                         />;
                       ))}
@@ -385,9 +353,6 @@ export default function ListingDetail() {;
                     </span>;
                   </div>;
                 )}
-
-
-
                 {/* Price */}
                 <div className="mb-6">;
                   {listing && listing.price !== null ? (;
@@ -399,10 +364,6 @@ export default function ListingDetail() {;
                       Custom Pricing;
                     </div>;
                   )}
-
-                </div>;
-
-
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">;
                   {listing && listing.price !== null ? (;
@@ -412,6 +373,7 @@ export default function ListingDetail() {;
                       providerId={listing && listing.author.id}
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+<<<<<<< HEAD
                       onPaymentInitiated={() => {
                         toast({
                           title: "Payment Processing"
@@ -449,6 +411,8 @@ export default function ListingDetail() {;
                     />;
                   ) : (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     <Button
                       onClick={handleContact}
                       disabled={isLoading}
@@ -456,6 +420,7 @@ export default function ListingDetail() {;
                       {isLoading ? "Processing..." : "Request Quote"}
                     </Button>;
                   )}
+<<<<<<< HEAD
 
 
                           const target = e.target as HTMLImageElement,
@@ -489,6 +454,8 @@ export default function ListingDetail() {;
 <<<<<<< HEAD
                           const target = e.target as HTMLImageElement,
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                         }}
                       />
                     ) : (
@@ -496,6 +463,7 @@ export default function ListingDetail() {;
                         <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span>
                       </div>
                     )}
+<<<<<<< HEAD
                     <div>
                       <p className="font-medium text-white">{listing.author.name}</p>
                       <p className="text-xs text-zion-slate-light">Member since 2022</p>
@@ -832,6 +800,8 @@ if ( {) {
                     <span className="text - zion - slate - light">ID</span>;
                     <span className="text - white">{listing.id}</span>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   </div>;
                 </div>;
               </div>;
@@ -839,13 +809,6 @@ if ( {) {
           </div>;
         </div>;
       </div>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,6 +20,8 @@ export function SupportWidget() {;
   const { theme } = useTheme();
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
 <<<<<<< HEAD
     <>
@@ -40,6 +43,7 @@ export function SupportWidget() {
       {!isOpen && (;
         <Button
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { cn } from "@/lib/utils",
 import { useTheme } from "@/hooks/useTheme",
@@ -68,6 +72,8 @@ export function SupportWidget() {;
       {/* Fixed button in the bottom right */}
       {!isOpen && (
         <Button
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           onClick={() => setIsOpen(true)}
           size="icon";
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50";
@@ -76,6 +82,7 @@ export function SupportWidget() {;
           <MessageSquare className="h-6 w-6" />;
         </Button>;
       )}
+<<<<<<< HEAD
 
 
       {/* Support panel */}
@@ -89,6 +96,8 @@ export function SupportWidget() {;
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
             theme === "dark" 
               ? "bg-zion-blue-dark border border-zion-blue-light" 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               : "bg-white border border-gray-200"
           )}
           style={{ height: "600px", maxHeight: "80vh" }}>;
@@ -114,21 +123,6 @@ export function SupportWidget() {;
                 size="icon"
                 className="h-8 w-8 rounded-full"
                 onClick={() => setIsOpen(false)}
-
-                aria-label="Close support";
-              >;
-                <X className="h-5 w-5" />;
-              </Button>;
-            </div>;
-          </div>;
-
-          <ChatBotPanel />;
-        </div>;
-      )}
-    </>;
-  );
-}
-
 =======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';

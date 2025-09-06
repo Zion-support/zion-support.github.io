@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 return (
 
     <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
@@ -83,14 +84,18 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
-
-        className="flex w-full items-center justify-between text-white font-medium"
-      >
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <span>Hourly Rate</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -98,6 +103,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
+<<<<<<< HEAD
       {expanded && (
       
       {expanded && (
@@ -106,12 +112,18 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
             <span>${priceRange[0]}/hr</span>
             <span>${priceRange[1]}/hr</span>
           </div>
           <Slider
+<<<<<<< HEAD
             aria-label='Hourly rate range'            aria-label="Hourly rate range"
             aria-label="Hourly rate range"
 import { ChevronDown, ChevronUp } from 'lucide-react';
@@ -143,11 +155,17 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             value={[priceRange[0], priceRange[1]]}
             min={50}
             max={200}
             step={5}
             onValueChange={handleChange}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -169,21 +187,27 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
             className="mt-6"
           />
         </div>
       )};
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 }
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             className="mt-6"
           />
         </div>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     </div>
@@ -193,27 +217,13 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 =======
     </div>
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    </div>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   );
 };
 }
-
-        <div className="mt - 6">;
-          <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
-            <span>${price_range[0]}/hr</span>;
-            <span>${price_range[1]}/hr</span>;
-          </div>;
-          <Slider;
-            aria - label='Hourly rate range'            aria - label="Hourly rate range";
-            value={[price_range[0], price_range[1]]}
-            min={50}
-            max={200}
-            step={5}
-            onValueChange={handle_change}
-            className='mt - 6'          />            className="mt - 6";
-            className="mt - 6";
-          />;
-        </div>)}
-    </div>);
-}
-
-;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedAIAutomationService {;
   id: string;
@@ -26,20 +27,33 @@ export interface AdvancedAIAutomationService {;
   marketSize: string;
   growthRate: string;
   variant: string;
+=======
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string[],
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: string,
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   contactInfo: {
-    mobile: string, email: string,
-    address: string,
-    website: string
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
+
 export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   // AI-Powered Code Generation & Review
   {
+<<<<<<< HEAD
 
     id: 'ai-code-generation-review', name: 'AI Code Generation & Review Platform',
     tagline: 'Generate, review, and optimize code with AI intelligence',
@@ -155,9 +169,12 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
+=======
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    reviews: 38
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       website: 'https://ziontechgroup.com';
     }
-<<<<<<< HEAD
     real_implementation: true,
     implementation_details: 'AI - powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.';
     launch_date: '2024 - 10 - 01';
@@ -165,6 +182,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     rating: 4.8,
     reviews: 38;
   }
+<<<<<<< HEAD
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -664,3 +682,6 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

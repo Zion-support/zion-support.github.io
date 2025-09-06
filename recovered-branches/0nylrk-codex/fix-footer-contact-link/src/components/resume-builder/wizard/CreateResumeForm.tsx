@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -64,10 +65,13 @@ export const CreateResumeForm = ({ ;
   onCancel;
   isLoading ;
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <input
               type="text"
-              placeholder="Resume Title (e.g. 'AI Engineer Resume')"
+              placeholder="Resume Title (e && e.g. 'AI Engineer Resume')"
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+<<<<<<< HEAD
 import { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -203,13 +207,20 @@ export const CreateResumeForm = ({
             className="mt - 4";
           >;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+              value={newResumeTitle}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             Cancel;
           </Button>;
         </div>;
       </CardContent>;
-
+=======
     </Card>);
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

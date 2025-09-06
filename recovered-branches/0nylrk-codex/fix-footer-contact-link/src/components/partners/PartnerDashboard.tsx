@@ -29,6 +29,7 @@ export function PartnerDashboard() {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
@@ -369,11 +370,14 @@ function PartnerDashboard() {
             <p className="text - zion - slate - light mb - 4">No referrals yet</p>;
             <p className="text - xs text - zion - slate - light">;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               Start sharing your referral links to earn rewards;
             </p>;
           </div>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -386,3 +390,5 @@ function PartnerDashboard() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

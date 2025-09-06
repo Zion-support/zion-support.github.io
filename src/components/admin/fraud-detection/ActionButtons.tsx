@@ -1,7 +1,35 @@
->
+=======
+return (
+    <div className='flex space-x-2'>
+      <Button
+
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
+interface ActionButtonsProps {
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
+interface ActionButtonsProps {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
+  return (
+    <div className="flex space-x-2">
+      <Button
+        variant="ghost"
+        size="icon"
+        title="View Details"
+        aria-label="View details"
+        onClick={() => alert("View details (would open a detailed view)")}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      >
         <Eye className="h-4 w-4" />
       </Button>
       <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
         variant='ghost'
         size='icon'
@@ -112,6 +140,9 @@
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         variant="ghost"
         size="icon"
         title="Send Warning"
@@ -145,6 +176,7 @@
         <Button
           variant="ghost"
           size="sm"
+<<<<<<< HEAD
           onClick={() => onAction(flagId, 'ignore')}
         >
           Ignore
@@ -166,71 +198,71 @@
 
 import React from 'react';
 import { Button } from '@/components / ui / button';
+=======
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
-interface ActionButtonsProps {
-  flag_id: string;
-  status: string;
-  on_action: (
-    flag_id: string,
-    action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
-export const ActionButtons: React.FC < ActionButtonsProps> = ({
-  flag_id,
-  status,
-  on_action,
-}) => {  return (
-    <div className='flex space - x-2'>;
+interface ActionButtonsProps {;
+  flagId: string,;
+  status: string,;
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
+}
+;
+export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {;
+  return (;
+    <div className="flex space-x-2">;
       <Button;
-        variant='ghost';
-        size='icon';
-        title='View Details';
-        aria - label='View details';
-        on_click={() => alert ('View details (would open a detailed view)')}        variant="ghost";
+        variant="ghost";
         size="icon";
         title="View Details";
-        aria - label="View details";
-        on_click = {(, ) => alert ("View details (would open a detailed view)"), }
+        aria-label="View details";
+        onClick={() => alert("View details (would open a detailed view)")}
       >;
-        <Eye className='h - 4 w - 4' />;
+        <Eye className="h-4 w-4" />;
       </Button>;
       <Button;
-        variant='ghost';
-        size='icon';
-        title='Send Warning';
-        aria - label='Send warning';
-        on_click={() => on_action (flag_id, 'warning')}
-        disabled={status === 'actioned' || status === 'ignored'}      >;
-        <Info className='h - 4 w - 4' />;
+        variant="ghost";
+        size="icon";
+        title="Send Warning";
+        aria-label="Send warning";
+        onClick={() => onAction(flagId, 'warning')}
+        disabled={status === 'actioned' || status === 'ignored'}
+      >;
+        <Info className="h-4 w-4" />;
       </Button>;
       <Button;
-        variant='ghost';
-        size='icon';
-        title='Suspend User';
-        aria - label='Suspend user';
-        on_click={() => on_action (flag_id, 'suspension')}
-        disabled={status === 'actioned' || status === 'ignored'}      >;
-        <AlertTriangle className='h - 4 w - 4' />;
+        variant="ghost";
+        size="icon";
+        title="Suspend User";
+        aria-label="Suspend user";
+        onClick={() => onAction(flagId, 'suspension')}
+        disabled={status === 'actioned' || status === 'ignored'}
+      >;
+        <AlertTriangle className="h-4 w-4" />;
       </Button>;
       <Button;
-        variant='ghost';
-        size='icon';
-        title='Ban User';
-        aria - label='Ban user';
-        on_click={() => on_action (flag_id, 'ban')}
-        disabled={status === 'actioned' || status === 'ignored'}      >;
-        <Ban className='h - 4 w - 4' />;
+        variant="ghost";
+        size="icon";
+        title="Ban User";
+        aria-label="Ban user";
+        onClick={() => onAction(flagId, 'ban')}
+        disabled={status === 'actioned' || status === 'ignored'}
+      >;
+        <Ban className="h-4 w-4" />;
       </Button>;
-      {status === 'pending' && (
+      {status === 'pending' && (;
         <Button;
-          variant='ghost';
-          size='sm'          on_click={() => on_action (flag_id, 'ignore')}          variant="ghost";
+          variant="ghost";
           size="sm";
-          on_click={() => on_action (flag_id, 'ignore')}
-          on_click = {(, ) => on_action (flag_id, 'ignore'), }
+          onClick={() => onAction(flagId, 'ignore')}
         >;
           Ignore;
-        </Button>)}
-    </div>);
-}
-'"},
+        </Button>;
+      )}
+    </div>;
   );
-}
+};
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

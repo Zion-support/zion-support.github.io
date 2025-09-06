@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -666,15 +667,19 @@ if (throw error) {
         <FraudStatsCards stats={stats} />;
         <Tabs default_value="all" className="mb - 8">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+        .eq("id", flagId);
+      if (error) throw error;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <TabsList>;
             <TabsTrigger value="all">All Flags</TabsTrigger>;
             <TabsTrigger value="pending">Pending Review</TabsTrigger>;
             <TabsTrigger value="dangerous">Dangerous</TabsTrigger>;
             <TabsTrigger value="actioned">Actioned</TabsTrigger>;
           </TabsList>;
-
+=======
           <TabsContent value="all" className="mt - 6">;
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {/* Search and Filters */}
             <FraudFilters;
               search_query={search_query}
@@ -685,10 +690,6 @@ if (throw error) {
               setSeverityFilter={setSeverityFilter}
               contentTypeFilter={contentTypeFilter}
               setContentTypeFilter={setContentTypeFilter}
-
-            />;
-
-
             {/* Flags Table */}
             <Card>;
               <CardContent className="p-0">;
@@ -698,6 +699,7 @@ if (throw error) {
                   hasFilters={hasFilters}
                   resetFilters={resetFilters}
                   onAction={handleAction}
+<<<<<<< HEAD
                 />
               </CardContent>
             </Card>
@@ -718,3 +720,24 @@ if (throw error) {
 }
 }
 ;
+=======
+                />;
+              </CardContent>;
+            </Card>;
+          </TabsContent>;
+=======
+          <TabsContent value="pending">;
+            <FraudTabContent tab_value="pending" />;
+          </TabsContent>;
+          <TabsContent value="dangerous">;
+            <FraudTabContent tab_value="dangerous" />;
+          </TabsContent>;
+          <TabsContent value="actioned">;
+            <FraudTabContent tab_value="actioned" />;
+          </TabsContent>;
+        </Tabs>;
+      </div>;
+    </AppLayout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

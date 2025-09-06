@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -11,23 +12,17 @@ import { toast } from '@/hooks / use - toast';
 import { TalentProfile } from '@/types / talent';
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export interface HireRequestData {
   talent: {
     id: string;
     full_name: string;
-
-    professional_title: string,
-    email?: string;
-  }
-  requester: {
-    name: string;
-    email: string,
-    id?: string;
-
   }
   project: {
     overview: string;
     timeline: string;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -117,6 +112,16 @@ export function useHireRequest() {;
       
       const errorMessage = error instanceof Error 
 
+=======
+        : "There was a problem submitting your request. Please try again.";
+      setError(errorMessage);
+      toast({
+        title: "Error";
+        description: errorMessage
+        variant: "destructive"});
+      return { success: false, error: errorMessage }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     budget_min: number,
     budget_max: number;
   }
@@ -162,11 +167,12 @@ if (throw error) {
         variant: "destructive"});
 ;
       return { success: false, error: error_message }
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsSubmitting (false);
     }
   }
+<<<<<<< HEAD
 
 ;
   return {
@@ -274,6 +280,8 @@ export function useHireRequest() {;
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

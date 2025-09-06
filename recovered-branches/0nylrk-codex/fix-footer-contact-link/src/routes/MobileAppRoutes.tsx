@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Route, Routes} from "react-router-dom";
 import MobileAppPage from "../pages/MobileAppPage";
 import MobileLaunchPage from "../pages/MobileLaunchPage";
@@ -41,10 +42,13 @@ const MobileAppRoutes = () => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const MobileAppRoutes = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Routes>;
       {/* Mobile App Routes */}
 
+<<<<<<< HEAD
       <Route path="/download" element={<MobileAppPage />} />;
       <Route path="/mobile-app" element={<MobileAppPage />} />;
       <Route path="/mobile-launch" element={<MobileLaunchPage />} />;
@@ -57,6 +61,8 @@ const MobileAppRoutes = () => {;
 };
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import { Route, Routes } from './react-router-dom';
 import MobileAppPage from "../pages / MobileAppPage";
@@ -73,6 +79,7 @@ const MobileAppRoutes = () =>: any {
     </Routes>);
 }
 ;
+<<<<<<< HEAD
 =======
 
 },
@@ -80,4 +87,6 @@ const MobileAppRoutes = () =>: any {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default MobileAppRoutes;

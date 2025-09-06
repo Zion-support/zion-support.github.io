@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -65,20 +66,12 @@ interface ProjectDetailsFieldProps {
 
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <FormField
       control={form && form.control}
       name="projectOverview"
-
-export /**
- * ProjectDetailsField - Function description
- */
-function ProjectDetailsField() {
-  return (
-    <FormField;
-      control={form.control}
-      name="project_overview";
-
       render={({ field }) => (
         <FormItem>;
           <FormLabel className="text - white">Project Overview</FormLabel>;
@@ -87,6 +80,7 @@ function ProjectDetailsField() {
               placeholder="Describe your project, goals, and requirements";
               className="bg - zion - blue border - zion - blue - light text - white min - h-[120px]";
               {...field}
+<<<<<<< HEAD
 
       render={({ field }) => (;
         <FormItem>;
@@ -114,12 +108,15 @@ function ProjectDetailsField() {
 }
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             />;
           </FormControl>;
           <FormMessage className="text - red - 400" />;
         </FormItem>)}
     />);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -129,3 +126,5 @@ function ProjectDetailsField() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

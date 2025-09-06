@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function AITalentMatchingPage() {;
   const benefits = [;
     {;
@@ -47,16 +48,27 @@ export default function AITalentMatchingPage() {;
 
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { Bot, Users, TrendingUp } from 'lucide-react'
 
+=======
+import React from "react"
+import { ServiceLandingTemplate } from "../components/services/ServiceLandingTemplate"
+import { Bot, Users, TrendingUp, Star } from 'lucide-react'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AITalentMatchingPage() {
+
   const benefits = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
       icon: <Bot className="h-8 w-8" />},
@@ -79,59 +91,8 @@ export default function AITalentMatchingPage() {
       name: "Raj Patel",
       role: "Startup Founder",
       text: "The quality of candidates has improved dramatically since using Zion's platform.",
+      avatar: "/placeholder.svg"}],
 
-  const features = [;
-    "Machine learning-based candidate matching",;
-    "Comprehensive skill assessment tools",;
-    "Real-time market analysis",;
-    "Automated interview scheduling",;
-    "Performance analytics dashboard",;
-    "Custom matching criteria";
-  ];
-
-  const stats = [;
-    { label: "Successful Placements", value: "95%" },;
-    { label: "Client Satisfaction", value: "98%" },;
-    { label: "Time to Hire", value: "50% faster" }
-  ]
-
-import React from './react';
-import { ServiceLandingTemplate  } from '../components / services / ServiceLandingTemplate';
-import { Bot, Users, TrendingUp, Star } from 'lucide-react';
-export default /**
- * AITalentMatchingPage - Function description
- */
-function AITalentMatchingPage() {
-  const benefits = [;
-    {
-      icon: Bot,
-      title: "AI - Powered Matching",
-      description: "Advanced algorithms match the right talent with the right opportunities";
-    },
-    {
-      icon: Users,
-      title: "Verified Professionals",
-      description: "All candidates are pre - screened and verified for quality";
-    },
-    {
-      icon: TrendingUp,
-      title: "Success Tracking",
-      description: "Monitor performance and success rates of placements";
-    }
-  ];
-  const features = [;
-    "Machine learning - based candidate matching",
-    "Comprehensive skill assessment tools",
-    "Real - time market analysis",
-    "Automated interview scheduling",
-    "Performance analytics dashboard",
-    "Custom matching criteria";
-  ];
-  const stats = [;
-    { label: "Successful Placements", value: "95%" },
-    { label: "Client Satisfaction", value: "98%" },
-    { label: "Time to Hire", value: "50% faster" }
-  ];
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
@@ -182,14 +143,10 @@ export default function AITalentMatchingPage() {;
       benefits={benefits}
       features={features}
       stats={stats}
-
+      ctaText="Start Matching Talent"
+      ctaLink="/contact"
     />;
   );
-
-      cta_text="Start Matching Talent";
-      cta_link="/contact";
-    />);
-}
-
-}
-;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from &quot;react&quot;
 import * as ScrollAreaPrimitive from &quot;@radix-ui/react-scroll-area&quot;
 import { cn } from &quot;@/lib/utils&quot;
@@ -11,9 +12,12 @@ const ScrollArea = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
 >(({ className, children, ...props }, ref) => (
   <ScrollAreaPrimitive.Root
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     ref={ref}
     className={cn("relative overflow-hidden", className)}
     {...props}
+<<<<<<< HEAD
 >
     <ScrollAreaPrimitive.Viewport className=&quot;h-full w-full rounded-[inherit]&quot;>
   >
@@ -108,3 +112,9 @@ export { ScrollArea, ScrollBar }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>;
+    <ScrollAreaPrimitive.Viewport className=&quot;h - full w - full rounded-[inherit]&quot;>;
+      {children}
+export { ScrollArea, ScrollBar }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

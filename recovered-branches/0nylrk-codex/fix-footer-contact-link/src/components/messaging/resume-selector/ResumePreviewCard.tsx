@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -38,6 +39,8 @@ interface ResumePreviewCardProps {
 }
 
 export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">;
       <CardContent className="p-4">;
@@ -57,6 +60,7 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
             size="sm"
             onClick={onDownload}
             disabled={isLoading}
+<<<<<<< HEAD
             className="h-8 w-8 p-0"
           >
             <Download className="h-4 w-4 text-zion-cyan" />
@@ -163,6 +167,11 @@ function ResumePreviewCard() {
           <div className="flex flex-wrap gap-1 mt-2">;
             {resume && resume.skills.slice(0, 5).map((skill, index) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        {resume.basic_info.summary && (
+          <p className="text - xs text - zion - slate line - clamp - 2 mb - 2">;
+            {resume.basic_info.summary}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <Badge
                 key={index}
                 variant="outline"
@@ -179,18 +188,16 @@ function ResumePreviewCard() {
             )}
           </div>;
         )}
-
-
-
-=======
-
       </CardContent>;
     </Card>;
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   );
 =======
           </p>)}

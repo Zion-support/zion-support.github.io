@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next / font / google';
 import './globals.css';
+<<<<<<< HEAD
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'] });
@@ -67,12 +68,23 @@ export default function RootLayout({
         <Navigation />
         <main className="min-h-screen">
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  return (
+    <html lang=&quot;en & quot; className=&quot;scroll - smooth & quot;>;
+      <body className={`${inter.class_name} bg - black text - white antialiased`}>;
+        <Navigation />;
+        <main className=&quot;min - h-screen & quot;>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {children}
         </main>;
         <Footer />;
       </body>;
+<<<<<<< HEAD
     </html>;
   );
 }
 }
 ;
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

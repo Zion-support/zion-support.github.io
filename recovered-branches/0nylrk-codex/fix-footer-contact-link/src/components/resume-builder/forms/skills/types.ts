@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Skill } from '@/types/resume';
@@ -22,6 +23,8 @@ export interface SkillsFormProps {;
   on_complete: () => void;
   on_back: () => void;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,6 +35,7 @@ export interface SkillItemProps {;
 export interface SkillItemProps {
   skill: Skill;
   category: string;
+<<<<<<< HEAD
 
   on_delete: (id: string, category: string) => Promise < void>;
 
@@ -141,3 +145,5 @@ export interface BulkAddSkillsProps {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

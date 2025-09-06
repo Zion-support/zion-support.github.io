@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Badge} from "@/components/ui/badge";
@@ -78,6 +79,11 @@ export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) 
     case 'under_review':;
 
 =======
+interface DisputeStatusBadgeProps {
+  status: 'open' | 'under_review' | 'resolved' | 'closed';
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 export /**
  * DisputeStatusBadge - Function description
  */
@@ -100,6 +106,7 @@ function DisputeStatusBadge() {
       variant = "outline";
       message = "This dispute has been closed";
       break;
+<<<<<<< HEAD
 
       variant = "secondary",
       message = "This dispute is under review by our team",
@@ -186,11 +193,14 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
           <ShieldAlert className="h - 3 w - 3" />;
           <span > Under Dispute</span>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         </Badge>;
       </TooltipTrigger>;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </Tooltip>;
   );
@@ -203,3 +213,9 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+=======
+    </Tooltip>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

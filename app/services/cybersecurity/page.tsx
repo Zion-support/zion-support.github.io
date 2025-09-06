@@ -5,7 +5,11 @@ export const metadata = {
   keywords: 'cybersecurity, penetration testing, security audit, compliance, incident response, vulnerability assessment, security consulting'
 =======
   description: 'Comprehensive cybersecurity solutions including threat detection, compliance management, security audits, and incident response. Protect your business from cyber threats.'
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 };
 
 export default function CybersecurityPage() {
@@ -168,7 +172,11 @@ export default function CybersecurityPage() {
             features={["24/7 monitoring", "Threat detection", "Incident response", "Security updates", "Vulnerability management", "Monthly reports"]}
             price="$5k–$15k/mo"
             icon="📊"
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           />
         </div>
       </section>
@@ -266,7 +274,11 @@ export default function CybersecurityPage() {
               "Compliance monitoring and reporting",
               "Ongoing optimization and improvement"
             ]} 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           />
         </div>
       </section>
@@ -313,7 +325,11 @@ export default function CybersecurityPage() {
       <CTASection />
 =======
       <ContactSection />
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     </div>
   );
 }
@@ -322,7 +338,11 @@ export default function CybersecurityPage() {
 function CybersecurityServiceCard({ title, description, features, price, icon }: { 
 =======
 function CyberServiceCard({ title, description, features, price, icon }: { 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   title: string; 
   description: string; 
   features: string[]; 
@@ -416,7 +436,11 @@ function IndustrySecurity({ title, description, solutions, icon }: {
           <li key={index} className="flex items-center text-sm text-gray-600">
             <span className="text-green-500 mr-2">✓</span>
             {feature}
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </li>
         ))}
       </ul>
@@ -448,7 +472,11 @@ function Item({ title, details }: { title: string; details: string[] }) {
           </li>
         ))}
       </ul>
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     </div>
   );
 }
@@ -518,7 +546,11 @@ function Pricing() {
             "Incident response",
             "Monthly security reports"
           ]} 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         />
       </div>
     </section>
@@ -562,7 +594,11 @@ function Plan({ name, price, duration, features }: {
           <li key={index} className="flex items-center text-gray-600">
             <span className="text-green-500 mr-3">✓</span>
             {feature}
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </li>
         ))}
       </ul>
@@ -576,7 +612,11 @@ function Plan({ name, price, duration, features }: {
         }`}
 =======
         className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       >
         Get Started
       </a>
@@ -644,6 +684,10 @@ function ContactSection() {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   );
 }

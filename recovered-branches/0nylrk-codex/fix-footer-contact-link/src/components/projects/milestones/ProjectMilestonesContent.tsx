@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react';
 
@@ -41,6 +42,9 @@ export function ProjectMilestonesContent() {;
     activities;
     isLoading: milestonesLoading, ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     createMilestone;
     updateMilestoneStatus;
     deleteMilestone;
@@ -51,6 +55,7 @@ export function ProjectMilestonesContent() {;
   const [project, setProject] = useState<any>(null),
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('milestones');
+<<<<<<< HEAD
 
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
 
@@ -112,6 +117,11 @@ export function ProjectMilestonesContent() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+        const projectData = await getProjectById(projectId);
+        if (projectData) {;
+          setProject(projectData);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         }
       } catch (error) {;
         console && console.error("Error loading project:", error);
@@ -122,6 +132,7 @@ export function ProjectMilestonesContent() {;
     loadProject();
     refetch();
   }, [projectId, getProjectById, refetch]);
+<<<<<<< HEAD
   const handleMilestoneCreated = async () => {
     await refetch()
   }
@@ -205,6 +216,8 @@ export function ProjectMilestonesContent() {;
   if (isLoading || !project) {
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <div className="container mx-auto py-8 px-4">;
         <div className="flex justify-center items-center h-64">;
@@ -213,6 +226,7 @@ export function ProjectMilestonesContent() {;
       </div>;
     );
   }
+<<<<<<< HEAD
 
 
   const handleMilestoneSubmit = async (data: any) => {;
@@ -266,10 +280,13 @@ export function ProjectMilestonesContent() {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           projectId={projectId || ''}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           isUnderDispute={isUnderDispute}
           disputeId={disputeId}
           isTalent={isTalent}
           onAddMilestone={() => setActiveTab('create')}
+<<<<<<< HEAD
 
         />;
       </div>;
@@ -287,6 +304,8 @@ export function ProjectMilestonesContent() {;
             projectId={projectId |''}
           <MilestoneManager 
             projectId={projectId || ''}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             milestones={milestones}
             activities={activities}
             isLoading={milestonesLoading}
@@ -435,6 +454,7 @@ if (return, ) {
             onDeleteMilestone={delete_milestone}
             onUploadDeliverable={upload_deliverable}
             refetch={refetch}
+<<<<<<< HEAD
           />
         </TabsContent>
         <TabsContent value="activity">
@@ -445,6 +465,9 @@ if (return, ) {
             <MilestoneCreator
           {(isClient || isTalent) && (
             <MilestoneCreator 
+=======
+            <MilestoneCreator
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               onSubmit={handleMilestoneSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setActiveTab('milestones')}
@@ -454,6 +477,7 @@ if (return, ) {
               projectType={projectType}
             />;
           )}
+<<<<<<< HEAD
         </TabsContent>
       </Tabs>
     </div>
@@ -465,6 +489,9 @@ if (return, ) {
   );
 }
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           />;
         </TabsContent>;
         <TabsContent value="activity">;
@@ -485,6 +512,10 @@ if (return, ) {
       </Tabs>;
     </div>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

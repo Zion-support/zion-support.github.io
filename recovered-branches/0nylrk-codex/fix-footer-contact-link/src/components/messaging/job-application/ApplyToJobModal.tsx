@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 import {
@@ -95,18 +96,18 @@ function ApplyToJobModal() {
         <DialogHeader>;
           <DialogTitle > Apply to Job: {job.title}</DialogTitle>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <DialogDescription>;
             Complete your application for this position;
           </DialogDescription>;
         </DialogHeader>;
-
-        <ApplyForm;
-
           job={job}
           on_close={on_close}
           onApplySuccess={onApplySuccess}
         />;
       </DialogContent>;
+<<<<<<< HEAD
     </Dialog>;
 <<<<<<< HEAD
 =======
@@ -119,3 +120,5 @@ function ApplyToJobModal() {
     </Dialog>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,20 +1,15 @@
 
-
-
-import { motion } from 'framer-motion';
-
-;
-
-interface UltraAdvancedFuturisticBackground2026Props {
-  intensity?: 'low' | 'medium' | 'high' | 'extreme',
-interface UltraAdvancedFuturisticBackground2026Props {;
-=======
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-interface UltraAdvancedFuturisticBackground2026Props {
   intensity?: 'low' | 'medium' | 'high' | 'extreme';
-
-
+  colorScheme?: 'neural-network' | 'quantum-field' | 'cyberpunk' | 'holographic' | 'multidimensional';
+  particleCount?: number;
+  animationSpeed?: number;
+  enableHolographic?: boolean;
+  enableQuantumEffects?: boolean;
+  enableNeuralNetworks?: boolean;
+  enableMultidimensional?: boolean;
+  children?: React && React.ReactNode;
+  children?: React.ReactNode
+}
 
 const UltraAdvancedFuturisticBackground2026: React.FC<;
   UltraAdvancedFuturisticBackground2026Props;
@@ -28,9 +23,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<;
   enableNeuralNetworks = true,;
   enableMultidimensional = true,;
   children,}) => {const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   intensity = 'high';
   colorScheme = 'neural-network';
   particleCount = 300;
@@ -38,11 +30,23 @@ const UltraAdvancedFuturisticBackground2026: React.FC<;
   enableHolographic = true;
   enableQuantumEffects = true;
   enableNeuralNetworks = true;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+  enableMultidimensional = true,;
+  children;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {;
+    const canvas = canvasRef && canvasRef.current;
+    if (!canvas) return;
 
+    const ctx = canvas && canvas.getContext('2d');
     if (!ctx) return;
-
-
     let animationFrameId: number;    let particles: Particle[] = [];
     let neuralNodes: NeuralNode[] = [];
     let quantumFields: QuantumField[] = [];
@@ -50,41 +54,15 @@ const UltraAdvancedFuturisticBackground2026: React.FC<;
     let neuralNodes: NeuralNode[] = [];
     let quantumFields: QuantumField[] = [];
     let holographicLayers: HolographicLayer[] = [];
-
-    if (!ctx) return;
-    let animationFrameId: number,
-    let particles: Particle[] = [];
-    let neuralNodes: NeuralNode[] = [];
-    let quantumFields: QuantumField[] = [];
-    let holographicLayers: HolographicLayer[] = [];
-
     // Set canvas size
     const resizeCanvas = () => {
       if (containerRef.current) {
         const rect = containerRef.current.getBoundingClientRect();
         canvas.width = rect.width;
-
-    let animationFrameId: number,;
-    let particles: Particle[] = [],;
-    let neuralNodes: NeuralNode[] = [],;
-    let quantumFields: QuantumField[] = [],;
-    let holographicLayers: HolographicLayer[] = [],;
-    // Set canvas size;
-    const resizeCanvas = () => {;
-      if (containerRef && containerRef.current) {;
-        const rect = containerRef && containerRef.current.getBoundingClientRect();
-        canvas && canvas.width = rect && rect.width;
-        canvas && canvas.height = rect && rect.height;        canvas && canvas.height = rect && rect.height;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+        canvas.height = rect.height
       }
     }
     resizeCanvas();
-
-    window && window.addEventListener('resize', resizeCanvas);
-    // Particle class;
-    class Particle {;
-
       x: number;
       y: number;
   color_scheme?:;
@@ -175,22 +153,20 @@ if ( {) {
       color: string;
       alpha: number;
       life: number;
-
-      x: number,
-      y: number,
-=======
-      max_life: number;      coordinate_x: number,
-      coordinate_y: number,
-
       vx: number,
       vy: number,
       size: number,
       color: string,
       alpha: number,
       life: number,
-
-        this.maxLife = this.life
-
+        this.x = x;
+        this.y = y;
+        this.vx = (Math.random() - 0.5) * 2 * animationSpeed;
+        this.vy = (Math.random() - 0.5) * 2 * animationSpeed;
+        this.size = Math.random() * 3 + 1;
+        this.color = getColorSchemeColor();
+        this.alpha = Math.random() * 0.8 + 0.2;
+        this.life = Math.random() * 100 + 50;
       }
       update() {
         this.x += this.vx;
@@ -205,9 +181,6 @@ if ( {) {
         if (this.y < 0) this.y = canvas.height;
         if (this.y > canvas.height) this.y = 0;
         // Fade out
-
-        this.alpha = this.life / this.maxLife
-
       }
       draw() {
         ctx.save();
@@ -216,6 +189,7 @@ if ( {) {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
+<<<<<<< HEAD
         ctx.restore();      }        ctx.restore()
         ctx.restore();      }
 
@@ -296,12 +270,41 @@ if ( {) {
     // Neural network node class
     class NeuralNode {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       x: number;
       y: number;
       connections: NeuralNode[];
       activation: number;
-
-
+        this.x = x;
+        this.y = y;
+        this.connections = [];
+        this.activation = Math.random();
+      }
+      update() {
+        this.activation += (Math.random() - 0.5) * 0.1;
+        this.activation = Math.max(0, Math.min(1, this.activation));
+      }
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = 0.8;
+        ctx.fillStyle = `rgba(0, 255, 255, ${this.activation})`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, 3 + this.pulse * 2, 0, Math.PI * 2);
+        ctx.fill();
+        // Draw connections
+        this.connections.forEach(connection => {
+          const distance = Math.sqrt(
+      pulse: number;      x: number,;
+      y: number,;
+      connections: NeuralNode[],;
+      activation: number,;
+      pulse: number,;
+        this && this.x = x;
+        this && this.y = y;
+        this && this.connections = [];
+        this && this.activation = Math && Math.random();
+        this && this.pulse = 0;      }        this && this.pulse = 0;
       }
 
       update() {;
@@ -309,6 +312,7 @@ if ( {) {
         this && this.activation = Math && Math.max(0, Math && Math.min(1, this && this.activation));
         this && this.pulse = Math && Math.sin(Date && Date.now() * 0 && 0.001 + this && this.x * 0 && 0.01) * 0 && 0.5 + 0 && 0.5;      }        this && this.pulse = Math && Math.sin(Date && Date.now() * 0 && 0.001 + this && this.x * 0 && 0.01) * 0 && 0.5 + 0 && 0.5;
       }
+<<<<<<< HEAD
 =======
             ctx.stroke();
           }
@@ -336,6 +340,8 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
       draw() {;
         ctx && ctx.save();
@@ -344,6 +350,7 @@ if ( {) {
         ctx && ctx.beginPath();
         ctx && ctx.arc(this && this.x, this && this.y, 3 + this && this.pulse * 2, 0, Math && Math.PI * 2);
         ctx && ctx.fill();
+
         // Draw connections;
         this && this.connections.forEach(connection => {;
           const distance = Math && Math.sqrt(;
@@ -373,6 +380,7 @@ if ( {) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
+<<<<<<< HEAD
 
 
     // Quantum field class;
@@ -380,28 +388,20 @@ if ( {) {
 
     // Quantum field class
     class QuantumField {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       x: number;
       y: number;
       radius: number;
       intensity: number;
-
-      x: number,
-      y: number,
-      radius: number,
-      intensity: number,
-      phase: number,
-      constructor(x: number, y: number) {
-
         this.x = x;
         this.y = y;
         this.radius = Math.random() * 100 + 50;
         this.intensity = Math.random() * 0.8 + 0.2;
-
-        this.phase = Math.random() * Math.PI * 2
-
       }
       update() {
         this.phase += 0.02 * animationSpeed
+<<<<<<< HEAD
 
       }
 
@@ -466,51 +466,16 @@ if ( {) {
       }
 
 <<<<<<< HEAD
+=======
+        }
+        ctx.restore()
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     // Holographic layer class
     class HolographicLayer {
-
-      phase: number;      x: number,;
-      y: number,;
-      radius: number,;
-      intensity: number,;
-      phase: number,;
-        this && this.x = x;
-        this && this.y = y;
-        this && this.radius = Math && Math.random() * 100 + 50;
-        this && this.intensity = Math && Math.random() * 0 && 0.8 + 0 && 0.2;
-        this && this.phase = Math && Math.random() * Math && Math.PI * 2;
-      }
-      update() {;
-        this && this.phase += 0 && 0.02 * animationSpeed;      }        this && this.phase = Math && Math.random() * Math && Math.PI * 2;
-      }
-      update() {;
-        this && this.phase += 0 && 0.02 * animationSpeed;
-      draw() {;
-        ctx && ctx.save();
-        ctx && ctx.globalAlpha = 0 && 0.1;
-        for (let i = 0; i < 3; i++) {;
-          const waveRadius =;
-            this && this.radius + Math && Math.sin(this && this.phase + (i * Math && Math.PI) / 3) * 20;
-          const alpha = this && this.intensity * (1 - i / 3);        ;
-        for (let i = 0, i < 3, i++) {;
-          const waveRadius = this && this.radius + Math && Math.sin(this && this.phase + i * Math && Math.PI / 3) * 20;
-          const alpha = this && this.intensity * (1 - i / 3);
-          ctx && ctx.lineWidth = 2;
-          ctx && ctx.beginPath();
-          ctx && ctx.arc(this && this.x, this && this.y, waveRadius, 0, Math && Math.PI * 2);
-          ctx && ctx.stroke();
-        }
-        ctx && ctx.restore();      }          ctx && ctx.stroke();
-        }
-        ctx && ctx.restore();
-    }
-    // Holographic layer class;
-    class HolographicLayer {;
-
       x: number;
       y: number;
       max_life: number,
@@ -671,25 +636,17 @@ if ( {) {
       height: number;
       rotation: number;
       alpha: number;
-
-      x: number,
-      y: number,
-      color: string;      coordinate_x: number,
-      coordinate_y: number,
-
       width: number,
       height: number,
       rotation: number,
       alpha: number,
       color: string,
-
-        this.color = getColorSchemeColor()
-      }
-
-      update() {
-        this.rotation += 0.005 * animationSpeed;
-        this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2
-
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.width = Math.random() * 200 + 100;
+        this.height = Math.random() * 200 + 100;
+        this.rotation = Math.random() * Math.PI * 2;
+        this.alpha = Math.random() * 0.3 + 0.1;
       }
       draw() {
         ctx.save();
@@ -699,6 +656,7 @@ if ( {) {
         ctx.strokeStyle = this.color;
         ctx.lineWidth = 1;
         ctx.setLineDash([5, 5]);
+<<<<<<< HEAD
 <<<<<<< HEAD
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
@@ -717,11 +675,13 @@ if ( {) {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         ctx.restore()
+<<<<<<< HEAD
     }
 
       }
@@ -733,83 +693,37 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Get color based on scheme
     function getColorSchemeColor(): string {
       const colors = {
-
-        'neural-network': ['#00ffff#0080ff#8000ff#ff0080'];
-        'quantum-field': ['#00ff80#80ff00#ff8000#ff0080'];
-        'cyberpunk': ['#ff0066#00ffff#ffff00#ff6600'];
-        'holographic': ['#ff00ff#00ffff#ffff00#ff8000'];
-        'multidimensional': ['#8000ff#00ff80#ff8000#0080ff']
-      };
-      const schemeColors = colors[colorScheme] || colors['neural-network'];
-      return schemeColors[Math.floor(Math.random() * schemeColors.length)]
-    }
-    // Initialize particles
-    for (let i = 0, i < particleCount, i++) {
-
       particles.push(new Particle(
         Math.random() * canvas.width;
         Math.random() * canvas.height
       ))
-
-    }
-    // Initialize neural network
-    if (enableNeuralNetworks) {
-      for (let i = 0, i < 20, i++) {
-
         neuralNodes.push(new NeuralNode(
           Math.random() * canvas.width;
           Math.random() * canvas.height
         ))
-
-      }
-
-
       // Create connections
       neuralNodes.forEach(node => {
         neuralNodes.forEach(otherNode => {
           if (node !== otherNode && Math.random() < 0.3) {
-
-            node.connections.push(otherNode)
-          }
-        })
-      })
-    }
-
-    // Initialize quantum fields
-    if (enableQuantumEffects) {
-      for (let i = 0, i < 8, i++) {
-
         quantumFields.push(new QuantumField(
-Math.random() * canvas.width;
+          Math.random() * canvas.width;
           Math.random() * canvas.height
         ))
-
-      }
-
     }
-
     // Initialize holographic layers
     if (enableHolographic) {
-
-      for (let i = 0, i < 5, i++) {
-        holographicLayers.push(new HolographicLayer())
-      };
-
     }
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Create gradient background
       const gradient = ctx.createRadialGradient(
-
-        canvas.width / 2, canvas.height / 2, 0;
-        canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
-      );
-      
-
       const bgColors = {
         'neural-network': ['rgba(0, 0, 20, 0.8)rgba(0, 20, 40, 0.6)rgba(20, 0, 40, 0.4)'];
         'quantum-field': ['rgba(0, 20, 0, 0.8)rgba(20, 40, 0, 0.6)rgba(40, 0, 20, 0.4)'];
@@ -853,36 +767,24 @@ Math.random() * canvas.width;
       gradient.addColorStop(0, currentBgColors[0]);
       gradient.addColorStop(0.5, currentBgColors[1]);
       gradient.addColorStop(1, currentBgColors[2]);
-
-      
-
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw quantum fields
       if (enableQuantumEffects) {
         quantumFields.forEach(field => {
           field.update();
-
-          field.draw()
-
         })
       }
       // Update and draw holographic layers
       if (enableHolographic) {
         holographicLayers.forEach(layer => {
           layer.update();
-
-          layer.draw()
-
         })
       }
       // Update and draw neural network
       if (enableNeuralNetworks) {
         neuralNodes.forEach(node => {
           node.update();
-
-          node.draw()
-
         })
       }
       // Update and draw particles
@@ -892,9 +794,6 @@ Math.random() * canvas.width;
         // Remove dead particles and create new ones
         if (particle.life <= 0) {
           particles[index] = new Particle(
-
-            Math.random() * canvas.width;
-
             Math.random() * canvas.height
           )
         }
@@ -902,59 +801,6 @@ Math.random() * canvas.width;
       // Draw particle connections
       if (intensity === 'extreme' |intensity === 'high') {
         particles.forEach((particle, i) => {
-      
-      ctx.fillStyle = gradient,
-      ctx.fillRect(0, 0, canvas.width, canvas.height),
-
-      // Update and draw quantum fields
-      if (enableQuantumEffects) {
-        quantumFields.forEach(field => {
-          field.update(),
-          field.draw()
-        })
-      }
-
-      // Update and draw holographic layers
-      if (enableHolographic) {
-        holographicLayers.forEach(layer => {
-          layer.update(),
-          layer.draw()
-        })
-      }
-
-      // Update and draw neural network
-      if (enableNeuralNetworks) {
-        neuralNodes.forEach(node => {
-          node.update(),
-          node.draw()
-        })
-      }
-
-      // Update and draw particles
-      particles.forEach((particle, index) => {
-        particle.update(),
-        particle.draw(),
-
-        // Remove dead particles and create new ones
-        if (particle.life <= 0) {
-          particles[index] = new Particle(
-            Math.random() * canvas.width,
-            Math.random() * canvas.height
-          )
-        }
-      }),
-
-      // Draw particle connections
-      if (intensity === 'extreme' || intensity === 'high') {_particles.forEach(_(particle, _i) => {
-
-          particles.slice(i + 1).forEach(otherParticle => {
-            const distance = Math.sqrt(
-
-              Math.pow(particle.x - otherParticle.x, 2) + 
-              Math.pow(particle.y - otherParticle.y, 2)
-            );
-            
-
             if (distance < 100) {
               ctx.save();
               ctx.globalAlpha = (100 - distance) / 100 * 0.3;
@@ -964,6 +810,7 @@ Math.random() * canvas.width;
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
               ctx.stroke();
+<<<<<<< HEAD
               ctx.restore();
 
       color: string;      x: number,;
@@ -1196,6 +1043,8 @@ Math.random() * canvas.width;
               ctx && ctx.restore();
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         this.coordinate_x = Math.random () * canvas.width;
         this.coordinate_y = Math.random () * canvas.height;
         this.width = Math.random () * 200 + 100;
@@ -1456,6 +1305,7 @@ if ( {) {
               ctx.line_to (other_particle.x, other_particle.y);
               ctx.stroke ();
               ctx.restore ();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -1477,10 +1327,13 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             }
           });
         });
       }
+<<<<<<< HEAD
       animationFrameId = requestAnimationFrame(animate);    };            }
           })
         })
@@ -1490,30 +1343,39 @@ if ( {) {
 
       animationFrameId = requestAnimationFrame(animate);    };
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     };
 
     animate();
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
+
+    return () => {;
+      window && window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationFrameId);
-    }
-  }, [
-    intensity
-    colorScheme
-    particleCount
-    animationSpeed
-    enableHolographic
-    enableQuantumEffects
-    enableNeuralNetworks
-    enableMultidimensional
+    };
+  }, [;
+    intensity,;
+    colorScheme,;
+    particleCount,;
+    animationSpeed,;
+    enableHolographic,;
+    enableQuantumEffects,;
+    enableNeuralNetworks,;
+    enableMultidimensional,;
   ]);
 
+<<<<<<< HEAD
     >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+    >;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
         style={{ zIndex: -1 }}
+<<<<<<< HEAD
       />
 
 <<<<<<< HEAD
@@ -1528,6 +1390,8 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Additional visual effects */}
       {enableMultidimensional && (;
         <div className='absolute inset-0 pointer-events-none'>;
@@ -1569,29 +1433,8 @@ if ( {) {
           <motion.div;
             className='absolute top - 1/4 left - 1/4 w - 64 h - 64 border border - cyan - 400 / 20 rounded - full';
             animate={{
-
-              scale: [1, 1 && 1.2, 1],
-              rotate: [0, 180, 360],
-              opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],            }}
-
             transition={{
-
-              duration: 8
-              repeat: Infinity
-              ease: 'easeInOut'
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
-      cancelAnimationFrame(animationFrameId)
-    }
-  }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects, enableNeuralNetworks, enableMultidimensional]);
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
-
-      />;
-
-
       {/* Additional visual effects */}
       {enableMultidimensional && (;
         <div className="absolute inset-0 pointer-events-none">;
@@ -1609,6 +1452,7 @@ if ( {) {
           <motion.div;
             className="absolute top - 1/4 left - 1/4 w - 64 h - 64 border border - cyan - 400 / 20 rounded - full";
             animate={{
+<<<<<<< HEAD
 <<<<<<< HEAD
               scale: [1.2, 1, 1.2]
               rotate: [360, 180, 0]
@@ -1642,14 +1486,63 @@ if ( {) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+              scale: [1, 1 && 1.2, 1]
+              rotate: [0, 180, 360]
+              opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
+            }}
+            transition={{
+            }}
+          />;
+          <motion&& motion.div
+            className='absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full'
+            animate={{
+            transition={{
+              duration: 10
+              repeat: Infinity
+              ease: 'easeInOut',            }}
+          />;
+        </div>;
+      )}
+              scale: [1, 1.2, 1];
+              rotate: [0, 180, 360];
+              opacity: [0.1, 0.3, 0.1];
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />;
+            }}
+          />;
+          <motion.div;
+            className="absolute bottom - 1/4 right - 1/4 w - 96 h - 96 border border - purple - 400 / 20 rounded - full";
+            animate={{
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             }}
           />;
         </div>;
       )}
-
-
-};
+      {children}
+    </div>;
+  );
+}
+export default UltraAdvancedFuturisticBackground2026;      {children}
 export default UltraAdvancedFuturisticBackground2026;
+
+      
+      {children}
+    </div>
+  )
+};
+
+export default UltraAdvancedFuturisticBackground2026;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               duration: 10,
@@ -1663,6 +1556,8 @@ export default UltraAdvancedFuturisticBackground2026;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               ease: 'easeInOut',              ease: "easeInOut";
             }}
           />;
@@ -1677,6 +1572,7 @@ export default UltraAdvancedFuturisticBackground2026;      {children}
 ;
 export default UltraAdvancedFuturisticBackground2026;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -1685,3 +1581,5 @@ export default UltraAdvancedFuturisticBackground2026;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

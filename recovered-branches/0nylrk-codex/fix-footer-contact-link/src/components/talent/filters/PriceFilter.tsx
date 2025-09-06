@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Slider} from "@/components/ui/slider";
 import {PriceFilterProps} from "@/types/filters";
@@ -70,6 +71,8 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button
@@ -81,6 +84,7 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
+<<<<<<< HEAD
 
       </button>;
 
@@ -101,6 +105,9 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          <Slider
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             value={[priceRange[0], priceRange[1]]}
             min={50}
             max={200}
@@ -110,12 +117,6 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
           />;
         </div>;
       )}
-
-    </div>;
-  );
-}
-
-=======
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Slider  } from '@/components / ui / slider';
 import { PriceFilterProps  } from '@/types / filters';
@@ -155,4 +156,3 @@ function PriceFilter() {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,8 +1,13 @@
-// If activating, deactivate all other models with the same purpose;
-      // Check condition
-if ( {) {
-  $2
+=======
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
+import { supabase  } from '@/integrations/supabase/client';
+import { ModelConfig  } from '@/utils/zion-gpt';
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface ModelVersionData extends ModelConfig {
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
+  errorMessage?: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         await supabase;
@@ -132,10 +137,22 @@ export function ZionGPTModelManager() {;
       // Refresh the model list;
       fetch_models ();
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }
+      // Update this model
+      await supabase
+        .from('model_versions')
+        .update({ active: !currentActive })
+        .eq('id', modelId)
+      // Refresh the model list
+      fetchModels()
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } catch (error) {
-      logErrorToProduction ('Error toggling model active state:', { data: error });
+      logErrorToProduction('Error toggling model active state:', { data: error })
     }
 
+<<<<<<< HEAD
 
         .order('createdAt', { ascending: false }),;
 
@@ -175,58 +192,61 @@ export function ZionGPTModelManager() {;
   },
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
-    <Card className="w-full">;
-      <CardHeader className="flex flex-row items-center justify-between">;
-        <div>;
-          <CardTitle>ZionGPT Models</CardTitle>;
-          <CardDescription>;
-            Manage fine-tuned AI models for different platform features;
-          </CardDescription>;
-        </div>;
-        <Button onClick={fetchModels} variant="outline" size="sm">;
-          <RefreshCw className="h-4 w-4 mr-2" /> Refresh;
-        </Button>;
-      </CardHeader>;
-      <CardContent>;
-        {isLoading ? (;
-          <div className="flex items-center justify-center h-24">;
-            <Loader2 className="h-8 w-8 animate-spin text-primary" />;
-          </div>;
-        ) : (;
-          <Table>;
-            <TableHeader>;
-              <TableRow>;
-                <TableHead>Model ID</TableHead>;
-                <TableHead>Version</TableHead>;
-                <TableHead>Purpose</TableHead>;
-                <TableHead>Base Model</TableHead>;
-                <TableHead>Status</TableHead>;
-                <TableHead>Created</TableHead>;
-                <TableHead className="text-right">Actions</TableHead>;
-              </TableRow>;
-            </TableHeader>;
-            <TableBody>;
-              {models && models.map((model,) => (;
-                <TableRow key={model && model.id}>;
-                  <TableCell className="font-medium">{model && model.id}</TableCell>;
-                  <TableCell>v{model && model.version}</TableCell>;
-                  <TableCell>{model && model.purpose}</TableCell>;
-                  <TableCell>{model && model.baseModel}</TableCell>;
-                  <TableCell>;
-                    {model && model.trainingStatus === 'succeeded' ? (;
-                      <Badge className="bg-green-500">Ready</Badge>;
-                    ) : model && model.trainingStatus === 'failed' ? (;
-                      <Badge className="bg-red-500">Failed</Badge>;
-                    ) : model && model.trainingStatus === 'running' ? (;
-                      <Badge className="bg-blue-500">Training</Badge>;
-                    ) : (;
-                      <Badge className="bg-yellow-500">Queued</Badge>;
+    <Card className="w-full">
+      <CardHeader className="flex flex-row items-center justify-between">
+        <div>
+          <CardTitle>ZionGPT Models</CardTitle>
+          <CardDescription>
+            Manage fine-tuned AI models for different platform features
+          </CardDescription>
+        </div>
+        <Button onClick={fetchModels} variant="outline" size="sm">
+          <RefreshCw className="h-4 w-4 mr-2" /> Refresh
+        </Button>
+      </CardHeader>
+      <CardContent>
+        {isLoading ? (
+          <div className="flex items-center justify-center h-24">
+            <Loader2 className="h-8 w-8 animate-spin text-primary" />
+          </div>
+        ) : (
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Model ID</TableHead>
+                <TableHead>Version</TableHead>
+                <TableHead>Purpose</TableHead>
+                <TableHead>Base Model</TableHead>
+                <TableHead>Status</TableHead>
+                <TableHead>Created</TableHead>
+                <TableHead className="text-right">Actions</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {models.map((model,) => (
+                <TableRow key={model.id}>
+                  <TableCell className="font-medium">{model.id}</TableCell>
+                  <TableCell>v{model.version}</TableCell>
+                  <TableCell>{model.purpose}</TableCell>
+                  <TableCell>{model.baseModel}</TableCell>
+                  <TableCell>
+                    {model.trainingStatus === 'succeeded' ? (
+                      <Badge className="bg-green-500">Ready</Badge>
+                    ) : model.trainingStatus === 'failed' ? (
+                      <Badge className="bg-red-500">Failed</Badge>
+                    ) : model.trainingStatus === 'running' ? (
+                      <Badge className="bg-blue-500">Training</Badge>
+                    ) : (
+                      <Badge className="bg-yellow-500">Queued</Badge>
                     )}
                     {model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
                   </TableCell>
                   <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
                   <TableCell className="text-right">
+<<<<<<< HEAD
                     {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
                       <Button
                         variant="ghost"
@@ -253,16 +273,21 @@ export function ZionGPTModelManager() {;
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       >
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
                         ) : (
                           <RefreshCw className="h-4 w-4" />
                         )}
-                        <span className="ml-1">Check</span>;
-                      </Button>;
-                    ) : model && model.trainingStatus === 'succeeded' ? (;
+                        <span className="ml-1">Check</span>
+                      </Button>
+                    ) : model.trainingStatus === 'succeeded' ? (
                       <Button
+<<<<<<< HEAD
                         variant = {model.active ? "outline" : "default",}
                         size="sm"
                         onClick = {(,) => toggleModelActive(model.id, model.active, model.purpose),}
@@ -274,6 +299,11 @@ export function ZionGPTModelManager() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       >
                         {model.active ? (
                           <>
@@ -284,12 +314,13 @@ export function ZionGPTModelManager() {;
                             <Play className="h-4 w-4 mr-1" /> Activate
                           </>
                         )}
-                      </Button>;
-                    ) : (;
+                      </Button>
+                    ) : (
                       <Button
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -305,12 +336,19 @@ export function ZionGPTModelManager() {;
 
                         title={model.errorMessage || "Training failed"}
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                         title = {model.errorMessage || "Training failed",}
+=======
                         title={model.errorMessage || "Training failed"}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
+<<<<<<< HEAD
                   </TableCell>
                 </TableRow>
                   </TableCell>;
@@ -320,14 +358,20 @@ export function ZionGPTModelManager() {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               ))}
-            </TableBody>;
-          </Table>;
+            </TableBody>
+          </Table>
         )}
-      </CardContent>;
-    </Card>;
-  );
+      </CardContent>
+    </Card>
+  )
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -423,3 +467,12 @@ export function ZionGPTModelManager() {;
     </Card>);
 }
 }
+=======
+=======
+;
+=======
+>>>>>>> main
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

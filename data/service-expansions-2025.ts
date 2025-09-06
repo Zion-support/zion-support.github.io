@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ServiceExpansion2025 {
 export interface ServiceExpansion2025 {;
+=======
+export interface ServiceExpansion2025 {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   name: string;
   tagline: string;
@@ -9,6 +13,7 @@ export interface ServiceExpansion2025 {;
   features: string[];
   link: string;
   category: string;
+<<<<<<< HEAD
   realImplementation: boolean;
   contactInfo: {
     mobile: string;
@@ -34,11 +39,22 @@ export interface ServiceExpansion2025 {;
 =======
 
 
+=======
+  real_implementation: boolean;
+  contact_info: {
+    mobile: string;
+    email: string;
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
+];      mobile: "+1 302 464 0950";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-=======
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -53,19 +69,9 @@ export interface ServiceExpansion2025 {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const serviceExpansions2025: ServiceExpansion2025[] = [
   {
-<<<<<<< HEAD
     id: "ai-workflow-automation", name: "AI Workflow Automation",
     tagline: "Intelligent process automation and optimization", price: "$89/month",
     description: "Advanced AI-powered workflow automation platform that streamlines business processes.",
-=======
-<<<<<<< HEAD
-    id: 'ai-workflow-automation'
-    name: 'AI Workflow Automation'
-    tagline: 'Intelligent process automation and optimization'
-    price: '$89/month'
-    description:
-      'Advanced AI-powered workflow automation platform that streamlines business processes.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     features: [
       "Process automation";
       "AI optimization";
@@ -76,6 +82,7 @@ export const serviceExpansions2025: ServiceExpansion2025[] = [
     link: "/services/ai-workflow-automation", category: "Service Expansions 2025",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -88,17 +95,20 @@ export const serviceExpansions2025: ServiceExpansion2025[] = [
       email: "kleber@ziontechgroup.com";
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-<<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
+<<<<<<< HEAD
 =======
 =======
     id: "ai-workflow-automation",
@@ -144,3 +154,5 @@ export const serviceExpansions2025: ServiceExpansion2025[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

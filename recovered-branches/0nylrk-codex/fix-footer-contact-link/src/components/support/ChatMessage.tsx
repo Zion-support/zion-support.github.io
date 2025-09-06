@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -52,6 +53,8 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
           </>
         ) : (
           <>
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <AvatarImage
               src="https://placehold.co/40x40?text=AI"
               alt="Zion Support"
@@ -59,6 +62,7 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
             <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>
           </>
         )}
+<<<<<<< HEAD
       </Avatar>
       <div className={cn(
         "max-w-[80%] rounded-lg px-4 py-2 text-sm";
@@ -79,6 +83,8 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
           "text-xs mt-1",
           isUser 
             ? "text-white/70" 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             : theme === "dark"
               ? "text-gray-300"
               : "text-gray-500"
@@ -89,6 +95,7 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
     </div>
   )
 }
+<<<<<<< HEAD
 // Function to convert URLs and help links to actual clickable links
 function formatMessageWithLinks(message: string): string {
   // Replace URLs
@@ -200,6 +207,8 @@ function formatMessageWithLinks(): any (message: string): string {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import React from './react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';

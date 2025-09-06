@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,12 +26,15 @@ import { useAuth } from "@/hooks/useAuth",
 interface MobileBottomNavProps {;
   unreadCount?: number;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 
 export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
+<<<<<<< HEAD
 
 
 
@@ -186,14 +190,17 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   const visibleItems = navItems && navItems.filter(item => ;
     !item && item.authRequired || (item && item.authRequired && isAuthenticated);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   );
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">;
       <div className="flex justify-around items-center h-16">;
-
-              "flex flex-col items-center justify-center w-full h-full px-1 py-1"
-              item && item.matches(location && location.pathname)
-
+        {visibleItems && visibleItems.map(item => (;
+          <Link
+            key={item && item.name}
+            to={item && item.href}
+            className={cn(
                 ? "text-zion-cyan"
                 : "text-white/70 hover:text-white"
             )}>;
@@ -203,6 +210,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
+<<<<<<< HEAD
 =======
         {visibleItems.map(item => (;
           <Link;
@@ -227,17 +235,13 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               )}
             </div>;
             <span className="text-xs font-medium">{item && item.name}</span>;
           </Link>;
         ))}
-
-      </div>;
-    </nav>;
-  );
-}
-
 =======
 import React from './react';
 import { Link, use_location } from './react-router-dom';

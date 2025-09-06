@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface BlogAuthor {
 export interface BlogAuthor {;
   name: string;
@@ -8,6 +9,10 @@ export interface BlogAuthor {;
   title: string,
   avatar_url: string;
 
+=======
+export interface BlogAuthor {
+  name: string;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,20 +32,12 @@ export interface BlogPost {
   read_time: string;
   category: string;
   tags: string[];
-
-  featured_image: string;
-  is_featured?: boolean;
-  is_published?: boolean;
-  created_by?: string,
-  updated_at?: string;
-}
-// Type for generated blog content;
-
 export interface GeneratedBlogContent {
   title: string;
   meta_description: string;
   body: string;
   tags: string[];
+<<<<<<< HEAD
 
   tweet_summary?: string,
   image_prompt?: string;
@@ -105,3 +102,6 @@ export interface BlogAuthor {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Link from 'next/link';
@@ -93,6 +94,9 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   Phone,
   Mail,
   MapPin,
@@ -142,6 +146,7 @@ import {
   Globe2,
   Bot,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   Crown,;
   Infinity,;} from 'lucide-react';import {
@@ -156,6 +161,8 @@ import {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, MessageCircle, Star, Zap, Sparkles;
   Home, Users, Briefcase, BookOpen, TrendingUp;
@@ -163,30 +170,63 @@ import {
   GraduationCap, ShieldCheck, Eye, Code, Wrench;
   Smartphone, BarChart3, Palette, Camera, Video;
   Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind;
-
-
 const serviceCategories = [
-
-
+    title: 'AI & Consciousness',
+    icon: Brain,
+    color: 'from-violet-600 via-purple-600 to-indigo-600',
+    services: [
+      { name: 'AI Emotional Intelligence', href: '/services/ai-emotional-intelligence-platform' },
+      { name: 'AI Creativity Orchestrator', href: '/services/ai-creativity-orchestrator' },
+      { name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager' }
+    ]
     title: 'Quantum Technology',
     icon: Globe,
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
     services: [
-
-
+      {
+        name: 'Quantum Internet Security'
+        href: '/services/quantum-internet-security-gateway'
+      }
+      {
+        name: 'Biotech DNA Computing'
+        href: '/services/biotech-dna-computing-platform'
+      }
+      {
+        name: 'Quantum Financial Trading'
+        href: '/services/quantum-financial-trading-platform'
+      }
+      {
+      { name: 'Biotech DNA Computing', href: '/services/biotech-dna-computing-platform' },
+      { name: 'Quantum Financial Trading', href: '/services/quantum-financial-trading-platform' },
+      { name: 'Quantum Creativity Studio', href: '/services/quantum-creativity-studio' }
+    ]
     title: 'Space & Metaverse',
     icon: Rocket,
     color: 'from-teal-600 via-emerald-600 to-green-600',
     services: [
-
-
+      {
+        name: 'Space Mining Automation'
+        href: '/services/space-mining-automation-platform'
+      }
+      {
+        name: 'Metaverse Digital Reality'
+        href: '/services/metaverse-digital-reality-platform'
+      }
+      {
+        name: 'AI Predictive Health'
+        href: '/services/ai-predictive-health-analytics'
+      }
+      {
+      { name: 'Metaverse Digital Reality', href: '/services/metaverse-digital-reality-platform' },
+      { name: 'AI Predictive Health', href: '/services/ai-predictive-health-analytics' },
+      { name: 'Virtual Event Holograms', href: '/services/virtual-event-hologram-platform' }
+    ]
     title: 'Enterprise IT',
     icon: Cpu,
     color: 'from-blue-600 via-cyan-600 to-teal-600',
     services: [
-
-
       {
+<<<<<<< HEAD
         name: 'Space Mining Automation'
         href: '/services/space-mining-automation-platform'
       }
@@ -238,16 +278,22 @@ const serviceCategories = [
   }
         name: 'Smart Financial Management',
         href: '/services / smart - financial - management - platform',
-      },
-    ],
-
 =======
-      { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-suite' },
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+        name: 'AI Business Intelligence',
+        href: '/services / ai - business - intelligence - suite',
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+      },
+      {
+        name: 'Smart Supply Chain',
+        href: '/services / smart - supply - chain - optimization',
+      },
+      {
+        name: 'Intelligent HR Management',
+        href: '/services / intelligent - hr - management - system',
+      },
+      {
       { name: 'Smart Supply Chain', href: '/services/smart-supply-chain-optimization' },
       { name: 'Intelligent HR Management', href: '/services/intelligent-hr-management-system' },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       { name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' }
     ]
   }
@@ -260,21 +306,14 @@ const serviceCategories = [
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-const mainNavigation = [
-
 =======
-  }, ];      { name: 'AI Business Intelligence', href: '/services / ai - business - intelligence - suite' },
-      { name: 'Smart Supply Chain', href: '/services / smart - supply - chain - optimization' },
-      { name: 'Intelligent HR Management', href: '/services / intelligent - hr - management - system' },
-      { name: 'Smart Financial Management', href: '/services / smart - financial - management - platform' }
-    ];
-  }
-const main_navigation = [;
-
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
   { name: 'AI Solutions', href: '/ai - solutions', icon: Brain },
@@ -285,17 +324,16 @@ const main_navigation = [;
   { name: 'Innovations', href: '/innovations', icon: Sparkles },
   { name: 'About', href: '/about', icon: Users },
 
-
-
 const quickLinks = [
+  { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+];
+;
+const quick_links = [;
   { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
-
+  { name: 'Case Studies', href: '/case - studies', icon: BookOpen },
   { name: 'Blog', href: '/blog', icon: BookOpen },
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Careers', href: '/careers', icon: GraduationCap },
-
-
 
 const resources = [
   { name: 'Support', href: '/support', icon: MessageCircle }, ];  { name: 'Support', href: '/support', icon: MessageCircle }
@@ -310,8 +348,6 @@ const resources = [;
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Events', href: '/events', icon: Calendar },
 
-
-
 const company = [
   { name: 'Webinars', href: '/webinars', icon: Video }, ];  { name: 'Webinars', href: '/webinars', icon: Video }
 ];
@@ -325,44 +361,13 @@ const company = [;
   { name: 'Press', href: '/press', icon: BookOpen },
   { name: 'Legal', href: '/legal', icon: Shield },
 
-
-
-];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home }
-  { name: 'Services', href: '/services', icon: Briefcase }
-  { name: 'AI Solutions', href: '/ai-solutions', icon: Brain }
-  { name: 'Quantum Tech', href: '/quantum-tech', icon: Globe }
-  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu }
-  { name: 'Space Tech', href: '/space-tech', icon: Rocket }
-  { name: 'Micro SAAS', href: '/micro-saas', icon: Target }
-  { name: 'Innovations', href: '/innovations', icon: Sparkles }
-  { name: 'About', href: '/about', icon: Users }
-  { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-];
 const footerSections = [
   {
     title: 'Services'
     links: [
-
-      { name: 'AI & Machine Learning', href: '/services/ai-ml' },
-      { name: 'Quantum Computing', href: '/services/quantum-computing' },
-      { name: 'Space Technology', href: '/services/space-technology' },
-      { name: 'Enterprise IT', href: '/services/enterprise-it' },
-      { name: 'Micro SAAS', href: '/services/micro-saas' },
-
   {
     title: 'Solutions'
     links: [
-
-  }
-    title: 'Industries',
-
     links: [
       { name: 'Healthcare', href: '/industries/healthcare' }
       { name: 'Finance', href: '/industries/finance' }
@@ -378,13 +383,6 @@ const footerSections = [
       { name: 'Quantum Security', href: '/solutions/quantum-security' },
       { name: 'Space Mining', href: '/solutions/space-mining' },
       { name: 'Metaverse Platform', href: '/solutions/metaverse' },
-
-      { name: 'Business Intelligence', href: '/solutions/business-intelligence' },
-      { name: 'Supply Chain AI', href: '/solutions/supply-chain-ai' }
-    ]
-  };
-  {
-
     title: 'Industries',
     links: [
       { name: 'Healthcare', href: '/industries/healthcare' },
@@ -392,68 +390,6 @@ const footerSections = [
       { name: 'Manufacturing', href: '/industries/manufacturing' },
       { name: 'Retail', href: '/industries/retail' },
       { name: 'Education', href: '/industries/education' },
-
-      { name: 'Government', href: '/industries/government' }
-    ]
-  };
-
-  {
-    title: 'Resources'
-    links: [
-
-=======
-    href: 'https://github.com / Zion - Holdings',
-    icon: Github,
-    color: 'hover:text - gray - 400',
-  }, ];  { name: 'LinkedIn', href: 'https://linkedin.com / company / ziontechgroup', icon: Linkedin, color: 'hover:text - blue - 500' },
-  { name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: Twitter, color: 'hover:text - blue - 400' },
-  { name: 'Facebook', href: 'https://facebook.com / ziontechgroup', icon: Facebook, color: 'hover:text - blue - 600' },
-  { name: 'Instagram', href: 'https://instagram.com / ziontechgroup', icon: Instagram, color: 'hover:text - pink - 500' },
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text - red - 500' },
-  { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github, color: 'hover:text - gray - 400' }
-const footer_sections = [;
-  {
-    title: 'Services',
-    links: [;
-      { name: 'AI & Machine Learning', href: '/services / ai - ml' },
-      { name: 'Quantum Computing', href: '/services / quantum - computing' },
-      { name: 'Space Technology', href: '/services / space - technology' },
-      { name: 'Enterprise IT', href: '/services / enterprise - it' },
-      { name: 'Micro SAAS', href: '/services / micro - saas' },
-      { name: 'Cybersecurity', href: '/services / cybersecurity' },
-    ],
-  },  {      { name: 'Cybersecurity', href: '/services / cybersecurity' }
-    ];
-  }
-  {
-    title: 'Solutions',
-    links: [;
-      { name: 'AI Consciousness', href: '/solutions / ai - consciousness' },
-      { name: 'Quantum Security', href: '/solutions / quantum - security' },
-      { name: 'Space Mining', href: '/solutions / space - mining' },
-      { name: 'Metaverse Platform', href: '/solutions / metaverse' },
-      {
-        name: 'Business Intelligence',
-        href: '/solutions / business - intelligence',
-      },
-      { name: 'Supply Chain AI', href: '/solutions / supply - chain - ai' },
-    ],
-  },  {      { name: 'Business Intelligence', href: '/solutions / business - intelligence' },
-      { name: 'Supply Chain AI', href: '/solutions / supply - chain - ai' }
-    ];
-  }
-    title: 'Industries',
-    links: [;
-      { name: 'Healthcare', href: '/industries / healthcare' },
-      { name: 'Finance', href: '/industries / finance' },
-      { name: 'Manufacturing', href: '/industries / manufacturing' },
-      { name: 'Retail', href: '/industries / retail' },
-      { name: 'Education', href: '/industries / education' },
-      { name: 'Government', href: '/industries / government' },
-    ],
-  },  {      { name: 'Government', href: '/industries / government' }
-    ];
-
   }
   {
     title: 'Resources',
@@ -463,6 +399,7 @@ const footer_sections = [;
       { name: 'Case Studies', href: '/case - studies' },
       { name: 'White Papers', href: '/white - papers' },
       { name: 'Blog', href: '/blog' },
+<<<<<<< HEAD
 
 
   return (
@@ -474,6 +411,8 @@ const footer_sections = [;
 =======
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }, ];
 ;
 export default /**
@@ -497,6 +436,7 @@ export default function UltraFuturisticFooter2029V2() {
     ];
   }
 ];
+<<<<<<< HEAD
 
 export default function UltraFuturisticFooter2029V2() {
   return (
@@ -534,6 +474,14 @@ export default function UltraFuturisticFooter2029V2() {
                     <Rocket className="w-7 h-7 text-white" />
                   </div>
 
+=======
+;
+export default /**
+ * UltraFuturisticFooter2029V2 - Function description
+ */
+function UltraFuturisticFooter2029V2() {
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
                 </div>
                 <div>
@@ -568,7 +516,6 @@ export default function UltraFuturisticFooter2029V2() {
               </div>
             </motion.div>
           </div>
-
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}>;
               <Link href='/' className='flex items-center space-x-3 mb-6 group'>;
@@ -644,10 +591,8 @@ export default function UltraFuturisticFooter2029V2() {
               </div>;
             </motion && motion.div>;
           </div>;
-=======
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 =======
 
@@ -669,12 +614,15 @@ export default function UltraFuturisticFooter2029V2() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {/* Service Categories */}
           {footerSections && footerSections.map((section, index) => (;
             <motion&& motion.div
               key={section && section.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
@@ -713,12 +661,19 @@ export default function UltraFuturisticFooter2029V2() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                ))}
+              </ul>;
+            </motion && motion.div>;
+          ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {/* Service Showcase */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
           className='mt-16 pt-12 border-t border-gray-800'
 
 <<<<<<< HEAD
@@ -780,6 +735,12 @@ export default function UltraFuturisticFooter2029V2() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+                className='group'>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <div
                   className={`p-4 rounded-xl bg-gradient-to-br ${category && category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>;
                   <div className='flex items-center space-x-3 mb-3'>;
@@ -813,89 +774,11 @@ export default function UltraFuturisticFooter2029V2() {
                           {service && service.name}
                         </Link>;
                       </li>;
-
-=======
-                className="group"
-              >
-=======
-                className='group'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              >
-                <div
-                  className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}
-                >
-                  <div className='flex items-center space-x-3 mb-3'>
-                    <div
-                      className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}
-                    >
-                      <category.icon className='w-5 h-5 text-white' />
-                    </div>
-                    <h4 className='font-semibold text-white text-sm'>
-                      {category.title}
-                    </h4>
-                  </div>
-                  <ul className='space-y-2'>
-                    {category.services.slice(0, 3).map(service => (
-                      <li key={service.name}>
-                        <Link
-                          href={service.href}
-                          className='text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block'                        >              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                <div className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>
-                  <div className="flex items-center space-x-3 mb-3">
-                    <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
-                      <category.icon className="w-5 h-5 text-white" />
-                    </div>
-                    <h4 className="font-semibold text-white text-sm">{category.title}</h4>
-                  </div>
-                  <ul className="space-y-2">
-                    {category.services.slice(0, 3).map((service) => (
-                      <li key={service.name}>
-                        <Link
-                className='group';
-              >;
-                <div;
-                  className={`p - 4 rounded - xl bg - gradient - to - br ${category.color} bg - opacity - 10 border border - cyan - 500 / 20 hover:border - cyan - 500 / 40 transition - all duration - 300`}
-                >;
-                  <div className='flex items - center space - x-3 mb - 3'>;
-                    <div;
-                      className={`p - 2 rounded - lg bg - gradient - to - r ${category.color}`}
-                    >;
-                      <category.icon className='w - 5 h - 5 text - white' />;
-                    </div>;
-                    <h4 className='font - semibold text - white text - sm'>;
-                      {category.title}
-                    </h4>;
-                  </div>;
-                  <ul className='space - y-2'>;
-                    {category.services.slice (0, 3).map (service => (
-                      <li key={service.name}>;
-                        <Link;
-                          href={service.href}
-                          className='text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 text - xs block'                        >              >;
-                <div className={`p - 4 rounded - xl bg - gradient - to - br ${category.color} bg - opacity - 10 border border - cyan - 500 / 20 hover:border - cyan - 500 / 40 transition - all duration - 300`}>;
-                  <div className="flex items - center space - x-3 mb - 3">;
-                    <div className={`p - 2 rounded - lg bg - gradient - to - r ${category.color}`}>;
-                      <category.icon className="w - 5 h - 5 text - white" />;
-                    </div>;
-                    <h4 className="font - semibold text - white text - sm">{category.title}</h4>;
-                  </div>;
-                  <ul className="space - y-2">;
-                    {category.services.slice (0, 3).map ((service) => (
-                      <li key={service.name}>;
-                        <Link;
-
                           href={service.href}
                           className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 text - xs block";
                         >;
                           {service.name}
+<<<<<<< HEAD
                         </Link>
                       </li>
                     ))}
@@ -921,65 +804,44 @@ export default function UltraFuturisticFooter2029V2() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                    ))}
+                  </ul>;
+                </div>;
+              </motion && motion.div>;
+            ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Bottom Footer */}
       <div className='border-t border-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>            {/* Copyright */}      <div className="border-t border-gray-800">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;
-
-=======
-                          className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block"
-                        >
-                          {service.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      {/* Bottom Footer */}
-      <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {/* Copyright */}
             <motion&& motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
-
-
               <Link
                 href='/privacy'
                 className='hover:text-cyan-400 transition-colors duration-300 ml-2'>;
                 Privacy Policy;
               </Link>{' '}
+<<<<<<< HEAD
               <Link
                 href='/terms'
                 className='hover:text-cyan-400 transition-colors duration-300 ml-2'
               >
                 Terms of Service
               </Link>            </motion.div>              className="text-gray-400 text-sm"
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             >
               © 2025 Zion Tech Group. All rights reserved.
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Terms of Service</Link>
+<<<<<<< HEAD
               </Link>            </motion.div>
 
             </motion.div>
@@ -990,12 +852,16 @@ export default function UltraFuturisticFooter2029V2() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* Social Links */}
             <motion&& motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className='flex items-center space-x-4'
 
 <<<<<<< HEAD
@@ -1012,22 +878,28 @@ export default function UltraFuturisticFooter2029V2() {
             >
               {socialLinks.map(social => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <Link
                   key={social && social.name}
                   href={social && social.href}
                   target='_blank'
                   rel='noopener noreferrer'
+<<<<<<< HEAD
                   className={`p-2 rounded-lg bg-gray-800/50 hover:bg-cyan-500/20 text-gray-400 ${social.color} transition-all duration-300 hover:scale-110`}
                 >
                   <social.icon className='w-4 h-4' />                </Link>            >
               {socialLinks.map((social) => (
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <Link
                   key={social && social.name}
                   href={social && social.href}
                   target="_blank"
                   rel="noopener noreferrer"
+<<<<<<< HEAD
 
 
 =======
@@ -1066,12 +938,16 @@ export default function UltraFuturisticFooter2029V2() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+              ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Newsletter Signup */}
       <motion&& motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
         viewport={{ once: true }}
+<<<<<<< HEAD
         className='bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-t border-cyan-500/20'
 
 <<<<<<< HEAD
@@ -1098,6 +974,8 @@ export default function UltraFuturisticFooter2029V2() {
             </p>
             <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <input
                 type='email'
                 placeholder='Enter your email'
@@ -1113,25 +991,11 @@ export default function UltraFuturisticFooter2029V2() {
               Get the latest updates on AI breakthroughs, quantum computing advances, space technology innovations, and cutting-edge micro SAAS solutions.;
             </p>;
             <div className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">;
-
-=======
-        className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-t border-cyan-500/20"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Ahead with Future Tech
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Get the latest updates on AI breakthroughs, quantum computing advances, space technology innovations, and cutting-edge micro SAAS solutions.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
+<<<<<<< HEAD
 <<<<<<< HEAD
               />
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
@@ -1146,21 +1010,25 @@ export default function UltraFuturisticFooter2029V2() {
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 Subscribe;
               </button>;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       </motion.div>;
     </footer>);
+<<<<<<< HEAD
               <input
                 type=&quot;email&quot;
                 placeholder=&quot;Enter your email&quot;
@@ -1223,3 +1091,6 @@ export default function UltraFuturisticFooter2029V2() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

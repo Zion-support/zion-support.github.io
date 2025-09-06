@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -127,6 +128,8 @@ interface Listing {;
   category: string,;
 
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -137,15 +140,19 @@ import { Input } from '@/components / ui / input';
 import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
 // Example listing type;
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Example listing type
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface Listing {
   id: string,
   title: string,
   description: string,
   category: string,
+<<<<<<< HEAD
 
 
 =======
@@ -271,6 +278,21 @@ export function CategoryListingPage({;
       }
     });
   return (;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  subcategory?: string;
+  image?: string;
+  tags?: string[];
+  author?: string;
+  author_image?: string;
+  ai_score?: number;
+  rating?: number;
+  review_count?: number;
+  price?: number | null;
+      }
+    });
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -278,18 +300,16 @@ export function CategoryListingPage({;
           <div className="text-center mb-12">;
             <GradientHeading>{title}</GradientHeading>;
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+<<<<<<< HEAD
 =======
 
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               {description}
-
-            </p>;
-          </div>;
-
-
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
@@ -299,6 +319,7 @@ export function CategoryListingPage({;
                   type="text"
                   placeholder="Search listings..."
                   value={searchQuery}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
@@ -369,10 +390,13 @@ export function CategoryListingPage({;
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 </SelectContent>;
               </Select>;
             </div>;
           </div>;
+<<<<<<< HEAD
 
 
 
@@ -386,19 +410,13 @@ export function CategoryListingPage({;
               {processedListings.map((listing) => (
                 <ListingScoreCard
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {/* Results Count */}
-          <div className="mb - 6">;
-            <p className="text - zion - slate - light">;
-              Showing {processed_listings.length} results;
-              {search_query && ` for "${search_query}"`}
-            </p>;
-          </div>;
-          {/* Listings Grid */}
-          {processed_listings.length > 0 ? (
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-              {processed_listings.map ((listing) => (
-                <ListingScoreCard;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          <div className="mb-6">;
+            <p className="text-zion-slate-light">;
+              Showing {processedListings && processedListings.length} results;
+              {searchQuery && ` for "${searchQuery}"`}
                   key={listing.id}
                   title={listing.title}
                   description={listing.description}
@@ -409,6 +427,7 @@ export function CategoryListingPage({;
                   author_image={listing.author_image}
                   ai_score={listing.ai_score}
                   rating={listing.rating}
+<<<<<<< HEAD
                   reviewCount={listing.reviewCount}
                 />
               ))}
@@ -454,6 +473,14 @@ export function CategoryListingPage({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                }}
+                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
+              >;
+                Clear all filters;
+              </Button>;
+            </div>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           )}
         </div>;
       </div>;

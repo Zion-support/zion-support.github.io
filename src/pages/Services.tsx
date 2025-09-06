@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -150,6 +151,14 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
+=======
+import ServiceCard from '../components/ServiceCard';
+import Card from '../components/Card';
+
+const Services: React.FC = () => {
+  return (
+    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
@@ -158,6 +167,7 @@ const Services = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto animate-slide-up">
             Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -249,11 +259,64 @@ const Services = () => {
         </div>
 
         {/* CTA Section */}
+=======
+        </div>
+
+        {/* Main Services */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <ServiceCard
+            title="AI & Machine Learning"
+            description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
+            icon="🤖"
+          />
+          <ServiceCard
+            title="Cybersecurity"
+            description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
+            icon="🔒"
+          />
+          <ServiceCard
+            title="Cloud Infrastructure"
+            description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
+            icon="☁️"
+          />
+          <ServiceCard
+            title="DevOps & Automation"
+            description="Streamline your development and operations with continuous integration, delivery, and automated workflows."
+            icon="⚙️"
+          />
+          <ServiceCard
+            title="Blockchain Solutions"
+            description="Leverage decentralized technologies for secure transactions, smart contracts, and transparent operations."
+            icon="🔗"
+          />
+          <ServiceCard
+            title="Data Analytics"
+            description="Unlock insights from your data with advanced analytics, business intelligence, and data visualization."
+            icon="📊"
+          />
+        </div>
+
+        {/* Why Choose Our Services */}
+        <div className="mt-16 text-center">
+          <h2 className="text-4xl font-bold mb-8">Why Choose Zion Tech Group for Your Services?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card title="Expert Team" description="Our specialists are leaders in their respective fields." />
+            <Card title="Tailored Solutions" description="Custom services designed to meet your unique business needs." />
+            <Card title="Innovation Driven" description="Always at the forefront of technological advancements." />
+            <Card title="Reliable Support" description="Dedicated 24/7 support to ensure seamless operations." />
+            <Card title="Scalable & Secure" description="Solutions built for growth and robust security." />
+            <Card title="Proven Track Record" description="Successful implementations across diverse industries." />
+          </div>
+        </div>
+
+        {/* Call to Action */}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <div className="text-center mt-16">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Contact us today for a free consultation and discover how we can help you achieve your goals.
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -268,6 +331,11 @@ const Services = () => {
               Call: +1 302 464 0950
             </a>
           </div>
+=======
+          <Button variant="primary" size="large" onClick={() => alert('Get a Free Consultation!')}>
+            Get a Free Consultation
+          </Button>
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         </div>
       </div>
     </div>

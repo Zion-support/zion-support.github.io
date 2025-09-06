@@ -23,10 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-
-
 interface ContentCardProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title: string;
   description: string;
   href: string;
@@ -35,6 +32,7 @@ interface ContentCardProps {;
   glow: string;
   date?: string;
 
+<<<<<<< HEAD
   category?: string;
 ;
 const ContentCard: React.FC < ContentCardProps> = ({
@@ -60,9 +58,16 @@ const ContentCard: React.FC < ContentCardProps> = ({
         </div>
         {category && (
           <span className='px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20'>            {category}          <span className="px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20">
+=======
+    >;
+      {/* Background Glow */}
+      <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-cyan-500/0 via-cyan-400/10 to-cyan-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />;
+      {/* Header */}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {category}
-          </span>
+          </span>;
         )}
+<<<<<<< HEAD
       </div>
           <span className='px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20'>            {category}
 
@@ -78,17 +83,13 @@ const ContentCard: React.FC < ContentCardProps> = ({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Content */}
       <h3 className='text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2'>;
         {title}
-
-      </h3>;
-
-      <p className='text-white/70 leading-relaxed mb-6 line-clamp-3'>        {description}
-      </p>;
-
-
       {/* Footer */}
+<<<<<<< HEAD
 
 =======
       <div className='flex items-center justify-between'>
@@ -144,37 +145,26 @@ export default ContentCard;
       <div className="flex items-center justify-between">
         <div className="inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      <div className='flex items-center justify-between'>;
+        <div className='inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300'>;
+          Read More;
+          <span className='ml-2 group-hover:translate-x-1 transition-transform duration-300'>;
+            →;
+          </span>      <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">;
+        {title}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           Read More
           <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
         </div>
         {date && (
-
-          <span className="text-xs text-white/50 font-mono">
-            {date}
-          </span>
-        )}
-
-      </div>
-<<<<<<< HEAD
-</h3>;
-      <p className="text-white/70 leading-relaxed mb-6 line-clamp-3">;
-      </p>;
       {/* Footer */}
       <div className='flex items-center justify-between'>;
         <div className='inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300'>;
           Read More;
           <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>;
         </div>;
-        {date && (;
-          <span className='text-xs text-white/50 font-mono'>{date}</span>        </div>;
-        {date && (;
-          <span className='text-xs text-white/50 font-mono'>{date}</span>        )}
-      </div>;
       {/* Hover Effects */}
-
-      </div>;
-
-
       {/* Hover Effects */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -183,19 +173,18 @@ export default ContentCard;
       <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />;
     </Link>;
   );
-
 };
-export default ContentCard;    </Link>;
-  );
 
-};
 export default ContentCard;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <div className='flex items - start justify - between mb - 6'>;
         <div;
           className={`w - 12 h - 12 bg - gradient - to - br ${color} rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300`}
@@ -250,6 +239,7 @@ export default ContentCard;    </Link>);
 ;
 export default ContentCard;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -262,3 +252,5 @@ export default ContentCard;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

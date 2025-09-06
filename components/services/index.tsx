@@ -7,6 +7,7 @@ export default function ServicesIndexPage () {
  export default function ServicesIndexPage () {
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -194,6 +195,8 @@ const ServicesPage: NextPage = () => {;
 export default function ServicesIndexPage() {;
   const all = (enhancedRealMicroSaasServices as unknown[]);
     .concat(;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       extraServices as any[];
   'Content - Type': 'application / json';
 }
@@ -237,7 +240,6 @@ function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[]);
     .concat (
       extra_services as any[];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       additionalEnhancedServices as any[];
       newlyAddedServices as any[];
       curatedMarketServices as any[];
@@ -248,64 +250,16 @@ function ServicesIndexPage() {
       realOperationalServices as any[];
       verified2025Additions as any[];
       realServicesQ12025 as any[];
-
-  // Normalize various category labels into our main buckets;
-  const categoryAliases: Record<string, string> = {;
-    'AI & Data': 'AI & DataAI & Machine Learning': 'AI & DataGenAI': 'AI & DataCloud & FinOps': 'Cloud & FinOpsCloud & Data': 'Cloud & FinOpsPlatform Engineering': 'Cloud & FinOpsObservability': 'ObservabilityObservability & Telemetry': 'ObservabilityQuality & Monitoring': 'Quality & MonitoringSecurity & Reliability': 'Quality & MonitoringSecurity & Compliance': 'Quality & MonitoringDeveloper Tools': 'Developer ToolsGrowth & Marketing': 'Developer Tools';
-  };
-  for (const s of all) {;
-    const service = s as { category?: string };
-    const rawCat = (service && service.category || '').trim();
-    const mapped = categoryAliases[rawCat] || (categories && categories.includes(rawCat) ? rawCat : 'Developer Tools');
-    byCategory[mapped].push(s);
-  }
-  React && React.useEffect(() => {;
-    const next = services && services.filter((s) => {;
-      // Category;
-      if (filters && filters.categories.length > 0 && !s && s.categories.some((c) => filters && filters.categories.includes(c))) return false;
-      // Price;
-      const min = s && s.priceFromUSD ?? s && s.priceRangeUSD?.[0];
-      const max = s && s.priceRangeUSD?.[1] ?? s && s.priceFromUSD;
-      if (filters && filters.priceMin !== undefined && (min === undefined || max === undefined ? true : max < filters && filters.priceMin)) return false;
-      if (filters && filters.priceMax !== undefined && (min === undefined ? true : min > filters && filters.priceMax)) return false;
-      // Rating;
-      if (filters && filters.ratingMin !== undefined && (s && s.rating ?? 0) < filters && filters.ratingMin) return false;
-      // Delivery time (not available in data, simulate pass-through);
-      return true;
-
     });
     setFiltered(next);
   }, [filters, services]);
-
-
-  const availableCategories = React && React.useMemo(() => {;
-
     const set = new Set<string>();
     services && services.forEach((s) => s && s.categories.forEach((c) => set && set.add(c)));
     return Array && Array.from(set);
   }, [services]);
-
-
-  const handleRequestQuote = (service: ServiceItem) => {;
-    setSelected(service);
-    setModalOpen(true);
-  };
-  const handleSubmit = async (values: QuoteFormValues) => {;
-    const res = await fetch('/api/quote-request', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({;
-        service: values && values.serviceTitle,;
-        description: values && values.projectDescription,;
-        timeline: { start: values && values.timelineStart, end: values && values.timelineEnd },;
-        budgetRange: values && values.budgetRange,;
-        email: values && values.email})}),;
-    if (!res && res.ok) {;
-      const err = await res && res.json().catch(() => ({}));
-      throw new Error(err?.message || 'Failed to submit');
-
     }
   }
+<<<<<<< HEAD
   };
 
   return (
@@ -442,10 +396,14 @@ if ( {) {
               {filtered.map ((service) => (
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />))}
 
+=======
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 
 
@@ -462,11 +420,14 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
         service={selected}
         onSubmit={handleSubmit}
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
     </div>
@@ -485,6 +446,17 @@ export default ServicesPage;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ServicesPage;
 
+=======
+export default ServicesPage;
+
+      <QuoteRequestModal;
+        open={modal_open}
+        on_close={() => setModalOpen (false)}
+        service={selected}
+        on_submit={handle_submit}
+      />;
+    </div>);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 <<<<<<< HEAD
 }
@@ -493,5 +465,8 @@ export default ServicesPage;
 ;
 export default ServicesPage;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

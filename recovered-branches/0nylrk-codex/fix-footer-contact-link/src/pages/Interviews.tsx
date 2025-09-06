@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useEffect, useState } from "react";
@@ -319,12 +320,18 @@ function InterviewsContent() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      }
+      grouped[dateKey].push(interview);
+    });
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 interview={interview}
                 onRefresh={async () => {;
                   await fetchInterviews();
                 }}
               />;
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       ))
@@ -449,6 +456,8 @@ function InterviewsContent() {;
                   {upcomingInterviews && upcomingInterviews.length}
                 </span>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               )}
             </TabsTrigger>;
             <TabsTrigger value="pending">;
@@ -458,61 +467,7 @@ function InterviewsContent() {;
                   {pendingInterviews && pendingInterviews.length}
                 </span>;
               )}
-
-            </TabsTrigger>;
-            <TabsTrigger value="past">Past</TabsTrigger>;
-          </TabsList>;
-
-          <TabsContent value="upcoming" className="space-y-6">;
-            {isLoading ? (;
-              <div className="flex justify-center py-12">;
-                <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>;
-              </div>;
-            ) : upcomingInterviews && upcomingInterviews.length > 0 ? (;
-              renderInterviewGroups(upcomingGrouped);
-            ) : (;
-              <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">;
-                <Video className="h-12 w-12 mx-auto text-muted-foreground mb-4" />;
-                <h3 className="text-xl font-medium mb-2">No upcoming interviews</h3>;
-                <p className="text-muted-foreground mb-6">You don't have any scheduled interviews coming up.</p>;
-              </div>;
             )}
-          </TabsContent>;
-
-          <TabsContent value="pending" className="space-y-6">;
-            {isLoading ? (;
-              <div className="flex justify-center py-12">;
-                <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>;
-              </div>;
-            ) : pendingInterviews && pendingInterviews.length > 0 ? (;
-              renderInterviewGroups(pendingGrouped);
-            ) : (;
-              <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">;
-                <Clock className="h-12 w-12 mx-auto text-muted-foreground mb-4" />;
-                <h3 className="text-xl font-medium mb-2">No pending interviews</h3>;
-                <p className="text-muted-foreground mb-6">You don't have any interview requests that need your attention.</p>;
-              </div>;
-            )}
-          </TabsContent>;
-
-          <TabsContent value="past" className="space-y-6">;
-            {isLoading ? (;
-              <div className="flex justify-center py-12">;
-                <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>;
-              </div>;
-            ) : pastInterviews && pastInterviews.length > 0 ? (;
-              renderInterviewGroups(pastGrouped);
-            ) : (;
-              <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">;
-                <Calendar className="h-12 w-12 mx-auto text-muted-foreground mb-4" />;
-                <h3 className="text-xl font-medium mb-2">No past interviews</h3>;
-                <p className="text-muted-foreground">Your interview history will appear here.</p>;
-              </div>;
-
-            )}
-
-
-
 =======
 import React, { useEffect, useState } from './react';
 import { use_interviews } from '@/hooks / use_interviews';
@@ -684,6 +639,7 @@ if ( {) {
       </main>;
       <Footer />;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   );
 }
@@ -728,6 +684,8 @@ export default function Interviews() {;
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
     </>);
 }

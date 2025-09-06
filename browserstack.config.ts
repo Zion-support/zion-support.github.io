@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { defineConfig, devices } from '@playwright/test';
 
 import { defineConfig, devices } from '@playwright/test';
@@ -14,6 +15,16 @@ export default defineConfig({;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import { defineConfig, devices } from '@playwright/test',;
+
+export default defineConfig({;
+  testDir:'tests/e2e',;
+  use:{;
+    baseURL:process && process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;
+    trace:'on-first-retry'},;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   projects:[;
     {name:'Desktop Chrome';
       use:{;
@@ -28,6 +39,7 @@ export default defineConfig({;
       use:{;
         browserName:'webkit'}
     }
+<<<<<<< HEAD
     {name:'Mobile Chrome';
       use:{;
         browserName:'chromium';
@@ -118,15 +130,52 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
         browserName: 'chromium';
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    trace: 'on-first-retry'
+  }
+  projects: [
+=======
+import { define_config, devices } from '@playwright / test';
+import { define_config, devices } from '@playwright / test',
+;
+export default define_config ({
+  test_dir:'tests / e2e',
+  use:{
+    baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
+    trace:'on - first - retry'},
+  projects:[;
+    {
+      name:'Desktop Chrome',
+      use:{
+        browser_name:'chromium',
+        channel:'chrome'}
+    },
+    {
+      name:'Desktop Firefox',
+      use:{
+        browser_name:'firefox'}
+    },
+    {
+      name:'Desktop Safari',
+      use:{
+        browser_name:'webkit'}
+    },
+    {
+      name:'Mobile Chrome',
+      use:{
+        browser_name:'chromium',
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         ...devices['Pixel 5']}
+    },
+    {
+      name:'Mobile Safari',
+      use:{
+        browser_name:'webkit',
+        ...devices['i_phone 12']}
     }
-    {name:'Mobile Safari';
-      use:{;
-        browserName:'webkit';
-        ...devices['iPhone 12']}
-    }
-  ];
+  ],
   reporter:[;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ]
   testDir: 'tests/e2e',;
@@ -198,13 +247,20 @@ import { defineConfig, devices } from '@playwright/test';
     trace: 'on-first-retry'
   }
   projects: [
+=======
+    ['list'],
+    ['html', { output_folder:'playwright - logs / html - report', open:'never' }]];
+}),import { define_config, devices  } from '@playwright / test';
+import { define_config, devices } from '@playwright / test';
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
+    trace: 'on - first - retry';
+  },
+  projects: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     {
       name: "Desktop Chrome"
       use: {
-
-        browser_name: 'chromium',
-        channel: 'chrome';
-
 }
     }
     {
@@ -226,22 +282,15 @@ import { defineConfig, devices } from '@playwright/test';
 
       name: "Mobile Chrome"
       use: {
-
-        browser_name: 'chromium',
-        ...devices['Pixel 5'];
-
 }
     }
     {
       name: "Mobile Safari"
       use: {
-
-        browser_name: 'webkit',
-        ...devices['i_phone 12'];
-
       }
 
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     ['list']
@@ -264,6 +313,8 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 });
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
   ],
   reporter: [;

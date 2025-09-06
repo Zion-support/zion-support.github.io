@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import Head from 'next/head';
 export default function Page() {
+=======
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
@@ -24,12 +28,12 @@ export default function Page() {
           dangerouslySetInnerHTML={{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             __html:
-
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>autonomous systems</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>',;
-
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -38,6 +42,7 @@ export default function Page() {
       </main>;
     </div>;
   );export default function Page() {;
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -48,6 +53,8 @@ export default function Page() {
 export default function Page() {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
@@ -100,10 +107,6 @@ function Page() {
         <meta property="og:description" content="Actionable architectural pattern synthesized from live site signals." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
-
-}
-
-=======
       <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
         <h1 className="text - 3xl font - extrabold">Pattern — Cloud Intelligence</h1>;
         <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2 > Context</h2><p > Signals indicate recurring needs around <strong > autonomous systems</strong>.</p><h2 > Problem</h2><p > How do we design a robust, observable, and cost - efficient approach?</p><h2 > Forces</h2><ul><li > Latency and throughput trade - offs</li><li > Quality and evaluation</li><li > Security and governance</li></ul><h2 > Solution</h2><p > Define clear boundaries, automate evaluation, and continuously iterate with telemetry - in - the - loop.</p><h2 > Consequences</h2><p > Improved reliability and faster iteration, requires disciplined measurement.</p>" }} />;
@@ -111,6 +114,7 @@ function Page() {
       </main>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -193,3 +197,5 @@ export default function Page(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

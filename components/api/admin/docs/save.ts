@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
  const ts = new Date () .toISOString () 
 const ts = new Date () .toISOString () 
  const ts = new Date () .toISOString () 
@@ -18,20 +19,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import fs from 'fs';
 import path from 'path';
-
-const DOCS_DIR = path && path.join(process && process.cwd(), 'datadocs');
-const CONTENT_PATH = path && path.join(DOCS_DIR, 'content && content.json');
-const VERSIONS_DIR = path && path.join(DOCS_DIR, 'versions');
-
-
 function ensureDir(dir: string) {
   if (!fs && fs.existsSync(dir)) {
     fs && fs.mkdirSync(dir, { recursive: true })
   }
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
@@ -40,53 +38,31 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const token = req.headers['x-admin-token'] as string | undefined;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
     return res.status(403).json({ error: 'Forbidden' });
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method Not Allowed' })
+
   const token = req && req.headers['x-admin-token'] as string | undefined;
   if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
     return res && res.status(403).json({ error: 'Forbidden' });
-=======
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' })
-<<<<<<< HEAD
-=======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const token = req.headers['x-admin-token'] as string | undefined;
-  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
-    return res.status(403).json({ error: 'Forbidden' });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   try {
     ensureDir(DOCS_DIR);
     ensureDir(VERSIONS_DIR);
 
-=======
-
-    const body = req.body;
-
-    const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
-
-
     const body = req && req.body;
+
     const jsonString =
       typeof body === 'string' ? body : JSON && JSON.stringify(body, null, 2);    const jsonString = typeof body === 'string' ? body : JSON && JSON.stringify(body, null, 2);
+
     const ts = new Date()
       .toISOString()
       .replace(/[-:T && T.Z]/g, '')
       .slice(0, 14);
-
-
-    fs && fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8');
-    fs && fs.writeFileSync(path && path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');
-    res && res.status(200).json({ ok: true, version: ts });
-
-=======
 
     res.status(200).json({ ok: true, version: ts })
   } catch (e) {
@@ -116,54 +92,11 @@ function ensure_dir() {
 }
     fs.mkdir_sync (dir, { recursive: true });
   }
-
-}
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (405).json ({ error: 'Method Not Allowed' });
-  const token = req.headers['x - admin - token'] as string | undefined;
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (403).json ({ error: 'Forbidden' });
-  }
-  try {
-    ensure_dir (DOCS_DIR);
-    ensure_dir (VERSIONS_DIR);
-;
-    const body = req.body;
-;
-    const json_string =;
-      typeof body === 'string' ? body : JSON.stringify (body, null, 2);    const json_string = typeof body === 'string' ? body : JSON.stringify (body, null, 2);
-;
-    const ts = new Date ();
-      .toISOString ();
-      .replace (/[-:T.Z]/g, '');
-      .slice (0, 14);
-;
-    fs.writeFileSync (CONTENT_PATH, json_string, 'utf8');
-    fs.writeFileSync (path.join (VERSIONS_DIR, `${ts}.json`), json_string, 'utf8');
-;
-    res.status (200).json ({ ok: true, version: ts });
-
   } catch (e) {
     res.status (500).json ({ error: 'Failed to save content' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-
-}
-
-=======
     res.status (500).json ({ error: 'Failed to save content' });
   }  } catch (e) {
     res.status (500).json ({ error: 'Failed to save content' });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

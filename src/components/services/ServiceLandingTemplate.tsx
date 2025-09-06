@@ -1,8 +1,16 @@
-name: string;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export interface Benefit {
+  title: string;
+  description: string;
+  icon?: React.ReactNode
+}
+export interface Testimonial {
+  name: string;
   role?: string;
   text: string;
   avatar?: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ServiceLandingTemplateProps {
 =======
@@ -41,16 +49,9 @@ export interface Testimonial {
   avatar?: string;
 
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface ServiceLandingTemplateProps {
-
-  title: string;
-  subtitle: string;
-  description: string;
-  benefits: Benefit[];
-  features?: string[];
-  stats?: Array<{ label: string; value: string }>
-  ctaText: string
-  ctaLink: string
 import React from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -61,6 +62,7 @@ export interface Benefit {;
   description: string,;
   icon?: React.ReactNode;
 }
+<<<<<<< HEAD
 export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({
 
 
@@ -87,6 +89,8 @@ export interface Benefit {;
   description: string,;
   icon?: React.ReactNode;
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
 export interface Testimonial {;
   name: string,;
@@ -105,39 +109,27 @@ interface ServiceLandingTemplateProps {;
   ctaText: string,;
   ctaLink: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
-
   title,
   subtitle,
   heroImage,
   description,
   benefits,
-
-
-export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
-  title,;
-  subtitle,;
-  description,;
-  benefits,;
-  features = [],;
-  stats = [],;
-  ctaText,;
-  ctaLink,;
-}) => {;
-
-  return (
-
-          </p>
   testimonials,
   ctaText,
+<<<<<<< HEAD
 <<<<<<< HEAD
   ctaLink}) => {
   ctaLink,
@@ -147,6 +139,10 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
@@ -157,6 +153,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             {subtitle}
           </p>
+<<<<<<< HEAD
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           {heroImage && (
             <div className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl relative h-80">
@@ -341,6 +338,16 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
     </div>;
   );
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {description}
+          </p>
+        </div>
+      </section>
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
       <section className="py-16 bg-zion-blue-light">
         <div className="container mx-auto px-4">
@@ -418,6 +425,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   </div>;
                   <div className="text - gray - 600">{stat.label}</div>;
@@ -445,3 +453,9 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 }
 
 },
+=======
+},
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

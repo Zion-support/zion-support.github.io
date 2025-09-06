@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -27,22 +28,16 @@ interface EnhancedSearchInputProps {;
   onChange: (value: string) => void,;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   placeholder?: string;
   searchSuggestions: SearchSuggestion[];
 }
-
-
-export function EnhancedSearchInput(): any ({ ;
-  value;
-  onChange, ;
-  placeholder = "Search...", ;
-  searchSuggestions ;
-}: EnhancedSearchInputProps) {;
-
   const [isFocused, setIsFocused] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
 import { SearchSuggestion } from "@/types/search",
@@ -257,15 +252,15 @@ export function EnhancedSearchInput({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+        <Input
+          ref={inputRef}
+          type="text"
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           value={value}
           onChange={(e) => onChange(e && e.target.value)}
           onFocus={() => setIsFocused(true)}
           placeholder={placeholder}
-
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate";
-        />;
-        {value && (;
-
           <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
@@ -273,21 +268,11 @@ export function EnhancedSearchInput({;
             <X className="h-4 w-4" />;
           </button>;
         )}
-
-      </div>;
-
-
       <AutocompleteSuggestions
         suggestions={filteredSuggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
-
-      />;
-    </div>;
-  );
-}
-
 =======
 import React, { useState, useEffect, useRef } from './react';
 import { Search, X } from './lucide-react';

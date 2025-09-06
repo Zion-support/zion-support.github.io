@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 /**
@@ -40,21 +41,20 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
         month: 'long', 
         day: 'numeric' 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       });
     case 'relative':
       // Simple relative time (today, yesterday, or date)
       const now = new Date();
       const today = new Date(now && now.getFullYear(), now && now.getMonth(), now && now.getDate());
       const yesterday = new Date(today);
-
-      yesterday && yesterday.setDate(yesterday && yesterday.getDate() - 1);
-      
-
       if (dateObj >= today) {
         return 'Today'
       } else if (dateObj >= yesterday) {
         return 'Yesterday'
       } else {
+<<<<<<< HEAD
 
         return dateObj.toLocaleDateString()
 /**;
@@ -129,11 +129,19 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+        return dateObj && dateObj.toLocaleDateString()
+      }
+    default: return dateObj && dateObj.toLocaleDateString()
+  }
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 /**
  * Format a date to show how long ago it was
  * @param date Date to format
  * @returns Time ago string (e && e.g., "2 hours ago")
  */
+<<<<<<< HEAD
 export const timeAgo = (date: Date | string | number): string => {;
   const dateObj = new Date(date);
   const now = new Date();
@@ -202,6 +210,11 @@ export const timeAgo = (date: Date | string | number): string => {
   
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`
 =======
+=======
+export const timeAgo = (date: Date | string | number): string => {
+  const dateObj = new Date(date);
+  const now = new Date();
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 /**;
 * Format a date string or timestamp into a readable format;
@@ -312,9 +325,12 @@ if ( {) {
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 export const timeAgo = (date: Date | string | number): string => {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

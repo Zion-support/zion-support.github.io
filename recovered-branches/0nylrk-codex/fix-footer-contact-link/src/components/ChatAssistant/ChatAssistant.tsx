@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import { ChatMessage  } from './ChatMessage';
 import { ChatInput  } from './ChatInput';
@@ -80,6 +81,9 @@ import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import React, { useState, useEffect, useRef, ReactNode } from 'react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   isOpen;
   onClose;
   recipient;
@@ -155,6 +159,7 @@ export function ChatAssistant({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   contextHeader;
 }: ChatAssistantProps) {;
+<<<<<<< HEAD
 
   const [messages, setMessages] = useState<Message[]>(initialMessages),;
   const messagesEndRef = useRef<HTMLDivElement | null>(null),;
@@ -236,6 +241,11 @@ export function ChatAssistant({;
   },
 
   if (!isOpen) return null,
+=======
+  const [messages, setMessages] = useState<Message[]>(initialMessages);
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  if (!isOpen) return null;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">;
@@ -254,28 +264,12 @@ export function ChatAssistant({;
               {recipient && recipient.role && (;
                 <div className="text-xs text-zion-slate">{recipient && recipient.role}</div>;
               )}
-
-            </div>;
-          </div>;
-          <Button
-            variant="ghost" 
-            size="icon"
-            className="text-white hover:bg-zion-purple/10 rounded-full"
-            onClick={onClose}>;
-            <X className="h-5 w-5" />;
-          </Button>;
-        </div>;
-
-
         {/* Context Header (Optional) */}
         {contextHeader && (;
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
             {contextHeader}
           </div>;
         )}
-
-
-
         {/* Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">;
           {messages && messages.length === 0 ? (;
@@ -285,6 +279,7 @@ export function ChatAssistant({;
           ) : (;
             messages && messages.map((msg) => (;
               <ChatMessage
+<<<<<<< HEAD
                 key={msg.id}
                 key={msg.id} 
                 role={msg.role}
@@ -305,8 +300,16 @@ export function ChatAssistant({;
         </div>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {/* Input */}
-
+        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;
+          <ChatInput onSend={handleSendMessage} />;
+        </div>;
+      </div>;
+    </div>;
+  );
+=======
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { Button } from '@/components / ui / button';
 import { X } from './lucide-react';
@@ -429,6 +432,7 @@ if (return null) {
         </div>;
       </div>;
     </div>);
+<<<<<<< HEAD
 
 }
 =======
@@ -447,3 +451,7 @@ if (return null) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

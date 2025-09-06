@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {AppLayout} from "@/layout/AppLayout";
@@ -184,10 +185,13 @@ export default function ApplicationStatusTracker() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <ProtectedRoute>;
       <AppLayout>;
         <ApplicationStatusTrackerContent />;
       </AppLayout>;
+<<<<<<< HEAD
     </ProtectedRoute>;
   );
 }
@@ -196,9 +200,9 @@ export default function ApplicationStatusTracker() {;
 
     </ProtectedRoute>);
 =======
-
-
-
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
+    </ProtectedRoute>);
 }
 <<<<<<< HEAD
 ;

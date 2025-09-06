@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import { SeverityIndicator } from "@/components/ui/severity-indicator";
@@ -56,14 +57,12 @@ interface SeverityDisplayProps {
 export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
   severity,
 
-}) => {
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+}) => {
 
-export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({;
-  severity,;
-}) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<< HEAD
 
     <SeverityIndicator;
       severity={severity as "safe" | "suspicious" | "dangerous"}
@@ -85,3 +84,5 @@ interface SeverityDisplayProps {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

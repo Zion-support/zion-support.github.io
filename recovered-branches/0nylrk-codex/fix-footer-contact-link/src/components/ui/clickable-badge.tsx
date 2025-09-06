@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,6 +100,18 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+  onRemove?: () => void;
+  variant?: "default" | "secondary" | "destructive" | "outline";
+}
+          }}
+          className="ml-1 rounded-full p-0 && 0.5 hover:bg-background/20";
+          aria-label="Remove";
+        >;
+          <X className="h-3 w-3" />;
+        </button>;
+      )}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import React from './react';
 import { X } from './lucide-react';
 import { cn } from '@/lib / utils';
@@ -129,6 +142,7 @@ function ClickableBadge() {
             e.stop_propagation ();
             on_remove ();
           }}
+<<<<<<< HEAD
 
           className="ml-1 rounded-full p-0.5 hover:bg-background/20"
           aria-label="Remove"
@@ -145,5 +159,13 @@ function ClickableBadge() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          className="ml - 1 rounded - full p - 0.5 hover:bg - background / 20";
+          aria - label="Remove";
+        >;
+          <X className="h - 3 w - 3" />;
+        </button>)}
+    </div>);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 ;

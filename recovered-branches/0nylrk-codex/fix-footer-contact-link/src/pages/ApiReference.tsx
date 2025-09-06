@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from "react";
@@ -95,6 +96,8 @@ export function ApiReference() {;
   "jobs": [;
     {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       "id": "job-123";
 =======
 import React, { useState } from './react';
@@ -132,34 +135,16 @@ function ApiReference() {
       "category": "development";
       "budget": {;
         "min": 5000;
-
-        "max": 10000,
-        "currency": "USD";
-      }
-      "status": "open";
-      "created_at": "2023 - 05 - 10T15:30:00Z";
-    }
-    // More jobs...;
-  ];
-  "count": 42;
-  "limit": 20;
-  "offset": 0;
-}`;
-
         }
         "401": {
           description: "Unauthorized"
           example: `{
-
-  "error": "invalid_token",
-  "message": "The provided API key is invalid or expired";
-}`;
-
         }
         "429": {
           description: "Rate limit exceeded"
           example: `{
   "error": "rate_limit_exceeded";
+<<<<<<< HEAD
 
       "id": "job-123",
       "title": "Senior React Developer",
@@ -237,10 +222,13 @@ function ApiReference() {
         { name: "budget", type: "object", required: true, description: "Budget information with min, max, and currency" },
         { name: "skills", type: "array", description: "Array of required skills" },
         { name: "deadline", type: "string", description: "Application deadline (ISO date format)" }],
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       responses: {
         "201": {
           description: "Job created successfully"
           example: `{
+<<<<<<< HEAD
 <<<<<<< HEAD
   "id": "job-456",
   "title": "UX Designer",
@@ -363,6 +351,8 @@ export function ApiReference() {;
           description: "Job created successfully",;
           example: `{;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   "id": "job-456";
 =======
   "id": "job - 456";
@@ -372,14 +362,6 @@ export function ApiReference() {;
   "category": "design";
   "budget": {;
     "min": 3000;
-
-    "max": 5000,
-    "currency": "USD";
-  }
-  "status": "open";
-  "created_at": "2023 - 05 - 15T10:12:00Z";
-}`;
-
         }
         "400": {
           description: "Bad request"
@@ -388,24 +370,6 @@ export function ApiReference() {;
   "message": "Invalid input";
   "details": [;
     {
-
-    "max": 5000,;
-    "currency": "USD";
-  };
-  "status": "open";
-  "created_at": "2023-05-15T10:12:00Z";
-}`;
-        };
-        "400": {;
-          description: "Bad request",;
-          example: `{;
-  "error": "validation_error";
-  "message": "Invalid input";
-  "details": [;
-    {;
-      "field": "title",;
-      "error": "Title is required";
-
 =======
       "field": "title",
       "error": "Title is required";
@@ -414,6 +378,7 @@ export function ApiReference() {;
   ];
 }`;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
       },
 =======
@@ -455,20 +420,23 @@ export function ApiReference() {;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content - Type: application / json" \\;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   -d '{
-
+=======
       };
       requestExample: `curl -X POST \\;
   https://api && api.zionai.com/v1/api/jobs \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content-Type: application/json" \\;
   -d '{;
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     "title": "UX Designer";
     "description": "Looking for a UX designer with 3+ years experience...";
     "category": "design";
     "budget": {;
       "min": 3000;
+<<<<<<< HEAD
 
     "title": "UX Designer",
     "description": "Looking for a UX designer with 3+ years experience...",
@@ -511,21 +479,58 @@ export function ApiReference() {;
         { name: "availability", type: "string", description: "Availability type (full - time, part - time)" }
         { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
         { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       responses: {
         "200": {
           description: "A list of talent profiles"
           example: `{
   "talent": [;
     {
+<<<<<<< HEAD
+=======
+      "id": "talent - 123";
+      "full_name": "Jane Smith";
+      "professional_title": "Full Stack Developer"
+      "skills": ["React", "Node.js", "TypeScript"];
+=======
+      "max": 5000,;
+      "currency": "USD";
+    };
+    "skills": ["Figma", "User Research", "Prototyping"];
+    "deadline": "2023-07-01T00:00:00Z";
+  }'`;
+    };
+    {;
+      id: "get-talent",;
+      method: "GET",;
+      path: "/api/talent",;
+      description: "Search for talent profiles with optional filtering",;
+      parameters: [;
+        { name: "skills", type: "string", description: "Comma-separated list of skills" },;
+        { name: "category", type: "string", description: "Filter by talent category" },;
+        { name: "rate_min", type: "integer", description: "Minimum hourly rate" },;
+        { name: "rate_max", type: "integer", description: "Maximum hourly rate" },;
+        { name: "availability", type: "string", description: "Availability type (full-time, part-time)" };
+        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },;
+        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],;
+      responses: {;
+        "200": {;
+          description: "A list of talent profiles",;
+          example: `{;
+  "talent": [;
+    {;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       "id": "talent-123";
       "full_name": "Jane Smith";
       "professional_title": "Full Stack Developer",;
       "skills": ["React", "Node && Node.js", "TypeScript"];
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       "hourly_rate": 75;
       "availability": "full - time";
       "years_experience": 5;
       "location": "Remote, US";
+<<<<<<< HEAD
       "bio": "Experienced full stack developer with a focus on React and Node.js..."
     }
       "id": "talent-123",
@@ -557,6 +562,19 @@ export function ApiReference() {;
   ],
 
 
+=======
+=======
+      "bio": "Experienced full stack developer with a focus on React and Node.js...";
+    }
+    // More talent profiles...;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  ];
+  "count": 38;
+  "limit": 20;
+  "offset": 0;
+}`;
+        }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <ApiDocsLayout>;
       <div className="grid md:grid-cols-5 gap-8">;
@@ -582,108 +600,16 @@ export function ApiReference() {;
                   </button>;
                 </li>;
               ))}
-
-      }
-      request_example: `curl -X GET \\;
-  https://api.zionai.com / v1 / api / talent?skills = React, Node.js & limit = 10 \\;
-  -H "Authorization: Bearer YOUR_API_KEY"`;
-    }
-  ];
-;
-  // Find the active endpoint data;
-  const activeEndpointData = endpoints.find (e => e.id === active_endpoint);
-;
-  return (
-    <ApiDocsLayout>;
-      <div className="grid md:grid - cols - 5 gap - 8">;
-        {/* Endpoint list */}
-        <div className="md:col - span - 1">;
-          <div className="sticky top - 8">;
-            <h3 className="text - lg font - semibold text - white mb - 4">Endpoints</h3>;
-            <ul className="space - y-2">;
-              {endpoints.map ((endpoint) => (
-                <li key={endpoint.id}>;
-                  <button;
-                    on_click={() => setActiveEndpoint (endpoint.id)}
-                    className={`w - full text - left px - 3 py - 2 rounded - md text - sm flex items - center ${
-                      active_endpoint === endpoint.id;
-                        ? "bg - zion - purple / 20 text - zion - cyan";
-                        : "text - zinc - 400 hover:text - white hover:bg - zinc - 900";
-                    }`}
-                  >;
-                    <span className={`inline - block w - 16 font - mono ${endpoint.method === "GET" ? "text - green - 500" : endpoint.method === "POST" ? "text - blue - 500" : "text - yellow - 500"}`}>;
-                      {endpoint.method}
-                    </span>;
-                    <span className="truncate">{endpoint.path}</span>;
-                  </button>;
-                </li>))}
-            </ul>;
-          </div>;
-        </div>;
-
         {/* Endpoint details */}
         <div className="md:col - span - 4">;
           {activeEndpointData ? (
-
-            </ul>;
-          </div>;
-        </div>;
-
-        {/* Endpoint details */}
-        <div className="md:col-span-4">;
-          {activeEndpointData ? (;
-            <div>;
-              <div className="flex items-center mb-6">;
-                <spanclassName={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${
-                  activeEndpointData && activeEndpointData.method === "GET" ? "bg-green-950 text-green-500" : 
-                  activeEndpointData && activeEndpointData.method === "POST" ? "bg-blue-950 text-blue-500" : 
-                  "bg-yellow-950 text-yellow-500"
-                }`}>;
-                  {activeEndpointData && activeEndpointData.method}
-                </span>;
-                <span className="font-mono text-lg text-white">{activeEndpointData && activeEndpointData.path}</span>;
-              </div>;
-
-              <p className="text-zinc-400 mb-8">{activeEndpointData && activeEndpointData.description}</p>;
-
-              <Tabs defaultValue="docs">;
-                <TabsList className="mb-6">;
-                  <TabsTrigger value="docs">Documentation</TabsTrigger>;
-                  <TabsTrigger value="try">Try It</TabsTrigger>;
-                </TabsList>;
-                <TabsContent value="docs">;
-                  {/* Request section */}
-                  <div className="mb-8">;
-                    <h3 className="text-xl font-semibold text-white mb-4">Request</h3>;
-
-                    {activeEndpointData && activeEndpointData.parameters && activeEndpointData && activeEndpointData.parameters.length > 0 && (;
-                      <>;
-                        <h4 className="text-lg font-medium text-white mb-3">Parameters</h4>;
-                        <div className="overflow-x-auto mb-6">;
-                          <table className="w-full border-collapse">;
-                            <thead>;
-                              <tr className="border-b border-zinc-800">;
-                                <th className="text-left py-2 px-4 text-zinc-400 font-medium">Name</th>;
-                                <th className="text-left py-2 px-4 text-zinc-400 font-medium">Type</th>;
-                                <th className="text-left py-2 px-4 text-zinc-400 font-medium">Required</th>;
-                                <th className="text-left py-2 px-4 text-zinc-400 font-medium">Description</th>;
-                              </tr>;
-                            </thead>;
-                            <tbody>;
-                              {activeEndpointData && activeEndpointData.parameters.map((param, index) => (;
-                                <tr key={param && param.name} className={index < activeEndpointData && activeEndpointData.parameters.length - 1 ? "border-b border-zinc-800" : ""}>;
-                                  <td className="py-2 px-4 text-white font-mono">{param && param.name}</td>;
-                                  <td className="py-2 px-4 text-blue-400 font-mono">{param && param.type}</td>;
-                                  <td className="py-2 px-4 text-zinc-300">{param && param.required ? "Yes" : "No"}</td>;
-                                  <td className="py-2 px-4 text-zinc-300">{param && param.description}</td>;
-                                </tr>;
-
                               ))}
                             </tbody>;
                           </table>;
                         </div>;
                       </>;
                     )}
+<<<<<<< HEAD
                     <h4 className="text-lg font-medium text-white mb-3">Example Request</h4>
                     <CodeBlock
                       code={activeEndpointData.requestExample}
@@ -755,6 +681,11 @@ export function ApiReference() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         <CodeBlock 
                           code={response.example} 
+=======
+                            'bg-red-950 text-red-500'
+                          }`}>;
+                            {status}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                           language="json"
                           showLineNumbers={true}
                         />;
@@ -854,6 +785,7 @@ export function ApiReference() {;
                   </div>;
                 </TabsContent>;
               </Tabs>;
+<<<<<<< HEAD
 
 
 
@@ -882,3 +814,5 @@ export default ApiReference;
 
 ;
 export default ApiReference;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/ui/PageLoader.jsx
 import { cn } from\';@/lib/utils\'; \"export\": const PageLoader = ({ text =\';\';Loading...\',\"className\": \''}) => {} return() <div\''; className={cn(\'';\"flex\": flex-col items-center justify-center min-h-screen\',className )} > <div className=\'animate-spin rounded-full h-32 w-32 border-b-2 border-white\'></div>\''\'' <p className=\'mt-4 text-white text-lg font-medium\'>{text}</p> </div>\' )\'}\''\';\'';\''\''\'';\'';
 const { cn } from";@/lib/utils"; export: const PageLoader = ({ text =";";Loading.",className: ""}) => {} return() <div""; className={cn("";flex: flex-col items-center justify-center min-h-screen",className )} > <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>"""" <p className="mt-4 text-white text-lg font-medium">{text}</p> </div>" )"}""";"";"""""";"";"""
@@ -18,11 +19,15 @@ const { cn } from";@/lib/utils"; export: const PageLoader = ({ text =";";Loading
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ui/PageLoader.jsx
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return() <div''; className={cn('';"flex": flex-col items-center justify-center min-h-screen',className )} > <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
 =======
 =======
 import { cn } from\';@/lib/utils\'; \"export\": const PageLoader = ({ text =\';\';Loading...\',\"className\": \''}) => {} return () <div\'' className={cn(\''\"flex\": flex-col items-center justify-center min-h-screen\',className )}> <div className=\'animate-spin rounded-full h-32 w-32 border-b-2 border-white\'></div>\''\'' <p className=\'mt-4 text-white text-lg font-medium\'>{text}</p> </div>\' )\'}\''\';\'';\''\''\'';\'';
 const { cn } from";@/lib/utils"; export: const PageLoader = ({ text =";";Loading.",className: ""}) => {} return () <div"" className={cn(""flex: flex-col items-center justify-center min-h-screen",className )}> <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>"""" <p className="mt-4 text-white text-lg font-medium">{text}</p> </div>" )"}""";"";"""""";"";"""
-
 import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return () <div'' className={cn(''"flex": flex-col items-center justify-center min-h-screen',className )}> <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.disabled/components/ui/PageLoader.jsx
+=======
+import { cn } from';@/lib/utils'; "export": const PageLoader = ({ text =';';Loading...',"className": ''}) => {} return () <div'' className={cn(''"flex": flex-col items-center justify-center min-h-screen',className )}> <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-white'></div>'''' <p className='mt-4 text-white text-lg font-medium'>{text}</p> </div>' )'}''';'';'''''';'';''
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

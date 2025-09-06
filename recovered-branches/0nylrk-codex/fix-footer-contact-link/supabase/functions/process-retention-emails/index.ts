@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -11,10 +12,13 @@ import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 <<<<<<< HEAD
@@ -39,6 +43,8 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -50,6 +56,7 @@ serve(async (req) => {
       "schedule_retention_emails"
     );
     if (scheduleError) {
+<<<<<<< HEAD
       throw new Error(`Failed to schedule retention emails: ${scheduleError.message}`)
     }
     console.log(`Scheduled ${scheduledCount} retention emails`);
@@ -61,6 +68,10 @@ serve(async (req) => {
 
     // // // console.log(`Scheduled ${scheduledCount} retention emails`),
 
+=======
+      throw new Error(`Failed to schedule retention emails: ${scheduleError && scheduleError.message}`)
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Fetch pending retention email jobs
     const { data: pendingJobs, error: jobsError } = await supabase
       .from("scheduled_jobs")
@@ -68,18 +79,25 @@ serve(async (req) => {
       .eq("job_type", "send_retention_email")
       .eq("status", "pending")
       .limit(50);
+<<<<<<< HEAD
     if (jobsError) {
       throw new Error(`Failed to fetch pending jobs: ${jobsError.message}`)
     }
     const processedJobs = [];
       .limit(50),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     if (jobsError) {
-      throw new Error(`Failed to fetch pending jobs: ${jobsError.message}`)
+      throw new Error(`Failed to fetch pending jobs: ${jobsError && jobsError.message}`)
     }
+<<<<<<< HEAD
 
     const processedJobs = [],
 
+=======
+    const processedJobs = [];
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     if (pendingJobs && pendingJobs.length > 0) {
       for (const job of pendingJobs) {
         try {
@@ -89,6 +107,7 @@ serve(async (req) => {
             {
               method: "POST",
               headers: {
+<<<<<<< HEAD
                 "Content-Type": "application/json"
                 "Authorization": `Bearer ${supabaseServiceKey}`}
               body: JSON.stringify(job)}
@@ -113,6 +132,8 @@ serve(async (req) => {
             const errorText = await reminderResponse && reminderResponse.text();
             console && console.error(`Failed to process job ${job && job.id}: ${errorText}`);
             
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             // Update job status to failed
             await supabase
               .from("scheduled_jobs")
@@ -123,9 +144,12 @@ serve(async (req) => {
             processedJobs && processedJobs.push(job && job.id)
           }
         } catch (error) {
+<<<<<<< HEAD
           console.error(`Error processing job ${job.id}:`, error);
           console.error(`Error processing job ${job.id}:`, error),
           
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           // Update job status to failed
           await supabase
             .from("scheduled_jobs")
@@ -136,6 +160,7 @@ serve(async (req) => {
       }
     }
     return new Response(
+<<<<<<< HEAD
       JSON.stringify({
         message: "Retention emails processed successfully";
         emails_scheduled: scheduledCount;
@@ -145,11 +170,18 @@ serve(async (req) => {
         emails_scheduled: scheduledCount,
         emails_processed: processedJobs.length,
         job_ids: processedJobs}),
+=======
+      JSON && JSON.stringify({
+        message: "Retention emails processed successfully";
+        emails_scheduled: scheduledCount;
+        job_ids: processedJobs});
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {
         status: 200
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
   } catch (error) {
+<<<<<<< HEAD
     console.error("Error in process-retention-emails function:", error);
     console.error("Error in process-retention-emails function:", error),
 
@@ -165,21 +197,30 @@ serve(async (req) => {
         error: "Internal server error", 
         details: error && error.message
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       });
       {
         status: 500
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 });
 
 =======
+=======
+  }
+});
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+=======
                 "Content - Type": "application / json",
                 "Authorization": `Bearer ${supabaseServiceKey}`}
               body: JSON.stringify (job)}
           );
+<<<<<<< HEAD
 =======
 
 
@@ -200,6 +241,8 @@ serve(async (req) => {;
     return new Response(null, { headers: corsHeaders });
   }
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
           // Check condition
 if ( {) {
@@ -252,6 +295,7 @@ if ( {) {
         headers: { "Content - Type": "application / json", ...cors_headers }}
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -259,5 +303,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 });

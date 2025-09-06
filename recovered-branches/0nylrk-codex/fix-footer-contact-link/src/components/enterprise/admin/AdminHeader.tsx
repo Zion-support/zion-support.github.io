@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
 
@@ -18,6 +19,8 @@ export function AdminHeader() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
 import React from "react",
@@ -30,6 +33,7 @@ export function AdminHeader() {
   const { company } = useCompanyWorkspace(),
 
   return (
+<<<<<<< HEAD
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <div>
@@ -140,11 +144,13 @@ function AdminHeader() {
           <Button variant="outline" size="sm" className="gap - 2">;
             <Download className="h - 4 w - 4" />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             Export Data;
           </Button>;
         </div>;
       </div>;
-
+=======
       <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">;
         <div className="bg - card rounded - lg p - 4 border border - border">;
           <div className="text - sm text - muted - foreground">Subscription Plan</div>;
@@ -178,6 +184,7 @@ function AdminHeader() {
         <Button > Customize Workspace</Button>;
       </div>;
     </div>);
+<<<<<<< HEAD
 
 }
 =======
@@ -189,3 +196,7 @@ function AdminHeader() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

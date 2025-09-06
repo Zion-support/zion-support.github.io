@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from 'react';
@@ -31,6 +32,8 @@ export function FraudDetectionSettings() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
@@ -48,6 +51,7 @@ export function FraudDetectionSettings() {;
       await new Promise((resolve) => setTimeout(resolve, 1000));
 =======
 
+<<<<<<< HEAD
 
 
 =======
@@ -494,37 +498,17 @@ if (return) {
                   prioritize keeping our marketplace safe while respecting your;
                   privacy.;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 </p>;
               </AccordionContent>;
             </AccordionItem>;
           </Accordion>;
-
-            <Button
-              onClick={handleSavePreferences}
-              disabled={isSaving}
-              className="bg-zion-purple hover:bg-zion-purple-light"
-            >
-              {isSaving ? "Saving..." : "Save Preferences"}
-
-            </Button>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-
-=======
-          <div className="pt - 2">;
-            <Button;
-              on_click={handleSavePreferences}
-              disabled={is_saving}
-              className="bg - zion - purple hover:bg - zion - purple - light";
-            >;
-              {is_saving ? "Saving..." : "Save Preferences"}
-
             </Button>;
           </div>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
 
     </Card>);
 }
@@ -540,3 +524,5 @@ if (return) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

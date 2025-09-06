@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
@@ -125,3 +126,6 @@ if ( {) {
     signIn: "/auth/signin",;
     signUp: "/auth/signup"}}),;
 export { handler as GET, handler as POST };
+=======
+export { handler as GET, handler as POST }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

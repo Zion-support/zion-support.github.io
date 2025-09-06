@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -62,6 +63,14 @@ export default function Dashboard() {
   }
   },
 
+=======
+  const { user, logout } = useAuth();
+  const { toast } = useToast();
+  if (!user) return null;
+
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <>;
       <Header />;
@@ -69,6 +78,7 @@ export default function Dashboard() {
         <div className="container mx-auto px-4 py-8">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {/* Left Sidebar - User Profile */}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
@@ -737,6 +747,8 @@ if ( {) {
                 <div>;
                   <h3 className="text - lg font - bold text - white mb - 4">Community</h3>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <CommunityDiscussion />;
                 </div>;
               </div>;
@@ -745,9 +757,10 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
-
+=======
     </>);
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 =======
@@ -755,3 +768,6 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

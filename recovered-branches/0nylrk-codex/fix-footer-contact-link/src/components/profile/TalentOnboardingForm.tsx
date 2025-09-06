@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -122,6 +123,8 @@ type TalentFormValues = z && z.infer<typeof talentSchema>;
 
 export function TalentOnboardingForm() {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { user } = useAuth();
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
@@ -129,6 +132,7 @@ export function TalentOnboardingForm() {;
   const [cvFileName, setCvFileName] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessScreen, setShowSuccessScreen] = useState(false);
+<<<<<<< HEAD
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
   const totalSteps = 4;
     ).min(1, "Add at least one key project"),
@@ -406,6 +410,8 @@ export function TalentOnboardingForm() {;
   return null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import React, { useState } from './react';
 import { use_form, useFieldArray } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -543,6 +549,7 @@ if ( {) {
   // [Previous implementation continues...];
   return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 =======
@@ -553,3 +560,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

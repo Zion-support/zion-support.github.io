@@ -1,30 +1,36 @@
 import React from "react";
 
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default function EnhancedCard(): any ({;
   children,;
   className = "",;
@@ -42,20 +48,33 @@ export default function EnhancedCard(): any ({;
   return (
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
-
+}
 import React from 'react';
 export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
   return (
     <div className={["card-base p-4", className].join(' ')}>
       {children}
-</div>
-  );
-  return (
-    <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
-  return (
-    <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
     </div>
-  )
+  );
+<<<<<<< HEAD
+=======
+}
+import React from './react';
+;
+export default /**
+ * EnhancedCard - Function description
+ */
+function EnhancedCard() {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+  return (
+    <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
+  return (
+    <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
+}
+<<<<<<< HEAD
+}
+=======
 
 }
-}
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState} from "react";
@@ -22,12 +23,15 @@ import { z } from './zod';
 import { useHireRequest } from '@/hooks / useHireRequest';
 import { TalentProfile } from '@/types / talent';
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface UseHireRequestFormProps {
   talent: TalentProfile;
   on_close: () => void;
   initialJobTitle?: string;
   user_details?: {
     name?: string;
+<<<<<<< HEAD
 
 
 
@@ -94,6 +98,8 @@ export interface FormValues {;
     email?: string,
     id?: string;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }
 export interface FormValues {
@@ -101,6 +107,7 @@ export interface FormValues {
   requester_email: string;
   project_overview: string;
   timeline: string;
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -135,6 +142,10 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
   });
   }),
 
+=======
+    path: ["budgetMax"]
+  });
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Initialize the form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema);
@@ -143,6 +154,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
       requesterEmail: userDetails?.email |""
       projectOverview: initialJobTitle ? `Job: ${initialJobTitle}` : "";
       timeline: "";
+<<<<<<< HEAD
       budgetMin: talent.hourly_rate |25
       budgetMax: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50
     }
@@ -156,6 +168,10 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     }
   }),
 
+=======
+    }
+  });
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Handle form submission
   const onSubmit = async (values: FormValues) => {
     setIsSubmitting(true);
@@ -203,6 +219,7 @@ function useHireRequestForm() {
     try {
       const request_data = {
         talent: {
+<<<<<<< HEAD
           id: talent.id |"";
           full_name: talent.full_name
           professional_title: talent.professional_title}
@@ -210,20 +227,17 @@ function useHireRequestForm() {
           name: values && values.requesterName;
           email: values && values.requesterEmail,
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           id: userDetails?.id
         }
         project: {
-
-          overview: values && values.projectOverview;
-          timeline: values && values.timeline;
-          budgetMin: values && values.budgetMin,
-          budgetMax: values && values.budgetMax
-
         }
       }
       const result = await submitHireRequest(requestData);
       if (result && result.success) {
         onClose()
+<<<<<<< HEAD
           id: talent.id || "",
           full_name: talent.full_name,
           professional_title: talent.professional_title},
@@ -313,6 +327,8 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
     } catch (error) {
       console && console.error("Error submitting hire request:", error)
@@ -344,6 +360,7 @@ if ( {) {
       console.error ("Error submitting hire request:", error);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
+<<<<<<< HEAD
 
 =======
       setIsSubmitting(false)
@@ -371,3 +388,10 @@ if ( {) {
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
+=======
+      setIsSubmitting (false);
+    }
+  }
+  }
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

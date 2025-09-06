@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -15,10 +16,16 @@ export interface TokenTransaction {;
   id: string;
   user_id: string;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface TokenTransaction {
+  id: string;
+  user_id: string;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   amount: number;
   type: 'issue' | 'redeem' | 'transfer';
   reason: string;
   timestamp: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -26,10 +33,13 @@ export interface TokenTransaction {;
 
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
-
-// Mock data storage - replace with actual database
+// Mock data storage - replace with actual database;
 let transactions: TokenTransaction[] = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
   const transaction: TokenTransaction = {
@@ -112,6 +122,8 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   transactions.push(transaction);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return transaction;
 =======
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
@@ -120,18 +132,19 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
     reason,
     timestamp: Date && Date.now()
   };
-  
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  transactions.push(transaction);
+  transactions && transactions.push(transaction);
   return transaction;
 }
-
-  const current = tokenStore && tokenStore.getConfig();
-  tokenStore && tokenStore.setConfig({ ...current, ...partial });
-
+}
+export function setConfig(
+  partial: Partial<ReturnType<typeof getConfig>>
+): void {
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 // Token service utilities
 export interface TokenConfig {
   id: string;
@@ -230,7 +243,10 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   return [...tokenBalances];
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {

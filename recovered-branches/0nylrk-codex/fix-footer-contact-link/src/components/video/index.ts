@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export * from './VideoCallRoom';
 ;
@@ -11,3 +12,5 @@ export const Index = () => {
 
 export * from './VideoCallRoom';
 export * from './VideoCallRoom';
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

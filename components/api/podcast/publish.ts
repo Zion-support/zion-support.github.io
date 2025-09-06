@@ -1,10 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
   const rssUrl =
@@ -15,16 +19,37 @@ export default async function handler(
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  try {
+  if (req && req.method !== 'POST')
+    return res && res.status(405).json({ error: 'Method not allowed' });
+  const rssUrl =
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const rssUrl = (process.env.SITE_URL |'http: //localhost:3000') + '/podcast.xml';
+
   return res.status(200).json({ ok: true, rssUrl })
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: 'Method not allowed' })) {
+  $2
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
   const rss_url =;
     (process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
@@ -37,9 +62,9 @@ function handler() {
 }
   const rss_url = (process.env.SITE_URL || 'http: //localhost:3000') + '/podcast.xml';
   return res.status (200).json ({ ok: true, rss_url });
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,3 +92,5 @@ function handler() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

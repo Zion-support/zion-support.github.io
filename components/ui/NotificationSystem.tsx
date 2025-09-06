@@ -5,12 +5,14 @@ export interface Notification {
 export interface Notification {;
 =======
 
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   type: "success" | "error" | "warning" | "info";
   title?: string;
@@ -25,7 +27,17 @@ interface NotificationSystemProps {;
   onDismiss?: (id: string) => void;
 }
 
+<<<<<<< HEAD
           key;
+=======
+const getNotificationStyles = (type: Notification["type"]): string => {;
+  const baseStyles = "border-l-4";
+  const typeStyles = {;
+    success: "bg-green-50 border-green-400 text-green-800",;
+    error: "bg-red-50 border-red-400 text-red-800",;
+    warning: "bg-yellow-50 border-yellow-400 text-yellow-800",;
+    info: "bg-blue-50 border-blue-400 text-blue-800",;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 
 const getNotificationStyles = (type: Notification["type"]): string => {
@@ -82,7 +94,6 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
 };
 
 
-=======
 import React from 'react';
 
 interface Notification {
@@ -115,7 +126,6 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
     }
   };
 
-=======
 export default function NotificationSystem({
   notifications,
   onDismiss,
@@ -154,7 +164,6 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
   if (notifications.length === 0) return null;
 
   return (
-<<<<<<< HEAD
     <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
       {notifications.map((notification) => (
         <div
@@ -172,7 +181,6 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
               <button
                 onClick={() => onDismiss(notification.id)}
                 className="ml-2 text-gray-400 hover:text-gray-600"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 ×
               </button>
@@ -182,6 +190,76 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
       ))}
     </div>
   );
+<<<<<<< HEAD
+=======
+
+const getNotificationStyles = (type: Notification["type"]): string => {
+  const base_styles = "border - l-4";
+  const type_styles = {
+    success: "bg - green - 50 border - green - 400 text - green - 800",
+    error: "bg - red - 50 border - red - 400 text - red - 800",
+    warning: "bg - yellow - 50 border - yellow - 400 text - yellow - 800",
+    info: "bg - blue - 50 border - blue - 400 text - blue - 800",
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+  id: string;
+  type: "success" | "error" | "warning" | "info";
+  title?: string;
+  message: string;
+  duration?: number;
+}
+interface NotificationSystemProps {
+
+interface NotificationSystemProps {;
+  notifications: Notification[];
+  on_dismiss?: (id: string) => void;
+}
+
+  return (
+    <div className="fixed top-4 right-4 z-50 space-y-2">;
+      {notifications && notifications.map((notification) => (;
+        <div
+          key={notification && notification.id}
+          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification && notification.type)}`}>;
+          <div className="flex items-start justify-between">;
+            <div className="flex-1">;
+              {notification && notification.title && (;
+                <h4 className="font-medium mb-1">{notification && notification.title}</h4>;
+              )}
+              <p className="text-sm">{notification && notification.message}</p>;
+            </div>;
+            {onDismiss && (;
+              <button
+                onClick={() => onDismiss(notification && notification.id)}
+                className="ml-2 text-gray-400 hover:text-gray-600";
+              >;
+                ×;
+              </button>;
+            )}
+          </div>;
+        </div>;
+      ))}
+    </div>;
+  );
+}
+const getNotificationStyles = (type: Notification["type"]): string => {
+  const base_styles = "border - l-4";
+  const type_styles = {
+    success: "bg - green - 50 border - green - 400 text - green - 800",
+    error: "bg - red - 50 border - red - 400 text - red - 800",
+    warning: "bg - yellow - 50 border - yellow - 400 text - yellow - 800",
+    info: "bg - blue - 50 border - blue - 400 text - blue - 800",
+  }
+  return `${base_styles} ${type_styles[type]}`;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 <<<<<<< HEAD
 }
@@ -260,6 +338,7 @@ if (return null) {
         </div>))}
     </div>);
 }
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -272,3 +351,5 @@ if (return null) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

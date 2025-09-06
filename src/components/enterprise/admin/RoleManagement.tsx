@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
@@ -12,12 +13,16 @@ import React from 'react'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -343,10 +348,61 @@ export function RoleManagement() {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+import React from "react",
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Switch } from "@/components/ui/switch",
+import { toast } from "@/hooks/use-toast",
+import { InfoIcon } from 'lucide-react'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger} from "@/components/ui/tooltip",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function RoleManagement() {
+  // Mock team members data
+  const teamMembers = [
+    {
+        manageBilling: false}}],
+
+  const handlePermissionChange = (_memberId: number, permission: string, value: boolean) => {
+    // In a real app, this would make an API call to update permissions
+    toast({
+      title: "Permission updated",
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
+  },
+
+  const roleDescriptions: Record<string string> = {
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates"},
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <div className="space-y-6">
+      <div>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </div>
           ))}
         </div>
       </div>
+<<<<<<< HEAD
       <div className='rounded-md border'>
 
       <div className="rounded-md border">
@@ -356,18 +412,23 @@ export function RoleManagement() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <Table>
           <TableHeader>
             <TableRow>
               <TableHead>Team Member</TableHead>
               <TableHead>Role</TableHead>
-              <TableHead className='text-center'>
-                <div className='flex items-center justify-center gap-1'>
+              <TableHead className="text-center">
+                <div className="flex items-center justify-center gap-1">
                   View Candidates
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
-                        <InfoIcon className='h-4 w-4 text-muted-foreground' />
+                        <InfoIcon className="h-4 w-4 text-muted-foreground" />
                       </TooltipTrigger>
                       <TooltipContent>
                         Can view candidate profiles and applications
@@ -376,13 +437,13 @@ export function RoleManagement() {;
                   </TooltipProvider>
                 </div>
               </TableHead>
-              <TableHead className='text-center'>
-                <div className='flex items-center justify-center gap-1'>
+              <TableHead className="text-center">
+                <div className="flex items-center justify-center gap-1">
                   Edit Candidates
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
-                        <InfoIcon className='h-4 w-4 text-muted-foreground' />
+                        <InfoIcon className="h-4 w-4 text-muted-foreground" />
                       </TooltipTrigger>
                       <TooltipContent>
                         Can edit candidate information and status
@@ -391,13 +452,13 @@ export function RoleManagement() {;
                   </TooltipProvider>
                 </div>
               </TableHead>
-              <TableHead className='text-center'>
-                <div className='flex items-center justify-center gap-1'>
+              <TableHead className="text-center">
+                <div className="flex items-center justify-center gap-1">
                   Create Jobs
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
-                        <InfoIcon className='h-4 w-4 text-muted-foreground' />
+                        <InfoIcon className="h-4 w-4 text-muted-foreground" />
                       </TooltipTrigger>
                       <TooltipContent>
                         Can create and publish job listings
@@ -406,13 +467,13 @@ export function RoleManagement() {;
                   </TooltipProvider>
                 </div>
               </TableHead>
-              <TableHead className='text-center'>
-                <div className='flex items-center justify-center gap-1'>
+              <TableHead className="text-center">
+                <div className="flex items-center justify-center gap-1">
                   Manage Team
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
-                        <InfoIcon className='h-4 w-4 text-muted-foreground' />
+                        <InfoIcon className="h-4 w-4 text-muted-foreground" />
                       </TooltipTrigger>
                       <TooltipContent>
                         Can add, edit, and remove team members
@@ -421,13 +482,13 @@ export function RoleManagement() {;
                   </TooltipProvider>
                 </div>
               </TableHead>
-              <TableHead className='text-center'>
-                <div className='flex items-center justify-center gap-1'>
+              <TableHead className="text-center">
+                <div className="flex items-center justify-center gap-1">
                   Billing Access
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
-                        <InfoIcon className='h-4 w-4 text-muted-foreground' />
+                        <InfoIcon className="h-4 w-4 text-muted-foreground" />
                       </TooltipTrigger>
                       <TooltipContent>
                         Can view and manage billing information
@@ -439,6 +500,7 @@ export function RoleManagement() {;
             </TableRow>
           </TableHeader>
           <TableBody>
+<<<<<<< HEAD
             {teamMembers.map(member => (              <TableRow key={member.id}>
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
@@ -448,13 +510,19 @@ export function RoleManagement() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <TableCell>
-                  <div className='font-medium'>{member.name}</div>
-                  <div className='text-sm text-muted-foreground'>
+                  <div className="font-medium">{member.name}</div>
+                  <div className="text-sm text-muted-foreground">
                     {member.email}
                   </div>
                 </TableCell>
                 <TableCell>
+<<<<<<< HEAD
 
 
                   <select 
@@ -470,10 +538,16 @@ export function RoleManagement() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   </select>
                 </TableCell>
                 <TableCell className="text-center">
                   <Switch
+<<<<<<< HEAD
                     aria-label='View candidates'
                     aria-label="View candidates"
                     checked={member.permissions.viewCandidates}
@@ -833,6 +907,11 @@ export function RoleManagement() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={checked =>
                       handlePermissionChange(
@@ -855,46 +934,25 @@ export function RoleManagement() {;
                     }                  />
                 </TableCell>
                 <TableCell className='text-center'>
-                    checked={member && member.permissions.viewCandidates}
-                    onCheckedChange={checked =>;
-                      handlePermissionChange(;
-                        member && member.id,;
-                        'viewCandidates',;
-                        checked;
-                      );
-                    }                  />;
-                </TableCell>;
-                <TableCell className='text-center'>;
-                  <Switch
-                    aria-label='Edit candidates'
-                    checked={member && member.permissions.editCandidates}
-                    onCheckedChange={checked =>;
-                      handlePermissionChange(;
-                        member && member.id,;
-                        'editCandidates',;
-                        checked;
-                      );
-                    }                  />;
-                </TableCell>;
-                <TableCell className='text-center'>;
                   <Switch
                     aria-label='Create jobs'
-                    checked={member && member.permissions.createJobs}
-                    onCheckedChange={checked =>;
-                      handlePermissionChange(member && member.id, 'createJobs', checked);
-                    }                  />;
-                </TableCell>;
-                <TableCell className='text-center'>;
+                    checked={member.permissions.createJobs}
+                    onCheckedChange={checked =>
+                      handlePermissionChange(member.id, 'createJobs', checked)
+                    }                  />
+                </TableCell>
+                <TableCell className='text-center'>
                   <Switch
                     aria-label='Manage team'
-                    checked={member && member.permissions.manageTeam}
-                    onCheckedChange={checked =>;
-                      handlePermissionChange(member && member.id, 'manageTeam', checked);
-                    }                  />;
-                </TableCell>;
-                <TableCell className='text-center'>;
+                    checked={member.permissions.manageTeam}
+                    onCheckedChange={checked =>
+                      handlePermissionChange(member.id, 'manageTeam', checked)
+                    }                  />
+                </TableCell>
+                <TableCell className='text-center'>
                   <Switch
                     aria-label='View billing'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     checked={member.permissions.viewBilling}
@@ -923,6 +981,10 @@ export function RoleManagement() {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+                    checked={member.permissions.viewBilling}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
                     }
@@ -930,14 +992,13 @@ export function RoleManagement() {;
                 </TableCell>;
               </TableRow>;
             ))}
-
           </TableBody>;
         </Table>;
       </div>;
     </div>;
   );
-
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -996,3 +1057,9 @@ export function RoleManagement() {;
     </div>);
 }
 ;
+=======
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

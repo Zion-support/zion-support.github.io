@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface EnterpriseIT2026ServiceV4 {;
   id: string;
@@ -26,47 +27,60 @@ export interface EnterpriseIT2026ServiceV4 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Quantum - safe cloud storage platform with quantum - resistant encryption and distributed storage.',
+    launch_date: '2026 - 05 - 01',
+    customers: 40,
+    rating: 4 && 4.9,
+    reviews: 32,
+  },
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com';
+    }
+    real_implementation: true;
+    implementation_details: 'Quantum - safe cloud storage platform with quantum - resistant encryption and distributed storage.';
+    launch_date: '2026 - 05 - 01';
+    customers: 40;
+    reviews: 32
+  }
+];
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: ServiceVariant,
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   contactInfo: {
-    mobile: string, email: string,
-    address: string,
-    website: string
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-
 }
+
 export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
   // Zero-Trust Network Architecture Platform
   {
-
-    id: 'zero-trust-network-architecture-platform', name: 'Zero-Trust Network Architecture Platform',
-    tagline: 'Secure every connection with zero-trust principles',
-    price: '$1,299',
-    period: '/month',
-    description: 'Comprehensive zero-trust network architecture platform that implements continuous verification, least-privilege access, and micro-segmentation to protect enterprise networks from modern cyber threats.',
-    features: [
-      'Continuous identity verificationLeast-privilege access controlMicro-segmentationReal-time threat detectionBehavioral analyticsAPI securityCloud-native architectureCompliance reporting';
-      'Integration APIs24/7 monitoring'
-    ];
-    popular: true, icon: '🛡️',
-    color: 'from-blue-600 to-indigo-600', textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/zero-trust-network-architecture-platform',
-    marketPosition: 'First comprehensive zero-trust network architecture platform. Competitive advantage: Continuous verification, micro-segmentation, and behavioral analytics.',
-    targetAudience: 'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies',
-    trialDays: 14, setupTime: '1 month',
-    category: 'Enterprise Security', realService: true,
-    technology: ['Zero-Trust ArchitectureAI/MLMicroservicesReactPythonPostgreSQLAWSKubernetes'], integrations: ['Active DirectorySAMLOAuthSIEM systemsFirewallsVPNs'],
-    useCases: ['Network securityAccess controlThreat preventionComplianceCloud security'],
-    roi: 'Reduce security incidents by 90%, improve compliance by 95%, lower security costs by 40%',
-    competitors: ['CiscoPalo Alto NetworksVMware'], marketSize: '$60B cybersecurity market',
-    growthRate: '50% annual growth', variant: 'enterprise-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
+    
     },
     realImplementation: true, implementationDetails: 'Comprehensive zero-trust network architecture platform with continuous verification and micro-segmentation.',
     launchDate: '2026-03-01', customers: 60,
@@ -96,9 +110,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     competitors: ['ServiceNowBMCBMC Helix'], marketSize: '$35B IT operations market',
     growthRate: '40% annual growth', variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
     },
     realImplementation: true, implementationDetails: 'AI-powered IT operations center with intelligent automation and predictive capabilities.',
     launchDate: '2026-02-15', customers: 120,
@@ -128,9 +139,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     competitors: ['EntrustDigiCertGlobalSign'], marketSize: '$15B cryptography market',
     growthRate: '70% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
     },
     realImplementation: true, implementationDetails: 'Advanced quantum-resistant cryptography platform with post-quantum algorithms and hybrid encryption.',
     launchDate: '2026-04-01', customers: 35,
@@ -160,9 +168,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     competitors: ['AWS Migration HubAzure MigrateGoogle Cloud Migrate'], marketSize: '$50B cloud migration market',
     growthRate: '60% annual growth', variant: 'ai-autonomous',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
     },
     realImplementation: true, implementationDetails: 'Autonomous cloud migration platform with AI automation and zero-downtime capabilities.',
     launchDate: '2026-03-15', customers: 85,
@@ -193,9 +198,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     competitors: ['AWS GreengrassAzure IoT EdgeGoogle Cloud IoT'], marketSize: '$40B edge computing market',
     growthRate: '80% annual growth', variant: 'edge-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
     },
     realImplementation: true, implementationDetails: 'Advanced edge computing orchestration platform with global scale and real-time processing.',
     launchDate: '2026-04-15', customers: 45,
@@ -225,9 +227,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     competitors: ['CollibraInformaticaAlation'], marketSize: '$25B data governance market',
     growthRate: '45% annual growth', variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
     },
     realImplementation: true, implementationDetails: 'AI-powered data governance platform with intelligent automation and comprehensive compliance.',
     launchDate: '2026-03-01', customers: 95,
@@ -257,9 +256,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     competitors: ['GitLabJenkinsCircleCI'], marketSize: '$20B DevOps market',
     growthRate: '55% annual growth', variant: 'ai-autonomous',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
     },
     realImplementation: true, implementationDetails: 'Fully autonomous DevOps platform with AI-powered automation and zero human intervention.',
     launchDate: '2026-02-20', customers: 150,
@@ -290,6 +286,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     competitors: ['AWS S3Azure BlobGoogle Cloud Storage'], marketSize: '$80B cloud storage market',
     growthRate: '65% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -298,6 +295,8 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
 =======
     
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     },
     realImplementation: true, implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.',
     launchDate: '2026-05-01', customers: 40,
@@ -312,6 +311,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     }
 =======
     reviews: 32;
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -732,3 +732,5 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

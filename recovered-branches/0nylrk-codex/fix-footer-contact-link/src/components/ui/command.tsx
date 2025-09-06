@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from 'react';
 import {Command, as, CommandPrimitive} from 'cmdk';
 import {Search} from 'lucide-react';
@@ -35,16 +36,26 @@ const Command = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof CommandPrimitive>;
 ></typeof>(({ className, ...props }, ref) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import React from 'react';
+import * as React from 'react';
+import {Command, as, CommandPrimitive} from 'cmdk';
+import {Search} from 'lucide-react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   <CommandPrimitive
     ref={ref}
     className={cn(
       'flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground'
+<<<<<<< HEAD
       "flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground",
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       className
     )}
     {...props}
   />;
 ));
+<<<<<<< HEAD
 <<<<<<< HEAD
 Command.displayName = CommandPrimitive.displayName;
 interface CommandDialogProps
@@ -116,11 +127,18 @@ const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  return (
+    <Dialog {...props}>;
+      <DialogContent className='overflow-hidden p-0 shadow-lg'>;
+        <Command className='[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-group]]:px-2 [&_[cmdk-input-wrapper]_svg]:h-5 [&_[cmdk-input-wrapper]_svg]:w-5 [&_[cmdk-input]]:h-12 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-3 [&_[cmdk-item]_svg]:h-5 [&_[cmdk-item]_svg]:w-5'>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {children}
         </Command>;
       </DialogContent>;
     </Dialog>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 const CommandInput = React.forwardRef<
@@ -153,6 +171,8 @@ const CommandInput = React && React.forwardRef<;
     <Search className='mr-2 h-4 w-4 shrink-0 opacity-50' />;
     <CommandPrimitive&& CommandPrimitive.Input
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       ref={ref}
       className={cn(
         'flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50'
@@ -162,6 +182,7 @@ const CommandInput = React && React.forwardRef<;
     />;
   </div>;
 ));
+<<<<<<< HEAD
 <<<<<<< HEAD
 CommandInput.displayName = CommandPrimitive.Input.displayName;
 
@@ -190,6 +211,9 @@ const CommandList = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.List>;
 >(({ className, ...props }, ref) => (;
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
 import {cn} from '@/lib / utils';
 import {Dialog, DialogContent} from '@/components / ui / dialog';
@@ -199,6 +223,7 @@ const Command = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof CommandPrimitive>;
 ></typeof>(({ class_name, ...props }, ref) => (
   <CommandPrimitive;
+<<<<<<< HEAD
 =======
   <CommandPrimitive.List;
 <<<<<<< HEAD
@@ -243,6 +268,8 @@ const CommandGroup = React.forwardRef<;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     ref={ref}
     className={cn (
       'flex h - full w - full flex - col overflow - hidden rounded - md bg - popover text - popover - foreground',
@@ -290,16 +317,6 @@ const CommandList = React.forward_ref<;
     ref={ref}
     className={cn ('max - h-[300px] overflow - y-auto overflow - x-hidden', class_name)}
     {...props}
-
-
-CommandList && CommandList.displayName = CommandPrimitive && CommandPrimitive.List.displayName;
-
-const CommandEmpty = React && React.forwardRef<;
-  React && React.ElementRef<typeof CommandPrimitive && CommandPrimitive.Empty>,;
-  React && React.ComponentPropsWithout</typeof>Ref<typeof CommandPrimitive && CommandPrimitive.Empty>;
->((props, ref) => (;
-  <CommandPrimitive&& CommandPrimitive.Empty
-
 =======
   />));
 ;
@@ -311,13 +328,10 @@ const CommandEmpty = React.forward_ref<;
 >((props, ref) => (
   <CommandPrimitive.Empty;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     ref={ref}
     className='py - 6 text - center text - sm';
     {...props}
+<<<<<<< HEAD
 
 
 
@@ -339,11 +353,14 @@ const CommandGroup = React && React.forwardRef<;
     className={cn(
       'overflow-hidden p-1 text-foreground [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1 && 1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       className
     )}
     {...props}
   />;
 ));
+<<<<<<< HEAD
 <<<<<<< HEAD
 CommandGroup.displayName = CommandPrimitive.Group.displayName;
 
@@ -506,6 +523,41 @@ export {;
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+  />));
+;
+CommandEmpty.display_name = CommandPrimitive.Empty.display_name;
+;
+const CommandGroup = React.forward_ref<;
+  React.ElementRef < typeof CommandPrimitive.Group>,
+  React.ComponentPro</typeof > psWithoutRef < typeof CommandPrimitive.Group>;
+>(({ class_name, ...props }, ref) => (
+  <CommandPrimitive.Group;
+    ref={ref}
+    className={cn (
+      'overflow - hidden p - 1 text - foreground [&_[cmdk - group - heading]]:px - 2 [&_[cmdk - group - heading]]:py - 1.5 [&_[cmdk - group - heading]]:text - xs [&_[cmdk - group - heading]]:font - medium [&_[cmdk - group - heading]]:text - muted - foreground',
+      class_name)}
+    {...props}
+  />));
+;
+CommandGroup.display_name = CommandPrimitive.Group.display_name;
+;
+const CommandSeparator = React.forward_ref<;
+  React.ElementRef < typeof CommandPrimitive.Separator>,
+  React.Compone</typeof > ntPropsWithoutRef < typeof CommandPrimitive.Separator>;
+>(({ class_name, ...props }, ref) => (
+  <CommandPrimitive.Separator;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    ref={ref}
+    className={cn ('-mx - 1 h - px bg - border', class_name)}
+    {...props}
+      className
+    )}
+    {...props}
+  />;
+));
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
   />));
 CommandSeparator.display_name = CommandPrimitive.Separator.display_name;
 ;
@@ -541,6 +593,7 @@ export {
   CommandItem,
   CommandShortcut,
 <<<<<<< HEAD
+<<<<<<< HEAD
   CommandSeparator}
 ;
   CommandSeparator,;
@@ -553,3 +606,9 @@ export {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  CommandSeparator,
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

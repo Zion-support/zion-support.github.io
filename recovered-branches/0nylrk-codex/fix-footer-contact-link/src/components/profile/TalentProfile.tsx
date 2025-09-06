@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -58,12 +59,15 @@ interface TalentProfileProps {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export function TalentProfile({
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   profile;
   onRequestHire;
   onMessageTalent
 }: TalentProfileProps) {
   const { isAuthenticated } = useAuth();
 
+<<<<<<< HEAD
 export function TalentProfile({ ;
   profile;
   onRequestHire;
@@ -155,36 +159,23 @@ export function TalentProfile({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  return (
+    <div className="container mx-auto px-4 py-8">;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Profile Header */}
       <ProfileHero
         name={profile && profile.full_name}
         title={profile && profile.professional_title}
         avatarUrl={profile && profile.profile_picture_url}
         profileType="talent"
-
-        rating={profile && profile.average_rating}
-        reviewCount={profile && profile.rating_count}
-      />;
-
-
       {/* Main content area */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;
         {/* Left Column - Skills & Info */}
-
-        <div className="space-y-8">;
-          <ProfileSkills skills={skillsArray} />;
-          <ProfileAvailability availability={availability} />;
-          <ProfileContact
-            email={profile && profile.user_id}
-            profileName={profile && profile.full_name}
-            profileType="talent"
-          />;
-        </div>;
-
-
         {/* Right Column - Bio & Projects */}
         <div className="lg:col-span-2 space-y-8">;
           {/* Bio Section */}
+<<<<<<< HEAD
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
             <h2 className="text-xl font-bold text-white mb-4">About {profile.full_name}</h2>
             <div className="prose prose-invert max-w-none">
@@ -307,6 +298,8 @@ function TalentProfile() {
             />;
           </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {/* Hire Now CTA */}
           {is_authenticated && (
             <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6 mb - 8">;
@@ -315,53 +308,6 @@ function TalentProfile() {
                 <p className="text - zion - slate mb - 6 max - w-md">;
                   Connect with {profile.full_name} for your next project and get started right away.;
                   {profile.hourly_rate && ` Rate starts at $${profile.hourly_rate}/hour.`}
-
-          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">;
-            <h2 className="text-xl font-bold text-white mb-4">About {profile && profile.full_name}</h2>;
-            <div className="prose prose-invert max-w-none">;
-              <p className="text-zion-slate whitespace-pre-wrap">{profile && profile.bio}</p>;
-            </div>;
-          </div>;
-
-          {/* Projects Section */}
-          <ProfileProjects projects={projectsArray} />;
-
-          {/* Ratings Section */}
-          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">;
-            <h2 className="text-xl font-bold text-white mb-4 flex items-center">;
-              <Star className="mr-2 h-5 w-5 text-yellow-400" />;
-              Reviews & Ratings;
-            </h2>;
-            <ProfileRatings
-              userId={profile && profile.id}
-              averageRating={profile && profile.average_rating}
-              ratingCount={profile && profile.rating_count}
-            />;
-          </div>;
-
-          {/* Hire Now CTA */}
-          {isAuthenticated && (;
-            <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">;
-              <div className="flex flex-col items-center text-center">;
-                <h3 className="text-xl font-bold text-white mb-2">Ready to collaborate?</h3>;
-                <p className="text-zion-slate mb-6 max-w-md">;
-                  Connect with {profile && profile.full_name} for your next project and get started right away.;
-                  {profile && profile.hourly_rate && ` Rate starts at $${profile && profile.hourly_rate}/hour.`}
-                </p>;
-
-                <div className="flex flex-wrap gap-4 justify-center">;
-                  <Button
-                    size="lg" 
-                    className="bg-zion-purple text-white hover:bg-zion-purple-dark"
-                    onClick={onRequestHire}>;
-                    <Handshake className="mr-2 h-5 w-5" />;
-                    Hire Now;
-                  </Button>;
-
-                  {onMessageTalent && (;
-                    <Button
-                      size="lg" 
-
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                       onClick={onMessageTalent}>;
@@ -373,13 +319,6 @@ function TalentProfile() {
               </div>;
             </div>;
           )}
-
-        </div>;
-      </div>;
-    </div>;
-  );
-}
-
 =======
                 </p>;
                 <div className="flex flex - wrap gap - 4 justify - center">;

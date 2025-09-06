@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface FeatureCardProps {icon: string;
   title: string;
   description: string;
@@ -50,8 +51,9 @@ export default /**
  */
 function FeatureCard() {
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
-<<<<<<< HEAD
     <div className={`feature - card group ${class_name}`}>;
       <div className={`w - 12 h - 12 ${gradient} rounded - lg flex items - center justify - center mb - 4`}>;
         <span className=&quot;text - white text - xl & quot;>{icon}</span>;
@@ -61,6 +63,7 @@ function FeatureCard() {
       <ul className=&quot;text - sm text - white / 60 space - y-1 & quot;>;
         {features.map ((feature, index) => (
           <li key={index}>• {feature}</li>))}
+<<<<<<< HEAD
 =======
   return (
     <div className={`feature-card group ${className}`}>
@@ -79,3 +82,5 @@ function FeatureCard() {
       </ul>;
     </div>);
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

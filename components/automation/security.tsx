@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,7 +9,13 @@
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+</pre> </div>)
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default function SecurityAudit({ report }: Props) {
+=======
 };
 </pre> </div>)
  
@@ -31,6 +38,7 @@ export default function SecurityAudit({ report }: Props) {
         <div className="text-sm text-gray-500">Generated at: {new Date(report.generatedAt).toLocaleString()}</div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">
 {JSON.stringify(report, null, 2)}
       </pre>
@@ -49,6 +57,10 @@ export default function SecurityAudit({ report }: Props) {
 }
 
 
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 }
 </pre> </div>);
@@ -69,25 +81,5 @@ function SecurityAudit() {
 {JSON.stringify (report, null, 2)}
       </pre>;
     </div>);
-  }
-},
-
-export default function SecurityAudit({ report }: Props) {
-  return (
-    <div className=&quot;space-y-4&quot;>
-      <header className=&quot;space-y-1&quot;>
-        <h1 className=&quot;text-3xl font-bold&quot;>Security Audit</h1>
-        <p className=&quot;text-gray-600 dark:text-gray-300&quot;>Automated vulnerability scan summary.</p>
-      </header>
-      {report.error && <div className=&quot;text-red-600&quot;>{report.error}</div>}
-      {report.generatedAt && (
-        <div className=&quot;text-sm text-gray-500&quot;>Generated at: {new Date(report.generatedAt).toLocaleString()}</div>
-      )}
-      <pre className=&quot;whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto&quot;>
-{JSON.stringify(report, null, 2)}
-      </pre>
-    </div>
-  )
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

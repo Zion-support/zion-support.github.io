@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -119,6 +120,34 @@ export default function Payments() {
 // Import UI components for Payment Settings tab;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                        <label
+                          htmlFor="notify-email"
+                          className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white">;
+                          Email notifications;
+                        </label>;
+                      </div>;
+                      <div className="flex items-center space-x-2">;
+                        <Checkbox id="notify-push" defaultChecked />;
+                        <label
+                          htmlFor="notify-push"
+                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white">;
+                          Push notifications;
+                        </label>;
+                      </div>;
+                    </div>;
+                  </div>;
+                </div>;
+              </div>;
+            </TabsContent>;
+          </Tabs>;
+        </div>;
+      </div>;
+      <Footer />;
+    </>;
+  );
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {Button} from "@/components/ui/button";
 import {Switch} from "@/components/ui/switch";
 import {Label} from "@/components/ui/label";
@@ -250,8 +279,11 @@ import { Label } from '@/components / ui / label';
 import { Checkbox } from '@/components / ui / checkbox';
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

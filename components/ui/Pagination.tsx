@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -23,6 +25,7 @@ import EnhancedButton from './EnhancedButton';
 export type PaginationProps = {;
 =======
 
+<<<<<<< HEAD
 
   page: number;
   page_size: number;
@@ -75,76 +78,12 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
   const goTo = (p: number) => {
-
-};
-
-export default function Pagination(): any ({;
-  page,;
-  pageSize,;
-  total,;
-  onChange,;
-}: PaginationProps) {  const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));export type PaginationProps = {;
-  page: number,;
-  pageSize: number,;
-  total: number,;
-  onChange: (nextPage: number) => void;
-};
-export default function Pagination(): any ({ page, pageSize, total, onChange }: PaginationProps) {;
-  const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));
-=======
-import React from 'react';
-import EnhancedButton from './EnhancedButton';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export type PaginationProps = {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-export type PaginationProps = {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  page: number;
-  pageSize: number;
-  total: number;
-  onChange: (nextPage: number) => void;
-}
-export default function Pagination({
-<<<<<<< HEAD
-  page
-  pageSize
-  total
-  onChange
-}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
-  page: number
-  pageSize: number
-  total: number
-  onChange: (nextPage: number) => void
-}
-export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
-=======
-  page,
-  pageSize,
-  total,
-  onChange,;
-}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
-  page: number,
-  pageSize: number,
-  total: number,
-  onChange: (nextPage: number) => void;
-};
-
-export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const totalPages = Math.max(1, Math.ceil(total / pageSize));
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  const canPrev = page > 1;
-  const canNext = page < totalPages;
-  const goTo = (p: number) => {;
-
     if (p >= 1 && p <= totalPages) onChange(p);
   }
   return (
@@ -170,12 +109,6 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
     </div>;
   );
 
-}  }
-    if (p >= 1 && p <= totalPages) onChange(p)
-  };
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>;
@@ -183,12 +116,15 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
       </EnhancedButton>;
       <div className="text-sm">;
         Page {page} of {totalPages}
+<<<<<<< HEAD
       </div>
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page + 1)} disabled={!canNext}>
         Next
       </EnhancedButton>
     </div>
 );
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 interface PaginationProps {;
@@ -197,105 +133,13 @@ interface PaginationProps {;
   baseUrl: string;
   className?: string;
 }
-
-
-const Pagination: React.FC<PaginationProps> = ({ ;
-  currentPage,;
-  totalPages,;
-  baseUrl,;
-  className = '' ;
-}) => {;
-  const getPageNumbers = () => {;
-  on_change: (next_page: number) => void;
-}
-;
-export default /**
- * Pagination - Function description
- */
-function Pagination() {
-  const total_pages = Math.max (1, Math.ceil (total / page_size));
-  const can_prev = page > 1;
-  const can_next = page < total_pages;
-;
-  const go_to = (p: number) =>: any {
-    if (on_change (p)) {
-  $2
-}
-  }
-;
-  return (
-    <div className='flex items - center justify - between gap - 2 mt - 4'>;
-      <EnhancedButton;
-        variant='secondary';
-        size='md';
-        on_click={() => go_to (page - 1)}
-        disabled={!can_prev}
-      >;
-        Prev;
-      </EnhancedButton>;
-      <div className='text - sm'>;
-        Page {page} of {total_pages}
-      </div>;
-      <EnhancedButton;
-        variant='secondary';
-        size='md';
-        on_click={() => go_to (page + 1)}
-        disabled={!can_next}
-      >        Next;
-      </EnhancedButton>;
-    </div>);
-}  }
-;
-  return (
-    <div className="flex items - center justify - between gap - 2 mt - 4">;
-      <EnhancedButton variant="secondary" size="md" on_click={() => go_to (page - 1)} disabled={!can_prev}>;
-        Prev;
-      </EnhancedButton>;
-      <div className="text - sm">;
-        Page {page} of {total_pages}
-      </div>;
-      <EnhancedButton variant="secondary" size="md" on_click={() => go_to (page + 1)} disabled={!can_next}>;
-        Next;
-      </EnhancedButton>;
-    </div>);
-import Link from 'next / link';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-interface PaginationProps {
-  current_page: number;
-  total_pages: number;
-  base_url: string;
-  class_name?: string;
-}
-const Pagination: React.FC < PaginationProps> = ({
-  current_page,
-  total_pages,
-  base_url,
-  class_name = '' ;
-}) => {
-  const getPageNumbers = () =>: any {
-
-    const pages = [];
     const maxVisiblePages = 5;
-
-    } else {;
-      const startPage = Math && Math.max(1, currentPage - 2);
-      const endPage = Math && Math.min(totalPages, startPage + maxVisiblePages - 1);
-
       if (startPage > 1) {;
         pages && pages.push(1);
         if (startPage > 2) {;
           pages && pages.push('...');
 }
       }
-
-
-      for (let i = startPage; i <= endPage; i++) {;
-        pages && pages.push(i);
-}
-      if (endPage < totalPages) {;
-        if (endPage < totalPages - 1) {;
-          pages && pages.push('...');
-
 }
         pages && pages.push(totalPages);
 }
@@ -321,11 +165,6 @@ const Pagination: React.FC < PaginationProps> = ({
       )}
       {/* Page Numbers */}
       <div className="flex items-center space-x-1">;
-
-        {getPageNumbers().map((page, index) => {;
-          if (page === '...') {;
-            return (
-
               <span key={index} className="px-3 py-2 text-sm text-gray-500">;
                 ...;
               </span>;
@@ -337,13 +176,6 @@ const Pagination: React.FC < PaginationProps> = ({
             <Link
               key={pageNumber}
               href={`${baseUrl}?page=${pageNumber}`}
-
-              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-                isCurrentPage
-                  ? 'bg-blue-600 text-white border border-blue-600'
-                  : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 hover:text-gray-900'
-}`}>;
-
               {pageNumber}
             </Link>;
           );
@@ -451,6 +283,7 @@ if ( {) {
         </Link>) : (
         <span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor - not - allowed">;
           Next;
+<<<<<<< HEAD
 
 
 }
@@ -468,11 +301,14 @@ export default Pagination;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </span>)}
     </nav>);
 }
 export default Pagination;
+<<<<<<< HEAD
 <<<<<<< HEAD
         Next
       </EnhancedButton>
@@ -493,3 +329,5 @@ export default Pagination;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

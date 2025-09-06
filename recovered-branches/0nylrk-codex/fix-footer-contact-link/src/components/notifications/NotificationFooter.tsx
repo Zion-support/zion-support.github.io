@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react';
 import { Button  } from '@/components/ui/button';
@@ -53,12 +54,15 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
     navigate('/notifications')
   },
   
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="p-3 text-center border-t border-zion-blue-light">;
       <Button
         variant="link"
         size="sm"
         className="text-zion-slate-light text-xs"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -106,3 +110,28 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+export const NotificationFooter: React.FC < NotificationFooterProps> = ({
+  on_close,
+}) => {
+  const navigate = use_navigate ();
+;
+  const handleViewAll = () =>: any {
+    on_close ();
+    navigate ("/notifications");
+  }
+;
+  return (
+    <div className="p - 3 text - center border - t border - zion - blue - light">;
+      <Button;
+        variant="link";
+        size="sm";
+        className="text - zion - slate - light text - xs";
+        on_click={handleViewAll}
+      >;
+        View all notifications;
+      </Button>;
+    </div>);
+}
+;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

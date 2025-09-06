@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Navigate} from "react-router-dom";
 import {useAuth} from "@/hooks/useAuth";
 import {Header} from "@/components/Header";
@@ -57,6 +58,8 @@ export default function Login() {;
   if (isAuthenticated && !user?.profileComplete) {;
     return <Navigate to="/onboarding" />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 =======
 import { Navigate } from './react-router-dom';
@@ -91,6 +94,7 @@ if ( {) {
       <LoginContent />;
       <Footer />;
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>;
   );
 }
@@ -105,3 +109,5 @@ if ( {) {
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

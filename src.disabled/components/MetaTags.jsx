@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/MetaTags.jsx
 "export\": const MetaTags = ({ title,description,keywords = \'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group\',image = \'"https\": \''\'";\",;
 export: const MetaTags = ({ title,description,keywords = "AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group",image = "https: """";",;'"'"
@@ -9,6 +10,8 @@ export: const MetaTags = ({ title,description,keywords = "AI,artificial intellig
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 "export\": const MetaTags = ({ title,description,keywords = \'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group\',image = \'"https\": \''\'";\",;
 export: const MetaTags = ({ title,description,keywords = "AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group",image = "https: """";",;'"'"

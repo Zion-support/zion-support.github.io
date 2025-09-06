@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
@@ -93,6 +94,9 @@ import {format} from 'date-fns';
 =======
 import {format} from 'date - fns';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import React, { useState, useEffect, useRef } from 'react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {MessageSquare} from 'lucide-react';
 import {use_messaging} from '@/context / MessagingContext';
 import {Button} from '@/components / ui / button';
@@ -101,6 +105,7 @@ import {AspectRatio} from '@/components / ui / aspect - ratio';
 import {use_auth} from '@/hooks / use_auth';
 import {MessageBubble} from './MessageBubble';
 import {DateDivider} from './DateDivider';
+<<<<<<< HEAD
 
   }, [activeConversation?.id, loadMessages]),
 
@@ -126,6 +131,8 @@ import {DateDivider} from './DateDivider';
   },
   
   if (!activeConversation) {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-8">;
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />;
@@ -140,6 +147,7 @@ import {DateDivider} from './DateDivider';
   
 =======
 
+<<<<<<< HEAD
 
   
 
@@ -346,14 +354,23 @@ if ( {) {
               active_conversation.other_user.user_type === 'employer' ? 'Employer' :;
               active_conversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  return (
+    <div className="flex-1 flex flex-col h-full">;
+      {/* Header */}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </div>;
           </div>;
         </div>;
       </div>;
-
-                    src={activeConversation && activeConversation.context_data.image_url}
-                    alt={activeConversation && activeConversation.context_data.title || "Context"}
-
+      {/* Context information (if available) */}
+      {hasContextData && (;
+        <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/10">;
+          <div className="text-sm text-zion-slate flex items-start gap-3">;
+            {activeConversation && activeConversation.context_data.image_url && (;
+              <div className="w-16 h-16 flex-shrink-0">;
+                <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">;
+                  <img
                     className="object-cover"
                   />;
                 </AspectRatio>;
@@ -377,9 +394,6 @@ if ( {) {
           </div>;
         </div>;
       )}
-
-
-
       {/* Messages */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">;
         {groupedMessages && groupedMessages.length === 0 ? (;
@@ -402,16 +416,12 @@ if ( {) {
             </div>;
           ));
         )}
-
-        <div ref={messagesEndRef} />;
-      </div>;
-
-
       {/* Input */}
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea
             value={messageText}
+<<<<<<< HEAD
 <<<<<<< HEAD
             onChange={(e) => setMessageText(e.target.value)}
             placeholder="Type a message..."
@@ -513,10 +523,13 @@ if ( {) {
             className="bg - zion - purple hover:bg - zion - purple - dark text - white";
           >;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             Send;
           </Button>;
         </form>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -529,3 +542,9 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

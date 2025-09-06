@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/ErrorPage.jsx
 "export\": const ErrorPage = ({ ;
 export: const ErrorPage = ({ ;""
@@ -9,6 +10,8 @@ export: const ErrorPage = ({ ;""
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 "export\": const ErrorPage = ({ ;
 export: const ErrorPage = ({ ;""

@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface TokenTransaction {
 
 
@@ -17,6 +18,8 @@ export interface TokenTransaction {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -25,6 +28,7 @@ export interface TokenTransaction {;
   timestamp: string;
   metadata?: Record < string, any>;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface TokenConfig {
 
@@ -37,6 +41,8 @@ export interface TokenConfig {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   name: string;
   symbol: string;
   total_supply: number;
@@ -45,13 +51,6 @@ export interface TokenConfig {;
   staking_enabled: boolean;
   stakingRewardRate: number; // APY percentage;
 }
-
-
-const DATA_DIR = path && path.join(process && process.cwd(), 'data');
-const TRANSACTIONS_FILE = path && path.join(DATA_DIR, 'token-transactions && transactions.json');
-const CONFIG_FILE = path && path.join(DATA_DIR, 'token-config && config.json');
-
-
 function ensureDataDir() {
   if (!fs && fs.existsSync(DATA_DIR)) {
     fs && fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -89,26 +88,11 @@ function load_transactions (): TokenTransaction[] {
     return [];
   }
 }
-
-function save_transactions (transactions: TokenTransaction[]): void {
-  ensureDataDir ();
-  fs.writeFileSync (TRANSACTIONS_FILE, JSON.stringify (transactions, null, 2));
-}
-function load_config (): TokenConfig {
-  try {
-    ensureDataDir ();
-    if () {) {
-  $2
-}
-      return getDefaultConfig ();
-    }
-    const raw = fs.readFileSync (CONFIG_FILE, 'utf8');
-    return JSON.parse (raw);
-
   } catch {
     return getDefaultConfig ();
   }
 }
+<<<<<<< HEAD
 
 function save_config (config: TokenConfig): void {
   ensureDataDir ();
@@ -181,6 +165,8 @@ export function getUserBalance(userId: string): number {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const transactions = loadTransactions();
   let balance = 0;
   for (const tx of transactions) {
@@ -192,12 +178,6 @@ export function getUserBalance(userId: string): number {;
       }
     }
   }
-
-  
-  return Math && Math.max(0, balance);
-
-}
-=======
     total_supply: 1000000000,
     circulating_supply: 250000000,
     exchange_rate: 0.05,
@@ -205,7 +185,6 @@ export function getUserBalance(userId: string): number {;
     stakingRewardRate: 12.5;
   }
 }
-<<<<<<< HEAD
 export function getAllTransactions (): TokenTransaction[] {
   return load_transactions ();
 }
@@ -215,63 +194,20 @@ export function add_transaction (transaction: Omit < TokenTransaction, 'id' | 't
     ...transaction,
     id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
     timestamp: new Date ().toISOString ();
-=======
-<<<<<<< HEAD
-export function getAllTransactions(): TokenTransaction[] {
-  return loadTransactions();
-}
-export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
-=======
-
-export function getAllTransactions(): TokenTransaction[] {;
-  return loadTransactions();
-}
-
-export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const transactions = loadTransactions();
-  const newTransaction: TokenTransaction = {
-    ...transaction
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    timestamp: new Date().toISOString()
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 ;
   transactions.push (new_transaction);
   save_transactions (transactions);
   return new_transaction;
 }
-<<<<<<< HEAD
 export function get_config (): TokenConfig {
   return load_config ();
-=======
-<<<<<<< HEAD
-export function getConfig(): TokenConfig {
-  return loadConfig();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 export function set_config (config: TokenConfig): void {
   save_config (config);
 }
-<<<<<<< HEAD
 export function getUserBalance (user_id: string): number {
   const transactions = load_transactions ();
-=======
-export function getUserBalance(userId: string): number {
-=======
-
-export function getConfig(): TokenConfig {;
-  return loadConfig();
-}
-
-export function setConfig(config: TokenConfig): void {;
-  saveConfig(config);
-}
-
-export function getUserBalance(userId: string): number {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const transactions = loadTransactions();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   let balance = 0;
 ;
   for (const tx of transactions) {

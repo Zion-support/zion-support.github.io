@@ -1,3 +1,8 @@
+=======
+
+import React from "react",
+import { Button } from "@/components/ui/button",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Filter } from 'lucide-react'
 import { SearchFilter } from "./filters/SearchFilter",
 import { SortFilter } from "./filters/SortFilter",
@@ -5,6 +10,7 @@ import { SkillsFilter } from "./filters/SkillsFilter",
 import { AvailabilityFilter } from "./filters/AvailabilityFilter",
 import { RegionFilter } from "./filters/RegionFilter",
 import { ExperienceFilter } from "./filters/ExperienceFilter",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { PriceFilter } from "./filters/PriceFilter";
 import { FilterSidebarProps } from "@/types/filters";
@@ -97,6 +103,8 @@ export function FilterSidebar({
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -116,16 +124,23 @@ export function FilterSidebar({
   setSortOption,
   clearFilters,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   isMobileFilterOpen,}: FilterSidebarProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  isMobileFilterOpen,}: FilterSidebarProps) {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   return (
     <>
       {/* Filter header */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <div className='flex items-center justify-between mb-6'>
         <h3 className='text-lg font-semibold text-white flex items-center'>
           <Filter className='h-4 w-4 mr-2 text-zion-purple' />  searchTerm
@@ -152,6 +167,7 @@ export function FilterSidebar({
       <div className='flex items-center justify-between mb-6'>
         <h3 className='text-lg font-semibold text-white flex items-center'>
           <Filter className='h-4 w-4 mr-2 text-zion-purple' />
+<<<<<<< HEAD
           Filters
         </h3>
         <Button
@@ -225,6 +241,19 @@ export function FilterSidebar({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          Filters
+        </h3>
+        <Button
+          variant='ghost'
+          size='sm'
+          onClick={clearFilters}
+          className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'        >
+          Clear All
+        </Button>
+      </div>
+          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   isMobileFilterOpen
 }: FilterSidebarProps) {
   return (
@@ -235,21 +264,27 @@ export function FilterSidebar({
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           Filters
         </h3>
         <Button 
           variant="ghost" 
           size="sm" 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           onClick={clearFilters}
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
         >
           Clear All
         </Button>
       </div>
+<<<<<<< HEAD
       
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -305,78 +340,50 @@ export function FilterSidebar({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
-          className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
-          Clear All;
-        </Button>;
-      </div>;
-          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent";
-          Filters;
-        </h3>;
-        <Button
-          variant="ghost" 
-          size="sm" 
-          onClick={clearFilters}
-          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent">;
-          Clear All;
-        </Button>;
-      </div>;
-
-      {/* Search */}
-      <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;
-
-      {/* Sorting */}
-      <SortFilter sortOption={sortOption} setSortOption={setSortOption} />;
-
       {/* Skills */}
       <SkillsFilter
         selectedSkills={selectedSkills}
         toggleSkill={toggleSkill}
         expanded={expandedSections.skills}
         toggleSection={() => toggleSection('skills')}
-
-        isMobileFilterOpen={isMobileFilterOpen}      />;
-
-
+        isMobileFilterOpen={isMobileFilterOpen}      />
       {/* Availability */}
       <AvailabilityFilter
         selectedAvailability={selectedAvailability}
         toggleAvailability={toggleAvailability}
         expanded={expandedSections.availability}
         toggleSection={() => toggleSection('availability')}
-
-        isMobileFilterOpen={isMobileFilterOpen}      />;
-
-
+        isMobileFilterOpen={isMobileFilterOpen}      />
       {/* Region */}
       <RegionFilter
         selectedRegions={selectedRegions}
         toggleRegion={toggleRegion}
         expanded={expandedSections.region}
         toggleSection={() => toggleSection('region')}
-
-        isMobileFilterOpen={isMobileFilterOpen}      />;
-
-
+        isMobileFilterOpen={isMobileFilterOpen}      />
       {/* Years of Experience */}
       <ExperienceFilter
         experienceRange={experienceRange}
         setExperienceRange={setExperienceRange}
         expanded={expandedSections.experience}
         toggleSection={() => toggleSection('experience')}
-
-        isMobileFilterOpen={isMobileFilterOpen}      />;
-
-
+        isMobileFilterOpen={isMobileFilterOpen}      />
       {/* Price Range */}
       <PriceFilter
         priceRange={priceRange}
         setPriceRange={setPriceRange}
         expanded={expandedSections.price}
         toggleSection={() => toggleSection('price')}
+<<<<<<< HEAD
         isMobileFilterOpen={isMobileFilterOpen}      />
       {isMobileFilterOpen && (
         <Button
@@ -526,11 +533,14 @@ function FilterSidebar() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         isMobileFilterOpen={isMobileFilterOpen}
       />;
-
       {isMobileFilterOpen && (;
         <Button;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -538,12 +548,18 @@ function FilterSidebar() {
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
         >
           Apply Filters
         </Button>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>
   )
@@ -614,26 +630,10 @@ function FilterSidebar() {
         </Button>;
       )}
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     </>;
   );
-<<<<<<< HEAD
-};
-}
-
-  );
-}
-        <Button;
-          on_click={() => window.dispatch_event (new CustomEvent ('closeMobileFilter'))}
-          className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
-        >;
-          Apply Filters;
-        </Button>)}
-    </>);
-}
-
-
-    </>;
-  );
-
-}
-;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -7,6 +8,8 @@ import {Configuration, OpenAIApi} from "https: //esm && esm.sh/openai@3 ;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -23,19 +26,11 @@ interface HireRequest {
   talent: {
     id: string;
     full_name: string;
-
-    professional_title: string,
-    email?: string;
-  }
-  requester: {
-    name: string;
-    email: string,
-    id?: string;
-
   }
   project: {
     overview: string;
     timeline: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
     budgetMin: number
     budgetMax: number
@@ -130,21 +125,16 @@ serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
     );
     const requestData: HireRequest = await req.json()
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     const { talent, requester, project } = requestData;
     // Format budget for display
-
-    const budgetDisplay = `$${project && project.budgetMin.toLocaleString()} - $${project && project.budgetMax.toLocaleString()}`;
-    
-    // 1. Optional: Enhance content with AI
-    let enhancedContent: EnhancedContent | null = null;
-    
-    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY"),
-
     if (openAiKey) {
       try {
         const configuration = new Configuration({
           apiKey: openAiKey});
         const openai = new OpenAIApi(configuration);
+<<<<<<< HEAD
     ),
     
     const requestData: HireRequest = await req.json(),
@@ -170,69 +160,18 @@ serve(async (req) => {
           Please provide:
           1. A brief summary of this project (max 100 characters)
           2. Classify this project into one category (e.g., "AI Development", "Cloud Migration", "Web Design", etc.)
+=======
+        const prompt = `
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           Format your response as JSON: {
             "summary": "Brief summary here"
             "projectType": "Project type here"
           }
         `;
-
-    budget_min: number,
-    budget_max: number;
-  }
-}
-interface EnhancedContent {
-  summary: string,
-  project_type: string;
-}
-serve (async (req) => {
-  // Handle CORS preflight requests;
-  // Check condition
-if ( {) {
-  $2
-}
-    return new Response (null, { headers: cors_headers });
-  }
-  try {
-    const supabase = create_client (
-      Deno.env.get ("SUPABASE_URL") ?? "";
-      Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY") ?? "");
-;
-    const request_data: HireRequest = await req.json (),
-    const { talent, requester, project } = request_data;
-;
-    // Format budget for display;
-    const budget_display = `$${project.budget_min.toLocaleString ()} - $${project.budget_max.toLocaleString ()}`;
-;
-    // 1. Optional: Enhance content with AI;
-    let enhanced_content: EnhancedContent | null = null;
-;
-    const openAiKey = Deno.env.get ("OPENAI_API_KEY"),
-    // Check condition
-if ( {) {
-  $2
-}
-      try {
-        const configuration = new Configuration ({
-          api_key: openAiKey});
-        const openai = new OpenAIApi (configuration);
-;
-        const prompt = `;
-          Project Overview: "${project.overview}";
-          Please provide:;
-          1. A brief summary of this project (max 100 characters);
-          2. Classify this project into one category (e.g., "AI Development", "Cloud Migration", "Web Design", etc.);
-          Format your response as JSON: {
-            "summary": "Brief summary here",
-            "project_type": "Project type here";
-          }
-        `;
-;
-        const completion = await openai.create_completion ({
-          model: "gpt - 3.5 - turbo - instruct";
-
           prompt;
           max_tokens: 150
           temperature: 0.3});
+<<<<<<< HEAD
         const responseText = completion.data.choices[0]?.text |"";
           
           Format your response as JSON:
@@ -251,10 +190,13 @@ if ( {) {
         
         const responseText = completion && completion.data.choices[0]?.text || "";
         
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         try {
           // Extract JSON from the response
           const jsonMatch = responseText && responseText.match(/\{[\s\S]*\}/);
           if (jsonMatch) {
+<<<<<<< HEAD
             enhancedContent = JSON.parse(jsonMatch[0]);
             console.log("Enhanced content generated:", enhancedContent)
           }
@@ -264,6 +206,17 @@ if ( {) {
         }
       } catch (aiError) {
         console.error("Error generating enhanced content:", aiError);
+=======
+            enhancedContent = JSON && JSON.parse(jsonMatch[0]);
+            console && console.log("Enhanced content generated:", enhancedContent)
+          }
+        } catch (jsonError) {
+          console && console.error("Error parsing AI response:", jsonError);
+          // Continue without enhanced content
+        }
+      } catch (aiError) {
+        console && console.error("Error generating enhanced content:", aiError);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         // Continue without enhanced content
       }
     }
@@ -272,6 +225,7 @@ if ( {) {
       .from('hire_requests')
       .insert([
         {
+<<<<<<< HEAD
           talent_id: talent.id
           requester_id: requester.id |null, // May be null if user is not authenticated
           requester_name: requester.name;
@@ -286,6 +240,8 @@ if ( {) {
           status: 'new',
           expiry_date: new Date(Date && Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days from now
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         }
       ])
       .select();
@@ -296,6 +252,7 @@ if ( {) {
 =======
       throw new Error(`Error storing hire request: ${requestError && requestError.message}`)
     }
+<<<<<<< HEAD
 =======
 
 
@@ -348,6 +305,8 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // 3. Create notification for the admin
     // Fetch admin users
     const { data: adminUsers, error: adminError } = await supabase
@@ -355,18 +314,25 @@ if ( {) {
       .select('id')
       .eq('user_typeadmin')
       .limit(1);
+<<<<<<< HEAD
     if (adminError) {
       console.error("Error fetching admin users:", adminError)
     }
     let adminId: string | undefined = undefined;
       .limit(1),
       
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     if (adminError) {
-      console.error("Error fetching admin users:", adminError)
+      console && console.error("Error fetching admin users:", adminError)
     }
+<<<<<<< HEAD
     
     let adminId: string | undefined = undefined,
     
+=======
+    let adminId: string | undefined = undefined;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Create notification for admin (if any found)
     if (adminUsers && adminUsers.length > 0) {
       adminId = adminUsers[0].id
@@ -445,20 +411,17 @@ if ( {) {
       admin_id = admin_users[0].id,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       const adminNotificationContent = {
+<<<<<<< HEAD
         title: `New hiring request for ${talent.full_name}`;
         message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`;
         type: "hire_request"
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         related_id: requestRecord[0].id
       }
       const { error: notificationError } = await supabase
         .rpc('create_notification', {
           _user_id: adminId;
-
-          _title: adminNotificationContent && adminNotificationContent.title;
-          _message: adminNotificationContent && adminNotificationContent.message;
-          _type: adminNotificationContent && adminNotificationContent.type,
-          _related_id: adminNotificationContent && adminNotificationContent.related_id
-
         });
       if (notificationError) {
         console && console.error("Error creating admin notification:", notificationError)
@@ -499,10 +462,6 @@ if ( {) {
       const email_response = await supabase.functions.invoke ('send - email', {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         body: {
-
-          to: talent && talent.email,
-          subject: `New Project Request from ${requester && requester.name}`;
-
           html: `
             <h1>You've Received a New Project Request</h1>
             <p>Hello ${talent && talent.full_name},</p>
@@ -511,6 +470,7 @@ if ( {) {
             <p><strong>Budget:</strong> ${budgetDisplay}</p>
             <p><strong>Timeline:</strong> ${project && project.timeline}</p>
             <p><strong>Overview:</strong></p>
+<<<<<<< HEAD
             <p>${project.overview}</p>
         title: `New hiring request for ${talent.full_name}`,
         message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`,
@@ -612,32 +572,57 @@ if ( {) {
           `}}),
       
       // // // console.log("Email sending result:", emailResponse)
+=======
+            <p>${project && project.overview}</p>
+            ${enhancedContent?.summary ? `<p><strong>Summary:</strong> ${enhancedContent && enhancedContent.summary}</p>` : ''}
+            ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent && enhancedContent.projectType}</p>` : ''}
+            <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
+            <p>Best regards,<br>The Zion AI Marketplace Team</p>
+          `}});
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
     return new Response(
-
-      JSON && JSON.stringify({ 
-        success: true, 
-        message: "Hire request processed successfully",
-
         request_id: requestRecord[0].id
       });
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
+<<<<<<< HEAD
+=======
+=======
+          html: `;
+            <h1 > You've Received a New Project Request</h1>;
+            <p > Hello ${talent.full_name}, </p>;
+            <p > You have received a new project request from ${requester.name} (${requester.email}).</p>;
+            <h2 > Project Details</h2>;
+            <p><strong > Budget:</strong> ${budget_display}</p>;
+            <p><strong > Timeline:</strong> ${project.timeline}</p>;
+            <p><strong > Overview:</strong></p>;
+            <p>${project.overview}</p>;
+            ${enhanced_content?.summary ? `<p><strong > Summary:</strong> ${enhanced_content.summary}</p>` : ''}
+            ${enhanced_content?.project_type ? `<p><strong > Project Type:</strong> ${enhanced_content.project_type}</p>` : ''}
+            <p > Please log in to your Zion AI Marketplace account to respond to this request.</p>;
+            <p > Best regards, <br > The Zion AI Marketplace Team</p>;
+          `}});
+;
+      console.log ("Email sending result:", email_response);
+    }
+    return new Response (
+      JSON.stringify ({
+        success: true,
+        message: "Hire request processed successfully",
+        request_id: request_record[0].id;
+      });
+      {
+        headers: { ...cors_headers, "Content - Type": "application / json" }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         status: 200}
     );
   } catch (error) {
-
-    console && console.error("Error processing hire request:", error && error.message);
-    
-    return new Response(
-      JSON && JSON.stringify({ 
-        success: false, 
-        message: "Failed to process hire request",
-        error: error && error.message 
-
       });
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
+<<<<<<< HEAD
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 200}
     )
@@ -684,8 +669,25 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+    console.error ("Error processing hire request:", error.message);
+;
+    return new Response (
+      JSON.stringify ({
+        success: false,
+        message: "Failed to process hire request",
+        error: error.message;
+      });
+      {
+        headers: { ...cors_headers, "Content - Type": "application / json" }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         status: 500}
     );
   }
 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

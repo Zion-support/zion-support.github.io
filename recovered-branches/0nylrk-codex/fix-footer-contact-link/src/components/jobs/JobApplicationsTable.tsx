@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,12 +51,15 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     markApplicationAsViewed;
     refetch;
   } = useJobApplications(jobId);
   const [processingId, setProcessingId] = useState<string | null>(null);
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
   const [showScoreDialog, setShowScoreDialog] = useState(false);
+<<<<<<< HEAD
   const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {
     setProcessingId(applicationId)
     try {
@@ -80,11 +84,14 @@ import {
     setProcessingId(applicationId),;
     try {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       await updateApplicationStatus(applicationId, newStatus);
       // If it's not already viewed, mark it as viewed;
       const application = applications && applications.find(app => app && app.id === applicationId);
       if (application && !application && application.viewed_at) {;
         await markApplicationAsViewed(applicationId);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -93,6 +100,8 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
     } finally {;
       setProcessingId(null);
@@ -103,6 +112,7 @@ import {
 
 =======
 
+<<<<<<< HEAD
 
   };
 
@@ -150,6 +160,12 @@ import {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+  if (isLoading) {;
+    return <LoadingState />;
+  }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <>;
       <ApplicationsTable
@@ -236,10 +252,6 @@ if ( {) {
         onViewApplication={handleViewApplication}
         onStatusChange={handleStatusChange}
         onViewScore={handleViewScore}
-
-      />;
-
-
       <ScoreDialog
 =======
       />;
@@ -249,12 +261,6 @@ if ( {) {
         onOpenChange={setShowScoreDialog}
         application={selected_application}
         onScoreUpdated={handleScoreUpdated}
-
-      />;
-    </>;
-  );
-}
-
 =======
       />;
     </>);

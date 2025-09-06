@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,10 +36,13 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
     "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
 interface ReminderPayload {
   user_id: string;
   missing_milestone: string
@@ -47,6 +51,11 @@ interface ReminderPayload {
 interface ReminderPayload {
   user_id: string,
   missing_milestone: string,
+=======
+interface ReminderPayload {
+  user_id: string;
+  missing_milestone: string
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   role: string
 }
 serve(async (req: Request) => {
@@ -61,6 +70,7 @@ serve(async (req: Request) => {
       supabaseUrl;
       supabaseServiceKey
     );
+<<<<<<< HEAD
     const payload = await req.json() as ReminderPayload;
     const { user_id, missing_milestone, role } = payload;
     if (!user_id |!missing_milestone |!role) {
@@ -70,6 +80,10 @@ serve(async (req: Request) => {
     const { user_id, missing_milestone, role } = payload,
     
     if (!user_id || !missing_milestone || !role) {
+=======
+    const { user_id, missing_milestone, role } = payload;
+    if (!user_id |!missing_milestone |!role) {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return new Response(
         JSON && JSON.stringify({ error: "Missing required fields" });
         {
@@ -84,9 +98,12 @@ serve(async (req: Request) => {
       .eq("id", user_id)
       .single();
     if (userError |!userData) {
+<<<<<<< HEAD
       .single(),
     
     if (userError || !userData) {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return new Response(
         JSON && JSON.stringify({ error: "User not found", details: userError });
         {
@@ -102,13 +119,17 @@ serve(async (req: Request) => {
         availability_set: "set your availability to help clients know when you can work"}
       client: {
         job_posted: "post your first job to start finding talent";
+<<<<<<< HEAD
         match_viewed: "check out your AI-matched talent suggestions"
         talent_invited: "invite talent to speed up your hiring process"}}
     const name = userData.display_name |"there";
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
       missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
     ] |"complete your next step";
     // Send email
+<<<<<<< HEAD
     const { data: emailData, error: emailError } = await resend.emails.send({
       from: "Zion AI Marketplace <notifications@zion.ai>";
       to: userData.email;
@@ -131,6 +152,8 @@ serve(async (req: Request) => {
       from: "Zion AI Marketplace <notifications@zion.ai>",
       to: userData.email,
       subject: "Complete your next step on Zion AI Marketplace",
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       html: `
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
           <h2>Hi ${name},</h2>
@@ -145,8 +168,11 @@ serve(async (req: Request) => {
           <p>The Zion AI Marketplace Team</p>
         </div>
       `});
+<<<<<<< HEAD
       `}),
     
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     if (emailError) {
       return new Response(
         JSON && JSON.stringify({ error: "Failed to send email", details: emailError });
@@ -162,6 +188,7 @@ serve(async (req: Request) => {
         _user_id: user_id;
         _title: "Complete your next step"
         _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`;
+<<<<<<< HEAD
         _type: "onboarding"}
     );
         _user_id: user_id,
@@ -344,3 +371,11 @@ serve(async (req: Request) => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });
+=======
+        _type: "onboarding"}
+    );
+        message: "Reminder sent successfully",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        notification_id: notification});
+      {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026AIService {;
   id: string;
@@ -26,6 +27,21 @@ export interface Innovative2026AIService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
+=======
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: ServiceVariant,
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   contactInfo: {
       
     mobile: string, email: string,
@@ -37,12 +53,12 @@ export interface Innovative2026AIService {;
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence
   {
+<<<<<<< HEAD
 
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
     tagline: 'Transform data into actionable insights with AI', price: '$299',
@@ -359,8 +375,10 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
+    reviews: 950
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -369,6 +387,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     customers: 1900;
     rating: 4.8,
     reviews: 950;
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];
@@ -648,3 +667,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  }
+;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

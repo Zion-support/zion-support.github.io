@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import React from 'react';
@@ -122,6 +123,8 @@ export function DynamicListingPage(): any ({;
   categoryFilters,;
 =======
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   categoryFilters;
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {;
@@ -132,6 +135,7 @@ export function DynamicListingPage(): any ({;
   const [isLoading, setIsLoading] = useState(false);
   const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
+<<<<<<< HEAD
 
 
 
@@ -274,6 +278,9 @@ export function DynamicListingPage(): any ({;
             serviceType: categorySlug, ;
             specificItem: {;
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { useState, useEffect } from './react';
 import { use_navigate } from './react-router-dom';
 import { GradientHeading } from '@/components / GradientHeading';
@@ -374,6 +381,7 @@ if ( {) {
               title: listing.title,
               category: listing.category,
               image: listing.images?.[0];
+<<<<<<< HEAD
 
 =======
               id: listing.id,;
@@ -386,10 +394,14 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             }
           }
         });
       }
+<<<<<<< HEAD
     }, 500)
   }
   return (
@@ -402,12 +414,15 @@ if ( {) {
   };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="min-h-screen bg-zion-blue py-12 px-4">;
       <div className="container mx-auto">;
         <div className="text-center mb-12">;
           <GradientHeading>{title}</GradientHeading>;
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -447,6 +462,9 @@ if ( {) {
                     console && console.log("Category selected:", value);
                     setSelectedCategory(value);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+            {description}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   }}
                 >;
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
@@ -454,6 +472,7 @@ if ( {) {
                   </SelectTrigger>;
                   <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
                     <SelectItem value="all" className="text-white">All Categories</SelectItem>;
+<<<<<<< HEAD
 
                     {categoryFilters.map((filter) => (;
                       <SelectItem key={filter.value} value={filter.value} className="text-white">;
@@ -465,18 +484,13 @@ if ( {) {
                         {filter.label}
                       </SelectItem>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                    {categoryFilters && categoryFilters.map((filter) => (;
+                      <SelectItem key={filter && filter.value} value={filter && filter.value} className="text-white">;
+                        {filter && filter.label}
+                      </SelectItem>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     ))}
-
-                  </SelectContent>;
-                </Select>;
-              </div>;
-
-              <div className="mb-6">;
-                <label className="text-sm font-medium text-zion-slate-light block mb-2">;
-                  Price Range;
-                </label>;
-                <div className="mt-6 px-2">;
-
                   <Slider
                     defaultValue={[priceRange && priceRange.min, priceRange && priceRange.max]}
                     min={priceRange && priceRange.min}
@@ -485,6 +499,7 @@ if ( {) {
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
                     className="mb-4"
+<<<<<<< HEAD
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
@@ -567,6 +582,8 @@ if ( {) {
                 <div className="flex flex-wrap gap-2">;
                   {[null, 3, 4, 5].map((rating) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     <Button
                       key={rating === null ? 'any' : rating}
                       variant="outline"
@@ -651,12 +668,6 @@ if ( {) {
                         setSelectedRating (rating);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       }}
-
-                      className={`${;
-                        selectedRating === rating ;
-                          ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
-                          : "border-zion-blue-light text-zion-slate-light";
-
                       }`}
                     >;
                       {rating === null ? (;
@@ -668,6 +679,7 @@ if ( {) {
                           ))}
                           <span className="ml-1">& Up</span>;
                         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       )}
                     </Button>;
@@ -683,20 +695,16 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       )}
                     </Button>;
                   ))}
-
-                </div>;
-              </div>;
-
-              <Button
-                variant="outline" 
-
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {;
                   console && console.log("Resetting filters");
                   setSearchQuery("");
+<<<<<<< HEAD
 
 
               <Button 
@@ -821,18 +829,21 @@ if ( {) {
                   setSelectedRating (null);
                 }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               >;
                 Reset Filters;
               </Button>;
             </div>;
           </div>;
-
-                    className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
-                  />;
-                </div>;
-
-                <div className="flex items-center gap-2 ml-auto">;
-
+                  <Input
+                    type="text"
+                    placeholder="Search listings..."
+                    value={searchQuery}
+                    onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => {;
+                      console && console.log("Search query:", e && e.target.value);
+                      setSearchQuery(e && e.target.value);
+                    }}
                   <Button
                     variant="outline"
                     size="icon"
@@ -846,71 +857,6 @@ if ( {) {
                     size="icon"
                     onClick={() => setView("list")}
                     className={`${view === "list" ? "bg-zion-purple/20 border-zion-purple text-zion-purple" : "border-zion-blue-light text-zion-slate"}`}
-
-          <div className="lg:col - span - 3">;
-            <div className="bg - zion - blue - dark rounded - lg p - 4 mb - 6 border border - zion - blue - light">;
-              <div className="flex flex - col md:flex - row gap - 4">;
-                <div className="relative flex - grow">;
-                  <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
-                  <Input;
-                    type="text";
-                    placeholder="Search listings...";
-                    value={search_query}
-                    on_change={(e: React.ChangeEvent < HTMLInputElement>) => {
-                      console.log ("Search query:", e.target.value);
-                      setSearchQuery (e.target.value);
-                    }}
-                    className="pl - 10 bg - zion - blue border border - zion - blue - light text - white";
-                  />;
-                </div>;
-                <div className="flex items - center gap - 2 ml - auto">;
-                  <Button;
-                    variant="outline";
-                    size="icon";
-                    on_click={() => set_view ("grid")}
-                    className={`${view === "grid" ? "bg - zion - purple / 20 border - zion - purple text - zion - purple" : "border - zion - blue - light text - zion - slate"}`}
-                  >;
-                    <LayoutGrid className="h - 4 w - 4" />;
-                  </Button>;
-                  <Button;
-                    variant="outline";
-                    size="icon";
-                    on_click={() => set_view ("list")}
-                    className={`${view === "list" ? "bg - zion - purple / 20 border - zion - purple text - zion - purple" : "border - zion - blue - light text - zion - slate"}`}
-                  >;
-                    <List className="h - 4 w - 4" />;
-                  </Button>;
-                </div>;
-              </div>;
-            </div>;
-            <div className="mb - 6">;
-              <p className="text - zion - slate - light">;
-                Showing {filtered_listings.length} results;
-                {selected_category !== "all" && ` in ${selected_category}`}
-                {search_query && ` for "${search_query}"`}
-              </p>;
-            </div>;
-            {is_loading ? (
-              <div className={`grid gap - 6 ${view === "grid" ? "grid - cols - 1 md:grid - cols - 2" : "grid - cols - 1"}`}>;
-                {[1, 2, 3, 4].map ((i) => (
-                  <div key={i} className="rounded - lg overflow - hidden border border - zion - blue - light">;
-                    <Skeleton className="h - 48 w - full bg - zion - blue - light / 20" />;
-                    <div className="p - 4">;
-                      <Skeleton className="h - 6 w - 1/3 mb - 2 bg - zion - blue - light / 20" />;
-                      <Skeleton className="h - 8 w - 5/6 mb - 4 bg - zion - blue - light / 20" />;
-                      <Skeleton className="h - 4 w - full mb - 2 bg - zion - blue - light / 20" />;
-                      <Skeleton className="h - 4 w - 4/5 mb - 4 bg - zion - blue - light / 20" />;
-                      <div className="flex justify - between items - center pt - 4">;
-                        <Skeleton className="h - 6 w - 1/4 bg - zion - blue - light / 20" />;
-                        <Skeleton className="h - 8 w - 1/4 bg - zion - blue - light / 20" />;
-                      </div>;
-                    </div>;
-                  </div>))}
-              </div>) : filtered_listings.length > 0 ? (
-              <div className={`grid gap - 6 ${view === "grid" ? "grid - cols - 1 md:grid - cols - 2" : "grid - cols - 1"}`}>;
-                {filtered_listings.map ((listing) => (
-                  <ProductListingCard;
-
                     key={listing.id}
 =======
                   >;
@@ -956,6 +902,7 @@ if ( {) {
                   <ProductListingCard
                     key={listing && listing.id}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 =======
 
                   <ProductListingCard 
@@ -999,6 +946,11 @@ if ( {) {
                     setCurrentPriceFilter([priceRange && priceRange.min, priceRange && priceRange.max]);
                     setSelectedRating(null);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+                    listing={listing}
+                    view={view}
+                    onRequestQuote={handleRequestQuote}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
                 >;
@@ -1019,6 +971,7 @@ if ( {) {
                 <p className="text - zion - slate - light mb - 6">Try adjusting your filters or search query</p>;
                 <Button;
                   variant="outline";
+<<<<<<< HEAD
 
                   onClick={() => {;
                     setSearchQuery(""),;
@@ -1031,6 +984,13 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                  on_click={() => {
+                    setSearchQuery ("");
+                    setSelectedCategory ("all");
+                    setCurrentPriceFilter ([price_range.min, price_range.max]);
+                    setSelectedRating (null);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   }}
                   className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
                 >;

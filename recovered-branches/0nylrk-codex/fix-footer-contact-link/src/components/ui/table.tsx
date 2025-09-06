@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from &quot;react&quot;
 import { cn } from &quot;@/lib/utils&quot;
 import * as React from "react"
@@ -10,9 +11,12 @@ const Table = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div className=&quot;relative w-full overflow-auto&quot;>
     <table
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       ref={ref}
       className={cn("w-full caption-bottom text-sm", className)}
       {...props}
+<<<<<<< HEAD
 />
   </div>
 ))
@@ -33,9 +37,12 @@ const TableBody = React.forwardRef<
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
   <tbody
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     ref={ref}
     className={cn("[&_tr:last-child]:border-0", className)}
     {...props}
+<<<<<<< HEAD
 />
 ))
 TableBody.displayName = &quot;TableBody&quot;
@@ -110,9 +117,15 @@ const TableCaption = React.forwardRef<
   React.HTMLAttributes<HTMLTableCaptionElement>
 >(({ className, ...props }, ref) => (
   <caption
+=======
+    ref={ref}
+    className={cn (&quot;p - 4 align - middle [&:has ([role = checkbox])]:pr - 0&quot;, class_name)}
+    {...props}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     ref={ref}
     className={cn("mt-4 text-sm text-muted-foreground", className)}
     {...props}
+<<<<<<< HEAD
 />
 ))
 TableCaption.displayName = &quot;TableCaption&quot;
@@ -148,3 +161,6 @@ export {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  TableCaption}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

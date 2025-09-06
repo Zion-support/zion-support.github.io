@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -66,6 +67,8 @@ interface ApplicationsTableProps {;
   onViewScore: (application: JobApplication) => void;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 export function ApplicationsTable({
   applications
@@ -78,6 +81,7 @@ export function ApplicationsTable({
   const [hireModalOpen, setHireModalOpen] = useState(false);
 
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
+<<<<<<< HEAD
 export function ApplicationsTable({ 
   applications, 
   processingId, 
@@ -115,6 +119,8 @@ export function ApplicationsTable({
 
   },
   
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <>;
       <div className="rounded - md border">;
@@ -135,6 +141,7 @@ export function ApplicationsTable({
                   <div className="flex items - center gap - 3">;
                     <Avatar className="h - 8 w - 8">;
                       {application.talent_profile?.profile_picture_url ? (
+<<<<<<< HEAD
 
 
 =======
@@ -256,6 +263,8 @@ export function ApplicationsTable({;
                 <TableCell className="hidden lg:table-cell">;
                   {application && application.match_score !== undefined && application && application.match_score !== null ? (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     <ClickableBadge
                       variant="outline"
                       className="cursor-pointer"
@@ -266,19 +275,13 @@ export function ApplicationsTable({;
                   ) : (;
                     <span className="text-muted-foreground text-sm">Not scored</span>;
                   )}
-
-                </TableCell>;
-                <TableCell className="text-right">;
-                  <div className="flex items-center justify-end gap-2">;
-                    <ClickableBadge
-                      variant="outline" 
-
                       className="cursor-pointer bg-green-50 hover:bg-green-100 text-green-700"
                       onClick={() => handleHireClick(application)}
                     >;
                       <Briefcase className="h-3 w-3 mr-1" /> Hire;
                     </ClickableBadge>;
-
+                    <ApplicationActions
+=======
                         <img;
                           src={application.talent_profile.profile_picture_url}
                           alt={application.talent_profile.full_name || "Candidate"}
@@ -323,6 +326,7 @@ export function ApplicationsTable({;
                     </ClickableBadge>;
                     <ApplicationActions;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -331,6 +335,9 @@ export function ApplicationsTable({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       application={application}
                       processing_id={processing_id}
                       onViewApplication={onViewApplication}
@@ -338,24 +345,12 @@ export function ApplicationsTable({;
                     />;
                   </div>;
                 </TableCell>;
-
-          </TableBody>;
-        </Table>;
-      </div>;
-
-
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal
         isOpen={hireModalOpen}
         onClose={() => setHireModalOpen(false)}
         application={selectedApplication |undefined}
         onConfirm={handleHireConfirmed}
-
-      />;
-    </>;
-  );
-}
-
 =======
               </TableRow>))}
           </TableBody>;

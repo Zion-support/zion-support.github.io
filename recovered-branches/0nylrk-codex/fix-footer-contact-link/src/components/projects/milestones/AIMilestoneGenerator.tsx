@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import { Button  } from '@/components/ui/button';
@@ -37,6 +38,9 @@ export function AIMilestoneGenerator({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import React, { useState } from 'react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   scope;
   startDate;
   endDate;
@@ -46,6 +50,7 @@ export function AIMilestoneGenerator({;
 }: AIMilestoneGeneratorProps) {;
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
 
+<<<<<<< HEAD
   const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({});
   const handleGenerateMilestones = async () => {
     if (!scope |!startDate |!projectType) {
@@ -191,6 +196,10 @@ export function AIMilestoneGenerator({;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
@@ -201,42 +210,6 @@ export function AIMilestoneGenerator({;
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
-
-          disabled={isGenerating || !scope || !startDate || !projectType}>;
-          {isGenerating ? (;
-            <>;
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-              Generating...;
-            </>;
-          ) : (;
-            <>;
-              <Sparkles className="mr-2 h-4 w-4" />;
-              Generate Milestones;
-            </>;
-          )}
-        </Button>;
-      </div>;
-
-      {generatedMilestones && generatedMilestones.length > 0 && (;
-        <Card>;
-          <CardContent className="pt-6">;
-            <div className="flex justify-between items-center mb-4">;
-              <p className="text-sm text-muted-foreground">;
-                {generatedMilestones && generatedMilestones.length} milestones generated based on your project scope;
-              </p>;
-              <Button
-                onClick={handleAddToProject}
-                disabled={!Object && Object.values(selectedMilestones).some(Boolean)}>;
-                Add Selected to Project;
-              </Button>;
-            </div>;
-
-            <Accordion type="multiple" className="w-full">;
-              {generatedMilestones && generatedMilestones.map((milestone, index) => (;
-                <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">;
-                  <div className="flex items-center justify-between">;
-                    <div className="flex items-center flex-1">;
-
                       <input
                         type="checkbox"
                         id={`milestone-${index}`}
@@ -383,12 +356,46 @@ if ( {) {
                         </div>;
                       </AccordionTrigger>;
                     </div>;
+<<<<<<< HEAD
 
                       onClick={(e) => {
                         e.stopPropagation();
 
                         e.stopPropagation(),
                         handleAddSingleMilestone(milestone)
+=======
+                      }}
+                      className="mr-2";
+                    >;
+                      <Plus className="h-4 w-4" />;
+                    </Button>;
+                  </div>;
+                  <AccordionContent>;
+                    <div className="pl-6 space-y-2">;
+                      <p className="text-sm">{milestone && milestone.description}</p>;
+                      <div className="flex items-center text-sm text-muted-foreground">;
+                        <Calendar className="w-4 h-4 mr-1" />;
+                        Due: {formatDate(milestone && milestone.dueDate)}
+                      </div>;
+                      <div className="text-sm text-muted-foreground">;
+                        Estimated effort: {milestone && milestone.estimatedHours} hours;
+                      </div>;
+                    </div>;
+                  </AccordionContent>;
+                </AccordionItem>;
+              ))}
+            </Accordion>;
+          </CardContent>;
+        </Card>;
+      )}
+=======
+                    <Button;
+                      variant="ghost";
+                      size="sm";
+                      on_click={(e) => {
+                        e.stop_propagation ();
+                        handleAddSingleMilestone (milestone);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       }}
                       className="mr - 2";
                     >;

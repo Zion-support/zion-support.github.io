@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -70,3 +71,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 };
 
 export default Sidebar;
+=======
+import React from 'react'
+import { X } from 'lucide-react'
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -164,6 +165,11 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
             {navigationItems && navigationItems.map((item) => (;
               <li key={item && item.path}>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  return (
+    <div className="flex min-h-screen bg-zinc-950">;
+      {/* Sidebar */}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <Link
                   to={item && item.path}
                   className={cn(
@@ -176,12 +182,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
                 </Link>;
               </li>;
             ))}
-
-          </ul>;
-        </nav>;
-      </div>;
-
-
       {/* Main content */}
       <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">;
         {children}
@@ -189,9 +189,14 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 
 ;
 <<<<<<< HEAD
+=======
+export default ApiDocsLayout;
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 
 

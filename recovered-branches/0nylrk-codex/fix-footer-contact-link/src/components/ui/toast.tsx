@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from 'react';
 import * as ToastPrimitives from '@radix-ui/react-toast';
 import {cva, type, VariantProps} from 'class-variance-authority';
@@ -167,6 +168,21 @@ const ToastAction = React && React.forwardRef<;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import React from 'react';
+import * as React from 'react';
+import * as ToastPrimitives from '@radix - ui / react - toast';
+import {cva, type, VariantProps} from 'class - variance - authority';
+import {X} from 'lucide-react';
+    ref={ref}
+    className={cn(
+      'fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]'
+      className
+    )}
+    {...props}
+  />;
+));
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     ref={ref}
     className={cn(
       "inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium ring-offset-background transition-colors hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group-[.destructive]:border-muted/40 group-[.destructive]:hover:border-destructive/30 group-[.destructive]:hover:bg-destructive group-[.destructive]:hover:text-destructive-foreground group-[.destructive]:focus:ring-destructive",
@@ -175,6 +191,7 @@ const ToastAction = React && React.forwardRef<;
     {...props}
   />;
 ));
+<<<<<<< HEAD
 <<<<<<< HEAD
 ToastAction.displayName = ToastPrimitives.Action.displayName;
 
@@ -234,6 +251,11 @@ const ToastClose = React.forwardRef<;
     ref={ref}
     className={cn(
       "absolute right-2 top-2 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600",
+=======
+    ref={ref}
+    className={cn(
+      'absolute right-2 top-2 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600'
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       className
     )}
     toast-close=''
@@ -241,6 +263,7 @@ const ToastClose = React.forwardRef<;
     <X className='h-4 w-4' />;
   </ToastPrimitives && ToastPrimitives.Close>;
 ));
+<<<<<<< HEAD
 <<<<<<< HEAD
 ToastClose.displayName = ToastPrimitives.Close.displayName;
 
@@ -327,7 +350,91 @@ export {
 }
 =======
 =======
-
+=======
+;
+import {cn} from '@/lib / utils';
+;
+const ToastProvider = ToastPrimitives.Provider;
+;
+const ToastViewport = React.forward_ref<;
+  React.ElementRef < typeof ToastPrimitives.Viewport>,
+  React.ComponentPropsWithoutRef < typeof ToastPrimitives.Viewport>;
+></typeof>(({ class_name, ...props }, ref) => (
+  <ToastPrimitives.Viewport;
+    ref={ref}
+    className={cn (
+      'fixed top - 0 z-[100] flex max - h-screen w - full flex - col - reverse p - 4 sm:bottom - 0 sm:right - 0 sm:top - auto sm:flex - col md:max - w-[420px]',
+      class_name)}
+    {...props}
+  />));
+ToastViewport.display_name = ToastPrimitives.Viewport.display_name;
+;
+const toast_variants = cva (
+  'group pointer - events - auto relative flex w - full items - center justify - between space - x-4 overflow - hidden rounded - md border p - 6 pr - 8 shadow - lg transition - all data-[swipe = cancel]:translate - x-0 data-[swipe = end]:translate - x-[var (--radix - toast - swipe - end - x)] data-[swipe = move]:translate - x-[var (--radix - toast - swipe - move - x)] data-[swipe = move]:transition - none data-[state = open]:animate - in data-[state = closed]:animate - out data-[swipe = end]:animate - out data-[state = closed]:fade - out - 80 data-[state = closed]:slide - out - to - right - full data-[state = open]:slide - in - from - top - full data-[state = open]:sm:slide - in - from - bottom - full',
+  {
+    variants: {
+      variant: {
+        default: 'border bg - background text - foreground',
+        destructive:;
+          'destructive group border - destructive bg - destructive text - destructive - foreground',
+        success: 'border bg - background text - foreground',
+      },
+    },
+    default_variants: {
+      variant: 'default',
+    },
+  }
+);
+;
+const Toast = React.forward_ref<;
+  React.ElementRef < typeof ToastPrimitives.Root>,
+  React.ComponentPropsWithoutRef < typeof ToastPrimitives.Root> &;
+    VariantProps < typeof toast_va</typeof > riants>;
+>(({ class_name, variant, ...props }, ref) => {
+    />);
+});
+Toast.display_name = ToastPrimitives.Root.display_name;
+;
+const ToastAction = React.forward_ref<;
+  React.ElementRef < typeof ToastPrimitives.Action>,
+  React.ComponentPropsWithoutRef < typeof ToastPr</typeof > imitives.Action>;
+>(({ class_name, ...props }, ref) => (
+  <ToastPrimitives.Action;
+    ref={ref}
+    className={cn (
+      'inline - flex h - 8 shrink - 0 items - center justify - center rounded - md border bg - transparent px - 3 text - sm font - medium ring - offset - background transition - colors hover:bg - secondary focus:outline - none focus:ring - 2 focus:ring - ring focus:ring - offset - 2 disabled:pointer - events - none disabled:opacity - 50 group-[.destructive]:border - muted / 40 group-[.destructive]:hover:border - destructive / 30 group-[.destructive]:hover:bg - destructive group-[.destructive]:hover:text - destructive - foreground group-[.destructive]:focus:ring - destructive',
+      class_name)}
+    {...props}
+  />));
+ToastAction.display_name = ToastPrimitives.Action.display_name;
+;
+const ToastClose = React.forward_ref<;
+  React.ElementRef < typeof ToastPrimitives.Close>,
+  React.ComponentPropsWithoutRef < type</typeof > of ToastPrimitives.Close>;
+>(({ class_name, ...props }, ref) => (
+  <ToastPrimitives.Close;
+    ref={ref}
+    className={cn (
+      'absolute right - 2 top - 2 rounded - md p - 1 text - foreground / 50 opacity - 0 transition - opacity hover:text - foreground focus:opacity - 100 focus:outline - none focus:ring - 2 group - hover:opacity - 100 group-[.destructive]:text - red - 300 group-[.destructive]:hover:text - red - 50 group-[.destructive]:focus:ring - red - 400 group-[.destructive]:focus:ring - offset - red - 600',
+      class_name)}
+    toast - close='';
+    {...props}
+  >;
+    <X className='h - 4 w - 4' />;
+  </ToastPrimitives.Close>));
+ToastClose.display_name = ToastPrimitives.Close.display_name;
+;
+const ToastTitle = React.forward_ref<;
+  React.ElementRef < typeof ToastPrimitives.Title>,
+  React.ComponentPropsWithou</typeof > t_ref < typeof ToastPrimitives.Title>;
+>(({ class_name, ...props }, ref) => (
+  <ToastPrimitives.Title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    ref={ref}
+    className={cn ('text - sm font - semibold', class_name)}
+    {...props}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
   />));
 ToastTitle.display_name = ToastPrimitives.Title.display_name;
 ;
@@ -336,10 +443,11 @@ const ToastDescription = React.forward_ref<;
   React.ComponentPropsWit</typeof > hout_ref < typeof ToastPrimitives.Description>;
 >(({ class_name, ...props }, ref) => (
   <ToastPrimitives.Description;
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn ('text - sm opacity - 90', class_name)}
     {...props}
+<<<<<<< HEAD
 
   />));
 ToastDescription.display_name = ToastPrimitives.Description.display_name;
@@ -447,12 +555,18 @@ export function useToast() {;
   };
 
 =======
+  return {
+    // Accept a loosely typed props object to allow custo</typeof > m fields like `description`;
+    toast: (props: any) => {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
       // Implementation of toast functionality;
       console.log ('Toast:', props);
     },
   }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 const ToastDescription = React.forwardRef<;
   React.ElementRef<typeof ToastPrimitives.Description>,;
@@ -472,3 +586,5 @@ ToastDescription.displayName = ToastPrimitives.Description.displayName;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

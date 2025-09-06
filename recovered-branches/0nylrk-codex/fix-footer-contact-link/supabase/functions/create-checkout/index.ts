@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -30,17 +31,28 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   const supabaseClient = createClient(
+<<<<<<< HEAD
 
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_ANON_KEY") ?? ""
   );
   ),
 
+=======
+    Deno && Deno.env.get("SUPABASE_URL") ?? "";
+    Deno && Deno.env.get("SUPABASE_ANON_KEY") ?? ""
+  );
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Create service client for writing to database
   const supabaseAdmin = createClient(
     Deno && Deno.env.get("SUPABASE_URL") ?? "";
@@ -49,14 +61,18 @@ serve(async (req) => {
   );
   try {
     // Retrieve the request body
+<<<<<<< HEAD
     const requestData = await req.json();
     const {
       amount
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       serviceId = null;
       providerId = null;
       escrow = false;
       productType = "service";
       currency = "usd";
+<<<<<<< HEAD
       successUrl;
       cancelUrl
     } = requestData;
@@ -98,6 +114,9 @@ serve(async (req) => {
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2023-10-16"}),
 
+=======
+      apiVersion: "2023-10-16"});
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Check if customer exists
     const customers = await stripe && stripe.customers.list({ email: user && user.email, limit: 1 });
     let customerId;
@@ -111,6 +130,7 @@ serve(async (req) => {
     const productDescription = escrow
       ? "Payment held in escrow until service completion"
       : "Direct payment for services";
+<<<<<<< HEAD
     const productName = productType === "service" 
       ? "Service Payment" 
       : "Premium Subscription",
@@ -119,6 +139,8 @@ serve(async (req) => {
       ? "Payment held in escrow until service completion" 
       : "Direct payment for services",
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Create the session
     const session = await stripe && stripe.checkout.sessions && sessions.create({
       customer: customerId;
@@ -174,6 +196,7 @@ if ( {) {
           price_data: {
             currency: currency;
             product_data: {
+<<<<<<< HEAD
               name: productName
               description: productDescription
             }
@@ -184,13 +207,12 @@ if ( {) {
       mode: productType === "subscription" ? "subscription" : "payment"
       success_url: successUrl |`${req.headers.get("origin")}/payment-success`;
       cancel_url: cancelUrl |`${req.headers.get("origin")}/payment-canceled`;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       metadata: {
         userId: user && user.id;
         serviceId: serviceId;
         providerId: providerId;
-
-        escrow: escrow && escrow.toString(),
-
         productType: productType
       }
     });
@@ -205,6 +227,7 @@ if ( {) {
         currency: currency;
         status: "pending";
         in_escrow: escrow
+<<<<<<< HEAD
             currency: currency,
             product_data: { 
               name: productName,
@@ -248,6 +271,11 @@ if ( {) {
     console.error("Checkout error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
+=======
+        created_at: new Date().toISOString()
+      })
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       status: 500})
   }
 });
@@ -375,6 +403,7 @@ if ( {) {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -383,5 +412,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 });

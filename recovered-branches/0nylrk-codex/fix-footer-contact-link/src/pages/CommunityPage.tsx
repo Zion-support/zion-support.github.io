@@ -1,4 +1,7 @@
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("categories");
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -183,14 +186,14 @@ export default function CommunityPage() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("categories"),
   
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
-
-    <AppLayout>;
-
       <SEO
         title="Community Forum | Zion AI Marketplace"
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
         keywords="community, forum, discussion, AI marketplace, questions, answers"
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
       <div className="container py-8">
@@ -481,37 +484,21 @@ function CommunityPage() {
           <Button as_child>;
             <Link to={user ? "/community / create" : "/login?next=/community / create"}>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               Create New Post;
             </Link>;
           </Button>;
         </div>;
-
-        <Tabs default_value="categories" value={active_tab} onValueChange={setActiveTab} className="mb - 8">;
-          <TabsList className="mb - 6">;
-
             <TabsTrigger value="categories">Categories</TabsTrigger>;
             <TabsTrigger value="featured">Featured</TabsTrigger>;
             <TabsTrigger value="recent">Recent</TabsTrigger>;
           </TabsList>;
-
-          <TabsContent value="categories">;
-            <ForumCategories />;
-          </TabsContent>;
-          <TabsContent value="featured">;
-            <div className="space - y-4">;
-              {featured_posts.map ((post) => (
-                <PostCard key={post.id} post={post} />))}
-            </div>;
-          </TabsContent>;
-          <TabsContent value="recent">;
-            <div className="space - y-4">;
-              {recent_posts.map ((post) => (
-                <PostCard key={post.id} post={post} />))}
-
             </div>;
           </TabsContent>;
         </Tabs>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </AppLayout>;
   );
@@ -524,3 +511,9 @@ function CommunityPage() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+=======
+    </AppLayout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

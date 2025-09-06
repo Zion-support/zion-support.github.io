@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2025Service {;
   id: string;
@@ -58,6 +59,9 @@ export interface Innovative2025Service {
     features: [;
       'Real - time emotion detection',
 
+=======
+  {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       'Sentiment analysis & mood tracking',
       'Emotional response generation',
       'Cultural context awareness',
@@ -66,36 +70,6 @@ export interface Innovative2025Service {
     ],
     popular: true,
     icon: '💝',
-
-=======
-    color: 'from - pink - 500 to - rose - 600',
-    text_color: 'text - pink - 400',
-    link: 'https://ziontechgroup.com / ai - emotional - intelligence - platform',
-    market_position:;
-      'Pioneering emotional AI technology. Competes with Affectiva ($500 - 2000 / month) and Realeyes ($1000 - 5000 / month) with superior accuracy.',
-    target_audience:;
-      'Mental health apps, Customer service, Education, Gaming, Healthcare',
-    trial_days: 21,
-    setup_time: '1 - 2 weeks',
-    category: 'AI & Emotional Intelligence',
-    real_service: true,
-    technology: [;
-      'TensorFlow',
-      'OpenCV',
-      'NLP',
-      'Computer Vision',
-      'Python',
-      'React',
-    ],
-    integrations: [;
-      'Slack',
-      'Zoom',
-      'Teams',
-      'CRM systems',
-      'Analytics platforms',
-    ],
-    use_cases: [;
-
       'Mental health monitoring',
       'Customer sentiment analysis',
       'Educational engagement',
@@ -103,12 +77,6 @@ export interface Innovative2025Service {
     ],
     roi: 'Improves customer satisfaction by 40% and engagement rates by 60% within 3 months.',
     competitors: ['Affectiva', 'Realeyes', 'Emotient', 'Noldus'],
-
-    market_size: '$3.8B emotional AI market',
-    growth_rate: '180% annual growth',
-    variant: 'holographic - matrix',
-    contact_info: {
-
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -123,20 +91,6 @@ export interface Innovative2025Service {
     reviews: 52,
   },
   {
-
-      'Quantum-classical hybrid algorithms',
-      'Real-time quantum resource allocation',
-    id: 'ai - quantum - hybrid - computing',
-    name: 'AI Quantum Hybrid Computing',
-    tagline: 'Seamless integration of classical and quantum computing',
-    price: '$8, 999',
-    period: '/month',
-    description:;
-      'Revolutionary platform that combines classical AI with quantum computing power, solving previously intractable problems in optimization, cryptography, and simulation.',
-    features: [;
-      'Quantum - classical hybrid algorithms',
-      'Real - time quantum resource allocation',
-
       'Advanced optimization solvers',
       'Quantum machine learning',
       'Secure quantum communications',
@@ -144,48 +98,12 @@ export interface Innovative2025Service {
     ],
     popular: true,
     icon: '⚛️',
-
-=======
-    color: 'from - cyan - 500 to - blue - 600',
-    text_color: 'text - cyan - 400',
-    link: 'https://ziontechgroup.com / ai - quantum - hybrid - computing',
-    market_position:;
-      'Leading edge in quantum - classical hybrid computing. Competes with IBM Quantum ($0.60 / quantum - second) and Google Quantum with AI integration.',
-    target_audience:;
-      'Financial services, Pharmaceutical research, Logistics, Cybersecurity, Research institutions',
-    trial_days: 45,
-    setup_time: '4 - 6 weeks',
-    category: 'Quantum Computing & AI',
-    real_service: true,
-    technology: [;
-      'Qiskit',
-      'Cirq',
-      'PennyLane',
-      'Python',
-      'CUDA',
-      'Quantum hardware',
-    ],
-    integrations: [;
-      'IBM Quantum',
-      'Google Quantum',
-      'AWS Braket',
-      'Azure Quantum',
-    ],
-    use_cases: [;
-
       'Portfolio optimization',
       'Drug discovery',
       'Supply chain optimization',
       'Cryptography',
     ],
     roi: 'Delivers 1000%+ ROI through solving previously impossible problems in weeks instead of years.',
-
-    competitors: ['IBM Quantum', 'Google Quantum', 'Rigetti', 'D - Wave'],
-    market_size: '$8.6B quantum computing market',
-    growth_rate: '300% annual growth',
-    variant: 'quantum - cyberpunk',
-    contact_info: {
-
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -199,22 +117,6 @@ export interface Innovative2025Service {
     rating: 4 && 4.9,
     reviews: 18,
   },
-
-      'Real-time blockchain monitoring',
-      'AI-powered fraud detection',
-  // Blockchain & Web3 Innovation Services;
-  {
-    id: 'ai - blockchain - analytics',
-    name: 'AI Blockchain Analytics Platform',
-    tagline: 'Intelligent blockchain data analysis and insights',
-    price: '$1, 299',
-    period: '/month',
-    description:;
-      'Advanced platform that uses AI to analyze blockchain transactions, detect patterns, and provide actionable insights for DeFi, NFTs, and cryptocurrency markets.',
-    features: [;
-      'Real - time blockchain monitoring',
-      'AI - powered fraud detection',
-
       'Market trend analysis',
       'Smart contract auditing',
       'DeFi risk assessment',
@@ -222,36 +124,6 @@ export interface Innovative2025Service {
     ],
     popular: true,
     icon: '🔗',
-
-=======
-    color: 'from - green - 500 to - emerald - 600',
-    text_color: 'text - green - 400',
-    link: 'https://ziontechgroup.com / ai - blockchain - analytics',
-    market_position:;
-      'Leading AI - powered blockchain analytics. Competes with Chainalysis ($10, 000+/month) and Elliptic ($5000+/month) with better AI insights.',
-    target_audience:;
-      'Cryptocurrency exchanges, DeFi protocols, Investment firms, Regulatory bodies, Law enforcement',
-    trial_days: 14,
-    setup_time: '1 week',
-    category: 'Blockchain & Web3',
-    real_service: true,
-    technology: [;
-      'Python',
-      'TensorFlow',
-      'Ethereum',
-      'Bitcoin',
-      'GraphQL',
-      'PostgreSQL',
-    ],
-    integrations: [;
-      'Coinbase',
-      'Binance',
-      'Uniswap',
-      'OpenSea',
-      'Trading platforms',
-    ],
-    use_cases: [;
-
       'Fraud detection',
       'Market analysis',
       'Compliance monitoring',
@@ -259,10 +131,6 @@ export interface Innovative2025Service {
     ],
     roi: 'Reduces fraud losses by 85% and improves trading decisions by 40% within 2 months.',
     competitors: ['Chainalysis', 'Elliptic', 'CipherTrace', 'TRM Labs'],
-
-    market_size: '$2.1B blockchain analytics market',
-    growth_rate: '220% annual growth',
-
     variant: 'cyberpunk',
     contact_info: {
       mobile: '+1 302 464 0950',
@@ -278,6 +146,7 @@ export interface Innovative2025Service {
     rating: 4 && 4.7,
     reviews: 89,
   },
+<<<<<<< HEAD
 
       'AI-generated 3D environments',
   // Metaverse & Virtual Reality Innovation Services;
@@ -633,6 +502,123 @@ export interface Innovative2025Service {
       'Advanced financial platform that uses AI to analyze markets, execute trades, and manage portfolios with superior performance and risk management.',
     features: [;
 
+=======
+      'Procedural content generation',
+      'Real - time world optimization',
+      'Avatar customization AI',
+      'Social interaction algorithms',
+      'Cross - platform compatibility',
+    ],
+    popular: true,
+    icon: '🌐',
+      'Virtual events',
+      'Gaming worlds',
+      'Educational simulations',
+      'Virtual real estate',
+    ],
+    roi: 'Reduces development time by 70% and increases user engagement by 150% within 4 months.',
+    competitors: ['Unity', 'Unreal Engine', 'Roblox Studio', 'Decentraland'],
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    real_implementation: true,
+    implementation_details:;
+      'AI - powered metaverse creation platform with real - time generation and optimization.',
+    launch_date: '2025 - 02 - 15',
+    customers: 34,
+    rating: 4 && 4.8,
+    reviews: 23,
+  },
+      'Edge AI processing',
+      'Real - time decision making',
+      'Device optimization',
+      'Predictive maintenance',
+      'Energy efficiency',
+      'Secure edge computing',
+    ],
+    popular: true,
+    icon: '🌐',
+      'AWS Greengrass',
+      'Azure IoT Edge',
+      'Google Cloud IoT',
+      'IBM Edge Application Manager',
+    ],
+    variant: 'cyberpunk',
+    contact_info: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Production edge AI platform with real - time processing and device optimization.',
+    launch_date: '2025 - 01 - 10',
+    customers: 89,
+    rating: 4 && 4.6,
+    reviews: 67,
+  },
+      'AI threat hunting',
+      'Zero - day detection',
+      'Automated response',
+      'Behavioral analysis',
+      'Threat intelligence',
+      'Incident automation',
+    ],
+    popular: true,
+    icon: '🛡️',
+      'Threat detection',
+      'Incident response',
+      'Vulnerability management',
+      'Security automation',
+    ],
+    roi: 'Reduces security incidents by 75% and response time by 90% within 6 months.',
+    competitors: ['CrowdStrike', 'SentinelOne', 'Carbon Black', 'Cylance'],
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Production AI threat hunting platform with real - time detection and automated response.',
+    launch_date: '2025 - 01 - 05',
+    customers: 67,
+    rating: 4 && 4.9,
+    reviews: 45,
+  },
+      'Medical image analysis',
+      'Disease detection',
+      'Diagnostic insights',
+      'Patient monitoring',
+      'Clinical decision support',
+      'HIPAA compliance',
+    ],
+    popular: true,
+    icon: '🏥',
+      'Radiology diagnosis',
+      'Disease screening',
+      'Treatment planning',
+      'Patient monitoring',
+    ],
+    roi: 'Improves diagnostic accuracy by 25% and reduces reading time by 40% within 4 months.',
+    competitors: ['Aidoc', 'Zebra Medical', 'Butterfly Network', 'Enlitic'],
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    real_implementation: true,
+    implementation_details:;
+      'Production healthcare AI platform with FDA compliance and clinical validation.',
+    launch_date: '2025 - 01 - 01',
+    customers: 23,
+    rating: 4 && 4.9,
+    reviews: 19,
+  },
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       'AI market analysis',
       'Algorithmic trading',
       'Portfolio optimization',
@@ -642,6 +628,7 @@ export interface Innovative2025Service {
     ],
     popular: true,
     icon: '📈',
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -691,19 +678,14 @@ export interface Innovative2025Service {
       'Market data feeds',
     ],
     use_cases: [;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       'Algorithmic trading',
       'Portfolio management',
       'Risk assessment',
       'Market analysis',
     ],
     roi: 'Improves trading performance by 35% and reduces risk by 50% within 6 months.',
-
-    competitors: ['Alpaca', 'Interactive Brokers', 'Robinhood', 'E * TRADE'],
-    market_size: '$11.3B algorithmic trading market',
-    growth_rate: '260% annual growth',
-    variant: 'quantum - cyberpunk',
-    contact_info: {
-
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -720,23 +702,23 @@ export interface Innovative2025Service {
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Production financial AI platform with real - time trading and comprehensive risk management.';
     launch_date: '2025 - 01 - 15';
-
     customers: 45;
-
-    rating: 4 && 4.8,
-
     reviews: 32
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+  }
+];
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -751,43 +733,19 @@ export interface Innovative2025Service {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-    mobile: string, email: string,
-    address: string,
-    website: string
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-
 }
+
 export const innovative2025Services: Innovative2025Service[] = [
   // AI & Machine Learning Innovation Services
   {
-
-    id: 'ai-multimodal-fusion-platform', name: 'AI Multimodal Fusion Platform',
-    tagline: 'Unified AI processing across text, image, video, and audio',
-    price: '$2,999',
-    period: '/month',
-    description: 'Revolutionary platform that seamlessly processes and analyzes multiple data types simultaneously, enabling breakthrough insights and applications across industries.',
-    features: [
-      'Cross-modal data fusion algorithmsReal-time multimodal analysisAdvanced pattern recognitionCustom model trainingAPI-first architectureEnterprise security & compliance'
-    ];
-    popular: true, icon: '🔮',
-    color: 'from-purple-500 to-indigo-600', textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-multimodal-fusion-platform', marketPosition: 'Leading edge in multimodal AI. Competes with OpenAI GPT-4V ($0.03/token) and Google Gemini ($0.0025/token) but offers unified processing.',
-    targetAudience: 'Research institutions, Healthcare, Autonomous vehicles, Content creation, Security & surveillance',
-    trialDays: 30, setupTime: '2-3 weeks',
-    category: 'AI & Machine Learning', realService: true,
-    technology: ['PyTorchTensorFlowCUDANVIDIA A100KubernetesRedis'], integrations: ['AWSAzureGCPDockerKubernetesREST API'],
-    useCases: ['Medical diagnosisAutonomous navigationContent moderationResearch analysis'], roi: 'Average customer sees 500% ROI within 6 months through improved accuracy and efficiency.',
-    competitors: ['OpenAI GPT-4VGoogle GeminiAnthropic ClaudeMicrosoft Azure AI'], marketSize: '$15B+ multimodal AI market',
-    growthRate: '250% annual growth', variant: 'quantum-holographic',
-    contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
+    
     },
     realImplementation: true,
     implementationDetails: 'Production-ready platform with GPU acceleration, real-time processing, and enterprise-grade security.',
@@ -815,9 +773,6 @@ export const innovative2025Services: Innovative2025Service[] = [
     competitors: ['AffectivaRealeyesEmotientNoldus'], marketSize: '$3.8B emotional AI market',
     growthRate: '180% annual growth', variant: 'holographic-matrix',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Advanced emotion recognition with privacy controls, real-time processing, and comprehensive analytics.',
@@ -845,9 +800,6 @@ export const innovative2025Services: Innovative2025Service[] = [
     competitors: ['IBM QuantumGoogle QuantumRigettiD-Wave'], marketSize: '$8.6B quantum computing market',
     growthRate: '300% annual growth', variant: 'quantum-cyberpunk',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
     },
     realImplementation: true, implementationDetails: 'Production quantum-classical hybrid platform with real-time optimization and enterprise security.',
     launchDate: '2025-01-01', customers: 22,
@@ -876,9 +828,6 @@ export const innovative2025Services: Innovative2025Service[] = [
     competitors: ['ChainalysisEllipticCipherTraceTRM Labs'], marketSize: '$2.1B blockchain analytics market',
     growthRate: '220% annual growth', variant: 'cyberpunk',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
     },
     realImplementation: true, implementationDetails: 'Real-time blockchain monitoring with AI-powered insights and comprehensive reporting.',
     launchDate: '2025-01-20', customers: 156,
@@ -907,9 +856,6 @@ export const innovative2025Services: Innovative2025Service[] = [
     competitors: ['UnityUnreal EngineRoblox StudioDecentraland'], marketSize: '$12.5B metaverse market',
     growthRate: '280% annual growth', variant: 'holographic-matrix',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
     },
     realImplementation: true, implementationDetails: 'AI-powered metaverse creation platform with real-time generation and optimization.',
     launchDate: '2025-02-15', customers: 34,
@@ -937,9 +883,6 @@ export const innovative2025Services: Innovative2025Service[] = [
     competitors: ['AWS GreengrassAzure IoT EdgeGoogle Cloud IoTIBM Edge Application Manager'], marketSize: '$6.7B edge AI market',
     growthRate: '190% annual growth', variant: 'cyberpunk',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
     },
     realImplementation: true, implementationDetails: 'Production edge AI platform with real-time processing and device optimization.',
     launchDate: '2025-01-10', customers: 89,
@@ -967,9 +910,6 @@ export const innovative2025Services: Innovative2025Service[] = [
     competitors: ['CrowdStrikeSentinelOneCarbon BlackCylance'], marketSize: '$18.2B AI cybersecurity market',
     growthRate: '240% annual growth', variant: 'quantum-cyberpunk',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
     },
     realImplementation: true, implementationDetails: 'Production AI threat hunting platform with real-time detection and automated response.',
     launchDate: '2025-01-05', customers: 67,
@@ -997,9 +937,6 @@ export const innovative2025Services: Innovative2025Service[] = [
     competitors: ['AidocZebra MedicalButterfly NetworkEnlitic'], marketSize: '$9.8B AI healthcare market',
     growthRate: '210% annual growth', variant: 'holographic-matrix',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
     },
     realImplementation: true, implementationDetails: 'Production healthcare AI platform with FDA compliance and clinical validation.',
     launchDate: '2025-01-01', customers: 23,
@@ -1027,15 +964,12 @@ export const innovative2025Services: Innovative2025Service[] = [
     competitors: ['AlpacaInteractive BrokersRobinhoodE*TRADE'], marketSize: '$11.3B algorithmic trading market',
     growthRate: '260% annual growth', variant: 'quantum-cyberpunk',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
     },
     realImplementation: true, implementationDetails: 'Production financial AI platform with real-time trading and comprehensive risk management.',
     launchDate: '2025-01-15', customers: 45,
     rating: 4.8,
     reviews: 32;
+<<<<<<< HEAD
 =======
 
 
@@ -1486,3 +1420,5 @@ export const innovative2025Services: Innovative2025Service[] = [;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,11 +104,17 @@ export function ContractPreview({
 
   const displayContent = contractContent || generatedContract || "",
   
+=======
+  status?: 'draft' | 'ready' | 'pending';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  talent?: TalentProfile;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="space - y-4">;
       <div className="flex justify - between items - center mb - 4">;
         <h2 className="text - 2xl font - bold">Contract Preview</h2>;
         {status === 'ready' ? (
+<<<<<<< HEAD
 
 
 export function ContractPreview(): any ({ ;
@@ -171,6 +178,8 @@ export function ContractPreview({;
         <h2 className="text-2xl font-bold">Contract Preview</h2>;
         {status === 'ready' ? (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Badge
             variant="secondary"
             className="text-sm bg-green-100 text-green-800">;
@@ -185,37 +194,21 @@ export function ContractPreview({;
         ) : (;
           <Badge variant="outline">Draft</Badge>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         )}
-
-      </div>;
-
-
       {/* Contract content */}
       <div className="border rounded-lg p-6 bg-muted/50">;
         {/* Render the contract content as markdown or formatted text */}
         <div className="prose prose-sm max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-muted-foreground">;
           {displayContent}
-
-        </div>;
-      </div>;
-
-      {/* Deployment info if available */}
-      {deploymentInfo && (;
-        <div className="mt-4 p-4 bg-primary/10 rounded-lg">;
-          <h3 className="font-medium mb-2">Contract Deployment Info</h3>;
-          <p className="text-sm">Contract Address: {deploymentInfo && deploymentInfo.deployedAddress || "Pending..."}</p>;
-          <p className="text-sm">Network: {deploymentInfo && deploymentInfo.networkName || "Unknown"}</p>;
-          <p className="text-sm">Status: {deploymentInfo && deploymentInfo.status}</p>;
-        </div>;
-      )}
-
-
       {/* Actions */}
       <div className="flex justify-end space-x-3 mt-4">;
         {onClose && (;
@@ -223,6 +216,7 @@ export function ContractPreview({;
             Close;
           </Button>;
         )}
+<<<<<<< HEAD
         {status === 'ready' && onSign && (
           <Button onClick={onSign}>
             Sign Contract
@@ -256,6 +250,8 @@ export function ContractPreview({;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
           <Badge;
             variant="secondary";

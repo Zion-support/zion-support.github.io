@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -13,6 +14,9 @@ export interface PartnerProfile {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface PartnerProfile {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   user_id: string;
   name: string;
@@ -21,22 +25,14 @@ export interface PartnerProfile {;
     twitter?: string;
     instagram?: string;
     youtube?: string;
-
-    linkedin?: string,
-    [key: string]: string | undefined;
-  }
-
   niche: string;
   audience_size: string;
   payout_method: string;
   bio: string;
   status: 'pending' | 'approved' | 'rejected';
   created_at: string;
-
-  updated_at: string,
-  commission_rate?: number;
-
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -53,13 +49,13 @@ export interface PartnerSettings {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface PartnerSettings {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   commission_rate: number;
-
-  fraud_threshold: number,
-  is_payouts_enabled: boolean;
-
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -76,17 +72,17 @@ export interface PartnerReferralLink {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface PartnerReferralLink {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   name: string;
   url: string;
   campaign?: string;
   source?: string;
   clicks: number;
-
-  conversions: number,
-  created_at: string;
-
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -103,11 +99,15 @@ export interface PartnerPayout {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface PartnerPayout {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   partner_id: string;
   amount: number;
   status: 'pending' | 'processing' | 'completed' | 'failed';
   method: string;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   created_at: string
@@ -171,3 +171,6 @@ export interface PartnerPayout {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

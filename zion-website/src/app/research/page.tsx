@@ -1,97 +1,9 @@
 import {
-
-  LightBulbIcon,
-  CpuChipIcon,
-  AcademicCapIcon,
-  GlobeAltIcon,
-  ChartBarIcon,
-  UserGroupIcon,
-  RocketLaunchIcon,
-  ShieldCheckIcon;
-} from '@heroicons / react / 24 / outline';
-const research_areas = [;
-  {
-    name: 'Artificial Intelligence & Machine Learning',
-    description: 'Advancing the frontiers of AI through novel algorithms, neural architectures, and learning paradigms.',
-    icon: LightBulbIcon,
-    topics: [;
-      'Deep Learning & Neural NetworksNatural Language ProcessingComputer Vision & Image RecognitionReinforcement LearningFederated LearningExplainable AI';
-    ]},
-  {
-    name: 'Quantum Computing & AI',
-    description: 'Exploring the intersection of quantum mechanics and artificial intelligence for breakthrough computational capabilities.',
-    icon: CpuChipIcon,
-    topics: [;
-      'Quantum Neural NetworksQuantum Machine LearningQuantum - Classical Hybrid SystemsQuantum Error CorrectionQuantum Algorithms for AIQuantum Supremacy Applications';
-    ]},
-  {
-    name: 'Autonomous Systems & Robotics',
-    description: 'Developing intelligent systems that can operate independently and adapt to changing environments.',
-    icon: RocketLaunchIcon,
-    topics: [;
-      'Autonomous Decision MakingMulti - Agent SystemsRobotic Learning & AdaptationHuman - Robot InteractionAutonomous NavigationSwarm Intelligence';
-    ]},
-  {
-    name: 'AI Ethics & Governance',
-    description: 'Ensuring responsible AI development through ethical frameworks and governance mechanisms.',
-    icon: ShieldCheckIcon,
-    topics: [;
-      'AI Bias & FairnessPrivacy - Preserving AIAI Safety & AlignmentEthical AI GuidelinesAI Regulation & PolicyHuman - AI Collaboration';
-    ]}];
-const recent_publications = [;
-  {
-    title: 'Quantum Neural Networks: A New Paradigm for AI',
-    authors: 'Dr. Marcus Rodriguez, Dr. Elena Petrov, et al.',
-    journal: 'Nature Machine Intelligence',
-    year: '2024',
-    doi: '10.1038 / s42256 - 024 - 00001 - x',
-    abstract: 'We present a novel approach to neural network architecture that leverages quantum computing principles for unprecedented computational efficiency.',
-    impact: 'High Impact'},
-  {
-    title: 'Autonomous Business Operations: AI - Driven Process Optimization',
-    authors: 'Dr. Sarah Chen, James Kim, et al.',
-    journal: 'Harvard Business Review',
-    year: '2024',
-    doi: '10.1000 / hbr.2024.001',
-    abstract: 'This research demonstrates how autonomous AI systems can optimize business processes, reducing operational costs by 30% while improving efficiency.',
-    impact: 'Industry Leading'},
-  {
-    title: 'Multi - Modal AI Research Assistant: Accelerating Scientific Discovery',
-    authors: 'Dr. Elena Petrov, Dr. Marcus Rodriguez, et al.',
-    journal: 'Science',
-    year: '2023',
-    doi: '10.1126 / science.abc1234',
-    abstract: 'Our autonomous research assistant demonstrates the potential of AI to accelerate scientific discovery across multiple domains.',
-    impact: 'Breakthrough'},
-  {
-    title: 'Ethical AI Development: A Framework for Responsible Innovation',
-    authors: 'Dr. Sarah Chen, Dr. Elena Petrov, et al.',
-    journal: 'AI Ethics Journal',
-    year: '2023',
-    doi: '10.1000 / aie.2023.001',
-    abstract: 'We propose a comprehensive framework for developing AI systems that prioritize human values and ethical considerations.',
-    impact: 'Foundational'}];
-const research_impact = [;
-  {
-    metric: 'Research Papers Published',
-    value: '150+',
-    description: 'Peer - reviewed publications in top - tier journals and conferences'},
-  {
-    metric: 'Citations',
-    value: '10, 000+',
-    description: 'Academic citations demonstrating research influence'},
-
   {
     metric: 'Patents Filed'
     value: '25+'
     description: 'Intellectual property protecting our innovations'}
   {
-
-    metric: 'Research Collaborations',
-    value: '50+',
-    description: 'Partnerships with leading academic institutions'}];
-const academic_partners = [;
-
   {
     name: 'Stanford University'
     location: 'Stanford, CA'
@@ -108,6 +20,7 @@ const academic_partners = [;
     focus: 'AI Ethics & Governance'
     collaboration: 'Policy research and ethical AI development'}
   {
+<<<<<<< HEAD
     name: 'University of Tokyo'
     location: 'Tokyo, Japan'
     focus: 'Robotics & Autonomous Systems'
@@ -120,12 +33,15 @@ export default function ResearchPage() {;
 const Page: React.FC<PageProps> = ({ className }) => {
   return (
     <div className="bg-black">
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
           <div className=&quot;text - center & quot;>;
             <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
               Research &{' '}
+<<<<<<< HEAD
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                 Innovation
               </span>
@@ -275,6 +191,8 @@ const Page: React.FC<PageProps> = ({ className }) => {
                     </div>
                   ))}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 </div>;
                 <p className=&quot;text - gray - 300 mb - 6&quot;>{area.description}</p>;
                 <div className=&quot;space - y-2 & quot;>;
@@ -289,6 +207,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* Recent Publications */}
+<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Publications</h2>
@@ -320,6 +239,8 @@ const Page: React.FC<PageProps> = ({ className }) => {
                     'bg-gray-600/20 text-gray-400'
                   }`}>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     {publication.impact}
                   </span>;
                   <span className=&quot;text - sm text - gray - 400 & quot;>{publication.year}</span>;
@@ -337,62 +258,11 @@ const Page: React.FC<PageProps> = ({ className }) => {
                   View Publication <span aria - hidden=&quot;true & quot;>→</span>;
                 </Link>;
               </div>))}
-=======
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Publications</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Publications</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            Recent Research
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our latest research contributions to the field of artificial intelligence and technology.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
-            {recentPublications.map((publication) => (
-              <div key={publication.title} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center gap-x-2 mb-4">
-                  <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${
-                    publication.impact === 'High Impact' ? 'bg-blue-600/20 text-blue-400' :
-                    publication.impact === 'Industry Leading' ? 'bg-green-600/20 text-green-400' :
-                    publication.impact === 'Breakthrough' ? 'bg-purple-600/20 text-purple-400' :
-                    'bg-gray-600/20 text-gray-400'
-                  }`}>
-                    {publication.impact}
-                  </span>
-                  <span className="text-sm text-gray-400">{publication.year}</span>
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{publication.title}</h3>
-                <p className="text-sm text-blue-400 mb-3">{publication.authors}</p>
-                <p className="text-sm text-gray-400 mb-3">{publication.journal}</p>
-                <p className="text-sm text-gray-300 mb-4">{publication.abstract}</p>
-                <a
-                  href={`https://doi.org/${publication.doi}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
-                >
-                  View Publication <span aria-hidden="true">→</span>
-                </Link>
-              </div>
-            ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>;
         </div>;
       </div>;
       {/* Research Impact */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
@@ -494,10 +364,13 @@ const Page: React.FC<PageProps> = ({ className }) => {
               </div>
             ))}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </dl>;
         </div>;
       </div>;
       {/* Academic Collaborations */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
@@ -564,6 +437,8 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <div className=&quot;space - y-3 text - gray - 300 & quot;>;
                   <p className=&quot;flex items - center gap - 2&quot;>;
                     <GlobeAltIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     {partner.location}
                   </p>;
                   <p className=&quot;flex items - center gap - 2&quot;>;
@@ -572,56 +447,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
                   </p>;
                   <p className=&quot;flex items - center gap - 2&quot;>;
                     <UserGroupIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
-=======
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Collaborations</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-<<<<<<< HEAD
-            Academic Partnerships
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            We collaborate with leading academic institutions worldwide to advance
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            Academic Partnerships
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            We collaborate with leading academic institutions worldwide to advance 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-            the frontiers of AI research and innovation.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
-            {academicPartners.map((partner) => (
-              <div key={partner.name} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center gap-x-3 mb-4">
-                  <AcademicCapIcon className="h-8 w-8 text-blue-400" />
-                  <h3 className="text-xl font-semibold text-white">{partner.name}</h3>
-                </div>
-                <div className="space-y-3 text-gray-300">
-                  <p className="flex items-center gap-2">
-                    <GlobeAltIcon className="h-5 w-5 text-blue-400" />
-                    {partner.location}
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <LightBulbIcon className="h-5 w-5 text-blue-400" />
-                    {partner.focus}
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <UserGroupIcon className="h-5 w-5 text-blue-400" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     {partner.collaboration}
                   </p>;
                 </div>;
@@ -630,6 +455,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* CTA section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
@@ -746,3 +572,5 @@ const Page: React.FC<PageProps> = ({ className }) => {
 
 export default Page;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

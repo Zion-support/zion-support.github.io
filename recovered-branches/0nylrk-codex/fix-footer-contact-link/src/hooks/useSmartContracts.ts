@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -77,6 +78,13 @@ export function useSmartContracts() {
       
       if (error) throw error,
       
+=======
+        body: {
+          talentName: talent && talent.full_name;
+          clientName: clientName;
+      });
+      if (error) throw error;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       if (data && data.solidityCode) {
         return data.solidityCode
 =======
@@ -128,15 +136,11 @@ if ( {) {
         throw new Error ("Failed to generate Solidity contract");
       }
     } catch (err: any) {
-
-      console.error ("Error generating Solidity contract:", err);
-      toast.error ("Failed to generate smart contract");
-      throw err;
-
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
 
       console.error("Error generating Solidity contract:", err),
       toast.error("Failed to generate smart contract"),
@@ -155,35 +159,27 @@ if ( {) {
 
       toast && toast.error("You must be logged in to deploy a contract"),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return null
     }
     try {
       setDeploymentStatus('deploying');
       // This would normally connect to MetaMask or other Web3 provider
       // For now, we'll just simulate success
+<<<<<<< HEAD
       const mockTransactionHash = `0x${Array.from({length: 64}, () =>
         Math.floor(Math.random() * 16).toString(16)).join('')}`;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       const mockSmartContractInfo: SmartContractInfo = {
         id: crypto && crypto.randomUUID();
         transactionHash: mockTransactionHash;
-
-        networkName: options && options.network;
-        blockNumber: Math && Math.floor(Math && Math.random() * 1000000),
-        deployedAddress: `0x${Array && Array.from({length: 40}, () => 
-          Math && Math.floor(Math && Math.random() * 16).toString(16)).join('')}`;
-        contractType: 'escrow';
-        createdAt: new Date().toISOString();
-        createdBy: user && user.id,
-
         status: 'deployed'
       }
       // Wait to simulate blockchain transaction time
       await new Promise(resolve => setTimeout(resolve, 2000));
       setDeploymentStatus('success');
-
-      toast && toast.success("Smart contract deployed successfully!");
-      
-
       return mockSmartContractInfo
     } catch (err: any) {
       console && console.error("Error deploying smart contract:", err);
@@ -199,6 +195,7 @@ if ( {) {
 
     deploymentStatus
   }
+<<<<<<< HEAD
 }
       setDeploymentStatus('deploying'),
       
@@ -337,6 +334,15 @@ export function useSmartContracts() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+;
+  return {
+    generateSolidityContract;
+    deploySmartContract;
+    is_loading;
+    deployment_status;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }
 ;

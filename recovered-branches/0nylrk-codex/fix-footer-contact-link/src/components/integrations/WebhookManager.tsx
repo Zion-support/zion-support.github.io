@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,6 +42,8 @@ export function WebhookManager() {
     loading, ;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     error;
     testResult;
     fetchWebhooks;
@@ -49,6 +52,7 @@ export function WebhookManager() {
     deleteWebhook;
     testWebhook;
   } = useWebhooks();
+<<<<<<< HEAD
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { toast } from "sonner",
 export function WebhookManager() {
@@ -270,10 +274,13 @@ export function WebhookManager() {;
       <Card>;
         <CardHeader>;
           <CardTitle>Create Webhook</CardTitle>;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <CardDescription>;
             Define webhooks to notify external systems when events occur in Zion.;
           </CardDescription>;
         </CardHeader>;
+<<<<<<< HEAD
         <CardContent className="space-y-4">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
             <div className="space-y-2">;
@@ -355,6 +362,24 @@ export function WebhookManager() {;
       </Card>
       <div>
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>
+=======
+              ))}
+            </div>;
+            <div className="flex space-x-2">;
+              <Select
+                value={newWebhook && newWebhook.selectedEvent}
+                onValueChange={(value) => setNewWebhook({...newWebhook, selectedEvent: value as WebhookEventType})}
+              >;
+                <SelectTrigger className="w-full">;
+                  <SelectValue placeholder="Select event" />;
+                </SelectTrigger>;
+                <SelectContent>;
+                  {eventOptions && eventOptions.map(option => (;
+                    <SelectItem key={option && option.value} value={option && option.value}>;
+                      {option && option.label}
+                    </SelectItem>;
+                  ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {loading ? (
           <p>Loading webhooks...</p>
         ) : error ? (
@@ -371,6 +396,7 @@ export function WebhookManager() {;
                       <CardTitle className="text-lg">{webhook.name}</CardTitle>
                       <CardDescription className="truncate max-w-md">
                         {webhook.url}
+<<<<<<< HEAD
                       </CardDescription>
                     </div>
                     <div className="flex items-center">
@@ -434,6 +460,39 @@ export function WebhookManager() {;
                         </SelectItem>
                           Test {eventOptions.find(e => e.value === event)?.label || event}
                         </SelectItem>;
+=======
+                        </Button>;
+                      </div>;
+                    </div>;
+                  </div>;
+                </CardHeader>;
+=======
+                <CardContent className="py - 2">;
+                  <div className="flex flex - col space - y-2">;
+                    <div>;
+                      <Label className="text - sm">Events</Label>;
+                      <div className="flex flex - wrap gap - 2 mt - 1">;
+                        {webhook.event_types.map (event => (
+                          <ClickableBadge key={event} variant="secondary">;
+                            {event_options.find (e => e.value === event)?.label || event}
+                          </ClickableBadge>))}
+                      </div>;
+                    </div>;
+                    <div className="text - xs text - muted - foreground">;
+                      {webhook.last_triggered_at;
+                        ? `Last triggered: ${new Date (webhook.last_triggered_at).toLocaleString ()}`;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                        : 'Never triggered'}
+                    </div>;
+                  </div>;
+                </CardContent>;
+                  >;
+                    <SelectTrigger className="w-[180px]">;
+                      <SelectValue placeholder="Test webhook" />;
+                    </SelectTrigger>;
+                    <SelectContent>;
+                      <SelectItem value="test_event">Test (generic)</SelectItem>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       ))}
                     </SelectContent>;
                   </Select>;
@@ -442,6 +501,7 @@ export function WebhookManager() {;
             ))}
           </div>;
         )}
+<<<<<<< HEAD
         {testResult && (
           <Card className="mt-4 border-blue-200">
             <CardHeader>
@@ -517,13 +577,15 @@ export function WebhookManager() {;
                   <pre className="mt - 1 p - 2 bg - gray - 100 rounded text - sm overflow - x-auto">;
                     {test_result.response_body || '<empty>'}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   </pre>;
                 </div>;
               </div>;
             </CardContent>;
-
+=======
           </Card>)}
       </div>;
     </div>);
 }
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

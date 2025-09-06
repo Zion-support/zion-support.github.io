@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useMemo, useState } from "react";
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types";
 export interface MilestoneAssistantProps {scopeOfWork: string;
@@ -127,6 +128,8 @@ function accept() {
     <div className="milestone-assistant">;
       <div className="assistant-header" style={{ display: "flex", gap: 12, alignItems: "center" }}>;
         <button onClick={generate} disabled={loading || isDisabled}>;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {loading ? "Generating..." : "💡 Generate AI Milestones"}
         </button>;
         <label style={{ display: "flex", gap: 6, align_items: "center" }}>;
@@ -134,6 +137,7 @@ function accept() {
           Auto - add to Milestone Tracker;
         </label>;
       </div>;
+<<<<<<< HEAD
 
       {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}
 ;
@@ -151,11 +155,14 @@ function accept() {
         {items.map ((item, idx) => (
           <div key={idx} className="milestone - item" style={{ border: "1px solid #ddd", border_radius: 8, margin_bottom: 8 }}>;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <div;
               className="milestone - summary";
               style={{ padding: 12, cursor: "pointer", display: "flex", justify_content: "space - between", align_items: "center" }}
               on_click={() => setExpandedIdx (expanded_idx === idx ? null : idx)}
             >;
+<<<<<<< HEAD
 
             <div;
               className="milestone-summary";
@@ -171,6 +178,8 @@ function accept() {
                 <span style={{ font_weight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", border_radius: 4, font_size: 12 }}>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   AI Suggested;
                 </span>;
               </div>;
@@ -211,8 +220,11 @@ function accept() {
                     type="number";
                     min={1}
                     value={item.estimatedEffortHours}
+<<<<<<< HEAD
                     onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value |"0", 10)) })}
                     onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || "0", 10)) })}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   />;
                 </div>;
                 <div style={{ display: "flex", justify_content: "space - between", margin_top: 8 }}>;
@@ -224,5 +236,8 @@ function accept() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default MilestoneAssistant;

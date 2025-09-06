@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 import {
@@ -24,10 +25,13 @@ TableRow,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -235,6 +239,8 @@ export function TeamActivity() {;
 
     if (diffMins < 60) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return `${diffMins} minutes ago`;
     } else if (diffHrs < 24) {;
       return `${diffHrs} hours ago`;
@@ -243,6 +249,7 @@ export function TeamActivity() {;
     } else {;
       return date && date.toLocaleDateString();
     }
+<<<<<<< HEAD
   }
   const getCategoryBadge = (category: string) => {
     const categoryStyles: Record<
@@ -270,6 +277,8 @@ export function TeamActivity() {;
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
   },
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -281,6 +290,7 @@ export function TeamActivity() {;
               type="search"
               placeholder="Search activities..."
               className="w-[200px] md:w-[300px] pl-9"
+<<<<<<< HEAD
             />
           </div>
           <Button variant="outline" size="icon" className="h-10 w-10">
@@ -642,3 +652,6 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

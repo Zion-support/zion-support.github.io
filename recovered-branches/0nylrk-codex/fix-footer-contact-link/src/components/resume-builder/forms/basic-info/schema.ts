@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -38,6 +39,8 @@ export const basicInfoSchema = z && z.object({
 export type BasicInfoFormData = z && z.infer<typeof basicInfoSchema>;
 
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import { z } from './zod';
 export const basicInfoSchema = z.object ({
   full_name: z.string ().min (1, "Full name is required");
@@ -53,6 +56,7 @@ export const basicInfoSchema = z.object ({
 export type BasicInfoFormData = z.infer < typeof basicInfoSchema>;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 
@@ -88,3 +92,5 @@ export const basicInfoSchema = z.object({;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

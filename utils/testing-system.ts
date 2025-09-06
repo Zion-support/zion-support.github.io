@@ -1,4 +1,5 @@
 export class TestingSystem {
+<<<<<<< HEAD
   static async testUserInteraction(
     element: HTMLElement
     action: 'click' | 'type' | 'hover'
@@ -7,12 +8,15 @@ export class TestingSystem {
       case 'click':;
         element.click ();
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         break;
-      case 'type': // Handle typing
+      case 'type': // Handle typing;
         break;
-      case 'hover': // Handle hover
+      case 'hover': // Handle hover;
         break;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 
@@ -31,6 +35,8 @@ export class TestingSystem {
 =======
   }
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

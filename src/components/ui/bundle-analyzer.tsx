@@ -1,9 +1,22 @@
-totalSize: number;
+import { AlertTriangle, Package, Zap } from 'lucide-react'
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface BundleInfo {
+  totalSize: number;
   gzippedSize: number;
   chunkCount: number;
   loadTime: number;
+  cacheHitRate: number
+interface ChunkInfo {
+  name: string;
+  size: number;
+  loadTime: number;
+  cached: boolean
+export function BundleAnalyzer() {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { user } = useAuth()
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
   const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
@@ -17,6 +30,7 @@ totalSize: number;
   const [shouldShow, setShouldShow] = useState(false)
   useEffect((,) => {
     // Only show in development or when explicitly enabled
+<<<<<<< HEAD
     const show =
       process.env.NODE_ENV === 'development' |
     const show = null;
@@ -28,67 +42,22 @@ totalSize: number;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
     if (!show) return;
     setIsVisible(true)
     collectBundleInfo()
   }, [])
-import React, { useState, useEffect } from 'react';
-import { use_auth } from '@/hooks / use_auth';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { Progress } from '@/components / ui / progress';
-import { AlertTriangle, Package, Zap } from 'lucide-react';
-import { logErrorToProduction } from '@/utils / production_logger';
-interface BundleInfo {
-  total_size: number;
-  gzipped_size: number;
-  chunk_count: number;
-  load_time: number;
-  cacheHitRate: number;
-interface ChunkInfo {
-  name: string;
-  size: number;
-  load_time: number;
-  cached: boolean;
-export /**
- * BundleAnalyzer - Function description
- */
-function BundleAnalyzer() {
-  const { user } = use_auth ();
-  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
-  const is_allowed = process.env.NODE_ENV !== 'production' || is_admin;
-  // Check condition
-if ( {) {
-  $2
-}
-    return null;
-  }
-  const [bundle_info, setBundleInfo] = useState < BundleInfo | null>(null);
-  const [chunks, set_chunks] = useState < ChunkInfo[]>([]);
-  const [is_visible, setIsVisible] = useState (false);
-  const [is_collecting, setIsCollecting] = useState (false);
-  const [should_show, setShouldShow] = useState (false);
-  useEffect ((, ) => {
-    // Only show in development or when explicitly enabled;
-    const show =;
-      process.env.NODE_ENV === 'development' ||;
-      local_storage.get_item ('bundle - analyzer') === 'true';
-    setShouldShow (show);
-    // Check condition
-if (return) {
-  $2
-}
-    setIsVisible (true);
-    collectBundleInfo ();
-  }, []);
   const collectBundleInfo = async () => {
     if (typeof window === 'undefined') return;
     setIsCollecting(true)
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       // Get performance entries for script resources
       const resourceEntries = performance.getEntriesByType(
         'resource'
@@ -120,6 +89,7 @@ if (return) {
       const cacheHitRate = null;
         chunkData.filter(chunk => chunk.cached).length / chunkData.length
       setBundleInfo({
+<<<<<<< HEAD
         totalSize
         gzippedSize
         chunkCount: chunkData.length
@@ -141,45 +111,10 @@ if (return) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
-      // Get performance entries for script resources;
-      const resource_entries = performance.getEntriesByType (
-        'resource') as PerformanceResourceTiming[];
-      const script_entries = resource_entries.filter (
-        entry =>;
-          entry.name.includes ('/_next / static/') &&;
-          (entry.name.ends_with ('.js') || entry.name.ends_with ('.css')));
-      // Calculate bundle information;
-      let total_size = 0;
-      let totalLoadTime = 0;
-      const chunk_data: ChunkInfo[] = [];
-      const chunk_data: ChunkInfo[] = [],
-      script_entries.for_each (entry => {
-        const size = entry.transfer_size || entry.encodedBodySize || 0;
-        const load_time = entry.response_end - entry.request_start;
-        const cached = entry.transfer_size === 0;
-        totalLoadTime += load_time;
-        chunk_data.push ({
-          name: entry.name.split ('/').pop ()?.split ('?')[0] || 'unknown',
-          size,
-          load_time,
-          cached,
-        });
-      });
-      // Estimate gzipped size (roughly 70% of original);
-      const gzipped_size = total_size * 0.7;
-      const cacheHitRate =;
-        chunk_data.filter (chunk => chunk.cached).length / chunk_data.length;
-      setBundleInfo ({
-        total_size,
-        gzipped_size,
-        chunk_count: chunk_data.length,
-        load_time: totalLoadTime / chunk_data.length,
-        cacheHitRate: cacheHitRate * 100,
-      });
-      set_chunks (chunk_data.sort ((a, b) => b.size - a.size).slice (0, 5)); // Top 5 largest chunks    } catch (error) {
-      logErrorToProduction ('Failed to collect bundle info:', { data: error });
     } finally {
       setIsCollecting(false)
     }
@@ -205,9 +140,10 @@ if (return) {
     }
   }
 
-
-
-
+  if (!shouldShow) {
+    return null
+  }
+=======
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -221,7 +157,6 @@ interface BundleInfo {;
   gzippedSize: number,;
   chunkCount: number,;
   loadTime: number,;
-
   cacheHitRate: number;
 }
 ;
@@ -322,16 +257,23 @@ export function BundleAnalyzer() {;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
         <Button
+<<<<<<< HEAD
           variant='outline'
           size='sm'
           onClick={toggleAnalyzer}
@@ -349,16 +291,15 @@ export function BundleAnalyzer() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           Bundle Analyzer
         </Button>
       </div>
     )
-          className='bg-background/80 backdrop-blur-sm'>;
-          <Package className='w-4 h-4 mr-2' />;
-          Bundle Analyzer;
-        </Button>;
-      </div>;
-    );
   }
   return (
     <div className="fixed bottom-20 right-4 z-50 w-96">
@@ -371,6 +312,7 @@ export function BundleAnalyzer() {;
             </CardTitle>
             <div className="flex gap-2">
               <Button
+<<<<<<< HEAD
                 variant='ghost'
                 size='sm'
                 onClick={collectBundleInfo}
@@ -403,6 +345,11 @@ export function BundleAnalyzer() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 ✕
               </Button>
             </div>
@@ -443,6 +390,7 @@ export function BundleAnalyzer() {;
                 <Progress value={bundleInfo.cacheHitRate} className="h-2" />
               </div>
               <div>
+<<<<<<< HEAD
 
                 className='h-6 w-6 p-0'>;
   // Check condition
@@ -511,6 +459,11 @@ if ( {) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
@@ -518,6 +471,7 @@ if ( {) {
                           </Badge>
                         )}
                       </div>
+<<<<<<< HEAD
                       <Badge
                         className={getSizeColor(chunk.size)}
                         variant='outline'
@@ -528,24 +482,26 @@ if ( {) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                         {formatSize(chunk.size)}
                       </Badge>
                     </div>
                   ))}
-
-                </div>;
-              </div>;
-
-              {bundleInfo && bundleInfo.totalSize > 1000000 && (;
-                <div className='flex items-center gap-2 p-2 bg-yellow-50 dark:bg-yellow-900/20 rounded text-xs'>;
-                  <AlertTriangle className='w-3 h-3 text-yellow-600' />;
-                  <span>Bundle size is large. Consider code splitting.</span>;
-                </div>;
-
+                </div>
+              </div>
+              {bundleInfo.totalSize > 1000000 && (
+                <div className="flex items-center gap-2 p-2 bg-yellow-50 dark:bg-yellow-900/20 rounded text-xs">
+                  <AlertTriangle className="w-3 h-3 text-yellow-600" />
+                  <span>Bundle size is large. Consider code splitting.</span>
+                </div>
               )}
-
             </>
           ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='text-xs text-muted-foreground'>
               {isCollecting
@@ -568,12 +524,20 @@ if ( {) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
+=======
+            <div className="text-xs text-muted-foreground">
+              {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
+            </div>;
+          )}
         </CardContent>;
       </Card>;
     </div>;
   );
 } ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -664,3 +628,8 @@ if ( {) {
       </Card>;
     </div>);
 }
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

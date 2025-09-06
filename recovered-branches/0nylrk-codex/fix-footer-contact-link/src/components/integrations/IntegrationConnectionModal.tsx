@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import {
@@ -29,6 +30,8 @@ import {;
   DialogTitle,;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -61,10 +64,6 @@ interface Integration {
   description: string;
   logo_url?: string;
   status: "connected" | "warning" | "disconnected";
-
-
-interface IntegrationConnectionModalProps {;
-
   isOpen: boolean;
   onClose: () => void;
 <<<<<<< HEAD
@@ -78,6 +77,7 @@ interface IntegrationConnectionModalProps {;
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 
 export function IntegrationConnectionModal(): any ({;
   isOpen,;
@@ -105,29 +105,16 @@ export function IntegrationConnectionModal({
     // Simulate OAuth flow;
     setTimeout(() => {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       setIsConnecting(false);
       toast && toast.success(`Connected to ${integration && integration.name} successfully`);
       onClose();
     }, 2000);
-
-
-    // In a real application, this would open a popup for OAuth authentication;
-    // window && window.open(`/api/oauth/${integration && integration.id}`, 'oauthwidth=600,height=600');
-  };
-
-  const handleDisconnect = () => {;
-    // In a real application, this would revoke the OAuth token;
-    toast && toast.info(`Disconnected from ${integration && integration.name}`);
-    onClose();
-  };
-
-  const handleSaveSettings = () => {;
-    // In a real application, this would save the sync settings;
-    toast && toast.success("Integration settings saved");
-
     onClose();
   }
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
@@ -201,6 +188,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
     onClose()
   },
   
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-md">;
@@ -212,6 +201,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
             onError={(e) => {;
               (e && e.target as HTMLImageElement).src = "/placeholder && placeholder.svg";
             }}
+<<<<<<< HEAD
           />
           <div>
             <DialogTitle>{integration.name} Integration</DialogTitle>
@@ -452,10 +442,13 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                 <h3 className="text-sm font-medium">API Details</h3>;
                 <p className="text-xs text-muted-foreground">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   Last synced:{" "}
                   {integration && integration.lastSync;
                     ? new Date(integration && integration.lastSync).toLocaleString();
                     : "Never"}
+<<<<<<< HEAD
                 </p>
               </div>
             </div>
@@ -676,11 +669,13 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
             </DialogFooter>;
           </>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         )}
       </DialogContent>;
     </Dialog>;
   );
-
+=======
   last_sync?: string;
 }
 interface IntegrationConnectionModalProps {
@@ -859,6 +854,7 @@ function IntegrationConnectionModal() {
           </>)}
       </DialogContent>;
     </Dialog>);
+<<<<<<< HEAD
 
 }
 =======
@@ -870,3 +866,7 @@ function IntegrationConnectionModal() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

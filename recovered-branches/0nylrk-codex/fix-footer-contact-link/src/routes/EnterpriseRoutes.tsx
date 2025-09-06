@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import EnterprisePlans from "../pages/EnterprisePlans";
@@ -54,10 +55,13 @@ const EnterpriseRoutes = () => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const EnterpriseRoutes = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Routes>;
       {/* Enterprise Routes */}
 
+<<<<<<< HEAD
       <Route path="/enterprise" element={<EnterprisePlans />} />;
       <Route path="/plans/enterprise" element={<EnterprisePlans />} />;
       <Route path="/enterprise/admin" element={<EnterpriseAdmin />} />;
@@ -75,6 +79,8 @@ const EnterpriseRoutes = () => {;
 };
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
@@ -98,6 +104,7 @@ const EnterpriseRoutes = () =>: any {
     </Routes>);
 }
 ;
+<<<<<<< HEAD
 =======
 
 },
@@ -105,4 +112,6 @@ const EnterpriseRoutes = () =>: any {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default EnterpriseRoutes;

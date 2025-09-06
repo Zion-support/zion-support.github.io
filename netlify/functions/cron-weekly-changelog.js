@@ -1,24 +1,9 @@
-
-
-      ? {
-
-          Authorization: `token ${token}`,
-
-        }
-      : {}
-  });
-
-  if (throw new Error (`HTTP ${resp.status}`)) {
-  $2
-}
-  return resp.json ();
-;
-
 exports.handler = async function () {
   try {
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
 
   if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
   return resp && resp.json();
@@ -73,3 +58,5 @@ exports && exports.handler = async function () {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 },
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

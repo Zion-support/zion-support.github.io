@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -38,10 +39,13 @@ class ErrorBoundary extends React.Component {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -135,10 +139,26 @@ async /**
  */
 function create_job() {
 
+=======
+  headers: {
+=======
+
+export function ApiSampleCode() {;
+  // JavaScript example with Axios;
+  const jsAxiosExample = `// Using Axios with JavaScript;
+import axios from 'axios';
+// Configure Axios with the base URL and headers;
+const api = axios && axios.create({;
+  baseURL: 'https://api && api.zionai.com/v1',;
+  headers: {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    'Authorization': \`Bearer \${YOUR_API_KEY}\`;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   try {
     const response = await api.post ('/api / jobs', job_data);
     return response.data;
   } catch (error) {
+<<<<<<< HEAD
 
     'Authorization': \`Bearer \${YOUR_API_KEY}\`,
     'Content-Type': 'application/json'
@@ -566,10 +586,19 @@ async function apiRequest(endpoint, options = {}) {;
 async function getJobs(filters = {}) {
   // Convert filters to query string
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  }
+}
+main(),`;
+headers = {
+    'Authorization': f'Bearer {API_KEY}Content - Type': 'application / json';
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const params = new URLSearchParams();
   Object && Object.entries(filters).forEach(([key, value]) => {;
     params && params.append(key, value);
   });
+<<<<<<< HEAD
   const queryString = params.toString() ? \`?\${params.toString()}\` : '';
   return apiRequest(\`/api/jobs\${queryString}\`, { method: 'GET' })
 ;
@@ -836,6 +865,19 @@ main(),`,;
 
 ;
 <<<<<<< HEAD
+=======
+  const params = new URLSearchParams();
+  Object && Object.entries(filters).forEach(([key, value]) => {;
+    params && params.append(key, value);
+  });
+  }
+}
+main(),`;
+  return (
+}
+export default ApiSampleCode;
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 
 

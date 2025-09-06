@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface QuantumSpaceTechService2026 {
 export interface QuantumSpaceTechService2026 {;
+=======
+export interface QuantumSpaceTechService2026 {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   name: string;
   tagline: string;
@@ -9,6 +13,7 @@ export interface QuantumSpaceTechService2026 {;
   features: string[];
   link: string;
   category: string;
+<<<<<<< HEAD
   realImplementation: boolean;
   contactInfo: {
     mobile: string;
@@ -34,11 +39,22 @@ export interface QuantumSpaceTechService2026 {;
 =======
 
 
+=======
+  real_implementation: boolean;
+  contact_info: {
+    mobile: string;
+    email: string;
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
+];      mobile: "+1 302 464 0950";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-=======
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -53,19 +69,9 @@ export interface QuantumSpaceTechService2026 {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
   {
-<<<<<<< HEAD
     id: "2026-quantum-space-tech", name: "2026 Quantum Space Tech Platform",
     tagline: "Quantum computing meets space technology", price: "$599/month",
     description: "Revolutionary platform combining quantum computing with advanced space technology for 2026.",
-=======
-<<<<<<< HEAD
-    id: '2026-quantum-space-tech'
-    name: '2026 Quantum Space Tech Platform'
-    tagline: 'Quantum computing meets space technology'
-    price: '$599/month'
-    description:
-      'Revolutionary platform combining quantum computing with advanced space technology for 2026.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     features: [
       "Quantum computing";
       "Space technology";
@@ -76,6 +82,7 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
     link: "/services/2026-quantum-space-tech", category: "Quantum Space Tech 2026",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -88,17 +95,20 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
       email: "kleber@ziontechgroup.com";
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-<<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
+<<<<<<< HEAD
 =======
 =======
     id: "2026-quantum-space-tech",
@@ -144,3 +154,5 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

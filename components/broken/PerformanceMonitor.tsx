@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
@@ -16,18 +17,19 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
 })
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {;
   return new Promise ( (resolve) => {;
   if (typeof window !== 'undefined' && 'performance' in window) {;
   //Wait for page to be fully loaded if (document && document.readyState === 'complete') {;
 
-}) ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
-if (newMetrics.loadTime > 3000) {
-  const formatTime = (ms: number) : string => {
+if (newMetrics && newMetrics.loadTime > 3000) {;
+  const formatTime = (ms: number) : string => {;
   if (ms === 0) return 'N/A';
+<<<<<<< HEAD
 if (ms < 1000) return `$ {
   Math.round (ms)
 }ms`;
@@ -41,10 +43,13 @@ case 'tablet': return Tablet;
 default: return Laptop;
 }
 const getPerformanceScore = () => {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   let score = 0;
 let totalMetrics = 0;
-//FCP scoring (0-100) if (metrics.fcp !== null) {
+//FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
   totalMetrics++;
+<<<<<<< HEAD
 if (metrics.fcp < 1800) score += 100;
 else if (metrics.fcp < 3000) score += 75;
 else if (metrics.fcp < 4000) score += 50;
@@ -115,16 +120,18 @@ interface PerformanceMetrics {
   networkLatency?: number
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  if (score >= 90) return 'Excellent';
+if (score >= 70) return 'Good';
+if (score >= 50) return 'Needs Improvement';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 export default PerformanceMonitor;
-
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {
+  return new Promise ( (resolve) => {
+  // Check condition
+if ( {) {
+  $2
 }
 <<<<<<< HEAD
 =======
@@ -269,5 +276,8 @@ if (return 'Needs Improvement') {
 ;
 export default PerformanceMonitor;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

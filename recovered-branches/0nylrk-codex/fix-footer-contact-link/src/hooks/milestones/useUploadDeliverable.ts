@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,11 +9,14 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {useRecordActivity} from './useRecordActivity';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const useUploadDeliverable = () => {
   const { user } = useAuth();
@@ -67,11 +71,14 @@ export const useUploadDeliverable = () => {
         added_by: user.id
       }
       const deliverables = [...(milestone.deliverables |[]), newDeliverable];
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       const { error } = await supabase
         .from('project_milestones')
         .update({ deliverables })
         .eq('id', milestoneId);
       if (error) throw error;
+<<<<<<< HEAD
         .single(),
       
       if (fetchError) throw fetchError,
@@ -113,6 +120,10 @@ export const useUploadDeliverable = () => {
       console && console.error("Error uploading deliverable:", err);
       toast && toast.error("Failed to upload deliverable: " + err && err.message),
 
+=======
+      // Create activity record
+      await recordMilestoneActivity(
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return null
 =======
 export const useUploadDeliverable = () =>: any {
@@ -182,6 +193,7 @@ if (throw error) {
     } finally {
       setIsSubmitting (false);
     }
+<<<<<<< HEAD
 
       ),
       
@@ -265,3 +277,5 @@ export const useUploadDeliverable = () => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

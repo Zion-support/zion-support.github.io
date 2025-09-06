@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export interface ResumeBasicInfo {
@@ -14,6 +15,11 @@ export interface WorkExperience {;
   headline?: string,
   summary?: string;
 
+=======
+export interface ResumeBasicInfo {
+  id?: string;
+  title: string;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 export interface WorkExperience {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -24,10 +30,6 @@ export interface WorkExperience {
   end_date?: Date | string;
   is_current: boolean;
   description?: string;
-
-  company_logo_url?: string,
-  location?: string;
-
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,10 +47,6 @@ export interface Education {
   end_date?: Date | string;
   is_current: boolean;
   description?: string;
-
-  institution_logo_url?: string,
-  location?: string;
-
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,10 +59,6 @@ export interface Skill {
   id?: string;
   name: string;
   proficiency?: number;
-
-  category?: string,
-  years_experience?: number;
-
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,10 +73,6 @@ export interface Certification {
   issuing_organization: string;
   issue_date?: Date | string;
   expiration_date?: Date | string;
-
-  credential_id?: string,
-  credential_url?: string;
-
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -98,10 +88,6 @@ export interface PortfolioProject {
   technologies?: string[];
   image_url?: string;
   github_url?: string;
-
-  demo_url?: string,
-  pdf_url?: string;
-
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -118,6 +104,7 @@ export interface Resume {
   education: Education[];
   skills: Skill[];
   certifications: Certification[];
+<<<<<<< HEAD
 
   portfolio_projects?: PortfolioProject[]
 
@@ -206,3 +193,6 @@ export interface ResumeBasicInfo {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

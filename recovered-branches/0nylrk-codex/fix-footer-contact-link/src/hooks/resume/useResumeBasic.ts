@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useFetchResume  } from './useFetchResume';
@@ -7,10 +8,13 @@ export function useResumeBasic() {
 import {useFetchResume} from './useFetchResume';
 import {useResumeActions} from './useResumeActions';
 export function useResumeBasic() {;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const fetchResumeOperations = useFetchResume();
   const resumeActions = useResumeActions();
   return {
     // From useFetchResume
+<<<<<<< HEAD
     isLoading: fetchResumeOperations.isLoading |resumeActions.isLoading;
     error: fetchResumeOperations.error |resumeActions.error;
     resume: fetchResumeOperations.resume;
@@ -22,6 +26,9 @@ export function useResumeBasic() {;
     updateBasicInfo: resumeActions.updateBasicInfo,
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { useFetchResume } from './useFetchResume',;
 import { useResumeActions } from './useResumeActions',;
 export function useResumeBasic() {;
@@ -37,11 +44,17 @@ export function useResumeBasic() {;
     createResume: resumeActions.createResume;
     updateBasicInfo: resumeActions.updateBasicInfo;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     setActiveResume: resumeActions.setActiveResume}
 }
 =======

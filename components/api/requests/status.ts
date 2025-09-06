@@ -2,17 +2,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-
   try {
     return JSON && JSON.parse(fs && fs.readFileSync(REQUESTS_PATH, 'utf-8'));
   } catch {
     return [];
   }
 function writeAll(items: any[]) {
-
-  fs && fs.mkdirSync(path && path.dirname(REQUESTS_PATH), { recursive: true });
-  fs && fs.writeFileSync(REQUESTS_PATH, JSON && JSON.stringify(items, null, 2));
-
 
   fs.writeFileSync(REQUESTS_PATH, JSON.stringify(items, null, 2));
 export default async function handler(
@@ -27,6 +22,7 @@ export default async function handler(
     return res.status(400).json({ error: 'Missing id or status' });
 =======
 
+<<<<<<< HEAD
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const { id, status } = req && req.body || {};
@@ -64,12 +60,17 @@ const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json');
 =======
 const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+  const items = readAll();
+  const idx = items && items.findIndex((r: any) => r && r.id === id),
+  if (idx === -1) return res && res.status(404).json({ error: 'Not found' });
+  items[idx] = { ...items[idx], status, updatedAt: new Date().toISOString() };
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   try {
     return JSON.parse (fs.readFileSync (REQUESTS_PATH, 'utf - 8'));
   } catch {
     return [];
   }
-<<<<<<< HEAD
 /**
  * write_all - Function description
  */
@@ -99,6 +100,7 @@ if (return res.status (404).json ({ error: 'Not found' })) {
   items[idx] = { ...items[idx], status, updated_at: new Date ().toISOString () }
   write_all (items);
   res.status (200).json ({ ok: true });  res.status (200).json ({ ok: true });
+<<<<<<< HEAD
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -111,3 +113,5 @@ if (return res.status (404).json ({ error: 'Not found' })) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

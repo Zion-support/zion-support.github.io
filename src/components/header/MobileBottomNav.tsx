@@ -1,50 +1,47 @@
+import React from 'react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import { cn } from '@/lib/utils'
+import { useAuth } from '@/hooks/useAuth'
+import { useWishlist } from '@/hooks/useWishlist'
+import { useCart } from '@/context/CartContext'
+import { logWarn } from '@/utils/productionLogger'
+import {
+  Home
+  Search
+  MessageCircle
+  Heart
+  MessageSquare
+  ShoppingCart
+  User
+} from 'lucide-react'
+import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
 interface MobileBottomNavProps {
-  unread_count?: number;
-export /**
- * MobileBottomNav - Function description
- */
-function MobileBottomNav() {
-  const router = use_router ();
-  const { user } = use_auth ();
-  const is_authenticated = !!user;
-  const { items: wishlist_items } = use_wishlist (); // Renamed to avoid conflict;
-  const favorites_count = wishlist_items.length;
-  const cartContextValue = use_cart (); // Call hook at top level;
-  let cart_count = 0;
-  // Check condition
-if ( {) {
-  $2
+  unreadCount?: number
+export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
+  const router = useRouter();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+  const { items: wishlistItems } = useWishlist(); // Renamed to avoid conflict
+  const favoritesCount = wishlistItems.length
+  const cartContextValue = useCart(); // Call hook at top level
+  let cartCount = 0
+  if (cartContextValue && cartContextValue.items) {
+    cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0) } else {
+=======
+import React from "react",
+import { useRouter } from "next/router",
+import Link from "next/link",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth",
+import { useWishlist } from "@/hooks/useWishlist",
+import { useCart } from '@/context/CartContext',
+import { logWarn } from '@/utils/productionLogger',
+import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
+
+interface MobileBottomNavProps {
+  unreadCount?: number
 }
-
-  const nav_items = [;
-
-    {
-      name: 'Home'
-      href: '/'
-      icon: Home
-      matches: (path: string) => path === '/',    }
-    {
-
-
-import React from 'react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { cn } from '@/lib/utils';
-import { useAuth } from '@/hooks/useAuth';
-import { useWishlist } from '@/hooks/useWishlist';
-import { useCart } from '@/context/CartContext';
-import { logWarn } from '@/utils/productionLogger';
-import {;
-  Home,;
-  Search,;
-  MessageCircle,;
-  Heart,;
-  MessageSquare,;
-  ShoppingCart,;
-  User,;
-} from 'lucide-react';
-import { useCart } from '@/context/CartContext';
-import { logWarn } from '@/utils/productionLogger';
 
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const router = useRouter(),
@@ -60,14 +57,21 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   } else {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
   }
   const navItems = [
     {
+<<<<<<< HEAD
       name: 'Home'
       href: '/'
       icon: Home
@@ -131,10 +135,14 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     {
       name: "Browse",
       href: "/talent",
       icon: Search,
+<<<<<<< HEAD
 <<<<<<< HEAD
       matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
     },
@@ -148,10 +156,14 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     {
       name: "Community",
       href: "/community",
       icon: MessageCircle,
+<<<<<<< HEAD
 <<<<<<< HEAD
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     },
@@ -163,10 +175,14 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     {
       name: "Wishlist",
       href: "/wishlist",
       icon: Heart,
+<<<<<<< HEAD
 <<<<<<< HEAD
       matches: (path: string) => path.startsWith("/wishlist"),
       badge: favoritesCount,
@@ -180,11 +196,15 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     },
     {
       name: "Messages",
       href: "/messages",
       icon: MessageSquare,
+<<<<<<< HEAD
 <<<<<<< HEAD
       matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
       badge: unreadCount,
@@ -199,11 +219,15 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     },
     {
       name: "Cart",
       href: "/cart",
       icon: ShoppingCart,
+<<<<<<< HEAD
 <<<<<<< HEAD
       matches: (path: string) => path.startsWith("/cart"),
       badge: cartCount
@@ -217,10 +241,14 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     {
       name: "Dashboard",
       href: "/dashboard",
       icon: User,
+<<<<<<< HEAD
 <<<<<<< HEAD
       matches: (path: string) => path.startsWith('/dashboard'),
       authRequired: true,
@@ -230,12 +258,19 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const visibleItems = navItems.filter(
     item => !item.authRequired || (item.authRequired && isAuthenticated)
   )
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       matches: (path: string) => path.startsWith("/dashboard"),
       authRequired: true
     }
   ],
 
+  // Filter items based on auth status
+  const visibleItems = navItems.filter(item => 
+    !item.authRequired || (item.authRequired && isAuthenticated)
+  ),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -248,11 +283,17 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">
       <div className="flex justify-around items-center h-16">
         {visibleItems.map(item => (
           <Link
+<<<<<<< HEAD
             key={item.name}
             href={item.href}
             aria-label={item.name}
@@ -397,15 +438,19 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
               )}
-            </div>;
-            <span className='hidden sm:block text-xs font-medium'>;
-              {item && item.name}
-            </span>;
-          </Link>;
+            </div>
+            <span className="hidden sm:block text-xs font-medium">{item.name}</span>
+          </Link>
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>
     </nav>
@@ -419,10 +464,14 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
 }
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       </div>;
     </nav>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -500,3 +549,9 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
     </nav>);
 }
 ;
+=======
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

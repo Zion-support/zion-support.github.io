@@ -1,5 +1,13 @@
-}
+import { useState, useEffect } from "react",
+import { SEO } from "@/components/SEO",
+import { TalentCard } from "@/components/talent/TalentCard",
+import { useAuth } from "@/hooks/useAuth",
+import { supabase } from "@/integrations/supabase/client",
+import { TalentProfile } from "@/types/talent",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  // Using router.asPath instead of useLocation
 
+<<<<<<< HEAD
         const { data, error } = await supabase;
           .from ('saved_talents');
           .select (
@@ -65,7 +73,47 @@ if ( {) {
   const handleRequestHire = (talent: TalentProfile) =>: any {
     log_info ('Request to hire:', { data: talent });    toast ({
 
+=======
+  useEffect(() => {
+    if (!user) {
+      router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`)
+    }
+  }, [user, router]),
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+  useEffect(() => {
+    const fetchSavedTalents = async () => {
+      setIsLoading(true),
+      try {
+        if (!user) {
+          logWarn("User not authenticated."),
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          return
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+        }
+        const { data, error } = await supabase
+          .from("saved_talents")
+          .select(
+            `
+            talent_profile (
+              id
+              user_id
+              full_name
+              professional_title
+              profile_picture_url
+              hourly_rate
+              bio
+              years_experience
+              key_projects
+              skills
+              location
+              availability
+              is_verified
+            )
+          `
+          )
+=======
           .eq("user_id", user.id),
 
         if (error) {
@@ -177,6 +225,10 @@ export default function SavedTalentsPage() {;
     },;
     fetchSavedTalents();
   }, [user]),;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const handleViewProfile = (talentId: string) => {;
     router.push(`/talent/${talentId}`);
   };
@@ -194,6 +246,7 @@ export default function SavedTalentsPage() {;
         logWarn('User not authenticated.')
         return;
       }
+<<<<<<< HEAD
 
 
         setSavedTalents(prevTalents =>
@@ -231,10 +284,16 @@ if ( {) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       } else {
         // Add to saved talents
         const { error } = await supabase
           .from('saved_talents')
+<<<<<<< HEAD
 <<<<<<< HEAD
           .insert([{ user_id: user.id, talent_id: talentId }])
         if (error) {
@@ -248,15 +307,20 @@ if ( {) {
           .insert([{ user_id: user.id, talent_id: talentId }]),
   
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         if (error) {
           throw error
         }
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Fetch the updated talent profile and add it to the list
         const { data: talentData, error: talentError } = await supabase
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
+<<<<<<< HEAD
 <<<<<<< HEAD
           .single()
         if (talentError) {
@@ -367,6 +431,9 @@ export default function SavedTalentsPage() {;
           return;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           .single(),
   
         if (talentError) {
@@ -376,6 +443,7 @@ export default function SavedTalentsPage() {;
             description: "Failed to update saved talents. Please try again later.",
             variant: "destructive"}),
           return
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
   
         if (talentData) {
@@ -394,13 +462,18 @@ export default function SavedTalentsPage() {;
         variant: "destructive"})
     }
   },
+<<<<<<< HEAD
 =======
 
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO
@@ -412,16 +485,23 @@ export default function SavedTalentsPage() {;
         <p className="text-muted-foreground">
           Here are the talents you've saved for future reference.
         </p>
+<<<<<<< HEAD
         
 <<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {isLoading ? (
           <div className="text-center py-8">Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (
           <div className="py-8">
             <EmptyState
+<<<<<<< HEAD
               icon={<Heart className="h-8 w-8" />}
               title="No Saved Talents"
               description="You haven't saved any talents yet."
@@ -429,11 +509,17 @@ export default function SavedTalentsPage() {;
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               action={{ text: 'Browse Talent', href: '/talent' }}
               className="border-none bg-transparent text-center"
             />
           </div>
         ) : (
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {savedTalents.map((talent) => (
               <TalentCard
@@ -702,3 +788,14 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
   );
 }
 ;
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ))}
+          </div>
+        )}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

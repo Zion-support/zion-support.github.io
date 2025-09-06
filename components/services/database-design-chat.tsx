@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -28,8 +29,26 @@ const DatabaseDesignChat: NextPage = () => {
     <div>
       <Head>
 
+=======
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+const DatabaseDesignChat: NextPage = () => {;
+  return (
+    <div>;
+      <Head>;
+        <title>DatabaseDesignChat - Zion Tech Solutions</title>;
+        <meta name="description" content="DatabaseDesignChat service" />{" "}
+      <main>
+        <h1>DatabaseDesignChat</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
+      </main>
+    </div>
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       </Head>;
-
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
       <main>;
         <h1>DatabaseDesignChat</h1>;
@@ -37,9 +56,11 @@ const DatabaseDesignChat: NextPage = () => {
         <a href="/services">Back to Services</a>;
       </main>;
     </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default DatabaseDesignChat;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -53,6 +74,8 @@ export default DatabaseDesignChat;
         <title>DatabaseDesignChat - Zion Tech Solutions</title>
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import type { NextPage } from './next';
 import Head from './next / head';

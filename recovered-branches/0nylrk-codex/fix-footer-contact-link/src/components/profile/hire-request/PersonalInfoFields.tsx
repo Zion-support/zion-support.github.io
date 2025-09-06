@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   FormField
   FormItem
@@ -69,19 +70,13 @@ interface PersonalInfoFieldsProps {
 
 export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <>;
       <FormField
         control={form && form.control}
         name="requesterName"
-
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel className="text-white">Your Name</FormLabel>;
-            <FormControl>;
-              <Input
-                placeholder="Enter your full name" 
-
                 {...field}
                 className="bg-zion-blue-light/20 border-zion-blue-light text-white"
               />;
@@ -89,21 +84,6 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
             <FormMessage />;
           </FormItem>;
         )}
-
-      />;
-
-
-      <FormField
-        control={form && form.control}
-        name="requesterEmail"
-
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel className="text-white">Your Email</FormLabel>;
-            <FormControl>;
-              <Input
-                placeholder="Enter your email address" 
-
                 type="email"
                 {...field}
                 className="bg-zion-blue-light/20 border-zion-blue-light text-white"
@@ -112,6 +92,7 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
             <FormMessage />;
           </FormItem>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
     </>
@@ -128,6 +109,8 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
 }
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export /**
  * PersonalInfoFields - Function description
  */
@@ -169,6 +152,7 @@ function PersonalInfoFields() {
       />;
     </>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -178,3 +162,5 @@ function PersonalInfoFields() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

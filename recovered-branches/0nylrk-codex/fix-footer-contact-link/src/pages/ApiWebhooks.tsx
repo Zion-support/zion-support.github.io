@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -27,11 +28,17 @@ export function ApiWebhooks() {
   "event_type": "new_application",
   "created_at": "2023-06-10T15:42:31Z",
   "data": {
+=======
+  "event_type": "new_application";
+  "created_at": "2023-06-10T15: 42:31Z";
+  "data": {;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     "application_id": "app-123456";
     "job_id": "job-789";
     "talent_id": "talent-456";
     "status": "new";
     "cover_letter": "I'm excited to apply for this position...";
+<<<<<<< HEAD
 
 import React from './react';
 import ApiDocsLayout from "@/components / developers / ApiDocsLayout";
@@ -597,6 +604,48 @@ app.listen(3000, () => {;
 
 ;
 <<<<<<< HEAD
+=======
+  const newHirePayload = `{
+=======
+    "resume_url": "https://storage && storage.zionai.com/resumes/resume-123 && 123.pdf",;
+    "created_at": "2023-06-10T15:42:31Z";
+  }
+}`;
+
+  const newHirePayload = `{;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  "event_type": "talent_hired";
+  const quoteReceivedPayload = `{
+=======
+    "status": "offer_accepted",;
+    "created_at": "2023-06-12T09:15:22Z";
+  }
+}`;
+
+  const quoteReceivedPayload = `{;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  "event_type": "quote_received";
+  "event_type": "message_received";
+  "created_at": "2023-06-18T14: 22:15Z";
+  "data": {;
+    "message_id": "msg-123";
+    "conversation_id": "conv-456";
+    "sender_id": "user-789";
+    "content": "Hi, I'd like to discuss the project details.";
+    "created_at": "2023-06-18T14:22:15Z";
+  }
+}`;
+  switch (event_type) {
+    case 'new_application':;
+      console.log ('New application received:', data.application_id);
+      // Process the new application...;
+      break;
+}),`;
+  return (
+}
+export default ApiWebhooks;
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 
 

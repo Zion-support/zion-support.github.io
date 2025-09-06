@@ -1,16 +1,17 @@
-import React, {;
-  useState,;
-  useRef,;
-  useEffect,;
-  FormEvent,;
-  KeyboardEvent,;
-} from 'react';
-import { Button } from '@/components/ui/button';
+import React, {
+  useState
+  useRef
+  useEffect
+  FormEvent
+  KeyboardEvent
+} from 'react'
+import { Button } from '@/components/ui/button'
+=======
+=======
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
-
-import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
-import { Button } from "@/components/ui/button",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Send } from 'lucide-react'
 interface ChatInputProps {
   onSend: (message: string) => void
@@ -29,6 +30,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
     inputRef.current?.focus()
 interface ChatInputProps {
 
+<<<<<<< HEAD
   onSend: (message: string) => void
   disabled?: boolean
 }
@@ -162,10 +164,14 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
       <textarea
         ref={inputRef}
+<<<<<<< HEAD
         className='flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light'
         placeholder='Type your message...'
         value={message}
@@ -191,10 +197,16 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
       />
+<<<<<<< HEAD
 
         className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light"
         placeholder="Type your message..."
@@ -219,10 +231,16 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       </Button>
     </form>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
         disabled={!message.trim() |disabled}
 =======
@@ -230,25 +248,15 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         disabled={!message.trim() || disabled}
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       >
         <Send className="h-5 w-5" />
       </Button>
     </form>
   )
 }
-
-
-      <Button;
-        type='submit';
-        className='bg - zion - purple hover:bg - zion - purple - light text - white rounded - full p - 2 h - 10 w - 10 flex items - center justify - center';
-        disabled={!message.trim () || disabled}      >;
-        <Send className='h - 5 w - 5' />;
-      </Button>;
-    </form>);
-}
-        disabled={!message.trim () || disabled}
-      >;
-        <Send className="h - 5 w - 5" />;
-      </Button>;
-    </form>);
-}
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

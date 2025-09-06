@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
@@ -44,25 +45,31 @@ import { logErrorToProduction } from '@/utils / production_logger';
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { logErrorToProduction } from '@/utils/productionLogger'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {
-  Zap,
-  Download,
-  Trash2,
-  RefreshCw,
-  Settings,
-  Activity,
-  Package,
-  Monitor,
-} from 'lucide-react';
+  Zap
+  Download
+  Trash2
+  RefreshCw
+  Settings
+  Activity
+  Package
+  Monitor
+} from 'lucide-react'
+
 interface QuickAction {
   id: string;
   label: string;
@@ -70,20 +77,16 @@ interface QuickAction {
   icon: React.ReactNode;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
-  dangerous?: boolean;
-export /**
- * QuickActions - Function description
- */
-function QuickActions() {
-  const { user } = use_auth ();
-  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
-  const is_allowed = process.env.NODE_ENV !== 'production' || is_admin;
-  // Check condition
-if ( {) {
-  $2
-}
-    return null;
+  dangerous?: boolean
+export function QuickActions() {
+
+  const { user } = useAuth()
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
+  if (!isAllowed) {
+    return null
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false)
   const [isProcessing, setIsProcessing] = useState<string | null>(null)
@@ -101,14 +104,19 @@ if ( {) {
     setIsProcessing (action_id);    try {
       await action ();
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    setIsProcessing(actionId);    try {
+      await action()
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } catch (error) {
-      logErrorToProduction (`Failed to execute action ${action_id}:`, {
-        data: error,
-      });
+      logErrorToProduction(`Failed to execute action ${actionId}:`, {
+        data: error
+      })
     } finally {
       setIsProcessing(null)
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -117,6 +125,9 @@ if ( {) {
       id: 'enable - performance - monitor',
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
@@ -156,11 +167,15 @@ export function QuickActions() {;
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const actions: QuickAction[] = [
     // Performance Actions
     {
@@ -170,6 +185,7 @@ export function QuickActions() {;
       icon: <Activity className="w-4 h-4" />,
       category: 'performance',
       action: () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
         localStorage.setItem('performance-monitoringtrue'),
         window.location.reload()
@@ -187,6 +203,9 @@ export function QuickActions() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
@@ -194,6 +213,7 @@ export function QuickActions() {;
       icon: <Package className="w-4 h-4" />,
       category: 'performance',
       action: () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
         localStorage.setItem('bundle-analyzertrue'),
         window.location.reload()
@@ -211,6 +231,9 @@ export function QuickActions() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     {
       id: 'clear-cache',
       label: 'Clear Cache',
@@ -218,12 +241,14 @@ export function QuickActions() {;
       icon: <Trash2 className="w-4 h-4" />,
       category: 'maintenance',
       dangerous: true,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       action: () => {
         if ('caches' in window) {
           caches.keys().then(names => {
             names.forEach(name => caches.delete(name))
           })
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         localStorage.clear()
         sessionStorage.clear()
@@ -246,6 +271,9 @@ export function QuickActions() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     {
       id: 'preload-critical-resources'
       label: 'Preload Critical Resources'
@@ -257,8 +285,42 @@ export function QuickActions() {;
         const criticalFonts = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   dangerous?: boolean;
+=======
+        ]
+        criticalFonts.forEach(font => {
+          const link = document.createElement('link')
+          link.rel = 'preload'
+          link.as = 'font'
+          link.type = 'font/woff2'
+          link.crossOrigin = 'anonymous'
+          link.href = font
+          document.head.appendChild(link)
+        })
+        // Preload critical images
+        const criticalImages = ['/logos/zion-logo.png', '/images/hero-bg.webp']
+        criticalImages.forEach(img => {
+          const link = document.createElement('link')
+          link.rel = 'preload'
+          link.as = 'image'
+          link.href = img
+          document.head.appendChild(link)
+        })
+          '/fonts/inter-var.woff2/fonts/cal-sans.woff2'
+        ],
+        
+        criticalFonts.forEach(font => {
+          const link = document.createElement('link'),
+          link.rel = 'preload',
+          link.as = 'font',
+          link.type = 'font/woff2',
+          link.crossOrigin = 'anonymous',
+          link.href = font,
+          document.head.appendChild(link)
+        }),
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
         // Preload critical images
         const criticalImages = [
@@ -273,6 +335,7 @@ export function QuickActions() {;
           document.head.appendChild(link)
         })
       }},
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       id: 'download-performance-report',
       label: 'Download Performance Report',
@@ -308,6 +371,7 @@ export function QuickActions() {;
         document.body.removeChild(a),
         URL.revokeObjectURL(url)
       }},
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
@@ -316,8 +380,7 @@ export function QuickActions() {;
       category: 'development',
       dangerous: true,
       action: () => {
-        throw new Error('Test error for Sentry integration - this is intentional!')
-      }},
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
@@ -337,7 +400,9 @@ export function QuickActions() {;
     performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
     development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
         const blob = new Blob([JSON && JSON.stringify(metrics, null, 2)], {;
           type: 'application/json',;
         });
@@ -530,10 +595,14 @@ export function QuickActions() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
         <Button
+<<<<<<< HEAD
           variant='outline'
           size='sm'
           onClick={() => setIsVisible(true)}
@@ -551,16 +620,15 @@ export function QuickActions() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           Quick Actions
         </Button>
       </div>
     )
-          className='bg-background/80 backdrop-blur-sm'        >;
-          <Settings className='w-4 h-4 mr-2' />;
-          Quick Actions;
-        </Button>;
-      </div>;
-    );
   }
   return (
     <div className="fixed bottom-4 left-4 z-50 w-80">
@@ -572,6 +640,7 @@ export function QuickActions() {;
               Quick Actions
             </CardTitle>
             <Button
+<<<<<<< HEAD
 
 
               variant="ghost"
@@ -584,16 +653,25 @@ export function QuickActions() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               ✕
             </Button>
           </div>
         </CardHeader>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>
@@ -638,6 +716,7 @@ export function QuickActions() {;
     </div>;
   );
 } ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -832,3 +911,8 @@ if ( {) {
 }
 }
 }
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

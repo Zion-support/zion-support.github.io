@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,10 +36,13 @@ export default function BlogPost() {;
   const { slug } = useParams() as { slug: string },;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const navigate = useNavigate();
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
   const [showShareMenu, setShowShareMenu] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
   useEffect(() => {
     // Find the current post by slug
@@ -190,6 +194,9 @@ export default function BlogPost() {;
   if (!post) {;
     return (;
 
+=======
+    return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <AppLayout>;
         <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">;
           <div className="animate-pulse">Loading article...</div>;
@@ -197,6 +204,7 @@ export default function BlogPost() {;
       </AppLayout>;
     );
   }
+<<<<<<< HEAD
 
 ;
   // Helper function to get share URL;
@@ -264,11 +272,14 @@ export default function BlogPost() {;
                 <img 
                   src={post.author.avatarUrl} 
                   alt={post.author.name} 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   className="w-12 h-12 rounded-full mr-3"
                   onError={(e) => {;
                     const target = e && e.target as HTMLImageElement;
                     target && target.src = "https: //images && images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80";
                   }}
+<<<<<<< HEAD
                 />
                 <div>
                   <p className="text-white font-medium">{post.author.name}</p>
@@ -392,12 +403,15 @@ export default function BlogPost() {;
                         href={getShareUrl('linkedin')} 
                         target="_blank" 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                         rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;
                         <Linkedin className="h-4 w-4 mr-2" />;
                         <span>LinkedIn</span>;
                       </a>;
                     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -446,29 +460,18 @@ export default function BlogPost() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                  )}
+                className="object-cover w-full h-full"
+                onError={(e) => {;
+                  const target = e && e.target as HTMLImageElement;
+                  target && target.src = "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 }}
-
-              />;
-            </div>;
-          </div>;
-
-          {/* Article content */}
-          <div className="max-w-4xl mx-auto">;
-            <div
-              className="prose prose-lg prose-invert max-w-none"
-              dangerouslySetInnerHTML={{ __html: post && post.content }}
-            />;
-
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2 mt-12">;
-              {post && post.tags.map(tag => (;
-                <span
-                  key={tag} 
-                  className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full">;
-
                   #{tag}
                 </span>;
               ))}
+<<<<<<< HEAD
             </div>
             <Separator className="my-12 bg-zion-blue-light" />
             {/* Related articles */}
@@ -523,6 +526,8 @@ export default function BlogPost() {;
                             const target = e && e.target as HTMLImageElement;
                             target && target.src = "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                           }}
                         />;
                       </div>;
@@ -532,24 +537,25 @@ export default function BlogPost() {;
                       </div>;
                     </Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   ))}
                 </div>;
               </div>;
             )}
-
-
-
             {/* Navigation */}
             <div className="flex justify-between items-center mt-12">;
               <Button
                 variant="outline"
                 className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
+<<<<<<< HEAD
                 asChild
               >
                 <Link to="/blog">
@@ -820,6 +826,8 @@ if ( {) {
                 <Link to="/blog">;
                   <ChevronLeft className="mr - 2 h - 4 w - 4" />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   All Articles;
                 </Link>;
               </Button>;
@@ -827,9 +835,10 @@ if ( {) {
           </div>;
         </div>;
       </div>;
-
+=======
     </AppLayout>);
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 =======
@@ -837,3 +846,6 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

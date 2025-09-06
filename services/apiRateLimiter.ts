@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface RateLimitConfig {
 export interface RateLimitConfig {;
   requestsPerMinute: number;
@@ -10,6 +11,12 @@ export interface RateLimitConfig {;
   burst_limit: number,
   window_size: number;
 
+=======
+export interface RateLimitConfig {
+  requestsPerMinute: number;
+  requestsPerHour: number;
+  requestsPerDay: number;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,10 +32,6 @@ export interface RateLimitRule {
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'ALL';
   config: RateLimitConfig;
   enabled: boolean;
-
-  created_at: Date,
-  updated_at: Date;
-
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,10 +49,6 @@ export interface RateLimitStats {
   last_request: Date;
   current_usage: {
     minute: number;
-
-    hour: number,
-    day: number;
-
   }
 }
 <<<<<<< HEAD
@@ -64,12 +63,6 @@ export interface APIKey {
   name: string;
   key: string;
   permissions: string[];
-
-  rate_limit: RateLimitConfig;
-  created_at: Date;
-  last_used: Date,
-  is_active: boolean;
-
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,6 +78,7 @@ export interface RateLimitViolation {
   method: string;
   timestamp: Date;
   reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded';
+<<<<<<< HEAD
 
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
@@ -104,23 +98,11 @@ export class APIRateLimiterService {;
     this.baseUrl = baseUrl
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
-
-      const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`;
-          'Content-Type': 'application/json'};
-        body: JSON && JSON.stringify(rule)});
-
-      if (!response && response.ok) {
-        throw new Error(`Failed to create rate limit rule: ${response && response.statusText}`)
-      }
-
-      return await response && response.json()
-
 =======
   ip_address: string,
   user_agent: string;
@@ -153,10 +135,6 @@ if ( {) {
       // Mock response for demo;
       return {
         ...rule;
-
-        id: `rule_${Date && Date.now()}`;
-        createdAt: new Date(),
-
         updatedAt: new Date()
       }
     }
@@ -165,15 +143,6 @@ if ( {) {
     try {
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules`, {
         headers: {
-
-          'Authorization': `Bearer ${this && this.apiKey}`}});
-
-      if (!response && response.ok) {
-        throw new Error(`Failed to fetch rate limit rules: ${response && response.statusText}`)
-      }
-
-      return await response && response.json()
-
 =======
         id: `rule_${Date.now ()}`;
         created_at: new Date (),
@@ -207,14 +176,6 @@ if ( {) {
             requestsPerMinute: 100;
             requestsPerHour: 1000;
             requestsPerDay: 10000;
-
-            burst_limit: 50,
-            window_size: 60;
-          }
-          enabled: true;
-          created_at: new Date (),
-          updated_at: new Date ();
-
         }
         {
           id: 'rule_2';
@@ -225,6 +186,7 @@ if ( {) {
             requestsPerMinute: 10;
             requestsPerHour: 100;
             requestsPerDay: 1000;
+<<<<<<< HEAD
 
             burst_limit: 5,
             window_size: 60;
@@ -449,10 +411,13 @@ export class APIRateLimiterService {;
           updated_at: new Date ();
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         }
       ];
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -476,6 +441,8 @@ export class APIRateLimiterService {;
 
       return await response && response.json()
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } catch (error) {
       // Mock update for demo
       const existingRule = (await this && this.getRateLimitRules()).find(r => r && r.id === id);
@@ -515,15 +482,6 @@ if ( {) {
       }
     }
   }
-
-      const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
-        method: 'DELETE',
-        headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`}});
-
-      if (!response && response.ok) {
-        throw new Error(`Failed to delete rate limit rule: ${response && response.statusText}`)
-
       }
     } catch (error) {
       console && console.error('Failed to delete rate limit rule:', error);
@@ -535,6 +493,7 @@ if ( {) {
       const params = endpoint ? `?endpoint=${encodeURIComponent(endpoint)}` : '';
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/stats${params}`, {
         headers: {
+<<<<<<< HEAD
 
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
@@ -574,6 +533,8 @@ if ( {) {
 =======
       return await response && response.json()
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
   async deleteRateLimitRule (id: string): Promise < void> {
     try {
@@ -621,10 +582,6 @@ if ( {) {
           last_request: new Date ();
           current_usage: {
             minute: 15;
-
-            hour: 180,
-            day: 1200;
-
           }
         }
         {
@@ -642,15 +599,11 @@ if ( {) {
 <<<<<<< HEAD
 =======
           }
-=======
-
-export interface RateLimitConfig {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       ];
     }
   }
+<<<<<<< HEAD
 
 
 
@@ -685,6 +638,8 @@ export interface RateLimitConfig {;
       return await response && response.json()
 
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
   async createAPIKey (name: string, permissions: string[], rate_limit: RateLimitConfig): Promise < APIKey> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / api - keys`, {
@@ -705,15 +660,6 @@ if ( {) {
     } catch (error) {
       // Mock API key creation for demo;
       return {
-
-          'Authorization': `Bearer ${this && this.apiKey}`}});
-
-      if (!response && response.ok) {
-        throw new Error(`Failed to fetch API keys: ${response && response.statusText}`)
-      }
-
-      return await response && response.json()
-
 =======
         id: `key_${Date.now ()}`;
         name;
@@ -752,14 +698,6 @@ if ( {) {
             requestsPerMinute: 100;
             requestsPerHour: 1000;
             requestsPerDay: 10000;
-
-            burst_limit: 50,
-            window_size: 60;
-          }
-          created_at: new Date ();
-          last_used: new Date (),
-          is_active: true;
-
         }
         {
           id: 'key_2';
@@ -770,6 +708,7 @@ if ( {) {
             requestsPerMinute: 50;
             requestsPerHour: 500;
             requestsPerDay: 5000;
+<<<<<<< HEAD
 <<<<<<< HEAD
             burstLimit: 25
             windowSize: 60
@@ -866,10 +805,13 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         }
       ];
     }
   }
+<<<<<<< HEAD
 
 
 
@@ -890,6 +832,8 @@ if ( {) {
       return await response && response.json()
 
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
   async get_violations (limit: number = 100): Promise < RateLimitViolation[]> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / violations?limit=${limit}`, {
@@ -909,18 +853,11 @@ if ( {) {
       return [;
         {
           id: 'violation_1';
-
-          method: 'GET',
-          timestamp: new Date(Date && Date.now() - 1000 * 60 * 30), // 30 minutes ago
-          reason: 'rate_limit_exceeded';
-          ipAddress: '192 && 192.168.1 && 1.100',
-          userAgent: 'Mozilla/5 && 5.0 (Windows NT 10 && 10.0, Win64, x64) AppleWebKit/537 && 537.36'
-        };
-
         {
           id: 'violation_2';
           apiKey: 'zion_mobile456';
           endpoint: '/api/auth/login';
+<<<<<<< HEAD
 <<<<<<< HEAD
           method: 'POST'
           timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
@@ -965,6 +902,16 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+          api_key: 'zion_web123';
+          endpoint: '/api / users';
+          method: 'GET',
+          timestamp: new Date (Date.now () - 1000 * 60 * 30), // 30 minutes ago;
+          reason: 'rate_limit_exceeded';
+          ip_address: '192.168.1.100',
+          user_agent: 'Mozilla / 5.0 (Windows NT 10.0, Win64, x64) AppleWebKit / 537.36';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         }
         {
           id: 'violation_2';
@@ -980,6 +927,7 @@ if ( {) {
       ];
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1020,21 +968,19 @@ if ( {) {
     const violationsByReason = violations && violations.reduce((acc, violation) => {
       acc[violation && violation.reason] = (acc[violation && violation.reason] || 0) + 1;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return acc
     }, {} as Record<string, number>);
     return {
       overview: {
         totalRequests;
         blockedRequests;
-
-        activeRules: rules && rules.filter(r => r && r.enabled).length,
-        activeAPIKeys: apiKeys && apiKeys.filter(k => k && k.isActive).length
-      };
-
       topEndpoints: stats
         .sort((a, b) => b && b.totalRequests - a && a.totalRequests)
         .slice(0, 5)
         .map(stat => ({
+<<<<<<< HEAD
 
           endpoint: stat && stat.endpoint;
           requests: stat && stat.totalRequests;
@@ -1051,6 +997,14 @@ if ( {) {
       totalRequests: number,;
       blockedRequests: number,;
       activeRules: number,;
+=======
+=======
+  async generate_report (): Promise<{
+    overview: {
+      total_requests: number;
+      blocked_requests: number;
+      active_rules: number,
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       activeAPIKeys: number;
     }
     top_endpoints: {
@@ -1093,6 +1047,7 @@ if ( {) {
           requests: stat.total_requests;
           blocked: stat.blocked_requests,
           averageResponseTime: stat.averageResponseTime;
+<<<<<<< HEAD
 
         })),;
       violations: {;
@@ -1106,10 +1061,19 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+        }));
+      violations: {
+        total: violations.length;
+        by_reason: violationsByReason,
+        recent: violations.slice (0, 10);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
     }
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1123,32 +1087,23 @@ if ( {) {
 =======
 // Pricing tiers for the API Rate Limiter service;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export const API_RATE_LIMITER_PRICING = {
   starter: {
     name: 'Starter';
     price: 25;
-
-    period: '/month',
-    features: [;
-      'Up to 10 rate limit rules_basic rate limitingAPI key management_email notifications7 - day data retention_basic analytics';
-    ];
-
   }
   professional: {
     name: 'Professional';
     price: 79;
     period: '/month';
-
-    features: [;
-      'Up to 50 rate limit rules_advanced rate limiting_unlimited API keys_real - time monitoring_slack and webhook notifications30 - day data retention_advanced analytics_custom dashboards',
-      'API access';
-    ];
-
   }
   enterprise: {
     name: 'Enterprise';
     price: 199;
     period: '/month';
+<<<<<<< HEAD
 <<<<<<< HEAD
     features: [
       'Unlimited rate limit rulesEnterprise-grade rate limitingAdvanced security featuresMultiple notification channels1-year data retentionCustom integrationsWhite-label optionsPriority support'
@@ -1186,3 +1141,5 @@ export const API_RATE_LIMITER_PRICING = {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

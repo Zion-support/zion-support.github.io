@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import {
@@ -27,10 +28,13 @@ import {
 
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const handleSignOut = async () => {
     try {
       await logout ();
     } catch (error) {
+<<<<<<< HEAD
 
 import {;
   DropdownMenu,;
@@ -78,6 +82,11 @@ export function UserMenu() {
   },
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      });
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   if (!user) {;
     return (
@@ -94,6 +103,7 @@ export function UserMenu() {
     );
   }
   return (
+<<<<<<< HEAD
 
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -183,46 +193,15 @@ export function UserMenu() {;
   }
 ;
   return (;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <DropdownMenu>;
       <DropdownMenuTrigger asChild>;
         <Button variant="ghost" className="h-8 w-8 rounded-full">;
           <Avatar className="h-8 w-8">;
-            <AvatarImage src={user.avatarUrl || ""} alt={user.displayName || "User Avatar"} />;
-            <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>;
-
-          </Avatar>;
-          <span className="sr-only">Open user menu</span>;
-        </Button>;
-      </DropdownMenuTrigger>;
-      <DropdownMenuContent align="end">;
-        <div className="grid gap-2 px-2 py-2">;
-          <div className="text-sm font-medium leading-none">;
-            {user && user.displayName || "User"}
-          </div>;
-          <div className="text-muted-foreground text-xs leading-none">;
-            {user && user.email}
-          </div>;
-        </div>;
-        <DropdownMenuSeparator />;
-        <DropdownMenuItem asChild>;
-          <Link to="/dashboard">Dashboard</Link>;
-        </DropdownMenuItem>;
-        <DropdownMenuItem asChild>;
-          <Link to="/profile">Profile</Link>;
-        </DropdownMenuItem>;
-        <DropdownMenuItem asChild>;
-          <Link to="/saved-talents">Saved Talents</Link>;
-        </DropdownMenuItem>;
-        <DropdownMenuItem asChild>;
-          <Link to="/wallet">Wallet</Link>;
-        </DropdownMenuItem>;
-        <DropdownMenuSeparator />;
-        <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>;
-      </DropdownMenuContent>;
-    </DropdownMenu>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+            <AvatarImage
   );
-
+=======
       toast ({
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
@@ -290,6 +269,7 @@ if ( {) {
         <DropdownMenuItem on_click={handleSignOut}>Sign Out</DropdownMenuItem>;
       </DropdownMenuContent>;
     </DropdownMenu>);
+<<<<<<< HEAD
 
 }
 =======
@@ -301,3 +281,7 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -64,10 +65,13 @@ import { GradientHeading } from "@/components/GradientHeading";
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
@@ -83,53 +87,19 @@ export default function SearchFeature() {
     "url": "https://app.ziontechgroup.com/features/search"
 
   };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   return (
-    <>;
-
-
-            <li>;
-              Sort by rating, price, or recency to surface the best options.;
-            </li>;
-          </ul>;
-
-          <h2 className='text - 2xl font - bold mb - 4'>;
-            Frequently Asked Questions;
-          </h2>;
-          <div className='space - y-4 mb - 12'>;
-            <div>;
-              <p className='font - semibold'>;
-                Can I search in multiple languages?;
-              </p>;
-              <p className='text - zion - slate - light'>;
-
-                Yes, the search engine supports queries in all interface;
-                languages.;
-              </p>;
-            </div>;
-            <div>;
-
-              <p className='font - semibold'>How are results ranked?</p>;
-              <p className='text - zion - slate - light'>;
-
-                A combination of relevance scoring and community ratings;
-                determines the order.;
-              </p>;
-            </div>;
-          </div>;
-
-        title="Advanced Search"
-        description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
-        keywords="search engine, filtering, tech marketplace search"
-        canonical="https://app.ziontechgroup.com/features/search"
-
-
-
+    <>
+      <SEO
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -163,6 +133,7 @@ export default function SearchFeature() {
               <p className="text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
@@ -208,6 +179,11 @@ export default function SearchFeature() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/search">Try Search</Link>
@@ -218,12 +194,16 @@ export default function SearchFeature() {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -259,18 +239,47 @@ export default function SearchFeature() {;
             Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
-            <img
-              src="https: //placehold && placehold.co/800x400"
-              alt="Screenshot of search results"
-              className="object-cover"
-
-
+            <img;
+              src="https: //placehold.co/800x400";
+              alt="Screenshot of search results";
+              className="object-cover";
+            />;
+          </div>;
+          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>;
+          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">;
+            <li>Find the right expert or product without endless scrolling.</li>;
+            <li>Save favorite searches and get notified of new matches.</li>;
+            <li>Sort by rating, price, or recency to surface the best options.</li>;
+          </ul>;
+          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>;
+          <div className="space-y-4 mb-12">;
+            <div>;
+              <p className="font-semibold">Can I search in multiple languages?</p>;
+              <p className="text-zion-slate-light">Yes, the search engine supports queries in all interface languages.</p>;
+            </div>;
+            <div>;
+              <p className="font-semibold">How are results ranked?</p>;
+              <p className="text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p>;
+            </div>;
+          </div>;
+          <div className="text-center">;
+            <Button size="lg" className="bg-zion-purple text-white" asChild>;
               <Link href="/search">Try Search</Link>;
             </Button>;
           </div>;
         </div>;
       </main>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 ;
+=======
+    </>;
+  );
+}
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

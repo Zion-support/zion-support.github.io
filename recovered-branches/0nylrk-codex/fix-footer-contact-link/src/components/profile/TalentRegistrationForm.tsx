@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -176,12 +177,15 @@ interface EnhancedProfile {
 }
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [skillTags, setSkillTags] = useState<string[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null);
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+<<<<<<< HEAD
 
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly;
@@ -459,50 +463,26 @@ export function TalentRegistrationForm() {;
           categorySkills.forEach(skill => {
             if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
               newSkills.push(skill)
+=======
+      setSkillTags([...skillTags, skillInput]);
+      form && form.setValue("skills", "");
+    }
+      }
+      setGeneratedContent(data as EnhancedProfile);
+    } finally {
+      setIsGenerating (false);
+    }
+  }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
-type CategoryType = 'programming' | 'devops' | 'platforms' | 'soft_skills' | 'other';
-;
-interface CategorizedSkills {
-  programming: string[],
-  devops: string[],
-  platforms: string[],
-  soft_skills: string[],
-  other: string[];
-}
-interface EnhancedProfile {
-  summary: string,
-  categorized_skills: CategorizedSkills;
-}
-export /**
- * TalentRegistrationForm - Function description
- */
-function TalentRegistrationForm() {
-  // Remove the use_toast () hook since we're importing the toast function directly;
-  const { user } = use_auth ();
-  const [is_submitting, setIsSubmitting] = useState (false);
-  const [skill_tags, setSkillTags] = useState < string[]>([]);
-  const [is_generating, setIsGenerating] = useState (false);
-  const [generated_content, setGeneratedContent] = useState < EnhancedProfile | null>(null);
-  const [uploaded_avatar, setUploadedAvatar] = useState < string | null>(null);
-;
-  // Initialize form with default values;
-  const form = use_form < TalentFormValues>({
-    resolver: zod_resolver (talentProfileSchema),
-    default_values: {
-      name: user?.display_name || "",
-      title: "",
-      bio: "",
-      location: "",
-      skills: "",
-      hourly_rate: "",
-      availability: "available",
-      enhanced_profile: true}}),
-  // Handle adding skill tags;
-  const handleAddSkill = () =>: any {
-    const skill_input = form.get_values ("skills");
-    if () {) {
+  // Apply generated content to form;
+  const applyGeneratedContent = () =>: any {
+    // Check condition
+if ( {) {
   $2
 }
+<<<<<<< HEAD
       setSkillTags ([...skill_tags, skill_input]);
       form.set_value ("skills", "");
     }
@@ -525,10 +505,29 @@ function TalentRegistrationForm() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      form.set_value ("bio", generated_content.summary);
+;
+      // Extract all skills from categorized skills and properly type cast them;
+      const allCategorizedSkills = generated_content.categorized_skills;
+      const new_skills: string[] = [],
+      // Safely extract and flatten skills from each category;
+      Object.values (allCategorizedSkills).for_each (category_skills => {
+        if () {) {
+  $2
+}
+          category_skills.for_each (skill => {
+            if () {) {
+  $2
+}
+              new_skills.push (skill);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             }
           });
         }
       });
+<<<<<<< HEAD
       if (newSkills.length > 0) {
         setSkillTags([...skillTags, ...newSkills])
       }
@@ -539,10 +538,13 @@ function TalentRegistrationForm() {
   const getCategoryColor = (category: CategoryType) => {;
     switch (category) {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
       case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
       case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
       case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
+<<<<<<< HEAD
 <<<<<<< HEAD
       case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500'
       default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
@@ -662,69 +664,18 @@ function TalentRegistrationForm() {
   // Send notification email;
   const sendEnhancementNotification = async (user_id: string, email: string) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     try {
       await supabase.functions.invoke ('send - email', {
         body: {
-
-      case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500',;
-      default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
-    }
-
         }
       });
     } catch (error) {;
       console && console.error("Failed to send notification email:", error);
     }
-
-  };
-
-  // Handle form submission;
-  const onSubmit = async (values: TalentFormValues) => {;
-    if (skillTags && skillTags.length === 0) {;
-      toast({;
-        title: "Skills required",;
-        description: "Please add at least one skill to your profile.",;
-        variant: "destructive"}),;
-      return;
-
     }
     setIsSubmitting(true);
-
-          to: email,
-          subject: "Your Zion Talent Profile Has Been Enhanced",
-          html: `;
-          <div style="font - family: Arial, sans - serif, max - width: 600px, margin: 0 auto, ">;
-            <h2 style="color: #6D28D9, ">Profile Enhancement Complete</h2>;
-            <p > Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>;
-            <p > We've added a professional summary and categorized your skills to help you stand out.</p>;
-            <p > You can review and edit these enhancements in your profile dashboard.</p>;
-            <div style="margin - top: 30px, padding - top: 20px, border - top: 1px solid #eee, ">;
-              <p style="color: #666, font - size: 12px, ">© ${new Date ().getFullYear ()} Zion Marketplace</p>;
-            </div>;
-          </div>;
-          `;
-        }
-      });
-    } catch (error) {
-      console.error ("Failed to send notification email:", error);
-    }
-  }
-;
-  // Handle form submission;
-  const on_submit = async (values: TalentFormValues) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
-        title: "Skills required",
-        description: "Please add at least one skill to your profile.",
-        variant: "destructive"}),
-      return;
-    }
-    setIsSubmitting (true);
-;
-
     try {
       // For actual implementation with Supabase;
       // Check condition
@@ -733,60 +684,12 @@ if ( {) {
 }
         throw new Error ("User not authenticated");
       }
-
-      // Enhance profile if not already done;
-      let final_summary = "";
-      let final_skills = skill_tags;
-;
-      // Check condition
-if ( {) {
-  $2
-}
-
         try {
           const { data: ai_data } = await supabase.functions.invoke ('talent - profile - enhancer', {
             body: {
-
-
-    try {;
-      // For actual implementation with Supabase;
-      if (!user?.id) {;
-        throw new Error("User not authenticated");
-      }
-
-      // Enhance profile if not already done;
-      let finalSummary = "";
-      let finalSkills = skillTags;
-
-      if (values && values.enhancedProfile && !generatedContent) {;
-        try {;
-          const { data: aiData } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {;
-            body: {;
-              talentData: {;
-                name: values && values.name,;
-                title: values && values.title,;
-                bio: values && values.bio,;
-                skills: skillTags,;
-                location: values && values.location;
-              }
-            }
-          });
-
-          if (aiData) {;
-
             finalSummary = (aiData as EnhancedProfile).summary;
             // Safely merge AI suggested skills with user-provided skills;
             const categorizedSkills = (aiData as EnhancedProfile).categorizedSkills;
-
-            const aiSkills: string[] = [],;
-
-            // Extract skills from each category and ensure they're strings;
-            Object && Object.values(categorizedSkills).forEach(categorySkills => {;
-              if (Array && Array.isArray(categorySkills)) {;
-                categorySkills && categorySkills.forEach(skill => {;
-                  if (typeof skill === 'string' && skill) {;
-                    aiSkills && aiSkills.push(skill);
-
 =======
               talent_data: {
                 name: values.name,
@@ -807,6 +710,7 @@ if ( {) {
             const categorized_skills = (ai_data as EnhancedProfile).categorized_skills;
             const ai_skills: string[] = [],
             // Extract skills from each category and ensure they're strings;
+<<<<<<< HEAD
 
             Object.values(categorizedSkills).forEach(categorySkills => {;
               if (Array.isArray(categorySkills)) {;
@@ -819,10 +723,24 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            Object.values (categorized_skills).for_each (category_skills => {
+              if () {) {
+  $2
+}
+                category_skills.for_each (skill => {
+                  // Check condition
+if ( {) {
+  $2
+}
+                    ai_skills.push (skill);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   }
                 });
               }
             });
+<<<<<<< HEAD
             // Create a unique set of skills
             finalSkills = [...new Set([...skillTags, ...aiSkills])]
             }),;
@@ -838,10 +756,14 @@ if ( {) {
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails
           finalSummary = ""
+=======
+          }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
           finalSummary = "";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -849,10 +771,13 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         }
       } else if (generatedContent) {;
         finalSummary = generatedContent && generatedContent.summary;
       }
+<<<<<<< HEAD
       // Get user email for notification
       const { data: userData } = await supabase.auth.getUser()
       const userEmail = userData.user?.email;
@@ -903,10 +828,15 @@ if ( {) {
         description: error.message |"There was an error creating your profile. Please try again."
         variant: "destructive"})
       setIsSubmitting(false)
+=======
+        });
+      if (error) throw error;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }
 
   return (
+<<<<<<< HEAD
     <div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
@@ -983,6 +913,8 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;
@@ -1102,12 +1034,6 @@ if (throw error) {
                               />;
                             </div>;
                           </FormControl>;
-
-                    />;
-                  </div>;
-
-                  <div className="col-span-1">;
-
                     <FormField
                       control={form && form.control}
                       name="title"
@@ -1143,12 +1069,6 @@ if (throw error) {
                               />;
                             </div>;
                           </FormControl>;
-
-                    />;
-                  </div>;
-
-                  <div className="col-span-1">;
-
                     <FormField
                       control={form && form.control}
                       name="location"
@@ -1184,12 +1104,6 @@ if (throw error) {
                               />;
                             </div>;
                           </FormControl>;
-
-                    />;
-                  </div>;
-
-                  <div className="col-span-1">;
-
                     <FormField
                       control={form && form.control}
                       name="hourlyRate"
@@ -1225,12 +1139,6 @@ if (throw error) {
                               />;
                             </div>;
                           </FormControl>;
-
-                    />;
-                  </div>;
-                </div>;
-
-
                 {/* Upload Avatar */}
                 <div className="space-y-2">;
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>;
@@ -1249,75 +1157,29 @@ if (throw error) {
                           <UserRound className="h-10 w-10 text-zion-slate opacity-50" />;
                         </div>;
                       )}
-
-                    </div>;
-
-                    <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">;
-                      <Upload className="mr-2 h-4 w-4" />;
-                      <span>Upload Photo</span>;
-
                       <input
                         type="file"
                         accept="image/*"
                         className="hidden"
                         onChange={handleAvatarUpload}
-
-                      />;
-                    </label>;
-                  </div>;
-                  <p className="text-sm text-zion-slate">;
-=======
-                          <FormMessage className="text - red - 400" />;
-                        </FormItem>)}
-                    />;
-                  </div>;
-                </div>;
-                {/* Upload Avatar */}
-                <div className="space - y-2">;
-                  <FormLabel className="text - zion - slate - light">Profile Picture</FormLabel>;
-                  <div className="flex items - center gap - 6">;
-                    <div className="relative w - 24 h - 24 rounded - full overflow - hidden bg - zion - blue - light border border - zion - blue - light">;
-                      {uploaded_avatar ? (
-                        <AspectRatio ratio={1 / 1}>;
-                          <img;
-                            src={uploaded_avatar}
-                            alt="Avatar preview";
-                            className="w - full h - full object - cover";
-                          />;
-                        </AspectRatio>) : (
-                        <div className="flex items - center justify - center h - full">;
-                          <UserRound className="h - 10 w - 10 text - zion - slate opacity - 50" />;
-                        </div>)}
-                    </div>;
-                    <label className="flex items - center justify - center px - 4 py - 2 rounded - md bg - zion - purple hover:bg - zion - purple - dark text - white cursor - pointer transition - colors">;
-                      <Upload className="mr - 2 h - 4 w - 4" />;
-                      <span > Upload Photo</span>;
-                      <input;
-                        type="file";
-                        accept="image/*";
-                        className="hidden";
-                        on_change={handleAvatarUpload}
-                      />;
-                    </label>;
-                  </div>;
-                  <p className="text - sm text - zion - slate">;
-
                     For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.;
                   </p>;
                 </div>;
               </div>;
-
-                        />;
-                      </FormControl>;
-                      <FormMessage className="text-red-400" />;
-                      <FormDescription className="text-zion-slate">;
-                        {field && field.value?.length || 0}/1000 characters;
-                      </FormDescription>;
-                    </FormItem>;
-                  )}
-                />;
-
-
+              {/* Bio Section */}
+              <div className="space-y-4">;
+                <h3 className="text-lg font-medium text-white">Professional Bio</h3>;
+                <FormField
+                  control={form && form.control}
+                  name="bio"
+                  render={({ field }) => (;
+                    <FormItem>;
+                      <FormLabel className="text-zion-slate-light">About Yourself</FormLabel>;
+                      <FormControl>;
+                        <Textarea
+                          className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white"
+                          placeholder="Describe your professional background, expertise, and the value you bring to clients..."
+                          {...field}
                 {/* AI Enhancement Option */}
                 <FormField
                   control={form && form.control}
@@ -1371,12 +1233,6 @@ if (throw error) {
                         </FormDescription>;
                       </div>;
                       <FormControl>;
-
-                />;
-
-                {form && form.watch("enhancedProfile") && (;
-                  <div className="flex justify-end">;
-
                     <Button
                       type="button"
                       variant="outline"
@@ -1388,7 +1244,10 @@ if (throw error) {
                     </Button>;
                   </div>;
                 )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {/* Generated Content Display */}
                 {generatedContent && (;
                   <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">;
@@ -1401,25 +1260,6 @@ if (throw error) {
                         type="button"
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-
-                        onClick={applyGeneratedContent}>;
-                        <Check className="mr-1 h-3 w-3" /> Apply;
-                      </Button>;
-                    </div>;
-
-                    <div className="space-y-4">;
-                      <div>;
-                        <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>;
-                        <p className="text-zion-slate italic">{generatedContent && generatedContent.summary}</p>;
-                      </div>;
-
-                      {generatedContent && generatedContent.categorizedSkills && (;
-                        <div>;
-                          <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5>;
-                          <div className="flex flex-wrap gap-2 mt-1">;
-                            {Object && Object.entries(generatedContent && generatedContent.categorizedSkills).map(([category, skills]) => (;
-                              <div key={category} className="flex items-center gap-2">;
-
                                 <Badge
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}>;
                                   {category}
@@ -1441,12 +1281,6 @@ if (throw error) {
                     </div>;
                   </div>;
                 )}
-
-              </div>;
-
-              <Separator className="bg-zion-blue-light/50" />;
-
-
               {/* Skills and Availability */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
                 {/* Skills Section */}
@@ -1555,12 +1389,6 @@ if (throw error) {
                               onKeyDown={handleSkillKeyPress}
                             />;
                           </FormControl>;
-
-                  />;
-
-                  <div className="flex flex-wrap gap-2 mt-2">;
-                    {skillTags && skillTags.map(skill => (;
-
                       <Badge
                         key={skill}
                         className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1 && 1.5 flex items-center gap-1">;
@@ -1577,11 +1405,6 @@ if (throw error) {
                     {skillTags && skillTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No skills added yet</p>;
                     )}
-
-                  </div>;
-                </div>;
-
-
                 {/* Availability Section */}
                 <div className="space-y-4">;
                   <h3 className="text-lg font-medium text-white">Availability</h3>;
@@ -1598,36 +1421,10 @@ if (throw error) {
                                 type="radio"
                                 id="available"
                                 value="available"
-
-                                checked={field && field.value === "available"}
-                                onChange={() => field && field.onChange("available")}
-                                className="text-zion-purple focus:ring-zion-purple";
-                              />;
-                              <label htmlFor="available" className="text-white flex items-center gap-2">;
-                                <div className="h-2 w-2 rounded-full bg-green-500"></div>;
-                                Available Now;
-                              </label>;
-                            </div>;
-
-                            <div className="flex items-center space-x-2">;
-
                               <input
                                 type="radio"
                                 id="limited"
                                 value="limited"
-
-                                checked={field && field.value === "limited"}
-                                onChange={() => field && field.onChange("limited")}
-                                className="text-zion-purple focus:ring-zion-purple";
-                              />;
-                              <label htmlFor="limited" className="text-white flex items-center gap-2">;
-                                <div className="h-2 w-2 rounded-full bg-yellow-500"></div>;
-                                Limited Availability;
-                              </label>;
-                            </div>;
-
-                            <div className="flex items-center space-x-2">;
-
                               <input
                                 type="radio"
                                 id="unavailable"
@@ -1729,6 +1526,7 @@ if (throw error) {
                             </div>;
                           </div>;
                         </FormControl>;
+<<<<<<< HEAD
 
                   />;
 
@@ -1771,3 +1569,26 @@ if (throw error) {
 }
 }
 ;
+=======
+                      Let clients know about your working hours, time zone, or availability for calls.;
+                    </FormDescription>;
+                  </div>;
+                </div>;
+              </div>;
+            </CardContent>;
+                <Button
+                  type="submit"
+                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                  disabled={isSubmitting}>;
+                  {isSubmitting ? "Creating Profile..." : "Create Profile"}
+                </Button>;
+              </div>;
+            </CardFooter>;
+          </form>;
+        </Form>;
+      </Card>;
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

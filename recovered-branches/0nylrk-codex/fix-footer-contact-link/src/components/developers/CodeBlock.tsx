@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -14,14 +15,12 @@ interface CodeBlockProps {;
   code: string,;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   language?: string;
   showLineNumbers?: boolean;
   className?: string;
 }
-
-
-export function CodeBlock(): any ({ ;
-
   code;
 
   language = 'bash';
@@ -29,6 +28,7 @@ export function CodeBlock(): any ({ ;
   className;
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {useState} from 'react';
 import {Check, Copy} from 'lucide-react';
@@ -120,6 +120,8 @@ export function CodeBlock({;
   };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <divclassName={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto"
@@ -134,12 +136,15 @@ export function CodeBlock({;
             {code && code.split('\n').map((_, i) => (;
               <div key={i} className="h-6 leading-6">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {i + 1}
               </div>;
             ))}
@@ -163,6 +168,7 @@ export function CodeBlock({;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -173,6 +179,8 @@ export function CodeBlock({;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default CodeBlock;
 
 =======

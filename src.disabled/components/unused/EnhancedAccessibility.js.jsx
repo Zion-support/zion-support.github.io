@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/unused/EnhancedAccessibility.js.jsx
 import React,{ useState,useEffect } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from\';\';@heroicons/react/24/outline\' const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'1\',6,\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \';\';none\'}) useEffect(() => {\'';
 const React,{ useState,useEffect } from";react" import { motion,AnimatePresence } from";";framer-motion" import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from";";@heroicons/react/24/outline" const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "1",6,reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: ";";none"}) useEffect(() => {"";"""
@@ -9,6 +10,8 @@ const React,{ useState,useEffect } from";react" import { motion,AnimatePresence 
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import React,{ useState,useEffect } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from\';\';@heroicons/react/24/outline\' const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'1\',6,\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \';\';none\'}) useEffect(() => {\'';
 const React,{ useState,useEffect } from";react" import { motion,AnimatePresence } from";";framer-motion" import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from";";@heroicons/react/24/outline" const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "1",6,reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: ";";none"}) useEffect(() => {"";"""

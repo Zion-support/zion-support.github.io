@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -314,6 +315,14 @@ export function DisputeForm({;
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      setFiles(prev => [...prev, ...newFiles]);
+      form && form.setValue("attachments", [...files, ...newFiles]);
+    }
+    }
+  }
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <FormField
             control={form && form.control}
             name="reason_code"
@@ -441,6 +450,7 @@ if ( {) {
                     </SelectTrigger>;
                   </FormControl>;
                   <SelectContent>;
+<<<<<<< HEAD
 
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (;
                       <SelectItem key={value} value={value}>{label}</SelectItem>;
@@ -460,6 +470,8 @@ if ( {) {
           />;
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <FormField
             control={form && form.control}
             name="description"
@@ -493,6 +505,7 @@ if ( {) {
                   />;
                 </FormControl>;
                 <FormMessage />;
+<<<<<<< HEAD
 
           />;
 
@@ -521,6 +534,8 @@ if ( {) {
                             type="button" 
                             variant="ghost" 
                             size="sm" 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                             onClick={() => removeFile(index)}
                           >;
                             Remove;
@@ -530,44 +545,14 @@ if ( {) {
                     </ul>;
                   </div>;
                 )}
-
-=======
-              </FormItem>)}
-          />;
-          <FormItem>;
-            <FormLabel > Attachments (optional)</FormLabel>;
-            <FormControl>;
-              <div className="space - y-4">;
-                <Input;
-                  type="file";
-                  multiple;
-                  on_change={handleFileChange}
-                  className="cursor - pointer";
-                />;
-                {files.length > 0 && (
-                  <div className="space - y-2">;
-                    <p className="text - sm font - medium">Selected files:</p>;
-                    <ul className="space - y-1">;
-                      {files.map ((file, index) => (
-                        <li key={index} className="flex items - center justify - between text - sm bg - muted / 30 p - 2 rounded">;
-                          <span>{file.name} ({(file.size / 1024).to_fixed (1)} KB)</span>;
-                          <Button;
-                            type="button";
-                            variant="ghost";
-                            size="sm";
-                            on_click={() => remove_file (index)}
-                          >;
-                            Remove;
-                          </Button>;
-                        </li>))}
-                    </ul>;
-                  </div>)}
-
               </div>;
             </FormControl>;
             <FormMessage />;
           </FormItem>;
-
+            )}
+            <Button type="submit" disabled={isSubmitting}>;
+              {isSubmitting ? "Submitting..." : "Submit Dispute"}
+=======
           <div className="flex justify - end space - x-2">;
             {on_cancel && (
               <Button type="button" variant="outline" on_click={on_cancel}>;
@@ -575,11 +560,12 @@ if ( {) {
               </Button>)}
             <Button type="submit" disabled={is_submitting}>;
               {is_submitting ? "Submitting..." : "Submit Dispute"}
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Button>;
           </div>;
         </form>;
       </Form>;
+<<<<<<< HEAD
 
     </div>);
 
@@ -600,3 +586,6 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

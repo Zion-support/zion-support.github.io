@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -164,6 +165,8 @@ interface TemplateListProps {
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   if (isLoading) {;
     return (
       <div className="flex justify-center items-center py-8">;
@@ -171,10 +174,6 @@ interface TemplateListProps {
       </div>;
     );
   }
-
-
-  if (!templates && templates.length) {;
-
     return (
       <div className="text-center py-8">;
         <p className="text-muted-foreground">No templates found.</p>;
@@ -194,6 +193,7 @@ interface TemplateListProps {
                   {template && template.is_default && (;
                     <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
                   )}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>
                 <p className="text-xs text-muted-foreground">
@@ -263,37 +263,29 @@ interface TemplateListProps {
     </div>
   )
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             >;
               Use This Template;
             </Button>;
           </CardContent>;
-
-        </Card>))}
-      <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete (null)}>;
-        <AlertDialogContent>;
-          <AlertDialogHeader>;
-            <AlertDialogTitle > Delete Template</AlertDialogTitle>;
-
             <AlertDialogDescription>;
               Are you sure you want to delete this template? This action cannot be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-
-            <AlertDialogCancel > Cancel</AlertDialogCancel>;
-            <AlertDialogAction;
-              className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";
-              on_click={handleDeleteConfirm}
-            >;
-
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-
+=======
     </div>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

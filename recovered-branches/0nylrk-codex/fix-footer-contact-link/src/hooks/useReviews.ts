@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState} from "react";
@@ -109,10 +110,18 @@ if (return) {
         title: "Error",
         description: "Failed to load reviews",
         variant: "destructive"})
+=======
+    try {
+      const { data, error } = await supabase;
+        .from ("reviews");
+        .select (`;
+          *;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } finally {
       setIsLoading(false)
     }
   }
+<<<<<<< HEAD
   // Fetch reviews for a user (to display on profile)
   const fetchUserReviews = async (userId: string) => {
     if (!userId) return;
@@ -171,12 +180,22 @@ if (throw error) {
         description: "Failed to load reviews",
         variant: "destructive"});
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    try {
+      const { data, error } = await supabase;
+        .from ("reviews");
+        .select (`;
+          *;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
   // Submit a review
   const submitReview = async (review: {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     project_id: string;
     reviewee_id: string;
     rating: number;
@@ -184,6 +203,7 @@ if (throw error) {
     communication_rating?: number;
     quality_rating?: number;
     timeliness_rating?: number;
+<<<<<<< HEAD
     would_work_again?: boolean
   },
   
@@ -233,10 +253,31 @@ if (throw error) {
       console.error("Error submitting review:", err);
       // Check for unique constraint violation
       if (err.code === "23505") {
+=======
+  }) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: "Error";
+        description: "You must be logged in to submit a review"
+        variant: "destructive"});
+      return false;
+    }
+    try {
+      const { data, error } = await supabase;
+        .from ("reviews");
+        .insert ({
+          ...review;
+      // Check for unique constraint violation
+      if (err && err.code === "23505") {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         toast({
           title: "Error";
           description: "You have already submitted a review for this project"
           variant: "destructive"})
+<<<<<<< HEAD
       } else {
         toast({
           title: "Error";
@@ -309,11 +350,45 @@ export function useReviews(projectId?: string) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+          reviewer_id: user.id});
+        .select ();
+        .single ();
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      toast ({
+        title: "Success",
+        description: "Your review has been submitted and is pending approval"});
+;
+      setUserReview (data);
+      return true;
+    } catch (err: any) {
+      console.error ("Error submitting review:", err);
+;
+      // Check for unique constraint violation;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+          title: "Error";
+          description: "You have already submitted a review for this project",
+          variant: "destructive"});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      } else {
+        toast ({
+          title: "Error";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
       return false;
     } finally {
       setIsSubmitting (false);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   // Update a review
@@ -458,10 +533,18 @@ export function useReviews(projectId?: string) {;
         variant: "destructive"}),
       return false
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  }
+        title: "Error";
+        description: "Failed to update review"
+        variant: "destructive"});
+      return false;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } finally {
       setIsSubmitting (false);
     }
   }
+<<<<<<< HEAD
   },
   
   // Report a review
@@ -478,14 +561,20 @@ export function useReviews(projectId?: string) {;
           reporter_id: user.id,
           reason}),
         
+=======
+          reason});
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       if (error) {
         // Check for unique constraint violation
         if (error && error.code === "23505") {
           toast({
             title: "Error";
             description: "You have already reported this review"
+<<<<<<< HEAD
             title: "Error",
             description: "You have already reported this review",
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             variant: "destructive"})
 =======
 ;
@@ -521,6 +610,7 @@ if ( {) {
           throw error;
         }
       } else {
+<<<<<<< HEAD
         toast({
           title: "Report Submitted"
           description: "Thank you. Our team will review your report"});
@@ -646,4 +736,18 @@ if ( {) {
     update_review;
     report_review}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+          description: "Thank you. Our team will review your report"});
+        return true;
+      }
+    } catch (err: any) {
+  }
+  return {
+    reviews;
+    user_review;
+    is_loading;
+    is_submitting;
+    fetchProjectReviews;
+    fetchUserReviews;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }

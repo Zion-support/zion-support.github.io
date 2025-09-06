@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { cn } from "@/lib/utils";
@@ -15,21 +16,14 @@ import React from "react",
 interface GradientHeadingProps {;
   children: React && React.ReactNode,;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   className?: string;
   level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
-
-
-export function GradientHeading(): any ({ children, className, level = "h2" }: GradientHeadingProps) {;
-  const Tag = level;
-
-  return (
-    <Tag
-      className={cn(
-        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"
-
         className
       )}>;
+<<<<<<< HEAD
 =======
 
 import { cn } from "@/lib/utils",
@@ -92,12 +86,9 @@ export function GradientHeading({ children, className, level = "h2" }: GradientH
       )}
     >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {children}
-
-    </Tag>;
-  );
-}
-
 =======
 import { cn } from '@/lib / utils';
 import React from './react';

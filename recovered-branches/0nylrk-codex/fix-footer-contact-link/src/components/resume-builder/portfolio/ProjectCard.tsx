@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState } from "react";
@@ -44,6 +45,8 @@ if ( {) {
   }
 ;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Card className="h - full flex flex - col">;
       <div className="relative h - 48 overflow - hidden rounded - t-lg bg - muted">;
@@ -51,6 +54,7 @@ if ( {) {
           <img;
             src={project.image_url}
             alt={project.title}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -143,6 +147,8 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
             src={project && project.image_url} 
             alt={project && project.title} 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             className="w-full h-full object-cover"
           />;
         ) : (;
@@ -150,36 +156,6 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
             <FileText className="h-12 w-12 text-muted-foreground/50" />;
           </div>;
         )}
-
-            className="w - full h - full object - cover";
-          />) : (
-          <div className="w - full h - full flex items - center justify - center bg - muted">;
-            <FileText className="h - 12 w - 12 text - muted - foreground / 50" />;
-          </div>)}
-      </div>;
-      <CardContent className="flex - grow pt - 6">;
-        <div className="space - y-2">;
-          <h3 className="font - semibold text - lg">{project.title}</h3>;
-
-          {project.description && (
-            <p className="text - sm text - muted - foreground line - clamp - 3">;
-              {project.description}
-
-      </div>;
-
-      <CardContent className="flex-grow pt-6">;
-        <div className="space-y-2">;
-          <h3 className="font-semibold text-lg">{project && project.title}</h3>;
-
-          {project && project.description && (;
-            <p className="text-sm text-muted-foreground line-clamp-3">{project && project.description}</p>;
-          )}
-
-          {project && project.technologies && project && project.technologies.length > 0 && (;
-            <div className="flex flex-wrap gap-1 mt-2">;
-              {project && project.technologies.map((tech, index) => (;
-                <Badge key={index} variant="secondary" className="text-xs">;
-
                   {tech}
                 </Badge>
               ))}
@@ -187,6 +163,7 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
                 </Badge>;
               ))}
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -282,3 +259,10 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
   )
 }
 ;
+=======
+              Delete;
+            </AlertDialogAction>;
+          </AlertDialogFooter>;
+        </AlertDialogContent>;
+      </AlertDialog>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

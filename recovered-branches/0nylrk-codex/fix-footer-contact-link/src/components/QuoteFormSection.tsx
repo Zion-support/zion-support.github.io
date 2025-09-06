@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,6 +15,8 @@ import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
 export function QuoteFormSection() {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 <<<<<<< HEAD
@@ -28,6 +31,7 @@ import { useState } from "react",
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setIsSubmitting(true);
+<<<<<<< HEAD
 
 
 
@@ -156,54 +160,31 @@ export function QuoteFormSection() {
                     Name;
                   </label>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <Input
                     id="name"
                     type="text"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                     required
-
-                  />;
-                </div>;
-                <div>;
-                  <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-1">;
-                    Company;
-                  </label>;
-
                   <Input
                     id="company"
                     type="text"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-
-                  />;
-                </div>;
-                <div>;
-                  <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">;
-                    Email;
-                  </label>;
-
                   <Input
                     id="email"
                     type="email"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                     required
-
-                  />;
-                </div>;
-                <div>;
-                  <label htmlFor="phone" className="block text-sm font-medium text-zion-slate-light mb-1">;
-                    Phone;
-                  </label>;
-
                   <Input
                     id="phone"
                     type="tel"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-
-=======
                       <input
                         id={`interest-${index}`}
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
+<<<<<<< HEAD
                       />
 <<<<<<< HEAD
                       <label
@@ -329,41 +310,12 @@ export function QuoteFormSection() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                         {item}
                       </label>;
                     </div>;
                   ))}
-
-                </div>;
-              </div>;
-
-              <div className="mt-6">;
-                <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1">;
-                  Additional Details;
-                </label>;
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"></textarea>;
-              </div>;
-
-              <div className="mt-6">;
-                <Button
-                  type="submit" 
-                  disabled={isSubmitting} 
-                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-3">;
-                  {isSubmitting ? "Sending..." : "Get Your Free Commercial Proposal"}
-                </Button>;
-              </div>;
-            </form>;
-          )}
-        </div>;
-      </div>;
-    </section>;
-  );
-}
-
-=======
 import { Button  } from './ui / button';
 import { Input  } from './ui / input';
 import { GradientHeading  } from './GradientHeading';
@@ -548,4 +500,3 @@ function QuoteFormSection() {
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

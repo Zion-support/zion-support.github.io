@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
@@ -36,11 +37,14 @@ const CERTS_FILE = path.join(
   'certifications'
   'certifications.json'
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 );
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
@@ -71,10 +75,27 @@ res.setHeader("Allow", "GET");
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
-
-
 =======
+  if (req && req.method !== 'GET') {
+    res && res.setHeader('Allow', 'GET');
+    return res && res.status(405).json({ error: 'Method Not Allowed' });
+  }
+  try {
+    const certifications = (await fs && fs.pathExists(CERTS_FILE))
+      ? await fs && fs.readJSON(CERTS_FILE)
+      : [];
+    return res && res.status(200).json({ certifications });
+  } catch (e) {
+    return res && res.status(500).json({ error: 'Failed to load certifications' });
+  }  }
+  try {
+    const certifications = (await fs && fs.pathExists(CERTS_FILE)) ? await fs && fs.readJSON(CERTS_FILE) : [];
+    return res && res.status(200).json({ certifications })
+  } catch (e) {
+    return res && res.status(500).json({ error: "Failed to load certifications" })
+  };
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+}
 ;
 const CERTS_FILE = path.join (
   process.cwd (),
@@ -92,6 +113,7 @@ if ( {) {
 }
     res.set_header ('Allow', 'GET');
     return res.status (405).json ({ error: 'Method Not Allowed' });
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   try {
@@ -117,4 +139,20 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 
 }
   };
+=======
+  }
+  try {
+    const certifications = (await fs.path_exists (CERTS_FILE));
+      ? await fs.readJSON (CERTS_FILE);
+      : [];
+    return res.status (200).json ({ certifications });
+  } catch (e) {
+    return res.status (500).json ({ error: 'Failed to load certifications' });
+  }  }
+  try {
+    const certifications = (await fs.path_exists (CERTS_FILE)) ? await fs.readJSON (CERTS_FILE) : [];
+    return res.status (200).json ({ certifications });
+  } catch (e) {
+    return res.status (500).json ({ error: "Failed to load certifications" });
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }

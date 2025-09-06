@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Resume } from "@/types/resume";
 export interface ResumeOption {;
@@ -8,6 +9,8 @@ export interface ResumeOption {;
 
 import { Resume  } from '@/types / resume';
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export interface ResumeOption {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
@@ -23,6 +26,7 @@ export interface ResumeSelectorProps {
 
 =======
 export interface ResumeSelectorProps {
+<<<<<<< HEAD
 
 
 
@@ -59,4 +63,6 @@ export interface ResumeSelectorProps {;
 =======
   onResumeSelected: (resume_option: ResumeOption) => void;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }

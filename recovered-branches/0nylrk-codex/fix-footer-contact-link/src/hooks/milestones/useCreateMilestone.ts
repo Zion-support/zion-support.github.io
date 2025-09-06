@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,12 +9,15 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone} from './types';
 import {useRecordActivity} from './useRecordActivity';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const useCreateMilestone = (projectId?: string) => {
   const { user } = useAuth();
@@ -35,10 +39,13 @@ export const useCreateMilestone = (projectId?: string) => {
           created_by: user && user.id})
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         .select()
         .single();
       if (error) throw error;
       // Create activity record
+<<<<<<< HEAD
 
       await recordMilestoneActivity(data && data.id, 'created', null, 'pendingMilestone created');
       
@@ -50,6 +57,8 @@ export const useCreateMilestone = (projectId?: string) => {
       toast && toast.error("Failed to create milestone: " + err && err.message),
 
 <<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return null
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -94,6 +103,7 @@ if (throw error) {
     } finally {
       setIsSubmitting (false);
     }
+<<<<<<< HEAD
 
 export const useCreateMilestone = (projectId?: string) => {;
   const { user } = useAuth();
@@ -196,3 +206,5 @@ export const useCreateMilestone = (projectId?: string) => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

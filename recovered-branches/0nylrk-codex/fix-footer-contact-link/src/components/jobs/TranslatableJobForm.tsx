@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -279,6 +280,8 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
       if (field === 'title' && title[lang]) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         content = title[lang];
         sourceLanguage = lang;
         break;
@@ -290,6 +293,7 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
         content = requirements[lang];
         sourceLanguage = lang;
         break;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -523,152 +527,25 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
               {t('jobs && jobs.job_title')}
             </label>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      }
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <Button
               type="button"
               size="sm"
               variant="outline"
               onClick={() => autoTranslate('title')}
-
-              disabled={isTranslating || (!title && title.en && !title && title.es && !title && title.pt && !title && title.ar)}
-              className="flex items-center gap-1";
-            >;
-              {isTranslating ? (;
-                <Loader2 className="h-4 w-4 animate-spin" />;
-              ) : (;
-                <Globe className="h-4 w-4" />;
-              )}
-              {t('translation && translation.auto_translate')}
-            </Button>;
-          </div>;
-
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
-            <TabsList className="w-full">;
-              {supportedLanguages && supportedLanguages.map((lang) => (;
-                <TabsTrigger key={lang && lang.code} value={lang && lang.code} className="flex-1">;
-                  <span className="mr-1">{lang && lang.flag}</span> {lang && lang.name}
-                </TabsTrigger>;
-              ))}
-            </TabsList>;
-
-            {supportedLanguages && supportedLanguages.map((lang) => (;
-              <TabsContent key={lang && lang.code} value={lang && lang.code} className="mt-2">;
-                <div className="space-y-1">;
-                  <Input
-                    id={`title-${lang && lang.code}`}
-                    value={title[lang && lang.code] || ''}
-                    onChange={(e) => handleTitleChange(e && e.target.value)}
-                    placeholder={t('jobs && jobs.title_placeholder')}
-                    className="w-full";
-                    dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}
-                  />;
-                </div>;
-              </TabsContent>;
-            ))}
-          </Tabs>;
-        </div>;
-
-        <div className="space-y-2">;
-          <div className="flex justify-between items-center">;
-            <label htmlFor="description" className="text-lg font-medium">;
-              {t('jobs && jobs.job_description')}
-            </label>;
-
             <Button
               type="button"
               size="sm"
               variant="outline"
               onClick={() => autoTranslate('description')}
-
-              disabled={isTranslating || (!description && description.en && !description && description.es && !description && description.pt && !description && description.ar)}
-              className="flex items-center gap-1";
-            >;
-              {isTranslating ? (;
-                <Loader2 className="h-4 w-4 animate-spin" />;
-              ) : (;
-                <Globe className="h-4 w-4" />;
-              )}
-              {t('translation && translation.auto_translate')}
-            </Button>;
-          </div>;
-
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
-            <TabsList className="w-full">;
-              {supportedLanguages && supportedLanguages.map((lang) => (;
-                <TabsTrigger key={lang && lang.code} value={lang && lang.code} className="flex-1">;
-                  <span className="mr-1">{lang && lang.flag}</span> {lang && lang.name}
-                </TabsTrigger>;
-              ))}
-            </TabsList>;
-
-            {supportedLanguages && supportedLanguages.map((lang) => (;
-              <TabsContent key={lang && lang.code} value={lang && lang.code} className="mt-2">;
-                <Textarea
-                  id={`description-${lang && lang.code}`}
-                  value={description[lang && lang.code] || ''}
-                  onChange={(e) => handleDescriptionChange(e && e.target.value)}
-                  placeholder={t('jobs && jobs.description_placeholder')}
-                  className="min-h-32 w-full";
-                  dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}
-                />;
-              </TabsContent>;
-            ))}
-          </Tabs>;
-        </div>;
-
-        <div className="space-y-2">;
-          <div className="flex justify-between items-center">;
-            <label htmlFor="requirements" className="text-lg font-medium">;
-              {t('jobs && jobs.skills_required')}
-            </label>;
-
             <Button
               type="button"
               size="sm"
               variant="outline"
               onClick={() => autoTranslate('requirements')}
-
-              disabled={isTranslating || (!requirements && requirements.en && !requirements && requirements.es && !requirements && requirements.pt && !requirements && requirements.ar)}
-              className="flex items-center gap-1";
-            >;
-              {isTranslating ? (;
-                <Loader2 className="h-4 w-4 animate-spin" />;
-              ) : (;
-                <Globe className="h-4 w-4" />;
-              )}
-              {t('translation && translation.auto_translate')}
-            </Button>;
-          </div>;
-
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
-            <TabsList className="w-full">;
-              {supportedLanguages && supportedLanguages.map((lang) => (;
-                <TabsTrigger key={lang && lang.code} value={lang && lang.code} className="flex-1">;
-                  <span className="mr-1">{lang && lang.flag}</span> {lang && lang.name}
-                </TabsTrigger>;
-              ))}
-            </TabsList>;
-
-            {supportedLanguages && supportedLanguages.map((lang) => (;
-              <TabsContent key={lang && lang.code} value={lang && lang.code} className="mt-2">;
-                <Textarea
-                  id={`requirements-${lang && lang.code}`}
-                  value={requirements[lang && lang.code] || ''}
-                  onChange={(e) => handleRequirementsChange(e && e.target.value)}
-                  placeholder={t('jobs && jobs.requirements_placeholder')}
-                  className="min-h-24 w-full";
-                  dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}
-                />;
-              </TabsContent>;
-            ))}
-          </Tabs>;
-        </div>;
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-          <div className="space-y-1">;
-            <label htmlFor="budget" className="text-lg font-medium">;
-              {t('jobs && jobs.budget')}
-            </label>;
-
             <Input
               id="budget"
               value={budget}
@@ -685,6 +562,7 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
               id="deadline"
               type="date"
               value={deadline}
+<<<<<<< HEAD
               onChange={(e) => setDeadline(e.target.value)}
               className="w-full"
             />
@@ -716,6 +594,13 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
   );
 }
 
+=======
+            />;
+          </div>;
+        </div>;
+      </div>;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <div className="pt - 4">;
         <Button;
           type="submit";
@@ -732,6 +617,10 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
       </div>;
     </form>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

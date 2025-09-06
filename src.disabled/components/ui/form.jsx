@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/ui/form.jsx
 import React from \'react\'; \"export\": const Form = ({ children,...props }) => { return <div {...props}>{children}</div> } export const FormField = ({ children,name }) => { return <div data-field={name}>{children}</div> } export const FormItem = ({ children,className = \'' }) => {\'; \"return\": <div className={className}>{children}</div> } export const FormControl = ({ children }) => { return <>{children}</> } export const FormLabel = ({ children,className = \'' }) => {\'; \"return\": <label className={className}>{children}</label> } export const FormMessage = ({ className = \'' }) => {\'; \"return\": <div className={className}></div> } \'
 const React from "react"; export: const Form = ({ children,.props }) => { return <div {.props}>{children}</div> } export const FormField = ({ children,name }) => { return <div data-field={name}>{children}</div> } export const FormItem = ({ children,className = "" }) => {"; return: <div className={className}>{children}</div> } export const FormControl = ({ children }) => { return <>{children}</> } export const FormLabel = ({ children,className = "" }) => {"; return: <label className={className}>{children}</label> } export const FormMessage = ({ className = "" }) => {"; return: <div className={className}></div> } "'"'"
@@ -9,6 +10,8 @@ const React from "react"; export: const Form = ({ children,.props }) => { return
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import React from \'react\'; \"export\": const Form = ({ children,...props }) => { return <div {...props}>{children}</div> } export const FormField = ({ children,name }) => { return <div data-field={name}>{children}</div> } export const FormItem = ({ children,className = \'' }) => {\'; \"return\": <div className={className}>{children}</div> } export const FormControl = ({ children }) => { return <>{children}</> } export const FormLabel = ({ children,className = \'' }) => {\'; \"return\": <label className={className}>{children}</label> } export const FormMessage = ({ className = \'' }) => {\'; \"return\": <div className={className}></div> } \'
 const React from "react"; export: const Form = ({ children,.props }) => { return <div {.props}>{children}</div> } export const FormField = ({ children,name }) => { return <div data-field={name}>{children}</div> } export const FormItem = ({ children,className = "" }) => {"; return: <div className={className}>{children}</div> } export const FormControl = ({ children }) => { return <>{children}</> } export const FormLabel = ({ children,className = "" }) => {"; return: <label className={className}>{children}</label> } export const FormMessage = ({ className = "" }) => {"; return: <div className={className}></div> } "'"'"

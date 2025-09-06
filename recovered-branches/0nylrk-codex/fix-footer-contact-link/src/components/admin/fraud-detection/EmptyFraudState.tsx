@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
@@ -73,12 +74,14 @@ export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }) => {
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
   hasFilters,;
   onResetFilters,;
 }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<< HEAD
 
     <div className="text - center py - 12">;
       <ShieldAlert className="mx - auto h - 12 w - 12 text - muted - foreground mb - 4" />;
@@ -109,3 +112,5 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

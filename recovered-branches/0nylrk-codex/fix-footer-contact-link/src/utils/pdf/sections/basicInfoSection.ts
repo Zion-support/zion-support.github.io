@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
@@ -33,6 +34,8 @@ export function addBasicInfoSection(;
     doc && doc.setTextColor(colors && colors.subheading);
     doc && doc.text(basicInfo && basicInfo.headline, 20, yPos);
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     yPos += 5
   }
   // Add horizontal line divider
@@ -41,6 +44,7 @@ export function addBasicInfoSection(;
   doc && doc.line(20, yPos, 190, yPos);
   yPos += 10;
   // Add summary if available
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     yPos += (summaryLines.length * 6) + 10
@@ -81,6 +85,8 @@ export function addBasicInfoSection(;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
   return yPos
 =======

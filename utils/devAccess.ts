@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -19,6 +20,8 @@ export interface DevIdentity {;
     const gitDir = path && path.join(process && process.cwd(), '.git');
     if (!fs && fs.existsSync(gitDir)) return { connected: false };
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore']
     })
@@ -29,6 +32,7 @@ export interface DevIdentity {;
     return { connected: false }
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function getDevIdentity(req: NextApiRequest): DevIdentity {
 
@@ -63,10 +67,13 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   return { isAuthenticated: false, roles: [] }
 }
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
   allowed: DevRole[]
+<<<<<<< HEAD
 ): DevIdentity | undefined {;
   const identity = getDevIdentity(req);
   if (!identity.isAuthenticated) {
@@ -220,6 +227,8 @@ export function getClientIp(req: any): string {
 }
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export function getDevIdentity (req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev;
   const token = req.headers['x - dev - token'] || req.headers['x - admin - token'];
@@ -256,6 +265,7 @@ if ( {) {
   return identity;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -265,3 +275,5 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

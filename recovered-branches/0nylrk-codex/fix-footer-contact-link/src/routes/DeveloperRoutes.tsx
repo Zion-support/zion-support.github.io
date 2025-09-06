@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -83,6 +84,9 @@ import ApiGettingStarted from "../pages/ApiGettingStarted",;
 import ApiWebhooks from "../pages/ApiWebhooks",;
 import ApiSampleCode from "../pages/ApiSampleCode",;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import ApiSampleCode from "../pages/ApiSampleCode";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import ApiErrorCodes from "../pages/ApiErrorCodes";
 export default function DeveloperRoutes() {;
   return (
@@ -98,10 +102,15 @@ export default function DeveloperRoutes() {;
     </Routes>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 =======
 
+=======
+}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from './react';
 import { Navigate, Route, Routes } from './react-router-dom';
 import DeveloperPortal from "../pages / DeveloperPortal";
@@ -127,6 +136,7 @@ function DeveloperRoutes() {
       <Route path="/docs / errors" element={<ApiErrorCodes />} />;
     </Routes>);
 }
+<<<<<<< HEAD
 
 =======
 
@@ -135,3 +145,6 @@ function DeveloperRoutes() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -56,6 +57,8 @@ interface Milestone {
   paymentStatus: "paid" | "pending" | "overdue"
 
   amount: string
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 interface ProjectViewProps {
   project: {
@@ -63,6 +66,7 @@ interface ProjectViewProps {
     id: string
     title: string
     client: {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -593,6 +597,8 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
       name: string,
       avatar?: string;

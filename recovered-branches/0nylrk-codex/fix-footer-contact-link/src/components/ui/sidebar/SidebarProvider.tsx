@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { createContext, useContext, useState } from "react";
 import React, { createContext, useContext, useState } from "react",
@@ -8,12 +9,15 @@ import React, { createContext, useContext, useState } from "react",
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface SidebarContextType {
   is_open: boolean;
   toggle: () => void;
   open: () => void;
   close: () => void
 }
+<<<<<<< HEAD
 
 const SidebarContext = create_context < SidebarContextType>({
   is_open: true,
@@ -25,10 +29,13 @@ const SidebarContext = create_context < SidebarContextType>({
 export const use_sidebar = (): SidebarContextType => useContext (SidebarContext);
 ;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface SidebarProviderProps {
   children: React.ReactNode;
   default_open?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function SidebarProvider({
   children
@@ -58,12 +65,15 @@ export function SidebarProvider({
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const toggle = () => setIsOpen(!isOpen);
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
 
   return (
+<<<<<<< HEAD
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
 <<<<<<< HEAD
       <div
@@ -128,10 +138,15 @@ export function SidebarProvider(): any ({ ;
 ;
 ;
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

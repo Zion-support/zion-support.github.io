@@ -1,6 +1,16 @@
+
+import React, { useEffect, useState } from "react",
+import { useInterviews } from "@/hooks/useInterviews",
+import { Interview } from "@/types/interview",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { InterviewCard } from "@/components/interviews/InterviewCard",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Calendar, Clock, Video } from 'lucide-react'
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -88,12 +98,95 @@ if ( {) {
   const renderInterviewGroups = (groupedInterviews: Record<string Interview[]>) => {
 
 
+=======
+    }
+    loadInterviews()
+  }, [])
+  // Filter interviews based on status and date
+  const now = new Date()
+  const today = startOfDay(now)
+  const upcomingInterviews = interviews
+    .filter(interview => {
+      const interviewDate = parseISO(interview.scheduled_date)
+      return (
+        isAfter(interviewDate, now) &&
+        ['confirmed', 'requested'].includes(interview.status)
+      )
+    })
+    .sort(
+      (a, b) =>
+        parseISO(a.scheduled_date).getTime() -
+        parseISO(b.scheduled_date).getTime()
+    )
+  const pendingInterviews = interviews.filter(
+    interview => interview.status === 'requested'
+  )
+  const pastInterviews = interviews.filter(interview => {
+    const interviewDate = parseISO(interview.scheduled_date)
+    return (
+      !isAfter(interviewDate, now) |
+      ['completed', 'declined', 'cancelled'].includes(interview.status)
+    )
+  })
+  // Group interviews by date
+  const groupInterviewsByDate = (interviews: Interview[]) => {
+    const grouped: Record<string, Interview[]> = {}
+    interviews.forEach(interview => {
+      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd')
+=======
+    },
+    
+    loadInterviews()
+  }, []),
+
+  // Filter interviews based on status and date
+  const now = new Date(),
+  const today = startOfDay(now),
+  
+  const upcomingInterviews = interviews
+    .filter((interview) => {
+      const interviewDate = parseISO(interview.scheduled_date),
+      return isAfter(interviewDate, now) && 
+        ['confirmedrequested'].includes(interview.status)
+    })
+    .sort((a, b) => 
+      parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
+    ),
+  
+  const pendingInterviews = interviews.filter(interview => 
+    interview.status === 'requested'
+  ),
+  
+  const pastInterviews = interviews.filter(interview => {
+    const interviewDate = parseISO(interview.scheduled_date),
+    return !isAfter(interviewDate, now) || 
+      ['completeddeclinedcancelled'].includes(interview.status)
+  }),
+
+  // Group interviews by date
+  const groupInterviewsByDate = (interviews: Interview[]) => {
+    const grouped: Record<string Interview[]> = {},
+    
+    interviews.forEach((interview) => {
+      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd'),
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      if (!grouped[dateKey]) {
+        grouped[dateKey] = []
+      }
+      grouped[dateKey].push(interview)
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return Object.entries(groupedInterviews)
       .sort(
         ([dateA], [dateB]) =>
           parseISO(dateA).getTime() - parseISO(dateB).getTime()
       )
       .map(([date, interviews]) => (
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -239,11 +332,17 @@ function InterviewsContent() {;
               />;
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             ))}
           </div>
         </div>
       ))
 
+<<<<<<< HEAD
     grouped_interviews: Record < string, Interview[]>) =>: any {
     return Object.entries (grouped_interviews);
       .sort (
@@ -321,6 +420,25 @@ function InterviewsContent() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <>
+      <SEO 
+        title="Interviews | Zion AI Marketplace" 
+        description="Manage your scheduled interviews with clients and talent" 
+      />
+      <main className="container mx-auto px-4 py-8">
+        <div className="flex justify-between items-center mb-8">
+          <div>
+            <h1 className="text-3xl font-bold">Interviews</h1>
+            <p className="text-muted-foreground mt-1">Schedule and manage your video interviews</p>
+          </div>
+        </div>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   {upcomingInterviews.length}
                 </span>
               )}
@@ -328,6 +446,7 @@ function InterviewsContent() {;
             <TabsTrigger value="pending">
               Pending
               {pendingInterviews.length > 0 && (
+<<<<<<< HEAD
                 <span className='ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs'>
                 <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
 <<<<<<< HEAD
@@ -335,12 +454,18 @@ function InterviewsContent() {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   {pendingInterviews.length}
                 </span>
               )}
             </TabsTrigger>
             <TabsTrigger value="past">Past</TabsTrigger>
           </TabsList>
+<<<<<<< HEAD
           <TabsContent value='upcoming' className='space-y-6'>
           
           <TabsContent value="upcoming" className="space-y-6">
@@ -350,6 +475,11 @@ function InterviewsContent() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {isLoading ? (
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
@@ -364,6 +494,7 @@ function InterviewsContent() {;
               </div>
             )}
           </TabsContent>
+<<<<<<< HEAD
           <TabsContent value='pending' className='space-y-6'>
           
           <TabsContent value="pending" className="space-y-6">
@@ -373,6 +504,11 @@ function InterviewsContent() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {isLoading ? (
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
@@ -387,6 +523,7 @@ function InterviewsContent() {;
               </div>
             )}
           </TabsContent>
+<<<<<<< HEAD
           <TabsContent value='past' className='space-y-6'>
           
           <TabsContent value="past" className="space-y-6">
@@ -396,6 +533,11 @@ function InterviewsContent() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {isLoading ? (
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
@@ -409,6 +551,7 @@ function InterviewsContent() {;
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
               </div>
             )}
+<<<<<<< HEAD
 
             </TabsTrigger>;
             <TabsTrigger value='past'>Past</TabsTrigger>;
@@ -540,3 +683,8 @@ function Interviews() {
 }
 }
 ;
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

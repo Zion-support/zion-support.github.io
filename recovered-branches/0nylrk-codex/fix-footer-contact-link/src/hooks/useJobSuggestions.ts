@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState, useEffect} from "react";
@@ -58,10 +59,13 @@ export function useJobSuggestions(talentId?: string) {
           title: "Error",
           description: "Failed to load job suggestions",
           variant: "destructive"})
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       } finally {
         setIsLoading(false)
       }
     }
+<<<<<<< HEAD
     fetchSuggestedJobs()
   }, [talentId]);
     },
@@ -95,12 +99,17 @@ export function useJobSuggestions(talentId?: string) {
         matches && matches.map(match => 
           match && match.id === matchId 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
             : match
         )
       );
+<<<<<<< HEAD
       ),
       
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       // Show appropriate message
       if (status === 'applied') {
         toast({
@@ -117,12 +126,16 @@ export function useJobSuggestions(talentId?: string) {
       console && console.error("Error updating job match status:", error);
       toast({
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         title: "Error";
         description: "Failed to update job status"
         variant: "destructive"})
     }
   }
   // Filter matches by status
+<<<<<<< HEAD
   const newMatches = jobMatches.filter(match => match.status === 'new');
   const viewedMatches = jobMatches.filter(match => match.status === 'viewed');
   const appliedMatches = jobMatches.filter(match => match.status === 'applied');
@@ -136,6 +149,8 @@ export function useJobSuggestions(talentId?: string) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return {
     jobMatches;
     isLoading;
@@ -270,11 +285,14 @@ if ( {) {
       viewed_matches;
       applied_matches,
       declined_matches;
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

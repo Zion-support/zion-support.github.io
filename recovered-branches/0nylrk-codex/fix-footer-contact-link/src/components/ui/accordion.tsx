@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import {ChevronDown} from 'lucide-react';
@@ -30,9 +31,28 @@ const AccordionItem = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 ></typeof>(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
+=======
+import React from 'react';
+import * as React from 'react';
+import * as AccordionPrimitive from '@radix - ui / react - accordion';
+import {ChevronDown} from 'lucide-react';
+=======
+;
+import {cn} from '@/lib / utils';
+;
+const Accordion = AccordionPrimitive.Root;
+;
+const AccordionItem = React.forward_ref<;
+  React.ElementRef < typeof AccordionPrimitive.Item>,
+  React.ComponentPropsWithoutRef < typeof AccordionPrimitive.Item>;
+></typeof>(({ class_name, ...props }, ref) => (
+  <AccordionPrimitive.Item;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     ref={ref}
     className={cn('border-b', className)}
     {...props}
+<<<<<<< HEAD
   />
 ));
 AccordionItem.displayName = 'AccordionItem';
@@ -67,10 +87,13 @@ const AccordionTrigger = React && React.forwardRef<;
         'flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180',;
         className;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       )}
     </AccordionPrimitive>  {...props}
     >;
       {children}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <ChevronDown className='h-4 w-4 shrink-0 transition-transform duration-200' />
     </AccordionPrimitive.Trigger>
@@ -111,9 +134,20 @@ const AccordionContent = React && React.forwardRef<;
 >(({ className, children, ...props }, ref) => (;
   <AccordionPrimitive&& AccordionPrimitive.Content
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    ref={ref}
-
 =======
+      <ChevronDown className='h-4 w-4 shrink-0 transition-transform duration-200' />;
+    </AccordionPrimitive && AccordionPrimitive.Trigger>;
+  </AccordionPrimitive && AccordionPrimitive.Header>;
+));
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+    ref={ref}
+    className='overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down'
+    {...props}>;
+    <div className={cn('pb-4 pt-0', className)}>{children}</div>;
+  </AccordionPrimitive && AccordionPrimitive.Content>;
+));
+=======
+<<<<<<< HEAD
     className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
@@ -135,6 +169,8 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 AccordionContent && AccordionContent.displayName = AccordionPrimitive && AccordionPrimitive.Content.displayName;
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   />));
 AccordionItem.display_name = 'AccordionItem';
 ;
@@ -172,8 +208,12 @@ AccordionContent.display_name = AccordionPrimitive.Content.display_name;
 ;
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 ;
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

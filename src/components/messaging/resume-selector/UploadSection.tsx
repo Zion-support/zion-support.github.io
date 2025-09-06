@@ -1,7 +1,12 @@
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Upload, FileText } from 'lucide-react'
 interface UploadSectionProps {
   customFile: File | null;
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
+<<<<<<< HEAD
 
 interface UploadSectionProps {;
   customFile: File | null;
@@ -20,35 +25,21 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
-    <div className='space-y-3'>;
-      <div className='flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30'>;
-        <Upload className='h-8 w-8 text-zion-purple mb-2' />;
-        <p className='text-sm text-zion-slate mb-2'>;
-          {customFile;
-            ? customFile && customFile.name;
-import React from 'react';
-import { Button } from '@/components / ui / button';
-import { Upload, FileText } from 'lucide-react';
-interface UploadSectionProps {
-  custom_file: File | null;
-  onFileUpload: (e: React.ChangeEvent < HTMLInputElement>) => void;
-export /**
- * UploadSection - Function description
- */
-function UploadSection() {
-  return (
-    <div className='space - y-3'>;
-      <div className='flex flex - col items - center justify - center border - 2 border - dashed border - zion - purple / 30 rounded - lg p - 6 bg - zion - blue - dark / 30'>;
-        <Upload className='h - 8 w - 8 text - zion - purple mb - 2' />;
-        <p className='text - sm text - zion - slate mb - 2'>;
-          {custom_file;
-            ? custom_file.name;
-            : 'Drag & drop your PDF or click to browse'}
-        </p>;
-        <Button variant='outline' className='relative'>;
-          Browse Files;
-
+    <div className="space-y-3">
+      <div className="flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30">
+        <Upload className="h-8 w-8 text-zion-purple mb-2" />
+        <p className="text-sm text-zion-slate mb-2">
+          {customFile ? customFile.name : "Drag & drop your PDF or click to browse"}
+        </p>
+        <Button variant="outline" className="relative">
+          Browse Files
+          <input
             type="file"
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             accept=".pdf"
@@ -56,6 +47,7 @@ function UploadSection() {
           />
         </Button>
       </div>
+<<<<<<< HEAD
             type="file"
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             accept=".pdf"
@@ -84,6 +76,11 @@ function UploadSection() {
       
       {customFile && (
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
@@ -95,11 +92,15 @@ function UploadSection() {
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Upload, FileText } from 'lucide-react';
@@ -123,15 +124,6 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer";
             accept=".pdf";
             onChange={onFileUpload}
-
-          />;
-        </Button>;
-      </div>;
-
-            type="file";
-            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer";
-            accept=".pdf";
-            onChange={onFileUpload}
           />;
         </Button>;
       </div>;
@@ -151,6 +143,7 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
   );
 };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 }
@@ -192,3 +185,8 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
 }
 
 ;
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

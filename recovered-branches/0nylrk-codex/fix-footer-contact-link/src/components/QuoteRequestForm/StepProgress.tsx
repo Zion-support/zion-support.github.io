@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import {QuoteRequestSteps} from "../QuoteRequestForm";
 import {CheckIcon} from "@/components/icons";
@@ -181,6 +182,8 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   "bg-zion-blue-light text-zion-slate-light"
                 )}>;
                 {status === "complete" ? (;
@@ -188,20 +191,6 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
                 ) : (;
                   <span className="text-xs">{steps && steps.findIndex(s => s && s.id === step && step.id) + 1}</span>;
                 )}
-
-              </div>;
-              <span
-                className={cn(
-                  "text-xs mt-2 font-medium"
-=======
-
-
-=======
-                  "text-xs mt-2 font-medium",
-
-                  status === "complete" ? "text-zion-cyan" : 
-                  status === "current" ? "text-white" : 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   "text-zion-slate-light"
                 )}>;
                 {step && step.label}
@@ -209,6 +198,7 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
             </div>;
           );
         })}
+<<<<<<< HEAD
 
       </div>;
     </div>;
@@ -219,6 +209,8 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import { QuoteRequestSteps } from '../QuoteRequestForm';
 import { CheckIcon } from '@/components / icons';

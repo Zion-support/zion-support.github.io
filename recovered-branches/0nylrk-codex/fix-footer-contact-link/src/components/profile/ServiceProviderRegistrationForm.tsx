@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,10 +80,13 @@ type ServiceFormValues = z && z.infer<typeof serviceProfileSchema>;
 
 export function ServiceProviderRegistrationForm() {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [serviceTags, setServiceTags] = useState<string[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
+<<<<<<< HEAD
 
 
 
@@ -258,21 +262,15 @@ export function ServiceProviderRegistrationForm() {;
     const serviceInput = form && form.getValues("services");
     if (serviceInput && !serviceTags && serviceTags.includes(serviceInput)) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       setServiceTags([...serviceTags, serviceInput]);
       form && form.setValue("services", "");
     }
-
-  },;
-  // Handle removing service tags;
-  const handleRemoveService = (service: string) => {;
-    setServiceTags(serviceTags.filter((s) => s !== service));
-  },;
-  // Handle key press in services input (add on enter);
-  const handleServiceKeyPress = (e: React.KeyboardEvent) => {;
-    if (e.key === "Enter") {;
-      e.preventDefault(),;
-      handleAddService();
+    } finally {
+      setIsGenerating (false);
     }
+<<<<<<< HEAD
   },;
   // Handle avatar upload;
   const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
@@ -429,10 +427,14 @@ if ( {) {
 }
           setServiceTags ([...service_tags, ...new_services]);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         }
       }
     }
   }
+<<<<<<< HEAD
   },
 
   // Handle form submission
@@ -532,6 +534,10 @@ if ( {) {
     setIsSubmitting (true);
 ;
 
+=======
+    }
+    setIsSubmitting(true);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     try {
       // For actual implementation with Supabase;
       // Check condition
@@ -540,19 +546,10 @@ if ( {) {
 }
         throw new Error ("User not authenticated");
       }
-
-      // Enhance profile if not already done;
-      let final_summary = values.bio;
-      let final_services = service_tags;
-;
-      // Check condition
-if ( {) {
-  $2
-}
-
         try {
           const { data: ai_data } = await supabase.functions.invoke ('service - profile - enhancer', {
             body: {
+<<<<<<< HEAD
 
 
 =======
@@ -614,11 +611,15 @@ if ( {) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
         }
       } else if (generatedContent) {;
+<<<<<<< HEAD
 
         finalSummary = generatedContent.summary,;
         finalServices = [...new Set([...serviceTags, ...generatedContent.services])];
@@ -945,6 +946,16 @@ if ( {) {
               </div>;
               `;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        finalSummary = generatedContent && generatedContent.summary;
+        finalServices = [...new Set([...serviceTags, ...generatedContent && generatedContent.services])];
+      }
+        .select();
+      if (error) throw error;
+        try {
+          await supabase.functions.invoke ('send - email', {
+            body: {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             }
           });
         } catch (emailError) {;
@@ -952,44 +963,10 @@ if ( {) {
           // Continue with submission even if email fails;
         }
       }
-
-
-      toast({;
-        title: "Profile Created Successfully",;
-        description: "Your service provider profile has been published and is now visible in the directory."}),;
-
-      // Redirect to service provider dashboard or profile page;
-      setTimeout(() => {;
-        window && window.location.href = "/service-dashboard";
-      }, 1500);
-
-    } catch (error: any) {;
-      console && console.error("Error creating profile:", error);
-      toast({;
-        title: "Error Creating Profile",;
-        description: error && error.message || "There was an error creating your profile. Please try again.",;
-        variant: "destructive"});
-    } finally {;
-      setIsSubmitting(false);
-
     }
   }
 
   return (
-
-    <div className="max-w-4xl mx-auto p-4 md:p-6">;
-      <Card className="bg-zion-blue-dark border-zion-blue-light">;
-        <CardHeader>;
-          <CardTitle className="text-2xl text-white">Create Your Service Provider Profile</CardTitle>;
-          <CardDescription className="text-zion-slate">;
-            Showcase your services and expertise to potential clients.;
-          </CardDescription>;
-        </CardHeader>;
-
-        <Form {...form}>;
-          <form onSubmit={form && form.handleSubmit(onSubmit)}>;
-            <CardContent className="space-y-8">;
-
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;
@@ -1080,12 +1057,6 @@ if ( {) {
                               />;
                             </div>;
                           </FormControl>;
-
-                    />;
-                  </div>;
-
-                  <div className="col-span-1">;
-
                     <FormField
                       control={form && form.control}
                       name="title"
@@ -1121,12 +1092,6 @@ if ( {) {
                               />;
                             </div>;
                           </FormControl>;
-
-                    />;
-                  </div>;
-
-                  <div className="col-span-1">;
-
                     <FormField
                       control={form && form.control}
                       name="location"
@@ -1162,12 +1127,6 @@ if ( {) {
                               />;
                             </div>;
                           </FormControl>;
-
-                    />;
-                  </div>;
-
-                  <div className="col-span-1">;
-
                     <FormField
                       control={form && form.control}
                       name="website"
@@ -1203,6 +1162,7 @@ if ( {) {
                               />;
                             </div>;
                           </FormControl>;
+<<<<<<< HEAD
 
                     />;
                   </div>;
@@ -1213,6 +1173,8 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {/* Upload Avatar */}
                 <div className="space-y-2">;
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>;
@@ -1231,75 +1193,29 @@ if ( {) {
                           <UserRound className="h-10 w-10 text-zion-slate opacity-50" />;
                         </div>;
                       )}
-
-                    </div>;
-
-                    <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">;
-                      <Upload className="mr-2 h-4 w-4" />;
-                      <span>Upload Photo</span>;
-
                       <input
                         type="file"
                         accept="image/*"
                         className="hidden"
                         onChange={handleAvatarUpload}
-
-                      />;
-                    </label>;
-                  </div>;
-                  <p className="text-sm text-zion-slate">;
-=======
-                          <FormMessage className="text - red - 400" />;
-                        </FormItem>)}
-                    />;
-                  </div>;
-                </div>;
-                {/* Upload Avatar */}
-                <div className="space - y-2">;
-                  <FormLabel className="text - zion - slate - light">Profile Picture</FormLabel>;
-                  <div className="flex items - center gap - 6">;
-                    <div className="relative w - 24 h - 24 rounded - full overflow - hidden bg - zion - blue - light border border - zion - blue - light">;
-                      {uploaded_avatar ? (
-                        <AspectRatio ratio={1 / 1}>;
-                          <img;
-                            src={uploaded_avatar}
-                            alt="Avatar preview";
-                            className="w - full h - full object - cover";
-                          />;
-                        </AspectRatio>) : (
-                        <div className="flex items - center justify - center h - full">;
-                          <UserRound className="h - 10 w - 10 text - zion - slate opacity - 50" />;
-                        </div>)}
-                    </div>;
-                    <label className="flex items - center justify - center px - 4 py - 2 rounded - md bg - zion - purple hover:bg - zion - purple - dark text - white cursor - pointer transition - colors">;
-                      <Upload className="mr - 2 h - 4 w - 4" />;
-                      <span > Upload Photo</span>;
-                      <input;
-                        type="file";
-                        accept="image/*";
-                        className="hidden";
-                        on_change={handleAvatarUpload}
-                      />;
-                    </label>;
-                  </div>;
-                  <p className="text - sm text - zion - slate">;
-
                     For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.;
                   </p>;
                 </div>;
               </div>;
-
-                        />;
-                      </FormControl>;
-                      <FormMessage className="text-red-400" />;
-                      <FormDescription className="text-zion-slate">;
-                        {field && field.value?.length || 0}/1000 characters;
-                      </FormDescription>;
-                    </FormItem>;
-                  )}
-                />;
-
-
+              {/* Bio Section */}
+              <div className="space-y-4">;
+                <h3 className="text-lg font-medium text-white">Service Description</h3>;
+                <FormField
+                  control={form && form.control}
+                  name="bio"
+                  render={({ field }) => (;
+                    <FormItem>;
+                      <FormLabel className="text-zion-slate-light">About Your Services</FormLabel>;
+                      <FormControl>;
+                        <Textarea
+                          className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white"
+                          placeholder="Describe your services, expertise, and what sets you apart from others..."
+                          {...field}
                 {/* AI Enhancement Option */}
                 <FormField
                   control={form && form.control}
@@ -1353,12 +1269,6 @@ if ( {) {
                         </FormDescription>;
                       </div>;
                       <FormControl>;
-
-                />;
-
-                {form && form.watch("enhancedProfile") && (;
-                  <div className="flex justify-end">;
-
                     <Button
                       type="button"
                       variant="outline"
@@ -1382,24 +1292,6 @@ if ( {) {
                         type="button"
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-
-                        onClick={applyGeneratedContent}>;
-                        <Check className="mr-1 h-3 w-3" /> Apply;
-                      </Button>;
-                    </div>;
-
-                    <div className="space-y-4">;
-                      <div>;
-                        <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>;
-                        <p className="text-zion-slate italic">{generatedContent && generatedContent.summary}</p>;
-                      </div>;
-
-                      {generatedContent && generatedContent.services && generatedContent && generatedContent.services.length > 0 && (;
-                        <div>;
-                          <h5 className="text-zion-slate-light text-sm mb-1">Suggested Services</h5>;
-                          <div className="flex flex-wrap gap-2 mt-1">;
-                            {generatedContent && generatedContent.services.map((service, index) => (;
-
                               <Badge
                                 key={index}
                                 className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">;
@@ -1412,12 +1304,6 @@ if ( {) {
                     </div>;
                   </div>;
                 )}
-
-              </div>;
-
-              <Separator className="bg-zion-blue-light/50" />;
-
-
               {/* Services and Availability */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
                 {/* Services Section */}
@@ -1516,12 +1402,6 @@ if ( {) {
                               onKeyDown={handleServiceKeyPress}
                             />;
                           </FormControl>;
-
-                  />;
-
-                  <div className="flex flex-wrap gap-2 mt-2">;
-                    {serviceTags && serviceTags.map(service => (;
-
                       <Badge
                         key={service}
                         className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1 && 1.5 flex items-center gap-1">;
@@ -1538,6 +1418,7 @@ if ( {) {
                     {serviceTags && serviceTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No services added yet</p>;
                     )}
+<<<<<<< HEAD
                   </div>
                 </div>
                   </div>;
@@ -1549,6 +1430,8 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {/* Pricing and Availability Section */}
                 <div className="space-y-4">;
                   <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>;
@@ -1619,10 +1502,6 @@ if ( {) {
                             />;
                           </div>;
                         </FormControl>;
-
-                  />;
-
-
                   <FormField
                     control={form && form.control}
                     name="availability"
@@ -1636,41 +1515,16 @@ if ( {) {
                                 type="radio"
                                 id="available"
                                 value="available"
-
-                                checked={field && field.value === "available"}
-                                onChange={() => field && field.onChange("available")}
-                                className="text-zion-purple focus:ring-zion-purple";
-                              />;
-                              <label htmlFor="available" className="text-white flex items-center gap-2">;
-                                <div className="h-2 w-2 rounded-full bg-green-500"></div>;
-                                Available for Work;
-                              </label>;
-                            </div>;
-
-                            <div className="flex items-center space-x-2">;
-
                               <input
                                 type="radio"
                                 id="limited"
                                 value="limited"
-
-                                checked={field && field.value === "limited"}
-                                onChange={() => field && field.onChange("limited")}
-                                className="text-zion-purple focus:ring-zion-purple";
-                              />;
-                              <label htmlFor="limited" className="text-white flex items-center gap-2">;
-                                <div className="h-2 w-2 rounded-full bg-yellow-500"></div>;
-                                Limited Availability;
-                              </label>;
-                            </div>;
-
-                            <div className="flex items-center space-x-2">;
-
                               <input
                                 type="radio"
                                 id="unavailable"
                                 value="unavailable"
                                 checked={field.value === "unavailable"}
+<<<<<<< HEAD
                                 onChange={() => field.onChange("unavailable")}
                                 className="text-zion-purple focus:ring-zion-purple"
                               />
@@ -1714,3 +1568,35 @@ if ( {) {
 }
 }
 ;
+=======
+                                on_change={() => field.on_change ("unavailable")}
+                                className="text - zion - purple focus:ring - zion - purple";
+                              />;
+                              <label html_for="unavailable" className="text - white flex items - center gap - 2">;
+                                <div className="h - 2 w - 2 rounded - full bg - red - 500"></div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                                Currently Unavailable;
+                              </label>;
+                            </div>;
+                          </div>;
+                        </FormControl>;
+                  />;
+                </div>;
+              </div>;
+            </CardContent>;
+                <Button
+                  type="submit"
+                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                  disabled={isSubmitting}>;
+                  {isSubmitting ? "Creating Profile..." : "Create Service Profile"}
+                </Button>;
+              </div>;
+            </CardFooter>;
+          </form>;
+        </Form>;
+      </Card>;
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,6 +9,8 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -16,6 +19,7 @@ import {format} from 'date - fns';
 import {EducationFormProps} from './types';
 import {EducationList} from './EducationList';
 import {EducationFormFields} from './EducationFormFields';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function EducationForm({
 export function EducationForm({ ;
@@ -90,11 +94,14 @@ export function EducationForm({;
       location: data && data.location},;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     let success;
     if (editingId) {;
       success = await updateEducation(editingId, educationData);
     } else {;
       success = await addEducation(resumeId, educationData);
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
     if (success) {
@@ -232,25 +239,17 @@ export function EducationForm({;
         </h3>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    }
+    }
+  }
+
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <EducationFormFields
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}
           onCancel={handleCancel}
-
-        />;
-      </div>;
-
-      {!editingId && educationEntries && educationEntries.length > 0 && (;
-        <div className="flex justify-end">;
-          <Button type="button" onClick={onComplete}>;
-            Next;
-          </Button>;
-        </div>;
-      )}
-    </div>;
-  );
-}
-
 =======
 export /**
  * EducationForm - Function description

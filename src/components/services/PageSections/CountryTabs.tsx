@@ -1,3 +1,20 @@
+import { Search } from 'lucide-react'
+
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import {
+  Pagination
+  PaginationContent
+  PaginationItem
+  PaginationButton
+  PaginationNext
+  PaginationPrevious
+} from '@/components/ui/pagination'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { CountryServiceCard } from '@/components/services/CountryServiceCard'
+import { CountryPricing } from '@/data/onsiteServicePricing'
+=======
+import { useState, useEffect } from 'react',;
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input',;
 import { Button } from '@/components/ui/button',;
@@ -7,14 +24,18 @@ import {;
   PaginationItem,;
   PaginationButton,;
   PaginationNext,;
-  PaginationPrevious,;
-} from '@/components/ui/pagination';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { CountryServiceCard } from '@/components/services/CountryServiceCard';
-import { CountryPricing } from '@/data/onsiteServicePricing';
-
-
+  PaginationPrevious} from '@/components/ui/pagination',;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+import { CountryServiceCard } from '@/components/services/CountryServiceCard',;
+import { CountryPricing } from '@/data/onsiteServicePricing',;
+interface CountryTabsProps {;
+  popularCountries: string[],;
+  filteredCountries: CountryPricing[],;
+  handleCountrySelect: (country: CountryPricing) => void,;
+  onQuote?: (country: CountryPricing) => void,;
+  searchQuery: string,;
   setSearchQuery: (query: string) => void;
+<<<<<<< HEAD
 export function CountryTabs(): any ({;
   popularCountries,;
   filteredCountries,;
@@ -46,6 +67,10 @@ interface CountryTabsProps {
   searchQuery: string;
   setSearchQuery: (query: string) => void
 export function CountryTabs({
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   popularCountries
   filteredCountries
@@ -63,7 +88,10 @@ export function CountryTabs({
   onQuote,
   searchQuery,
 <<<<<<< HEAD
+<<<<<<< HEAD
   setSearchQuery,
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1)
   const countriesPerPage = 50
@@ -71,6 +99,7 @@ export function CountryTabs({
     setCurrentPage(1)
   }, [searchQuery])
   const totalPages = Math.ceil(filteredCountries.length / countriesPerPage)
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -90,6 +119,8 @@ export function CountryTabs({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1),
   const countriesPerPage = 50,
@@ -99,9 +130,11 @@ export function CountryTabs({
   }, [searchQuery]),
 
   const totalPages = Math.ceil(filteredCountries.length / countriesPerPage),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const paginatedCountries = filteredCountries.slice(
     (currentPage - 1) * countriesPerPage
     currentPage * countriesPerPage
+<<<<<<< HEAD
   )
   ),
 <<<<<<< HEAD
@@ -109,9 +142,14 @@ export function CountryTabs({
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
-    <Tabs defaultValue='featured' className='w-full'>;
-      <TabsList className='bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6'>;
+    <Tabs defaultValue="featured" className="w-full">
+      <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">
         <TabsTrigger
           value="featured"
           className="data-[state=active]:bg-zion-purple"
@@ -122,6 +160,7 @@ export function CountryTabs({
           All Countries
         </TabsTrigger>
       </TabsList>
+<<<<<<< HEAD
       <TabsContent value='featured' className='mt-0'>
         <div className='mb-6'>
           <h2 className='text-2xl font-bold text-white text-center'>
@@ -135,12 +174,18 @@ export function CountryTabs({
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             Featured Service Locations
           </h2>
           <p className="text-zion-slate-light text-center mt-2">
             Browse our most popular service destinations
           </p>
         </div>
+<<<<<<< HEAD
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
           {filteredCountries
             .filter(country => popularCountries.includes(country.country))
@@ -264,17 +309,21 @@ export function CountryTabs({
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           ))}
-
-        </div>;
-
-        {totalPages > 1 && (;
-          <div className='mt-8'>;
-            <Pagination className='justify-center'>;
-              <PaginationContent>;
-                <PaginationItem>;
+        </div>
+        {totalPages > 1 && (
+          <div className="mt-8">
+            <Pagination className="justify-center">
+              <PaginationContent>
+                <PaginationItem>
                   <PaginationPrevious
                     href={`?page=${currentPage - 1}`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -437,6 +486,13 @@ function CountryTabs() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+                    onClick={(e) => {;
+                      e.preventDefault(),;
+                      setCurrentPage(Math.max(1, currentPage - 1));
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     }}
                   />;
                 </PaginationItem>;
@@ -447,12 +503,15 @@ function CountryTabs() {
                         page={page}
                         isActive={page === currentPage}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         onClick={e => {
                           e.preventDefault()
                           setCurrentPage(page) }}
                       />
                     </PaginationItem>
                   )
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                         onClick={(e) => {;
                           e.preventDefault();
                           setCurrentPage(page);
@@ -460,11 +519,31 @@ function CountryTabs() {
                       />;
                     </PaginationItem>;
                   );
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 )}
                 <PaginationItem>;
                   <PaginationNext;
                     href={`?page=${currentPage + 1}`}
+                    }}
+=======
+                  />
+                </PaginationItem>
+              </PaginationContent>
+            </Pagination>
+          </div>
+        )}
+      </TabsContent>;
+    </Tabs>;
+  );
+}
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

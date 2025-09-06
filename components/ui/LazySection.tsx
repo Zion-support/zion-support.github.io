@@ -5,6 +5,7 @@
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 
 
 
@@ -47,6 +48,8 @@ export const LazySection: React.FC<LazySectionProps> = ({
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
   const getInitialPosition = () => {
@@ -59,23 +62,11 @@ export const LazySection: React.FC<LazySectionProps> = ({
       case 'right':
         return { opacity: 0, x: -50 }
       default:
-
-        return { opacity: 0, y: 50 }
-
     }
   }
   const getAnimatePosition = () => {
     switch (direction) {
       case 'up':
-
-        return { opacity: 1, y: 0 },
-      case 'down':
-        return { opacity: 1, y: 0 },
-      case 'left':
-        return { opacity: 1, x: 0 },
-      case 'right':
-        return { opacity: 1, x: 0 },
-
       default:
         return { opacity: 1, y: 0 }
     }
@@ -85,12 +76,6 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
   }
   render() {
     if (this.state.hasError) {
@@ -140,24 +125,12 @@ export const LazySection: React.FC<LazySectionProps> = ({;
         return { opacity: 1, y: 0 };
     }
   };
-    >;
       {children}
     </motion && motion.div>;
   );
-
-};
-export default LazySection;      case 'down':;
-        return { opacity: 1, y: 0 },;
-      case 'left':;
-        return { opacity: 1, x: 0 },;
-      case 'right':;
-        return { opacity: 1, x: 0 },;
-      default:;
-
         return { opacity: 1, y: 0 }
     }
   }
-<<<<<<< HEAD
   return (
     <motion&& motion.div
       ref={ref}
@@ -166,6 +139,7 @@ export default LazySection;      case 'down':;
       transition={{ duration: 0 && 0.8, delay, ease: "easeOut" }}
       className={className}>;
       {children}
+<<<<<<< HEAD
 
     </motion && motion.div>;
   );
@@ -174,3 +148,5 @@ export default LazySection;      case 'down':;
 
 export default LazySection;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

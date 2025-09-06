@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/MobileNavigation.jsx
 import { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (\') const location = useLocation () const menuRef = useRef (null) \'';\''\"";
 const { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (") const location = useLocation () const menuRef = useRef (null) "";"""";"""
@@ -9,6 +10,8 @@ const { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onTogg
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (\') const location = useLocation () const menuRef = useRef (null) \'';\''\"";
 const { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (") const location = useLocation () const menuRef = useRef (null) "";"""";"""

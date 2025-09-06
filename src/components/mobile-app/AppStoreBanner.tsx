@@ -1,4 +1,40 @@
-return (
+import React, { useState, useEffect } from "react",
+import { safeStorage } from "@/utils/safeStorage",
+import { X } from 'lucide-react'
+import { useIsMobile } from "@/hooks/use-mobile",
+export const AppStoreBanner: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false),
+  const isMobile = useIsMobile(),
+  
+  useEffect(() => {
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    // Only show banner on mobile devices and if it hasn't been dismissed before
+    if (isMobile && !safeStorage.getItem("appBannerDismissed")) {
+      // Delay showing the banner by 2 seconds
+      const timer = setTimeout(() => {
+        setIsVisible(true)
+=======
+      }, 2000),
+      
+      return () => clearTimeout(timer)
+    }
+    return undefined
+  }, [isMobile]),
+  
+  const dismissBanner = () => {
+    setIsVisible(false),
+    safeStorage.setItem("appBannerDismissed", "true")
+  },
+  
+  // Only render on mobile devices
+  if (!isMobile || !isVisible) return null,
+  
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
       <div className="flex items-center">
         <div className="w-12 h-12 bg-zion-cyan rounded-lg mr-3 flex-shrink-0"></div>
@@ -24,6 +60,7 @@ return (
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 };
 '"};
@@ -33,11 +70,14 @@ return (
 '"}
 }
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 },
 import React, { useState, useEffect } from "react",;
 import { safeStorage } from "@/utils/safeStorage",;
 import { X } from 'lucide-react';
 import { useIsMobile } from "@/hooks/use-mobile",;
+<<<<<<< HEAD
 =======
 
 
@@ -46,6 +86,8 @@ import React, { useState, useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage";
 import { X } from 'lucide-react'import { useIsMobile } from "@/hooks/use-mobile";
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export const AppStoreBanner: React.FC = () => {;
   const [isVisible, setIsVisible] = useState(false),;
   const isMobile = useIsMobile(),;
@@ -95,6 +137,7 @@ export const AppStoreBanner: React.FC = () => {;
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 '"},;
@@ -138,3 +181,8 @@ if (return null) {
 }
 
   )
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

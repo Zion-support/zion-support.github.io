@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -86,12 +87,15 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
   updateStatus;
   toggleArchive;
 export const QuotesTable: React.FC<QuotesTableProps> = ({
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   quotes;
 
   isArchived = false;
   isLoading;
   updateStatus;
   toggleArchive;
+<<<<<<< HEAD
   deleteQuote
   quotes,
   isArchived = false,
@@ -211,100 +215,14 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                 </TableCell>;
                 <TableCell className="text - white">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   {quote.requester_name}
                 </TableCell>;
                 <TableCell className="text - white">;
                   <div className="font - medium">{quote.project_name}</div>;
                   <div className="text - sm text - zion - slate - light truncate max - w-[200px]">;
                     {quote.project_summary}
-
-  deleteQuote,;
-  onViewDetails;
-}) => {;
-  return (
-    <div className="overflow-x-auto">;
-      <Table>;
-        <TableHeader>;
-          <TableRow className="border-zion-blue-light hover:bg-zion-blue">;
-            <TableHead className="text-zion-slate-light">Talent</TableHead>;
-            <TableHead className="text-zion-slate-light">Requester</TableHead>;
-            <TableHead className="text-zion-slate-light">Project</TableHead>;
-            <TableHead className="text-zion-slate-light">Budget</TableHead>;
-            <TableHead className="text-zion-slate-light">Date</TableHead>;
-            <TableHead className="text-zion-slate-light">Status</TableHead>;
-            <TableHead className="text-zion-slate-light">Actions</TableHead>;
-          </TableRow>;
-        </TableHeader>;
-        <TableBody>;
-          {isLoading ? (;
-            <TableRow>;
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;
-                Loading quote requests...;
-              </TableCell>;
-            </TableRow>;
-          ) : quotes && quotes.length === 0 ? (;
-            <TableRow>;
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;
-                {isArchived ;
-                  ? "No archived quote requests found." ;
-                  : "No quote requests found."}
-              </TableCell>;
-            </TableRow>;
-          ) : (;
-            quotes && quotes.map(quote => (;
-              <TableRow
-                key={quote && quote.id}
-                className="border-zion-blue-light hover:bg-zion-blue">;
-                <TableCell className="text-white">;
-                  {quote && quote.talent_name || 'Unknown Talent'}
-                </TableCell>;
-                <TableCell className="text-white">;
-                  {quote && quote.requester_name}
-                </TableCell>;
-                <TableCell className="text-white">;
-                  <div className="font-medium">{quote && quote.project_name}</div>;
-                  <div className="text-sm text-zion-slate-light truncate max-w-[200px]">;
-                    {quote && quote.project_summary}
-                  </div>;
-                </TableCell>;
-                <TableCell className="text-white">;
-                  {quote && quote.budget_display || ;
-                  (quote && quote.budget_min && quote && quote.budget_max ;
-                   ? `$${quote && quote.budget_min} - $${quote && quote.budget_max}` ;
-                   : quote && quote.budget_min ;
-                     ? `$${quote && quote.budget_min}` ;
-                     : 'Not specified')}
-                </TableCell>;
-                <TableCell className="text-white">;
-                  {formatDate(quote && quote.created_at)}
-                </TableCell>;
-                <TableCell>;
-                  <QuoteStatusBadge status={quote && quote.status} />;
-                </TableCell>;
-                <TableCell>;
-                  <div className="flex items-center gap-2">;
-                    <Button
-                      variant="ghost" 
-                      size="icon" 
-                      onClick={() => onViewDetails(quote)}
-                    >;
-                      <Eye className="h-4 w-4" />;
-                      <span className="sr-only">View Details</span>;
-                    </Button>;
-
-                    {isArchived ? (;
-                      <>;
-                        <Button
-                          variant="ghost" 
-                          size="icon"
-                          onClick={() => toggleArchive(quote && quote.id, false)}
-                        >;
-                          <Archive className="h-4 w-4" />;
-                          <span className="sr-only">Unarchive</span>;
-                        </Button>;
-                        <Button
-                          variant="ghost" 
-
                           size="icon"
                           className="text-red-500"
                           onClick={() => {;
@@ -312,6 +230,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                               deleteQuote(quote && quote.id);
                             }
                           }}
+<<<<<<< HEAD
 
 =======
                               }
@@ -491,6 +410,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                               if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
                                 deleteQuote(quote && quote.id);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                               }
                             }}
                             className="text-red-500";
@@ -500,6 +421,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     )}
                   </div>
@@ -518,12 +440,15 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     )}
                   </div>;
                 </TableCell>;
               </TableRow>;
             ));
           )}
+<<<<<<< HEAD
 
 
 
@@ -543,3 +468,109 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+=======
+                  </div>;
+                </TableCell>;
+                <TableCell className="text - white">;
+                  {quote.budget_display ||;
+                  (quote.budget_min && quote.budget_max;
+                  ? `$${quote.budget_min} - $${quote.budget_max}`;
+                  : quote.budget_min;
+                    ? `$${quote.budget_min}`;
+                    : 'Not specified')}
+                </TableCell>;
+                <TableCell className="text - white">;
+                  {format_date (quote.created_at)}
+                </TableCell>;
+                <TableCell>;
+                  <QuoteStatusBadge status={quote.status} />;
+                </TableCell>;
+                <TableCell>;
+                  <div className="flex items - center gap - 2">;
+                    <Button;
+                      variant="ghost";
+                      size="icon";
+                      on_click={() => onViewDetails (quote)}
+                    >;
+                      <Eye className="h - 4 w - 4" />;
+                      <span className="sr - only">View Details</span>;
+                    </Button>;
+                    {is_archived ? (
+                      <>;
+                        <Button;
+                          variant="ghost";
+                          size="icon";
+                          on_click={() => toggle_archive (quote.id, false)}
+                        >;
+                          <Archive className="h - 4 w - 4" />;
+                          <span className="sr - only">Unarchive</span>;
+                        </Button>;
+                        <Button;
+                          variant="ghost";
+                          size="icon";
+                          className="text - red - 500";
+                          on_click={() => {
+                            if () {) {
+  $2
+}
+                              delete_quote (quote.id);
+                            }
+                          }}
+                        >;
+                          <Trash2 className="h - 4 w - 4" />;
+                          <span className="sr - only">Delete</span>;
+                        </Button>;
+                      </>) : (
+                      <DropdownMenu>;
+                        <DropdownMenuTrigger as_child>;
+                          <Button variant="ghost" size="icon">;
+                            <MoreHorizontal className="h - 4 w - 4" />;
+                            <span className="sr - only">Actions</span>;
+                          </Button>;
+                        </DropdownMenuTrigger>;
+                        <DropdownMenuContent align="end">;
+                          <DropdownMenuItem on_click={() => update_status (quote.id, 'new')}>;
+                            Mark as New;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem on_click={() => update_status (quote.id, 'in_review')}>;
+                            Mark as In Review;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem on_click={() => update_status (quote.id, 'responded')}>;
+                            Mark as Responded;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem on_click={() => update_status (quote.id, 'accepted')}>;
+                            Mark as Accepted;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem on_click={() => update_status (quote.id, 'closed')}>;
+                            Mark as Closed;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem on_click={() => toggle_archive (quote.id, true)}>;
+                            <Archive className="h - 4 w - 4 mr - 2" />;
+                            Archive;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem;
+                            on_click={() => {
+                              if () {) {
+  $2
+}
+                                delete_quote (quote.id);
+                              }
+                            }}
+                            className="text - red - 500";
+                          >;
+                            <Trash2 className="h - 4 w - 4 mr - 2" />;
+                            Delete;
+                          </DropdownMenuItem>;
+                        </DropdownMenuContent>;
+                      </DropdownMenu>)}
+                  </div>;
+                </TableCell>;
+              </TableRow>)))}
+        </TableBody>;
+      </Table>;
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

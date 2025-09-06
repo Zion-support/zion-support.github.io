@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -85,6 +86,9 @@ export function VerifiedBadge(): any ({ verified, size = 'sm' }: VerifiedBadgePr
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+import React from 'react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import {CheckCircle} from 'lucide-react';
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components / ui / tooltip';
 interface VerifiedBadgeProps {
@@ -105,3 +109,21 @@ if (return null) {
     lg: 'h - 5 w - 5';
   }
 ;
+<<<<<<< HEAD
+=======
+  return (
+    <TooltipProvider>;
+      <Tooltip>;
+        <TooltipTrigger as_child>;
+          <span className="inline - flex text - blue - 500">;
+            <CheckCircle className={`${size_classes[size]} fill - blue - 100`} />;
+          </span>;
+        </TooltipTrigger>;
+        <TooltipContent>;
+          <p > Verified talent</p>;
+        </TooltipContent>;
+      </Tooltip>;
+    </TooltipProvider>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

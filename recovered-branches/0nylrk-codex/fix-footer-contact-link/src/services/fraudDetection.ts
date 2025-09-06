@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Re-export from the refactored modules to maintain backward compatibility
@@ -11,3 +12,5 @@
 export * from './fraud';
 // Re-export from the refactored modules to maintain backward compatibility;
 export * from './fraud';
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

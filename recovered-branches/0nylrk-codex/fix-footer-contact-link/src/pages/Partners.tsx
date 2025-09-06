@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,10 +42,13 @@ export default function Partners() {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 import { useNavigate } from "react-router-dom",
@@ -197,11 +201,14 @@ export default function Partners() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     return (
+<<<<<<< HEAD
 
       <div className="container max-w-6xl py-10">;
         <div className="text-center mb-8">;
@@ -338,15 +345,9 @@ export default function Partners() {;
             size="lg" 
             variant="outline" 
 
-            className="text-zion-cyan border-zion-cyan"
 =======
-
-          <Button 
-            size="lg" 
-            variant="outline" 
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             className="text-zion-cyan border-zion-cyan"
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             onClick={() => navigate('/login')}
           >;
             Partner Login;
@@ -355,6 +356,7 @@ export default function Partners() {;
       </div>;
     );
   }
+<<<<<<< HEAD
 
 
 
@@ -414,3 +416,44 @@ export default function Partners() {;
 }
 }
 ;
+=======
+            Export CSV;
+          </Button>;
+        </div>;
+      </div>;
+          <TabsTrigger value="overview">Overview</TabsTrigger>;
+          <TabsTrigger value="referrals">Referral Links</TabsTrigger>;
+          <TabsTrigger value="earnings">Earnings</TabsTrigger>;
+          <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>;
+          <TabsTrigger value="resources">Resources</TabsTrigger>;
+        </TabsList>;
+=======
+        <TabsContent value="overview" className="space - y-4">;
+          <PartnerDashboard />;
+        </TabsContent>;
+        <TabsContent value="referrals" className="space - y-4">;
+          <PartnerReferralLinks />;
+        </TabsContent>;
+        <TabsContent value="earnings" className="space - y-4">;
+          <Card>;
+            <CardHeader>;
+              <CardTitle > Earnings & Payouts</CardTitle>;
+              <CardDescription > Track your earnings and manage payouts</CardDescription>;
+            </CardHeader>;
+            <CardContent>;
+              {/* This will be implemented later */}
+              <p className="text - zion - slate - light">Earnings tracking and payout requests will be available soon.</p>;
+            </CardContent>;
+          </Card>;
+        </TabsContent>;
+        <TabsContent value="leaderboard" className="space - y-4">;
+          <PartnerLeaderboard />;
+        </TabsContent>;
+        <TabsContent value="resources" className="space - y-4">;
+          <PartnerResources />;
+        </TabsContent>;
+      </Tabs>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

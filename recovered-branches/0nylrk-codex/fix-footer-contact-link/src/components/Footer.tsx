@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -87,6 +88,8 @@ export function Footer() {
             <ul className="space-y-2">;
               <li>;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <Link
                   to="/marketplace"
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
@@ -170,60 +173,31 @@ function Footer() {
                 </Link>;
               </li>;
               <li>;
-
-                <Link;
-                  to="/services";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
-
                   Services;
                 </Link>;
               </li>;
               <li>;
-
-                <Link;
-                  to="/talent";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
-
                   Talent;
                 </Link>;
               </li>;
               <li>;
-
-                <Link;
-                  to="/equipment";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
-
                   Equipment;
                 </Link>;
               </li>;
               <li>;
-
-                <Link;
-                  to="/categories";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
-
                   Categories;
                 </Link>;
               </li>;
               <li>;
-
-                  className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======
-                <Link;
-                  to="/green - it";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
-
                   Green IT;
                 </Link>;
               </li>;
             </ul>;
           </div>;
-
+                <Link
+                  to="/content/about"
+                  className="text-zion-slate hover:text-zion-cyan transition-colors">;
+=======
           <div>;
             <h3 className="text - white font - semibold mb - 4 text - lg">Company</h3>;
             <ul className="space - y-2">;
@@ -232,78 +206,47 @@ function Footer() {
                   to="/content / about";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
                 >;
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   About Us;
                 </Link>;
               </li>;
               <li>;
-
-                <Link;
-                  to="/blog";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
-
                   Blog;
                 </Link>;
               </li>;
               <li>;
-
-                <Link;
-                  to="/partners";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
-
                   Partners;
                 </Link>;
               </li>;
               <li>;
-
-                <Link;
-                  to="/careers";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
-
                   Careers;
                 </Link>;
               </li>;
               <li>;
-
-                <Link;
-                  to="/contact";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
-
                   Contact;
                 </Link>;
               </li>;
               <li>;
-
-                  className="text-zion-slate hover:text-zion-cyan transition-colors">;
-=======
-                <Link;
-                  to="/sitemap - page";
-                  className="text - zion - slate hover:text - zion - cyan transition - colors";
-                >;
-
                   Sitemap;
                 </Link>;
               </li>;
             </ul>;
           </div>;
-
-          <div>;
-            <h3 className="text - white font - semibold mb - 4 text - lg">;
-              Subscribe to our newsletter;
-            </h3>;
-            <p className="text - zion - slate mb - 4">;
-
               Stay updated with the latest news on tech, AI, and marketplace;
               opportunities.;
             </p>;
             <NewsletterForm />;
           </div>;
         </div>;
-
+              <Link
+                to="/privacy"
+                className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">;
+                Privacy Policy;
+              </Link>;
+              <Link
+                to="/terms"
+                className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">;
+=======
         <div className="mt - 12 pt - 8 border - t border - zion - blue - light">;
           <div className="flex flex - col md: flex - row justify - between items - center">;
             <p className="text - zion - slate text - sm">;
@@ -321,13 +264,14 @@ function Footer() {
                 to="/terms";
                 className="text - zion - slate hover:text - zion - cyan text - sm transition - colors";
               >;
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Terms of Service;
               </Link>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
               <Link to="/privacy" className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">Terms of Service</Link>
@@ -422,3 +366,6 @@ export function Footer() {;
     </footer>;
   );
 }
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

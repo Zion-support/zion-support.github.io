@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { upsertFile } = require('./_lib/github');
 
 async function scorePage(url) {
@@ -55,10 +56,13 @@ function score_page() {
 exports.handler = async function () {
   try {
     const base_url = process.env.URL || process.env.DEPLOY_URL || '';
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     const pages = ['/', '/learn', '/dao', '/certifications', '/blog'];
     const results = [];
     ${p}`));
     }
+<<<<<<< HEAD
 
     const report = { updatedAt: Date && Date.now(), results };
     const owner = process && process.env.GITHUB_OWNER;
@@ -292,3 +296,5 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from &quot;react&quot;
 import useEmblaCarousel from &quot;embla-carousel-react&quot;
 import { ArrowLeft, ArrowRight } from &quot;lucide-react&quot;
@@ -247,15 +248,15 @@ on_select (api);
       api.on (&quot;re_init & quot;, on_select);
       api.on (&quot;select & quot;, on_select);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return () => {
         api?.off (&quot;select & quot;, on_select);
       }
-
-    }, [api, on_select]);
-
     return (
       <CarouselContext.Provider;
         value={{
+<<<<<<< HEAD
           carouselRef
           api: api
           opts
@@ -268,11 +269,14 @@ on_select (api);
           scrollPrev,
           scrollNext,
           canScrollPrev,
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           canScrollNext}}
       >;
         <div;
           ref={ref}
           onKeyDownCapture={handleKeyDown}
+<<<<<<< HEAD
 className={cn(&quot;relative&quot;, className)}
           role=&quot;region&quot;
           aria-roledescription=&quot;carousel&quot;
@@ -285,12 +289,18 @@ className={cn(&quot;relative&quot;, className)}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+className={cn (&quot;relative & quot;, class_name)}
+          role=&quot;region & quot;
+          aria - roledescription=&quot;carousel & quot;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {...props}
         >;
           {children}
         </div>;
       </CarouselContext.Provider>);
   }
+<<<<<<< HEAD
 
 )
 Carousel.displayName = &quot;Carousel&quot;
@@ -301,10 +311,13 @@ const CarouselContent = React.forwardRef<
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
   const { carouselRef, orientation } = useCarousel()
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div ref={carouselRef} className="overflow-hidden">
       <div
         ref={ref}
+<<<<<<< HEAD
         className={cn(
           &quot;flex&quot;
           orientation === &quot;horizontal&quot; ? &quot;-ml-4&quot; : &quot;-mt-4 flex-col&quot;
@@ -385,11 +398,17 @@ const CarouselPrevious = React.forward_ref<;
 >(({ class_name, variant = &quot;outline & quot;, size = &quot;icon & quot;, ...props }, ref) => {
   const { orientation, scroll_prev, canScrollPrev } = use_carousel ();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  return (
+    <div;
+      ref={ref}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Button;
       ref={ref}
       variant={variant}
       size={size}
+<<<<<<< HEAD
 
       className={cn(
         &quot;absolute  h-8 w-8 rounded-full&quot;
@@ -402,9 +421,12 @@ const CarouselPrevious = React.forward_ref<;
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >
       <ArrowLeft className=&quot;h-4 w-4&quot; />
@@ -452,11 +474,14 @@ const CarouselNext = React.forward_ref<;
 >(({ class_name, variant = &quot;outline & quot;, size = &quot;icon & quot;, ...props }, ref) => {
   const { orientation, scroll_next, canScrollNext } = use_carousel ();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Button;
       ref={ref}
       variant={variant}
       size={size}
+<<<<<<< HEAD
 
       className={cn(
         &quot;absolute h-8 w-8 rounded-full&quot;
@@ -469,9 +494,12 @@ const CarouselNext = React.forward_ref<;
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >
       <ArrowRight className=&quot;h-4 w-4&quot; />
@@ -533,3 +561,6 @@ export {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  CarouselNext}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

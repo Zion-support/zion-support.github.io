@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import clsx, { type ClassValue } from &quot;clsx&quot;
 import { twMerge } from &quot;tailwind-merge&quot;
 import clsx, { type ClassValue } from "clsx"
@@ -17,3 +18,5 @@ function cn() {
   return tw_merge (clsx (inputs));
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

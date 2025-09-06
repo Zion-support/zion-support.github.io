@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 import {
@@ -20,11 +21,14 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 export function ExportPanel() {;
+<<<<<<< HEAD
 export function ExportPanel() {
   const { toast } = useToast();
 
@@ -46,10 +50,15 @@ export function ExportPanel() {
         toast({
           title: `${format.toUpperCase()} Export Ready`
           description: "Your export has been downloaded."
+=======
+  const { toast } = useToast();
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         });
       }, 1500));
   }
 
+<<<<<<< HEAD
     toast({
       title: `Exporting as ${format.toUpperCase()}`,
       description: "Your export is being prepared and will download shortly.",
@@ -78,6 +87,8 @@ export function ExportPanel() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader>;
@@ -95,7 +106,15 @@ export function ExportPanel() {
           <Button
             variant="default"
             className="bg-zion-purple hover:bg-zion-purple-dark"
-
+            onClick={() => handleExport("csv")}
+          >;
+            Export as CSV;
+          </Button>;
+          <Button
+            variant="outline"
+            className="border-zion-blue-light text-zion-slate-light"
+            onClick={() => handleExport("json")}
+=======
 import React from './react';
 import {
   Card,
@@ -113,6 +132,7 @@ function ExportPanel() {
   const { toast } = use_toast ();
 ;
   const handle_export = (format: "csv" | "json") =>: any {
+<<<<<<< HEAD
 =======
             onClick={() => handleExport('csv')}
           >
@@ -139,6 +159,8 @@ export function ExportPanel() {;
   const { toast } = useToast(),;
   const handleExport = (format: 'csv' | 'json') => {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Placeholder for actual export functionality;
     (toast ({
       title: `Exporting as ${format.toUpperCase ()}`,
@@ -184,6 +206,7 @@ export function ExportPanel() {;
           </Button>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
 
     </Card>;
 <<<<<<< HEAD
@@ -196,4 +219,6 @@ export function ExportPanel() {;
 =======
     </Card>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }

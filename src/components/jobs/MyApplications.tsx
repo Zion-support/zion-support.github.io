@@ -1,8 +1,20 @@
-default:
+
+import { useState } from "react",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Loader2, MessageSquare, ExternalLink } from 'lucide-react'
+import { formatDistanceToNow } from "date-fns",
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      default:
         return <Badge variant="outline">{status}</Badge>
     }
+  }
 
-import {ApplicationStatus} from "@/types/jobs";
+  if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -32,6 +44,7 @@ import {ApplicationStatus} from "@/types/jobs";
   }
   return (
     <div className="grid gap-4 md:grid-cols-2">
+<<<<<<< HEAD
       {applications.map((application,) => (
       {applications.map((application) => (
 <<<<<<< HEAD
@@ -39,12 +52,20 @@ import {ApplicationStatus} from "@/types/jobs";
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
               <CardTitle className="text-lg">
+<<<<<<< HEAD
                 {application.job?.title |"Unknown Job"}
                 {application.job?.title || "Unknown Job"}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </CardTitle>
               {getStatusBadge(application.status)}
             </div>
@@ -56,6 +77,7 @@ import {ApplicationStatus} from "@/types/jobs";
             <div className="space-y-3">
               {application.cover_letter && (
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
+<<<<<<< HEAD
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -150,6 +172,14 @@ export function MyApplications() {;
                   variant="outline" 
                   size="sm" 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  {application.cover_letter}
+                </p>
+              )}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   className="text-xs"
                   asChild
                 >
@@ -157,6 +187,7 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -213,21 +244,25 @@ export function MyApplications() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <Button 
-
                   variant="default" 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   size="sm"
                   className="text-xs"
-                  asChild>;
-                  <Link href={`/messages?jobId=${application && application.job_id}`}>;
-                    <MessageSquare className="h-3 w-3 mr-1" /> Contact Client;
-                  </Link>;
-                </Button>;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
+                  asChild
+                >
+                  <Link href={`/messages?jobId=${application.job_id}`}>
+                    <MessageSquare className="h-3 w-3 mr-1" /> Contact Client
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
   )
@@ -336,3 +371,9 @@ if ( {) {
 };
 }
 ;
+=======
+=======
+    </div>;
+  );
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

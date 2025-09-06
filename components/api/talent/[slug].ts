@@ -1,20 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
     const { item, translated } = applyTranslations(base, lang);
     return res && res.status(200).json({ item, translated });
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message });
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   if (req && req.method !== 'GET') {
     return res && res.setHeader('AllowGET').status(405).end('Method Not Allowed');
   }
-
-  const { slug, lang } = req && req.query as { slug: string, lang?: string };
-
-
   try {
     if (hasSupabase) {
       const { data, error } = await supabaseClient && supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single();
@@ -22,6 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const { item, translated } = applyTranslations(data as unknown as TalentProfile, lang);
       return res && res.status(200).json({ item, translated })
     }
+<<<<<<< HEAD
 
 }
 
@@ -53,6 +48,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {supabase, as, supabase_client} from '@/utils / supabase / client';
 import {TALENT_PROFILES, as, LOCAL} from '@/data / talent';
 import type { TalentProfile } from '@/utils / types / talent';
@@ -141,6 +138,9 @@ if (throw error) {
   } catch (e: any) {
     return res.status (500).json ({ error: e.message });
 }
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

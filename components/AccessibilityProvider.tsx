@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
 interface AccessibilityContextType {
@@ -5,6 +6,8 @@ interface AccessibilityContextType {
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { create_context, useContext, useState, ReactNode } from './react';
 ;
 interface AccessibilityContextType {
@@ -15,6 +18,7 @@ interface AccessibilityContextType {
   toggleLargeText: () => void;
   toggleReducedMotion: () => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 const AccessibilityContext = createContext<
   AccessibilityContextType | undefined
@@ -122,6 +126,8 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
       "use_accessibility must be used within an AccessibilityProvider",
     );
   }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return context;
 }
 ;
@@ -146,6 +152,7 @@ export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
     toggleHighContrast,
     toggleLargeText,
     toggleReducedMotion,
+<<<<<<< HEAD
   }
 ;
   return (
@@ -162,3 +169,5 @@ export default AccessibilityProvider;
 };
 
 export default AccessibilityProvider;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

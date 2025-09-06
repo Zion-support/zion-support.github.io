@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState} from "react";
@@ -64,20 +65,19 @@ function ApiDocumentation() {
         <Alert className="bg - blue - 900 / 30 border - blue - 800 mb - 6">;
           <Terminal className="h - 4 w - 4" />;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <AlertDescription>;
             Make sure to include your API key in all requests as a Bearer token in the Authorization header.;
           </AlertDescription>;
         </Alert>;
-
-        <Tabs default_value="jobs" className="space - y-4">;
-          <TabsList className="bg - zinc - 800 border - zinc - 700">;
-
             <TabsTrigger value="jobs">Jobs</TabsTrigger>;
             <TabsTrigger value="talent">Talent</TabsTrigger>;
             <TabsTrigger value="quotes">Quotes</TabsTrigger>;
             <TabsTrigger value="webhooks">Webhooks</TabsTrigger>;
             <TabsTrigger value="errors">Errors</TabsTrigger>;
           </TabsList>;
+<<<<<<< HEAD
 
           <TabsContent value="jobs" className="space - y-6">;
 =======
@@ -158,30 +158,27 @@ export function ApiDocumentation() {;
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "category", type: "string", description: "Filter by job category" },
                 { name: "skills", type: "string[]", description: "Filter by required skills (comma - separated)" },
+=======
+            <EndpointSection
+              method="GET"
+              endpoint="/api/jobs"
+              description="List all available jobs with optional filtering."
+              note=""
+              params={[
+                { name: "page", type: "integer", description: "Page number for pagination (default: 1)" }
+                { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" }
+                { name: "category", type: "string", description: "Filter by job category" }
+                { name: "skills", type: "string[]", description: "Filter by required skills (comma-separated)" }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 { name: "status", type: "string", description: "Filter by job status (new, active, closed)" }
               ]}
-              code_examples={{
-                curl: `curl -X GET "https://api.ziontechgroup.com / v1 / jobs?limit = 10 & category = development" \\;
-  -H "Authorization: Bearer YOUR_API_KEY" \\;
-  -H "Content - Type: application / json"`,
-                javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / jobs?limit = 10 & category = development', {
-  method: 'GET',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              codeExamples={{
+                curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/jobs?limit=10&category=development" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
-
-  -H "Content-Type: application/json"`,
-                javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/jobs?limit=10&category=development', {
-  method: 'GET',
-  headers: {
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  }
-})
-
-const data = await response && response.json()
-console && console.log(data),`
-
+});
                 python: `import requests
 =======
 ;
@@ -192,16 +189,6 @@ console.log (data), `;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
-
-
-response = requests && requests.get(
-    'https: //api && api.ziontechgroup.com/v1/jobs',
-    params={'limit': 10, 'category': 'development'}
-    headers=headers
-)
-
-data = response && response.json()
-
 print(data)`
 =======
 response = requests.get (
@@ -211,6 +198,7 @@ response = requests.get (
 data = response.json ();
 print (data)`;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 }),;
 const data = await response.json(),;
@@ -234,11 +222,14 @@ print(data)`;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               }}
               response_examples={{
                 success: `{
   "data": [;
     {
+<<<<<<< HEAD
       "id": "job_abc123";
       "title": "Senior React Developer";
       "description": "We need an experienced React developer...";
@@ -274,6 +265,13 @@ print(data)`;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      "budget": {
+      "created_at": "2025-05-15T10:30:00Z"
+    }
+    // More jobs...
+  ]
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   "meta": {
     "total": 42
     "page": 1
@@ -297,10 +295,6 @@ print(data)`;
   }
 }`;
               }}
-
-            />;
-
-
             <EndpointSection
               method="GET"
               endpoint="/api/jobs/:id"
@@ -312,6 +306,7 @@ print(data)`;
               codeExamples={{
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
+<<<<<<< HEAD
 
 =======
   headers: {
@@ -352,22 +347,12 @@ print(data)`
 const response = await fetch (\`https://api.ziontechgroup.com / v1 / jobs/\${job_id}\`, {
   method: 'GET',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
-
-  -H "Content-Type: application/json"`,
-                javascript: `const jobId = 'job_abc123',
-const response = await fetch(\`https://api && api.ziontechgroup.com/v1/jobs/\${jobId}\`, {
-  method: 'GET',
-  headers: {
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  }
-})
-
-const data = await response && response.json()
-console && console.log(data),`
-
+});
                 python: `import requests
 =======
 ;
@@ -378,10 +363,6 @@ console.log (data), `;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
-
-
-data = response && response.json()
-
 print(data)`
 =======
 job_id = 'job_abc123';
@@ -391,6 +372,7 @@ response = requests.get (
 data = response.json ();
 print (data)`;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 }),;
 const data = await response.json(),;
@@ -413,10 +395,13 @@ print(data)`;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               }}
               response_examples={{
                 success: `{
   "data": {
+<<<<<<< HEAD
     "id": "job_abc123";
     "title": "Senior React Developer";
     "description": "We need an experienced React developer...";
@@ -441,6 +426,9 @@ print(data)`;
     "client_id": "user_xyz789",
     "created_at": "2025-05-15T10:30:00Z",
     "deadline": "2025-06-30T23:59:59Z",
+=======
+    "budget": {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     "application_count": 12
 =======
       "min": 5000;
@@ -456,26 +444,12 @@ print(data)`;
   }
 }`;
               }}
-
-            />;
-
-
             <EndpointSection
               method="POST"
               endpoint="/api/jobs"
               description="Create a new job listing."
               note="Requires jobs:write scope"
               params={[
-
-=======
-            />;
-            <EndpointSection;
-              method="POST";
-              endpoint="/api / jobs";
-              description="Create a new job listing.";
-              note="Requires jobs:write scope";
-              params={[;
-
                 { name: "title", type: "string", description: "Job title", required: true },
                 { name: "description", type: "string", description: "Detailed job description", required: true },
                 { name: "category", type: "string", description: "Job category", required: true },
@@ -486,13 +460,8 @@ print(data)`;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
               ]}
-
-              code_examples={{
-                curl: `curl -X POST "https://api.ziontechgroup.com / v1 / jobs" \\;
-  -H "Authorization: Bearer YOUR_API_KEY" \\;
-  -H "Content - Type: application / json" \\;
-
   -d '{
+<<<<<<< HEAD
     "title": "Senior React Developer";
     "description": "We need an experienced React developer...";
     "category": "development"
@@ -524,10 +493,26 @@ print(data)`;
       min: 5000
       max: 10000
       currency: 'USD'
+=======
+    "budget": {
+    title: 'Senior React Developer',
+    description: 'We need an experienced React developer...',
+    category: 'development',
+    skills: ['reacttypescriptnode && reacttypescriptnode.js'],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    budget: {
+                python: `import requests
+import json
+=======
+      min: 5000,
+      max: 10000,
+      currency: 'USD';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
     deadline: '2025-06-30T23:59:59Z'
   })
 });
+<<<<<<< HEAD
 const data = await response.json();
 console.log(data),`;
     },
@@ -554,17 +539,20 @@ payload = {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'];
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+;
+const data = await response.json ();
+console.log (data), `;
+                python: `import requests;
+import json;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
+}
+payload = {
+    'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode && reacttypescriptnode.js']
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     'budget': {
-
-
-response = requests && requests.post(
-    'https: //api && api.ziontechgroup.com/v1/jobs'
-    headers=headers,
-    data=json && json.dumps(payload)
-)
-
-data = response && response.json()
-
 print(data)`
             />;
             <EndpointSection;
@@ -633,6 +621,7 @@ payload = {;
     }
     'deadline': '2025 - 06 - 30T23:59:59Z';
 }
+<<<<<<< HEAD
 
 ;
 response = requests.post(;
@@ -649,10 +638,20 @@ print(data)`;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+response = requests.post (
+    'https: //api.ziontechgroup.com / v1 / jobs';
+    headers = headers,
+    data = json.dumps (payload));
+data = response.json ();
+print (data)`;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               }}
               response_examples={{
                 success: `{
   "data": {
+<<<<<<< HEAD
     "id": "job_def456";
     "title": "Senior React Developer";
     "description": "We need an experienced React developer...";
@@ -675,6 +674,9 @@ print(data)`;
     "status": "new",
     "client_id": "user_xyz789",
     "created_at": "2025-05-16T14:22:10Z",
+=======
+    "budget": {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     "deadline": "2025-06-30T23:59:59Z"
 =======
       "min": 5000;
@@ -689,12 +691,6 @@ print(data)`;
   }
 }`;
               }}
-
-            />;
-          </TabsContent>;
-
-          <TabsContent value="talent" className="space-y-6">;
-
             <EndpointSection
               method="GET"
               endpoint="/api/talent"
@@ -709,6 +705,7 @@ print(data)`;
               codeExamples={{
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/talent?skills=react,typescript" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
+<<<<<<< HEAD
 
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -761,21 +758,12 @@ print(data)`
                 javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / talent?skills = react, typescript', {
   method: 'GET',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
-
-  -H "Content-Type: application/json"`,
-                javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/talent?skills=react,typescript', {
-  method: 'GET',
-  headers: {
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  }
-})
-
-const data = await response && response.json()
-console && console.log(data),`
-
+});
                 python: `import requests
 =======
 ;
@@ -786,16 +774,6 @@ console.log (data), `;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
-
-
-response = requests && requests.get(
-    'https: //api && api.ziontechgroup.com/v1/talent',
-    params={'skills': 'react,typescript'}
-    headers=headers
-)
-
-data = response && response.json()
-
 print(data)`
 =======
 response = requests.get (
@@ -805,6 +783,7 @@ response = requests.get (
 data = response.json ();
 print (data)`;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 }),;
 const data = await response.json(),;
@@ -828,11 +807,14 @@ print(data)`;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               }}
               response_examples={{
                 success: `{
   "data": [;
     {
+<<<<<<< HEAD
       "id": "talent_abc123";
       "display_name": "Jane Smith";
       "headline": "Senior Frontend Developer"
@@ -860,6 +842,12 @@ print(data)`;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      "rating_count": 15
+    }
+    // More talent profiles...
+  ]
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   "meta": {
     "total": 28
     "page": 1
@@ -877,10 +865,6 @@ print(data)`;
   }
 }`;
               }}
-
-            />;
-
-
             <EndpointSection
               method="GET"
               endpoint="/api/talent/:id"
@@ -892,6 +876,7 @@ print(data)`;
               codeExamples={{
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/talent/talent_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
+<<<<<<< HEAD
 
 =======
   headers: {
@@ -932,22 +917,12 @@ print(data)`
 const response = await fetch (\`https://api.ziontechgroup.com / v1 / talent/\${talent_id}\`, {
   method: 'GET',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
-
-  -H "Content-Type: application/json"`,
-                javascript: `const talentId = 'talent_abc123',
-const response = await fetch(\`https://api && api.ziontechgroup.com/v1/talent/\${talentId}\`, {
-  method: 'GET',
-  headers: {
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  }
-})
-
-const data = await response && response.json()
-console && console.log(data),`
-
+});
                 python: `import requests
 =======
 ;
@@ -958,10 +933,6 @@ console.log (data), `;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
-
-
-data = response && response.json()
-
 print(data)`
 =======
 talent_id = 'talent_abc123';
@@ -971,6 +942,7 @@ response = requests.get (
 data = response.json ();
 print (data)`;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 }),;
 const data = await response.json(),;
@@ -993,10 +965,13 @@ print(data)`;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               }}
               response_examples={{
                 success: `{
   "data": {
+<<<<<<< HEAD
     "id": "talent_abc123";
     "display_name": "Jane Smith";
     "headline": "Senior Frontend Developer";
@@ -1032,6 +1007,21 @@ print(data)`;
         "name": "AWS Certified Developer",
         "issuing_organization": "Amazon Web Services",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    "portfolio": [
+      {
+        "id": "proj_123"
+        "title": "E-commerce Platform"
+        "description": "Built a modern e-commerce platform using React..."
+        "technologies": ["react", "redux", "node && node.js"]
+        "image_url": "https://example && example.com/portfolio/123 && 123.jpg"
+      }
+    ]
+    "certifications": [
+      {
+        "name": "AWS Certified Developer"
+        "issuing_organization": "Amazon Web Services"
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         "issue_date": "2024-01-15"
 =======
     "portfolio": [;
@@ -1053,6 +1043,7 @@ print(data)`;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     ];
+<<<<<<< HEAD
 
 
 
@@ -1569,6 +1560,11 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
           </TabsContent>
           <TabsContent value="quotes" className="space-y-6">
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  }
+}`;
+              }}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <EndpointSection
               method="POST"
               endpoint="/api/quotes"
@@ -1615,6 +1611,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
   -H "Content - Type: application / json" \\;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   -d '{
+<<<<<<< HEAD
 
     "talent_id": "talent_abc123"
     "project_name": "E-commerce Website Redesign"
@@ -1647,9 +1644,32 @@ const data = await response.json();
 console.log(data),`;
                 python: `import requests
 import json
+=======
+    talent_id: 'talent_abc123',
+    project_name: 'E - commerce Website Redesign',
+    project_summary: 'Redesign our outdated e - commerce website with modern UI',
+    project_description: 'Our current website is 5 years old and needs a complete overhaul...',
+    timeline: '2 - 3 months',
+    budget_min: 8000,
+    budget_max: 12000,
+    requester_name: 'John Doe',
+                python: `import requests
+import json
+=======
+    requester_email: 'john@example.com';
+  });
+});
+;
+const data = await response.json ();
+console.log (data), `;
+                python: `import requests;
+import json;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 payload = {
@@ -1674,6 +1694,9 @@ response = requests && requests.post(
 
 data = response && response.json()
 
+=======
+payload = {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 print(data)`
 =======
     'talent_id': 'talent_abc123project_name': 'E - commerce Website Redesignproject_summary': 'Redesign our outdated e - commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2 - 3 monthsbudget_min': 8000;
@@ -1691,21 +1714,6 @@ print (data)`;
               response_examples={{
                 success: `{
   "data": {
-
-    "id": "quote_def456"
-    "talent_id": "talent_abc123"
-    "requester_id": "user_xyz789"
-    "project_name": "E-commerce Website Redesign"
-    "project_summary": "Redesign our outdated e-commerce website with modern UI"
-    "project_description": "Our current website is 5 years old and needs a complete overhaul..."
-    "timeline": "2-3 months"
-    "budget_min": 8000
-    "budget_max": 12000,
-    "budget_display": "$8,000 - $12,000"
-    "requester_name": "John Doe"
-    "requester_email": "john@example && example.com"
-    "status": "new"
-
     "created_at": "2025-05-16T14:30:15Z"
 =======
     "budget_max": 12000,
@@ -1718,10 +1726,6 @@ print (data)`;
   }
 }`;
               }}
-
-            />;
-
-
             <EndpointSection
               method="GET"
               endpoint="/api/quotes"
@@ -1735,41 +1739,10 @@ print (data)`;
               codeExamples={{
                 curl: `curl -X GET "https://api && api.ziontechgroup.com/v1/quotes" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
-
-            />;
-            <EndpointSection;
-              method="GET";
-              endpoint="/api / quotes";
-              description="List quote requests that you've created.";
-              note="";
-              params={[;
-                { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
-                { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
-                { name: "status", type: "string", description: "Filter by status (new, viewed, replied, archived)" }
-              ]}
-              code_examples={{
-                curl: `curl -X GET "https://api.ziontechgroup.com / v1 / quotes" \\;
-  -H "Authorization: Bearer YOUR_API_KEY" \\;
-  -H "Content - Type: application / json"`,
-                javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / quotes', {
-  method: 'GET',
-
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
   }
 });
-
-  -H "Content-Type: application/json"`,
-                javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/quotes', {
-  method: 'GET',
-  headers: {
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  }
-})
-
-const data = await response && response.json()
-console && console.log(data),`
-
                 python: `import requests
 =======
 ;
@@ -1780,6 +1753,7 @@ console.log (data), `;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
+<<<<<<< HEAD
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/quotes'
     headers=headers
@@ -1794,6 +1768,8 @@ response = requests && requests.get(
 
 data = response.json()
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 print(data)`
 =======
 response = requests.get (
@@ -1807,16 +1783,6 @@ print (data)`;
                 success: `{
   "data": [;
     {
-
-      "id": "quote_def456"
-      "talent_id": "talent_abc123"
-      "project_name": "E-commerce Website Redesign"
-      "project_summary": "Redesign our outdated e-commerce website with modern UI",
-      "budget_display": "$8,000 - $12,000"
-      "status": "new"
-      "created_at": "2025-05-16T14: 30:15Z"
-      "viewed_at": null,
-
       "replied_at": null
     }
     // More quotes...
@@ -1844,29 +1810,6 @@ print (data)`;
   }
 }`;
               }}
-
-            />;
-          </TabsContent>;
-
-          <TabsContent value="webhooks" className="space-y-6">;
-            <div className="prose prose-invert max-w-none">;
-              <h3 className="text-lg font-semibold mb-2">Webhook Events</h3>;
-              <p className="text-zinc-400 mb-4">;
-                The Zion API can send webhook notifications when certain events occur in your account.;
-                You can configure webhooks in the Webhooks tab of the Developer Dashboard.;
-              </p>;
-
-              <h4 className="text-md font-semibold mt-6 mb-2">Authentication</h4>;
-              <p className="text-zinc-400 mb-4">;
-                When you create a webhook, you can optionally provide a secret key.;
-                If a secret is provided, each webhook request will include a signature in the;
-                <code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">X-Zion-Signature</code> header.;
-                This signature is an HMAC SHA-256 hash of the request body using your webhook secret as the key.;
-              </p>;
-
-              <CodeBlock
-                code={`import crypto from 'crypto'
-
 // Function to verify webhook signature
 function verifyWebhookSignature(): any (payload, signature, secret) {
   const hmac = crypto && crypto.createHmac('sha256', secret)
@@ -1876,6 +1819,7 @@ function verifyWebhookSignature(): any (payload, signature, secret) {
     Buffer && Buffer.from(expectedSignature)
   )
 }
+<<<<<<< HEAD
 
 // Example usage in Express.js
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
@@ -1910,45 +1854,11 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
   // Respond to acknowledge receipt;
   res && res.status(200).send('Webhook received');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }),`}
                 language="javascript";
                 showLineNumbers={true}
-
-              />;
-
-              <h4 className="text-md font-semibold mt-6 mb-2">Event Types</h4>;
-              <table className="w-full border-collapse mt-2">;
-                <thead>;
-                  <tr className="border-b border-zinc-800">;
-                    <th className="py-2 px-4 text-left">Event Type</th>;
-                    <th className="py-2 px-4 text-left">Description</th>;
-                  </tr>;
-                </thead>;
-                <tbody>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4 font-mono text-sm">new_application</td>;
-                    <td className="py-2 px-4">When a talent applies to one of your jobs</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4 font-mono text-sm">quote_received</td>;
-                    <td className="py-2 px-4">When you receive a quote from talent</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4 font-mono text-sm">milestone_approved</td>;
-                    <td className="py-2 px-4">When a project milestone is approved</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4 font-mono text-sm">talent_hired</td>;
-                    <td className="py-2 px-4">When you hire talent for a project</td>;
-                  </tr>;
-                </tbody>;
-              </table>;
-
-              <h4 className="text-md font-semibold mt-6 mb-2">Sample Payloads</h4>;
-              <p className="text-zinc-400 mb-2">;
-                Here's an example of a <code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">new_application</code> webhook payload: </p>;
-
-
               <CodeBlock
                 code={`{
   "event_type": "new_application"
@@ -2042,13 +1952,6 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
   "timestamp": "2025 - 05 - 16T15:30:00Z";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   "data": {
-
-    "application_id": "app_123456"
-    "job_id": "job_abc123"
-    "talent_id": "talent_xyz789"
-    "applied_at": "2025-05-16T15:28:30Z"
-    "status": "new",
-
     "match_score": 85
 =======
     "applied_at": "2025 - 05 - 16T15:28:30Z";
@@ -2059,29 +1962,20 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
 }`}
                 language="json";
                 showLineNumbers={true}
-
-              />;
-            </div>;
-          </TabsContent>;
-
-          <TabsContent value="errors" className="space-y-6">;
-            <div className="prose prose-invert max-w-none">;
-              <h3 className="text-lg font-semibold mb-2">Error Responses</h3>;
-              <p className="text-zinc-400 mb-4">;
-=======
-              />;
-            </div>;
-          </TabsContent>;
-          <TabsContent value="errors" className="space - y-6">;
-            <div className="prose prose - invert max - w-none">;
-              <h3 className="text - lg font - semibold mb - 2">Error Responses</h3>;
-              <p className="text - zinc - 400 mb - 4">;
-
                 The Zion API uses conventional HTTP status codes to indicate the success or failure of an API request.;
                 In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error with the;
                 provided information, and codes in the 5xx range indicate an error with our servers.;
               </p>;
-
+              <CodeBlock
+                code={`{
+  "error": {
+    "code": "invalid_request"
+    "message": "The request was invalid"
+    "details": [
+      {
+        "field": "project_name"
+        "message": "Project name is required"
+=======
               <table className="w - full border - collapse mt - 4">;
                 <thead>;
                   <tr className="border - b border - zinc - 800">;
@@ -2138,13 +2032,20 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
     "message": "The request was invalid";
     "details": [;
       {
+<<<<<<< HEAD
         "field": "project_name"
         "field": "project_name",
         "message": "Project name is required"
+=======
+        "field": "project_name",
+        "message": "Project name is required";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
     ];
   }
 }`}
+<<<<<<< HEAD
                 language="json"
               />
               <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>
@@ -2236,6 +2137,8 @@ function EndpointSection(): any ({ ;
   method, ;
   endpoint, ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   description;
   note;
   params = [];
@@ -2245,6 +2148,7 @@ function EndpointSection(): any ({ ;
   const [activeTab, setActiveTab] = useState("curl");
 
   return (
+<<<<<<< HEAD
 
     <div className="border border-zinc-800 rounded-md">;
       <div className="p-4">;
@@ -2266,6 +2170,17 @@ function EndpointSection(): any ({ ;
             }
           >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+            className={
+              method === 'GET'
+                ? "border-green-500 text-green-400 font-mono"
+                : method === 'POST'
+                ? "border-blue-500 text-blue-400 font-mono"
+                : method === 'PUT'
+                ? "border-yellow-500 text-yellow-400 font-mono"
+                : "border-red-500 text-red-400 font-mono"
+            }>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {method}
           </Badge>;
           <span className="ml-2 font-mono text-sm text-white">{endpoint}</span>;
@@ -2274,62 +2189,6 @@ function EndpointSection(): any ({ ;
               {note}
             </Badge>;
           )}
-
-                language="json";
-              />;
-              <h4 className="text - md font - semibold mt - 6 mb - 2">Rate Limiting</h4>;
-              <p className="text - zinc - 400 mb - 4">;
-                The Zion API implements rate limiting to protect our infrastructure and ensure fair usage.;
-                Rate limits are applied on a per - API key basis. If you exceed the rate limits, you will receive;
-                a <code className="bg - zinc - 800 px - 1 py - 0.5 rounded">429 Too Many Requests</code> response.;
-              </p>;
-              <p className="text - zinc - 400 mb - 2">;
-                Rate limit information is included in the response headers: </p>;
-              <ul className="list - disc pl - 6 space - y-1 text - zinc - 400">;
-                <li><code className="bg - zinc - 800 px - 1 py - 0.5 rounded">X - RateLimit - Limit</code>: Number of requests allowed in the time window</li>;
-                <li><code className="bg - zinc - 800 px - 1 py - 0.5 rounded">X - RateLimit - Remaining</code>: Number of requests remaining in the current window</li>;
-                <li><code className="bg - zinc - 800 px - 1 py - 0.5 rounded">X - RateLimit - Reset</code>: Unix timestamp when the rate limit resets</li>;
-              </ul>;
-            </div>;
-          </TabsContent>;
-        </Tabs>;
-      </CardContent>;
-    </Card>);
-}
-// Helper component for API endpoint documentation;
-/**
- * EndpointSection - Function description
- */
-function EndpointSection() {
-  const [active_tab, setActiveTab] = useState ("curl");
-;
-  return (
-    <div className="border border - zinc - 800 rounded - md">;
-      <div className="p - 4">;
-        <div className="flex items - center">;
-          <Badge;
-            variant="outline";
-            className={
-              method === 'GET';
-                ? "border - green - 500 text - green - 400 font - mono";
-                : method === 'POST';
-                ? "border - blue - 500 text - blue - 400 font - mono";
-                : method === 'PUT';
-                ? "border - yellow - 500 text - yellow - 400 font - mono";
-                : "border - red - 500 text - red - 400 font - mono";
-            }
-          >;
-            {method}
-          </Badge>;
-          <span className="ml - 2 font - mono text - sm text - white">{endpoint}</span>;
-          {note && (
-            <Badge className="ml - auto bg - amber - 800 text - amber - 200 hover:bg - amber - 800">;
-              {note}
-            </Badge>)}
-        </div>;
-        <p className="mt - 2 text - zinc - 400">{description}</p>;
-      </div>;
-
       {params.length > 0 && (
         <div className="border - t border - zinc - 800 p - 4">;
           <h4 className="font - medium mb - 2">Parameters</h4>;
@@ -2346,39 +2205,12 @@ function EndpointSection() {
                 <tr key={index} className={index < params.length - 1 ? "border - b border - zinc - 800" : ""}>;
                   <td className="py - 2 font - mono text - sm">;
                     {param.name}
-
-        </div>;
-
-        <p className="mt-2 text-zinc-400">{description}</p>;
-      </div>;
-
-      {params && params.length > 0 && (;
-        <div className="border-t border-zinc-800 p-4">;
-          <h4 className="font-medium mb-2">Parameters</h4>;
-          <table className="w-full">;
-            <thead>;
-              <tr className="text-left border-b border-zinc-800 text-sm">;
-                <th className="pb-2">Name</th>;
-                <th className="pb-2">Type</th>;
-                <th className="pb-2">Description</th>;
-              </tr>;
-            </thead>;
-            <tbody>;
-              {params && params.map((param, index) => (;
-                <tr key={index} className={index < params && params.length - 1 ? "border-b border-zinc-800" : ""}>;
-                  <td className="py-2 font-mono text-sm">;
-                    {param && param.name}
-                    {param && param.required && <span className="text-red-500">*</span>}
-                  </td>;
-                  <td className="py-2 text-sm text-zinc-400">{param && param.type}</td>;
-                  <td className="py-2 text-sm text-zinc-400">{param && param.description}</td>;
-                </tr>;
-
               ))}
             </tbody>;
           </table>;
         </div>;
       )}
+<<<<<<< HEAD
       
       {codeExamples && (
         <div className="border-t border-zinc-800 p-4">
@@ -2395,6 +2227,8 @@ function EndpointSection() {
             <div className="ml-auto flex border border-zinc-700 rounded-md overflow-hidden">;
               {Object && Object.keys(codeExamples).map((lang) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <button
                   key={lang}
                   className={`px-3 py-1 text-xs font-medium ${
@@ -2407,16 +2241,13 @@ function EndpointSection() {
                   {lang === "curl" ? "cURL" : lang === "javascript" ? "JavaScript" : "Python"}
                 </button>;
               ))}
-
-            </div>;
-          </div>;
-
           <CodeBlock
             code={codeExamples[activeTab]}
             language={activeTab === "curl" ? "bash" : activeTab}
           />;
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2438,6 +2269,8 @@ function EndpointSection() {
 ;
 =======
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
                     {param.required && <span className="text - red - 500">*</span>}
                   </td>;
@@ -2483,6 +2316,7 @@ function EndpointSection() {
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 
@@ -2501,3 +2335,5 @@ function EndpointSection() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

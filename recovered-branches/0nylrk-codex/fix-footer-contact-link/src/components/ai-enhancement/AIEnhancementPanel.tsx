@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components/ui/card';
@@ -13,10 +14,14 @@ interface AIEnhancementPanelProps {;
   defaultOptions: AIEnhancementOptions,;
   onApply: (content: string) => void,;
 
+=======
+import React, { useState } from 'react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function AIEnhancementPanel({
 =======
@@ -35,6 +40,8 @@ export function AIEnhancementPanel({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   title;
   defaultOptions;
   onApply;
@@ -45,6 +52,7 @@ export function AIEnhancementPanel({;
 }: AIEnhancementPanelProps) {;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
     ...defaultOptions;
+<<<<<<< HEAD
 
     content: initialContent || defaultOptions && defaultOptions.content}),;
   const [generatedContent, setGeneratedContent] = useState<string>('');
@@ -98,11 +106,14 @@ export function AIEnhancementPanel({;
 
   const handleGenerate = async () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     const result = await enhanceContent(options);
     if (result) {;
       setGeneratedContent(result);
     }
 
+<<<<<<< HEAD
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -138,6 +149,8 @@ export function AIEnhancementPanel({;
   }
   },
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Card className="w-full max-w-2xl mx-auto">;
       <CardHeader>;
@@ -155,11 +168,6 @@ export function AIEnhancementPanel({;
             className="min-h-[100px]"
             value={options && options.content}
             onChange={(e) => handleInputChange(e, 'content')}
-
-          />;
-        </div>;
-
-
         {/* Context input */}
         <div className="space-y-2">;
           <label className="text-sm font-medium">Context (optional)</label>;
@@ -168,11 +176,6 @@ export function AIEnhancementPanel({;
             className="min-h-[60px]"
             value={options && options.context}
             onChange={(e) => handleInputChange(e, 'context')}
-
-          />;
-        </div>;
-
-
         {/* Instructions input (optional) */}
         {showInstructions && (;
           <div className="space-y-2">;
@@ -184,6 +187,7 @@ export function AIEnhancementPanel({;
             />;
           </div>;
         )}
+<<<<<<< HEAD
         {/* Generate button */}
         <Button
           onClick={handleGenerate}
@@ -242,6 +246,10 @@ export function AIEnhancementPanel({;
                 variant="ghost" 
                 size="sm" 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        {/* Generate button */}
+        <Button
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 onClick={handleCopy}
                 className="h-8">;
                 {copied ? (;
@@ -260,27 +268,12 @@ export function AIEnhancementPanel({;
             </div>;
           </div>;
         )}
-
-      </CardContent>;
-
-      {generatedContent && (;
-        <CardFooter className="flex justify-between">;
-          {onClose && (;
-            <Button variant="outline" onClick={onClose}>;
-              Cancel;
-            </Button>;
-
           )}
           <Button onClick={handleApply}>;
             Apply to Form;
           </Button>;
         </CardFooter>;
       )}
-
-    </Card>;
-  );
-}
-
 =======
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components / ui / card';
 import {Textarea} from '@/components / ui / textarea';

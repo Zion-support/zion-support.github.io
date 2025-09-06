@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from "react";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { cva, type, VariantProps } from "class-variance-authority";
@@ -43,9 +44,12 @@ const label_variants = cva (
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     ref={ref}
-    className={cn(labelVariants(), className)}
+    className={cn (label_variants (), class_name)}
     {...props}
+<<<<<<< HEAD
   />
 ))
 Label.displayName = LabelPrimitive.Root.displayName
@@ -134,6 +138,8 @@ Label.displayName = LabelPrimitive.Root.displayName;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export { Label }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
   />));
 Label.display_name = LabelPrimitive.Root.display_name;

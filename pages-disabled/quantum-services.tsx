@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -23,10 +24,13 @@ class ErrorBoundary extends React.Component {
 
 import React from 'react';
 import Layout from '../components/layout/Layout';
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import SEO from '../components/SEO';
 
 import {motion} from 'framer-motion';
 import {Atom, Brain, Rocket, Shield, Zap, Target, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Grid, List, TrendingUp, User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building, MessageCircle, Sparkles, ArrowRight, CheckCircle, Star, Globe} from 'lucide-react';
+<<<<<<< HEAD
 
 const QuantumServicesPage: React.FC = () => {
   const quantumServices = [
@@ -134,10 +138,13 @@ export default function QuantumServices() {;
   return (
     <Layout>;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <SEO
         title="Quantum Computing Services - Zion Tech Group"
         description="Revolutionary quantum computing solutions for the future. From neural networks to financial trading, unlock quantum advantage."
         keywords="quantum computing, quantum services, quantum neural networks, quantum financial trading, quantum materials discovery"
+<<<<<<< HEAD
 
       />;
 
@@ -608,6 +615,8 @@ export default QuantumServicesPage;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 import React from 'react';
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       <span className="text - lg text - gray - 400">/{service.period}</span>;
                     </div>;
                   </div>;
@@ -665,8 +674,8 @@ import React from 'react';
 }
 ;
 export default QuantumServicesPage;
-<<<<<<< HEAD
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -682,3 +691,5 @@ export default QuantumServicesPage;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

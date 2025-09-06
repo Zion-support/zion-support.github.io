@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -45,6 +46,16 @@ export default function SecretsRotationAutomationPage() {
 
 export default function SecretsRotationAutomationPage() {
   const features = [
+=======
+import React from './react';
+import SEO from "../components / SEO";
+import { Check, ExternalLink  } from './lucide-react';
+export default /**
+ * SecretsRotationAutomationPage - Function description
+ */
+function SecretsRotationAutomationPage() {
+  const features = [;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     "Automated key and secret rotation",
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
@@ -109,6 +120,7 @@ export default function SecretsRotationAutomationPage() {
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
+<<<<<<< HEAD
 
 return (
   return (
@@ -186,10 +198,21 @@ return (
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
+=======
             </a>;
           </div>;
         </section>;
       </main>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+            </a>;
+          </div>;
+        </section>;
+      </main>;
+<<<<<<< HEAD
 
 }
 
+=======
+    </>);
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

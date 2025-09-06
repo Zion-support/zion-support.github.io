@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -57,11 +58,22 @@ export default function InteractiveCard({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    <Link;
+      href={href}
+      className={`group block p - 8 rounded - 2xl border border - white / 10 hover:border - white / 30 bg - black / 20 hover:bg - black / 40 transition - all duration - 500 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm hover - lift ${class_name}`}
+      onMouseEnter={() => setIsHovered (true)}
+      onMouseLeave={() => setIsHovered (false)}
+      aria - label={`Navigate to ${title} page`}
+>;
+      <div className=&quot;relative & quot;>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {/* Animated background */}
         <div;
           className={`absolute inset - 0 bg - gradient - to - r ${color} rounded - xl opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500 blur - xl`}
         />;
         {/* Icon */}
+<<<<<<< HEAD
 <div className=&quot;relative z-10 text-6xl mb-6 group-hover:scale-110 transition-transform duration-300&quot;>
           {icon}
         </div>;
@@ -80,12 +92,15 @@ export default function InteractiveCard({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {title}
           </h3>;
           <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
             {description}
           </p>;
           {/* Custom children or default arrow */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 {children |(
 {children || (
@@ -129,11 +144,14 @@ export default function InteractiveCard({;
           style={{background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
           style={{;
             background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           }}
         />;
       </div>;
     </Link>);
 }
+<<<<<<< HEAD
 export function FeatureCard({title;
   description;
   icon;
@@ -151,6 +169,8 @@ export function FeatureCard({;
   className = '';
 }: InteractiveCardProps & { stats?: { label: string, value: string }[] }) {;
   return (;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <InteractiveCard;
       title={title}
       description={description}
@@ -159,7 +179,6 @@ export function FeatureCard({;
       className={class_name}
 >;
       {stats && (
-<<<<<<< HEAD
         <div className=&quot;mt - 6 pt - 6 border - t border - white / 10 & quot;>;
           <div className=&quot;grid grid - cols - 2 gap - 4&quot;>;
             {stats.map ((stat, index) => (
@@ -167,20 +186,11 @@ export function FeatureCard({;
                 <div className=&quot;text - 2xl font - bold text - white & quot;>{stat.value}</div>;
                 <div className=&quot;text - sm text - gray - 400 & quot;>{stat.label}</div>;
               </div>))}
-=======
-        <div className="mt-6 pt-6 border-t border-white/10">
-          <div className="grid grid-cols-2 gap-4">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-2xl font-bold text-white">{stat.value}</div>
-                <div className="text-sm text-gray-400">{stat.label}</div>
-              </div>
-            ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>;
         </div>)}
     </InteractiveCard>);
 }
+<<<<<<< HEAD
 export function TestimonialCard({quote;
   author;
   position;
@@ -265,3 +275,5 @@ export function TestimonialCard({;
   )
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

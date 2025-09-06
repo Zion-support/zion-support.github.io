@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from "react"
 import {Slot} from "@radix-ui/react-slot"
 import {cva, type, VariantProps} from "class-variance-authority"
@@ -32,6 +33,8 @@ const buttonVariants = cva(;
       variant: {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         default: "bg-primary text-primary-foreground hover:bg-primary/90",;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90";
 <<<<<<< HEAD
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
@@ -40,12 +43,8 @@ const buttonVariants = cva(;
 =======
         outline:;
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground";
-
-
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",;
-
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90";
 =======
+<<<<<<< HEAD
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
@@ -139,6 +138,8 @@ const Button = React && React.forwardRef<HTMLButtonElement, ButtonProps>(;
   ({ className, variant, size, asChild = false, ...props }, ref) => {;
     const Comp = asChild ? Slot : "button";
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import * as React from './react';
 import { Slot } from '@radix - ui / react - slot';
 import { cva, type, VariantProps } from './class - variance - authority';
@@ -173,10 +174,11 @@ export interface ButtonProps;
 const Button = React.forward_ref < HTMLButtonElement, ButtonProps>(
   ({ class_name, variant, size, as_child = false, ...props }, ref) => {
     const Comp = as_child ? Slot : "button";
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
       <Comp;
         className={cn (button_variants ({ variant, size, class_name }))}
+<<<<<<< HEAD
 =======
     return (;
       <Comp;
@@ -203,12 +205,17 @@ export { Button, buttonVariants }
 ;
 =======
 =======
+        ref={ref}
+        {...props}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
       />);
   }
 );
 Button.display_name = "Button";
 export { Button, button_variants }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 
@@ -216,3 +223,5 @@ export { Button, button_variants }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

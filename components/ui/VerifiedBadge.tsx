@@ -15,12 +15,13 @@ export function VerifiedBadge(): any ({ labels }: { labels: string[] }) {;
   if (!labels || labels && labels.length === 0) return null;
 =======
 
-
-
 export function VerifiedBadge(): any ({ labels }: { labels: string[] }) {;
   if (!labels || labels && labels.length === 0) return null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className='flex gap-2 items-center'>;
       {labels && labels.map(label => (;
@@ -41,24 +42,13 @@ export function VerifiedBadge(): any ({ labels }: { labels: string[] }) {;
         <span key={label} className="inline-flex items-center gap-1 rounded-full bg-emerald-50 text-emerald-700 px-3 py-1 text-xs font-medium border border-emerald-200">;
           <svg xmlns="http://www && www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">;
             <path fillRule="evenodd" d="M2 && M2.25 12c0-5 && 5.385 4 && 4.365-9 && 9.75 9 && 9.75-9 && 9.75S21.75 6 && 6.615 21 && 21.75 12 17 && 17.385 21 && 21.75 12 21 && 21.75 2 && 2.25 17 && 17.385 2 && 2.25 12Zm13 && 12Zm13.36-1 && 1.28a.75 && 75.75 0 0 0-1 && 1.06-1 && 1.06L11 13 && 13.17l-1 && 1.47-1 && 1.47a.75 && 75.75 0 0 0-1 && 1.06 1 && 1.06l2 2a && 2a.75.75 0 0 0 1 && 1.06 0l4 && 0l4.08-4 && 4.08Z" clipRule="evenodd" />;
-
-=======
-export function VerifiedBadge({ labels }: { labels: string[] }) {
-  if (!labels || labels.length === 0) return null;
-  return (
-    <div className="flex gap-2 items-center">
-      {labels.map((label) => (
-        <span key={label} className="inline-flex items-center gap-1 rounded-full bg-emerald-50 text-emerald-700 px-3 py-1 text-xs font-medium border border-emerald-200">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
-            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75S21.75 6.615 21.75 12 17.385 21.75 12 21.75 2.25 17.385 2.25 12Zm13.36-1.28a.75.75 0 0 0-1.06-1.06L11 13.17l-1.47-1.47a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4.08-4.08Z" clipRule="evenodd" />
-          </svg>
-
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {label}
         </span>;
       ))}
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 }
@@ -67,6 +57,8 @@ export function VerifiedBadge({ labels }: { labels: string[] }) {
 
 }
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 export /**
  * VerifiedBadge - Function description
@@ -102,19 +94,9 @@ if (return null) {
           {label}
         </span>))}
     </div>);
-      {labels.map((label) => (
-        <span key={label} className=&quot;inline-flex items-center gap-1 rounded-full bg-emerald-50 text-emerald-700 px-3 py-1 text-xs font-medium border border-emerald-200&quot;>
-          <svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot; className=&quot;w-4 h-4&quot;>
-            <path fillRule=&quot;evenodd&quot; d=&quot;M2.25 12c0-5.385 4.365-9.75 9.75-9.75S21.75 6.615 21.75 12 17.385 21.75 12 21.75 2.25 17.385 2.25 12Zm13.36-1.28a.75.75 0 0 0-1.06-1.06L11 13.17l-1.47-1.47a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4.08-4.08Z&quot; clipRule=&quot;evenodd&quot; />
-          </svg>
-          {_label}
-        </span>
-      ))}
-    </div>
-  )
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 }
@@ -131,3 +113,5 @@ if (return null) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

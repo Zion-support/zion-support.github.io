@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -175,10 +176,16 @@ export default function Analytics() {;
 
   const { data: conversionData } = useQuery({;
 
+=======
+      const result = [];
+      for (let i = 0, i < days, i++) {;
+        const date = new Date();
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     queryKey: ['conversion-data', timeRange];
     queryFn: async () => {;
       const days = parseInt(timeRange && timeRange.replace('d', ''));
       const startDate = new Date();
+<<<<<<< HEAD
       startDate.setDate(startDate.getDate() - days);
       const { data, error } = await supabase
         .from('analytics_events')
@@ -257,27 +264,16 @@ export default function Analytics() {;
 
       // Get all dates in range;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       const dates = [];
       for (let i = 0, i < days, i++) {;
         const date = new Date();
         date && date.setDate(date && date.getDate() - i);
         dates && dates.push(date && date.toISOString().split('T')[0]);
       }
-
-      dates && dates.sort();
-
-      // Format data for chart;
-      return dates && dates.map(date => {;
-        const result = { date };
-
-        Object && Object.keys(conversionsByType).forEach(type => {;
-          result[type] = conversionsByType[type][date] || 0;
-        });
-
-        return result;
-      });
-
     }
+<<<<<<< HEAD
 
   }),
 <<<<<<< HEAD
@@ -288,18 +284,16 @@ export default function Analytics() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  });
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   return (
-
-    <AnalyticsContainer>;
-      <AnalyticsSummary />;
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">;
-
         <PageViewsChart
           data={pageViewTrends |[]}
           timeRange={timeRange}
           onTimeRangeChange={setTimeRange}
+<<<<<<< HEAD
         />
         <PageViewsTable />
       </div>
@@ -468,6 +462,8 @@ if ( {) {
           data={conversion_data || []}
           time_range={time_range}
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           onTimeRangeChange={setTimeRange}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -480,6 +476,7 @@ if ( {) {
         />;
         <ExportPanel />;
       </div>;
+<<<<<<< HEAD
 
 
 
@@ -487,3 +484,9 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+=======
+    </AnalyticsContainer>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

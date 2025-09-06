@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -145,11 +146,53 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
       case "serviceProvider": return "Service Provider",;
       case "talent":;
         return "Talent",;
+=======
+      case "serviceProvider": return "Service Provider";
+=======
+import { useState } from './react';
+import { zod_resolver } from '@hookform / resolvers / zod';
+import { use_form } from './react - hook - form';
+import { z } from './zod';
+import { User, Mail, AtSign, GraduationCap } from './lucide-react';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { Textarea } from '@/components / ui / textarea';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
+;
+const profile_schema = z.object ({
+  display_name: z.string ().min (2, "Name must be at least 2 characters");
+  bio: z.string ().min (10, "Bio must be at least 10 characters").max (500, "Bio must be less than 500 characters");
+  headline: z.string ().min (5, "Headline must be at least 5 characters").max (100, "Headline must be less than 100 characters")});
+;
+type ProfileFormValues = z.infer < typeof profile_schema>;
+;
+interface ProfileSetupProps {
+  on_complete: (data: ProfileFormValues) => void,
+  user_type: string;
+}
+export /**
+ * ProfileSetup - Function description
+ */
+function ProfileSetup() {
+  const form = use_form < ProfileFormValues>({
+    resolver: zod_resolver (profile_schema),
+    default_values: {
+      display_name: "",
+      bio: "",
+      headline: ""}}),
+  const getTypeLabel = () =>: any {
+    switch (user_type) {
+      case "service_provider": return "Service Provider";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      case "talent":;
+        return "Talent";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       case "client":;
         return "Client";
       default:;
         return "User";
     }
+<<<<<<< HEAD
   };
   return (;
 
@@ -164,6 +207,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(onComplete)} className="space-y-6">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <FormField
             control={form && form.control}
             name="displayName"
@@ -183,17 +229,16 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
                 <FormMessage className="text-red-400" />;
               </FormItem>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             )}
-
-          />;
-
-
           <FormField
             control={form && form.control}
             name="headline"
@@ -256,10 +301,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
                       className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
                       {...field}
                     />;
-
-          />;
-
-
           <FormField
             control={form && form.control}
             name="bio"
@@ -310,29 +351,11 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
 }
                   />;
                 </FormControl>;
-
-          />;
-
-          <Button
-            type="submit"
-            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">;
-=======
-
-
-
-=======
-                <FormMessage className="text - red - 400" />;
-              </FormItem>)}
-          />;
-          <Button;
-            type="submit";
-            className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white";
-          >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Complete Profile;
           </Button>;
         </form>;
       </Form>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -345,3 +368,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

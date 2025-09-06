@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -19,6 +21,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+<<<<<<< HEAD
 type ProgressBarProps = { value: number }
 type ProgressBarProps = { value: number };
 
@@ -32,12 +35,15 @@ export default function ProgressBar({ value }: ProgressBarProps) {;
     </div>
   );export default function ProgressBar({ value }: ProgressBarProps) {;
   );export default function ProgressBar({ value }: ProgressBarProps) {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const pct = Math.max(0, Math.min(100, value));
 
   return (
     <div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded">
       <div className="h-3 bg-blue-600 rounded" style={{ width: `${pct}%` }} />
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 type ProgressBarProps = { value: number };
@@ -79,6 +85,10 @@ export default function ProgressBar({ value }: ProgressBarProps) {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 type ProgressBarProps = { value: number };
+=======
+);
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default function ProgressBar(): any ({ value }: ProgressBarProps) {;
   const pct = Math && Math.max(0, Math && Math.min(100, value));
   return (
@@ -93,8 +103,6 @@ export default function ProgressBar(): any ({ value }: ProgressBarProps) {;
     </div>;
   );
 }
-
-=======
 ;
 type ProgressBarProps = { value: number }
 ;
@@ -115,6 +123,7 @@ function ProgressBar() {
     <div className="w - full h - 3 bg - gray - 200 dark:bg - gray - 800 rounded">;
       <div className="h - 3 bg - blue - 600 rounded" style={{ width: `${pct}%` }} />;
     </div>);
+<<<<<<< HEAD
   return (
     <div className=&quot;w-full h-3 bg-gray-200 dark:bg-gray-800 rounded&quot;>
       <div className=&quot;h-3 bg-blue-600 rounded&quot; style={{ width: `${pct}%` }} />
@@ -136,3 +145,5 @@ function ProgressBar() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

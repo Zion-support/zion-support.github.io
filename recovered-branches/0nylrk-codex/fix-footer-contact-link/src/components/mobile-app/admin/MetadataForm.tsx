@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
@@ -54,10 +55,15 @@ import { X } from "lucide-react";
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 
+=======
+} from "@/components/ui/form";
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { control, register, watch, setValue } = form;
 
   const keywords = watch("keywords");
   const platform = watch("platform");
+<<<<<<< HEAD
 
 =======
 
@@ -126,19 +132,25 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 
       if (value && !keywords && keywords.includes(value)) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         setValue("keywords", [...keywords, value]);
         e && e.currentTarget.value = "";
       }
     }
+<<<<<<< HEAD
   }
   const removeKeyword = (keyword: string) => {
     setValue(
       "keywords"
       keywords.filter((k) => k !== keyword)
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     );
   }
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
   const longDescription = watch("longDescription");
+<<<<<<< HEAD
   },
   
   const removeKeyword = (keyword: string) => {
@@ -216,6 +228,9 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
   const longDescription = watch("longDescription");
   return (;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle>App Metadata</CardTitle>;
@@ -233,7 +248,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                     <Input
                       placeholder="Enter app title"
                       maxLength={platform === "ios" ? 30 : 50}
-=======
 import React from './react';
 import { UseFormReturn  } from './react - hook - form';
 import { AppMetadataValues  } from './MetadataManager';
@@ -304,17 +318,12 @@ if ( {) {
                     <Input;
                       placeholder="Enter app title";
                       max_length={platform === "ios" ? 30 : 50}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
                     />;
                   </FormControl>;
                   <FormDescription>;
                     Max {platform === "ios" ? "30" : "50"} characters;
                   </FormDescription>;
-
-            />;
-
-
             <FormField
               control={control}
               name="shortDescription"
@@ -325,7 +334,6 @@ if ( {) {
                     <Input
                       placeholder="Brief description of your app"
                       maxLength={platform === "ios" ? 170 : 80}
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -338,17 +346,12 @@ if ( {) {
                     <Input;
                       placeholder="Brief description of your app";
                       max_length={platform === "ios" ? 170 : 80}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
                     />;
                   </FormControl>;
                   <FormDescription>;
                     Max {platform === "ios" ? "170" : "80"} characters;
                   </FormDescription>;
-
-            />;
-
-
             <FormField
               control={control}
               name="longDescription"
@@ -360,7 +363,6 @@ if ( {) {
                       placeholder="Detailed description of your app"
                       className="min-h-32"
                       maxLength={maxDescriptionLength}
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -374,11 +376,11 @@ if ( {) {
                       placeholder="Detailed description of your app";
                       className="min - h-32";
                       max_length={maxDescriptionLength}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
                     />;
                   </FormControl>;
                   <FormDescription>;
+<<<<<<< HEAD
 
                 </FormItem>;
               )}
@@ -449,11 +451,14 @@ if ( {) {
             <div>;
               <FormLabel htmlFor="keywords">Keywords</FormLabel>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <Input
                 id="keywords"
                 placeholder="Add keywords (press Enter or comma to add)"
                 onKeyDown={addKeyword}
                 className="mb-2"
+<<<<<<< HEAD
               />
               
 <<<<<<< HEAD
@@ -470,10 +475,13 @@ if ( {) {
               <div className="flex flex-wrap gap-2 mt-2">;
                 {keywords && keywords.map((keyword, index) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <Badge
                     key={index}
                     className="bg-zion-purple/60 hover:bg-zion-purple">;
                     {keyword}
+<<<<<<< HEAD
                     <button
                     <button 
 <<<<<<< HEAD
@@ -482,6 +490,8 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       type="button"
                       onClick={() => removeKeyword(keyword)}
                       className="ml-1 hover:text-red-300";
@@ -490,6 +500,7 @@ if ( {) {
                     </button>;
                   </Badge>;
                 ))}
+<<<<<<< HEAD
               </div>
               <FormDescription className="mt-2">
                 Add keywords to improve discoverability (max 100 characters total)
@@ -537,6 +548,12 @@ if ( {) {
                 </FormItem>;
               )}
 =======
+=======
+                Add keywords to improve discoverability (max 100 characters;
+                total);
+              </FormDescription>;
+            </div>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <FormField;
               control={control}
               name="version";
@@ -547,11 +564,11 @@ if ( {) {
                     <Input placeholder="e.g., 1.0.0" {...field} />;
                   </FormControl>;
                 </FormItem>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             />;
           </div>;
         </Form>;
       </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </Card>;
   );
@@ -567,3 +584,5 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

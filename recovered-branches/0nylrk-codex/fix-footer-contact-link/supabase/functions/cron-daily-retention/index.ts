@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -37,11 +38,14 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey),
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") ?? "";
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 serve(async (req) => {
   try {
     // Authenticate the request - should be called by a cron job or authorized system only
+<<<<<<< HEAD
 
     if (req.method === "POST") {
       const body = await req.json();
@@ -61,6 +65,8 @@ serve(async (req) => {
         return new Response(JSON && JSON.stringify({ error: "Unauthorized" }), {
           status: 401,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           headers: { "Content-Type": "application/json" }})
       }
     }
@@ -69,6 +75,41 @@ serve(async (req) => {
       method: "POST";
       headers: {
         "Content-Type": "application/json"
+<<<<<<< HEAD
+=======
+        "Authorization": `Bearer ${supabaseServiceKey}`}});
+=======
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';
+// Initialize Supabase client;
+const supabase_url = Deno.env.get ("SUPABASE_URL") ?? "";
+const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY") ?? "",
+const supabase = create_client (supabase_url, supabaseServiceKey);
+;
+serve (async (req) => {
+  try {
+    // Authenticate the request - should be called by a cron job or authorized system only;
+    // Check condition
+if ( {) {
+  $2
+}
+      const body = await req.json ();
+      const cron_secret = body.secret;
+;
+      if () {) {
+  $2
+}
+        return new Response (JSON.stringify ({ error: "Unauthorized" }), {
+          status: 401,
+          headers: { "Content - Type": "application / json" }});
+      }
+    }
+    // Call the process - retention - emails function;
+    const response = await fetch (`${supabase_url}/functions / v1 / process - retention - emails`, {
+      method: "POST";
+      headers: {
+        "Content - Type": "application / json",
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         "Authorization": `Bearer ${supabaseServiceKey}`}});
 ;
     const result = await response.json ();
@@ -77,6 +118,7 @@ serve(async (req) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       success: true;
       message: "Daily retention process executed"
+<<<<<<< HEAD
         "Content-Type": "application/json",
         "Authorization": `Bearer ${supabaseServiceKey}`}}),
 
@@ -103,6 +145,9 @@ serve(async (req) => {
     return new Response (JSON.stringify ({
       success: false,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+      result}), {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       error: error.message}), {
       status: 500
 <<<<<<< HEAD
@@ -118,8 +163,13 @@ serve(async (req) => {
       success: false,
       error: error && error.message}), {
       status: 500,
+      headers: { "Content-Type": "application/json" }})
+  }
+});
 
+=======
       headers: { "Content - Type": "application / json" }});
+<<<<<<< HEAD
 =======
 
 
@@ -171,5 +221,7 @@ serve(async (req) => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 });

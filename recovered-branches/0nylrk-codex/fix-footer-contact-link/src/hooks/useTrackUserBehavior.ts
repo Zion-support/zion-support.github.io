@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useRef, useEffect  } from 'react';
@@ -30,6 +31,8 @@ export function useTrackUserBehavior(componentName: string) {;
         const buttonText = button?.textContent || '',
         
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         trackEvent('button_click', {
           component: componentName;
           elementId: buttonId
@@ -39,24 +42,11 @@ export function useTrackUserBehavior(componentName: string) {;
     }
     // Track form submissions
     const trackFormSubmits = (e: Event) => {
-
-      const target = e && e.target as HTMLFormElement;
-      if (target && target.tagName === 'FORM') {
-        const formId = target && target.id || '',
-        
-
         trackEvent('form_submit', {
           component: componentName
           elementId: formId
         })
       }
-
-    };
-
-    component && component.addEventListener('click', trackButtonClicks);
-    component && component.addEventListener('submit', trackFormSubmits, true);
-
-
     return () => {
       component && component.removeEventListener('click', trackButtonClicks);
       component && component.removeEventListener('submit', trackFormSubmits, true)
@@ -65,9 +55,13 @@ export function useTrackUserBehavior(componentName: string) {;
 
   return componentRef
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useRef, useEffect} from 'react';
 import {use_analytics} from '@/context / AnalyticsContext';
 export /**
@@ -76,6 +70,7 @@ export /**
 function useTrackUserBehavior() {
   const { track_event } = use_analytics ();
   const component_ref = useRef < HTMLDivElement>(null);
+<<<<<<< HEAD
 =======
 
 
@@ -130,4 +125,6 @@ export function useTrackUserBehavior(componentName: string) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;

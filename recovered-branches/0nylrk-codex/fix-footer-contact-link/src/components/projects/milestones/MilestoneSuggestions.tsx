@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from 'react';
@@ -21,11 +22,15 @@ interface MilestoneSuggestionsProps {
 }
 
 export function MilestoneSuggestions({;
+=======
+import React, { useState } from 'react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   projectName;
   scopeSummary;
   startDate;
   endDate;
   projectType;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -128,72 +133,23 @@ export function MilestoneSuggestions({;
 
     if (milestones && milestones.length > 0) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  onMilestonesGenerated;
+}: MilestoneSuggestionsProps) {;
+  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       setShowSuggestions(true);
       if (onMilestonesGenerated) {;
         onMilestonesGenerated(milestones);
       }
     }
-
-import {Button} from '@/components / ui / button';
-import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks / useMilestoneGenerator';
-import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
-import {Loader2, Sparkles, Check} from 'lucide-react';
-import {Badge} from '@/components / ui / badge';
-import {format, parseISO} from 'date - fns';
-interface MilestoneSuggestionsProps {
-  project_name: string,
-  scope_summary: string,
-  start_date: Date,
-  end_date?: Date;
-  project_type: string,
-  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
-}
-export /**
- * MilestoneSuggestions - Function description
- */
-function MilestoneSuggestions() {
-  const { generate_milestones, generated_milestones, is_generating } = useMilestoneGenerator ();
-  const [show_suggestions, setShowSuggestions] = useState (false);
-;
-  const handleGenerateMilestones = async () => {
-    const input: MilestoneInput = {
-      scope: `${project_name}: ${scope_summary}`,
-      start_date: start_date.toISOString (),
-      end_date: end_date ? end_date.toISOString () : null,
-      project_type: project_type || "Other";
-    }
-;
-    const milestones = await generate_milestones (input);
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      setShowSuggestions (true);
-      // Check condition
-if ( {) {
-  $2
-}
-        onMilestonesGenerated (milestones);
-      }
-    }
-  }
-;
-  const format_date = (date_string: string) =>: any {
-
     try {
       return format (parseISO (date_string), 'MMM dd, yyyy');
     } catch (error) {
-
-  };
-
-  const formatDate = (dateString: string) => {;
-    try {;
-      return format(parseISO(dateString), 'MMM dd, yyyy');
-    } catch (error) {;
-      return dateString;
-
     }
+<<<<<<< HEAD
 
   },
 <<<<<<< HEAD
@@ -204,6 +160,9 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   return (
     <div className="space-y-4">;
@@ -211,6 +170,7 @@ if ( {) {
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
+<<<<<<< HEAD
           disabled={isGenerating |!scopeSummary |!startDate}
           className="w-full"
         >
@@ -224,9 +184,12 @@ if ( {) {
               <Sparkles className="mr-2 h-4 w-4" />
               Suggest Project Milestones with AI
             </>
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           )}
         </Button>
       )}
+<<<<<<< HEAD
 
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
@@ -272,3 +235,14 @@ if ( {) {
   );
 }
 ;
+=======
+                These milestones will be added to your contract;
+              </div>;
+            </div>;
+          </CardContent>;
+=======
+        </Card>)}
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

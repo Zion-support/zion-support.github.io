@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -20,12 +21,15 @@ import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
 interface SeverityIndicatorProps {;
   severity: "safe" | "suspicious" | "dangerous",;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   showIcon?: boolean;
   showText?: boolean;
   size?: "sm" | "md" | "lg";
   className?: string;
 }
 
+<<<<<<< HEAD
 export function SeverityIndicator({
   severity
   showIcon = true
@@ -135,6 +139,8 @@ export function SeverityIndicator({;
         return <AlertCircleclassName={cn(
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           "text-destructive"
         )} />;
       case 'suspicious':;
@@ -142,10 +148,6 @@ export function SeverityIndicator({;
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
           "text-amber-500"
         )} />;
-
-      default: return <CheckCircleclassName={cn(
-          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
-
           "text-green-500"
         )} />;
     }
@@ -155,6 +157,7 @@ export function SeverityIndicator({;
     <div className={cn("flex items-center gap-1", className)}>;
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}
+<<<<<<< HEAD
 
     </div>;
   );
@@ -164,6 +167,8 @@ export function SeverityIndicator({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import React from './react';
 import { cn } from '@/lib / utils';

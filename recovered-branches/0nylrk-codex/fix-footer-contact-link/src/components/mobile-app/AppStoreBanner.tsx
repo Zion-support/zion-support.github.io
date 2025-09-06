@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState, useEffect } from "react";
@@ -143,6 +144,8 @@ export const AppStoreBanner: React.FC = () => {;
 export default AppStoreBanner;
 =======
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState, useEffect } from './react';
 import { X  } from './lucide-react';
 import { useIsMobile  } from '@/hooks / use - mobile';
@@ -199,6 +202,7 @@ if (return null) {
     </div>);
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -206,3 +210,5 @@ if (return null) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,6 +126,11 @@ export interface ThemeColors {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+  switch (preset) {
+    case 'dark':;
+      return {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
         primary_color;
         background_color: '#0f172a';
         text_color: '#e2e8f0';
@@ -166,6 +172,7 @@ export interface ThemeColors {;
   }
 }
 // Apply theme colors to document CSS variables;
+<<<<<<< HEAD
 
 export function applyThemeColors(colors: ThemeColors) {;
   const root = document.documentElement,;
@@ -186,4 +193,17 @@ export function applyThemeColors(colors: ThemeColors) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export /**
+ * applyThemeColors - Function description
+ */
+function applyThemeColors() {
+  const root = document.document_element,
+  root.style.set_property ('--primary - color', colors.primary_color);
+  root.style.set_property ('--background - color', colors.background_color);
+  root.style.set_property ('--text - color', colors.text_color);
+  root.style.set_property ('--accent - color', colors.accent_color);
+  root.style.set_property ('--button - color', colors.button_color);
+  root.style.set_property ('--card - background', colors.card_background);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;

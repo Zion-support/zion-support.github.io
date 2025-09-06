@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -94,6 +95,8 @@ export function ApplicationRow(): any ({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function ApplicationRow({;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   application;
   processingId;
   onViewApplication;
@@ -107,6 +110,7 @@ export function ApplicationRow({
 =======
   onViewScore;
 }: ApplicationRowProps) {;
+<<<<<<< HEAD
 =======
 }
 
@@ -204,6 +208,9 @@ export function ApplicationRow({;
         ) : (;
           <span className="text-muted-foreground text-sm">No resume</span>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         )}
       </TableCell>;
       <TableCell className="text-right">;
@@ -278,6 +285,7 @@ function ApplicationRow() {
             <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">;
               <FileText className="h - 4 w - 4 mr - 1" /> View;
             </a>;
+<<<<<<< HEAD
 
           </Button>;
         ) : (;
@@ -292,17 +300,18 @@ function ApplicationRow() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          </Button>) : (
+          <span className="text - muted - foreground text - sm">No resume</span>)}
+      </TableCell>;
+      <TableCell className="text - right">;
+        <ApplicationActions;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           application={application}
           processing_id={processing_id}
           onViewApplication={onViewApplication}
           onStatusChange={onStatusChange}
-
-        />;
-      </TableCell>;
-    </TableRow>;
-  );
-}
-
 =======
         />;
       </TableCell>;

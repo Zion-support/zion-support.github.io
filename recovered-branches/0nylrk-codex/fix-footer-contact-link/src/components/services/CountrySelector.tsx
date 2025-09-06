@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState, useEffect} from "react";
@@ -143,32 +144,19 @@ export function CountrySelector(): any ({ onCountryChange, selectedCountry }: Co
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
-            ))}
-          </div>
-          <div className="p-2">
-            <p className="text-sm text-zion-slate-light pb-1">All Countries</p>
-            {onsiteServicePricing
-              .sort((a, b) => a.country.localeCompare(b.country))
-              .map((item) => (
-              <SelectItem key={item.country} value={item.country} className="text-white">
-                {item.country} - ${item.pricePerIncident.toFixed(2)}
-              </SelectItem>
-            ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          </div>
-        </SelectContent>
-      </Select>
-    </div>
-  )
-}
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+            ))}
           </div>;
-        </SelectContent>;
-      </Select>;
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+          <div className="p-2">;
+            <p className="text-sm text-zion-slate-light pb-1">All Countries</p>;
+            {onsiteServicePricing;
+              .sort((a, b) => a && a.country.localeCompare(b && b.country));
+              .map((item) => (;
+              <SelectItem key={item && item.country} value={item && item.country} className="text-white">;
+                {item && item.country} - ${item && item.pricePerIncident.toFixed(2)}
+              </SelectItem>;
+            ))}
 =======
 import { useState, useEffect } from './react';
 import { Globe } from './lucide-react';

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -46,6 +47,8 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       icon: <Award className="h-5 w-5 text-muted-foreground" />
       description: "Credits earned from referrals"
     }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   ];
 
   return (
@@ -64,6 +67,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
                 <div className="text-2xl font-bold">{card.value}</div>
                 <p className="text-xs text-muted-foreground">
                   {card.description}
+<<<<<<< HEAD
                 </p>
               </>
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -121,10 +125,13 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             )}
           </CardContent>;
         </Card>;
       ))}
+<<<<<<< HEAD
     </div>
 <<<<<<< HEAD
   );
@@ -140,3 +147,11 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                </p>;
+              </>)}
+          </CardContent>;
+        </Card>))}
+    </div>);
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

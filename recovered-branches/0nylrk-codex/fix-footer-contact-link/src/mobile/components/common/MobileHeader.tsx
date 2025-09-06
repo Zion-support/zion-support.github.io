@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -25,6 +26,8 @@ interface MobileHeaderProps {;
   title: string,;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   showBack?: boolean;
   showNotifications?: boolean;
   showSettings?: boolean;
@@ -36,10 +39,6 @@ import { Button } from "@/components/ui/button",
 =======
   onSettingsClick?: () => void;
 }
-
-
-export function MobileHeader(): any ({;
-
   title;
 
   showBack = false;
@@ -50,6 +49,7 @@ export function MobileHeader(): any ({;
   onSettingsClick}: MobileHeaderProps) {;
   const navigate = useNavigate();
   return (
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface MobileHeaderProps {
@@ -185,6 +185,8 @@ export function MobileHeader({;
               size="icon" 
               className="mr-2" 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               onClick={() => navigate(-1)}
             >;
               <ChevronLeft className="h-5 w-5" />;
@@ -193,31 +195,19 @@ export function MobileHeader({;
           )}
           <h1 className="text-lg font-medium leading-none truncate">;
             {title}
-
-          </h1>;
-        </div>;
-        <div className="flex items-center space-x-2">;
-          {showNotifications && (;
-            <Button
-              variant="ghost" 
-
               size="icon"
               onClick={onNotificationsClick}>;
               <Bell className="h-5 w-5" />;
               <span className="sr-only">Notifications</span>;
             </Button>;
           )}
-
-          {showSettings && (;
-            <Button
-              variant="ghost" 
-
               size="icon"
               onClick={onSettingsClick}>;
               <Settings className="h-5 w-5" />;
               <span className="sr-only">Settings</span>;
             </Button>;
           )}
+<<<<<<< HEAD
 
         </div>;
       </div>;
@@ -229,6 +219,8 @@ export function MobileHeader({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import React from './react';
 import { use_navigate } from './react-router-dom';

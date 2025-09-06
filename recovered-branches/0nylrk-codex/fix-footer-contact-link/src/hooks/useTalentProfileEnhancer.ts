@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -19,14 +20,14 @@ export interface TalentProfileData {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface TalentProfileData {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   name: string;
   title: string;
   bio: string;
-
-  skills: string[],
-  location?: string;
-
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -149,10 +150,17 @@ export function useTalentProfileEnhancer() {;
 
       setError(err && err.message || 'Failed to enhance profile'),
 
+=======
+export interface CategorizedSkills {
+  programming: string[];
+  devops: string[];
+  platforms: string[];
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return null
     } finally {
       setIsGenerating(false)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   };
@@ -165,6 +173,9 @@ export function useTalentProfileEnhancer() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return {
     enhanceProfile;
     isGenerating;
@@ -176,6 +187,7 @@ export function useTalentProfileEnhancer() {;
     isGenerating;
     error;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -183,5 +195,8 @@ export function useTalentProfileEnhancer() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }

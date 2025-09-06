@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 email?: string;
   profileName: string;
   profileType: 'service' | 'talent'
@@ -103,14 +104,21 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4 flex items-center">
         <Mail className="mr-2 h-5 w-5 text-zion-cyan" />
         Contact
       </h3>
+<<<<<<< HEAD
       
       {email && (
         <div className="mb-4 text-zion-slate-light">
@@ -233,144 +241,52 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
 
       
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {email && (
-        <div className='mb - 4 text - zion - slate - light'>;
-          <span className='block'>Email: </span>;
-          <a;
-            href={`mailto:${email}`}
-
-export function ProfileContact(): any ({;
-  email,;
-  profileName,;
-  profileType,;
-}: ProfileContactProps) {;
-  const [message, setMessage] = useState('');
-  const [subject, setSubject] = useState('');
-  const [isSending, setIsSending] = useState(false);
-
-
-  const handleSendMessage = (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    setIsSending(true);
-
-    // Here would be the actual API call to send the message;
-    setTimeout(() => {;
-      setIsSending(false);
-      setMessage('');
-      setSubject('');      toast({;
-        title: 'Message Sent',;
-        description: `Your message has been sent to ${profileName}.`,;
-      });
-    }, 1000);
-  };
-
-  return (
-    <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>;
-      <h3 className='text-xl font-bold text-white mb-4 flex items-center'>;
-        <Mail className='mr-2 h-5 w-5 text-zion-cyan' />;
-        Contact;
-      </h3>;
-
-      {email && (;
-        <div className='mb-4 text-zion-slate-light'>;
-          <span className='block'>Email: </span>;
+        <div className="mb-4 text-zion-slate-light">
+          <span className="block">Email: </span>
           <a
             href={`mailto:${email}`}
-            className='text-zion-cyan hover:underline truncate block'>        <div className="mb-4 text-zion-slate-light">;
-          <span className="block">Email: </span>;
-          <a
-            href={`mailto:${email}`} 
             className="text-zion-cyan hover:underline truncate block"
-
-
-
-          >
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {email}
-          </a>;
-        </div>;
+          </Link>
+        </div>
       )}
-
-
-            <Input
-              placeholder='Subject'
-              value={subject}
-              onChange={e => setSubject(e && e.target.value)}
-              className='bg-zion-blue border-zion-blue-light text-white'              required              className="bg-zion-blue border-zion-blue-light text-white";
-      <form onSubmit={handleSendMessage}>;
-        <div className="space-y-4">;
-          <div>;
-            <Input
-
-      
-
       <form onSubmit={handleSendMessage}>
         <div className="space-y-4">
           <div>
             <Input
-
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               placeholder="Subject"
               value={subject}
-              onChange={(e) => setSubject(e && e.target.value)}
-              className="bg-zion-blue border-zion-blue-light text-white";
-              required;
-            />;
-          </div>;
-          <div>;
+              onChange={(e) => setSubject(e.target.value)}
+              className="bg-zion-blue border-zion-blue-light text-white"
+              required
+            />
+          </div>
+          <div>
             <Textarea
               placeholder={`Message to ${profileName}...`}
               value={message}
-
-
-            type="submit" 
-            className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
-
-            disabled={isSending}
-          >
-
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Send className="mr-2 h-4 w-4" />
             {isSending ? "Sending..." : "Send Message"}
-
-
-          </Button>;
-        </div>;
-      </form>;
-    </div>;
-  );
-
-
-}
-              on_change={e => set_message (e.target.value)}
-              className='bg - zion - blue border - zion - blue - light text - white min - h-[120px]';
-              required;
-            />;
-          </div>;
-          <Button;
-            type='submit';
-            className='w - full bg - zion - cyan hover:bg - zion - cyan / 90';
-            disabled={is_sending}              required;
-            />;
-          </div>;
-          <Button;
-            type="submit";
-            className="w - full bg - zion - cyan hover:bg - zion - cyan / 90";
-            disabled = {is_sending, }
-          >;
-            <Send className='mr - 2 h - 4 w - 4' />;
-            {is_sending ? 'Sending...' : 'Send Message'}          </Button>            disabled={is_sending}
-          >;
-            <Send className="mr - 2 h - 4 w - 4" />;
-            {is_sending ? "Sending..." : "Send Message"}
-          </Button>;
-        </div>;
-      </form>;
-    </div>);
-  `mailto:$ {
-  email;
-}` ";
-}className="text - zion - cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>);
-}'"}
-}
-;
+          </Button>
+        </div>
+      </form>
+    </div>
+  )
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -8,6 +8,7 @@ export const support = {
 }
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   logEvent: (event: any) => null,
@@ -38,6 +39,8 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
 
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     if (titleMatch || contentMatch || tagMatch) {
       matchedArticles && matchedArticles.push(article && article.id);
       confidence += titleMatch ? 0 && 0.8 : contentMatch ? 0 && 0.6 : tagMatch ? 0 && 0.4 : 0;
@@ -51,21 +54,32 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
   };
 }
 
-
+export function getArticlesByCategory(articles: HelpArticle[], category: string): HelpArticle[] {
+  return articles && articles.filter(article => article && article.category === category);
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
+export function getArticlesByTag(articles: HelpArticle[], tag: string): HelpArticle[] {
+  return articles && articles.filter(article => article && article.tags.includes(tag));
+}
+
+export function searchArticles(articles: HelpArticle[], query: string): HelpArticle[] {
+  const queryLower = query && query.toLowerCase();
+  return articles && articles.filter(article => 
+    article && article.title.toLowerCase().includes(queryLower) ||
+    article && article.content.toLowerCase().includes(queryLower) ||
+    article && article.tags.some(tag => tag && tag.toLowerCase().includes(queryLower))
+  );
+}
   // Add support functionality here;
   log_event: (event: any) => null,
   get_articles: () => [],
   getArticleById: (id: string) => null;
-};
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export const logSupportEventToOperator = (event: any) => {
+}
+;
+export const logSupportEventToOperator = (event: any) =>: any {
   // Add support event logging functionality here;
   return null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -77,3 +91,6 @@ export const logSupportEventToOperator = (event: any) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

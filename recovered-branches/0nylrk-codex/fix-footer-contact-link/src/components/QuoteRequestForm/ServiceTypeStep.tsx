@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useState} from "react";
 import {QuoteFormData, ListingItem, ServiceType} from "@/types/quotes";
 import {Input} from "@/components/ui/input";
@@ -132,6 +133,8 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
            item.category.toLowerCase().includes(searchQuery.toLowerCase())
   }),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="space - y-6">;
       <div>;
@@ -145,6 +148,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                 ? "bg - zion - purple / 20 border - zion - purple";
                 : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";
             }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
             onClick={() => handleTypeSelect("service")}
           >
@@ -345,6 +349,8 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
                       ? "ring-2 ring-zion-purple rounded-lg"
                       : ""
                     formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   }`}
                 >;
                   <ListingScoreCard
@@ -366,11 +372,6 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
           </div>;
         </div>;
       )}
-
-    </div>;
-
-  );
-=======
             on_click={() => handleTypeSelect ("service")}
           >;
             <h4 className="font - medium text - white">Services</h4>;
@@ -448,5 +449,4 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
           </div>;
         </div>)}
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

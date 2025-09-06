@@ -2,25 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
 html { color-scheme: dark; }
 body { @apply bg-gray-950 text-gray-100; }
 
@@ -28,16 +9,6 @@ code { @apply font-mono; }
 
 /* Import Modern Design System */
 @import './modern-design-system.css';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> main
-=======
 /* Import Inter font for modern typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
@@ -76,21 +47,8 @@ code { @apply font-mono; }
   --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   --gradient-futuristic: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
 }
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-19ef
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
 /* Base styles */
 @layer base {
   html {
@@ -205,25 +163,6 @@ code { @apply font-mono; }
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -524,34 +463,23 @@ code { @apply font-mono; }
 
 /* Neon Glow Effects */
 .neon-glow {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> main
   box-shadow: 
-=======
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.025em;
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
-  box-shadow:
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900;
+  background: var(--gradient-futuristic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
-<<<<<<< HEAD
-    0 0 5px currentColor,
-  box-shadow:     0 0 5px currentColor,
-
-    0 0 5px currentColor,
-
-=======
 h2 {
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 800;
@@ -571,50 +499,14 @@ h3 {
 /* Enhanced futuristic effects */
 .neon-glow {
   text-shadow: 
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-19ef
-<<<<<<< HEAD
-    0 0 5px currentColor,
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     0 0 5px currentColor,
   box-shadow:     0 0 5px currentColor,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
   box-shadow:     0 0 5px currentColor,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  box-shadow:     0 0 5px currentColor,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
     0 0 10px currentColor,
     0 0 15px currentColor,
     0 0 20px currentColor;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
 .neon-glow-cyan {
   color: var(--neon-cyan);
   text-shadow: 0 0 5px var(--neon-cyan);
@@ -711,24 +603,14 @@ h3 {
   transition: all var(--animation-normal) ease;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> main
 .futuristic-button::before {
+.neon-border {
+  box-shadow: 
+    inset 0 0 20px rgba(0, 212, 255, 0.1),
+    0 0 20px rgba(0, 212, 255, 0.2),
+    0 0 40px rgba(0, 212, 255, 0.1);
+}
 
-<<<<<<< HEAD
-  content: '';
-.futuristic-button::before {  content: '';
-
-  content: '';
-
-=======
 .cyber-grid {
   background-image: 
     linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
@@ -795,49 +677,13 @@ a:hover {
 }
 
 .futuristic-link::before {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-19ef
-<<<<<<< HEAD
-  content: '';
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   content: '';
 .futuristic-button::before {  content: '';
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
 .futuristic-button::before {  content: '';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-.futuristic-button::before {  content: '';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
   position: absolute;
   bottom: 0;
   left: -100%;
   width: 100%;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left var(--animation-slow) ease;
@@ -1119,17 +965,7 @@ a:hover {
     display: none;
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> main
 
-=======
   height: 2px;
   background: var(--gradient-accent);
   transition: left 0.3s ease;
@@ -1139,19 +975,6 @@ a:hover {
   left: 0;
 }
 
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-19ef
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -1176,25 +999,6 @@ a:hover {
 }
 
 /* Focus styles */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
 .focus-cyber:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
@@ -1208,26 +1012,8 @@ a:hover {
 .focus-holographic:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.5);
-<<<<<<< HEAD
-}
-=======
-:focus {
-  outline: 2px solid var(--neon-blue);
-  outline-offset: 2px;
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
 }
-<<<<<<< HEAD
->>>>>>> main
 
 /* Futuristic animations */
 @keyframes float {
@@ -1605,21 +1391,3 @@ a:hover {
     display: none !important;
   }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-19ef
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main

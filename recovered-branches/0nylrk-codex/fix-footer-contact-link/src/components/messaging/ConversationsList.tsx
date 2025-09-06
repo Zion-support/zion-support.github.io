@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react';
 import { User  } from 'lucide-react';
@@ -59,9 +60,13 @@ export function ConversationsList({
       ) : (
         <div>
           {conversations.map((conversation) => (
+=======
+import React from 'react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <ConversationItem
               key={conversation.id}
               conversation={conversation}
+<<<<<<< HEAD
               isActive={activeConversation?.id === conversation.id}
               onClick={() => {
                 setActiveConversation(conversation);
@@ -76,16 +81,16 @@ export function ConversationsList({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+              isActive={activeConversation?.id === conversation && conversation.id}
+              onClick={() => {;
+                setActiveConversation(conversation);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               }}
             />;
           ))}
         </div>;
       )}
-
-    </div>;
-  );
-}
-
 =======
 import {User} from 'lucide-react';
 import {Conversation} from '@/types / messaging';

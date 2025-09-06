@@ -31,6 +31,7 @@ import { ServiceVariant } from '../types/service-variants';
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
     website: string;
   }
 
@@ -1644,16 +1645,21 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     features: [
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       'Autonomous warehouse robotsAI-powered route optimizationReal-time inventory trackingPredictive maintenanceMulti-robot coordinationSafety and collision avoidancePerformance analyticsScalable deployment';
       'API integration capabilities'
   ];    features: [;
       'Autonomous warehouse robotsAI - powered route optimization_real - time inventory tracking_predictive maintenance_multi - robot coordination_safety and collision avoidance_performance analytics_scalable deployment';
       'API integration capabilities';
     ];
-
-    popular: true, icon: '🤖',
-
-=======
+    integrations: ['WMS systems, ERP platforms, IoT sensors, Robotics hardware, Cloud platforms'];
+    useCases: ['Warehouse automation, Order fulfillment, Inventory management, Last-mile delivery'];
+    roi: 'Increase warehouse efficiency by 300% and reduce operational costs by 40%'
+    competitors: ['Amazon Robotics, Fetch Robotics, Locus Robotics, 6 River Systems, AutoStore'];
+    reviews: 28
+  }
+];
     color: 'from - gray - 600 to - slate - 700', text_color: 'text - gray - 400',
     link: 'https://ziontechgroup.com / autonomous - supply - chain - robotics',
     market_position: 'Leading - edge platform competing with Amazon Robotics, Fetch Robotics, and Locus Robotics',
@@ -1667,8 +1673,11 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     competitors: ['Amazon Robotics, Fetch Robotics, Locus Robotics, 6 River Systems, AutoStore'];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     market_size: '$28B+ Warehouse Robotics market', growth_rate: '35% YoY',
     variant: 'autonomous - robotics - enterprise', contact_info: contact,
     real_implementation: true, implementation_details: 'Robotics - grade platform with AI - powered autonomy and comprehensive logistics management',
@@ -2013,6 +2022,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     reviews: 28;
+<<<<<<< HEAD
 
   },;
   // Autonomous DevOps Platform;
@@ -3225,3 +3235,5 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

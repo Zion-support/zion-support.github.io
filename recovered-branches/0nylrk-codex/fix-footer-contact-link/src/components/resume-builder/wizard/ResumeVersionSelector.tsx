@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState } from "react";
@@ -57,12 +58,15 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [newResumeTitle, setNewResumeTitle] = useState('');
   const [existingResumes, setExistingResumes] = useState<Resume[]>([]),
   const [isLoading, setIsLoading] = useState(false);
 
+<<<<<<< HEAD
 
   const handleCreateNewVersion = async () => {;
     if (newResumeTitle && newResumeTitle.trim()) {;
@@ -78,10 +82,13 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         setNewResumeTitle('');
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
       setIsLoading(false);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
         setNewResumeTitle('')
 =======
@@ -223,3 +230,15 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+            Save as new version;
+          </DropdownMenuItem>;
+        </DropdownMenuContent>;
+      </DropdownMenu>;
+              Save;
+            </Button>;
+          </DialogFooter>;
+        </DialogContent>;
+      </Dialog>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

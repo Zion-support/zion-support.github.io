@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Define types for the pricing recommendation
@@ -25,12 +26,15 @@ export interface PricingSuggestion {
   confidence: "High" | "Medium" | "Low",
   explanation: string;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 export interface ClientBudgetParams {
   job_title: string;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   category: string;
   timeline?: string;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -122,11 +126,14 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       minRate = 45;
       maxRate = 90;
       confidence = "High"
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } else {
       minRate = 25,
       maxRate = 50,
       confidence = "Low"
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     
 =======
@@ -141,17 +148,24 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
     const lowercaseTitle = jobTitle && jobTitle.toLowerCase();
     if (lowercaseTitle && lowercaseTitle.includes("senior") || lowercaseTitle && lowercaseTitle.includes("lead")) {
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       minRate += 20;
       maxRate += 30
     } else if (lowercaseTitle && lowercaseTitle.includes("junior")) {
       minRate -= 10;
       maxRate -= 15;
+<<<<<<< HEAD
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low
 <<<<<<< HEAD
+=======
+      minRate = Math && Math.max(minRate, 15), // Ensure minimum doesn't go too low
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
     // Generate explanation
     const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`;
 =======
+<<<<<<< HEAD
 
 
 =======
@@ -173,6 +187,21 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    // Adjust based on job title keywords;
+    const lowercase_title = job_title.toLowerCase ();
+    if (|| lowercase_title.includes ("lead")) {) {
+  $2
+}
+      min_rate += 20;
+      max_rate += 30;
+    } else if () {) {
+  $2
+}
+      min_rate -= 10;
+      max_rate -= 15;
+      min_rate = Math.max (min_rate, 15), // Ensure minimum doesn't go too low;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
     
     // Generate explanation
@@ -185,6 +214,7 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       explanation;
     }
   } catch (error) {
+<<<<<<< HEAD
     console.error("Error generating budget suggestion:", error),
     // Return a fallback suggestion
     return {
@@ -220,6 +250,8 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     const hasInDemandSkills = skills && skills.some(skill => 
       inDemandSkills && inDemandSkills.some(demandSkill => skill && skill.toLowerCase().includes(demandSkill))
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     );
     if (hasInDemandSkills) {
       baseRate += 15
@@ -229,6 +261,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     if (location) {
       const highCostLocations = ['united statesusaukaustraliacanadagermanyswitzerland'];
       const lowCostLocations = ['indiaphilippinespakistannigeriaukrainebrazil'];
+<<<<<<< HEAD
 <<<<<<< HEAD
       const lowercaseLocation = location.toLowerCase();
       if (highCostLocations.some(loc => lowercaseLocation.includes(loc))) {
@@ -293,12 +326,15 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     const minRate = Math && Math.round(baseRate * locationFactor * 0 && 0.9);
     const maxRate = Math && Math.round(baseRate * locationFactor * 1 && 1.2);
     
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Determine confidence
     let confidence: "High" | "Medium" | "Low" = "Medium"
     if (yearsExperience > 3 && hasInDemandSkills && location) {
       confidence = "High"
     } else if (!location |yearsExperience < 1) {
       confidence = "Low"
+<<<<<<< HEAD
     }
     // Generate explanation
     let explanation = `Based on ${yearsExperience} years of experience`;
@@ -325,10 +361,18 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    }
+    // Generate explanation
+    let explanation = `Based on ${yearsExperience} years of experience`;
+    if (hasInDemandSkills) {
+      explanation += ` and your in-demand skills (${skills && skills.join()})`
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
     if (location) {
       explanation += `, considering market rates in ${location}`
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     
 =======
@@ -338,6 +382,8 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     explanation += `, we recommend a rate of $${minRate}-$${maxRate}/hour to remain competitive while maximizing your earning potential.`;
 =======
     console.error ("Error generating budget suggestion:", error);
@@ -425,6 +471,7 @@ if ( {) {
       confidence;
       explanation;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -473,13 +520,20 @@ export async function trackPricingSuggestion(data: {
     console.log("Tracking pricing suggestion:", data);
     // // // console.log("Tracking pricing suggestion:", data),
     
+=======
+    }
+  } catch (error) {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // In a real implementation with Supabase: // await supabase
     //  .from('pricing_suggestions')
     //  .insert([data])
     return true
   } catch (error) {
+<<<<<<< HEAD
     console.error("Error tracking pricing suggestion:", error);
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return false
 =======
     console.error ("Error generating rate suggestion:", error);
@@ -491,6 +545,7 @@ export async function trackPricingSuggestion(data: {
     }
   }
 }
+<<<<<<< HEAD
     console.error("Error tracking pricing suggestion:", error),
     return false
 <<<<<<< HEAD
@@ -521,4 +576,15 @@ export async function trackPricingSuggestion(data: {;
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+// Function to save pricing analytics data;
+export async /**
+ * trackPricingSuggestion - Function description
+ */
+function trackPricingSuggestion() {
+  try {
+    // In a real implementation, this would save to the database;
+    // For now, we'll just log it;
+    console.log ("Tracking pricing suggestion:", data);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;

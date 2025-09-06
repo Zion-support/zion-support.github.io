@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 interface ModernNavigationProps {
 class_name?: string;
@@ -10,21 +11,16 @@ ursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
 }
 export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
 origin/main
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className={className}>
       <h1>ModernNavigation</h1>
       <p>This component is currently under development.</p>
-</div>
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
   }
   render() {
     if (this.state.hasError) {
@@ -44,6 +40,7 @@ export default function ModernNavigation(): any ({}: ModernNavigationProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
+<<<<<<< HEAD
 :ModernNavigation.tsx
 }
 ursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
@@ -58,3 +55,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
 }
 origin/main
+=======
+export default /**
+ * ModernNavigation - Function description
+ */
+function ModernNavigation() {
+  return (
+    <div className={class_name}>;
+      <h1 > ModernNavigation</h1>;
+      <p > This component is currently under development.</p>;
+    </div>);
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState, useMemo } from "react";
@@ -124,6 +125,11 @@ if ( {) {
 }
         return sort_config.direction === "ascending" ? -1 : 1;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    key: keyof CountryPricing;
+    direction: "ascending" | "descending"
+  }>({
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
       // Check condition
 if ( {) {
@@ -131,43 +137,10 @@ if ( {) {
 }
         return sort_config.direction === "ascending" ? 1 : -1;
       }
-
-import {useState, useMemo} from "react";
-import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
-import {Input} from "@/components/ui/input";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Globe, Search, ArrowUpDown} from "lucide-react";
-import {Button} from "@/components/ui/button";
-export function ITServicePricingTable() {;
-  const [searchQuery, setSearchQuery] = useState("");
-  const [sortConfig, setSortConfig] = useState<{;
-    key: keyof CountryPricing,;
-    direction: "ascending" | "descending";
-  }>({;
-    key: "country",;
-    direction: "ascending"}),;
-
-  const sortedData = useMemo(() => {;
-    let filteredData = [...onsiteServicePricing];
-
-    // Filter by search query;
-    if (searchQuery) {;
-      filteredData = filteredData && filteredData.filter(item => ;
-        item && item.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
-      );
-    }
-
-    // Sort data;
-    filteredData && filteredData.sort((a, b) => {;
-      if (a[sortConfig && sortConfig.key] < b[sortConfig && sortConfig.key]) {;
-        return sortConfig && sortConfig.direction === "ascending" ? -1 : 1;
-      }
-      if (a[sortConfig && sortConfig.key] > b[sortConfig && sortConfig.key]) {;
-        return sortConfig && sortConfig.direction === "ascending" ? 1 : -1;
-      }
       return 0;
     });
 
+<<<<<<< HEAD
     return filteredData;
   }, [onsiteServicePricing, searchQuery, sortConfig]);
   const handleSort = (key: keyof CountryPricing) => {
@@ -194,6 +167,8 @@ export function ITServicePricingTable() {;
           : "ascending"})
   },
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;
       <div className="flex items-center mb-6">;
@@ -202,6 +177,7 @@ export function ITServicePricingTable() {;
           <Input
             placeholder="Search by country..."
             value={searchQuery}
+<<<<<<< HEAD
             onChange={(e) => setSearchQuery(e.target.value)}
             className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white"
           />
@@ -375,6 +351,8 @@ export function ITServicePricingTable() {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
     return filtered_data;
   }, [onsiteServicePricing, search_query, sort_config]);
@@ -456,4 +434,3 @@ export function ITServicePricingTable() {;
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

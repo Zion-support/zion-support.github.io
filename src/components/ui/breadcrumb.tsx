@@ -1,26 +1,4 @@
-}
->(({ className, separator, ...props }, ref,) => (;
-  <nav
-import * as React from 'react';
-import { Slot } from '@radix - ui / react - slot';
-import { ChevronRight } from 'lucide-react';
-import { cn } from '@/lib / utils';
-const Breadcrumb = React.forward_ref<;
-  HTMLElement,
-  React.ComponentPropsWithoutRef<'nav'> & {
-    separator?: React.ReactNode;
-  }
->(({ class_name, separator, ...props }, ref, ) => (
-  <nav;
-    ref={ref}
-    aria-label='breadcrumb'
-    className={cn(
-      'inline-flex items-center gap-1 text-sm text-zion-slate-light',      className
-    )}
-    {...props}
-
-
-
+=======
 
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
@@ -39,17 +17,23 @@ const Breadcrumb = React.forwardRef<
     aria-label="breadcrumb"
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       "inline-flex items-center gap-1 text-sm text-zion-slate-light",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       className
     )}
     {...props}
   />
 ))
+<<<<<<< HEAD
 
   />));
 Breadcrumb.display_name = 'Breadcrumb';
@@ -108,9 +92,22 @@ BreadcrumbLink.displayName = "BreadcrumbLink"
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const BreadcrumbSeparator = ({
-
-
+  children
+  className
+  ...props
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  >
+    {children |<ChevronRight className='h-4 w-4' />}
+  </li>
+)
+BreadcrumbSeparator.displayName = 'BreadcrumbSeparator'
+=======
 }: React.ComponentProps<"li">) => (
   <li
     role="presentation"
@@ -119,14 +116,18 @@ const BreadcrumbSeparator = ({
     {...props}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   >
-    {children |<ChevronRight className='h-4 w-4' />}
+    {children || <ChevronRight className="h-4 w-4" />}
   </li>
 )
+<<<<<<< HEAD
 <<<<<<< HEAD
 BreadcrumbSeparator.displayName = 'BreadcrumbSeparator'
 }: React.ComponentProps<"li">) => (
@@ -212,10 +213,20 @@ export {
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
+ 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+const BreadcrumbEllipsis = ({
+  className
+  ...props
+export {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   Breadcrumb
   BreadcrumbList
   BreadcrumbItem
   BreadcrumbLink
+<<<<<<< HEAD
 
 
     {...props}>;
@@ -273,23 +284,13 @@ const BreadcrumbEllipsis = ({
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }: React.ComponentProps<"span">) => (
   <span
     role="presentation"
     aria-hidden="true"
     className={cn("flex h-9 w-9 items-center justify-center", className)}
-    {...props}
-  >
-
-    &#8230,
-  </span>;
-    role="presentation";
-    aria - hidden="true";
-    className={cn ("flex h - 9 w - 9 items - center justify - center", class_name)}
-  <li;
-    role="presentation";
-    aria - hidden="true";
-    className={cn ("[&>svg]:size - 3.5 text - zion - slate - light / 70", class_name)}
     {...props}
   >
     &#8230,
@@ -303,8 +304,8 @@ export {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
-
-
-  BreadcrumbEllipsis}
   BreadcrumbEllipsis}
 ;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

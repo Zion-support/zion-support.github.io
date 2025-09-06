@@ -1,4 +1,21 @@
-const [formData, setFormData] = useState({
+
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth",
+import { useRouter } from "next/router",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { toast } from "sonner",
+import { supabase } from "@/integrations/supabase/client",
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [formData, setFormData] = useState({
 
     brand_name: ""
     subdomain: ""
@@ -10,6 +27,7 @@ const [formData, setFormData] = useState({
     custom_domain: ""
 
     is_co_branded: true
+<<<<<<< HEAD
 <<<<<<< HEAD
   });
   // Check if user has admin role
@@ -29,6 +47,9 @@ const [formData, setFormData] = useState({
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }),
   
   // Check if user has admin role
@@ -114,7 +135,7 @@ const [formData, setFormData] = useState({
     }
   },
 
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <SEO 
@@ -326,6 +347,7 @@ const [formData, setFormData] = useState({
       </main>
     </>
   )
+<<<<<<< HEAD
 }
 
 import React, { useState } from "react";
@@ -688,3 +710,8 @@ function TenantOnboarding() {
   );
 }
 ;
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

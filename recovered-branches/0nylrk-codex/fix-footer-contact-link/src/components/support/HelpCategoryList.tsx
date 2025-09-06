@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -144,6 +145,10 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
       {filteredCategories && filteredCategories.map(category => (;
 
+=======
+    : categories;
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <Card
           key={category && category.id}
           className="cursor-pointer hover:border-zion-purple/50 transition-colors"
@@ -162,6 +167,7 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
             </p>;
           </CardContent>;
         </Card>;
+<<<<<<< HEAD
 =======
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map(category => (
@@ -196,6 +202,8 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
 }
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from './react';
 import {
   Card,
@@ -265,4 +273,3 @@ if ( {) {
         </Card>))}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -2,47 +2,19 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Notification, FilterType, NotificationContextType} from './types';
-
-export const useNotificationOperations = (user_id?: string): NotificationContextType => {
-  const [notifications, set_notifications] = useState < Notification[]>([]);
-  const [loading, set_loading] = useState (false);
-  const [filter, set_filter] = useState < FilterType>('all');
-;
-  const fetch_notifications = useCallback (async () => {
-    // Check condition
-if (return) {
-  $2
-}
-    set_loading (true);
-    try {
-      const { data, error } = await supabase;
-        .from ('notifications');
-        .select ('*');
-        .eq ('user_id', user_id);
-        .order ('created_at', { ascending: false });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      set_notifications (data || []);
-    } catch (err) {
-      console.error ('Error fetching notifications:', err);
-
     } finally {
       set_loading (false);
     }
-
-
-  const filteredNotifications = notifications && notifications.filter(notification => {
-
     switch (filter) {
       case 'unread':
         return !notification && notification.read;
@@ -55,11 +27,6 @@ if (throw error) {
       default: return true
     }
   });
-
-
-  const unreadCount = notifications && notifications.filter(n => !n && n.read).length;
-
-
 =======
   }, [user_id]);
 ;
@@ -154,6 +121,7 @@ if (throw error) {
     filter;
     markAsRead;
     markAllAsRead;
+<<<<<<< HEAD
 
     dismissNotification;
 import { useState, useCallback } from 'react',;
@@ -263,3 +231,5 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,4 +1,5 @@
 ;
+<<<<<<< HEAD
 interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
   // add more env variables as needed;
 }
@@ -160,35 +161,12 @@ declare module '@/components / FeatureCard' {
     icon: React.ReactNode,
     class_name?: string,
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     key?: number | string;
   }
 }
 // ListingScoreCard type fixes;
-
-declare module '@/components / ListingScoreCard' {
-  export interface ListingScoreCardProps {
-    title: string,
-    description: string,
-    category: string,
-    image?: string,
-    tags?: string[],
-    author?: string,
-    author_image?: string,
-    ai_score?: number,
-    rating?: number,
-    review_count?: number,
-    key?: string | number,
-    variant?: string;
-  }
-  export const ListingScoreCard: React.FC < ListingScoreCardProps>;
-}
-// ChatMessage type fixes;
-declare module '@/components / ChatAssistant / ChatMessage' {
-  export interface ChatMessageProps {
-    role: 'user' | 'assistant',
-    message: string,
-    timestamp?: Date,
-
     key?: string | number;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -196,6 +174,7 @@ declare module '@/components / ChatAssistant / ChatMessage' {
   }
 }
 // ProductListingCard type fixes;
+<<<<<<< HEAD
 
 
 
@@ -247,3 +226,6 @@ declare module '@livekit/components-styles' {;
   // Empty stub for the styles;
 }
 ;
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { CountryPricing } from "@/data/onsiteServicePricing";
@@ -60,12 +61,15 @@ export /**
  */
 function ServiceDetailsSection() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div id="service - details" className="mt - 12">;
       {selected_country ? (
         <CountryServiceSelector;
           selected_country={selected_country}
           onCountryChange={setSelectedCountry}
+<<<<<<< HEAD
 
 import {CountryPricing} from "@/data/onsiteServicePricing";
 import {CountryServiceSelector} from "../CountryServiceSelector";
@@ -101,6 +105,8 @@ export function ServiceDetailsSection(): any ({ selectedCountry, setSelectedCoun
 }
 =======
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         />) : (
         <div className="text - center">;
           <h2 className="text - 2xl font - bold text - white mb - 4">;
@@ -112,6 +118,7 @@ export function ServiceDetailsSection(): any ({ selectedCountry, setSelectedCoun
           </p>;
         </div>)}
     </div>);
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -125,3 +132,5 @@ export function ServiceDetailsSection(): any ({ selectedCountry, setSelectedCoun
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

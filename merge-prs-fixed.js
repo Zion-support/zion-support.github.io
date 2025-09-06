@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -76,6 +77,10 @@ const fs = require('fs');
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+#!/usr/bin/env node;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 console.log('🚀 Starting merge process for all open PRs...'),;
 try {;
     // Check if we're in a git repository;
@@ -112,6 +117,7 @@ try {;
             console.log('Found merge conflicts in:', conflictFiles.trim()),;
             // Resolve conflicts by accepting our version;
 <<<<<<< HEAD
+<<<<<<< HEAD
             const files = conflictFiles.trim().split('\n');
             const files = conflictFiles.trim().split('\n'),;
             const files = conflictFiles.trim().split('\n');
@@ -129,15 +135,24 @@ try {;
                         execSync(`git checkout --ours "${file}"`);
                     } catch (e) {;
                         execSync(`git checkout --theirs "${file}"`);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            for (const file of files) {;
+                if (file.trim()) {;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     }
-                    exec_sync (`git add "${file}"`);
+                    execSync(`git add "${file}"`);
                 }
             }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             // Commit the merge;
-            exec_sync ('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
+            execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
         }
     }
+<<<<<<< HEAD
     // Get all branches;
     console.log('🌿 Getting all branches...');
     const branches = execSync('git branch -r', { encoding: 'utf8' });
@@ -184,6 +199,9 @@ try {;
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     console.log(`Found ${branchList.length} branches to merge: `),;
     branchList.forEach(branch => console.log(`  - ${branch}`)),;
     // Merge each branch;
@@ -212,17 +230,9 @@ try {;
     console.log('✅ Repository is now clean and up to date');
 } catch (error) {;
     console.error('❌ Error during merge process:', error.message),;
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     process.exit(1);
 }
-=======
-    console.log ('📤 Pushing all changes to main...'),
-    exec_sync ('git push origin main'),
-    console.log ('🎉 All merge operations completed successfully!'),
-    console.log ('✅ All PRs have been merged into main branch'),
-    console.log ('✅ All merge conflicts have been resolved'),
-    console.log ('✅ Repository is now clean and up to date');
-} catch (error) {
-    console.error ('❌ Error during merge process:', error.message),
-    process.exit (1);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

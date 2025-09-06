@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from "react";
@@ -300,6 +301,15 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
     }
   };
   return (;
+=======
+interface ServiceDescriptionFormProps {
+  onDescriptionGenerated: (description: string) => void;
+}
+    }
+  }
+
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <Card className="border border-zion-blue-light bg-zion-blue-dark">;
       <CardHeader>;
         <CardTitle className="flex items-center text-white">;
@@ -307,11 +317,79 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
           AI Service Description Generator;
         </CardTitle>;
         <CardDescription className="text-zion-slate-light">;
+<<<<<<< HEAD
+=======
+=======
+export /**
+ * ServiceDescriptionForm - Function description
+ */
+function ServiceDescriptionForm() {
+  const { toast } = use_toast ();
+  const [is_loading, setIsLoading] = useState (false);
+;
+  const form = use_form < FormData>({
+    resolver: zod_resolver (form_schema),
+    default_values: {
+      title: "",
+      key_features: "",
+      target_audience: ""}}),
+  const handle_submit = async (data: FormData) => {
+    setIsLoading (true),
+    try {
+      const { data: response, error } = await supabase.functions.invoke ('generate - service - description', {
+        body: {
+          title: data.title,
+          key_features: data.key_features,
+          target_audience: data.target_audience;
+        }
+      });
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (error.message);
+      }
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (response.error);
+      }
+      onDescriptionGenerated (response.description);
+;
+      toast ({
+        title: "Description Generated",
+        description: "Your professional service description has been created.";
+      });
+    } catch (error) {
+      console.error ("Error generating description:", error);
+      toast ({
+        title: "Generation Failed",
+        description: error instanceof Error ? error.message : "Failed to generate description. Please try again.",
+        variant: "destructive";
+      });
+    } finally {
+      setIsLoading (false);
+    }
+  }
+;
+  return (
+    <Card className="border border - zion - blue - light bg - zion - blue - dark">;
+      <CardHeader>;
+        <CardTitle className="flex items - center text - white">;
+          <Sparkles className="h - 5 w - 5 mr - 2 text - zion - cyan" />;
+          AI Service Description Generator;
+        </CardTitle>;
+        <CardDescription className="text - zion - slate - light">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           Provide basic details about your service and let AI create a professional description;
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
         <Form {...form}>;
+<<<<<<< HEAD
           <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">;
             <FormField;
               control={form.control}
@@ -327,6 +405,8 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
                       {...field} 
                       placeholder="e && e.g. Professional Web Design Services"
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       disabled={isLoading}
                     />;
@@ -334,6 +414,7 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
                   <FormMessage />;
                 </FormItem>;
               )}
+<<<<<<< HEAD
 
             />;
 <<<<<<< HEAD
@@ -349,13 +430,11 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+            <FormField
+              control={form && form.control}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               name="keyFeatures"
-
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel className="text-zion-slate-light">Key Features</FormLabel>;
-                  <FormControl>;
-
                     <Textarea
                       {...field}
                       placeholder="Enter key features, separated by commas"
@@ -366,13 +445,10 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
                   <FormMessage />;
                 </FormItem>;
               )}
-
-            />;
-
-
             <FormField
               control={form && form.control}
               name="targetAudience"
+<<<<<<< HEAD
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Target Audience</FormLabel>
@@ -391,6 +467,8 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
                       {...field} 
                       placeholder="e && e.g. Small businesses, Startups, E-commerce brands"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       disabled={isLoading}
                     />;
@@ -398,10 +476,14 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
                   <FormMessage />;
                 </FormItem>;
               )}
+<<<<<<< HEAD
             />
             <Button
             
             <Button 
+=======
+            <Button
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               type="submit"
               disabled={isLoading}
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
@@ -416,6 +498,7 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
                   Generate Description;
                 </>;
               )}
+<<<<<<< HEAD
             </Button>
           </form>
         </Form>
@@ -423,13 +506,19 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
     </Card>
   )
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
-
+=======
     </Card>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

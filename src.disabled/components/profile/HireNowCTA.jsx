@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/profile/HireNowCTA.jsx
 '\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";
 "export: function HireNowCTA({ talentName,hourlyRate,onHire }) {" const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ projectDescription: ",budget: ",",startDate: ",message: "})" const handleSubmit = e => {""";"""";"""
@@ -9,6 +10,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 '\"export\": function HireNowCTA({ talentName,hourlyRate,onHire }) {\' const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ \"projectDescription\": \',\"budget\": \',\',\"startDate\": \',\"message\": \'})\' const handleSubmit = e => {\''\';\''\"";
 "export: function HireNowCTA({ talentName,hourlyRate,onHire }) {" const [isFormOpen,setIsFormOpen] = useState(false) const [formData,setFormData] = useState({ projectDescription: ",budget: ",",startDate: ",message: "})" const handleSubmit = e => {""";"""";"""

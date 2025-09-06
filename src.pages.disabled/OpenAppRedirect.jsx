@@ -1,4 +1,28 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React from \'react\' export default OpenAppRedirect\';
+<<<<<<< HEAD
 <<<<<<< HEAD
 :src.pages.disabled/OpenAppRedirect.jsx
 import _React from 'react' export default OpenAppRedirect';
@@ -18,6 +42,9 @@ import _React from 'react' export default OpenAppRedirect';
 import _React from 'react' export default OpenAppRedirect';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.pages.disabled/OpenAppRedirect.jsx
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 =======
 :src.pages.disabled/OpenAppRedirect.jsx

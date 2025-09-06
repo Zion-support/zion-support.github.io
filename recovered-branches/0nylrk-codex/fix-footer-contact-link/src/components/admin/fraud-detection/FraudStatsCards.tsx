@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import {
@@ -23,6 +24,8 @@ import {;
   CardDescription,;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 } from "@/components/ui/card";
 
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
@@ -36,6 +39,7 @@ import { FraudStats } from "@/types/fraud",
 =======
 interface FraudStatsCardsProps {;
   stats: FraudStats;
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -230,3 +234,54 @@ export default FraudStatsCards;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+              {stats.pending_flags}
+            </CardTitle>;
+            <CardDescription > Pending Review</CardDescription>;
+          </div>;
+          {stats.pending_flags > 0 && (
+            <ShieldAlert className="h - 5 w - 5 text - amber - 500" />)}
+        </CardHeader>;
+      </Card>;
+      <Card>;
+        <CardHeader className="pb - 2 flex flex - row items - center justify - between">;
+          <div>;
+            <CardTitle className="text - 2xl font - bold text - amber - 500">;
+              {stats.suspicious_count}
+            </CardTitle>;
+            <CardDescription > Suspicious</CardDescription>;
+          </div>;
+          <AlertTriangle className="h - 5 w - 5 text - amber - 500" />;
+        </CardHeader>;
+      </Card>;
+      <Card>;
+        <CardHeader className="pb - 2 flex flex - row items - center justify - between">;
+          <div>;
+            <CardTitle className="text - 2xl font - bold text - red - 500">;
+              {stats.dangerous_count}
+            </CardTitle>;
+            <CardDescription > Dangerous</CardDescription>;
+          </div>;
+          <AlertCircle className="h - 5 w - 5 text - red - 500" />;
+        </CardHeader>;
+      </Card>;
+      <Card>;
+        <CardHeader className="pb - 2">;
+          <CardTitle className="text - 2xl font - bold">;
+            {stats.actioned_count}
+          </CardTitle>;
+          <CardDescription > Actions Taken</CardDescription>;
+        </CardHeader>;
+      </Card>;
+      <Card>;
+        <CardHeader className="pb - 2">;
+          <CardTitle className="text - 2xl font - bold">;
+            {stats.false_positives}
+          </CardTitle>;
+          <CardDescription > False Positives</CardDescription>;
+        </CardHeader>;
+      </Card>;
+    </div>);
+}
+;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

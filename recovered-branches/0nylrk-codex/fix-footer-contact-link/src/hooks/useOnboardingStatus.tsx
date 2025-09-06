@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState, useEffect} from "react";
@@ -177,18 +178,13 @@ export function useOnboardingStatus() {;
 
   return status
 }
+=======
+        }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       } catch (err) {;
-        console.error("Error in onboarding status hook:", err);
+        console && console.error("Error in onboarding status hook:", err);
       }
-
-    };
-
-    fetchOnboardingStatus();
-  }, [user]);
-
-  return status;
-}
-
+=======
 import { useState, useEffect } from './react';
 import { use_auth } from './use_auth';
 import { supabase } from '@/integrations / supabase / client';
@@ -263,6 +259,7 @@ if ( {) {
 ;
   return status;
 }
+<<<<<<< HEAD
 
 =======
 ;
@@ -270,3 +267,6 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

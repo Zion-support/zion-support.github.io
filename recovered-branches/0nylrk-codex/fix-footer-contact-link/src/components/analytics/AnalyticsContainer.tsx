@@ -19,6 +19,7 @@ interface AnalyticsContainerProps {
 }
 =======
 
+<<<<<<< HEAD
 
 export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps) {;
 =======
@@ -108,6 +109,8 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
   const isAdmin = user?.role === "admin" || user?.userType === "admin";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // If still loading auth status, show loading;
   if (isLoading) {;
     return (
@@ -116,16 +119,6 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
       </div>;
     );
   }
-
-
-  // If not authenticated, redirect;
-  if (!isAuthenticated) {;
-    return <Navigate to="/login" state={{ from: "/analytics" }} replace />;
-  }
-
-  // If not admin, redirect;
-  if (!isAdmin) {;
-
     return <Navigate to="/unauthorized" replace />;
   }
   return (
@@ -206,6 +199,7 @@ if ( {) {
         {children}
       </main>;
       <Footer />;
+<<<<<<< HEAD
 
     </div>);
 
@@ -219,3 +213,6 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

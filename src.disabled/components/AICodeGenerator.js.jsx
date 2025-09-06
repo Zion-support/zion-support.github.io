@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/AICodeGenerator.js.jsx
 ' \"export\": const AICodeGenerator = () => { const { trackEvent } = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'true\'}) const [activeTab,setActiveTab] = useState (\'generate\') const [showAdvanced,setShowAdvanced] = useState (false) const [customCode,setCustomCode] = useState (\') const [copied,setCopied] = useState (false) const { isGenerating,isAnalyzing,generatedCode,codeAnalysis,suggestions,history,generateCode,analyzeCode,applySuggestion,optimizeCode,generateTests,generateDocs,clearHistory,exportCode } = useAICodeGeneration () const [form,setForm] = useState ({ \"prompt\": \',\"language\": \'typescript,\',\"framework\": \'react,\',\"style\": \'functional,\',\"target\": \'web,\',\"quality\": \'development,\',\"includeTests\": \'fals\',e,\"includeDocs\": \'fals\',e,\"includeErrorHandling\": \'fals\',e,\"includeLogging\": \'fals\',e,\"includeMetrics\": \'false\'}) \'';\"";
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -7,6 +8,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 ' \"export\": const AICodeGenerator = () => { const { trackEvent } = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'true\'}) const [activeTab,setActiveTab] = useState (\'generate\') const [showAdvanced,setShowAdvanced] = useState (false) const [customCode,setCustomCode] = useState (\') const [copied,setCopied] = useState (false) const { isGenerating,isAnalyzing,generatedCode,codeAnalysis,suggestions,history,generateCode,analyzeCode,applySuggestion,optimizeCode,generateTests,generateDocs,clearHistory,exportCode } = useAICodeGeneration () const [form,setForm] = useState ({ \"prompt\": \',\"language\": \'typescript,\',\"framework\": \'react,\',\"style\": \'functional,\',\"target\": \'web,\',\"quality\": \'development,\',\"includeTests\": \'fals\',e,\"includeDocs\": \'fals\',e,\"includeErrorHandling\": \'fals\',e,\"includeLogging\": \'fals\',e,\"includeMetrics\": \'false\'}) \'';\"";
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/AICodeGenerator.js.jsx

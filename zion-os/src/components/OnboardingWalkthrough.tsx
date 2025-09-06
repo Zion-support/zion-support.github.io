@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import { useState, useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
@@ -173,6 +174,8 @@ if ( {) {
 ;
   return (;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <>;
       {/* Overlay */}
       <div className="fixed inset - 0 bg - black / 50 z - 40" on_click={handle_skip} />;
@@ -229,6 +232,7 @@ if ( {) {
       {/* Highlight Target Element */}
       {currentStepData.target && (
         <div;
+<<<<<<< HEAD
 
           className="fixed z-30 pointer-events-none";
           style={{top: 0;
@@ -249,12 +253,15 @@ if ( {) {
               top: "50%",;
               left: "50%",;
               transform: "translate(-50%, -50%)",;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               width: "300px";
               height: "200px"}}
           />;
         </div>)}
     </>);
 }
+<<<<<<< HEAD
 // Hook to add data attributes for walkthrough targeting;
 export function useWalkthroughTarget(id: string) {return {;
 ;
@@ -279,5 +286,8 @@ export function useWalkthroughTarget(id: string) {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     "data-walkthrough-target": id;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+// Hook to add data attributes for walkthrough targeting;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     id}
 }

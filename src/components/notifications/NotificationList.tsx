@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 onRetry
 },) => {
 } import React from 'react';
@@ -50,6 +51,8 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   notifications
   onMarkAsRead
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import Skeleton from '@/components/ui/skeleton',;
@@ -57,19 +60,26 @@ import { Button } from '@/components/ui/button',;
 import { NotificationItem } from './NotificationItem',;
 import { Notification } from '@/context/notifications',;
 import { EmptyState } from '@/components/ui/empty-state',;
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { Bell } from 'lucide-react';
 interface NotificationListProps {;
   loading: boolean,;
   error: string | null,;
   notifications: Notification[],;
-  onMarkAsRead: (id: string,) => Promise<void>,;
-  onDismiss: (id: string,) => Promise<void>,;
+  onMarkAsRead: (id: string) => Promise<void>,;
+  onDismiss: (id: string) => Promise<void>,;
   onRetry: () => void;
 }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   loading: boolean
   error: string | null
   notifications: Notification[]
@@ -79,6 +89,7 @@ interface NotificationListProps {;
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
+<<<<<<< HEAD
 
   loading
   error
@@ -102,16 +113,28 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
   onRetry;
 },) => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  onDismiss,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  onRetry
+}) => {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
-    <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">;
-      {error ? (;
-        <div className="p-8 text-center text-amber-500">;
-          <p>{error}</p>;
+    <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">
+      {error ? (
+        <div className="p-8 text-center text-amber-500">
+          <p>{error}</p>
           <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
             variant="outline" 
             size="sm" 
 
+=======
+            variant="outline"
+            size="sm"
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             className="mt-2"
             onClick={onRetry}
           >
@@ -137,6 +160,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
       ) : (
         notifications.map((notification) => (
           <NotificationItem
+<<<<<<< HEAD
 
     </ScrollArea>;
   );
@@ -232,6 +256,9 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
 ";
 <<<<<<< HEAD
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             key={notification.id}
             notification={notification}
             onMarkAsRead={onMarkAsRead}
@@ -242,3 +269,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
     </ScrollArea>;
   );
 };
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

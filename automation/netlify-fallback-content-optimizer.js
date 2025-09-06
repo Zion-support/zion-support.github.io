@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node //Netlify Function Fallback: content-optimizer //This is a local fallback when the main function is unavailable try {
   // Basic fallback logic const result = {
   statusCode: 200;
@@ -30,6 +31,9 @@ body: JSON && JSON.stringify ({
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 // Netlify Function Fallback: content-optimizer
 // This is a local fallback when the main function is unavailable
@@ -37,6 +41,10 @@ body: JSON && JSON.stringify ({
 exports.handler = async (_event, _context) => {
     // // // console.log('content-optimizer fallback executed locally'),
     
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     try {
         // Basic fallback logic
         const result = {
@@ -46,6 +54,7 @@ exports.handler = async (_event, _context) => {
                 message: 'content-optimizer executed locally as fallback'
                 timestamp: new Date().toISOString()
 
+<<<<<<< HEAD
 =======
 message: error && error.message 
 }) 
@@ -109,13 +118,22 @@ exports.handler = async (_event, _context) => {
 },
 ;
 =======
+=======
+                fallback: true
+            })
+        }
+        return result
+    } catch (error) {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+        console.error('Fallback execution error:', error)
+        return {
+            statusCode: 500
+            body: JSON.stringify({
+                error: 'Fallback execution failed'
 
-
-},
-
-;
-
+                message: error.message
+            })
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 #!/usr/bin/env node;
@@ -146,9 +164,15 @@ exports.handler = async (_event, _context) => {;
     }
 },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

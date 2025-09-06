@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const metadata = {title: 'Careers - Zion Tech Group';
   description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.';
   keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs'}
@@ -113,6 +114,8 @@ export default function CareersPage() {;
     {;
       title: 'Health & Wellness',;
       description: 'Comprehensive health coverage and wellness programs.',;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       icon: '🏥'}];
   return (
     <div className="space - y-16">;

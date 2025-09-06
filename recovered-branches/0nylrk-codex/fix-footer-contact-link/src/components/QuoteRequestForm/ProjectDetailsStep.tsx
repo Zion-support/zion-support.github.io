@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {QuoteFormData} from "@/types/quotes";
@@ -266,10 +267,13 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
           <div>;
             <Label htmlFor="email" className="text-zion-slate-light">Email</Label>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <Input
               id="email"
               type="email"
               placeholder="Your email address"
+<<<<<<< HEAD
 
               value={formData.contactInfo.email}
               onChange={(e) =>
@@ -383,10 +387,13 @@ function ProjectDetailsStep() {
                 updateFormData ({ project_description: e.target.value });
               }
               className="min - h-32 bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             />;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -490,3 +497,5 @@ function ProjectDetailsStep() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

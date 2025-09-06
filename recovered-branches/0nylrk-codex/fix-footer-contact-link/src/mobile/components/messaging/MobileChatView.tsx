@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -31,6 +32,8 @@ interface Message {;
   isMe: boolean,;
 
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import React, { useState } from './react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 import { Button } from '@/components / ui / button';
@@ -39,21 +42,29 @@ import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from './
 import { cn } from '@/lib / utils';
 import { use_navigate } from './react-router-dom';
 import { toast } from './sonner';
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface Message {
   id: string,
   content: string,
   timestamp: string,
-
-
+  is_me: boolean,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  sender?: string;
+  avatar?: string;
+  status?: 'sent' | 'delivered' | 'read';
+}
 interface MobileChatViewProps {
   contact: {
 
     id: string
     name: string
     avatar?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
     status?: string
   }
@@ -131,17 +142,15 @@ interface MobileChatViewProps {;
   onSendMessage: (content: string) => void
 }
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [newMessage, setNewMessage] = useState("");
 
   const navigate = useNavigate();
-
-
-  const handleSend = () => {;
-    if (newMessage && newMessage.trim() !== "") {;
-
       onSendMessage(newMessage);
       setNewMessage("");
     }
+<<<<<<< HEAD
   }
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -378,10 +387,13 @@ if ( {) {
                 "text - xs mt - 1 flex justify - end";
                 message.is_me ? "text - primary - foreground / 80" : "text - muted - foreground")}>;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {message.timestamp}
                 {message.is_me && message.status && (
                   <span className="ml - 1">;
                     {message.status === 'read' ? '✓✓' : '✓'}
+<<<<<<< HEAD
 
   };
 
@@ -490,25 +502,18 @@ if ( {) {
                     {message.status === 'read' ? '✓✓' : '✓'}
                   </span>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 )}
               </div>;
             </div>;
           </div>;
         ))}
-
-      </div>;
-
-      <div className="sticky bottom-0 bg-background border-t border-border p-2">;
-        <div className="flex items-center gap-2">;
-          <Button variant="ghost" size="icon">;
-            <PaperclipIcon className="h-5 w-5" />;
-          </Button>;
-
-
           <Input
             value={newMessage}
             onChange={(e) => setNewMessage(e && e.target.value)}
             onKeyDown={handleKeyDown}
+<<<<<<< HEAD
 
             placeholder="Type a message...";
             className="flex-1";
@@ -529,3 +534,36 @@ if ( {) {
 }
 }
 ;
+=======
+=======
+                  </span>)}
+              </div>;
+            </div>;
+          </div>))}
+      </div>;
+      <div className="sticky bottom - 0 bg - background border - t border - border p - 2">;
+        <div className="flex items - center gap - 2">;
+          <Button variant="ghost" size="icon">;
+            <PaperclipIcon className="h - 5 w - 5" />;
+          </Button>;
+          <Input;
+            value={new_message}
+            on_change={(e) => setNewMessage (e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Type a message...";
+            className="flex - 1";
+          />;
+          <Button;
+            size="icon";
+            on_click={handle_send}
+            disabled={!new_message.trim ()}
+            className={!new_message.trim () ? "opacity - 50" : ""}
+          >;
+            <Send className="h - 5 w - 5" />;
+          </Button>;
+        </div>;
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

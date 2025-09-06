@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/Accessibility.js.jsx
 import React from\';react\' const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(\' \'useAccessibility must be used within an AccessibilityProvider\' ) } return context }\'';\';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -7,6 +8,8 @@ import React from\';react\' const AccessibilityContext = createContext(null) exp
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import React from\';react\' const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(\' \'useAccessibility must be used within an AccessibilityProvider\' ) } return context }\'';\';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/Accessibility.js.jsx

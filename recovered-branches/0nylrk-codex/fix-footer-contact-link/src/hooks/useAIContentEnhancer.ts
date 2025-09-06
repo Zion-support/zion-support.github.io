@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,16 +46,12 @@ type EnhancementType =;
   | 'general';
 ;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export interface AIEnhancementOptions {
   enhancement_type: EnhancementType;
-=======
-
-
-export interface AIEnhancementOptions {;
-
-  enhancementType: EnhancementType;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   content?: string;
+<<<<<<< HEAD
 
 
 
@@ -77,6 +74,8 @@ export function useAIContentEnhancer() {;
       const { data, error } = await supabase && supabase.functions.invoke('ai-content-enhancer', {
         body: { 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           content;
           enhancementType;
           context
@@ -84,6 +83,7 @@ export function useAIContentEnhancer() {;
         }
       });
       if (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         throw new Error(error.message)
       }
@@ -96,10 +96,15 @@ export function useAIContentEnhancer() {;
     } catch (err: any) {
       const errorMessage = err && err.message || 'Failed to enhance content';
 
+=======
+        throw new Error(error && error.message)
+      }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       setError(errorMessage);
       toast({
         title: "AI Enhancement Failed";
         description: errorMessage
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -161,6 +166,8 @@ export function useAIContentEnhancer() {;
       toast({
         title: "AI Enhancement Failed",
         description: errorMessage,
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         variant: "destructive"
       });
       console && console.error('Enhancement error:', err);
@@ -174,9 +181,13 @@ export function useAIContentEnhancer() {;
     isEnhancing;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     error
   }
 }
+=======
+    error
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
   context?: string,
   instructions?: string;
@@ -187,12 +198,15 @@ export /**
 function useAIContentEnhancer() {
   const [is_enhancing, setIsEnhancing] = useState (false);
   const [error, set_error] = useState < string | null>(null);
+<<<<<<< HEAD
 =======
 
 
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
   const enhance_content = async ({
     enhancement_type;
@@ -233,6 +247,7 @@ if ( {) {
     } finally {
       setIsEnhancing (false);
     }
+<<<<<<< HEAD
 
   },;
   return {;
@@ -246,5 +261,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 ;

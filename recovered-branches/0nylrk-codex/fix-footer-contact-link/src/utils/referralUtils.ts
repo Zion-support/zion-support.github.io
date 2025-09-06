@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { format } from 'date-fns';
 import {format} from 'date-fns';
 =======
@@ -29,6 +30,8 @@ if (return '-', ) {
   $2
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   try {
     // Check condition
 if ( {) {
@@ -38,12 +41,6 @@ if ( {) {
     }
     return format (date, 'MMM d, yyyy');
   } catch (e) {
-
-  
-  const url = new URL(window && window.location.href);
-  const refCode = url && url.searchParams.get('ref');
-  
-
   if (refCode) {
     localStorage && localStorage.setItem('referral_code', refCode);
     // Remove it from URL to keep it clean
@@ -51,10 +48,6 @@ if ( {) {
     window && window.history.replaceState({}, document && document.title, url && url.toString());
     return refCode
   }
-
-  
-  return localStorage && localStorage.getItem('referral_code')
-
 }
 /**
  * Stores referral code in localStorage when detected in URL
@@ -88,6 +81,7 @@ export function formatDate(date: Date | string | undefined): string {;
   }
 }
 /**;
+<<<<<<< HEAD
 
  * Stores referral code in localStorage when detected in URL;
  */;
@@ -119,32 +113,50 @@ export function checkUrlForReferralCode(): string | null {;
 /**
  * Track referral when a user signs up
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+* Stores referral code in local_storage when detected in URL;
+*/;
+export function checkUrlForReferralCode (): string | null {
+  // Check condition
+if (return null) {
+  $2
+}
+  const url = new URL (window.location.href);
+  const ref_code = url.search_params.get ('ref');
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    local_storage.set_item ('referral_code', ref_code);
+    // Remove it from URL to keep it clean;
+    url.search_params.delete ('ref');
+    window.history.replace_state ({}, document.title, url.to_string ());
+    return ref_code;
+  }
+  return local_storage.get_item ('referral_code');
+}
+/**;
+* Track referral when a user signs up;
+*/;
+export async /**
+ * track_referral - Function description
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
  */
 function track_referral() {
   try {
-
-    const refCode = localStorage && localStorage.getItem('referral_code');
-    if (!refCode) return,
-    
-
     // Call API to record the referral
     const response = await fetch('/api/track-referral', {
       method: 'POST'
       headers: {
-
-        'Content-Type': 'application/json'};
-      body: JSON && JSON.stringify({
-
         refCode;
         userId;
         email
         ipAddress: '', // This will be captured by the server
       })});
-
-    
-    if (response && response.ok) {
-
       // Clear the stored referral code
+<<<<<<< HEAD
 
       localStorage.removeItem('referral_code')
 ;
@@ -176,6 +188,9 @@ export async function trackReferral(userId: string, email: string) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      localStorage && localStorage.removeItem('referral_code')
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   } catch (error) {
     console && console.error('Error tracking referral:', error)

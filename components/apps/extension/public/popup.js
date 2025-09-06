@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000'
 const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000',
 
@@ -124,3 +125,5 @@ document.getElementById('result').textContent = 'Signed in (local).';
   setUserId(id),
   document.getElementById('result').textContent = 'Signed in (local).';
 }),
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

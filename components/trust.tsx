@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -18,6 +20,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
@@ -51,51 +54,52 @@ export default function TrustPage() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const params = new URLSearchParams(window.location.search);
     const u = params.get('user');
     if (u) setUserId(u);    if (u) setUserId(u)
   }, []);
   useEffect(() => {
     async function load() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function TrustPage() {;
   const [userId, setUserId] = useState<string>('demo-user');
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
 
-
-
   }, []);
+
   useEffect(() => {;
     async function load() {;
       setLoading(true);
-
-
-    });
-    alert(type === 'endorse' ? 'Endorsed' : 'Flagged');  }      const json = await res && res.json();
-      setData(json);
-=======
-      setLoading(true);
-      const res = await fetch(
-        `/api/trust/${encodeURIComponent(userId)}?analyze=true`
+      const res = await fetch(;
+        `/api/trust/${encodeURIComponent(userId)}?analyze=true`;
       );
-      const json = await res.json();
+      const json = await res && res.json();
       setData(json);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       setLoading(false);
     }
     load();
   }, [userId]);
 
+    });
+    alert(type === 'endorse' ? 'Endorsed' : 'Flagged');  }      const json = await res && res.json();
+      setData(json);
+      setLoading(false);
+    }
+    load();
+  }, [userId]);
 
+  async function submitPeer(): any (type: 'endorse' | 'flag') {;
+    await fetch('/api/trust/peer', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }) });
+    alert(type === 'endorse' ? 'Endorsed' : 'Flagged');
   }
+
   async function submitAppeal(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
     const form = e && e.target as HTMLFormElement;
@@ -110,6 +114,7 @@ export default function TrustPage() {;
     alert('Appeal submitted');
     form && form.reset();  }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
     alert('Appeal submitted');
@@ -140,6 +145,8 @@ export default function TrustPage() {;
     form && form.reset();
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
   return (
     <EnhancedLayout>
@@ -153,18 +160,10 @@ export default function TrustPage() {;
                 checked={showLogic}
                 onChange={() => setShowLogic(!showLogic)}
               />{' '}
-
-    <EnhancedLayout>
-      <div className="space-y-6">
-
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Trust & Reputation</h1>
           <div className="flex items-center gap-3">
             <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>
-
-          </div>
-
-        </div>
               Transparent logic;
             </label>          </div>      <div className="space-y-6">;
         <div className="flex items-center justify-between">;
@@ -173,16 +172,7 @@ export default function TrustPage() {;
             <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>;
         </div>;
         {loading && <div>Loading...</div>}
-
-        {!loading && data && (
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="md:col-span-2 space-y-4">
-              <div className="flex items-center gap-3">
-                <TrustBadge score={data.total} reason={data.reasonSummary} communityVerified={data.communityVerified} />
-                <RiskIndicator status={data.riskLevel} />
-
               </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="bg-white dark:bg-gray-900 rounded border p-4">
                 <h2 className="font-medium mb-2">Trust Metrics</h2>
                 <TrustRadar metrics={(data.components |[]).map((c: any) => ({ label: c.key, value: Math.round(c.raw * 100) }))} />
@@ -196,6 +186,7 @@ export default function TrustPage() {;
                         <span>{c.key}</span>
                         <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
                       </li>
+<<<<<<< HEAD
   }
 
                   metrics={(data && data.components || []).map((c: any) => ({;
@@ -273,6 +264,8 @@ export default function TrustPage() {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     ))}
                   </ul>;
                 </div>;
@@ -281,6 +274,7 @@ export default function TrustPage() {;
                 <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>                  <strong>Operator GPT Analysis:</strong> {data && data.reasonSummary}
                 </div>;
               )}
+<<<<<<< HEAD
 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -372,6 +366,12 @@ export default function TrustPage() {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+              )}
+            </div>;
+          </div>;
+        )}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   );
 }
 import EnhancedLayout from '../components / layout / EnhancedLayout';
@@ -580,6 +580,7 @@ function submit_appeal() {
       </div>;
     </EnhancedLayout>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -591,3 +592,5 @@ function submit_appeal() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

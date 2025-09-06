@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise',;
 const generateId = () => Math.random().toString(36).slice(2, 10),;
 const seedCompany: CompanyRecord = {;
@@ -16,8 +17,9 @@ import {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const generateId = () => Math.random().toString(36).slice(2, 10);
-<<<<<<< HEAD
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
   name: 'Acme Corporation';
   slug: 'acme';
@@ -119,6 +121,7 @@ const seed_company: CompanyRecord = {
     usage_limits: {
       monthlyJobPosts: 50,
       budgetCapUsd: 10000}},
+<<<<<<< HEAD
 =======
 
 
@@ -145,6 +148,8 @@ const seedCompany: CompanyRecord = {;
       monthlyJobPosts: 50,;
       budgetCapUsd: 10000}},;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   members: [;
     { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
     { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },
@@ -153,6 +158,7 @@ const seedCompany: CompanyRecord = {;
     { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'admin@acme.com', action: 'created_company' },
     { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'maria@acme.com', action: 'posted_job', meta: { job_id: 'job_123' } }],
   invoices: [;
+<<<<<<< HEAD
 
     { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },;
     { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]},;
@@ -283,9 +289,15 @@ export const store = {;
     company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },;
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return true;
   },
   list_invoices (company_id: string): InvoiceRecord[] {
     const company = companiesById[company_id];
     return company ? company.invoices : [];
+<<<<<<< HEAD
   }};
+=======
+  }}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

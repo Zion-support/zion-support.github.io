@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -92,47 +93,35 @@ interface ProjectActionsProps {;
 export function ProjectActions({;
   projectId,;
   isUnderDispute,;
+=======
+import React from 'react';
+  projectId;
+  isUnderDispute;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   disputeId;
   isTalent;
   onAddMilestone;
 }: ProjectActionsProps) {;
-  return (;
-
-    <div className="flex gap-2">;
-      {isUnderDispute && disputeId ? (;
-        <Button variant="outline" asChild>;
-          <Link to={`/dashboard/disputes/${disputeId}`}>;
-            <ShieldAlert className="h-4 w-4 mr-2" />;
-            View Active Dispute;
-          </Link>;
-        </Button>;
-      ) : (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
         <RaiseDisputeButton
           projectId={projectId}
           variant="outline"
         />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-      )}
-      {isTalent && !isUnderDispute && (
-        <Button onClick={onAddMilestone}>
-          Add Milestone
-        </Button>
-      )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    </div>
-  )
-}
 =======
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+      )}
+      {isTalent && !isUnderDispute && (;
+        <Button onClick={onAddMilestone}>;
+          Add Milestone;
+        </Button>;
+      )}
 =======
 import {Button} from '@/components / ui / button';
 import {Link} from 'react-router-dom';

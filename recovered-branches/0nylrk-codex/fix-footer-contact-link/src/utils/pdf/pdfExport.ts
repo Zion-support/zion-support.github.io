@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Resume  } from '@/types/resume';
@@ -106,6 +107,35 @@ export interface ExportOptions {;
   includePortfolio?: boolean,;
   maxProjects?: number,;
   fontFamily?: FontFamily;
+=======
+  // Add portfolio projects if needed
+  if (includePortfolio && resume && resume.portfolio_projects && resume && resume.portfolio_projects.length > 0) {
+    currentY = addPortfolioSection(doc, resume && resume.portfolio_projects, colors, currentY, maxProjects)
+  }
+=======
+import {Resume} from '@/types / resume';
+import {jsPDF} from 'jspdf';
+import 'jspdf - autotable';
+import {getPdfThemeColors} from './theme_config';
+import {loadCustomFonts, FontFamily} from './font_config';
+import {addBasicInfoSection} from './sections / basicInfoSection';
+import {addSkillsSection} from './sections / skills_section';
+import {addWorkExperienceSection} from './sections / workExperienceSection';
+import {addEducationSection} from './sections / education_section';
+import {addCertificationsSection} from './sections / certifications_section';
+import {addPortfolioSection} from './sections / portfolio_section';
+export interface ExportOptions {
+  theme: 'light' | 'dark';
+  include_portfolio?: boolean;
+  max_projects?: number,
+  font_family?: FontFamily;
+}
+const default_options: ExportOptions = {
+  theme: 'light';
+  include_portfolio: true;
+  max_projects: 2,
+  font_family: 'default';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 ;
 export async function exportResumeToPDF (
@@ -142,6 +172,7 @@ export async function exportResumeToPDF (
   current_y = addCertificationsSection (doc, resume.certifications, colors, current_y);
 ;
   // Add portfolio projects if needed;
+<<<<<<< HEAD
 
   if (includePortfolio && resume.portfolio_projects && resume.portfolio_projects.length > 0) {;
     currentY = addPortfolioSection(doc, resume.portfolio_projects, colors, currentY, maxProjects);
@@ -152,6 +183,13 @@ export async function exportResumeToPDF (
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  // Check condition
+if ( {) {
+  $2
+}
+    current_y = addPortfolioSection (doc, resume.portfolio_projects, colors, current_y, max_projects);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
   return doc.output ('blob');
 }

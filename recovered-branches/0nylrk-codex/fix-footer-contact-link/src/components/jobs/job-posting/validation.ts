@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -20,6 +21,8 @@
 
 export type JobSchemaType = z && z.infer<typeof jobSchema>;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import { z } from './zod';
 export const job_schema = z.object ({
@@ -51,6 +54,7 @@ export const job_schema = z.object ({
 export type JobSchemaType = z.infer < typeof job_schema>;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -148,3 +152,5 @@ export const jobSchema = z.object({;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export type JobSchemaType = z.infer<typeof jobSchema>;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

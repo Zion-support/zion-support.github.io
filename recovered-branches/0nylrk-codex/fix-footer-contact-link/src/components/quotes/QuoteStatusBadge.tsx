@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import {Badge} from "@/components/ui/badge";
 import {QuoteStatus} from "@/types/quotes";
@@ -91,3 +92,16 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+interface QuoteStatusBadgeProps {
+  status: QuoteStatus;
+}
+  return (
+    <Badge className={config.class_name}>;
+      {config.label}
+=======
+    </Badge>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

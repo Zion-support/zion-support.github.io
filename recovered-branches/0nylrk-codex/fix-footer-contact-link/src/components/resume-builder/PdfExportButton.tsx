@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -215,14 +216,16 @@ export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
     }
   }
   },
+=======
+  const [isExporting, setIsExporting] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>('light'),
+  const [includePortfolio, setIncludePortfolio] = useState(true);
+
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   return (
-
-    <DropdownMenu>;
-      <DropdownMenuTrigger asChild>;
-        <Button
-          variant="outline" 
-
           className="gap-2"
           disabled={isExporting}>;
           {isExporting ? (;
@@ -230,6 +233,7 @@ export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
           ) : (;
             <FileText className="h-4 w-4" />;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
           Export PDF
           <ChevronDown className="h-4 w-4" />
@@ -377,6 +381,8 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';

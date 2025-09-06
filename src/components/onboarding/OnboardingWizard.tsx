@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useAuth } from '@/hooks/useAuth'
@@ -232,6 +233,8 @@ export function OnboardingWizard({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -264,10 +267,14 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -296,16 +303,20 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       icon: <MessageSquare className="h-6 w-6 text-zion-purple" />,
       action: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         text: 'Browse Talent',
         url: '/talent',
       },
     },
   ]
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         text: "Browse Talent",
         url: "/talent"
       }
     }
   ],
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -333,6 +344,10 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const talentSteps: WizardStep[] = [
     {
       title: "Complete your profile",
@@ -370,6 +385,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />,
       action: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         text: 'Enable Matchmaking',
         url: '/talent-dashboard',
       },
@@ -399,6 +415,8 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
     }
   }
     >
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         text: "Enable Matchmaking",
         url: "/talent-dashboard"
       }
@@ -431,9 +449,14 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <CardHeader>
         <CardTitle className="text-center text-white">
           {type === 'client' ? 
@@ -444,6 +467,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       <CardContent>
         <div className="flex items-center mb-6">
           {/* Step dots */}
+<<<<<<< HEAD
           <div className='flex items-center justify-center flex-1'>
           <div className="flex items-center justify-center flex-1">
 <<<<<<< HEAD
@@ -451,10 +475,16 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {steps.map((_, index) => (
               <div
                 key={index}
                 className={cn(
+<<<<<<< HEAD
                   'h-2 w-2 rounded-full mx-1',                  index === currentStep
                     ? 'bg-zion-purple scale-125'
 
@@ -486,18 +516,20 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {steps[currentStep]?.icon}
-          </div>;
-          <h3 className='text-xl font-bold text-white mb-2'>;
-            {steps[currentStep]?.title}
-          </h3>;
-          <p className='text-zion-slate-light mb-6'>;
-            {steps[currentStep]?.description}
-          </p>;
-        </div>;
-      </CardContent>;
-      <CardFooter className='flex flex-col space-y-2'>;
+          </div>
+          <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep]?.title}</h3>
+          <p className="text-zion-slate-light mb-6">{steps[currentStep]?.description}</p>
+        </div>
+      </CardContent>
+      <CardFooter className="flex flex-col space-y-2">
         <Button
+<<<<<<< HEAD
           className='w-full bg-zion-purple hover:bg-zion-purple-light'
           onClick={handleAction}        >
           {steps[currentStep]?.action.text}
@@ -542,10 +574,20 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 }
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {steps[currentStep]?.skipText}
+          </Button>
+        )}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       </CardFooter>;
     </Card>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -718,3 +760,9 @@ if ( {) {
     </Card>);
 }
 ;
+=======
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 application: JobApplication
 }
 
@@ -89,11 +90,29 @@ function ApplicationCard() {
 }
 
 <<<<<<< HEAD
+=======
+import { useState } from "react",
+import { formatDistanceToNow } from "date-fns",
+import { JobApplication } from "@/types/jobs",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react'
+import Link from "next/link",
+import { StatusBadge } from "./StatusBadge",
+import { ApplicationProgress } from "./ApplicationProgress",
+import { toast } from "sonner",
+interface ApplicationCardProps {
+  application: JobApplication
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
+<<<<<<< HEAD
     toast.info("Resume download functionality will be implemented soon")
   },
     toast.info('Resume download functionality will be implemented soon') }
@@ -101,11 +120,15 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
     switch (application.status) {interface ApplicationCardProps {
   application: JobApplication
 }
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   const [expanded, setExpanded] = useState(false)
   const handleDownloadResume = () => {
     // This would typically download the resume file
     toast.info("Resume download functionality will be implemented soon")
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
@@ -164,6 +187,11 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
   const renderActionButtons = () => {
     switch (application.status) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  }
+  const renderActionButtons = () => {
+    switch (application.status) {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       case "shortlisted": return (
           <Button variant="default" size="sm">
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview
@@ -200,6 +228,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
             <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -213,6 +242,11 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
     // This would typically download the resume file
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <div className="text-sm text-muted-foreground mt-1">
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
             </div>
@@ -220,6 +254,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           <StatusBadge status={application.status} />
         </div>
       </CardHeader>
+<<<<<<< HEAD
 
     <Card className='overflow - hidden'>;
       <CardHeader className='pb - 3'>;
@@ -251,134 +286,20 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {expanded && (
-          <div className='mt - 4 space - y-3'>;
+          <div className="mt-4 space-y-3">
             {application.cover_letter && (
-              <div>;
-                <h4 className='text - sm font - medium mb - 1'>Your Cover Letter</h4>;
-                <p className='text - sm text - muted - foreground'>;
-                  {application.cover_letter}
-
-
-import { useState } from 'react';
-import { formatDistanceToNow } from 'date-fns';
-import { JobApplication } from '@/types/jobs';
-import { Button } from '@/components/ui/button';
-import {;
-  Card,;
-  CardContent,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
-} from '@/components/ui/card';
-import {;
-  FileText,;
-  MessageSquare,;
-  HelpCircle,;
-  Calendar,;
-  ExternalLink,;
-  Download,;
-} from 'lucide-react';
-import Link from 'next/link';
-import { StatusBadge } from './StatusBadge';
-import { ApplicationProgress } from './ApplicationProgress';
-import { toast } from 'sonner';
-
-import { useState } from "react";
-import { formatDistanceToNow } from "date-fns";
-import { JobApplication } from "@/types/jobs";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react';import Link from "next/link";
-import { StatusBadge } from "./StatusBadge";
-import { ApplicationProgress } from "./ApplicationProgress";
-import { toast } from "sonner";
-interface ApplicationCardProps {;
-  application: JobApplication;
-
-export function ApplicationCard(): any ({ application }: ApplicationCardProps) {;
-
-  const [ expanded, setExpanded ] = useState(false),;
-
-  const handleDownloadResume = () => {;
-    // This would typically download the resume file;
-    toast && toast.info('Resume download functionality will be implemented soon');  };
-
-  const renderActionButtons = () => {;
-    switch (application && application.status) {interface ApplicationCardProps {;
-  application: JobApplication;
-}
-
-export function ApplicationCard(): any ({ application }: ApplicationCardProps) {;
-  const [expanded, setExpanded] = useState(false);
-
-  const handleDownloadResume = () => {;
-    // This would typically download the resume file;
-    toast && toast.info("Resume download functionality will be implemented soon");
-  };
-
-  const renderActionButtons = () => {;
-    switch (application && application.status) {;
-      case 'shortlisted':;
-        return (
-          <Button variant='default' size='sm'>;
-            <Calendar className='h-4 w-4 mr-1' /> Prepare for Interview;
-        );
-      case 'interview':;
-        return (
-          <Button variant='default' size='sm'>;
-            <Calendar className='h-4 w-4 mr-1' /> View Interview Details;
-          </Button>;
-        );
-      case 'hired':;
-
-          >;
-            <FileText className='h-4 w-4 mr-1' /> View Offer;
-          </Button>;
-        );
-      case 'rejected':;
-        return (
-          <Button variant='outline' size='sm'>;
-            <HelpCircle className='h-4 w-4 mr-1' /> View Feedback;
-          </Button>;
-        );
-      default:;
-        return null;
-    }
-  };
-
-  return (
-    <Card className='overflow-hidden'>;
-      <CardHeader className='pb-3'>;
-        <div className='flex justify-between items-start'>;
-          <div>;
-            <CardTitle>{application && application.job?.title || 'Unknown Job'}</CardTitle>;
-            <div className='text-sm text-muted-foreground mt-1'>;
-              Applied{' '}
-              {formatDistanceToNow(new Date(application && application.created_at), {;
-                addSuffix: true,;
-              })}            </div>            <CardTitle>{application && application.job?.title || "Unknown Job"}</CardTitle>;
-            <div className="text-sm text-muted-foreground mt-1">;
-              Applied {formatDistanceToNow(new Date(application && application.created_at), { addSuffix: true })}
-            </div>;
-          </div>;
-          <StatusBadge status={application && application.status} />;
-        </div>;
-      </CardHeader>;
-
-      <CardContent className='pb-3'>;
-        <ApplicationProgress status={application && application.status} className='my-4' />;
-
-        {expanded && (;
-          <div className='mt-4 space-y-3'>;
-            {application && application.cover_letter && (;
-              <div>;
-                <h4 className='text-sm font-medium mb-1'>Your Cover Letter</h4>;
-                <p className='text-sm text-muted-foreground'>;
-                  {application && application.cover_letter}
-                </p>;
-              </div>;
+              <div>
+                <h4 className="text-sm font-medium mb-1">Your Cover Letter</h4>
+                <p className="text-sm text-muted-foreground">{application.cover_letter}</p>
+              </div>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -393,6 +314,8 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                       {application && application.resume.title || 'Resume'}
                     </span>;
                   </div>;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <Button
                     variant='ghost'
                     size='sm'
@@ -402,35 +325,13 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                 </div>
               </div>
             )}
-
-      
-      <CardContent className="pb-3">
-        <ApplicationProgress status={application.status} className="my-4" />
-        
-
-                </p>;
-              </div>)}
-            {application.resume && (
-              <div className='border rounded - md p - 3 bg - muted / 20'>;
-                <div className='flex justify - between items - center'>;
-                  <div className='flex items - center'>;
-                    <FileText className='h - 4 w - 4 mr - 2 text - blue - 500' />;
-                    <span className='text - sm font - medium'>;
-                      {application.resume.title || 'Resume'}
-                    </span>;
-                  </div>;
-                  <Button;
-                    variant='ghost';
-                    size='sm';
-                    on_click={handleDownloadResume}
-                  >;
-                    <Download className='h - 3 w - 3 mr - 1' /> Download                  </Button>;
-                </div>;
-              </div>)}
         {expanded && (
           <div className="mt-4 space-y-3">
             {application.cover_letter && (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <div>
                 <h4 className="text-sm font-medium mb-1">Your Cover Letter</h4>
                 <p className="text-sm text-muted-foreground">{application.cover_letter}</p>
@@ -443,6 +344,10 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                     <FileText className="h-4 w-4 mr-2 text-blue-500" />
                     <span className="text-sm font-medium">{application.resume.title |"Resume"}</span>
                   </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             
             {application.resume && (
               <div className="border rounded-md p-3 bg-muted/20">
@@ -452,17 +357,24 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                     <span className="text-sm font-medium">{application.resume.title || "Resume"}</span>
                   </div>
 =======
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <Button variant="ghost" size="sm" onClick={handleDownloadResume}>
                     <Download className="h-3 w-3 mr-1" /> Download
                   </Button>
                 </div>
               </div>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -488,21 +400,27 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
 
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {application.match_score && (
-              <div>;
-                <h4 className='text - sm font - medium mb - 1'>Match Score</h4>;
-                <div className='flex items - center'>;
-                  <div className='h - 6 w - 6 rounded - full bg - blue - 100 text - blue - 800 flex items - center justify - center text - xs font - medium'>;
-                    {application.match_score}%;
-                  </div>;
-                  <span className='ml - 2 text - xs text - muted - foreground'>;
-                    Relevance to job requirements;
+              <div>
+                <h4 className='text-sm font-medium mb-1'>Match Score</h4>
+                <div className='flex items-center'>
+                  <div className='h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium'>
+                    {application.match_score}%
+                  </div>
+                  <span className='ml-2 text-xs text-muted-foreground'>
+                    Relevance to job requirements
                   </span>                </div>            {application.match_score && (
               <div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             
             {application.match_score && (
-
               <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -511,6 +429,11 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <h4 className="text-sm font-medium mb-1">Match Score</h4>
                 <div className="flex items-center">
                   <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium">
@@ -519,6 +442,7 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                   <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>
                 </div>
               </div>
+<<<<<<< HEAD
 
 
 import { useState } from "react",;
@@ -638,6 +562,11 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </Button>
           <div className="flex gap-2">
             {renderActionButtons()}
@@ -649,17 +578,24 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
               <Link href={`/jobs/${application.job_id}`}>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <ExternalLink className="h-4 w-4 mr-1" /> View Job
               </Link>
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Button variant='secondary' size='sm' className='w-full' asChild>
           <Link href={`/messages?jobId=${application.job_id}`}>
@@ -677,14 +613,19 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <Button 
           variant="secondary" 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           size="sm"
           className="w-full"
           asChild
         >
           <Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className="h-4 w-4 mr-1" /> Message Client
+<<<<<<< HEAD
           </Link>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -692,10 +633,16 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         </Button>
       </CardFooter>
     </Card>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -812,3 +759,18 @@ default: return (<Card className="overflow - hidden" > <CardHeader className="pb
 }</CardContent> <Button variant="outline" size="sm" as_child > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w - full" as_child > </Link> </Button> </CardFooter> </Card>);
 }";
 }
+=======
+=======
+}% </div> <span className="ml-2 text-xs text-muted-foreground" >Relevance to job requirements</span> </div> </div>) 
+}</div>) ";
+}</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>) ;
+}";
+};
+}
+}
+=======
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

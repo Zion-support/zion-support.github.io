@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -46,6 +47,8 @@ export function BottomNavigation() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const location = useLocation();
   const navItems = [
     { path: "/mobile", icon: <Home />, label: "Home" }
@@ -59,6 +62,7 @@ export function BottomNavigation() {
         const isActive = location && location.pathname === item && item.path;
         return (
           <Link
+<<<<<<< HEAD
             key={item.path}
             to={item.path}
             className={cn(
@@ -114,11 +118,14 @@ export function BottomNavigation() {;
               {React && React.cloneElement(item && item.icon as React && React.ReactElement, { ;
                 className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground") ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               })}
             </div>;
             <span className="text-xs mt-1">{item && item.label}</span>;
           </Link>;
         );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -126,12 +133,9 @@ export function BottomNavigation() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       })}
-
-    </div>;
-  );
-}
-
 =======
 import React from './react';
 import { Link, use_location } from './react-router-dom';

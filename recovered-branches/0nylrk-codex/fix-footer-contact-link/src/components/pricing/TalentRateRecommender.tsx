@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from "react";
@@ -59,25 +60,22 @@ interface TalentRateRecommenderProps {
 }
 export const TalentRateRecommender: React.FC < TalentRateRecommenderProps> = ({
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   skills;
   years_experience;
   location;
-
-  const generateSuggestion = async () => {;
-    if (skills && skills.length === 0 || yearsExperience <= 0) {;
-      return;
+  const [isLoading, setIsLoading] = useState(false);
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
+  const { user } = useAuth();
 
     }
     setIsLoading(true);
     try {;
       const params: TalentRateParams = {;
         skills;
-
-        yearsExperience,;
-        location};
-
-
       const result = await getTalentRateSuggestion(params);
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from "lucide-react",
 <<<<<<< HEAD
@@ -233,6 +231,17 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      setSuggestion(result);
+    } catch (error) {;
+      console && console.error("Error generating rate suggestion:", error);
+    } finally {;
+      setIsLoading(false);
+    }
+      }
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="space-y-4">;
       <div>;
@@ -241,6 +250,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
             type="button"
             variant="outline"
             onClick={generateSuggestion}
+<<<<<<< HEAD
 <<<<<<< HEAD
             disabled={skills.length === 0 |yearsExperience <= 0}
             className="w-full"
@@ -271,6 +281,8 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
           </Button>;
         ) : (;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <PricingSuggestionBox
 =======
   onSuggestionApplied,
@@ -346,6 +358,7 @@ if ( {) {
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
+<<<<<<< HEAD
 
 
 
@@ -361,3 +374,13 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+=======
+            rate_type={rate_type}
+          />)}
+      </div>;
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

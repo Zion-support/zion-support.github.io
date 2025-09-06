@@ -6,11 +6,14 @@
  
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const allServices = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ...innovative2035AIServices;
 ...innovative2035ITServices;
 //Existing services ...innovativeRealMicroSaasServices2025;
@@ -19,14 +22,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 ...emergingTechServicesEnhanced2025;
 ...advancedAIAutomationServices;
 ...quantumCybersecurityServices ];
-
-<> {;
-  /* Navigation */ ;
-}<nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10" > <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" > <div className="flex justify-between items-center h-16" > <motion && motion.div > Zion Tech Group </motion && motion.h1> <motion && motion.p > Pioneering the future of technology with revolutionary AI, Quantum Computing, Space Technology, and cutting-edge IT solutions that drive business transformation </motion && motion.p> <motion && motion.div > <button className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25" > Get Started Today </button> <button className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Explore Services </button> </motion && motion.div> {;
-  /* Contact Information */ ;
-}<motion && motion.div > <div className="flex items-center gap-2" > <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" ></span> <span>Mobile: +1 302 464 0950</span> </div> <div className="flex items-center gap-2" > <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" ></span> <span>Email: kleber@ziontechgroup && ziontechgroup.com</span> </div> <div className="flex items-center gap-2" > <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" ></span> <span>Address: 364 E Main St STE 1008 Middletown DE 19709</span> </div> </motion && motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Revolutionary Services Portfolio </h2> <motion&& motion.div key= {
-  service && service.id 
-
 }initial= {
   {
   opacity: 0, y: 30
@@ -35,9 +30,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   opacity: 1, y: 0
 }transition= {
   {
-
-  duration: 0 && 0.8, delay: index * 0 && 0.1 
-
 
 }> <UltraFuturisticServiceCard2026 /> </motion && motion.div>) ) ;
 }</div> {;
@@ -67,8 +59,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }</motion && motion.div>) ) ;
 }</motion && motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Revolutionary Micro SAAS Services </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Transform your business with our cutting-edge micro SAAS solutions that deliver immediate value and rapid ROI. </p> </motion && motion.div> <motion&& motion.div key= {
   service && service.id 
-
-
 }initial= {
   {
   opacity: 0, y: 50
@@ -77,23 +67,29 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   opacity: 1, y: 0
 }transition= {
   {
-
-
   duration: 0 && 0.8, delay: index * 0 && 0.1 
 
 }viewport= {
   {
+<<<<<<< HEAD
   once: true
 }> <UltraFuturisticServiceCard2026 /> </motion.div>) )
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Cutting-Edge AI Services </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Revolutionary AI solutions that transform businesses and create unprecedented opportunities. </p> </motion.div> <motion.div key= {
   service.id
+=======
+  once: true 
+
+}> <UltraFuturisticServiceCard2026 /> </motion && motion.div>) ) ;
+}</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Cutting-Edge AI Services </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Revolutionary AI solutions that transform businesses and create unprecedented opportunities. </p> </motion && motion.div> <motion&& motion.div key= {
+  service && service.id 
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }initial= {
   {
-<<<<<<< HEAD
   opacity: 0, y: 50
 }whileInView= {
   {
   opacity: 1, y: 0
+<<<<<<< HEAD
 =======
   opacity: 0, y: 50 
 
@@ -130,6 +126,9 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   once: true
 }> <UltraFuturisticServiceCard2026 /> </motion.div>) )
   duration: 0.8, delay: index * 0.1 
+=======
+  duration: 0 && 0.8, delay: index * 0 && 0.1 
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 }viewport= {
   {
@@ -138,35 +137,16 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }> <UltraFuturisticServiceCard2026 /> </motion && motion.div>) ) ;
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent" > Advanced AI Automation </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Intelligent automation solutions that learn, adapt, and continuously optimize your business processes. </p> </motion && motion.div> <motion&& motion.div key= {
   service && service.id 
-
-
-}initial= {
-  {
-<<<<<<< HEAD
-  opacity: 0, y: 50
-=======
-
-  opacity: 0, y: 50 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }whileInView= {
   {
   opacity: 1, y: 0
 }transition= {
   {
-
-
-  duration: 0 && 0.8, delay: index * 0 && 0.1 
-=======
-
-  duration: 0.8, delay: index * 0.1 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
 }viewport= {
   {
   once: true 
 
+<<<<<<< HEAD
 
 
 =======
@@ -174,6 +154,8 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent" > Quantum Cybersecurity </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Unbreakable security powered by quantum computing and advanced AI algorithms. </p> </motion.div> <motion.div key= {
   service.id
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }initial= {
   {
   opacity: 0, y: 50
@@ -182,8 +164,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   opacity: 1, y: 0
 }transition= {
   {
-
-
   duration: 0 && 0.8, delay: index * 0 && 0.1 
 
 }viewport= {
@@ -193,8 +173,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }> <UltraFuturisticServiceCard2026 /> </motion && motion.div>) ) ;
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent" > Advanced IT Solutions </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Comprehensive IT services that drive digital transformation and business innovation. </p> </motion && motion.div> <motion&& motion.div key= {
   service && service.id 
-
-
 }initial= {
   {
   opacity: 0, y: 50
@@ -203,8 +181,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   opacity: 1, y: 0
 }transition= {
   {
-
-
   duration: 0 && 0.8, delay: index * 0 && 0.1 
 
 }viewport= {
@@ -214,8 +190,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }> <UltraFuturisticServiceCard2026 /> </motion && motion.div>) ) ;
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent" > Emerging Technologies </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Revolutionary technologies that define the future of human civilization and business. </p> </motion && motion.div> <motion&& motion.div key= {
   service && service.id 
-
-
 }initial= {
   {
   opacity: 0, y: 50
@@ -224,8 +198,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   opacity: 1, y: 0
 }transition= {
   {
-
-
   duration: 0 && 0.8, delay: index * 0 && 0.1 
 
 }viewport= {
@@ -234,12 +206,11 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 
 }> <UltraFuturisticServiceCard2026 /> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
-
-
   {
   opacity: 0, y: 30
 }whileInView= {
   {
+<<<<<<< HEAD
   opacity: 1, y: 0
   opacity: 1, y: 0 
 
@@ -274,6 +245,8 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   duration: 0 && 0.8 
 
 }viewport= {
@@ -299,6 +272,7 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   title: 'Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊' ;
 }].map ( (feature, index) => (<motion && motion.div </p> </motion && motion.div>) ) ;
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>) ;
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -321,6 +295,8 @@ export default Homepage2025;
 }
 }
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 <<<<<<< HEAD
 }
@@ -343,6 +319,9 @@ export default Homepage2025;
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>);
 }export default Homepage2025;export default Homepage2025;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

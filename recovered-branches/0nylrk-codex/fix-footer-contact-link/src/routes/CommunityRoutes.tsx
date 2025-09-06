@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "../components/ProtectedRoute";
@@ -95,6 +96,11 @@ const CommunityRoutes = () => {;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+  return (
+    <Routes>;
+      {/* Public routes */}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '../components / ProtectedRoute';
@@ -123,23 +129,19 @@ const CommunityRoutes = () =>: any {
           </ProtectedRoute>;
         }
       />;
-
-      <Route;
-        path="/community / edit/:post_id";
-
         element={
           <ProtectedRoute>;
             <EditPostPage />;
           </ProtectedRoute>;
         }
 
-      />;
-    </Routes>;
-  );
-
 =======
-},;
+      />;
+    </Routes>);
+}
+;
 export default CommunityRoutes;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -147,3 +149,7 @@ export default CommunityRoutes;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

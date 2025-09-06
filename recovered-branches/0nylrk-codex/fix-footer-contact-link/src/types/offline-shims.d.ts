@@ -9,6 +9,7 @@ declare module 'react' {
   export function useRef<T = undefined>(initialValue?: T): { current: T | undefined }
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   export default React,
@@ -56,10 +57,37 @@ declare module 'react' {
   export function forward_ref < T, P = {}>(
     render: (props: P, ref: Ref < T>) => ReactElement | null): any;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+declare module 'react' {
+  const React: any;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   export const Fragment: any;
   export const StrictMode: any;
   export const clone_element: any;
   export type ReactNode = any;
+<<<<<<< HEAD
 <<<<<<< HEAD
   export type ReactElement = any
   export type ComponentType<P = {}> = (props: P) => any
@@ -115,10 +143,13 @@ declare module 'react' {
   export type ElementRef < T = any> = any,
   export type CSSProperties = Record < string, string | number | undefined>;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 declare module 'react-dom' {
   export * from 'react-dom / index';
 }
+<<<<<<< HEAD
 
 declare module 'react / jsx - runtime' {
   export const jsx: any;
@@ -231,3 +262,6 @@ declare module 'react/jsx-runtime' {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

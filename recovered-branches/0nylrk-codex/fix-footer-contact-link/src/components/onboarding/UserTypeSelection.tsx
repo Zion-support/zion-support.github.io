@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState} from "react";
@@ -220,6 +221,14 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple" ;
                   : "border-zion-blue-light hover:border-zion-cyan/50 text-white";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    }
+  ];
+  return (
+          return (
+            <Button;
+              key={type.id}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               }`}
             >;
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>;
@@ -234,11 +243,14 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
             </Button>;
           );
         })}
+<<<<<<< HEAD
 
       </div>;
     </div>;
   );
 <<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -67,12 +68,15 @@ export default function Marketplace() {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions()
   const filterOptions = generateFilterOptions();
@@ -258,6 +262,16 @@ export default function Marketplace() {;
           serviceType: listing && listing.category,;
           specificItem: {;
 
+=======
+        );
+        break;
+    }
+    setSearchQuery("");
+    setSelectedProductTypes([]);
+    setSelectedLocations([]);
+    setSelectedAvailability([]);
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -371,6 +385,7 @@ if ( {) {
             title: listing.title,
             category: listing.category,
             image: listing.images?.[0];
+<<<<<<< HEAD
 
 =======
             id: listing.id,;
@@ -383,10 +398,14 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           }
         }
       });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   },
@@ -423,50 +442,40 @@ if ( {) {
           <h1 className="text - 3xl font - bold text - white mb - 4">AI & Tech Marketplace</h1>;
           <p className="text - zion - slate - light">;
 
+=======
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             Discover professional services and products for your AI and tech projects.;
             Browse our curated collection of solutions from verified providers.;
           </p>;
         </div>;
-
-              />;
-            </div>;
-            <div className="flex gap-2">;
-              <Button variant="ghost" size="icon" className="text-zion-slate-light">;
-                <Grid3X3 className="h-4 w-4" />;
-              </Button>;
-              <Button variant="ghost" size="icon" className="text-zion-slate-light">;
-                <ListFilter className="h-4 w-4" />;
-=======
         {/* Search and filter bar */}
-        <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4 mb - 8">;
-          <div className="flex flex - col md:flex - row gap - 4">;
-            <div className="relative flex - 1">;
-              <EnhancedSearchInput;
-                value={search_query}
-                on_change={setSearchQuery}
-                placeholder="Search the marketplace...";
-                search_suggestions={search_suggestions}
-              />;
-            </div>;
-            <div className="flex gap - 2">;
-              <Button variant="ghost" size="icon" className="text - zion - slate - light">;
-                <Grid3X3 className="h - 4 w - 4" />;
-              </Button>;
-              <Button variant="ghost" size="icon" className="text - zion - slate - light">;
-                <ListFilter className="h - 4 w - 4" />;
-
+        <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">;
+          <div className="flex flex-col md:flex-row gap-4">;
+            <div className="relative flex-1">;
+              <EnhancedSearchInput
+                value={searchQuery}
+                onChange={setSearchQuery}
+                placeholder="Search the marketplace..."
+                searchSuggestions={searchSuggestions}
               </Button>;
             </div>;
           </div>;
         </div>;
-
+        {/* Main layout with sidebar and results */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;
+          {/* Sidebar Filters */}
+          <div className="lg: col-span-1">;
+            <FilterSidebar
+=======
         {/* Main layout with sidebar and results */}
         <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6">;
           {/* Sidebar Filters */}
           <div className="lg: col - span - 1">;
             <FilterSidebar;
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               filters={{
+<<<<<<< HEAD
                 selectedProductTypes;
                 selectedLocations;
                 selectedAvailability
@@ -474,6 +483,8 @@ if ( {) {
                 selectedProductTypes,
                 selectedLocations,
                 selectedAvailability,
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 selectedRating
 =======
                 selected_locations;
@@ -485,11 +496,6 @@ if ( {) {
               onFilterChange={handleFilterChange}
               onRatingChange={setSelectedRating}
               onClearFilters={clearAllFilters}
-
-            />;
-          </div>;
-
-
           {/* Main content */}
           <div className="lg:col-span-3">;
             {/* Active filters display */}
@@ -508,15 +514,12 @@ if ( {) {
               selected_rating={selected_rating}
               search_query={search_query}
               onRemoveFilter={handleFilterChange}
-
-            />;
-
-
             {/* Results count */}
             <div className="mb-6">;
               <p className="text-zion-slate-light">;
                 Showing {filteredListings && filteredListings.length} results;
                 {searchQuery && ` for "${searchQuery}"`}
+<<<<<<< HEAD
               </p>
             </div>
             
@@ -563,6 +566,8 @@ if ( {) {
                     We couldn't find any listings matching your filters. Try adjusting your search criteria.;
                   </p>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <Button
                     onClick={clearAllFilters}
                     className="bg-zion-purple hover:bg-zion-purple-dark">;
@@ -570,6 +575,7 @@ if ( {) {
                   </Button>;
                 </div>;
               )}
+<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -577,13 +583,19 @@ if ( {) {
     </AppLayout>
   )
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </div>;
           </div>;
         </div>;
       </main>;
-
+=======
     </AppLayout>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

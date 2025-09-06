@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from \'react\'; import { SEO } from \'../components/SEO\'; const \"Privacy\": React.FC = () => { return ( <> <SEO title=\'Privacy - Zion Tech Group\' />\'; <div: className=\'min-h-screen bg-white py-20\'>\'; <div: className=\'max-w-4xl mx-auto px-4\'>\'; <h1: className=\'text-4xl font-bold text-gray-900 mb-8\'>Privacy</h1>\'; <p: className=\'text-lg text-gray-600\'>Content coming soon...</p>\'; </div> </div> </> )} ; \"export\": default Privacy
 import _React from 'react'; import { SEO } from '../components/SEO'; const "Privacy": _React.FC = () => { return ( <> <SEO title='Privacy - Zion Tech Group' />'; <div: className='min-h-screen bg-white py-20'>'; <div: className='max-w-4xl mx-auto px-4'>'; <h1: className='text-4xl font-bold text-gray-900 mb-8'>Privacy</h1>'; <p: className='text-lg text-gray-600'>Content coming soon...</p>'; </div> </div> </> )} ; "export": default Privacy
 import React from \'react\'; import { SEO } from \'../components/SEO\'; const \"Privacy\": React.FC = () => { return ( <> <SEO title=\'Privacy - Zion Tech Group\' />\'; <div: className=\'min-h-screen bg-white py-20\'>\'; <div: className=\'max-w-4xl mx-auto px-4\'>\'; <h1: className=\'text-4xl font-bold text-gray-900 mb-8\'>Privacy</h1>\'; <p: className=\'text-lg text-gray-600\'>Content coming soon...</p>\'; </div> </div> </> )} ; \"export\": default Privacy

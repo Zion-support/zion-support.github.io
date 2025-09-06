@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -73,10 +74,13 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     email: ''
     budget: BUDGET_RANGES[0].value
     timeframe: TIMELINE_OPTIONS[0].value})
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [startDate, setStartDate] = useState<Date | undefined>(new Date());
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
     description: '',
     email: '',
     budget: BUDGET_RANGES[0].value,
@@ -104,36 +108,16 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     e.preventDefault(),
     setIsSubmitting(true),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     try {
       // Call Supabase function to process the quote;
       const { data, error } = await supabase.functions.invoke ('process - quote', {
         body: {
           service: service ? {
-
-
-  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {;
-    const { name, value } = e && e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React && React.FormEvent<HTMLFormElement>) => {;
-    e && e.preventDefault();
-    setIsSubmitting(true),;
-
-    try {;
-      // Call Supabase function to process the quote;
-      const { data, error } = await supabase && supabase.functions.invoke('process-quote', {;
-        body: {;
-          service: service ? {;
-            id: service && service.id,;
-            title: service && service.title,;
-            category: service && service.category} : null,;
-          quoteDetails: {;
-            ...formData,;
-            startDate: startDate?.toISOString(),;
-
             endDate: endDate?.toISOString()}
         }
+<<<<<<< HEAD
       });
       if (error) throw error;
       }),
@@ -175,37 +159,15 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
             start_date: start_date?.toISOString (),
             end_date: end_date?.toISOString ()}
         }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      // Show success message;
-      toast ({
-        title: "Quote Request Submitted!",
-        description: "We've sent your request to the service provider. They will contact you soon."}),
-      // Close the modal and reset form;
-      onOpenChange (false);
-      setFormData ({
-        description: '',
-        email: '',
-        budget: BUDGET_RANGES[0].value,
-        timeframe: TIMELINE_OPTIONS[0].value}),
-      setStartDate (new Date ());
-      setEndDate (undefined);
-      setCurrentStep ('details');
-    } catch (error) {
-      console.error ("Error submitting quote:", error);
-      toast ({
-        title: "Error",
-        description: "There was an error submitting your quote request. Please try again.",
-        variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      if (error) throw error;
     } finally {
       setIsSubmitting (false);
     }
   }
+<<<<<<< HEAD
   },
 
   const nextStep = () => {
@@ -388,6 +350,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
               <div className="space-y-2">;
                 <Label htmlFor="description" className="text-white">Project Description</Label>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <Textarea
                   id="description"
                   name="description"
@@ -396,21 +360,13 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   placeholder="Describe your project needs in detail..."
                   className="h-32 bg-zion-blue-dark border-zion-blue-light text-white resize-none"
                   required
-
-                />;
-              </div>;
-
-              <div className="space-y-2">;
-                <Label htmlFor="budget" className="text-white">Estimated Budget</Label>;
-                <Select
-                  value={formData && formData.budget} 
-
                   onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
                 >;
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">;
                     <SelectValue placeholder="Select your budget range" />;
                   </SelectTrigger>;
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
+<<<<<<< HEAD
 
                     {BUDGET_RANGES.map((range) => (;
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;
@@ -422,6 +378,12 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                         {range.label}
                       </SelectItem>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                    {BUDGET_RANGES && BUDGET_RANGES.map((range) => (;
+                      <SelectItem key={range && range.value} value={range && range.value} className="text-white hover:bg-zion-blue-light">;
+                        {range && range.label}
+                      </SelectItem>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     ))}
                   </SelectContent>;
                 </Select>;
@@ -429,14 +391,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
             </div>;
           )}
           {/* Step 2: Timeline */}
-
-          {currentStep === 'timeline' && (;
-            <div className="space-y-4">;
-              <div className="space-y-2">;
-                <Label className="text-white">Project Timeline</Label>;
-                <Select
-                  value={formData && formData.timeframe}
-
                   onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}
                 >;
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">;
@@ -448,17 +402,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                         {option && option.label}
                       </SelectItem>;
                     ))}
-
-                  </SelectContent>;
-                </Select>;
-              </div>;
-
-              <div className="grid grid-cols-2 gap-4">;
-                <div className="space-y-2">;
-                  <Label className="text-white">Expected Start Date</Label>;
-                  <Popover>;
-                    <PopoverTrigger asChild>;
-
                       <Button
                         variant={"outline"}
                         className={cn(
@@ -476,6 +419,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                         onSelect={setStartDate}
                         initialFocus
                         className="p-3 pointer-events-auto bg-zion-blue-dark text-white"
+<<<<<<< HEAD
 
                       />;
                     </PopoverContent>;
@@ -492,6 +436,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                           "justify-start text-left font-normal w-full";
 
                           "justify-start text-left font-normal w-full",
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}>;
                         <CalendarIcon className="mr-2 h-4 w-4" />;
@@ -503,17 +449,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                         mode="single"
                         selected={endDate}
                         onSelect={setEndDate}
-
-                        disabled={(date) => !startDate || date < startDate}
-                        initialFocus;
-                        className="p-3 pointer-events-auto bg-zion-blue-dark text-white";
-                      />;
-                    </PopoverContent>;
-                  </Popover>;
-                </div>;
-              </div>;
-            </div>;
-
           )}
           {/* Step 3: Contact */}
           {currentStep === 'contact' && (;
@@ -529,6 +464,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   placeholder="your@email && email.com"
                   className="bg-zion-blue-dark border-zion-blue-light text-white"
                   required
+<<<<<<< HEAD
 
                   )}
                   {endDate && (
@@ -574,6 +510,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                       <span className="text-white">{format(startDate, "PPP")}</span>;
                     </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   )}
                   {endDate && (;
                     <div className="flex justify-between">;
@@ -584,6 +522,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
 
 
 
@@ -594,6 +533,9 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">
             {currentStep !== 'details' && (
+=======
+          )}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <Button
                 type="button"
                 variant="outline"
@@ -602,29 +544,10 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 Previous;
               </Button>;
             )}
-
-
-            <div className={cn("flex gap-2", currentStep === 'details' && "ml-auto")}>;
-
               <Button
                 type="button"
                 variant="outline"
                 onClick={() => onOpenChange(false)}
-
-                className="border-zion-blue-light text-white hover:bg-zion-blue-light";
-              >;
-                Cancel;
-              </Button>;
-
-              {currentStep !== 'contact' ? (;
-                <Button
-                  type="button" 
-                  onClick={nextStep}
-                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
-                  Next;
-                </Button>;
-              ) : (;
-
                 <Button
                   type="submit"
                   disabled={isSubmitting}
@@ -632,6 +555,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>;
               )}
+<<<<<<< HEAD
             </div>
           </DialogFooter>
         </form>
@@ -639,13 +563,19 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     </Dialog>
   )
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </div>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
-
+=======
     </Dialog>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

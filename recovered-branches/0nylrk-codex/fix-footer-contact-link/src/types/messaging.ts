@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 
 // Define the shape of a message
 export interface Message {;
+=======
+// Define the shape of a message;
+export interface Message {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   sender_id: string;
   recipient_id: string;
@@ -9,6 +14,7 @@ export interface Message {;
   read: boolean;
   sender_name?: string;
   sender_avatar?: string;
+<<<<<<< HEAD
 
   attachment_url?: string
 
@@ -16,39 +22,28 @@ export interface Message {;
 }
 // Define the shape of a conversation;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export interface Conversation {
   id: string;
   user_id: string;
   other_user: {
     id: string;
     name: string;
-
-    avatar_url?: string,
-    user_type?: string;
-
   }
   name: string;
   avatar_url?: string;
   last_message?: {
-
-    content: string,
-    created_at: string;
-
   }
   updated_at: string;
   unread_count: number;
   context_type?: 'job' | 'talent' | 'general';
-
-  context_id?: string,
-  context_data?: ConversationContextData;
-}
-// Context data for creating a conversation;
-
 export interface ConversationContextData {
   title?: string;
   description?: string;
   image_url?: string;
 }
+<<<<<<< HEAD
 
   isLoading: boolean
   sendMessage: (conversationId: string, content: string) => Promise<void>
@@ -148,3 +143,6 @@ export interface MessagingContextType {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

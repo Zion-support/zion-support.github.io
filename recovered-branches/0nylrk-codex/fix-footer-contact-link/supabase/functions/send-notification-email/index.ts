@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -27,6 +28,11 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface EmailRequest {
   user_id: string
   notification_id: string
@@ -37,6 +43,7 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+<<<<<<< HEAD
     const { user_id, notification_id } = await req.json() as EmailRequest;
     const { user_id, notification_id } = await req.json() as EmailRequest,
     
@@ -47,22 +54,33 @@ serve(async (req) => {
     );
     ),
 
+=======
+    // Create Supabase client with the service role key
+    const supabaseClient = createClient(
+      Deno && Deno.env.get("SUPABASE_URL") ?? "";
+      Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
+    );
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Get notification details and user email
     const { data: notification, error: notificationError } = await supabaseClient
       .from('notifications')
       .select('title, message, type')
       .eq('id', notification_id)
       .single();
+<<<<<<< HEAD
     if (notificationError) throw new Error(`Error fetching notification: ${notificationError.message}`);
       .single(),
       
     if (notificationError) throw new Error(`Error fetching notification: ${notificationError.message}`),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     const { data: userProfile, error: userError } = await supabaseClient
       .from('profiles')
       .select('display_name, email')
       .eq('id', user_id)
       .single();
+<<<<<<< HEAD
     if (userError) throw new Error(`Error fetching user: ${userError.message}`);
     // In a real implementation, here you would use a service like Resend, SendGrid, etc.
     // to send the actual email. For this example, we'll simulate the email sending.
@@ -85,11 +103,16 @@ serve(async (req) => {
 
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return new Response(
       JSON && JSON.stringify({ success: true });
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
+<<<<<<< HEAD
         headers: { ...corsHeaders, "Content-Type": "application/json" },
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         status: 200}
     )
   } catch (error) {
@@ -98,6 +121,7 @@ serve(async (req) => {
       JSON && JSON.stringify({ error: error && error.message });
       {
 <<<<<<< HEAD
+<<<<<<< HEAD
         headers: { ...corsHeaders, "Content-Type": "application/json" }
         status: 500}
     )
@@ -105,6 +129,10 @@ serve(async (req) => {
 });
 =======
 
+=======
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const cors_headers = {
@@ -113,6 +141,7 @@ const cors_headers = {
 ;
 interface EmailRequest {
   user_id: string,
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -133,6 +162,8 @@ const corsHeaders = {;
 interface EmailRequest {;
   user_id: string,;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   notification_id: string;
 }
 serve (async (req) => {
@@ -193,6 +224,7 @@ if ( {) {
         status: 500}
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -200,5 +232,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 });

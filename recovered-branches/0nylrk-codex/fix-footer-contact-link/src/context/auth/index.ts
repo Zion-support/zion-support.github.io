@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export { AuthContext } from './AuthContext';
@@ -22,3 +23,7 @@ export { AuthContext } from './AuthContext',;
 export { AuthProvider } from './AuthProvider',;
 // Re-export the context type for convenience;
 export type { AuthContextType } from '@/types/auth';
+=======
+export { AuthContext } from './AuthContext';
+export { AuthProvider } from './AuthProvider';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

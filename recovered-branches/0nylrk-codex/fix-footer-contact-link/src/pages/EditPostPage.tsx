@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState, useEffect} from "react";
@@ -75,11 +76,14 @@ const mockPost: ForumPost = {
 }
 export default function EditPostPage() {;
   const { postId } = useParams() as { postId?: string };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const navigate = useNavigate();
   const { toast } = useToast();
   const { user } = useAuth();
   const [post, setPost] = useState<ForumPost | null>(mockPost);
   const [isLoading, setIsLoading] = useState(true);
+<<<<<<< HEAD
 export default function EditPostPage() {
   const { postId } = useParams() as { postId?: string }
   const navigate = useNavigate();
@@ -118,6 +122,8 @@ export default function EditPostPage() {
 
   if (isLoading) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <AppLayout>;
         <div className="container py-8">;
@@ -128,10 +134,6 @@ export default function EditPostPage() {
       </AppLayout>;
     );
   }
-
-
-  if (!post) {;
-
     return (
       <AppLayout>;
         <div className="container py-8">;
@@ -143,6 +145,7 @@ export default function EditPostPage() {
       </AppLayout>;
     );
   }
+<<<<<<< HEAD
 
   if (!post) {
     return (
@@ -163,6 +166,8 @@ export default function EditPostPage() {
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
   
   if (!isAuthor && !isAdmin) {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <AppLayout>
         <div className="container py-8">
@@ -181,6 +186,7 @@ export default function EditPostPage() {
     categoryId: post.categoryId as ForumCategory
     tags: post.tags.join(", ")
   }
+<<<<<<< HEAD
   },
 
   const handleSubmit = async (values: PostFormValues) => {
@@ -232,15 +238,17 @@ export default function EditPostPage() {
     }
   }
   },
+=======
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   return (
-
-    <AppLayout>;
-
       <SEO
         title="Edit Post | Community Forum | Zion AI Marketplace"
         description="Edit your discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, edit post"
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
       <div className="container py-8">
@@ -434,6 +442,9 @@ export default function EditPostPage() {;
 <<<<<<< HEAD
 =======
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { useState, useEffect } from './react';
 import { Link, use_navigate, use_params } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -467,11 +478,14 @@ const mock_post: ForumPost = {
   reply_count: 12,
   is_answered: true,
   is_featured: true;
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 ;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { ReactNode } from "react";
 import {cn} from "@/lib/utils";
 import {slugify} from "@/lib/slugify";
@@ -80,32 +81,22 @@ interface CategoryCardProps {;
    * callers could not customise the icon colour as intended.;
    */;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   color?: string;
   count?: number;
   className?: string;
 }
 
-
-export function CategoryCard(): any ({ title, description, icon, color, count, className }: CategoryCardProps) {;
-  // Create a URL-friendly slug from the category title;
-  const slug = slugify(title);
-
-
   const slug = slugify(title);
   return (
     <Link
-
-      to={`/category/${slug}`} 
-
       className={cn(
         "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
         className
       )}>;
       <div
         className={cn(
-
-          "mb-4 p-3 bg-zion-blue-dark rounded-full"
-
           !color && "text-zion-cyan"
         )}
         style={color ? { color } : undefined}>;
@@ -151,6 +142,7 @@ function CategoryCard() {
         class_name)}
     >;
       <div;
+<<<<<<< HEAD
 
         className={cn(;
           "mb-4 p-3 bg-zion-blue-dark rounded-full";
@@ -162,6 +154,11 @@ function CategoryCard() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         )}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        className={cn (
+          "mb - 4 p - 3 bg - zion - blue - dark rounded - full";
+          !color && "text - zion - cyan")}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         style={color ? { color } : undefined}
       >;
         {icon}

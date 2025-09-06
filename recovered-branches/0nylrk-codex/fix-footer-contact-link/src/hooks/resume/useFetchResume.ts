@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
@@ -37,6 +38,8 @@ export function useFetchResume() {;
       let resumeQuery = supabase && supabase.from('talent_resumes').select('*');
       
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       if (resumeId) {
         resumeQuery = resumeQuery && resumeQuery.eq('id', resumeId)
       } else {
@@ -46,11 +49,6 @@ export function useFetchResume() {;
           .order('created_at', { ascending: false })
           .limit(1)
       }
-
-      
-      const { data: resumeData, error: resumeError } = await resumeQuery && resumeQuery.single();
-      
-
       if (resumeError) {
         if (resumeError && resumeError.code === 'PGRST116') {
           // No resume found, this is not a critical error for a new user
@@ -118,14 +116,11 @@ if ( {) {
           set_resume (null);
           setIsLoading (false);
           return null;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
         throw resume_error;
       }
+<<<<<<< HEAD
 
 
       
@@ -156,34 +151,18 @@ if ( {) {
         .eq('resume_id', resumeData && resumeData.id);
         
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       if (skillsError) throw skillsError;
       // Fetch certifications
       const { data: certData, error: certError } = await supabase
         .from('certifications')
         .select('*')
-
-        .eq('resume_id', resumeData && resumeData.id);
-        
-
       if (certError) throw certError;
       const fullResume: Resume = {
         id: resumeData && resumeData.id;
         user_id: resumeData && resumeData.user_id;
         basic_info: {
-
-          id: resumeData && resumeData.id;
-          title: resumeData && resumeData.title;
-          headline: resumeData && resumeData.headline,
-          summary: resumeData && resumeData.summary
-        };
-        work_experience: workData || [];
-        education: educationData || [];
-        skills: skillsData || [];
-        certifications: certData || [],
-        is_active: resumeData && resumeData.is_active
-      };
-      
-
       setResume(fullResume);
       return fullResume
     } catch (e: any) {
@@ -263,6 +242,7 @@ if (throw cert_error) {
     }
   }
   return {
+<<<<<<< HEAD
     isLoading;
 ;
 <<<<<<< HEAD
@@ -325,9 +305,9 @@ if (throw cert_error) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    is_loading;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     error;
     resume;
-
-    fetch_resume}
-
 }

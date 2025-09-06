@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   FormField
   FormItem
@@ -135,6 +136,8 @@ export function TimelineField(): any ({ form }: TimelineFieldProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     { value: "Ongoing", label: "Ongoing" }
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export /**
  * TimelineField - Function description
  */
@@ -147,15 +150,9 @@ function TimelineField() {
     { value: "3 - 6 months", label: "3 - 6 months" },
     { value: "6+ months", label: "6+ months" },
     { value: "Ongoing", label: "Ongoing" },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
-
-    <FormField;
-      control={form.control}
-      name="timeline";
-
       render={({ field }) => (
         <FormItem>;
           <FormLabel className="text - white">Project Timeline</FormLabel>;
@@ -172,6 +169,7 @@ function TimelineField() {
                 {timeline_options.map ((option) => (
                   <SelectItem key={option.value} value={option.value}>;
                     {option.label}
+<<<<<<< HEAD
 
       render={({ field }) => (;
         <FormItem>;
@@ -199,17 +197,9 @@ function TimelineField() {
 =======
                   </SelectItem>))}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </SelectContent>;
             </Select>;
           </FormControl>;
           <FormMessage />;
-
-    />;
-  );
-}
-
-=======
-        </FormItem>)}
-    />);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

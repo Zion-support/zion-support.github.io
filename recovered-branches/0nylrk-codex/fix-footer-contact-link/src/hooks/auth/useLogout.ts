@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {supabase} from "@/integrations/supabase/client";
@@ -34,6 +35,8 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {
       await supabase && supabase.auth.signOut({ scope: 'global' });
       
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       // Update state
       setUser(null)
     } catch (error) {
@@ -66,6 +69,7 @@ export const use_logout = (set_user: (user: UserProfile | null) =>: any void) =>
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
       cleanupAuthState(),
@@ -113,3 +117,5 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
 }
 
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

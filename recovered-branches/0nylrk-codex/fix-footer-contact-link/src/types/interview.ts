@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -48,6 +49,9 @@ export interface Interview {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface Interview {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   client_id: string;
   talent_id: string;
@@ -64,6 +68,7 @@ export interface Interview {;
   interview_type: InterviewType;
   client_name?: string;
   talent_name?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   client_avatar?: string,
@@ -88,6 +93,10 @@ export interface InterviewRequest {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+export interface InterviewRequest {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   talent_id: string;
   client_id: string;
   scheduled_date: string;
@@ -95,6 +104,7 @@ export interface InterviewRequest {;
   notes?: string;
   meeting_link?: string;
   meeting_platform?: MeetingPlatform;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   interview_type: InterviewType,
@@ -180,3 +190,10 @@ export interface InterviewResponse {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+export interface InterviewResponse {
+  interview_id: string;
+  status: InterviewStatus;
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

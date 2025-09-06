@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createWriteStream } from 'fs';
 import { join } from 'path';
 ;
@@ -53,6 +54,11 @@ const generateSitemap = () => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { createWriteStream } from 'fs',
 import { join } from 'path',
 import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); const baseUrl = 'https: const pages = [ '','/about','/services','/services/ai-services','/services/micro-saas','/services/it-services','/contact',]; const generateSitemap = () => { const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${pages.map(page => ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString().split('T')[0]}</lastmod> <changefreq>weekly</changefreq> <priority>${page === '' ? '1.0' : '0.8'}</priority> </url>`).join('\n')} </urlset>`; const outDir = path.join(__dirname,'..','out'); if (!fs.existsSync(outDir)) { fs.mkdirSync(outDir,{ recursive: true })} fs.writeFileSync(path.join(outDir,'sitemap.xml'),sitemap); }; generateSitemap();
@@ -84,6 +90,7 @@ const generateSitemap = () => {
     <loc>https://ziontechgroup.com/about</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
+<<<<<<< HEAD
     <priority>${page === '' ? '1.0' : '0.8'}</priority>
   </url>").join('\n')}
 </urlset>";
@@ -120,12 +127,17 @@ import fs from 'fs'; import path from 'path'; const __filename = fileURLToPath(i
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+generateSitemap();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   const sitemapPath = join(process.cwd(), 'publicsitemap.xml'),
   const writeStream = createWriteStream(sitemapPath),
   writeStream.write(sitemap),
   writeStream.end(),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   console.log('Sitemap generated successfully at:', sitemapPath)
 },
@@ -321,6 +333,15 @@ if (require.main === module) {
 
 module.exports = { generateSitemapXML, generateSitemapTXT, pages };
 origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+  console.log('Sitemap generated successfully at:', sitemapPath)
+},
+
+generateSitemap(),
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { createWriteStream } from 'fs',;
 import { join } from 'path',;
 const generateSitemap = () => {;
@@ -359,6 +380,7 @@ const generateSitemap = () => {;
 },;
 generateSitemap();
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-4094
 #!/usr/bin/env node
 console.log('🗺️  Generating sitemap...');
@@ -378,27 +400,30 @@ origin/automation-improvements-final
 
 
 =======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
 =======
 };
 ,
 generateSitemap(),
-
-
-
-
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
-
+>>>>>>> origin/main
+=======
 >>>>>>> origin/automation-improvements-final
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
-console && console.log('🗺️  Generating sitemap...');
-console && console.log('✅ Sitemap generation completed');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

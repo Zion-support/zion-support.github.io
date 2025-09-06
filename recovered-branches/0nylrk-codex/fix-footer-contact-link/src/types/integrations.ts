@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -8,12 +9,15 @@ export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
 export type IntegrationStatus = "connected" | "warning" | "disconnected";
 ;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export interface Integration {
   id: string;
   name: string;
   description: string;
   logo_url: string;
   status: IntegrationStatus;
+<<<<<<< HEAD
   lastSync?: string
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
@@ -54,11 +58,15 @@ export interface SyncLog {;
   integration: string;
   event: string;
   status: "success" | "error" | "warning";
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export interface SyncLog {
   id: string;
   integration: string;
   event: string;
   status: "success" | "error" | "warning";
+<<<<<<< HEAD
   timestamp: string
   id: string,
   integration: string,
@@ -130,3 +138,5 @@ export type AtsIntegrationEvents =;
   | "interview_scheduled";
   | "resume_uploaded";
   | "job_posted";
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

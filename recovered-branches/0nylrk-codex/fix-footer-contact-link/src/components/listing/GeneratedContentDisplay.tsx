@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -19,20 +20,46 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+} from "@/components/ui/card";
+
+interface GeneratedContent {;
+  description: string;
+  tags: string[];
+  suggestedPrice: {;
+=======
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { Badge  } from '@/components / ui / badge';
+import { ArrowRight  } from './lucide-react';
+import {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   Card,
   CardContent,
   CardFooter,
   CardHeader,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   key_points: string[];
+=======
+  CardTitle,
+} from '@/components / ui / card';
+interface GeneratedContent {
+  description: string;
+  tags: string[];
+  suggested_price: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    min: number;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 }
 interface GeneratedContentDisplayProps {
 =======
 interface GeneratedContentDisplayProps {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   CardTitle,;
@@ -191,6 +218,15 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
             {content && content.keyPoints.map((point, index) => (;
               <li key={index}>{point}</li>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  content: GeneratedContent;
+              <Badge
+                key={index}
+                className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
+                {tag}
+              </Badge>;
+            ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             ))}
 =======
   on_apply: () => void;
@@ -246,6 +282,7 @@ function GeneratedContentDisplay() {
         </div>;
       </CardContent>;
       <CardFooter>;
+<<<<<<< HEAD
 
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
@@ -272,3 +309,6 @@ function GeneratedContentDisplay() {
   );
 }
 ;
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

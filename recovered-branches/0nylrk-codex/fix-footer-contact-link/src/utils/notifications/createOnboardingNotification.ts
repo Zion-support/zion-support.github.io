@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { createNotification  } from './createNotification';
@@ -22,6 +23,8 @@ export async function createOnboardingNotification({
 
   try {
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   let title = '';
   let message = '';
   let actionUrl = '';
@@ -91,6 +94,7 @@ if ( {) {
         break;
     }
   }
+<<<<<<< HEAD
 
   return create_notification ({
     user_id;
@@ -188,3 +192,6 @@ export async function createOnboardingNotification({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

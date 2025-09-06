@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button";
 =======
@@ -9,6 +10,8 @@ import { Button  } from '@/components / ui / button';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Contract {
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   title: string;
   client: string;
@@ -16,6 +19,7 @@ interface Contract {
   date: string;
   isSmartContract: boolean
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface RecentContractsTableProps {
 
@@ -58,6 +62,11 @@ export function RecentContractsTable({
 }: RecentContractsTableProps) {
 
 export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
+=======
+  contracts: Contract[];
+  onViewContract: (contractId: string) => void
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <>;
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>;
@@ -224,6 +233,7 @@ function RecentContractsTable() {
                     View;
                   </Button>;
                 </td>;
+<<<<<<< HEAD
 
 
 
@@ -249,4 +259,6 @@ function RecentContractsTable() {
       </div>;
     </>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }

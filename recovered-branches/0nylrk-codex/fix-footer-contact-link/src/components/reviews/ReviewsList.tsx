@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Review } from "@/types/reviews";
@@ -52,6 +53,8 @@ if ( {) {
   $2
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <div className="space - y-4">;
         {Array (3);
@@ -59,6 +62,7 @@ if ( {) {
           .map ((_, i) => (
             <div;
               key={i}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="border rounded-lg p-4 bg-card animate-pulse"
             >
@@ -163,6 +167,8 @@ export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: Revi
 
   return (
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Check condition
 if ( {) {
   $2
@@ -181,6 +187,7 @@ if ( {) {
         <ReviewCard key={review.id} review={review} on_report={onReportReview} />))}
     </div>);
 }
+<<<<<<< HEAD
 
 =======
     <div className="space-y-4">
@@ -207,3 +214,5 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

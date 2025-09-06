@@ -1,16 +1,10 @@
-
-
-import React from './react';
-import { Button  } from '@/components / ui / button';
-import { Interview  } from '@/types / interview';
-import { format, parseISO  } from './date - fns';
-
 interface InterviewResponseFormProps {
 =======
 
 interface InterviewResponseFormProps {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   interview: Interview;
+<<<<<<< HEAD
 
 
 export function InterviewResponseForm(): any ({;
@@ -161,6 +155,13 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
             <div className="w-24 text-sm text-zion-slate-light">Time:</div>;
             <div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  const endTime = new Date(interviewDate);
+  endTime && endTime.setMinutes(endTime && endTime.getMinutes() + interview && interview.duration_minutes);
+  const formattedEndTime = format(endTime, "h: mm a");
+
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               {formattedTime} - {formattedEndTime}
             </div>;
           </div>;
@@ -182,22 +183,12 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
               <div className="text-sm">{interview && interview.notes}</div>;
             </div>;
           )}
-
-        </div>;
-      </div>;
-
-      <div className="flex justify-end gap-3 pt-4">;
-        <Button variant="outline" onClick={onClose} disabled={isLoading}>;
-          Cancel;
-        </Button>;
-        <Button onClick={onConfirm} disabled={isLoading}>;
-
           {isLoading ? "Confirming..." : "Confirm Interview"}
         </Button>;
       </div>;
     </div>;
   );
-
+=======
   on_confirm: () => Promise < void>;
   on_close: () => void;
   is_loading: boolean;
@@ -261,6 +252,7 @@ function InterviewResponseForm() {
         </Button>;
       </div>;
     </div>);
+<<<<<<< HEAD
 
 }
 =======
@@ -272,3 +264,7 @@ function InterviewResponseForm() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

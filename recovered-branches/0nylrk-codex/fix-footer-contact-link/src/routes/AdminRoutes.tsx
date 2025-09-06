@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
@@ -38,6 +39,8 @@ import TokenManager from "@/pages/admin/TokenManager";
 import IntegrationsPage from "@/pages/admin/IntegrationsPage";
 const AdminRoutes = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Routes>;
       <Route
@@ -47,10 +50,6 @@ const AdminRoutes = () => {;
             <QuoteManager />;
           </ProtectedRoute>;
         }
-
-      />;
-
-
       <Route
         path="/admin/reviews"
         element={
@@ -58,10 +57,6 @@ const AdminRoutes = () => {;
             <ReviewsModeration />;
           </ProtectedRoute>;
         }
-
-      />;
-
-
       <Route
         path="/admin/whitelabel"
         element={
@@ -69,10 +64,6 @@ const AdminRoutes = () => {;
             <WhitelabelManager />;
           </ProtectedRoute>;
         }
-
-      />;
-
-
       <Route
         path="/admin/partners"
         element={
@@ -80,10 +71,6 @@ const AdminRoutes = () => {;
             <PartnerManager />;
           </ProtectedRoute>;
         }
-
-      />;
-
-
       <Route
         path="/admin/app-metadata"
         element={
@@ -91,10 +78,6 @@ const AdminRoutes = () => {;
             <AppMetadataManager />;
           </ProtectedRoute>;
         }
-
-      />;
-
-
       <Route
         path="/admin/support-requests"
         element={
@@ -102,10 +85,6 @@ const AdminRoutes = () => {;
             <SupportRequests />;
           </ProtectedRoute>;
         }
-
-      />;
-
-
       <Route
         path="/admin/fraud-detection"
         element={
@@ -113,10 +92,6 @@ const AdminRoutes = () => {;
             <FraudDetection />;
           </ProtectedRoute>;
         }
-
-      />;
-
-
       <Route
         path="/admin/tokens"
         element={
@@ -124,13 +99,10 @@ const AdminRoutes = () => {;
             <TokenManager />;
           </ProtectedRoute>;
         }
-
-      />;
-
-
       <Route
         path="/admin/integrations"
         element={
+<<<<<<< HEAD
           <ProtectedRoute adminOnly={true}>
             <IntegrationsPage />
           </ProtectedRoute>
@@ -145,6 +117,18 @@ import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          <ProtectedRoute adminOnly={true}>;
+            <IntegrationsPage />;
+          </ProtectedRoute>;
+        }
+export default AdminRoutes;
+
+=======
+import { Fragment } from './react';
+import { Route, Routes } from './react-router-dom';
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 // Admin Pages;
 import QuoteManager from "@/pages / admin / QuoteManager";
 import ReviewsModeration from "@/pages / admin / ReviewsModeration";
@@ -230,6 +214,7 @@ const AdminRoutes = () =>: any {
           </ProtectedRoute>;
         }
       />;
+<<<<<<< HEAD
 
     </Routes>;
   );
@@ -239,4 +224,9 @@ const AdminRoutes = () =>: any {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    </Routes>);
+}
+;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default AdminRoutes;

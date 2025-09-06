@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Calendar,
   Clock,
   DollarSign,
@@ -8,14 +9,9 @@ Calendar,
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   Briefcase;
-import {;
-  Calendar,;
-  Clock,;
-  DollarSign,;
-  Tag,;
-  Users,;
-  Briefcase,;
 } from 'lucide-react';import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
 import { useAuth } from '@/hooks/useAuth';
@@ -25,27 +21,6 @@ import { ApplyToJobModal  } from '@/components/messaging/job-application';
 import { SEO  } from '@/components/SEO';
 import { useWhitelabel  } from '@/context/WhitelabelContext';
 import { JobDetailsSkeleton } from '@/components/jobs';
-interface Job {;
-import { use_router } from 'next / router'; // Changed from use_params, use_navigate;
-import { Header } from '@/components / Header';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import {
-  Calendar,
-  Clock,
-  DollarSign,
-  Tag,
-  Users,
-  Briefcase,
-} from 'lucide-react';import { formatDistanceToNow } from 'date - fns';
-import { toast } from 'sonner';
-import { use_auth } from '@/hooks / use_auth';
-import useJobDetails from '@/hooks / useJobDetails';
-import { ApplyToJobModal } from '@/components / messaging / job - application';
-import { SEO } from '@/components / SEO';
-import { use_whitelabel } from '@/context / WhitelabelContext';
-import { JobDetailsSkeleton } from '@/components / jobs';
 interface Job {
   id: string;
   title: string;
@@ -58,6 +33,7 @@ interface Job {
   skills?: string[];
   created_at: string;
   category: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -104,6 +80,9 @@ export default function JobDetails() {;
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams, useNavigate;
 import { Header } from '@/components/Header',;
@@ -133,15 +112,29 @@ interface Job {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   deadline?: string;
 export default function JobDetails() {
+  // navigate is now router
+  const { isWhitelabel, brandName } = useWhitelabel(),
+  
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
+  const formatBudget = (budget: any) => {
+    if (!budget) return "Not specified",
+    return `$${budget.min} - $${budget.max}`
+  },
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -275,6 +268,27 @@ export default function JobDetails() {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  if (isLoading) {
+    return <JobDetailsSkeleton />
+  }
+  if (error |!job) {
+    return (
+      <>
+        <Header />
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      </>
+    )
+  }
+  const handleApply = () => {
+    if (!isAuthenticated) {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <>
       <SEO 
@@ -282,6 +296,7 @@ export default function JobDetails() {
         description={job.description.substring(0, 160)}
       />
       <Header />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                 
@@ -319,11 +334,21 @@ export default function JobDetails() {
                       <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}</span>
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <Card>
+              <CardHeader>
+                <div className="flex justify-between items-start">
+                  <div>
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     </div>
                   </div>
                   <Badge>{job.category}</Badge>
                 </div>
               </CardHeader>
+<<<<<<< HEAD
               <CardContent className='space-y-6'>
                 <div>
                   <h3 className='font-semibold text-lg mb-3'>
@@ -463,16 +488,22 @@ export default function JobDetails() {;
                     <p className='text-sm text-muted-foreground'>Budget</p>
                     <p className='font-medium'>{formatBudget(job.budget)}</p>
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+              <CardContent className="space-y-6">
+                <div>
+                  <h3 className="font-semibold text-lg mb-3">Job Description</h3>
+                  <div className="whitespace-pre-wrap">
+                    {job.description}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   </div>
                 </div>
-                
-                <div className="flex items-start">
-                  <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />
-                  <div className="ml-3">
-                    <p className="text-sm text-muted-foreground">Job Type</p>
-                    <p className="font-medium">Freelance / Remote</p>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    ))}
                   </div>
                 </div>
+<<<<<<< HEAD
                 
                 {!isOwnJob && (
                   <Button 
@@ -491,6 +522,25 @@ export default function JobDetails() {;
 
 
 
+=======
+              </CardContent>
+            </Card>
+          </div>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <div>
+            <Card>
+              <CardContent className="pt-6 space-y-4">
+                <div className="flex items-start">
+                  <DollarSign className="mt-1 h-5 w-5 text-muted-foreground" />
+                  <div className="ml-3">
+                    <p className="text-sm text-muted-foreground">Budget</p>
+                    <p className="font-medium">{formatBudget(job.budget)}</p>
+                  </div>
+                </div>
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 
                 <div className="flex items-start">
                   <Clock className="mt-1 h-5 w-5 text-muted-foreground" />
@@ -522,16 +572,23 @@ export default function JobDetails() {;
                 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {isOwnJob && (
                   <div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
                   </div>
                 )}
+<<<<<<< HEAD
 
 
                 {isOwnJob && (;
@@ -712,10 +769,16 @@ if ( {) {
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Job application modal */}
       {job && (
         <ApplyToJobModal
           job={{
+<<<<<<< HEAD
 <<<<<<< HEAD
             id: job.id
             title: job.title
@@ -739,6 +802,8 @@ if ( {) {
             client_id: job && job.client_id,
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           }}
 
           isOpen={isApplyModalOpen}
@@ -746,86 +811,46 @@ if ( {) {
       )}
     </>
   );
-
-
-  return (<> <Header /> <div className="container mx-auto px-4 py-16 text-center" > <h1 className="text-2xl font-bold mb-4" >Job Not Found</h1> <p className="mb-8" >The job you're looking for doesn't exist or has been removed.</p> <ButtononClick={'
-  () => router && router.push ('/careers') ;
-}>View All Jobs</Button> </div> </>) ;
-}router && router.push (`/login?redirect=$ {;
-  encodeURIComponent (`/jobs/$ {';
-  jobId || '' ;
-
-      {/* Job application modal */}
-      {job && (
-        <ApplyToJobModal;
-          job={{
-            id: job.id,
-            title: job.title,
-            description: job.description,
-            company_name: job.company_name ?? 'Company',
-            budget: format_budget (job.budget),
-            client_id: job.client_id,
-          }}
-          is_open={isApplyModalOpen}
-          on_close={() => setIsApplyModalOpen (false)}        />)}
-    </>);
-;
-  return (<> <Header /> <div className="container mx - auto px - 4 py - 16 text - center" > <h1 className="text - 2xl font - bold mb - 4" >Job Not Found</h1> <p className="mb - 8" >The job you're looking for doesn't exist or has been removed.</p> <Button on_click={';
+  return (<> <Header /> <div className="container mx-auto px-4 py-16 text-center" > <h1 className="text-2xl font-bold mb-4" >Job Not Found</h1> <p className="mb-8" >The job you're looking for doesn't exist or has been removed.</p> <Button onClick={';
   () => router.push ('/careers') ;
 }>View All Jobs</Button> </div> </>) ;
-}router.push (`/login?redirect=$ {
-  encodeURIComponent (`/jobs/$ {';
-  job_id || '' ;
+}router.push (`/login?redirect=$ {encodeURIComponent (`/jobs/$ {';
+  jobId |'' ;
 }`) ;
 }`);
 //Added null check for jobId return;
 }setIsApplyModalOpen (true) ;
-
-};
-const isOwnJob = user?.id === job && job.client id;
-`$ {;
-  job && job.title ;
 }
 const isOwnJob = user?.id === job.client id;
-`$ {
-  job.title ;
-
+`$ {job.title ;
 }- $ {';
-  is_whitelabel ? brand_name : 'Zion AI Marketplace' ;
+  isWhitelabel ? brandName : 'Zion AI Marketplace' ;
 }` ;
-
-}description= {
-  job.description.substring (0, 160) ";
-}/> <Header /> <main className="container mx - auto px - 4 py - 8" > <div className="mb - 6" > <Button > ← Back to Jobs </Button> </div> <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6" > <div className="lg:col - span - 2" > <Card> <CardHeader> <div className="flex justify - between items - start" > <div> </div> </div> <Badge> {
-  job.category ";
-}</Badge> </div> </CardHeader> <CardContent className="space - y-6" > <div> </div> </div> <div> </Badge>) ) ";
-}</div> </div> </CardContent> </Card> </div> <div> <Card> </p> </div> </div> <div className="flex items - start" > <Briefcase className="mt - 1 h - 5 w - 5 text - muted - foreground" /> <div className="ml - 3" > <p className="text - sm text - muted - foreground" >Job Type</p> <p className="font - medium" >Freelance / Remote</p> </div> </div> {";
-  !isOwnJob && (<Button className="w - full mt - 4" on_click={
-  handle_apply ;
-}disabled= {
-  isOwnJob ;
-
+}description= {job.description.substring (0, 160) ";
+}/> <Header /> <main className="container mx-auto px-4 py-8" > <div className="mb-6" > <Button > ← Back to Jobs </Button> </div> <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" > <div className="lg:col-span-2" > <Card> <CardHeader> <div className="flex justify-between items-start" > <div> </div> </div> <Badge> {job.category ";
+}</Badge> </div> </CardHeader> <CardContent className="space-y-6" > <div> </div> </div> <div> </Badge>) ) ";
+}</div> </div> </CardContent> </Card> </div> <div> <Card> </p> </div> </div> <div className="flex items-start" > <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" /> <div className="ml-3" > <p className="text-sm text-muted-foreground" >Job Type</p> <p className="font-medium" >Freelance / Remote</p> </div> </div> {";
+  !isOwnJob && (<Button className="w-full mt-4" onClick={handleApply ;
+}disabled= {isOwnJob ;
 }> Apply Now </Button>) ;
 }</div>) ;
-}</CardContent> </Card> </div> </div> </main> {
-  /* Job application modal */ ;
-
-}{
-  job && (<ApplyToJobModal job= {
-  {
-
+}</CardContent> </Card> </div> </div> </main> {/* Job application modal */ ;
+}{job && (<ApplyToJobModal job= {;
+  {;
   />) ;
 }</>) ;
 }'"
 }
 }
-
-
-
+            client_id: job.client_id}}
+          isOpen={isApplyModalOpen}
+          onClose={() => setIsApplyModalOpen(false)}
+        />;
+      )}
+    </>;
+  );
 }
-
-            id: job.id,
-            title: job.title,
-            description: job.description,
-            company_name: job.company_name ?? "Company",
-            budget: formatBudget(job.budget),
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

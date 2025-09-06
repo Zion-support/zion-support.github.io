@@ -1,7 +1,20 @@
+  DialogContent, 
+  DialogHeader, 
+  DialogTitle, 
+  DialogDescription 
+} from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
+import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'import { Card, CardContent } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
+import { QuoteStatusBadge } from "./QuoteStatusBadge"
+import type { QuoteRequest } from "@/types/quotes"
+import {format} from "date-fns"
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface QuoteDetailsProps {
   quote: QuoteRequest | null
   isOpen: boolean
   onClose: () => void
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
@@ -12,12 +25,15 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null;
   const formatDate = (dateString?: string) => {;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     if (!dateString) return 'Not specified';    try {
       return format(new Date(dateString), 'PPP')
     } catch (e) {
       return dateString
     }
   }
+<<<<<<< HEAD
 import React from "react",
 import { 
   Dialog,
@@ -37,6 +53,9 @@ interface QuoteDetailsProps {
   quote: QuoteRequest | null,
   isOpen: boolean,
   onClose: () => void
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from "react",;
 import {;
   Dialog,;
@@ -52,6 +71,7 @@ import { Separator } from "@/components/ui/separator",;
 import { QuoteStatusBadge } from "./QuoteStatusBadge",;
 import type { QuoteRequest } from "@/types/quotes",;
 import { format } from "date-fns",;
+<<<<<<< HEAD
 =======
 
 
@@ -71,6 +91,8 @@ import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
 import {format} from "date-fns";
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface QuoteDetailsProps {;
   quote: QuoteRequest | null,;
   isOpen: boolean,;
@@ -86,6 +108,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     } catch (e) {;
       return dateString;
     }
+<<<<<<< HEAD
   }
 
 <<<<<<< HEAD
@@ -106,8 +129,15 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         <Separator className="my-4" />
         <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
 =======
+=======
+  },
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -121,6 +151,22 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+    <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
+      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle className="text-2xl flex items-center justify-between">
+            <span>{quote.project_name}</span>
+            <QuoteStatusBadge status={quote.status} />
+          </DialogTitle>
+          <DialogDescription>
+            Quote request submitted on {formatDate(quote.created_at)}
+          </DialogDescription>
+        </DialogHeader>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Requester Information</h3>
@@ -136,6 +182,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
               </div>
             </CardContent>
           </Card>
+<<<<<<< HEAD
           
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -143,6 +190,11 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>
@@ -159,6 +211,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             </CardContent>
           </Card>
         </div>
+<<<<<<< HEAD
         
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -166,10 +219,16 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <Card className="mt-6">
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-3">Project Details</h3>
             <p className="mb-4">{quote.project_summary}</p>
+<<<<<<< HEAD
             
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -177,13 +236,21 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {quote.project_description && (
               <>
                 <h4 className="font-medium mt-4">Additional Details</h4>
                 <p>{quote.project_description}</p>
               </>
             )}
+<<<<<<< HEAD
             
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <div className="mt-6 flex items-center gap-2">
               <DollarSign className="h-4 w-4 text-gray-500" />
               <span className="font-medium">Budget: </span>
@@ -196,6 +263,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             </div>
           </CardContent>
         </Card>
+<<<<<<< HEAD
         
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -203,12 +271,18 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <div className="mt-6 flex justify-end">
           <Button onClick={onClose}>Close</Button>
         </div>
       </DialogContent>
     </Dialog>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -355,3 +429,10 @@ interface QuoteDetailsProps {
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>)
 }
 '";
+=======
+=======
+=======
+},
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

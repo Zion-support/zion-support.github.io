@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -37,10 +38,13 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey),
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 serve(async (req) => {
   // Parse the URL to get the tracking parameters
+<<<<<<< HEAD
 
   const url = new URL(req && req.url);
   const type = url && url.searchParams.get("type"), // "open" or "click"
@@ -59,6 +63,8 @@ serve(async (req) => {
   const userId = url.searchParams.get("uid"),
   const redirectUrl = url.searchParams.get("redirect"),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Validate required parameters
   if (!type |!campaignId |!userId) {
     return new Response("Missing required parameters", { status: 400 })
@@ -71,8 +77,11 @@ serve(async (req) => {
         .update({ opened_at: new Date().toISOString() })
         .eq("id", campaignId)
         .eq("user_id", userId);
+<<<<<<< HEAD
         .eq("user_id", userId),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       // Return a 1x1 transparent GIF
       return new Response(
         new Uint8Array([
@@ -121,6 +130,7 @@ if ( {) {
           0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B]);
         {
           headers: {
+<<<<<<< HEAD
             "Content-Type": "image/gif"
             "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate";
             "Pragma": "no-cache";
@@ -143,14 +153,19 @@ if ( {) {
       const destination = redirectUrl || `${supabaseUrl}/dashboard`,
       return new Response(null, {
         status: 302
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         headers: {
           Location: destination}})
     }
+<<<<<<< HEAD
     return new Response("Invalid event type", { status: 400 })
   } catch (error) {
     console.error("Error tracking email event:", error);
     console.error("Error tracking email event:", error),
     
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // If it was a click event, still try to redirect the user
     if (type === "click" && redirectUrl) {
       return new Response(null, {
@@ -158,6 +173,7 @@ if ( {) {
         headers: {
           Location: redirectUrl}})
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     return new Response("Error processing event", { status: 500 })
   }
@@ -246,3 +262,5 @@ serve(async (req) => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -349,11 +350,18 @@ function UsageOverview() {
           <TabsContent value="historical">;
             <div className="py - 10 text - center text - muted - foreground">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    }
+  }
+
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               Historical usage data will be available after your first full billing cycle.;
             </div>;
           </TabsContent>;
         </Tabs>;
       </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </Card>;
   );
@@ -366,3 +374,9 @@ function UsageOverview() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+=======
+    </Card>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

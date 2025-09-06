@@ -1,5 +1,6 @@
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') const [sortBy,setSortBy] = useState (\'name\') \'';\"";
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.pages.disabled/AdvancedServicesShowcase2025.jsx
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
@@ -18,6 +19,9 @@ const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelected
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.pages.disabled/AdvancedServicesShowcase2025.jsx
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 =======
 :src.pages.disabled/AdvancedServicesShowcase2025.jsx

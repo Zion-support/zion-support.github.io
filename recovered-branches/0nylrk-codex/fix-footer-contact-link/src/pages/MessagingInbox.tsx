@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
@@ -19,11 +20,18 @@ export default function MessagingInbox() {
     markAsRead;
     fetchConversations;
     isLoading
+=======
+import React, { useEffect, useState } from 'react';
+    markAsRead;
+    fetchConversations;
+    isLoading;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   } = useMessaging();
 
   const isMobile = useIsMobile();
   const navigate = useNavigate();
   const [activeCall, setActiveCall] = useState<string | null>(null);
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -68,12 +76,15 @@ export default function MessagingInbox() {
   useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       try {
         await fetchConversations()
       } catch (error) {
         console.error("Failed to load conversations:", error),
         toast.error("Failed to load messages. Please try again.")
       }
+<<<<<<< HEAD
     }
     loadData()
   }, [fetchConversations]);
@@ -207,6 +218,8 @@ export default function MessagingInbox() {;
 
             {activeConversation && (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <Button
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">;
@@ -214,19 +227,14 @@ export default function MessagingInbox() {;
                 Start Call;
               </Button>;
             )}
-
-          </div>;
-
-          <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">;
-            <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>;
-
               {/* Conversations List */}
               {isLoading ? (;
                 <div className="flex-1 flex items-center justify-center p-8">;
                   <div className="animate-pulse">Loading conversations...</div>;
                 </div>;
               ) : (;
-
+                <ConversationsList
+=======
     }
 ;
     load_data ();
@@ -279,6 +287,7 @@ if ( {) {
                 </div>) : (
                 <ConversationsList;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -287,17 +296,26 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   conversations={conversations}
                   active_conversation={active_conversation}
                   setActiveConversation={setActiveConversation}
                   markAsRead={markAsRead}
+<<<<<<< HEAD
 
 
+=======
+=======
+                />)}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               {/* Conversation Detail */}
               <ConversationDetailView />;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
 
         {/* Add extra bottom padding on mobile to account for the bottom nav */}
         {isMobile && <div className="h-16"></div>}
@@ -307,3 +325,11 @@ if ( {) {
 }
 }
 ;
+=======
+        {/* Add extra bottom padding on mobile to account for the bottom nav */}
+        {is_mobile && <div className="h - 16"></div>}
+      </div>;
+    </ProtectedRoute>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

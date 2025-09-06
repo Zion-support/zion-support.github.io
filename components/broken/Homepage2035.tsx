@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
@@ -95,13 +96,13 @@ import Layout from './layout / Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';
 import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035';
 import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saas-batch';
 import { innovative2025ITEnterpriseBatch  } from '../data/innovative-2025-it-enterprise-batch';
 import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch';
-
-
 
 // Loading fallback component;
 const LoadingFallback = () => (;
@@ -110,7 +111,6 @@ const LoadingFallback = () => (;
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0 && 0.5 }}
       className='text-center'// Loading fallback component
-<<<<<<< HEAD
 const LoadingFallback = () => (;
   <div className="min-h-screen flex items-center justify-center bg-gray-900">;
     <motion&& motion.div
@@ -135,6 +135,7 @@ const LoadingFallback = () => (;
     </motion && motion.div>;
   </div>;
 );
+<<<<<<< HEAD
 
       setIsVisible(true)
 
@@ -351,8 +352,9 @@ const Homepage2035: React.FC = () => {;
   if (isLoading) {
     return <LoadingFallback />;  }      opacity: 1
       scale: 1
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       transition: { duration: 1.5, ease: "easeOut" as const }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }
   }
   const categories = [
@@ -368,9 +370,12 @@ const Homepage2035: React.FC = () => {;
   const allServices = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               service && service.category.includes('Financial') ||;
               service && service.category.includes('Trading');
             );
@@ -396,7 +401,6 @@ const Homepage2035: React.FC = () => {;
     { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5" /> },;
     { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
   ];
-  const allServices = [;
 import {
   ArrowRight,
   Play,
@@ -613,25 +617,8 @@ if ( {) {
     ...innovative2025ITEnterpriseBatch;
     ...innovative2025AIServicesBatch;
   ];
-
-
-  const filteredServices = activeCategory === 'all' ;
-    ? allServices ;
-    : allServices && allServices.filter(service => {;
-        if (activeCategory === 'ai') return service && service.category.includes('AI') || service && service.category.includes('Machine Learning');
-        if (activeCategory === 'it') return service && service.category.includes('IT') || service && service.category.includes('Enterprise');
-        if (activeCategory === 'quantum') return service && service.name.includes('Quantum');
-        if (activeCategory === 'space') return service && service.category.includes('Space');
-        if (activeCategory === 'cyber') return service && service.category.includes('Security') || service && service.category.includes('Cybersecurity');
-        if (activeCategory === 'cloud') return service && service.category.includes('Cloud') || service && service.category.includes('DevOps');
-        if (activeCategory === 'fintech') return service && service.category.includes('Financial') || service && service.category.includes('Trading');
-        return true;
-      });
-  if (isLoading) {;
-    return <LoadingFallback />;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -648,10 +635,13 @@ if ( {) {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Layout>;
       <UltraFuturisticBackground2035>;
         {/* Hero Section */}
+<<<<<<< HEAD
 
 
               initial={{ opacity: 0, y: 30 }}
@@ -692,9 +682,10 @@ if ( {) {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2'
                 >
                   <Play className='w-5 h-5' />                  <span>Watch Demo</span>                  <span>Explore Services</span>
@@ -703,18 +694,18 @@ if ( {) {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-
-                  className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2"
-
                 >
                   <Play className="w-5 h-5" />
                   <span>Watch Demo</span>
                 </motion.button>
               </div>
             </motion.div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               transition={{ duration: 0 && 0.8 }}
               className='mb-8'>;
               <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight'>;
@@ -751,6 +742,7 @@ if ( {) {
               </div>;
             </motion && motion.div>;
 
+<<<<<<< HEAD
 
 =======
 
@@ -759,12 +751,12 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-
-
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -781,74 +773,11 @@ if ( {) {
                   <div className="text-cyan-400 mb-2 flex justify-center">{stat && stat.icon}</div>;
                   <div className="text-3xl font-bold text-white mb-1">{stat && stat.value}</div>;
                   <div className="text-gray-400 text-sm">{stat && stat.label}</div>;
-
-=======
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-            >
-              {[
-                { icon: <Users className="w-8 h-8" />, value: '50K+', label: 'Happy Clients' },
-                { icon: <Star className="w-8 h-8" />, value: '4.9', label: 'Average Rating' },
-                { icon: <Award className="w-8 h-8" />, value: '200+', label: 'Services' },
-                { icon: <TrendingUp className="w-8 h-8" />, value: '99.9%', label: 'Uptime' }
-              ].map((stat, index) => (
-=======
-              className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
-            >
-              {[
-                {
-                  icon: <Users className='w-8 h-8' />
-                  value: '50K+'
-                  label: 'Happy Clients'
-                }
-                {
-                  icon: <Star className='w-8 h-8' />
-                  value: '4.9'
-                  label: 'Average Rating'
-                }
-                {
-                  icon: <Award className='w-8 h-8' />
-                  value: '200+'
-                  label: 'Services'
-                }
-                {
-                  icon: <TrendingUp className='w-8 h-8' />
-                  value: '99.9%'
-                  label: 'Uptime'
-                },              ].map((stat, index) => (                { icon: <Users className="w-8 h-8" />, value: '50K+', label: 'Happy Clients' }
-                { icon: <Star className="w-8 h-8" />, value: '4.9', label: 'Average Rating' }
-                { icon: <Award className="w-8 h-8" />, value: '200+', label: 'Services' }
-                { icon: <TrendingUp className="w-8 h-8" />, value: '99.9%', label: 'Uptime' }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                <motion.div
-                  icon: <Users className='w - 8 h - 8' />,
-                  value: '50K+',
-                  label: 'Happy Clients',
-                },
-                {
-                  icon: <Star className='w - 8 h - 8' />,
-                  value: '4.9',
-                  label: 'Average Rating',
-                },
-                {
-                  icon: <Award className='w - 8 h - 8' />,
-                  value: '200+',
-                  label: 'Services',
-                },
-                {
-                  icon: <TrendingUp className='w - 8 h - 8' />,
-                  value: '99.9%',
-                  label: 'Uptime',
-                },              ].map ((stat, index) => (                { icon: <Users className="w - 8 h - 8" />, value: '50K+', label: 'Happy Clients' },
-                { icon: <Star className="w - 8 h - 8" />, value: '4.9', label: 'Average Rating' },
-                { icon: <Award className="w - 8 h - 8" />, value: '200+', label: 'Services' },
-                { icon: <TrendingUp className="w - 8 h - 8" />, value: '99.9%', label: 'Uptime' }
-                <motion.div;
-
                   key={index}
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+<<<<<<< HEAD
 
                   className='text-center'
                 >
@@ -892,11 +821,15 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+              ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {/* Services Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
+<<<<<<< HEAD
 
 =======
 
@@ -914,10 +847,13 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className='text-center mb-16'
 
 <<<<<<< HEAD
@@ -939,6 +875,8 @@ if ( {) {
                 Discover our comprehensive portfolio of cutting-edge services
                 designed to transform your business              </p>            >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 Revolutionary Technology Solutions
               </h2>
@@ -946,10 +884,13 @@ if ( {) {
                 Discover our comprehensive portfolio of cutting-edge services designed to transform your business
               </p>
             </motion.div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               className='text-center mb-16'>;
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>;
                 Revolutionary Technology Solutions;
@@ -965,6 +906,7 @@ if ( {) {
               </p>;
             </motion && motion.div>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
@@ -973,12 +915,15 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* Category Filter */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className='flex flex-wrap justify-center gap-4 mb-12'
             >
               {categories.map(category => (                <motion.button              className="flex flex-wrap justify-center gap-4 mb-12"
@@ -1007,12 +952,15 @@ if ( {) {
                       : 'border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   }`}
                 >;
                   {category && category.icon}
                   <span>{category && category.name}</span>;
                 </motion && motion.button>;
               ))}
+<<<<<<< HEAD
             </motion.div>
 
             </motion && motion.div>;
@@ -1042,6 +990,8 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* Services Grid */}
             <motion&& motion.div
               variants={staggerContainer}
@@ -1060,29 +1010,8 @@ if ( {) {
                 >;
                   <UltraFuturisticServiceCard2035 service={service} />;
                 </motion && motion.div>;
-
-=======
-            </motion.div>
-
-            {/* Services Grid */}
-            <motion.div
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {filteredServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  variants={fadeInUp}
-                  className="w-full"
-                >
-                  <UltraFuturisticServiceCard2035 service={service} />
-                </motion.div>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
+<<<<<<< HEAD
             </motion.div>
 
 <<<<<<< HEAD
@@ -1097,12 +1026,15 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* View All Services Button */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className='text-center mt-16'            >
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -1118,12 +1050,12 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-
-
               className='text-center mt-16'>;
               <motion&& motion.button
                 whileHover={{ scale: 1 && 1.05 }}
@@ -1149,6 +1081,7 @@ if ( {) {
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
+<<<<<<< HEAD
 
 =======
                 className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto"
@@ -1186,10 +1119,13 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className='text-center mb-16'
 
 <<<<<<< HEAD
@@ -1280,6 +1216,8 @@ if ( {) {
                     'Focused on delivering measurable business outcomes and ROI'
                 },              ].map((feature, index) => (            >
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 Why Choose Zion Tech Group?
               </h2>
@@ -1294,8 +1232,6 @@ if ( {) {
                   title: 'AI-Powered Solutions'
                   description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights'
                 }
-
-
               className='text-center mb-16'>;
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>;
                 Why Choose Zion Tech Group?;
@@ -1381,46 +1317,15 @@ if ( {) {
                   icon: <Target className="w-12 h-12" />,;
                   title: 'Results-Driven',;
                   description: 'Focused on delivering measurable business outcomes and ROI';
-=======
-                {
-                  icon: <Shield className="w-12 h-12" />
-                  title: 'Enterprise Security'
-                  description: 'Military-grade security protocols and compliance standards to protect your business'
-                }
-                {
-                  icon: <Rocket className="w-12 h-12" />
-                  title: 'Space Technology'
-                  description: 'Pioneering space tech solutions for the next generation of innovation'
-                }
-                {
-                  icon: <Atom className="w-12 h-12" />
-                  title: 'Quantum Computing'
-                  description: 'Access to quantum computing power for complex problem-solving'
-                }
-                {
-                  icon: <Cloud className="w-12 h-12" />
-                  title: 'Cloud-Native'
-                  description: 'Built for the cloud with scalability, reliability, and performance in mind'
-                }
-                {
-                  icon: <Target className="w-12 h-12" />
-                  title: 'Results-Driven'
-                  description: 'Focused on delivering measurable business outcomes and ROI'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 }
               ].map((feature, index) => (;
                 <motion&& motion.div
-
-=======
-              ].map((feature, index) => (
-                <motion.div
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
 
@@ -1470,11 +1375,29 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
         </section>;
 
 
+=======
+                  className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'>;
+                  <div className='text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300'>;
+                    {feature && feature.icon}
+                  </div>;
+                  <h3 className='text-xl font-bold text-white mb-3'>;
+                    {feature && feature.title}
+                  </h3>;
+                  <p className='text-gray-300'>{feature && feature.description}</p>                </motion && motion.div>                >;
+                  <div className="text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">;
+                    {feature && feature.icon}
+                  </div>;
+                  <h3 className="text-xl font-bold text-white mb-3">{feature && feature.title}</h3>;
+                  <p className="text-gray-300">{feature && feature.description}</p>;
+                </motion && motion.div>;
+              ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
+<<<<<<< HEAD
 =======
 
 
@@ -1494,6 +1417,8 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1541,6 +1466,7 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
       </UltraFuturisticBackground2035>;
     </Layout>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 animate: {
@@ -1658,6 +1584,8 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
   /* View All Services Button */ ;
 }<motion && motion.div > <span>View All Services</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> </motion && motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > We combine innovation, expertise, and cutting-edge technology to deliver exceptional results </p> </motion && motion.div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -1665,6 +1593,7 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
 
   duration: 0 && 0.8 
 }viewport= {
@@ -1693,73 +1622,12 @@ export default Homepage2035;  )
 
 }> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button ;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 };
 
-=======
-            </div>
-          </div>
-        </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of companies already leveraging our cutting-edge technology solutions
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2"
-                >
-                  <span>Get Started Today</span>
-                  <ArrowRight className="w-5 h-5" />
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
-                >
-                  Schedule a Demo
-                </motion.button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </UltraFuturisticBackground2035>
-    </Layout>
-  )
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-};
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Homepage2035;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1767,6 +1635,8 @@ export default Homepage2035;
 
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   className='text - center';
                 >;
                   <div className='text - cyan - 400 mb - 2 flex justify - center'>;
@@ -2056,28 +1926,6 @@ export default Homepage2035;
         </section>;
       </UltraFuturisticBackground2035>;
     </Layout>);
-=======
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
-;
-animate: {
-=======
-};
-
-  animate: {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-};
-
-<<<<<<< HEAD
-animate: {
-=======
-  animate: {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   transition: {
   stagger_children: 0.1, delay_children: 0.2;
 }
@@ -2133,14 +1981,8 @@ const filtered_services = active_category === 'all' ? all_services return (<Layo
   duration: 0.8;
 }viewport= {
   {
-<<<<<<< HEAD
   once: true;
 }> <h2 className="text - 4xl sm:text - 5xl font - bold text - white mb - 6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 300 mb - 8" > Join thousands of companies already leveraging our cutting - edge technology solutions </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center" > <motion.button > <span > Get Started Today</span> <ArrowRight className="w - 5 h - 5" /> </motion.button> <motion.button;
-=======
-<<<<<<< HEAD
-  once: true
-}> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 export default Homepage2035);
 }
@@ -2149,8 +1991,11 @@ export default Homepage2035;
 <<<<<<< HEAD
 =======
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

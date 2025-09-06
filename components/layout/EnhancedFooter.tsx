@@ -5,11 +5,14 @@ import Link from "next/link";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -24,7 +27,6 @@ const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const company = null;
   ];
   const resources = null;
@@ -54,16 +56,16 @@ const serviceCategories = [
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' }
       { name: 'AI Quantum Hybrid Computing', href: '/ai-quantum-hybrid-computing' }
     ]
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-  {
-    title: 'Cutting-Edge IT'
-    services: [
-      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' }
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' }
-      { name: '5G Private Networks', href: '/5g-private-network-solutions' }
-      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' }
-    ]
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
+<<<<<<< HEAD
   {
     title: 'Innovative SaaS'
     services: [
@@ -396,10 +398,13 @@ function EnhancedFooter() {
                 className="text - gray - 400 hover:text - white transition - colors";
               >;
                 <Github className="h - 5 w - 5" />;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </a>;
             </div>;
           </div>;
           {/* Services */}
+<<<<<<< HEAD
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Services</h3>
             <ul className="space-y-2">
@@ -518,8 +523,82 @@ function EnhancedFooter() {
       </div>
     </footer>
   );
+=======
+                  Web Development;
+                </Link>;
+              </li>;
+              <li>;
+                  Mobile Apps;
+                </Link>;
+              </li>;
+              <li>;
+                  AI Solutions;
+                </Link>;
+              </li>;
+              <li>;
+                  Cloud Services;
+                </Link>;
+              </li>;
+            </ul>;
+          </div>;
+          {/* Company */}
+                  About Us;
+                </Link>;
+              </li>;
+              <li>;
+                  Careers;
+                </Link>;
+              </li>;
+              <li>;
+                  Blog;
+                </Link>;
+              </li>;
+              <li>;
+                  Contact;
+                </Link>;
+              </li>;
+            </ul>;
+          </div>;
+          {/* Contact Info */}
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+              <Link
+                href="/privacy"
+                className="text-gray-400 hover:text-white text-sm transition-colors">;
+                Privacy Policy;
+              </Link>;
+              <Link
+                href="/terms"
+                className="text-gray-400 hover:text-white text-sm transition-colors">;
+        <div className="border - t border - gray - 800 mt - 8 pt - 8">;
+          <div className="flex flex - col md:flex - row justify - between items - center">;
+<p className="text - gray - 400 text - sm">;
+              © {current_year} Zion Tech Group. All rights reserved.;
+            </p>;
+            <div className="flex space - x-6 mt - 4 md:mt - 0">;
+              <Link;
+                href="/privacy";
+                className="text - gray - 400 hover:text - white text - sm transition - colors";
+              >;
+                Privacy Policy;
+              </Link>;
+              <Link;
+                href="/terms";
+                className="text - gray - 400 hover:text - white text - sm transition - colors";
+              >;
+                Terms of Service;
+              </Link>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </footer>);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 export default EnhancedFooter;
+<<<<<<< HEAD
 };
 
 export default EnhancedFooter;
@@ -531,3 +610,6 @@ export default EnhancedFooter;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

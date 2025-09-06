@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 <<<<<<< HEAD
@@ -20,10 +21,13 @@ import React from 'react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { ArrowLeft } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -45,16 +49,27 @@ import { ArrowLeft } from 'lucide-react'
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import { Button } from "@/components/ui/button",
+import Link from "next/link",
+import { ArrowLeft } from 'lucide-react'
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export function BackToDirectoryButton() {
-import { ArrowLeft } from 'lucide-react';
-export function BackToDirectoryButton() {;
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <div className="container mx-auto px-4 md: px-6 mb-12">
       <Button variant="outline" asChild className="my-8">
         <Link href="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
           <ArrowLeft className="mr-2 h-4 w-4" />
 =======
+<<<<<<< HEAD
     <div className='container mx-auto px-4 md:px-6 mb-12'>;
       <Button variant='outline' asChild className='my-8'>;
         <Link
@@ -64,6 +79,8 @@ export function BackToDirectoryButton() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           Back to Talent Directory
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         </Link>
       </Button>
     </div>
@@ -71,16 +88,22 @@ export function BackToDirectoryButton() {;
 };
   );
 };
+=======
           Back to Talent Directory
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         </Link>
       </Button>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -103,6 +126,8 @@ export function BackToDirectoryButton() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import Link from "next/link";
@@ -110,7 +135,6 @@ import { ArrowLeft } from 'lucide-react';
 export function BackToDirectoryButton() {;
   return (;
     <div className="container mx-auto px-4 md: px-6 mb-12">;
-
       <Button variant="outline" asChild className="my-8">;
         <Link href="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">;
           <ArrowLeft className="mr-2 h-4 w-4" />;
@@ -120,6 +144,7 @@ export function BackToDirectoryButton() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -157,3 +182,9 @@ function BackToDirectoryButton() {
   );
 }
 ;
+=======
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

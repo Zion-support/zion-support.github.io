@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState, useEffect  } from 'react';
@@ -29,10 +30,13 @@ import Rocket from 'lucide-react / dist / esm / icons / rocket';
 import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
 import {cn} from '@/lib / utils';
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface WizardStep {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
 import {cn} from '@/lib/utils';
 interface WizardStep {;
@@ -65,24 +69,17 @@ export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }
   title: string,
   description: string,
   icon: React.ReactNode,
+=======
+  title: string
+  description: string
+  icon: React.ReactNode
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   action: {
-    text: string,
-    url: string
-  };
-  skipText?: string
-}
-
-interface OnboardingWizardProps {
-  type: 'client' | 'talent',
-  onComplete: () => void,
-  onSkip: () => void,
-  className?: string
-}
-
-export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;
   const [currentStep, setCurrentStep] = useState(0);
+
   const navigate = useNavigate();
   const { user } = useAuth();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -407,6 +404,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
           {type === 'client' ? ;
             "Ready to find top IT talent?" : ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    {
+      title: "Complete your profile"
+      description: "Add your skills, experience, and preferences";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             "Let's build your professional profile"}
         </CardTitle>;
       </CardHeader>;
@@ -418,9 +420,12 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
               <div
                 key={index}
                 className={cn(
+<<<<<<< HEAD
                   "h-2 w-2 rounded-full mx-1";
 
                   "h-2 w-2 rounded-full mx-1",
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   index === currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep
@@ -429,13 +434,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
                 )}
               />;
             ))}
-
-          </div>;
-        </div>;
-
-        <div className="flex flex-col items-center text-center p-4">;
-          <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">;
-
             {steps[currentStep].icon}
           </div>;
           <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep].title}</h3>;
@@ -445,13 +443,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       <CardFooter className="flex flex-col space-y-2">;
         <Button
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
-
-          onClick={handleAction}>;
-          {steps[currentStep].action && action.text}
-        </Button>;
-
-        {steps[currentStep].skipText && (;
-
           <Button
             variant="ghost"
             className="text-zion-slate-light hover:text-white"
@@ -459,12 +450,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
             {steps[currentStep].skipText}
           </Button>;
         )}
-
-      </CardFooter>;
-    </Card>;
-  );
-}
-
 =======
       icon: <FileText className="h - 6 w - 6 text - zion - purple" />,
       action: {

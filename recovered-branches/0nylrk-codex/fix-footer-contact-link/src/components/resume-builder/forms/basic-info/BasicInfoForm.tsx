@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,12 +37,11 @@ export interface BasicInfoFormProps {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   resumeId?: string;
 
   initialData?: Partial<BasicInfoFormData>;
-
-  onSave: (data: BasicInfoFormData) => void,;
-
   skills?: string[];
   yearsExperience?: number;
 import { PersonalInfoFields } from "./PersonalInfoFields",
@@ -54,6 +54,7 @@ export interface BasicInfoFormProps {
   yearsExperience?: number,
   onComplete?: () => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -70,12 +71,15 @@ export function BasicInfoForm({
 export function BasicInfoForm(): any ({;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   resumeId;
 
   initialData = {}
   onSave;
   skills = [];
   yearsExperience = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
   resumeId,
   initialData = {},
@@ -218,22 +222,21 @@ export function BasicInfoForm({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+        }
+      });
+    }
+  }, [initialData, form]);
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   return (
-
-    <Form {...form}>;
-      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;
-        <Card className="p-6 space-y-6">;
-          <PersonalInfoFields control={form && form.control} />;
-          <ContactFields control={form && form.control} />;
-
-          <div className="pt-4 border-t border-gray-200">;
-            <h3 className="text-lg font-medium mb-4">Rate Information</h3>;
-
             <RateOptimizationSection
               control={form && form.control}
               setValue={form && form.setValue}
               skills={skills}
+<<<<<<< HEAD
               yearsExperience={yearsExperience |0}
               yearsExperience={yearsExperience || 0}
               location={form.getValues("location")}
@@ -250,6 +253,8 @@ export function BasicInfoForm({;
 }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import React, { useState, useEffect } from './react';
 import { use_form } from './react - hook - form';
@@ -287,3 +292,57 @@ function BasicInfoForm() {
       hourly_rate: 0,
       ...initial_data}});
 ;
+<<<<<<< HEAD
+=======
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      Object.entries (initial_data).for_each (([key, value]) => {
+        // Check condition
+if ( {) {
+  $2
+}
+          form.set_value (key as keyof BasicInfoFormData, value as any);
+        }
+      });
+    }
+  }, [initial_data, form]);
+;
+  const handle_submit = (data: BasicInfoFormData) =>: any {
+    on_save (data),
+    // Check condition
+if ( {) {
+  $2
+}
+      on_complete ();
+    }
+  }
+;
+  return (
+    <Form {...form}>;
+      <form on_submit={form.handle_submit (handle_submit)} className="space - y-6">;
+        <Card className="p - 6 space - y-6">;
+          <PersonalInfoFields control={form.control} />;
+          <ContactFields control={form.control} />;
+          <div className="pt - 4 border - t border - gray - 200">;
+            <h3 className="text - lg font - medium mb - 4">Rate Information</h3>;
+            <RateOptimizationSection;
+              control={form.control}
+              set_value={form.set_value}
+              skills={skills}
+              years_experience={years_experience || 0}
+              location={form.get_values ("location")}
+              rate_type="hourly";
+            />;
+          </div>;
+        </Card>;
+        <div className="flex justify - end">;
+          <Button type="submit">Save Basic Information</Button>;
+        </div>;
+      </form>;
+    </Form>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

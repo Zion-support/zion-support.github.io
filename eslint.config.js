@@ -23,10 +23,9 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
 
-=======
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
@@ -40,6 +39,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -60,6 +61,7 @@ import next from '@next/eslint-plugin-next';
 =======
 
 import js from '@eslint/js';
+<<<<<<< HEAD
 
 import js from '@eslint/js';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -69,14 +71,19 @@ export default [
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     files: ["**/*.{js,jsx,ts,tsx}"],
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     ignores: [
       '.next/**',
       'out/**',
       'dist/**',
       'build/**',
       'node_modules/**',
+<<<<<<< HEAD
       '.eslintrc.js',
       'coverage/**',
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
@@ -91,6 +98,7 @@ export default [
       '**/*.temp.*',
       '**/*.test.*',
       '**/*.spec.*',
+<<<<<<< HEAD
       '**/test-utils.*',
       '**/jest.setup.*',
       '**/jest.config.*',
@@ -236,6 +244,8 @@ export default [
       '**/*.bundle.js',
       '**/public/**',
       '**/static/**',
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     ],
     languageOptions: {
       parser: typescriptParser,
@@ -248,6 +258,7 @@ export default [
       },
       globals: {
         // Browser globals
+<<<<<<< HEAD
         window: 'readonly',
         document: 'readonly',
         console: 'readonly',
@@ -324,6 +335,11 @@ export default [
         React: 'readonly',
         // Jest/Testing globals
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+        // React
+        React: 'readonly',
+        // Jest/Testing globals
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -331,6 +347,7 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
+<<<<<<< HEAD
 origin/automation-improvements-final
 
 <<<<<<< HEAD
@@ -399,36 +416,18 @@ export default [
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },
   js && js.configs.recommended,
-  {
-    files: ["**/*.{js,jsx}"],
-    languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: "module",
-      globals: {
-        ...globals && globals.browser,
-        ...globals && globals.node,
-        React: "readonly",
-        jest: "readonly",
-        describe: "readonly",
-        it: "readonly",
-        test: "readonly",
-        expect: "readonly",
-        beforeEach: "readonly",
-        afterEach: "readonly",
-        beforeAll: "readonly",
-        afterAll: "readonly"
-      },
 =======
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      parser: typescriptParser,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+export default [
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+  {
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
           jsx: true
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
     },
@@ -440,12 +439,14 @@ export default [
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       react,
       "react-hooks": reactHooks
     },
     rules: {
-      ...react && react.configs.recommended && recommended.rules,
-      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
       "no-unused-vars": "warn",
       "no-console": "warn",
       "prefer-const": "error",
@@ -462,6 +463,7 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.node,
+<<<<<<< HEAD
         React: "readonly",
         jest: "readonly",
         describe: "readonly",
@@ -527,16 +529,22 @@ export default [
         require: 'readonly',
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         jest: 'readonly',
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
         expect: 'readonly',
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly'
+<<<<<<< HEAD
         React: "readonly",
         jest: "readonly",
         describe: "readonly",
@@ -549,10 +557,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         afterAll: "readonly"
 origin/main
 origin/automation-improvements-final
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         afterAll: "readonly"
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       },
       parser: tsparser,
       parserOptions: {
@@ -567,18 +574,19 @@ origin/automation-improvements-final
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
       "jsx-a11y": jsxA11y
+
     },
     rules: {
-
-      ...tseslint && tseslint.configs.recommended && recommended.rules,
-      ...react && react.configs.recommended && recommended.rules,
-      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
-      ...jsxA11y && jsxA11y.configs.recommended && recommended.rules,
+      ...tseslint.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
 
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true }
       ],
+<<<<<<< HEAD
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
       "react-hooks/exhaustive-deps": "warn",
@@ -589,6 +597,8 @@ origin/automation-improvements-final
 
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         describe: 'readonly',
         it: 'readonly',
         beforeEach: 'readonly',
@@ -601,17 +611,24 @@ origin/automation-improvements-final
       'react-hooks': reactHooks
     },
     rules: {
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'react-hooks/exhaustive-deps': 'warn',
       'no-undef': 'off',
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       'no-unused-vars': 'off',
       'no-console': 'warn',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off'
+<<<<<<< HEAD
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
       "react-hooks/exhaustive-deps": "warn",
@@ -623,11 +640,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/main
 origin/automation-improvements-final
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       "react/react-in-jsx-scope": "off"
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     settings: {
       react: {
@@ -646,7 +662,7 @@ origin/automation-improvements-final
       ecmaVersion: 2021,
       sourceType: "script",
       globals: {
-        ...globals && globals.node,
+        ...globals.node,
         console: "readonly",
         process: "readonly",
         require: "readonly",
@@ -659,6 +675,7 @@ origin/automation-improvements-final
       }
     },
     rules: {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "no-unused-vars": "warn",
       "no-console": "warn",
@@ -684,23 +701,21 @@ origin/automation-improvements-final
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'no-undef': 'error'
     }
-<<<<<<< HEAD
-=======
-
-=======
-  }
-];
-
-
-=======
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react/no-unescaped-entities': 'off',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-undef': 'off',
       'no-unused-vars': 'warn'
     }
   },
-{
+  {
     ignores: [
       'node_modules/',
       '.next/',
@@ -729,6 +744,7 @@ origin/automation-improvements-final
       'working-automation-suite.cjs'
     ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
   }
@@ -744,17 +760,18 @@ origin/automation-improvements-final
 =======
 
 
-  }
-];
-
-
-
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 ];
+  }
+];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

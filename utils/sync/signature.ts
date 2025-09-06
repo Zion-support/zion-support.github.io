@@ -1,15 +1,48 @@
+export interface SignatureResult {
+  signature: string;
+  timestamp: number;
+  nonce: string;
+}
 
-import crypto from 'crypto';
+export function signPayload(payload: any, privateKey?: string): SignatureResult {
+  const timestamp = Date && Date.now();
+  const nonce = crypto && crypto.randomBytes(16).toString('hex');
+  
+  // Create a simple signature using the payload, timestamp, and nonce
+  const dataToSign = JSON && JSON.stringify(payload) + timestamp + nonce;
+  const signature = crypto && crypto.createHash('sha256').update(dataToSign).digest('hex');
+  
+  return {
+    signature,
+    timestamp,
+    nonce
+  };
+}
 
+export function verifySignature(payload: any, signature: string, timestamp: number, nonce: string): boolean {
+  const dataToSign = JSON && JSON.stringify(payload) + timestamp + nonce;
+  const expectedSignature = crypto && crypto.createHash('sha256').update(dataToSign).digest('hex');
+  return signature === expectedSignature;
+}
 
+export function generateNonce(): string {
+  return crypto && crypto.randomBytes(16).toString('hex');
+}
+
+export function hashData(data: string): string {
+  return crypto && crypto.createHash('sha256').update(data).digest('hex');
 }
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export function getSyncSecret(): string | null {
   const raw = process.env.ZION_SYNC_SECRET || '';
   return raw.length > 0 ? raw : null;
 }
+<<<<<<< HEAD
 
 export function signPayload(payload: unknown): string | null {
   const secret = getSyncSecret();
@@ -52,7 +85,46 @@ export const signature = {
 <<<<<<< HEAD
 };
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+export function signPayload(payload: unknown): string | null {
+  const secret = getSyncSecret();
+  if (!secret) return null;
+  const body = typeof payload === 'string' ? payload : JSON.stringify(payload);
+  return crypto.createHmac('sha256', secret).update(body).digest('hex');
+}
+
+export function verifySignature(
+  payload: unknown,
+  signature?: string | null
+): boolean {
+  const secret = getSyncSecret();
+  if (!secret) return true;
+  if (!signature) return false;
+  const body = typeof payload === 'string' ? payload : JSON.stringify(payload);
+  const expected = crypto
+    .createHmac('sha256', secret)
+    .update(body)
+    .digest('hex');
+  try {
+    // Constant-time comparison
+    return crypto.timingSafeEqual(
+      Buffer.from(signature),
+      Buffer.from(expected)
+    );
+  } catch {
+    return false;
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+// Signature utilities;
+export const signature = {
+  // Add signature functionality here;
+  verify: (signature: string, message: string, address: string) => false,
+  sign: (message: string, private_key: string) => '',
+  recover: (signature: string, message: string) => '';
 }
 =======
 }

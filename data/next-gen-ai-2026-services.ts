@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface NextGenAi2026Service {
 export interface NextGenAi2026Service {;
+=======
+export interface NextGenAi2026Service {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   name: string;
   tagline: string;
@@ -9,6 +13,7 @@ export interface NextGenAi2026Service {;
   features: string[];
   link: string;
   category: string;
+<<<<<<< HEAD
   realImplementation: boolean;
   contactInfo: {
     mobile: string;
@@ -67,6 +72,38 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
     }
   }
 ]
+=======
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
+];      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup && ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+]
+=======
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
+  contactInfo: {
+    mobile: string,
+    email: string,
+    address: string
+  }
+}
+
+export const nextGenAI2026Services: NextGenAi2026Service[] = [
+  {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     id: "2026-next-gen-ai",
     name: "2026 Next-Gen AI Platform",
     tagline: "Next-generation AI for 2026",
@@ -84,6 +121,7 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
     realImplementation: true,
     contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -97,11 +135,15 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      mobile: "+1 302 464 0950",
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709";
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ];
 ],
@@ -115,3 +157,8 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

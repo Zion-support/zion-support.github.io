@@ -1,3 +1,6 @@
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Link from 'next/link'
 import { GradientHeading } from './GradientHeading'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -25,6 +28,7 @@ import { Zap } from 'lucide-react'
 export function FeaturesGuideSection() {
   const features = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -304,6 +308,8 @@ export function FeaturesGuideSection() {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
@@ -557,7 +563,7 @@ export function FeaturesGuideSection() {;
       ],;
       link: "/help";
       buttonText: "View Resources";
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
     {
       id: 'talent-directory'
@@ -682,6 +688,7 @@ export function FeaturesGuideSection() {;
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
+<<<<<<< HEAD
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace"
@@ -1344,10 +1351,16 @@ function FeaturesGuideSection() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {feature.title}
               </TabsTrigger>
             ))}
           </TabsList>
+<<<<<<< HEAD
           <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>
             {features.slice(4).map(feature => (
               <TabsTrigger
@@ -1369,6 +1382,11 @@ function FeaturesGuideSection() {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
                 {feature.title}
@@ -1376,61 +1394,6 @@ function FeaturesGuideSection() {
             ))}
           </TabsList>
           {features.map(feature => (
-
-      link: "/help",
-      button_text: "View Resources";
-    }
-  ];
-  return (
-    <section className="py - 20 bg - zion - blue - dark">;
-      <div className="container mx - auto px - 4">;
-        <div className="text - center mb - 12">;
-          <GradientHeading > Your Complete Guide to Zion</GradientHeading>;
-          <p className="text - zion - slate - light text - xl mt - 4 max - w-3xl mx - auto">;
-            Discover all the powerful tools and features available to help you navigate;
-            the world of AI and tech services;
-          </p>;
-        </div>;
-        <Tabs default_value="ai - matcher" className="w - full max - w-5xl mx - auto">;
-          <TabsList className="grid grid - cols - 2 md:grid - cols - 4 gap - 2 bg - zion - blue rounded - lg p - 1 mb - 8">;
-            {features.slice (0, 4).map (feature => (
-              <TabsTrigger;
-                key={feature.id}
-                value={feature.id}
-                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";
-              >;
-                {feature.title}
-              </TabsTrigger>))}
-          </TabsList>;
-          <TabsList className='grid grid - cols - 2 md:grid - cols - 4 gap - 2 bg - zion - blue rounded - lg p - 1'>;
-            {features.slice (4).map (feature => (
-              <TabsTrigger;
-                key={feature.id}
-                value={feature.id}
-                className='data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan'              >                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";
-            {features.slice (4).map (feature => (
-              <TabsTrigger;
-                key={feature.id}
-                value={feature.id}
-                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";
-              >;
-                {feature.title}
-              </TabsTrigger>))}
-          </TabsList>;
-          {features.map (feature => (
-            <TabsContent key={feature.id} value={feature.id} className='mt - 8'>;
-              <div className='bg - zion - blue rounded - lg border border - zion - blue - light p - 6 md:p - 8 flex flex - col md:flex - row gap - 8'>;
-                <div className='md:w - 1/3 flex flex - col items - center md:items - start'>;
-                  <div className='bg - zion - blue - dark p - 4 rounded - xl mb - 4'>;
-
-                    {feature.icon}
-                  </div>;
-                  <h3 className='text - 2xl font - bold text - white mb - 3'>;
-                    {feature.title}
-                  </h3>;
-                  <p className='text - zion - slate - light mb - 6'>;
-                    {feature.description}
-
             <TabsContent key={feature.id} value={feature.id} className="mt-8">
               <div className="bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8">
                 <div className="md:w-1/3 flex flex-col items-center md:items-start">
@@ -1439,8 +1402,9 @@ function FeaturesGuideSection() {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-zion-slate-light mb-6">{feature.description}</p>
-                  <Button 
+                  <Button
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+<<<<<<< HEAD
 
 
                     asChild
@@ -1561,6 +1525,11 @@ function FeaturesGuideSection() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     ))}
                   </ol>
                 </div>
@@ -1568,6 +1537,7 @@ function FeaturesGuideSection() {
             </TabsContent>
           ))}
         </Tabs>
+<<<<<<< HEAD
         <div className='mt-12 text-center'>
         
         <div className="mt-12 text-center">
@@ -1577,12 +1547,18 @@ function FeaturesGuideSection() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Button
             variant="outline"
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             asChild
           >
             <Link
+<<<<<<< HEAD
               href='/marketplace'              onClick={() => fireEvent('explore_marketplace_click')}
               href="/marketplace"
               onClick = {() => fireEvent('explore_marketplace_click'),}
@@ -1601,11 +1577,17 @@ function FeaturesGuideSection() {
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </Link>
           </Button>
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 };
 
@@ -1673,3 +1655,8 @@ function FeaturesGuideSection() {
 
   )
 }
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

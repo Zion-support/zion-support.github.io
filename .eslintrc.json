@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": [
@@ -6,11 +7,15 @@
     "@typescript-eslint/recommended"
   ],
 origin/automation-improvements-final
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true,
     "node": true,
+<<<<<<< HEAD
     "es6": true,
     "jest": true
     "es2021": true
@@ -24,10 +29,16 @@ origin/automation-improvements-final
     "alert": "readonly"
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
+<<<<<<< HEAD
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
     "no-console": "warn"
@@ -37,6 +48,11 @@ origin/automation-improvements-final
     "react/no-unescaped-entities": "off"
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   },
   "ignorePatterns": [
     "node_modules/",
@@ -109,6 +125,7 @@ origin/automation-improvements-final
     "security-reports/",
     "pages.__backup/",
     "pages-disabled/",
+<<<<<<< HEAD
     "pages.disabled_auto/",
     "zion_academy/",
     "pm2-automation/",
@@ -236,5 +253,10 @@ origin/automation-improvements-final
     "pages.disabled_auto/"
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   ]
 }

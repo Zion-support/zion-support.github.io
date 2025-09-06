@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 
 import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons
 
+=======
+import React from 'react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {Check, Trash2, ChevronRight} from '@/components/icons';
 import {Button} from '@/components/ui/button';
 import {Badge} from '@/components/ui/badge';
@@ -10,6 +14,7 @@ import {cn} from '@/lib/utils';
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
 import {useNavigate} from 'react-router-dom';
 import {Notification, NotificationType} from '@/context/notifications';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -66,6 +71,8 @@ export const getTypeIcon = (type: NotificationType) => {;
   switch (type) {;
     case 'message':;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return <span className="text-blue-500">💬</span>;
     case 'quote_request':;
       return <span className="text-purple-500">📝</span>;
@@ -75,6 +82,7 @@ export const getTypeIcon = (type: NotificationType) => {;
       return <span className="text-zion-purple">🤝</span>;
     case 'onboarding':;
       return <span className="text-zion-cyan">🚀</span>;
+<<<<<<< HEAD
 
     case 'system':;
       return <span className="text-yellow-500">⚠️</span>,;
@@ -172,6 +180,13 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
       navigate(notification.action_url)
     }
 <<<<<<< HEAD
+=======
+    }
+    // If there's an action URL, navigate to it;
+    if (notification && notification.action_url) {;
+      navigate(notification && notification.action_url);
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
   },
 =======
@@ -185,27 +200,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
   return (
     <div
       className={cn(
-
-        "p-3 border-b border-zion-blue-light relative group"
-        !notification && notification.read ? "bg-zion-blue-dark/30" : ""
-      )}>;
-      <div className="flex items-start gap-2">;
-        <div className="text-xl">{getTypeIcon(notification && notification.type)}</div>;
-        <div className="flex-1">;
-          <div className="flex justify-between items-center mb-1">;
-            <h4 className="font-medium text-white">{notification && notification.title || "Notification"}</h4>;
-            {!notification && notification.read && (;
-              <Badge className="bg-zion-cyan text-xs">New</Badge>;
-            )}
-          </div>;
-          <p className="text-sm text-zion-slate-light">{notification && notification.message || "You have a new notification"}</p>;
-          <div className="flex justify-between items-center mt-1">;
-            <p className="text-xs text-zion-slate">;
-              {notification && notification.created_at ? formatDistanceToNow(new Date(notification && notification.created_at), { addSuffix: true }) : "Just now"}
-            </p>;
-
-            {notification && notification.action_url && notification && notification.action_text && (;
-
               <Button
                 variant="link"
                 size="sm"
@@ -215,6 +209,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
                 <ChevronRight className="h-3 w-3 ml-1" />;
               </Button>;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
         </div>
@@ -281,12 +276,18 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
               <Button
                 variant="ghost" 
                 size="icon" 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 className="h-6 w-6"
-
+                onClick={(e) => {;
+                  e && e.stopPropagation();
+                  onDismiss(notification && notification.id);
+                }}
             </TooltipContent>;
           </Tooltip>;
         </TooltipProvider>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -298,3 +299,10 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+=======
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

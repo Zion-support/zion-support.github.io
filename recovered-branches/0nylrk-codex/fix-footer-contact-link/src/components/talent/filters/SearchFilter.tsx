@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,6 +28,8 @@ export function SearchFilter(): any ({ searchTerm, setSearchTerm }: SearchFilter
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="mb-6">;
       <div className="relative">;
@@ -35,6 +38,7 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           type="text"
           placeholder="Search talents..."
           value={searchTerm}
+<<<<<<< HEAD
 <<<<<<< HEAD
           onChange={(e) => setSearchTerm(e.target.value)}
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light"
@@ -76,6 +80,8 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 }
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { Input  } from '@/components / ui / input';
 import { SearchIcon  } from './lucide-react';
 import { SearchFilterProps  } from '@/types / filters';
@@ -97,6 +103,7 @@ function SearchFilter() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -104,3 +111,5 @@ function SearchFilter() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

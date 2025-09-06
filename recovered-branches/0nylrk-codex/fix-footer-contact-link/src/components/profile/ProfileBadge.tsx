@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -129,6 +130,10 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  const { icon: Icon, text, colors } = badgeConfig[type];
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import React from './react';
 import { BadgeCheck, Star, Clock, Award } from './lucide-react';

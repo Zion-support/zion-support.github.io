@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
@@ -106,26 +107,20 @@ export function HeroSection() {;
 
         <div className="flex flex-col sm: flex-row justify-center gap-4">;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6"
             size="lg"
             asChild>;
             <Link to="/signup">Join Zion Now</Link>;
           </Button>;
-=======
-          <Button
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6"
-            size="lg"
-            asChild
-          >
-            <Link to="/signup">Join Zion Now</Link>
-          </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button
             variant="outline"
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark text-lg py-6"
             size="lg"
-
+            asChild>;
+=======
 import { Button  } from '@/components / ui / button';
 import { GradientHeading  } from '@/components / GradientHeading';
 import { Link  } from './react-router-dom';
@@ -167,12 +162,16 @@ function HeroSection() {
             size="lg";
             as_child;
           >;
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <Link to="/marketplace">Explore Marketplace</Link>;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </section>;
   );
 }
 ;
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

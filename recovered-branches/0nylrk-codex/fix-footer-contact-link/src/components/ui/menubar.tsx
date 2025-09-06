@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from &quot;react&quot;
 import * as MenubarPrimitive from &quot;@radix-ui/react-menubar&quot;
 import { Check, ChevronRight, Circle } from &quot;lucide-react&quot;
@@ -70,10 +71,13 @@ const MenubarSubTrigger = React.forwardRef<;
   React.ElementRef<typeof MenubarPrimitive.SubTrigger>,;
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.SubTrigger> & {;
     inset?: boolean;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 >(({ class_name, inset, children, ...props }, ref) => (
   <MenubarPrimitive.SubTrigger;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className={cn(
       &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot;
@@ -181,10 +185,13 @@ const MenubarItem = React.forwardRef<;
   React.ElementRef<typeof MenubarPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Item> & {;
     inset?: boolean;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 >(({ class_name, inset, ...props }, ref) => (
   <MenubarPrimitive.Item;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className={cn(
       &quot;relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
@@ -265,6 +272,8 @@ className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       class_name)}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     checked={checked}
     {...props}
   >;
@@ -274,6 +283,7 @@ className={cn (
       </MenubarPrimitive.ItemIndicator>;
     </span>;
     {children}
+<<<<<<< HEAD
   </MenubarPrimitive.CheckboxItem>;
 ));
 MenubarCheckboxItem.displayName = MenubarPrimitive.CheckboxItem.displayName;
@@ -309,6 +319,8 @@ className={cn(
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       className
     )}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     {...props}
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
@@ -317,6 +329,7 @@ className={cn(
       </MenubarPrimitive.ItemIndicator>
     </span>
     {children}
+<<<<<<< HEAD
   </MenubarPrimitive.RadioItem>;
 ));
 MenubarRadioItem.displayName = MenubarPrimitive.RadioItem.displayName;
@@ -326,10 +339,13 @@ const MenubarLabel = React.forwardRef<;
   React.ElementRef<typeof MenubarPrimitive.Label>,;
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Label> & {;
     inset?: boolean;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 >(({ class_name, inset, ...props }, ref) => (
   <MenubarPrimitive.Label;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className={cn(
       &quot;px-2 py-1.5 text-sm font-semibold&quot;
@@ -378,10 +394,13 @@ const MenubarSeparator = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Separator>;
 >(({ class_name, ...props }, ref) => (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   <MenubarPrimitive.Separator;
     ref={ref}
     className={cn (&quot;-mx - 1 my - 1 h - px bg - muted & quot;, class_name)}
     {...props}
+<<<<<<< HEAD
 />
 ))
 MenubarSeparator.displayName = MenubarPrimitive.Separator.displayName
@@ -396,10 +415,13 @@ const MenubarShortcut = ({
         "ml-auto text-xs tracking-widest text-muted-foreground",
         className
       )}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {...props}
     />;
   );
 }
+<<<<<<< HEAD
 MenubarShortcut.displayname = &quot;MenubarShortcut&quot;
 export {
   Menubar
@@ -449,3 +471,6 @@ export {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  MenubarShortcut}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Config} from "tailwindcss";
 import {fontFamily} from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
@@ -39,16 +40,23 @@ const config: Config = {
     "./src/**/*.{ts, tsx}"];
   safelist: ['border - border'];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   theme: {
     container: {
       center: true;
       padding: "2rem"
+<<<<<<< HEAD
       screens: {
         "2xl": "1400px"}}
       center: true,
       padding: "2rem",
       screens: {
         "2xl": "1400px"}},
+=======
+      screens: {
+        "2xl": "1400px"}}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     extend: {
       colors: {
         border: "hsl (var (--border))";
@@ -57,6 +65,7 @@ const config: Config = {
         background: "hsl (var (--background))";
         foreground: "hsl (var (--foreground))";
         primary: {
+<<<<<<< HEAD
           DEFAULT: "hsl(var(--primary))"
           foreground: "hsl(var(--primary-foreground))"}
         secondary: {
@@ -100,6 +109,8 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)"}
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans]}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       keyframes: {
         "accordion-down": {
           from: { height: "0" }
@@ -108,6 +119,7 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" }
           to: { height: "0" }}}
       animation: {
+<<<<<<< HEAD
         "accordion-down": "accordion-down 0.2s ease-out"
         "accordion-up": "accordion-up 0.2s ease-out"}}}
           DEFAULT: "hsl(var(--primary))",
@@ -163,6 +175,8 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out"}}},
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   plugins: [
     animatePlugin
     plugin(function({ addUtilities }) {
@@ -177,10 +191,73 @@ const config: Config = {
     })]}
 export default config;
 
+<<<<<<< HEAD
+=======
+=======
+          DEFAULT: "hsl (var (--primary))",
+          foreground: "hsl (var (--primary - foreground))"}
+        secondary: {
+          DEFAULT: "hsl (var (--secondary))",
+          foreground: "hsl (var (--secondary - foreground))"}
+        destructive: {
+          DEFAULT: "hsl (var (--destructive))",
+          foreground: "hsl (var (--destructive - foreground))"}
+        muted: {
+          DEFAULT: "hsl (var (--muted))",
+          foreground: "hsl (var (--muted - foreground))"}
+        accent: {
+          DEFAULT: "hsl (var (--accent))",
+          foreground: "hsl (var (--accent - foreground))"}
+        popover: {
+          DEFAULT: "hsl (var (--popover))",
+          foreground: "hsl (var (--popover - foreground))"}
+        card: {
+          DEFAULT: "hsl (var (--card))",
+          foreground: "hsl (var (--card - foreground))"}
+        // Custom Zion colors;
+        "zion - blue": {
+          DEFAULT: "#0a0f1f";
+          light: "#1e263b",
+          dark: "#090c1a"}
+        "zion - purple": {
+          DEFAULT: "#a855f7";
+          light: "#d8b4fe",
+          dark: "#9333ea"}
+        "zion - cyan": {
+          DEFAULT: "#00e5ff";
+          light: "#7df9ff",
+          dark: "#00c4cc"}
+        "zion - slate": {
+          DEFAULT: "#94A3B8";
+          light: "#CBD5E1",
+          dark: "#64748B"}}
+      border_radius: {
+        lg: "var (--radius)";
+        md: "calc (var (--radius) - 2px)",
+        sm: "calc (var (--radius) - 4px)"}
+      font_family: {
+        sans: ["var (--font - sans)", ...font_family.sans]}
+      keyframes: {
+        "accordion - down": {
+          from: { height: "0" }
+          to: { height: "var (--radix - accordion - content - height)" }}
+        "accordion - up": {
+          from: { height: "var (--radix - accordion - content - height)" }
+          to: { height: "0" }}}
+      animation: {
+        "accordion - down": "accordion - down 0.2s ease - out",
+        "accordion - up": "accordion - up 0.2s ease - out"}}}
+  plugins: [;
+    animate_plugin,
+    plugin (function ({ add_utilities }) {
+      const new_utilities = {
+        '.rtl': {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           direction: 'rtl',
           text_align: 'right'}
         '.ltr': {
           direction: 'ltr',
+<<<<<<< HEAD
 
           textAlign: 'left'}},
       addUtilities(newUtilities)
@@ -283,4 +360,10 @@ const config: Config = {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          text_align: 'left'}}
+      add_utilities (new_utilities);
+    })]}
+;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default config;

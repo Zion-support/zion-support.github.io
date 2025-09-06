@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { createContext } from "react";
@@ -38,4 +39,6 @@ import type { AuthContextType } from "@/types/auth",;
 // arguments causes a TypeScript error (TS2347). Instead, we cast the;
 // default value so consumers still get some level of type safety.;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);

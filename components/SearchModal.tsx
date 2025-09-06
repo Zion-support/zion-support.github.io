@@ -1,50 +1,17 @@
-
-import React, { useState, useEffect, useRef } from './react';
-import { Search, X, ArrowRight, Clock  } from './lucide-react';
-import Link from './next / link';
-;
-
 interface SearchResult {
+=======
+
 interface SearchResult {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title: string;
   description: string;
   url: string;
   category: string;
 }
-
-
 interface SearchModalProps {
   is_open: boolean;
   on_close: () => void;
 }
-
-const search_data: SearchResult[] = [;
-  // Services;
-  {
-    title: "AI Services",
-    description: "Machine learning, computer vision, NLP, and AI solutions",
-    url: "/ai - services",
-    category: "Services",
-  },
-  {
-    title: "IT Services",
-    description: "Cloud infrastructure, cybersecurity, and IT solutions",
-    url: "/it - services",
-    category: "Services",
-  },
-  {
-    title: "Micro SaaS",
-    description: "Custom micro SaaS platforms and automation tools",
-    url: "/micro - saas",
-    category: "Services",
-  },
-  {
-    title: "Cloud Solutions",
-    description: "AWS, Azure, GCP migration and cloud infrastructure",
-    url: "/cloud - solutions",
-    category: "Services",
-  },
-
   {
     title: "Cybersecurity"
     description: "Security audits, penetration testing, and compliance"
@@ -52,58 +19,6 @@ const search_data: SearchResult[] = [;
     category: "Services"
   }
   {
-
-    title: "Blockchain Solutions",
-    description: "Smart contracts, DeFi, and blockchain development",
-    url: "/blockchain - services",
-    category: "Services",
-  },
-  // Solutions;
-  {
-    title: "Digital Transformation",
-    description: "Complete digital transformation solutions",
-    url: "/digital - transformation",
-    category: "Solutions",
-  },
-  {
-    title: "Enterprise Solutions",
-    description: "Large - scale enterprise technology solutions",
-    url: "/enterprise - solutions",
-    category: "Solutions",
-  },
-  {
-    title: "Startup Solutions",
-    description: "Technology solutions for startups and SMBs",
-    url: "/startup - solutions",
-    category: "Solutions",
-  },
-  // Industries;
-  {
-    title: "Healthcare",
-    description: "Technology solutions for healthcare industry",
-    url: "/industries / healthcare",
-    category: "Industries",
-  },
-  {
-    title: "Finance",
-    description: "Financial technology and fintech solutions",
-    url: "/industries / finance",
-    category: "Industries",
-  },
-  {
-    title: "Education",
-    description: "Educational technology and e - learning solutions",
-    url: "/industries / education",
-    category: "Industries",
-  },
-  {
-    title: "Manufacturing",
-    description: "Industrial IoT and manufacturing automation",
-    url: "/industries / manufacturing",
-    category: "Industries",
-  },
-  // Company;
-
   {
     title: "About Us"
     description: "Learn about Zion Tech Group and our mission"
@@ -136,15 +51,21 @@ const search_data: SearchResult[] = [;
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 interface SearchModalProps {;
   isOpen: boolean;
   onClose: () => void;
 }
+
 const searchData: SearchResult[] = [;
   // Services;
   {;
@@ -183,6 +104,7 @@ const searchData: SearchResult[] = [;
     url: "/blockchain-services",;
     category: "Services",;
   },;
+
   // Solutions;
   {;
     title: "Digital Transformation",;
@@ -202,6 +124,7 @@ const searchData: SearchResult[] = [;
     url: "/startup-solutions",;
     category: "Solutions",;
   },;
+
   // Industries;
   {;
     title: "Healthcare",;
@@ -227,6 +150,7 @@ const searchData: SearchResult[] = [;
     url: "/industries/manufacturing",;
     category: "Industries",;
   },;
+
   // Company;
   {;
     title: "About Us",;
@@ -259,6 +183,7 @@ const searchData: SearchResult[] = [;
     category: "Company",;
   },;
 ];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -271,38 +196,18 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
-
-
-  useEffect(() => {;
-    if (isOpen && inputRef && inputRef.current) {;
-      inputRef && inputRef.current.focus();
-    }
-  }, [isOpen]);
-
-  useEffect(() => {;
-    // Load recent searches from localStorage;
-    const saved = localStorage && localStorage.getItem("recent-searches");
-    if (saved) {;
-      setRecentSearches(JSON && JSON.parse(saved));
-    }
-  }, []);
-  useEffect(() => {;
-    if (query && query.trim()) {;
-      const filtered = searchData && searchData.filter(;
-        (item) =>;
-          item && item.title.toLowerCase().includes(query && query.toLowerCase()) ||;
-          item && item.description.toLowerCase().includes(query && query.toLowerCase()) ||;
-          item && item.category.toLowerCase().includes(query && query.toLowerCase()),;
-
       );
       setResults(filtered);
     } else {;
       setResults([]);
+=======
 ;
 export default /**
  * SearchModal - Function description
@@ -347,14 +252,10 @@ if ( {) {
       set_results (filtered);
     } else {
       set_results ([]);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     setSelectedIndex (0);
   }, [query]);
-
-
-  const handleKeyDown = (e: React && React.KeyboardEvent) => {;
-    if (e && e.key === "Escape") {;
-
       onClose();
     } else if (e && e.key === "ArrowDown") {;
       e && e.preventDefault();
@@ -365,21 +266,6 @@ if ( {) {
     } else if (e && e.key === "Enter" && results[selectedIndex]) {;
       handleResultClick(results[selectedIndex]);
     }
-
-  };
-  const handleResultClick = (result: SearchResult) => {;
-    // Add to recent searches;
-    const newRecent = [;
-      result && result.title,;
-      ...recentSearches && recentSearches.filter((s) => s !== result && result.title),;
-    ].slice(0, 5);
-    setRecentSearches(newRecent);
-    localStorage && localStorage.setItem("recent-searches", JSON && JSON.stringify(newRecent));
-    // Navigate to result;
-    window && window.location.href = result && result.url;
-  };
-  const handleRecentClick = (search: string) => {;
-
     setQuery(search);
   }
   if (!isOpen) return null;
@@ -390,10 +276,6 @@ if ( {) {
         <div
           className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
           onClick={onClose}
-
-        />;
-
-
         {/* Modal */}
         <div className="relative w-full max-w-2xl bg-white rounded-lg shadow-xl">;
           {/* Search Input */}
@@ -410,13 +292,6 @@ if ( {) {
             />;
             <button
               onClick={onClose}
-
-              className="ml-3 p-1 hover:bg-gray-100 rounded">;
-              <X className="w-5 h-5" />;
-            </button>;
-          </div>;
-
-
           {/* Results */}
           <div className="max-h-96 overflow-y-auto">;
             {query && query.trim() ? (;
@@ -424,6 +299,7 @@ if ( {) {
                 <div className="p-2">;
                   {results && results.map((result, index) => (;
                     <div
+=======
 ;
   const handleKeyDown = (e: React.KeyboardEvent) =>: any {
     // Check condition
@@ -508,26 +384,13 @@ if (return null) {
                 <div className="p - 2">;
                   {results.map ((result, index) => (
                     <div;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       key={index}
                       className={`p - 3 rounded - lg cursor - pointer transition - colors ${
                         index === selected_index;
                           ? "bg - blue - 50 border border - blue - 200";
                           : "hover:bg - gray - 50";
                       }`}
-
-
-                <div>;
-                  <div className="text-sm text-gray-500 mb-3">;
-                    Popular Searches;
-                  </div>;
-                  <div className="grid grid-cols-2 gap-2">;
-                    {[;
-                      "AI Services",;
-                      "Cloud Solutions",;
-                      "Cybersecurity",;
-                      "Digital Transformation",;
-                    ].map((term) => (;
-
                       <button
                         key={term}
                         onClick={() => setQuery(term)}
@@ -545,6 +408,7 @@ if (return null) {
       </div>;
     </div>;
   );
+=======
                       on_click={() => handleResultClick (result)}
                     >;
                       <div className="flex items - start justify - between">;
@@ -613,4 +477,5 @@ if (return null) {
         </div>;
       </div>;
     </div>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

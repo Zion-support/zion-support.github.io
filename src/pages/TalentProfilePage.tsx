@@ -1,3 +1,7 @@
+=======
+import React, { useState, useEffect } from "react",
+import { useRouter } from 'next/router',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { TalentProfile } from "@/components/profile/TalentProfile",
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
 import { ProfileErrorState } from "@/components/profile/ProfileErrorState",
@@ -11,6 +15,7 @@ import { Handshake, MessageSquare } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
 import { UserProfile } from "@/types/auth",
+<<<<<<< HEAD
 import { toast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
 export default function TalentProfilePage() {
@@ -75,6 +80,10 @@ export default function TalentProfilePage() {
     name: user.name |''
     points: user.points |0
   const userProfile: UserProfile = user ? {
+=======
+
+  // Create a compatible UserProfile from UserDetails or the authenticated user
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     id: user.id || '',
     displayName: user.displayName || '',
     email: user.email || '', // Ensure email is always a string
@@ -85,13 +94,14 @@ export default function TalentProfilePage() {
     role: user.role || '',
     name: user.name || '',
     points: user.points || 0
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   } : {
     id: userDetails?.id |''
     displayName: userDetails?.name |''
     email: userDetails?.email |'', // Ensure email is always a string
     userType: null, // Default empty string since userDetails doesn't have this property
     profileComplete: false, // Default value since userDetails doesn't have this property
+<<<<<<< HEAD
     created_at: new Date().toISOString(); // Default value since userDetails doesn't have this property
     updated_at: new Date().toISOString(); // Default value since userDetails doesn't have this property    role: '', // Default empty string since userDetails doesn't have this property
     name: ''
@@ -126,10 +136,15 @@ export default function TalentProfilePage() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Handle loading error gracefully
   useEffect(() => {
     if (error) {
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
         title: 'Error loading profile'
         title: 'Error loading profile',
@@ -140,12 +155,15 @@ export default function TalentProfilePage() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         description:
           'There was a problem loading this talent profile. Please try again.'
         variant: 'destructive'
       }) }        title: "Error loading profile"
         description: "There was a problem loading this talent profile. Please try again."
         variant: "destructive"})
+<<<<<<< HEAD
         id: user.id || '',
         display_name: user.display_name || '',
         email: user.email || '', // Ensure email is always a string;
@@ -206,11 +224,14 @@ if ( {) {
       }) }        title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
         variant: "destructive"});
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }, [error])
   if (isLoading) {
     return <ProfileLoadingState />
   }
+<<<<<<< HEAD
 
   // Check condition
 if ( {) {
@@ -544,6 +565,11 @@ return (<> <SEO title= {
 
 
 
+=======
+  if (error |!profile) {
+    return <ProfileErrorState error={error} />
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
         variant: "destructive"})
@@ -613,16 +639,21 @@ export default function TalentProfilePage() {;
   if (error || !profile) {;
     return <ProfileErrorState error={error} />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 
   const handleRequestHire = () => {
     if (!isAuthenticated) {
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
         title: 'Authentication required',
         description: 'Please sign in to hire this talent.',
@@ -762,6 +793,65 @@ return (<> <SEO title= {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+        title: "Authentication required",
+        description: "Please sign in to hire this talent.",
+        variant: "default"}),
+      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`),
+      return
+    }
+    setIsHireModalOpen(true)
+  },
+
+  const handleMessageTalent = () => {
+    if (!isAuthenticated) {
+      toast({
+        title: "Authentication required",
+        description: "Please sign in to message this talent.",
+        variant: "default"}),
+      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`),
+      return
+;
+  const handleRequestHire = () => {;
+    if (!isAuthenticated) {;
+      toast({;
+        title: "Authentication required",;
+        description: "Please sign in to hire this talent.",;
+        variant: "default"}),;
+      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`),;
+      return;
+    }
+    setIsHireModalOpen(true);
+  },;
+  const handleMessageTalent = () => {;
+    if (!isAuthenticated) {;
+      toast({;
+        title: "Authentication required",;
+        description: "Please sign in to message this talent.",;
+        variant: "default"}),;
+      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
+      return;
+    }
+    setIsMessageModalOpen(true);
+  };
+  return (;
+    <>;
+      <SEO;
+        title={profile.full_name}
+        description={profile.bio || 'Talent profile'}
+        ogImage={profile.profile_picture_url}
+      />
+      <div className="min-h-screen bg-zion-blue pb-12">
+      <TalentProfile
+        profile={profile}
+        onRequestHire={handleRequestHire}
+        onMessageTalent={handleMessageTalent}
+      />;
+      <BackToDirectoryButton />;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Sticky action buttons that appear when scrolling */}
       <StickyAction>
         <div className="p-2 flex gap-2">
@@ -773,23 +863,11 @@ return (<> <SEO title= {
             <Handshake className="mr-2 h-4 w-4" />
             Hire Now
           </Button>
-      />;
-      <BackToDirectoryButton />;
-
-      {/* Sticky action buttons that appear when scrolling */}
-      <StickyAction>;
-        <div className="p-2 flex gap-2">;
-          <Button
-            size="sm"
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
-            onClick = {handleRequestHire,}>;
-            <Handshake className="mr-2 h-4 w-4" />;
-            Hire Now;
-          </Button>;
           <Button
             size="sm"
             variant="outline"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -857,18 +935,25 @@ return (<> <SEO title= {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            onClick={handleMessageTalent}
+          >
+            <MessageSquare className="mr-2 h-4 w-4" />
+            Message
+          </Button>
+        </div>
+      </StickyAction>
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         talent = {profile,}
         isOpen = {isHireModalOpen,}
         onClose = {(,) => setIsHireModalOpen(false),}
         userDetails = {userProfile,}
-
-      />;
-
-
+      />
       {/* Message Talent Modal */}
       <MessageTalentModal
         talent = {profile,}
         isOpen = {isMessageModalOpen,}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -879,6 +964,14 @@ return (<> <SEO title= {
 ;
 <<<<<<< HEAD
 
+=======
+        onClose = {() => setIsMessageModalOpen(false),}      />
+    </div>
+    </>
+  )
+}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       
       {/* Request to Hire Modal */}
       <HireRequestModal;
@@ -893,11 +986,11 @@ return (<> <SEO title= {
         isOpen={isMessageModalOpen}
         onClose={() => setIsMessageModalOpen(false)}
       />;
-
     </div>;
     </>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -917,3 +1010,9 @@ return (<> <SEO title= {
     </>);
 }
 ;
+=======
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

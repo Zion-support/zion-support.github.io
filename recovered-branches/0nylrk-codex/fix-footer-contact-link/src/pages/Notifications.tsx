@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -38,6 +39,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -52,6 +55,7 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {SEO} from "@/components/SEO";
 import {useNavigate} from "react-router-dom";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -137,6 +141,34 @@ const getNotificationTypeBadge = (type: NotificationType) =>: any {
 }
 ;
 
+=======
+const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {;
+  switch (type) {;
+    case 'message':;
+      return <MessageCircle className={cn(className, "text-blue-500")} />;
+    case 'quote_request':;
+      return <Briefcase className={cn(className, "text-purple-500")} />;
+    case 'booking_confirmation':;
+      return <CheckCircle className={cn(className, "text-green-500")} />;
+    case 'hire_request':;
+      return <UserCheck className={cn(className, "text-zion-purple")} />;
+    case 'onboarding':;
+      return <Settings className={cn(className, "text-zion-cyan")} />;
+    case 'system':;
+      return <AlertCircle className={cn(className, "text-yellow-500")} />;
+    default:;
+      return <Bell className={cn(className, "text-gray-500")} />;
+  }
+      return <Badge className="bg-blue-500">Message</Badge>;
+    case 'quote_request':;
+      return <Badge className="bg-purple-500">Quote Request</Badge>;
+    case 'booking_confirmation':;
+      return <Badge className="bg-green-500">Booking</Badge>;
+    case 'hire_request':;
+      return <Badge className="bg-zion-purple">Hire Request</Badge>;
+    case 'onboarding':;
+      return <Badge className="bg-zion-cyan">Onboarding</Badge>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const NotificationCard: React.FC<{
   notification: {
     id: string
@@ -146,6 +178,7 @@ const NotificationCard: React.FC<{
     read: boolean
     created_at: string
     action_url?: string;
+<<<<<<< HEAD
     action_text?: string
   }
   onMarkAsRead: (id: string) => Promise<void>
@@ -249,6 +282,8 @@ const NotificationCard: React.FC<{;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <divclassName={cn(
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors"
@@ -270,13 +305,6 @@ const NotificationCard: React.FC<{;
                 {!notification && notification.read && (;
                   <Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">New</Badge>;
                 )}
-
-              </div>;
-            </div>;
-
-            <div className="flex items-center gap-2">;
-              {!notification && notification.read && (;
-
                 <Button
                   variant="ghost"
                   size="sm"
@@ -291,19 +319,6 @@ const NotificationCard: React.FC<{;
                 variant="ghost"
                 size="sm"
                 className="h-8 w-8 p-0"
-
-                onClick={() => onDismiss(notification && notification.id)}
-              >;
-                <Trash2 className="h-4 w-4 text-red-400" />;
-                <span className="sr-only">Dismiss</span>;
-              </Button>;
-            </div>;
-          </div>;
-
-          <p className="text-zion-slate-light mb-3">{notification && notification.message}</p>;
-
-          {notification && notification.action_url && notification && notification.action_text && (;
-
             <Button
               variant="outline"
               size="sm"
@@ -313,6 +328,7 @@ const NotificationCard: React.FC<{;
               <ChevronRight className="ml-1 h-4 w-4" />;
             </Button>;
           )}
+<<<<<<< HEAD
         </div>
       </div>
     </div>
@@ -323,6 +339,8 @@ const NotificationCard: React.FC<{;
 export default function NotificationsPage() {
   const {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     filteredNotifications;
     unreadCount;
 =======
@@ -420,6 +438,7 @@ function NotificationsPage() {
     dismiss_notification;
     loading;
     filter;
+<<<<<<< HEAD
   const {
     filteredNotifications,
     unreadCount,
@@ -455,6 +474,8 @@ function NotificationsPage() {
 
           {unreadCount > 0 && (;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <Button
               variant="outline"
               onClick={() => markAllAsRead()}
@@ -463,31 +484,6 @@ function NotificationsPage() {
               Mark all as read;
             </Button>;
           )}
-
-        </div>;
-
-        <div className="mb-8">;
-          <Tabs defaultValue={filter} onValueChange={(value) => setFilter(value as any)}>;
-            <TabsList className="grid w-full max-w-md grid-cols-5">;
-              <TabsTrigger value="all">All</TabsTrigger>;
-              <TabsTrigger value="unread">Unread</TabsTrigger>;
-              <TabsTrigger value="onboarding">Onboarding</TabsTrigger>;
-              <TabsTrigger value="messages">Messages</TabsTrigger>;
-              <TabsTrigger value="system">System</TabsTrigger>;
-            </TabsList>;
-            <TabsContent value={filter} className="mt-6">;
-              {loading ? (;
-                <div className="space-y-4">;
-                  <Skeleton className="h-24 w-full rounded-lg" />;
-                  <Skeleton className="h-24 w-full rounded-lg" />;
-                  <Skeleton className="h-24 w-full rounded-lg" />;
-                </div>;
-              ) : filteredNotifications && filteredNotifications.length === 0 ? (;
-                <div className="text-center py-12 bg-muted rounded-lg">;
-                  <Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30" />;
-                  <h3 className="text-xl font-medium">No notifications found</h3>;
-                  <p className="text-muted-foreground mt-1">;
-
                     {filter === 'all' ? "You don't have any notifications yet" : `You don't have any ${filter} notifications`}
                   </p>;
                 </div>;
@@ -503,6 +499,7 @@ function NotificationsPage() {
                   ))}
                 </div>;
               )}
+<<<<<<< HEAD
             </TabsContent>
           </Tabs>
         </div>
@@ -511,14 +508,20 @@ function NotificationsPage() {
     </>
   )
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </TabsContent>;
           </Tabs>;
         </div>;
       </main>;
       <Footer />;
-
+=======
     </>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

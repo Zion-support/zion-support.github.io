@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -50,6 +51,8 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useState} from 'react';
 import {use_form} from 'react - hook - form';
 import {Button} from '@/components / ui / button';
@@ -62,6 +65,7 @@ import {zod_resolver} from '@hookform / resolvers / zod';
 import {format} from 'date - fns';
 import {CertificationsList} from './CertificationsList';
 import {CertificationFormFields} from './CertificationFormFields';
+<<<<<<< HEAD
 
 
 
@@ -71,10 +75,13 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
 
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
   // Helper function to format dates as strings for form inputs
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '';
@@ -294,58 +301,25 @@ function CertificationsForm() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      } else {
+        success = await add_certification (resume_id, cert_data);
+      }
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
-
-    <div className="space-y-6">;
-      <div>;
-        <h2 className="text-xl font-semibold mb-2">Certifications & Licenses</h2>;
-        <p className="text-muted-foreground">;
-          Add any professional certifications, licenses, or credentials you have earned.;
-        </p>;
-      </div>;
-
-      {certifications && certifications.length > 0 && (;
-        <CertificationsList
-          certifications={certifications} 
-          onEdit={handleEdit} 
-          onDelete={handleDelete} 
-        />;
-      )}
-
-      <div className="bg-muted/40 p-6 rounded-lg">;
-        <h3 className="text-md font-medium mb-4">;
-          {editingId ? 'Update Certification' : 'Add Certification'}
-        </h3>;
-
-        <Form {...form}>;
-          <form onSubmit={form && form.handleSubmit(handleAddOrUpdate)} className="space-y-4">;
-            <CertificationFormFields form={form} />;
-
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
-            <div className="flex justify-between pt-2">;
-
               <Button
                 type="button"
                 variant="outline"
                 onClick={() => {;
                   if (editingId) {;
                     setEditingId(null);
-
-                    form && form.reset({;
-                      name: '',;
-                      issuing_organization: '',;
-                      issue_date: '',;
-                      expiration_date: '',;
-                      credential_id: '',;
-                      credential_url: ''});
-                  } else {;
-                    onBack();
-
                   }
                 }}
               >;
                 {editingId ? 'Cancel' : 'Back'}
+<<<<<<< HEAD
 
               </Button>;
 
@@ -380,3 +354,16 @@ function CertificationsForm() {
     }
   }
 ;
+=======
+                  Next;
+                </Button>;
+              </div>;
+            </div>;
+          </form>;
+        </Form>;
+      </div>;
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -105,11 +106,18 @@ export function securityHeaders(req, res, next) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+  return response;// Security headers middleware
+export function securityHeaders(req, res, next) {
+  Object.entries({
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
   }).forEach(([key, value]) => {
-    res && res.setHeader(key, value);
+    res.setHeader(key, value);
   });
   next();
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 origin/main
@@ -180,3 +188,8 @@ function security_headers() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

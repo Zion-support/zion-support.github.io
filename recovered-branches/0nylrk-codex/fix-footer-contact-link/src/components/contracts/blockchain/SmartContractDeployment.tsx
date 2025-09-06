@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from "react";
@@ -64,6 +65,8 @@ export function SmartContractDeployment({
   });
   }),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const handleDeployContract = async () => {
     // Check condition
 if ( {) {
@@ -77,6 +80,7 @@ if ( {) {
     } catch (error) {
       console.error ("Deployment error:", error);
     }
+<<<<<<< HEAD
   }
   const handleDownloadSolidity = () => {
     // Create a blob from the Solidity code
@@ -234,20 +238,16 @@ export function SmartContractDeployment(): any ({ ;
     document.body.remove_child (a);
 ;
     toast.success ("Solidity contract downloaded");
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
-;
-  return (
-    <Card className="w - full">;
-      <CardHeader>;
-        <CardTitle className="flex items - center gap - 2">;
-          <ShieldCheck className="h - 5 w - 5 text - primary" />;
-
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
           Deploy your agreement as a smart contract for enhanced security and automation;
         </CardDescription>;
       </CardHeader>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <CardContent className="space-y-6">;
         <div className="space-y-4">;
@@ -342,11 +342,27 @@ export function SmartContractDeployment(): any ({ ;
                 />
               </div>
               <div className="flex items-center space-x-2">
+=======
+            <Switch
+              id="deploy-blockchain"
+              checked={deploymentOptions && deploymentOptions.deployToChain}
+              onCheckedChange={(checked) => setDeploymentOptions({;
+                ...deploymentOptions;
+                deployToChain: checked;
+              })}
+                    ...deploymentOptions;
+                    network: value as BlockchainNetwork;
+                  })}
+                    ...deploymentOptions;
+                    walletAddress: e && e.target.value;
+                  })}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <Switch
                   id="use-escrow"
                   checked={deploymentOptions && deploymentOptions.useEscrow}
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;
+<<<<<<< HEAD
 
                     useEscrow: checked
                 <Switch 
@@ -366,12 +382,15 @@ export function SmartContractDeployment(): any ({ ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   })}
                 />;
                 <Label htmlFor="use-escrow">Use escrow for payments</Label>;
               </div>;
             </>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="rounded-md bg-muted p-4">
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>
@@ -480,17 +499,12 @@ export function SmartContractDeployment(): any ({ ;
             <div className="max - h-52 overflow - y-auto bg - background p - 3 rounded text - xs font - mono">;
               <pre>{solidity_code.slice (0, 500)}...</pre>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </div>;
           </div>;
         </div>;
       </CardContent>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
       <CardFooter className="flex justify - between">;
         <Button variant="outline" on_click={handleDownloadSolidity}>;

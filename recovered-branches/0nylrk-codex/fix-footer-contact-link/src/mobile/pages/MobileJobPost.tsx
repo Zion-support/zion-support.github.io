@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -251,6 +252,8 @@ export function MobileJobPost() {;
   const renderStepContent = () => {;
     switch (currentStep) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       case "details": return <DetailsStep />;
       case "requirements":;
         return <RequirementsStep />;
@@ -261,122 +264,23 @@ export function MobileJobPost() {;
       default:;
         return <DetailsStep />;
     }
-
-  };
-
-
-=======
-
-  },
-  
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-screen flex flex-col">;
       <MobileHeader
         title={`Post a Job (${currentStep === "preview" ? 4 : currentStep === "budget" ? 3 : currentStep === "requirements" ? 2 : 1}/4)`}
         showBack
-
-      />;
-
-      <main className="flex-1 py-4 pb-24 px-4">;
-        <div className="mb-6 flex justify-between">;
-          <div className="flex space-x-1">;
-            <Badge variant={currentStep === "details" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1</Badge>;
-            <Badge variant={currentStep === "requirements" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2</Badge>;
-            <Badge variant={currentStep === "budget" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3</Badge>;
-            <Badge variant={currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>;
-          </div>;
-
-          <Button variant="outline" className="flex gap-1">;
-            <Zap className="h-4 w-4" /> AI Assist;
-          </Button>;
-        </div>;
-
-        {renderStepContent()}
-
-        <div className="flex gap-2 mt-6">;
-          {currentStep !== "details" && (;
-            <Button
-              variant="outline" 
-              className="flex-1 gap-1" 
-              onClick={goToPrevStep}>;
-              <ChevronLeft className="h-4 w-4" /> Back;
-            </Button>;
-          )}
-
-
           <Button
             className="flex-1 gap-1"
             onClick={goToNextStep}>;
             {currentStep === "preview" ? "Publish Job" : "Continue"}
             {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
-
-          </Button>;
-        </div>;
-      </main>;
-
-      <BottomNavigation />;
-    </div>;
-  );
-}
-
-function DetailsStep() {;
-  return (
-    <div className="space-y-4">;
-      <h2 className="text-lg font-medium">Job Details</h2>;
-
-      <div className="space-y-2">;
-        <Label htmlFor="title">Job Title</Label>;
-        <Input id="title" placeholder="e && e.g. Senior React Developer" />;
-      </div>;
-
-      <div className="space-y-2">;
-        <Label htmlFor="company">Company Name</Label>;
-        <Input id="company" placeholder="Your company name" />;
-      </div>;
-
-      <div className="space-y-2">;
-        <Label htmlFor="location">Location</Label>;
-        <Select defaultValue="remote">;
-          <SelectTrigger>;
-            <SelectValue placeholder="Select location type" />;
-          </SelectTrigger>;
-          <SelectContent>;
-            <SelectItem value="remote">Remote</SelectItem>;
-            <SelectItem value="onsite">On-site</SelectItem>;
-            <SelectItem value="hybrid">Hybrid</SelectItem>;
-          </SelectContent>;
-        </Select>;
-      </div>;
-
-      <div className="space-y-2">;
-        <Label htmlFor="jobType">Job Type</Label>;
-        <Select>;
-          <SelectTrigger>;
-            <SelectValue placeholder="Select job type" />;
-          </SelectTrigger>;
-          <SelectContent>;
-            <SelectItem value="fulltime">Full-time</SelectItem>;
-            <SelectItem value="parttime">Part-time</SelectItem>;
-            <SelectItem value="contract">Contract</SelectItem>;
-            <SelectItem value="freelance">Freelance</SelectItem>;
-          </SelectContent>;
-        </Select>;
-      </div>;
-
-      <div className="space-y-2">;
-        <Label htmlFor="description">Job Description</Label>;
-        <Textarea
-          id="description" 
-          placeholder="Describe the job role and responsibilities" 
-
           rows={5}
         />;
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -647,6 +551,15 @@ function RequirementsStep() {;
             <Badge
               key={skill} 
 
+=======
+function RequirementsStep() {
+  const [skills, set_skills] = useState < string[]>([;
+    "React", "TypeScript", "Node.js";
+  ]);
+      setSkills([...skills, newSkill]);
+      setNewSkill("");
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1">;
               {skill}
@@ -656,6 +569,7 @@ function RequirementsStep() {;
 =======
               <button
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
+<<<<<<< HEAD
 =======
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1"
@@ -667,12 +581,15 @@ function RequirementsStep() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 onClick={() => removeSkill(skill)}
               >;
                 ×;
               </button>;
             </Badge>;
           ))}
+<<<<<<< HEAD
 
         </div>;
         <div className="flex gap-2">;
@@ -712,6 +629,8 @@ function RequirementsStep() {;
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           rows={4}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -726,6 +645,7 @@ function RequirementsStep() {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -802,12 +722,49 @@ function BudgetStep() {
         <Textarea 
           id="additionalInfo" 
           placeholder="Any additional information about budget or payment" 
+=======
+}
+        <Select>;
+          <SelectTrigger>;
+            <SelectValue placeholder="Select payment type" />;
+          </SelectTrigger>;
+          <SelectContent>;
+            <SelectItem value="hourly">Hourly Rate</SelectItem>;
+            <SelectItem value="fixed">Fixed Price</SelectItem>;
+            <SelectItem value="salary">Salary</SelectItem>;
+          </SelectContent>;
+        </Select>;
+      </div>;
+              <SelectValue placeholder="Currency" />;
+            </SelectTrigger>;
+            <SelectContent>;
+              <SelectItem value="usd">USD</SelectItem>;
+              <SelectItem value="eur">EUR</SelectItem>;
+              <SelectItem value="gbp">GBP</SelectItem>;
+            </SelectContent>;
+          </Select>;
+        </div>;
+      </div>;
+        <Select>;
+          <SelectTrigger>;
+            <SelectValue placeholder="Select project duration" />;
+          </SelectTrigger>;
+          <SelectContent>;
+            <SelectItem value="ltw">Less than a week</SelectItem>;
+            <SelectItem value="ltm">Less than a month</SelectItem>;
+            <SelectItem value="6m+">6+ months</SelectItem>;
+            <SelectItem value="ongoing">Ongoing</SelectItem>;
+          </SelectContent>;
+        </Select>;
+      </div>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           rows={3}
         />
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 
 function PreviewStep() {
   return (
@@ -849,6 +806,8 @@ function PreviewStep() {
 ;
 ;
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 /**
  * PreviewStep - Function description
  */
@@ -887,9 +846,12 @@ function PreviewStep() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

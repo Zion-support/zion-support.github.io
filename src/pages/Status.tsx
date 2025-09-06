@@ -1,3 +1,11 @@
+import { SEO } from "@/components/SEO",
+import { useState, useEffect } from "react",
+import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+import Link from "next/link",
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ServiceStatus {
 
   name: string
@@ -5,6 +13,7 @@ interface ServiceStatus {
   description: string
   lastChecked: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -104,6 +113,8 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
 }
 
 ;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
     name: "Marketplace API",
@@ -237,9 +248,37 @@ export default function Status() {;
       case 'maintenance':;
         return <Clock className="h-5 w-5 text-blue-500" />,;
       default:;
-        return <AlertCircle className="h-5 w-5 text-gray-500" />}
-import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
-}
+        return <AlertCircle className="h-5 w-5 text-gray-500" />;
+    }
+  },;
+  const getStatusText = (status: ServiceStatus['status']) => {;
+    switch (status) {;
+      case 'operational':;
+        return 'Operational',;
+      case 'degraded':;
+        return 'Degraded Performance',;
+      case 'outage':;
+        return 'Service Outage',;
+      case 'maintenance':;
+        return 'Scheduled Maintenance',;
+      default:;
+        return 'Unknown';
+    }
+  },;
+  const getStatusColor = (status: ServiceStatus['status']) => {;
+    switch (status) {;
+      case 'operational':;
+        return 'text-green-500',;
+      case 'degraded':;
+        return 'text-yellow-500',;
+      case 'outage':;
+        return 'text-red-500',;
+      case 'maintenance':;
+        return 'text-blue-500',;
+      default:;
+        return 'text-gray-500';
+    }
+  },
 
   const formatUptime = (seconds: number) => {
     const days = Math.floor(seconds / 86400),
@@ -397,27 +436,75 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
       </main>
     </>
   )
-}
-
-import { log_warn } from '@/utils / production_logger';
-interface ServiceStatus {
-  name: string,
-  status: 'operational' | 'degraded' | 'outage' | 'maintenance',
-  description: string,
-  last_checked: string;
-}
-        return <CheckCircle className="h - 5 w - 5 text - green - 500" />;
-        return <Clock className="h - 5 w - 5 text - blue - 500" />;
-      default:;
-        return <AlertCircle className="h - 5 w - 5 text - gray - 500" />}
-import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components / SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default /**
- * Status - Function description
- */
-function Status() { const [last_updated, setLastUpdated] = useState (new Date ()); const [is_refreshing, setIsRefreshing] = useState (false);
-}
+                  </CardContent>;
+                </Card>;
+              </div>;
+              <div className="text-center">;
+                <p className="text-zion-slate-light mb-4">;
+                  For detailed incident history and real-time updates:;
+                </p>;
+                <Button;
+                  variant="outline";
+                  asChild;
+                  className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10";
+                >;
+                  <a;
+                    href={statusUrl} ;
+                    target="_blank";
+                    rel="noopener noreferrer";
+                    className="flex items-center gap-2";
+                  >;
+                    <ExternalLink className="h-4 w-4" />;
+                    Visit Full Status Page;
+                  </a>;
+                </Button>;
+              </div>;
+            </>;
+          )}
+;
+          <div className="mt-12 text-center">;
+            <Card className="bg-zion-blue-dark border-zion-blue-light">;
+              <CardHeader>;
+                <CardTitle className="text-white">Need Help?</CardTitle>;
+              </CardHeader>;
+              <CardContent className="space-y-4">;
+                <p className="text-zion-slate-light">;
+                  If you're experiencing issues not reflected here, please contact our support team.;
+                </p>;
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                  <Button;
+                    variant="outline";
+                    asChild;
+                    className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10";
+                  >;
+                    <Link href="/contact">Contact Support</Link>;
+                  </Button>;
+                  <Button;
+                    variant="outline";
+                    asChild;
+                    className="text-zion-purple border-zion-purple hover:bg-zion-purple/10";
+                  >;
+                    <a href="https://twitter.com/ZionTechGroup" target="_blank" rel="noopener noreferrer">;
+                      @ZionTechGroup;
+                    </a>;
+                  </Button>;
+                </div>;
+              </CardContent>;
+            </Card>;
+          </div>;
+        </div>;
+      </main>;
+    </>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 ;
+=======
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

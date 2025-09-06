@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -24,18 +25,17 @@ import path from 'path';
 import fs from 'fs';
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   title: string;
   html?: string;
   code?: { language?: string; content: string }[];
-
-}
-;
-
 type DocsContent = {
   title: string;
   sections: Section[];
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 type PageProps = {
   docs: DocsContent;
@@ -90,6 +90,8 @@ export default function ApiDocsPage(): any ({ docs }: PageProps) {;
         <section key={section && section.id} id={section && section.id} className='scroll-mt-24'>;
           <h2 className='text-2xl font-semibold'>{section && section.title}</h2>          {section && section.html && (;
             <div dangerouslySetInnerHTML={{ __html: section && section.html }} />;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           )}
           {section && section.code && section && section.code.length > 0 && (  return (
     <DocsLayout title={docs && docs.title} nav={docs && docs.sections.map((s) => ({ id: s && s.id, title: s && s.title }))}>;
@@ -106,6 +108,7 @@ export default function ApiDocsPage(): any ({ docs }: PageProps) {;
                 </CodeBlock>              ))}            <div className="space-y-4 mt-4">;
               {section && section.code.map((c, idx) => (;
                 <CodeBlock key={idx} language={c && c.language}>{c && c.content}</CodeBlock>;
+<<<<<<< HEAD
 
 =======
 export type Section = {
@@ -175,11 +178,14 @@ export default function ApiDocsPage({ docs }: PageProps) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               ))}
             </div>;
           )}
         </section>;
       ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </DocsLayout>
 );
@@ -210,6 +216,8 @@ export default function ApiDocsPage({ docs }: PageProps) {
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
 type PageProps = {
   docs: DocsContent;
@@ -249,6 +257,7 @@ function ApiDocsPage() {
             </div>)}
         </section>))}
     </DocsLayout>);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
             <div className='space-y-4 mt-4'>
@@ -289,3 +298,5 @@ function ApiDocsPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

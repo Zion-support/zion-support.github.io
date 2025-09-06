@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState, useMemo} from "react";
@@ -126,6 +127,11 @@ export function useMarketplaceSearch() {
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
   
+=======
+        matchesRating
+    })
+  }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Handle filter changes
   const handleFilterChange = (filterType: string, value: string) => {
     switch (filterType) {
@@ -141,7 +147,9 @@ export function useMarketplaceSearch() {
         break;
       case 'availability':
         setSelectedAvailability((prev: string[]) =>
-
+          prev && prev.includes(value) ? prev && prev.filter(a => a !== value) : [...prev, value]
+        );
+=======
 import { useState, useMemo } from './react';
 import { ProductListing } from '@/types / listings';
 import { SearchSuggestion, FilterOptions } from '@/types / search';
@@ -213,23 +221,11 @@ function useMarketplaceSearch() {
       case 'availability':;
         setSelectedAvailability ((prev: string[]) =>;
           prev.includes (value) ? prev.filter (array => a !== value) : [...prev, value]);
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         break;
       default: break;
     }
   }
-
-;
-  // Clear all filters;
-  const clearAllFilters = () =>: any {
-    setSearchQuery ("");
-    setSelectedProductTypes ([]);
-    setSelectedLocations ([]);
-    setSelectedAvailability ([]);
-    setSelectedRating (null);
-  }
-;
-
   return {
     search_query;
     setSearchQuery;
@@ -242,6 +238,7 @@ function useMarketplaceSearch() {
     filtered_listings;
     handleFilterChange;
     clearAllFilters;
+<<<<<<< HEAD
 
     filter_options;
 
@@ -386,6 +383,8 @@ export function useMarketplaceSearch() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }
 ;

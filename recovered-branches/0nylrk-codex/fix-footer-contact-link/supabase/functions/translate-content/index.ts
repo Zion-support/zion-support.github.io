@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 const corsHeaders = {
@@ -15,6 +16,11 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -22,23 +28,30 @@ serve(async (req) => {
   }
   try {
     // Extract request data
+<<<<<<< HEAD
     const { content, sourceLanguage = "en", targetLanguages = ["es", "pt", "ar"], contentType } = await req.json();
     if (!content |content.trim() === "") {
     const { content, sourceLanguage = "en", targetLanguages = ["es", "pt", "ar"], contentType } = await req.json(),
 
     if (!content || content.trim() === "") {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       throw new Error("Content is required")
     }
     if (!OPENAI_API_KEY) {
       throw new Error("OpenAI API key is not configured")
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Prepare system prompt based on content type
     let systemPrompt = "You are a professional translator. Translate the content accurately while maintaining the original meaning, tone, and format.";
     if (contentType === "job") {
       systemPrompt = "You are a professional translator specializing in job descriptions. Translate the content accurately while maintaining the professional tone and technical terminology."
     } else if (contentType === "profile") {
       systemPrompt = "You are a professional translator specializing in professional profiles. Translate the content accurately while maintaining the professional tone and highlighting skills appropriately."
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
     // Create translations for each target language
@@ -94,11 +107,22 @@ serve(async (req) => {
           "Content-Type": "application/json"};
         body: JSON && JSON.stringify({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    }
+    // Create translations for each target language
+    const translations = {}
+    for (const targetLang of targetLanguages) {
+      if (targetLang === sourceLanguage) {
+        translations[targetLang] = content;
+        continue
+      }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           model: "gpt-4o-mini";
           messages: [
             {
               role: "system"
               content: systemPrompt}
+<<<<<<< HEAD
             {
               role: "user"
               content: `Translate the following ${contentType |"content"} from ${sourceLanguage} to ${targetLang}:
@@ -112,6 +136,78 @@ serve(async (req) => {
       const data = await response.json();
       translations[targetLang] = data.choices[0].message.content.trim()
     }
+=======
+            {
+              role: "user"
+              content: `Translate the following ${contentType |"content"} from ${sourceLanguage} to ${targetLang}:
+=======
+import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
+const OPENAI_API_KEY = Deno.env.get ("OPENAI_API_KEY");
+;
+const cors_headers = {
+  "Access - Control - Allow - Origin": "*",
+  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
+;
+serve (async (req) => {
+  // Handle CORS preflight requests;
+  // Check condition
+if ( {) {
+  $2
+}
+    return new Response (null, { headers: cors_headers });
+  }
+  try {
+    // Extract request data;
+    const { content, source_language = "en", target_languages = ["es", "pt", "ar"], content_type } = await req.json ();
+;
+    // Check condition
+if (=== "") {) {
+  $2
+}
+      throw new Error ("Content is required");
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error ("OpenAI API key is not configured");
+    }
+    // Prepare system prompt based on content type;
+    let system_prompt = "You are a professional translator. Translate the content accurately while maintaining the original meaning, tone, and format.";
+    // Check condition
+if ( {) {
+  $2
+}
+      system_prompt = "You are a professional translator specializing in job descriptions. Translate the content accurately while maintaining the professional tone and technical terminology.";
+    } else // Check condition
+if ( {) {
+  $2
+}
+      system_prompt = "You are a professional translator specializing in professional profiles. Translate the content accurately while maintaining the professional tone and highlighting skills appropriately.";
+    }
+    // Create translations for each target language;
+    const translations = {}
+;
+    for (const target_lang of target_languages) {
+      // Check condition
+if ( {) {
+  $2
+}
+        translations[target_lang] = content;
+        continue;
+      }
+      const response = await fetch ("https://api.openai.com / v1 / chat / completions", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${OPENAI_API_KEY}`;
+          "Content - Type": "application / json"}
+        body: JSON.stringify ({
+          model: "gpt - 4o - mini";
+          messages: [;
+            {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               role: "system",
               content: system_prompt}
             {
@@ -119,6 +215,7 @@ serve(async (req) => {
               content: `Translate the following ${content_type || "content"} from ${source_language} to ${target_lang}:;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               ${content}
+<<<<<<< HEAD
 <<<<<<< HEAD
               
               Only provide the translated text, no explanations or additional comments.`}];
@@ -144,6 +241,9 @@ serve(async (req) => {
       translations[targetLang] = data.choices[0].message.content.trim();
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+              Only provide the translated text, no explanations or additional comments.`}];
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
 
     return new Response(
@@ -162,6 +262,7 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 });
 
@@ -169,6 +270,10 @@ serve(async (req) => {
 
 
 
+=======
+  }
+});
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -199,6 +304,7 @@ if ( {) {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -206,5 +312,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 });

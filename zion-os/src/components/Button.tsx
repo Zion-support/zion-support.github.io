@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { forwardRef } from 'react';
 import Link from 'next/link';
@@ -208,10 +209,13 @@ if ( {) {
   ),;
   if (href) {;
     return (;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <Link href={href} className={classes}>;
         {content}
       </Link>);
   }
+<<<<<<< HEAD
 ;
   return (;
 =======
@@ -223,10 +227,13 @@ if ( {) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <button;
       ref={ref}
       type={type}
       className={classes}
+<<<<<<< HEAD
 
       on_click={on_click}
       disabled={disabled || loading}
@@ -297,6 +304,8 @@ export function FloatingActionButton({;
   ...props;
 }: ButtonProps & { icon: React.ReactNode }) {;
   return (;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <Button;
       {...props}
       icon={icon}

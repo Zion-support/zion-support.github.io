@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Certification  } from '@/types/resume';
@@ -106,6 +107,11 @@ export function CertificationsSection(): any ({ certifications }: Certifications
                   {cert && cert.expiration_date && ` - ${formatDate(cert && cert.expiration_date)}`}
                 </span>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+interface CertificationsSectionProps {
+  certifications: Certification[];
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               )}
             </div>;
             <p className="text-sm">{cert && cert.issuing_organization}</p>;
@@ -118,12 +124,6 @@ export function CertificationsSection(): any ({ certifications }: Certifications
             )}
           </div>;
         ))}
-
-      </div>;
-    </div>;
-  );
-}
-
 =======
 export /**
  * CertificationsSection - Function description

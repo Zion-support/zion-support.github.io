@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { ReactNode } from 'react';
@@ -15,18 +16,12 @@ import {ReactNode} from 'react';
 // Extend FeatureCardProps to include key for mapping;
 declare module '@/components / FeatureCard' {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   export interface FeatureCardProps {
     title: string;
     description: string;
     icon: ReactNode;
-
-    class_name?: string,
-    key?: number | string;
-  }
-}
-// Extend ListingScoreCardProps to include key for mapping;
-declare module '@/components / ListingScoreCard' {
-
   export interface ListingScoreCardProps {
     title: string;
     description: string;
@@ -37,6 +32,7 @@ declare module '@/components / ListingScoreCard' {
     author_image?: string;
     ai_score?: number;
     rating?: number;
+<<<<<<< HEAD
 
     key?: string | number
 
@@ -113,5 +109,7 @@ declare module '@/components / ProductListingCard' {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }

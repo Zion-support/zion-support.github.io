@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -62,14 +63,25 @@ import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react',
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
 import { useRouter } from 'next/router',
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
+import type { AppDispatch } from '@/store'
+import { addItem } from '@/store/cartSlice'
+import { toast } from '@/hooks/use-toast';
+import { useCurrency } from '@/hooks/useCurrency';
+import Image from 'next/image'; // Import next/image
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { RatingStars } from "@/components/RatingStars",
 import { FavoriteButton } from "@/components/FavoriteButton",
 import { useDispatch } from 'react-redux',
@@ -87,6 +99,7 @@ interface ProductListingCardProps {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -98,11 +111,15 @@ interface ProductListingCardProps {
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 const ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
+<<<<<<< HEAD
 <<<<<<< HEAD
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
@@ -116,10 +133,13 @@ const ProductListingCardComponent = ({
   ),
   const [imageError, setImageError] = useState(false),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const stockStatus =
     listing.stock === undefined
       ? 'In stock'
       : listing.stock <= 0
+<<<<<<< HEAD
   detailBasePath = '/marketplace/listing',
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid'
@@ -134,23 +154,31 @@ const ProductListingCardComponent = ({
     listing.stock === undefined
       ? 'In stock'
       : listing.stock <= 0
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         ? 'Out of stock'
         : listing.stock <= 5
           ? 'Low stock'
           : 'In stock'
+<<<<<<< HEAD
       ? 'Out of stock'
       : listing.stock <= 5
       ? 'Low stock'
       : 'In stock',
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const stockVariant =
     listing.stock === undefined
       ? 'success'
       : listing.stock <= 0
+<<<<<<< HEAD
   const stockVariant = null;
     listing.stock === undefined
       ? 'success'
       : listing.stock <= 0
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         ? 'destructive'
         : listing.stock <= 5
           ? 'warning'
@@ -165,6 +193,7 @@ const ProductListingCardComponent = ({
       // Prevent infinite loops if placeholder also fails
       setImageSrc('/placeholder.svg')
       setImageError(true)
+<<<<<<< HEAD
 =======
 
   const handleViewListing = () =>: any {
@@ -179,59 +208,68 @@ if ( {) {
       log_debug ('[ProductCard] Listing ID:', { id: listing.id });
       log_debug ('[ProductCard] Listing Title:', { title: listing.title });
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
-    // Validate listing ID exists before navigation;
-    // Check condition
-if ( {) {
-  $2
-}
-      logErrorToProduction (
-        '[ProductCard] Missing listing ID, cannot navigate',
-        new Error ('Missing listing ID'),
+  }
+  const handleViewListing = () => {
+    // Debug logging for development
+    if (process.env.NODE_ENV === 'development') {
+      logDebug('[ProductCard] Navigating to:', {
+        path: `${detailBasePath}/${listing.id}`
+      })
+      logDebug('[ProductCard] Listing ID:', { id: listing.id })
+      logDebug('[ProductCard] Listing Title:', { title: listing.title })
+    }
+    // Validate listing ID exists before navigation
+    if (!listing.id) {
+      logErrorToProduction(
+        '[ProductCard] Missing listing ID, cannot navigate'
+        new Error('Missing listing ID')
         { component: 'ProductListingCard' }
-      );
-      toast ({
-        title: 'Navigation Error',
-        description: 'Product information is incomplete',
-        variant: 'destructive',
-      });
+      )
+      toast({
+        title: 'Navigation Error'
+        description: 'Product information is incomplete'
+        variant: 'destructive'
+      })
       return;
     }
-    router.push (`${detailBasePath}/${listing.id}`);
+    router.push(`${detailBasePath}/${listing.id}`)
   }
-  const dispatch = use_dispatch < AppDispatch>();
-  const addToCart = () =>: any {
-    set_loading (true);
-    dispatch (
-      add_item ({
-        id: listing.id,
-        title: listing.title,
-        price: listing.price ?? 0,
-      }));
-    toast.success (`1× ${listing.title} added`, {
+  const dispatch = useDispatch<AppDispatch>()
+  const addToCart = () => {
+    setLoading(true)
+    dispatch(
+      addItem({
+        id: listing.id
+        title: listing.title
+        price: listing.price ?? 0
+      })
+    )
+    toast.success(`1× ${listing.title} added`, {
       action: {
-        label: 'View Cart',
-        on_click: () => router.push ('/cart'),
-      },
-    });
-    set_loading (false);
-
+        label: 'View Cart'
+        onClick: () => router.push('/cart')
+      }
+    })
+    setLoading(false)
   }
-  const handleRequestQuote = (e: React.MouseEvent) =>: any {
-    e.prevent_default ();
-    e.stop_propagation ();
-    // Check condition
-if ( {) {
-  $2
-}
-      onRequestQuote (listing.id);
+  const handleRequestQuote = (e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    if (onRequestQuote) {
+      onRequestQuote(listing.id)
     } else {
-      router.push (`/request - quote?listing=${listing.id}`);
+      router.push(`/request-quote?listing=${listing.id}`)
     }
   }
-  const imageContainerClasses = is_grid ? 'h - 48' : 'h - 32 w - 48';
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48'
       onKeyDown={e => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         if (e.key === 'Enter' |e.key === ' ') {
           e.preventDefault()
           handleViewListing()
@@ -240,6 +278,7 @@ if ( {) {
       {/* Image */}
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
+<<<<<<< HEAD
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid',
@@ -272,6 +311,16 @@ if ( {) {
     
   const { formatPrice } = useCurrency(),
 
+=======
+=======
+      ? 'destructive'
+      : listing.stock <= 5
+      ? 'warning'
+      : 'success',
+    
+  const { formatPrice } = useCurrency(),
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const getPrice = () => {
     if (listing.price === null) return "Custom pricing",
     return formatPrice(listing.price)
@@ -300,117 +349,111 @@ interface ProductListingCardProps {;
   listing: ProductListing,;
   view?: 'grid' | 'list',;
   onRequestQuote?: (id: string) => void,;
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   detailBasePath?: string;
+}
+;
 const ProductListingCardComponent = ({;
   listing,;
   view = 'grid',;
   onRequestQuote,;
-  detailBasePath = '/marketplace/listing',;
+  detailBasePath = '/marketplace/listing';
 }: ProductListingCardProps) => {;
-  const isGrid = view === 'grid';
-  const router = useRouter();
-  const [loading, setLoading] = useState(false);  const [imageSrc, setImageSrc] = useState(;
-    listing && listing.images && listing && listing.images.length > 0 && listing && listing.images[0];
-      ? listing && listing.images[0];
-      : '/placeholder && placeholder.svg';
-  );
-  const [imageError, setImageError] = useState(false);
-
+  const isGrid = view === 'grid',;
+  const router = useRouter(),;
+  const [loading, setLoading] = useState(false),;
+  const [imageSrc, setImageSrc] = useState(;
+    listing.images && listing.images.length > 0 && listing.images[0];
+    ? listing.images[0];
+    : '/placeholder.svg';
+  ),;
+  const [imageError, setImageError] = useState(false),;
   const stockStatus =;
-    listing && listing.stock === undefined;
+    listing.stock === undefined;
       ? 'In stock';
-      : listing && listing.stock <= 0;
-        ? 'Out of stock';
-        : listing && listing.stock <= 5;
-          ? 'Low stock';
-          : 'In stock';
-
+      : listing.stock <= 0;
+      ? 'Out of stock';
+      : listing.stock <= 5;
+      ? 'Low stock';
+      : 'In stock',;
   const stockVariant =;
-    listing && listing.stock === undefined;
+    listing.stock === undefined;
       ? 'success';
-      : listing && listing.stock <= 0;
-        ? 'destructive';
-        : listing && listing.stock <= 5;
-          ? 'warning';
-          : 'success';
-
-  const { formatPrice } = useCurrency();
-
+      : listing.stock <= 0;
+      ? 'destructive';
+      : listing.stock <= 5;
+      ? 'warning';
+      : 'success',;
+  const { formatPrice } = useCurrency(),;
   const getPrice = () => {;
-    if (listing && listing.price === null) return 'Custom pricing';
-    return formatPrice(listing && listing.price);
-  };
-
+    if (listing.price === null) return "Custom pricing",;
+    return formatPrice(listing.price);
+  },;
   const handleImageError = () => {;
-    if (!imageError) {;
-      // Prevent infinite loops if placeholder also fails;
-      setImageSrc('/placeholder && placeholder.svg');
+    if (!imageError) { // Prevent infinite loops if placeholder also fails;
+      setImageSrc('/placeholder.svg'),;
       setImageError(true);
     }
-  };
-
+  },;
   const handleViewListing = () => {;
     // Debug logging for development;
-    if (process && process.env.NODE_ENV === 'development') {;
-      logDebug('[ProductCard] Navigating to:', {;
-        path: `${detailBasePath}/${listing && listing.id}`,;
-      });
-      logDebug('[ProductCard] Listing ID:', { id: listing && listing.id });
-      logDebug('[ProductCard] Listing Title:', { title: listing && listing.title });
+    if (process.env.NODE_ENV === 'development') {;
+      logDebug('[ProductCard] Navigating to:', { path: `${detailBasePath}/${listing.id}` }),;
+      logDebug('[ProductCard] Listing ID:', { id: listing.id }),;
+      logDebug('[ProductCard] Listing Title:', { title: listing.title });
     }
-
+    
+    // Validate listing ID exists before navigation
+    if (!listing.id) {
+      logErrorToProduction('[ProductCard] Missing listing ID, cannot navigate', new Error('Missing listing ID'), { component: 'ProductListingCard' }),
+      toast({
+        title: "Navigation Error",
+        description: "Product information is incomplete",
+        variant: "destructive"}),
+      return
+;
     // Validate listing ID exists before navigation;
-    if (!listing && listing.id) {;
-      logErrorToProduction(;
-        '[ProductCard] Missing listing ID, cannot navigate',;
-        new Error('Missing listing ID'),;
-        { component: 'ProductListingCard' }
-      );
+    if (!listing.id) {;
+      logErrorToProduction('[ProductCard] Missing listing ID, cannot navigate', new Error('Missing listing ID'), { component: 'ProductListingCard' }),;
       toast({;
-        title: 'Navigation Error',;
-        description: 'Product information is incomplete',;
-        variant: 'destructive',;
-      });
+        title: "Navigation Error",;
+        description: "Product information is incomplete",;
+        variant: "destructive"}),;
       return;
     }
-
-    router && router.push(`${detailBasePath}/${listing && listing.id}`);
-  };
-
-  const dispatch = useDispatch<AppDispatch>();
-
+;
+    router.push(`${detailBasePath}/${listing.id}`);
+  },;
+  const dispatch = useDispatch<AppDispatch>(),;
   const addToCart = () => {;
-    setLoading(true);
+    setLoading(true),;
     dispatch(;
-      addItem({;
-        id: listing && listing.id,;
-        title: listing && listing.title,;
-        price: listing && listing.price ?? 0,;
-      });
-    );
-    toast && toast.success(`1× ${listing && listing.title} added`, {;
+      addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 });
+    ),;
+    toast.success(`1× ${listing.title} added`, {;
       action: {;
         label: 'View Cart',;
-        onClick: () => router && router.push('/cart'),;
-      },;
-    });
+        onClick: () => router.push('/cart')}}),;
     setLoading(false);
-  };
-
-  const handleRequestQuote = (e: React && React.MouseEvent) => {;
-    e && e.preventDefault();
-    e && e.stopPropagation();
-
+  },;
+  const handleRequestQuote = (e: React.MouseEvent) => {;
+    e.preventDefault(),;
+    e.stopPropagation(),;
     if (onRequestQuote) {;
-      onRequestQuote(listing && listing.id);
+      onRequestQuote(listing.id);
     } else {;
-      router && router.push(`/request-quote?listing=${listing && listing.id}`);
+      router.push(`/request-quote?listing=${listing.id}`);
     }
-  };
+  },
+  
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48',
 
+<<<<<<< HEAD
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
 
 
@@ -451,79 +494,60 @@ const ProductListingCardComponent = ({;
             handleViewListing();
           }  return ();
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <div
-      data-testid= "equipment-link"'`
+      data-testid="equipment-link"
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
       onClick={handleViewListing}
-      tabIndex={0}"
-      onKeyDown={(e) => {;
-        if(e && e.key === 'Enter' || e && e.key === ' ') {;
-          e && e.preventDefault () ;
-
+      tabIndex={0}
+      role="button"
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault(),
+          handleViewListing()
+        }
+      }}
+    >
+      {/* Image */}
+      <div;
+        className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        onClick={handleViewListing} // Keep existing onClick for navigation
+        role="button"
+        tabIndex={-1} // Remove from tab order as parent is focusable
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            handleViewListing()
+          }  return ()
+    <div
+      data-testid= "equipment-link";'`
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+      onClick={handleViewListing}
+      tabIndex={0};"
+      onKeyDown={(e) => {
+        if(e.key === 'Enter' |e.key === ' ') {
+          e.preventDefault ()
           handleViewListing () }
       }}
       {/* Image */}
       <div'
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
-
-        onClick={handleViewListing} // Keep existing onClick for navigation"
+        onClick={handleViewListing} // Keep existing onClick for navigation;"
         tabIndex={-1} // Remove from tab order as parent is focusable
-        onKeyDown={(e) => {;
-          if(e && e.key === 'Enter' || e && e.key === ' ') {;
-            e && e.preventDefault () ;
-
-        // Check condition
-if ( {) {
-  $2
-}
-          e.prevent_default ();
-          handleViewListing ();
-        }      }}
-    >;
-      {/* Image */}
-      <div;
-        class_name = {is_grid ? 'block w - full' : 'block w - 48 flex - shrink - 0', }
-        on_click={handleViewListing} // Keep existing on_click for navigation;
-        role='button';
-        tab_index={-1} // Remove from tab order as parent is focusable;
-        onKeyDown={e => {
-          // Check condition
-if ( {) {
-  $2
-}
-            e.prevent_default ();
-            handleViewListing ();
-          }  return ();
-    <div;
-      data - testid= "equipment - link";'`;
-      className={`bg - card / 70 backdrop - blur - md border border - primary / 10 sm:border - primary / 20 rounded - lg overflow - hidden flex ${is_grid ? 'flex - col' : 'flex - row'} cursor - pointer focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary hover:animate - glowing - border transition - all duration - 300`}
-      on_click={handleViewListing}
-      tab_index={0}";
-      onKeyDown={(e) => {
-        // Check condition
-if ( {) {
-  $2
-}
-          e.prevent_default ();
-          handleViewListing () }
-      }}
-      {/* Image */}
-      <div';
-        class_name = {is_grid ? 'block w - full' : 'block w - 48 flex - shrink - 0'}
-        on_click={handleViewListing} // Keep existing on_click for navigation;";
-        tab_index={-1} // Remove from tab order as parent is focusable;
         onKeyDown={(e) => {
-          // Check condition
-if ( {) {
-  $2
-}
-            e.prevent_default ();
+          if(e.key === 'Enter' |e.key === ' ') {
+            e.preventDefault ()
             handleViewListing () }
         }}
-      >;
-        <div className={`relative ${imageContainerClasses}`}>;
+      >
+        <div className={`relative ${imageContainerClasses}`}>
           {' '}
           {/* Ensure this container has dimensions */}
+<<<<<<< HEAD
 
 
         onKeyDown={(e) => {
@@ -532,6 +556,15 @@ if ( {) {
             e.preventDefault()
             handleViewListing()
 <<<<<<< HEAD
+=======
+          <Image
+            src = {imageSrc,}
+            alt = {listing.title,}
+            fill = {true,}
+            style={{ objectFit: 'cover' }}
+            onError = {handleImageError,}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           }
         }}
       >;
@@ -543,22 +576,24 @@ if ( {) {
             style={{ objectFit: 'cover' }}
             onError={handleImageError}
 =======
+<<<<<<< HEAD
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             priority={false} // Assuming these are not LCP images
-            sizes={
-              isGrid
-                ? '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                : '192px'
-            } // 192px is w-48
-          />;
-          {listing && listing.featured && (;
-            <Badge className='absolute top-2 right-2 bg-primary text-primary-foreground border-none'>;
-              Featured;
-            </Badge>;
+            sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
+          />
+          {listing.featured && (
+            <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
+              Featured
+            </Badge>
           )}
+<<<<<<< HEAD
           {stockStatus && (
             <Badge
               variant={stockVariant as any}
@@ -574,9 +609,15 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               {stockStatus}
-            </Badge>;
+            </Badge>
           )}
+<<<<<<< HEAD
 
           <FavoriteButton itemId={listing && listing.id} />;
 
@@ -598,11 +639,17 @@ if ( {) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               {listing.category}
             </Badge>
             {listing.rating && (
               <RatingStars value={listing.rating} count={listing.reviewCount} />
             )}
+<<<<<<< HEAD
 
           </div>;
 
@@ -686,11 +733,23 @@ if ( {) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {listing.uspHeadline}
+              </p>
+            )}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   {tag}
-                </span>;
+                </span>
               ))}
-            </div>;
+            </div>
           )}
+<<<<<<< HEAD
 
 
 
@@ -750,12 +809,18 @@ if ( {) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {listing.price !== null ? (
               <div className="flex items-center text-primary">
                 <DollarSign className="h-4 w-4 mr-1" />
                 {getPrice()}
               </div>
             ) : (
+<<<<<<< HEAD
               <span className='text-foreground/80'>{getPrice()}</span>
             )}
           </div>
@@ -787,6 +852,11 @@ if ( {) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             >
               {loading ? (
                 <>
@@ -800,6 +870,7 @@ if ( {) {
                 "Add to Cart"
               )}
             </Button>
+<<<<<<< HEAD
             <Button
               size='sm'
               variant='default'
@@ -829,12 +900,18 @@ if ( {) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 router.push('/checkout')
               }}
-              disabled = {loading,}
+              disabled={loading}
             >
               Buy Now
             </Button>
+<<<<<<< HEAD
             {onRequestQuote && (
               <Button
                 size='sm'
@@ -1050,6 +1127,9 @@ export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
 <<<<<<< HEAD
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             
             {onRequestQuote && (
               <Button 
@@ -1109,32 +1189,14 @@ ProductListingCard.displayName = 'ProductListingCard';
                 Request Quote;
               </Button>;
             )}
-
           </div>;
         </div>;
       </div>;
     </div>;
   );
-
-          </div>;
-        </div>;
-      </div>;
-    </div>) }
-export default React.memo (ProductListingCard);
-
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-export default ProductListingCard;
-'"`;
-
-
-
-export const ProductListingCard = React.memo (ProductListingCardComponent);
-ProductListingCard.display_name = 'ProductListingCard';
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

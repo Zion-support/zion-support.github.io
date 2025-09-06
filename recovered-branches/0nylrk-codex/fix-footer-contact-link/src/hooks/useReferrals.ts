@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState, useEffect} from "react";
@@ -83,11 +84,14 @@ if ( {) {
       fetch_referrals ();
       fetch_rewards ();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }, [user]);
 ;
   const fetchReferralCode = async () => {
     try {
+<<<<<<< HEAD
       setIsLoading(true),
       const { data, error } = await supabase
         .from('referral_codes')
@@ -103,10 +107,13 @@ if ( {) {
       setReferralCode(data)
     } catch (error) {
       console.error("Error in fetchReferralCode:", error)
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } finally {
       setIsLoading(false)
     }
   }
+<<<<<<< HEAD
   const fetchReferrals = async () => {
     try {
       if (!user) return;
@@ -182,22 +189,21 @@ if ( {) {
       
       if (refError) throw refError,
       
+=======
+      if (refError) throw refError;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       // Get rewards
       const { data: rewards, error: rewardsError } = await supabase
         .from('referral_rewards')
         .select('amount')
+<<<<<<< HEAD
         .eq('user_id', user.id);
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       if (rewardsError) throw rewardsError;
       // Calculate stats
-
-      const totalReferrals = referrals ? referrals && referrals.length : 0;
-      const pendingReferrals = referrals ? referrals && referrals.filter(r => r && r.status === 'pending').length : 0;
-      const completedReferrals = referrals ? referrals && referrals.filter(r => r && r.status === 'completed').length : 0;
-      
-      const totalRewards = rewards ? rewards && rewards.reduce((sum, item) => {
-        return sum + (item && item.amount || 0)
-
       }, 0) : 0;
+<<<<<<< HEAD
         .eq('user_id', user.id),
         
       if (rewardsError) throw rewardsError,
@@ -211,6 +217,8 @@ if ( {) {
         return sum + (item.amount || 0)
       }, 0) : 0,
       
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       setStats({
         totalReferrals;
         pendingReferrals;
@@ -220,7 +228,8 @@ if ( {) {
     } catch (error) {
       console && console.error("Error fetching referral stats:", error)
     }
-
+  }
+=======
 ;
   const fetch_referrals = async () => {
     try {
@@ -243,6 +252,7 @@ if (throw error) {
       console.error ("Error fetching referrals:", error);
     }
   }
+<<<<<<< HEAD
   },
 
   const generateReferralCode = async () => {
@@ -260,6 +270,90 @@ if (throw error) {
       }
       const { data, error } = await supabase.rpc('generate_referral_code', {
         user_id: user.id
+=======
+;
+  const fetch_rewards = async () => {
+    try {
+      // Check condition
+if (return) {
+  $2
+}
+      const { data, error } = await supabase;
+        .from ('referral_rewards');
+        .select ('*');
+        .eq ('user_id', user.id);
+        .order ('created_at', { ascending: false });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      set_rewards (data || []);
+    } catch (error) {
+      console.error ("Error fetching rewards:", error);
+    }
+  }
+;
+  const fetchReferralStats = async () => {
+    try {
+      // Check condition
+if (return) {
+  $2
+}
+      // Get total referrals;
+      const { data: referrals, error: ref_error } = await supabase;
+        .from ('referrals');
+        .select ('id, status');
+        .eq ('referrer_id', user.id);
+;
+      // Check condition
+if (throw ref_error) {
+  $2
+}
+      // Get rewards;
+      const { data: rewards, error: rewards_error } = await supabase;
+        .from ('referral_rewards');
+        .select ('amount');
+        .eq ('user_id', user.id);
+;
+      // Check condition
+if (throw rewards_error) {
+  $2
+}
+      // Calculate stats;
+      const total_referrals = referrals ? referrals.length : 0;
+      const pending_referrals = referrals ? referrals.filter (r => r.status === 'pending').length : 0;
+      const completed_referrals = referrals ? referrals.filter (r => r.status === 'completed').length : 0;
+;
+      const total_rewards = rewards ? rewards.reduce ((sum, item) => {
+        return sum + (item.amount || 0);
+      }, 0) : 0;
+;
+      set_stats ({
+        total_referrals;
+        pending_referrals;
+        completed_referrals;
+        total_rewards;
+      });
+    } catch (error) {
+      console.error ("Error fetching referral stats:", error);
+    }
+  }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  const generateReferralCode = async () => {
+    try {
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+          title: "Authentication required";
+          description: "You need to be logged in to generate a referral code"
+          variant: "destructive"});
+        return;
+      }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       });
       if (error) throw error;
       toast({
@@ -277,6 +371,7 @@ if (throw error) {
         title: "Success!";
         description: "Your referral code has been generated"
         variant: "success"});
+<<<<<<< HEAD
       // Refresh the code
       fetchReferralCode();
       }),
@@ -297,12 +392,15 @@ if (throw error) {
       toast({
         title: "Error generating code";
         description: error.message |"There was a problem generating your referral code"
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         variant: "destructive"})
     }
   }
   // Get the referral link for the current user
   const getReferralLink = () => {
     if (!referralCode) return "";
+<<<<<<< HEAD
     const baseUrl = window.location.origin;
     return `${baseUrl}/?ref=${referralCode.code}`
   }
@@ -316,6 +414,8 @@ if (throw error) {
   const getReferralLink = () => {
     if (!referralCode) return "",
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Copy the referral link to clipboard
   const copyReferralLink = () => {
     const link = getReferralLink();
@@ -325,11 +425,26 @@ if (throw error) {
         title: "Copied!";
         description: "Referral link copied to clipboard"
         variant: "success"})
+<<<<<<< HEAD
     } else {
       toast({
         title: "Cannot copy link";
         description: "Please generate a referral code first"
         variant: "destructive"})
+=======
+=======
+;
+      // Refresh the code;
+      fetchReferralCode ();
+;
+      return data;
+    } catch (error: any) {
+      console.error ("Error generating referral code:", error);
+      toast ({
+        title: "Error generating code";
+        description: error.message || "There was a problem generating your referral code",
+        variant: "destructive"});
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }
 ;
@@ -355,32 +470,16 @@ if ( {) {
         title: "Copied!";
         description: "Referral link copied to clipboard",
         variant: "success"});
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } else {
       toast ({
         title: "Cannot copy link";
-
-        description: "Please generate a referral code first",
-        variant: "destructive"});
-    }
-  }
-;
-  // Share on social media platforms;
-  const shareOnSocialMedia = (platform: 'twitter' | 'facebook' | 'linkedin') =>: any {
-    const link = getReferralLink ();
-    const text = "Join Zion AI marketplace for AI talent and opportunities!";
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
-
         title: "Cannot share";
         description: "Please generate a referral code first"
         variant: "destructive"});
       return;
     }
+<<<<<<< HEAD
     let shareUrl = '';
     switch (platform) {
       case 'twitter':
@@ -519,6 +618,8 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return {
     referral_code;
     is_loading;
@@ -530,6 +631,7 @@ if ( {) {
     copyReferralLink;
     shareOnSocialMedia;
     fetchReferralStats;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     fetchReferrals, // Added this method for refreshing referrals
@@ -678,5 +780,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }

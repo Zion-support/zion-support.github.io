@@ -1,10 +1,14 @@
+
 import { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
 import { Loader2 } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CreateResumeFormProps } from "./types",
 export const CreateResumeForm = ({ 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   onCreateResume,
   onCancel,
   isLoading,
@@ -43,17 +47,14 @@ export const CreateResumeForm = ({
     await onCreateResume(newResumeTitle)
   }
   return (
-
-    <Card className='w-full max-w-2xl mx-auto'>;
-      <CardContent className='py-8'>;
-        <div className='text-center'>;
-          <h2 className='text-2xl font-bold mb-2'>Create New Resume</h2>;
-          <p className='text-muted-foreground mb-6'>;
-            Give your resume a title to get started;
-          </p>;
-
-          <div className='flex gap-2 max-w-md mx-auto'>;
-
+    <Card className='w-full max-w-2xl mx-auto'>
+      <CardContent className='py-8'>
+        <div className='text-center'>
+          <h2 className='text-2xl font-bold mb-2'>Create New Resume</h2>
+          <p className='text-muted-foreground mb-6'>
+            Give your resume a title to get started
+          </p>
+          <div className='flex gap-2 max-w-md mx-auto'>
             <input
               type='text'
               placeholder="Resume Title (e.g. 'AI Engineer Resume')"
@@ -63,23 +64,12 @@ export const CreateResumeForm = ({
             />
             <Button
               onClick={handleSubmit}
-
-
-import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Loader2 } from 'lucide-react'
-import { CreateResumeFormProps } from "./types";
-export const CreateResumeForm = ({ 
-  onCreateResume,
-  onCancel;
-  isLoading 
-}: CreateResumeFormProps) => {
-
-  const [ newResumeTitle, setNewResumeTitle ] = useState(''),
-
-
-
+              disabled={!newResumeTitle.trim() |isLoading}            >
+              {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
+              Create
+            </Button>
+          </div>
+          <Button variant='ghost' onClick={onCancel} className='mt-4'>            Cancel
   const handleSubmit = async () => {
     if (!newResumeTitle.trim()) return;
     await onCreateResume(newResumeTitle)
@@ -91,6 +81,7 @@ export const CreateResumeForm = ({
           <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>
           <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>
           <div className="flex gap-2 max-w-md mx-auto">
+<<<<<<< HEAD
               disabled={!newResumeTitle && newResumeTitle.trim() || isLoading}>;
               {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
               Create;
@@ -127,12 +118,89 @@ export const CreateResumeForm = ({
           <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>;
 
           <div className="flex gap-2 max-w-md mx-auto">;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <input
               type="text"
               placeholder="Resume Title (e.g. 'AI Engineer Resume')"
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
               value={newResumeTitle}
 <<<<<<< HEAD
+<<<<<<< HEAD
+              onChange={(e) => setNewResumeTitle(e.target.value)}
+            />;
+            <Button;
+              onClick={handleSubmit}
+              disabled={!newResumeTitle.trim() || isLoading}
+=======
+              onChange={(e) => setNewResumeTitle(e.target.value)}
+            />
+            <Button
+              onClick={handleSubmit}
+              disabled={!newResumeTitle.trim() |isLoading}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+            >
+              {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+              Create
+            </Button>
+          </div>
+<<<<<<< HEAD
+          
+=======
+=======
+=======
+  const [newResumeTitle, setNewResumeTitle] = useState(''),
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+
+  const handleSubmit = async () => {
+    if (!newResumeTitle.trim()) return,
+    await onCreateResume(newResumeTitle)
+  },
+
+<<<<<<< HEAD
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  return (
+    <Card className="w-full max-w-2xl mx-auto">
+      <CardContent className="py-8">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>
+          <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>
+          
+          <div className="flex gap-2 max-w-md mx-auto">
+            <input
+              type="text"
+              placeholder="Resume Title (e.g. 'AI Engineer Resume')"
+              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+import { useState } from "react",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Loader2 } from 'lucide-react';
+import { CreateResumeFormProps } from "./types",;
+export const CreateResumeForm = ({;
+  onCreateResume,;
+  onCancel,;
+  isLoading;
+}: CreateResumeFormProps) => {;
+  const [newResumeTitle, setNewResumeTitle] = useState(''),;
+  const handleSubmit = async () => {;
+    if (!newResumeTitle.trim()) return,;
+    await onCreateResume(newResumeTitle);
+  };
+  return (;
+    <Card className="w-full max-w-2xl mx-auto">;
+      <CardContent className="py-8">;
+        <div className="text-center">;
+          <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>;
+          <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>;
+          <div className="flex gap-2 max-w-md mx-auto">;
+            <input;
+              type="text";
+              placeholder="Resume Title (e.g. 'AI Engineer Resume')";
+              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm";
+              value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
             />;
             <Button;
@@ -145,16 +213,15 @@ export const CreateResumeForm = ({
           </div>
           
 =======
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Button
             variant="ghost"
             onClick={onCancel}
             className="mt-4"
           >
+<<<<<<< HEAD
             Cancel
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -163,11 +230,17 @@ export const CreateResumeForm = ({
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </Button>
         </div>
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text-center"> <h2 className=" text-2xl font-bold mb-2">Create New Resume</h2> <p className=" text-muted-foreground mb-6">Give your resume a title to get started</p> <div className=" flex gap-2 max-w-md mx-auto" > <input /> <Button onClick={
@@ -227,100 +300,14 @@ w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 '"},;
-
-
-
+;
   );
 };
-
-
-
-import { useState } from 'react';
-import { Card, CardContent } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Loader2 } from 'lucide-react';
-import { CreateResumeFormProps } from './types';
-export const CreateResumeForm = ({
-  onCreateResume,
-  on_cancel,
-  is_loading,
-}: CreateResumeFormProps) =>: any {
-  const [newResumeTitle, setNewResumeTitle] = useState ('');
-  const handle_submit = async () => {
-    if () return) {
-  $2
-}
-    await onCreateResume (newResumeTitle);
-  }
-  return (
-    <Card className='w - full max - w-2xl mx - auto'>;
-      <CardContent className='py - 8'>;
-        <div className='text - center'>;
-          <h2 className='text - 2xl font - bold mb - 2'>Create New Resume</h2>;
-          <p className='text - muted - foreground mb - 6'>;
-            Give your resume a title to get started;
-          </p>;
-          <div className='flex gap - 2 max - w-md mx - auto'>;
-            <input;
-              type='text';
-              placeholder="Resume Title (e.g. 'AI Engineer Resume')";
-              className='flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - sm';
-              value={newResumeTitle}
-              on_change={e => setNewResumeTitle (e.target.value)}
-            />;
-            <Button;
-              on_click={handle_submit}
-              disabled={!newResumeTitle.trim () || is_loading}            >;
-              {is_loading && <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />}
-              Create;
-            </Button>;
-          </div>;
-          <Button variant='ghost' on_click={on_cancel} className='mt - 4'>            Cancel;
-  const handle_submit = async () => {
-    if () return) {
-  $2
-}
-    await onCreateResume (newResumeTitle);
-  }
-  return (
-    <Card className="w - full max - w-2xl mx - auto">;
-      <CardContent className="py - 8">;
-        <div className="text - center">;
-          <h2 className="text - 2xl font - bold mb - 2">Create New Resume</h2>;
-          <p className="text - muted - foreground mb - 6">Give your resume a title to get started</p>;
-          <div className="flex gap - 2 max - w-md mx - auto">;
-            <input;
-              type="text";
-              placeholder="Resume Title (e.g. 'AI Engineer Resume')";
-              className="flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - sm";
-              value={newResumeTitle}
-              on_change={(e) => setNewResumeTitle (e.target.value)}
-            />;
-            <Button;
-              on_click={handle_submit}
-              disabled={!newResumeTitle.trim () || is_loading}
-            >;
-              {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}
-              Create;
-            </Button>;
-          </div>;
-          <Button;
-            variant="ghost";
-            on_click = {on_cancel, }
-            className="mt - 4";
-          >;
-          </Button>;
-        </div>;
-      </CardContent>;
-    </Card>);
-}
-w - full max - w-2xl mx - auto"> <CardContent className=" py - 8"> <div className=" text - center"> <h2 className=" text - 2xl font - bold mb - 2">Create New Resume</h2> <p className=" text - muted - foreground mb - 6">Give your resume a title to get started</p> <div className=" flex gap - 2 max - w-md mx - auto" > <input /> <Button on_click={
-  handle_submit;
-}disabled= {
-  !newResumeTitle.trim () || is_loading;
-}> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>);
-}
-'"},
-  );
-}
+=======
+},
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

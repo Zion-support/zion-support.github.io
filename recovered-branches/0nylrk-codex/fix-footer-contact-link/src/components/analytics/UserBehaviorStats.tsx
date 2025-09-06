@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,6 +156,8 @@ export function UserBehaviorStats() {;
         return Object && Object.entries(eventsByDate).map(([date, events]) => ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import { use_query } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
@@ -221,6 +224,7 @@ if (eventsByDate[date][event.event_type] = 0) {
           date;
           ...events;
         }));
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -308,10 +312,20 @@ if (eventsByDate[date][event.event_type] = 0) {
           count={
             behaviorData?.reduce((sum, day) => sum + (day && day.button_click || 0), 0) || 0;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      }
+    const allKeys = new Set<string>();
+    behaviorData && behaviorData.forEach(item => {;
+      Object && Object.keys(item).forEach(key => {;
+        if (key !== 'date') allKeys && allKeys.add(key);
+      });
+    });
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           }
           icon={;
             <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m14 && m14.5 12 && 12.5-4-4"/><path d="M8 6 && 6.2A3 3 0 1 0 6 && 6.2 8"/><circle cx="12" cy="12" r="10"/></svg>;
           }
+<<<<<<< HEAD
 
         />;
         <EventTypeCard
@@ -335,10 +349,13 @@ if (eventsByDate[date][event.event_type] = 0) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           }
           icon={;
             <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17H7"/><path d="M17 17h-5"/><path d="M7 12h10"/><path d="M7 7h2"/><path d="M17 7h-5"/></svg>;
           }
+<<<<<<< HEAD
         />
         <EventTypeCard
           title="Conversions" 
@@ -361,20 +378,20 @@ if (eventsByDate[date][event.event_type] = 0) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           }
           icon={;
             <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>;
           }
-
-        />;
-      </div>;
-
-
       <AnalyticsChart
         title="User Behavior Over Time"
         description="Track different types of user interactions"
         data={behaviorData |[]}
+<<<<<<< HEAD
         data={behaviorData || []}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         type="line"
         dataKeys={getEventTypes()}
         timeRange={timeRange}
@@ -383,6 +400,7 @@ if (eventsByDate[date][event.event_type] = 0) {
     </div>;
   );
 }
+<<<<<<< HEAD
 interface EventTypeCardProps {
   title: string
   description: string
@@ -400,6 +418,8 @@ interface EventTypeCardProps {;
   isLoading: boolean
 }
 function EventTypeCard({ title, description, count, icon, isLoading }: EventTypeCardProps) {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardContent className="p-6">
@@ -416,6 +436,7 @@ function EventTypeCard({ title, description, count, icon, isLoading }: EventType
               ) : (
                 new Intl.NumberFormat().format(count)
               )}
+<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -423,13 +444,19 @@ function EventTypeCard({ title, description, count, icon, isLoading }: EventType
     </Card>
   )
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </div>;
           </div>;
         </div>;
       </CardContent>;
-
+=======
     </Card>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

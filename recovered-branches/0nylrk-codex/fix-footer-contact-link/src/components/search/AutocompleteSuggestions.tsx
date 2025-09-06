@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -86,6 +87,8 @@ if ( {) {
   $2
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return { before: '', match: text, after: '' }
   }
   return {
@@ -93,6 +96,7 @@ if ( {) {
     match: text.substring (index, index + search_term.length);
     after: text.substring (index + search_term.length);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 export function AutocompleteSuggestions({
@@ -153,6 +157,8 @@ export function AutocompleteSuggestions({
           
           return (
             <li key={`${suggestion.type}-${index}`}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 className="px-4 py-2 hover:bg-zion-blue-light/20 cursor-pointer"
                 onClick={() => onSelectSuggestion(suggestion.text)}>
               <div className="flex items-center justify-between">
@@ -168,6 +174,7 @@ export function AutocompleteSuggestions({
             </li>
           )
         })}
+<<<<<<< HEAD
       </ul>
     </div>
   )
@@ -180,3 +187,42 @@ export function AutocompleteSuggestions({
 =======
 }
 ;
+=======
+=======
+}
+;
+export /**
+ * AutocompleteSuggestions - Function description
+ */
+function AutocompleteSuggestions() {
+  // Check condition
+if (return null) {
+  $2
+}
+  return (
+    <div className="absolute z - 50 top - full left - 0 right - 0 mt - 1 bg - zion - blue - dark border border - zion - blue - light rounded - lg shadow - lg overflow - hidden">;
+      <ul className="py - 2 max - h-60 overflow - y-auto">;
+        {suggestions.map ((suggestion, index) => {
+          const highlight = highlight_match (suggestion.text, search_term);
+;
+          return (
+            <li key={`${suggestion.type}-${index}`}
+                className="px - 4 py - 2 hover:bg - zion - blue - light / 20 cursor - pointer";
+                on_click={() => onSelectSuggestion (suggestion.text)}>;
+              <div className="flex items - center justify - between">;
+                <div>;
+                  <span>{highlight.before}</span>;
+                  <span className="font - bold text - zion - purple">{highlight.match}</span>;
+                  <span>{highlight.after}</span>;
+                </div>;
+                <span className="text - xs text - zion - slate - light capitalize">;
+                  {suggestion.type}
+                </span>;
+              </div>;
+            </li>);
+        })}
+      </ul>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

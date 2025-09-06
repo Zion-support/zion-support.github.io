@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -50,11 +51,14 @@ export default function IntegrationsPage() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function IntegrationsPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <ProtectedRoute adminOnly={true}>;
       <SEO
         title="Integrations - Zion AI Marketplace"
         description="Connect your Zion account with CRMs and Applicant Tracking Systems."
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
       <Header />
@@ -100,6 +104,9 @@ export default function IntegrationsPage() {;
 ;
 =======
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -122,10 +129,6 @@ function IntegrationsPage() {
       </main>;
       <Footer />;
     </ProtectedRoute>);
-=======
-
-
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

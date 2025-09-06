@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 type Props = {
   content: string | null;
   generatedAt: string | null;}
@@ -17,6 +18,10 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+type Props = {;
+  content: string | null;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   content: string | null,
   generated_at: string | null;
 }
@@ -26,6 +31,7 @@ export default /**
  */
 function ChangelogPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <main className='mx-auto max-w-4xl px-4 py-12'>
       <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>
@@ -46,6 +52,8 @@ function ChangelogPage() {
         <div className='mt - 6 rounded - xl border border - gray - 200 bg - white p - 6 text - gray - 600'>          No changelog generated yet.      {generated_at && (
         <p className="mt - 2 text - sm text - gray - 600">Generated: {generated_at}</p>)}
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {content ? (
         <pre className="mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray - 800 shadow - sm">;
 {content}
@@ -75,14 +83,47 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
     </main>);
 }
 
+export default function ChangelogPage(): any ({ content, generatedAt }: Props) {;
+  return (
+    <main className='mx-auto max-w-4xl px-4 py-12'>;
+      <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>type Props = {;
+  content: string | null,;
+  generatedAt: string | null;
+};
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export default function ChangelogPage(): any ({ content, generatedAt }: Props) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+    <main className='mx-auto max-w-4xl px-4 py-12'>;
+      <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>;
+      {generatedAt && (;
+        <p className='mt-2 text-sm text-gray-600'>Generated: {generatedAt}</p>;
+      )}
+      {content ? (;
+        <pre className='mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm'>;
+          {content}
+        </pre>;
+      ) : (;
+        <div className='mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600'>          No changelog generated yet.      {generatedAt && (;
+        <p className="mt-2 text-sm text-gray-600">Generated: {generatedAt}</p>;
+      )}
+      {content ? (;
+        <pre className="mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm">;
+{content}
+        </pre>;
+      ) : (;
+        <div className="mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600">;
+          No changelog generated yet.;
+        </div>;
+      )}
+    </main>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   );
 }
-
-    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
-
   } catch {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -92,7 +133,10 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
+
   } catch {
+=======
+
 export async function getStaticProps() {;
   try {;
     const file = path && path.join(process && process.cwd(), 'CHANGELOG && CHANGELOG.md');
@@ -105,17 +149,18 @@ export async function getStaticProps() {;
     return { props: { content: null, generatedAt: null }, revalidate: 300 };
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
   } catch {;
-
-
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 export async /**
  * getStaticProps - Function description
@@ -140,22 +185,9 @@ function getStaticProps() {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
-      {generatedAt && (
-        <p className=&quot;mt-2 text-sm text-gray-600&quot;>Generated: {generatedAt}</p>
-      )}
-      {content ? (
-        <pre className=&quot;mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm&quot;>
-{content}
-        </pre>
-      ) : (
-        <div className=&quot;mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600&quot;>
-          No changelog generated yet.
-        </div>
-      )}
-    </main>
-  )
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
   } catch {
 
@@ -178,3 +210,5 @@ function getStaticProps() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

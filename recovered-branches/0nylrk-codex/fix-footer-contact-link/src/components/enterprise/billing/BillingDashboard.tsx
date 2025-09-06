@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { BillingHeader } from "./BillingHeader",
@@ -122,12 +123,15 @@ function BillingDashboard() {
       <Tabs default_value="subscription" className="mt - 8">;
         <TabsList className="grid w - full grid - cols - 4 mb - 8">;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <TabsTrigger value="subscription">Subscription</TabsTrigger>;
           <TabsTrigger value="payment">Payment Methods</TabsTrigger>;
           <TabsTrigger value="invoices">Invoice History</TabsTrigger>;
           <TabsTrigger value="usage">Usage Overview</TabsTrigger>;
         </TabsList>;
-
+  );
+=======
         <TabsContent value="subscription" className="space - y-8">;
           <CurrentSubscription />;
         </TabsContent>;
@@ -142,6 +146,7 @@ function BillingDashboard() {
         </TabsContent>;
       </Tabs>;
     </div>);
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -153,3 +158,7 @@ function BillingDashboard() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

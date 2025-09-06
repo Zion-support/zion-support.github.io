@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -50,11 +51,15 @@ import {Notification, as, BaseNotification} from '@/types / notifications';
 export interface NotificationContextType {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface NotificationContextType {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   notifications: Notification[];
-  filteredNotifications: Notification[];
-  unreadCount: number;
+  filtered_notifications: Notification[];
+  unread_count: number;
   loading: boolean;
   filter: FilterType;
+<<<<<<< HEAD
   markAsRead: (id: string) => Promise<void>;
   markAllAsRead: () => Promise<void>;
   dismissNotification: (id: string) => Promise<void>;
@@ -111,3 +116,5 @@ export interface NotificationContextType {;
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

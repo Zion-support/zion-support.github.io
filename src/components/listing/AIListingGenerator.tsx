@@ -1,30 +1,19 @@
 interface GeneratedContent {
-  description: string,
-  tags: string[],
-  suggested_price: {
-    min: number,
-    max: number;
 
+  description: string
+  tags: string[]
+  suggestedPrice: {
+    min: number
+
+    max: number
   }
   keyPoints: string[]
 }
 interface AIListingGeneratorProps {
 
+  onApplyGenerated?: (content: GeneratedContent,) => void
 
-interface GeneratedContent {;
-  description: string,;
-  tags: string[],;
-  suggestedPrice: {;
-    min: number,;
-    max: number;
-  };
-  keyPoints: string[];
-}
-
-interface AIListingGeneratorProps {;
-  onApplyGenerated?: (content: GeneratedContent,) => void,;
-  initialValues?: {;
-
+  initialValues?: {
     title?: string;
     category?: string;
     keyFeatures?: string;
@@ -33,6 +22,9 @@ interface AIListingGeneratorProps {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
   const { toast } = useToast()
   const [isLoading, setIsLoading] = useState(false)
@@ -42,6 +34,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     category
     keyFeatures
     targetAudience
+<<<<<<< HEAD
   }: {
     title: string
     category: string
@@ -84,12 +77,13 @@ function AIListingGenerator() {
     category;
     key_features;
     target_audience;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }: {
-    title: string,
-    category: string,
-    key_features: string,
-    target_audience: string;
-
+    title: string
+    category: string
+    keyFeatures: string
+    targetAudience: string
   }) => {
     setIsLoading (true);
     try {
@@ -102,11 +96,28 @@ if ( {) {
 }
         throw new Error (error.message);
       }
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      if (data && (data as any).error) {
+        throw new Error((data as any).error)
+      }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
-
-
-
+      setGeneratedContent((data as any)?.generated || null)
+=======
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Sparkles } from 'lucide-react'
+import { supabase } from "@/integrations/supabase/client",
+import { AIListingForm } from "./AIListingForm",
+import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
+import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
+import {logErrorToProduction} from '@/utils/productionLogger',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       toast({
         title: "Content Generated"
         description: "AI has created optimized listing content for you."
@@ -118,27 +129,10 @@ if ( {) {
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       })
-      // Check condition
-if (.error) {) {
-  $2
-}
-        throw new Error ((data as any).error);
-      }
-      setGeneratedContent ((data as any)?.generated || null);
-      toast ({
-        title: "Content Generated",
-        description: "AI has created optimized listing content for you.";
-      });
-    } catch (error) {
-      logErrorToProduction ('Error generating content:', { data: error }),
-      toast ({
-        title: "Generation Failed",
-        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
-        variant: "destructive";
-      });
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
   }
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
@@ -154,15 +148,25 @@ if (.error) {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       toast({
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
       })
     }
+<<<<<<< HEAD
   }
   },
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -176,19 +180,27 @@ if (.error) {) {
           </p>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
           <AIListingForm
           <AIListingForm 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             onSubmit = {handleGenerate,}
             isLoading = {isLoading,}
             initialValues = {initialValues,}
           />
         </CardContent>
       </Card>
+<<<<<<< HEAD
           <AIListingForm 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
 ;
       setGeneratedContent((data as any)?.generated || null),;
+<<<<<<< HEAD
 =======
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
@@ -222,6 +234,8 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
 
       setGeneratedContent((data as any)?.generated || null);
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       toast({;
         title: "Content Generated",;
         description: "AI has created optimized listing content for you.";
@@ -230,44 +244,23 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
       logErrorToProduction('Error generating content:', { data: error }),;
       toast({;
         title: "Generation Failed",;
-        description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
+        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",;
         variant: "destructive";
       });
     } finally {;
       setIsLoading(false);
     }
-  };
-
+  },;
   const handleApply = () => {;
     if (generatedContent && onApplyGenerated) {;
-      onApplyGenerated(generatedContent);
+      onApplyGenerated(generatedContent),;
       toast({;
-        title: "Content Applied",;
-        description: "The generated content has been applied to your listing.";
-      });
-
-  const handle_apply = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      onApplyGenerated (generated_content);
-      toast ({
-        title: "Content Applied",
+        title: "Content Applied";
         description: "The generated content has been applied to your listing.";
       });
     }
-  },
-
-    }
-
-  },
-
-
-
-
-  return (
-
+  };
+  return (;
     <div className="space-y-6">;
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
@@ -281,6 +274,9 @@ if ( {) {
         </CardHeader>;
         <CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <AIListingForm;
             onSubmit={handleGenerate} ;
             isLoading={isLoading} ;
@@ -289,6 +285,7 @@ if ( {) {
         </CardContent>;
       </Card>;
 =======
+<<<<<<< HEAD
 
           <AIListingForm
             onSubmit = {handleGenerate,}
@@ -300,10 +297,15 @@ if ( {) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {isLoading && <LoadingContentSkeleton />}
       {generatedContent && !isLoading && (
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
       )}
+<<<<<<< HEAD
     </div>
   )
 }: AIListingGeneratorProps) {
@@ -481,7 +483,13 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     </div>;
   );
 }
 ;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

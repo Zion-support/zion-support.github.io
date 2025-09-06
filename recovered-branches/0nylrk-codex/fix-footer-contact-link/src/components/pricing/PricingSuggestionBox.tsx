@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -97,6 +98,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   rateType}) => {;
   if (isLoading) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <Card className="border border-dashed border-muted">;
         <CardContent className="flex items-center justify-center p-6">;
@@ -137,6 +140,7 @@ if ( {) {
             </p>;
           </div>;
         </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       </Card>;
     );
@@ -316,11 +320,13 @@ if ( {) {
               <TooltipContent>;
                 <p > Apply this suggestion to your pricing field</p>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </TooltipContent>;
             </Tooltip>;
           </TooltipProvider>;
         </div>;
-
+=======
         <p className="text - xs text - center text - muted - foreground pt - 2">;
           Based on market data & trends. You can adjust as needed.;
         </p>;
@@ -328,6 +334,7 @@ if ( {) {
     </Card>);
 }
 ;
+<<<<<<< HEAD
 
 =======
 
@@ -339,3 +346,6 @@ export default PricingSuggestionBox;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

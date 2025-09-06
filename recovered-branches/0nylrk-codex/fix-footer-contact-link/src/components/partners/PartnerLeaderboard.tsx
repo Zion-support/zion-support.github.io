@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -15,12 +16,15 @@ import { Badge } from '@/components / ui / badge';
 import { Crown, Medal, Trophy } from './lucide-react';
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface LeaderboardEntry {
 
   id: string
   rank: number
   name: string
   avatar?: string;
+<<<<<<< HEAD
 
 import { Badge } from "@/components/ui/badge",
 import { Crown, Medal, Trophy } from "lucide-react",
@@ -225,82 +229,11 @@ export function PartnerLeaderboard() {;
     switch(rank) {;
       case 1:;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         return <Trophy className="h-5 w-5 text-yellow-500" />;
       case 2:;
         return <Medal className="h-5 w-5 text-gray-400" />;
-
-  referrals: number,
-  earnings: number,
-  badges: string[];
-}
-export /**
- * PartnerLeaderboard - Function description
- */
-function PartnerLeaderboard() {
-  // Placeholder data - would come from API in real implementation;
-  const leaderboard: LeaderboardEntry[] = [;
-    {
-      id: "1",
-      rank: 1,
-      name: "AI Tech Guru",
-      avatar: "", // URL would be here;
-      referrals: 178,
-      earnings: 4500,
-      badges: ["gold", "trending"];
-    }
-    {
-      id: "2",
-      rank: 2,
-      name: "Machine Learning Hub",
-      avatar: "",
-      referrals: 145,
-      earnings: 3625,
-      badges: ["silver"];
-    }
-    {
-      id: "3",
-      rank: 3,
-      name: "Neural Networks Pro",
-      avatar: "",
-      referrals: 124,
-      earnings: 3100,
-      badges: ["bronze"];
-    }
-    {
-      id: "4",
-      rank: 4,
-      name: "AI Career Insights",
-      avatar: "",
-      referrals: 98,
-      earnings: 2450,
-      badges: [];
-    }
-    {
-      id: "5",
-      rank: 5,
-      name: "Deep Learning Daily",
-      avatar: "",
-      referrals: 87,
-      earnings: 2175,
-      badges: ["newcomer"];
-    }
-  ];
-;
-  // Function to render rank badge;
-  const renderRankBadge = (rank: number) =>: any {
-    switch (rank) {
-      case 1:;
-        return <Trophy className="h - 5 w - 5 text - yellow - 500" />;
-      case 2:;
-        return <Medal className="h - 5 w - 5 text - gray - 400" />;
-      case 3:;
-        return <Medal className="h - 5 w - 5 text - amber - 700" />,
-      default:;
-        return <span className="text - sm font - semibold">{rank}</span>;
-    }
-  }
-;
-
   return (
     <div className="space - y-6">;
       <Card className="bg - zion - blue - dark border - zion - blue - light">;
@@ -324,6 +257,7 @@ function PartnerLeaderboard() {
 =======
           <div className="space - y-4">;
             {leaderboard.length > 0 ? (
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -408,12 +342,15 @@ function PartnerLeaderboard() {
                           Elite;
                         </Badge>;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       )}
                       {entry && entry.badges.includes("trending") && (;
                         <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">;
                           Trending;
                         </Badge>;
                       )}
+<<<<<<< HEAD
 =======
                       )}
                       {entry.badges.includes("trending") && (
@@ -433,6 +370,8 @@ function PartnerLeaderboard() {
                   Start referring to earn your spot on the leaderboard
                 </p>
               </div>
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     </div>;
                   </div>;
                 </div>;
@@ -445,6 +384,7 @@ function PartnerLeaderboard() {
                   Start referring to earn your spot on the leaderboard;
                 </p>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -512,3 +452,19 @@ function PartnerLeaderboard() {
 }
 }
 ;
+=======
+            )}
+              New Partner;
+            </Badge>;
+          </div>;
+        </CardContent>;
+      </Card>;
+            </ul>;
+          </div>;
+        </CardContent>;
+      </Card>;
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

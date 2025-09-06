@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useAuthStatus} from "./talent/useAuthStatus";
@@ -26,6 +27,8 @@ function useTalentDirectory() {
   // Fetch auth status and saved talents;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const {
     is_authenticated;
     user_details,
@@ -35,6 +38,7 @@ function useTalentDirectory() {
 ;
   // Fetch talent data;
   const {
+<<<<<<< HEAD
     talents
     isLoading
 import { useFilterTalents } from "./talent/useFilterTalents",
@@ -105,10 +109,32 @@ export function useTalentDirectory() {
     sortOption;
     setSortOption;
     // UI state
+=======
+    talents,
+    is_loading;
+  } = useTalentData ();
+;
+  // Apply filters and sorting;
+  const {
+    filtered_talents;
+    search_term;
+    setSearchTerm;
+    selected_skills;
+    selected_availability;
+    selected_regions;
+    price_range;
+    setPriceRange;
+    experience_range;
+    setExperienceRange;
+    sort_option;
+    setSortOption;
+  const {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     isMobileFilterOpen;
     setIsMobileFilterOpen;
     isHireModalOpen;
     setIsHireModalOpen;
+<<<<<<< HEAD
     selectedTalent;
     setSelectedTalent;
     expandedSections;
@@ -262,3 +288,28 @@ export function useTalentDirectory() {;
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
+=======
+    selected_talent;
+    setSelectedTalent;
+  return {
+    // Talents and loading state;
+    talents;
+    setSearchTerm;
+    selected_skills;
+    selected_availability;
+    selected_regions;
+    price_range;
+    setPriceRange;
+    experience_range;
+    setExperienceRange;
+    sort_option;
+    setSortOption;
+    isMobileFilterOpen;
+    setIsMobileFilterOpen;
+    isHireModalOpen;
+    setIsHireModalOpen;
+    selected_talent;
+    setSelectedTalent;
+  }
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

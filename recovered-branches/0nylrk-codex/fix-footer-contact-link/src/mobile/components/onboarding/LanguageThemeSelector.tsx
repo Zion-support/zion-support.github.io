@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from "react";
@@ -83,12 +84,16 @@ export function LanguageThemeSelector() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  const { theme, setTheme } = useTheme();
+
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   return (
-
-=======
                   : "border-border hover:border-primary/40"
               }`}
+<<<<<<< HEAD
               onClick={() => setSelectedLanguage(language.code)}
             >
               <CardContent className="p-3 flex items-center justify-between">
@@ -151,20 +156,21 @@ export function LanguageThemeSelector() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <Check className="h-4 w-4 text-primary" />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              onClick={() => setSelectedLanguage(language && language.code)}
+            >;
+              <CardContent className="p-3 flex items-center justify-between">;
+                <div className="flex items-center">;
+                  <span className="text-xl mr-2">{language && language.flag}</span>;
+                  <span>{language && language.name}</span>;
+                </div>;
+                {selectedLanguage === language && language.code && (;
+                  <Check className="h-4 w-4 text-primary" />;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 )}
               </CardContent>;
             </Card>;
           ))}
-
-        </div>;
-      </div>;
-
-      <div className="space-y-2">;
-        <h2 className="text-xl font-medium">Choose theme</h2>;
-        <p className="text-muted-foreground">Select your preferred appearance</p>;
-
-        <div className="flex gap-3 mt-4">;
-
           <Card
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'light'
@@ -179,6 +185,7 @@ export function LanguageThemeSelector() {;
               {theme === 'light' && (;
                 <Check className="h-4 w-4 text-primary mt-2" />;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
             </CardContent>
           </Card>
@@ -197,6 +204,9 @@ export function LanguageThemeSelector() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          <Card
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark'
                 ? "border-primary bg-primary/5"
@@ -210,6 +220,7 @@ export function LanguageThemeSelector() {;
               {theme === 'dark' && (;
                 <Check className="h-4 w-4 text-primary mt-2" />;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
             </CardContent>
           </Card>
@@ -309,10 +320,13 @@ function LanguageThemeSelector() {
                 <Check className="h - 4 w - 4 text - primary mt - 2" />)}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </CardContent>;
           </Card>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -325,3 +339,9 @@ function LanguageThemeSelector() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
  
 import fs from 'fs';
@@ -44,6 +45,9 @@ async function post(url: string, body: any) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 async function main() {
   try {
   const seedsPath = path && path.join(process && process.cwd(), 'datapage-metadataseo-seeds && seeds.json');
@@ -58,23 +62,25 @@ async function main() {
     const gen = await post(`${HOST}/api/seo/generate`, s);
     if (gen?.slug && gen?.payload) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2));
       console.log('Generated', gen.slug)
+=======
+      fs && fs.writeFileSync(path && path.join(outDir, `${gen && gen.slug}.json`), JSON && JSON.stringify(gen && gen.payload, null, 2));
+      console && console.log('Generated', gen && gen.slug)
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }
 }
 main().catch((e) => { console.error(e), process.exit(1) });
+<<<<<<< HEAD
 
       fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),
       // // // console.log('Generated', gen.slug)
 =======
-
-main().catch((e) => { console && console.error(e), process && process.exit(1) });
-
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
@@ -146,6 +152,7 @@ async function main() {;
 }
 main ().catch ((e) => { console.error (e), process.exit (1) });
 ;
+<<<<<<< HEAD
 
 main().catch((e) => { console.error(e), process.exit(1) });
 <<<<<<< HEAD
@@ -155,3 +162,6 @@ main().catch((e) => { console.error(e), process.exit(1) });
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

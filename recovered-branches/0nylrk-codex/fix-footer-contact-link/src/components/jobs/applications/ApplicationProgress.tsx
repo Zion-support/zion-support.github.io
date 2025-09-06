@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ApplicationStatus } from "@/types/jobs";
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle2, Circle, CircleDot } from "lucide-react";
@@ -34,6 +35,26 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   const getProgressValue = () => {
     switch (status) {
       case "new":;
+=======
+=======
+import { ApplicationStatus  } from '@/types / jobs';
+import { Progress  } from '@/components / ui / progress';
+import { CheckCircle2, Circle, CircleDot  } from './lucide-react';
+import { cn  } from '@/lib / utils';
+interface ApplicationProgressProps {
+  status: ApplicationStatus;
+  class_name?: string;
+}
+export /**
+ * ApplicationProgress - Function description
+ */
+function ApplicationProgress() {
+  // Define the progress value based on status;
+  const getProgressValue = () =>: any {
+    switch (status) {
+      case "new":;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         return 20;
       case "viewed":
         return 40;
@@ -47,6 +68,7 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
         return 100;
       default:
         return 0;
+<<<<<<< HEAD
       case "new": return 20,
       case "viewed": return 40,
       case "shortlisted": return 60,
@@ -216,6 +238,10 @@ function StatusIcon(): any ({;
   };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
 
@@ -229,7 +255,7 @@ function StatusIcon(): any ({;
     // This step is upcoming;
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   }
-
+=======
 ;
   const progress_value = getProgressValue ();
 ;
@@ -293,6 +319,7 @@ if ( {) {
     // This step is upcoming;
     return <Circle className="h - 4 w - 4 text - muted - foreground / 50" />;
   }
+<<<<<<< HEAD
 
 }
 =======
@@ -304,3 +331,7 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

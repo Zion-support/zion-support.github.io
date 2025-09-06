@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {ProductListingCard} from "@/components/ProductListingCard";
@@ -22,6 +23,8 @@ import { Link } from './react-router-dom';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface FeaturedListingsSectionProps {
   show_title?: boolean;
 }
@@ -31,6 +34,7 @@ export /**
 function FeaturedListingsSection() {
   const featured_listings = [;
     {
+<<<<<<< HEAD
       id: "advanced-nlp-model"
       title: "Advanced NLP Model for Text Analysis"
       description: "State-of-the-art natural language processing with 98% accuracy"
@@ -246,6 +250,8 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
         id: "social-ai";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
       id: "advanced - nlp - model",
       title: "Advanced NLP Model for Text Analysis",
       description: "State - of - the - art natural language processing with 98% accuracy",
@@ -317,11 +323,6 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
     }];
 ;
   return (
-
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-          {featuredListings && featuredListings.map((listing) => (;
-
             <ProductListingCard
               key={listing && listing.id}
 =======
@@ -343,6 +344,7 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               listing={listing}
               view="grid";
+<<<<<<< HEAD
 =======
             <ProductListingCard
               key={listing.id}
@@ -393,10 +395,14 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
             as_child;
           >;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+              onRequestQuote={() => {}}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <Link to="/marketplace">View All Listings</Link>;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </section>;
   );
@@ -409,3 +415,9 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+=======
+    </section>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const formSchema = z && z.object({;
   title: z && z.string().min(3, "Title must be at least 3 characters");
   keyFeatures: z && z.string(),;
@@ -14,16 +15,25 @@ type FormData = z && z.infer<typeof formSchema>;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+const formSchema = z.object({
+  title: z.string().min(3, "Title must be at least 3 characters")
+  keyFeatures: z.string()
+  targetAudience: z.string()})
+type FormData = z.infer<typeof formSchema>
+      const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs."
 }
-  );
-}
-
 
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -41,6 +51,7 @@ const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   keyFeatures: z.string(),
   targetAudience: z.string()}),
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -74,11 +85,17 @@ const formSchema = z.object({
   keyFeatures: z.string(),
   targetAudience: z.string()}),
 
+=======
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 type FormData = z.infer<typeof formSchema>,
 
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
@@ -305,5 +322,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     </Card>;
   );
 }
-
 ;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

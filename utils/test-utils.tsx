@@ -1,13 +1,8 @@
 import React from 'react';
-
-import { render, RenderOptions } from '@testing - library / react';
-import { ThemeProvider } from 'next - themes';
-;
-const AllTheProviders = ({ children }: { children: React.ReactNode }) =>: any {
-
   return (
-    <ThemeProvider attribute="class" defaultTheme="light">
+    <ThemeProvider attribute="class" default_theme="light">;
       {children}
+<<<<<<< HEAD
     </ThemeProvider>
   );
 }
@@ -108,4 +103,6 @@ export const createMockProps = (overrides = {}) => ({;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 });

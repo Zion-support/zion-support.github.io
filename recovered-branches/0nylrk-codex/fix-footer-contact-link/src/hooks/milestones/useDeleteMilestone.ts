@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,10 +9,13 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const useDeleteMilestone = () => {
   const { user } = useAuth();
@@ -54,6 +58,8 @@ export const useDeleteMilestone = () => {
       console && console.error("Error deleting milestone:", err);
       toast && toast.error("Failed to delete milestone: " + err && err.message),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return false
 =======
 export const useDeleteMilestone = () =>: any {
@@ -87,6 +93,7 @@ if (throw error) {
     } finally {
       setIsSubmitting (false);
     }
+<<<<<<< HEAD
 
         .eq('id', milestoneId),
       
@@ -143,3 +150,5 @@ export const useDeleteMilestone = () => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

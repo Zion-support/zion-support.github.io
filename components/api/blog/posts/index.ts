@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { v4 as uuidv4  } from 'uuid';
 import { BlogPost  } from '@/utils/types/blog';
 import { readPosts, writePosts } from '@/utils/data/blogStore';
@@ -18,12 +19,44 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  if (req.method === 'GET') {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     const { status, topic, tag, author, limit, offset } = req.query;
+=======
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     let posts = readPosts();
-
-
+    if (status && typeof status === 'string')
+      posts = posts && posts.filter(p => p && p.status === status);
+    if (topic && typeof topic === 'string')
+    if (author && typeof author === 'string')
+      posts = posts && posts.filter(p => p && p.author === author);
+    posts = posts && posts.sort(
+      (a, b) =>
+        new Date(b && b.publishDate).getTime() - new Date(a && a.publishDate).getTime()
+    );
+    const o = parseInt(String(offset |0), 10) |0;
+    const l = parseInt(String(limit |20), 10) |20;
+    return res
+      .status(200)
+    if (author && typeof author === 'string') posts = posts.filter((p) => p.author === author);
+    posts = posts.sort((a, b) => (new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()));
+    const o = parseInt(String(offset |0), 10) |0;
+    const l = parseInt(String(limit |20), 10) |20;
+    return res.status(200).json({ items: posts.slice(o, o + l), total: posts.length })
+    const posts = readPosts();
+    if (posts && posts.some(p => p && p.slug === body && body.slug)) {
+      return res && res.status(409).json({ error: 'Slug already exists' });
+    }
+    const post: BlogPost = {
+  }
+return res.status(405).end();
+}
+  return res && res.status(405).end();
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -109,6 +142,7 @@ if ( {) {
       tags: body.tags || [],
       topics: body.topics || [],
       seo: {
+<<<<<<< HEAD
         metaTitle: body.seo?.metaTitle |body.title!
         metaDescription: body.seo?.metaDescription |''
         ogImageUrl: body.seo?.ogImageUrl |body.coverImageUrl |''
@@ -127,6 +161,10 @@ return res.status(405).end();
         metaTitle: body.seo?.metaTitle || body.title!,
         metaDescription: body.seo?.metaDescription || '',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        meta_title: body.seo?.meta_title || body.title!,
+        meta_description: body.seo?.meta_description || '',
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',
       },
       body: body.body || '',
@@ -137,6 +175,7 @@ return res.status(405).end();
     write_posts (posts);
     return res.status (201).json (post);
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   return res.status(405).end();
@@ -151,3 +190,8 @@ return res.status(405).end();
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+return res.status (405).end ();
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

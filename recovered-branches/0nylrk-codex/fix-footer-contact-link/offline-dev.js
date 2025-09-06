@@ -1,12 +1,19 @@
 
-const server = http && http.createServer((req, res) => {
-  if (req && req.url === '/' || req && req.url === '/index && index.html') {
-    fs && fs.readFile(path && path.join(__dirname, 'offline && offline.html'), (err, data) => {
+
+const http = require('http')
+const fs = require('fs')
+const path = require('path')
+
+const server = http.createServer((req, res) => {
+  if (req.url === '/' |req.url === '/index.html') {
+    fs.readFile(path.join(__dirname, 'offline.html'), (err, data) => {
       if (err) {
-        res && res.writeHead(500),
-        res && res.end('Error loading offline && offline.html'),
+
+        res.writeHead(500)
+        res.end('Error loading offline.html')
         return
       }
+<<<<<<< HEAD
       res.writeHead(200, { 'Content-Type': 'text/html' })
 
     })
@@ -41,7 +48,11 @@ const PORT = 8080
 const PORT = 8080,
 server && server.listen(PORT, () => {
   console && console.log(`
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+server.listen(PORT, () => {
+  // // // console.log(`
 ╔══════════════════════════════════════════════════════════════════╗
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║
 ╠══════════════════════════════════════════════════════════════════╣
@@ -52,29 +63,35 @@ server && server.listen(PORT, () => {
 ║     dependencies. Most features will not work until you install  ║
 ║     the required npm packages.                                   ║
 ║                                                                  ║
-║  🔍 See OFFLINE-DEV-README && README.md for detailed instructions.         ║
+║  🔍 See OFFLINE-DEV-README.md for detailed instructions.         ║
 ║                                                                  ║
 ║  🌐 When internet is available: ║
-║     1. Run: chmod +x setup && setup.sh                                    ║
-║     2. Run: ./setup && setup.sh npm                                       ║
+║     1. Run: chmod +x setup.sh                                    ║
+║     2. Run: ./setup.sh npm                                       ║
 ║     3. Run: npm run dev                                          ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 `)
+<<<<<<< HEAD
 
 
 }),
 <<<<<<< HEAD
 ;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }),;
 const PORT = 8080,;
 server.listen(PORT, () => {;
   // // // console.log(`;
+<<<<<<< HEAD
 =======
 const PORT = 8080,
 server.listen (PORT, () => {
   console.log (`;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ╔══════════════════════════════════════════════════════════════════╗;
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║;
 ╠══════════════════════════════════════════════════════════════════╣;
@@ -85,7 +102,7 @@ server.listen (PORT, () => {
 ║     dependencies. Most features will not work until you install  ║;
 ║     the required npm packages.                                   ║;
 ║                                                                  ║;
-║  🔍 See OFFLINE - DEV - README.md for detailed instructions.         ║;
+║  🔍 See OFFLINE-DEV-README.md for detailed instructions.         ║;
 ║                                                                  ║;
 ║  🌐 When internet is available: ║;
 ║     1. Run: chmod +x setup.sh                                    ║;
@@ -94,6 +111,7 @@ server.listen (PORT, () => {
 ║                                                                  ║;
 ╚══════════════════════════════════════════════════════════════════╝;
 `);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }),;
 =======
@@ -105,3 +123,9 @@ server.listen (PORT, () => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}),;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

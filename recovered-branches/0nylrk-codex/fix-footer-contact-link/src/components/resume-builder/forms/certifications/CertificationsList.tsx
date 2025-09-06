@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Certification  } from '@/types/resume';
@@ -143,6 +144,8 @@ if ( {) {
                       ? cert.expiration_date;
                       : format(cert.expiration_date, 'MMM yyyy')}
                     </>;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   )}
                 </p>;
               </div>;
@@ -157,48 +160,10 @@ if ( {) {
                 <Button
                   variant="ghost"
                   size="icon"
-
-                      {typeof cert.expiration_date === "string";
-                        ? cert.expiration_date;
-                        : format (cert.expiration_date, "MMM yyyy")}
-                    </>)}
-                </p>;
-              </div>;
-              <div className="flex gap - 2">;
-                <Button;
-                  variant="ghost";
-                  size="icon";
-                  on_click={() => on_edit (cert)}
-                >;
-                  <Edit className="h - 4 w - 4" />;
-                </Button>;
-                <Button;
-                  variant="ghost";
-                  size="icon";
-                  on_click={() => on_delete (cert.id!)}
-                >;
-                  <Trash2 className="h - 4 w - 4" />;
-                </Button>;
-              </div>;
-            </div>;
-
             {cert.credential_url && (
               <p className="text - xs mt - 2">;
                 <a;
                   href={cert.credential_url}
-
-                  onClick={() => onDelete(cert && cert.id!)}
-                >;
-                  <Trash2 className="h-4 w-4" />;
-                </Button>;
-              </div>;
-            </div>;
-            {cert && cert.credential_url && (;
-              <p className="text-xs mt-2">;
-                <a
-                  href={cert && cert.credential_url} 
-                  target="_blank" 
-
                   rel="noopener noreferrer"
                   className="text-primary hover:underline">;
                   View credential;
@@ -208,12 +173,6 @@ if ( {) {
           </CardContent>;
         </Card>;
       ))}
-
-    </div>;
-  );
-}
-
-=======
                   target="_blank";
                   rel="noopener noreferrer";
                   className="text - primary hover:underline";
@@ -225,6 +184,7 @@ if ( {) {
         </Card>))}
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
                   target="_blank"
@@ -253,3 +213,5 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

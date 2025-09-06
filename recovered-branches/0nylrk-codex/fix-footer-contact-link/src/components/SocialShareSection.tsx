@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Button} from "./ui/button";
@@ -196,6 +197,8 @@ export function SocialShareSection() {;
       onClick: copyLinkToClipboard;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import { Button } from './ui / button';
 import { Twitter, Facebook, Linkedin, Link } from '@/components / icons';
 import { toast } from './ui / use - toast';
@@ -264,6 +267,7 @@ function SocialShareSection() {
     }];
 ;
   return (
+<<<<<<< HEAD
 
             {shareLinks.map((link, index) => (;
               <Button;
@@ -276,3 +280,30 @@ function SocialShareSection() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+=======
+    <section className="py - 12 bg - zion - blue">;
+      <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
+        <div className="max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 6">;
+          <div>;
+            <h3 className="text - xl font - bold text - white mb - 2">Share Zion with Your Network</h3>;
+            <p className="text - zion - slate - light">Help others discover the future of AI & tech marketplace</p>;
+          </div>;
+          <div className="flex flex - wrap gap - 3">;
+            {share_links.map ((link, index) => (
+              <Button;
+                key={index}
+                className={`${link.color} text - white`}
+                size="sm";
+                on_click={link.on_click}
+              >;
+                {link.icon}
+                <span>{link.name}</span>;
+              </Button>))}
+          </div>;
+        </div>;
+      </div>;
+    </section>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

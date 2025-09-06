@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -11,6 +12,8 @@ import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get('OPENAI_API_KEY'),
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 interface Message {
@@ -27,6 +30,7 @@ interface Message {
   role: string,
   content: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 
@@ -59,10 +63,13 @@ interface Message {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 interface RequestBody {
   messages: Message[]
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -94,6 +101,8 @@ serve(async (req) => {
     const { messages } = await req && req.json() as RequestBody;
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Prepare the system message to define the assistant's behavior
     const systemMessage: Message = {
       role: 'system'
@@ -101,6 +110,7 @@ serve(async (req) => {
     }
     // Combine the system message with user messages
     const combinedMessages = [systemMessage, ...messages];
+<<<<<<< HEAD
 <<<<<<< HEAD
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
@@ -196,6 +206,20 @@ serve(async (req) => {
 
     return new Response(JSON && JSON.stringify({ message: assistantMessage }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+=======
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+  }
+});
+
+=======
+serve (async (req) => {
+  // Handle CORS preflight requests;
+  // Check condition
+if ( {) {
+  $2
+}
+    return new Response (null, { headers: cors_headers });
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
   try {
     const { messages } = await req.json () as RequestBody;
@@ -229,6 +253,7 @@ if ( {) {
       throw new Error (data.error.message);
     }
     const assistant_message = data.choices[0].message.content;
+<<<<<<< HEAD
 =======
 
 
@@ -251,5 +276,19 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+;
+    // Log this interaction for analytics (in a real implementation);
+    // This would track common questions, successful interactions, etc.;
+    console.log ('AI chat interaction logged');
+;
+    return new Response (JSON.stringify ({ message: assistant_message }), {
+      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+  } catch (error) {
+    console.error ('Error in ai - chat function:', error);
+    return new Response (JSON.stringify ({ error: error.message }), {
+      status: 500,
+      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 });

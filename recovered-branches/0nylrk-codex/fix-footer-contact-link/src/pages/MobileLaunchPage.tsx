@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -38,6 +39,8 @@ class ErrorBoundary extends React.Component {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from "react";
 import {SEO} from "@/components/SEO";
 import {AppLayout} from "@/layout/AppLayout";
@@ -48,6 +51,7 @@ import {MobileEmailCapture} from "@/components/mobile-app/MobileEmailCapture";
 import {AppStoreBanner} from "@/components/mobile-app/AppStoreBanner";
 import {QrCodeDownload} from "@/components/mobile-app/QrCodeDownload";
 import {CommunityTrust} from "@/components/mobile-app/CommunityTrust";
+<<<<<<< HEAD
 import React from "react",
 import { SEO } from "@/components/SEO",
 import { AppLayout } from "@/layout/AppLayout",
@@ -66,15 +70,16 @@ import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const MobileLaunchPage: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+const MobileLaunchPage: React.FC = () => {;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
-
-    <AppLayout>;
-
       <SEO
         title="Get the Zion App - AI Marketplace in Your Pocket"
         description="Download the Zion mobile app for iOS and Android. Hire AI talent, find tech jobs, and manage projects on the go."
         keywords="Zion mobile app, AI talent app, tech job app, project management app, iOS app, Android app"
         canonical="/mobile-launch"
+<<<<<<< HEAD
       />
       <MobileLaunchHero />
       <MobileFeatureShowcase />
@@ -86,6 +91,8 @@ const MobileLaunchPage: React.FC = () => {
     </AppLayout>
   )
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default MobileLaunchPage;
 
 <<<<<<< HEAD
@@ -141,6 +148,7 @@ const MobileLaunchPage: React.FC = () => {
     </AppLayout>);
 }
 ;
+<<<<<<< HEAD
 =======
 
 },
@@ -148,4 +156,6 @@ const MobileLaunchPage: React.FC = () => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default MobileLaunchPage;

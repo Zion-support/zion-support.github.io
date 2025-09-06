@@ -1,7 +1,29 @@
+<<<<<<< HEAD
 import Stripe from 'stripe';
 import { withErrorLogging } from '../../utils/withErrorLogging.cjs';
+=======
+          price: priceId,
+          quantity: quantity,
+        },
+      ],
+      success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${req.headers.origin}/cancel`,
+    });
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+    res.statusCode = 200;
+    res.json({ 
+      success: true, 
+      sessionId: session.id,
+      url: session.url 
+    });
+  } catch (err) {
+    // console.error('Checkout session API error:', err);
+    res.statusCode = 500;
+    res.json({ error: err.message || 'Checkout session creation failed' });
+  }
 
+<<<<<<< HEAD
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -49,6 +71,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 export default withErrorLogging(handler);
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+export default withErrorLogging(handler);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
@@ -57,10 +82,15 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
+<<<<<<< HEAD
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       url: session.url
     })
   } catch (err) {,
@@ -71,3 +101,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 };
 export default withErrorLogging(handler),
 ,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -40,10 +41,19 @@ export interface HeaderProps {;
   // use the tenant's primary color;
   const effectiveTheme = customTheme || (isWhitelabel ? {;
 
+=======
+import React from 'react';
+  const { user } = useAuth();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();
+  const [query, setQuery] = useState("");
+  const searchSuggestions = generateSearchSuggestions();
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     primaryColor;
     backgroundColor: '#0f172a', // Default dark background;
     textColor: '#ffffff', // Default light text;
   } : undefined);
+<<<<<<< HEAD
 
 
 =======
@@ -146,23 +156,20 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 
   },
   
+=======
+      navigate(`/search?q=${encodeURIComponent(query)}`);
+      setQuery("");
+    }
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <header
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"
-
-      style={headerStyle}>;
-      <div className="container flex h-16 items-center px-4 sm:px-6">;
-        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />;
-
-        <div className="ml-6 flex-1">;
-          <MainNavigation />;
-        </div>;
-        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">;
-
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
             searchSuggestions={searchSuggestions}
+<<<<<<< HEAD
 <<<<<<< HEAD
           />
         </form>
@@ -264,6 +271,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import {MainNavigation} from '@/layout / MainNavigation';
 import {use_auth} from '@/hooks / use_auth';

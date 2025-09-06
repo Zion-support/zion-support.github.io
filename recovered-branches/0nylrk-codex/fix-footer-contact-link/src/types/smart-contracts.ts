@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -24,23 +25,15 @@ export interface SmartContractInfo {;
   status: 'draft' | 'deployed' | 'executed' | 'cancelled'
 <<<<<<< HEAD
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
-export interface SmartContractInfo {
-  id: string;
-  transaction_hash?: string;
-  network_name?: BlockchainNetwork;
-  block_number?: number;
-  deployed_address?: string;
-  contract_type: 'escrow' | 'milestone' | 'simple_agreement';
-  metadata_url?: string;
-  created_at: string;
-  created_by: string,
-  status: 'draft' | 'deployed' | 'executed' | 'cancelled';
-
+export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';
 }
 <<<<<<< HEAD
 =======
 export interface EscrowContractDetails {
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 }
@@ -54,11 +47,14 @@ export interface EscrowContractDetails {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   client: string;
   talent: string;
   amount: number;
   currency: string;
   deliverables: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   completionDeadline: string
   arbitrator?: string
@@ -119,3 +115,6 @@ export interface DeploymentOptions {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

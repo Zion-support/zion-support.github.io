@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Header} from "@/components/Header";
@@ -63,6 +64,8 @@ export default function Categories() {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { CategoriesSection } from '@/components / CategoriesSection';
@@ -85,6 +88,7 @@ function Categories() {
               Find exactly what you're looking for to enhance your business or personal projects.;
             </p>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -109,3 +113,13 @@ function Categories() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          {/* Reuse the Categories Section component */}
+          <CategoriesSection show_title={false} />;
+        </div>;
+      </div>;
+      <Footer />;
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

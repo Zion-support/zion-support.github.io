@@ -1,14 +1,20 @@
-rank: number,
+
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Award } from 'lucide-react'
+
+interface LeaderboardEntry {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  rank: number,
   name: string,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   referrals: number
 }
-
-
-
 export function ReferralLeaderboard() {
   // This would typically be fetched from the server
   // For now, we'll use mock data
   const leaderboardData: LeaderboardEntry[] = [
+<<<<<<< HEAD
 <<<<<<< HEAD
     { rank: 1, name: 'Alex Johnson', referrals: 24 }
     { rank: 2, name: 'Jamie Smith', referrals: 18 }
@@ -29,6 +35,8 @@ export function ReferralLeaderboard() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   ]
   return (
     <Card>
@@ -39,34 +47,20 @@ export function ReferralLeaderboard() {
     { rank: 3, name: "Taylor Wong", referrals: 15 }
     { rank: 4, name: "Casey Brown", referrals: 12 }
     { rank: 5, name: "Jordan Lee", referrals: 10 }]
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
-} from '@/components/ui/card';
-import { Award } from 'lucide-react';
-interface LeaderboardEntry {;
-  rank: number;
-  name: string;
-  referrals: number;
-  rank: number,;
-  name: string,;
-  referrals: number;
-}
-export function ReferralLeaderboard() {;
-  // This would typically be fetched from the server;
-  // For now, we'll use mock data;
-  const leaderboardData: LeaderboardEntry[] = [;
-    { rank: 1, name: 'Alex Johnson', referrals: 24 },;
-    { rank: 2, name: 'Jamie Smith', referrals: 18 },;
-    { rank: 3, name: 'Taylor Wong', referrals: 15 },;
-    { rank: 4, name: 'Casey Brown', referrals: 12 },;
-    { rank: 5, name: 'Jordan Lee', referrals: 10 },;
-  ];
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <Award className="h-5 w-5" />
+=======
+    { rank: 1, name: "Alex Johnson", referrals: 24 },
+    { rank: 2, name: "Jamie Smith", referrals: 18 },
+    { rank: 3, name: "Taylor Wong", referrals: 15 },
+    { rank: 4, name: "Casey Brown", referrals: 12 },
+    { rank: 5, name: "Jordan Lee", referrals: 10 }],
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -106,11 +100,14 @@ export function ReferralLeaderboard() {;
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Award className="h-5 w-5" />
           Leaderboard
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -119,10 +116,16 @@ export function ReferralLeaderboard() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         </CardTitle>
         <CardDescription>Top referrers this month</CardDescription>
       </CardHeader>
       <CardContent>
+<<<<<<< HEAD
         <div className='space-y-2'>
           {leaderboardData.map(entry => (
             <div
@@ -140,6 +143,11 @@ export function ReferralLeaderboard() {;
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             >
               <div className="flex items-center gap-3">
                 <div 
@@ -150,8 +158,8 @@ export function ReferralLeaderboard() {;
                       ? "bg-slate-200 text-slate-800"
                       : entry.rank === 3
                       ? "bg-amber-200 text-amber-800"
-
                       : "bg-muted text-muted-foreground"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 >
                   {entry.rank}
@@ -182,6 +190,9 @@ export function ReferralLeaderboard() {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Award } from 'lucide-react';
 interface LeaderboardEntry {;
@@ -224,7 +235,6 @@ export function ReferralLeaderboard() {;
                       ? "bg-slate-200 text-slate-800";
                       : entry.rank === 3;
                       ? "bg-amber-200 text-amber-800";
-
                       : "bg-muted text-muted-foreground";
                   }`}
                 >;
@@ -237,38 +247,12 @@ export function ReferralLeaderboard() {;
               </span>
             </div>
           ))}
-        </div>
-      </CardContent>
-    </Card>
-
-
-                          : 'bg-muted text-muted-foreground'                  }`}>;
-                  {entry && entry.rank}
-                </div>;
-                <span className='font-medium'>{entry && entry.name}</span>;
-              </div>;
-              <span className='text-sm'>;
-                {entry && entry.referrals} referral{entry && entry.referrals !== 1 ? 's' : ''}              </span>                      ? "bg-slate-200 text-slate-800";
-                      : entry && entry.rank === 3;
-                      ? "bg-amber-200 text-amber-800";
-                      : "bg-muted text-muted-foreground";
-                >;
-                  {entry && entry.rank}
-                </div>;
-                <span className='font-medium'>{entry && entry.name}</span>;
-              </div>;
-              <span className='text-sm'>;
-                {entry && entry.referrals} referral{entry && entry.referrals !== 1 ? 's' : ''}                <span className="font-medium">{entry && entry.name}</span>;
-              </div>;
-              <span className="text-sm">;
-                {entry && entry.referrals} referral{entry && entry.referrals !== 1 ? "s" : ""}
-            </div>;
-          ))}
         </div>;
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
@@ -280,3 +264,9 @@ export function ReferralLeaderboard() {;
     </Card>);
 }
 ;
+=======
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

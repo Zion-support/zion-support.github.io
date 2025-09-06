@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -332,10 +333,20 @@ export const MetadataManager: React.FC = () => {;
               <ScreenshotManager platform="android" />;
               <ExportPanel platform="android" metadata={android_form.get_values ()} />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    } catch (error) {
+      toast.error ("Failed to save metadata");
+      console.error (error);
+    } finally {
+      setIsSaving (false);
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </div>;
           </div>;
         </TabsContent>;
       </Tabs>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -347,3 +358,10 @@ export const MetadataManager: React.FC = () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+=======
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

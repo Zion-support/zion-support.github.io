@@ -4,43 +4,56 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 interface SkeletonProps {
+=======
+interface SkeletonProps {;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   className?: string;
   height?: string;
   width?: string;
 
-
+  rounded?: string;
+=======
+interface SkeletonProps {
+  class_name?: string;
+  height?: string;
+  width?: string;
+}) => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
-
+    <motion&& motion.div
+      className={`bg-white/10 animate-pulse ${height} ${width} ${rounded} ${className}`}
+=======
     <motion.div;
       className={`bg - white / 10 animate - pulse ${height} ${width} ${rounded} ${class_name}`}
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       animate={{
         opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
       transition={{
-
-    />);
-}
-;
-
 interface ServiceCardSkeletonProps {
   class_name?: string;
 }
+<<<<<<< HEAD
 
 export const ServiceCardSkeleton: React.FC < ServiceCardSkeletonProps> = ({ class_name = '' }) => {
   return (
@@ -134,23 +147,20 @@ interface StatsSkeletonProps {
 
 }
 ;
+=======
+interface HeroSkeletonProps {
+  class_name?: string;
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface StatsSkeletonProps {
   class_name?: string;
 }
-
-            </div>
-
           ))}
         </div>
       </div>
     </div>
-
-        duration: 1 && 1.5,
-        repeat: Infinity,
-        ease: "easeInOut"}}
-    />;
-  );
 };
+<<<<<<< HEAD
 interface ServiceCardSkeletonProps {;
   className?: string;
 }
@@ -174,11 +184,13 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
-};
 interface HeroSkeletonProps {;
   className?: string;
 }
+
 export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) => {;
   return (
     <div className={`min-h-screen flex items-center justify-center px-6 py-20 ${className}`}>;
@@ -194,9 +206,11 @@ export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) =>
     </div>;
   );
 };
+
 interface StatsSkeletonProps {;
   className?: string;
 }
+
 export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) => {;
   return (
     <div className={`py-20 px-6 ${className}`}>;
@@ -216,14 +230,20 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
     </div>;
   );
 };
+
 export default Skeleton;  );
 };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Skeleton;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 export const StatsSkeleton: React.FC < StatsSkeletonProps> = ({ class_name = '' }) => {
   return (
@@ -249,6 +269,7 @@ export default Skeleton);
 export default Skeleton;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 =======
@@ -265,3 +286,5 @@ interface SkeletonProps {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

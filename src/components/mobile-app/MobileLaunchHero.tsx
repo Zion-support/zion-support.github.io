@@ -1,13 +1,27 @@
-return (
-    <section className='relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24'>
-      <div className='container mx-auto px-4 lg:px-8'>
-        <div className='flex flex-col md:flex-row items-center gap-8 md:gap-16'>
-          <div className='flex-1 text-white'>
-            <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight'>
-              The Power of <span className='text-zion-cyan'>Zion</span>
-              <br />
+=======
+
+import React from "react",
+import Link from "next/link",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import { ArrowRight, Smartphone } from 'lucide-react'
+
+export const MobileLaunchHero: React.FC = () => {
+  // App store links - these would come from environment variables in production
+  const appStoreUrl = "#", // Replace with actual App Store URL
+  const googlePlayUrl = "#", // Replace with actual Google Play URL
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+    <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+          <div className="flex-1 text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+              The Power of <span className="text-zion-cyan">Zion</span><br />
               In Your Pocket
             </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <p className='text-lg md:text-xl opacity-90 mb-8'>
               Find top AI talent or global IT jobs on the go. Track projects
@@ -19,6 +33,8 @@ return (
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               message candidates, and get AI-powered matches instantly with our
               mobile app.
             </p>
@@ -29,6 +45,7 @@ return (
             </div>
             <div className="mb-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <AppStoreButtons
               <AppStoreButtons 
 =======
@@ -38,6 +55,8 @@ return (
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}              />
             </div>
@@ -62,6 +81,7 @@ return (
                   variant='ghost'
                   size='lg'
                   className='text-white hover:bg-white/10'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -94,6 +114,9 @@ export const MobileLaunchHero: React.FC = () => {
 <<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             
             <p className="text-lg md:text-xl opacity-90 mb-8">
               Find top AI talent or global IT jobs on the go. Track projects, message candidates, and get AI-powered matches instantly with our mobile app.
@@ -116,12 +139,18 @@ export const MobileLaunchHero: React.FC = () => {
               
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <Link href="#features">
                 <Button variant="ghost" size="lg" className="text-white hover:bg-white/10">
                   See Features
@@ -129,6 +158,7 @@ export const MobileLaunchHero: React.FC = () => {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
           <div className='flex-1 flex justify-center md:justify-end'>
             <div className='relative'>
               {/* Phone mockup with glow effect */}
@@ -150,10 +180,16 @@ export const MobileLaunchHero: React.FC = () => {
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">
                 <CardContent className="p-0">
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
                     <Smartphone className="w-40 h-40 text-white opacity-40" />
+<<<<<<< HEAD
                   </div>
                 </CardContent>
               </Card>
@@ -181,6 +217,9 @@ import React from 'react';
 import Link from 'next/link';
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from "react",;
 import Link from "next/link",;
 import { ArrowRight, Smartphone } from 'lucide-react';
@@ -242,6 +281,7 @@ export const MobileLaunchHero: React.FC = () => {;
     </section>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -338,3 +378,8 @@ export const MobileLaunchHero: React.FC = () => {
 }
 "  );
 }
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

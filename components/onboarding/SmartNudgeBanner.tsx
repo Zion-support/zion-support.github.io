@@ -4,26 +4,35 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React from 'react';
 import { X } from 'lucide-react';
 
-
+export type SmartNudgeBannerProps = {;
+=======
+;
+export type SmartNudgeBannerProps = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   role: 'talent' | 'client';
   user_id?: string | null;
   message: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 export default function SmartNudgeBanner({
@@ -79,43 +88,16 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
         typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
       setHidden(v === 'dismissed');      const v = typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
       setHidden(v === 'dismissed')
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } catch {}
   }, [storageKey]);
-  const dismiss = React.useCallback(() => {
 
-};
-export default function SmartNudgeBanner(): any ({;
-  role,;
-  userId,;
-  message,;
-}: SmartNudgeBannerProps) {;
-  const storageKey = React && React.useMemo(;
-    () => `zion-nudge-${role}-${userId ?? 'anon'}`,;
-    [role, userId];
-  );  const [hidden, setHidden] = React && React.useState<boolean>(false);
-  React && React.useEffect(() => {;
-    try {;
-      const v =;
-        typeof window !== 'undefined' ? localStorage && localStorage.getItem(storageKey) : null;
-      setHidden(v === 'dismissed');    } catch {}export type SmartNudgeBannerProps = {;
-  role: 'talent' | 'client',;
-  userId?: string | null;
-  message: string;
-};
-export default function SmartNudgeBanner(): any ({ role, userId, message }: SmartNudgeBannerProps) {;
-  const storageKey = React && React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]);
-  const [hidden, setHidden] = React && React.useState<boolean>(false);
-  React && React.useEffect(() => {;
-    try {;
-      const v =;
-        typeof window !== 'undefined' ? localStorage && localStorage.getItem(storageKey) : null;
-      setHidden(v === 'dismissed');      const v = typeof window !== 'undefined' ? localStorage && localStorage.getItem(storageKey) : null;
-      setHidden(v === 'dismissed');
-
-    } catch {}
-  }, [storageKey]);
   const dismiss = React && React.useCallback(() => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setHidden(true);
+<<<<<<< HEAD
 
 
 =======
@@ -131,18 +113,30 @@ export default function SmartNudgeBanner(): any ({ role, userId, message }: Smar
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } catch {}
   }, [storageKey]);
   if (hidden) return null;
+
   return (
-
-
-        {message}
-
-      </div>;
+    <div className='relative rounded-xl border border-cyan-300/40 dark:border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4'>;
+      <button
+        onClick={dismiss}
+        aria-label='Dismiss'
+        className='absolute top-2 right-2 p-1 rounded hover:bg-black/5 dark:hover:bg-white/10'>;
+        <X size={16} />;
+      </button>;
+      <div className='text-sm'>{message}</div>;
     </div>;
-  );
+  );        <X size={16} />;
+      </button>;
+      <div className="text-sm">;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+        {message}
 =======
+<<<<<<< HEAD
       <div className='text-sm'>{message}</div>
     </div>
 <<<<<<< HEAD
@@ -167,6 +161,9 @@ export default function SmartNudgeBanner(): any ({ role, userId, message }: Smar
 }
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -240,19 +237,6 @@ if (return null) {
         {message}
       </div>;
     </div>);
-  if (hidden) return null,
-
-  return (
-    <div className=&quot;relative rounded-xl border border-cyan-300/40 dark:border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4&quot;>
-      <button onClick={dismiss} aria-label=&quot;Dismiss&quot; className=&quot;absolute top-2 right-2 p-1 rounded hover:bg-black/5 dark:hover:bg-white/10&quot;>
-        <X size={16} />
-      </button>
-      <div className=&quot;text-sm&quot;>
-        {message}
-      </div>
-    </div>
-  )
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD

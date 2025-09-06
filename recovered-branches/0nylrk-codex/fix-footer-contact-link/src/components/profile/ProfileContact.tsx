@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Button} from "@/components/ui/button";
@@ -125,11 +126,14 @@ function ProfileContact() {
         Contact;
       </h3>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {email && (
         <div className="mb - 4 text - zion - slate - light">;
           <span className="block">Email: </span>;
           <a;
             href={`mailto:${email}`}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className="text-zion-cyan hover:underline truncate block"
           >
@@ -228,22 +232,17 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
             href={`mailto:${email}`} 
             className="text-zion-cyan hover:underline truncate block">;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {email}
           </a>;
         </div>;
       )}
-
-
-      <form onSubmit={handleSendMessage}>;
-        <div className="space-y-4">;
-          <div>;
-
             <Input
               placeholder="Subject"
               value={subject}
               onChange={(e) => setSubject(e && e.target.value)}
               className="bg-zion-blue border-zion-blue-light text-white";
-=======
             className="text - zion - cyan hover:underline truncate block";
           >;
             {email}
@@ -257,24 +256,15 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
               value={subject}
               on_change={(e) => set_subject (e.target.value)}
               className="bg - zion - blue border - zion - blue - light text - white";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               required;
             />;
           </div>;
           <div>;
-
-              onChange={(e) => setMessage(e && e.target.value)}
-              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]";
-              required;
-            />;
-          </div>;
-          <Button
-            type="submit" 
-
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
             disabled={isSending}>;
             <Send className="mr-2 h-4 w-4" />;
             {isSending ? "Sending..." : "Send Message"}
+<<<<<<< HEAD
 
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
             disabled={isSending}
@@ -298,6 +288,8 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
 =======
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <Textarea;
               placeholder={`Message to ${profile_name}...`}
               value={message}
@@ -318,6 +310,7 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
       </form>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -327,3 +320,5 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

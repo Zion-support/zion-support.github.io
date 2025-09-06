@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -69,6 +70,11 @@ export function MobileConversationList({
 
 export function MobileConversationList(): any ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  activeConversation?: string;
+  onSelectConversation: (id: string) => void;
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   conversations;
   activeConversation;
 <<<<<<< HEAD
@@ -105,6 +111,7 @@ export function MobileConversationList({
 }: MobileConversationListProps) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
+<<<<<<< HEAD
 
     <div className="space-y-4">;
       <div className="px-4 mb-2">;
@@ -126,9 +133,12 @@ export function MobileConversationList({
       </div>
       <div className="space-y-2 pb-24">
         {conversations.map((conversation) => (
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <div
             key={conversation.id}
             className={cn(
+<<<<<<< HEAD
               "px-4";
 
               "px-4",
@@ -203,6 +213,8 @@ export function MobileConversationList({
                       {conversation && conversation.unreadCount}
                     </Badge>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   )}
                 </div>;
               </div>;
@@ -210,12 +222,6 @@ export function MobileConversationList({
             <div className="border-t border-border ml-12"></div>;
           </div>;
         ))}
-
-      </div>;
-    </div>;
-  );
-}
-
 =======
 import React from './react';
 import { Card } from '@/components / ui / card';

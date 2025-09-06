@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from "react";
@@ -118,13 +119,11 @@ interface RateOptimizationSectionProps {;
   skills: string[],;
   yearsExperience: number,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   location?: string;
   rateType: "hourly" | "fixed";
 }
-
-
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
-
 =======
 import React, { useState } from './react';
 import { Control } from './react - hook - form';
@@ -145,15 +144,6 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
   control;
   set_value;
   skills;
-
-  location,;
-  rateType;
-}) => {;
-  const handleSuggestionApplied = (rate: number) => {;
-    setValue("hourlyRate", rate);
-  };
-
-
   return (
     <div className="space-y-4">;
       <FormField
@@ -190,6 +180,7 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
                 type="number";
                 min="1";
                 step="0.01";
+<<<<<<< HEAD
 
                 placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}
 <<<<<<< HEAD
@@ -198,6 +189,10 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                placeholder={rate_type === "hourly" ? "e.g. 45" : "e.g. 1000"}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {...field}
               />;
             </FormControl>;
@@ -205,12 +200,6 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
               Set a competitive rate based on your skills and experience;
             </FormDescription>;
             <FormMessage />;
-
-      />;
-
-      <Card>;
-        <CardContent className="pt-4">;
-
           <TalentRateRecommender
 =======
           </FormItem>)}
@@ -223,6 +212,7 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
             years_experience={years_experience}
             location={location}
             onSuggestionApplied={handleSuggestionApplied}
+<<<<<<< HEAD
 <<<<<<< HEAD
             rateType={rateType}
           />
@@ -253,3 +243,14 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+=======
+            rate_type={rate_type}
+          />;
+        </CardContent>;
+      </Card>;
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

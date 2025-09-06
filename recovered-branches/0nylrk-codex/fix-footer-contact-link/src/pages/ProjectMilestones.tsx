@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -53,6 +54,8 @@ function ProjectMilestones() {;
         <SEO
           title="Payment Milestones | Zion AI Marketplace" 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           description="Manage project payment milestones and deliverables"
 =======
 import React from 'react';
@@ -77,6 +80,7 @@ function ProjectMilestones() {
         <ProjectMilestonesContent />;
         <Footer />;
       </>;
+<<<<<<< HEAD
 
 
 
@@ -99,3 +103,5 @@ export default ProjectMilestones;
 
 ;
 export default ProjectMilestones;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

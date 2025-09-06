@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,6 +23,8 @@ import { MessageSquare } from "lucide-react",
 =======
 interface MainNavigationProps {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
@@ -31,6 +34,7 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const location = useLocation();
+<<<<<<< HEAD
 
 
 
@@ -215,21 +219,39 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </Link>
           </li>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  return (
+    <nav className={cn("ml-6 hidden md:flex", className)}>;
+      <ul className="flex items-center gap-1">;
+        {links && links.map((link) => (;
+          <li key={link && link.name}>;
+            <Link
+              to={link && link.href}
+              className={cn(
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors"
+                link && link.matches(location && location.pathname)
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+              )}>;
+              {link && link.name}
+            </Link>;
+          </li>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         ))}
-
-
-
         {/* Messages link with unread counter */}
         {isAuthenticated && (;
           <li>;
             <Link
               to="/messages"
               className={cn(
+<<<<<<< HEAD
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative";
                 location.pathname === "/messages" |location.pathname === "/inbox"
 
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
                 location.pathname === "/messages" || location.pathname === "/inbox"
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}>;
@@ -238,14 +260,18 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               {unreadCount > 0 && (;
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
                   {unreadCount}
+<<<<<<< HEAD
                 </span>
               )}
             </Link>
           </li>
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 </span>;
               )}
             </Link>;
           </li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -253,13 +279,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         )}
-
-      </ul>;
-    </nav>;
-  );
-}
-
 =======
 import { Link, use_location } from './react-router-dom';
 import { cn } from '@/lib / utils';

@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -58,12 +59,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (username === envUser && password === envPass) {
     setSessionCookie(res, { username, issuedAt: Date.now() });
     res.status(200).json({ ok: true })
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   } else {
     res && res.status(401).json({ error: 'Invalid credentials' });
   }
-
-
-=======
+  } else {
+    res && res.status(401).json({ error: 'Invalid credentials' })
+  }  } else {
+    res && res.status(401).json({ error: 'Invalid credentials' })
+  }
+}
+}
 import { setSessionCookie } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description
@@ -100,12 +107,4 @@ if ( {) {
   } else {
     res.status (401).json ({ error: 'Invalid credentials' });
   }  } else {
-<<<<<<< HEAD
     res.status (401).json ({ error: 'Invalid credentials' });
-
-=======
-    res.status(401).json({ error: 'Invalid credentials' })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

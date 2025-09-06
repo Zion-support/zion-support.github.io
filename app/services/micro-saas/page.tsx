@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const metadata = { 
   title: 'Micro SaaS Development | Zion Tech Group',
   description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
@@ -62,6 +63,7 @@ export default function MicroSaaSPage() {
             price="$4,500-13,000"
             icon="📈"
           />
+<<<<<<< HEAD
           <MicroSaaSCard
             title="AI Content Creation Suite"
             description="Complete content marketing automation with AI writing, SEO optimization, and multi-format generation"
@@ -159,10 +161,38 @@ export default function MicroSaaSPage() {
             features={["Smart scheduling", "Data compression", "Incremental backups", "Recovery testing", "Compliance reporting", "Multi-cloud support"]}
             price="$1,199/month"
             icon="💾"
+=======
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Development Process</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <ProcessStep
+            step="1"
+            title="Discovery & Planning"
+            description="Market research, user personas, feature specification, and technical architecture"
+          />
+          <ProcessStep
+            step="2"
+            title="Design & Prototyping"
+            description="UI/UX design, user flow mapping, and interactive prototypes for validation"
+          />
+          <ProcessStep
+            step="3"
+            title="Development & Testing"
+            description="Agile development with continuous testing, code reviews, and quality assurance"
+          />
+          <ProcessStep
+            step="4"
+            title="Launch & Growth"
+            description="Deployment, user onboarding, marketing setup, and ongoing optimization"
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           />
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className="mb-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Development Process</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -189,6 +219,8 @@ export default function MicroSaaSPage() {
         </div>
       </section>
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <section className="mb-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Core Technology Stack</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -425,6 +457,25 @@ function CTASection() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
+=======
+}
+=======
+export const metadata = { title: 'Micro SaaS Development | Zion Tech Group' } export default /**
+ * MicroSaaSPage - Function description
+ */
+function MicroSaaSPage() { return ( <section> <h1 style={{font_size: 26, font_weight: 800}}>Micro SaaS Development</h1> <p style={{margin_top: 8, color: '#374151'}}>We design, build, launch and operate revenue - generating micro SaaS products end - to - end.</p> <div style={{display: 'grid', gap: 12, margin_top: 16}}> <Item title="Core features" details={["Multi - tenant architecture", "Auth (email, OAuth)", "Billing (Stripe)", "Admin + analytics", "In - app onboarding"]} /> <Item title="Growth stack" details={["SEO - ready marketing site", "Blog + docs", "Email campaigns", "Referral + affiliates"]} /> <Item title="Ops & reliability" details={["CI / CD", "Observability", "Error budgets", "SLOs", "On - call setup"]} /> </div> <Pricing /> </section> )} /**
+ * Item - Function description
+ */
+function Item() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h3 style={{font_weight: 700}}>{title}</h3> <ul style={{padding_left: 18, color: '#4b5563'}}>{details.map (d => (<li key={d} style={{list_style: 'disc'}}>{d}</li>))}</ul> </div> )} /**
+ * Pricing - Function description
+ */
+function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat (auto - fit, minmax (260px, 1fr))'}}> <Plan name="MVP Sprint" price="$8k–$20k" features={["2–4 weeks", "MVP scope", "Stripe billing", "Basic analytics"]} /> <Plan name="Growth" price="$20k–$60k" features={["6–10 weeks", "SEO + content", "CRM + email", "Observability"]} /> <Plan name="Scale" price="$60k+" features={["Custom roadmap", "SRE + security", "Multi - region", "SLAs"]} /> </div> )} /**
+ * Plan - Function description
+ */
+function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
+>>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

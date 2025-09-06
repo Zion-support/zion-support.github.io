@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -91,6 +92,8 @@ interface FilterSidebarProps {;
 
 export function FilterSidebar(): any ({;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   filters;
   filterOptions;
   onFilterChange;
@@ -110,6 +113,7 @@ export function FilterSidebar(): any ({;
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
 =======
   return (
+<<<<<<< HEAD
 
 
   },
@@ -305,6 +309,8 @@ export function FilterSidebar(): any ({;
       </div>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Rating Filter */}
       <div className="mb-6">;
         <label className="text-sm font-medium text-zion-slate-light block mb-2">;
@@ -317,12 +323,6 @@ export function FilterSidebar(): any ({;
               variant="outline"
               size="sm"
               onClick={() => onRatingChange(rating)}
-
-              className={`${;
-                filters && filters.selectedRating === rating ;
-                  ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
-                  : "border-zion-blue-light text-zion-slate-light";
-
               }`}
             >;
               {rating === null ? (;
@@ -337,13 +337,6 @@ export function FilterSidebar(): any ({;
               )}
             </Button>;
           ))}
-
-        </div>;
-      </div>;
-    </div>;
-  );
-}
-
 =======
 import React from './react';
 import { Button } from '@/components / ui / button';

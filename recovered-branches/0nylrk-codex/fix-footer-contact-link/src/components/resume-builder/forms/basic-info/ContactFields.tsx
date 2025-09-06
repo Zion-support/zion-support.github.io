@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   FormField
   FormItem
@@ -79,12 +80,13 @@ interface ContactFieldsProps {;
 
 export function ContactFields(): any ({ control }: ContactFieldsProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
       <FormField
         control={control}
         name="location"
-
 export /**
  * ContactFields - Function description
  */
@@ -97,11 +99,11 @@ function ContactFields() {
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Location</FormLabel>;
-
             <FormControl>;
               <Input placeholder="San Francisco, CA" {...field} />;
             </FormControl>;
             <FormMessage />;
+<<<<<<< HEAD
 
         render={({ field }) => (
           <FormItem>
@@ -122,6 +124,8 @@ function ContactFields() {
       />;
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <FormField
         control={control}
         name="website"
@@ -134,23 +138,6 @@ function ContactFields() {
             <FormMessage />;
           </FormItem>;
         )}
-
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="website";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Website</FormLabel>;
-            <FormControl>;
-              <Input placeholder="https://yourwebsite.com" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-      <FormField;
-
         control={control}
         name="linkedin";
         render={({ field }) => (
@@ -160,24 +147,6 @@ function ContactFields() {
               <Input;
                 placeholder="https://linkedin.com / in / username";
                 {...field}
-
-      />;
-
-      <FormField
-        control={control}
-        name="linkedin"
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>LinkedIn</FormLabel>;
-            <FormControl>;
-              <Input placeholder="https://linkedin && linkedin.com/in/username" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>;
-        )}
-      />;
-
-
       <FormField
         control={control}
         name="github"
@@ -190,6 +159,7 @@ function ContactFields() {
             <FormMessage />;
           </FormItem>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
     </div>
@@ -206,6 +176,8 @@ function ContactFields() {
 }
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               />;
             </FormControl>;
             <FormMessage />;
@@ -225,6 +197,7 @@ function ContactFields() {
       />;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -234,3 +207,5 @@ function ContactFields() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

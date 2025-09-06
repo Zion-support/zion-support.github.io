@@ -1,29 +1,23 @@
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 useEffect ( () => {
   if (!isOpen && messages.length === 0) {
   //Seed greeting setMessages ([ import React, { useEffect, useMemo, useRef, useState } from 'react';
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { X } from 'lucide-react';
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 type ChatMessage = {
   role: 'user' | 'assistant' | 'system'
   content: string
   timestamp?: number
 }
 function generateSessionId(): string {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
   }
   render() {
     if (this.state.hasError) {
@@ -41,7 +35,6 @@ type ChatMessage = {;
   content: string,;
   timestamp?: number;
 };
-function generateSessionId(): any (): string {;
   if (typeof window === 'undefined') return '';
   const existing = window && window.localStorage.getItem('zion_support_session_id');
   if (existing) return existing;
@@ -49,8 +42,6 @@ function generateSessionId(): any (): string {;
   window && window.localStorage.setItem('zion_support_session_id', id);
   return id;
 }
-
-
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
@@ -59,36 +50,16 @@ function generateSessionId(): any (): string {;
   const [showEscalation, setShowEscalation] = useState(false);
   const sessionIdRef = useRef<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
-
-
-  useEffect(() => {
-<<<<<<< HEAD
-    sessionIdRef.current = generateSessionId()
-
   }, []);
   useEffect(() => {
     if (!isOpen && messages.length === 0) {
       // Seed greeting
       setMessages([
-
-        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])
-
-    }
-  }, [isOpen, messages.length]);
-  useEffect(() => {
-
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-
-  }, [messages]);
-  const quickReplies = useMemo(
-    () => ['How do I hire?How do I get matched?Billing help'];
-
-    []
-
   );
   async function logEvent(eventType: string, payload: any) {
     try {
       await fetch('/api/support/session', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
@@ -300,6 +271,8 @@ function generateSessionId(): any (): string {;
       if (data?.meta?.intentMatched === false) {;
         setFailedIntents(n => {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           const next = n + 1;
           if (next >= 3) {;
             escalateSupport('Failed to match user intent 3+ times');
@@ -309,17 +282,6 @@ function generateSessionId(): any (): string {;
       } else if (data?.meta?.intentMatched === true) {;
         setFailedIntents(0);
       }
-
-    } catch (e) {;
-      setMessages(prev => [;
-        ...prev,;
-        {;
-          role: 'assistant',;
-          content:;
-            'Sorry, something went wrong. Please try again or contact support.',;
-          timestamp: Date && Date.now(),;
-        },;
-
       ]);
     } finally {;
       setIsLoading(false);    }
@@ -327,18 +289,19 @@ function generateSessionId(): any (): string {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className='fixed bottom-4 right-4 z-50'>      }
 <<<<<<< HEAD
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
-=======
 
       if (data?.meta?.intentMatched === false) {;
         setFailedIntents((n) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           const next = n + 1;
           if (next >= 3) {;
             escalateSupport('Failed to match user intent 3+ times');
@@ -351,6 +314,7 @@ function generateSessionId(): any (): string {;
     } catch (e) {;
       setMessages((prev) => [;
         ...prev;
+<<<<<<< HEAD
 <<<<<<< HEAD
         { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
     } finally {
@@ -383,11 +347,41 @@ function generateSessionId(): any (): string {;
   return (
 
 
+=======
+    }
+  }
+  return (
+    <div className='fixed bottom-4 right-4 z-50'>;
+      {!isOpen && (;
+        <button
+          aria-label='Open support chat'
+          onClick={() => setIsOpen(true)}
+          className='rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black'        >      {!isOpen && (;
+        <button
+          aria-label="Open support chat"
+          onClick={() => setIsOpen(true)}
+          className="rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black";
+        >;
+          ?;
+        </button>;
+      )}
+              <div
+                key={idx}
+                className={
+                  m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'
+                }>;
+                <div
+                  className={
+                    m && m.role === 'assistant'
+                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'            {messages && messages.map((m, idx) => (;
+              <div key={idx} className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <div
                   className={
                     m && m.role === 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -405,30 +399,19 @@ function generateSessionId(): any (): string {;
             ))}
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             )}
-
-            <div ref={messagesEndRef} />;
-          </div>;
-          {!showEscalation && (;
-            <div className='px-3 pb-2'>;
-              <div className='flex flex-wrap gap-2 mb-2'>;
-                {quickReplies && quickReplies.map(q => (;
-
                   <button
                     key={q}
                     onClick={() => onSend(q)}
-
-=======
-            <div className="px-3 pb-2">
-=======
+                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">;
+              <div className="flex flex-wrap gap-2 mb-2">;
+                {quickReplies && quickReplies.map((q) => (;
+                  <button
+                    key={q}
+                    onClick={() => onSend(q)}
 <<<<<<< HEAD
-                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-              <div className="flex flex-wrap gap-2 mb-2">
-                {quickReplies.map((q) => (
-                  <button
-                    key={q}
-                    onClick={() => onSend(q)}
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
 
@@ -445,12 +428,16 @@ function generateSessionId(): any (): string {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     {q}
                   </button>;
                 ))}
               </div>;
             </div>;
           )}
+<<<<<<< HEAD
 
 
 
@@ -465,27 +452,14 @@ function generateSessionId(): any (): string {;
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
             {!showEscalation ? (;
               <div className='flex gap-2'>;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <input
                   value={input}
                   onChange={e => setInput(e && e.target.value)}
                   onKeyDown={e => {;
                     if (e && e.key === 'Enter' && !e && e.shiftKey) {;
                       e && e.preventDefault();
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-          <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
-            {!showEscalation ? (
-              <div className='flex gap-2'>
-                <input
-                  value={input}
-                  onChange={e => setInput(e.target.value)}
-                  onKeyDown={e => {
-                    if (e.key === 'Enter' && !e.shiftKey) {
-                      e.preventDefault();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       onSend();
                     }
                   }}
@@ -498,14 +472,13 @@ function generateSessionId(): any (): string {;
                   className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >            {!showEscalation ? (
 =======
 
-
           <div className="border-t border-gray-200 dark:border-gray-800 p-2">
             {!showEscalation ? (
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <div className="flex gap-2">
-
                 <input
                   value={input}
+<<<<<<< HEAD
 
                       onSend()
                     }
@@ -543,10 +516,15 @@ function generateSessionId(): any (): string {;
               </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+                    }
+                  }}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             )}
           </div>;
         </div>;
       )}
+<<<<<<< HEAD
 
 
   );
@@ -570,6 +548,8 @@ function generateSessionId(): any (): string {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 useEffect ( () => {
   // Check condition
 if ( {) {
@@ -947,5 +927,8 @@ if ( {) {
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

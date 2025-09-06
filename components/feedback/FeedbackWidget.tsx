@@ -1,11 +1,14 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -19,6 +22,7 @@ class ErrorBoundary extends React.Component {
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export type FeedbackWidgetProps = {;
   responseId?: string;
@@ -51,51 +55,36 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  const [rating, setRating] = useState<null | 'up' | 'down'>(null);
+  const [comment, setComment] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const effectiveResponseId = useMemo(;
+    () => responseId || uuidv4(),;
+    [responseId];
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   );
   const submit = async () => {;
     if (!rating) {;
       setError('Please choose 👍 or 👎');
-
-      return;    }  const effectiveResponseId = useMemo(() => responseId || uuidv4(), [responseId]);
-  const submit = async () => {;
-    if (!rating) {;
-
-      setError('Please choose 👍 or 👎');
-      return;      return;
-      return
     }
     setError(null);
     setSubmitting(true);
-
-    try {;
-      const res = await fetch('/api/feedback/submit', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({;
-          responseId: effectiveResponseId,;
-          rating,;
-          comment: comment && comment.trim(),;
-          pagePath:;
-            typeof window !== 'undefined';
-              ? window && window.location.pathname;
-              : undefined,;
-          aiModel,;
-        }),;
-
       });
       if (!res && res.ok) throw new Error('Failed to submit feedback');
       setSubmitted(true);
-
-    } catch (e: any) {;
-      setError(e?.message || 'Something went wrong');
-    } finally {;
-
       setSubmitting(false);    }
   }
   return (
+<<<<<<< HEAD
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
       <div className='text-sm font-medium mb-2'>Was this answer useful?</div>          comment: comment.trim()
           pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           aiModel})});
       if (!res.ok) throw new Error('Failed to submit feedback');
       setSubmitted(true)
@@ -103,8 +92,12 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       setError(e?.message |'Something went wrong')
     } finally {
       setSubmitting(false)
+    }
+  }
 
+  return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>;
+<<<<<<< HEAD
       <div className='text-sm font-medium mb-2'>Was this answer useful?</div>          comment: comment && comment.trim(),;
           pagePath: typeof window !== 'undefined' ? window && window.location.pathname : undefined,;
           aiModel})});
@@ -144,15 +137,22 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       ) : (
         <div className='space-y-3'>
           <div className='flex items-center gap-2'>
+=======
+      <div className='text-sm font-medium mb-2'>Was this answer useful?</div>;
+      {submitted ? (;
+        <div className='text-sm text-emerald-700 dark:text-emerald-300'>;
+          Thanks for your feedback!;
+        </div>;
+      ) : (;
+        <div className='space-y-3'>;
+          <div className='flex items-center gap-2'>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <button
-              type='button'              onClick={() => setRating(rating === 'up' ? null : 'up')}      {submitted ? (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-        <div className="text-sm text-emerald-700 dark:text-emerald-300">Thanks for your feedback!</div>
-      ) : (
-        <div className="space-y-3">
-          <div className="flex items-center gap-2">
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              type='button'              onClick={() => setRating(rating === 'up' ? null : 'up')}      {submitted ? (;
+        <div className="text-sm text-emerald-700 dark:text-emerald-300">Thanks for your feedback!</div>;
+      ) : (;
+        <div className="space-y-3">;
+          <div className="flex items-center gap-2">;
             <button
               type="button"
               onClick={() => setRating(rating === 'up' ? null : 'up')}
@@ -163,8 +163,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
               <span>Yes</span>;
             </button>;
             <button
-
-
               onClick={() => setRating(rating === 'down' ? null : 'down')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'down' ? 'bg-red-600 text-white border-red-600' : ''}`}
               aria-pressed={rating === 'down'}
@@ -174,13 +172,12 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
             </button>;
           </div>;
           <textarea
-
-
               {submitting ? 'Submitting…' : 'Submit feedback'}
             </button>;
           </div>;
         </div>;
       )}
+<<<<<<< HEAD
 
 
   );
@@ -204,6 +201,8 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
 export type FeedbackWidgetProps = {
   response_id?: string;
@@ -353,6 +352,7 @@ if ( {) {
           </div>;
         </div>)}
     </div>);
+<<<<<<< HEAD
 
   const _submit = async () => {
     if (!rating) {
@@ -476,3 +476,5 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

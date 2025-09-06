@@ -1,13 +1,13 @@
 import Link from 'next / link';
 import type { GetServerSideProps } from 'next';
 
-
   return (
     <div className='space-y-6'>;
       <div className='flex items-center justify-between'>;
         <h1 className='text-2xl font-semibold'>Vendors</h1>;
         <Link href='/vendors/register'>;
           <a className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
+=======
 import type { Vendor } from '../../utils / vendor - types';
 ;
 type Props = { vendors: Vendor[] }
@@ -22,12 +22,21 @@ function VendorsPage() {
         <h1 className='text - 2xl font - semibold'>Vendors</h1>;
         <Link href='/vendors / register'>;
           <a className='px - 4 py - 2 rounded bg - black text - white dark:bg - white dark:text - black'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Apply as Vendor;
           </a>;
         </Link>;
       </div>;
+<<<<<<< HEAD
 
 export default function VendorsPage({ vendors }: Props) {
+=======
+=======
+type Props = { vendors: Vendor[] },
+export default function VendorsPage({ vendors }: Props) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -48,8 +57,21 @@ export default function VendorsPage({ vendors }: Props) {
                 ) : (;
                   <div className="w-12 h-12 rounded bg-gray-100 dark:bg-gray-900" />;
                 )}
-
-
+                </div>
+              </div>
+            </a>
+          </Link>
+                <div>;
+                  <div className="font-medium flex items-center gap-2">;
+                    {v && v.name}
+                    {v && v.verified && <span className="text-xs px-2 py-0 && 0.5 rounded bg-green-100 text-green-700">Verified</span>}
+                  </div>;
+                  <div className="text-xs text-gray-500">Services: {v && v.servicesOffered?.join() || '—'}</div>;
+                </div>;
+              </div>;
+            </a>;
+          </Link>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         ))}
 <<<<<<< HEAD
       </div>
@@ -72,14 +94,29 @@ const { listVendors } = await import('../../utils/vendor-store');
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+const { listVendors } = await import('../../utils/vendor-store');
+  const vendors = listVendors();
+  return { props: { vendors } }
+};      <div className="text-center text-xs text-gray-500">Powered by Zion • Co-brand available</div>
+    </div>
+=======
+export const getServerSideProps: GetServerSideProps<Props> = async () => {;
+  const { listVendors } = await import('../../utils/vendor-store');
+  const vendors = listVendors();
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   );
 }
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
+<<<<<<< HEAD
 
   return { props: { vendors } }
 };  return { props: { vendors } }
@@ -94,6 +131,10 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const vendors = listVendors();
 =======
 
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
       {vendors.length === 0 && (
         <p className='text - gray - 500'>No vendors yet. Be the first to apply.</p>)}
@@ -171,6 +212,7 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 };
@@ -178,3 +220,5 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

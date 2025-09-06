@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import {Calendar, RefreshCw} from "@/components/icons";
 import {Card, CardContent} from "@/components/ui/card";
@@ -83,6 +84,8 @@ interface QuotesFilterProps {;
 
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   searchQuery;
 =======
 import React from './react';
@@ -115,6 +118,7 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
   setStatusFilter;
   archive_filter;
   setArchiveFilter;
+<<<<<<< HEAD
 
 
 
@@ -136,6 +140,8 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
   setDateRange,
   on_reset;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }) => {
 =======
   setDateRange,;
@@ -143,6 +149,7 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
 }) => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<< HEAD
 
               onChange={(e) => setSearchQuery(e && e.target.value)}
 =======
@@ -244,6 +251,8 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
               </SelectTrigger>;
               <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <SelectItem value="all">All Statuses</SelectItem>;
                 <SelectItem value="new">New</SelectItem>;
                 <SelectItem value="in_review">In Review</SelectItem>;
@@ -253,21 +262,13 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
               </SelectContent>;
             </Select>;
           </div>;
-
-          <div>;
-            <p className="text - zion - slate - light text - sm mb - 2">Archive</p>;
-            <Select value={archive_filter} onValueChange={(value: any) => setArchiveFilter (value)}>;
-              <SelectTrigger className="bg - zion - blue border - zion - blue - light text - white">;
-                <SelectValue placeholder="Archive Status" />;
-              </SelectTrigger>;
-              <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
-
                 <SelectItem value="active">Active Only</SelectItem>;
                 <SelectItem value="archived">Archived Only</SelectItem>;
                 <SelectItem value="all">All Quotes</SelectItem>;
               </SelectContent>;
             </Select>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div>;
             <p className="text-zion-slate-light text-sm mb-2">Date Range</p>;
@@ -286,10 +287,25 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
                       </>;
                     ) : (;
                       format(dateRange.from, "LLL dd, y");
+=======
+                <Button
+                  variant="outline"
+                  className="w-full justify-start text-left font-normal bg-zion-blue border-zion-blue-light text-white">;
+                  <Calendar className="mr-2 h-4 w-4 text-zion-slate-light" />;
+                  {dateRange?.from ? (;
+                    dateRange && dateRange.to ? (;
+                      <>;
+                        {format(dateRange && dateRange.from, "LLL dd, y")} -{" "}
+                        {format(dateRange && dateRange.to, "LLL dd, y")}
+                      </>;
+                    ) : (;
+                      format(dateRange && dateRange.from, "LLL dd, y");
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     );
                   ) : (;
                     <span>Date range</span>;
                   )}
+<<<<<<< HEAD
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">
@@ -301,11 +317,19 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                </Button>;
+              </PopoverTrigger>;
+              <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">;
+                <CalendarComponent
+                  initialFocus
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   mode="range"
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 />
               </PopoverContent>
@@ -365,12 +389,14 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
                   on_select={setDateRange}
                   numberOfMonths={2}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 />;
               </PopoverContent>;
             </Popover>;
           </div>;
         </div>;
-
+=======
         <div className="mt - 4 flex justify - end">;
           <Button;
             variant="outline";
@@ -384,5 +410,9 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
     </Card>);
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

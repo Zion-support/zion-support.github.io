@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -53,6 +54,8 @@ interface AIListingGeneratorProps {;
   onApplyGenerated?: (content: GeneratedContent) => void,;
   initialValues?: {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     title?: string;
     category?: string;
     keyFeatures?: string;
@@ -67,6 +70,7 @@ import { Badge } from "@/components/ui/badge",
 
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface GeneratedContent {
@@ -209,86 +213,27 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: "Please provide at least a title and category.",;
         variant: "destructive";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      });
-      return;
-    }
-
-import React, { useState } from './react';
-import { use_toast } from '@/hooks / use - toast';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Textarea } from '@/components / ui / textarea';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
-import { Skeleton } from '@/components / ui / skeleton';
-import { Sparkles, ArrowRight } from '@/components / icons';
-import { supabase } from '@/integrations / supabase / client';
-import { Badge } from '@/components / ui / badge';
-interface GeneratedContent {
-  description: string,
-  tags: string[],
-  suggested_price: {
-    min: number,
-    max: number;
-  }
-  key_points: string[];
-}
-interface AIListingGeneratorProps {
-  onApplyGenerated?: (content: GeneratedContent) => void,
-  initial_values?: {
-    title?: string;
-    category?: string;
-    key_features?: string;
-    target_audience?: string;
-  }
-}
-export /**
- * AIListingGenerator - Function description
- */
-function AIListingGenerator() {
-  const { toast } = use_toast ();
-  const [title, set_title] = useState (initial_values.title || "");
-  const [category, set_category] = useState (initial_values.category || "");
-  const [key_features, setKeyFeatures] = useState (initial_values.key_features || "");
-  const [target_audience, setTargetAudience] = useState (initial_values.target_audience || "");
-  const [is_loading, setIsLoading] = useState (false);
-  const [generated_content, setGeneratedContent] = useState (null as GeneratedContent | null);
-;
-  const handleInputChange = (e: { target: { value: string } }, field: string) =>: any {
-    switch (field) {
-      case 'title':;
-        set_title (e.target.value);
+=======
         break;
       case 'category':;
-        set_category (e.target.value);
+        setCategory(e && e.target.value);
         break;
-      case 'key_features':;
-        setKeyFeatures (e.target.value);
+      case 'keyFeatures':;
+        setKeyFeatures(e && e.target.value);
         break;
-      case 'target_audience':;
-        setTargetAudience (e.target.value),
+      case 'targetAudience':;
+        setTargetAudience(e && e.target.value),;
         break;
-    }
-  }
-;
-  const handle_generate = async () => {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
-        title: "Missing required fields",
-        description: "Please provide at least a title and category.",
-        variant: "destructive";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       });
       return;
     }
-    setIsLoading (true);
-;
-
+    setIsLoading(true);
     try {
       const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
         body: { title, category, key_features, target_audience }
       });
+<<<<<<< HEAD
 
 ;
     setIsLoading(true),;
@@ -349,10 +294,13 @@ if ( {) {
         variant: "destructive";
       });
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
 
     } finally {
       setIsLoading(false)
@@ -466,6 +414,8 @@ if ( {) {
         description: "The generated content has been applied to your listing.";
       });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }
 
@@ -524,6 +474,7 @@ if ( {) {
               placeholder="e && e.g. Developers, Marketers, Startups";
               className="bg-zion-blue border border-zion-blue-light text-white";
               disabled={isLoading}
+<<<<<<< HEAD
 
             />;
           </div>;
@@ -560,6 +511,8 @@ if ( {) {
             <div className="flex flex-wrap gap-2">
               {[...Array(5)].map((_, i) => (
                 <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               ))}
             </div>
             <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />
@@ -571,6 +524,7 @@ if ( {) {
           </CardContent>
         </Card>
       )}
+<<<<<<< HEAD
 
       {generatedContent && !isLoading && (
         <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -632,6 +586,8 @@ if ( {) {
                 {generatedContent && generatedContent.keyPoints.map((point, index) => (;
                   <li key={index}>{point}</li>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 ))}
 =======
 ;
@@ -768,16 +724,4 @@ if ( {) {
             </div>;
           </CardContent>;
           <CardFooter>;
-
-            <Button;
-              on_click={handle_apply}
-              className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white";
-            >;
-              Apply to My Listing;
-              <ArrowRight className="ml - 2 h - 4 w - 4" />;
-            </Button>;
-          </CardFooter>;
-        </Card>)}
-    </div>);
-
 }

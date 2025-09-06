@@ -1,4 +1,52 @@
-if (isLoading) {
+
+import React, { useState } from 'react',;
+import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
+import { useAuth } from '@/hooks/useAuth',;
+import { MilestoneCard } from './MilestoneCard',;
+import { AddMilestoneForm } from './AddMilestoneForm',;
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent } from '@/components/ui/card',;
+// lucide-react doesn't export PlusIcon, use our icon wrapper;
+import { Plus } from 'lucide-react';
+import { EmptyState } from '@/components/ui/empty-state',;
+interface MilestonesListProps {;
+  milestones: Milestone[],;
+  activities: Record<string MilestoneActivity[]>,;
+  isLoading: boolean,;
+  isClient: boolean,;
+  onCreateMilestone: (data: any) => Promise<Milestone | null>,;
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,;
+  onDeleteMilestone: (id: string) => Promise<boolean>,;
+  onUploadDeliverable: (id: string, file: File) => Promise<any>,;
+  isSubmitting: boolean,;
+  onApprove?: (id: string) => Promise<void>,;
+  onReject?: (id: string) => Promise<void>;
+}
+
+export const MilestonesList: React.FC<MilestonesListProps> = ({
+  milestones,
+  activities,
+  isLoading,
+  isClient,
+  onCreateMilestone,
+  onUpdateStatus,
+  onDeleteMilestone,
+  onUploadDeliverable,
+  isSubmitting,
+  onApprove,
+  onReject
+}) => {
+  const [showAddForm, setShowAddForm] = useState(false),
+  
+  const handleSubmit = async (data: any) => {
+    await onCreateMilestone(data),
+    setShowAddForm(false)
+  },
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (isLoading) {
     return (
       <div className="space-y-4">
         {[1, 2, 3].map((i) => (
@@ -13,12 +61,16 @@ if (isLoading) {
       </div>
     )
   }
+<<<<<<< HEAD
   
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
         icon={<span className="text-3xl">📊</span>}
         title="No Milestones Yet"
+<<<<<<< HEAD
 
 
         description={isClient ? 
@@ -50,23 +102,12 @@ if (isLoading) {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 
-
-  if (milestones && milestones.length === 0 && !showAddForm) {;
-    return (
-      <EmptyState
-        icon = {<span className="text-3xl">📊</span>,}
-        title="No Milestones Yet";
-        description = {isClient ? ;
-          "Break down the project into manageable milestones to track progress and payments." : ;
-          "No milestones have been created for this project yet.",}
-        action={isClient ? ;
-          {;
-            text: "Create First Milestone",;
-            onClick: (,) => setShowAddForm(true);
-          } : undefined;
-        }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       {isClient && !showAddForm && (
@@ -77,14 +118,20 @@ if (isLoading) {
           </Button>
         </div>
       )}
+<<<<<<< HEAD
       
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <AddMilestoneForm
             <AddMilestoneForm 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               onSubmit = {handleSubmit,}
               isSubmitting = {isSubmitting,}
               onCancel = {(,) => setShowAddForm(false),}
@@ -108,11 +155,8 @@ if (isLoading) {
         </Card>;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
-
-
-      <div className="space-y-4">;
-        {milestones && milestones.map((milestone,) => (;
-
+      <div className="space-y-4">
+        {milestones.map((milestone,) => (
           <MilestoneCard
 <<<<<<< HEAD
             key = {milestone.id,}
@@ -140,11 +184,39 @@ if (isLoading) {
           />;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         ))}
-
+      </div>
+    </div>
+  )
+}
+"
+              onSubmit={handleSubmit}
+              isSubmitting={isSubmitting}
+              onCancel={() => setShowAddForm(false)}
+            />;
+          </CardContent>;
+        </Card>;
+      )}
+      
+      <div className="space-y-4">
+        {milestones.map((milestone) => (
+          <MilestoneCard
+            key={milestone.id}
+            id={milestone.id}
+            projectId={milestone.project_id}
+            title={milestone.title}
+            description={milestone.description}
+            amount={parseFloat(milestone.amount.toString())}
+            status={milestone.status}
+            dueDate={milestone.due_date}
+            onApprove={onApprove}
+            onReject={onReject}
+          />;
+        ))}
       </div>;
     </div>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -225,3 +297,8 @@ if ( {) {
 ";
 
             <AddMilestoneForm
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

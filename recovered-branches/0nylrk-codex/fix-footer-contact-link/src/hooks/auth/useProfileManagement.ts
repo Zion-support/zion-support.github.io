@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {supabase} from "@/integrations/supabase/client";
@@ -20,11 +21,14 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
     try {
       setIsLoading(true)
       if (!data.id) {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         return { error: "User ID is required" }
       }
       // Update user metadata
       const { error: authError } = await supabase && supabase.auth.updateUser({
         data: {
+<<<<<<< HEAD
 
           display_name: data && data.displayName;
           user_type: data && data.userType,
@@ -34,9 +38,41 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
         toast({
           title: "Profile update failed";
           description: authError.message
+=======
+=======
+import { supabase } from '@/integrations / supabase / client';
+import { toast } from '@/hooks / use - toast';
+import type { UserProfile } from "@/types / auth";
+export const useProfileManagement = (setIsLoading: (loading: boolean) =>: any void) => {
+  const update_profile = async (data: Partial < UserProfile>) => {
+    try {
+      setIsLoading (true),
+      // Check condition
+if ( {) {
+  $2
+}
+        return { error: "User ID is required" }
+      }
+      // Update user metadata;
+      const { error: auth_error } = await supabase.auth.update_user ({
+        data: {
+          display_name: data.display_name;
+          user_type: data.user_type,
+          headline: data.headline}});
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+          title: "Profile update failed";
+          description: auth_error.message,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           variant: "destructive"});
         return { error: authError }
       }
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
@@ -87,6 +123,9 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       if (profileError) {
         toast({
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       // Update profiles table;
       const { error: profile_error } = await supabase;
         .from ("profiles");
@@ -107,10 +146,11 @@ if ( {) {
         toast ({
           title: "Profile update failed";
           description: profile_error.message,
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           variant: "destructive"});
         return { error: profile_error }
       }
+<<<<<<< HEAD
 
           title: "Profile update failed",
           description: profileError.message,
@@ -127,16 +167,16 @@ if ( {) {
     } catch (error: any) {
       console && console.error("Profile update error:", error);
       toast({
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         title: "Profile update failed";
-
-        description: error && error.message || "An unexpected error occurred",
-
         variant: "destructive"});
       return { error }
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
 
 ;
   return { update_profile }
@@ -194,3 +234,5 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return { updateProfile }
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

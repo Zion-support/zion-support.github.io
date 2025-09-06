@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useEffect, useState, useRef, ReactNode} from "react";
@@ -21,6 +22,8 @@ interface LazyLoadProps {;
   width?: string | number;
   children: ReactNode,;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   loadingComponent?: ReactNode;
 <<<<<<< HEAD
 import { cn } from "@/lib/utils",
@@ -28,10 +31,6 @@ import { Skeleton } from "@/components/ui/skeleton",
 =======
   className?: string;
 }
-
-
-export function LazyLoad(): any ({;
-
   height = "200px";
   width = "100%";
   children;
@@ -40,6 +39,7 @@ export function LazyLoad(): any ({;
   const [isVisible, setIsVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface LazyLoadProps {
@@ -137,6 +137,14 @@ export function LazyLoad({;
       },;
       {;
         rootMargin: "200px", // Start loading when element is within 200px of viewport;
+=======
+          setIsVisible(true);
+          observer && observer.disconnect();
+        }
+      }
+      {
+        root_margin: "200px", // Start loading when element is within 200px of viewport;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         threshold: 0.1}
 <<<<<<< HEAD
     ),;
@@ -144,6 +152,7 @@ export function LazyLoad({;
       observer.observe(containerRef.current);
 =======
     );
+<<<<<<< HEAD
 
 ;
     // Check condition
@@ -163,12 +172,15 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
     return () => {
       if (containerRef.current) {
         observer.unobserve(containerRef.current)
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, []);
   useEffect(() => {
@@ -239,6 +251,10 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  }, []);
+    <Skeleton
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       style={{ height, width }}
       className="rounded-md bg-zion-blue-light/20"
     />;
@@ -246,6 +262,7 @@ if ( {) {
   return (
     <div
       ref={containerRef}
+<<<<<<< HEAD
 
       className={cn("transition-opacity duration-500", 
         isLoaded ? "opacity-100" : "opacity-0",
@@ -268,3 +285,43 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 ;
+=======
+=======
+;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      // Simulate loading delay (remove in production);
+      const timer = set_timeout (() => {
+        setIsLoaded (true);
+      }, 500);
+;
+      return () => clear_timeout (timer);
+    }
+  }, [is_visible]);
+;
+  const defaultLoadingComponent = (
+    <Skeleton;
+      style={{ height, width }}
+      className="rounded - md bg - zion - blue - light / 20";
+    />);
+;
+  return (
+    <div;
+      ref={container_ref}
+      className={cn ("transition - opacity duration - 500",
+        is_loaded ? "opacity - 100" : "opacity - 0";
+        class_name)}
+    >;
+      {is_visible ? (
+        <>;
+          {!is_loaded && (loading_component || defaultLoadingComponent)}
+          {is_loaded && children}
+        </>) : (
+        loading_component || defaultLoadingComponent)}
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

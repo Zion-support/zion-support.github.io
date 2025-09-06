@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, {
   useState
@@ -46,6 +47,8 @@ import React, {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -59,6 +62,7 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
   const [message, setMessage] = useState("");
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
+<<<<<<< HEAD
 
   useEffect(() => {;
     // Focus input when component mounts;
@@ -136,6 +140,8 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">;
       <textarea
@@ -144,7 +150,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
         placeholder="Type your message..."
         value={message}
         onChange={(e) => setMessage(e && e.target.value)}
-=======
   useState,
   useRef,
   useEffect,
@@ -202,7 +207,6 @@ if (&& !disabled) {) {
         placeholder="Type your message...";
         value={message}
         on_change={(e) => set_message (e.target.value)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
@@ -220,14 +224,6 @@ if (&& !disabled) {) {
 );
 =======
       />;
-
-        disabled={!message && message.trim() || disabled}>;
-        <Send className="h-5 w-5" />;
-      </Button>;
-    </form>;
-
-  );
-=======
       <Button;
         type="submit";
         className="bg - zion - purple hover:bg - zion - purple - light text - white rounded - full p - 2 h - 10 w - 10 flex items - center justify - center";
@@ -236,8 +232,8 @@ if (&& !disabled) {) {
         <Send className="h - 5 w - 5" />;
       </Button>;
     </form>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+<<<<<<< HEAD
 =======
 
 );
@@ -252,3 +248,5 @@ if (&& !disabled) {) {
 }
   )
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

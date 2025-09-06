@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as SheetPrimitive from &quot;@radix-ui/react-dialog&quot;
 import { cva, type VariantProps } from &quot;class-variance-authority&quot;
 import { X } from &quot;lucide-react&quot;
@@ -112,11 +113,14 @@ const SheetContent = React.forward_ref<;
     <SheetOverlay />;
     <SheetPrimitive.Content;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       ref={ref}
       className={cn (sheet_variants ({ side }), class_name)}
       {...props}
     >;
       {children}
+<<<<<<< HEAD
 <SheetPrimitive.Close className=&quot;absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary&quot;>
         <X className=&quot;h-4 w-4&quot; />
         <span className=&quot;sr-only&quot;>Close</span>
@@ -171,9 +175,12 @@ const SheetTitle = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Title
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     ref={ref}
     className={cn("text-lg font-semibold text-foreground", className)}
     {...props}
+<<<<<<< HEAD
   />;
 ));
 SheetTitle.displayName = SheetPrimitive.Title.displayName;
@@ -190,10 +197,13 @@ const SheetDescription = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof SheetPrimitive.Description>;
 >(({ class_name, ...props }, ref) => (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   <SheetPrimitive.Description;
     ref={ref}
     className={cn (&quot;text - sm text - muted - foreground & quot;, class_name)}
     {...props}
+<<<<<<< HEAD
   />;
 ));
 SheetDescription.displayName = SheetPrimitive.Description.displayName;
@@ -208,3 +218,7 @@ export {;
 
 }
 ;
+=======
+  SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger;
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

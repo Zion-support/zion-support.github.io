@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useForm  } from 'react-hook-form';
@@ -180,6 +181,21 @@ export function EducationFormFields(): any ({ ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import {z} from 'zod';
+import {format} from 'date - fns';
+import {Loader2} from 'lucide-react';
+import {Button} from '@/components / ui / button';
+import {Textarea} from '@/components / ui / textarea';
+import {Input} from '@/components / ui / input';
+import {Checkbox} from '@/components / ui / checkbox';
+import {Alert, AlertDescription} from '@/components / ui / alert';
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
+import {useState} from 'react';
+import {EducationFormFieldsProps} from './types';
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   return (
     <Form {...form}>;
@@ -189,6 +205,7 @@ export function EducationFormFields(): any ({ ;
             control={form && form.control}
             name="institution"
             render={({ field }) => (
+<<<<<<< HEAD
               <FormItem>
                 <FormLabel>Institution</FormLabel>
                 <FormControl>
@@ -198,6 +215,60 @@ export function EducationFormFields(): any ({ ;
               </FormItem>
             )}
           />
+=======
+              <FormItem>;
+                <FormLabel > Institution</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                <FormControl>;
+                  <Input placeholder="University of California, MIT, etc." {...field} />;
+                </FormControl>;
+                <FormMessage />;
+          <FormField
+            control={form && form.control}
+            name="degree"
+            render={({ field }) => (;
+              <FormItem>;
+                <FormLabel>Degree</FormLabel>;
+                <FormControl>;
+                  <Input placeholder="Bachelor's, Master's, Ph && Ph.D, etc." {...field} />;
+                </FormControl>;
+                <FormMessage />;
+              </FormItem>;
+            )}
+        <FormField
+          control={form && form.control}
+          name="field_of_study"
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Field of Study</FormLabel>;
+=======
+              </FormItem>)}
+          />;
+          <FormField;
+            control={form.control}
+            name="degree";
+            render={({ field }) => (
+              <FormItem>;
+                <FormLabel > Degree</FormLabel>;
+                <FormControl>;
+                  <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />;
+                </FormControl>;
+                <FormMessage />;
+              </FormItem>)}
+          />;
+        </div>;
+        <FormField;
+          control={form.control}
+          name="field_of_study";
+          render={({ field }) => (
+            <FormItem>;
+              <FormLabel > Field of Study</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              <FormControl>;
+                <Input placeholder="Computer Science, Engineering, etc." {...field} />;
+              </FormControl>;
+              <FormMessage />;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <FormField
             control={form.control}
             name="degree"
@@ -229,6 +300,7 @@ export function EducationFormFields(): any ({ ;
           <FormField
             control={form.control}
             name="start_date"
+<<<<<<< HEAD
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
@@ -264,6 +336,8 @@ export function EducationFormFields(): any ({ ;
 
           <div className="space-y-4">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <FormField
               control={form && form.control}
               name="is_current"
@@ -280,36 +354,12 @@ export function EducationFormFields(): any ({ ;
                   </div>;
                 </FormItem>;
               )}
-
-            />;
-
-            {!form && form.watch('is_current') && (;
-
               <FormField
                 control={form && form.control}
                 name="end_date"
-
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>End Date</FormLabel>;
-                    <FormControl>;
-                      <Input
-                        type="date" 
-                        {...field} 
-                        value={field && field.value || ''} 
-                      />;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>;
-
                 )}
               />;
             )}
-
-          </div>;
-        </div>;
-
-
         <FormField
           control={form && form.control}
           name="location"
@@ -383,10 +433,6 @@ export function EducationFormFields(): any ({ ;
                 <Input placeholder="Cambridge, MA" {...field} />;
               </FormControl>;
               <FormMessage />;
-
-        />;
-
-
         <FormField
           control={form && form.control}
           name="description"
@@ -415,18 +461,12 @@ export function EducationFormFields(): any ({ ;
                 />;
               </FormControl>;
               <FormMessage />;
-
-        />;
-
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
-        <div className="flex justify-between pt-2">;
-
           <Button
             type="button"
             variant="outline"
             onClick={onCancel}>;
             {isEditing ? 'Cancel' : 'Back'}
+<<<<<<< HEAD
 
           </Button>;
 
@@ -441,3 +481,26 @@ export function EducationFormFields(): any ({ ;
 }
 }
 ;
+=======
+=======
+            </FormItem>)}
+        />;
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+        <div className="flex justify - between pt - 2">;
+          <Button;
+            type="button";
+            variant="outline";
+            on_click={on_cancel}
+          >;
+            {is_editing ? 'Cancel' : 'Back'}
+          </Button>;
+          <Button type="submit" disabled={is_loading}>;
+            {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}
+            {is_editing ? 'Update' : 'Add'} Education;
+          </Button>;
+        </div>;
+      </form>;
+    </Form>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

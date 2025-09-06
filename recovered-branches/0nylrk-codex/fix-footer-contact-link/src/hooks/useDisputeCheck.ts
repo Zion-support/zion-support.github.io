@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState, useEffect } from "react";
@@ -61,6 +62,10 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
         
         if (error) throw error,
         
+=======
+        const { data, error } = await query;
+        if (error) throw error;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         if (data && data.length > 0) {
           // Get the first dispute (highest priority based on status)
           setIsUnderDispute(true);
@@ -126,16 +131,11 @@ if ( {) {
           setDisputeId (null);
         }
       } catch (err) {
-
-        console.error ("Error checking dispute status:", err);
-        setIsUnderDispute (false);
-        setDisputeStatus (null);
-        setDisputeId (null);
-
       } finally {
         setIsLoading (false);
       }
     }
+<<<<<<< HEAD
 
 =======
         console.error("Error checking dispute status:", err),
@@ -218,5 +218,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }

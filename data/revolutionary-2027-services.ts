@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Revolutionary2027Service {
 export interface Revolutionary2027Service {;
+=======
+export interface Revolutionary2027Service {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   name: string;
   tagline: string;
@@ -9,6 +13,7 @@ export interface Revolutionary2027Service {;
   features: string[];
   link: string;
   category: string;
+<<<<<<< HEAD
   realImplementation: boolean;
   contactInfo: {
     mobile: string;
@@ -34,11 +39,22 @@ export interface Revolutionary2027Service {;
 =======
 
 
+=======
+  real_implementation: boolean;
+  contact_info: {
+    mobile: string;
+    email: string;
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
+];      mobile: "+1 302 464 0950";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-=======
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -53,19 +69,9 @@ export interface Revolutionary2027Service {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const revolutionary2027Services: Revolutionary2027Service[] = [
   {
-<<<<<<< HEAD
     id: "2027-revolutionary-service", name: "2027 Revolutionary Service Platform",
     tagline: "Revolutionary services for 2027", price: "$299/month",
     description: "Revolutionary service platform that transforms how businesses operate in 2027.",
-=======
-<<<<<<< HEAD
-    id: '2027-revolutionary-service'
-    name: '2027 Revolutionary Service Platform'
-    tagline: 'Revolutionary services for 2027'
-    price: '$299/month'
-    description:
-      'Revolutionary service platform that transforms how businesses operate in 2027.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     features: [
       "Revolutionary services";
       "Transformative capabilities";
@@ -76,6 +82,7 @@ export const revolutionary2027Services: Revolutionary2027Service[] = [
     link: "/services/2027-revolutionary-service", category: "Revolutionary 2027 Services",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -88,17 +95,20 @@ export const revolutionary2027Services: Revolutionary2027Service[] = [
       email: "kleber@ziontechgroup.com";
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-<<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
+<<<<<<< HEAD
 =======
 =======
     id: "2027-revolutionary-service",
@@ -144,3 +154,5 @@ export const revolutionary2027Services: Revolutionary2027Service[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,8 @@
+
+=======
+import React, { useState, useRef, useEffect } from "react",
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { ScrollArea } from "@/components/ui/scroll-area",
@@ -6,30 +11,26 @@ import { toast } from "@/components/ui/use-toast",
 import { cn } from "@/lib/utils",
 import { ChatMessage } from "./ChatMessage",
 import { QuickReplyButton } from "./QuickReplyButton";
-
-import React, { useState, useRef, useEffect } from './react';
-import { log_debug, logErrorToProduction } from '@/utils / production_logger';
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
-import { ScrollArea  } from '@/components / ui / scroll - area';
-import { Separator  } from '@/components / ui / separator';
-import { toast  } from '@/components / ui / use - toast';
-import { cn  } from '@/lib / utils';
-import { ChatMessage  } from './ChatMessage';
-import { QuickReplyButton  } from './QuickReplyButton';
-import { Send, Loader2 } from 'lucide-react'import { use_theme  } from '@/hooks / use_theme';
-// Define suggested quick replies;
-const QUICK_REPLIES = [;
+import { Send, Loader2 } from 'lucide-react'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// Define suggested quick replies
+const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" },
   { id: "match", text: "How do I get matched?" },
   { id: "billing", text: "Billing help" }],
-type Message = {
-  id: string,
-  content: string,
-  sender: "user" | "bot",
-  timestamp: Date;
 
+const QUICK_REPLIES = [
+  { id: "hire", text: "How do I hire?" }
+  { id: "match", text: "How do I get matched?" }
+  { id: "billing", text: "Billing help" }]
+=======
+type Message = {
+  id: string
+  content: string
+  sender: "user" | "bot"
+  timestamp: Date
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export /**
@@ -80,10 +81,37 @@ const QUICK_REPLIES = [
   { id: "billing", text: "Billing help" }],
 
 
+=======
+export function ChatBotPanel() {
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: "welcome",
+      content: "Hi! How can I help you?",
+      sender: "bot",
+      timestamp: new Date()}]),
+  const [inputValue, setInputValue] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
+  const [failedAttempts, setFailedAttempts] = useState(0)
+  const scrollAreaRef = useRef<HTMLDivElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
+  const { theme } = useTheme()
+=======
+  const [inputValue, setInputValue] = useState(""),
+  const [isLoading, setIsLoading] = useState(false),
+  const [failedAttempts, setFailedAttempts] = useState(0),
+  const scrollAreaRef = useRef<HTMLDivElement>(null),
+  const inputRef = useRef<HTMLInputElement>(null),
+  const { theme } = useTheme(),
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Auto-scroll to bottom when messages change
   useEffect(() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
+<<<<<<< HEAD
 
     if (!text.trim()) return;
       timestamp: new Date()},
@@ -93,6 +121,9 @@ const QUICK_REPLIES = [
         description: "We're having trouble connecting to our support service."}),
             
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState, useRef, useEffect } from "react",;
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
 import { Button } from "@/components/ui/button",;
@@ -105,7 +136,10 @@ import { ChatMessage } from "./ChatMessage",;
 import { QuickReplyButton } from "./QuickReplyButton",;
 import { Send, Loader2 } from 'lucide-react';
 import { useTheme } from "@/hooks/useTheme",;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 // Define suggested quick replies;
 const QUICK_REPLIES = [;
   { id: "hire", text: "How do I hire?" },;
@@ -116,8 +150,12 @@ type Message = {;
   content: string,;
   sender: "user" | "bot",;
   timestamp: Date;
+<<<<<<< HEAD
 };
 
+=======
+},;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export function ChatBotPanel() {;
   const [messages, setMessages] = useState<Message[]>([;
     {;
@@ -125,6 +163,7 @@ export function ChatBotPanel() {;
       content: "Hi! How can I help you?",;
       sender: "bot",;
       timestamp: new Date()}]),;
+<<<<<<< HEAD
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [failedAttempts, setFailedAttempts] = useState(0);
@@ -177,6 +216,115 @@ export function ChatBotPanel() {;
 }
   );
 }
+=======
+  const [inputValue, setInputValue] = useState(""),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [failedAttempts, setFailedAttempts] = useState(0),;
+  const scrollAreaRef = useRef<HTMLDivElement>(null),;
+  const inputRef = useRef<HTMLInputElement>(null),;
+  const { theme } = useTheme(),;
+  // Auto-scroll to bottom when messages change;
+  useEffect(() => {;
+    if (scrollAreaRef.current) {;
+      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
+    }
+  }, [messages]),;
+  // Focus input when component mounts;
+  useEffect(() => {;
+    if (inputRef.current) {;
+      inputRef.current.focus();
+    }
+  }, []),
+
+  const handleSendMessage = async (text: string = inputValue) => {
+    if (!text.trim()) return,
+    
+    const userMessage: Message = {
+      id: `user-${Date.now()}`,
+      content: text,
+      sender: "user",
+      timestamp: new Date()},
+    
+    setMessages((prev) => [...prev, userMessage]),
+    setInputValue(""),
+    setIsLoading(true),
+    
+    try {
+      // Call the OpenAI-powered support function
+      const response = await sendToAIAssistant(text),
+      
+      const botMessage: Message = {
+        id: `bot-${Date.now()}`,
+        content: response.message || "Sorry, I couldn't process your request. Please try again.",
+        sender: "bot",
+        timestamp: new Date()},
+      
+      setMessages((prev) => [...prev, botMessage]),
+      
+      // Check if the request was successful
+      if (!response.success) {
+        setFailedAttempts((prev) => prev + 1),
+        
+        // After 3 failed attempts, suggest escalation
+        if (failedAttempts >= 2) {
+          suggestEscalation()
+  }, []),;
+  const handleSendMessage = async (text: string = inputValue) => {;
+    if (!text.trim()) return,;
+    const userMessage: Message = {;
+      id: `user-${Date.now()}`,;
+      content: text,;
+      sender: "user",;
+      timestamp: new Date()},;
+    setMessages((prev) => [...prev, userMessage]),;
+    setInputValue(""),;
+    setIsLoading(true),;
+    try {;
+      // Call the OpenAI-powered support function;
+      const response = await sendToAIAssistant(text),;
+      const botMessage: Message = {;
+        id: `bot-${Date.now()}`,;
+        content: response.message || "Sorry, I couldn't process your request. Please try again.",;
+        sender: "bot",;
+        timestamp: new Date()},;
+      setMessages((prev) => [...prev, botMessage]),;
+      // Check if the request was successful;
+      if (!response.success) {;
+        setFailedAttempts((prev) => prev + 1),;
+        // After 3 failed attempts, suggest escalation;
+        if (failedAttempts >= 2) {;
+          suggestEscalation();
+        }
+      } else {;
+        // Reset failed attempts if successful;
+        setFailedAttempts(0);
+      }
+    } catch (error) {
+      logErrorToProduction("Error in AI chat", error as Error, { component: 'ChatBotPanel' }),
+      toast({
+        variant: "destructive",
+        title: "Communication Error",
+        description: "We're having trouble connecting to our support service."}),
+      
+      setFailedAttempts((prev) => prev + 1),
+      if (failedAttempts >= 2) {
+        suggestEscalation()
+    } catch (error) {;
+      logErrorToProduction("Error in AI chat", error as Error, { component: 'ChatBotPanel' }),;
+      toast({;
+        variant: "destructive",;
+        title: "Communication Error",;
+        description: "We're having trouble connecting to our support service."}),;
+      setFailedAttempts((prev) => prev + 1),;
+      if (failedAttempts >= 2) {;
+        suggestEscalation();
+      }
+    } finally {;
+      setIsLoading(false);
+    }
+  },
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const sendToAIAssistant = async (message: string) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
@@ -217,9 +365,13 @@ export function ChatBotPanel() {;
 
   const suggestEscalation = () => {
     const escalationMessage: Message = {
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       id: `bot-escalation-${Date.now()}`,
       content: 
         "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
@@ -530,25 +682,8 @@ export function ChatBotPanel() {;
     </div>;
   );
 }
-  const sendToAIAssistant = async (message: string) => {
-    try {
-      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"},
-        body: JSON.stringify({ 
-          messages: [{ role: "user", content: message }] 
-        })}),
-      
-      if (!response.ok) {
-        return {
-          success: false,
-          message: "I'm having trouble connecting to my knowledge base right now."
-        }
-          message: "I'm having trouble connecting to my knowledge base right now."
-        };
-      }
 ;
+<<<<<<< HEAD
       const data = await response.json(),;
       return {;
         success: true,;
@@ -606,3 +741,8 @@ export function ChatBotPanel() {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     handleSendMessage(text)
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

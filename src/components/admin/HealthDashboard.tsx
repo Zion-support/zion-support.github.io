@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -42,53 +43,45 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {
-  AlertTriangle,
-  CheckCircle,
-  XCircle,
-  Clock,
-  TrendingUp,
-  Activity,
-} from 'lucide-react';
+  AlertTriangle
+  CheckCircle
+  XCircle
+  Clock
+  TrendingUp
+  Activity
+} from 'lucide-react'
+
 interface HealthData {
   status: 'healthy' | 'warning' | 'critical';
   timestamp: string;
   uptime: number;
   version: string;
   environment: string;
-
   metrics: {
-    error_rate: number;
-    critical_errors: number;
-    response_time: number;
-    memory_usage: number;
-
+    errorRate: number;
+    criticalErrors: number;
+    responseTime: number;
+    memoryUsage: number
   }
   health: {
     status: string;
     score: number;
     issues: string[];
-
-    memoryUsage: number;
-  };
-  health: {;
-    status: string;
-    score: number;
-    issues: string[];
-    recommendations: string[];
-  };
-  errors: {;
-    summary: {;
-
-    recommendations: string[];
+    recommendations: string[]
   }
   errors: {
     summary: {
@@ -96,11 +89,9 @@ interface HealthData {
       critical: number;
       high: number;
       medium: number;
-
-      low: number;
-    };
-    topErrors: Array<{;
-
+      low: number
+    }
+    topErrors: Array<{
       patternId: string;
       description: string;
       occurrences: number;
@@ -108,19 +99,71 @@ interface HealthData {
       solution?: string
     }>
     byCategory: { [category: string]: number }
-      low: number;
-    }
-    top_errors: Array<{
-      pattern_id: string;
-      description: string;
-      occurrences: number;
-      severity: string;
-      solution?: string;
-    }>;
-    by_category: { [category: string]: number }
   }
 
-
+const HealthDashboard: React.FC = () => {
+  const [healthData, setHealthData] = useState<HealthData | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const [autoRefresh, setAutoRefresh] = useState(true)
+  const fetchHealthData = async () => {
+    try {
+      const response = await fetch('/api/admin/health')
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`)
+      }
+      const data = await response.json()
+      setHealthData(data)
+      setError(null)
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : 'Failed to fetch health data'
+      )
+    } finally {
+      setLoading(false)
+    }
+  }
+  useEffect(() => {
+    fetchHealthData();
+    if (autoRefresh) {;
+      const interval = setInterval(fetchHealthData, 30000); // Refresh every 30 seconds
+      return () => clearInterval(interval)
+    }
+    return undefined
+  }, [autoRefresh])
+  const getStatusIcon = (status: string,) => {
+    switch (status) {
+      case 'healthy':
+        return <CheckCircle className='w-5 h-5 text-green-500' />
+      case 'warning':
+        return <AlertTriangle className='w-5 h-5 text-yellow-500' />
+      case 'critical':
+        return <XCircle className='w-5 h-5 text-red-500' />
+      default:
+        return <Activity className='w-5 h-5 text-gray-500' />
+    }
+  }
+  const getStatusBadge = (status: string) => {
+    const variant = null;
+      status === 'healthy'
+        ? 'default'
+        : status === 'warning'
+          ? 'secondary'
+          : 'destructive'; return (
+      <Badge variant={variant} className='ml-2'>
+        {status.toUpperCase()}
+      </Badge>
+    )
+  }
+  const formatUptime = (seconds: number) => {
+    const hours = Math.floor(seconds / 3600)
+    const minutes = Math.floor((seconds % 3600) / 60)
+    return `${hours}h ${minutes}m`
+  }
+  const formatBytes = (bytes: number) => {
+    return `${bytes.toFixed(1)} MB`
+  }
+=======
 import React, { useState, useEffect } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -229,39 +272,40 @@ const HealthDashboard: React.FC = () => {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   if (loading) {
     return (
-      <div className='flex items-center justify-center p-8'>
-        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900'></div>
+      <div className="flex items-center justify-center p-8">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
       </div>
     )
   }
   if (error) {
     return (
-      <Card className='border-red-200 bg-red-50'>
-        <CardContent className='p-6'>
-          <div className='flex items-center text-red-600'>
-            <XCircle className='w-5 h-5 mr-2' />
+      <Card className="border-red-200 bg-red-50">
+        <CardContent className="p-6">
+          <div className="flex items-center text-red-600">
+            <XCircle className="w-5 h-5 mr-2" />
             <span>Failed to load health data: {error}</span>
           </div>
-          <Button onClick={fetchHealthData} className='mt-4'>
+          <Button onClick={fetchHealthData} className="mt-4">
             Retry
           </Button>
         </CardContent>
       </Card>
     )
-
-const HealthDashboard: React.FC = () => {;
-  const [healthData, setHealthData] = useState<HealthData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [autoRefresh, setAutoRefresh] = useState(true);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -313,6 +357,11 @@ const HealthDashboard: React.FC = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -323,6 +372,7 @@ const HealthDashboard: React.FC = () => {;
         </div>
         <div className="flex items-center space-x-2">
           <Button
+<<<<<<< HEAD
             variant='outline'
             size='sm'
             onClick={() => setAutoRefresh(!autoRefresh)}          >
@@ -335,6 +385,11 @@ const HealthDashboard: React.FC = () => {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
           </Button>
           <Button onClick={fetchHealthData} size="sm">
@@ -397,6 +452,7 @@ const HealthDashboard: React.FC = () => {;
           <TabsTrigger value="metrics">Metrics</TabsTrigger>
           <TabsTrigger value="recommendations">Recommendations</TabsTrigger>
         </TabsList>
+<<<<<<< HEAD
         <TabsContent value='overview' className='space-y-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
 
@@ -407,6 +463,11 @@ const HealthDashboard: React.FC = () => {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <Card>
               <CardHeader>
                 <CardTitle>System Information</CardTitle>
@@ -441,6 +502,7 @@ const HealthDashboard: React.FC = () => {;
               </CardHeader>
               <CardContent>
                 {healthData.health.issues.length > 0 ? (
+<<<<<<< HEAD
                   <ul className='space-y-2'>
                     {healthData.health.issues.map((issue, index) => (
                       <li
@@ -661,16 +723,22 @@ const HealthDashboard: React.FC = () => {;
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       </li>
                     ))}
-                  </ul>;
-                ) : (;
-                  <p className='text-green-600 text-sm'>No issues detected</p>;
+                  </ul>
+                ) : (
+                  <p className="text-green-600 text-sm">No issues detected</p>
                 )}
               </CardContent>
             </Card>
           </div>
         </TabsContent>
+<<<<<<< HEAD
         <TabsContent value='errors' className='space-y-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
 
@@ -682,35 +750,32 @@ const HealthDashboard: React.FC = () => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <Card>
               <CardHeader>
                 <CardTitle>Error Summary</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className='grid grid-cols-2 gap-4'>
-                  <div className='text-center'>
-                    <p className='text-2xl font-bold text-red-600'>
-                      {healthData.errors.summary.critical}
-                    </p>
-                    <p className='text-sm text-gray-600'>Critical</p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center">
+                    <p className="text-2xl font-bold text-red-600">{healthData.errors.summary.critical}</p>
+                    <p className="text-sm text-gray-600">Critical</p>
                   </div>
-                  <div className='text-center'>
-                    <p className='text-2xl font-bold text-orange-600'>
-                      {healthData.errors.summary.high}
-                    </p>
-                    <p className='text-sm text-gray-600'>High</p>
+                  <div className="text-center">
+                    <p className="text-2xl font-bold text-orange-600">{healthData.errors.summary.high}</p>
+                    <p className="text-sm text-gray-600">High</p>
                   </div>
-                  <div className='text-center'>
-                    <p className='text-2xl font-bold text-yellow-600'>
-                      {healthData.errors.summary.medium}
-                    </p>
-                    <p className='text-sm text-gray-600'>Medium</p>
+                  <div className="text-center">
+                    <p className="text-2xl font-bold text-yellow-600">{healthData.errors.summary.medium}</p>
+                    <p className="text-sm text-gray-600">Medium</p>
                   </div>
-                  <div className='text-center'>
-                    <p className='text-2xl font-bold text-gray-600'>
-                      {healthData.errors.summary.low}
-                    </p>
-                    <p className='text-sm text-gray-600'>Low</p>
+                  <div className="text-center">
+                    <p className="text-2xl font-bold text-gray-600">{healthData.errors.summary.low}</p>
+                    <p className="text-sm text-gray-600">Low</p>
                   </div>
                 </div>
               </CardContent>
@@ -721,6 +786,7 @@ const HealthDashboard: React.FC = () => {;
               </CardHeader>
               <CardContent>
                 {healthData.errors.topErrors.length > 0 ? (
+<<<<<<< HEAD
                   <div className='space-y-2'>
                     {healthData.errors.topErrors
                       .slice(0, 5)
@@ -814,10 +880,19 @@ const HealthDashboard: React.FC = () => {;
                   {formatBytes(healthData.metrics.memoryUsage)}
                 </p>
                 <p className='text-xs text-gray-600'>JavaScript heap</p>
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                ) : (
+                  <p className="text-gray-600 text-sm">No recurring errors</p>
+                )}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </CardContent>
             </Card>
           </div>
         </TabsContent>
+<<<<<<< HEAD
         <TabsContent value='recommendations' className='space-y-4'>
 
         <TabsContent value="recommendations" className="space-y-4">
@@ -827,24 +902,79 @@ const HealthDashboard: React.FC = () => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm">Error Rate</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-2xl font-bold">{healthData.metrics.errorRate.toFixed(2)}%</p>
+                <p className="text-xs text-gray-600">Errors per request</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm">Critical Errors</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-2xl font-bold text-red-600">{healthData.metrics.criticalErrors}</p>
+                <p className="text-xs text-gray-600">In last hour</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm">Avg Response</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-2xl font-bold">{healthData.metrics.responseTime.toFixed(0)}ms</p>
+                <p className="text-xs text-gray-600">API response time</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm">Memory Usage</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-2xl font-bold">{formatBytes(healthData.metrics.memoryUsage)}</p>
+                <p className="text-xs text-gray-600">JavaScript heap</p>
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Card>
             <CardHeader>
               <CardTitle>Improvement Recommendations</CardTitle>
             </CardHeader>
             <CardContent>
               {healthData.health.recommendations.length > 0 ? (
+<<<<<<< HEAD
                 <ul className='space-y-3'>
                   {healthData.health.recommendations.map((rec, index) => (
                     <li key={index} className='flex items-start'>
                       <CheckCircle className='w-4 h-4 text-green-500 mt-0.5 mr-2 flex-shrink-0' />
                       <span className='text-sm'>{rec}</span>                    </li>
+=======
+=======
+                <ul className="space-y-3">
+                  {healthData.health.recommendations.map((rec, index) => (
+                    <li key={index} className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
+                      <span className="text-sm">{rec}</span>
+                    </li>
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   ))}
-                </ul>;
-              ) : (;
-                <p className='text-gray-600'>;
-                  No specific recommendations at this time;
-                </p>;
+                </ul>
+              ) : (
+                <p className="text-gray-600">No specific recommendations at this time</p>
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1230,15 +1360,24 @@ if (return null) {
                 <p className='text - gray - 600'>;
                   No specific recommendations at this time;
                 </p>)}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </CardContent>;
           </Card>;
         </TabsContent>;
       </Tabs>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     </div>);
 }
+=======
+    </div>;
+  );
+},;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default HealthDashboard;
-export default HealthDashboard,
-export default HealthDashboard,
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

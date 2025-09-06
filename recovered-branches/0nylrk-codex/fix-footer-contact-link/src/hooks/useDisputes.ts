@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState, useEffect} from "react";
@@ -75,11 +76,32 @@ export function useDisputes() {
         project: {
           ...dispute.project
           title: dispute.project?.job?.title |'Untitled Project'
+=======
+          *;
+          project: projects (
+            scope_summary;
+            job_id;
+            client_id;
+            talent_id;
+        ...dispute;
+        client_profile: dispute && dispute.client_profile?.client_profile;
+        talent_profile: dispute && dispute.talent_profile?.talent_profile;
+        project: {
         }
       }));
       setDisputes(transformedData as Dispute[]);
       setError(null)
     } catch (err: any) {
+=======
+          ...dispute.project,
+          title: dispute.project?.job?.title || 'Untitled Project';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+        }
+      }));
+      setDisputes(transformedData as Dispute[]);
+      setError(null)
+    } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error fetching disputes:", err);
       setError("Failed to fetch disputes: " + err.message)
       })),
@@ -124,16 +146,44 @@ export function useDisputes() {
       
       if (error) throw error,
       
+=======
+      console.error ("Error fetching disputes:", err);
+      set_error ("Failed to fetch disputes: " + err.message),
+      toast.error ("Failed to fetch disputes");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } finally {
+      setIsLoading (false);
+    }
+  }
+    try {
+      const { data, error } = await supabase;
+        .from ("disputes");
+        .select (`;
+          *;
+          project: projects (
+            scope_summary;
+            job_id;
+            client_id;
+            talent_id;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return {
         ...data;
         client_profile: data && data.client_profile?.client_profile;
         talent_profile: data && data.talent_profile?.talent_profile;
         project: {
+<<<<<<< HEAD
           ...data.project
           title: data.project?.job?.title |'Untitled Project'
+=======
+=======
+          ...data.project,
+          title: data.project?.job?.title || 'Untitled Project';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         }
       } as Dispute
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error fetching dispute:", err),
       toast.error("Failed to fetch dispute details"),
       return null
@@ -171,6 +221,8 @@ export function useDisputes() {
       if (error) throw error,
       
       toast.success("Dispute submitted successfully"),
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       fetchDisputes(), // Refresh the list
       return data as Dispute
     } catch (err: any) {
@@ -179,8 +231,11 @@ export function useDisputes() {
       return null
     }
   }
+<<<<<<< HEAD
   },
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const updateDisputeStatus = async (disputeId: string, status: DisputeStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
@@ -188,6 +243,7 @@ export function useDisputes() {
         .update({ status })
         .eq("id", disputeId);
       if (error) throw error;
+<<<<<<< HEAD
         .eq("id", disputeId),
       
       if (error) throw error,
@@ -203,16 +259,23 @@ export function useDisputes() {
       ),
       
       toast.success(`Dispute status updated to ${status}`),
+=======
+      // Update local state
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return true
     } catch (err: any) {
       console && console.error("Error updating dispute status:", err);
       toast && toast.error("Failed to update dispute status");
       return false
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }
   const resolveDispute = async (
     disputeId: string
+<<<<<<< HEAD
     disputeId: string, 
 =======
 
@@ -310,6 +373,11 @@ export function useDisputes() {;
       console.error("Error fetching dispute:", err),;
       toast.error("Failed to fetch dispute details"),;
 
+=======
+=======
+      console.error ("Error fetching dispute:", err);
+      toast.error ("Failed to fetch dispute details");
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return null;
     }
   }
@@ -374,6 +442,7 @@ if (throw error) {
       toast.error ("Failed to update dispute status");
       return false;
     }
+<<<<<<< HEAD
 
   },;
   const resolveDispute = async (;
@@ -395,10 +464,25 @@ if (throw error) {
           resolved_at: new Date().toISOString();
           resolution_summary: resolution.summary
           resolution_type: resolution.resolution_type
+=======
+  }
+;
+  const resolve_dispute = async (
+    dispute_id: string,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    resolution: { summary: string, resolution_type: string }
+  ): Promise < boolean> => {
+    try {
+      const { error } = await supabase;
+        .from ("disputes");
+        .update ({
+          status: 'resolved';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         })
         .eq("id", disputeId);
       if (error) throw error;
       // Update local state
+<<<<<<< HEAD
       setDisputes(prevDisputes =>
         prevDisputes.map(dispute =>
           dispute.id === disputeId
@@ -434,6 +518,8 @@ if (throw error) {
       ),
       
       toast.success("Dispute resolved successfully"),
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return true
     } catch (err: any) {
       console && console.error("Error resolving dispute:", err);
@@ -441,10 +527,14 @@ if (throw error) {
       return false
     }
   }
+<<<<<<< HEAD
   },
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const getDisputeMessages = async (disputeId: string): Promise<DisputeMessage[]> => {
     try {
+<<<<<<< HEAD
       const { data, error } = await supabase
         .from("dispute_messages")
         .select(`
@@ -492,11 +582,50 @@ if (throw error) {
       if (error) throw error,
       
       toast.success("Message sent successfully"),
+=======
+      const { data, error } = await supabase;
+        .from ("dispute_messages");
+        .select (`;
+          *;
+          user_id: user.id;
+          message
+=======
+          user_id: user && user.id;
+          message,
+          is_admin_note: isAdminNote
+        });
+      if (error) throw error;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return true
     } catch (err: any) {
       console && console.error("Error sending message:", err);
       toast && toast.error("Failed to send message");
       return false
+<<<<<<< HEAD
+=======
+    }
+  }
+  // Fetch disputes when component mounts or user changes
+  useEffect(() => {
+    if (user) {
+      fetchDisputes()
+    }
+  }, [user]);
+=======
+          is_admin_note: isAdminNote;
+        });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      toast.success ("Message sent successfully");
+      return true;
+    } catch (err: any) {
+      console.error ("Error sending message:", err);
+      toast.error ("Failed to send message");
+      return false;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }
 ;
@@ -510,7 +639,7 @@ if ( {) {
     }
   }, [user]);
 ;
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     disputes;
     is_loading;
@@ -519,6 +648,7 @@ if ( {) {
     getDisputeById;
     create_dispute;
     updateDisputeStatus;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     addDisputeMessage
@@ -634,6 +764,8 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }
 ;

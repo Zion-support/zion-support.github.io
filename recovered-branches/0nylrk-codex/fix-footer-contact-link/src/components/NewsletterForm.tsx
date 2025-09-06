@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import React from 'react';
@@ -8,6 +9,8 @@ import {Input} from "@/components/ui/input";
 import {useState} from "react";
 export function NewsletterForm() {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -22,6 +25,7 @@ import { useState } from "react",
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setIsSubmitting(true);
+<<<<<<< HEAD
 
 
 
@@ -68,11 +72,14 @@ export function NewsletterForm() {
 
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Input
             type="email"
             placeholder="Enter your email"
             className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
             value={email}
+<<<<<<< HEAD
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setEmail(e.target.value)
             }
@@ -127,17 +134,14 @@ export function NewsletterForm() {;
           <Button
             type="submit" 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             disabled={isSubmitting}
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple">;
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>;
         </form>;
       )}
-
-    </div>;
-
-  );
-=======
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
 import { useState  } from './react';
@@ -190,6 +194,7 @@ function NewsletterForm() {
           >;
             {is_submitting ? "Subscribing..." : "Subscribe"}
           </Button>;
+<<<<<<< HEAD
 
         </form>;
 <<<<<<< HEAD
@@ -202,3 +207,6 @@ function NewsletterForm() {
   );
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

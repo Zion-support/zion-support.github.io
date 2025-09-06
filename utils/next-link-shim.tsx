@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ;
@@ -38,11 +39,14 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/main
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from 'react';
 type Href = string | { pathname?: string; href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: Href;
   children: React.ReactNode;
+<<<<<<< HEAD
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 };
@@ -123,6 +127,8 @@ origin/main
 function resolveHref(href: Href): string {
 =======
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 };
@@ -132,14 +138,19 @@ function resolveHref(href: Href): string {
       {children};
 };
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 };
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/automation-improvements-final
+import React from 'react';
+  className: string;
+  id: string;
+  innerHTML: string;
+  textContent: string | null;
+  style: { [key: string]: string }
 }
->>>>>>> origin/main
-function resolveHref(href: Href): string {
+  tagName: 'A';
+  href: string;
+  target: string;
+}
   if (typeof href === 'string') return href;
   return href?.pathname |(href as { href?: string })?.href |'#';
 }
@@ -156,9 +167,13 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
 
     });
   }
+<<<<<<< HEAD
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from 'react';
 type Href = string | { pathname?: string; href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -169,6 +184,7 @@ function resolveHref("href": Href): string {
   if (typeof href === 'string') return href;
   return href?.pathname || (href as { href?: string })?.href || '#';
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function Link({ href, children, className, ...rest }: LinkProps) {
 
@@ -189,24 +205,20 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
       "href": resolved,
       "className": mergedClassName,
       ...rest});
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 
-
-
-
-
-
-=======
-
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   return (
-    <a href={resolved} className={className} {...rest}>
+    <a href={resolved} className={className} {...rest}>;
       {children}
-    </a>
+    </a>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -232,6 +244,9 @@ origin/main
 origin/automation-improvements-final
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 <<<<<<< HEAD
 =======
@@ -263,6 +278,7 @@ import React from 'react'; type Href = string | { pathname?: string; href?: stri
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 =======
 
 
@@ -287,8 +303,18 @@ import React from 'react'; type Href = string | { pathname?: string; href?: stri
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >>>>>>> origin/automation-improvements-final
 =======
+;
+// Define HTMLAnchorElement if not available;
+interface HTMLElement {
+  class_name: string;
+  id: string;
+  innerHTML: string;
+  text_content: string | null;
+  style: { [key: string]: string }
 }
 interface HTMLAnchorElement extends HTMLElement {
   tag_name: 'A';

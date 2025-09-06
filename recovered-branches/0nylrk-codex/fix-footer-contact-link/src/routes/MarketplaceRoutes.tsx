@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Route, Routes} from "react-router-dom";
@@ -141,26 +142,16 @@ const MarketplaceRoutes = () => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const MarketplaceRoutes = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Routes>;
       {/* Marketplace Routes */}
-
-      <Route path="/marketplace" element={<Marketplace />} />;
-      <Route path="/categories" element={<Categories />} />;
-      <Route path="/category/:slug" element={<CategoryDetail />} />;
-      <Route path="/featured" element={<Featured />} />;
-      <Route path="/marketplace/listing/:id" element={<ListingDetail />} />;
-      <Route path="/listing/:id" element={<ListingDetail />} />;
-
-      {/* Equipment Routes */}
-      <Route path="/equipment" element={<EquipmentPage />} />;
-      <Route path="/equipment/:id" element={<EquipmentDetail />} />;
-
-
       {/* Job Routes */}
       <Route
         path="/post-job"
         element={
+<<<<<<< HEAD
 
           <ProtectedRoute>;
             <PostJob />;
@@ -226,4 +217,6 @@ const MarketplaceRoutes = () => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default MarketplaceRoutes;

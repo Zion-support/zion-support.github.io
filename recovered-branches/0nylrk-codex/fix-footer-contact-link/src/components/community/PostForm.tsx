@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState } from "react";
@@ -127,6 +128,8 @@ export const PostForm = ({
       content: initialValues?.content |""
       categoryId: initialValues?.categoryId |"project-help"
       tags: initialValues?.tags |""
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -140,48 +143,10 @@ export const PostForm = ({
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-import { useState } from './react';
-import { use_form } from './react - hook - form';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
-import { Input } from '@/components / ui / input';
-import { Button } from '@/components / ui / button';
-import { Textarea } from '@/components / ui / textarea';
-import { ForumCategory } from '@/types / community';
-interface PostFormValues {
-  title: string,
-  content: string,
-  category_id: ForumCategory,
-  tags: string;
-}
-interface PostFormProps {
-  initial_values?: Partial < PostFormValues>;
-  on_submit: (values: PostFormValues) => void,
-  is_editing?: boolean;
-}
-export const PostForm = ({
-  initial_values;
-  on_submit;
-  is_editing = false;
-}: PostFormProps) =>: any {
-  const form = use_form < PostFormValues>({
-    default_values: {
-      title: initial_values?.title || "",
-      content: initial_values?.content || "",
-      category_id: initial_values?.category_id || "project - help",
-      tags: initial_values?.tags || "";
-    }
-  });
-;
-  const [is_submitting, setIsSubmitting] = useState (false);
-;
-  const handle_submit = async (values: PostFormValues) => {
-    setIsSubmitting (true),
-
     try {
       await on_submit (values);
     } finally {
+<<<<<<< HEAD
 <<<<<<< HEAD
       setIsSubmitting(false)
     }
@@ -205,12 +170,15 @@ export const PostForm = ({
     } finally {;
       setIsSubmitting(false);
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
 <<<<<<< HEAD
   },
 
 =======
   }
+<<<<<<< HEAD
 =======
 
 
@@ -218,6 +186,8 @@ export const PostForm = ({
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Card>;
       <CardHeader>;
@@ -256,30 +226,9 @@ export const PostForm = ({
                     <Input placeholder="Enter post title..." {...field} />;
                   </FormControl>;
                   <FormMessage />;
-
-            />;
-
-
             <FormField
               control={form && form.control}
               name="content"
-
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Content</FormLabel>;
-                  <FormControl>;
-                    <Textarea
-                      placeholder="Write your post content here..." 
-                      className="min-h-[200px]"
-                      {...field} 
-                    />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>;
-              )}
-            />;
-
-
             <FormField
               control={form && form.control}
               name="categoryId"
@@ -299,13 +248,10 @@ export const PostForm = ({
                   <FormMessage />;
                 </FormItem>;
               )}
-
-            />;
-
-
             <FormField
               control={form && form.control}
               name="tags"
+<<<<<<< HEAD
 
               render={({ field }) => (;
                 <FormItem>;
@@ -329,10 +275,21 @@ export const PostForm = ({
       </CardContent>
     </Card>
   )
+=======
+            </Button>;
+          </form>;
+        </Form>;
+      </CardContent>;
+export default PostForm;
+
+=======
+    </Card>);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 ;
 export default PostForm;
 ;
+<<<<<<< HEAD
 
 },
 
@@ -344,3 +301,6 @@ export default PostForm,
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

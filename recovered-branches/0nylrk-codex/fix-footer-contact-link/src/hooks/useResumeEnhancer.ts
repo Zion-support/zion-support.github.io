@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,19 +34,14 @@ export function useResumeEnhancer() {;
           content, 
           enhancementType: type,
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           context
         }
       });
       if (error) {
         throw new Error(error && error.message)
       }
-
-      
-      return data && data.enhancedContent
-    } catch (err: any) {
-      setError(err && err.message || 'Failed to enhance content'),
-      console && console.error('Enhancement error:', err);
-
       return null
     } finally {
       setIsEnhancing(false)
@@ -99,6 +95,7 @@ if ( {) {
     is_enhancing;
     error;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -106,5 +103,8 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }

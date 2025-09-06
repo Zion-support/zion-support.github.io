@@ -1,3 +1,7 @@
+=======
+
+import React from "react",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Handshake, MessageSquare, Star } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { HireNowCTA } from "./HireNowCTA",
@@ -9,120 +13,15 @@ import { ProfileAvailability } from "./ProfileAvailability",
 import { ProfileContact } from "./ProfileContact",
 import { ProfileRatings } from "./ProfileRatings",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
-
-
-import React from 'react';
-import { Handshake, MessageSquare, Star } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-
-import { HireNowCTA } from './HireNowCTA';
-import { ProfileHero } from './ProfileHero';
-import { ProfileSkills } from './ProfileSkills';
-import { ProfileExperience } from './ProfileExperience';
-import { ProfileProjects } from './ProfileProjects';
-import { ProfileAvailability } from './ProfileAvailability';
-import { ProfileContact } from './ProfileContact';
-import { ProfileRatings } from './ProfileRatings';
-import { TalentProfile as TalentProfileType } from '@/types/talent';
-import { useAuth } from '@/hooks/useAuth';
-import { Availability } from '@/types/profile';
-interface TalentProfileProps {;
-  profile: TalentProfileType;
-  onRequestHire: () => void;
-  onMessageTalent?: () => void
-
-
-export function TalentProfile(): any ({;
-  profile,;
-  onRequestHire,;
-  onMessageTalent,;
-}: TalentProfileProps) {;
-  const { isAuthenticated } = useAuth();
-
-  // Create proper availability object from talent profile;
-  const availability: Availability = {;
-    status:;
-      profile && profile.availability_type === 'full_time';
-        ? 'available';
-        : profile && profile.availability_type === 'part_time';
-          ? 'limited';
-          : 'unavailable',;
-    message: `${profile && profile.professional_title} with ${profile && profile.years_experience} years of experience`,;
-  };
-
-  // Create proper skills array for ProfileSkills component;
-  const skillsArray =;
-    profile && profile.skills?.map(skill => ({;
-      name: skill,;
-      level: 3, // Default level since we don't have this data;
-    })) || [];
-
-  // Create proper projects array for ProfileProjects component;
-  const projectsArray =;
-    profile && profile.key_projects?.map((proj, i) => ({;
-      id: `project-${i}`,;
-      title: proj && proj.title,;
-      description: proj && proj.description,;
-      date: new Date().toISOString(), // Default date since we don't have this data;
-    })) || [];
-
-  return (
-    <div className='container mx-auto px-4 py-8'>
-      {/* Profile Header */}
-      <ProfileHero
-        name={profile.full_name}
-        title={profile.professional_title}
-        avatarUrl={profile.profile_picture_url}
-        profileType='talent'
-
-        rating={profile && profile.average_rating}
-        reviewCount={profile && profile.rating_count}      />;
-
-
-      {/* Main content area */}
-      <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8'>;
-        {/* Left Column - Skills & Info */}
-        <div className='space-y-8'>;
-          <ProfileSkills skills={skillsArray} />;
-          <ProfileAvailability availability={availability} />;
-          <ProfileContact
-
-            email={profile && profile.user_id}
-            profileName={profile && profile.full_name}
-            profileType='talent'          />;
-        </div>;
-
-
-        {/* Right Column - Bio & Projects */}
-        <div className='lg:col-span-2 space-y-8'>;
-          {/* Bio Section */}
-
-import React from 'react';
-import { Handshake, MessageSquare, Star } from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import { HireNowCTA } from './HireNowCTA';
-import { ProfileHero } from './ProfileHero';
-import { ProfileSkills } from './ProfileSkills';
-import { ProfileExperience } from './ProfileExperience';
-import { ProfileProjects } from './ProfileProjects';
-import { ProfileAvailability } from './ProfileAvailability';
-import { ProfileContact } from './ProfileContact';
-import { ProfileRatings } from './ProfileRatings';
-import { TalentProfile as TalentProfileType } from '@/types / talent';
-import { use_auth } from '@/hooks / use_auth';
-import { Availability } from '@/types / profile';
-interface TalentProfileProps {
-  profile: TalentProfileType;
-  onRequestHire: () => void;
-  onMessageTalent?: () => void;
-export /**
- * TalentProfile - Function description
- */
-function TalentProfile() {
-  const { is_authenticated } = use_auth ();
-  // Create proper availability object from talent profile;
-  const availability: Availability = {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  profile,
+  onRequestHire,
+  onMessageTalent
+}: TalentProfileProps) {
+=======
+  // Create proper availability object from talent profile
+
+  const availability: Availability = {
     status: profile.availability_type === 'full_time' ? 'available' : 
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable',
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
@@ -200,6 +99,7 @@ export function TalentProfile({;
         reviewCount={profile.rating_count}
       />;
       {/* Main content area */}
+<<<<<<< HEAD
       <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mt - 8'>;
         {/* Left Column - Skills & Info */}
         <div className='space - y-8'>;
@@ -461,10 +361,17 @@ export function TalentProfile({;
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {/* Left Column - Skills & Info */}
         <div className="space-y-8">
           <ProfileSkills skills={skillsArray} />
           <ProfileAvailability availability={availability} />
+<<<<<<< HEAD
           <ProfileContact
             email={profile.user_id}
             profileName={profile.full_name}
@@ -532,6 +439,11 @@ export function TalentProfile({;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {/* Hire Now CTA */}
           {isAuthenticated && (
             <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">
@@ -541,6 +453,7 @@ export function TalentProfile({;
                   Connect with {profile.full_name} for your next project and get started right away.
                   {profile.hourly_rate && ` Rate starts at $${profile.hourly_rate}/hour.`}
                 </p>
+<<<<<<< HEAD
                 <div className='flex flex-wrap gap-4 justify-center'>
                   <Button
                     size='lg'
@@ -580,6 +493,11 @@ export function TalentProfile({;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       Message
                     </Button>
                   )}
@@ -587,6 +505,7 @@ export function TalentProfile({;
               </div>
             </div>
           )}
+<<<<<<< HEAD
 
 
 
@@ -625,3 +544,8 @@ export function TalentProfile({;
     </div>);
 }
 ;
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,6 +78,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
   const renderActionButtons = () => {
     switch (application.status) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       case "shortlisted": return (
           <Button variant="default" size="sm">;
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;
@@ -96,89 +99,18 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         );
       case "rejected":;
         return (
-
-          <Button variant="outline" size="sm">;
-            <HelpCircle className="h-4 w-4 mr-1" /> View Feedback;
-          </Button>;
-        ),;
-      default:;
-        return null;
-
     }
   }
+<<<<<<< HEAD
   },
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   return (
-
-import { useState } from './react';
-import { formatDistanceToNow } from './date - fns';
-import { JobApplication } from '@/types / jobs';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
-import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from './lucide-react';
-import { Link } from './react-router-dom';
-import { StatusBadge } from './StatusBadge';
-import { ApplicationProgress } from './ApplicationProgress';
-import { toast } from './sonner';
-interface ApplicationCardProps {
-  application: JobApplication;
-}
-export /**
- * ApplicationCard - Function description
- */
-function ApplicationCard() {
-  const [expanded, set_expanded] = useState (false);
-;
-  const handleDownloadResume = () =>: any {
-    // This would typically download the resume file;
-    toast.info ("Resume download functionality will be implemented soon");
-  }
-;
-  const renderActionButtons = () =>: any {
-    switch (application.status) {
-      case "shortlisted": return (
-          <Button variant="default" size="sm">;
-            <Calendar className="h - 4 w - 4 mr - 1" /> Prepare for Interview;
-          </Button>);
-      case "interview":;
-        return (
-          <Button variant="default" size="sm">;
-            <Calendar className="h - 4 w - 4 mr - 1" /> View Interview Details;
-          </Button>);
-      case "hired":;
-        return (
-          <Button variant="secondary" size="sm" className="bg - green - 100 text - green - 800 hover: bg - green - 200 hover:text - green - 900">;
-            <FileText className="h - 4 w - 4 mr - 1" /> View Offer;
-          </Button>);
-      case "rejected":;
-        return (
-          <Button variant="outline" size="sm">;
-            <HelpCircle className="h - 4 w - 4 mr - 1" /> View Feedback;
-          </Button>),
-      default:;
-        return null;
-    }
-  }
-;
-  return (
-    <Card className="overflow - hidden">;
-      <CardHeader className="pb - 3">;
-        <div className="flex justify - between items - start">;
-          <div>;
-            <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>;
-            <div className="text - sm text - muted - foreground mt - 1">;
-              Applied {formatDistanceToNow (new Date (application.created_at), { add_suffix: true })}
-            </div>;
-          </div>;
-          <StatusBadge status={application.status} />;
-        </div>;
-      </CardHeader>;
-      <CardContent className="pb - 3">;
-        <ApplicationProgress status={application.status} className="my - 4" />;
-
         {expanded && (
           <div className="mt - 4 space - y-3">;
             {application.cover_letter && (
+<<<<<<< HEAD
               <div>
                 <h4 className="text-sm font-medium mb-1">Your Cover Letter</h4>
                 <p className="text-sm text-muted-foreground">{application.cover_letter}</p>
@@ -319,19 +251,17 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            )}
+          </div>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         )}
-
-      </CardContent>;
-
-      <CardFooter className="flex flex-col gap-3 pt-0">;
-        <div className="flex justify-between items-center w-full">;
-          <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>;
-
             {expanded ? "Show Less" : "Show More"}
           </Button>;
           <div className="flex gap-2">;
             {renderActionButtons()}
             <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
               variant="outline"
               size="sm"
@@ -369,3 +299,24 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 }
 }
 ;
+=======
+              </Link>;
+            </Button>;
+          </div>;
+        </div>;
+=======
+        <Button;
+          variant="secondary";
+          size="sm";
+          className="w - full";
+          as_child;
+        >;
+          <Link to={`/messages?job_id=${application.job_id}`}>;
+            <MessageSquare className="h - 4 w - 4 mr - 1" /> Message Client;
+          </Link>;
+        </Button>;
+      </CardFooter>;
+    </Card>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

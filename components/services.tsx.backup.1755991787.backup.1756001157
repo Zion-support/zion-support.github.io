@@ -3,13 +3,6 @@ import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, Filter as FilterIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
-<<<<<<< HEAD
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import { enhancedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-micro-saas-services';
-=======
-import QuantumNeuralBackground from '../components/ui/QuantumNeuralBackground';
-import { expandedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/expanded-micro-saas-services';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-acae
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -284,7 +277,6 @@ export default function ServicesPage() {
       icon: <Truck className="w-6 h-6" />,
       count: allServices.filter(s => s.category === 'Supply Chain & Logistics').length
     }
-=======
   const heroStats = [
     { value: '200+', label: 'Revolutionary Services', color: 'text-cyan-400', icon: <Cpu className="w-6 h-6" /> },
     { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400', icon: <ShieldCheck className="w-6 h-6" /> },
@@ -293,11 +285,6 @@ export default function ServicesPage() {
   ];
 
   return (
-<<<<<<< HEAD
-    <UltraFuturisticBackground variant="neural" intensity="high">
-=======
-    <QuantumNeuralBackground variant="holographic" intensity="high">
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-acae
       <div className="min-h-screen">
         <Head>
           <title>Complete Services Portfolio | Zion Tech Group - AI, Cloud, Security & More</title>
@@ -1389,12 +1376,6 @@ export default function ServicesPage() {
         </div>
       </section>
     </div>
-=======
       </div>
-<<<<<<< HEAD
-    </UltraFuturisticBackground>
-=======
-    </QuantumNeuralBackground>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-acae
   );
 }

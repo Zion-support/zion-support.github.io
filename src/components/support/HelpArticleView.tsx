@@ -1,6 +1,16 @@
+
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card } from "@/components/ui/card",
+import { ThumbsUp, ThumbsDown } from 'lucide-react'
+import { toast } from "@/components/ui/use-toast",
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface HelpArticleViewProps {
   articleId: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
@@ -12,6 +22,9 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export function HelpArticleView({ articleId }: HelpArticleViewProps) {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Find the article in all categories
   let article = null;
   for (const category of HELP_CATEGORIES) {
@@ -30,6 +43,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   return new Date(date).toLocaleDateString("en-US", {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -44,68 +58,13 @@ export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
 };
 }
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
   
   // Find the article in all categories
   let article,
-  for (const category of HELP_CATEGORIES) {
-    const found = category.articles.find(a => a.id === articleId),
-    if (found) {
-      article = found,
-      break
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card } from "@/components/ui/card",;
-import { ThumbsUp, ThumbsDown } from 'lucide-react';
-import { toast } from "@/components/ui/use-toast",;
-import { HELP_CATEGORIES } from "./help-content",;
-interface HelpArticleViewProps {;
-  articleId: string;
-}
-;
-export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),;
-
-  // Find the article in all categories;
-  let article;
-  for (const category of HELP_CATEGORIES) {;
-    const found = category && category.articles.find(a => a && a.id === articleId);
-    if (found) {;
-      article = found;
-      break;
-    }
-  }
-
-  if (!article) {;
-    return <div>Article not found</div>;
-  }
-
-  const handleFeedback = (type: "helpful" | "not-helpful") => {;
-    setFeedbackGiven(type);
-
-  return new Date(date).toLocaleDateString("en-US", {;
-    year: "numeric",;
-    month: "long",;
-    day: "numeric", });
-}
-
-
-
-import React, { useState } from './react';
-import { Button  } from '@/components / ui / button';
-import { Card  } from '@/components / ui / card';
-import { ThumbsUp, ThumbsDown } from 'lucide-react'import { toast  } from '@/components / ui / use - toast';
-import { HELP_CATEGORIES  } from './help - content';
-interface HelpArticleViewProps {
-  article_id: string;
-}
-export /**
- * HelpArticleView - Function description
- */
-function HelpArticleView() {
-  const [feedback_given, setFeedbackGiven] = useState<"helpful" | "not - helpful" | null>(null);
-  // Find the article in all categories;
-  let article;
   for (const category of HELP_CATEGORIES) {
     const found = category.articles.find(a => a.id === articleId),
     if (found) {
@@ -283,5 +242,7 @@ function formatDate(date: string): string {;
     day: "numeric";
   });
 }
-
 ;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

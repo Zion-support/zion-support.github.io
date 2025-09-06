@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
 export type DisputeReason =
   | 'Scope Disagreement'
@@ -154,3 +155,7 @@ export type UserSummary = {
   role: 'admin' | 'client' | 'talent';
 }
 };
+=======
+  role: 'admin' | 'client' | 'talent';
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

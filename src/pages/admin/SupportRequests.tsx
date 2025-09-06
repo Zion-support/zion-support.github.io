@@ -1,7 +1,25 @@
+
+import { Search, Filter } from 'lucide-react'
+import { SEO } from "@/components/SEO";
+=======
+import React, { useState } from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Search, Filter } from 'lucide-react'
+import { SEO } from "@/components/SEO",
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
   {
+<<<<<<< HEAD
     id: 'SR-1001'
     user: 'john.doe@example.com'
     userId: 'user-123'
@@ -108,6 +126,17 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
+=======
+    id: "SR-1007",
+    user: "jamie.taylor@tech.org",
+    userId: "user-345",
+    issue: "Cannot upload portfolio images",
+    status: "resolved",
+    priority: "medium",
+    createdAt: "2023-12-10T15:10:00Z",
+    lastUpdated: "2023-12-13T11:25:00Z",
+    category: "profile"
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 <<<<<<< HEAD
 ],
@@ -249,6 +278,7 @@ export default function SupportRequests() {;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -276,6 +306,8 @@ export default function SupportRequests() {;
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     
     return true
   }),
@@ -294,6 +326,7 @@ export default function SupportRequests() {;
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -301,6 +334,11 @@ export default function SupportRequests() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <>
       <SEO 
@@ -317,6 +355,7 @@ export default function SupportRequests() {;
               Manage and respond to user support requests and issues
             </p>
           </div>
+<<<<<<< HEAD
           <div className='mt-4 md:mt-0'>
             <Button className='bg-zion-purple hover:bg-zion-purple-light'>
           
@@ -328,10 +367,16 @@ export default function SupportRequests() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               New Support Case
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
         
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -339,6 +384,11 @@ export default function SupportRequests() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {/* Status Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <Card>
@@ -347,6 +397,7 @@ export default function SupportRequests() {;
               <CardDescription>Open Requests</CardDescription>
             </CardHeader>
           </Card>
+<<<<<<< HEAD
           
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -354,12 +405,18 @@ export default function SupportRequests() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{inProgressCount}</CardTitle>
               <CardDescription>In Progress</CardDescription>
             </CardHeader>
           </Card>
+<<<<<<< HEAD
           
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -367,12 +424,18 @@ export default function SupportRequests() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{resolvedCount}</CardTitle>
               <CardDescription>Resolved</CardDescription>
             </CardHeader>
           </Card>
+<<<<<<< HEAD
           
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -380,6 +443,11 @@ export default function SupportRequests() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>
@@ -387,6 +455,7 @@ export default function SupportRequests() {;
             </CardHeader>
           </Card>
         </div>
+<<<<<<< HEAD
         <Tabs defaultValue='all' className='mb-8'>
         
         <Tabs defaultValue="all" className="mb-8">
@@ -396,12 +465,18 @@ export default function SupportRequests() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <TabsList>
             <TabsTrigger value="all">All Requests</TabsTrigger>
             <TabsTrigger value="escalated">Escalated</TabsTrigger>
             <TabsTrigger value="ai-flagged">AI Flagged</TabsTrigger>
             <TabsTrigger value="need-response">Need Response</TabsTrigger>
           </TabsList>
+<<<<<<< HEAD
 
       />;
       <div className='container mx-auto px-4 py-8'>;
@@ -473,11 +548,17 @@ export default function SupportRequests() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* Search and Filters */}
             <div className="flex flex-col md:flex-row gap-4 mb-6">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <Input
+<<<<<<< HEAD
                   placeholder='Search by ID, user or issue...'
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
@@ -501,9 +582,12 @@ export default function SupportRequests() {;
                 onValueChange={value => setStatusFilter(value || null)}
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Status' />
+=======
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -516,11 +600,17 @@ export default function SupportRequests() {;
                   <SelectValue placeholder="Status" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Statuses</SelectItem>
@@ -529,6 +619,7 @@ export default function SupportRequests() {;
                   <SelectItem value="resolved">Resolved</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Select
                 value={priorityFilter |''}
@@ -542,13 +633,17 @@ export default function SupportRequests() {;
                 onValueChange={value => setPriorityFilter(value || null)}
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Priority' />
+=======
               
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -556,6 +651,11 @@ export default function SupportRequests() {;
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Priorities</SelectItem>
@@ -564,6 +664,7 @@ export default function SupportRequests() {;
                   <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Select
                 value={categoryFilter |''}
@@ -577,13 +678,17 @@ export default function SupportRequests() {;
                 onValueChange={value => setCategoryFilter(value || null)}
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Category' />
+=======
               
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -591,6 +696,11 @@ export default function SupportRequests() {;
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Categories</SelectItem>
@@ -602,6 +712,7 @@ export default function SupportRequests() {;
                   <SelectItem value="profile">Profile</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
 
                   onChange={e => setSearchQuery(e && e.target.value)}
                   className='pl-10'                />;
@@ -622,6 +733,11 @@ export default function SupportRequests() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* Support Requests Table */}
             <Card>
               <CardContent className="p-0">
@@ -640,6 +756,7 @@ export default function SupportRequests() {;
                     </TableRow>
                   </TableHeader>
                   <TableBody>
+<<<<<<< HEAD
                     {filteredRequests.map(request => (                      <TableRow key={request.id}>
                         <TableCell className='font-medium'>
                           {request.id}
@@ -871,35 +988,35 @@ export default function SupportRequests() {;
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                        <TableCell>{request.user}</TableCell>
+                        <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
+                        <TableCell>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                             {request.priority}
-                          </Badge>;
-                        </TableCell>;
-                        <TableCell>{request.category}</TableCell>;
-                        <TableCell>;
-                          {new Date (request.created_at).toLocaleDateString ()}
-                        </TableCell>;
-                        <TableCell>;
-                          {new Date (request.last_updated).toLocaleDateString ()}
-                        </TableCell>;
-                        <TableCell>;
-                          <Button variant='ghost' size='sm'>;
-                            View;
-                          </Button>;
-                          <Button variant='ghost' size='sm'>;
-                            Assign;
-                          </Button>;
-                        </TableCell>;
-
-
-          
-          <TabsContent value="escalated" className="mt-6">
-            <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
-              <h3 className="text-xl font-medium mb-4">Escalated Requests</h3>
-              <p className="text-zion-slate-light">
-                This tab will show support requests that have been escalated by agents or the system.
-              </p>
-            </div>
+                          </Badge>
+                        </TableCell>
+                        <TableCell>{request.category}</TableCell>
+                        <TableCell>{new Date(request.createdAt).toLocaleDateString()}</TableCell>
+                        <TableCell>{new Date(request.lastUpdated).toLocaleDateString()}</TableCell>
+                        <TableCell>
+                          <Button variant="ghost" size="sm">View</Button>
+                          <Button variant="ghost" size="sm">Assign</Button>
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </CardContent>
+            </Card>
           </TabsContent>
+<<<<<<< HEAD
           
           <TabsContent value="ai-flagged" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
@@ -921,6 +1038,11 @@ export default function SupportRequests() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </p>
             </div>
           </TabsContent>
@@ -928,6 +1050,7 @@ export default function SupportRequests() {;
       </div>
     </>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1095,3 +1218,14 @@ export default function SupportRequests() {;
 <<<<<<< HEAD
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Escalated Requests</h3> <p className=" text - zion - slate - light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai - flagged"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">AI Flagged Issues</h3> <p className=" text - zion - slate - light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need - response"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Awaiting Response</h3> <p className=" text - zion - slate - light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>);
 }'"}
+=======
+=======
+}</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
+}</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Escalated Requests</h3> <p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flagged"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need-response"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Awaiting Response</h3> <p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>) ;
+}'"};
+=======
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

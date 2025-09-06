@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from &quot;react&quot;
 import * as RadioGroupPrimitive from &quot;@radix-ui/react-radio-group&quot;
 import { Circle } from &quot;lucide-react&quot;
@@ -24,6 +25,8 @@ const RadioGroup = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof RadioGroupPrimitive.Root>;
 >(({ class_name, ...props }, ref) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <RadioGroupPrimitive.Root;
       className={cn (&quot;grid gap - 2&quot;, class_name)}
@@ -31,6 +34,7 @@ const RadioGroup = React.forward_ref<;
       ref={ref}
     />);
 });
+<<<<<<< HEAD
 RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
 const RadioGroupItem = React.forwardRef<;
   React.ElementRef<typeof RadioGroupPrimitive.Item>;
@@ -114,3 +118,6 @@ export { RadioGroup, RadioGroupItem }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export { RadioGroup, RadioGroupItem }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

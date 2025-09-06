@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -71,11 +72,13 @@ interface TabDefinition {;
 
 export function DeveloperPortal() {;
 
-  const { user } = useAuth();
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+  const { user } = useAuth();
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const [activeTab, setActiveTab] = useState<string>("documentation");
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -141,9 +144,16 @@ function DeveloperPortal() {
         </p>;
       </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Tabs */}
+      <div className="border - b border - zinc - 800 mb - 8">;
+        <div className="flex flex - wrap -mb - px">;
+          {tabs.map ((tab) => {
+            const Icon = tab.icon;
 
 =======
+<<<<<<< HEAD
       <div className="border-b border-zinc-800 mb-8">
         <div className="flex flex-wrap -mb-px">
           {tabs.map((tab) => {
@@ -187,6 +197,8 @@ export function DeveloperPortal() {;
   const { user } = useAuth(),;
   const [activeTab, setActiveTab] = useState<string>("documentation"),;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Define the tabs;
   const tabs: TabDefinition[] = [;
     { id: "documentation", label: "Documentation", icon: BookOpen },;
@@ -209,6 +221,7 @@ export function DeveloperPortal() {;
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">;
         <div className="flex flex-wrap -mb-px">;
+<<<<<<< HEAD
 
           {tabs.map((tab) => {;
             const Icon = tab.icon;
@@ -238,6 +251,12 @@ export function DeveloperPortal() {;
       </div>;
 
 
+=======
+          {tabs && tabs.map((tab) => {;
+            const Icon = tab && tab.icon;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+            return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Tab content */}
       <div>;
         {activeTab === "documentation" && <ApiDocumentation />}
@@ -248,6 +267,7 @@ export function DeveloperPortal() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function ProtectedDeveloperPortal() {
   return (
@@ -278,6 +298,8 @@ export default function ProtectedDeveloperPortal() {;
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
               <button;
                 key={tab.id}

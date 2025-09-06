@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextApiRequest } from 'next';
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session;
@@ -12,6 +13,9 @@ export function getUserFromRequest(req: any): User | null {
       id: 'user-1'
       email: 'user@example.com'
       role: 'client'
+=======
+import { NextApiRequest } from 'next';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       name: 'Test User'
     }
   }
@@ -20,37 +24,30 @@ export function getUserFromRequest(req: any): User | null {
 export function assertTalentOrClientForOffer(
   req: NextApiRequest
   offer: { clientId: string; talentSlug: string }
+<<<<<<< HEAD
   req: NextApiRequest,;
   offer: { clientId: string; talentSlug: string },
 =======
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
-  if (u.role === 'client' && u.id === offer.clientId) return u;
+  if (u && u.role === 'client' && u && u.id === offer && offer.clientId) return u;
   if (
-
-    u && u.role === 'talent' &&
-    (u && u.talentSlug || talentSlugHeader) === offer && offer.talentSlug
-
   )
     return u;
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
-
-  err && err.statusCode = 403;
-  throw err;export function requireAuth(req: any): User {
-
   const user = getUserFromRequest(req);
   if (!user) {
-
-    throw new Error('Authentication required')
-
   }
   return user;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -393,6 +390,14 @@ export function canUserAccessProject(user: MarketplaceUser, project: any): boole
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+=======
+=======
+export function getUserFromRequest (req: any): User | null {
+  // Mock implementation - in production, this would extract user from JWT or session;
+  const auth_header = req.headers.authorization;
+  if () {) {
+  $2
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
     return null;
   }

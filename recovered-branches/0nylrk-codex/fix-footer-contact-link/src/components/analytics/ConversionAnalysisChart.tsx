@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import {
@@ -29,6 +30,8 @@ import {;
   CardHeader,;
   CardTitle,;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 } from "@/components/ui/card";
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -39,6 +42,7 @@ interface ConversionAnalysisProps {;
   onTimeRangeChange: (range: string) => void
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function ConversionAnalysisChart({
   data
@@ -64,6 +68,8 @@ export function ConversionAnalysisChart(): any ({;
       ? Object && Object.keys(data[0]).filter((key) => key !== "date");
 
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import React from './react';
 import {
   Card,
@@ -73,15 +79,19 @@ import {
   CardTitle,
 } from '@/components / ui / card';
 import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface ConversionAnalysisProps {
   data: Array < Record < string, any>>;
   time_range: string;
   onTimeRangeChange: (range: string) => void;
 }
+<<<<<<< HEAD
 
 export function ConversionAnalysisChart({
   data,
@@ -179,4 +189,21 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
       </CardContent>;
     </Card>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+export /**
+ * ConversionAnalysisChart - Function description
+ */
+function ConversionAnalysisChart() {
+  const data_keys =;
+    data && data.length > 0;
+      ? Object.keys (data[0]).filter ((key) => key !== "date");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      : [];
+;
+  return (
+          Track different conversion types;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }

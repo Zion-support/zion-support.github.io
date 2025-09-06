@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Education  } from '@/types/resume';
@@ -145,6 +146,11 @@ export function EducationSection(): any ({ education }: EducationSectionProps) {
               {edu && edu.location && (;
                 <span className="text-sm">{edu && edu.location}</span>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+interface EducationSectionProps {
+  education: Education[];
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               )}
             </div>;
             {edu && edu.description && (;
@@ -152,12 +158,6 @@ export function EducationSection(): any ({ education }: EducationSectionProps) {
             )}
           </div>;
         ))}
-
-      </div>;
-    </div>;
-  );
-}
-
 =======
 export /**
  * EducationSection - Function description

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -46,6 +47,8 @@ function useConversationState() {
   const [is_loading, setIsLoading] = useState (false);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return {
     // State;
     messages;
@@ -56,6 +59,7 @@ function useConversationState() {
     set_conversations;
     unread_count;
     setUnreadCount;
+<<<<<<< HEAD
 
     activeConversation;
 import { useState } from 'react',;
@@ -88,6 +92,9 @@ export function useConversationState() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    active_conversation;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     setActiveConversation;
     is_loading;
     setIsLoading}

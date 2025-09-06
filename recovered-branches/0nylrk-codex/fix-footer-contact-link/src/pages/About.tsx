@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Header} from "@/components/Header";
@@ -358,6 +359,8 @@ function About() {
                 <h3 className="text - xl font - bold text - white mb - 3">Trust</h3>;
                 <p className="text - zion - slate - light">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   We maintain the highest standards of integrity, transparency, and ethical practices in everything we do.;
                 </p>;
               </div>;
@@ -366,6 +369,7 @@ function About() {
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   );
@@ -377,9 +381,9 @@ function About() {
 
     </>);
 =======
-
-
-
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
+    </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

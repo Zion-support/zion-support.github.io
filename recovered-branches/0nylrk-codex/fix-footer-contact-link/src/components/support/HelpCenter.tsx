@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -65,10 +66,13 @@ export default function HelpCenter() {
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
   const [searchQuery, setSearchQuery] = useState(""),
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
 
+<<<<<<< HEAD
 
 
 
@@ -145,6 +149,8 @@ export default function HelpCenter() {;
 =======
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const handleCategorySelect = (categoryId: string) => {;
     setSelectedCategory(categoryId),;
     setSelectedArticle(null);
@@ -194,6 +200,7 @@ export default function HelpCenter() {;
             <TabsContent value="articles">;
               {!selectedCategory && !selectedArticle && (;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <HelpCategoryList;
                   categories={HELP_CATEGORIES} ;
                   onCategorySelect={handleCategorySelect}
@@ -226,12 +233,17 @@ export default function HelpCenter() {;
                   </Button>
                   <HelpArticleList
                   <HelpArticleList 
+=======
+                  onCategorySelect={handleCategorySelect}
+                  <HelpArticleList
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
                   />;
                 </>;
               )}
+<<<<<<< HEAD
               
               {selectedArticle && (
                 <>
@@ -240,6 +252,8 @@ export default function HelpCenter() {;
               {selectedArticle && (;
                 <>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <Button
                     variant="ghost"
                     onClick={handleBackToArticles}
@@ -249,6 +263,7 @@ export default function HelpCenter() {;
                   <HelpArticleView articleId={selectedArticle} />;
                 </>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
             </TabsContent>
             <TabsContent value="faq">
@@ -518,85 +533,13 @@ export default function HelpCenter() {;
                       support@ziontechgroup.com, or by scheduling a call with;
                       our team through the Contact tab.;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     </p>;
                   </div>;
                 </div>;
               </div>;
             </TabsContent>;
-
-            <TabsContent value="contact">;
-              <div className="grid grid - cols - 1 md: grid - cols - 2 gap - 8">;
-                <div className="bg - zion - blue - light / 20 rounded - lg p - 6">;
-                  <h2 className="text - xl font - semibold mb - 4">;
-                    Contact Support;
-                  </h2>;
-                  <p className="text - zion - slate - light mb - 4">;
-                    Our support team is available 24 / 7 to assist you with any;
-                    questions or issues.;
-                  </p>;
-                  <div className="space - y-4">;
-                    <div className="flex items - center">;
-                      <div className="bg - zion - purple / 10 p - 2 rounded - full mr - 3">;
-                        <svg;
-                          xmlns="http://www.w3.org / 2000 / svg";
-                          className="h - 5 w - 5 text - zion - purple";
-                          view_box="0 0 20 20";
-                          fill="current_color";
-                        >;
-                          <path d="M2.003 5.884L10 9.882l7.997 - 3.998A2 2 0 0016 4H4a2 2 0 00 - 1.997 1.884z" />;
-                          <path d="M18 8.118l - 8 4 - 8-4V14a2 2 0 002 2h12a2 2 0 002 - 2V8.118z" />;
-                        </svg>;
-                      </div>;
-                      <a;
-                        href="mailto:support@ziontechgroup.com";
-                        className="text - zion - cyan hover:underline";
-                      >;
-                        support@ziontechgroup.com;
-                      </a>;
-                    </div>;
-                    <div className="flex items - center">;
-                      <div className="bg - zion - purple / 10 p - 2 rounded - full mr - 3">;
-                        <svg;
-                          xmlns="http://www.w3.org / 2000 / svg";
-                          className="h - 5 w - 5 text - zion - purple";
-                          view_box="0 0 20 20";
-                          fill="current_color";
-                        >;
-                          <path d="M2 3a1 1 0 011 - 1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l - 1.548.773a11.037 11.037 0 006.105 6.105l.774 - 1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01 - 1 1h - 2C7.82 18 2 12.18 2 5V3z" />;
-                        </svg>;
-                      </div>;
-                      <span className="text - zion - slate - light">;
-                        +1 302 464 0950;
-                      </span>;
-                    </div>;
-                  </div>;
-                  <Button className="w - full mt - 6 bg - zion - purple hover:bg - zion - purple - light">;
-                    Open Live Chat;
-                  </Button>;
-                </div>;
-                <div className="bg - zion - blue - light / 20 rounded - lg p - 6">;
-                  <h2 className="text - xl font - semibold mb - 4">;
-                    Feedback & Suggestions;
-                  </h2>;
-                  <p className="text - zion - slate - light mb - 4">;
-                    We value your input and are constantly looking to improve;
-                    our platform.;
-                  </p>;
-                  <form className="space - y-4">;
-                    <div>;
-                      <Input placeholder="Your email" />;
-                    </div>;
-                    <div>;
-                      <Input placeholder="Subject" />;
-                    </div>;
-                    <div>;
-                      <textarea;
-                        className="w - full min - h-[120px] px - 3 py - 2 rounded - md border border - zion - blue - light bg - zion - blue / 20 text - white";
-                        placeholder="Your feedback or suggestion";
-                      />;
-                    </div>;
-                    <Button className="w - full bg - zion - cyan hover:bg - zion - cyan / 80">;
-
                       Submit Feedback;
                     </Button>;
                   </form>;
@@ -606,6 +549,7 @@ export default function HelpCenter() {;
           </Tabs>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 
   )
@@ -614,3 +558,5 @@ export default function HelpCenter() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

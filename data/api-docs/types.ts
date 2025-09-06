@@ -7,18 +7,15 @@
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-
 export interface RateLimitInfo {
   tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;
   burst?: number;
-
-;
-
 export interface ErrorCode {
   code: string;
   http_status: number;
   message: string;
+<<<<<<< HEAD
 
 ;
 
@@ -50,6 +47,8 @@ export interface EndpointSpec {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   title: string;
   description: string;
@@ -64,6 +63,7 @@ export interface EndpointSpec {;
   rate_limits?: RateLimitInfo[];
   errors?: ErrorCode[];
   tags?: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   versions: string[]; // e && e.g., ['v1'] or ['v1','v2']
@@ -89,10 +89,14 @@ export interface SectionSpec {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface SectionSpec {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   title: string;
   description?: string;
   endpoints: EndpointSpec[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface ApiDocsSpec {
 
@@ -110,20 +114,16 @@ export interface ApiDocsSpec {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   product: 'Zion OS';
   versions: string[]; // available versions;
   default_version: string;
   sections: SectionSpec[];
-
-
 export type Visibility = 'public' | 'partner' | 'internal';
 export interface CodeSample {
   language: 'curl' | 'javascript' | 'python'
   code: string
-=======
-export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
-  lastUpdatedIso: string;  auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>;
-;
 export type Visibility = 'public' | 'partner' | 'internal';
 ;
 export interface CodeSample {
@@ -141,6 +141,7 @@ export interface ErrorCode {
 export interface EndpointSpec {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   id: string, title: string,
   description: string, path: string,
   method: HttpMethod, visibility: Visibility,
@@ -148,6 +149,8 @@ export interface EndpointSpec {
   query?: Record<string, string>;
   params?: Record<string, string>;
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string, title: string,
   description: string, path: string,
   method: HttpMethod, visibility: Visibility,
@@ -157,9 +160,8 @@ export interface EndpointSpec {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   requestBodySchema?: unknown;
   responseBodySchema?: unknown;
-
-
   lastUpdatedIso: string
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -252,3 +254,7 @@ export interface ApiDocsSpec {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  lastUpdatedIso: string;
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

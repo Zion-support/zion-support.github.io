@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -199,18 +200,17 @@ export function InvoiceHistory() {;
   const getBadgeForStatus = (status: string) => {;
     switch (status) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       case "paid": return <Badge className="bg-green-500">Paid</Badge>;
       case "pending":;
         return <Badge variant="outline">Pending</Badge>;
-
-      case "overdue":;
-        return <Badge variant="destructive">Overdue</Badge>,;
-      default:;
-        return <Badge variant="outline">{status}</Badge>;
-
     }
   }
+<<<<<<< HEAD
   },
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   return (
     <div className="space-y-6">;
@@ -222,34 +222,6 @@ export function InvoiceHistory() {;
             type="search"
             placeholder="Search invoices..."
             className="w-[200px] md:w-[300px] pl-9"
-
-          />;
-        </div>;
-      </div>;
-
-      <div className="rounded-md border">;
-        <Table>;
-          <TableHeader>;
-            <TableRow>;
-              <TableHead>Invoice Number</TableHead>;
-              <TableHead>Date</TableHead>;
-              <TableHead>Billing Period</TableHead>;
-              <TableHead>Amount</TableHead>;
-              <TableHead>Status</TableHead>;
-              <TableHead className="text-right">Actions</TableHead>;
-            </TableRow>;
-          </TableHeader>;
-          <TableBody>;
-            {invoices && invoices.map((invoice) => (;
-              <TableRow key={invoice && invoice.id}>;
-                <TableCell className="font-medium">{invoice && invoice.id}</TableCell>;
-                <TableCell>{invoice && invoice.date}</TableCell>;
-                <TableCell>{invoice && invoice.period}</TableCell>;
-                <TableCell>{invoice && invoice.amount}</TableCell>;
-                <TableCell>{getBadgeForStatus(invoice && invoice.status)}</TableCell>;
-                <TableCell className="text-right">;
-                  <div className="flex justify-end gap-2">;
-
                     <Button
                       variant="outline"
                       size="sm"
@@ -416,6 +388,7 @@ function InvoiceHistory() {
                     </Button>;
                   </div>;
                 </TableCell>;
+<<<<<<< HEAD
 
 =======
 
@@ -568,12 +541,15 @@ export function InvoiceHistory() {;
         </Button>;
         <div className="text - sm text - muted - foreground">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           Showing 1 - 6 of 12 invoices;
         </div>;
         <Button variant="outline" size="sm">;
           Next;
         </Button>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -586,3 +562,9 @@ export function InvoiceHistory() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

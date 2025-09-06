@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -64,6 +65,9 @@ interface MilestoneManagerProps {
 <<<<<<< HEAD
 
 export function MilestoneManager({;
+=======
+import React from 'react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   projectId;
   milestones;
   activities;
@@ -76,6 +80,7 @@ export function MilestoneManager({;
   onUpdateStatus;
   onDeleteMilestone;
   onUploadDeliverable;
+<<<<<<< HEAD
 export function MilestoneManager({
   projectId,
   milestones,
@@ -106,6 +111,8 @@ export function MilestoneManager({
   const handleMilestoneApproved = async (milestoneId: string) => {;
     try {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       await onUpdateStatus(milestoneId, "completed" as MilestoneStatus);
       toast && toast.success("Milestone approved");
       await refetch();
@@ -113,12 +120,6 @@ export function MilestoneManager({
       console && console.error("Error approving milestone:", error);
       toast && toast.error("Failed to approve milestone");
     }
-
-  };
-
-  const handleMilestoneRejected = async (milestoneId: string) => {;
-    try {;
-
       await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus);
       toast && toast.success("Milestone rejected");
       await refetch();
@@ -129,10 +130,6 @@ export function MilestoneManager({
   }
 
   return (
-
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
-      <div className="lg:col-span-2">;
-
         <MilestonesList
 =======
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks / use_milestones';
@@ -183,6 +180,7 @@ function MilestoneManager() {
       <div className="lg:col - span - 2">;
         <MilestonesList;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
       await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),
       toast.success("Milestone approved"),
@@ -276,6 +274,8 @@ export function MilestoneManager({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           milestones={milestones}
           activities={activities}
           is_loading={is_loading}
@@ -284,6 +284,7 @@ export function MilestoneManager({;
           onUpdateStatus={onUpdateStatus}
           onDeleteMilestone={onDeleteMilestone}
           onUploadDeliverable={onUploadDeliverable}
+<<<<<<< HEAD
           isSubmitting={isSubmitting}
           onApprove={isClient ? handleMilestoneApproved : undefined}
           onReject={isClient ? handleMilestoneRejected : undefined}
@@ -304,6 +305,9 @@ export function MilestoneManager({;
   );
 }
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           is_submitting={is_submitting}
           on_approve={is_client ? handleMilestoneApproved : undefined}
           on_reject={is_client ? handleMilestoneRejected : undefined}
@@ -317,6 +321,10 @@ export function MilestoneManager({;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

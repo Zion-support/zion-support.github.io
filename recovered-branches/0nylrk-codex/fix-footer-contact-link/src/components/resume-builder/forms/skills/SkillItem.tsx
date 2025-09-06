@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
@@ -46,6 +47,8 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
     <Badge
       key={skill && skill.id} 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       variant="secondary"
       className="flex items-center gap-1 py-1 && 1.5 px-3">;
       {skill && skill.name}
@@ -56,6 +59,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
         variant="ghost"
         size="icon"
         className="h-5 w-5 p-0 ml-1"
+<<<<<<< HEAD
         onClick={() => onDelete(skill.id!, category)}
       >
         <Trash2 className="h-3 w-3" />
@@ -81,6 +85,8 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       variant="secondary";
       className="flex items - center gap - 1 py - 1.5 px - 3";
     >;
@@ -98,5 +104,8 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
     </Badge>);
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,6 +9,8 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useState} from 'react';
 import {useLoadMilestones} from './useLoadMilestones';
 import {useCreateMilestone} from './useCreateMilestone';
@@ -15,27 +18,6 @@ import {useUpdateMilestone} from './useUpdateMilestone';
 import {useDeleteMilestone} from './useDeleteMilestone';
 import {useUploadDeliverable} from './useUploadDeliverable';
 import {MilestoneStatus} from './types';
-
-export const use_milestones = (project_id?: string) =>: any {
-  const { milestones, activities, is_loading, error, refetch } = useLoadMilestones (project_id);
-  const { create_milestone, is_submitting: is_creating } = useCreateMilestone (project_id);
-  const { updateMilestoneStatus, update_milestone, is_submitting: is_updating } = useUpdateMilestone ();
-  const { delete_milestone, is_submitting: is_deleting } = useDeleteMilestone ();
-  const { upload_deliverable, is_submitting: is_uploading } = useUploadDeliverable ();
-;
-  // Combine all loading states;
-  const is_submitting = is_creating || is_updating || is_deleting || is_uploading;
-;
-  // Function to upload deliverable with project_id;
-  const handleUploadDeliverable = async (milestone_id: string, file: File) => {
-    // Check condition
-if (return null, ) {
-  $2
-}
-    return await upload_deliverable (milestone_id, project_id, file);
-  }
-;
-
   return {
     milestones;
     activities;
@@ -44,6 +26,7 @@ if (return null, ) {
     is_submitting;
     create_milestone;
     updateMilestoneStatus;
+<<<<<<< HEAD
 <<<<<<< HEAD
     updateMilestone;
     deleteMilestone;
@@ -104,3 +87,5 @@ export const useMilestones = (projectId?: string) => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

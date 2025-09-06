@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { IntegrationProviderMeta } from "./types";
 
 import { IntegrationProviderMeta } from "./types";
@@ -15,6 +16,9 @@ import { IntegrationProviderMeta } from "./types";
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   {
     id: "salesforce"
     name: "Salesforce"
@@ -28,13 +32,6 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     description: "Marketing & Sales CRM"
   }
   {
-
-    id: "zoho",
-    name: "Zoho CRM",
-    category: "crm",
-    description: "All - in - one CRM",
-  },
-
   {
     id: "pipedrive"
     name: "PipeDrive"
@@ -55,6 +52,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     description: "Recruiting software"
   }
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -106,12 +104,15 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 ];
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
 export function getProviderById (
   id: string,
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find ((p) => p.id === id);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -146,3 +147,5 @@ export function getProviderById(
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

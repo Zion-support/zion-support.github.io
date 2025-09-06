@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 import { Badge } from "@/components/ui/badge";
@@ -65,6 +66,8 @@ export const RequestsHeader: React.FC < RequestsHeaderProps> = ({
   archive_filter,
   setArchiveFilter;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }) => {
 =======
 type RequestsHeaderProps = {;
@@ -134,6 +137,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
 }) => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<< HEAD
 
 
         <Select 
@@ -236,6 +240,8 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
         >;
           <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <SelectValue placeholder="All Statuses" />;
           </SelectTrigger>;
           <SelectContent>;
@@ -247,13 +253,6 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
             <SelectItem value="closed">Closed</SelectItem>;
           </SelectContent>;
         </Select>;
-
-        <Select;
-          value={archive_filter}
-          onValueChange={(value) => setArchiveFilter (value as 'active' | 'archived' | 'all')}
-        >;
-          <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
-
             <SelectValue placeholder="Active Only" />;
           </SelectTrigger>;
           <SelectContent>;
@@ -263,10 +262,11 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
           </SelectContent>;
         </Select>;
       </div>;
-
+=======
     </div>);
 }
 ;
+<<<<<<< HEAD
 
 =======
 
@@ -278,3 +278,6 @@ export default RequestsHeader;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

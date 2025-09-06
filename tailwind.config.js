@@ -4,8 +4,12 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+<<<<<<< HEAD
     './src/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}', // Added for Next.js app directory compatibility
+=======
+    './src/**/*.{js,ts,jsx,tsx}'
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   ],
   theme: {
     extend: {
@@ -27,8 +31,26 @@ module.exports = {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
+<<<<<<< HEAD
           950: '#030712'
         }
+=======
+        },
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-up': 'slideUp 0.5s ease-out',
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -77,9 +99,14 @@ module.exports = {
       }
     }
   },
+<<<<<<< HEAD
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio')
   ]
 };
+=======
+  plugins: [],
+};
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

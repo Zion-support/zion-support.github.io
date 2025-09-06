@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -89,6 +90,14 @@ function TalentDashboardContent() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
   const onboardingStatus = null;
+=======
+
+function TalentDashboardContent() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("job-matches");
+  const onboardingStatus = null;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { useState, useEffect } from "react",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -116,6 +125,7 @@ function TalentDashboardContent() {
     onboardingStatus.skillsAdded &&
     onboardingStatus.availabilitySet &&
     onboardingStatus.matchReceived,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -124,7 +134,12 @@ function TalentDashboardContent() {
 
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO 
@@ -153,6 +168,7 @@ function TalentDashboardContent() {
         </div>
         {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />
+<<<<<<< HEAD
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -162,6 +178,11 @@ function TalentDashboardContent() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <div>
             <Card className="mb-8">
               <CardHeader className="pb-2">
@@ -169,6 +190,7 @@ function TalentDashboardContent() {
                   <div className="flex items-center gap-3">
                     <Avatar className="h-12 w-12 border">
                       {user?.avatarUrl ? (
+<<<<<<< HEAD
                         <img
                           src={user.avatarUrl}
                           alt={user.displayName |'User'}
@@ -181,16 +203,21 @@ function TalentDashboardContent() {
                       ) : (
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
                           {user?.displayName?.charAt(0) || "U"}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                         </div>
                       )}
                     </Avatar>
                     <div>
+<<<<<<< HEAD
                       <CardTitle>{user?.displayName |'User'}</CardTitle>
                       <CardDescription>
                         {user?.headline |'AI Professional'}
                       </CardDescription>
                       <CardTitle>{user?.displayName || "User"}</CardTitle>
                       <CardDescription>{user?.headline || "AI Professional"}</CardDescription>
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     </div>
                   </div>
                   <Badge className="bg-green-100 text-green-800">Online</Badge>
@@ -210,6 +237,7 @@ function TalentDashboardContent() {
                     <span className="text-xs text-muted-foreground">Projects</span>
                   </div>
                 </div>
+<<<<<<< HEAD
                 <div className='mt-4'>
                   <Button className='w-full' asChild>
                     <Link href='/messages'>
@@ -225,12 +253,18 @@ function TalentDashboardContent() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       Messages
                     </Link>
                   </Button>
                 </div>
               </CardContent>
             </Card>
+<<<<<<< HEAD
 
 
             
@@ -239,12 +273,18 @@ function TalentDashboardContent() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             {showAdvanced && (
               <div className="mt-6">
                 <AdvancedOnboardingSteps />
               </div>
+<<<<<<< HEAD
             )}
             {/* Upcoming Interviews Card */}
             <div className='mt-8'>
@@ -463,6 +503,11 @@ function TalentDashboardContent() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <CardHeader>
                 <CardTitle className="text-lg">Quick Stats</CardTitle>
               </CardHeader>
@@ -488,6 +533,7 @@ function TalentDashboardContent() {
               </CardContent>
             </Card>
           </div>
+<<<<<<< HEAD
           <div className='lg:col-span-2'>
             <Tabs defaultValue='job-matches' onValueChange={setActiveTab}>
               <TabsList className='mb-6'>
@@ -505,11 +551,17 @@ function TalentDashboardContent() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   AI Job Matches
                 </TabsTrigger>
                 <TabsTrigger value="applications">My Applications</TabsTrigger>
                 <TabsTrigger value="saved">Saved Jobs</TabsTrigger>
               </TabsList>
+<<<<<<< HEAD
               <TabsContent value='job-matches' className='mt-0'>
                 <SuggestedJobs />
               </TabsContent>
@@ -526,6 +578,11 @@ function TalentDashboardContent() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <MyApplications />
                 <div className="mt-4 flex justify-center">
                   <Button variant="outline" asChild>
@@ -535,6 +592,7 @@ function TalentDashboardContent() {
                   </Button>
                 </div>
               </TabsContent>
+<<<<<<< HEAD
               <TabsContent value='saved' className='mt-0'>
                 <Card className='bg-muted/30'>
                   <CardContent className='pt-6 text-center'>
@@ -550,6 +608,11 @@ function TalentDashboardContent() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       You haven't saved any jobs yet.
                     </p>
                     <Button className="mt-4" asChild>
@@ -564,6 +627,7 @@ function TalentDashboardContent() {
       </main>
     </>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -658,9 +722,11 @@ function TalentDashboardContent() {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 ;
-
 export default function TalentDashboard() {;
   return (;
     <ProtectedRoute>;
@@ -668,6 +734,7 @@ export default function TalentDashboard() {;
     </ProtectedRoute>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -761,3 +828,9 @@ function TalentDashboard() {
     </ProtectedRoute>);
 }
 ;
+=======
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -152,17 +153,12 @@ export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+        <HireRequestForm
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}
-
-        />;
-      </DialogContent>;
-    </Dialog>;
-  );
-}
-
-=======
           </DialogTitle>;
         </DialogHeader>;
         <HireRequestForm;
@@ -173,4 +169,3 @@ export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails 
       </DialogContent>;
     </Dialog>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -95,6 +96,8 @@ interface ActiveFiltersBarProps {;
 
 export function ActiveFiltersBar(): any ({;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   selectedProductTypes;
   selectedLocations;
   selectedAvailability;
@@ -102,6 +105,7 @@ export function ActiveFiltersBar(): any ({;
   searchQuery;
   onRemoveFilter;
   onRemoveRating;
+<<<<<<< HEAD
 
 
 
@@ -158,14 +162,15 @@ export function ActiveFiltersBar(): any ({;
           onClick={onClearSearch}
         >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        <ClickableBadge
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={onClearSearch}>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           Search: {searchQuery}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       )}
-
-
-      {selectedProductTypes && selectedProductTypes.map(type => (;
-
         <ClickableBadge
           key={`type-${type}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
@@ -175,10 +180,6 @@ export function ActiveFiltersBar(): any ({;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
-
-
-      {selectedLocations && selectedLocations.map(location => (;
-
         <ClickableBadge
           key={`location-${location}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
@@ -188,10 +189,6 @@ export function ActiveFiltersBar(): any ({;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
-
-
-      {selectedAvailability && selectedAvailability.map(availability => (;
-
         <ClickableBadge
           key={`availability-${availability}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
@@ -201,10 +198,6 @@ export function ActiveFiltersBar(): any ({;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
-
-
-      {selectedRating !== null && (;
-
         <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={onRemoveRating}>;
@@ -212,11 +205,6 @@ export function ActiveFiltersBar(): any ({;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       )}
-
-    </div>;
-  );
-}
-
 =======
 import React from './react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';

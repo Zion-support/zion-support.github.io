@@ -1,4 +1,12 @@
+import React, { useState } from 'react';
+  talent;
+  isOpen;
+  onClose;
+  jobTitle;
+}: MessageTalentModalProps) {;
+  const { createConversation } = useMessaging();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from 'react';
 import {
@@ -292,6 +300,30 @@ export function MessageTalentModal({;
     } finally {;
       setIsSubmitting(false);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  const navigate = useNavigate();
+      });
+      return;
+    }
+        talent.user_id;
+=======
+
+    try {;
+      setIsSubmitting(true);
+
+      // Create context data for the conversation;
+      const contextData = {;
+        title: jobTitle || `Discussion with ${talent && talent.full_name}`,;
+        description: talent && talent.bio || talent && talent.professional_title || "",;
+        image_url: talent && talent.profile_picture_url || "";
+      };
+
+      // Create conversation with this talent;
+      await createConversation(;
+        talent && talent.user_id;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        message;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }
 
@@ -303,6 +335,7 @@ export function MessageTalentModal({;
             <Avatar className="h-8 w-8 border border-zion-purple/20">;
               <AvatarImage src={talent && talent.profile_picture_url} alt={talent && talent.full_name} />;
               <AvatarFallback className="bg-zion-blue-dark text-white">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -319,39 +352,54 @@ export function MessageTalentModal({;
             {talent.professional_title && (
               <span className="block mt-1 text-zion-cyan">{talent.professional_title}</span>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                {talent && talent.full_name.charAt(0).toUpperCase()}
+              </AvatarFallback>;
+            </Avatar>;
+            Message {talent && talent.full_name}
+          </DialogTitle>;
+          <DialogDescription className="text-zion-slate">;
+            Send a direct message to start a conversation.;
+            {talent && talent.professional_title && (;
+              <span className="block mt-1 text-zion-cyan">{talent && talent.professional_title}</span>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             )}
-
-          </DialogDescription>;
-        </DialogHeader>;
-
-        <div className="space-y-4">;
-          <div>;
-            <label className="block text-sm font-medium text-zion-slate mb-1">;
-              Message;
-            </label>;
-
             <Textarea
               value={message}
               onChange={(e) => setMessage(e && e.target.value)}
               rows={5}
+<<<<<<< HEAD
               className="w-full bg-zion-blue-dark/30 border-zion-purple/20 text-white focus:ring-zion-purple"
               placeholder="Write your message here..."
             />
           </div>
         </div>
         <DialogFooter className="gap-2 sm:gap-0">
+=======
+              placeholder="Write your message here...";
+            />;
+          </div>;
+        </div>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Button
             type="button"
             variant="outline"
             onClick={onClose}
+<<<<<<< HEAD
             className="border-zion-purple/30 text-white"
           >
             Cancel
           </Button>
+=======
+            className="border-zion-purple/30 text-white">;
+            Cancel;
+          </Button>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Button
             type="button"
             onClick={handleSendMessage}
             disabled={isSubmitting}
+<<<<<<< HEAD
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -361,11 +409,36 @@ export function MessageTalentModal({;
     </Dialog>
   )
 }
+=======
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white">;
+            {isSubmitting ? 'Sending...' : 'Send Message'}
+=======
+        <DialogFooter className="gap - 2 sm:gap - 0">;
+          <Button;
+            type="button";
+            variant="outline";
+            on_click={on_close}
+            className="border - zion - purple / 30 text - white";
+          >;
+            Cancel;
+          </Button>;
+          <Button;
+            type="button";
+            on_click={handleSendMessage}
+            disabled={is_submitting}
+            className="bg - zion - purple hover:bg - zion - purple - dark text - white";
+          >;
+            {is_submitting ? 'Sending...' : 'Send Message'}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </Button>;
         </DialogFooter>;
       </DialogContent>;
     </Dialog>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

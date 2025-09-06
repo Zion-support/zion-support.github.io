@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -29,6 +30,8 @@ interface ListingScoreCardProps {
   title: string,
   description: string,
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   image?: string;
   category: string,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -37,20 +40,11 @@ interface ListingScoreCardProps {
   author_image?: string;
   ai_score?: number;
   rating?: number;
-
-
-export function ListingScoreCard(): any ({ ;
-  title;
-  description, ;
-  image, ;
-  category, ;
-  tags;
-  author, ;
-
   authorImage;
   aiScore = 0;
   rating = 0;
   reviewCount = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
   className
 }: ListingScoreCardProps) {
@@ -115,6 +109,8 @@ export function ListingScoreCard({
             src={image} 
             alt={title} 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />;
         </div>;
@@ -130,6 +126,7 @@ export function ListingScoreCard({
               <span>{aiScore}%</span>;
             </div>;
           )}
+<<<<<<< HEAD
 
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
@@ -259,6 +256,9 @@ export function ListingScoreCard({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                      : "text-zion-slate-light"
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   )}
                 />;
               ))}
@@ -268,14 +268,8 @@ export function ListingScoreCard({;
             </span>;
           </div>;
         )}
-
-
-        {tags && tags.length > 0 && (;
-          <div className="flex flex-wrap gap-2 mb-4">;
-            {tags && tags.map((tag, i) => (;
-              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
-
                 {tag}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </Badge>
             ))}
@@ -310,16 +304,16 @@ export function ListingScoreCard({;
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">
                 {author.charAt(0)}
               </div>
+=======
+              </Badge>;
+            ))}
+          </div>;
+        )}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             )}
             <span className="text-sm text-zion-slate-light">{author}</span>;
           </div>;
         )}
-
-      </div>;
-    </div>;
-  );
-}
-
 =======
   review_count?: number;
   class_name?: string;

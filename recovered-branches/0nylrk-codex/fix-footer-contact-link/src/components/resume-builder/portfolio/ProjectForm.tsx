@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -51,6 +52,8 @@ const projectSchema = z.object({
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useState} from 'react';
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
@@ -60,6 +63,7 @@ import {Input} from '@/components / ui / input';
 import {Textarea} from '@/components / ui / textarea';
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
 import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
+<<<<<<< HEAD
 
   pdf_url: z && z.string().optional()}),;
 
@@ -86,10 +90,17 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    .optional();
+  demo_url: z;
+    .union([z && z.string().url('Please enter a valid URL'), z && z.literal('')]);
+    .optional();
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
   const isEditing = !!project;
+<<<<<<< HEAD
   const form = useForm<ProjectFormValues>({
     resolver: zodResolver(projectSchema)
     defaultValues: {
@@ -201,15 +212,14 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         success = await updateProject(project && project.id, projectData);
       } else {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         const projectId = await addProject(projectData);
         success = !!projectId;
       }
-
-
-      if (success) {;
-
         onSuccess();
         form && form.reset();
+<<<<<<< HEAD
 =======
 ;
       if (success) {;
@@ -222,12 +232,15 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
     } catch (error) {;
       console && console.error('Error saving project:', error);
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 
@@ -247,6 +260,9 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
+=======
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
@@ -262,30 +278,9 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               <FormMessage />;
             </FormItem>;
           )}
-
-        />;
-
-
         <FormField
           control={form && form.control}
           name="description"
-
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Project Description</FormLabel>;
-              <FormControl>;
-                <Textarea
-                  placeholder="Describe what the project does and your role in it..."
-                  className="min-h-[100px]"
-                  {...field} 
-                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-        />;
-
-
         <FormField
           control={form && form.control}
           name="technologies"
@@ -298,11 +293,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               <FormMessage />;
             </FormItem>;
           )}
-
-        />;
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
           <FormField
             control={form && form.control}
             name="github_url"
@@ -318,10 +308,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 <FormMessage />;
               </FormItem>;
             )}
-
-          />;
-
-
           <FormField
             control={form && form.control}
             name="demo_url"
@@ -337,11 +323,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 <FormMessage />;
               </FormItem>;
             )}
-
-          />;
-        </div>;
-
-
         <FormField
           control={form && form.control}
           name="image_url"
@@ -357,6 +338,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               <FormMessage />;
             </FormItem>;
           )}
+<<<<<<< HEAD
         />
         {/* Future file upload field would go here */}
         
@@ -376,6 +358,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import {PortfolioProject} from '@/types / resume';
 import {use_portfolio} from '@/hooks / use_portfolio';
 import {use_auth} from '@/hooks / use_auth';
@@ -394,3 +378,177 @@ const project_schema = z.object ({
   pdf_url: z.string ().optional ()}),
 type ProjectFormValues = z.infer < typeof project_schema>;
 ;
+<<<<<<< HEAD
+=======
+interface ProjectFormProps {
+  project?: PortfolioProject;
+  on_success: () => void,
+  on_cancel: () => void;
+}
+export /**
+ * ProjectForm - Function description
+ */
+function ProjectForm() {
+  const { user } = use_auth ();
+  const { add_project, update_project } = use_portfolio ();
+  const [is_loading, setIsLoading] = useState (false);
+  const is_editing = !!project;
+;
+  const form = use_form < ProjectFormValues>({
+    resolver: zod_resolver (project_schema),
+    default_values: {
+      title: project?.title || '',
+      description: project?.description || '',
+      technologies: project?.technologies ? project.technologies.join () : '',
+      image_url: project?.image_url || '',
+      github_url: project?.github_url || '',
+      demo_url: project?.demo_url || '',
+      pdf_url: project?.pdf_url || ''}
+  });
+;
+  const on_submit = async (data: ProjectFormValues) => {
+    // Check condition
+if (return) {
+  $2
+}
+    setIsLoading (true),
+    try {
+      const project_data: PortfolioProject = {
+        title: data.title,
+        description: data.description,
+        technologies: data.technologies ?;
+          data.technologies.split ().map (tech => tech.trim ()) : [],
+        image_url: data.image_url,
+        github_url: data.github_url || undefined,
+        demo_url: data.demo_url || undefined,
+        pdf_url: data.pdf_url},
+      let success = false;
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        success = await update_project (project.id, project_data);
+      } else {
+        const project_id = await add_project (project_data);
+        success = !!project_id;
+      }
+      // Check condition
+if ( {) {
+  $2
+}
+        on_success ();
+        form.reset ();
+      }
+    } catch (error) {
+      console.error ('Error saving project:', error);
+    } finally {
+      setIsLoading (false);
+    }
+  }
+;
+  return (
+    <Form {...form}>;
+      <form on_submit={form.handle_submit (on_submit)} className="space - y-4">;
+        <FormField;
+          control={form.control}
+          name="title";
+          render={({ field }) => (
+            <FormItem>;
+              <FormLabel > Project Title</FormLabel>;
+              <FormControl>;
+                <Input placeholder="E.g., AI Chatbot, E - commerce Website" {...field} />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>)}
+        />;
+        <FormField;
+          control={form.control}
+          name="description";
+          render={({ field }) => (
+            <FormItem>;
+              <FormLabel > Project Description</FormLabel>;
+              <FormControl>;
+                <Textarea;
+                  placeholder="Describe what the project does and your role in it...";
+                  className="min - h-[100px]";
+                  {...field}
+                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>)}
+        />;
+        <FormField;
+          control={form.control}
+          name="technologies";
+          render={({ field }) => (
+            <FormItem>;
+              <FormLabel > Technologies Used</FormLabel>;
+              <FormControl>;
+                <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>)}
+        />;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+          <FormField;
+            control={form.control}
+            name="github_url";
+            render={({ field }) => (
+              <FormItem>;
+                <FormLabel className="flex items - center gap - 2">;
+                  <Github className="h - 4 w - 4" />;
+                  GitHub URL;
+                </FormLabel>;
+                <FormControl>;
+                  <Input placeholder="https://github.com / yourusername / project" {...field} />;
+                </FormControl>;
+                <FormMessage />;
+              </FormItem>)}
+          />;
+          <FormField;
+            control={form.control}
+            name="demo_url";
+            render={({ field }) => (
+              <FormItem>;
+                <FormLabel className="flex items - center gap - 2">;
+                  <Link className="h - 4 w - 4" />;
+                  Demo URL;
+                </FormLabel>;
+                <FormControl>;
+                  <Input placeholder="https://your - project - demo.com" {...field} />;
+                </FormControl>;
+                <FormMessage />;
+              </FormItem>)}
+          />;
+        </div>;
+        <FormField;
+          control={form.control}
+          name="image_url";
+          render={({ field }) => (
+            <FormItem>;
+              <FormLabel className="flex items - center gap - 2">;
+                <FileImage className="h - 4 w - 4" />;
+                Screenshot URL;
+              </FormLabel>;
+              <FormControl>;
+                <Input placeholder="https://example.com / screenshot.jpg" {...field} />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>)}
+        />;
+        {/* Future file upload field would go here */}
+        <div className="flex justify - end space - x-2 pt - 4">;
+          <Button type="button" variant="outline" on_click={on_cancel}>;
+            Cancel;
+          </Button>;
+          <Button type="submit" disabled={is_loading}>;
+            {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}
+            {is_editing ? 'Update' : 'Add'} Project;
+          </Button>;
+        </div>;
+      </form>;
+    </Form>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 '),
@@ -82,16 +83,23 @@ function restorePage(pagePath) {;
 '),
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       if (parts.length > 1) {
         // Take the content after the conflict resolution
         backupContent = parts[1].split('>>>>>>>')[0]
-
 =======
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
     }
     // Clean up the content
@@ -103,6 +111,7 @@ function restorePage(pagePath) {;
       return { restored: false, reason: 'Backup content is also corrupted' }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 
@@ -111,6 +120,8 @@ function restorePage(pagePath) {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Create a backup of the current corrupted file
 
     const timestamp = Date.now()
@@ -123,18 +134,22 @@ function restorePage(pagePath) {;
       backupUsed: backupPath
 
       corruptedBackup: corruptedBackupPath
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
     // Create a backup of the current corrupted file;
-    const timestamp = Date.now (),
-    const corruptedBackupPath = `${page_path}.corrupted.${timestamp}`,
-    fs.writeFileSync (corruptedBackupPath, current_content),
+    const timestamp = Date.now();
+    const corruptedBackupPath = `${pagePath}.corrupted.${timestamp}`;
+    fs.writeFileSync(corruptedBackupPath, currentContent),;
     // Restore the page;
-
     fs.writeFileSync(pagePath, backupContent),;
     return {;
       restored: true,;
       backupUsed: backupPath,;
       corruptedBackup: corruptedBackupPath;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -142,11 +157,17 @@ function restorePage(pagePath) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -155,6 +176,9 @@ function restorePage(pagePath) {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 // Function to fix specific corrupted pages
 function fixSpecificPages() {
   const results = {
@@ -163,6 +187,7 @@ function fixSpecificPages() {
     restored: 0
     failed: 0
     details: []
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   console.log('🚀 Starting targeted page restoration...')
@@ -181,11 +206,18 @@ function fixSpecificPages() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   for (const pagePath of corruptedPages) {
     if (!fs.existsSync(pagePath)) {
       console.log(`⚠️  Page not found: ${pagePath}`)
       results.failed++
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   },
   // // // console.log('🚀 Starting targeted page restoration...'),
   // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
@@ -193,6 +225,10 @@ function fixSpecificPages() {
     if (!fs.existsSync(pagePath)) {
       // // // console.log(`⚠️  Page not found: ${pagePath}`),
       results.failed++,
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       results.details.push({
         file: pagePath
         restored: false
@@ -201,6 +237,7 @@ function fixSpecificPages() {
       })
       continue
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     console.log(`\n🔍 Checking: ${pagePath}`)
     const result = restorePage(pagePath)
@@ -221,6 +258,11 @@ function fixSpecificPages() {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const result = restorePage(pagePath),
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    const result = restorePage(pagePath),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     if (result.restored) {
       results.restored++
       console.log(`✅ Restored: ${pagePath}`)
@@ -228,11 +270,14 @@ function fixSpecificPages() {
       console.log(`   Corrupted backup: ${result.corruptedBackup}`)
     } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
       results.failed++
       console.log(`❌ Failed: ${pagePath}`)
 
       results.failed++,
       console.log(`❌ Failed: ${pagePath}`),
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       console.log(`   Reason: ${result.reason}`)
     }
     results.details.push({
@@ -241,6 +286,7 @@ function fixSpecificPages() {
     })
   }
   // Generate summary
+<<<<<<< HEAD
 
 
   return results
@@ -312,17 +358,103 @@ function fixSpecificPages() {;
   // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),;
   return results;
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+  console.log('\n📊 Restoration Summary: ')
+  console.log(`   Total pages: ${results.total}`)
+  console.log(`   Restored: ${results.restored}`)
+  console.log(`   Failed: ${results.failed}`)
+  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`)
+  // Save detailed report
+  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json')
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2))
+  console.log(`\n📄 Detailed report saved to: ${reportPath}`)
 
+<<<<<<< HEAD
       results.failed++,
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  return results
+=======
+      // // // console.log(`❌ Failed: ${pagePath}`),
+      // // // console.log(`   Reason: ${result.reason}`)
+;
+// Function to fix specific corrupted pages;
+function fixSpecificPages() {;
+  const results = {;
+    total: corruptedPages.length;
+    restored: 0,;
+    failed: 0,;
+    details: [];
+  },;
+  // // // console.log('🚀 Starting targeted page restoration...'),;
+  // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),;
+  for (const pagePath of corruptedPages) {;
+    if (!fs.existsSync(pagePath)) {;
+      // // // console.log(`⚠️  Page not found: ${pagePath}`),;
+      results.failed++,;
+      results.details.push({;
+        file: pagePath,;
+        restored: false,;
+        reason: 'Page not found';
+      }),;
+      continue;
+    }
+;
+    // // // console.log(`\n🔍 Checking: ${pagePath}`),;
+    const result = restorePage(pagePath);
+    if (result.restored) {;
+      results.restored++,;
+      // // // console.log(`✅ Restored: ${pagePath}`),;
+      // // // console.log(`   Used backup: ${result.backupUsed}`),;
+      // // // console.log(`   Corrupted backup: ${result.corruptedBackup}`);
+    } else {;
+      results.failed++,;
+      // // // console.log(`❌ Failed: ${pagePath}`),;
+      // // // console.log(`   Reason: ${result.reason}`);
+    }
+;
+    results.details.push({;
+      file: pagePath,;
+      ...result;
+    });
+  }
+  // Generate summary
+  // // // console.log('\n📊 Restoration Summary: '),
+  // // // console.log(`   Total pages: ${results.total}`),
+  // // // console.log(`   Restored: ${results.restored}`),
+  // // // console.log(`   Failed: ${results.failed}`),
+  // // // console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),
+  // Save detailed report
+  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json'),
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),
+  // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),
+  return results
+;
+  // Generate summary;
+  // // // console.log('\n📊 Restoration Summary: '),;
+  // // // console.log(`   Total pages: ${results.total}`),;
+  // // // console.log(`   Restored: ${results.restored}`),;
+  // // // console.log(`   Failed: ${results.failed}`),;
+  // // // console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),;
+  // Save detailed report;
+  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json'),;
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),;
+  // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),;
+  return results;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 // Run the restoration if this script is executed directly
 if ({
   fixSpecificPages()
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = {
 =======
@@ -394,6 +526,9 @@ if ( {) {
   fixSpecificPages ();
 <<<<<<< HEAD
 =======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -407,6 +542,7 @@ module.exports = {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
+<<<<<<< HEAD
 ;
 module.exports = {;
   restorePage,;
@@ -423,10 +559,13 @@ main
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 module.exports = {
-  restore_page,
+  restorePage,
   fixSpecificPages,
   findBestBackup;
+<<<<<<< HEAD
 },;
 
 };
@@ -439,3 +578,7 @@ main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

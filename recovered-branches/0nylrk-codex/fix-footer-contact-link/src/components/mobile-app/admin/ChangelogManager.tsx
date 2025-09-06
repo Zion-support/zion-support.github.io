@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -28,16 +29,22 @@ interface ChangelogManagerProps {
 }
 
 type ChangelogEntry = {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   version: string;
   date: string;
   changes: string;
+<<<<<<< HEAD
 }
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
   platform
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }) => {
   const [entries, setEntries] = useState<ChangelogEntry[]>([
     {
+<<<<<<< HEAD
       id: "1"
       version: "1.0.0"
       date: "2025-05-15"
@@ -213,6 +220,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
   ) => {;
     const { name, value } = e && e.target;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     setNewEntry((prev) => ({ ...prev, [name]: value }));
   }
   return (
@@ -237,6 +246,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 onChange={handleInputChange}
               />;
             </div>;
+<<<<<<< HEAD
 
             <Button;
 <<<<<<< HEAD
@@ -260,12 +270,17 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            <Button
+              onClick={handleAddEntry}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Textarea
             placeholder="What's new in this version?"
             name="changes"
             value={newEntry && newEntry.changes}
             onChange={handleInputChange}
             rows={3}
+<<<<<<< HEAD
           />
           
 <<<<<<< HEAD
@@ -282,6 +297,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">;
             {entries && entries.map((entry) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <div
                 key={entry && entry.id}
                 className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark">;
@@ -304,6 +321,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 <p className="text-sm whitespace-pre-wrap">{entry && entry.changes}</p>;
               </div>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
             {entries.length === 0 && (
               <p className="text-center text-gray-400 py-4">
@@ -330,6 +348,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               </p>;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             )}
           </div>;
         </div>;
@@ -340,7 +360,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 =======
 }
 
-=======
       id: "1",
       version: "1.0.0",
       date: "2025 - 05 - 15",
@@ -454,9 +473,12 @@ if (return) {
     </Card>);
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

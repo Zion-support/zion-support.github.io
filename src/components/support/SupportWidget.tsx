@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const [isOpen, setIsOpen] = useState(false)
   const { theme } = useTheme()
   const router = useRouter()
@@ -92,16 +93,26 @@ export function SupportWidget() {;
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 Zion Support
               </h3>
             </div>
             <div className="flex items-center gap-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Button
 =======
               <Button
 
 
+=======
+              <Button
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
@@ -122,12 +133,22 @@ export function SupportWidget() {;
             </div>
           </div>
           
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <ChatBotPanel />
         </div>
       )}
     </>;
   );
+<<<<<<< HEAD
 
 }
 ;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

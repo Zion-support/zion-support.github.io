@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from 'react';
 import {cva, type, VariantProps} from 'class-variance-authority';
 import {cn} from '@/lib/utils';
@@ -53,11 +54,16 @@ const Alert = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
 >(({ className, variant, ...props }, ref) => (
+=======
+import React from 'react';
+import * as React from 'react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   <div
     ref={ref}
     role="alert"
     className={cn(alertVariants({ variant }), className)}
     {...props}
+<<<<<<< HEAD
   />
 ));
 Alert.displayName = 'Alert';
@@ -71,10 +77,13 @@ const AlertTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   <h5
     ref={ref}
     className={cn('mb-1 font-medium leading-none tracking-tight', className)}
     {...props}
+<<<<<<< HEAD
   />
 ));
 AlertTitle.displayName = 'AlertTitle';
@@ -88,10 +97,13 @@ const AlertDescription = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   <div
     ref={ref}
     className={cn('text-sm [&_p]:leading-relaxed', className)}
     {...props}
+<<<<<<< HEAD
   />
 ));
 AlertDescription.displayName = 'AlertDescription';
@@ -109,3 +121,12 @@ export { Alert, AlertTitle, AlertDescription }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+  />));
+AlertDescription.display_name = 'AlertDescription';
+;
+export { Alert, AlertTitle, AlertDescription }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

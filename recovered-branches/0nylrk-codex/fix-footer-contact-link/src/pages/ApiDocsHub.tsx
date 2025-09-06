@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -212,6 +213,25 @@ export function ApiDocsHub() {;
 
         <div className="grid gap-6 md:grid-cols-2">;
 
+=======
+    {
+      title: "Sample Code"
+      description: "Examples in JavaScript, Python, and Node.js";
+          <Link
+            to="/developers/portal"
+            className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover: bg-zion-purple/90 transition-colors">;
+            Go to Developer Portal;
+            <ArrowRight className="ml-2 h-4 w-4" />;
+          </Link>;
+        </div>;
+      </div>;
+    </ApiDocsLayout>;
+  );
+}
+export default ApiDocsHub;
+
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       icon: Zap,
       path: "/developers / docs / samples",
       color: "from - yellow - 500 to - orange - 500"},
@@ -264,6 +284,7 @@ export function ApiDocsHub() {;
 }
 export default ApiDocsHub;
 ;
+<<<<<<< HEAD
 
 =======
           {sections.map((section) => (;
@@ -276,3 +297,6 @@ export default ApiDocsHub;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -18,6 +20,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,12 +60,11 @@ import {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 } from 'lucide-react';
-interface Service {;
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+interface Service {;
   Brain,
   Shield,
   Rocket,
@@ -74,6 +76,7 @@ interface Service {;
   TrendingUp,
   Clock,
   Star,
+<<<<<<< HEAD
 
   Filter,;
   ChevronDown,;
@@ -86,6 +89,8 @@ interface Service {;
 } from 'lucide-react';
 ;
 interface Service {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   name: string;
   tagline: string;
@@ -101,6 +106,7 @@ interface Service {
   growth_rate: string;
   popular?: boolean;
 
+<<<<<<< HEAD
   color: string;} from 'lucide-react';
 interface Service {
   id: string
@@ -350,54 +356,18 @@ const EnhancedServicesShowcase: React.FC = () => {
   }
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <section id='services' className='py-24 px-6 relative overflow-hidden'>;
       {/* Background */}
-
-      <div className='absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>;
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0 && 0.1),transparent_50%)]' />;
-      </div>;
-      <div className='max-w-7xl mx-auto relative z-10'>;
-        {/* Header */}
-        <div className='text-center mb-16'>;
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-            <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>;
-              Our Services;
-            </span>;
-          </h2>;
-          <p className='text-xl text-white/70 max-w-3xl mx-auto leading-relaxed'>;
-            Cutting-edge technology solutions designed to transform your;
-            business and accelerate innovation          </p>;
-        </div>;
-        {/* Filters */}
-        <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>    };
-    return iconMap[category] || Brain;
-
   };
+
   return (
     <section id="services" className="py-24 px-6 relative overflow-hidden">;
       {/* Background */}
-
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]" />;
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0 && 0.1),transparent_50%)]" />;
-      </div>;
-      <div className="max-w-7xl mx-auto relative z-10">;
-        {/* Header */}
-        <div className="text-center mb-16">;
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">;
-              Our Services;
-            </span>;
-          </h2>;
-          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">;
-            Cutting-edge technology solutions designed to transform your business and accelerate innovation;
-          </p>;
-        </div>;
-
-
         {/* Filters */}
+<<<<<<< HEAD
         <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>
           {/* Category Filter */}
           <div className="relative">
@@ -418,12 +388,21 @@ const EnhancedServicesShowcase: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   {category === 'all' ? 'All Categories' : category}
-                </option>
+                </option>;
               ))}
+<<<<<<< HEAD
             </select>
             <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />
           </div>
+=======
+            </select>;
+            <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />;
+          </div>;
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {/* Search */}
           <div className='relative'>;
             <input
@@ -431,17 +410,9 @@ const EnhancedServicesShowcase: React.FC = () => {
               placeholder='Search services...'
               value={searchTerm}
 
-              onChange={e => setSearchTerm(e && e.target.value)}
-              className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64';
-            />;
-            <Filter className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50' />          </div>;
-        </div>;
-
-
         {/* Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Search */}
           <div className="relative">;
             <input
@@ -482,6 +453,7 @@ const EnhancedServicesShowcase: React.FC = () => {
               )}
 =======
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
@@ -532,6 +504,8 @@ const EnhancedServicesShowcase: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {/* Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {filteredServices && filteredServices.map((service, index) => (;
@@ -556,6 +530,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                 </div>;
               )}
               {/* Service Content */}
+<<<<<<< HEAD
 
               <div className='p-8'>
 
@@ -766,14 +741,12 @@ const EnhancedServicesShowcase: React.FC = () => {
                       {getCategoryIcon (service.category)({
                         class_name: 'w - 3 h - 3',
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       })}
                     </div>;
                     <div className='text - xs text - white / 40'>;
                       {service.category}
-
-              <div className="p-8">
-                {/* Icon and Category */}
-
                 <div className="flex items-center justify-between mb-4">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center text-2xl`}>
                     <service.icon className="w-8 h-8 text-white" />
@@ -807,29 +780,11 @@ const EnhancedServicesShowcase: React.FC = () => {
                   </div>;
                 </div>;
                 {/* Service Info */}
-
-                <h3 className="text-xl font-bold mb-3 text-white">{service.name}</h3>
-                <p className="text-white/70 text-sm mb-4 leading-relaxed">{service.tagline}</p>
-                {/* Pricing */}
-                <div className="mb-6">
-                  <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-3xl font-bold text-white">{service.price}</span>
-                    <span className="text-white/60">{service.period}</span>
-                  </div>
-                  <div className="flex items-center gap-4 text-xs text-white/50">
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
-                      {service.setupTime}
-                    </span>
-                    <span className="flex items-center gap-1">
-
                       <Users className="w-3 h-3" />
                       {service.customers} customers
                     </span>
                   </div>
                 </div>
-<<<<<<< HEAD
-<div className='mb-6'>;
                   <div className='flex items-baseline gap-2 mb-2'>;
                     <span className='text-3xl font-bold text-white'>;
                       {service && service.price}
@@ -849,19 +804,8 @@ const EnhancedServicesShowcase: React.FC = () => {
                   </div>;
                 </div>;
                 {/* Key Features */}
-
-=======
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
-                  <div className="space-y-2">
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-xs text-white/70">
-                        <CheckCircle className="w-3 h-3 text-green-400" />
-                        {feature}
-                      </div>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
+<<<<<<< HEAD
                   </div>
                 </div>
 
@@ -919,10 +863,31 @@ const EnhancedServicesShowcase: React.FC = () => {
                   <div className="mt-2 text-xs text-white/60">
                     Market: {service.marketSize} • Growth: {service.growthRate}
 
+=======
+                {/* Benefits */}
+                <div className='mb-6'>;
+                  <h4 className='text-sm font-semibold text-white mb-3'>;
+                    Key Benefits:;
+                  </h4>;
+                  <div className='space-y-2'>;
+                    {service && service.benefits.slice(0, 2).map((benefit, idx) => (;
+                      <div
+                        key={idx}
+                        className='flex items-center gap-2 text-xs text-white/70'>;
+                        <TrendingUp className='w-3 h-3 text-blue-400' />                        {benefit}                <div className="mb-6">;
+                  <h4 className="text-sm font-semibold text-white mb-3">Key Benefits:</h4>;
+                  <div className="space-y-2">;
+                    {service && service.benefits.slice(0, 2).map((benefit, idx) => (;
+                      <div key={idx} className="flex items-center gap-2 text-xs text-white/70">;
+                        <TrendingUp className="w-3 h-3 text-blue-400" />;
+                      </div>;
+                    ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   </div>
                 </div>
                   </div>;
                 </div>;
+
                 {/* ROI and Market Info */}
                 <div className='mb-6 p-4 bg-white/5 rounded-lg'>;
                   <div className='text-xs text-white/60 mb-2'>;
@@ -938,132 +903,12 @@ const EnhancedServicesShowcase: React.FC = () => {
                   </div>;
                 </div>;
                 {/* Action Buttons */}
-
-                    </div>                  </div>;
-                </div>;
-                {/* Service Info */}                {/* Icon and Category */}
-                <div className="flex items - center justify - between mb - 4">;
-                  <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br ${service.color} p - 4 flex items - center justify - center text - 2xl`}>;
-                    <service.icon className="w - 8 h - 8 text - white" />;
-                  </div>;
-                  <div className="text - right">;
-                    <div className="text - xs text - white / 60 mb - 1">{getCategoryIcon (service.category)({ class_name: 'w - 3 h - 3' })}</div>;
-                    <div className="text - xs text - white / 40">{service.category}</div>;
-                  </div>;
-                </div>;
-                {/* Service Info */}
-                <h3 className='text - xl font - bold mb - 3 text - white'>;
-                  {service.name}
-                </h3>;
-                <p className='text - white / 70 text - sm mb - 4 leading - relaxed'>;
-                  {service.tagline}
-                </p>;
-                {/* Pricing */}
-                <div className='mb - 6'>;
-                  <div className='flex items - baseline gap - 2 mb - 2'>;
-                    <span className='text - 3xl font - bold text - white'>;
-                      {service.price}
-                    </span>;
-                    <span className='text - white / 60'>{service.period}</span>;
-                  </div>;
-                  <div className='flex items - center gap - 4 text - xs text - white / 50'>;
-                    <span className='flex items - center gap - 1'>;
-                      <Clock className='w - 3 h - 3' />;
-                      {service.setup_time}
-                    </span>;
-                    <span className='flex items - center gap - 1'>;
-                      <Users className='w - 3 h - 3' />                      {service.customers} customers                    <span className="flex items - center gap - 1">;
-                      <Users className="w - 3 h - 3" />;
-                      {service.customers} customers;
-                    </span>;
-                  </div>;
-                </div>;
-                {/* Key Features */}
-                <div className='mb - 6'>;
-                  <h4 className='text - sm font - semibold text - white mb - 3'>;
-                    Key Features:;
-                  </h4>;
-                  <div className='space - y-2'>;
-                    {service.features.slice (0, 3).map ((feature, idx) => (
-                      <div;
-                        key={idx}
-                        className='flex items - center gap - 2 text - xs text - white / 70';
-                      >;
-                        <CheckCircle className='w - 3 h - 3 text - green - 400' />                        {feature}                <div className="mb - 6">;
-                  <h4 className="text - sm font - semibold text - white mb - 3">Key Features:</h4>;
-                  <div className="space - y-2">;
-                    {service.features.slice (0, 3).map ((feature, idx) => (
-                      <div key={idx} className="flex items - center gap - 2 text - xs text - white / 70">;
-                        <CheckCircle className="w - 3 h - 3 text - green - 400" />;
-                      </div>))}
-                  </div>;
-                </div>;
-                {/* Benefits */}
-                <div className='mb - 6'>;
-                  <h4 className='text - sm font - semibold text - white mb - 3'>;
-                    Key Benefits:;
-                  </h4>;
-                  <div className='space - y-2'>;
-                    {service.benefits.slice (0, 2).map ((benefit, idx) => (
-                      <div;
-                        key={idx}
-                        className='flex items - center gap - 2 text - xs text - white / 70';
-                      >;
-                        <TrendingUp className='w - 3 h - 3 text - blue - 400' />                        {benefit}                <div className="mb - 6">;
-                  <h4 className="text - sm font - semibold text - white mb - 3">Key Benefits:</h4>;
-                  <div className="space - y-2">;
-                    {service.benefits.slice (0, 2).map ((benefit, idx) => (
-                      <div key={idx} className="flex items - center gap - 2 text - xs text - white / 70">;
-                        <TrendingUp className="w - 3 h - 3 text - blue - 400" />;
-                      </div>))}
-                  </div>;
-                </div>;
-                {/* ROI and Market Info */}
-                <div className='mb - 6 p - 4 bg - white / 5 rounded - lg'>;
-                  <div className='text - xs text - white / 60 mb - 2'>;
-                    ROI & Market Position;
-                  </div>;
-                  <div className='text - xs text - white / 80 leading - relaxed'>;
-                    {service.roi}
-                  </div>;
-                  <div className='mt - 2 text - xs text - white / 60'>                    Market: {service.market_size} • Growth: {service.growth_rate}                <div className="mb - 6 p - 4 bg - white / 5 rounded - lg">;
-                  <div className="text - xs text - white / 60 mb - 2">ROI & Market Position</div>;
-                  <div className="text - xs text - white / 80 leading - relaxed">{service.roi}</div>;
-                  <div className="mt - 2 text - xs text - white / 60">;
-                  </div>;
-                </div>;
-                {/* Action Buttons */}
-                <div className='flex gap - 3'>;
-                  <button;
-                    on_click={() =>;
-                      (window.location.href = `mailto:kleber@ziontechgroup.com?subject = Inquiry about ${service.name}`);
-                    }
-                    className='flex - 1 px - 4 py - 3 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - xl font - semibold text - white transition - all duration - 300 transform hover:scale - 105'                  >;
-                    Get Started;
-                  </button>;
-                  <button;
-                    on_click={() =>;
-                      (window.location.href = `mailto:kleber@ziontechgroup.com?subject = Demo request for ${service.name}`);
-                    }
-                    className='px - 4 py - 3 border border - white / 20 hover:border - white / 40 rounded - xl font - semibold text - white transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'                  >                <div className="flex gap - 3">;
-                  <button;
-                    on_click={() => window.location.href = `mailto:kleber@ziontechgroup.com?subject = Inquiry about ${service.name}`}
-                    className="flex - 1 px - 4 py - 3 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - xl font - semibold text - white transition - all duration - 300 transform hover:scale - 105";
-                  >;
-                    Get Started;
-                  </button>;
-                  <button;
-                    on_click={() =>;
-                      (window.location.href = `mailto:kleber@ziontechgroup.com?subject = Demo request for ${service.name}`);
-                    }
-                    className='px - 4 py - 3 border border - white / 20 hover:border - white / 40 rounded - xl font - semibold text - white transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'                    on_click={() => window.location.href = `mailto:kleber@ziontechgroup.com?subject = Demo request for ${service.name}`}
-                    className="px - 4 py - 3 border border - white / 20 hover:border - white / 40 rounded - xl font - semibold text - white transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10";
-
                   >;
                     Demo;
                   </button>;
                 </div>;
               </div>;
+<<<<<<< HEAD
 
 =======
                 <div className="flex gap-3">
@@ -1125,6 +970,20 @@ const EnhancedServicesShowcase: React.FC = () => {
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          ))}
+        {/* CTA Section */}
+        <div className='text-center mt-16'>;
+          <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>;
+            <h3 className='text-2xl font-bold text-white mb-4'>;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className='text-white/70 mb-6 max-w-2xl mx-auto'>;
+              Let's discuss how our cutting-edge technology solutions can;
+              accelerate your digital transformation journey.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <a
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Consultation Request'
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
@@ -1147,7 +1006,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                 href='tel:+13024640950'
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'                href="tel:+13024640950"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
-=======
             </div>))}
         </div>;
         {/* CTA Section */}
@@ -1191,15 +1049,12 @@ const EnhancedServicesShowcase: React.FC = () => {
           </div>;
         </div>;
       </div>;
-
-
 };
+
 export default EnhancedServicesShowcase;  );
 };
+
 export default EnhancedServicesShowcase;
-
-
-=======
     </section>);
 }
 ;
@@ -1208,6 +1063,7 @@ export default EnhancedServicesShowcase);
 ;
 export default EnhancedServicesShowcase;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   );
@@ -1228,3 +1084,5 @@ export default EnhancedServicesShowcase;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

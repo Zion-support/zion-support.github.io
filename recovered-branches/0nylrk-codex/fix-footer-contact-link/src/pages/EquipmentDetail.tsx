@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -139,6 +140,8 @@ interface EquipmentDetails {
   brand: string,
   category: string,
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   subcategory?: string;
   images: string[],;
   price: number,;
@@ -154,6 +157,7 @@ interface EquipmentDetails {
   returnPolicy?: string;
 =======
   rating?: number;
+<<<<<<< HEAD
 
 
 
@@ -202,12 +206,20 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       { name: "Connectivity", value: "HDMI 2.1, USB-C, Wi-Fi, Bluetooth" }
     ],
     features: [
+=======
+  warranty?: string;
+  returnPolicy?: string;
+}
+    ];
+    features: [;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       "Advanced 8K full-frame sensor";
       "16+ stops of dynamic range";
       "Internal RAW recording";
       "Dual native ISO technology";
       "5-axis in-body image stabilization";
       "AI-powered autofocus with subject tracking";
+<<<<<<< HEAD
       "Weather-sealed magnesium alloy body"
       "Multiple assist tools: false color, waveform, vectorscope";
       "Anamorphic de-squeeze options";
@@ -460,6 +472,12 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Effects", value: "8 stereo effects processors" },;
       { name: "Recording", value: "64-channel USB interface" },;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      "Multiple assist tools: false color, waveform, vectorscope";
+      "Anamorphic de-squeeze options";
+      "Custom 3D LUT support";
+    ];
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       { name: "Weight", value: "32 lbs" }
     ];
     features: [;
@@ -560,25 +578,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "iOS and Android remote control app";
       "Configurable user layers";
       "8 DCA groups and 6 mute groups";
-
-      "Integrated WiFi for wireless control";
-    ],;
-    warranty: "3 years manufacturer warranty",;
-    returnPolicy: "21-day return policy for items in original condition";
-  }
-};
-
-export default function EquipmentDetail() {;
-  const { equipmentId } = useParams() as { equipmentId?: string };
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [quantity, setQuantity] = useState(1);
-  const [isAdding, setIsAdding] = useState(false);
-
-  // In a real app, this would fetch from an API;
-  const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined;
-
-  if (!equipment) {;
-
     return (
       <>;
         <Header />;
@@ -625,32 +624,6 @@ if ( {) {
         </div>;
         <Footer />;
 
-
-  const handleAddToCart = () => {;
-    setIsAdding(true);
-
-    // Simulate API call;
-    setTimeout(() => {;
-      setIsAdding(false);
-      toast({;
-        title: "Added to cart",;
-        description: `${quantity}x ${equipment && equipment.name} added to your cart.`});
-    }, 800);
-  };
-
-  const handleBuyNow = () => {;
-    setIsAdding(true);
-
-    // Simulate API call;
-    setTimeout(() => {;
-      setIsAdding(false);
-      toast({;
-        title: "Proceeding to checkout",;
-        description: `Preparing your order for ${equipment && equipment.name}.`});
-    }, 800);
-  };
-
-
   return (
     <>;
       <Header />;
@@ -661,35 +634,16 @@ if ( {) {
             <div className="lg:col-span-2">;
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">;
                 {/* Main Image */}
-
-                <div className="aspect-video w-full relative">;
-                  <img
-                    src={equipment && equipment.images[selectedImageIndex]} 
-                    alt={equipment && equipment.name} 
-                    className="w-full h-full object-contain bg-zion-blue-light/10 p-4"
-                  />;
-                </div>;
-
-                {/* Thumbnail Gallery */}
-                {equipment && equipment.images.length > 1 && (;
-                  <div className="flex p-4 gap-2 overflow-x-auto">;
-                    {equipment && equipment.images.map((image, index) => (;
-
                       <div
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={`w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${;
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent";
                         }`}
-
-                      >;
-                        <img
-                          src={image} 
-                          alt={`${equipment && equipment.name} - image ${index + 1}`} 
-
                           className="w-full h-full object-cover"
                         />;
                       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -756,6 +710,11 @@ if ( {) {
                 </Tabs>
               </div>
             </div>
+=======
+                    ))}
+                  </div>;
+                )}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       </ul>;
                     </div>;
                   </TabsContent>;
@@ -763,12 +722,15 @@ if ( {) {
               </div>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">;
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
@@ -782,6 +744,7 @@ if ( {) {
                       {equipment && equipment.subcategory}
                     </Badge>;
                   )}
+<<<<<<< HEAD
 
                 </div>;
 
@@ -795,6 +758,8 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {/* Rating */}
                 {equipment && equipment.rating && (;
                   <div className="flex items-center gap-2 mb-4">;
@@ -803,10 +768,13 @@ if ( {) {
                         <Star
                           key={i}
                           className={`h-5 w-5 ${
+<<<<<<< HEAD
                             i < Math.floor(equipment.rating!)
                               ? "text-zion-cyan fill-zion-cyan"
                             i < Math.floor(equipment.rating!) 
                               ? "text-zion-cyan fill-zion-cyan" 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                               : "text-zion-slate-light"
                           }`}
                         />;
@@ -817,14 +785,6 @@ if ( {) {
                     </span>;
                   </div>;
                 )}
-
-
-                {/* Price */}
-                <div className="text-3xl font-bold text-white mb-4">;
-                  {equipment && equipment.currency}{equipment && equipment.price.toLocaleString()}
-                </div>;
-
-
                 {/* Stock Status */}
                 <div className="mb-6">;
                   {equipment && equipment.inStock ? (;
@@ -843,6 +803,7 @@ if ( {) {
                       <span>Out of Stock</span>;
                     </div>;
                   )}
+<<<<<<< HEAD
                 </div>
                 {/* Quantity */}
                 <div className="mb-6">
@@ -951,19 +912,11 @@ if ( {) {
                 </div>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {/* Additional Info */}
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">;
                   {/* Shipping */}
-
-                  <div className="flex gap-3 text-zion-slate-light">;
-                    <Truck className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
-                    <div>;
-                      <p className="text-white text-sm font-medium">Free Shipping</p>;
-                      <p className="text-xs">For orders over $100 within the US</p>;
-                    </div>;
-                  </div>;
-
-
                   {/* Warranty */}
                   {equipment && equipment.warranty && (;
                     <div className="flex gap-3 text-zion-slate-light">;
@@ -974,9 +927,6 @@ if ( {) {
                       </div>;
                     </div>;
                   )}
-
-
-
                   {/* Return Policy */}
                   {equipment && equipment.returnPolicy && (;
                     <div className="flex gap-3 text-zion-slate-light">;
@@ -987,6 +937,7 @@ if ( {) {
                       </div>;
                     </div>;
                   )}
+<<<<<<< HEAD
 
 =======
             {/* Right Column - Purchase Info */}
@@ -1127,6 +1078,8 @@ if ( {) {
     </>
   )
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 </div>;
               </div>;
             </div>;
@@ -1134,9 +1087,13 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
-
+=======
     </>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

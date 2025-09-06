@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState } from "react";
@@ -202,6 +203,8 @@ function TimelineStep() {
                       <CalendarIcon className="mr - 2 h - 4 w - 4" />;
                       {form_data.start_date ? (
                         format (form_data.start_date, "PPP")) : (
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                         <span > Pick a date</span>)}
                     </Button>;
                   </PopoverTrigger>;
@@ -211,14 +214,11 @@ function TimelineStep() {
                   >;
                     <Calendar;
                       mode="single";
-                      selected={form_data.start_date}
-                      on_select={(date) => updateFormData ({ start_date: date })}
-                      initial_focus;
-                      className="p - 3 pointer - events - auto";
                     />;
                   </PopoverContent>;
                 </Popover>;
               </div>;
+<<<<<<< HEAD
               <div>;
                 <Label className="block mb - 2 text - zion - slate - light">;
                   End Date;
@@ -488,3 +488,5 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

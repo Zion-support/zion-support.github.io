@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts'
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
@@ -17,6 +18,8 @@ import {serve} from 'https: //deno && deno.land/std@0 && 0.208.0/http/server && 
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -26,12 +29,6 @@ interface TenantInfo {
   subdomain: string;
   custom_domain: string | null;
   primary_color: string;
-
-const supabaseUrl = Deno && Deno.env.get('SUPABASE_URL');
-const supabaseServiceKey = Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
-
-if (!supabaseUrl || !supabaseServiceKey) {
-
   throw new Error('Required environment variables are not set')
 }
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
@@ -43,18 +40,6 @@ serve(async (req) => {
       headers: corsHeaders})
   }
   try {
-
-    const url = new URL(req && req.url);
-    const hostnameParam = url && url.searchParams.get('host');
-    const subdomainParam = url && url.searchParams.get('subdomain');
-    
-    // Get hostname from parameters or headers
-    const forwardedHost = req && req.headers.get('x-forwarded-host');
-    const hostname = hostnameParam || 
-      (forwardedHost ? forwardedHost && forwardedHost.split()[0].trim().split(':')[0] : null) ||
-      url && url.hostname;
-
-
     if (!hostname && !subdomainParam) {
       throw new Error('No hostname or subdomain provided')
     }
@@ -91,6 +76,7 @@ serve(async (req) => {
             .eq('subdomain', subdomain)
             .eq('is_active', true)
             .single();
+<<<<<<< HEAD
           if (!subdomainResult.error) {
             tenantInfo = subdomainResult.data as TenantInfo
 import { serve } from 'https: //deno.land/std@0.208.0/http/server.ts',;
@@ -102,6 +88,10 @@ interface TenantInfo {;
   custom_domain: string | null,;
   primary_color: string,;
   logo_url: string | null,;
+=======
+=======
+  logo_url: string | null,
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   theme_preset: string;
 }
 const cors_headers = {
@@ -178,6 +168,7 @@ if ( {) {
         .single ();
 ;
       // If no match on custom domain, try subdomain;
+<<<<<<< HEAD
 
       if (!data && !error) {;
         const subdomain = hostname.split('.')[0],;
@@ -197,6 +188,29 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      // Check condition
+if ( {) {
+  $2
+}
+        const subdomain = hostname.split ('.')[0];
+        if () {) {
+  $2
+}
+          const subdomain_result = await supabase;
+            .from ('whitelabel_tenants');
+            .select ('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');
+            .eq ('subdomain', subdomain);
+            .eq ('is_active', true);
+            .single ();
+;
+          // Check condition
+if ( {) {
+  $2
+}
+            tenant_info = subdomain_result.data as TenantInfo;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           }
         }
       } else // Check condition
@@ -206,6 +220,7 @@ if ( {) {
         tenant_info = data as TenantInfo;
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -220,6 +235,8 @@ if ( {) {
       JSON && JSON.stringify({
         tenant: tenantInfo,
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         status: 'success'
       });
       {
@@ -230,10 +247,6 @@ if ( {) {
   } catch (error) {
     console && console.error('Tenant detector error:', error);
     return new Response(
-
-      JSON && JSON.stringify({ 
-        error: error && error.message || 'Internal server error',
-
         status: 'error'
 =======
     return new Response (
@@ -257,6 +270,7 @@ if ( {) {
       {
         status: 500;
         headers: {
+<<<<<<< HEAD
           'Content-Type': 'application/json'
           ...corsHeaders}}
     )
@@ -300,3 +314,5 @@ if ( {) {
 });
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

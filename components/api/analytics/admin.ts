@@ -1,12 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
   try {
     const supabase = createServerClient();
     // Replace with your actual tables/queries
     // Fallback to mock if querying fails
-
-
     ]);
     const [usersR, jobsR, quotesR, projectsR, referralsR] = result;
     const users =
@@ -29,7 +26,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       referralsR && referralsR.status === 'fulfilled' && referralsR && referralsR.value.data
         ? (referralsR && referralsR.value.data as any[])
         : [];
-
 
     const usersData = mockIfEmpty(users, [
       { id: 1, role: 'client', country: 'US' }
@@ -58,21 +54,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       { id: 43, converted: true, source: 'partner' }
     ]);      { id: 41, converted: true, source: 'linkedin' }
       { id: 42, converted: false, source: 'twitter' }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       { id: 43, converted: true, source: 'partner' }]);
-
-
-
     const totalUsers = usersData.length;
     const totalTalents = usersData.filter(u => u.role === 'talent').length;
     const totalClients = usersData.filter(u => u.role === 'client').length;
     const jobsPosted = jobsData.filter(j => j.status === 'posted').length;
     const jobsFilled = jobsData.filter(j => j.status === 'filled').length;
     const quotesSent = quotesData.filter(q => q.status === 'sent').length;
-
-    const quotesAccepted = quotesData.filter(q => q.status === 'accepted').length;
-
-
     const activeProjects = projectsData.filter(p => p.status === 'active').length;
     const categoryCounts: Record<string, number> = {}
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 });
@@ -82,16 +70,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-
     const totalUsers = usersData && usersData.length;
     const totalTalents = usersData && usersData.filter(u => u && u.role === 'talent').length;
     const totalClients = usersData && usersData.filter(u => u && u.role === 'client').length;
-    const jobsPosted = jobsData && jobsData.filter(j => j && j.status === 'posted').length;
-    const jobsFilled = jobsData && jobsData.filter(j => j && j.status === 'filled').length;
     const quotesSent = quotesData && quotesData.filter(q => q && q.status === 'sent').length;
     const quotesAccepted = quotesData && quotesData.filter(
       q => q && q.status === 'accepted'
     ).length;
+<<<<<<< HEAD
     const activeProjects = projectsData && projectsData.filter(
       p => p && p.status === 'active'
     ).length;
@@ -137,16 +123,15 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       referralConversions: 2,
 =======
       totals: { totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
       referralConversions: 2
 
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
-}
-
-=======
+    });
+  } catch (e: any) {
     res.status (200).json ({
       totals: {
         total_users: 4,
@@ -171,6 +156,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     });
   }}
 <<<<<<< HEAD
+<<<<<<< HEAD
     const geoCounts: Record<string, number> = {};
 
 }
@@ -185,3 +171,5 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

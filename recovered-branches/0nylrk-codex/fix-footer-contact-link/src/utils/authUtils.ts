@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";
@@ -86,6 +87,14 @@ export const cleanupAuthState = () => {;
   })
 },
 
+=======
+    }
+  });
+  // Remove from sessionStorage if in use
+    }
+  })
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 /**
  * Utility function to check new user registration and schedule welcome emails
  */
@@ -95,6 +104,7 @@ export const checkNewRegistration = async (user: UserDetails) => {
     const { data: existingCampaign } = await supabase
       .from("email_campaigns")
       .select("id")
+<<<<<<< HEAD
 
       .eq("user_id", user.id)
       .eq("campaign_type", "welcome_series");
@@ -103,6 +113,11 @@ export const checkNewRegistration = async (user: UserDetails) => {
       .maybeSingle();
       .maybeSingle(),
       
+=======
+      .eq("user_id", user && user.id)
+      .eq("campaign_type", "welcome_series")
+      .maybeSingle();
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // If no welcome email sent yet, schedule one
     if (!existingCampaign) {
       // Create a scheduled job for the welcome email
@@ -166,6 +181,7 @@ if ( {) {
           scheduled_for: new Date ().toISOString ();
           status: "pending";
           payload: {
+<<<<<<< HEAD
             user_id: user.id;
             email_type: "welcome_series";
             user_type: user.userType |"unknown"
@@ -179,13 +195,21 @@ if ( {) {
           }
         }),
         
+=======
+            user_id: user && user.id;
+            email_type: "welcome_series";
+          }
+        });
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       // Create entry in email_campaigns table
       await supabase
         .from("email_campaigns")
         .insert({
-
+          user_id: user && user.id;
+=======
             user_type: user.user_type || "unknown",
             display_name: user.display_name || user.email?.split ("@")[0] || "User";
+<<<<<<< HEAD
 =======
           user_id: user.id,
           campaign_type: "welcome_series",
@@ -242,6 +266,8 @@ export const checkNewRegistration = async (user: UserDetails) => {;
             user_type: user.userType || "unknown",;
             display_name: user.displayName || user.email?.split("@")[0] || "User";
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           }
         });
 ;
@@ -256,10 +282,6 @@ export const checkNewRegistration = async (user: UserDetails) => {;
           template_data: {
             user_id: user && user.id;
             email_type: "welcome_series";
-
-            user_type: user && user.userType || "unknown",
-            display_name: user && user.displayName || user && user.email?.split("@")[0] || "User"
-
 =======
             user_type: user.user_type || "unknown",
             display_name: user.display_name || user.email?.split ("@")[0] || "User";
@@ -268,6 +290,7 @@ export const checkNewRegistration = async (user: UserDetails) => {;
         });
     }
   } catch (error) {
+<<<<<<< HEAD
 
     console.error("Error checking or scheduling welcome email:", error)
   } catch (error) {;
@@ -281,3 +304,5 @@ export const checkNewRegistration = async (user: UserDetails) => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

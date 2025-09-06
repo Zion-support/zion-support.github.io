@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -97,10 +98,27 @@ export default function ProfileDetail() {
           title: "Error"
           description: err.message |"Failed to fetch profile."
           variant: "destructive"})
+=======
+  const { profileId } = useParams();
+  const [profileData, setProfileData] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState(true);
+
+      setIsLoading(true);
+      setError(null);
+      try {;
+        if (!profileId) {;
+          setError("Profile ID is missing.");
+          return;
+        }
+          setError("Profile not found.");
+          return;
+        }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       } finally {
         setIsLoading(false)
       }
     }
+<<<<<<< HEAD
     fetchProfile()
   }, [profileId]);
     },
@@ -202,32 +220,27 @@ export default function ProfileDetail() {;
 
   if (isLoading) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <p>Loading profile...</p>;
       </div>;
     );
   }
-
-
-  if (error) {;
-
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <p>Error: {error}</p>;
       </div>;
     );
   }
-
-
-  if (!profileData) {;
-
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <p>Profile not found.</p>;
       </div>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -250,6 +263,11 @@ export default function ProfileDetail() {;
       <Header />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
+=======
+  return (
+    <>;
+      <SEO
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {/* Main Content */}
           <div className="col-span-12 lg:col-span-8">
             {/* Profile Header */}
@@ -269,6 +287,7 @@ export default function ProfileDetail() {;
                       {profileData.is_verified && (
                         <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
                       )}
+<<<<<<< HEAD
                     </CardTitle>
                     <CardDescription className="text-zion-cyan">{profileData.professional_title}</CardDescription>
                   </div>
@@ -399,6 +418,74 @@ export default function ProfileDetail() {;
             </Card>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+                    </CardTitle>;
+                    <CardDescription className="text-zion-cyan">{profileData && profileData.professional_title}</CardDescription>;
+=======
+;
+    fetch_profile ();
+  }, [profile_id]);
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="min - h-screen flex items - center justify - center">;
+        <p > Loading profile...</p>;
+      </div>);
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="min - h-screen flex items - center justify - center">;
+        <p > Error: {error}</p>;
+      </div>);
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="min - h-screen flex items - center justify - center">;
+        <p > Profile not found.</p>;
+      </div>);
+  }
+  return (
+    <>;
+      <SEO;
+        title={`${profile_data.full_name} | Zion AI Marketplace`}
+        description={profile_data.bio || "Check out this talent's profile on Zion!"}
+      />;
+      <Header />;
+      <div className="container mx - auto px - 4 py - 8">;
+        <div className="grid grid - cols - 12 gap - 6">;
+          {/* Main Content */}
+          <div className="col - span - 12 lg:col - span - 8">;
+            {/* Profile Header */}
+            <Card className="mb - 6 bg - zion - blue border - zion - blue - light">;
+              <CardHeader>;
+                <div className="flex items - center space - x-4">;
+                  <Avatar className="w - 20 h - 20">;
+                    {profile_data.profile_picture_url ? (
+                      <AvatarImage src={profile_data.profile_picture_url} alt={profile_data.full_name} />) : (
+                      <AvatarFallback>{profile_data.full_name?.char_at (0)}</AvatarFallback>)}
+                  </Avatar>;
+                  <div>;
+                    <CardTitle className="text - 2xl font - bold text - white flex items - center gap - 2">;
+                      {profile_data.full_name}
+                      {profile_data.is_verified && (
+                        <CheckCircle2 className="w - 5 h - 5 text - zion - cyan" />)}
+                    </CardTitle>;
+                    <CardDescription className="text - zion - cyan">{profile_data.professional_title}</CardDescription>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                  </div>;
+                </div>;
+              </CardHeader>;
+              <CardContent>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* Portfolio Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
               <CardHeader>;
@@ -413,6 +500,7 @@ export default function ProfileDetail() {;
                         href={link && link.url}
                         target="_blank"
                         rel="noopener noreferrer"
+<<<<<<< HEAD
                         className="text-zion-cyan hover:text-white flex items-center gap-2"
                       >
                         <LinkIcon className="h-4 w-4" />
@@ -420,14 +508,19 @@ export default function ProfileDetail() {;
                       </a>
                         {link.title || link.url}
                       </Link>
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     ))}
                   </div>
                 ) : (
                   <p className="text-zion-slate-light">No portfolio links provided.</p>
                 )}
+<<<<<<< HEAD
               </CardContent>
             </Card>
           </div>
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">
             <HireNowCTA
@@ -437,10 +530,13 @@ export default function ProfileDetail() {;
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
 
+<<<<<<< HEAD
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               }}
             />;
             {/* Contact Information */}
@@ -467,6 +563,7 @@ export default function ProfileDetail() {;
                     </a>;
                   </div>;
                 )}
+<<<<<<< HEAD
               </div>
             </div>
               </div>;
@@ -478,6 +575,8 @@ export default function ProfileDetail() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
               <h3 className="text-xl font-bold mb-4">Social</h3>;
@@ -500,6 +599,7 @@ export default function ProfileDetail() {;
                     LinkedIn;
                   </a>;
                 )}
+<<<<<<< HEAD
 
 =======
                 <div className="flex flex - wrap gap - 4 text - sm">;
@@ -655,15 +755,18 @@ export default function ProfileDetail() {;
                   </Link>
                 )}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
       <Footer />;
-
+=======
     </>);
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 =======
@@ -671,3 +774,6 @@ export default function ProfileDetail() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

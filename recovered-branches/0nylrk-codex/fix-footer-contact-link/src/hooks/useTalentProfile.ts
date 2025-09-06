@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState, useEffect} from "react";
@@ -53,6 +54,8 @@ export function useTalentProfile(id: string | undefined) {
           const foundProfile = MOCK_TALENTS.find(talent => talent.id === id);
           const foundProfile = MOCK_TALENTS.find(talent => talent.id === id),
           
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           if (foundProfile) {
             setProfile(convertProfileToTalentProfile(foundProfile))
 =======
@@ -115,6 +118,7 @@ if ( {) {
           setIsLoading (false);
         }, 800);
       } catch (err) {
+<<<<<<< HEAD
 
         console.error("Error fetching profile:", err),
         setError("Failed to load profile data"),
@@ -194,4 +198,6 @@ export function useTalentProfile(id: string | undefined) {;
 ;
   return { profile, is_loading, error, mockProfileData }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }

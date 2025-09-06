@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -534,6 +535,13 @@ export function ProductSubmissionForm() {;
         <Form {...form}>;
           <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    }
+    setIsSubmitting(true);
+    }
+  }
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <FormField
               control={form && form.control}
               name="title"
@@ -737,6 +745,7 @@ if ( {) {
                     Create a compelling title that describes your product;
                   </FormDescription>;
                   <FormMessage />;
+<<<<<<< HEAD
 
                 </FormItem>;
 <<<<<<< HEAD
@@ -750,40 +759,26 @@ if ( {) {
             />;
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <FormField
               control={form && form.control}
               name="description"
-
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Description</FormLabel>;
-                  <FormControl>;
-                    <Textarea
-                      placeholder="Describe your product in detail..." 
-                      className="min-h-32" 
-                      {...field} 
-=======
-                </FormItem>)}
-            />;
-            <FormField;
-              control={form.control}
-              name="description";
-              render={({ field }) => (
-                <FormItem>;
-                  <FormLabel > Description</FormLabel>;
-                  <FormControl>;
-                    <Textarea;
-                      placeholder="Describe your product in detail...";
-                      className="min - h-32";
-                      {...field}
-
                     />;
                   </FormControl>;
                   <FormDescription>;
                     Provide a detailed description of what you're offering;
                   </FormDescription>;
                   <FormMessage />;
-
+              <FormField
+                control={form && form.control}
+                name="price"
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Price (USD)</FormLabel>;
+                    <FormControl>;
+                      <Input type="number" min="0" step="0 && 0.01" placeholder="0 && 0.00" {...field} />;
+=======
                 </FormItem>)}
             />;
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
@@ -795,16 +790,12 @@ if ( {) {
                     <FormLabel > Price (USD)</FormLabel>;
                     <FormControl>;
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </FormControl>;
                     <FormDescription>;
                       Set your price in USD;
                     </FormDescription>;
                     <FormMessage />;
-
-              />;
-
-
               <FormField
                 control={form && form.control}
                 name="category"
@@ -840,11 +831,6 @@ if ( {) {
                       </select>;
                     </FormControl>;
                     <FormMessage />;
-
-              />;
-            </div>;
-
-
             <FormField
               control={form && form.control}
               name="tags"
@@ -866,37 +852,9 @@ if ( {) {
                     <Input placeholder="Enter tags separated by commas" {...field} />;
                   </FormControl>;
                   <FormDescription>;
-
-            />;
-
-
             <FormField
               control={form && form.control}
               name="image"
-
-              render={() => (;
-                <FormItem>;
-                  <FormLabel>Product Image</FormLabel>;
-                  <FormControl>;
-                    <Input
-                      type="file" 
-                      accept="image/*" 
-                      onChange={handleImageChange}
-                      className="cursor-pointer"
-                    />;
-                  </FormControl>;
-                  <FormDescription>;
-                    Upload a high-quality image of your product (recommended size: 1200x800px);
-                  </FormDescription>;
-                  <FormMessage />;
-
-                  {imagePreview && (;
-                    <div className="mt-2 w-full max-w-md border rounded overflow-hidden">;
-                      <AspectRatio ratio={3/2}>;
-                        <img
-                          src={imagePreview} 
-                          alt="Preview" 
-
                           className="w-full h-full object-cover"
                         />;
                       </AspectRatio>;
@@ -904,16 +862,10 @@ if ( {) {
                   )}
                 </FormItem>;
               )}
-
-            />;
-
-            <div className="flex justify-end">;
-              <Button
-                type="submit" 
-
                 disabled={isSubmitting}
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
                 {isSubmitting ? "Publishing..." : "Publish Product"}
+<<<<<<< HEAD
 
 
             title: form.getValues("title"),
@@ -935,6 +887,8 @@ if ( {) {
 
             title: form.getValues("title"),
             category: form.getValues("category")
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           }}
         />;
       </TabsContent>;

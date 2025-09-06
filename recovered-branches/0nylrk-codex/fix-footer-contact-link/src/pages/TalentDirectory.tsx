@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -64,6 +65,8 @@ export default function TalentDirectory() {
   const navigate = useNavigate();
   // Use our custom hook to manage state
   const {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     filteredTalents;
     isLoading;
     searchTerm;
@@ -107,6 +110,7 @@ function TalentDirectory() {
     setIsHireModalOpen;
     selected_talent;
     setSelectedTalent;
+<<<<<<< HEAD
     expandedSections;
     isAuthenticated;
     savedTalents;
@@ -173,12 +177,15 @@ function TalentDirectory() {
 
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {/* Main content */}
-          <div className="flex flex-col lg:flex-row gap-6">
+          <div className="flex flex-col lg:flex-row gap-6">;
             {/* Sidebar - Desktop */}
-            <div className="w-full lg:w-64 shrink-0 hidden lg:block">
+            <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
               <FilterSidebar
                 searchTerm={searchTerm}
+<<<<<<< HEAD
                 setSearchTerm={setSearchTerm}
                 selectedSkills={selectedSkills}
                 toggleSkill={toggleSkill}
@@ -265,6 +272,9 @@ export default function TalentDirectory() {;
 =======
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     expanded_sections;
     is_authenticated;
     saved_talents;
@@ -301,7 +311,7 @@ export default function TalentDirectory() {;
             <div className="w - full lg:w - 64 shrink - 0 hidden lg:block">;
               <FilterSidebar;
                 search_term={search_term}
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 setSearchTerm={setSearchTerm}
                 selected_skills={selected_skills}
                 toggle_skill={toggle_skill}
@@ -317,6 +327,7 @@ export default function TalentDirectory() {;
                 toggle_section={toggle_section}
                 sort_option={sort_option}
                 setSortOption={setSortOption}
+<<<<<<< HEAD
 
               />;
             </div>;
@@ -326,10 +337,13 @@ export default function TalentDirectory() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">;
               <Button
                 onClick={() => setIsMobileFilterOpen(true)}
+<<<<<<< HEAD
                 variant="outline"
                 className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light"
               >
@@ -343,6 +357,14 @@ export default function TalentDirectory() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+              >;
+                Filter & Sort;
+              </Button>;
+            </div>;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* Results */}
             <TalentResults;
               filtered_talents={filtered_talents}
@@ -351,6 +373,7 @@ export default function TalentDirectory() {;
               handleRequestHire={handleRequestHire}
               saved_talents={saved_talents}
               handleToggleSave={handleToggleSave}
+<<<<<<< HEAD
               isAuthenticated={isAuthenticated}
               activeFiltersProps={{
                 selectedSkills;
@@ -377,22 +400,13 @@ export default function TalentDirectory() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 experienceRange;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              is_authenticated={is_authenticated}
+              activeFiltersProps={{
+                setPriceRange;
+                experience_range;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 setExperienceRange;
-
-                selectedSkills
-                toggleSkill
-                selectedAvailability
-                toggleAvailability
-                selectedRegions
-                toggleRegion
-                priceRange
-                setPriceRange
-                experienceRange
-                setExperienceRange
-                clearFilters}}
-            />;
-
-
             {/* Mobile filter sidebar */}
             {isMobileFilterOpen && (;
               <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">;
@@ -428,6 +442,7 @@ export default function TalentDirectory() {;
                     setSortOption={setSortOption}
                     clearFilters={clearFilters}
                     isMobileFilterOpen={isMobileFilterOpen}
+<<<<<<< HEAD
                   />
                 </div>
               </div>
@@ -438,11 +453,21 @@ export default function TalentDirectory() {;
     </AppLayout>
   )
 }
+=======
+                  />;
+                </div>;
+=======
+              </div>)}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </div>;
         </div>;
       </div>;
     </AppLayout>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

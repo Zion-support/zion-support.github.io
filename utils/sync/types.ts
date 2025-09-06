@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type SyncScope = "full" | "dao" | "marketplace";
 export interface Peer {id: string;
 export type SyncScope = "full" | "dao" | "marketplace",;
@@ -44,11 +45,14 @@ export interface InstanceConfig {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export type SyncEventType =;
   | "proposal";
   | "token_transfer";
   | "talent_mobility";
   | "dao_endorsement";
+<<<<<<< HEAD
   | "leaderboard_entry";
 export interface BaseEventPayload {id: string;
 }
@@ -222,11 +226,14 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
   | TalentMobilityPayload;
   | DaoEndorsementPayload;
+<<<<<<< HEAD
   | LeaderboardEntryPayload;
 export interface SyncEvent {eventId: string;
   type: SyncEventType;
@@ -307,3 +314,5 @@ export interface MultiverseState {;
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

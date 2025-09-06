@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -202,17 +203,11 @@ export function IntegrationsSyncLog() {;
   const getStatusBadge = (status: string) => {;
     switch (status) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       case "success": return <Badge className="bg-green-500">Success</Badge>;
       case "error":;
         return <Badge variant="destructive">Error</Badge>;
-
-      case "warning":;
-        return <Badge className="bg-amber-500">Warning</Badge>,;
-      default:;
-        return <Badge variant="outline">Unknown</Badge>;
-    }
-  };
-
 
   return (
     <Card>;
@@ -239,6 +234,7 @@ export function IntegrationsSyncLog() {;
                 <TableCell className="hidden md:table-cell">{log && log.details}</TableCell>;
               </TableRow>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -246,15 +242,9 @@ export function IntegrationsSyncLog() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             ))}
-
-          </TableBody>;
-        </Table>;
-      </div>;
-    </Card>;
-  );
-}
-
 =======
 import React from './react';
 import { Card } from '@/components / ui / card';

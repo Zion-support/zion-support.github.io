@@ -1,9 +1,17 @@
-// Handle sending messages to the AI chat assistant
+
+import { useState } from "react",
+import { MessageSquare } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
+<<<<<<< HEAD
 <<<<<<< HEAD
           "Content-Type": "application/json"}
         body: JSON.stringify({
@@ -28,6 +36,9 @@
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
@@ -56,6 +67,7 @@ export function ChatAssistantTrigger() {;
         throw new Error("Failed to get response from AI assistant");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -76,28 +88,37 @@ export function ChatAssistantTrigger() {;
             avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',;
             role: 'Virtual Assistant';      if (!response && response.ok) {;
         throw new Error("Failed to get response from AI assistant");
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
-
-      return Promise && Promise.resolve();
-    } catch (error) {;
-      logErrorToProduction('Error in AI chat:', { data: error }),;
-      return Promise && Promise.resolve();
+      return Promise.resolve()
+    } catch (error) {
+      logErrorToProduction('Error in AI chat:', { data: error })
+      return Promise.resolve()
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   },;
   return (;
     <>;
       <Button;
         onClick={() => setIsOpen(true)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         size="icon"
         variant="outline"
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
@@ -106,10 +127,13 @@ export function ChatAssistantTrigger() {;
         <MessageSquare className="h-5 w-5" />
       </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       
       return Promise.resolve()
     } catch (error) {
@@ -118,12 +142,14 @@ export function ChatAssistantTrigger() {;
     }
   },
 
-
   return (
-    <>;
+    <>
       <Button
         onClick = {(,) => setIsOpen(true),}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         size="icon"
         variant="outline"
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
@@ -131,6 +157,7 @@ export function ChatAssistantTrigger() {;
       >
         <MessageSquare className="h-5 w-5" />
       </Button>
+<<<<<<< HEAD
       {isOpen && (
 =======
 
@@ -164,10 +191,19 @@ export function ChatAssistantTrigger() {;
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {isOpen && (
+        <ChatAssistant
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           }}
           onSendMessage = {handleSendMessage,}
-        />;
+        />
       )}
+<<<<<<< HEAD
     </>
   )
 }
@@ -249,3 +285,7 @@ if ( {) {
 
 
 ;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

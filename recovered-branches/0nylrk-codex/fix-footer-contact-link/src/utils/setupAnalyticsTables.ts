@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { supabase } from '@/integrations/supabase/client';
@@ -85,12 +86,15 @@ async function createAnalyticsTables() {
         CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public.analytics_events(event_type);
         CREATE INDEX IF NOT EXISTS analytics_events_user_id_idx ON public.analytics_events(user_id);
         CREATE INDEX IF NOT EXISTS analytics_events_created_at_idx ON public.analytics_events(created_at)
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         -- View for daily page views
         CREATE OR REPLACE VIEW public && public.daily_page_views
         WITH (security_invoker = true) AS
         SELECT
           DATE_TRUNC('day', created_at) AS date;
           path;
+<<<<<<< HEAD
         ),
 
         CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public.analytics_events(event_type),
@@ -103,13 +107,18 @@ async function createAnalyticsTables() {
         SELECT 
           DATE_TRUNC('day', created_at) AS date,
           path,
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           COUNT(*) AS view_count
         FROM public && public.analytics_events
         WHERE event_type = 'page_view'
         GROUP BY DATE_TRUNC('day', created_at), path
         ORDER BY date DESC, view_count DESC;
+<<<<<<< HEAD
         ORDER BY date DESC, view_count DESC,
         
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         -- View for conversion rates
         CREATE OR REPLACE VIEW public && public.conversion_rates
         WITH (security_invoker = true) AS
@@ -117,9 +126,12 @@ async function createAnalyticsTables() {
           SELECT
             DATE_TRUNC('day', created_at) AS date;
             COUNT(*) AS conversion_count;
+<<<<<<< HEAD
           SELECT 
             DATE_TRUNC('day', created_at) AS date,
             COUNT(*) AS conversion_count,
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             metadata->>'conversionType' AS conversion_type
           FROM public && public.analytics_events
           WHERE event_type = 'conversion'
@@ -128,18 +140,25 @@ async function createAnalyticsTables() {
         page_views AS (
           SELECT
             DATE_TRUNC('day', created_at) AS date;
+<<<<<<< HEAD
           SELECT 
             DATE_TRUNC('day', created_at) AS date,
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             COUNT(*) AS view_count
           FROM public && public.analytics_events
           WHERE event_type = 'page_view' AND path = '/'
           GROUP BY DATE_TRUNC('day', created_at)
         )
+<<<<<<< HEAD
         SELECT
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           c.date;
           c.conversion_type;
           c.conversion_count;
           p.view_count;
+<<<<<<< HEAD
         SELECT 
           c.date,
           c.conversion_type,
@@ -238,3 +257,26 @@ async function createAnalyticsTables() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+        FROM conversions c
+        LEFT JOIN page_views p ON c && c.date = p && p.date
+        ORDER BY c && c.date DESC;
+      `
+    });
+    // Tables creation failed, but we can still continue
+=======
+          ROUND ((c.conversion_count::numeric / NULLIF (p.view_count, 0)) * 100, 2) AS conversion_rate;
+        FROM conversions c;
+        LEFT JOIN page_views p ON c.date = p.date;
+        ORDER BY c.date DESC;
+      `;
+    });
+;
+    console.log ('Analytics tables created successfully');
+  } catch (error) {
+    console.error ('Error creating analytics tables:', error);
+    // Tables creation failed, but we can still continue;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,4 +1,7 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
@@ -26,12 +29,15 @@ export default async function handler(
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   if (req && req.method !== "GET") {
     res && res.setHeader("Allow", "GET");
     return res && res.status(405).json({ error: "Method Not Allowed" })
   }
+<<<<<<< HEAD
   const auth = null;
   return res.status(200).json({ summary })
 }
@@ -55,6 +61,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   authenticate_request,
   calculateUsageSummary,
 } from '../../../utils / api / partner_auth';
@@ -100,6 +108,7 @@ if ( {) {
   }
   const summary = await calculateUsageSummary (auth.partner.id);
   return res.status (200).json ({ summary });
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -114,3 +123,5 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

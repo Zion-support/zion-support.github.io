@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { BookProject } from '../book/bookTypes',;
 export function buildPrintableHtml(project: BookProject): string {;
   const { meta, chapters, visuals } = project,;
@@ -20,12 +21,15 @@ export function buildPrintableHtml(project: BookProject): string {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const chapterHtml = chapters;
     .map(;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       (c) => `;
       <section class="chapter">;
-        <h2>${escapeHtml(c.title)}</h2>;
-        <div class="content">${paragraphize(c.content)}</div>;
+        <h2>${escape_html (c.title)}</h2>;
+        <div class="content">${paragraphize (c.content)}</div>;
       </section>;
     `);
+<<<<<<< HEAD
 <<<<<<< HEAD
     .join('\n\n'),;
   const visualsHtml = [;
@@ -58,12 +62,15 @@ export function buildPrintableHtml(project: BookProject): string {;
     .join ('\n'),
   const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return `<!doctype html>;
 <html>;
 <head>;
-<meta charset="utf-8" />;
-<title>${escapeHtml(meta.title)}</title>;
+<meta charset="utf - 8" />;
+<title>${escape_html (meta.title)}</title>;
 <style>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   @page { margin: 1in }
   body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111 }
@@ -185,24 +192,35 @@ function escapeHtml(s: string): string {;
   }
 }
 
+=======
+  @page { margin: 1in }
+  body { font - family: ui - serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111 }
+  .cover { break - after: page, display: flex, flex - direction: column, justify - content: center, height: 90vh }
+  .cover h1 { font - size: 40px, margin: 0 }
+  .cover h3 { font - size: 20px, margin: 8px 0 0 0, color: #444 }
+  .cover .by { margin - top: 24px, color: #666 }
+  .barcode { margin - top: 24px, height: 64px }
+  .quote { border - left: 4px solid #222, padding - left: 12px, margin: 16px 0, color: #333 }
+  .quote cite { display: block, margin - top:6px, color:#666, font - style: normal }
+  .chapter { break - before: page }
+  .chapter h2 { font - size: 28px, margin: 0 0 12px 0 }
+  .content p { line - height: 1.6, margin: 0 0 12px 0, white - space: pre - wrap }
+  .visual { break - inside: avoid, margin: 12px 0 }
+  .visual img { max - width: 100%, height: auto }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 </style>;
 </head>;
 <body>;
   <section class="cover">;
-
-    <div>${escape_html (meta.publisher || '')}</div>;
-    <h1>${escape_html (meta.title)}</h1>;
-    <h3>${escape_html (meta.subtitle || '')}</h3>;
-    <div class="by">By ${escape_html (meta.author)}</div>;
-
     ${barcode}
   </section>;
-  ${quotesHtml}
-  ${chapterHtml}
-  ${visualsHtml}
+  ${quotes_html}
+  ${chapter_html}
+  ${visuals_html}
 </body>;
 </html>`;
 }
+<<<<<<< HEAD
 
     <div>${escapeHtml(meta.publisher || '')}</div>;
     <h1>${escapeHtml(meta.title)}</h1>;
@@ -263,3 +281,5 @@ function paragraphize(text: string): string {;
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

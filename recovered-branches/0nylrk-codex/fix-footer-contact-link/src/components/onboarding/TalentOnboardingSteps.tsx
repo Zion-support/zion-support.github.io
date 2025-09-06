@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -120,6 +121,10 @@ export function TalentOnboardingSteps() {;
 }
 
 =======
+=======
+  const { user } = useAuth();
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from './react';
 import { use_auth  } from '@/hooks / use_auth';
 import { useOnboardingStatus  } from '@/hooks / useOnboardingStatus';
@@ -165,4 +170,3 @@ function TalentOnboardingSteps() {
 ;
   return <OnboardingTracker steps={steps} />;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

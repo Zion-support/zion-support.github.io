@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {toast} from "@/hooks/use-toast";
@@ -124,6 +125,8 @@ export function useAuthEventHandlers(): any (;
 =======
 
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import { toast } from '@/hooks / use - toast';
 import type { UserProfile } from "@/types / auth";
 import { checkNewRegistration } from '@/utils / auth_utils';
@@ -176,6 +179,7 @@ if ( {) {
     handleSignedIn;
     handleSignedOut;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
   },
@@ -186,5 +190,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }

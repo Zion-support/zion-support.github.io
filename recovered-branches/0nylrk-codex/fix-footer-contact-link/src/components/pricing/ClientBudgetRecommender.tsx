@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from "react";
@@ -38,46 +39,25 @@ interface ClientBudgetRecommenderProps {;
   jobTitle: string,;
   category: string,;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
   onSuggestionApplied: (minValue: number, maxValue: number) => void;
 }
-
-
-export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
-
   jobTitle;
   category;
   timeline;
   scope;
-
-  experienceLevel,;
-  onSuggestionApplied}) => {;
-
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
   const { user } = useAuth();
 
-
-  const generateSuggestion = async () => {;
-    if (!jobTitle || !category) {;
-      return;
-
     }
     setIsLoading(true);
-
-    try {;
-      const params: ClientBudgetParams = {;
-        jobTitle,;
-        category};
-
-      if (timeline) params && params.timeline = timeline;
-      if (scope) params && params.scope = scope;
-      if (experienceLevel) params && params.experienceLevel = experienceLevel;
-
-
       const result = await getClientBudgetSuggestion(params);
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from "lucide-react",
 <<<<<<< HEAD
@@ -225,6 +205,17 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      setSuggestion(result);
+    } catch (error) {;
+      console && console.error("Error generating budget suggestion:", error);
+    } finally {;
+      setIsLoading(false);
+    }
+      }
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="space-y-4">;
       <div>;
@@ -233,6 +224,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
             type="button"
             variant="outline"
             onClick={generateSuggestion}
+<<<<<<< HEAD
 <<<<<<< HEAD
             disabled={!jobTitle |!category}
             className="w-full"
@@ -263,6 +255,8 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           </Button>;
         ) : (;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <PricingSuggestionBox
 =======
 import React, { useState } from './react';
@@ -365,6 +359,7 @@ if ( {) {
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
+<<<<<<< HEAD
 
 
 
@@ -380,3 +375,13 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+=======
+            rate_type="hourly";
+          />)}
+      </div>;
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

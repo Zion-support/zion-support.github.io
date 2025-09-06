@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface UserDetails {
 export interface UserDetails {;
   id?: string;
@@ -25,6 +26,18 @@ export interface UserProfile {;
   permissions?: string[];
   company_id?: string;
 
+=======
+export interface UserDetails {
+  id?: string;
+  name?: string;
+  email?: string;
+  user_type?: string;
+  display_name?: string;
+  avatar_url?: string;
+  headline?: string;
+  profile_complete?: boolean;
+  role?: string;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   bio?: string;
   created_at?: string;
   updated_at?: string;
@@ -43,6 +56,7 @@ export interface UserProfile {
   avatar_url?: string;
   headline?: string;
   role?: string;
+<<<<<<< HEAD
 
   permissions?: string[],
   company_id?: string;
@@ -146,3 +160,6 @@ export interface UserDetails {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

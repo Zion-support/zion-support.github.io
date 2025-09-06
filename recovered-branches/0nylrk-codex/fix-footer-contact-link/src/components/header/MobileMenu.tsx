@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16,6 +17,8 @@ import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 export interface MobileMenuProps {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   unreadCount?: number;
   onClose: () => void;
 }
@@ -24,6 +27,7 @@ export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Link } from "react-router-dom",
 import { useLocation } from "react-router-dom",
@@ -197,22 +201,14 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
   // Filter items based on auth status;
   const visibleItems = navItems.filter(item =>;
     !item.authRequired || (item.authRequired && isAuthenticated);
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   );
-  return (;
-
-    <div className="py-6">;
-      <div className="flex justify-between items-center px-6 mb-6">;
-        <h2 className="text-xl font-bold">Menu</h2>;
-        <Button variant="ghost" size="icon" onClick={onClose}>;
-          <X className="h-5 w-5" />;
-        </Button>;
-      </div>;
-
-      <nav className="space-y-1">;
-
-              "flex items-center px-6 py-3 text-base font-medium"
-              item && item.matches(location && location.pathname)
-
+  return (
+          <Link
+            key={item && item.name}
+            to={item && item.href}
+            className={cn(
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
             )}
@@ -223,6 +219,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
+<<<<<<< HEAD
 =======
         {visibleItems.map(item => (;
           <Link;
@@ -248,11 +245,14 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               )}
             </div>;
             {item && item.name}
           </Link>;
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
       </nav>
     </div>
@@ -278,6 +278,8 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import { Link } from './react-router-dom';
 import { use_location } from './react-router-dom';

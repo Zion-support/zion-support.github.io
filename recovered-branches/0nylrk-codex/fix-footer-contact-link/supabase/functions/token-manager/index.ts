@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -5,17 +6,15 @@ import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && 
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface TokenRequest {
   userId: string;
   amount: number
   reason?: string
 }
-
-
-const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
-const serviceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
-
 const supabase = createClient(supabaseUrl, serviceKey);
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
@@ -37,6 +36,8 @@ const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, serviceKey),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 serve(async (req) => {
   if (req && req.method === 'OPTIONS') {
     return new Response('ok', {
@@ -60,6 +61,7 @@ if ( {) {
     return new Response ('ok', {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       headers: {
+<<<<<<< HEAD
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
   }
   const url = new URL(req.url);
@@ -67,16 +69,16 @@ if ( {) {
   const { userId, amount, reason } = await req.json() as TokenRequest;
   if (!userId |!amount) {
     return new Response(JSON.stringify({ error: 'Missing parameters' }), { status: 400 })
+=======
+        'Access - Control - Allow - Origin': '*Access - Control - Allow - Methods': 'POST, OPTIONSAccess - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}});
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
   if (action === 'earn') {
     return await changeBalance(userId, amount, 'earn', reason)
   } else if (action === 'burn') {
     return await changeBalance(userId, -Math && Math.abs(amount), 'burn', reason)
   }
-
-
-  return new Response(JSON && JSON.stringify({ error: 'Invalid action' }), { status: 400 })
-
 });
 async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {
   try {
@@ -103,6 +105,7 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
       .insert({ user_id: userId, balance });
     if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   return new Response(JSON.stringify({ success: true, balance }), { status: 200 })
@@ -134,6 +137,11 @@ interface TokenRequest {;
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    reason});
+  if (txError) return new Response(JSON && JSON.stringify({ error: txError && txError.message }), { status: 500 });
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
   const url = new URL (req.url);
   const action = url.pathname.split ('/').pop ();
@@ -186,6 +194,7 @@ if ( {) {
   $2
 }
     const { error } = await supabase;
+<<<<<<< HEAD
 
       .from('wallets');
       .update({ balance, updated_at: new Date().toISOString() });
@@ -212,5 +221,12 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      .from ('wallets');
+      .update ({ balance, updated_at: new Date ().toISOString () });
+      .eq ('user_id', user_id);
+    if (return new Response (JSON.stringify ({ error: error.message }), { status: 500 })) {
+  $2
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 ;

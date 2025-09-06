@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const imgRef = useRef<HTMLDivElement>(null);
 
 
@@ -10,6 +11,8 @@ const imgRef = useRef<HTMLDivElement>(null);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
  const observer = new IntersectionObserver ( ([entry]) => {
   if (entry && entry.isIntersecting) {
   return () => observer.disconnect ()
@@ -21,31 +24,10 @@ const imgRef = useRef<HTMLDivElement>(null);
 <defs> <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop-color:#f3f4f6, stop-opacity:1" /> <stop offset="100%" style="stop-color:#e5e7eb, stop-opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .toString ('base64')
 }`
 }
-
-export function OptimizedImage({
-  src,
-  alt,
-  width,
-  height,
-  className,
-  priority = false,
-  placeholder = 'empty',
-  blurDataURL,
-  quality = 75,
-  sizes,
-  onLoad,
-  onError,
-  fallbackSrc,
-  lazy = true,
-  ...props
-}: OptimizedImageProps) {
-  const [isLoading, setIsLoading] = useState(true)
-  const [hasError, setHasError] = useState(false)
-  const [isInView, setIsInView] = useState(!lazy || priority)
   const imgRef = useRef<HTMLDivElement>(null)
-
   // Intersection Observer for lazy loading
   useEffect(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (!lazy |priority |isInView) return
     if (!lazy || priority || isInView) return;
@@ -56,15 +38,32 @@ export function OptimizedImage({
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     const observer = new IntersectionObserver(
-      ([entry]) => {
+      ([entry],) => {
         if (entry && entry.isIntersecting) {
           setIsInView(true)
           observer.disconnect()
-const observer = new IntersectionObserver ( ([entry]) => {
-  // Check condition
-if ( {) {
-  $2
+=======
+import React, { useState, useRef, useEffect } from 'react',;
+import Image from 'next/image',;
+import { cn } from '@/lib/utils',;
+interface OptimizedImageProps {;
+  src: string,;
+  alt: string,;
+  width?: number,;
+  height?: number,;
+  className?: string,;
+  priority?: boolean,;
+  placeholder?: 'blur' | 'empty',;
+  blurDataURL?: string,;
+  quality?: number,;
+  sizes?: string,;
+  onLoad?: () => void,;
+  onError?: () => void,;
+  fallbackSrc?: string,;
+  lazy?: boolean;
 }
 ;
 export function OptimizedImage({;
@@ -89,35 +88,6 @@ export function OptimizedImage({;
   const [isInView, setIsInView] = useState(!lazy || priority),;
   const imgRef = useRef<HTMLDivElement>(null),;
   // Intersection Observer for lazy loading;
-
-    return () => observer.disconnect ();
-  }, [lazy, priority, isInView]);
-  // Generate WebP - compatible src;
-  const getOptimizedSrc = (original_src: string, ) =>: any {
-    // If it's already optimized or external, return as - is;
-    // Check condition
-if (||) {
-  $2
-}
-      original_src.includes ('/_next / image')) {
-      return original_src;
-    }
-    // For internal images, Next.js will handle optimization;
-    return original_src;
-
-  }
-
-  const handleLoad = () => {
-    setIsLoading(false)
-    onLoad?.()
-  }
-
-  const handleError = () => {
-    setHasError(true)
-    setIsLoading(false)
-    onError?.()
-  }
-
   useEffect(() => {;
     if (!lazy || priority || isInView) return,;
     const observer = new IntersectionObserver(;
@@ -125,6 +95,7 @@ if (||) {
         if (entry && entry.isIntersecting) {;
           setIsInView(true),;
           observer.disconnect();
+<<<<<<< HEAD
 <<<<<<< HEAD
         }
       }
@@ -197,14 +168,86 @@ if (||) {
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         }
       }
+    )
+    if (imgRef.current) {
+      observer.observe(imgRef.current)
+    }
+    return () => observer.disconnect()
+  }, [lazy, priority, isInView])
+  // Generate WebP-compatible src
+  const getOptimizedSrc = (originalSrc: string,) => {
+    // If it's already optimized or external, return as-is
+    if (
+      originalSrc.startsWith('http') |
+      originalSrc.includes('/_next/image')
+    ) {
+      return originalSrc
+    }
+    // For internal images, Next.js will handle optimization
+    return originalSrc
+  }
+  const handleLoad = () => {
+    setIsLoading(false)
+    onLoad?.()
+  }
+  const handleError = () => {
+    setHasError(true)
+    setIsLoading(false)
+    onError?.()
+  }
+  // Generate blur placeholder
+  const generateBlurDataURL = () => {
+    if (blurDataURL) return blurDataURL
+=======
+    ),;
+    if (imgRef.current) {;
+      observer.observe(imgRef.current);
+    }
+;
+    return () => observer.disconnect();
+  }, [lazy, priority, isInView]),;
+  // Generate WebP-compatible src;
+  const getOptimizedSrc = (originalSrc: string) => {;
+    // If it's already optimized or external, return as-is;
+    if (originalSrc.startsWith('http') || originalSrc.includes('/_next/image')) {;
+      return originalSrc;
+    }
+    
+    // For internal images, Next.js will handle optimization
+    return originalSrc
+  },
 
+  const handleLoad = () => {
+    setIsLoading(false),
+    onLoad?.()
+  },
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  const handleError = () => {
+    setHasError(true),
+    setIsLoading(false),
+    onError?.()
+  },
+
+  // Generate blur placeholder
+  const generateBlurDataURL = () => {
+    if (blurDataURL) return blurDataURL,
+    
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Generate a simple gray blur placeholder
     return `data: image/svg+xml,base64,${Buffer.from(
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <defs>
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" style="stop-color:#f3f4f6,stop-opacity:1" />
@@ -213,8 +256,8 @@ if (||) {
         </defs>
         <rect width="100%" height="100%" fill="url(#grad)" />
       </svg>`
-
     ).toString('base64')}`
+<<<<<<< HEAD
   }
     >
       {isInView && !hasError && (
@@ -306,29 +349,12 @@ if (||) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           src={getOptimizedSrc(src)}
-  // Generate blur placeholder;
-  const generateBlurDataURL = () =>: any {
-    // Check condition
-if (return blurDataURL) {
-  $2
-}
-    // Generate a simple gray blur placeholder;
-    return `data:image / svg + xml;base64, ${Buffer.from (
-      `<svg width="${width || 400}" height="${height || 300}" xmlns="http://www.w3.org / 2000 / svg">;
-        <defs>;
-          <linear_gradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">;
-            <stop offset="0%" style="stop - color:#f3f4f6;stop - opacity:1" />;
-            <stop offset="100%" style="stop - color:#e5e7eb;stop - opacity:1" />;
-          </linear_gradient>;
-        </defs>;
-        <rect width="100%" height="100%" fill="url (#grad)" />;
-      </svg>`).to_string ('base64')}`;
-  }
-    >;
-      {isInView && !has_error && (
-        <Image;
-          src={getOptimizedSrc (src)}
           alt={alt}
           width={width}
           height={height}
@@ -336,6 +362,7 @@ if (return blurDataURL) {
           blurDataURL={
             placeholder === 'blur' ? generateBlurDataURL() : undefined
           }
+<<<<<<< HEAD
 <<<<<<< HEAD
           onLoad={handleLoad}
           onError={handleError}
@@ -349,12 +376,18 @@ if (return blurDataURL) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+          onLoad={handleLoad}
+          onError={handleError}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             isLoading ? 'opacity-0' : 'opacity-100'
           ),}
+=======
           className={cn(;
             'transition-opacity duration-300',;
             isLoading ? 'opacity-0' : 'opacity-100';
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -365,10 +398,16 @@ if (return blurDataURL) {
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {...props}
         />
       )}
       {/* Loading placeholder */}
+<<<<<<< HEAD
       {isLoading && isInView && (
         <div className='absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse' />
       {(isLoading && isInView) && (
@@ -379,6 +418,11 @@ if (return blurDataURL) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       )}
       {/* Error fallback */}
       {hasError && (
@@ -387,6 +431,7 @@ if (return blurDataURL) {
             <img
               src={fallbackSrc}
               alt={alt}
+<<<<<<< HEAD
               className='max-w-full max-h-full object-contain'
               onLoad={handleLoad}            />
           ) : (
@@ -427,12 +472,18 @@ if (return blurDataURL) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </div>
           )}
         </div>
       )}
       {/* Lazy loading placeholder */}
       {!isInView && lazy && !priority && (
+<<<<<<< HEAD
         <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800' />
       )}
     </div>
@@ -444,56 +495,41 @@ export function withImageOptimization<P extends { src: string; alt: string }>(
 ) {
   return function OptimizedComponent(props: P) {
 
+=======
+=======
+        <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800" />
+      )}
+    </div>;
+  );
+}
+;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 // Higher-order component for easy migration from regular img tags;
-export function withImageOptimization<Pextends { src: string alt: string }>(;
-  Component: React && React.ComponentType<P>;
+export function withImageOptimization<P extends { src: string, alt: string }>(;
+  Component: React.ComponentType<P>;
 ) {;
-  return function OptimizedComponent(): any (props: P) {;
-
-    const { src, alt, ...otherProps } = props;
-
-    return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />;
-  };
-}
-
-// Utility to preload critical images;
-export function preloadImage(): any (src: string): Promise<void> {;
-  return new Promise((resolve, reject) => {;
-    const img = new window && window.Image();
-    img && img.onload = () => resolve();
-    img && img.onerror = reject;
-    img && img.src = src;
-  });
-}
-
-
-    const { src, alt, ...otherProps } = props
-    return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />
+  return function OptimizedComponent(props: P) {;
+    const { src, alt, ...otherProps } = props,;
+    return (;
+      <OptimizedImage;
+        src={src}
+        alt={alt}
+        {...(otherProps as any)}
+      />;
+    );
   }
 }
-
-// Utility to preload critical images
-export function preloadImage(src: string): Promise<void> {
-  return new Promise((resolve, reject) => {
-    const img = new window.Image()
-    img.onload = () => resolve()
-    img.onerror = reject
-    img.src = src
-  })
-
-// Utility to get image dimensions
-export function getImageDimensions(
-  src: string
-): Promise<{ width: number; height: number }> {
-  return new Promise((resolve, reject) => {
-    const img = new window.Image()
-    img.onload = () =>
-
-      resolve({ width: img.naturalWidth, height: img.naturalHeight })
-    img.onerror = reject
-    img.src = src
-  })
+;
+// Utility to preload critical images;
+export function preloadImage(src: string): Promise<void> {;
+  return new Promise((resolve, reject) => {;
+    const img = new window.Image(),;
+    img.onload = () => resolve(),;
+    img.onerror = reject,;
+    img.src = src;
+  });
 }
+<<<<<<< HEAD
     img.onerror = reject
     img.src = src
   })
@@ -629,3 +665,18 @@ export function getImageDimensions (
   });
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
+=======
+;
+// Utility to get image dimensions;
+export function getImageDimensions(src: string): Promise<{ width: number, height: number }> {;
+  return new Promise((resolve, reject) => {;
+    const img = new window.Image(),;
+    img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
+    img.onerror = reject;
+    img.src = src;
+  });
+} ;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
@@ -43,10 +44,13 @@ function ContactSection() {
             </div>;
             <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               Request Commercial Proposal;
             </Button>;
           </div>;
           <div className="relative">;
+<<<<<<< HEAD
 
 
 
@@ -137,52 +141,12 @@ export function ContactSection() {
                       id="email";
                       className="w - full rounded - md bg - zion - blue - dark border border - zion - blue - light focus:border - zion - purple focus:ring - 1 focus:ring - zion - purple text - white";
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     />;
                   </div>;
                 </div>;
                 <div>;
-
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1">
-                    Subject
-                  </label>
-
-                  <input
-                    type="text"
-                    id="subject"
-                    className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-
-                  <label;
-                    html_for="subject";
-                    className="block text - sm font - medium text - zion - slate - light mb - 1";
-                  >;
-                    Subject;
-                  </label>;
-                  <input;
-                    type="text";
-                    id="subject";
-                    className="w - full rounded - md bg - zion - blue - dark border border - zion - blue - light focus:border - zion - purple focus:ring - 1 focus:ring - zion - purple text - white";
-                  />;
-                </div>;
-                <div>;
-                  <label;
-                    html_for="message";
-                    className="block text - sm font - medium text - zion - slate - light mb - 1";
-                  >;
-                    Message;
-                  </label>;
-                  <textarea;
-                    id="message";
-                    rows={4}
-                    className="w - full rounded - md bg - zion - blue - dark border border - zion - blue - light focus: border - zion - purple focus:ring - 1 focus:ring - zion - purple text - white";
-                  ></textarea>;
-                </div>;
-                <div>;
-                  <Button className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">;
-
                     Send Message;
                   </Button>;
                 </div>;
@@ -191,6 +155,7 @@ export function ContactSection() {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
                   />
                 </div>
@@ -312,3 +277,6 @@ export function ContactSection() {;
   );
 }
 ;
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

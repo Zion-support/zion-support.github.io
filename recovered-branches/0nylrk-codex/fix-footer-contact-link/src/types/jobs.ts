@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -46,6 +47,10 @@ export interface Job {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+export interface Job {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   client_id: string;
   title: string;
@@ -55,6 +60,7 @@ export interface Job {;
   budget: JobBudget;
   deadline: string;
   status: JobStatus;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   created_at: string,
@@ -79,17 +85,14 @@ export interface JobFormData {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+export interface JobFormData {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   title: string;
   description: string;
   category: JobCategory;
   skills: string;
-
-  budget_min: number;
-  budget_max: number,
-  deadline: Date;
-}
-// Add JobMatch interface to be shared across components;
-
 export interface JobMatch {
   id: string;
   job_id: string;
@@ -112,12 +115,9 @@ export interface JobMatch {
     key_projects: any[];
     skills: string[];
     location?: string;
-
-    category?: string,
-    company_name?: string;
-
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface ResumeAttachment {
 
@@ -130,11 +130,15 @@ export interface ResumeAttachment {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface ResumeAttachment {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
   file_url?: string;
   resume_id?: string;
+<<<<<<< HEAD
 
   summary?: string,
   skills?: string[];
@@ -156,6 +160,9 @@ export interface JobApplication {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface JobApplication {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   job_id: string;
   talent_id: string;
@@ -172,10 +179,6 @@ export interface JobApplication {;
     full_name: string;
     professional_title: string;
     profile_picture_url?: string;
-
-    bio: string,
-    skills: string[];
-
   }
   resume?: ResumeAttachment;
   // New fields for resume scoring;
@@ -184,6 +187,7 @@ export interface JobApplication {;
   match_breakdown?: {
     skills_match?: {
       score: number;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   notes?: string,  // New field for client notes
@@ -325,3 +329,6 @@ export interface JobApplication {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

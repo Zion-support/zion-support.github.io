@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/src/components/ComprehensiveServicesShowcase2025.jsx
 import { AnimatePresence,motion } from \'framer-motion\'; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from \'lucide-react\'; import { useState } from \'react\';
 const { AnimatePresence,motion } from "framer-motion"; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from "lucide-react"; import { useState } from "react";''"
@@ -9,6 +10,8 @@ const { AnimatePresence,motion } from "framer-motion"; import { ; CheckCircle,; 
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import { AnimatePresence,motion } from \'framer-motion\'; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from \'lucide-react\'; import { useState } from \'react\';
 const { AnimatePresence,motion } from "framer-motion"; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from "lucide-react"; import { useState } from "react";''"

@@ -1,6 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -17,6 +18,10 @@ export interface EnterpriseIt2026ServiceV2 {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface EnterpriseIt2026ServiceV2 {
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   name: string;
   tagline: string;
@@ -47,12 +52,6 @@ export interface EnterpriseIt2026ServiceV2 {;
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  }
-
-  {
-
-=======
 export interface EnterpriseIT2026ServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -78,12 +77,12 @@ export interface EnterpriseIT2026ServiceV2 {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
   // Zero Trust Network Architecture
   {
+<<<<<<< HEAD
 
     id: 'zero-trust-network-architecture-pro', name: 'Zero Trust Network Architecture Pro',
     tagline: 'Never trust, always verify - comprehensive zero trust security',
@@ -705,8 +704,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
+    reviews: 180
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -715,6 +716,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     customers: 280;
     rating: 4.9,
     reviews: 180;
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];
@@ -1170,3 +1172,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  }
+;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

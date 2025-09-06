@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,8 @@ import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/compon
 interface UserBadgesProps {;
   badges: Badge[];
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 
 const iconMap = {;
@@ -25,12 +28,15 @@ const iconMap = {;
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from './lucide-react';
 import { Badge } from '@/types / community';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface UserBadgesProps {
   badges: Badge[];
 }
@@ -40,6 +46,7 @@ const icon_map = {
   Award;
   BadgeCheck;
   Star;
+<<<<<<< HEAD
 
   MessageSquare;
 };
@@ -148,6 +155,12 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
   );
 };
 <<<<<<< HEAD
+=======
+  if (!badges?.length) return null;
+  return (
+export default UserBadges;
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 
 

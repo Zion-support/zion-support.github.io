@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,30 +25,17 @@ import { Quote } from './lucide-react';
 const testimonials = [;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!"
     author: "Sarah Chen"
     role: "CTO, DataMind Solutions";
-
-    avatar: "https://i.pravatar.cc / 150?img = 32",
-    company: "DataMind"},
-  {
-    quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24 / 7 support is unmatched in the industry.",
-    author: "Michael Rodriguez",
-    role: "IT Director, GlobalTech";
-    avatar: "https://i.pravatar.cc / 150?img = 12",
-    company: "GlobalTech"},
-  {
-    quote: "As an AI developer, Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game - changer.";
-    author: "Aanya Patel",
-    role: "Independent AI Consultant",
-    avatar: "https://i.pravatar.cc / 150?img = 28",
-    company: "AI Systems"},
-
   {
     quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure."
     author: "Thomas Klein"
     role: "Operations Manager, EcoTech Systems";
+<<<<<<< HEAD
 <<<<<<< HEAD
     avatar: "https://i.pravatar.cc/150?img=67"
     company: "EcoTech"}]
@@ -149,6 +137,8 @@ export function TestimonialCarousel() {;
 
         <div className="max-w-5xl mx-auto px-8">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Carousel
 =======
     avatar: "https://i.pravatar.cc / 150?img = 67",
@@ -173,6 +163,7 @@ function TestimonialCarousel() {
               align: "start"
 
               loop: true}}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className="w-full"
           >
@@ -325,13 +316,16 @@ export function TestimonialCarousel() {;
               <CarouselPrevious className="relative static left - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover: bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple" />;
               <CarouselNext className="relative static right - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover:bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple" />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </div>;
           </Carousel>;
         </div>;
       </div>;
-
+=======
     </section>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 ;
@@ -344,3 +338,6 @@ export function TestimonialCarousel() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

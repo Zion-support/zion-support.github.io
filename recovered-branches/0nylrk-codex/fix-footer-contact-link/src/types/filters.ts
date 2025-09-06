@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export interface FilterSidebarProps {
@@ -25,11 +26,17 @@ export interface FilterSidebarProps {;
   setPriceRange: (range: [number, number]) => void;
   experience_range: [number, number];
 
+=======
+export interface FilterSidebarProps {
+  search_term: string;
+  setSearchTerm: (term: string) => void;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   setExperienceRange: (range: [number, number]) => void;
   expanded_sections: {
     skills: boolean;
     availability: boolean;
     region: boolean;
+<<<<<<< HEAD
 
     experience: boolean,
     price: boolean;
@@ -79,6 +86,8 @@ export interface RegionFilterProps extends FilterComponentProps {
   selected_regions: string[],
   toggle_region: (region: string) => void;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 export interface ExperienceFilterProps extends FilterComponentProps {
 <<<<<<< HEAD
@@ -171,6 +180,7 @@ export interface PriceFilterProps extends FilterComponentProps {
   price_range: [number, number];
   setPriceRange: (range: [number, number]) => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -210,3 +220,8 @@ export interface SortFilterProps {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+export interface SearchFilterProps {
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

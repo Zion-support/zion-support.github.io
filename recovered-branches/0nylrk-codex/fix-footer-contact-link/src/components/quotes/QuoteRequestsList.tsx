@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -79,6 +80,8 @@ type QuoteRequestsListProps = {;
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import React from './react';
 import { QuoteRequestCard } from './QuoteRequestCard';
 import { EmptyStateCard } from './EmptyStateCard';
@@ -98,17 +101,12 @@ export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
   is_loading;
   is_archived;
   onViewDetails;
-
-  onMarkAsResponded,;
-  onToggleArchive;
-}) => {;
-  if (isLoading) {;
-
     return (
       <div className="text-center py-20">;
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>;
       </div>;
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -151,6 +149,9 @@ export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
   
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">;
       {quotes && quotes.map(quote => (;
@@ -185,6 +186,7 @@ if ( {) {
           onViewDetails={onViewDetails}
           onMarkAsResponded={!is_archived ? onMarkAsResponded : undefined}
           onToggleArchive={onToggleArchive}
+<<<<<<< HEAD
 
 
 
@@ -200,3 +202,11 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+=======
+        />))}
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

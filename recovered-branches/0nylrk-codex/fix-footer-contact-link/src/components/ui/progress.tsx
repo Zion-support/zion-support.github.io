@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from 'react';
 import * as ProgressPrimitive from '@radix-ui/react-progress';
 import {cn} from '@/lib/utils';
@@ -72,6 +73,18 @@ Progress && Progress.displayName = ProgressPrimitive && ProgressPrimitive.Root.d
 export { Progress };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+import React from 'react';
+import * as React from 'react';
+    ref={ref}
+    className={cn(
+      'relative h-4 w-full overflow-hidden rounded-full bg-secondary'
+      className
+    )}
+    {...props}>;
+    <ProgressPrimitive&& ProgressPrimitive.Indicator
+      className='h-full w-full flex-1 bg-primary transition-all'
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import * as ProgressPrimitive from '@radix - ui / react - progress';
 ;
 import {cn} from '@/lib / utils';
@@ -97,6 +110,7 @@ Progress.display_name = ProgressPrimitive.Root.display_name;
 export { Progress }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -104,3 +118,6 @@ export { Progress }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {MapPin} from "lucide-react";
@@ -111,12 +112,15 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
       <PaymentButton
         amount={selectedCountry && selectedCountry.pricePerIncident}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         serviceId="it-onsite-service"
         providerId="zion-tech-group"
         buttonText={`Pay for Service in ${selectedCountry && selectedCountry.country}`}
         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white w-full py-6"
         redirectUrl="/it-onsite-services?success=true"
         onPaymentInitiated={handlePaymentInitiated}
+<<<<<<< HEAD
       />
       <p className="text-xs text-zion-slate-light mt-2">
         Price includes transportation and first hour onsite. Additional hours
@@ -130,6 +134,8 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export /**
  * PaymentSection - Function description
  */

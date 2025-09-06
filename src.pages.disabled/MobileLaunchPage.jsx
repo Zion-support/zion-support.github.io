@@ -1,5 +1,6 @@
 ' \' \' \' \' \' \'"export\": const MobileLaunchPage = () => {\'';
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.pages.disabled/MobileLaunchPage.jsx
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
@@ -18,6 +19,9 @@ ursor/add-new-services-and-deploy-updates-0462
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.pages.disabled/MobileLaunchPage.jsx
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 =======
 :src.pages.disabled/MobileLaunchPage.jsx

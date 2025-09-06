@@ -6,35 +6,6 @@ export type EnhancedButtonProps =;
     variant?: "primary" | "secondary" | "ghost";
     size?: "sm" | "md" | "lg";
     fullWidth?: boolean;
-
-  };
-
-const baseStyles =;
-  "inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]";
-const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>, string> = {;
-  sm: "text-sm px-3 py-2",;
-  md: "text-sm px-4 py-3",;
-  lg: "text-base px-5 py-3",;
-};
-const variantStyles: Record<;
-  NonNullable<EnhancedButtonProps["variant"]>,;
-  string;
-> = {;
-  primary: "bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400",;
-  secondary:;
-    "bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100",;
-  ghost:;
-    "bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100",;
-};
-export default function EnhancedButton(): any ({;
-  className,;
-  variant = "primary",;
-  size = "md",;
-  fullWidth,;
-  ...props;
-}: EnhancedButtonProps) {;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <button
       className={clsx(
@@ -46,6 +17,7 @@ export default function EnhancedButton(): any ({;
       )}
       {...props}
 <<<<<<< HEAD
+<<<<<<< HEAD
     />
   );
 }
@@ -55,6 +27,8 @@ export default function EnhancedButton(): any ({;
 }
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from './react';
 import clsx from './clsx';
 export type EnhancedButtonProps =;
@@ -97,6 +71,7 @@ function EnhancedButton() {
       {...props}
     />);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -121,3 +96,5 @@ export default EnhancedButton;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

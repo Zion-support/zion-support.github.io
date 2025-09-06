@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import * as React from &quot;react&quot;
 import { Input } from &quot;@/components/ui/input&quot;
@@ -58,6 +59,12 @@ export const SidebarHeader = React.forwardRef<
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>((props, ref) => {
+  return (
+    <Input;
+      ref={ref}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >((props, ref) => {
   return (
     <div;
@@ -65,6 +72,7 @@ export const SidebarHeader = React.forwardRef<
       data - sidebar=&quot;header & quot;
       className={cn (&quot;flex flex - col gap - 2 p - 2&quot;, props.class_name)}
       {...props}
+<<<<<<< HEAD
     />
   )
 })
@@ -85,6 +93,8 @@ export const SidebarFooter = React.forwardRef<
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >((props, ref) => {
   return (
     <div;
@@ -92,6 +102,7 @@ export const SidebarFooter = React.forwardRef<
       data - sidebar=&quot;footer & quot;
       className={cn (&quot;flex flex - col gap - 2 p - 2&quot;, props.class_name)}
       {...props}
+<<<<<<< HEAD
     />
   )
 })
@@ -141,10 +152,20 @@ export const SidebarContent = React.forwardRef<
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>((props, ref) => {
+  return (
+    <Separator;
+      ref={ref}
+      data - sidebar=&quot;separator & quot;
+      className={cn (&quot;mx - 2 w - auto bg - sidebar - border & quot;, props.class_name)}
+      {...props}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >((props, ref) => {
   return (
     <div;
       ref={ref}
+<<<<<<< HEAD
 
       data-sidebar="content"
       className={cn(
@@ -173,6 +194,8 @@ export const SidebarGroup = React.forwardRef<
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >((props, ref) => {
   return (
     <div;
@@ -180,8 +203,11 @@ export const SidebarGroup = React.forwardRef<
       data - sidebar=&quot;group & quot;
       className={cn (&quot;relative flex w - full min - w-0 flex - col p - 2&quot;, props.class_name)}
       {...props}
+<<<<<<< HEAD
     />
   )
 })
 SidebarGroup.displayName = &quot;SidebarGroup&quot;
 SidebarGroup.displayName = "SidebarGroup"
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -33,6 +34,11 @@ import { Server, Clock, MapPin } from "lucide-react",
     const dataCenters: Record<string, string[]> = {;
 
 =======
+interface ServiceDetailsProps {
+  country: string;
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 // Component to show service details for the selected country;
 export /**
  * ServiceDetails - Function description
@@ -49,6 +55,7 @@ function ServiceDetails() {
       "Australia": ["Sydney", "Melbourne", "Perth"];
       "Singapore": ["Singapore Central"];
       "Canada": ["Toronto", "Montreal", "Vancouver"];
+<<<<<<< HEAD
     const dataCenters: Record<string string[]> = {
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
       "United Kingdom": ["London", "Manchester", "Birmingham"],
@@ -79,9 +86,18 @@ function ServiceDetails() {
       "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore";
       // Default placeholder
       "default": "https://source.unsplash.com/featured/900x700/?datacenter"
+=======
+      "United States": "EST/CST/PST depending on location";
+      "United Kingdom": "GMT/BST";
+      "Germany": "CET/CEST";
+=======
+      // Default for other countries;
+      "default": ["Major metropolitan areas"];
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
     return regions[country] |regions["default"]
   }
+<<<<<<< HEAD
     },
     
     return regions[country] || regions["default"]
@@ -140,20 +156,46 @@ function ServiceDetails() {
         <CardTitle className="text-white flex items-center">;
           <Server className="mr-2 h-5 w-5 text-zion-cyan" /> ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+;
+  // Get region - specific image;
+  const getRegionalImage = (country: string): string => {
+    // In a real app, you'd have specific images for each region;
+    const regions: Record < string, string> = {
+      "United States": "https://source.unsplash.com / featured / 900x700/?datacenter, usa";
+      "United Kingdom": "https://source.unsplash.com / featured / 900x700/?datacenter, uk";
+      "Germany": "https://source.unsplash.com / featured / 900x700/?datacenter, germany";
+      "Japan": "https://source.unsplash.com / featured / 900x700/?datacenter, japan";
+      "Australia": "https://source.unsplash.com / featured / 900x700/?datacenter, australia";
+      "Singapore": "https://source.unsplash.com / featured / 900x700/?datacenter, singapore";
+      // Default placeholder;
+      "default": "https://source.unsplash.com / featured / 900x700/?datacenter";
+    }
+;
+    return regions[country] || regions["default"];
+  }
+;
+  // Get region - specific instructions;
+  const getRegionalInstructions = (country: string): string => {
+    // In a real implementation, this would be much more detailed and specific;
+    const time_zones: Record < string, string> = {
+      "United States": "EST / CST / PST depending on location";
+      "United Kingdom": "GMT / BST";
+      "Germany": "CET / CEST";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      "Japan": "JST";
+      "Australia": "AEST / ACDT / AWST depending on location";
+      "Singapore": "SGT";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           IT Onsite Service in {country}
         </CardTitle>;
         <CardDescription className="text-zion-slate-light">;
           Details about our service locations and capabilities in {country}
-
-        </CardDescription>;
-      </CardHeader>;
-      <CardContent className="space-y-4">;
-        <div className="overflow-hidden rounded-lg mb-4">;
-
           <img
             src={getRegionalImage(country)}
             alt={`Datacenter in ${country}`}
             className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"
+<<<<<<< HEAD
           />
         </div>
         <div className="space-y-4">
@@ -303,3 +345,21 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
 }
 }
 ;
+=======
+                  {dc}
+                </div>;
+              ))}
+            </ul>;
+          </div>;
+        </div>;
+      </CardContent>;
+=======
+      <CardFooter className="border - t border - zion - blue - light pt - 4">;
+        <p className="text - sm text - zion - slate - light">;
+          For custom enterprise needs or multi - site services in {country}, please contact our enterprise team for tailored pricing.;
+        </p>;
+      </CardFooter>;
+    </Card>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

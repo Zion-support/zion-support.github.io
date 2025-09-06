@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -32,14 +33,14 @@ export interface ForumCategoryInfo {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface ForumCategoryInfo {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: ForumCategory;
   name: string;
   description: string;
-
-  admin_only: boolean,
-  icon: string;
-
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export interface ForumPost {
@@ -67,6 +68,9 @@ export interface ForumPost {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface ForumPost {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   title: string;
   content: string;
@@ -80,6 +84,7 @@ export interface ForumPost {;
   updated_at: string;
   upvotes: number;
   downvotes: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   reply_count: number;
@@ -110,6 +115,10 @@ export interface ForumReply {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+export interface ForumReply {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   post_id: string;
   parentReplyId?: string;
@@ -121,6 +130,7 @@ export interface ForumReply {;
   created_at: string;
   updated_at: string;
   upvotes: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   downvotes: number,
@@ -195,6 +205,15 @@ export interface CommunityUser {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+export interface Badge {
+  id: string;
+  name: string;
+  description: string;
+}
+export interface CommunityUser {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   name: string;
   avatar?: string;
@@ -203,6 +222,7 @@ export interface CommunityUser {;
   post_count: number;
   reply_count: number;
   badges: Badge[];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   isModerator: boolean
@@ -289,3 +309,6 @@ export interface CommunityUser {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

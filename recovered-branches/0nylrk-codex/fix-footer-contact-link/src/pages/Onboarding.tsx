@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,11 +41,14 @@ export default function Onboarding() {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { user, updateProfile, isLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
 
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
   const navigate = useNavigate();
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -331,6 +335,19 @@ export default function Onboarding() {;
             <Steps currentStep={currentStep} className="max-w-xl mx-auto">;
               {steps && steps.map((step, index) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      case "serviceProvider": return "creator";
+      case "talent":;
+        return "jobSeeker";
+      navigate('/talent-onboarding');
+      return;
+    }
+      navigate('/login');
+      return;
+    }
+  }
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <Step
                   key={index}
                   status={
@@ -340,35 +357,25 @@ export default function Onboarding() {;
                       ? "current";
                       : "incomplete";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   }
                   label={step && step.label}
                   description={step && step.description}
                 />;
               ))}
-
-            </Steps>;
-          </div>;
-
-          <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">;
-            {currentStep === 0 ? (;
-              <UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType} />;
-            ) : (;
-              <ProfileSetup onComplete={handleProfileComplete} userType={userType!} />;
-            )}
-
-            {currentStep === 1 && (;
-              <div className="mt-6">;
-
                 <Button
                   variant="outline"
                   className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light"
                   onClick={() => setCurrentStep(0)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 >
                   Back to Role Selection
@@ -544,15 +551,18 @@ if ( {) {
                   className="w - full border - zion - blue - light text - white hover:bg - zion - blue - light";
                   on_click={() => setCurrentStep (0)}
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 >;
                   Back to Role Selection;
                 </Button>;
-              </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              </div>;
+            )}
           </div>;
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>;
   );
@@ -565,3 +575,9 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+=======
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,36 +1,61 @@
-</div>;
-          </div>;
-        </div>;
-      </div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     src = {activeConversation && activeConversation.context_data.image_url,}
                     alt = {activeConversation && activeConversation.context_data.title || "Context",}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
-                    className="object-cover"
-                    loading="lazy"
+  const { user } = useAuth()
+  const {
+    activeConversation
+    activeMessages
+    sendMessage
+
+    loadMessages
+  } = useMessaging();
+  const [messageText, setMessageText] = useState('');
+  const messagesEndRef = null;
+  return (
+    <div className="flex-1 flex flex-col h-full">
+      {/* Header */}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
+        <div className="flex items-center gap-3">
+          <Avatar className="h-10 w-10 border border-zion-purple/20">
+            />
+            <AvatarFallback className="bg-zion-blue-dark text-white">
+              {activeConversation.other_user.name.charAt(0).toUpperCase()}
+            </AvatarFallback>
+          </Avatar>
+          <div>
+            <div className="font-medium text-white">
+              {activeConversation.other_user.name}
+            </div>
+            <div className="text-xs text-zion-slate">
+               activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
+            </div>
+          </div>
+        </div>
+      </div>
       {/* Context information (if available) */}
       {hasContextData && (
-        <div className="p - 4 border - b border - zion - purple / 20 bg - zion - blue - dark / 10">;
-          <div className="text - sm text - zion - slate flex items - start gap - 3">;
-            {active_conversation.context_data && active_conversation.context_data.image_url && (
-              <div className="w - 16 h - 16 flex - shrink - 0">;
-                <AspectRatio ratio={1 / 1} className="rounded bg - zion - blue - dark / 30 overflow - hidden">;
-                  <img;
-                    src = {active_conversation.context_data.image_url, }
-                    alt = {active_conversation.context_data.title || "Context", }
-                    className="object - cover";
-                    loading="lazy";
-
-                    src={activeConversation.context_data.image_url}
-                    alt={activeConversation.context_data.title || "Context"}
-
+        <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/10">
+          <div className="text-sm text-zion-slate flex items-start gap-3">
+            {activeConversation.context_data && activeConversation.context_data.image_url && (
+              <div className="w-16 h-16 flex-shrink-0">
+                <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">
+                  <img
+=======
                     alt = {activeConversation.context_data.title || "Context",}
+=======
                     src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className="object-cover"
                     loading="lazy"
                   />
@@ -65,6 +90,7 @@
             <div key={group.date}>
               <DateDivider date={new Date(group.date)} />
               <div className="space-y-3">
+<<<<<<< HEAD
                 {group.messages.map((message,) => (
                   <MessageBubble
                     key = {message.id,}
@@ -114,16 +140,19 @@
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         )}
-
-        <div ref={messagesEndRef} />;
-      </div>;
-
-
+        <div ref={messagesEndRef} />
+      </div>
       {/* Input */}
       <div className="p-3 border-t border-zion-purple/20">
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">
           <textarea
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -131,6 +160,9 @@
 
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
             onKeyDown={handleKeyDown}
@@ -138,19 +170,25 @@
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             ref={inputRef}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           />
           <Button 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             type="submit"
             className="bg-zion-purple hover: bg-zion-purple-dark text-white"
           >
             Send
           </Button>
         </form>
+<<<<<<< HEAD
 
           />;
           <Button
@@ -206,6 +244,10 @@
       <div className="p - 3 border - t border - zion - purple / 20">;
         <form on_submit={handleSendMessage} className="flex items - start gap - 2">;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      <div className="p-3 border-t border-zion-purple/20">;
+        <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <textarea;
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
@@ -218,17 +260,21 @@
             type="submit";
             className="bg-zion-purple hover: bg-zion-purple-dark text-white";
           >;
-
             Send;
           </Button>;
         </form>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     </div>);
+=======
+    </div>;
+  );
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
-
-      </div>
-    </div>
-  )
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

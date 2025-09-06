@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useAuth  } from './useAuth';
@@ -30,20 +31,13 @@ export function useSitemap() {;
   };
   
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Helper function to check if a user can access a specific path
   const canAccessRoute = (path: string): boolean => {
     const route = findRouteByPath(path);
     if (!route) return false;
     // If route requires authentication and user is not authenticated
-
-    if (route && route.requiredAuth && !isAuthenticated) return false;
-    
-    // If route requires specific roles and user doesn't have one
-    if (route && route.requiredRoles && route && route.requiredRoles.length > 0) {
-      if (!user || !user && user.userType) return false;
-      const userTypeEnum = isValidUserType(user && user.userType) ? user && user.userType as UserType : undefined,
-      return userTypeEnum ? route && route.requiredRoles.includes(userTypeEnum) : false
-
     }
     return true
   }
@@ -115,6 +109,7 @@ if (return false) {
     findRouteByPath;
     canAccessRoute;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -122,5 +117,8 @@ if (return false) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }

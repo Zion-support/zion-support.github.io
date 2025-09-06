@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {ResumeBasicInfo} from '@/types/resume';
@@ -42,6 +43,8 @@ export function ResumeBasicInfoSection(): any ({ basicInfo }: ResumeBasicInfoSec
 }
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export /**
  * ResumeBasicInfoSection - Function description
  */
@@ -54,6 +57,7 @@ function ResumeBasicInfoSection() {
       {basic_info.summary && <p className="text - sm">{basic_info.summary}</p>}
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -84,3 +88,5 @@ export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProp
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

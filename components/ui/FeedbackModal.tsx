@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type FeedbackContext = { actionType?: string; metadata?: any }
 export default function FeedbackModal({
   isOpen
@@ -18,53 +19,29 @@ export default function FeedbackModal({
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
   userHeaders?: Record<string, string>;}) {export default function FeedbackModal(): any ({;
-
-=======
-export type FeedbackContext = { actionType?: string, metadata?: any };
-export default function FeedbackModal({
-
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   isOpen;
   onClose;
   defaultContext;
   defaultKind = 'general';
-
-  userHeaders}: {;
-  isOpen: boolean,;
-  onClose: (submitted: boolean) => void,;
-
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
-
-
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [rating, setRating] = useState<number>(0);
   const [hover, setHover] = useState<number>(0);
   const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
   const [comment, setComment] = useState('');
   const [loading, setLoading] = useState(false);
   if (!isOpen) return null;
-
-
-  async function submit() {;
-    if (rating < 1) return onClose(false);
-    setLoading(true);
-    try {;
-      await fetch('/api/feedback', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) },;
-        body: JSON && JSON.stringify({;
-          rating,;
-          comment,;
-          kind,;
-          context: defaultContext || {},;
-        }),;
-
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
     setLoading(false);
     onClose(true);
@@ -73,12 +50,17 @@ export default function FeedbackModal({
 
 
 
+=======
+    setLoading(false);
+    onClose(true);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 =======
         method: 'POST',
         headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) };
         body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
     } catch {}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     } catch {}
@@ -87,10 +69,14 @@ export default function FeedbackModal({
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     setLoading(false);
     onClose(true)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
   return (
+<<<<<<< HEAD
 
 =======
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
@@ -108,12 +94,16 @@ export default function FeedbackModal({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
               onClick={() => setRating(n)}
-
-
+              className={;
+                hover >= n || rating >= n ? 'text-yellow-500' : 'text-gray-300';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               }
               aria-label={`${n} stars`}
             >;
@@ -154,6 +144,7 @@ export default function FeedbackModal({
                 type='radio'
                 checked={kind === 'feature'}
                 onChange={() => setKind('feature')}
+=======
 ;
 export type FeedbackContext = { action_type?: string; metadata?: any }
 ;
@@ -267,15 +258,12 @@ function submit() {
                 type='radio';
                 checked={kind === 'feature'}
                 on_change={() => set_kind ('feature')}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               />;
               Suggest a feature;
             </label>;
           </div>;
         </div>;
-
-            disabled={loading || rating < 1}
-            className='px-3 py-2 rounded bg-gray-900 text-white'>;
-
             {loading ? 'Submitting…' : 'Submit'}
           </button>        </div>;
       </div>;
@@ -283,31 +271,12 @@ function submit() {
   );
 }              aria-label={`${n} stars`}
             >★</button>;
+=======
               className={(hover >= n || rating >= n) ? 'text-yellow-500' : 'text-gray-300'}
               aria-label={`${n} stars`}
             >★</button>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           ))}
-
-        </div>;
-        <div className="text-sm">;
-          <label className="block mb-1" htmlFor="input-Optional comment">Optional comment</label>;
-          <textarea value={comment} onChange={(e)=>setComment(e && e.target.value)} className="w-full border rounded p-2" rows={3} />;
-        </div>;
-        <div className="text-sm">;
-          <label className="block mb-1" htmlFor="input-Also">Also</label>;
-          <div className="flex gap-3">;
-            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='general'} onChange={()=>setKind('general')} />General</label>;
-            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='bug'} onChange={()=>setKind('bug')} />Report a bug</label>;
-            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='feature'} onChange={()=>setKind('feature')} />Suggest a feature</label>;
-          </div>;
-        </div>;
-        <div className="flex justify-end gap-2">;
-          <button onClick={()=>onClose(false)} className="px-3 py-2 rounded border">Later</button>;
-          <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>;
-        </div>;
-      </div>;
-    </div>;
-
 =======
           <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
         </div>
@@ -325,7 +294,10 @@ function submit() {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <div className='flex justify - end gap - 2'>;
           <button;
             on_click={() => on_close (false)}
@@ -363,58 +335,6 @@ function submit() {
         </div>;
       </div>;
     </div>);
-
-  if (!isOpen) return null,
-
-  async function submit() {
-    if (rating < 1) return onClose(false),
-    setLoading(true),
-    try {
-      await fetch('/api/feedback', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) },
-        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
-    } catch {}
-    setLoading(false),
-    onClose(true)
-  }
-
-  return (
-    <div className=&quot;fixed inset-0 z-50 flex items-center justify-center bg-black/40&quot;>
-      <div className=&quot;bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4&quot;>
-        <div className=&quot;text-lg font-medium&quot;>Was this helpful?</div>
-        <div className=&quot;flex gap-2&quot;>
-          {[1,2,3,4,5].map(n => (
-            <button
-              key={n}
-              onMouseEnter={_() => setHover(n)}
-              onMouseLeave={_() => setHover(0)}
-              onClick={_() => setRating(n)}
-              className={_(hover >= n || rating >= n) ? 'text-yellow-500' : 'text-gray-300'}
-              aria-label={_`${n} stars`}
-            >★</button>
-          ))}
-        </div>
-        <div className=&quot;text-sm&quot;>
-          <label className=&quot;block mb-1&quot;>Optional comment</label>
-          <textarea value={comment} onChange={(e)=>setComment(e.target.value)} className=&quot;w-full border rounded p-2&quot; rows={3} />
-        </div>
-        <div className=&quot;text-sm&quot;>
-          <label className=&quot;block mb-1&quot;>Also</label>
-          <div className=&quot;flex gap-3&quot;>
-            <label className=&quot;inline-flex items-center gap-1&quot;><input type=&quot;radio&quot; checked={kind==='general'} onChange={()=>setKind('general')} />General</label>
-            <label className=&quot;inline-flex items-center gap-1&quot;><input type=&quot;radio&quot; checked={kind==='bug'} onChange={()=>setKind('bug')} />Report a bug</label>
-            <label className=&quot;inline-flex items-center gap-1&quot;><input type=&quot;radio&quot; checked={kind==='feature'} onChange={()=>setKind('feature')} />Suggest a feature</label>
-          </div>
-        </div>
-        <div className=&quot;flex justify-end gap-2&quot;>
-          <button onClick={()=>onClose(false)} className=&quot;px-3 py-2 rounded border&quot;>Later</button>
-          <button onClick={submit} disabled={loading || rating<1} className=&quot;px-3 py-2 rounded bg-gray-900 text-white&quot;>{loading? 'Submitting…' : 'Submit'}</button>
-        </div>
-      </div>
-    </div>
-  )
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD

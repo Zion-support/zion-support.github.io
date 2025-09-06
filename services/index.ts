@@ -1,17 +1,26 @@
+<<<<<<< HEAD
 // Export all micro SaaS services
+=======
+// Export all micro SaaS services;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export { urlShortenerService } from './urlShortenerService';
 export { passwordGeneratorService } from './passwordGeneratorService';
 export { qrCodeService } from './qrCodeService';
 export { fileConverterService } from './fileConverterService';
 export { textAnalysisService } from './textAnalysisService';
+<<<<<<< HEAD
 // Export service types and interfaces
 export type {;
+=======
+export type {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   ShortUrl;
   UrlAnalytics;
   ClickEvent;
   CreateShortUrlRequest;
 } from './urlShortenerService';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type {
 
 
@@ -28,31 +37,14 @@ export type {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export type {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   PasswordOptions;
   PasswordStrength;
   GeneratedPassword;
 } from './passwordGeneratorService';
 <<<<<<< HEAD
-export type {
-
-
-export type {;
-=======
-
-;
-
-export type {
-=======
-
-
-export type {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  QRCodeOptions;
-  QRCodeResult;
-  QRCodeTemplate;
-} from './qrCodeService';
 <<<<<<< HEAD
 export type {
 
@@ -70,12 +62,41 @@ export type {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export type {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+  QRCodeOptions;
+  QRCodeResult;
+  QRCodeTemplate;
+} from './qrCodeService';
+<<<<<<< HEAD
+<<<<<<< HEAD
+export type {
+
+
+export type {;
+=======
+
+;
+
+export type {
+=======
+
+
+export type {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export type {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   ConversionOptions;
   ConversionResult;
   SupportedFormat;
   FileInfo;
 } from './fileConverterService';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type {
 
 
@@ -92,6 +113,9 @@ export type {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export type {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   TextAnalysisResult;
   BasicTextStats;
   ReadabilityMetrics;
@@ -101,6 +125,7 @@ export type {;
   EntityExtraction;
   TextSummary;
 } from './textAnalysisService';
+<<<<<<< HEAD
 
 ;
 // Service categories for easy discovery;
@@ -138,18 +163,14 @@ export const SERVICES_METADATA = {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     description: 'Create short, trackable URLs with analytics';
     icon: '🔗';
     category: 'UTILITIES';
     features: [;
       'Custom short codes_click tracking_analytics dashboard_expiration datesQR code generation';
     ];
-
-    pricing: 'Free',
-    api_endpoint: '/api / url - shortener';
-  }
-  password_generator: {
-
     name: 'Password Generator';
     description: 'Generate secure passwords with strength analysis';
     icon: '🔐';
@@ -157,10 +178,6 @@ export const SERVICES_METADATA = {
     features: [;
       'Multiple generation modes_strength analysis_custom character sets_password history_security recommendations';
     ];
-
-    pricing: 'Free',
-    api_endpoint: '/api / password - generator';
-
   }
   qrCodeGenerator: {
     name: 'QR Code Generator';
@@ -170,12 +187,6 @@ export const SERVICES_METADATA = {
     features: [;
       'Multiple QR code types_custom styling_logo integration_error correction_template library';
     ];
-
-    pricing: 'Free',
-    api_endpoint: '/api / qr - code - generator';
-  }
-  file_converter: {
-
     name: 'File Converter';
     description: 'Convert files between different formats';
     icon: '🔄';
@@ -183,9 +194,6 @@ export const SERVICES_METADATA = {
     features: [;
       'Multiple file formats_batch conversion_quality settings_metadata preservation_cloud processing';
     ];
-
-    pricing: 'Free (Basic) / $9 && 9.99/month (Pro)',
-
     apiEndpoint: '/api/file-converter'
   }
   textAnalysis: {
@@ -202,14 +210,12 @@ export const SERVICES_METADATA = {
     features: [;
       'Readability metrics_sentiment analysis_keyword extraction_entity recognition_language detection';
     ];
-
-    pricing: 'Free (Basic) / $19 && 19.99/month (Pro)',
-
     apiEndpoint: '/api/text-analysis'
   }
 } as const;
 // Service availability and status
 export const getServiceStatus = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   return {
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
@@ -238,6 +244,9 @@ export const getServiceStatus = () => {
     fileConverter: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     textAnalysis: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  return {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }
 // Service usage statistics
@@ -248,6 +257,9 @@ export const getServiceStats = () => {
     averageResponseTime: 125
     services: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 }
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 }
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 }
@@ -256,15 +268,20 @@ export const getServiceStats = () => {
     }
   }
 }
+<<<<<<< HEAD
 
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 };
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 };
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 };
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 };
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+=======
     pricing: 'Free (Basic) / $19.99 / month (Pro)',
     api_endpoint: '/api / text - analysis';
+<<<<<<< HEAD
 =======
 
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 };
@@ -330,6 +347,8 @@ export const SERVICE_CATEGORIES = {;
     description: 'Text analysis and content insights',;
     services: ['textAnalysis'];
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 } as const;
 ;
@@ -345,6 +364,7 @@ export const getServiceStatus = () =>: any {
 }
 ;
 // Service usage statistics;
+<<<<<<< HEAD
 
 export const getServiceStats = () => {;
   return {;
@@ -364,6 +384,19 @@ export const getServiceStats = () => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export const getServiceStats = () =>: any {
+  return {
+    total_users: 15420;
+    total_requests: 2847500;
+    averageResponseTime: 125,
+    services: {
+      url_shortener: { users: 8920, requests: 1250000, avg_response: 89 }
+      password_generator: { users: 12450, requests: 890000, avg_response: 45 }
+      qrCodeGenerator: { users: 6780, requests: 456000, avg_response: 156 }
+      file_converter: { users: 5430, requests: 234000, avg_response: 234 }
+      text_analysis: { users: 3890, requests: 11500, avg_response: 178 }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }
 };

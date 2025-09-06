@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -26,6 +27,8 @@ export function FeatureCard(): any ({;
   className,;
 }: FeatureCardProps) {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
 <<<<<<< HEAD
 import { cn } from "@/lib/utils";
@@ -35,6 +38,7 @@ import React from "react";
 
     <div
       className={cn(
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { cn } from "@/lib/utils",
@@ -100,6 +104,18 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
       </div>;
     </div>;
   );
+=======
+  );
+=======
+import { cn  } from '@/lib / utils';
+import React from './react';
+interface FeatureCardProps {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  class_name?: string;
+  key?: string | number; // Added key prop;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 <<<<<<< HEAD
 ;
@@ -121,6 +137,7 @@ function FeatureCard() {
         <p className="text - zion - slate - light">{description}</p>;
       </div>;
     </div>);
+<<<<<<< HEAD
 
 }
 =======
@@ -129,3 +146,7 @@ function FeatureCard() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

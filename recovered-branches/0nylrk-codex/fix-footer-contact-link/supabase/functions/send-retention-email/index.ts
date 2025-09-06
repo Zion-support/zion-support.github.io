@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -16,6 +17,8 @@ const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
@@ -44,6 +47,7 @@ interface EmailData {
   user_type: string;
   days_inactive?: number;
   onboarding_status?: any;
+<<<<<<< HEAD
 <<<<<<< HEAD
   job_id?: string
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
@@ -132,11 +136,14 @@ serve(async (req) => {
     }
     
     const userEmail = authUser.email,
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     if (!userEmail) {
       throw new Error("User email not found")
     }
     // Generate email content based on email type
     const { subject, html } = await generateEmail(emailData, userData);
+<<<<<<< HEAD
     // Send email via Resend
     const emailResponse = await resend.emails.send({
       from: "Zion AI Marketplace <notifications@zion.ai>";
@@ -159,6 +166,14 @@ serve(async (req) => {
     if (emailResponse && emailResponse.error) {
       throw new Error(`Failed to send email: ${emailResponse && emailResponse.error.message}`)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    // Send email via Resend
+    const emailResponse = await resend && resend.emails.send({
+      from: "Zion AI Marketplace <notifications@zion && zion.ai>";
+      to: userEmail;
+      subject: subject
+      html: html});
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
     // Update job status
     await supabase
@@ -167,16 +182,22 @@ serve(async (req) => {
         status: "completed"
         completed_at: new Date().toISOString()})
       .eq("id", jobId);
+<<<<<<< HEAD
       .eq("id", jobId),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Update email campaign record
     await supabase
       .from("email_campaigns")
       .update({
         status: "sent"
         sent_at: new Date().toISOString()})
+<<<<<<< HEAD
       .eq("user_id", emailData.user_id)
       .eq("campaign_type", emailData.email_type);
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return new Response(
       JSON && JSON.stringify({
         success: true;
@@ -282,13 +303,6 @@ if ( {) {
         status: 200}
     );
   } catch (error) {
-
-    console.error ("Error in send - retention - email function:", error);
-;
-    return new Response (
-      JSON.stringify ({
-        success: false,
-
         error: error.message});
 =======
     console && console.error("Error in send-retention-email function:", error);
@@ -300,14 +314,11 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {
         headers: {
-
-          ...cors_headers,
-          "Content - Type": "application / json"}
-
         status: 500}
     );
   }
 });
+<<<<<<< HEAD
 async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {
   const { email_type, display_name, user_type } = emailData;
   const firstName = display_name?.split(" ")[0] |"there";
@@ -492,6 +503,8 @@ if ( {) {
   $2
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return {
         subject: `Welcome to Zion AI Marketplace, ${first_name}!`;
         html: `;
@@ -537,6 +550,7 @@ if ( {) {
           </div>;
         `}
     }
+<<<<<<< HEAD
   } else if (email_type === "inactivity_3") {
     // Day 3 incomplete action reminder
     if (emailData.onboarding_status) {
@@ -549,6 +563,10 @@ if ( {) {
           nextAction = "complete your profile",
           ctaLink = "/profile",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          nextAction = "complete your profile";
+          ctaLink = "/profile";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           ctaText = "Complete Your Profile"
         } else if (!onboarding && onboarding.skills_added) {
           nextAction = "add your skills to get matched with the right opportunities";
@@ -628,6 +646,7 @@ if ( {) {
       }
     }
     return {
+<<<<<<< HEAD
       subject: `${firstName}, one quick step to unlock more opportunities`,
       html: `
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
@@ -647,6 +666,8 @@ if ( {) {
   } else if (email_type === "inactivity_7") {
     // Day 7+ reactivation
     if (user_type === "jobSeeker" |user_type === "creator") {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return {
         subject: `New projects waiting for your expertise, ${firstName}`,
         html: `
@@ -678,9 +699,12 @@ if ( {) {
           </div>
         `}
     }
+<<<<<<< HEAD
   } else if (email_type === "inactivity_30") {
     // 30-day reengagement with incentives
     if (user_type === "jobSeeker" |user_type === "creator") {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return {
         subject: `${firstName}, we miss you! Special offer inside`,
         html: `
@@ -736,6 +760,7 @@ if ( {) {
   } else if (email_type === "unfilled_job_14_days") {
     // Email for clients with unfilled jobs
     return {
+<<<<<<< HEAD
       subject: `Tips to find the perfect talent for "${emailData.job_title}"`,
       html: `
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
@@ -921,6 +946,8 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     `}
 }
 ;

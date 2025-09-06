@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -53,6 +54,8 @@ function DisputesPage() {;
         <SEO
           title="Dispute Resolution Center | Zion AI Marketplace" 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           description="View and manage disputes between clients and talents"
 =======
 import React from 'react';
@@ -77,6 +80,7 @@ function DisputesPage() {
         <DisputeDashboard />;
         <Footer />;
       </>;
+<<<<<<< HEAD
 
 
 
@@ -99,3 +103,5 @@ export default DisputesPage;
 
 ;
 export default DisputesPage;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

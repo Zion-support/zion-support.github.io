@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useTheme } from "@/hooks/useTheme";
 <<<<<<< HEAD
 interface ChatMessageProps {
@@ -47,7 +48,16 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 
 
 
+=======
+import React, { useMemo } from "react",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { cn } from "@/lib/utils";
+import { format } from "date-fns";
+// Use the wrapper hook so TypeScript properly infers the return type
+// from the ThemeProvider context
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
       <Avatar className="h-8 w-8">
@@ -65,6 +75,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
             <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>
           </>
         )}
+<<<<<<< HEAD
       </Avatar>
       <div
         className={cn(
@@ -78,20 +89,26 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
           'max-w-[80%] rounded-lg px-4 py-2 text-sm',
 <<<<<<< HEAD
 
+=======
+      </Avatar>
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           isUser
             ? 'bg-zion-purple text-white'
             : theme === 'dark'
               ? 'bg-zion-blue-light text-white'
               : 'bg-gray-100 text-gray-800'
-
         )}
       >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       
       <div className={cn(
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",
@@ -101,6 +118,10 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
             ? "bg-zion-blue-light text-white"
             : "bg-gray-100 text-gray-800"
       )}>
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <div dangerouslySetInnerHTML={sanitizedHtml} />
         <div className={cn(
           "text-xs mt-1",
@@ -111,10 +132,12 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
               : "text-gray-500"
         )}>
           {format(timestamp, "h:mm a")}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         </div>
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -124,21 +147,30 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 },
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
+=======
 },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
 // characters. This ensures any user-supplied string is rendered harmless
 // before we perform our link replacements below.
 function escapeHtml(unsafe: string): string {
   return unsafe
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -180,6 +212,8 @@ function formatMessageWithLinks(message: string): string {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     .replace(/&/g, "&amp,")
     .replace(/</g, "<")
     .replace(/>/g, ">")
@@ -267,7 +301,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
               : "text-gray-500";
         )}>;
           {format(timestamp, "h:mm a")}
-
         </div>;
       </div>;
     </div>;
@@ -280,7 +313,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 // before we perform our link replacements below.;
 function escapeHtml(unsafe: string): string {;
   return unsafe;
-
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -305,6 +337,7 @@ function formatMessageWithLinks(message: string): string {
   return formattedMessage; return formattedMessage
 }
 ;
+<<<<<<< HEAD
 }
 }
 function formatMessageWithLinks(message: string): string {;
@@ -431,3 +464,8 @@ function formatMessageWithLinks (message: string): string {
   return formattedMessage; return formattedMessage
 }
 ;
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

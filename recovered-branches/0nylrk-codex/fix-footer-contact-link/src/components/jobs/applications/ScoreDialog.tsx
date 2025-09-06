@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
@@ -72,12 +73,15 @@ interface ScoreDialogProps {;
 
 export function ScoreDialog(): any ({;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   open;
   onOpenChange;
   application;
   onScoreUpdated;
 }: ScoreDialogProps) {;
   return (
+<<<<<<< HEAD
 
 
 
@@ -110,16 +114,13 @@ export function ScoreDialog(): any ({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          <ApplicationScoreCard
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             application={application}
             onScoreUpdated={onScoreUpdated}
           />;
         )}
-
-      </DialogContent>;
-    </Dialog>;
-  );
-}
-
 =======
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components / ui / dialog';
 import { JobApplication } from '@/types / jobs';

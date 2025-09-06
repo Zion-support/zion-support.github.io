@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -173,10 +174,15 @@ export const MobileAppHero: React.FC = () => {
               <Phone className="w - full h - auto text - white" />;
               {/* This would be replaced with an actual phone mockup image in production */}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </section>;
   );
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

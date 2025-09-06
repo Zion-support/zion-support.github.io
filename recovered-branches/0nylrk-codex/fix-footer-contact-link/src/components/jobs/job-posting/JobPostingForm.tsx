@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate  } from 'react-router-dom';
@@ -59,6 +60,8 @@ interface JobPostingFormProps {
 =======
 :recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / jobs / job - posting / JobPostingForm.tsx;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState, useEffect, useCallback } from 'react';
 import {use_navigate} from 'react-router-dom';
 import { toast } from './sonner';
@@ -72,14 +75,14 @@ import {DateFields} from './DateFields';
 import {DescriptionFields} from './DescriptionFields';
 import { use_jobs } from '@/hooks / use_jobs';
 import {JobSchemaType} from './validation';
-
-
-export function JobPostingForm(): any ({ jobId, onSuccess }: JobPostingFormProps) {;
-
+  jobId?: string;
+  onSuccess?: () => void;
+}
   const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState(false);
   const [editorContent, setEditorContent] = useState("");
+<<<<<<< HEAD
 
 interface JobPostingFormProps {
   job_id?: string;
@@ -104,6 +107,8 @@ function JobPostingForm() {
   const [editor_content, setEditorContent] = useState ("");
 ;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const {
 =======
 
@@ -117,6 +122,7 @@ function JobPostingForm() {
     setEndDate;
     is_remote;
     setIsRemote;
+<<<<<<< HEAD
 
 
 =======
@@ -216,6 +222,8 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
   useEffect(() => {;
     if (jobId) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       setIsFormLoading(true);
       getJobById(jobId);
         .then((job) => {;
@@ -238,7 +246,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
                   // @ts-ignore - We know these fields exist in our form;
                   setValue(key, value as any);
                 } catch (e) {;
-
+=======
     submit_job;
   } = useJobForm ({ job_id, on_success });
 ;
@@ -287,8 +295,9 @@ if ( {) {
                   // @ts - ignore - We know these fields exist in our form;
                   set_value (key, value as any);
                 } catch (e) {
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   // Skip fields that don't exist in our form;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -297,10 +306,13 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 }
               }
             });
           }
+<<<<<<< HEAD
 
         })
         .catch((error) => {
@@ -340,22 +352,9 @@ if ( {) {
         form.reset(),
         setEditorContent("")
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         });
-
-
-  const handleEditorChange = useCallback((value: string) => {;
-    setEditorContent(value),;
-    setValue('description', value);
-  }, [setValue]);
-
-  const onSubmit = async (values: JobSchemaType) => {;
-    setIsFormLoading(true);
-
-    try {;
-      const jobData = await submitJob(values),;
-
-      if (jobId) {;
-
         await updateJob(jobId, jobData);
         toast && toast.success("Job updated successfully!");
       } else {;
@@ -363,6 +362,7 @@ if ( {) {
         toast && toast.success("Job posted successfully!");
         form && form.reset();
         setEditorContent("");
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -429,11 +429,21 @@ if ( {) {
           <Label htmlFor="isRemote">
 
 =======
+=======
+      }
+    }
+  }
+  if (isLoading |isFormLoading) {
+
+  }
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <Input
               type="checkbox"
               id="isRemote"
               checked={isRemote}
               className="mr-2"
+<<<<<<< HEAD
     } catch (error: any) {;
       console.error("Error creating/updating job:", error);
       toast.error(error.message || "Failed to post job");
@@ -548,11 +558,13 @@ if ( {) {
               className="mr - 2";
               on_change={(e) => setIsRemote (e.target.checked)}
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             />;
             Remote;
           </Label>;
         </div>;
-
+=======
         <DescriptionFields;
           control={form.control}
           handleEditorChange={handleEditorChange}
@@ -563,6 +575,7 @@ if ( {) {
         </Button>;
       </form>;
     </Form>);
+<<<<<<< HEAD
 
 }
 =======
@@ -571,3 +584,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

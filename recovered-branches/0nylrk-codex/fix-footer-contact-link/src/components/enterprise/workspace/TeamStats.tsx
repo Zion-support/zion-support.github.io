@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 import {
@@ -20,11 +21,14 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 } from "@/components/ui/card";
 
 import { Progress } from "@/components/ui/progress";
 export function TeamStats() {;
   return (
+<<<<<<< HEAD
     <Card>
       <CardHeader>
         <CardTitle>Team Stats</CardTitle>
@@ -208,12 +212,17 @@ function TeamStats() {
         <div className="pt - 4 text - center border - t border - border mt - 4">;
           <button className="text - sm text - blue - 500 font - medium hover: text - blue - 700">;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             View Full Analytics;
           </button>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
     </Card>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   );
 }
 ;

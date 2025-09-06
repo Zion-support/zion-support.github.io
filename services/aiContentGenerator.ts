@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ContentGenerationRequest {
 export interface ContentGenerationRequest {;
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
@@ -11,6 +12,13 @@ export interface ContentGenerationRequest {;
   keywords?: string[],
   target_audience?: string;
 
+=======
+export interface ContentGenerationRequest {
+  type: 'blog - post' | 'social - media' | 'email' | 'landing - page' | 'product - description';
+  topic: string;
+  tone: 'professional' | 'casual' | 'friendly' | 'formal';
+  length: 'short' | 'medium' | 'long';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,10 +35,6 @@ export interface ContentGenerationResponse {
   suggestions: string[];
   metadata: {
     title: string;
-
-    description: string,
-    tags: string[];
-
   }
 }
 <<<<<<< HEAD
@@ -45,6 +49,7 @@ export interface ContentTemplate {
   name: string;
   description: string;
   type: string;
+<<<<<<< HEAD
 
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
@@ -64,10 +69,13 @@ export class AIContentGeneratorService {;
     this.baseUrl = baseUrl
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
   async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
     try {
       // In a real implementation, this would call OpenAI, Claude, or similar API
+<<<<<<< HEAD
 <<<<<<< HEAD
       const response = await fetch(`${this.baseUrl}/content/generate`, {
         method: 'POST'
@@ -150,11 +158,14 @@ export interface ContentGenerationRequest {;
 
       return await response && response.json()
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } catch (error) {
       // Fallback to mock data for demo purposes
       return this && this.generateMockContent(request)
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -164,6 +175,8 @@ export interface ContentGenerationRequest {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   async getTemplates(): Promise<ContentTemplate[]> {
     return [
 =======
@@ -206,32 +219,17 @@ if ( {) {
         id: 'blog - post - starter';
         name: 'Blog Post Starter';
         description: 'Professional blog post template with SEO optimization';
-
-        type: 'blog - post';
-        preview: 'Create engaging blog posts that rank well in search engines...',
-        price: 29;
-
       }
       {
         id: 'social - media - campaign';
         name: 'Social Media Campaign';
         description: 'Complete social media content strategy and posts';
-
-        type: 'social - media';
-        preview: 'Engage your audience with compelling social media content...',
-        price: 49;
-
       }
       {
         id: 'email - sequence';
         name: 'Email Sequence';
         description: 'Convert prospects with persuasive email sequences';
         type: 'email';
-
-        preview: 'Build relationships and drive sales with email automation...',
-        price: 39;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       {
         id: 'landing - page - copy';
@@ -302,6 +300,7 @@ if ( {) {
       }
     ];
   }
+<<<<<<< HEAD
 
 
 
@@ -331,6 +330,8 @@ This is a ${request && request.length} ${request && request.type} about ${reques
 ${request && request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return {
       content: mockContent;
       wordCount: mockContent && mockContent.split(' ').length;
@@ -395,11 +396,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }> {
     // Mock content analysis;
-
-        'content': 2 && 2.1;
-        'seo': 1 && 1.8,
-        'marketing': 1 && 1.5
-
+    return {
 =======
       seo_score: Math.floor (Math.random () * 30) + 70;
       readability_score: Math.floor (Math.random () * 30) + 70;
@@ -411,6 +408,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'seo': 1.8,
         'marketing': 1.5;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
     return {;
       seoScore: Math.floor(Math.random() * 30) + 70,;
@@ -429,10 +427,13 @@ ${request.topic} represents a significant opportunity for organizations looking 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
     }
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -446,30 +447,21 @@ ${request.topic} represents a significant opportunity for organizations looking 
 =======
 // Pricing tiers for the AI Content Generator;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export const AI_CONTENT_PRICING = {
   starter: {
     name: 'Starter';
     price: 29;
-
-    period: '/month',
-    features: [;
-      '100 content generations per month_basic templatesSEO analysis_email support_standard quality';
-    ];
-
   }
   professional: {
     name: 'Professional';
     price: 99;
-
-    period: '/month',
-    features: [;
-      '500 content generations per month_premium templates_advanced SEO analysis_priority support_high quality output_custom brandingAPI access';
-    ];
-
   }
   enterprise: {
     name: 'Enterprise';
     price: 299;
+<<<<<<< HEAD
 <<<<<<< HEAD
     period: '/month'
     features: [
@@ -523,3 +515,5 @@ export const AI_CONTENT_PRICING = {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

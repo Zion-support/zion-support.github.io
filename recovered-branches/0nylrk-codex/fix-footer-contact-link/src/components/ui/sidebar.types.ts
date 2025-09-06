@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -23,6 +24,8 @@ export type PolymorphicComponentProp<T extends React && React.ElementType, Props
 export type SafeRef<T> = React && React.Ref<T>;
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 // Sidebar specific types
 export type SidebarState = "expanded" | "collapsed";
 =======
@@ -65,6 +68,7 @@ export type SidebarContext = {
   set_open: (open: boolean) => void;
   open_mobile: boolean;
   setOpenMobile: (open: boolean) => void;
+<<<<<<< HEAD
 
   is_mobile: boolean;
   toggle_sidebar: () => void;
@@ -142,3 +146,5 @@ export type SidebarContext = {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

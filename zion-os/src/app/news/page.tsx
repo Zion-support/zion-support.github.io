@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from "next/link";
 export const metadata = {title: "News & Insights - Zion Tech Group | Latest Technology Updates";
   description: "Stay updated with the latest news, insights, and thought leadership from Zion Tech Group. Discover industry trends, company updates, and technology innovations.";
@@ -12,6 +13,8 @@ export default function NewsPage() {;
   return (;
     <div className="min-h-screen">;
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import Link from './next / link';,
 export const metadata = {
   title: "News & Insights - Zion Tech Group | Latest Technology Updates",
@@ -23,24 +26,6 @@ export default /**
 function NewsPage() {
   return (
     <div className="min - h-screen">;
-=======
-<<<<<<< HEAD
-import Link from "next/link";
-export const metadata = {title: "News & Insights - Zion Tech Group | Latest Technology Updates";
-  description: "Stay updated with the latest news, insights, and thought leadership from Zion Tech Group. Discover industry trends, company updates, and technology innovations.";
-  keywords: "news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group"}
-export default function NewsPage() {return (;
-=======
-import Link from "next/link",;
-export const metadata = {;
-  title: "News & Insights - Zion Tech Group | Latest Technology Updates",;
-  description: "Stay updated with the latest news, insights, and thought leadership from Zion Tech Group. Discover industry trends, company updates, and technology innovations.",;
-  keywords: "news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group"};
-export default function NewsPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-    <div className="min-h-screen">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;

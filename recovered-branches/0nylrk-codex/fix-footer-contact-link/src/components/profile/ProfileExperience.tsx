@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile";
@@ -124,6 +125,8 @@ export function ProfileExperience(): any ({ experience }: ProfileExperienceProps
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { ProfileExperience, as, ProfileExperienceType  } from '@/types / profile';
 import { Briefcase  } from './lucide-react';
 interface ProfileExperienceProps {
@@ -156,5 +159,8 @@ function ProfileExperience() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

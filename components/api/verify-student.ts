@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
   authenticateRequest
   enforceRateLimit
@@ -32,17 +36,14 @@ const TALENTS_FILE = path && path.join(
   'data',
   'talents',
   'talents && talents.json'
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 );
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 <<<<<<< HEAD
 ) {
-
-  try {
-  const started = Date && Date.now();
-  const auth = await authenticateRequest(req),
-
   if (!auth) {
     return res && res.status(401).json({ error: 'Unauthorized' });
   }
@@ -50,18 +51,6 @@ export default async function handler(
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429);
     return res && res.status(429).json({ error: 'Rate limit exceeded' });
   }
-
-  if (req && req.method !== 'POST') {
-    res && res.setHeader('Allow', 'POST');
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405);
-    return res && res.status(405).json({ error: 'Method Not Allowed' });  }
-  const { email, programTrack } = req && req.body || {};
-  if (!email) {
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
-    return res && res.status(400).json({ error: 'email required' });
-const TALENTS_FILE = path && path.join(process && process.cwd(), "data", "talents", "talents && talents.json");
-
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   const started = Date && Date.now();
@@ -78,26 +67,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405);
     return res && res.status(405).json({ error: "Method Not Allowed" })
   }
-
-  const { email, programTrack } = req && req.body || {};
-  if (!email) {
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
-    return res && res.status(400).json({ error: 'email required' });
-  const talents = (await fs && fs.pathExists(TALENTS_FILE))
-    ? await fs && fs.readJSON(TALENTS_FILE)
-
     : [];
   const match = talents && talents.find(
     (t: any) =>
-
-      t && t.email === email && (!programTrack || t && t.programTrack === programTrack)
-
   );
   const verified = Boolean(match && match.certificationStatus === 'completed');
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 200);
   return res && res.status(200).json({ verified });  return res && res.status(200).json({ verified })
-
 }
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -126,6 +104,32 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!(await enforceRateLimit(auth.apiKey))) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
     return res.status(429).json({ error: "Rate limit exceeded" })
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  authenticate_request,
+  enforceRateLimit,
+  record_request,
+} from '../../utils / api / partner_auth';
+;
+const TALENTS_FILE = path.join (
+  process.cwd (),
+  'data',
+  'talents',
+  'talents.json');
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const started = Date.now ();
+  const auth = await authenticate_request (req),
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (401).json ({ error: 'Unauthorized' });
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
   if ()) {) {
   $2
@@ -191,6 +195,7 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400);
   const verified = Boolean (match && match.certification_status === 'completed');
   await record_request (req, res, auth.partner, auth.api_key, started, 200);
   return res.status (200).json ({ verified });  return res.status (200).json ({ verified });
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -280,3 +285,7 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

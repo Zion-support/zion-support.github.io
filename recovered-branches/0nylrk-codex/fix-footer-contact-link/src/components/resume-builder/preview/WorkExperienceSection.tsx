@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { WorkExperience  } from '@/types/resume';
@@ -145,6 +146,11 @@ export function WorkExperienceSection(): any ({ workExperience }: WorkExperience
               {work && work.location && (;
                 <span className="text-sm">{work && work.location}</span>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+interface WorkExperienceSectionProps {
+  work_experience: WorkExperience[];
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               )}
             </div>;
             {work && work.description && (;
@@ -152,12 +158,6 @@ export function WorkExperienceSection(): any ({ workExperience }: WorkExperience
             )}
           </div>;
         ))}
-
-      </div>;
-    </div>;
-  );
-}
-
 =======
 export /**
  * WorkExperienceSection - Function description

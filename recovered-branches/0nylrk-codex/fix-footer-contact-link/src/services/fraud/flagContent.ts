@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Content flagging functionality
 import { supabase  } from '@/integrations/supabase/client';
@@ -60,16 +61,11 @@ export const flag_content = async (
       contentId,
       reason,
       severity
+=======
+      reason;
+      severity;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     });
-
-    
-    const { error } = await supabase && supabase.from('fraud_flags').insert({
-      user_id: userId;
-      user_email: userEmail;
-      content_type: contentType;
-      content_id: contentId,
-      content_excerpt: contentExcerpt && contentExcerpt.substring(0, 200), // Limit excerpt length
-
       severity;
       reason;
       ip_address: ipAddress;
@@ -79,16 +75,11 @@ export const flag_content = async (
     if (error) throw error;
     return { success: true }
   } catch (error) {
-
-    console && console.error('Error flagging content:', error);
-    return { 
-      success: false, 
-      error: error instanceof Error ? error && error.message : 'Unknown error' 
-
     }
   }
 }
 
+<<<<<<< HEAD
     }),
     
     const { error } = await supabase.from('fraud_flags').insert({
@@ -161,6 +152,33 @@ export const flagContent = async (;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+;
+    const { error } = await supabase.from ('fraud_flags').insert ({
+      user_id: user_id;
+      user_email: user_email;
+      content_type: content_type;
+      content_id: content_id,
+      content_excerpt: content_excerpt.substring (0, 200), // Limit excerpt length;
+      severity;
+      reason;
+      ip_address: ip_address;
+      timestamp: new Date ().toISOString (),
+      status: 'pending';
+    });
+;
+    // Check condition
+if (throw error) {
+  $2
+}
+    return { success: true }
+  } catch (error) {
+    console.error ('Error flagging content:', error);
+    return {
+      success: false,
+      error: error instanceof Error ? error.message : 'Unknown error';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }
 };

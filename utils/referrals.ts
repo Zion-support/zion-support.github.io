@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire',;
 export async function triggerReferralEvent(event: ReferralEvent, code?: string) {;
   try {;
@@ -117,3 +118,5 @@ if (return, ) {
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

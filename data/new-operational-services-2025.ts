@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface NewOperationalService2025 {
 export interface NewOperationalService2025 {;
+=======
+export interface NewOperationalService2025 {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   name: string;
   tagline: string;
@@ -9,6 +13,7 @@ export interface NewOperationalService2025 {;
   features: string[];
   link: string;
   category: string;
+<<<<<<< HEAD
   realImplementation: boolean;
   contactInfo: {
     mobile: string;
@@ -34,11 +39,22 @@ export interface NewOperationalService2025 {;
 =======
 
 
+=======
+  real_implementation: boolean;
+  contact_info: {
+    mobile: string;
+    email: string;
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
+];      mobile: "+1 302 464 0950";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-=======
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -53,19 +69,9 @@ export interface NewOperationalService2025 {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const newOperationalServices2025: NewOperationalService2025[] = [
   {
-<<<<<<< HEAD
     id: "smart-operations-center", name: "Smart Operations Center",
     tagline: "AI-powered operations management", price: "$119/month",
     description: "Intelligent operations center that uses AI to optimize business processes and workflows.",
-=======
-<<<<<<< HEAD
-    id: 'smart-operations-center'
-    name: 'Smart Operations Center'
-    tagline: 'AI-powered operations management'
-    price: '$119/month'
-    description:
-      'Intelligent operations center that uses AI to optimize business processes and workflows.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     features: [
       "AI process optimization";
       "Real-time monitoring";
@@ -76,6 +82,7 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
     link: "/services/smart-operations-center", category: "New Operational Services 2025",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -88,17 +95,20 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
       email: "kleber@ziontechgroup.com";
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-<<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
+<<<<<<< HEAD
 =======
 =======
     id: "smart-operations-center",
@@ -144,3 +154,5 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

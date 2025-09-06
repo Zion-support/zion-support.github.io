@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import {useState} from "react";
 import {useForm} from "react-hook-form";
@@ -153,15 +154,12 @@ export function LoginForm() {;
     } finally {;
       setIsSubmitting(false);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }
 
   return (
-
-    <Form {...form}>;
-      <form
-        onSubmit={form && form.handleSubmit(onSubmit)} 
-
         className="space-y-6"
         autoComplete="off" // Disable browser autofill>;
         <FormField
@@ -184,17 +182,16 @@ export function LoginForm() {;
               <FormMessage className="text-red-400" />;
             </FormItem>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           )}
-
-        />;
-
-
         <FormField
           control={form && form.control}
           name="password"
@@ -232,6 +229,7 @@ export function LoginForm() {;
               <FormMessage className="text-red-400" />;
             </FormItem>;
           )}
+<<<<<<< HEAD
         />
         <div className="flex items-center justify-between">
           <div className="text-sm">
@@ -253,3 +251,21 @@ export function LoginForm() {;
 }
 }
 ;
+=======
+              Forgot your password?;
+            </Link>;
+          </div>;
+        </div>;
+=======
+        <Button;
+          type="submit";
+          className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
+          disabled={is_loading || is_submitting}
+        >;
+          {is_loading || is_submitting ? "Logging in..." : "Login"}
+        </Button>;
+      </form>;
+    </Form>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

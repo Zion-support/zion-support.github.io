@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -34,12 +35,15 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Navigate} from "react-router-dom";
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import type { QuoteRequest } from "@/types/quotes";
 
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {QuoteDetails} from "@/components/quotes/QuoteDetails";
 import {ExportToCSV} from "@/components/quotes/ExportToCSV";
 import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
+<<<<<<< HEAD
 
 
 export default function QuoteManager() {;
@@ -253,6 +257,48 @@ export default function QuoteManager() {;
             <QuoteStatusCards statusCounts={statusCounts} />;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+import React, { useState } from './react';
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { useAdminQuotes } from '@/hooks / useAdminQuotes';
+import { use_auth } from '@/hooks / use_auth';
+import { Card, CardContent } from '@/components / ui / card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { Navigate } from './react-router-dom';
+import type { QuoteRequest } from "@/types / quotes";
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+import { QuoteDetails } from '@/components / quotes / QuoteDetails';
+import { ExportToCSV } from '@/components / quotes / ExportToCSV';
+import { QuoteStatusCards, QuotesFilter, QuotesTable } from '@/components / admin / quotes';
+;
+export default /**
+ * QuoteManager - Function description
+ */
+function QuoteManager() {
+  const { user } = use_auth ();
+  const is_admin = user?.user_type === 'admin';
+;
+  const [selected_quote, setSelectedQuote] = useState < QuoteRequest | null>(null);
+  const [show_details, setShowDetails] = useState (false);
+;
+  const {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    quotes;
+    is_loading;
+    error;
+    status_filter;
+    setStatusFilter;
+    archive_filter;
+    setArchiveFilter;
+    search_query;
+    setSearchQuery;
+    date_range;
+    setDateRange;
+  }
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* Filters */}
             <QuotesFilter
               searchQuery={searchQuery}
@@ -264,18 +310,6 @@ export default function QuoteManager() {;
               dateRange={dateRange}
               setDateRange={setDateRange}
               onReset={handleResetFilters}
-
-            />;
-
-            {/* Tabs for Active/Archived */}
-            <Tabs defaultValue="active" className="mb-6">;
-              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;
-                <TabsTrigger value="active">Active Quotes</TabsTrigger>;
-                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>;
-              </TabsList>;
-
-              <TabsContent value="active">;
-
                 {/* Quotes Table */}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
                   <QuotesTable
@@ -285,23 +319,19 @@ export default function QuoteManager() {;
                     toggleArchive={toggleArchive}
                     deleteQuote={deleteQuote}
                     onViewDetails={handleViewDetails}
-
-                  />;
-                </Card>;
-              </TabsContent>;
-
-              <TabsContent value="archived">;
-                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
-
                   <QuotesTable
                     quotes={quotes && quotes.filter(quote => quote && quote.is_archived)}
                     isArchived={true}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
                     deleteQuote={deleteQuote}
                     onViewDetails={handleViewDetails}
+<<<<<<< HEAD
                   />
                 </Card>
               </TabsContent>
@@ -324,10 +354,13 @@ export default function QuoteManager() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
+<<<<<<< HEAD
           onClose={() => {
             setShowDetails(false);
 
@@ -359,6 +392,10 @@ export default function QuoteManager() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+          onClose={() => {;
+            setShowDetails(false);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
     update_status;
     toggle_archive;

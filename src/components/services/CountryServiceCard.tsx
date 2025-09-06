@@ -1,6 +1,46 @@
-// Get region flag based on country name (for demo purposes)
+import {
+  Card
+  CardContent
+  CardFooter
+  CardHeader
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { Badge } from '@/components/ui/badge'
+
+import { Globe, Server, Clock, MapPin, Check } from 'lucide-react'
+import { CountryPricing } from "@/data/onsiteServicePricing";
+interface CountryServiceCardProps {
+
+  country: CountryPricing
+  onSelect: (country: CountryPricing) => void;
+  onQuote?: (country: CountryPricing) => void;
+  isPopular?: boolean; import Link from 'next/link'
+import { Badge } from "@/components/ui/badge"
+import { CountryPricing } from "@/data/onsiteServicePricing"
+interface CountryServiceCardProps {
+=======
+
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import Link from 'next/link',
+import { Badge } from "@/components/ui/badge",
+import { Globe, Server, Clock, MapPin, Check } from 'lucide-react'
+import { CountryPricing } from "@/data/onsiteServicePricing",
+interface CountryServiceCardProps {
+  country: CountryPricing,
+  onSelect: (country: CountryPricing) => void,
+  onQuote?: (country: CountryPricing) => void,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  isPopular?: boolean
+}
+
+export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: CountryServiceCardProps) {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  // Get region flag based on country name (for demo purposes)
 
   const getRegionEmoji = (countryName: string | undefined): string => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (!countryName) return '🌐'
     const emojiMap: Record<string, string> = {
@@ -121,6 +161,9 @@
 <<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     if (!countryName) return "🌐",
     
     const emojiMap: Record<string string> = {
@@ -173,9 +216,14 @@
             <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>
             <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </div>
           {isPopular && (
             <Badge className="bg-zion-purple text-white border-none">Popular</Badge>
@@ -186,6 +234,7 @@
         <p className="text-3xl font-bold text-zion-cyan mb-4">
           ${country.pricePerIncident.toFixed(2)}
         </p>
+<<<<<<< HEAD
         <div className='space-y-2 text-zion-slate-light'>
           <div className='flex items-start'>
             <Clock className='h-4 w-4 mr-2 text-zion-purple mt-1' />
@@ -203,6 +252,11 @@
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </div>
           <div className="flex items-start">
             <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" />
@@ -218,17 +272,34 @@
           </div>
         </div>
       </CardContent>
-
-
-import {;
-  Card,;
-  CardContent,;
-  CardFooter,;
-  CardHeader,;
-} from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { Badge } from '@/components/ui/badge';
+      <CardFooter className="flex flex-col space-y-2">
+        <Button
+          onClick={() => onSelect(country)}
+          className={`w-full ${
+            isPopular
+              ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light"
+          }`}
+        >
+          Select Service
+        </Button>
+        <Button
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          Get Quote
+        </Button>
+        <Button
+          asChild
+          variant="ghost"
+          className="w-full text-zion-cyan hover: text-zion-purple"
+        >
+          <Link href="/contact">Contact Sales</Link>
+        </Button>
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import Link from 'next/link',;
+import { Badge } from "@/components/ui/badge",;
 import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
 import { CountryPricing } from "@/data/onsiteServicePricing",;
 interface CountryServiceCardProps {;
@@ -315,74 +386,36 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           </div>;
         </div>;
       </CardContent>;
-      <CardFooter className='flex flex-col space-y-2'>;
-        <Button
-          onClick = {() => onSelect(country),}
+      <CardFooter className="flex flex-col space-y-2">;
+        <Button;
+          onClick={() => onSelect(country)}
           className={`w-full ${;
             isPopular;
-              ? 'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple';
-              : 'bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light';
-    >;
-      <CardHeader className='pb - 2'>;
-        <div className='flex items - center justify - between'>;
-          <div className='flex items - center space - x-2'>;
-            <span className='text - 2xl' aria - hidden='true'>;
-              {getRegionEmoji (country.country)}
-            </span>;
-            <h3 className='text - lg font - semibold text - white truncate'>;
-              {country.country || 'Unknown Country'}
-            </h3>;
-          </div>;
-          {is_popular && (
-            <Badge className='bg - zion - purple text - white border - none'>;
-              Popular;
-            </Badge>)}
-        </div>;
-      </CardHeader>;
-      <CardContent className='pb - 4'>;
-        <p className='text - 3xl font - bold text - zion - cyan mb - 4'>;
-          ${country.pricePerIncident.to_fixed (2)}
-        </p>;
-        <div className='space - y-2 text - zion - slate - light'>;
-          <div className='flex items - start'>;
-            <Clock className='h - 4 w - 4 mr - 2 text - zion - purple mt - 1' />;
-            <span>;
-              Typical response time: {getResponseTime (country.country)}
-            </span>;
-          </div>;
-          <div className='flex items - start'>;
-            <MapPin className='h - 4 w - 4 mr - 2 text - zion - purple mt - 1' />;
-            <span > Service available in major cities</span>;
-          </div>;
-          <div className='flex items - start'>;
-            <Server className='h - 4 w - 4 mr - 2 text - zion - purple mt - 1' />;
-            <span > Hardware & network support</span>;
-          </div>;
-          <div className='flex items - start'>;
-            <Check className='h - 4 w - 4 mr - 2 text - zion - purple mt - 1' />;
-            <span > First hour included</span>;
-          </div>;
-        </div>;
-      </CardContent>;
-      <CardFooter className='flex flex - col space - y-2'>;
-        <Button;
-          on_click = {() => on_select (country), }
-          className={`w - full ${
-            is_popular;
-              ? 'bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple';
-              : 'bg - zion - blue hover:bg - zion - blue - light border border - zion - blue - light';
+              ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
+              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light";
           }`}
         >;
           Select Service;
         </Button>;
-
-          className='w-full text-zion-cyan hover:text-zion-purple'>;
-          <Link href='/contact'>Contact Sales</Link>;
+        <Button;
+          variant="outline";
+          className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10";
+          onClick={() => onQuote?.(country)}
+        >;
+          Get Quote;
+        </Button>;
+        <Button;
+          asChild;
+          variant="ghost";
+          className="w-full text-zion-cyan hover: text-zion-purple";
+        >;
+          <Link href="/contact">Contact Sales</Link>;
         </Button>;
       </CardFooter>;
     </Card>;
   );
 }
+<<<<<<< HEAD
 
         <Button;
           variant='outline';
@@ -445,3 +478,9 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       </CardFooter>
     </Card>
   )
+=======
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

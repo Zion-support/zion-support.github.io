@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -280,10 +281,15 @@ if ( {) {
         description: "An error occurred while scheduling the interview. Please try again.",
         variant: "destructive"});
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    }
+    setIsSubmitting(true);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } finally {
       setIsSubmitting (false);
     }
   }
+<<<<<<< HEAD
 
   const timeSlots = [
     "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30"
@@ -372,6 +378,8 @@ if ( {) {
         </div>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <FormField
           control={form && form.control}
           name="title"
@@ -412,11 +420,6 @@ if ( {) {
                 <Input placeholder="Brief title for the interview" {...field} />;
               </FormControl>;
               <FormMessage />;
-
-        />;
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
           <FormField
             control={form && form.control}
             name="date"
@@ -429,6 +432,7 @@ if ( {) {
                       <Button
                         variant="outline"
                         className={cn(
+<<<<<<< HEAD
                           "w-full pl-3 text-left font-normal";
 
                           "w-full pl-3 text-left font-normal",
@@ -442,6 +446,8 @@ if ( {) {
                         ) : (;
                           <span>Pick a date</span>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                         )}
                         <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                       </Button>;
@@ -450,6 +456,7 @@ if ( {) {
                   <PopoverContent className="w-auto p-0" align="start">;
                     <Calendar
                       mode="single"
+<<<<<<< HEAD
                       selected={field.value}
                       onSelect={field.onChange}
                       disabled={(date) => date < new Date() |date > addDays(new Date(), 90)}
@@ -653,10 +660,13 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       initial_focus;
                       className="p - 3 pointer - events - auto";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     />;
                   </PopoverContent>;
                 </Popover>;
                 <FormMessage />;
+<<<<<<< HEAD
 
               </FormItem>;
 <<<<<<< HEAD
@@ -669,6 +679,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           />;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <FormField
             control={form && form.control}
             name="time"
@@ -692,12 +704,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       <SelectValue placeholder="Select time" />;
                     </SelectTrigger>;
                   </FormControl>;
-
-          />;
-        </div>;
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
           <FormField
             control={form && form.control}
             name="duration"
@@ -739,10 +745,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
-
-          />;
-
-
           <FormField
             control={form && form.control}
             name="platform"
@@ -768,20 +770,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   </FormControl>;
                   <SelectContent>;
                     <SelectItem value="zoom">Zoom</SelectItem>;
-
-                    <SelectItem value="google - meet">Google Meet</SelectItem>;
-
                     <SelectItem value="teams">Microsoft Teams</SelectItem>;
                     <SelectItem value="other">Other</SelectItem>;
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
-
-          />;
-        </div>;
-
-        {form && form.watch('platform') !== 'in-app' && (;
-
           <FormField
             control={form && form.control}
             name="meetingLink"
@@ -810,6 +803,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   />;
                 </FormControl>;
                 <FormMessage />;
+<<<<<<< HEAD
 
           <FormField
             control={form.control}
@@ -838,9 +832,13 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormControl>
                 <Textarea
                 <Textarea 
+=======
+                <Textarea
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
                   {...field}
+<<<<<<< HEAD
                 />
               </FormControl>
               <FormMessage />
@@ -861,3 +859,23 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 }
 }
 ;
+=======
+                />;
+              </FormControl>;
+              <FormMessage />;
+=======
+            </FormItem>)}
+        />;
+        <div className="flex justify - end gap - 4 pt - 4">;
+          <Button variant="outline" on_click={on_close} type="button">;
+            Cancel;
+          </Button>;
+          <Button type="submit" disabled={is_submitting}>;
+            {is_submitting ? "Scheduling..." : "Schedule Interview"}
+          </Button>;
+        </div>;
+      </form>;
+    </Form>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

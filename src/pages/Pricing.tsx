@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Check, Star, Phone, Mail, MapPin } from 'lucide-react';
@@ -282,3 +283,5 @@ const Pricing = () => {
 };
 
 export default Pricing;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

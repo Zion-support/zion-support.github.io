@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   path: string; // full URL or relative
   requiresAuth: boolean;
 export default function TryItConsole({
@@ -26,10 +27,13 @@ interface TryItProps {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   path: string, // full URL or relative
   requiresAuth: boolean
 }
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -63,54 +67,37 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
 
-
-
   }, [baseUrl, path]);
-
-
-  async function onSend() {;
-    setLoading(true);
-    setResponse('');
-    try {;
-      const headers: Record<string, string> = {;
-        'Content-Type': 'application/json',;
-      };
-      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
-      const res = await fetch(url, {;
-        method,;
-        headers,;
-        body:;
-          method === 'GET' || method === 'DELETE';
-            ? undefined;
-            : body || undefined,;
-
       });
       const text = await res && res.text();
       setResponse(text);
-
-    } catch (e: any) {;
-      setResponse(String(e?.message || e));
-    } finally {;
-
       setLoading(false);    }
   }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className='space-y-2'>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
 =======
 
+=======
+    <div className='space-y-2'>;
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+      const res = await fetch(url, {;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       const headers: Record<string, string> = { 'Content-Type': 'application/json' };
       if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       const res = await fetch(url, {
-
         method;
         headers;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       setResponse(text)
@@ -138,6 +125,122 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
         <div>
 
+=======
+    }
+  }
+  return (
+    <div className='space-y-2'>;
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>;
+        <div>;
+          <label className='block text-sm mb-1'>Base URL</label>;
+          <input
+            className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary'
+            value={baseUrl}
+            onChange={e => setBaseUrl(e && e.target.value)}
+          />;
+        </div>;
+        <div>;
+          <label className='block text-sm mb-1'>Auth Token</label>;
+          <input
+            className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary'
+            value={token}
+            onChange={e => setToken(e && e.target.value)}
+  path: string; // full URL or relative;
+  requires_auth: boolean;
+;
+export default /**
+ * TryItConsole - Function description
+ */
+function TryItConsole() {
+  const [base_url, setBaseUrl] = useState ('https://api.zion.os');  const [token, set_token] = useState ('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+  path: string, // full URL or relative;
+  requires_auth: boolean;
+}
+export default /**
+ * TryItConsole - Function description
+ */
+function TryItConsole() {
+  const [base_url, setBaseUrl] = useState ('https: //api.zion.os'),
+  const [body, set_body] = useState ('');
+  const [response, set_response] = useState < string>('');
+  const [loading, set_loading] = useState (false);
+;
+  const url = useMemo (() => {
+    if () return path) {
+  $2
+}
+    return base_url.replace (/\/$/, '') + path;  }, [base_url, path]);    return base_url.replace (/\/$/, '') + path;
+  }, [base_url, path]);
+;
+  async /**
+ * on_send - Function description
+ */
+function on_send() {
+    set_loading (true);
+    set_response ('');
+    try {
+      const headers: Record < string, string> = {
+        'Content - Type': 'application / json',
+      }
+      // Check condition
+if (headers['Authorization'] = `Bearer ${token}`) {
+  $2
+}
+      const res = await fetch (url, {
+        method,
+        headers,
+        body:;
+          method === 'GET' || method === 'DELETE';
+            ? undefined;
+            : body || undefined,
+      });
+      const text = await res.text ();
+      set_response (text);
+    } catch (e: any) {
+      set_response (String (e?.message || e));
+    } finally {
+      set_loading (false);    }
+  }
+  return (
+    <div className='space - y-2'>;
+      <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 2'>      // Check condition
+if (headers['Authorization'] = `Bearer ${token}`) {
+  $2
+}
+      const res = await fetch (url, {
+        method;
+        headers;
+        body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),
+      const text = await res.text ();
+      set_response (text);
+    } catch (e: any) {
+      set_response (String (e?.message || e));
+    } finally {
+      set_loading (false);
+    }
+  }
+  return (
+    <div className='space - y-2'>;
+      <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 2'>;
+        <div>;
+          <label className='block text - sm mb - 1'>Base URL</label>;
+          <input;
+            className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary';
+            value={base_url}
+            on_change={e => setBaseUrl (e.target.value)}
+          />;
+        </div>;
+        <div>;
+          <label className='block text - sm mb - 1'>Auth Token</label>;
+          <input;
+            className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary';
+            value={token}
+            on_change={e => set_token (e.target.value)}
+            placeholder='Optional';
+          />;
+        </div>;
+        <div>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} />
         </div>
@@ -152,72 +255,27 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
 =======
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div>
-
-          />        </div>;
-      </div>;
-      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (;
-        <div>        <div>;
-          <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>;
-          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e && e.target.value)} />;
-        </div>;
-        <div>;
-          <label className="block text-sm mb-1" htmlFor="input-Auth Token">Auth Token</label>;
-          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={token} onChange={(e) => setToken(e && e.target.value)} placeholder="Optional" />;
-        </div>;
-        <div>;
-          <label className="block text-sm mb-1" htmlFor="input-Method">Method</label>;
-          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />;
-        </div>;
-      </div>;
-      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (;
-        <div>;
-          <label className='block text-sm mb-1'>Request Body (JSON)</label>;
-
           <textarea
             className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
             value={body}
             onChange={e => setBody(e && e.target.value)}
             placeholder='{ }';
           />;
-=======
-<<<<<<< HEAD
-      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
-=======
-      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        <div>
-          <label className='block text-sm mb-1'>Request Body (JSON)</label>
-          <textarea
-            className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
-            value={body}
-            onChange={e => setBody(e.target.value)}
-            placeholder='{ }'
-          />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       )}
       <button
         onClick={onSend}
         className='px-3 py-2 rounded bg-high-contrast-accent text-black'
-<<<<<<< HEAD
         disabled={loading}>;
         {loading ? 'Sending…' : 'Send Request'}
-
-      </button>;
-      <div>;
-        <label className='block text-sm mb-1'>Response</label>;
-        <pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80'>;
-          <code>{response}</code>;
-        </pre>;
-      </div>;
-    </div>;
-
   );
 }
 <<<<<<< HEAD
@@ -269,6 +327,7 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
         </pre>;
       </div>;
     </div>);
+<<<<<<< HEAD
         </div>
       </div>
       {_(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
@@ -313,3 +372,5 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

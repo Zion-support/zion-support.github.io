@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -78,6 +79,11 @@ export type ContractFormValues = z && z.infer<typeof formSchema>;
 
 export function ContractForm(): any ({;
 
+=======
+  deployOptions?: DeploymentOptions;
+  onDeployOptionsChange?: (options: DeploymentOptions) => void;
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   talent;
   clientName;
   initialValues;
@@ -89,6 +95,7 @@ export function ContractForm(): any ({;
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
   const { toast } = useToast();
+<<<<<<< HEAD
 
 interface ContractFormProps {
   talent: TalentProfile,
@@ -298,20 +305,24 @@ export function ContractForm({;
     // If payment terms isn't already set to milestone, update it;
     if (form.getValues("paymentTerms") !== "milestone") {;
       form.setValue("paymentTerms", "milestone");
+=======
+        const typedKey = key as keyof ContractFormValues;
+        form && form.setValue(typedKey, initialValues[typedKey]);
+      });
     }
-
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }, [initialValues, form]);
+    } finally {
+      setIsGenerating (false);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+    }
+  }
   return (
     <>;
       <DialogHeader>;
         <DialogTitle className="text - xl">Contract Builder</DialogTitle>;
         <DialogDescription>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           Create a professional contract for your project with {talent.full_name}
+<<<<<<< HEAD
 
 
   // Track form values for template saving;
@@ -387,10 +398,13 @@ export function ContractForm({;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <PaymentTermsFields
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
+<<<<<<< HEAD
           
 <<<<<<< HEAD
 =======
@@ -425,6 +439,8 @@ export function ContractForm({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}>;
             {isGenerating ? (;
@@ -435,6 +451,7 @@ export function ContractForm({;
             ) : (;
               "Generate Contract";
             )}
+<<<<<<< HEAD
           </Button>
         </form>
       </Form>
@@ -491,13 +508,19 @@ export function ContractForm({;
           on_click={() => form.reset ()}
           disabled={is_generating}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         >;
           Reset Form;
         </Button>;
       </DialogFooter>;
-
+=======
     </>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,14 +1,50 @@
+import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict
+import { TableRow, TableCell } from '@/components/ui/table'
+import { JobApplication, ApplicationStatus } from '@/types/jobs'
+import { StatusBadge } from './StatusBadge'
+import { ScoreBadge } from './ScoreBadge';
+import { ApplicationActions } from './ApplicationActions';
+import Image from 'next/image'; // Import next/image
+import React, { useState } from 'react'; // Import useState
+=======
+import { formatDistanceToNow } from "date-fns",
+import { Calendar, User, FileText, BarChart } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
+import { TableRow, TableCell } from "@/components/ui/table",
+import { JobApplication, ApplicationStatus } from "@/types/jobs",
+import { StatusBadge } from "./StatusBadge",
+import { ScoreBadge } from "./ScoreBadge",
+import { ApplicationActions } from "./ApplicationActions",
+import Image from 'next/image', // Import next/image
+import React, { useState } from 'react', // Import useState
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface ApplicationRowProps {
-  application: JobApplication;
-  processing_id: string | null;
-  onViewApplication: (application_id: string) => Promise < void>;
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
 =======
 
 
+=======
+    applicationId: string
+    newStatus: ApplicationStatus
+  ) => Promise<void>
+  onViewScore: (application: JobApplication) => void
+interface ApplicationRowProps {
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string,) => Promise<void>
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>
+  onViewScore: (application: JobApplication,) => void
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ApplicationRow({
@@ -25,7 +61,11 @@ export function ApplicationRow({
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+  const talentName = application.talent_profile?.full_name || 'Unknown'
+=======
 
+<<<<<<< HEAD
 import { formatDistanceToNow } from 'date-fns';
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -83,6 +123,10 @@ export function ApplicationRow(): any ({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <TableRow key={application.id}>
       <TableCell>
@@ -90,6 +134,7 @@ export function ApplicationRow(): any ({;
           <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
             {application.talent_profile?.profile_picture_url && !avatarError ? (
               <Image
+<<<<<<< HEAD
                 src={application.talent_profile.profile_picture_url}
                 alt={talentName}
                 width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
@@ -110,11 +155,17 @@ export function ApplicationRow(): any ({;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             ) : (
               <User className="h-5 w-5 text-gray-400" />
             )}
           </AvatarPrimitive>
           <div>
+<<<<<<< HEAD
             <div className='font-medium'>{talentName}</div>
             <div className='text-xs text-muted-foreground'>
               {application.talent_profile?.professional_title |'Talent'}
@@ -123,22 +174,28 @@ export function ApplicationRow(): any ({;
             </div>
             <div className="text-xs text-muted-foreground">
               {application.talent_profile?.professional_title || "Talent"}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </div>
           </div>
         </div>
       </TableCell>
       <TableCell>
+<<<<<<< HEAD
 
 
         <div className="flex items-center gap-1">
           <Calendar className="h-4 w-4 text-muted-foreground" />
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         </div>
       </TableCell>
       <TableCell>
         <StatusBadge status={application.status} />
       </TableCell>
       <TableCell>
+<<<<<<< HEAD
         <Button
           variant='ghost'
           size='sm'
@@ -157,11 +214,17 @@ export function ApplicationRow(): any ({;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <ScoreBadge application={application} />
         </Button>
       </TableCell>
       <TableCell>
         {application.resume ? (
+<<<<<<< HEAD
           <Button variant='ghost' size='sm' asChild>
             <a
               href={application.resume.file_url |'#'}
@@ -174,6 +237,8 @@ export function ApplicationRow(): any ({;
             <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">
               <FileText className="h-4 w-4 mr-1" /> View
             </Link>
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </Button>
         ) : (
           <span className="text-muted-foreground text-sm">No resume</span>
@@ -181,6 +246,7 @@ export function ApplicationRow(): any ({;
       </TableCell>
       <TableCell className="text-right">
         <ApplicationActions
+<<<<<<< HEAD
           application = {application,}
           processingId = {processingId,}
           onViewApplication = {onViewApplication,}
@@ -384,3 +450,8 @@ export function ApplicationRow({;
     </TableRow>);
 }
 ;
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

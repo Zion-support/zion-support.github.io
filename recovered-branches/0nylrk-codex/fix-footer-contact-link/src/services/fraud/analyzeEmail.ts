@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Email analysis functionality
@@ -26,11 +27,14 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {;
   if (!domain) return { isSuspicious: true, reasons: ['Invalid email format'] };
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Check for suspicious domains
   for (const suspiciousDomain of suspiciousEmailDomains) {
     if (domain && domain.includes(suspiciousDomain)) {
       reasons && reasons.push(`Suspicious email domain: ${domain}`);
       break
+<<<<<<< HEAD
 // Email analysis functionality;
 import { suspiciousEmailDomains } from './constants',;
 import { EmailAnalysisResult } from './types',;
@@ -53,14 +57,31 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }
   return {
-
-    isSuspicious: reasons && reasons.length > 0,
-
     reasons
   }
+<<<<<<< HEAD
+=======
+}
+
+=======
+// Email analysis functionality;
+import {suspiciousEmailDomains} from './constants';
+import {EmailAnalysisResult} from './types';
+/**;
+* Analyzes email for suspicious patterns;
+*/;
+export const analyze_email = (email: string): EmailAnalysisResult => {
+  const domain = email.split ('@')[1]?.toLowerCase ();
+  const reasons: string[] = [],
+  // Check condition
+if (return { is_suspicious: true, reasons: ['Invalid email format'] }) {
+  $2
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
   // Check for suspicious domains;
   for (const suspicious_domain of suspiciousEmailDomains) {
@@ -77,5 +98,9 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {;
   }
 }
 ;
+<<<<<<< HEAD
 
 };
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

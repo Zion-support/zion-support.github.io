@@ -1,8 +1,10 @@
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 export default function ITSupportPage() {
   const benefits = [
     {import React from "react"
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -13,36 +15,26 @@ export default function ITSupportPage() {
 <<<<<<< HEAD
 =======
 =======
+=======
+import React from "react"
+export default function ITSupportPage() {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
-import React from 'react';
-import { ServiceLandingTemplate } from '@/components / services / ServiceLandingTemplate';
-import { Phone, ShieldCheck, Clock } from 'lucide-react';
-export default /**
- * ITSupportPage - Function description
- */
-function ITSupportPage() {
-  const benefits = [;
-    {import React from './react';
-import { ServiceLandingTemplate  } from '@/components / services / ServiceLandingTemplate';
-import React from './react';
-export default /**
- * ITSupportPage - Function description
- */
-function ITSupportPage() {
-  const benefits = [;
+  const benefits = [
     {
-      title: '24 / 7 Assistance',
-      description:;
-        'Our experts are available around the clock to keep your systems running.',
-      icon: <Clock className='h - 8 w - 8' />,
-    },
+      title: '24/7 Assistance'
+      description:
+        'Our experts are available around the clock to keep your systems running.'
+      icon: <Clock className='h-8 w-8' />
+    }
     {
-      title: 'Certified Professionals',
-      description:;
-        'Work with seasoned technicians experienced in modern IT infrastructures.',
-      icon: <ShieldCheck className='h - 8 w - 8' />,
-    },
+      title: 'Certified Professionals'
+      description:
+        'Work with seasoned technicians experienced in modern IT infrastructures.'
+      icon: <ShieldCheck className='h-8 w-8' />
+    }
     {
+<<<<<<< HEAD
       title: 'Multi - Channel Support',
       description:;
         'Get help via phone, chat, or onsite visits tailored to your needs.',
@@ -71,6 +63,8 @@ export default function ITSupportPage() {
       icon: <ShieldCheck className='h-8 w-8' />
     }
     {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       title: 'Multi-Channel Support'
       description:
         'Get help via phone, chat, or onsite visits tailored to your needs.'
@@ -78,7 +72,10 @@ export default function ITSupportPage() {
     }
   ]
   const testimonials = [
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     {
       name: 'Lisa Wong'
       role: 'Operations Manager'
@@ -87,6 +84,9 @@ export default function ITSupportPage() {
     }
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       name: 'Carlos Diaz'
       role: 'IT Lead'
       text: 'Professional and responsive. Their technicians feel like an extension of our own team.'
@@ -94,6 +94,7 @@ export default function ITSupportPage() {
     }
   ]
     return (
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -110,6 +111,8 @@ import { Phone, ShieldCheck, Clock } from 'lucide-react'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default function ITSupportPage() {
   const benefits = [
     {
@@ -135,7 +138,9 @@ export default function ITSupportPage() {
       name: "Carlos Diaz",
       role: "IT Lead",
       text: "Professional and responsive. Their technicians feel like an extension of our own team.",
+      avatar: "/placeholder.svg"}],
 
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -184,11 +189,18 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  return (
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <ServiceLandingTemplate
       title="IT Support Services"
       subtitle="Reliable assistance to keep your business technology operating smoothly."
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
+<<<<<<< HEAD
 <<<<<<< HEAD
       benefits = {benefits,}
       testimonials = {testimonials,};
@@ -209,6 +221,9 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 }
 }
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       benefits={benefits}
       testimonials={testimonials}
       ctaText="Get IT Support"
@@ -221,33 +236,25 @@ import { Phone, ShieldCheck, Clock } from 'lucide-react';
 export default function ITSupportPage() {;
   const benefits = [;
     {;
-      title: '24/7 Assistance',;
-      description:;
-        'Our experts are available around the clock to keep your systems running.',;
-      icon: <Clock className='h-8 w-8' />,;
-    },;
+      title: "24/7 Assistance",;
+      description: "Our experts are available around the clock to keep your systems running.",;
+      icon: <Clock className="h-8 w-8" />},;
     {;
-      title: 'Certified Professionals',;
-      description:;
-        'Work with seasoned technicians experienced in modern IT infrastructures.',;
-      icon: <ShieldCheck className='h-8 w-8' />,;
-    },;
+      title: "Certified Professionals",;
+      description: "Work with seasoned technicians experienced in modern IT infrastructures.",;
+      icon: <ShieldCheck className="h-8 w-8" />},;
     {;
-      title: 'Multi-Channel Support',;
-      description:;
-        'Get help via phone, chat, or onsite visits tailored to your needs.',;
-      icon: <Phone className='h-8 w-8' />,;
-    },;
-  ];
-
+      title: "Multi-Channel Support",;
+      description: "Get help via phone, chat, or onsite visits tailored to your needs.",;
+      icon: <Phone className="h-8 w-8" />}],;
   const testimonials = [;
     {;
-      name: 'Lisa Wong',;
-      role: 'Operations Manager',;
+      name: "Lisa Wong",;
+      role: "Operations Manager",;
       text: "Zion's support team resolved our network outage within hours and saved us from a major downtime.",;
-      avatar: '/placeholder && placeholder.svg',;
-    },;
+      avatar: "/placeholder.svg"},;
     {;
+<<<<<<< HEAD
       name: 'Carlos Diaz',;
       role: 'IT Lead',;
       text: 'Professional and responsive. Their technicians feel like an extension of our own team.',;
@@ -276,11 +283,26 @@ export default function ITSupportPage() {;
   );      benefits={benefits}
       testimonials={testimonials}
 
+=======
+      name: "Carlos Diaz",;
+      role: "IT Lead",;
+      text: "Professional and responsive. Their technicians feel like an extension of our own team.";
+      avatar: "/placeholder.svg"}];
+  return (;
+    <ServiceLandingTemplate;
+      title="IT Support Services";
+      subtitle="Reliable assistance to keep your business technology operating smoothly.";
+      heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support";
+      description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes.";
+      benefits={benefits}
+      testimonials={testimonials}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       ctaText="Get IT Support";
       ctaLink="/request-quote";
     />;
   );
 }
+<<<<<<< HEAD
 
       name: 'Carlos Diaz',
       role: 'IT Lead',
@@ -306,3 +328,9 @@ export default function ITSupportPage() {;
 }
 ;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState, useEffect} from "react";
@@ -54,6 +55,8 @@ export function useCompanyWorkspace(companySlug?: string) {
           teamLimit: 50,
           billingCycle: "Annual",
           workspaceUrl: "acme.zion-ai.com"}),
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         setError(null)
       } else {
         // For any other slug, we could check if it's a valid company
@@ -64,18 +67,24 @@ export function useCompanyWorkspace(companySlug?: string) {
           logoUrl: "/placeholder && placeholder.svg";
           theme: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             primaryColor: "#4f46e5";
             backgroundColor: "#ffffff"
             textColor: "#1f2937"}
           plan: "Teams";
           teamSize: 5;
           teamLimit: 10;
+<<<<<<< HEAD
           billingCycle: "Monthly"
 =======
 
           billingCycle: "Monthly",
           workspaceUrl: `${companySlug}.zion-ai && ai.com`});
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         setError(null)
       }
       setIsLoading(false)
@@ -142,6 +151,7 @@ if ( {) {
 ;
   return { company, is_loading, error }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -222,4 +232,6 @@ export function useCompanyWorkspace(companySlug?: string) {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return { company, isLoading, error }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }

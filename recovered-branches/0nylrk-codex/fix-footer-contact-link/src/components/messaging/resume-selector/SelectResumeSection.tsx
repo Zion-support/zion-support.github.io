@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -18,10 +19,14 @@ interface SelectResumeSectionProps {
 }
 
 export function SelectResumeSection({;
+=======
+import React from 'react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   resumeOptions;
   selectedResume;
   handleResumeSelect;
   handleDownloadResume;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -66,6 +71,20 @@ export function SelectResumeSection({
               className={`w-full text-left p-3 rounded-md transition ${
                 selectedResume?.id === option.id
                   ? 'bg-zion-purple/20 border border-zion-purple'
+=======
+  isLoading;
+}: SelectResumeSectionProps) {;
+  return (
+    <div className="space-y-2">;
+      {resumeOptions && resumeOptions.length === 0 ? (;
+        <p className="text-sm text-zion-slate">No saved resumes found.</p>;
+      ) : (;
+        <>;
+          {resumeOptions && resumeOptions.map((option) => (;
+            <button
+              key={option && option.id}
+              className={`w-full text-left p-3 rounded-md transition ${
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
               }`}
               onClick={() => handleResumeSelect(option && option.id)}
@@ -76,10 +95,6 @@ export function SelectResumeSection({
               </div>;
             </button>;
           ))}
-
-
-          {selectedResume?.type === 'ai_resume' && selectedResume && selectedResume.resume && (;
-
             <ResumePreviewCard
               resume={selectedResume && selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
@@ -88,11 +103,6 @@ export function SelectResumeSection({
           )}
         </>;
       )}
-
-    </div>;
-  );
-}
-
 =======
 import {Resume} from '@/types / resume';
 interface SelectResumeSectionProps {

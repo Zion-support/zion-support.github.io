@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState} from "react";
@@ -163,10 +164,13 @@ export default function ForumPostPage() {
   // can't determine the generic type for the helper from React Router.
   // Cast the result instead to provide the expected shape.;
   const { postId } = useParams() as { postId?: string };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { user } = useAuth();
   const { toast } = useToast();
   const [post, setPost] = useState(mockPost);
   const [replies, setReplies] = useState(mockReplies);
+<<<<<<< HEAD
   // Cast the result instead to provide the expected shape.
   const { postId } = useParams() as { postId?: string }
   const { user } = useAuth();
@@ -191,6 +195,8 @@ export default function ForumPostPage() {
   
   // For this demo, we'll assume the post is found
   if (!post) {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <AppLayout>
         <div className="container py-8">
@@ -214,6 +220,7 @@ export default function ForumPostPage() {
       title: "Vote recorded"
       description: "You upvoted this post"})
   }
+<<<<<<< HEAD
   },
 
   const handleDownvote = () => {
@@ -348,17 +355,15 @@ export default function ForumPostPage() {
         description: "Only the original poster or moderators can mark answers",;
         variant: "destructive";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       });
       return;
     }
-
-
-    // Update the replies;
-    const updatedReplies = replies && replies.map(reply => ({;
-
       ...reply;
       isAnswer: reply && reply.id === replyId;
     }));
+<<<<<<< HEAD
 
       ...reply,
       isAnswer: reply.id === replyId
@@ -823,21 +828,11 @@ export default function ForumPostPage() {;
               {post && post.tags.map(tag => (;
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   {tag}
                 </Badge>;
               ))}
-
-            </div>;
-
-            <div className="prose dark:prose-invert max-w-none mb-6">;
-              {post && post.content.split('\n\n').map((paragraph, i) => (;
-                <p key={i}>{paragraph}</p>;
-              ))}
-            </div>;
-
-            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">;
-              <div className="flex items-center gap-4">;
-
                 <Button
                   variant="outline"
                   size="sm"
@@ -850,26 +845,6 @@ export default function ForumPostPage() {;
                   variant="outline"
                   size="sm"
                   onClick={handleDownvote}
-
-                  className="flex items-center gap-2">;
-                  <ThumbsDown className="h-4 w-4" />;
-                  <span>{post && post.downvotes}</span>;
-                </Button>;
-              </div>;
-
-              <div className="flex items-center gap-2">;
-                {(isAuthor || isAdminOrMod) && (;
-                  <Button variant="ghost" size="sm" asChild>;
-                    <Link to={`/community/edit/${post && post.id}`}>;
-                      <Edit className="h-4 w-4 mr-1" />;
-                      Edit;
-                    </Link>;
-                  </Button>;
-                )}
-
-                {isAdminOrMod && (;
-                  <>;
-
                     <Button
                       variant="ghost"
                       size="sm"
@@ -886,6 +861,7 @@ export default function ForumPostPage() {;
                     </Button>;
                   </>;
                 )}
+<<<<<<< HEAD
 
 
                 <Button
@@ -925,9 +901,21 @@ export default function ForumPostPage() {;
                     Please <Link to="/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.
                   </AlertDescription>
                 </Alert>
+=======
+                  Report;
+                </Button>;
+              </div>;
+            </div>;
+          </CardContent>;
+        </Card>;
+              ))}
+            </div>;
+          )}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               )}
             </div>
           )}
+<<<<<<< HEAD
           
           {post.isLocked && (
             <Alert className="mb-8">
@@ -941,9 +929,12 @@ export default function ForumPostPage() {;
             {replies
               .filter(reply => !reply.isAnswer)
               .map(reply => (
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <ReplyCard
                   key={reply.id}
                   reply={reply}
+<<<<<<< HEAD
                   onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
                   canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
                 />
@@ -965,6 +956,9 @@ export default function ForumPostPage() {;
   );
 }
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <div className="mt - 8">;
           <h2 className="text - xl font - bold mb - 6">Responses ({post.reply_count})</h2>;
           {post.is_answered && (
@@ -1009,6 +1003,10 @@ export default function ForumPostPage() {;
       </div>;
     </AppLayout>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,6 +145,8 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
       case "closed":;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import React, { useState } from './react';
 import { Dispute, DisputeStatus } from '@/types / disputes';
 import { Button } from '@/components / ui / button';
@@ -181,6 +184,7 @@ function DisputesList() {
       default:;
         return "default";
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
   if (isLoading) {;
@@ -229,6 +233,8 @@ function DisputesList() {
 
   if (disputes.length === 0) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <div className="text-center py-12 border rounded-md bg-muted/20">;
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
@@ -273,6 +279,7 @@ function DisputesList() {
         <Button
           variant={statusFilter === "closed" ? "default" : "outline"}
           onClick={() => setStatusFilter("closed")}
+<<<<<<< HEAD
           size="sm"
         >
           Closed
@@ -337,6 +344,18 @@ function DisputesList() {
   );
 }
 
+=======
+          size="sm";
+        >;
+          Closed;
+        </Button>;
+      </div>;
+                    </span>;
+                  </div>;
+                </TableCell>;
+                <TableCell>;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   {formatDistanceToNow (new Date (dispute.created_at), { add_suffix: true })}
                 </TableCell>;
                 <TableCell>;
@@ -355,6 +374,10 @@ function DisputesList() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import { useState } from "react";
 import {Rocket;
@@ -437,6 +438,8 @@ export default function DeploymentNotification({;
     <div className="fixed top-4 right-4 z-50 space-y-3 max-w-md">;
       {updates.map((update) => (;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <div;
           key={update.id}
           className={`group relative backdrop - blur - sm rounded - xl border p - 4 transition - all duration - 300 hover:shadow - lg ${getUpdateColor (update.type)}`}
@@ -462,12 +465,15 @@ export default function DeploymentNotification({;
             </button>;
           </div>;
           {/* Instance Details (if available) */}
+<<<<<<< HEAD
           {update.instanceName && (;
             <div className="mb-3 p-3 bg-white/10 rounded-lg border border-white/20">;
               <div className="flex items-center gap-2 mb-2">;
                 <div className="p-1 bg-white/20 rounded">;
                   {getVerticalIcon(update.vertical |'GENERAL')}
                   {getVerticalIcon(update.vertical || 'GENERAL')}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 </div>;
                 <span className="font - medium text - white text - sm">;
                   {update.instance_name}
@@ -487,9 +493,12 @@ export default function DeploymentNotification({;
                     {update.domain}
                   </span>)}
               </div>;
+<<<<<<< HEAD
             </div>;
           )}
 ;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {/* Progress Bar (for deployment updates) */}
           {update.progress !== undefined && (
             <div className="mb - 3 space - y-2">;
@@ -503,15 +512,19 @@ export default function DeploymentNotification({;
                   style={{ width: `${update.progress}%` }}
                 ></div>;
               </div>;
+<<<<<<< HEAD
             </div>;
           )}
 ;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {/* Action Buttons */}
           {update.actions && update.actions.length > 0 && (
             <div className="flex gap - 2 pt - 2 border - t border - white / 20">;
               {update.actions.map ((action, index) => (
                 <button;
                   key={index}
+<<<<<<< HEAD
 
                   onClick={() => handleAction(update.id, action.action)}
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${action.action === 'deploy' |action.action === 'retry';
@@ -533,6 +546,8 @@ export default function DeploymentNotification({;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       ? 'bg-blue-600 hover:bg-blue-700 text-white';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       : action.action === 'view';
                       ? 'bg - green - 600 hover:bg - green - 700 text - white';
                       : 'bg - white / 20 hover:bg - white / 30 text - white / 80';
@@ -543,11 +558,14 @@ export default function DeploymentNotification({;
                   {action.action === 'retry' && <Rocket className="w - 3 h - 3" />}
                   {action.action === 'configure' && <Settings className="w - 3 h - 3" />}
                   <span>{action.label}</span>;
+<<<<<<< HEAD
                 </button>;
               ))}
             </div>;
           )}
 ;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {/* Timestamp */}
           <div className="absolute bottom - 2 right - 4 text - xs text - white / 60">;
             {format_timestamp (update.timestamp)}
@@ -555,6 +573,7 @@ export default function DeploymentNotification({;
         </div>))}
     </div>);
 }
+<<<<<<< HEAD
 // Example usage with mock data;
 export function DeploymentNotificationExample() {const [updates, setUpdates] = useState<DeploymentUpdate[]>([;
     {;
@@ -640,6 +659,8 @@ export function DeploymentNotificationExample() {;
   };
   return (;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <DeploymentNotification;
       updates={updates}
       on_dismiss={handle_dismiss}

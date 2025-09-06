@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -19,6 +20,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, AlertTriangle, Zap, Cpu;
@@ -26,6 +29,7 @@ import { Shield, Lock, Eye, AlertTriangle, Zap, Cpu;
  } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const features = [
@@ -126,6 +130,8 @@ export default function QuantumCybersecurityPage() {;
     "Protect against quantum computing attacks with future-proof encryption";
     "Reduce security incidents by 90% with AI-powered threat detection";
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import Head from 'next / head';
 import {motion} from 'framer-motion';
 import {Shield, Lock, Eye, AlertTriangle, Zap, Cpu, Database, Globe, ArrowRight, CheckCircle, Star, Users} from 'lucide-react';
@@ -141,37 +147,6 @@ function QuantumCybersecurityPage() {
       title: "Quantum - Resistant Encryption",
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
       color: "from - blue - 500 to - cyan - 500";
-=======
-<<<<<<< HEAD
-import React from 'react',
-=======
-import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, AlertTriangle, Zap, Cpu;
-  Database, Globe, ArrowRight, CheckCircle, Star, Users
- } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-export default function QuantumCybersecurityPage() {
-
-  const features = [
-    {
-<<<<<<< HEAD
-      icon: Shield
-      title: "Quantum-Resistant Encryption"
-      description: "Advanced cryptographic algorithms that remain secure even against quantum computers."
-      color: "from-blue-500 to-cyan-500"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    }
-=======
-      icon: Shield,
-      title: "Quantum-Resistant Encryption",
-      description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
-      color: "from-blue-500 to-cyan-500";
-    };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       icon: Lock,
       title: "Zero - Trust Architecture",
@@ -212,39 +187,6 @@ export default function QuantumCybersecurityPage() {
     "Scalable security that grows with your business";
     "Expert security team available around the clock";
   ];
-
-
-  const threats = [;
-    {;
-      type: "Quantum Attacks",;
-      description: "Future quantum computers could break current encryption standards",;
-      solution: "Quantum-resistant algorithms and post-quantum cryptography";
-    };
-    {;
-      type: "AI-Powered Threats",;
-      description: "Sophisticated attacks using artificial intelligence and machine learning",;
-      solution: "Advanced AI defense systems and behavioral analysis";
-    };
-    {;
-      type: "Supply Chain Attacks",;
-      description: "Compromised software or hardware in the supply chain",;
-      solution: "Comprehensive supply chain verification and integrity checks";
-    };
-    {;
-      type: "Ransomware",;
-      description: "Malicious software that encrypts data and demands payment",;
-      solution: "Real-time detection, automated backup, and rapid recovery";
-    }
-  ];
-  const pricing = [;
-    {;
-      plan: "Essential",;
-      price: "$799",;
-      period: "/month",;
-      description: "Basic quantum cybersecurity for small businesses",;
-      features: [;
-
-        "Quantum-resistant encryption";
 ;
   const threats = [;
     {
@@ -281,19 +223,6 @@ export default function QuantumCybersecurityPage() {
         "24 / 7 monitoring";
         "Email support";
         "Up to 100 users";
-
-        "Standard compliance reports";
-      ],;
-      popular: false;
-    };
-    {;
-      plan: "Professional",;
-      price: "$1,999";
-      period: "/month",;
-      description: "Advanced security features for growing organizations",;
-      features: [;
-
-=======
         "Standard compliance reports";
       ],
       popular: false;
@@ -311,19 +240,6 @@ export default function QuantumCybersecurityPage() {
         "Up to 1000 users";
         "Custom security policies";
         "Advanced compliance reporting";
-
-        "Incident response team";
-      ],;
-      popular: true;
-    };
-    {;
-      plan: "Enterprise",;
-      price: "Custom",;
-      period: "",;
-      description: "Full-scale security solution for large organizations",;
-      features: [;
-
-=======
         "Incident response team";
       ],
       popular: true;
@@ -341,19 +257,11 @@ export default function QuantumCybersecurityPage() {
         "On - premise deployment";
         "Custom training programs";
         "SLA guarantees";
-
-        "Executive reporting";
-      ],;
-      popular: false;
-
-=======
-        "Executive reporting";
-      ],
-      popular: false;
     }
   ];
 ;
   return (
+<<<<<<< HEAD
     <>
       <Head>
         <title>Quantum Cybersecurity - Zion Tech Group</title>
@@ -389,27 +297,14 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         <div className="max-w-7xl mx-auto px-6">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-
-            transition={{ duration: 0 && 0.6 }}
-            className="text-center">;
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
-              Quantum;
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">;
-                {" "}Cybersecurity;
-              </span>;
-            </h1>;
-            <p className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8">;
-              Future-proof your security infrastructure with quantum-resistant encryption and AI-powered threat detection. ;
-              Stay ahead of emerging cyber threats with the most advanced security technology available.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105">;
@@ -417,6 +312,7 @@ export default function QuantumCybersecurityPage() {
               </a>;
               <a
                 href="#demo"
+<<<<<<< HEAD
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
                 Security Assessment
@@ -444,12 +340,15 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Features */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -472,6 +371,8 @@ export default function QuantumCybersecurityPage() {
               <motion.div
                 key={feature.title}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -483,6 +384,7 @@ export default function QuantumCybersecurityPage() {
                 <p className="text-slate-600 leading-relaxed">{feature && feature.description}</p>;
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -518,6 +420,8 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Benefits */}
       <section className="py-20 bg-slate-50">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -525,6 +429,7 @@ export default function QuantumCybersecurityPage() {
             <motion&& motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose Quantum Cybersecurity?</h2>
@@ -562,6 +467,8 @@ export default function QuantumCybersecurityPage() {
                 {benefits.map((benefit, index) => (
                   <motion.div
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     key={benefit}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -571,6 +478,7 @@ export default function QuantumCybersecurityPage() {
                     <span className="text-slate-700">{benefit}</span>;
                   </motion && motion.div>;
                 ))}
+<<<<<<< HEAD
               </div>
             </motion.div>
 
@@ -646,12 +554,15 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Threat Landscape */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -674,6 +585,8 @@ export default function QuantumCybersecurityPage() {
               <motion.div
                 key={threat.type}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -685,6 +598,7 @@ export default function QuantumCybersecurityPage() {
                 </div>;
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -720,12 +634,15 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Compliance */}
       <section className="py-20 bg-slate-900">;
         <div className="max-w-7xl mx-auto px-6">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -893,12 +810,15 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Pricing */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -921,6 +841,8 @@ export default function QuantumCybersecurityPage() {
               <motion.div
                 key={plan.plan}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -932,6 +854,7 @@ export default function QuantumCybersecurityPage() {
                     Most Popular;
                   </div>;
                 )}
+<<<<<<< HEAD
                 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.plan}</h3>
@@ -1008,6 +931,8 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   ))}
                 </ul>;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <a
                   href="/contact"
                   className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
@@ -1016,6 +941,7 @@ export default function QuantumCybersecurityPage() {
                 </a>
               </motion.div>
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -1047,6 +973,8 @@ export default function QuantumCybersecurityPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">;
         <div className="max-w-4xl mx-auto px-6 text-center">;
@@ -1066,19 +994,6 @@ export default function QuantumCybersecurityPage() {
               </a>;
               <a
                 href="/contact"
-
-                className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200">;
-                Schedule Consultation;
-              </a>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-      <EnhancedFooter />;
-    </>;
-  );
-
-=======
     <>;
       <Head>;
         <title > Quantum Cybersecurity - Zion Tech Group</title>;
@@ -1097,7 +1012,6 @@ export default function QuantumCybersecurityPage() {
             initial={{ opacity: 0, coordinate_y: 20 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
             className="text - center";
           >;
             <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">;
@@ -1395,8 +1309,8 @@ export default function QuantumCybersecurityPage() {
       </section>;
       <EnhancedFooter />;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1404,3 +1318,5 @@ export default function QuantumCybersecurityPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

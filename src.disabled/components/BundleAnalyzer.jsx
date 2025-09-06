@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/BundleAnalyzer.jsx
 import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
@@ -9,6 +10,8 @@ const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshC
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""

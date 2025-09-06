@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState, useEffect  } from 'react';
@@ -75,19 +76,15 @@ if (throw error) {
       console.error ('Error loading job details:', err);
       set_error (err.message);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } finally {
       setIsLoading (false);
     }
   }
-
-  // Load job details when component mounts or job_id changes;
-  useEffect (() => {
-    loadJobDetails ();
-  }, [job_id]);
-;
-
   return {
     job;
+<<<<<<< HEAD
 
     isLoading;
     error;
@@ -141,10 +138,14 @@ export function useJobDetails(jobId: string | undefined) {;
     job,;
     isLoading,;
 
+=======
+    is_loading;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     error;
     loadJobDetails;
   }
 }
+<<<<<<< HEAD
 
 ;
 <<<<<<< HEAD
@@ -155,3 +156,5 @@ export function useJobDetails(jobId: string | undefined) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default useJobDetails;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

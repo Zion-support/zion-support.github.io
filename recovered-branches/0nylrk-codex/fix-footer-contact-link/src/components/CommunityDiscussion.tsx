@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -28,11 +29,14 @@ import { Separator  } from '@/components / ui / separator';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface DiscussionPost {
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: number;
   author: string;
   avatar?: string;
   time: string;
   title: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
@@ -71,6 +75,8 @@ const initial_posts: DiscussionPost[] = [;
     title: "What AI trends are you most excited for in 2025?"
     body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"
   }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   {
     id: 2
     author: "David Kim"
@@ -79,6 +85,7 @@ const initial_posts: DiscussionPost[] = [;
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."
   }
 ];
+<<<<<<< HEAD
 export const CommunityDiscussion: React.FC = () => {;
   const [posts, setPosts] = useState(initialPosts);
   const [showNew, setShowNew] = useState(false);
@@ -165,18 +172,28 @@ interface DiscussionPost {;
   body: string;
 }
 ;
+=======
+export const CommunityDiscussion: React.FC = () => {
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const initialPosts: DiscussionPost[] = [;
   {;
     id: 1,;
     author: "Anna Zhou",;
     time: "2h ago",;
     title: "What AI trends are you most excited for in 2025?",;
+<<<<<<< HEAD
     body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},;
+=======
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",;
+  },;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   {;
     id: 2,;
     author: "David Kim",;
     time: "50m ago",;
     title: "Quick tip: How to rank your Zion listing higher",;
+<<<<<<< HEAD
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],;
 export const CommunityDiscussion: React.FC = () => {;
   const [posts, setPosts] = useState(initialPosts),;
@@ -199,6 +216,17 @@ export const CommunityDiscussion: React.FC = () => {;
   };
   return (;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",;
+  },;
+];
+    ]);
+    setNewTitle("");
+    setNewBody("");
+    setShowNew(false);
+  }
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">;
       <div className="flex items-center gap-3 mb-4">;
         <MessageCircle size={28} className="text-zion-cyan" />;
@@ -237,7 +265,6 @@ export const CommunityDiscussion: React.FC = () => {;
               value={newBody}
               onChange={(e: React && React.ChangeEvent<HTMLTextAreaElement>) =>;
                 setNewBody(e && e.target.value);
-=======
 ;
 export const CommunityDiscussion: React.FC = () => {
   const [posts, set_posts] = useState (initial_posts);
@@ -299,6 +326,7 @@ export const CommunityDiscussion: React.FC = () => {
             />;
             <Textarea;
               placeholder="What's on your mind?";
+<<<<<<< HEAD
 
               className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]";
 <<<<<<< HEAD
@@ -396,14 +424,23 @@ export const CommunityDiscussion: React.FC = () => {
                 disabled={!new_title.trim () || !new_body.trim ()}
               >;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+              }
+              max_length={400}
+              rows={3}
+            />;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 Post;
               </Button>;
             </div>;
           </CardContent>;
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 );
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 </AvatarFallback>;
               </Avatar>;
               <div>;
@@ -432,6 +469,7 @@ export const CommunityDiscussion: React.FC = () => {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -486,3 +524,5 @@ export const CommunityDiscussion: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

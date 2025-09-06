@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -34,6 +35,11 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -42,6 +48,7 @@ serve(async (req) => {
     const { query } = await req && req.json();
     if (!query) {
       return new Response(
+<<<<<<< HEAD
 <<<<<<< HEAD
         JSON.stringify({ error: "Query is required" });
         JSON.stringify({ error: "Query is required" }),
@@ -55,10 +62,17 @@ serve(async (req) => {
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+        JSON && JSON.stringify({ error: "Query is required" });
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      )
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     if (!openAiKey) throw new Error("OPENAI_API_KEY is not set");
     const configuration = new Configuration({ apiKey: openAiKey });
     const openai = new OpenAIApi(configuration);
     const prompt = `Interpret the following user search query and extract filters as JSON.\nQuery: "${query}"\nReturn JSON with fields: type, skills, location, budget, availability. Use null if a value is not provided.`;
+<<<<<<< HEAD
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini"
       messages: [{ role: "user", content: prompt }];
@@ -83,6 +97,9 @@ serve(async (req) => {
 
     const responseText = completion.choices[0].message.content || "",
     let filters,
+=======
+    let filters;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     try {
       const match = responseText && responseText.match(/\{[\s\S]*\}/);
       filters = match ? JSON && JSON.parse(match[0]) : JSON && JSON.parse(responseText)
@@ -91,6 +108,7 @@ serve(async (req) => {
     }
     return new Response(
 <<<<<<< HEAD
+<<<<<<< HEAD
       JSON.stringify({ filters });
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
@@ -98,18 +116,32 @@ serve(async (req) => {
     console.error("ai-search error", error);
     return new Response(
       JSON.stringify({ error: error.message });
+=======
+      JSON && JSON.stringify({ filters });
+      { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+    )
+  } catch (error) {
+    console && console.error("ai-search error", error);
+    return new Response(
+      JSON && JSON.stringify({ error: error && error.message });
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
 });
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+=======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
+<<<<<<< HEAD
 =======
 
 
@@ -117,6 +149,8 @@ const cors_headers = {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       JSON.stringify({ filters }),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
 serve (async (req) => {
   // Check condition
@@ -169,6 +203,7 @@ if ( {) {
       { status: 500, headers: { ...cors_headers, "Content - Type": "application / json" } }
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -176,5 +211,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 });

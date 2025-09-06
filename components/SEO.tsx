@@ -1,43 +1,31 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-
 import React from "react";
 import Head from "next/head";
+<<<<<<< HEAD
 origin/main
 origin/automation-improvements-final
 
+=======
+>>>>>>> origin/automation-improvements-final
+
+=======
+import React from './react';
+import Head from './next / head';
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface SEOProps {
+=======
 interface SEOProps {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title?: string;
   description?: string;
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   keywords?: string;
 }
-
-const SEO: React.FC < SEOProps> = ({
-  title = "Zion Tech Group - Technology Solutions",
-  description = "Leading provider of AI services, IT solutions, and micro SaaS development.",
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting",
-
 }) => {
 =======
 
@@ -46,6 +34,7 @@ const SEO: React.FC<SEOProps> = ({;
   description = "Leading provider of AI services, IT solutions, and micro SaaS development.",;
   keywords = "AI services, IT solutions, micro SaaS, technology consulting",;
 }) => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Head>
       <title>{title}</title>
@@ -54,6 +43,7 @@ const SEO: React.FC<SEOProps> = ({;
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head>
   );
+<<<<<<< HEAD
 }
 };
 
@@ -97,5 +87,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 export default SEO;
 origin/main
 origin/automation-improvements-final
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 export default SEO;

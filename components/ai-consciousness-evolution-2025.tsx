@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -21,6 +23,7 @@ import React from 'react';
 import Head from 'next / head';
 import Layout from '../components / layout / Layout';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {
@@ -84,6 +87,8 @@ const contactInfo = {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   website: 'https://ziontechgroup.com'
 }
 const features = [
@@ -134,8 +139,6 @@ const integrations = [
   'Fitness trackers'
   'Meditation apps',];}
 const features = [
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Brain,;
   Star,;
@@ -218,25 +221,17 @@ const integrations = [;
   'Social media networks',;
   'Fitness trackers',;
   'Meditation apps',];};
-const features = [;
   'Emotional intelligence training modulesConsciousness expansion exercisesSelf-awareness development toolsEmpathy and compassion trainingMindfulness and meditation guidanceCognitive enhancement techniquesSocial intelligence developmentCreative consciousness exploration';
   'Spiritual growth pathwaysPersonal transformation tracking';
 ];
-
-
-const useCases = [;
-
   'Personal development and growthProfessional leadership trainingTherapeutic and healing practicesEducational enhancementCorporate wellness programsMental health supportSpiritual developmentCreative arts enhancement';
   'Relationship improvementStress management and resilience';
 ];
-
-
-const technology = [;
-
   'Advanced AI algorithmsMachine learning modelsNatural language processingEmotional recognition systemsBiometric feedback integrationVirtual reality experiencesAugmented reality overlaysBrain-computer interfaces';
   'Quantum computing integrationBlockchain security';
 ];
 
+<<<<<<< HEAD
 =======
   'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
   'Fitness trackersMeditation apps'
@@ -428,37 +423,75 @@ const integrations = [;
 ;
 const testimonials = [;
 
+=======
+  'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
+  'Fitness trackersMeditation apps';
+];
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   {
+    rating: 5,
+    avatar: '👩‍🔬';
+  }
+export default function AIConsciousnessEvolution2025() {
 
+<<<<<<< HEAD
     name: 'Dr. Sarah Chen',
     role: 'Clinical Psychologist',
     company: 'Mindful Wellness Center',
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function AIConsciousnessEvolution2025() {
+=======
+const testimonials = [;
+  {;
+    name: 'Dr. Sarah Chen',;
+    role: 'Clinical Psychologist',;
+    company: 'Mindful Wellness Center',;
+    content:;
+      'The AI Consciousness Evolution platform has revolutionized how we approach emotional intelligence training. Our clients show remarkable improvements in self-awareness and empathy.',;
+    rating: 5,;
+    avatar: '👩‍⚕️',;
+  },  {;
+    name: 'Michael Rodriguez',;
+    role: 'CEO',;
+    company: 'InnovateTech Solutions',    content: 'The AI Consciousness Evolution platform has revolutionized how we approach emotional intelligence training. Our clients show remarkable improvements in self-awareness and empathy.',;
+    rating: 5,;
+    avatar: '👩‍⚕️';
+  };
+    name: 'Michael Rodriguez',;
+    role: 'CEO',;
+    company: 'InnovateTech Solutions',;
+    content:;
+      'Implementing this platform in our leadership development program has transformed our company culture. Our executives are more emotionally intelligent and effective leaders.',;
+    rating: 5,;
+    avatar: '👨‍💼',;
+  },  {;
+    name: 'Dr. Emily Watson',;
+    role: 'Research Director',;
+    company: 'Consciousness Research Institute',    content: 'Implementing this platform in our leadership development program has transformed our company culture. Our executives are more emotionally intelligent and effective leaders.',;
+    rating: 5,;
+    avatar: '👨‍💼';
+  };
+    name: 'Dr. Emily Watson',;
+    role: 'Research Director',;
+    company: 'Consciousness Research Institute',;
+    content:;
+      "This is the most advanced consciousness development tool I've ever encountered. The AI integration makes personal growth accessible to everyone.",;
+    rating: 5,;
+    avatar: '👩‍🔬',;
+  },];    content: 'This is the most advanced consciousness development tool I\'ve ever encountered. The AI integration makes personal growth accessible to everyone.',;
+    rating: 5,;
+    avatar: '👩‍🔬';
+  }
+
+export default function AIConsciousnessEvolution2025() {;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
-
-
     <Layout>;
       <Head>;
         <title>;
           AI Consciousness Evolution Platform 2025 - Zion Tech Group;
         </title>;
-
-        />;
-      </Head>;
-
-
-      {/* Hero Section */}
-      <div className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
-        {/* Animated Background */}
-
-        <div className='absolute inset-0 bg-gradient-to-br from-purple-900 via-black to-pink-900'>;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(168,85,247,0 && 0.15),transparent_50%)]'></div>;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(236,72,153,0 && 0.15),transparent_50%)]'></div>;
-        </div>;
-
-
         {/* Floating Elements */}
         <div className='absolute inset-0 overflow-hidden'>;
           {[...Array(15)].map((_, i) => (;
@@ -486,12 +519,15 @@ export default function AIConsciousnessEvolution2025() {
               key={i}
               className='absolute w-2 h-2 bg-purple-400 rounded-full opacity-30'
               animate={{
+<<<<<<< HEAD
                 x: [0, 100, 0]
                 y: [0, -100, 0]
                 opacity: [0.3, 0.8, 0.3]
                 x: [0, 100, 0],
                 y: [0, -100, 0],
                 opacity: [0.3, 0.8, 0.3],
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               }}              transition={{
                 duration: 8 + i * 2
                 repeat: Infinity
@@ -499,12 +535,15 @@ export default function AIConsciousnessEvolution2025() {
               }}
               style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
                 left: `${Math.random() * 100}%`
                 top: `${Math.random() * 100}%`
               }}            />
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 left: `${Math && Math.random() * 100}%`,
                 top: `${Math && Math.random() * 100}%`,
               }}            />;
@@ -515,6 +554,7 @@ export default function AIConsciousnessEvolution2025() {
             />;
           ))}
         </div>;
+<<<<<<< HEAD
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">;
           <motion&& motion.div
 
@@ -534,6 +574,8 @@ export default function AIConsciousnessEvolution2025() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}>;
@@ -541,6 +583,7 @@ export default function AIConsciousnessEvolution2025() {
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
               transition={{ duration: 0.6, delay: 0.2 }}
               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-6'
 
@@ -601,45 +644,12 @@ export default function AIConsciousnessEvolution2025() {
               your emotional intelligence, expand self - awareness, and unlock;
               your full potential.;
             </p>;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* Key Stats */}
             <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 12'>;
               {[;
                 {
-
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-6"
-            >
-              <Sparkles className="w-4 h-4 mr-2" />
-              Revolutionary AI Technology
-            </motion.div>
-
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent">
-                AI Consciousness
-              </span>
-              <br />
-              <span className="text-white">Evolution Platform</span>
-            </h1>
-            
-            <p className="text-xl sm:text-2xl text-purple-200 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Experience the future of personal development with our revolutionary AI-powered consciousness evolution platform. 
-              Enhance your emotional intelligence, expand self-awareness, and unlock your full potential.
-            </p>
-
-            {/* Key Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-              {[
-                { label: 'Success Rate', value: '94%', icon: <Award className="w-8 h-8" /> },
-                { label: 'Active Users', value: '12.5K+', icon: <Users className="w-8 h-8" /> },
-                { label: 'Improvement', value: '300%', icon: <TrendingUp className="w-8 h-8" /> },
-                { label: 'Satisfaction', value: '4.9/5', icon: <Star className="w-8 h-8" /> }
-              ].map((stat, index) => (
-
-                <motion.div
-                  key={stat.label}
-              <Sparkles className='w-4 h-4 mr-2' />;
-              Revolutionary AI Technology;
-            </motion && motion.div>;
             <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6'>;
               <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent'>;
                 AI Consciousness;
@@ -683,6 +693,7 @@ export default function AIConsciousnessEvolution2025() {
                   key={stat && stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -761,75 +772,18 @@ export default function AIConsciousnessEvolution2025() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105"
-              >
-                Start Free Trial
-              </motion.button>
-              <motion.button
-label: 'Success Rate',
-                  value: '94%',
-                  icon: <Award className='w - 8 h - 8' />,
-                },
-                {
-                  label: 'Active Users',
-                  value: '12.5K+',
-                  icon: <Users className='w - 8 h - 8' />,
-                },
-                {
-                  label: 'Improvement',
-                  value: '300%',
-                  icon: <TrendingUp className='w - 8 h - 8' />,
-                },
-                {
-                  label: 'Satisfaction',
-                  value: '4.9 / 5',
-                  icon: <Star className='w - 8 h - 8' />,
-                },              ].map ((stat, index) => (                { label: 'Success Rate', value: '94%', icon: <Award className="w - 8 h - 8" /> },
-                { label: 'Active Users', value: '12.5K+', icon: <Users className="w - 8 h - 8" /> },
-                { label: 'Improvement', value: '300%', icon: <TrendingUp className="w - 8 h - 8" /> },
-                { label: 'Satisfaction', value: '4.9 / 5', icon: <Star className="w - 8 h - 8" /> }
-                <motion.div;
-                  key={stat.label}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
-                  className='text - center';
-                >;
-                  <div className='inline - flex items - center justify - center w - 16 h - 16 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full mb - 3 text - purple - 400'>;
-                    {stat.icon}
-                  </div>;
-                  <div className='text - 3xl font - bold text - white mb - 1'>;
-                    {stat.value}
-                  </div>;
-                  <div className='text - sm text - purple - 300'>{stat.label}</div>                </motion.div>                >;
-                  <div className="inline - flex items - center justify - center w - 16 h - 16 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full mb - 3 text - purple - 400">;
-                    {stat.icon}
-                  </div>;
-                  <div className="text - 3xl font - bold text - white mb - 1">{stat.value}</div>;
-                  <div className="text - sm text - purple - 300">{stat.label}</div>;
-                </motion.div>))}
-            </div>;
+=======
+              ))}
             {/* CTA Buttons */}
-            <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>              <motion.button;
-                initial={{ opacity: 0, scale: 0.9 }}
+            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>              <motion&& motion.button
+                initial={{ opacity: 0, scale: 0 && 0.9 }}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className='bg - gradient - to - r from - purple - 500 to - pink - 600 hover:from - purple - 600 hover:to - pink - 700 text - white font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200 hover:shadow - 2xl hover:shadow - purple - 500 / 25 hover:scale - 105'              >            <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6">;
-              <motion.button;
+                transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
+                className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'>            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
+              <motion&& motion.button
+                initial={{ opacity: 0, scale: 0 && 0.9 }}
                 initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className='bg - gradient - to - r from - purple - 500 to - pink - 600 hover:from - purple - 600 hover:to - pink - 700 text - white font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200 hover:shadow - 2xl hover:shadow - purple - 500 / 25 hover:scale - 105'                className="bg - gradient - to - r from - purple - 500 to - pink - 600 hover:from - purple - 600 hover:to - pink - 700 text - white font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200 hover:shadow - 2xl hover:shadow - purple - 500 / 25 hover:scale - 105";
-              >;
-                Start Free Trial;
-              </motion.button>;
-              <motion.button;
-                initial={{ opacity: 0, scale: 0.9 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
                 className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105">;
@@ -838,13 +792,12 @@ label: 'Success Rate',
               <motion&& motion.button
                 initial={{ opacity: 0, scale: 0 && 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-
-
       {/* Features Section */}
       <section className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -862,10 +815,13 @@ label: 'Success Rate',
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center mb-16'
 
 <<<<<<< HEAD
@@ -889,6 +845,8 @@ label: 'Success Rate',
             className="text-center mb-16"
           >
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <h2 className="text-4xl font-bold text-white mb-6">
               Revolutionary Features for
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Consciousness Evolution</span>
@@ -920,17 +878,12 @@ label: 'Success Rate',
               the most advanced consciousness development experience ever created.;
             </p>;
           </motion && motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {features && features.map((feature, index) => (;
-              <motion&& motion.div
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={feature}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300'
 
 <<<<<<< HEAD
@@ -983,11 +936,15 @@ label: 'Success Rate',
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* How It Works Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
+<<<<<<< HEAD
 
 =======
           </div>
@@ -1016,10 +973,13 @@ label: 'Success Rate',
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center mb-16'
 
 <<<<<<< HEAD
@@ -1043,6 +1003,8 @@ label: 'Success Rate',
             className="text-center mb-16"
           >
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <h2 className="text-4xl font-bold text-white mb-6">
               How AI Consciousness Evolution
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Works</span>
@@ -1054,7 +1016,6 @@ label: 'Success Rate',
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-<<<<<<< HEAD
                 className='border - 2 border - purple - 500 / 50 text - purple - 300 hover:text - white hover:bg - gradient - to - r hover:from - purple - 500 / 20 hover:to - pink - 500 / 20 font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200'              >                className="border - 2 border - purple - 500 / 50 text - purple - 300 hover:text - white hover:bg - gradient - to - r hover:from - purple - 500 / 20 hover:to - pink - 500 / 20 font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200";
               >;
                 Watch Demo;
@@ -1239,6 +1200,7 @@ label: 'Success Rate',
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
             {[;
               {
+<<<<<<< HEAD
 
                 Works;
               </span>;
@@ -1380,11 +1342,53 @@ label: 'Success Rate',
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+              }
+            ].map((step, index) => (;
+              <motion&& motion.div
+                key={step && step.step}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.2 }}
+                viewport={{ once: true }}
+                className='text-center'>;
+                <div className='relative mb-8'>;
+                  <div className='w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
+                    <div className='text-white font-bold text-2xl'>;
+                      {step && step.step}
+                    </div>;
+                  </div>;
+                  <div className='absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full blur-xl opacity-30'></div>;
+                </div>;
+                <div className='w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-purple-400'>;
+                  {step && step.icon}
+                </div>;
+                <h3 className='text-2xl font-bold text-white mb-4'>;
+                  {step && step.title}
+                </h3>;
+                <p className='text-gray-300 leading-relaxed'>;
+                  {step && step.description}
+                </p>              </motion && motion.div>              >;
+                <div className="relative mb-8">;
+                  <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <div className="text-white font-bold text-2xl">{step && step.step}</div>;
+                  </div>;
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full blur-xl opacity-30"></div>;
+                </div>;
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-purple-400">;
+                  {step && step.icon}
+                </div>;
+                <h3 className="text-2xl font-bold text-white mb-4">{step && step.title}</h3>;
+                <p className="text-gray-300 leading-relaxed">{step && step.description}</p>;
+              </motion && motion.div>;
+            ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Use Cases Section */}
       <section className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
+<<<<<<< HEAD
 
 =======
           </div>
@@ -1413,10 +1417,13 @@ label: 'Success Rate',
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center mb-16'
 
 <<<<<<< HEAD
@@ -1440,6 +1447,8 @@ label: 'Success Rate',
             className="text-center mb-16"
           >
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <h2 className="text-4xl font-bold text-white mb-6">
               Transform Your Life with
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> AI Consciousness</span>
@@ -1470,17 +1479,12 @@ label: 'Success Rate',
               across multiple domains.;
             </p>;
           </motion && motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {useCases && useCases.map((useCase, index) => (;
-              <motion&& motion.div
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={useCase}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300'
 
 <<<<<<< HEAD
@@ -1533,11 +1537,15 @@ label: 'Success Rate',
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Technology Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
+<<<<<<< HEAD
 
 =======
           </div>
@@ -1566,10 +1574,13 @@ label: 'Success Rate',
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center mb-16'
 
 <<<<<<< HEAD
@@ -1593,6 +1604,8 @@ label: 'Success Rate',
             className="text-center mb-16"
           >
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <h2 className="text-4xl font-bold text-white mb-6">
               Cutting-Edge
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Technology</span>
@@ -1605,141 +1618,10 @@ label: 'Success Rate',
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {technology.map((tech, index) => (
               <motion.div
-
-                Technology;
-              </span>;
-            </h2>;
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className='text - center';
-              >;
-                <div className='relative mb - 8'>;
-                  <div className='w - 24 h - 24 bg - gradient - to - r from - purple - 500 to - pink - 600 rounded - full flex items - center justify - center mx - auto mb - 4'>;
-                    <div className='text - white font - bold text - 2xl'>;
-                      {step.step}
-                    </div>;
-                  </div>;
-                  <div className='absolute inset - 0 bg - gradient - to - r from - purple - 500 to - pink - 600 rounded - full blur - xl opacity - 30'></div>;
-                </div>;
-                <div className='w - 20 h - 20 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4 text - purple - 400'>;
-                  {step.icon}
-                </div>;
-                <h3 className='text - 2xl font - bold text - white mb - 4'>;
-                  {step.title}
-                </h3>;
-                <p className='text - gray - 300 leading - relaxed'>;
-                  {step.description}
-                </p>              </motion.div>              >;
-                <div className="relative mb - 8">;
-                  <div className="w - 24 h - 24 bg - gradient - to - r from - purple - 500 to - pink - 600 rounded - full flex items - center justify - center mx - auto mb - 4">;
-                    <div className="text - white font - bold text - 2xl">{step.step}</div>;
-                  </div>;
-                  <div className="absolute inset - 0 bg - gradient - to - r from - purple - 500 to - pink - 600 rounded - full blur - xl opacity - 30"></div>;
-                </div>;
-                <div className="w - 20 h - 20 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4 text - purple - 400">;
-                  {step.icon}
-                </div>;
-                <h3 className="text - 2xl font - bold text - white mb - 4">{step.title}</h3>;
-                <p className="text - gray - 300 leading - relaxed">{step.description}</p>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Use Cases Section */}
-      <section className='py - 20 bg - black'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - black">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text - center mb - 16';
-          >;
-            <h2 className='text - 4xl font - bold text - white mb - 6'>;
-              Transform Your Life with;
-              <span className='bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
-                {' '}
-                AI Consciousness;
-              </span>;
-            </h2>;
-            <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
-              From personal development to professional growth, our platform;
-              serves diverse needs across multiple domains.;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {use_cases.map ((use_case, index) => (          >;
-            <h2 className="text - 4xl font - bold text - white mb - 6">;
-              Transform Your Life with;
-              <span className="bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip - text text - transparent"> AI Consciousness</span>;
-            </h2>;
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-              From personal development to professional growth, our platform serves diverse needs;
-              across multiple domains.;
-            </p>;
-          </motion.div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-            {use_cases.map ((use_case, index) => (
-              <motion.div;
-                key={use_case}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='group bg - gradient - to - br from - gray - 900 / 50 to - black / 50 backdrop - blur - lg border border - purple - 500 / 20 rounded - 2xl p - 6 hover:border - purple - 400 / 40 hover:shadow - xl hover:shadow - purple - 500 / 20 transition - all duration - 300';
-              >;
-                <div className='w - 16 h - 16 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - xl flex items - center justify - center mb - 4 group - hover:scale - 110 transition - transform duration - 300'>;
-                  <Lightbulb className='w - 8 h - 8 text - purple - 400' />;
-                </div>;
-                <h3 className='text - xl font - bold text - white mb - 3 group - hover:text - purple - 300 transition - colors duration - 200'>;
-                  {use_case}
-                </h3>;
-                <p className='text - gray - 400'>;
-                  Leverage AI - powered consciousness development for enhanced;
-                  personal and professional growth.                </p>              >;
-                <div className="w - 16 h - 16 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - xl flex items - center justify - center mb - 4 group - hover:scale - 110 transition - transform duration - 300">;
-                  <Lightbulb className="w - 8 h - 8 text - purple - 400" />;
-                </div>;
-                <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - purple - 300 transition - colors duration - 200">;
-                  {use_case}
-                </h3>;
-                <p className="text - gray - 400">;
-                  Leverage AI - powered consciousness development for enhanced personal and professional growth.;
-                </p>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Technology Section */}
-      <section className='py - 20 bg - gradient - to - b from - black to - purple - 900 / 20'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - gradient - to - b from - black to - purple - 900 / 20">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text - center mb - 16';
-          >;
-            <h2 className='text - 4xl font - bold text - white mb - 6'>;
-              Cutting - Edge;
-              <span className='bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
-                {' '}
-                Technology;
-              </span>;
-            </h2>;
-            <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
-
               Our platform leverages the latest advancements in AI, machine;
               learning, and consciousness research to deliver unprecedented;
               results.;
             </p>;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={tech}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -1755,29 +1637,12 @@ label: 'Success Rate',
                 </div>;
                 <p className="text-sm text-gray-300 font-medium">{tech}</p>;
               </motion && motion.div>;
-
-=======
-=======
-          </motion.div>;
-          <div className='grid grid - cols - 2 md:grid - cols - 5 gap - 6'>            {technology.map ((tech, index) => (          >;
-            <h2 className="text - 4xl font - bold text - white mb - 6">;
-              Cutting - Edge;
-              <span className="bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip - text text - transparent"> Technology</span>;
-            </h2>;
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-              Our platform leverages the latest advancements in AI, machine learning, and consciousness research;
-              to deliver unprecedented results.;
-            </p>;
-          </motion.div>;
-          <div className="grid grid - cols - 2 md:grid - cols - 5 gap - 6">;
-            {technology.map ((tech, index) => (
-              <motion.div;
-
                 key={tech}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='text-center group'
 
@@ -1824,11 +1689,15 @@ label: 'Success Rate',
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Testimonials Section */}
       <section className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
+<<<<<<< HEAD
 
 =======
                 className='text-center group'
@@ -1885,10 +1754,13 @@ label: 'Success Rate',
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center mb-16'
 
 <<<<<<< HEAD
@@ -1912,6 +1784,8 @@ label: 'Success Rate',
             className="text-center mb-16"
           >
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <h2 className="text-4xl font-bold text-white mb-6">
               What Our Users
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Say</span>
@@ -1945,13 +1819,11 @@ label: 'Success Rate',
             {testimonials && testimonials.map((testimonial, index) => (;
               <motion&& motion.div
                 key={testimonial && testimonial.name}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.2 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className='bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6'
 
 <<<<<<< HEAD
@@ -2034,11 +1906,15 @@ label: 'Success Rate',
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Pricing Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
+<<<<<<< HEAD
 
 =======
           </div>
@@ -2067,10 +1943,13 @@ label: 'Success Rate',
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center mb-16'
 
 <<<<<<< HEAD
@@ -2094,6 +1973,8 @@ label: 'Success Rate',
             className="text-center mb-16"
           >
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <h2 className="text-4xl font-bold text-white mb-6">
               Choose Your
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Evolution Path</span>
@@ -2105,6 +1986,7 @@ label: 'Success Rate',
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
+<<<<<<< HEAD
 
                 Evolution Path;
               </span>;
@@ -2185,6 +2067,8 @@ label: 'Success Rate',
                 popular: false,;
               },            ].map((plan, index) => (                  'Everything in ProfessionalTeam managementCustom integrationsDedicated supportWhite-label optionsAdvanced reportingAPI access';
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 name: 'Enterprise',
                 price: '$799',
                 period: '/month',
@@ -2204,6 +2088,7 @@ label: 'Success Rate',
               },              {                  'Advanced AI assessmentUnlimited exercisesPersonalized coachingPriority supportAdvanced analyticsIntegration with wearablesGroup sessions'
 =======
                 description: 'Complete solution for organizations and teams',
+<<<<<<< HEAD
 
                 features: [;
                   'Everything in Professional',
@@ -2223,11 +2108,25 @@ label: 'Success Rate',
               }
 
 
+=======
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.2 }}
+                viewport={{ once: true }}
+                className={`relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border rounded-2xl p-8 ${
+                  plan && plan.popular
+                    ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20'                    : 'border-purple-500/20'
+                }`}>;
+                {plan && plan.popular && (;
+                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>;
+                    <span className='bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold'>                      Most Popular;
+                    </span>;
+                  </div>;
+                )}                  plan && plan.popular ;
+                    ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20' ;
+                    : 'border-purple-500/20';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 }`}
-
-                  plan.popular 
-                    ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20' 
-
                     : 'border-purple-500/20'
               <motion.div;
 =======
@@ -2317,14 +2216,12 @@ label: 'Success Rate',
                 }`}
               >;
                 {plan.popular && (
-
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-
                     <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold">
                       Most Popular
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2342,26 +2239,20 @@ label: 'Success Rate',
                   <h3 className='text - 2xl font - bold text - white mb - 2'>;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     {plan.name}
                   </h3>;
                   <div className='mb - 4'>;
                     <span className='text - 4xl font - bold text - purple - 400'>;
                       {plan.price}
-
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold text-purple-400">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
-                  </div>
-
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               >;
@@ -2403,13 +2294,11 @@ label: 'Success Rate',
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       {feature}
                     </li>;
                   ))}
-
-                </ul>;
-
-
                 <button
                   className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
                     plan && plan.popular
@@ -2422,6 +2311,7 @@ label: 'Success Rate',
                 }`}>;
                 </button>;
               </motion && motion.div>;
+<<<<<<< HEAD
 
                       {feature}
 =======
@@ -2461,11 +2351,15 @@ label: 'Success Rate',
       </section>;
 
 
+=======
+            ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>;
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">;
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion&& motion.div
+<<<<<<< HEAD
 =======
 
 
@@ -2486,6 +2380,8 @@ label: 'Success Rate',
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -2494,6 +2390,7 @@ label: 'Success Rate',
               Ready to Evolve Your;
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 {' '}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -2525,6 +2422,8 @@ label: 'Success Rate',
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Evolve Your
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Consciousness?</span>
             </h2>
             <p className="text-xl text-purple-200 mb-8">
@@ -2540,6 +2439,7 @@ label: 'Success Rate',
               </button>
             </div>
             {/* Contact Info */}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-6'>
               {[
@@ -2565,11 +2465,14 @@ label: 'Success Rate',
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               {[
                 { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile }
                 { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email }
 
                 { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
+<<<<<<< HEAD
 
               ].map((contact, index) => (
 
@@ -2591,6 +2494,8 @@ label: 'Success Rate',
 
                 <motion.div
                   key={contact.label}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 Consciousness?;
               </span>;
             </h2>;
@@ -2642,13 +2547,11 @@ label: 'Success Rate',
                 { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo && contactInfo.address }
                 <motion&& motion.div
                   key={contact && contact.label}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.4 + index * 0 && 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
                   className='text-center'
 
 <<<<<<< HEAD
@@ -2693,9 +2596,15 @@ label: 'Success Rate',
       </section>
     </Layout>
 );  )
-}
-
 =======
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+    </Layout>;
+  );  );
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+}
   )
 }
                     </span>;
@@ -2825,6 +2734,7 @@ label: 'Success Rate',
       </section>;
     </Layout>));
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -2835,3 +2745,5 @@ label: 'Success Rate',
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

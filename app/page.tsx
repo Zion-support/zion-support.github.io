@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -68,6 +69,7 @@ export default function HomePage() {
             description="Business intelligence, predictive analytics and data science solutions."
             icon="📊"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           />
           <Card
@@ -88,6 +90,8 @@ export default function HomePage() {
             description="Cloud migration, architecture, and optimization across AWS, Azure, and GCP."
             icon="☁️"
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           />
         </div>
       </section>
@@ -143,3 +147,5 @@ function FeatureCard({ title, description }: { title: string; description: strin
     </div>
   );
 }
+=======
+>>>>>>> d9a4214406946307ebf253d8e717bd531b4be976

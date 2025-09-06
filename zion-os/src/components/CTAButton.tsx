@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 "use client",
 import Link from './next / link';,
@@ -42,6 +43,8 @@ function CTAButton() {
 
     <Link;
       href={href}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;

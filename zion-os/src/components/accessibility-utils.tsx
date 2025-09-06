@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import { useEffect, useRef, useState } from "react";
 // Skip link component for keyboard navigation;
@@ -7,6 +8,8 @@ import { useEffect, useRef, useState } from "react",;
 // Skip link component for keyboard navigation;
 export function SkipLink({ targetId, children }: { targetId: string, children: React.ReactNode }) {;
   return (;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <a;
       href={`#${target_id}`}
       className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
@@ -14,6 +17,7 @@ export function SkipLink({ targetId, children }: { targetId: string, children: R
       {children}
     </a>);
 }
+<<<<<<< HEAD
 // Live region for screen reader announcements;
 export function LiveRegion({message;
   role = "status";
@@ -34,6 +38,8 @@ export function LiveRegion({;
   "aria-live"?: "polite" | "assertive" | "off";
 }) {;
   return (;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <div;
       role={role}
       aria - live={aria_live}
@@ -43,6 +49,7 @@ export function LiveRegion({;
       {message}
     </div>);
 }
+<<<<<<< HEAD
 // Focus trap for modals and dialogs;
 export function useFocusTrap(enabled: boolean = true) {const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {;
@@ -484,6 +491,8 @@ export function ProgressIndicator({;
     <div className="space-y-2">;
       <div className="flex justify-between text-sm">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <span>{label}</span>;
         <span>{percentage}%</span>;
       </div>;
@@ -500,6 +509,7 @@ export function ProgressIndicator({;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 // Collapsible section component;
 export function CollapsibleSection({title;
   children;
@@ -560,6 +570,8 @@ export function CollapsibleSection({;
   return (;
     <div className="border border-[var(--border)] rounded-lg">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <button;
         className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
         on_click={() => setIsExpanded (!is_expanded)}
@@ -572,11 +584,14 @@ export function CollapsibleSection({;
         </span>;
       </button>;
       <div;
+<<<<<<< HEAD
         id={`collapsible-${title.toLowerCase().replace(/\s+/g, '-')}`}
         ref={contentRef}
         className={`overflow-hidden transition-all duration-300 ${isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
         className={`overflow-hidden transition-all duration-300 ${;
           isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         }`}
         aria - hidden={!is_expanded}
       >;
@@ -586,6 +601,7 @@ export function CollapsibleSection({;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 // Tooltip component with proper accessibility;
 export function Tooltip({children;
   content;
@@ -662,6 +678,8 @@ export function Tooltip({;
   return (;
     <div className="relative inline-block">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <div;
         onMouseEnter={() => setIsVisible (true)}
         onMouseLeave={() => setIsVisible (false)}

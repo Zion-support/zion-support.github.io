@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {
   Table;
@@ -145,6 +146,8 @@ export function TeamManagement() {
   }
   },
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -247,13 +250,11 @@ if ( {) {
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
-
-              <DialogTitle > Add Team Member</DialogTitle>;
-
               <DialogDescription>;
                 Send an invitation to join your workspace. They'll receive an email with instructions.;
               </DialogDescription>;
             </DialogHeader>;
+<<<<<<< HEAD
 
                   className="col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">;
 =======
@@ -422,6 +423,8 @@ export function TeamManagement() {;
                   className="col - span - 3 flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - sm ring - offset - background file:border - 0 file:bg - transparent file:text - sm file:font - medium placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50";
                 >;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <option value="admin">Admin</option>;
                   <option value="recruiter">Recruiter</option>;
                   <option value="manager">Manager</option>;
@@ -430,17 +433,18 @@ export function TeamManagement() {;
               </div>;
             </div>;
             <DialogFooter>;
-
-              <Button variant="outline" on_click={() => setIsAddingMember (false)}>;
-                Cancel;
-              </Button>;
-              <Button on_click={handleAddMember}>Send Invitation</Button>;
-
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       </div>;
-
+                          .join("")}
+                      </span>;
+                    </div>;
+                    <div>;
+                      <div className="font-medium">{member && member.name}</div>;
+                      <div className="text-sm text-muted-foreground">;
+                        {member && member.email}
+=======
       <div className="rounded - md border">;
         <Table>;
           <TableHeader>;
@@ -469,19 +473,11 @@ export function TeamManagement() {;
                       <div className="font - medium">{member.name}</div>;
                       <div className="text - sm text - muted - foreground">;
                         {member.email}
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       </div>;
                     </div>;
                   </div>;
                 </TableCell>;
-
-          </TableBody>;
-        </Table>;
-      </div>;
-    </div>;
-  );
-}
-
 =======
                 <TableCell>{member.role}</TableCell>;
                 <TableCell>;
@@ -498,6 +494,7 @@ export function TeamManagement() {;
                       <Button;
                         variant="ghost";
                         size="sm";
+<<<<<<< HEAD
 
                         className="text-destructive hover:text-destructive";
 <<<<<<< HEAD
@@ -519,5 +516,27 @@ export function TeamManagement() {;
       </div>
     </div>
   )
+=======
+                        on_click={() => handleResendInvite (member.email)}
+                      >;
+                        <Mail className="h - 4 w - 4 mr - 1" />;
+                        Resend;
+                      </Button>) : (
+                      <Button;
+                        variant="ghost";
+                        size="sm";
+                        className="text - destructive hover:text - destructive";
+                        on_click={() => handleRemoveMember (member.id)}
+                      >;
+                        <Trash className="h - 4 w - 4" />;
+                      </Button>)}
+                  </div>;
+                </TableCell>;
+              </TableRow>))}
+          </TableBody>;
+        </Table>;
+      </div>;
+    </div>);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -19,6 +21,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 type Question = {
   id: string;
@@ -50,6 +53,8 @@ export default function Quiz({ questions, onComplete }: Props) {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     setSubmitted(true);
     onComplete(score);
   }
@@ -64,12 +69,8 @@ export default function Quiz({ questions, onComplete }: Props) {;
             {q && q.options.map((opt, i) => (;
               <label key={i} className='flex items-center gap-2'>;
                 <input
-
-=======
-};
-=======
-                  type='radio'                  name={q.id}
   function submit() {
+<<<<<<< HEAD
     setSubmitted(true);
     onComplete(score)
   }
@@ -87,6 +88,8 @@ export default function Quiz({ questions, onComplete }: Props) {
 
     setSubmitted(true)
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     onComplete(score)
   }
   return (
@@ -99,6 +102,7 @@ export default function Quiz({ questions, onComplete }: Props) {
               <label key={i} className="flex items-center gap-2">;
                 <input
                   type="radio"
+<<<<<<< HEAD
 <<<<<<< HEAD
                   name={q.id}
                   checked={answers[q.id] === i}
@@ -134,6 +138,33 @@ export default function Quiz({ questions, onComplete }: Props) {
 
 
 =======
+=======
+              )}
+            </div>;
+          )}
+        </div>;
+      ))}
+      <button
+        onClick={submit}
+        className='px-4 py-2 bg-blue-600 text-white rounded'>;
+        Submit Quiz;
+      </button>;
+      {submitted && (;
+        <div className='text-sm'>;
+          Score: {score} / {questions && questions.length}
+        </div>;
+      )}
+      {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
+    </div>
+);
+}
+    </div>;
+  );      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>;
+      {submitted && <div className="text-sm">Score: {score} / {questions && questions.length}</div>}
+    </div>;
+  );
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <div className='mt - 2 text - sm'>;
               {answers[q.id] === q.answer_index ? (
                 <span className='text - green - 600'>Correct</span>) : (
@@ -156,6 +187,7 @@ export default function Quiz({ questions, onComplete }: Props) {
     </div>);      <button on_click={submit} className="px - 4 py - 2 bg - blue - 600 text - white rounded">Submit Quiz</button>;
       {submitted && <div className="text - sm">Score: {score} / {questions.length}</div>}
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
                 />
 <<<<<<< HEAD
@@ -212,3 +244,5 @@ export default function Quiz({ questions, onComplete }: Props) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

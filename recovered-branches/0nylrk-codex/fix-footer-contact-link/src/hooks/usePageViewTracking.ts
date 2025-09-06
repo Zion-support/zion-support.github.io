@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useEffect  } from 'react';
@@ -60,6 +61,10 @@ export function usePageViewTracking() {
 
     handleRouteChange(),
     
+=======
+    // Initial page load
+    handleRouteChange();
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return () => {
       window && window.removeEventListener('popstate', handleRouteChange)
     }
@@ -67,6 +72,7 @@ export function usePageViewTracking() {
 
   // Also track when location changes directly via React Router
   useEffect(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     // // // console.log('Page view:', location.pathname)
   }, [location.pathname])
@@ -83,6 +89,8 @@ import { useLocation } from 'react-router-dom',;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import {useEffect} from 'react';
 import {use_location} from 'react-router-dom';
@@ -113,6 +121,7 @@ function usePageViewTracking() {
       window.removeEventListener ('popstate', handleRouteChange);
     }
   }, []);
+<<<<<<< HEAD
 
   // Also track when location changes directly via React Router;
   useEffect(() => {;
@@ -126,4 +135,6 @@ function usePageViewTracking() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;

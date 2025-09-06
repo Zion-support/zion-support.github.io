@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes";
@@ -6,8 +7,11 @@ import type { QuoteRequest } from "@/types/quotes";
 import { Button } from "@/components/ui/button";
 <<<<<<< HEAD
 import { Button } from '@/components/ui/button'
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { Download } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes";
+interface ExportToCSVProps {
 
   quotes: QuoteRequest[]
   filename?: string
@@ -30,6 +34,7 @@ export const ExportToCSV = ({
     ]
     // Format quote data for CSV
     const rows = quotes.map(quote => [
+<<<<<<< HEAD
       quote.id
       quote.talent_name |'Unknown'
       quote.requester_name
@@ -64,6 +69,8 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     
     // Format quote data for CSV
     const rows = quotes.map(quote => [
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       quote.id,
       quote.talent_name || 'Unknown',
       quote.requester_name,
@@ -78,7 +85,10 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
             : 'Not specified'),
       quote.timeline,
       quote.status,
+<<<<<<< HEAD
       new Date(quote.created_at).toLocaleDateString(),
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     ])
     // Create CSV content
     const csvContent = [
@@ -92,6 +102,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
               ? `"${cell.replace(/"/g, '""')}"`
               : cell
           )
+<<<<<<< HEAD
           .join(',')
       )
     ].join('\n')
@@ -100,6 +111,8 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       ),;
     ].join('\n');
     // Create download link;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
     const url = URL.createObjectURL(blob)
     const link = document.createElement('a')
@@ -111,11 +124,14 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     document.body.appendChild(link)
 import { Button } from "@/components/ui/button"
 import type { QuoteRequest } from "@/types/quotes"
+<<<<<<< HEAD
 =======
 import { Download } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes";
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface ExportToCSVProps {
   quotes: QuoteRequest[]
   filename?: string
@@ -150,18 +166,25 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       headers.join()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       ...rows.map(row =>
         row.map(cell =>
 
 
+=======
+      ...rows.map(row => 
+        row.map(cell => 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           // Escape commas and quotes in cell values
           typeof cell === 'string' && (cell.includes() |cell.includes('"'))
             ? `"${cell.replace(/"/g, '""')}"`
             : cell
         ).join()
       )
+<<<<<<< HEAD
     ].join('\n')
     // Create download link
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' })
@@ -385,6 +408,8 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     ].join('\n'),
     
     // Create download link
@@ -409,7 +434,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 import { Button } from "@/components/ui/button",;
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes",;
-
 interface ExportToCSVProps {;
   quotes: QuoteRequest[],;
   filename?: string;
@@ -466,6 +490,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       URL.revokeObjectURL(url);
     }, 100);
   };
+<<<<<<< HEAD
 
       >;
       <Download size={16} />;
@@ -495,6 +520,9 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 
 
 
+=======
+  return (;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <Button;
       variant="outline";
       onClick={handleExport}
@@ -505,4 +533,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       Export CSV;
     </Button>;
   );
-}
+};
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

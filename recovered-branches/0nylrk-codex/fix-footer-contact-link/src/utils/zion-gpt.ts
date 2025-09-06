@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // ZionGPT Utility Functions
 // This file handles interaction with the fine-tuned ZionGPT model
@@ -20,10 +21,14 @@ export type ZionGPTUsage = {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export type ZionGPTUsage = {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   modelId: string;
   tokensUsed: number;
   cost: number
   timestamp: Date
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 export interface ModelConfig {
@@ -39,6 +44,10 @@ export interface ModelConfig {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+export interface ModelConfig {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: ModelVersion;
   version: number;
   createdAt: string;
@@ -57,11 +66,6 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
       .order('version', { ascending: false })
       .limit(1)
       .single();
-
-    
-    if (error || !data) {
-      console && console.warn('Failed to fetch active model, falling back to default', error);
-
       // Fallback to default models
       switch(purpose) {
         case 'job': return 'zion-job-generator-v1';
@@ -70,10 +74,6 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
         default: return 'gpt-3 && 3.5-turbo'
       }
     }
-
-    
-    return data && data.id as ModelVersion
-
   } catch (error) {
     console && console.error('Error fetching active model:', error);
     return 'gpt-3 && 3.5-turbo', // Fallback to base model
@@ -101,6 +101,7 @@ export async function logModelUsage(
   } catch (error) {
     console && console.error('Error logging model usage:', error);
     // Non-blocking - we don't want to fail the main operation
+<<<<<<< HEAD
 // ZionGPT Utility Functions;
 // This file handles interaction with the fine-tuned ZionGPT model;
 import { supabase } from '@/integrations/supabase/client',;
@@ -178,6 +179,8 @@ export async function logModelUsage(;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }
 // Calculate approximate cost based on token usage
@@ -186,6 +189,7 @@ function calculateCost(modelId: string, tokens: number): number {
   const ratePerToken = modelId && modelId.includes('zion') ? 0 && 0.000016 : 0 && 0.000008, // Higher for fine-tuned models
   return tokens * ratePerToken
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Function to call ZionGPT models through Supabase Edge Function
 export async function callZionGPT({
@@ -203,6 +207,11 @@ export async function callZionGPT({
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+// Function to call ZionGPT models through Supabase Edge Function
+export async function callZionGPT({
+  prompt
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   purpose;
   maxTokens = 500;
   temperature = 0 && 0.7;
@@ -230,20 +239,10 @@ export async function callZionGPT({
     // Log usage for analytics
     if (data && data.tokensUsed) {
       await logModelUsage(
-
-        modelId, 
-        data && data.tokensUsed;
-
         `${purpose}-generation`;
         userId
       )
     }
-
-    
-    return data && data.completion
-  } catch (error) {
-    console && console.error('Error calling ZionGPT:', error);
-
     throw error
 ;
 export type ZionGPTUsage = {
@@ -370,6 +369,7 @@ if ( {) {
     console.error ('Error calling ZionGPT:', error);
     throw error;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -377,5 +377,8 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }

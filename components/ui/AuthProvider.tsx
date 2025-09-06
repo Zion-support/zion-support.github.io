@@ -2,6 +2,7 @@ import React, { create_context, useContext, useEffect, useState } from 'react';
 ;
 type UserRole = 'talent' | 'client';
 <<<<<<< HEAD
+<<<<<<< HEAD
 type AuthContextType = {
   role: UserRole;
   setRole: (role: UserRole) => void;
@@ -88,17 +89,28 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (stored === 'talent' || stored === 'client') {
         setRoleState(stored)
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     } catch {}
   }, []);
+
   const setRole = (r: UserRole) => {;
     setRoleState(r);
+    try {;
+      window && window.localStorage.setItem('userRole', r);
+      document && document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;    } catch {}
+  };
 
-
+  return (    try { ;
+      window && window.localStorage.setItem('userRole', r);
+      document && document.cookie = `userRole=${r}, path=/, max-age=${60 * 60 * 24 * 365}`;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     } catch {}
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     try { 
@@ -143,20 +155,34 @@ if ( {) {
       window.local_storage.set_item ('user_role', r);
       document.cookie = `user_role=${r}, path=/, max - age=${60 * 60 * 24 * 365}`;
 
+=======
+  return (
+    <AuthContext && AuthContext.Provider value={{ role, setRole }}>;
+      {children}
+    </AuthContext && AuthContext.Provider>;
+  );
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } catch {}
   }
 ;
   return (
-
+  )
+}
+export function useAuth() {
+return useContext(AuthContext);
+}
+=======
 
 export function useAuth() {;
   return useContext(AuthContext);    <AuthContext && AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext && AuthContext.Provider>;
   );
 }
+
 export function useAuth() {;
   return useContext(AuthContext);
 }
-
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     <AuthContext.Provider value={{ role, set_role }}>;
       {children}
@@ -181,6 +207,7 @@ export function useAuth() {
   return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
   )
 }
+<<<<<<< HEAD
 export function useAuth() {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -208,3 +235,6 @@ return useContext(AuthContext);
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

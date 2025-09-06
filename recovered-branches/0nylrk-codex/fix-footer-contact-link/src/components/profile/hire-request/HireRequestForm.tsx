@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,10 +50,13 @@ export interface HireRequestFormProps {
   initialJobTitle?: string,
 =======
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   initialJobTitle?: string;
   userDetails?: {;
     name?: string;
     email?: string;
+<<<<<<< HEAD
 
 
 
@@ -172,6 +176,8 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
             Cancel;
           </Button>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Button
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -184,21 +190,16 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
             ) : (;
               'Submit Request';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             )}
-
-          </Button>;
-        </DialogFooter>;
-      </form>;
-    </Form>;
-  );
-}
-
 =======
 import React from './react';
 import { useHireRequestForm, FormValues } from './useHireRequestForm';

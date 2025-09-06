@@ -12,8 +12,11 @@ import React from 'react';
 
 
 import React from 'react';
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { 
   LightBulbIcon,
   CpuChipIcon, 
@@ -23,18 +26,24 @@ import {
   UserGroupIcon;
 } from '@heroicons/react/24/outline';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from 'react';
 
 
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const features = [
   {
     name: 'AI-Powered Research'
@@ -96,7 +105,6 @@ const solutions = [
   }
 ];
 export default function HomePage() {
-=======
   LightBulbIcon,
   CpuChipIcon,
   GlobeAltIcon,
@@ -106,99 +114,7 @@ export default function HomePage() {
 } from '@heroicons / react / 24 / outline';
 ;
 const features = [;
-=======
-  LightBulbIcon
-  CpuChipIcon
-  GlobeAltIcon
-  ShieldCheckIcon
-  ChartBarIcon
-  UserGroupIcon
-} from '@heroicons/react/24/outline';
-=======
-import React from 'react';
-=======
-import { 
-  LightBulbIcon,
-  CpuChipIcon, 
-  GlobeAltIcon, 
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon;
-} from '@heroicons/react/24/outline';
-=======
-import React from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-const features = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  {
-    name: 'AI - Powered Research',
-    description: 'Cutting - edge artificial intelligence that accelerates research and discovery across all domains.',
-    icon: LightBulbIcon;
-  },
-  {
-    name: 'Quantum Computing',
-    description: 'Next - generation quantum neural networks for solving complex computational problems.',
-    icon: CpuChipIcon;
-  },
-  {
-    name: 'Global Solutions',
-    description: 'Worldwide deployment of autonomous business operations and digital transformation.',
-    icon: GlobeAltIcon;
-  },
-  {
-    name: 'Enterprise Security',
-    description: 'Military - grade security protocols protecting your most valuable digital assets.',
-    icon: ShieldCheckIcon;
-  },
-  {
-    name: 'Data Analytics',
-    description: 'Advanced analytics and insights driving informed decision - making.',
-    icon: ChartBarIcon;
-  },
-  {
-    name: 'Expert Team',
-    description: 'World - class researchers and engineers pushing the boundaries of technology.',
-    icon: UserGroupIcon;
-  }
-];
-;
-const stats = [;
-  { name: 'Research Papers Published', value: '150+' },
-  { name: 'AI Models Deployed', value: '500+' },
-  { name: 'Global Clients', value: '1000+' },
-  { name: 'Patents Filed', value: '25+' }
-];
-;
-const solutions = [;
-  {
-    name: 'AI Research Assistant',
-    description: 'Autonomous research platform that accelerates scientific discovery.',
-    href: '/solutions / ai - autonomous - research';
-  },
-  {
-    name: 'Quantum Neural Networks',
-    description: 'Next - generation computing for complex problem solving.',
-    href: '/solutions / quantum - neural - networks';
-  },
-  {
-    name: 'Autonomous Business Operations',
-    description: 'AI - powered automation for enterprise efficiency.',
-    href: '/solutions / autonomous - business';
-  },
-  {
-    name: 'IT Asset Management',
-    description: 'Intelligent management of digital infrastructure.',
-    href: '/solutions / it - asset - management';
-  }
-];
-;
-export default /**
- * HomePage - Function description
- */
-function HomePage() {
+import {
   return (
     <div className="bg-black">
       {/* Hero section */}
@@ -207,6 +123,7 @@ function HomePage() {
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Leading the Future of{' '}
+<<<<<<< HEAD
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                 AI & Technology
               </span>
@@ -453,6 +370,8 @@ function HomePage() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Solutions showcase */}
       <div className="mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8">;
         <div className="mx - auto max - w-2xl lg:text - center">;
@@ -484,6 +403,7 @@ function HomePage() {
                     <a href={solution.href}>;
                       <span className="absolute inset - 0" />;
                       {solution.name}
+<<<<<<< HEAD
 
 
           </div>;
@@ -650,3 +570,5 @@ function HomePage() {
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

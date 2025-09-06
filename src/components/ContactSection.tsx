@@ -1,8 +1,100 @@
-fetch("/api/contact", {
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: ""
+    email: ""
+    subject: ""
+    message: ""})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+
+  const [errors, setErrors] = useState<{
+    name?: string;
+    email?: string;
+    subject?: string;
+    message?: string
+import { useState } from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/components/ui/use-toast",
+import z from "zod",
+import { Mail } from 'lucide-react'
+
+export function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""}),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [submitted, setSubmitted] = useState(false),
+  const [errors, setErrors] = useState<{
+    name?: string,
+    email?: string,
+    subject?: string,
+    message?: string
+  }>({}),
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target,
+    setFormData((prev) => ({ ...prev, [name]: value })),
+    setErrors((prev) => ({ ...prev, [name]: undefined }))
+  },
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(),
+
+    const schema = z.object({
+      name: z.string().min(2, "Name is required"),
+      email: z.string().email("Enter a valid email"),
+      subject: z.string().min(2, "Subject is required"),
+      message: z.string().min(10, "Message must be at least 10 characters")}),
+
+    const result = schema.safeParse(formData),
+    if (!result.success) {
+      const fieldErrors: Record<string string> = {},
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      for (const err of result.error.errors) {
+        if (err.path[0]) {
+          fieldErrors[err.path[0] as string] = err.message
+        }
+      }
+      toast({
+        title: "Form Validation Error"
+        description: result.error.errors[0]?.message |"Please check your form and try again"
+        variant: "destructive"})
+      return
+    }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      toast({
+        title: "Form Validation Error",
+        description: result.error.errors[0]?.message || "Please check your form and try again",
+        variant: "destructive"}),
+      return;
+    }
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+    setErrors({}),
+    setIsSubmitting(true),
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    fetch("/api/contact", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
       body: JSON.stringify(formData)})
       .then(async (res) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
         setIsSubmitting(false)
         if (!res.ok) {
@@ -20,22 +112,28 @@ fetch("/api/contact", {
           const data = await res.json().catch(() => ({})),
           throw new Error(data.error || "Failed to send message")
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         }
         toast({
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         setSubmitted(true)
         setTimeout(() => setSubmitted(false), 2000)
         setFormData({ name: "", email: "", subject: "", message: "" })
       })
       .catch((err) => {
         setIsSubmitting(false);        toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
           title: "Submission Error"
           description: err.message
@@ -62,6 +160,8 @@ fetch("/api/contact", {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         setSubmitted(true),
         setTimeout(() => setSubmitted(false), 2000),
         setFormData({ name: "", email: "", subject: "", message: "" })
@@ -71,14 +171,19 @@ fetch("/api/contact", {
         toast({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           title: "Submission Error",
           description: err.message,
           variant: "destructive"})
       })
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   },
@@ -103,6 +208,12 @@ fetch("/api/contact", {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <section className="py-20 bg-zion-blue" id="contact">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -190,6 +301,7 @@ fetch("/api/contact", {
                   <Textarea
                     id="message"
                     name="message"
+<<<<<<< HEAD
                     rows = {4,}
                     value = {formData.message,}
                     onChange = {handleChange,}
@@ -456,6 +568,11 @@ if ( {) {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
@@ -467,6 +584,7 @@ if ( {) {
                   <Button
                     type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+<<<<<<< HEAD
                     disabled = {isSubmitting,}
                   >
                     disabled={isSubmitting}
@@ -476,43 +594,16 @@ if ( {) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
                     <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
                   )}
-
-                </div>;
-              </form>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
-
-
-
-    </section>);
-}set_errors (field_errors);
-toast ({
-  return;
-}set_errors ({
-});
-setIsSubmitting (true);
-}) .catch ( (err) => {
-  setIsSubmitting (false);
-toast ({
-  title: "Submission Error";
-description: err.message;
-});
-}";
-}</div> <div> <label html_for="email" className="block text - sm font - medium text - zion - slate - light mb - 1" > Email </label> <Input) ";
-}</div> </div> <div> <label html_for="subject" className="block text - sm font - medium text - zion - slate - light mb - 1" > Subject </label> <Input) ";
-}</div> <div> <label html_for="message" className="block text - sm font - medium text - zion - slate - light mb - 1" > Message </label> <Textarea);
-}</div> <div> <Button > {';
-  is_submitting ? 'Sending...' : 'Send Message';
-}</Button>);
-}</div> </form> </div> </div> </div> </div> </section>);
-}'"}
-}
-;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

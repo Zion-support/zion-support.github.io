@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -34,21 +35,30 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+<<<<<<< HEAD
     const { title, keyFeatures, targetAudience } = await req.json();
     if (!title) {
       return new Response(
         JSON && JSON.stringify({ 
           error: "Missing required field: title" 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         });
         {
           status: 400
           headers: { ...corsHeaders, "Content-Type": "application/json" }
+<<<<<<< HEAD
     const { title, keyFeatures, targetAudience } = await req.json(),
 
     if (!title) {
@@ -145,10 +155,48 @@ The description should: 1. Be approximately 200-300 words
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }
 
+=======
+=======
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
+const cors_headers = {
+  "Access - Control - Allow - Origin": "*",
+  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
+;
+serve (async (req) => {
+  // Check condition
+if ( {) {
+  $2
+}
+    return new Response (null, { headers: cors_headers });
+  }
+  try {
+    const { title, key_features, target_audience } = await req.json ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      return new Response (
+        JSON.stringify ({
+          error: "Missing required field: title";
+        });
+        {
+          status: 400,
+          headers: { ...cors_headers, "Content - Type": "application / json" }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        }
+      );
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
     );
   } catch (error) {
-
+      });
+      {
+        status: 500
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+=======
     console.error ("Error in generate - service - description:", error);
 ;
     return new Response (
@@ -159,6 +207,7 @@ The description should: 1. Be approximately 200-300 words
       {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
+<<<<<<< HEAD
 
 5. Include a compelling opening and closing statement`,
 
@@ -224,5 +273,10 @@ The description should: 1. Be approximately 200-300 words;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      }
+    );
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 });

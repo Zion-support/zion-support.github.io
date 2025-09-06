@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState, useEffect} from "react";
@@ -52,6 +53,14 @@ function useJobMatches() {
         .select(`
           *;
           talent_profile: talent_id(
+=======
+    try {
+      const { data, error } = await supabase;
+        .from ("job_talent_matches");
+        .select (`;
+          *;
+          talent_profile: talent_id (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             id;
             user_id;
             full_name;
@@ -60,6 +69,7 @@ function useJobMatches() {
             hourly_rate;
             bio;
             years_experience;
+<<<<<<< HEAD
             key_projects
           *,
           talent_profile:talent_id(
@@ -115,6 +125,15 @@ function useJobMatches() {
         title: "AI Matching Complete",
         description: `Found ${response && response.data.matches || 0} potential talent matches for this job.`});
       
+=======
+    } finally {
+      setIsLoading (false);
+    }
+  }
+  const triggerAIMatching = async () => {
+    setIsProcessing (true);
+    try {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       // Refresh the matches list
       await fetchMatches()
     } catch (error) {
@@ -123,6 +142,7 @@ function useJobMatches() {
         title: "Matching Failed";
         description: "Could not process talent matching. Please try again later."
         variant: "destructive"})
+<<<<<<< HEAD
     } finally {
       setIsProcessing(false)
     }
@@ -230,6 +250,32 @@ export function useJobMatches(jobId: string) {;
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+      const response = await supabase.functions.invoke ('job - talent - matcher', {
+        body: { job_id }});
+;
+      if (throw new Error (response.error.message)) {
+  $2
+}
+      toast ({
+        title: "AI Matching Complete",
+        description: `Found ${response.data.matches || 0} potential talent matches for this job.`});
+;
+      // Refresh the matches list;
+      await fetch_matches ();
+    } catch (error) {
+      console.error ("Error triggering AI matching:", error);
+      toast ({
+        title: "Matching Failed";
+        description: "Could not process talent matching. Please try again later.",
+        variant: "destructive"});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } finally {
+      setIsProcessing (false);
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }
 

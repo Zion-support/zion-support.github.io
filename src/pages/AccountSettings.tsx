@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 toast.success (
         `Wallet connected: ${address.slice (0, 6)}...${address.slice (-4)}`);
 <<<<<<< HEAD
@@ -22,6 +23,8 @@ import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { Wallet, Database, Save } from 'lucide-react'
 
 import {
@@ -99,12 +102,90 @@ export default function AccountSettings() {
       toast.success(
         `Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`
       )
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } catch (error: any) {
-      toast.error (error.message || 'Failed to connect wallet');
+      toast.error(error.message |'Failed to connect wallet')
+    }
+  }
+=======
+import { useState } from 'react',;
+import { useLocalStorage } from '@/hooks',;
+import { Header } from '@/components/Header',;
+import { SEO } from '@/components/SEO',;
+import { useAuth } from '@/hooks/useAuth',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Wallet, Database, Save } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Separator } from '@/components/ui/separator',;
+import { Switch } from '@/components/ui/switch',;
+import { Label } from '@/components/ui/label',;
+import { toast } from 'sonner',;
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
+export default function AccountSettings() {;
+  const { user } = useAuth(),;
+  const [displayWeb3, setDisplayWeb3] = useLocalStorage('display_web3', false),;
+  const [didHandle, setDidHandle] = useLocalStorage('did_handle', ''),;
+  const [enableBackup, setEnableBackup] = useLocalStorage('enable_backup', false),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const handleSave = () => {;
+    setIsSubmitting(true),;
+    // Simulate API call;
+    setTimeout(() => {;
+      try {;
+        setDisplayWeb3(displayWeb3),;
+        setDidHandle(didHandle),;
+        setEnableBackup(enableBackup),;
+        logInfo('Saved settings', { displayWeb3, didHandle, enableBackup }),;
+        toast.success('Account settings updated successfully');
+      } catch (e) {;
+        logErrorToProduction('Failed to save settings', { data:  e }),;
+        toast.error('Failed to save settings');
+      } finally {;
+        setIsSubmitting(false);
+      }
+    }, 1000);
+  },;
+  const handleConnectWallet = async () => {;
+    try {;
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum,;
+      if (!ethereum) {;
+        toast.error('No wallet detected. Please install MetaMask or another compatible wallet.'),;
+        return;
+      }
+;
+      // Request accounts;
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),;
+      const address = accounts[0],;
+      // Sign message to verify ownership;
+      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,;
+      await ethereum.request({;
+        method: 'personal_sign',;
+        params: [address, message];
+      }),;
+      // Auto-set DID handle if ENS is available;
+      try {;
+        const provider = new (window as any).ethers.providers.Web3Provider(ethereum),;
+        const ensName = await provider.lookupAddress(address);
+        if (ensName) {;
+          setDidHandle(ensName);
+        }
+      } catch (error) {;
+        logErrorToProduction('ENS lookup error:', { data: error });
+      }
+;
+      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
+    } catch (error: any) {;
+      toast.error(error.message || 'Failed to connect wallet');
     }
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { useLocalStorage } from '@/hooks',;
 import { Header } from '@/components/Header',;
@@ -275,10 +356,14 @@ export default function AccountSettings() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <>
       <SEO title="Account Settings" description="Manage your account" />
       <Header />
+<<<<<<< HEAD
       <main className='container mx-auto py-8 px-4'>
         <h1 className='text-3xl font-bold mb-6 text-white'>Account Settings</h1>
         <div className='grid gap-6 md:grid-cols-2'>
@@ -291,11 +376,17 @@ export default function AccountSettings() {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
               <CardDescription>Manage your personal information and privacy</CardDescription>
             </CardHeader>
+<<<<<<< HEAD
 
     <>;
       <SEO title='Account Settings' description='Manage your account' />;
@@ -370,6 +461,15 @@ export default function AccountSettings() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+            <CardContent className="space-y-6">
+              <div className="space-y-2">
+                <Label htmlFor="email">Email Address</Label>
+                <Input
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     Connect
                   </Button>
                 </div>
@@ -377,6 +477,7 @@ export default function AccountSettings() {;
                   Link your decentralized identity to display on your profile
                 </p>
               </div>
+<<<<<<< HEAD
               <div className='flex items-center justify-between'>
                 <div className='space-y-0.5'>
                   <Label htmlFor='displayWeb3'>Display Web3 Identity</Label>
@@ -419,6 +520,11 @@ export default function AccountSettings() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     Decentralized Backup
                   </Label>
                   <p className="text-xs text-gray-500">
@@ -426,6 +532,7 @@ export default function AccountSettings() {;
                   </p>
                 </div>
                 <Switch
+<<<<<<< HEAD
                   id='backup'
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}                />;
@@ -465,11 +572,17 @@ export default function AccountSettings() {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className="ml-2 h-4 w-4" />}
               </Button>
             </CardContent>
           </Card>
+<<<<<<< HEAD
           
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -477,6 +590,11 @@ export default function AccountSettings() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Card>
             <CardHeader>
               <CardTitle>Web3 Features</CardTitle>
@@ -486,6 +604,7 @@ export default function AccountSettings() {;
               <div className="space-y-2">
                 <h3 className="font-medium">Connected Wallet</h3>
                 {didHandle ? (
+<<<<<<< HEAD
                   <div className='flex items-center gap-2 bg-gray-100 p-3 rounded-md'>
               </Button>;
             </CardContent>;
@@ -583,27 +702,67 @@ export default function AccountSettings() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+                  <div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md">
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="20" 
+                      height="20" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      className="text-green-500"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <span>{didHandle}</span>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md">
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="20" 
+                      height="20" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      className="text-red-500"
+                    >
+                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                    <span>No wallet connected</span>
+                  </div>
+                )}
+              </div>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <div>
-                <h3 className='font-medium mb-2'>Backup Status</h3>
-                <div className='grid grid-cols-2 gap-2'>
-                  <div className='bg-gray-100 p-3 rounded-md'>
-                    <p className='text-sm font-medium'>Profile Data</p>
-                    <p className='text-xs text-gray-500'>
-              </div>;
-
-              <div>;
-                <h3 className='font-medium mb-2'>Backup Status</h3>;
-                <div className='grid grid-cols-2 gap-2'>;
-                  <div className='bg-gray-100 p-3 rounded-md'>;
-                    <p className='text-sm font-medium'>Profile Data</p>;
-                    <p className='text-xs text-gray-500'>;
+                <h3 className="font-medium mb-2">Backup Status</h3>
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="bg-gray-100 p-3 rounded-md">
+                    <p className="text-sm font-medium">Profile Data</p>
+                    <p className="text-xs text-gray-500">
                       {enableBackup ? 'Backed up' : 'Not backed up'}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     </p>
                   </div>
                   <div className="bg-gray-100 p-3 rounded-md">
                     <p className="text-sm font-medium">Resume Data</p>
                     <p className="text-xs text-gray-500">
+<<<<<<< HEAD
                       {enableBackup ? 'Backed up' : 'Not backed up'}
                     </p>
                   </div>
@@ -624,19 +783,22 @@ export default function AccountSettings() {;
                   <div className='bg-gray-100 p-3 rounded-md'>;
                     <p className='text-sm font-medium'>Resume Data</p>;
                     <p className='text-xs text-gray-500'>;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       {enableBackup ? 'Backed up' : 'Not backed up'}
-                    </p>;
-                  </div>;
-                  <div className='bg-gray-100 p-3 rounded-md'>;
-                    <p className='text-sm font-medium'>Project History</p>;
-                    <p className='text-xs text-gray-500'>;
+                    </p>
+                  </div>
+                  <div className="bg-gray-100 p-3 rounded-md">
+                    <p className="text-sm font-medium">Project History</p>
+                    <p className="text-xs text-gray-500">
                       {enableBackup ? 'Backed up' : 'Not backed up'}
-                    </p>;
-                  </div>;
-                  <div className='bg-gray-100 p-3 rounded-md'>;
-                    <p className='text-sm font-medium'>Reviews</p>;
-                    <p className='text-xs text-gray-500'>;
+                    </p>
+                  </div>
+                  <div className="bg-gray-100 p-3 rounded-md">
+                    <p className="text-sm font-medium">Reviews</p>
+                    <p className="text-xs text-gray-500">
                       {enableBackup ? 'Backed up' : 'Not backed up'}
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             <CardContent className='space - y-6'>;
@@ -729,10 +891,13 @@ export default function AccountSettings() {;
                   {enable_backup;
                     ? 'Restore your profile data from decentralized storage';
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     </p>
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div>
                 <h3 className='font-medium mb-2'>Recovery Options</h3>
@@ -762,6 +927,8 @@ export default function AccountSettings() {;
 };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
               
               <div>
                 <h3 className="font-medium mb-2">Recovery Options</h3>
@@ -775,7 +942,10 @@ export default function AccountSettings() {;
                 <p className="text-xs text-gray-500 mt-1">
                   {enableBackup 
                     ? 'Restore your profile data from decentralized storage' 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     : 'Enable backup first to use this feature'}
                 </p>;
               </div>;
@@ -784,9 +954,17 @@ export default function AccountSettings() {;
         </div>;
       </main>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
     </>);
+=======
+    </>;
+  );
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 ;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

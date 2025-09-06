@@ -1,14 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Define RequestInit if not available
 =======
 
 // Define RequestInit if not available;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface File extends Blob {
   name: string;
   lastModified: number;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -16,45 +20,33 @@ interface File extends Blob {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  last_modified: number;
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface Blob {
   size: number;
   type: string;
-  slice(start?: number, end?: number, contentType?: string): Blob;
+  slice (start?: number, end?: number, content_type?: string): Blob;
 }
 interface FormData {
-  append(name: string, value: string | Blob): void;
-  delete(name: string): void;
-  get(name: string): string | File | null;
-  getAll(name: string): (string | File)[];
-  has(name: string): boolean;
-  set(name: string, value: string | Blob): void;
+  append (name: string, value: string | Blob): void;
+  delete (name: string): void;
+  get (name: string): string | File | null;
+  get_all (name: string): (string | File)[];
+  has (name: string): boolean;
+  set (name: string, value: string | Blob): void;
 }
 interface URLSearchParams {
-  append(name: string, value: string): void;
-  delete(name: string): void;
-  get(name: string): string | null;
-  getAll(name: string): string[];
-  has(name: string): boolean;
-  set(name: string, value: string): void;
-  toString(): string;
+  append (name: string, value: string): void;
+  delete (name: string): void;
+  get (name: string): string | null;
+  get_all (name: string): string[];
+  has (name: string): boolean;
+  set (name: string, value: string): void;
+  to_string (): string;
 }
 type BodyInit = string | Blob | ArrayBuffer | FormData | URLSearchParams;
-type RequestCache = 'default' | 'no-store' | 'reload' | 'no-cache' | 'force-cache' | 'only-if-cached';
-type RequestCredentials = 'omit' | 'same-origin' | 'include';
-interface Headers {
-  append(name: string, value: string): void;
-  delete(name: string): void;
-  get(name: string): string | null;
-  has(name: string): boolean;
-  set(name: string, value: string): void;
-}
-
-type HeadersInit = Headers | string[][] | Record < string, string>;
-type RequestMode = 'navigate' | 'same - origin' | 'no - cors' | 'cors';
-type RequestRedirect = 'follow' | 'error' | 'manual';
-type ReferrerPolicy = 'no - referrer' | 'no - referrer - when - downgrade' | 'origin' | 'origin - when - cross - origin' | 'same - origin' | 'strict - origin' | 'strict - origin - when - cross - origin' | 'unsafe - url';
-;
-
 interface RequestInit {
   body?: BodyInit | null;
   cache?: RequestCache;
@@ -66,25 +58,15 @@ interface RequestInit {
   mode?: RequestMode;
   redirect?: RequestRedirect;
   referrer?: string;
-  referrerPolicy?: ReferrerPolicy;
   signal?: AbortSignal | null;
   window?: any;
   timeout?: number;
 }
-
-// Define AbortController if not available;
-
-interface AbortController {
-  signal: AbortSignal;
-  abort(): void;
-}
-
-// Define AbortSignal if not available;
-
 interface AbortSignal extends EventTarget {
   aborted: boolean;
   onabort: ((this: AbortSignal, ev: Event) => any) | null;
 }
+<<<<<<< HEAD
 
 
 
@@ -239,6 +221,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com';
 export class ApiClient {
   private baseURL: string;
@@ -299,6 +283,7 @@ export class ApiClient {
     });
   }
 }
+<<<<<<< HEAD
 }};
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -317,15 +302,15 @@ interface AbortSignal extends EventTarget {
   onabort: ((this: AbortSignal, ev: Event) => any) | null;
 origin/main
 }
+=======
+export const apiClient = new ApiClient();
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 };
 export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions };
 ;
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 interface ApiResponse<T = unknown> {
+interface ApiResponse < T = unknown> {
   data?: T;
   error?: string;
   success: boolean;
@@ -333,13 +318,6 @@ interface ApiResponse<T = unknown> {
 interface RequestOptions extends RequestInit {
   timeout?: number;
 }
-
-
-// Add global type definitions for Node && Node.js environment
-
-=======
-// Add global type definitions for Node.js environment;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 declare global {
   interface RequestInit {
     timeout?: number;
@@ -347,45 +325,6 @@ declare global {
 }
 class ApiClient {
   private baseURL: string;
-
-  private default_headers: HeadersInit;
-;
-  constructor (baseURL: string = '', default_headers: HeadersInit = {}) {
-    this.baseURL = baseURL;
-    this.default_headers = default_headers;
-  }
-  async request < T = unknown>(
-    endpoint: string,
-    options: RequestOptions = {}
-  ): Promise < ApiResponse < T>> {
-    const url = `${this.baseURL}${endpoint}`;
-    const controller = new AbortController ();
-;
-    // Set timeout if provided;
-    // Check condition
-if ( {) {
-  $2
-}
-      set_timeout (() => controller.abort (), options.timeout);
-
-    }
-
-    try {
-
-        ...options,
-        signal: controller && controller.signal,
-        headers: {
-          ...this && this.defaultHeaders,
-          ...options && options.headers,
-        },
-      });
-
-      if (!response && response.ok) {
-        throw new Error(`HTTP error! status: ${response && response.status}`);
-      }
-
-      const data = await response && response.json();
-
       return {
 
         success: true
@@ -393,7 +332,18 @@ if ( {) {
       }
     } catch (error) {
       return {
+    }
+  }
+  async get<T = unknown>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
+    return this && this.request<T>(endpoint, { ...options, method: 'GET' });
+  }
+  async post<T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise<ApiResponse<T>> {
+      headers: {
+        'Content-Type': 'application/json'
+        ...options?.headers
+      }
 
+<<<<<<< HEAD
         success: false,
 
 =======
@@ -440,8 +390,25 @@ export type { ApiResponse, RequestOptions };
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+    });
+  }
+  async put<T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise<ApiResponse<T>> {
+      headers: {
+        'Content-Type': 'application/json'
+        ...options?.headers
+      }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+    });
+  }
+  async delete<T = unknown>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
+    return this && this.request<T>(endpoint, { ...options, method: 'DELETE' });
+  }
+}
+export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions }
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -455,6 +422,8 @@ export type { ApiResponse, RequestOptions }
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         error: error instanceof Error ? error.message : 'Unknown error occurred',
       }
 
@@ -494,6 +463,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 export type { ApiResponse, RequestOptions }
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/main
 origin/automation-improvements-final
 export type { ApiResponse, RequestOptions }
@@ -501,3 +471,5 @@ export type { ApiResponse, RequestOptions };
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

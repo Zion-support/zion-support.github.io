@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -44,35 +45,12 @@ interface ReviewCardProps {;
 
 export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [reportReason, setReportReason] = useState("");
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
 
-
-  const handleReport = async () => {;
-    if (!reportReason && reportReason.trim()) return;
-
-
-    setIsReporting(true);
-    const success = await onReport(review && review.id, reportReason);
-    setIsReporting(false);
-
-
-    if (success) {;
-      setReportReason("");
-      setIsReportDialogOpen(false);
-    }
-  };
-
-  const renderStars = (rating?: number) => {;
-    if (!rating) return null;
-
-
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <div className="flex">;
         {[1, 2, 3, 4, 5].map((star) => (;
@@ -81,6 +59,7 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />;
         ))}
+<<<<<<< HEAD
 
       </div>
 
@@ -429,6 +408,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 </span>;
               </Badge>)}
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {review.would_work_again !== undefined && (
               <Badge;
                 variant={review.would_work_again ? "default" : "secondary"}
@@ -437,6 +418,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 {review.would_work_again;
                   ? "Would work again";
                   : "Would not work again"}
+<<<<<<< HEAD
 
 
           <div>;
@@ -563,42 +545,19 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
             <Button variant="ghost" size="sm" className="text - muted - foreground">;
               <Flag className="h - 3 w - 3 mr - 1" />;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               Report;
             </Button>;
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
-
-              <DialogTitle > Report Review</DialogTitle>;
-              <DialogDescription>;
-                If you believe this review violates our community guidelines,
-                please provide details below.;
-              </DialogDescription>;
-            </DialogHeader>;
-            <Textarea;
-              placeholder="Why are you reporting this review?";
-              value={report_reason}
-              on_change={(e) => setReportReason (e.target.value)}
-              className="min - h-[100px]";
-            />;
-            <DialogFooter>;
-              <Button;
-                variant="outline";
-                on_click={() => setIsReportDialogOpen (false)}
-              >;
-                Cancel;
-              </Button>;
-              <Button;
-                on_click={handle_report}
-                disabled={!report_reason.trim () || is_reporting}
-              >;
-                {is_reporting ? "Submitting..." : "Submit Report"}
-
               </Button>;
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       </div>;
+<<<<<<< HEAD
 
     </div>);
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -612,3 +571,5 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

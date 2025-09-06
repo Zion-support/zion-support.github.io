@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,12 +9,15 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneStatus} from './types';
 import {useRecordActivity} from './useRecordActivity';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const useUpdateMilestone = () => {
   const { user } = useAuth();
@@ -70,6 +74,8 @@ export const useUpdateMilestone = () => {
 
       const previousStatus = milestoneData.status,
       
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       // Update the milestone status
       const { error } = await supabase
         .from('project_milestones')
@@ -78,6 +84,7 @@ export const useUpdateMilestone = () => {
       if (error) throw error;
       // Create activity record
       await recordMilestoneActivity(milestoneId, 'status_changed', previousStatus, newStatus, comment);
+<<<<<<< HEAD
       toast.success(`Milestone status changed to ${newStatus}`);
       return true
     } catch (err: any) {
@@ -93,11 +100,14 @@ export const useUpdateMilestone = () => {
 
       console.error("Error updating milestone status:", err),
       toast.error("Failed to update status: " + err.message),
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return false
     } finally {
       setIsSubmitting(false)
     }
   }
+<<<<<<< HEAD
   const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {
     if (!user) return false;
   },
@@ -120,6 +130,8 @@ export const useUpdateMilestone = () => {
       console && console.error("Error updating milestone:", err);
       toast && toast.error("Failed to update milestone: " + err && err.message),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return false
 =======
 ;
@@ -151,19 +163,16 @@ if (throw error) {
       return false;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
-
-;
-
+      setIsSubmitting (false);
+    }
+  }
   return {
     updateMilestoneStatus;
     update_milestone;
     is_submitting;
-=======
-      setIsSubmitting(false)
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         .eq('id', milestoneId),
@@ -261,3 +270,5 @@ export const useUpdateMilestone = () => {;
 ;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

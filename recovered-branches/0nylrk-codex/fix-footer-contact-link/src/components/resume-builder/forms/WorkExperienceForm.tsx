@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -307,10 +308,16 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     )}
                   </div>
                   <div className="flex gap-2">
+=======
+                    )}
+                  </div>;
+                  <div className="flex gap-2">;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     <Button
                       variant="ghost"
                       size="icon"
                       onClick={() => handleEdit(work)}
+<<<<<<< HEAD
                     >
                       <Edit className="h-4 w-4" />
                     </Button>
@@ -339,10 +346,33 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+=======
+                    >;
+                      <Edit className="h-4 w-4" />;
+                    </Button>;
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => handleDelete(work && work.id!)}
+                    >;
+                      <Trash2 className="h-4 w-4" />;
+                    </Button>;
+                  </div>;
+                </div>;
+                {work && work.description && (;
+                  <p className="text-sm mt-3 line-clamp-2">{work && work.description}</p>;
+                )}
+              </CardContent>;
+            </Card>;
+          ))}
+        </div>;
+      )}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <FormField
                 control={form.control}
                 name="company_name"
                 render={({ field }) => (
+<<<<<<< HEAD
                   <FormItem>
                     <FormLabel>Company Name</FormLabel>
                     <FormControl>
@@ -352,10 +382,20 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   </FormItem>
                 )}
               />
+=======
+                  <FormItem>;
+                    <FormLabel > Company Name</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                    <FormControl>;
+                      <Input placeholder="Google, Microsoft, etc." {...field} />;
+                    </FormControl>;
+                    <FormMessage />;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <FormField
                 control={form.control}
                 name="role_title"
                 render={({ field }) => (
+<<<<<<< HEAD
                   <FormItem>
                     <FormLabel>Job Title</FormLabel>
                     <FormControl>
@@ -367,9 +407,19 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
               />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+=======
+                  <FormItem>;
+                    <FormLabel > Job Title</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                    <FormControl>;
+                      <Input placeholder="Software Engineer, Product Manager, etc." {...field} />;
+                    </FormControl>;
+                    <FormMessage />;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <FormField
                 control={form.control}
                 name="start_date"
+<<<<<<< HEAD
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
@@ -407,6 +457,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
               <div className="space-y-4">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <FormField
                   control={form && form.control}
                   name="is_current"
@@ -423,36 +475,12 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       </div>;
                     </FormItem>;
                   )}
-
-                />;
-
-                {!form && form.watch('is_current') && (;
-
                   <FormField
                     control={form && form.control}
                     name="end_date"
-
-                    render={({ field }) => (;
-                      <FormItem>;
-                        <FormLabel>End Date</FormLabel>;
-                        <FormControl>;
-                          <Input
-                            type="date" 
-                            {...field} 
-                            value={field && field.value || ''} 
-                          />;
-                        </FormControl>;
-                        <FormMessage />;
-                      </FormItem>;
-
                     )}
                   />;
                 )}
-
-              </div>;
-            </div>;
-
-
             <FormField
               control={form && form.control}
               name="location"
@@ -527,10 +555,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     <Input placeholder="San Francisco, CA (Remote)" {...field} />;
                   </FormControl>;
                   <FormMessage />;
-
-            />;
-
-
             <FormField
               control={form && form.control}
               name="description"
@@ -539,9 +563,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   <FormLabel className="flex justify-between">;
                     <span>Job Description</span>;
                     <AIEnhancementButton
-
-                      currentContent={field && field.value || ''}
-
                       enhancementType="work-description"
                       context={`Role: ${form && form.getValues('role_title')} at ${form && form.getValues('company_name')}`}
                       onEnhanced={handleEnhanceDescription}
@@ -577,16 +598,10 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     />;
                   </FormControl>;
                   <FormMessage />;
-
-            />;
-
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
-            <div className="flex justify-between pt-2">;
-
               <Button
                 type="button"
                 variant="outline"
+<<<<<<< HEAD
 
                 onClick={() => {
                   if (editingId) {
@@ -617,10 +632,16 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   } else {;
                     onBack();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+                onClick={() => {;
+                  if (editingId) {;
+                    setEditingId(null);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   }
                 }}
               >;
                 {editingId ? 'Cancel' : 'Back'}
+<<<<<<< HEAD
 
               </Button>;
 
@@ -643,14 +664,20 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     </div>
   )
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </div>;
             </div>;
           </form>;
         </Form>;
       </div>;
-
+=======
     </div>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

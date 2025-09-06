@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState } from "react";
@@ -108,6 +109,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           <div className="space-y-6">
             {(isClient |isTalent) && (
               <div className="border-b pb-4 mb-4">
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {canLeaveReview ? (
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
                     <h3 className="font-medium mb-2">Share your experience</h3>
@@ -128,6 +131,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                       {userReview.status === "approved"
                         ? "published"
                         : "pending approval"}
+<<<<<<< HEAD
                     </p>
                     {userReview.status === "pending" && (
                       <Button
@@ -215,18 +219,18 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     )}
                   </div>;
                 ) : null}
               </div>;
             )}
-
-
-
             <ReviewsList
               reviews={reviews}
               isLoading={isLoading}
               onReportReview={reportReview}
+<<<<<<< HEAD
 
             />;
           </div>;
@@ -243,6 +247,8 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
       {/* Review Modal */}
       {(isClient |isTalent) && (
       {(isClient || isTalent) && (
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <LeaveReviewModal
           projectId={project && project.id}
           revieweeId={revieweeId}
@@ -251,12 +257,6 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
           onClose={() => setIsReviewModalOpen(false)}
         />;
       )}
-
-    </Card>;
-  );
-}
-
-=======
                     </p>;
                     {user_review.status === "pending" && (
                       <Button;
@@ -294,4 +294,3 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
         />)}
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

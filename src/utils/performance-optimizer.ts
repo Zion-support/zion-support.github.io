@@ -1,11 +1,14 @@
-const images = document && document.querySelectorAll('img');
-  images && images.forEach(img => {
-    if (!img && img.loading) {
-      img && img.loading = 'lazy';
+// Performance optimization utilities
+export const optimizeImages = () => {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    if (!img.loading) {
+      img.loading = 'lazy'
     }
     if (!img.decoding) {
       img.decoding = 'async'
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   });
 };
@@ -32,10 +35,14 @@ export const preloadCriticalResources = () => {
     document && document.head.appendChild(link);
 
   });
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 };
 
+=======
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
+<<<<<<< HEAD
 
 // Performance optimization utilities;
 export const optimize_images = () =>: any {
@@ -96,9 +103,10 @@ export const optimizeBundleSize = () => {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const loadComponent = componentName => {
     return import(`./components/${componentName}`);
-
   };
 
   return { loadComponent };
@@ -106,7 +114,13 @@ export const optimizeBundleSize = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     link.rel = 'preload';
     link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

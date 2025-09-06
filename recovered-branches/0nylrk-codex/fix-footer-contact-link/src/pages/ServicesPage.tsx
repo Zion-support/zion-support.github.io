@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {DynamicListingPage} from "@/components/DynamicListingPage";
@@ -391,84 +392,23 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     id: "service - 5",
     title: "IT Infrastructure Modernization",
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.";
     category: "Consulting",;
     price: 8500,;
     currency: "$",;
     tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"];
 
-    <AppLayout>;
-      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">;
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">;
-          <h2 className="text-white text-lg font-medium">Featured Services</h2>;
-          <div className="flex flex-wrap gap-2">;
-            <Link to="/it-onsite-services">;
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">;
-                <Globe className="h-4 w-4 mr-2" />;
-                Global IT Onsite Services;
-              </Button>;
-            </Link>;
-            <Link to="/request-quote">;
-              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
-=======
-    author: {
-      name: "ModernizeIT Consulting",
-      id: "modernize - it"},
-    images: ["https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=800 & h=500"],
-    created_at: "2023 - 11 - 10T08:45:00.000Z",
-    ai_score: 86,
-    rating: 4.6,
-    review_count: 67},
-  {
-    id: "service - 6",
-    title: "AI Strategy & Implementation",
-    description: "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage.",
-    category: "Strategy",
-    price: 7500,
-    currency: "$",
-    tags: ["AI Strategy", "Digital Transformation", "Business Growth"];
-    author: {
-      name: "AI Future Consulting",
-      id: "ai - future",
-      avatar_url: "https://images.unsplash.com / photo - 1560250097 - 0b93528c311a?auto = format & fit = crop & w=100 & h=100"},
-    images: ["https://images.unsplash.com / photo - 1519389950473 - 47ba0277781c?auto = format & fit = crop & w=800 & h=500"],
-    created_at: "2024 - 02 - 02T10:30:00.000Z",
-    ai_score: 94,
-    rating: 4.8,
-    review_count: 85}],
-// Filter options specific to services;
-const SERVICE_FILTERS = [;
-  { label: 'Development', value: 'development' },
-  { label: 'Management', value: 'management' },
-  { label: 'Security', value: 'security' },
-  { label: 'Analytics', value: 'analytics' },
-  { label: 'Consulting', value: 'consulting' },
-  { label: 'Strategy', value: 'strategy' }],
-export default /**
- * ServicesPage - Function description
- */
-function ServicesPage() {
+export default function ServicesPage() {;
   return (
-    <AppLayout>;
-      <div className="bg - zion - blue - dark py - 4 px - 4 md:px - 8 mb - 6 border - b border - zion - blue - light">;
-        <div className="container mx - auto flex flex - col md:flex - row items - center justify - between gap - 4">;
-          <h2 className="text - white text - lg font - medium">Featured Services</h2>;
-          <div className="flex flex - wrap gap - 2">;
-            <Link to="/it - onsite - services">;
-              <Button variant="outline" className="border - zion - purple text - zion - cyan hover:bg - zion - purple / 10">;
-                <Globe className="h - 4 w - 4 mr - 2" />;
-                Global IT Onsite Services;
-              </Button>;
-            </Link>;
-            <Link to="/request - quote">;
-              <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">;
-
                 Request a Quote;
               </Button>;
             </Link>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
       />;
       <TrustedBySection />;
@@ -479,6 +419,15 @@ function ServicesPage() {
 ;
 =======
 
+=======
+      <DynamicListingPage
+        title="IT & AI Services"
+        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
+        categorySlug="services"
+        listings={SERVICE_LISTINGS}
+        categoryFilters={SERVICE_FILTERS}
+        initialPrice={{ min: 3000, max: 10000 }}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
       <DynamicListingPage;
         title="IT & AI Services";
@@ -492,6 +441,7 @@ function ServicesPage() {
     </AppLayout>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
       <DynamicListingPage 
@@ -501,3 +451,5 @@ function ServicesPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

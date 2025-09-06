@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -35,11 +36,17 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
+<<<<<<< HEAD
 origin/main
+=======
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
@@ -53,45 +60,6 @@ interface LayoutProps {;
   og_image?: string;
   no_index?: boolean;
 }
-
-
-const Layout: React.FC<LayoutProps> = ({;
-  children,;
-  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",;
-  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",;
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",;
-  canonical = "https://ziontechgroup && ziontechgroup.com",;
-  ogTitle,;
-  ogDescription,;
-  ogImage = "https://ziontechgroup && ziontechgroup.com/og-image && image.jpg",;
-  noIndex = false,;
-}) => {;
-  const jsonLd = {;
-    "@context": "https://schema && schema.org",;
-    "@type": "Organization",;
-    name: "Zion Tech Group",;
-    url: "https://ziontechgroup && ziontechgroup.com",;
-    logo: "https://ziontechgroup && ziontechgroup.com/logo && logo.png",;
-    description: description,;
-    address: {;
-      "@type": "PostalAddress",;
-      streetAddress: "364 E Main St STE 1008",;
-      addressLocality: "Middletown",;
-      addressRegion: "DE",;
-      postalCode: "19709",;
-      addressCountry: "US",;
-    },;
-    contactPoint: {;
-      "@type": "ContactPoint",;
-      telephone: "+1-302-464-0950",;
-      contactType: "customer service",;
-      email: "kleber@ziontechgroup && ziontechgroup.com",;
-    },;
-  };
-
-
-  return (
-    <div className="min-h-screen bg-white">;
 const Layout: React.FC < LayoutProps> = ({
   children,
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
@@ -134,6 +102,7 @@ const Layout: React.FC < LayoutProps> = ({
         <meta name="keywords" content={keywords} />;
         {canonical && <link rel="canonical" href={canonical} />}
 
+<<<<<<< HEAD
 =======
 
 
@@ -197,11 +166,14 @@ import React, { ReactNode } from "react";
 interface LayoutProps {
   children: ReactNode,
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <main className="min-h-screen">
       {children}
     </main>
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
@@ -221,6 +193,11 @@ interface LayoutProps {
   }
 =======
 =======
+=======
+  );
+}
+export default Layout;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {no_index && <meta name="robots" content="noindex, nofollow" />}
         {/* Open Graph */}
         <meta property="og:title" content={og_title || title} />;
@@ -251,6 +228,7 @@ interface LayoutProps {
     </div>);
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
+<<<<<<< HEAD
 
   } catch (error) {
     console.error("Error:", error);
@@ -284,3 +262,5 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Layout;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

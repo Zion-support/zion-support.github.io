@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/context/auth/AuthProvider.jsx
 ' \' \' \' \' \' \''\''\";\";
 " " " " " " """"";";'"'"
@@ -9,6 +10,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 ' \' \' \' \' \' \''\''\";\";
 " " " " " " """"";";'"'"

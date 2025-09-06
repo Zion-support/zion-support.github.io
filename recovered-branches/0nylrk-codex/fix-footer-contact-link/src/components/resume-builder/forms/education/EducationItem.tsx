@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { format } from "date-fns";
@@ -23,6 +24,8 @@ export /**
  */
 function EducationItem() {
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Card className="bg - muted / 40">;
       <CardContent className="pt - 6">;
@@ -52,6 +55,7 @@ function EducationItem() {
             {education.location && (
               <p className="text - xs text - muted - foreground">;
                 {education.location}
+<<<<<<< HEAD
 
 =======
 
@@ -105,6 +109,8 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
             {education && education.location && (;
               <p className="text-xs text-muted-foreground">{education && education.location}</p>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             )}
           </div>;
           <div className="flex gap-2">;
@@ -128,6 +134,7 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
           <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
       </CardContent>
     </Card>
   );
@@ -143,6 +150,8 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
 }
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </p>)}
           </div>;
           <div className="flex gap - 2">;
@@ -167,6 +176,7 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -176,3 +186,5 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

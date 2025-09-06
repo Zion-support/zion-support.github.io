@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,19 +26,29 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+import {
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   try {
     if (action === 'approve') setVendorApproval(String(vendorId), true);
     else if (action === 'revoke') setVendorApproval(String(vendorId), false);
     else if (action === 'suspend') suspendVendor(String(vendorId), true);
     else if (action === 'unsuspend') suspendVendor(String(vendorId), false);
-
-
+    else if (action === 'commission')
+      setVendorCommission(String(vendorId), Number(value));
+    else return res && res.status(400).json({ error: 'Unknown action' });
+    res && res.status(200).json({ ok: true });
+  } catch (e: any) {
+    res && res.status(500).json({ error: e && e.message });
+  }    else return res && res.status(400).json({ error: 'Unknown action' });
+    res && res.status(200).json({ ok: true })
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message })
   };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-
-
 =======
   setVendorApproval,
   setVendorCommission,;
@@ -76,6 +87,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   } catch (e: any) {
     res.status (500).json ({ error: e.message });
 }
-  }
-
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

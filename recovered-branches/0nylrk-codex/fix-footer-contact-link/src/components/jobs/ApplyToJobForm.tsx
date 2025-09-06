@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -228,10 +229,16 @@ if ( {) {
       set_error (err.message || "Failed to submit application"),
       toast.error ("Failed to submit application");
 
+=======
+      setError("Please provide a cover letter");
+      return;
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } finally {
       setIsSubmitting (false);
     }
   }
+<<<<<<< HEAD
 
     } finally {
       setIsSubmitting(false)
@@ -299,44 +306,13 @@ if ( {) {
         <div>;
           <Label htmlFor="coverLetter">Cover Letter</Label>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Textarea
             id="coverLetter"
             value={coverLetter}
             onChange={(e) => setCoverLetter(e && e.target.value)}
             rows={6}
-
-;
-  return (
-    <form on_submit={handle_submit} className="space - y-6">;
-      <div>;
-        <h3 className="text - lg font - medium mb - 1">Apply to: {job.title}</h3>;
-        <p className="text - sm text - muted - foreground mb - 4">;
-          Posted {formatDistanceToNow (new Date (job.created_at), { add_suffix: true })}
-        </p>;
-      </div>;
-      {error && (
-        <Alert variant="destructive">;
-          <AlertCircle className="h - 4 w - 4" />;
-          <AlertDescription>{error}</AlertDescription>;
-        </Alert>)}
-      <div className="space - y-4">;
-        <div>;
-          <Label html_for="cover_letter">Cover Letter</Label>;
-          <Textarea;
-            id="cover_letter";
-            value={cover_letter}
-            on_change={(e) => setCoverLetter (e.target.value)}
-            rows={6}
-            placeholder="Introduce yourself and explain why you are a good fit for this job...";
-            className="mt - 1";
-          />;
-          <p className="text - xs text - muted - foreground mt - 1">;
-            Provide a brief introduction and highlight your relevant skills and experience.;
-          </p>;
-        </div>;
-        <div>;
-          <Label html_for="resume">Select Resume (Optional)</Label>;
-
           {isResumesLoading ? (
             <div className="flex items - center gap - 2 mt - 2">;
               <Loader2 className="h - 4 w - 4 animate - spin" />;
@@ -345,6 +321,7 @@ if ( {) {
             <Select;
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
+<<<<<<< HEAD
 
 =======
                 type="button"
@@ -466,10 +443,13 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
             >;
               <SelectTrigger className="mt - 1">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <SelectValue placeholder="Select a resume" />;
               </SelectTrigger>;
               <SelectContent>;
                 <SelectItem value="">No resume</SelectItem>;
+<<<<<<< HEAD
 
         </div>;
       </div>;
@@ -483,6 +463,18 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                type="button"
+                onClick={() => navigate("/dashboard/talent/portfolio")}
+              >;
+                Create Resume;
+              </Button>;
+            </div>;
+          )}
+        <Button
+          type="button"
+          variant="outline"
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();
@@ -499,6 +491,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           ) : (;
             "Submit Application";
           )}
+<<<<<<< HEAD
         </Button>
       </div>
     </form>
@@ -510,6 +503,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
   );
 }
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {resumes.map ((resume) => (
                   <SelectItem key={resume.id} value={resume.id}>;
                     {resume.basic_info.title || "Untitled Resume"}
@@ -556,6 +552,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
       </div>;
     </form>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

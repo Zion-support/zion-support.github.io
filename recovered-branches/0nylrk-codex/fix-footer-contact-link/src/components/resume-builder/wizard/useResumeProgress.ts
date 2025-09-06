@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState, useEffect } from "react";
@@ -104,36 +105,22 @@ if ( {) {
 
       completed += 1;
 =======
+=======
+    }
+      completed += 1;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     if (resume && resume.education && resume && resume.education.length > 0) {
       completed += 1
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
-
-    // Skills (1 point if at least one entry);
-    // Check condition
-if ( {) {
-  $2
-}
-
       completed += 1;
-=======
     if (resume && resume.skills && resume && resume.skills.length > 0) {
       completed += 1
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
-
-    // Certifications (1 point if at least one entry);
-    // Check condition
-if ( {) {
-  $2
-}
-
       completed += 1;
-=======
     if (resume && resume.certifications && resume && resume.certifications.length > 0) {
       completed += 1
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
+<<<<<<< HEAD
 
     const progress_percentage = (completed / 5) * 100;
     set_progress (progress_percentage);
@@ -148,3 +135,5 @@ if ( {) {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

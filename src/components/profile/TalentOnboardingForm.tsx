@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 public_url;
 }= supabase.storage.from ('resumes') .getPublicUrl (file_name);
 return public_url;
@@ -26,6 +27,8 @@ import { z } from "zod",
 import { useRouter } from 'next/router',
 import {logErrorToProduction} from '@/utils/productionLogger',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
   Form
@@ -78,6 +81,7 @@ import { Separator } from "@/components/ui/separator"
 import { toast } from "@/components/ui/use-toast"
 import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2 } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 <<<<<<< HEAD
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
@@ -88,6 +92,8 @@ import { useAuth } from "@/hooks/useAuth"
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer"
 import { supabase } from "@/integrations/supabase/client"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 // Define the form schema with validation
 
 const talentSchema = z.object({
@@ -146,9 +152,12 @@ export function TalentOnboardingForm() {
   const totalSteps = 4
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import { useAuth } from "@/hooks/useAuth",
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
@@ -159,6 +168,7 @@ import { supabase } from "@/integrations/supabase/client",
     resolver: zodResolver(talentSchema)
     defaultValues: {
       basicInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
         fullName: user?.displayName |''
         professionalTitle: ''
@@ -253,6 +263,8 @@ import { supabase } from "@/integrations/supabase/client",
     if (!file) return;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         availabilityType: "",
         timezone: "",
         hourlyRate: "",
@@ -276,7 +288,10 @@ import { supabase } from "@/integrations/supabase/client",
     if (!file) return,
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -284,6 +299,7 @@ import { supabase } from "@/integrations/supabase/client",
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
     reader.readAsDataURL(file)
@@ -326,3 +342,8 @@ const form = useForm<TalentFormValues> ({
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
 }'}
 }
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

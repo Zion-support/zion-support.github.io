@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,12 +49,15 @@ function ClientDashboardContent() {
 function ClientDashboardContent() {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
 
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useIsMobile } from "@/hooks/use-mobile",
 =======
@@ -63,10 +67,13 @@ import { useIsMobile } from "@/hooks/use-mobile",
   useEffect(() => {;
     if (jobs && jobs.length > 0 && !selectedJobId) {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       setSelectedJobId(jobs[0].id);
       setSelectedJobTitle(jobs[0].title);
     }
   }, [jobs, selectedJobId]);
+<<<<<<< HEAD
 
 
 
@@ -280,6 +287,8 @@ function ClientDashboardContent() {;
                     </p>;
                   </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 )}
 <<<<<<< HEAD
               </div>
@@ -427,6 +436,7 @@ if ( {) {
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
 
 
 =======
@@ -447,6 +457,8 @@ export default function ClientDashboard() {;
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
     </>);
 }

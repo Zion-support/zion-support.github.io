@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
 // <reference path="./.next/types/routes.d.ts" />
@@ -8,6 +9,9 @@
 =======
 
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 
 =======

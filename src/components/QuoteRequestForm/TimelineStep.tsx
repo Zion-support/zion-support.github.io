@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div
 
 interface TimelineStepProps {
@@ -5,6 +6,9 @@ interface TimelineStepProps {
   updateFormData: (data: Partial<QuoteFormData>) => void
 <<<<<<< HEAD
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 import { format } from "date-fns",
 import { Calendar } from "@/components/ui/calendar",
@@ -18,7 +22,9 @@ interface TimelineStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -43,11 +49,20 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
+  return (
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
-                formData && formData.timeline === 'fixed'
-                  ? 'bg-zion-purple/20 border-zion-purple'
-                  : 'bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50'
+                formData.timeline === "fixed" 
+                  ? "bg-zion-purple/20 border-zion-purple" 
+                  : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
               }`}
+<<<<<<< HEAD
               onClick={() => updateFormData({ timeline: 'fixed' })}            >
               <h4 className='font-medium text-white'>Fixed Dates</h4>
               <p className='text-sm text-zion-slate-light'>
@@ -57,10 +72,22 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
             <div
 
               onClick={() => updateFormData({ timeline: "fixed" })}
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
+                formData.timeline === "flexible" 
+                  ? "bg-zion-purple/20 border-zion-purple" 
+                  : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
+              }`}
+              onClick={() => updateFormData({ timeline: "flexible" })}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             >
-              <h4 className="font-medium text-white">Fixed Dates</h4>
-              <p className="text-sm text-zion-slate-light">I have specific start and end dates</p>
+              <h4 className="font-medium text-white">Flexible Timeline</h4>
+              <p className="text-sm text-zion-slate-light">I'm flexible on the timing</p>
             </div>
+<<<<<<< HEAD
             
             <div 
 <<<<<<< HEAD
@@ -90,13 +117,18 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+          </div>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <div>
-                <Label className='block mb-2 text-zion-slate-light'>
-                  Start Date
-                </Label>
+                <Label className="block mb-2 text-zion-slate-light">Start Date</Label>
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
+<<<<<<< HEAD
 
             >;
               <h4 className='font-medium text-white'>Flexible Timeline</h4>;
@@ -166,6 +198,11 @@ function TimelineStep() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
@@ -174,6 +211,7 @@ function TimelineStep() {
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start">
                     <Calendar
+<<<<<<< HEAD
                       mode='single'
                       selected={formData.startDate}
                       onSelect={date => updateFormData({ startDate: date })}                      initialFocus
@@ -188,10 +226,16 @@ function TimelineStep() {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     />
                   </PopoverContent>
                 </Popover>
               </div>
+<<<<<<< HEAD
               
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -199,13 +243,17 @@ function TimelineStep() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <div>
-                <Label className='block mb-2 text-zion-slate-light'>
-                  End Date
-                </Label>
+                <Label className="block mb-2 text-zion-slate-light">End Date</Label>
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
                       variant='outline'
                       className={cn(
@@ -259,18 +307,25 @@ function TimelineStep() {
                 </Popover>;
               </div>;
 
+=======
+=======
+                      variant="outline"
+                      className={cn(
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
                         !formData.endDate && "text-zion-slate-light"
-
-
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       )}
-                    </Button>;
-                  </PopoverTrigger>;
-                  <PopoverContent
-                    className='w-auto p-0 bg-zion-blue-dark border border-zion-blue-light'
-                    align='start'>;
+                    >
+                      <CalendarIcon className="mr-2 h-4 w-4" />
+                      {formData.endDate ? format(formData.endDate, "PPP") : <span>Pick a date</span>}
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start">
                     <Calendar
+<<<<<<< HEAD
 
                       initialFocus;
                       className='p-3 pointer-events-auto';
@@ -389,3 +444,14 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
     </div>);
 }
 ;
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      selected={formData.endDate}
+                      onSelect={date => updateFormData({ endDate: date })}
+                      initialFocus
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

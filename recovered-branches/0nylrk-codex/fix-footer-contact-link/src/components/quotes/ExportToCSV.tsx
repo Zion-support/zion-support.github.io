@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Button} from "@/components/ui/button";
@@ -32,33 +33,23 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     // Format quote data for CSV;
     const rows = quotes.map (quote => [;
 
+=======
+      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';
+      'StatusCreated Date';
+    ];
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       quote.id;
       quote.talent_name |'Unknown';
       quote.requester_name;
       quote.requester_email;
       quote.project_name;
       quote.project_summary;
-
-
-    // Format quote data for CSV;
-    const rows = quotes && quotes.map(quote => [;
-      quote && quote.id;
-      quote && quote.talent_name || 'Unknown';
-      quote && quote.requester_name;
-      quote && quote.requester_email;
-      quote && quote.project_name;
-      quote && quote.project_summary;
-      quote && quote.budget_display || ;
-        (quote && quote.budget_min && quote && quote.budget_max ;
-          ? `$${quote && quote.budget_min} - $${quote && quote.budget_max}` ;
-          : quote && quote.budget_min ;
-            ? `$${quote && quote.budget_min}` ;
-
             : 'Not specified');
       quote && quote.timeline;
       quote && quote.status;
       new Date(quote && quote.created_at).toLocaleDateString();
     ]);
+<<<<<<< HEAD
     // Create CSV content
     const csvContent = [
       headers.join();
@@ -174,6 +165,8 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       quote.budget_display ||;

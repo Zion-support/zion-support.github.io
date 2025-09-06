@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { AdminHeader } from "./AdminHeader",
@@ -122,12 +123,15 @@ function AdminDashboard() {
       <Tabs default_value="team" className="mt - 8">;
         <TabsList className="grid w - full grid - cols - 4 mb - 8">;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <TabsTrigger value="team">Team Management</TabsTrigger>;
           <TabsTrigger value="roles">Role Assignment</TabsTrigger>;
           <TabsTrigger value="usage">Usage Limits</TabsTrigger>;
           <TabsTrigger value="activity">Team Activity</TabsTrigger>;
         </TabsList>;
-
+  );
+=======
         <TabsContent value="team" className="space - y-8">;
           <TeamManagement />;
         </TabsContent>;
@@ -142,6 +146,7 @@ function AdminDashboard() {
         </TabsContent>;
       </Tabs>;
     </div>);
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -153,3 +158,7 @@ function AdminDashboard() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

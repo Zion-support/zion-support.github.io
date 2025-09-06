@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -21,6 +22,9 @@ interface AIEnhancementDialogProps {
 }
 
 export function AIEnhancementDialog({;
+=======
+import React from 'react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   title;
   isOpen;
   onClose;
@@ -29,6 +33,7 @@ export function AIEnhancementDialog({;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
@@ -71,6 +76,8 @@ export function AIEnhancementDialog({
   }
   },
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Dialog open={isOpen} onOpenChange={() => onClose()}>;
       <DialogContent className="max-w-3xl">;
@@ -82,13 +89,6 @@ export function AIEnhancementDialog({
           defaultOptions={defaultOptions}
           onApply={handleApply}
           initialContent={initialContent}
-
-        />;
-      </DialogContent>;
-    </Dialog>;
-  );
-}
-
 =======
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';
 import {AIEnhancementPanel} from './AIEnhancementPanel';

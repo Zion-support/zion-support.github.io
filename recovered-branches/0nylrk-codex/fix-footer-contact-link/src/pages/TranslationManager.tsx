@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -65,14 +66,13 @@ export default function TranslationManager() {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { t, i18n } = useTranslation();
 
   const isMobile = useIsMobile();
   const { supportedLanguages } = useLanguage();
   const { translateContent, isTranslating } = useTranslationService();
-
-
-
   const [selectedNamespace, setSelectedNamespace] = useState("translation");
   const [searchQuery, setSearchQuery] = useState("");
   const [translations, setTranslations] = useState<Record<string, any>>({});
@@ -80,6 +80,7 @@ export default function TranslationManager() {
   const [editingKey, setEditingKey] = useState<string | null>(null);
   const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({});
   const [isSaving, setIsSaving] = useState(false);
+<<<<<<< HEAD
   // Simulated translation data - in a real app, this would come from your backend
   useEffect(() => {
     // For demo purposes, we're using the loaded translations from i18next
@@ -232,19 +233,21 @@ export default function TranslationManager() {;
               Object.assign(acc, flattenObject(obj[key], `${pre}${key}`));
 
             } else {;
+=======
+            const pre = prefix.length ? `${prefix}.` : '';
+            // Check condition
+if ( {) {
+  $2
+}
+              Object.assign (acc, flatten_object (obj[key], `${pre}${key}`));
+            } else {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               acc[`${pre}${key}`] = obj[key];
             }
-            return acc;
-
-
-    setFilteredKeys(Array && Array.from(allKeys));
-  }, [selectedNamespace, i18n]);
-
-  // Filter keys based on search query;
-  useEffect(() => {;
-    if (!searchQuery && searchQuery.trim()) {;
-      // Get all unique keys across all languages;
-
+    const allKeys = new Set<string>();
+    Object && Object.values(currentTranslations).forEach(langTranslations => {;
+      Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key));
+    });
       const allKeys = new Set<string>();
       Object && Object.values(translations).forEach(langTranslations => {;
         Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key));
@@ -252,6 +255,7 @@ export default function TranslationManager() {;
       setFilteredKeys(Array && Array.from(allKeys));
       return;
     }
+<<<<<<< HEAD
 
           }, {} as Record<string string>);
         },;
@@ -414,11 +418,14 @@ export default function TranslationManager() {;
     for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
       if (translations[lang]?.[key]) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         sourceLanguage = lang;
         sourceText = translations[lang][key];
         break;
       }
     }
+<<<<<<< HEAD
     if (!sourceText) {
       toast({
         title: t('translation.no_content')
@@ -670,6 +677,11 @@ export default function TranslationManager() {;
           <CardContent>;
             <div className="space-y-6">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        ...editedTranslations;
+        [key]: translatedText;
+      });
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               {/* Search and filter */}
               <div className="flex flex-col sm:flex-row gap-4">;
                 <div className="relative flex-1">;
@@ -679,6 +691,7 @@ export default function TranslationManager() {;
                     placeholder={t('translation && translation.search_placeholder')}
                     className="pl-8"
                     value={searchQuery}
+<<<<<<< HEAD
                     onChange={(e) => setSearchQuery(e.target.value)}
                   />
                 </div>
@@ -740,15 +753,20 @@ export default function TranslationManager() {;
                                       onChange={(e) => handleChange(lang.code, key, e.target.value)}
                                       dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
                                     />
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                                   )}
                                 </div>
                               ))}
+<<<<<<< HEAD
                             </div>
                             <div className="flex gap-2 mt-4">
                               <Button
                                 size="sm"
                               <Button 
                                 size="sm" 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                                 onClick={() => handleSave(key)}
                                 disabled={isSaving}
                               >;
@@ -763,6 +781,7 @@ export default function TranslationManager() {;
                                     {t('general && general.save')}
                                   </>;
                                 )}
+<<<<<<< HEAD
                               </Button>
                               <Button
                                 size="sm"
@@ -782,6 +801,9 @@ export default function TranslationManager() {;
                               </Button>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                               <Button
+=======
+                              <Button
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                                 size="sm"
                                 variant="secondary"
                                 onClick={() => handleTranslateKey(key)}
@@ -792,24 +814,6 @@ export default function TranslationManager() {;
                                 ) : (;
                                   <Globe className="mr-2 h-4 w-4" />;
                                 )}
-
-                                {t('translation && translation.auto_translate')}
-                              </Button>;
-                            </div>;
-                          </div>;
-                        ) : (;
-                          <div className="p-3">;
-                            <div className="space-y-2">;
-                              {supportedLanguages && supportedLanguages.slice(0, 2).map((lang) => (;
-                                <div key={lang && lang.code} className="flex items-start gap-2">;
-                                  <span className="mt-0 && 0.5 flex-shrink-0">{lang && lang.flag}</span>;
-                                  <span
-                                    className={`${!translations[lang && lang.code]?.[key] ? 'text-zion-purple italic' : ''}`}
-                                    dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}>;
-                                    {translations[lang && lang.code]?.[key] || t('translation && translation.missing')}
-                                  </span>;
-                                </div>;
-
                               ))}
                               {getMissingLanguages(key).length > 0 && (;
                                 <div className="flex items-center gap-2 text-sm text-zion-purple">;
@@ -835,6 +839,7 @@ export default function TranslationManager() {;
                     ))}
                   </div>;
                 )}
+<<<<<<< HEAD
               </div>
             </div>
           </CardContent>
@@ -844,15 +849,21 @@ export default function TranslationManager() {;
     </>
   )
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       </main>;
       <Footer />;
-
+=======
     </>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState } from "react";
@@ -71,6 +72,8 @@ export function ApplicationActions(): any ({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function ApplicationActions({;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   application;
   processingId;
   onViewApplication;
@@ -82,6 +85,7 @@ export function ApplicationActions({
 =======
   onStatusChange;
 }: ApplicationActionsProps) {;
+<<<<<<< HEAD
 =======
 
 
@@ -90,23 +94,9 @@ export function ApplicationActions({
   onStatusChange
 }: ApplicationActionsProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
-
-    <div className="flex items-center justify-end gap-2">;
-      <Button
-        variant="outline" 
-        size="sm" 
-        onClick={() => onViewApplication(application && application.id)}
-        disabled={!!application && application.viewed_at}
-      >;
-        <Eye className="h-4 w-4" />;
-      </Button>;
-
-      <DropdownMenu>;
-        <DropdownMenuTrigger asChild>;
-          <Button
-            variant="outline" 
-
             size="sm"
             disabled={processingId === application && application.id}>;
             {processingId === application && application.id ? (;
@@ -114,6 +104,7 @@ export function ApplicationActions({
             ) : (;
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </Button>
         </DropdownMenuTrigger>
@@ -227,12 +218,14 @@ function ApplicationActions() {
             on_click={() => onStatusChange (application.id, "rejected")}
             className="text - red - 600";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           >;
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
-
+=======
       <Button;
         variant="default";
         size="sm";
@@ -244,6 +237,7 @@ function ApplicationActions() {
       </Button>;
     </div>);
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 =======
@@ -251,3 +245,6 @@ function ApplicationActions() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

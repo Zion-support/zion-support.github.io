@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -64,10 +65,13 @@ import { GradientHeading } from "@/components/GradientHeading";
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
@@ -101,6 +105,15 @@ export default function AdminDashboard() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+  return (
+    <>
+      <SEO
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
@@ -119,6 +132,7 @@ export default function AdminDashboard() {
               src="https: //placehold.co/800x400"
               alt="Screenshot of admin dashboard"
               className="object-cover"
+<<<<<<< HEAD
 <<<<<<< HEAD
             />
           </div>
@@ -150,12 +164,20 @@ export default function AdminDashboard() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            />
+          </div>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Track sales and service metrics in real time.</li>
             <li>Approve or remove listings with a few clicks.</li>
             <li>Assign roles and permissions to your team.</li>
           </ul>
+<<<<<<< HEAD
           <h2 className='text-2xl font-bold mb-4'>
             Frequently Asked Questions
           </h2>
@@ -186,6 +208,11 @@ export default function AdminDashboard() {
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <p className="font-semibold">Who can access the dashboard?</p>
               <p className="text-zion-slate-light">Only authorized admins and moderators with the proper roles.</p>
             </div>
@@ -203,10 +230,13 @@ export default function AdminDashboard() {
       </main>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 };
   )
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -246,10 +276,13 @@ export default function AdminDashboard() {;
               src="https: //placehold.co/800x400";
               alt="Screenshot of admin dashboard";
               className="object-cover";
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             />;
           </div>;
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>;
@@ -261,97 +294,25 @@ export default function AdminDashboard() {;
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>;
           <div className="space-y-4 mb-12">;
             <div>;
-              <p className='font-semibold'>Who can access the dashboard?</p>;
-              <p className='text-zion-slate-light'>;
-
-      <SEO;
-        title='Admin Dashboard';
-        description='Gain insight into your marketplace with powerful administration tools.';
-        keywords='admin dashboard, analytics, manage listings';
-        canonical='https://app.ziontechgroup.com / features / admin - dashboard';
-      />;
-      {/* Use a normal script tag so JSON - LD is correctly parsed */}
-      <script;
-        type='application / ld + json';
-        dangerouslySetInnerHTML={{ __html: JSON.stringify (schema) }}
-      ></script>;
-      <Header />;
-      <main className='bg - background text - white py - 12'>;
-        <div className='container mx - auto px - 4 md:px - 6'>;
-          <GradientHeading className='mb - 4 text - center'>;
-            Admin Dashboard;
-          </GradientHeading>;
-          <p className='text - center text - zion - slate - light max - w-3xl mx - auto mb - 8'>;
-            Visualize user activity, manage orders and keep your marketplace;
-            running smoothly.;
-          </p>;
-          <div className='relative w - full h - auto aspect - video mx - auto mb - 12 rounded - lg shadow - xl overflow - hidden'>;
-            <img;
-              src='https://placehold.co / 800x400';
-              alt='Screenshot of admin dashboard';
-              className='object - cover';
-            />;
-          </div>;
-          <h2 className='text - 2xl font - bold mb - 4'>Benefits &amp; Use Cases</h2>;
-          <ul className='list - disc list - inside space - y-2 mb - 8 text - zion - slate - light'>            <li > Track sales and service metrics in real time.</li>;
-            <li > Approve or remove listings with a few clicks.</li>;
-            <li > Assign roles and permissions to your team.</li>;
-          </ul>      />;
-      {/* Use a normal script tag so JSON - LD is correctly parsed */}
-      <script;
-        type="application / ld + json";
-        dangerouslySetInnerHTML={{ __html: JSON.stringify (schema) }}
-      ></script>;
-      <Header />;
-      <main className="bg - background text - white py - 12">;
-        <div className="container mx - auto px - 4 md:px - 6">;
-          <GradientHeading className="mb - 4 text - center">Admin Dashboard</GradientHeading>;
-          <p className="text - center text - zion - slate - light max - w-3xl mx - auto mb - 8">;
-            Visualize user activity, manage orders and keep your marketplace running smoothly.;
-          </p>;
-          <div className="relative w - full h - auto aspect - video mx - auto mb - 12 rounded - lg shadow - xl overflow - hidden">;
-            <img;
-              src="https: //placehold.co / 800x400";
-              alt="Screenshot of admin dashboard";
-              className="object - cover";
-            />;
-          </div>;
-          <h2 className="text - 2xl font - bold mb - 4">Benefits &amp, Use Cases</h2>;
-          <ul className="list - disc list - inside space - y-2 mb - 8 text - zion - slate - light">;
-            <li > Track sales and service metrics in real time.</li>;
-            <li > Approve or remove listings with a few clicks.</li>;
-            <li > Assign roles and permissions to your team.</li>;
-          </ul>;
-          <h2 className='text - 2xl font - bold mb - 4'>;
-            Frequently Asked Questions;
-          </h2>;
-          <div className='space - y-4 mb - 12'>;
-            <div>;
-              <p className='font - semibold'>Who can access the dashboard?</p>;
-              <p className='text - zion - slate - light'>;
-
-                Only authorized admins and moderators with the proper roles.;
-              </p>;
+              <p className="font-semibold">Who can access the dashboard?</p>;
+              <p className="text-zion-slate-light">Only authorized admins and moderators with the proper roles.</p>;
             </div>;
             <div>;
-
-
-                Yes, you can export data to CSV for further analysis.;
-              </p>;
+              <p className="font-semibold">Can I export reports?</p>;
+              <p className="text-zion-slate-light">Yes, you can export data to CSV for further analysis.</p>;
             </div>;
           </div>;
-
-
+          <div className="text-center">;
+            <Button size="lg" className="bg-zion-purple text-white" asChild>;
               <Link href="/admin">View Dashboard</Link>;
             </Button>;
           </div>;
         </div>;
       </main>;
-
-
+    </>;
   );
 }
-    </>);
-}
-
-  )
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

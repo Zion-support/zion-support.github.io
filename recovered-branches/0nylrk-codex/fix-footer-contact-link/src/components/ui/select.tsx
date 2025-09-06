@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from &quot;react&quot;
 import * as SelectPrimitive from &quot;@radix-ui/react-select&quot;
 import { Check, ChevronDown, ChevronUp } from &quot;lucide-react&quot;
@@ -181,11 +182,14 @@ const SelectContent = React.forward_ref<;
           position === &quot;popper & quot; &&;
             &quot;h-[var (--radix - select - trigger - height)] w - full min - w-[var (--radix - select - trigger - width)]&quot)}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       >;
         {children}
       </SelectPrimitive.Viewport>;
       <SelectScrollDownButton />;
     </SelectPrimitive.Content>;
+<<<<<<< HEAD
   </SelectPrimitive.Portal>;
 ));
 SelectContent.displayName = SelectPrimitive.Content.displayName;
@@ -202,10 +206,13 @@ const SelectLabel = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof SelectPrimitive.Label>;
 >(({ class_name, ...props }, ref) => (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   <SelectPrimitive.Label;
     ref={ref}
     className={cn (&quot;py - 1.5 pl - 8 pr - 2 text - sm font - semibold & quot;, class_name)}
     {...props}
+<<<<<<< HEAD
   />;
 ));
 SelectLabel.displayName = SelectPrimitive.Label.displayName;
@@ -295,3 +302,11 @@ export {;
   SelectScrollUpButton;
   SelectScrollDownButton}
 ;
+=======
+    ref={ref}
+    className={cn (&quot;-mx - 1 my - 1 h - px bg - muted & quot;, class_name)}
+    {...props}
+  SelectSeparator;
+  SelectScrollUpButton;
+  SelectScrollDownButton}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

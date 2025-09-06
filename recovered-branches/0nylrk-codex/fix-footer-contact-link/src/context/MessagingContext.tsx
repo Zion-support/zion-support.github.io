@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
@@ -140,11 +141,20 @@ function MessagingProvider() {
   const { user } = use_auth ();
 ;
 
+=======
+  const context = useContext(MessagingContext) as MessagingContextType;
+  if (context === undefined) {;
+    throw new Error('useMessaging must be used within a MessagingProvider');
+  }
+  return context;
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const {
 =======
 
 // Provider component;
 export function MessagingProvider(): any ({ children }: { children: ReactNode }) {;
+<<<<<<< HEAD
 =======
 
 
@@ -153,6 +163,8 @@ export function MessagingProvider(): any ({ children }: { children: ReactNode })
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { user } = useAuth();
 
   const {;
@@ -170,6 +182,7 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
     send_message;
     create_conversation;
     markAsRead;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   return (
@@ -217,16 +230,13 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       setConversations([]);
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setUnreadCount(0);
     }
   }, [user, fetchConversations, setConversations, setUnreadCount]);
-
-
-  // Create context value with all the methods and states;
-  const contextValue: MessagingContextType = {;
-
 =======
     fetch_conversations;
     load_messages;
@@ -273,6 +283,7 @@ if ( {) {
     markAsRead;
     setActiveConversation;
 
+<<<<<<< HEAD
     fetchConversations,;
     loadMessages;
   };
@@ -283,12 +294,11 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  return (
+    <MessagingContext && MessagingContext.Provider value={contextValue}>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {children}
-
-    </MessagingContext && MessagingContext.Provider>;
-  );
-}
-
 =======
     fetch_conversations,
     load_messages;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,29 +9,24 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Loader2, Sparkles} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
 import {use_resume} from '@/hooks / use_resume';
 import {BulkAddSkillsProps} from './types';
-
-
-  const handleCategorizeSkills = async () => {;
-    if (!bulkSkills || bulkSkills && bulkSkills.trim().length === 0) {;
-
       setError('Please enter some skills to categorize');
       return;
     }
-
-
-
     setError(null);
     try {;
       const enhancedContent = await enhanceContent(;
         bulkSkills;
         'skill-categorization';
       );
+<<<<<<< HEAD
 
 import {Alert, AlertDescription} from '@/components / ui / alert';
 import {Textarea} from '@/components / ui / textarea';
@@ -103,11 +99,14 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           // Refresh the skills;
           await on_success ();
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         } catch (err) {
           set_error ('Failed to parse categorized skills. Please try again.');
         }
       }
     } catch (err: any) {
+<<<<<<< HEAD
 
 
       if (enhancedContent) {;
@@ -246,6 +245,15 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
 
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    }
+  }
+  return (
+          <Textarea
+            className="min-h-24"
+            placeholder="Python, React, TypeScript, Project Management, Communication..."
+            value={bulkSkills}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
       set_error (err.message || 'Failed to categorize skills');
     }

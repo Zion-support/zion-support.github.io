@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,6 +35,8 @@ type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const timeRangeToInterval = {
   '1d': { days: 1, interval: 'hour' }
   '7d': { days: 7, interval: 'day' }
@@ -43,6 +46,7 @@ const timeRangeToInterval = {
 }
 export function PageViewsTable() {
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
+<<<<<<< HEAD
 },
 
 export function PageViewsTable() {;
@@ -123,6 +127,10 @@ export function PageViewsTable() {
           ) : pageViews && pageViews.length > 0 ? (
             pageViews.map((page, index) => {
               const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0';
+=======
+  const { data: pageViews, isLoading } = useQuery({
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 <<<<<<< HEAD
               const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0',
@@ -172,7 +180,9 @@ const timeRangeToInterval = {;
   '30d': { days: 30, interval: 'day' },;
   '90d': { days: 90, interval: 'week' },;
   '365d': { days: 365, interval: 'month' }
-
+    queryKey: ['page-views-data', timeRange];
+    queryFn: async () => {;
+      const { days } = timeRangeToInterval[timeRange];
                           style={{ width: `${percentage}%` }}
                         />;
                       </div>;
@@ -187,6 +197,7 @@ const timeRangeToInterval = {;
               No page view data available for this time period;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -194,14 +205,9 @@ const timeRangeToInterval = {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           )}
-
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-}
-
 =======
 }
 ;

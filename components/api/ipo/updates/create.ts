@@ -1,45 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-
-
-}
-
-=======
-
-import { readJsonFile, writeJsonFile } from '../../../../utils / api / storage';
-import { requireSuperadminApi } from '../../../../utils / api / auth';
-import { v4 as uuidv4 } from 'uuid';
-export default /**
- * handler - Function description
- */
-function handler() {
-  if () return) {
-  $2
-}
-  if (
-    return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
-}
-  const { title, date, summary, kpis } = req.body || {}
-  if (return res.status (400).json ({ error: 'Missing title' })) {
-  $2
-}
-  const updates = readJsonFile ('updates.json', [] as any[]);
-  const update = {
-    id: uuidv4 (),
-
     title,
     date: date || new Date ().toISOString ().slice (0, 10),
     summary: summary || '',
     kpis: kpis || '',
     opens: 0,
-
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (!requireSuperadminApi(req, res)) return;
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { title, date, summary, kpis } = req && req.body || {};
@@ -50,6 +14,7 @@ function handler() {
   writeJsonFile('updates && updates.json', updates);
   res && res.status(200).json(update)
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   res.status(200).json(update)
@@ -59,6 +24,8 @@ function handler() {
 =======
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
   updates.unshift (update);
   writeJsonFile ('updates.json', updates);
@@ -82,6 +49,7 @@ function handler() {
   updates.unshift (update);
   writeJsonFile ('updates.json', updates);
   res.status (200).json (update);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -110,3 +78,5 @@ function handler() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState, useEffect } from 'react';
@@ -20,6 +21,8 @@ export function useIsMobile() {
     };
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     if (typeof window !== 'undefined') {
       window && window.addEventListener('resize', handleResize);
       return () => window && window.removeEventListener('resize', handleResize)
@@ -29,9 +32,13 @@ export function useIsMobile() {
 
   return isMobile
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useState, useEffect} from 'react';
 export /**
  * useIsMobile - Function description
@@ -54,6 +61,7 @@ if ( {) {
     }
     return undefined;
   }, []);
+<<<<<<< HEAD
 =======
 
 
@@ -83,4 +91,6 @@ export function useIsMobile() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;

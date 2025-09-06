@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28,6 +29,8 @@ interface ActiveFiltersProps {;
   toggleRegion: (region: string) => void,;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   priceRange: [number, number];
 
   setPriceRange: (range: [number, number]) => void;
@@ -39,10 +42,6 @@ import { X } from "lucide-react",
 =======
   clearFilters: () => void;
 }
-
-
-export function ActiveFilters(): any ({;
-
   selectedSkills;
   toggleSkill;
   selectedAvailability;
@@ -53,6 +52,7 @@ export function ActiveFilters(): any ({;
   setPriceRange;
   experienceRange;
   setExperienceRange;
+<<<<<<< HEAD
 
 
 
@@ -194,16 +194,17 @@ export function ActiveFilters({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+        <ClickableBadge
+          key={skill}
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           onClick={() => toggleSkill(skill)}
         >;
           {skill}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
-
-
-      {selectedAvailability && selectedAvailability.map(status => (;
-
         <ClickableBadge
           key={status}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
@@ -215,10 +216,6 @@ export function ActiveFilters({;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
-
-
-      {selectedRegions && selectedRegions.map(region => (;
-
         <ClickableBadge
           key={region}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
@@ -228,10 +225,6 @@ export function ActiveFilters({;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
-
-
-      {(priceRange[0] !== 50 || priceRange[1] !== 200) && (;
-
         <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => setPriceRange([50, 200])}
@@ -240,10 +233,6 @@ export function ActiveFilters({;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       )}
-
-
-      {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (;
-
         <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => setExperienceRange([0, 15])}
@@ -252,6 +241,7 @@ export function ActiveFilters({;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       )}
+<<<<<<< HEAD
 
 
       <Button
@@ -318,6 +308,8 @@ export function ActiveFilters({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import React from './react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';

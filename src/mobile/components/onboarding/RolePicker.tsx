@@ -1,4 +1,38 @@
-className={`cursor-pointer transition-all ${
+
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Briefcase, Users, Check } from 'lucide-react'
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          className={`cursor-pointer transition-all ${
+            selectedRole === 'talent' 
+              ? "border-primary bg-primary/5" 
+              : "border-border hover:border-primary/40"
+          }`}
+          onClick={() => handleSelect('talent')}
+        >
+          <CardContent className="p-5">
+            <div className="flex items-center">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                <Briefcase className="h-6 w-6 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-medium">I'm offering services</h3>
+                <p className="text-sm text-muted-foreground">Find work and showcase your skills</p>
+              </div>
+              {selectedRole === 'talent' && (
+                <Check className="h-5 w-5 text-primary" />
+              )}
+            </div>
+          </CardContent>
+        </Card>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          className={`cursor-pointer transition-all ${
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
               : "border-border hover:border-primary/40"
@@ -15,6 +49,7 @@ className={`cursor-pointer transition-all ${
                 <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>
               </div>
               {selectedRole === 'client' && (
+<<<<<<< HEAD
                 <Check className='h-5 w-5 text-primary' />
               )}
             </div>
@@ -176,3 +211,8 @@ function RolePicker() {
     </div>);
 }
 ;
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

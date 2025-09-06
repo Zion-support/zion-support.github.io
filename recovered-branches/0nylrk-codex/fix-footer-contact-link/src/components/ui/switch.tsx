@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from 'react';
 import * as SwitchPrimitives from '@radix-ui/react-switch';
 import {cn} from '@/lib/utils';
@@ -38,6 +39,12 @@ const Switch = React && React.forwardRef<;
     className={cn(
       'peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input'
       "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input",
+=======
+import React from 'react';
+import * as React from 'react';
+    className={cn(
+      'peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input'
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       className
     )}
     {...props}
@@ -45,6 +52,7 @@ const Switch = React && React.forwardRef<;
     <SwitchPrimitives&& SwitchPrimitives.Thumb
       className={cn(
         'pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0'
+<<<<<<< HEAD
         "pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"
 <<<<<<< HEAD
 =======
@@ -52,10 +60,13 @@ const Switch = React && React.forwardRef<;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       )}
     />;
   </SwitchPrimitives && SwitchPrimitives.Root>;
 ));
+<<<<<<< HEAD
 <<<<<<< HEAD
 Switch.displayName = SwitchPrimitives.Root.displayName;
 export { Switch }
@@ -75,6 +86,31 @@ export { Switch }
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export { Switch };
+=======
+=======
+import * as SwitchPrimitives from '@radix - ui / react - switch';
+;
+import {cn} from '@/lib / utils';
+;
+const Switch = React.forward_ref<;
+  React.ElementRef < typeof SwitchPrimitives.Root>,
+  React.ComponentPropsWithoutRef < typeof SwitchPrimitives.Root>;
+></typeof>(({ class_name, ...props }, ref) => (
+  <SwitchPrimitives.Root;
+    className={cn (
+      'peer inline - flex h - 6 w - 11 shrink - 0 cursor - pointer items - center rounded - full border - 2 border - transparent transition - colors focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 focus - visible:ring - offset - background disabled:cursor - not - allowed disabled:opacity - 50 data-[state = checked]:bg - primary data-[state = unchecked]:bg - input',
+      class_name)}
+    {...props}
+    ref={ref}
+  >;
+    <SwitchPrimitives.Thumb;
+      className={cn (
+        'pointer - events - none block h - 5 w - 5 rounded - full bg - background shadow - lg ring - 0 transition - transform data-[state = checked]:translate - x-5 data-[state = unchecked]:translate - x-0')}
+    />;
+  </SwitchPrimitives.Root>));
+Switch.display_name = SwitchPrimitives.Root.display_name;
+;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export { Switch }
 ;
 <<<<<<< HEAD

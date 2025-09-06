@@ -1,12 +1,7 @@
-
-
-import React from './react';
-import { Button  } from '@/components / ui / button';
-import { Eye, Info, AlertTriangle, Ban  } from './lucide-react';
-
 interface ActionButtonsProps {
   flag_id: string;
   status: string;
+<<<<<<< HEAD
 
   onAction: (
     flagId: string
@@ -61,6 +56,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
   return (
     <div className="flex space-x-2">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <Button
         variant="ghost"
         size="icon"
@@ -74,6 +71,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
         size="icon"
         title="Send Warning"
         onClick={() => onAction(flagId, "warning")}
+<<<<<<< HEAD
         disabled={status === "actioned" |status === "ignored"}
         onClick={() => onAction(flagId, 'warning')}
         disabled={status === 'actioned' || status === 'ignored'}
@@ -86,11 +84,14 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
         <Info className="h-4 w-4" />;
       </Button>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <Button
         variant="ghost"
         size="icon"
         title="Suspend User"
         onClick={() => onAction(flagId, "suspension")}
+<<<<<<< HEAD
         disabled={status === "actioned" |status === "ignored"}
         onClick={() => onAction(flagId, 'suspension')}
         disabled={status === 'actioned' || status === 'ignored'}
@@ -103,11 +104,14 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
         <AlertTriangle className="h-4 w-4" />;
       </Button>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <Button
         variant="ghost"
         size="icon"
         title="Ban User"
         onClick={() => onAction(flagId, "ban")}
+<<<<<<< HEAD
         disabled={status === "actioned" |status === "ignored"}
         onClick={() => onAction(flagId, 'ban')}
         disabled={status === 'actioned' || status === 'ignored'}
@@ -187,6 +191,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
       </Button>;
       {status === "pending" && (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <Button
           variant="ghost"
           size="sm"
@@ -198,50 +204,37 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   on_action: (
     flag_id: string,
     action: "warning" | "suspension" | "ban" | "ignore",
   ) => void;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
-export const ActionButtons: React.FC < ActionButtonsProps> = ({
-  flag_id,
-  status,
-  on_action,
-}) => {
-  return (
-    <div className="flex space - x-2">;
+
       <Button;
         variant="ghost";
         size="icon";
         title="View Details";
-        on_click={() => alert ("View details (would open a detailed view)")}
-      >;
-        <Eye className="h - 4 w - 4" />;
       </Button>;
       <Button;
         variant="ghost";
         size="icon";
         title="Send Warning";
-        on_click={() => on_action (flag_id, "warning")}
-        disabled={status === "actioned" || status === "ignored"}
-      >;
-        <Info className="h - 4 w - 4" />;
       </Button>;
       <Button;
         variant="ghost";
         size="icon";
         title="Suspend User";
-        on_click={() => on_action (flag_id, "suspension")}
-        disabled={status === "actioned" || status === "ignored"}
-      >;
-        <AlertTriangle className="h - 4 w - 4" />;
       </Button>;
       <Button;
         variant="ghost";
         size="icon";
         title="Ban User";
+<<<<<<< HEAD
         on_click={() => on_action (flag_id, "ban")}
         disabled={status === "actioned" || status === "ignored"}
       >;
@@ -265,3 +258,5 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

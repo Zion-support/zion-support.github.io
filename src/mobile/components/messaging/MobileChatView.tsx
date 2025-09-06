@@ -1,14 +1,40 @@
-id: string;
-  content: string;
-  timestamp: string;
-  isMe: boolean;
-  sender?: string;
-  avatar?: string;
-
+import React, { useState } from "react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react'
+import { cn } from "@/lib/utils",
+import { useRouter } from 'next/router',
+import { toast } from "sonner",
+interface Message {
+  id: string,
+  content: string,
+  timestamp: string,
+  isMe: boolean,
+  sender?: string,
+  avatar?: string,
+  status?: 'sent' | 'delivered' | 'read'
+import React, { useState } from "react",;
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react';
+import { cn } from "@/lib/utils",;
+import { useRouter } from 'next/router',;
+import { toast } from "sonner",;
+interface Message {;
+  id: string,;
+  content: string,;
+  timestamp: string,;
+  isMe: boolean,;
+  sender?: string,;
+  avatar?: string,;
   status?: 'sent' | 'delivered' | 'read';
-
+}
+;
 interface MobileChatViewProps {;
   contact: {;
+<<<<<<< HEAD
 
     id: string;
     name: string;
@@ -72,75 +98,47 @@ interface MobileChatViewProps {
     id: string;
     name: string;
     avatar?: string;
+=======
+    id: string,;
+    name: string,;
+    avatar?: string,;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     status?: string;
-  }
-  messages: Message[];
-  on_back: () => void;
+  },;
+  messages: Message[],;
+  onBack: () => void,;
   onSendMessage: (content: string) => void;
-export /**
- * MobileChatView - Function description
- */
-function MobileChatView() {
-  const [new_message, setNewMessage] = useState ('');
-  const router = use_router ();
-  const handle_send = () =>: any {
-    // Check condition
-if (!== '') {) {
-  $2
 }
-      onSendMessage (new_message);
-      setNewMessage ('');
 
-
-
-
-
-    }
-  }
-  const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {    // Check condition
-if ( {) {
-  $2
-}
-      e.prevent_default ();
-      handle_send ();
-    }
-
-  const startVideoCall = () =>: any {
-    const room_id = `mobile-${contact.id}`;
-    toast.success ('Starting video call', {
-      description: `Connecting with ${contact.name}...`,
-    });
-    // Navigate to video call page;
-    router.push (`/call/${room_id}`);
-  }
-  const startAudioCall = () =>: any {
-    const room_id = `mobile - audio-${contact.id}`;
-    toast.success ('Starting audio call', {
-      description: `Connecting with ${contact.name}...`,
-    });
-    // Navigate to video call page with audio - only flag;
-    router.push (`/call/${room_id}?audio_only = true`);
-
-  }
-export function MobileChatView(): any ({;
-  contact,;
-  messages,;
-  onBack,;
-  onSendMessage,;
-}: MobileChatViewProps) {;
-  const [newMessage, setNewMessage] = useState('');
-  const router = useRouter();
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
+  const [newMessage, setNewMessage] = useState(""),
+  const router = useRouter(),
+  
+  const handleSend = () => {
+    if (newMessage.trim() !== "") {
+      onSendMessage(newMessage),
+      setNewMessage("")
+;
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
+  const [newMessage, setNewMessage] = useState(""),;
+  const router = useRouter(),;
   const handleSend = () => {;
     if (newMessage.trim() !== "") {;
       onSendMessage(newMessage),;
       setNewMessage("");
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
-  };
-
-  const handleKeyDown = (e: React && React.KeyboardEvent<HTMLInputElement>) => {    if (e && e.key === 'Enter' && !e && e.shiftKey) {;
-      e && e.preventDefault();
-      handleSend();
+  }
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      handleSend()
     }
+<<<<<<< HEAD
   };
 
   const startVideoCall = () => {;
@@ -193,11 +191,17 @@ export function MobileChatView(): any ({;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
         <div className="flex items-center h-14 px-4">
           <Button
+<<<<<<< HEAD
             variant='ghost'
             size='icon'
             onClick={onBack}
@@ -219,11 +223,17 @@ export function MobileChatView(): any ({;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />
               <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>
             </Avatar>
             <div>
+<<<<<<< HEAD
               <h3 className='font-medium'>{contact.name}</h3>
               <p className='text-xs text-muted-foreground'>
                 {contact.status |'Online'}
@@ -234,17 +244,21 @@ export function MobileChatView(): any ({;
             <Button
               variant='ghost'
               size='icon'
+=======
+              variant="ghost"
+              size="icon"
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               onClick={startAudioCall}
-
-              aria-label='Start audio call'>;
-              <Phone className='h-5 w-5' />;
-            </Button>;
-
-
+              aria-label="Start audio call"
+            >
+              <Phone className="h-5 w-5" />
+            </Button>
+            
             <Button
-              variant='ghost'
-              size='icon'
+              variant="ghost"
+              size="icon"
               onClick={startVideoCall}
+<<<<<<< HEAD
               aria-label='Start video call'            >
               <Video className='h-5 w-5' />
             </Button>
@@ -289,6 +303,8 @@ export function MobileChatView(): any ({;
               variant="ghost"
               size="icon"
               onClick={startVideoCall}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               aria-label="Start video call"
             >
               <Video className="h-5 w-5" />
@@ -297,13 +313,19 @@ export function MobileChatView(): any ({;
             <Button variant="ghost" size="icon" aria-label="More options">
               <MoreVertical className="h-5 w-5" />
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </Button>
           </div>
         </div>
       </header>
+<<<<<<< HEAD
 
               aria-label='Start video call'>;
               <Video className='h-5 w-5' />;
@@ -506,22 +528,23 @@ export function MobileChatView(): any ({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     {message.status === 'read' ? '✓✓' : '✓'}
-
-              </div>;
-            </div>;
-          </div>;
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
         ))}
-
-      
-      <div className="sticky bottom-0 bg-background border-t border-border p-2">
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" aria-label="Attach file">
-            <PaperclipIcon className="h-5 w-5" />
-
+      </div>
           </Button>
           <Input
             value={newMessage}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -575,6 +598,8 @@ export function MobileChatView(): any ({;
           
           <Input
             value={newMessage}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             onChange={(e) => setNewMessage(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Type a message..."
@@ -589,6 +614,7 @@ export function MobileChatView(): any ({;
             aria-label="Send message"
           >
             <Send className="h-5 w-5" />
+<<<<<<< HEAD
           </Button>
         </div>
 
@@ -621,11 +647,16 @@ export function MobileChatView(): any ({;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </Button>
         </div>
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 
                   </span>)}
@@ -659,3 +690,8 @@ export function MobileChatView(): any ({;
 
 }
 ;
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
 export interface Session {
 
@@ -8,10 +9,15 @@ export interface Session {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface Session {
+  user_id: string;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   email: string;
   role: 'admin' | 'user' | 'guest';
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function getSessionFromReq(req: NextApiRequest): Session | null {
   // Mock implementation - replace with actual session logic;
@@ -48,6 +54,8 @@ export const isAdmin = () => {
   return true;
 }
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 // Admin authentication utilities
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -193,6 +201,7 @@ export const is_admin = () =>: any {
   // Placeholder implementation;
   return true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
@@ -210,3 +219,9 @@ export const is_admin = () =>: any {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

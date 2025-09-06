@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -152,15 +153,11 @@ export function TalentPool() {;
   const getStatusBadge = (status: string) => {;
     switch (status) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       case "available": return <Badge className="bg-green-500">Available</Badge>;
       case "interviewing":;
         return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>;
-
-      case "hired":;
-        return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Hired</Badge>,;
-      default:;
-        return <Badge variant="outline">{status}</Badge>;
-
     }
   }
 
@@ -232,6 +229,7 @@ function TalentPool() {
           <Button size="sm">View All</Button>;
         </div>;
       </CardHeader>;
+<<<<<<< HEAD
 
                   {getStatusBadge(talent.status)}
                   <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">
@@ -269,6 +267,9 @@ function TalentPool() {
   );
 }
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <CardContent className="p - 0">;
         <div className="divide - y divide - border">;
           {talents.map ((talent) => (
@@ -300,6 +301,10 @@ function TalentPool() {
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

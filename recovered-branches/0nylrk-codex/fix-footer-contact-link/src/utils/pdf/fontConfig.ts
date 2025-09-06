@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { jsPDF } from 'jspdf';
@@ -42,6 +43,8 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
 
     console && console.error('Error loading custom fonts:', error);
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Fall back to default font
     doc.setFont('helvetica')
 import { jsPDF } from 'jspdf',;
@@ -79,6 +82,7 @@ if (return, ) {
   } catch (error) {
     console.error ('Error loading custom fonts:', error);
     // Fall back to default font;
+<<<<<<< HEAD
 
     doc.setFont('helvetica');
 <<<<<<< HEAD
@@ -88,5 +92,9 @@ if (return, ) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    doc.set_font ('helvetica');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }

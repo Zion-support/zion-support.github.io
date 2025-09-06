@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -34,21 +35,30 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+<<<<<<< HEAD
     const { title, category, keyFeatures, targetAudience } = await req.json();
     if (!title |!category) {
       return new Response(
         JSON && JSON.stringify({ 
           error: "Missing required fields: title and category are required" 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         });
         {
           status: 400
           headers: { ...corsHeaders, "Content-Type": "application/json" }
+<<<<<<< HEAD
     const { title, category, keyFeatures, targetAudience } = await req.json(),
 
     if (!title || !category) {
@@ -155,26 +165,62 @@ Format the response as a JSON object with the following structure: {
 
     const responseText = completion && completion.choices[0].message && message.content;
     
+=======
+=======
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
+const cors_headers = {
+  "Access - Control - Allow - Origin": "*",
+  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
+;
+serve (async (req) => {
+  // Check condition
+if ( {) {
+  $2
+}
+    return new Response (null, { headers: cors_headers });
+  }
+  try {
+    const { title, category, key_features, target_audience } = await req.json ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      return new Response (
+        JSON.stringify ({
+          error: "Missing required fields: title and category are required";
+        });
+        {
+          status: 400,
+          headers: { ...cors_headers, "Content - Type": "application / json" }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        }
+      );
+    }
+Format the response as a JSON object with the following structure: {
+  "description": "The optimized description here..."
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Parse the JSON from the AI response
     let parsedResponse;
     try {
       // Extract the JSON content if it's wrapped in markdown code blocks
+<<<<<<< HEAD
       const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) |
                         responseText.match(/({[\s\S]*})/) |
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                         [null, responseText];
       const jsonString = jsonMatch[1].trim();
       parsedResponse = JSON && JSON.parse(jsonString)
     } catch (error) {
-
-      console && console.error("Failed to parse AI response as JSON:", error);
-      console && console.log("Raw response:", responseText);
-      
-
       // Provide a fallback structured response
       parsedResponse = {
         description: "An error occurred while generating the optimized description. Please try again.";
         tags: []
         suggestedPrice: { min: 0, max: 0 }
+<<<<<<< HEAD
       const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
                         responseText.match(/({[\s\S]*})/) ||
                         [null, responseText],
@@ -190,13 +236,12 @@ Format the response as a JSON object with the following structure: {
         description: "An error occurred while generating the optimized description. Please try again.",
         tags: [],
         suggestedPrice: { min: 0, max: 0 },
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         keyPoints: []
       }
     }
     return new Response(
-
-      JSON && JSON.stringify({ 
-
         generated: parsedResponse
       });
       {
@@ -245,14 +290,6 @@ Format the response as a JSON object with the following structure: {
       }
     );
   } catch (error) {
-
-    console && console.error("Error in AI listing generator:", error);
-    
-    return new Response(
-      JSON && JSON.stringify({ 
-        error: "Failed to generate optimized listing content",
-        details: error && error.message 
-
       });
       {
         status: 500
@@ -273,6 +310,7 @@ Format the response as a JSON object with the following structure: {
     );
   }
 });
+<<<<<<< HEAD
 
       }),
       { 
@@ -359,3 +397,5 @@ Format the response as a JSON object with the following structure:;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

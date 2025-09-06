@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,20 +14,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 // Authentication utilities
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export interface User {
   id: string;
   email: string;
   role: string;
   isAdmin: boolean;
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export interface User {;
@@ -158,24 +155,21 @@ export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowe
     ensure_admin (user);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return { allowed: true }
   } catch {
     return { allowed: false }
   }
 }
-
-// Additional auth utilities for login;
-
 export interface DemoUser {
-=======
-// Additional auth utilities for login
-export interface DemoUser {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   id: string;
   name: string;
   role: 'admin' | 'user' | 'guest';
   email: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 const demoUsers: DemoUser[] = [];
 export function ensureDemoUsers(): void {
@@ -297,11 +291,14 @@ export function getUserFromRequest (req: NextApiRequest): DemoUser | null {
 if (return null) {
   $2
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   try {
     return JSON.parse (decodeURIComponent (match[1]));
   } catch {
     return null;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -330,26 +327,27 @@ if (return null) {
 export function isAuthenticated(session: AuthSession | null): boolean {
     if (!session) return false;
 
+=======
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   }
 
-export function hasRole(session: AuthSession | null, role: string): boolean {
-    if (!session || !isAuthenticated(session)) return false;
-
-
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export function isAdmin(session: AuthSession | null): boolean {
+  return hasRole(session, 'admin');
 }
 <<<<<<< HEAD
 =======
 
 export function isModerator(session: AuthSession | null): boolean {
   return hasRole(session, 'moderator') || isAdmin(session);
-
 }
+<<<<<<< HEAD
 
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

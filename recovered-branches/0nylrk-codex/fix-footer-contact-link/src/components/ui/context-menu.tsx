@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from &quot;react&quot;
 import * as ContextMenuPrimitive from &quot;@radix-ui/react-context-menu&quot;
 import { Check, ChevronRight, Circle } from &quot;lucide-react&quot;
@@ -36,10 +37,13 @@ const ContextMenuSubTrigger = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.SubTrigger> & {
     inset?: boolean;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 >(({ class_name, inset, children, ...props }, ref) => (
   <ContextMenuPrimitive.SubTrigger;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className={cn(
       &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot;
@@ -139,10 +143,13 @@ const ContextMenuItem = React.forwardRef<;
   React.ElementRef<typeof ContextMenuPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {;
     inset?: boolean;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 >(({ class_name, inset, ...props }, ref) => (
   <ContextMenuPrimitive.Item;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className={cn(
       &quot;relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
@@ -223,6 +230,8 @@ className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       class_name)}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     checked={checked}
     {...props}
   >;
@@ -232,6 +241,7 @@ className={cn (
       </ContextMenuPrimitive.ItemIndicator>;
     </span>;
     {children}
+<<<<<<< HEAD
   </ContextMenuPrimitive.CheckboxItem>;
 ));
 ContextMenuCheckboxItem.displayName =;
@@ -268,6 +278,8 @@ className={cn(
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       className
     )}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     {...props}
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
@@ -276,6 +288,7 @@ className={cn(
       </ContextMenuPrimitive.ItemIndicator>
     </span>
     {children}
+<<<<<<< HEAD
   </ContextMenuPrimitive.RadioItem>;
 ));
 ContextMenuRadioItem.displayName = ContextMenuPrimitive.RadioItem.displayName;
@@ -285,10 +298,13 @@ const ContextMenuLabel = React.forwardRef<;
   React.ElementRef<typeof ContextMenuPrimitive.Label>,;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {;
     inset?: boolean;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 >(({ class_name, inset, ...props }, ref) => (
   <ContextMenuPrimitive.Label;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className={cn(
       &quot;px-2 py-1.5 text-sm font-semibold text-foreground&quot;
@@ -337,10 +353,13 @@ const ContextMenuSeparator = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.Separator>;
 >(({ class_name, ...props }, ref) => (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   <ContextMenuPrimitive.Separator;
     ref={ref}
     className={cn (&quot;-mx - 1 my - 1 h - px bg - border & quot;, class_name)}
     {...props}
+<<<<<<< HEAD
 />
 ))
 ContextMenuSeparator.displayName = ContextMenuPrimitive.Separator.displayName
@@ -355,10 +374,13 @@ const ContextMenuShortcut = ({
         "ml-auto text-xs tracking-widest text-muted-foreground",
         className
       )}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {...props}
     />;
   );
 }
+<<<<<<< HEAD
 ContextMenuShortcut.displayName = &quot;ContextMenuShortcut&quot;
 export {
   ContextMenu
@@ -406,3 +428,6 @@ export {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  ContextMenuRadioGroup}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

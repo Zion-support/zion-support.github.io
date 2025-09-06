@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -140,6 +141,8 @@ export default function ProfilePage() {;
   useEffect(() => {;
     const fetchProfile = async () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       setIsLoading(true);
       setIsError(false);
       try {;
@@ -148,60 +151,10 @@ export default function ProfilePage() {;
           .select("*");
           .eq("id", profileId);
           .single();
-
-import { useState, useEffect } from './react';
-import { use_params } from './react-router-dom';
-import { supabase } from '@/integrations / supabase / client';
-import { toast } from '@/components / ui / use - toast';
-import { SEO } from '@/components / SEO';
-import { AppHeader } from '@/layout / AppHeader';
-import { Footer } from '@/components / Footer';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { HireNowCTA } from '@/components / profile / HireNowCTA';
-import { Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from './lucide-react';
-;
-export default /**
- * ProfilePage - Function description
- */
-function ProfilePage() {
-  // use_params may be untyped in this environment, so avoid passing a;
-  // type argument and cast the result instead to prevent TS2347 errors.;
-  const { profile_id } = use_params () as { profile_id?: string }
-  const [profile_data, setProfileData] = useState < any>(null);
-  const [is_loading, setIsLoading] = useState (true);
-  const [is_error, setIsError] = useState (false);
-;
-  useEffect (() => {
-    const fetch_profile = async () => {
-      setIsLoading (true);
-      setIsError (false);
-      try {
-        const { data, error } = await supabase;
-          .from ("talent_profiles");
-          .select ("*");
-          .eq ("id", profile_id);
-          .single ();
-;
-        // Check condition
-if ( {) {
-  $2
-}
-          throw error;
-        }
-        setProfileData (data);
-      } catch (error) {
-        console.error ("Error fetching profile:", error);
-        setIsError (true);
-        toast ({
-          title: "Error",
-          description: "Failed to load profile. Please try again later.",
-          variant: "destructive"});
-
       } finally {
         setIsLoading (false);
       }
+<<<<<<< HEAD
 
 
         if (error) {;
@@ -230,22 +183,21 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   if (isLoading) {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <span className="loading loading-ring loading-lg"></span>;
       </div>;
     );
   }
-
-
-  if (isError || !profileData) {;
-
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <p className="text-red-500">Failed to load profile.</p>;
       </div>;
     );
   }
+<<<<<<< HEAD
 =======
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -265,6 +217,11 @@ if ( {) {
       <AppHeader />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
+=======
+  return (
+    <>;
+      <SEO
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {/* Main Content Area */}
           <div className="col-span-12 lg:col-span-8">
             {/* Profile Header */}
@@ -284,7 +241,10 @@ if ( {) {
                       <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
                     </div>
                   )}
+<<<<<<< HEAD
                 </div>
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {/* Main Info */}
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
@@ -293,7 +253,10 @@ if ( {) {
                       <p className="text-zion-cyan font-medium">{profileData.professional_title}</p>
                     </div>
                     {/* Add Save/Unsave Button Here */}
+<<<<<<< HEAD
                   </div>
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   {/* Location & Availability */}
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">
                     {profileData.location && (
@@ -308,6 +271,7 @@ if ( {) {
                         <span>{profileData.availability}</span>
                       </div>
                     )}
+<<<<<<< HEAD
                   </div>
                 </div>
               </div>
@@ -321,6 +285,8 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               {/* Skills */}
               {profileData && profileData.skills && profileData && profileData.skills.length > 0 && (;
                 <div className="mt-4">;
@@ -332,6 +298,7 @@ if ( {) {
                   </div>;
                 </div>;
               )}
+<<<<<<< HEAD
             </div>
             {/* Bio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
@@ -349,6 +316,8 @@ if ( {) {
             </div>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>;
@@ -368,6 +337,7 @@ if ( {) {
                 ) : (;
                   <p className="text-zion-slate-light">No portfolio links provided.</p>;
                 )}
+<<<<<<< HEAD
               </div>
             </div>
             {/* Experience Section */}
@@ -387,6 +357,8 @@ if ( {) {
             </div>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;
@@ -396,6 +368,7 @@ if ( {) {
                     href={profileData && profileData.github_link}
                     target="_blank"
                     rel="noopener noreferrer"
+<<<<<<< HEAD
 
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
@@ -408,12 +381,18 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                    className="text-zion-cyan hover:text-white transition-colors">;
+                    <Github className="h-6 w-6" />;
+                  </a>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 )}
                 {profileData && profileData.twitter_link && (;
                   <a
                     href={profileData && profileData.twitter_link}
                     target="_blank"
                     rel="noopener noreferrer"
+<<<<<<< HEAD
 
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
@@ -426,12 +405,18 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                    className="text-zion-cyan hover:text-white transition-colors">;
+                    <Twitter className="h-6 w-6" />;
+                  </a>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 )}
                 {profileData && profileData.linkedin_link && (;
                   <a
                     href={profileData && profileData.linkedin_link}
                     target="_blank"
                     rel="noopener noreferrer"
+<<<<<<< HEAD
 
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
@@ -444,13 +429,12 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                    className="text-zion-cyan hover:text-white transition-colors">;
+                    <Linkedin className="h-6 w-6" />;
+                  </a>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 )}
-
-              </div>;
-            </div>;
-          </div>;
-
-
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">;
             <HireNowCTA
@@ -459,6 +443,7 @@ if ( {) {
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
+<<<<<<< HEAD
 
 <<<<<<< HEAD
               }}
@@ -639,18 +624,20 @@ if ( {) {
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
               }}
             />;
             {/* Placeholder for other sidebar elements */}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </div>;
         </div>;
       </div>;
       <Footer />;
-
+=======
     </>);
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 ;
@@ -663,3 +650,6 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,9 +1,10 @@
-import React from 'react';
-import { Button  } from '@/components/ui/button';
+import React from 'react',
+import { Button } from '@/components/ui/button',
 import { useRouter } from 'next/router', // Changed from useNavigate
 import { CheckCircle2 } from 'lucide-react'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next',
 export default function PaymentSuccess() {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const router = null;
 import React from 'react';
@@ -26,12 +27,21 @@ export default function PaymentSuccess() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  const router = useRouter(), // Changed from navigate
+  const { t } = useTranslation(),
+  
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
         <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">
           <CheckCircle2 className="h-6 w-6 text-green-600" />
         </div>
+<<<<<<< HEAD
         <h1 className='text-2xl font-bold text-white mb-2'>
           {t('errors.payment_success_title')}
         </h1>
@@ -51,11 +61,17 @@ export default function PaymentSuccess() {;
           <Button 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             {t('errors.go_to_dashboard')}
           </Button>
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -177,6 +193,8 @@ export default function PaymentSuccess() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             variant="outline"
             onClick={() => router.push('/')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
@@ -186,6 +204,7 @@ export default function PaymentSuccess() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -216,9 +235,13 @@ export default function PaymentSuccess() {
 ;
 <<<<<<< HEAD
 
+=======
+  )
+}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           
           <Button 
-
             variant="outline"
             onClick={() => router.push('/')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
@@ -230,6 +253,7 @@ export default function PaymentSuccess() {
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
@@ -299,3 +323,9 @@ function PaymentSuccess() {
     </div>);
 }
 ;
+=======
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from "react"
 import type { CSSProperties } from "react"
 import * as RechartsPrimitive from "recharts"
@@ -41,6 +42,15 @@ export type ChartConfig = Record<
     | { color?: never, theme: Record<keyof typeof THEMES, string> }
   )
 >
+=======
+  string;
+  {;
+    label?: React && React.ReactNode;
+    icon?: React && React.ComponentType;
+  } & (;
+    | { color?: string, theme?: never }
+    | { color?: never, theme: Record<keyof typeof THEMES, string> }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 type ChartContextProps = {
   config: ChartConfig
 }
@@ -49,6 +59,7 @@ const ChartContext = React.createContext<ChartContextProps>({
 function useChart(): ChartContextProps {
   return React.useContext(ChartContext)
 }
+<<<<<<< HEAD
 
 const ChartContainer = React.forwardRef<
 =======
@@ -68,6 +79,8 @@ function useChart(): any (): ChartContextProps {;
 
 const ChartContainer = React && React.forwardRef<;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   HTMLDivElement;
   React && React.ComponentProps<"div"> & {;
     config: ChartConfig;
@@ -75,12 +88,6 @@ const ChartContainer = React && React.forwardRef<;
       typeof RechartsPrimitive && RechartsPrimitive.ResponsiveContainer;
     >["children"];
   }
-
->(({ id, className, children, config, ...props }, ref) => {;
-  const uniqueId = useReactId();
-  const chartId = `chart-${id || uniqueId && uniqueId.replace(/:/g, "")}`;
-
-
   return (
     <ChartContext && ChartContext.Provider value={{ config }}>;
       <div
@@ -94,22 +101,6 @@ const ChartContainer = React && React.forwardRef<;
         <ChartStyle id={chartId} config={config} />;
         <RechartsPrimitive && RechartsPrimitive.ResponsiveContainer>;
           {children}
-
-        </RechartsPrimitive && RechartsPrimitive.ResponsiveContainer>;
-      </div>;
-    </ChartContext && ChartContext.Provider>;
-  );
-});
-ChartContainer && ChartContainer.displayName = "Chart";
-
-const ChartStyle = ({ id, config }: { id: string, config: ChartConfig }) => {;
-  const colorConfig = Object && Object.entries(config).filter(;
-    ([_, config]) => config && config.theme || config && config.color;
-  );
-
-  if (!colorConfig && colorConfig.length) {;
-    return null;
-
 =======
 const ChartContext = React.create_context < ChartContextProps>({
   config: {}});
@@ -158,17 +149,6 @@ if ( {) {
   return (
     <style;
       dangerouslySetInnerHTML={{
-
-            ([theme, prefix]) => `;
-${prefix} [data-chart=${id}] {;
-${colorConfig;
-  .map(([key, itemConfig]) => {;
-    const color =;
-      itemConfig && itemConfig.theme?.[theme as keyof typeof itemConfig && itemConfig.theme] ||;
-      itemConfig && itemConfig.color;
-    return color ? `  --color-${key}: ${color},` : null;
-  });
-
   .join("\n")}
 }
 `;
@@ -177,12 +157,6 @@ ${colorConfig;
     />;
   );
 }
-
-
-const ChartTooltip = RechartsPrimitive && RechartsPrimitive.Tooltip;
-
-const ChartTooltipContent = React && React.forwardRef<;
-
   HTMLDivElement;
   React && React.ComponentProps<typeof RechartsPrimitive && RechartsPrimitive.Tooltip> &;
     React && React.ComponentProps<"div"> & {;
@@ -221,6 +195,7 @@ const ChartTooltipContent = React.forward_ref<;
       label_key?: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
+<<<<<<< HEAD
 
 >(
   (
@@ -266,6 +241,22 @@ const ChartTooltipContent = React.forward_ref<;
           ? config[label as keyof typeof config]?.label |label
           : itemConfig?.label
       if (labelFormatter) {
+=======
+>(;
+  (;
+    {;
+      active;
+      payload;
+      class_name;
+      indicator = "dot";
+      hide_label = false;
+      hide_indicator = false;
+      label;
+      label_formatter;
+      labelClassName;
+      formatter;
+      color;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         return (
           <div className={cn("font-medium", labelClassName)}>
             {labelFormatter(value, payload)}
@@ -275,6 +266,7 @@ const ChartTooltipContent = React.forward_ref<;
       if (!value) {
         return null
       }
+<<<<<<< HEAD
 
       return <div className={cn("font-medium", labelClassName)}>{value}</div>
     }, [
@@ -287,6 +279,8 @@ const ChartTooltipContent = React.forward_ref<;
       return <div className={cn("font-medium", labelClassName)}>{value}</div>;
     }, [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
       name_key;
       label_key}
@@ -330,16 +324,6 @@ if ( {) {
       hide_label;
       labelClassName;
       config;
-
-      labelKey]);
-
-    if (!active || !payload?.length) {;
-      return null;
-    }
-
-    const nestLabel = payload && payload.length === 1 && indicator !== "dot";
-
-
 =======
       label_key]);
     // Check condition
@@ -353,14 +337,6 @@ if ( {) {
     return (
       <div;
         ref={ref}
-
-        <div className="grid gap-1 && 1.5">;
-          {payload && payload.map((item, index) => {;
-            const key = `${nameKey || item && item.name || item && item.dataKey || "value"}`;
-            const itemConfig = getPayloadConfigFromPayload(config, item, key);
-            const indicatorColor = color || item && item.payload.fill || item && item.color;
-
-
             return (
               <div
                 key={item && item.dataKey}
@@ -389,6 +365,7 @@ if ( {) {
                           )}
                             style={
                               {
+<<<<<<< HEAD
                                 "--color-bg": indicatorColor;
                                 "--color-bg": indicatorColor,
 <<<<<<< HEAD
@@ -397,6 +374,9 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                                "--color-bg": indicatorColor
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                                 "--color-border": indicatorColor} as CSSProperties
                             }
                         />;
@@ -409,6 +389,7 @@ if ( {) {
                       )}>;
                       <div className="grid gap-1 && 1.5">;
                         {nestLabel ? tooltipLabel : null}
+<<<<<<< HEAD
                         <span className="text-muted-foreground">
                           {itemConfig?.label |item.name}
                         </span>
@@ -433,6 +414,8 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       )}
                     </div>;
                   </>;
@@ -444,6 +427,7 @@ if ( {) {
       </div>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 )
 ChartTooltipContent.displayName = "ChartTooltip"
@@ -468,6 +452,8 @@ const ChartLegend = RechartsPrimitive && RechartsPrimitive.Legend;
 
 const ChartLegendContent = React && React.forwardRef<;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   HTMLDivElement;
   React && React.ComponentProps<"div"> &;
     Pick<React && React.ComponentProps<typeof RechartsPrimitive && RechartsPrimitive.Legend>;
@@ -548,6 +534,7 @@ const ChartLegendContent = React.forward_ref<;
       name_key?: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -559,6 +546,9 @@ const ChartLegendContent = React.forward_ref<;
       return null
     }
 
+=======
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <div
         ref={ref}
@@ -566,13 +556,6 @@ const ChartLegendContent = React.forward_ref<;
           "flex items-center justify-center gap-4"
           verticalAlign === "top" ? "pb-3" : "pt-3"
           className
-
-        )}>;
-        {payload && payload.map((item) => {;
-          const key = `${nameKey || item && item.dataKey || "value"}`;
-          const itemConfig = getPayloadConfigFromPayload(config, item, key);
-
-
           return (
             <div
               key={item && item.value}
@@ -596,6 +579,7 @@ const ChartLegendContent = React.forward_ref<;
       </div>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 )
 ChartLegendContent.displayName = "ChartLegend"
@@ -773,6 +757,11 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
+=======
+}
+export {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 );
 ChartLegendContent && ChartLegendContent.displayName = "ChartLegend";
 
@@ -810,6 +799,7 @@ function getPayloadConfigFromPayload(): any (;
     ] as string;
   }
 
+<<<<<<< HEAD
 =======
 
 
@@ -822,12 +812,15 @@ export {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return configLabelKey in config;
     ? config[configLabelKey];
     : config[key as keyof typeof config];
 }
 
 export {;
+<<<<<<< HEAD
 
   ChartContainer,;
   ChartTooltip,;
@@ -844,3 +837,11 @@ export {;
 
   ChartStyle}
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  ChartContainer;
+  ChartTooltip;
+  ChartTooltipContent;
+  ChartLegend;
+  ChartLegendContent;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

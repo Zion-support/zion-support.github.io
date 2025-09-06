@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,11 +34,14 @@ interface ReplyCardProps {;
   reply: ForumReply,;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
   className?: string;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const ReplyCard = ({
   reply;
@@ -115,6 +119,8 @@ export const ReplyCard = ({;
       "transition-shadow"
       reply && reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       className
     )}>;
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
@@ -130,6 +136,7 @@ export const ReplyCard = ({;
             {reply && reply.authorRole && (;
               <Badge variant="outline" className="ml-2 text-xs">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -138,6 +145,10 @@ export const ReplyCard = ({;
                 {reply.authorRole}
               </Badge>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                {reply && reply.authorRole}
+              </Badge>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             )}
             {reply && reply.isAnswer && (;
               <Badge className="ml-2 bg-green-500 text-white">;
@@ -148,6 +159,7 @@ export const ReplyCard = ({;
           </div>;
           <div className="text-xs text-muted-foreground">;
             {timeAgo}
+<<<<<<< HEAD
           </div>
         </div>
       </CardHeader>
@@ -182,6 +194,10 @@ export default ReplyCard;
   );
 };
 <<<<<<< HEAD
+=======
+export default ReplyCard;
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 
 

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
  export const getStaticProps: GetStaticProps<PageProps> = async () => {
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
  export const getStaticProps: GetStaticProps<PageProps> = async () => {
@@ -11,6 +12,8 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
       docs: content as DocsContent,
     },
   }}import React, { useEffect } from 'react';
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import type { GetStaticProps } from 'next';
 import content from '../../../data / docs / content.json';
 export type Section = {
@@ -33,7 +36,6 @@ type PageProps = {
 }
 ;
 export const getStaticProps: GetStaticProps < PageProps> = async () => {
-
   return {
     props: {
       docs: content as DocsContent
@@ -59,22 +61,19 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
     props: {
       docs: content as DocsContent}}
 
+<<<<<<< HEAD
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
   }
   render() {
     if (this.state.hasError) {
@@ -101,25 +100,10 @@ type DocsContent = {;
   title: string,;
   sections: Section[];
 };
-type PageProps = {;
-  docs: DocsContent;
-};
 export const getStaticProps: GetStaticProps<PageProps> = async () => {;
   return {;
     props: {;
       docs: content as DocsContent}}
-export default function PrintDocs(): any ({ docs }: PageProps) {;
-  useEffect(() => {;
-    const id = setTimeout(() => window && window.print(), 500);
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function PrintDocs({ docs }: PageProps) {
-  useEffect(() => {;
-    const id = setTimeout(() => window.print(), 500);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return () => clearTimeout(id);
   }, []);
   return (
@@ -141,6 +125,7 @@ export default function PrintDocs({ docs }: PageProps) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -153,6 +138,8 @@ export default function PrintDocs({ docs }: PageProps) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="p-8 max-w-4xl mx-auto">;
       <h1 className="text-3xl font-bold mb-6">{docs && docs.title}</h1>;
@@ -164,9 +151,8 @@ export default function PrintDocs({ docs }: PageProps) {
             {s && s.code && s && s.code.map((c, i) => (;
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c && c.content}</pre>;
             ))}
-
-
         ))}
+<<<<<<< HEAD
       </div>
     </div>
 );
@@ -175,6 +161,9 @@ export default function PrintDocs({ docs }: PageProps) {
 }
 <<<<<<< HEAD
 
+=======
+  );
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 export default /**
  * PrintDocs - Function description
@@ -215,6 +204,7 @@ function PrintDocs() {
           </section>))}
       </div>;
     </div>);
+<<<<<<< HEAD
 
 export const getStaticProps: GetStaticProps<PageProps> = async () => {_return {
     props: {
@@ -269,3 +259,5 @@ export default function PrintDocs({ docs }: PageProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

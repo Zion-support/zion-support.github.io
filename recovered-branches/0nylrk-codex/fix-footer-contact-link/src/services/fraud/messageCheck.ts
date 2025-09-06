@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Message checking functionality
@@ -26,6 +27,8 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
               analysis && analysis.reasons.some(r => r && r.includes('payment') || r && r.includes('external')) 
       ? 'dangerous' 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       : 'suspicious'
 =======
 // Message checking functionality;
@@ -52,6 +55,7 @@ if ( {) {
   }
   return {
     ...analysis;
+<<<<<<< HEAD
 <<<<<<< HEAD
     severity
   }
@@ -96,3 +100,8 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
+=======
+    severity;
+  }
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

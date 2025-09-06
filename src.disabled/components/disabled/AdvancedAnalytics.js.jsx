@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/disabled/AdvancedAnalytics.js.jsx
 import React,{ useState,useEffect } from\';react\' import { motion } from\';\';framer-motion\' import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from\';\';lucide-react\' \"export\": function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ \"visitors\": \'0\',\"conversions\": \'0\',\"revenue\": \'0\',\"bounceRate\": \'0\',\"avgSessionDuration\": \'0\',\"topPages\": \'[]\',\"trafficSources\": \'[]\',\"deviceTypes\": \'[]\'}) const [timeRange,setTimeRange] = useState(\'';7d\') const [isLoading,setIsLoading] = useState(true) useEffect(() => {\'';
 const React,{ useState,useEffect } from";react" import { motion } from";";framer-motion" import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from";";lucide-react" export: function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ visitors: "0",conversions: "0",revenue: "0",bounceRate: "0",avgSessionDuration: "0",topPages: "[]",trafficSources: "[]",deviceTypes: "[]"}) const [timeRange,setTimeRange] = useState("";7d") const [isLoading,setIsLoading] = useState(true) useEffect(() => {"";"""
@@ -9,6 +10,8 @@ const React,{ useState,useEffect } from";react" import { motion } from";";framer
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import React,{ useState,useEffect } from\';react\' import { motion } from\';\';framer-motion\' import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from\';\';lucide-react\' \"export\": function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ \"visitors\": \'0\',\"conversions\": \'0\',\"revenue\": \'0\',\"bounceRate\": \'0\',\"avgSessionDuration\": \'0\',\"topPages\": \'[]\',\"trafficSources\": \'[]\',\"deviceTypes\": \'[]\'}) const [timeRange,setTimeRange] = useState(\'';7d\') const [isLoading,setIsLoading] = useState(true) useEffect(() => {\'';
 const React,{ useState,useEffect } from";react" import { motion } from";";framer-motion" import { TrendingUp,Users,DollarSign,Clock,BarChart3,PieChart,Smartphone,Monitor,Tablet } from";";lucide-react" export: function AdvancedAnalytics() { const [analyticsData,setAnalyticsData] = useState({ visitors: "0",conversions: "0",revenue: "0",bounceRate: "0",avgSessionDuration: "0",topPages: "[]",trafficSources: "[]",deviceTypes: "[]"}) const [timeRange,setTimeRange] = useState("";7d") const [isLoading,setIsLoading] = useState(true) useEffect(() => {"";"""

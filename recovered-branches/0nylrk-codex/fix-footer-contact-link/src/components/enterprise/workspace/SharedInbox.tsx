@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -30,10 +31,25 @@ export function SharedInbox() {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       id: "msg-1",
+=======
+=======
+import React from './react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+export /**
+ * SharedInbox - Function description
+ */
+function SharedInbox() {
+  // Mock messages;
+  const messages = [;
+    {
+      id: "msg - 1",
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       from: "John Smith",
       subject: "Interview Scheduled",
       preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm.",
       timestamp: "2h ago",
+<<<<<<< HEAD
 <<<<<<< HEAD
       unread: true;
     };
@@ -61,10 +77,14 @@ export function SharedInbox() {
       preview: "The contract with freelancer Michael Chen has been approved and signed."
       timestamp: "2d ago"
       unread: false
+=======
+      unread: true;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   ],
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Card>
       <CardHeader>
@@ -213,10 +233,13 @@ export function SharedInbox() {;
         <div className="p - 3 text - center border - t border - border">;
           <button className="text - sm text - blue - 500 font - medium hover: text - blue - 700">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             View All Messages;
           </button>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </Card>;
   );
@@ -229,3 +252,9 @@ export function SharedInbox() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+=======
+=======
+    </Card>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

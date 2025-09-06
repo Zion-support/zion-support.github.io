@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+export interface AdditionalLiveService2025 { id: string; name: string; tagline: string; price: string; features: string[]} export const additionalLiveServices2025: AdditionalLiveService2025[] = [ { id: 'live-service-1',name: 'Live Service 1',tagline: 'Real-time service delivery',price: '$199',features: ['Real-time monitoring','Live support','Performance tracking'],},];
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export interface AdditionalLiveService2025 {
   "id": string;
   name: string;
@@ -11,6 +17,7 @@ export const "additionalLiveServices2025": AdditionalLiveService2025[] = [{
     "price": '$199',
     "features": ['Real-time monitoring', 'Live support', 'Performance tracking']},
 ];
+<<<<<<< HEAD
 
 export interface AdditionalLiveService2025 { id: string; name: string; tagline: string; price: string; features: string[]} export const additionalLiveServices2025: AdditionalLiveService2025[] = [ { id: 'live-service-1',name: 'Live Service 1',tagline: 'Real-time service delivery',price: '$199',features: ['Real-time monitoring','Live support','Performance tracking'],},];
 export interface AdditionalLiveService2025 { id: string; name: string; tagline: string; price: string; features: string[]} export const additionalLiveServices2025: AdditionalLiveService2025[] = [ { id: 'live-service-1',name: 'Live Service 1',tagline: 'Real-time service delivery',price: '$199',features: ['Real-time monitoring','Live support','Performance tracking'],},];
@@ -35,3 +42,6 @@ export interface AdditionalLiveService2025 { id: string; name: string; tagline: 
 export interface AdditionalLiveService2025 { id: string; name: string; tagline: string; price: string; features: string[]} export const additionalLiveServices2025: AdditionalLiveService2025[] = [ { id: 'live-service-1',name: 'Live Service 1',tagline: 'Real-time service delivery',price: '$199',features: ['Real-time monitoring','Live support','Performance tracking'],},];
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,6 +94,11 @@ export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
 
       <div className="space-y-3 mt-6">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+interface RolePickerProps {
+  on_select: (role: UserRole) => void;
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <Card
           className={`cursor-pointer transition-all ${
             selectedRole === 'talent'
@@ -114,6 +120,7 @@ export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
                 <Check className="h-5 w-5 text-primary" />;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>
           </CardContent>
         </Card>
@@ -133,12 +140,16 @@ export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+        <Card
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           className={`cursor-pointer transition-all ${
             selectedRole === 'client'
               ? "border-primary bg-primary/5"
               : "border-border hover:border-primary/40"
           }`}
           onClick={() => handleSelect('client')}
+<<<<<<< HEAD
 
 =======
 export /**
@@ -194,48 +205,29 @@ interface RolePickerProps {;
               : "border - border hover:border - primary / 40";
           }`}
           on_click={() => handle_select ('talent')}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         >;
-          <CardContent className="p - 5">;
-            <div className="flex items - center">;
-              <div className="w - 12 h - 12 rounded - full bg - primary / 10 flex items - center justify - center mr - 4">;
-                <Briefcase className="h - 6 w - 6 text - primary" />;
+          <CardContent className="p-5">;
+            <div className="flex items-center">;
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">;
+                <Users className="h-6 w-6 text-primary" />;
               </div>;
-              <div className="flex - 1">;
-                <h3 className="font - medium">I'm offering services</h3>;
-                <p className="text - sm text - muted - foreground">Find work and showcase your skills</p>;
+              <div className="flex-1">;
+                <h3 className="font-medium">I'm hiring</h3>;
+                <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>;
               </div>;
-              {selected_role === 'talent' && (
-                <Check className="h - 5 w - 5 text - primary" />)}
-            </div>;
-          </CardContent>;
-        </Card>;
-        <Card;
-          className={`cursor - pointer transition - all ${
-            selected_role === 'client';
-              ? "border - primary bg - primary / 5";
-              : "border - border hover:border - primary / 40";
-          }`}
-          on_click={() => handle_select ('client')}
-        >;
-          <CardContent className="p - 5">;
-            <div className="flex items - center">;
-              <div className="w - 12 h - 12 rounded - full bg - primary / 10 flex items - center justify - center mr - 4">;
-                <Users className="h - 6 w - 6 text - primary" />;
-              </div>;
-              <div className="flex - 1">;
-                <h3 className="font - medium">I'm hiring</h3>;
-                <p className="text - sm text - muted - foreground">Post jobs and find talented professionals</p>;
-              </div>;
-              {selected_role === 'client' && (
-                <Check className="h - 5 w - 5 text - primary" />)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              {selectedRole === 'client' && (;
+                <Check className="h-5 w-5 text-primary" />;
+              )}
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-
+=======
     </div>);
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 =======
@@ -243,3 +235,6 @@ interface RolePickerProps {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
 
 class ErrorBoundary extends React.Component {
@@ -47,6 +48,9 @@ import Link from 'next/link'
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from "react",
 import { useProjects } from "@/hooks/useProjects",
 import { SEO } from "@/components/SEO",
@@ -56,13 +60,21 @@ import { Badge } from "@/components/ui/badge",
 import Link from "next/link",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { Clock, Briefcase } from 'lucide-react'
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-
+import React from 'react'
+import { useProjects } from '@/hooks/useProjects'
+import { SEO } from '@/components/SEO'
+import {
   Card
   CardContent
   CardDescription
@@ -80,32 +92,6 @@ function ProjectsContent() {
 
   const { projects, isLoading } = useProjects()
 
-function ProjectsContent() { const { projects, isLoading  } = useProjects(),;
-function ProjectsContent() {;
-  const { projects, isLoading } = useProjects(),;
-
-  return (
-    <>;
-      <SEO
-        title='My Projects | Zion AI Marketplace'
-        description='View and manage your projects.'
-
-import React from "react";
-import { useProjects } from "@/hooks/useProjects";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
-import { Clock, Briefcase } from 'lucide-react'
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Star } from 'lucide-react';
-
-
-function ProjectsContent() { const { projects, isLoading  } = useProjects(),
-
-
   return (
     <>
       <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects." />
@@ -115,14 +101,21 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
           <p className="text-muted-foreground mt-1">All of your current and past projects</p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {isLoading ? (
           <p>Loading projects...</p>
         ) : projects.length === 0 ? (
           <p>You don't have any projects yet.</p>
         ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='grid gap-6'>
             {projects.map(project => (
@@ -144,21 +137,25 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <Card key={project.id}>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Briefcase className="h-5 w-5 text-primary" />
                     <span>{project.job?.title || "Project"}</span>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </CardTitle>
                   <CardDescription className="flex items-center gap-2 mt-1">
                     <Badge variant="outline">{project.status}</Badge>
                     <span className="flex items-center gap-1 text-xs text-muted-foreground">
                       <Clock className="h-3 w-3" />
                       Started {new Date(project.start_date).toLocaleDateString()}
-                    </span>
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <p className='text-sm text-muted-foreground line-clamp-2'>
                     {project.job?.description |'Project details'}
@@ -166,10 +163,23 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
                 </CardContent>
                 <CardFooter>
                   <Button asChild variant='outline' className='w-full'>                    <Link href={`/project/${project.id}`}>View Details</Link>                  <p className="text-sm text-muted-foreground line-clamp-2">
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    {project.job?.description || "Project details"}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <Button asChild variant="outline" className="w-full">
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             ))}
           </div>
         )}
 =======
+<<<<<<< HEAD
 
                   <Button asChild variant='outline' className='w-full'>                    <Link href={`/project/${project.id}`}>View Details</Link>                  <p className="text-sm text-muted-foreground line-clamp-2">
                     {project.job?.description |"Project details"}
@@ -387,3 +397,18 @@ function Projects() {
 
 ;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      </main>;
+    </>;
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+;
+export default function Projects() {;
+  return <ProjectsContent />;
+};
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

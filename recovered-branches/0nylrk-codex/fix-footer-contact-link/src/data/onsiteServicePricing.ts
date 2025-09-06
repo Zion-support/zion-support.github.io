@@ -1,4 +1,6 @@
+  country: string;
 
+<<<<<<< HEAD
 export interface CountryPricing {
 <<<<<<< HEAD
 
@@ -236,6 +238,9 @@ export const onsiteServicePricing: CountryPricing[] = [
   { country: 'Yemen', pricePerIncident: 320.66 }
   { country: 'Zambia', pricePerIncident: 62.01 }
   { country: 'Zimbabwe', pricePerIncident: 60.5 },];  { country: "Afghanistan", pricePerIncident: 131.04 }
+=======
+  pricePerIncident: number;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   { country: "Albania", pricePerIncident: 110.41 }
   { country: "Algeria", pricePerIncident: 92.26 }
   { country: "American Samoa", pricePerIncident: 193.60 }
@@ -320,7 +325,10 @@ export const onsiteServicePricing: CountryPricing[] = [
   { country: "Guatemala", pricePerIncident: 111.93 }
   { country: "Guernsey", pricePerIncident: 119.49 }
   { country: "Guinea", pricePerIncident: 175.45 }
+<<<<<<< HEAD
   { country: "Guinea-Bissau", pricePerIncident: 178.48 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   { country: "Guyana", pricePerIncident: 173.94 }
   { country: "Haiti", pricePerIncident: 107.39 }
   { country: "Honduras", pricePerIncident: 114.95 }
@@ -465,6 +473,7 @@ export const onsiteServicePricing: CountryPricing[] = [
   { country: "Western Sahara", pricePerIncident: 142.18 }
   { country: "Yemen", pricePerIncident: 320.66 }
   { country: "Zambia", pricePerIncident: 62.01 }
+<<<<<<< HEAD
   { country: "Zimbabwe", pricePerIncident: 60.50 }
   country: string;
   pricePerIncident: number;
@@ -702,6 +711,15 @@ export const onsiteServicePricing: CountryPricing[] = [
   { country: 'Yemen', pricePerIncident: 320.66 },
   { country: 'Zambia', pricePerIncident: 62.01 },;
   { country: 'Zimbabwe', pricePerIncident: 60.5 },];  { country: "Afghanistan", pricePerIncident: 131.04 };
+=======
+=======
+  country: string,
+  pricePerIncident: number
+}
+
+export const onsiteServicePricing: CountryPricing[] = [
+  { country: "Afghanistan", pricePerIncident: 131.04 };
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   { country: "Albania", pricePerIncident: 110.41 };
   { country: "Algeria", pricePerIncident: 92.26 };
   { country: "American Samoa", pricePerIncident: 193.60 };
@@ -932,6 +950,7 @@ export const onsiteServicePricing: CountryPricing[] = [
   { country: "Yemen", pricePerIncident: 320.66 };
   { country: "Zambia", pricePerIncident: 62.01 };
   { country: "Zimbabwe", pricePerIncident: 60.50 }
+<<<<<<< HEAD
 
 
 export interface CountryPricing {;
@@ -939,9 +958,14 @@ export interface CountryPricing {;
 =======
 
 =======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
   { country: "Zimbabwe", pricePerIncident: 60.50 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 =======
 
   country: string;
@@ -1420,3 +1444,5 @@ export const onsiteServicePricing: CountryPricing[] = [;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -26,11 +27,13 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 } from 'lucide-react';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -55,6 +58,8 @@ export default function AutonomousVehicleAIPage() {
 =======
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/autonomous-vehicle-ai-platform');
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -148,6 +153,7 @@ export default function AutonomousVehicleAIPage() {;
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>;
+<<<<<<< HEAD
 
   );
 }
@@ -281,6 +287,40 @@ export default function AutonomousVehicleAIPage() {
     </UltraAdvancedFuturisticBackground>
 
   );
+=======
+import Head from 'next / head';
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Car,
+  Star,
+} from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
+import Button from '../components / ui / Button';
+import { enhancedRealMicroSaasServices } from '../data / enhanced - real - micro - saas - services';
+export default /**
+ * AutonomousVehicleAIPage - Function description
+ */
+function AutonomousVehicleAIPage() {
+  const service = enhancedRealMicroSaasServices.find (string =>;
+    s.link.ends_with ('/autonomous - vehicle - ai - platform'));  // Check condition
+if (return null) {
+  $2
+}import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
+import Button from '../components / ui / Button';
+import { enhancedRealMicroSaasServices } from '../data / enhanced - real - micro - saas - services';
+export default /**
+ * AutonomousVehicleAIPage - Function description
+ */
+function AutonomousVehicleAIPage() {
+  const service = enhancedRealMicroSaasServices.find (string => s.link.ends_with ('/autonomous - vehicle - ai - platform'));
+  // Check condition
+if (return null) {
+  $2
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 <<<<<<< HEAD
 }
@@ -375,6 +415,7 @@ export default function AutonomousVehicleAIPage() {
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
+<<<<<<< HEAD
 
 =======
 
@@ -386,3 +427,5 @@ export default function AutonomousVehicleAIPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

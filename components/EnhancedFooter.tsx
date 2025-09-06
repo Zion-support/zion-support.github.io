@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Link from 'next/link';
@@ -156,29 +157,14 @@ const EnhancedFooter: React.FC = () => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <footer className='bg-slate-950 border-t border-white/10'>;
       <div className='max-w-7xl mx-auto px-6 py-16'>;
         {/* Main Footer Content */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12'>;
           {/* Company Info */}
-
-          <div className='lg:col-span-2'>;
-            <div className='flex items-center space-x-3 mb-6'>;
-              <div className='w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center'>;
-                <Brain className='w-6 h-6 text-white' />;
-              </div>;
-              <span className='text-xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
-                Zion Tech Group;
-              </span>;
-            </div>;
-            <p className='text-white/70 mb-6 max-w-md'>;
-              Leading-edge technology solutions and autonomous innovation;
-              platform. Empowering businesses with cutting-edge AI, quantum;
-              computing, and digital transformation.;
-            </p>;
-
-
             {/* Contact Info */}
             <div className='space-y-3'>;
               <div className='flex items-center space-x-3 text-white/70'>;
@@ -193,6 +179,7 @@ const EnhancedFooter: React.FC = () => {;
                 <Phone className='w-4 h-4' />;
                 <a
                   href='tel:+13024640950'
+<<<<<<< HEAD
                   className='hover:text-white transition-colors'
                 >
                   +1 (302) 464-0950
@@ -370,11 +357,25 @@ const EnhancedFooter: React.FC = () => {
                 {section.links.map ((link) => (
                   <li key={link.name}>;
                     <Link;
+=======
+                  className='hover:text-white transition-colors'>;
+                  +1 (302) 464-0950;
+                </a>;
+              </div>;
+              <div className='flex items-center space-x-3 text-white/70'>;
+                <MapPin className='w-4 h-4' />                <span>Global Operations</span>              <div className="flex items-center space-x-3 text-white/70">;
+                <MapPin className="w-4 h-4" />;
+                <span>Global Operations</span>;
+              </div>;
+            </div>;
+          </div>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
                       href={link.href}
                       className="text - white / 70 hover: text - white transition - colors duration - 200";
                     >;
                       {link.name}
+<<<<<<< HEAD
                     </Link>
                   </li>
                 ))}
@@ -395,20 +396,22 @@ const EnhancedFooter: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                ))}
+              </ul>;
+            </div>;
+          ))}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {/* Bottom Section */}
         <div className='pt-8 border-t border-white/10'>;
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
             {/* Copyright */}
-
-            <div className='text-white/60 text-sm'>              © {currentYear} Zion Tech Group. All rights reserved.;
-            </div>;
-
-
             {/* Social Links */}
             <div className='flex items-center space-x-4'>;
               {socialLinks && socialLinks.map(social => (        <div className="pt-8 border-t border-white/10">;
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;
             {/* Copyright */}
+<<<<<<< HEAD
             <div className="text-white/60 text-sm">
             </div>
             {/* Social Links */}
@@ -465,7 +468,18 @@ const EnhancedFooter: React.FC = () => {
 };
 
 =======
+=======
+};
 
+export default EnhancedFooter;
+import React from "react";
+  FileText,;
+  HelpCircle} from "lucide-react";
+export default function EnhancedFooter() {;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+
+  const scrollToTop = () => {";
+    window && window.scrollTo({ top: 0, behavior: "smooth" });
                     </Link>;
                   </li>))}
               </ul>;
@@ -525,48 +539,22 @@ function EnhancedFooter() {
 ;
   const scrollToTop = () =>: any {";
     window.scroll_to ({ top: 0, behavior: "smooth" });
-
 }
   const current_year = new Date ().getFullYear ();
 }
-
-      { name: "AI Development", href: "/services/ai-development" }],;
-    solutions: [",;
-
       { name: "AI Content Creation", href: "/solutions/ai-content-creation" },";
       { name: "Customer Support", href: "/solutions/customer-support" },";
       { name: "Email Automation", href: "/solutions/email-automation" },";
       { name: "Event Management", href: "/solutions/event-management" },";
       { name: "Project Management", href: "/solutions/project-management" },";
-
-      { name: "Workflow Automation", href: "/solutions/workflow-automation" }],;
-    company: [",;
-
       { name: "About Us", href: "/about" },";
       { name: "Careers", href: "/careers" },";
       { name: "Partners", href: "/partners" },";
       { name: "Contact", href: "/contact" },";
-
-      { name: "Blog", href: "/blog" }],;
-    resources: [",;
-      { name: "Help Center", href: "/help" },";
-      { name: "Pricing Guide", href: "/pricing-guide" },";
-      { name: "Search", href: "/search" },";
-      { name: "Sitemap", href: "/sitemap" }],;
-    legal: [",;
-
       { name: "Privacy Policy", href: "/privacy" },";
       { name: "Terms of Service", href: "/terms" },";
       { name: "Cookie Policy", href: "/cookies" }]}
   const socialLinks = [];
-
-
-  return (
-    <footer className="bg-gray-900 text-white">";
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">";
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">,;
-
-=======
   const footer_links = {}, ";
       { name: "IT Services", href: "/services / it - services" }, ";
       { name: "Micro SaaS", href: "/services / micro - saas" }, ";
@@ -608,15 +596,6 @@ function EnhancedFooter() {
                 <span className="text - white font - bold text - lg">Z</span>;
               </div>;
               <div>";
-
-                  Technology Solutions,;
-                </div>;
-            </div>";
-            <p className="text-gray-400 mb-6 max-w-md">,;
-              Leading technology solutions provider specializing in AI,;
-              cybersecurity, cloud infrastructure, and digital transformation,;
-services. We help businesses innovate, scale, and succeed in the,;
-
 digital age.;
             </p>";
             <div className="space-y-3">";
@@ -624,84 +603,23 @@ digital age.;
                 <Phone className="w-4 h-4"  />";
                 <ahref="tel: +13024640950
                   className="hover:text-white transition-colors">;
-
-                  +1 (302) 464-0950,;
-
                 </a>;
               </div>";
               <div className="flex items-center space-x-3 text-gray-400">";
                 <Mail className="w-4 h-4"  />";
                 <ahref="mailto: kleber@ziontechgroup && ziontechgroup.com
                   className="hover:text-white transition-colors">;
-
-                  kleber@ziontechgroup && ziontechgroup.com,;
-                </a>;
-              </div>";
-              <div className="flex items-center space-x-3 text-gray-400">";
-                <MapPin className="w-4 h-4"  />,;
-
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>;
               </div>;
           {/* comment */}
           <div>";
             <h3 className="text-lg font-semibold mb-4 flex items-center">";
               <Globe className="w-5 h-5 mr-2 text-blue-400"  />;
-
-                <span className="text - xl font - bold">Zion Tech Group</span>";
-                <div className="text - xs text - gray - 400">;
-                  Technology Solutions,
-                </div>;
-            </div>";
-            <p className="text - gray - 400 mb - 6 max - w-md">,
-              Leading technology solutions provider specializing in AI,
-              cybersecurity, cloud infrastructure, and digital transformation,
-services. We help businesses innovate, scale, and succeed in the,
-digital age.;
-            </p>";
-            <div className="space - y-3">";
-              <div className="flex items - center space - x-3 text - gray - 400">";
-                <Phone className="w - 4 h - 4"  />";
-                <a href="tel: +13024640950;
-                  className="hover:text - white transition - colors">;
-                  +1 (302) 464 - 0950,
-                </a>;
-              </div>";
-              <div className="flex items - center space - x-3 text - gray - 400">";
-                <Mail className="w - 4 h - 4"  />";
-                <a href="mailto: kleber@ziontechgroup.com;
-                  className="hover:text - white transition - colors">;
-                  kleber@ziontechgroup.com,
-                </a>;
-              </div>";
-              <div className="flex items - center space - x-3 text - gray - 400">";
-                <MapPin className="w - 4 h - 4"  />,
-                <span > 364 E Main St STE 1008, Middletown DE 19709</span>;
-              </div>;
-          {/* comment */}
-          <div>";
-            <h3 className="text - lg font - semibold mb - 4 flex items - center">";
-              <Globe className="w - 5 h - 5 mr - 2 text - blue - 400"  />;
-              Services,
-
             </h3>";
             <ul className="space - y-2">;
               {footer_links.services.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
-
-              Services,;
-            </h3>";
-            <ul className="space-y-2">;
-              {footerLinks && footerLinks.services.map(link => (";
-                <li key="{link && link.name}">";
-                  <Link href="{link && link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm">,;
-                    {link && link.name}
-
-
-                  </Link>;
-                </li>;
-              ))}
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
@@ -710,30 +628,11 @@ digital age.;
           </div>;
           {/* comment */}
           <div>";
-
-            <h3 className="text - lg font - semibold mb - 4 flex items - center">";
-              <Shield className="w - 5 h - 5 mr - 2 text - green - 400"  />;
-              Solutions,
-
             </h3>";
             <ul className="space - y-2">;
               {footer_links.solutions.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
-
-              Solutions,;
-            </h3>";
-            <ul className="space-y-2">;
-              {footerLinks && footerLinks.solutions.map(link => (";
-                <li key="{link && link.name}">";
-                  <Link href="{link && link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm">,;
-                    {link && link.name}
-
-
-                  </Link>;
-                </li>;
-              ))}
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
@@ -742,30 +641,11 @@ digital age.;
           </div>;
           {/* comment */}
           <div>";
-
-            <h3 className="text - lg font - semibold mb - 4 flex items - center">";
-              <FileText className="w - 5 h - 5 mr - 2 text - purple - 400"  />;
-              Company,
-
             </h3>";
             <ul className="space - y-2">;
               {footer_links.company.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
-
-              Company,;
-            </h3>";
-            <ul className="space-y-2">;
-              {footerLinks && footerLinks.company.map(link => (";
-                <li key="{link && link.name}">";
-                  <Link href="{link && link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm">,;
-                    {link && link.name}
-
-
-                  </Link>;
-                </li>;
-              ))}
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
@@ -774,41 +654,17 @@ digital age.;
           </div>;
           {/* comment */}
           <div>";
-
-            <h3 className="text - lg font - semibold mb - 4 flex items - center">";
-              <HelpCircle className="w - 5 h - 5 mr - 2 text - yellow - 400"  />;
-              Resources,
-
             </h3>";
             <ul className="space - y-2 mb - 6">;
               {footer_links.resources.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
-
-              Resources,;
-            </h3>";
-            <ul className="space-y-2 mb-6">;
-              {footerLinks && footerLinks.resources.map(link => (";
-                <li key="{link && link.name}">";
-                  <Link href="{link && link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm">,;
-                    {link && link.name}
-
-
                   </Link>;
                 </li>;
               ))}
             </ul>";
             <h4 className="text-md font-semibold mb-3 text-gray-300">Legal</h4>";
             <ul className="space-y-2">;
-
-              {footerLinks && footerLinks.legal.map(link => (";
-                <li key="{link && link.name}">";
-                  <Link href="{link && link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm">,;
-                    {link && link.name}
-
-
                   </Link>;
                 </li>;
               ))}
@@ -819,9 +675,6 @@ digital age.;
           <div className="max-w-2xl mx-auto text-center mb-8">";
             <h3 className="text-xl font-semibold mb-2">Stay Updated</h3>";
             <p className="text-gray-400 mb-4">;
-
-              Subscribe to our newsletter for the latest technology insights and,;
-
 company updates.;
             </p>";
             <form className="flex flex-col sm: flex-row gap-3 max-w-md mx-auto">";
@@ -830,10 +683,6 @@ company updates.;
                 className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"  />";
               <buttontype="submit
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">;
-
-                Subscribe,;
-
-=======
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
@@ -869,9 +718,6 @@ company updates.;
             </form>;
           </div>;
         {/* comment */}";
-
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">,;
-
               © {currentYear} Zion Tech Group. All rights reserved.;
             </div>";
             <div className="flex items-center space-x-6">";
@@ -893,6 +739,7 @@ company updates.;
         aria-label="Scroll to top">";
         <ArrowUp className="w-5 h-5"  />;
 <<<<<<< HEAD
+<<<<<<< HEAD
       </button>
     </footer>
   )}"'
@@ -906,6 +753,8 @@ export default EnhancedFooter;
   )}"';
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <div className="border - t border - gray - 800 pt - 8">";
           <div className="flex flex - col md: flex - row justify - between items - center">";
             <div className="text - gray - 400 text - sm mb - 4 md:mb - 0">,
@@ -931,6 +780,7 @@ export default EnhancedFooter;
       </button>,
     </footer>,
   )}"';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   );
@@ -942,3 +792,5 @@ export default EnhancedFooter;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

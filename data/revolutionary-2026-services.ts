@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface Revolutionary2026Service {;
   id: string;
@@ -26,6 +27,21 @@ export interface Revolutionary2026Service {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
+=======
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: ServiceVariant,
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   contactInfo: {
       
     mobile: string, email: string,
@@ -37,12 +53,12 @@ export interface Revolutionary2026Service {;
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const revolutionary2026Services: Revolutionary2026Service[] = [
   // AI-Powered Business Intelligence & Analytics
   {
+<<<<<<< HEAD
 
     id: 'ai-business-intelligence-suite-2026', name: 'AI Business Intelligence Suite 2026',
     tagline: 'Next-generation AI-powered business analytics and decision intelligence', price: '$299',
@@ -1201,6 +1217,10 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
+=======
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    reviews: 25
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -1209,6 +1229,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     customers: 45;
     rating: 4.8,
     reviews: 25;
+<<<<<<< HEAD
   }
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1889,7 +1910,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
-];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+;

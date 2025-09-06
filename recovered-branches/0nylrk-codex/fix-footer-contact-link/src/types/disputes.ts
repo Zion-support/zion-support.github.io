@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -20,6 +21,9 @@ export interface Dispute {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface Dispute {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   project_id: string;
   milestone_id?: string;
@@ -33,20 +37,9 @@ export interface Dispute {;
   status: DisputeStatus;
   resolution_type: ResolutionType;
   project?: {
-
-    title?: string,
-    scope_summary?: string;
-  }
-  client_profile?: {
-    display_name: string,
-    avatar_url?: string;
-  }
-  talent_profile?: {
-    display_name: string,
-    avatar_url?: string;
-
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface DisputeMessage {
 
@@ -59,6 +52,9 @@ export interface DisputeMessage {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface DisputeMessage {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   dispute_id: string;
   user_id: string;
@@ -66,12 +62,9 @@ export interface DisputeMessage {;
   created_at: string;
   is_admin_note: boolean;
   user_profile?: {
-
-    display_name: string,
-    avatar_url?: string;
-
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface DisputeAttachment {
 
@@ -84,6 +77,9 @@ export interface DisputeAttachment {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface DisputeAttachment {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   dispute_id: string;
   uploaded_by: string;
@@ -91,6 +87,7 @@ export interface DisputeAttachment {;
   file_path: string;
   file_type: string;
   file_size: number;
+<<<<<<< HEAD
 
   created_at: string,
   url?: string;
@@ -119,11 +116,14 @@ export const disputeReasonLabels: Record<DisputeReason, string> = {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   milestone_quality: 'Quality of Deliverable';
   delayed_delivery: 'Delayed Delivery';
   scope_change: 'Scope Change Disagreement';
   communication: 'Communication Issues';
   payment: 'Payment Dispute';
+<<<<<<< HEAD
 <<<<<<< HEAD
   contract_terms: 'Contract Terms Disagreement'
 other: 'Other Issue'}
@@ -222,3 +222,5 @@ export const disputeReasonLabels: Record<DisputeReason string> = {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

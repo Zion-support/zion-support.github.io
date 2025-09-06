@@ -1,5 +1,4 @@
-import { logInfo, logWarn } from '@/utils/productionLogger'
-
+=======
 import React, { useState, useEffect, useRef, useMemo } from "react",
 import { useTranslation } from "react-i18next",
 import { Search, X } from 'lucide-react'
@@ -14,17 +13,23 @@ import { logInfo, logWarn } from '@/utils/productionLogger',
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   /**
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
+<<<<<<< HEAD
    */;
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
   placeholder?: string;  /**
@@ -41,6 +46,14 @@ interface EnhancedSearchInputProps {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  placeholder?: string,
+  /**
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
    */
@@ -55,6 +68,7 @@ export function EnhancedSearchInput({
   searchSuggestions
 }: EnhancedSearchInputProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo
 import { Search, X  } from 'lucide-react'
 import { Input } from '@/components/ui/input'
@@ -68,8 +82,34 @@ export function EnhancedSearchInput({
   searchSuggestions
 }: EnhancedSearchInputProps) {
 =======
+=======
+  const [isFocused, setIsFocused] = useState(false)
+  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([])
+  const [highlightedIndex, setHighlightedIndex] = useState<number>(-1)
+  const inputRef = useRef<HTMLInputElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [valueOnFocus, setValueOnFocus] = useState<string | null>(null)
+  const [enterHandledPostFocus, setEnterHandledPostFocus] = useState(false)
+  const { t } = useTranslation()
+  const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([])
+  const [loading, setLoading] = useState(false)
+  const debounced = useDebounce(value, 200)
+=======
+  const [isFocused, setIsFocused] = useState(false),
+  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),
+  const [highlightedIndex, setHighlightedIndex] = useState<number>(-1),
+  const inputRef = useRef<HTMLInputElement>(null),
+  const containerRef = useRef<HTMLDivElement>(null),
+  const [valueOnFocus, setValueOnFocus] = useState<string | null>(null),
+  const [enterHandledPostFocus, setEnterHandledPostFocus] = useState(false),
+  const { t } = useTranslation(),
+  const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([]),
+  const [loading, setLoading] = useState(false),
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+  const debounced = useDebounce(value, 200),
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   searchSuggestions;
 }: EnhancedSearchInputProps) {;
@@ -131,14 +171,22 @@ export function EnhancedSearchInput({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const debouncedFetchSuggestions = useMemo(
     () =>
       debounce(async (query: string) => {
         if (!query.trim()) {
+<<<<<<< HEAD
           setApiSuggestions([])
           return
           setApiSuggestions([]),
           return;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         }
         setLoading(true)
         try {
@@ -149,7 +197,11 @@ export function EnhancedSearchInput({;
             const data = await response.json()
             if (Array.isArray(data)) {
               setApiSuggestions(data.slice(0, 5)), // Limit to 5 API suggestions
+<<<<<<< HEAD
           return
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState, useEffect, useRef, useMemo } from "react",;
 import { useTranslation } from "react-i18next",;
 import { Search, X } from 'lucide-react';
@@ -164,6 +216,7 @@ import { logInfo, logWarn } from '@/utils/productionLogger',;
 interface EnhancedSearchInputProps {;
   value: string,;
   onChange: (value: string) => void,;
+<<<<<<< HEAD
 =======
 
 
@@ -178,6 +231,8 @@ interface EnhancedSearchInputProps {
   value: string,
   on_change: (value: string, ) => void,
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   /**;
    * Optional callback when a suggestion is selected. This allows parent;
    * components to perform actions such as navigation.;
@@ -218,6 +273,7 @@ export function EnhancedSearchInput({;
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         set_loading (true);
@@ -238,21 +294,35 @@ if ( {) {
 
           setApiSuggestions([]),
 
+=======
+;
+        setLoading(true),;
+        try {;
+          const response = await fetch(`/api/search/suggest?q=${encodeURIComponent(query)}`, {;
+            signal: AbortSignal.timeout(5000) // 5 second timeout;
+          }),;
+          if (response.ok) {;
+            const data = await response.json(),;
+            if (Array.isArray(data)) {;
+              setApiSuggestions(data.slice(0, 5)), // Limit to 5 API suggestions;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             }
           } else {
-
-            // Silently fail for search suggestions - don't show error toast;
-            log_warn ('Search suggestions API error:', { data: response.status }),
-            setApiSuggestions ([]);
+            // Silently fail for search suggestions - don't show error toast
+            logWarn('Search suggestions API error:', { data: response.status })
+            setApiSuggestions([])
           }
         } catch (error) {
-          // Silently fail for search suggestions - don't show error toast;
-          log_warn ('Search suggestions fetch error:', { data: error }),
-          setApiSuggestions ([]);
-
+          // Silently fail for search suggestions - don't show error toast
+          logWarn('Search suggestions fetch error:', { data: error })
+          setApiSuggestions([])
         } finally {
           setLoading(false)
         }
+<<<<<<< HEAD
       }, 300)
     []
   )
@@ -421,10 +491,26 @@ if ( {) {
 }
       log_info ('Calling onSelectSuggestion with:', { data: suggestion_obj }),
       onSelectSuggestion (suggestion_obj);
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    if (onSelectSuggestion) {
+      logInfo('Calling onSelectSuggestion with:', { data: suggestionObj })
+      onSelectSuggestion(suggestionObj)
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } else {
-
-        router.push (`/search/${suggestion_obj.slug || slugify (suggestion_obj.text)}`);
-
+      // Provide a sensible default navigation if the parent did not supply a handler
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      if (suggestionObj.id) {
+        router.push(`/marketplace/listing/${suggestionObj.id}`)
+      } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
+        router.push(suggestionObj.slug)
+      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {
+        router.push(`/blog/${suggestionObj.slug}`)
+      } else {
       }
     }
     setIsFocused(false)
@@ -433,15 +519,10 @@ if ( {) {
   }
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>,) => {
     switch (e.key) {
-
-      case 'ArrowDown':;
-        // Check condition
-if ( {) {
-  $2
-}
-          e.prevent_default (),
-          setHighlightedIndex (prev => (prev + 1) % filtered_suggestions.length);
-
+      case 'ArrowDown':
+        if (isFocused && filteredSuggestions.length > 0) {
+          e.preventDefault()
+          setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length)
         }
   const debouncedFilterSuggestions = useMemo(// Changed from useCallback to useMemo
     () => debounce((currentValue: string, suggestions: SearchSuggestion[]) => {
@@ -449,24 +530,21 @@ if ( {) {
         setFilteredSuggestions(suggestions.filter(s => s.type === 'recent'))
         return;
 }
-
-        setFilteredSuggestions (suggestions.filter (string => s.type === 'recent'));
-        return;
-}
-      const filtered = suggestions.filter (suggestion =>;
-        suggestion.text.toLowerCase ().includes (current_value.toLowerCase ()));
-      filtered.sort ((a, b) => {
-        const aStartsWith = a.text.toLowerCase ().starts_with (current_value.toLowerCase ()) ? -1 : 0;
-        const bStartsWith = b.text.toLowerCase ().starts_with (current_value.toLowerCase ()) ? -1 : 0;
-        return aStartsWith - bStartsWith;
-});
-      setFilteredSuggestions (filtered.slice (0, 8));
-}, 300),
-    [setFilteredSuggestions] // setFilteredSuggestions from useState is stable);
-  useEffect (() => {
+      const filtered = suggestions.filter(suggestion =>
+        suggestion.text.toLowerCase().includes(currentValue.toLowerCase())
+      )
+      filtered.sort((a, b) => {
+        const aStartsWith = a.text.toLowerCase().startsWith(currentValue.toLowerCase()) ? -1 : 0
+        const bStartsWith = b.text.toLowerCase().startsWith(currentValue.toLowerCase()) ? -1 : 0
+        return aStartsWith-bStartsWith
+})
+      setFilteredSuggestions(filtered.slice(0, 8))
+}, 300)
+    [setFilteredSuggestions] // setFilteredSuggestions from useState is stable
+  )
+  useEffect(() => {
   // TODO: Add dependencies if needed;
-
-  return () => {
+  return () => {;
     // Cleanup function;
 };
 }, []); [])
@@ -487,235 +565,17 @@ if ( {) {
         setIsFocused(false)
 }
     }
-
-
-import { logInfo, logWarn } from '@/utils/productionLogger';
-
-import { logInfo, logWarn } from '@/utils/productionLogger';
-interface EnhancedSearchInputProps {;
-  value: string,;
-  onChange: (value: string,) => void,;
-  /**;
-   * Optional callback when a suggestion is selected. This allows parent;
-   * components to perform actions such as navigation.;
-   */;
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,;
-  placeholder?: string;  /**;
-   * Optional list of fallback suggestions (e && e.g. recent searches).;
-   * If provided, these will be shown when the input is empty.;
-   */;
-  searchSuggestions?: SearchSuggestion[];
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+}, [])
+  const handleSelectSuggestion = (suggestionText: string) => { // Renamed suggestion to suggestionText
+    onChange(suggestionText)
+    if(onSelectSuggestion) {
+      onSelectSuggestion(suggestionText)
 }
-
-export function EnhancedSearchInput(): any ({;
-  value;
-  onChange;
-  onSelectSuggestion;
-  placeholder = "Search...";
-  searchSuggestions;
-}: EnhancedSearchInputProps) {;
-import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo;
-import { Search, X  } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
-import { SearchSuggestion } from '@/types/search';
-export function EnhancedSearchInput(): any ({;
-  value,;
-  onChange,;
-  onSelectSuggestion,;
-  placeholder = "Search...",;
-  searchSuggestions;
-}: EnhancedSearchInputProps) {;
-  const [isFocused, setIsFocused] = useState(false);
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
-  const [highlightedIndex, setHighlightedIndex] = useState<number>(-1);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [valueOnFocus, setValueOnFocus] = useState<string | null>(null);
-  const [enterHandledPostFocus, setEnterHandledPostFocus] = useState(false);
-  const { t } = useTranslation();
-  const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([]);
-  const [loading, setLoading] = useState(false);
-
-  const debounced = useDebounce(value, 200);
-
-  const debouncedFetchSuggestions = useMemo(;
-    (,) =>;
-      debounce(async (query: string,) => {;
-        if (!query && query.trim()) {;
-          setApiSuggestions([]),;
-          return;
-        }
-
-        setLoading(true);
-        try {;
-          const response = await fetch(`/api/search/suggest?q=${encodeURIComponent(query)}`, {;
-            signal: AbortSignal && AbortSignal.timeout(5000) // 5 second timeout;
-          });
-
-          if (response && response.ok) {;
-            const data = await response && response.json();
-            if (Array && Array.isArray(data)) {;
-              setApiSuggestions(data && data.slice(0, 5)), // Limit to 5 API suggestions;
-            }
-          } else {;
-            // Silently fail for search suggestions - don't show error toast;
-            logWarn('Search suggestions API error:', { data: response && response.status }),;
-            setApiSuggestions([]);
-          }
-        } catch (error) {;
-          // Silently fail for search suggestions - don't show error toast;
-          logWarn('Search suggestions fetch error:', { data: error }),;
-          setApiSuggestions([]);
-        } finally {;
-          setLoading(false);
-        }
-      }, 300);
-    [];
-  );
-
-  // Fetch suggestions from API when input value changes;
-  useEffect((,) => {;
-    if (!debounced) {;
-      // Show recent suggestions provided via props when no query entered;
-      setFilteredSuggestions(;
-        (searchSuggestions || []).filter(s => s && s.type === 'recent');
-      );
-      setHighlightedIndex(-1);
-      return;
-    }
-
-    const controller = new AbortController();
-    fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {;
-      signal: controller && controller.signal;
-    });
-      .then(res => {;
-        if (!res && res.ok) throw new Error('Failed to fetch suggestions');
-        return res && res.json();
-      });
-      .then(data => {;
-        if (Array && Array.isArray(data)) {;
-          setFilteredSuggestions(data && data.slice(0, 8));
-        } else {;
-          setFilteredSuggestions([]);
-        }
-        setHighlightedIndex(-1);
-      });
-      .catch(() => setFilteredSuggestions([]));
-    return () => controller && controller.abort();
-  }, [debounced, searchSuggestions]);
-
-  // Handle clicks outside the component to close suggestions;
-  useEffect((,) => {;
-    function handleClickOutside(): any (event: MouseEvent) {;
-      if (containerRef && containerRef.current && !containerRef && containerRef.current.contains(event && event.target as Node)) {;
-        setIsFocused(false),;
-        // setHighlightedIndex(-1), // Already handled in onBlur generally;
-      }
-    }
-
-    document && document.addEventListener("mousedown", handleClickOutside);
-    return () => document && document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  const router = useRouter();
-
-  const handleSelectSuggestion = (suggestionObj: SearchSuggestion,) => {;
-    logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),;
-    onChange(suggestionObj && suggestionObj.text);
-    if (onSelectSuggestion) {;
-      logInfo('Calling onSelectSuggestion with:', { data: suggestionObj }),;
-      onSelectSuggestion(suggestionObj);
-    } else {;
-      // Provide a sensible default navigation if the parent did not supply a handler;
-      logWarn('onSelectSuggestion callback not provided');
-      if (suggestionObj && suggestionObj.id) {;
-        router && router.push(`/marketplace/listing/${suggestionObj && suggestionObj.id}`);
-      } else if (suggestionObj && suggestionObj.type === 'doc' && suggestionObj && suggestionObj.slug?.startsWith('/')) {;
-        router && router.push(suggestionObj && suggestionObj.slug);
-      } else if (suggestionObj && suggestionObj.type === 'blog' && suggestionObj && suggestionObj.slug) {;
-        router && router.push(`/blog/${suggestionObj && suggestionObj.slug}`);
-      } else {;
-        router && router.push(`/search/${suggestionObj && suggestionObj.slug || slugify(suggestionObj && suggestionObj.text)}`);
-      }
-    }
-    setIsFocused(false);
-    inputRef && inputRef.current?.blur();
-    setHighlightedIndex(-1);
-  };
-
-  const handleKeyDown = (e: React && React.KeyboardEvent<HTMLInputElement>,) => {;
-    switch (e && e.key) {;
-      case 'ArrowDown':;
-        if (isFocused && filteredSuggestions && filteredSuggestions.length > 0) {;
-          e && e.preventDefault(),;
-          setHighlightedIndex(prev => (prev + 1) % filteredSuggestions && filteredSuggestions.length);
-        }
-  const debouncedFilterSuggestions = useMemo(// Changed from useCallback to useMemo;
-    () => debounce((currentValue: string, suggestions: SearchSuggestion[]) => {;
-      if(!currentValue) {;
-        setFilteredSuggestions(suggestions && suggestions.filter(s => s && s.type === 'recent'));
-        return;
-}
-
-      const filtered = suggestions && suggestions.filter(suggestion =>;
-        suggestion && suggestion.text.toLowerCase().includes(currentValue && currentValue.toLowerCase());
-      );
-      filtered && filtered.sort((a, b) => {;
-        const aStartsWith = a && a.text.toLowerCase().startsWith(currentValue && currentValue.toLowerCase()) ? -1 : 0;
-        const bStartsWith = b && b.text.toLowerCase().startsWith(currentValue && currentValue.toLowerCase()) ? -1 : 0;
-        return aStartsWith-bStartsWith;
-});
-      setFilteredSuggestions(filtered && filtered.slice(0, 8));
-}, 300),;
-    [setFilteredSuggestions] // setFilteredSuggestions from useState is stable;
-  );
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;
-};
-}, []); []);
-    debouncedFilterSuggestions(value, searchSuggestions);
-    setHighlightedIndex(-1);
-    return () => {;
-      debouncedFilterSuggestions && debouncedFilterSuggestions.cancel();
-};
-}, [value, searchSuggestions, debouncedFilterSuggestions]);
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;
-};
-}, []); []);
-    function handleClickOutside(): any (event: MouseEvent) {;
-      if(containerRef && containerRef.current && !containerRef && containerRef.current.contains(event && event.target as Node)) {;
-        setIsFocused(false);
-}
-    }
-
-    document && document.addEventListener("mousedown", handleClickOutside);
-    return () => document && document.removeEventListener("mousedown", handleClickOutside);
-}, []);
-  const handleSelectSuggestion = (suggestionText: string) => { // Renamed suggestion to suggestionText;
-    onChange(suggestionText);
-    if(onSelectSuggestion) {;
-      onSelectSuggestion(suggestionText);
-}
-    setIsFocused(false);
-    inputRef && inputRef.current?.blur();
-    setHighlightedIndex(-1);
-};
-  const handleKeyDown = (e: React && React.KeyboardEvent<HTMLInputElement>) => {;
-    if(!isFocused || filteredSuggestions && filteredSuggestions.length === 0) {;
-      if(e && e.key === 'Escape') { ;
-        e && e.preventDefault();
-        setIsFocused(false);
-        setHighlightedIndex(-1);
-        inputRef && inputRef.current?.blur();
-
+    setIsFocused(false)
+    inputRef.current?.blur()
+    setHighlightedIndex(-1)
 }
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if(!isFocused |filteredSuggestions.length === 0) {
@@ -725,85 +585,41 @@ export function EnhancedSearchInput(): any ({;
         setHighlightedIndex(-1)
         inputRef.current?.blur()
 }
-
-    document.addEventListener ("mousedown", handleClickOutside);
-    return () => document.removeEventListener ("mousedown", handleClickOutside);
-}, []);
-  const handleSelectSuggestion = (suggestion_text: string) =>: any { // Renamed suggestion to suggestion_text;
-    on_change (suggestion_text);
-    // Check condition
-if ( {) {
-  $2
-}
-      onSelectSuggestion (suggestion_text);
-}
-    setIsFocused (false);
-    input_ref.current?.blur ();
-    setHighlightedIndex (-1);
-}
-  const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      // Check condition
-if ( {) {
-  $2
-
-}
-        e.prevent_default ();
-        setIsFocused (false);
-        setHighlightedIndex (-1);
-        input_ref.current?.blur ();
-}
       return;
 }
-    switch (e.key) {
-      case 'ArrowDown':;
-        e.prevent_default ();
-        setHighlightedIndex (prev => (prev + 1) % filtered_suggestions.length);
-        break;
-      case 'ArrowUp':;
-        e.prevent_default ();
-        setHighlightedIndex (prev => (prev - 1 + filtered_suggestions.length) % filtered_suggestions.length);
-        break;
-      case 'Enter':;
-        // Check condition
-if ( {) {
-  $2
+    switch(e.key) {
+      case 'ArrowDown':
+        e.preventDefault()
+        setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length)
+        break
+      case 'ArrowUp':
+        e.preventDefault()
+        setHighlightedIndex(prev => (prev - 1 + filteredSuggestions.length) % filteredSuggestions.length)
+        break
+      case 'Enter':
+        if(highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {
+          e.preventDefault()
+          handleSelectSuggestion(filteredSuggestions[highlightedIndex].text)
 }
-          e.prevent_default ();
-          handleSelectSuggestion (filtered_suggestions[highlighted_index].text);
-}
-        break;
-      case 'ArrowUp':;
-        // Check condition
-if ( {) {
-  $2
-}
-          e.prevent_default ();
-          setHighlightedIndex (prev => (prev - 1 + filtered_suggestions.length) % filtered_suggestions.length);
+        break
+      case 'ArrowUp':
+        if (isFocused && filteredSuggestions.length > 0) {
+          e.preventDefault()
+          setHighlightedIndex(prev => (prev - 1 + filteredSuggestions.length) % filteredSuggestions.length)
         }
-
-        break;
-      case 'Enter':;
-        // Check condition
-if ( {) {
-  $2
-}
-          e.prevent_default (), // Prevent form submission;
-          handleSelectSuggestion (filtered_suggestions[highlighted_index]);
-        } else if () {) {
-  $2
-}
-          // Manually trigger search navigation to ensure consistent behavior;
-          e.prevent_default ();
-          log_info ('EnhancedSearchInput manual submit:', { data: value }),
-          router.push (`/search?q=${encodeURIComponent (value)}`);
-          setIsFocused (false);
-          setHighlightedIndex (-1);
-          input_ref.current?.blur ();
-
+        break
+      case 'Enter':
+        if (isFocused && highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {
+          e.preventDefault(), // Prevent form submission
+          handleSelectSuggestion(filteredSuggestions[highlightedIndex])
+        } else if (value.trim()) {
+          // Manually trigger search navigation to ensure consistent behavior
+          e.preventDefault()
+          logInfo('EnhancedSearchInput manual submit:', { data: value })
+          router.push(`/search?q=${encodeURIComponent(value)}`)
+          setIsFocused(false)
+          setHighlightedIndex(-1)
+          inputRef.current?.blur()
         } else {
           // Prevent empty form submission
           e.preventDefault()
@@ -822,6 +638,7 @@ if ( {) {
         break
     }
   }
+<<<<<<< HEAD
 
     switch(e && e.key) {;
 <<<<<<< HEAD
@@ -830,6 +647,9 @@ if ( {) {
         router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
     document.addEventListener("mousedown", handleClickOutside),;
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -860,9 +680,12 @@ if ( {) {
   },;
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
     switch (e.key) {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       case 'ArrowDown':;
         if (isFocused && filteredSuggestions.length > 0) {;
           e.preventDefault(),;
@@ -906,6 +729,7 @@ if ( {) {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
@@ -924,19 +748,29 @@ if ( {) {
 
         router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
 
+=======
+  },
+  
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
-
-      aria-expanded = {isFocused && filteredSuggestions && filteredSuggestions.length> 0,}
-      aria-haspopup="listbox";
-      aria-controls="autocomplete-suggestions-list" // Added aria-controls;
-      onClick = {(,) => inputRef && inputRef.current?.focus(),}
-    >;
-      <div className="relative flex items-center w-full">;
+    <div
+      className="relative w-full"
+      ref={containerRef}
+      role="combobox"
+      aria-expanded={isFocused && filteredSuggestions.length > 0}
+      aria-haspopup="listbox"
+      aria-controls="autocomplete-suggestions-list" // Added aria-controls
+      onClick={() => inputRef.current?.focus()}
+    >
+      <div className="relative flex items-center w-full">
         <Search
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
-        />;
-
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
+        />
         <Input
+<<<<<<< HEAD
           ref = {inputRef,}
           ref={inputRef}
 <<<<<<< HEAD
@@ -945,10 +779,16 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           type="text"
           id="enhanced-search-input"
           name="search"
           value={value}
+<<<<<<< HEAD
           onChange={(e) => {
             onChange(e.target.value)
             setEnterHandledPostFocus(false)
@@ -1026,6 +866,11 @@ if ( {) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
@@ -1040,6 +885,7 @@ if ( {) {
             <X className="h-4 w-4" />
           </button>
         )}
+<<<<<<< HEAD
       </div>
       <AutocompleteSuggestions
         suggestions = {filteredSuggestions,}
@@ -1058,11 +904,17 @@ if ( {) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         highlightedIndex={highlightedIndex} // Pass highlightedIndex
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls
       />
     </div>
   )
+<<<<<<< HEAD
 }setIsFocused (false)
 inputRef.current?.blur ()
 setHighlightedIndex (-1)
@@ -1239,3 +1091,12 @@ break;
       />;
     </div>);
 }
+=======
+=======
+;
+=======
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -18,6 +19,8 @@ export default async function handler(
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const { jobDescription, candidateProfiles } = req.body |{}
@@ -30,24 +33,14 @@ export default async function handler(
   const method = (req && req.method || 'POST').toUpperCase();
   if (method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
 
-
-    `Candidates:\n${candidateProfiles && candidateProfiles.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
-
-
   const text = await generateText(
     prompt
     'You are a matching engine. Output strictly valid JSON.'
   );
   return res && res.status(200).json({ matches: text });
-
-=======
-  const { jobDescription, candidateProfiles } = req.body || {};
-  if (!jobDescription || !Array.isArray(candidateProfiles)) return res.status(400).json({ error: 'jobDescription and candidateProfiles[] required' });
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const prompt = `Given a job description and candidate profiles, output JSON with topMatches (array of {index, matchScore, rationale}) and gaps for each.\n` +
     `Job Description:\n${jobDescription}\n\n` +
+<<<<<<< HEAD
 
     `Candidates:\n${candidateProfiles && candidateProfiles.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
 =======
@@ -65,6 +58,8 @@ export default async function handler(
 =======
 
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { authenticate_request } from '@/utils / auth';
 import { generate_text } from '@/utils / ai';
 ;
@@ -112,6 +107,7 @@ function handler() {
 ;
   const text = await generate_text (prompt, 'You are a matching engine. Output strictly valid JSON.');
   return res.status (200).json ({ matches: text });
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -142,3 +138,5 @@ function handler() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

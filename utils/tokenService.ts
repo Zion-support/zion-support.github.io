@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { addTransaction, getAllTransactions, getUserBalance } from './tokenStore';
 export function issueTokens(userId: string, amount: number, reason: string) {
   return addTransaction({
@@ -25,11 +26,15 @@ export function revokeTokens(userId: string, amount: number, reason: string) {;
   
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  const currentBalance = getUserBalance(userId);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return addTransaction({
     userId
     type: 'spend'
     amount: actualAmount
     description: reason
+=======
 import { add_transaction, getAllTransactions, getUserBalance } from './token_store';
 ;
 export /**
@@ -55,5 +60,6 @@ function revoke_tokens() {
     type: 'spend',
     amount: actual_amount,
     description: reason;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
 }

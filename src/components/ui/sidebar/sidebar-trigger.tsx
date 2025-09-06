@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from "react"
 import { PanelLeft } from 'lucide-react'
 import { Button } from &quot;@/components/ui/button&quot;
@@ -6,26 +7,18 @@ import { useSidebar } from &quot;./sidebar-context&quot;
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { useSidebar } from "./sidebar-context"
+=======
 
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const SidebarTrigger = React.forwardRef<
   React.ElementRef<typeof Button>
   React.ComponentProps<typeof Button>
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
-
-import * as React from &quot;react & quot;
-import { PanelLeft } from 'lucide-react';
-import { Button } from &quot;@/components / ui / button & quot;
-import { cn } from &quot;@/lib / utils & quot;
-import { use_sidebar } from &quot;./sidebar - context & quot;
-;
-export const SidebarTrigger = React.forward_ref<;
-  React.ElementRef < typeof Button>,
-  React.ComponentProps < typeof Button>;
->((props, ref) => {
-  const { toggle_sidebar } = use_sidebar ();
-
   return (
+<<<<<<< HEAD
     <Button
       ref={ref}
       data - sidebar=&quot;trigger & quot;
@@ -43,19 +36,16 @@ export const SidebarTrigger = React.forward_ref<;
       variant="ghost"
       size="icon"
       className={cn("h-7 w-7", props.className)}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       onClick={(event) => {
         props.onClick?.(event)
         toggleSidebar()
       }}
       {...props}
-
-    >;
-      <PanelLeft />;
-      <span className=&quot;sr - only & quot;>Toggle Sidebar</span>;
-    </Button>);
-});
-SidebarTrigger.display_name = &quot;SidebarTrigger & quot;
-;
-
-
-SidebarTrigger.displayName = "SidebarTrigger"
+    >
+      <PanelLeft />
+      <span className="sr-only">Toggle Sidebar</span>
+    </Button>
+  )
+})

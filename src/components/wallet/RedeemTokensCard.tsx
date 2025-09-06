@@ -1,23 +1,101 @@
-return (
-    <Card>;
-      <CardHeader>;
 
-        <CardTitle className='flex items - center gap - 2'>;
-          <Gift className='h - 5 w - 5' /> Redeem Rewards;
+import React, { useState } from "react",
+import { useWallet } from "@/hooks/useWallet",
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
 
-        </CardTitle>;
-        <CardDescription>;
-          Exchange your ZION$ for rewards and perks;
-        </CardDescription>;
-      </CardHeader>;
-      <CardContent>;
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
+  Dialog
+  DialogContent
+  DialogDescription
+  DialogHeader
+  DialogTitle
+  DialogTrigger
+=======
+} from '@/components/ui/dialog'
+type RewardOption = {
+  id: string,
+  title: string,
+  description: string,
+  cost: number,
+  type: 'credit' | 'feature' | 'course'
+},
 
-                {wallet?.balance || 0} ZION$.;
-              </DialogDescription>;
-            </DialogHeader>;
-            <div className='space-y-4 py-4'>;
-              {REWARD_OPTIONS && REWARD_OPTIONS.map(option => (;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+const REWARD_OPTIONS: RewardOption[] = [
+  {
+    id: 'premium-week',
+    title: 'Premium Week',
+    description: '7 days of premium features including top placement in search results',
+    cost: 100,
+    type: 'feature'
+  },
+  {
+    id: 'resume-review',
+    title: 'AI Resume Review',
+    description: 'Get your resume analyzed and optimized by our AI',
+    cost: 50,
+    type: 'feature'
+  },
+  {
+    id: 'platform-credit',
+    title: '$5 Platform Credit',
+    description: 'Get $5 credit to use on any paid service',
+    cost: 100,
+    type: 'credit'
+  }
+],
 
+export function RedeemTokensCard() {
+  const { wallet, spendTokens } = useWallet(),
+  const [open, setOpen] = useState(false),
+
+  const handleRedeem = async (option: RewardOption) => {
+    if (!wallet || wallet.balance < option.cost) return,
+    
+    await spendTokens(option.cost, `Redeemed: ${option.title}`),
+    setOpen(false)
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <Gift className="h-5 w-5" /> Redeem Rewards
+        </CardTitle>
+        <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Dialog open={open} onOpenChange={setOpen}>
+          <DialogTrigger asChild>
+            <Button className="w-full">View Available Rewards</Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Available Rewards</DialogTitle>
+              <DialogDescription>
+            <div className='space-y-4 py-4'>
+              {REWARD_OPTIONS.map(option => (
                 <div
 <<<<<<< HEAD
                   key={option.id}
@@ -303,9 +381,13 @@ export function RedeemTokensCard() {
                       disabled={!wallet |wallet.balance < option.cost}
                       onClick={() => handleRedeem(option)}                    >
                       Redeem <ArrowRight className='ml-1 h-3 w-3' />
+<<<<<<< HEAD
                 Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.
               </DialogDescription>
             </DialogHeader>
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <div className="space-y-4 py-4">
               {REWARD_OPTIONS.map((option) => (
                 <div key={option.id} className="flex justify-between items-center border-b pb-4">
@@ -323,9 +405,14 @@ export function RedeemTokensCard() {
                     >
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     </Button>
                   </div>
                 </div>
@@ -341,6 +428,7 @@ export function RedeemTokensCard() {
         </Dialog>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 
         <Dialog open={open} onOpenChange={set_open}>;
           <DialogTrigger as_child>;
@@ -354,6 +442,8 @@ export function RedeemTokensCard() {
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -416,9 +506,12 @@ export function RedeemTokensCard() {;
         <Dialog open={open} onOpenChange={setOpen}>;
           <DialogTrigger asChild>;
             <Button className="w-full">View Available Rewards</Button>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
@@ -448,29 +541,27 @@ export function RedeemTokensCard() {;
                 </div>;
               ))}
             </div>;
-            <div className='flex justify - between'>;
-              <Button;
-                variant='outline';
-                size='sm';
-                on_click={() => set_open (false)}
-
-              >;
-                Close;
-              </Button>;
-              <Button variant='ghost' size='sm'>;
-
-                Learn More <ExternalLink className='ml - 1 h - 3 w - 3' />;
-
+            <div className="flex justify-between">;
+              <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>;
+              <Button variant="ghost" size="sm">;
+                Learn More <ExternalLink className="ml-1 h-3 w-3" />;
               </Button>;
             </div>;
           </DialogContent>;
         </Dialog>;
       </CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
     </Card>);
+=======
+    </Card>;
+  );
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
-
-  )
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

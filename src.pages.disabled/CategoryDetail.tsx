@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { useParams,Link,useNavigate } from \'react - router - dom\''\';\' import { Header } from \'@/components / header / Header\''\';\' import { Footer } from \'@/components / Footer\''\';\' import { GradientHeading } from \'@/components / GradientHeading\''\';\' import { ProductListingCard } from \'@/components / ProductListingCard\''\';\' import { useState,useEffect,useRef,Suspense,useCallback } from \'react\'';\";\";
 import { useParams,Link,useNavigate } from 'react - router - dom''';' import { Header } from '@/components / header / Header''';' import { Footer } from '@/components / Footer''';' import { GradientHeading } from '@/components / GradientHeading''';' import { ProductListingCard } from '@/components / ProductListingCard''';' import { useState,useEffect,useRef,Suspense,useCallback } from 'react'';";";""
 import { useParams,Link,useNavigate } from \'react - router - dom\''\';\' import { Header } from \'@/components / header / Header\''\';\' import { Footer } from \'@/components / Footer\''\';\' import { GradientHeading } from \'@/components / GradientHeading\''\';\' import { ProductListingCard } from \'@/components / ProductListingCard\''\';\' import { useState,useEffect,useRef,Suspense,useCallback } from \'react\'';\";\";

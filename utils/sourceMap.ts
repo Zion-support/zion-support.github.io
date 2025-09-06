@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Mock source map utility
 export function getSourceMapWithExistence() {
   return {
@@ -15,17 +16,17 @@ export function getSourceMapWithExistence() {
   }
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+export interface DeployTemplateResult {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 export function getGitStatus() {
   return {
-<<<<<<< HEAD
     connected: false
     branch: 'main'
   }
 }
-
-  return nodes && nodes.map(markExistenceRecursive);
-
 
 function buildZionSourceMap(): SourceNode[] {
   return [
@@ -71,12 +72,12 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
   };
 }
 
-=======
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
 export interface DeployTemplateResult {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -109,10 +110,13 @@ export interface DeployTemplateResult {;
   createdPaths: string[];
   skippedPaths: string[];
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export function ensureDirectory(dirPath: string): void {
   if (!fs && fs.existsSync(dirPath)) {
     fs && fs.mkdirSync(dirPath, { recursive: true });
   }
+<<<<<<< HEAD
 
 
 export function deployBasicTemplateForPath(
@@ -166,13 +170,14 @@ export function deployBasicTemplateForPath(
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   created_paths: string[];
   skipped_paths: string[];
 ;
 export function ensure_directory (dir_path: string): void {
   if () {) {
   $2
-}
 }
 }
     const readme = `# ${path.basename (absolute_dir)}\n\n_this module is part of the Zion OS modular source tree. Customize as needed.\n`;
@@ -183,6 +188,7 @@ export function ensure_directory (dir_path: string): void {
   }
   return { created_paths, skipped_paths }
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -192,3 +198,5 @@ export function ensure_directory (dir_path: string): void {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
@@ -11,11 +12,14 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 
 const recentPosts = [...BLOG_POSTS]
   .sort((a, b) => {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
     );
   })
   .slice(0, 3);
+<<<<<<< HEAD
 export function BlogSection() {
   return (
     <section className="py-20 bg-zion-blue-dark" id="blog">
@@ -150,6 +154,8 @@ export function BlogSection() {;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
           {recentPosts && recentPosts.map((post, index) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <Card
               key={post && post.id}
               className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 overflow-hidden">;
@@ -160,13 +166,6 @@ export function BlogSection() {;
                   className="object-cover w-full h-full opacity-60 hover:opacity-80 transition-opacity duration-300"
                   loading="lazy"
                   onError={(
-
-                    e: React && React.SyntheticEvent<HTMLImageElement, Event>,;
-                  ) => {;
-                    const target = e && e.currentTarget as HTMLImageElement;
-                    target && target.src =;
-                      "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";
-
                   }}
                 />;
                 <div className="absolute bottom-4 left-4 text-zion-purple/70 text-4xl font-bold">;
@@ -203,7 +202,7 @@ export function BlogSection() {;
       </div>;
     </section>;
   );
-
+=======
 import { GradientHeading  } from './GradientHeading';
 import { Card, CardContent, CardFooter  } from '@/components / ui / card';
 import { Button  } from './ui / button';
@@ -293,6 +292,7 @@ function BlogSection() {
         </div>;
       </div>;
     </section>);
+<<<<<<< HEAD
 
 }
 =======
@@ -304,3 +304,7 @@ function BlogSection() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

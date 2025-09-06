@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { UserProfile, UserDetails  } from '@/types/auth';
@@ -99,6 +100,8 @@ type UserWithProfile = UserProfile | UserDetails | null;
 export /**
  * useMessagingOperations - Function description
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
  */
 function useMessagingOperations() {
   // State management;
@@ -113,13 +116,6 @@ function useMessagingOperations() {
     setUnreadCount;
     active_conversation;
     setActiveConversation;
-
-    is_loading,
-    setIsLoading;
-  } = useConversationState ();
-;
-  // Conversations management;
-
   const {
     fetch_conversations;
     create_conversation;
@@ -127,11 +123,6 @@ function useMessagingOperations() {
     user;
     set_conversations;
     setUnreadCount;
-
-    setIsLoading);
-;
-  // Messages management;
-
   const {
     load_messages;
     send_message;
@@ -145,10 +136,6 @@ function useMessagingOperations() {
     set_conversations;
     setUnreadCount;
     setIsLoading;
-
-    fetch_conversations);
-;
-
   return {
     // State;
     messages;
@@ -160,6 +147,7 @@ function useMessagingOperations() {
     setUnreadCount;
     active_conversation;
     setActiveConversation;
+<<<<<<< HEAD
 
     is_loading;
 ;
@@ -174,5 +162,7 @@ function useMessagingOperations() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -15,6 +16,8 @@ export const advancedMicroSaasExpansion2025V2 = [
   {
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     name: 'AI Content Factory Pro',
     description: 'Advanced AI - powered content creation and management platform',
     category: 'AI & Data',
@@ -255,6 +258,7 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Automated response',
       'Incident management',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
   },;
 ];      'Real-time monitoringThreat intelligenceAutomated responseIncident management'
@@ -631,3 +635,6 @@ export const advancedMicroSaasExpansion2025V2 = [;
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+  },
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

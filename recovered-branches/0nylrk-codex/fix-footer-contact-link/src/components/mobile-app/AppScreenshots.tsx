@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useRef } from "react";
@@ -197,10 +198,16 @@ export const AppScreenshots: React.FC = () => {;
                   src={screenshot && screenshot.src} 
                   alt={screenshot && screenshot.alt}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    }
+  }
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   className="w-full h-full object-cover"
                 />;
               </div>;
             ))}
+<<<<<<< HEAD
 
           </div>;
 
@@ -217,6 +224,8 @@ export const AppScreenshots: React.FC = () => {;
     </section>;
   );
 <<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

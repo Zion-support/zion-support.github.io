@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState, useEffect  } from 'react';
@@ -31,6 +32,8 @@ export default function VideoCall() {
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useState, useEffect} from 'react';
 import {use_params, use_navigate} from 'react-router-dom';
 import {Header} from '@/components / Header';
@@ -39,21 +42,12 @@ import {SEO} from '@/components / SEO';
 import {VideoCallRoom} from '@/components / video / VideoCallRoom';
 import {Button} from '@/components / ui / button';
 import {toast} from 'sonner';
+  const { roomId } = useParams();
 
-export default /**
- * VideoCall - Function description
- */
-function VideoCall() {
-  // use_params is typed as `any` in this environment due to missing type;
-  // definitions, so avoid passing a type argument to prevent TS2347.;
-  const { room_id } = use_params ();
-  const navigate = use_navigate ();
-  const [is_joining, setIsJoining] = useState (false);
-  const [has_joined, setHasJoined] = useState (false);
-  const [participants, set_participants] = useState < Array<{
-    id: string,
-    name: string,
-
+  const navigate = useNavigate();
+  const [isJoining, setIsJoining] = useState(false);
+  const [hasJoined, setHasJoined] = useState(false);
+  const [participants, setParticipants] = useState<Array<{
     avatar?: string;
     is_muted?: boolean;
     isVideoEnabled?: boolean;
@@ -61,6 +55,7 @@ function VideoCall() {
     is_host?: boolean;
   }>>([;
     {
+<<<<<<< HEAD
       id: 'user-1'
       name: 'You'
       isVideoEnabled: true
@@ -104,24 +99,18 @@ export default function VideoCall() {;
 
   const handleJoinCall = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     setIsJoining(true);
     // Simulate connection delay;
     setTimeout(() => {;
       setHasJoined(true);
       setIsJoining(false);
-
-      toast && toast.success("Call joined", {;
-        description: `You have joined meeting room ${roomId}`;
-      });
-    }, 1500);
-  };
-
-  const handleLeaveCall = () => {;
-
     setHasJoined(false);
     toast && toast.info("Call ended", {;
       description: "You have left the meeting";
     });
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -162,10 +151,13 @@ export default function VideoCall() {;
 
     if (!participants && participants.find(p => p && p.id === randomUser && randomUser.id)) {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       setParticipants(prev => [...prev, randomUser]);
       toast(`${randomUser && randomUser.name} joined the call`);
     }
   }
+<<<<<<< HEAD
   },
   
   const simulateUserJoining = () => {
@@ -223,24 +215,15 @@ export default function VideoCall() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   return (
-
-    <>;
-      <SEO title={`Video Call - Room ${roomId}`} description="Zion video call" />;
-      <Header />;
-      <main className="container mx-auto py-8 min-h-[calc(100vh-200px)]">;
-        {!hasJoined ? (;
-          <div className="flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8">;
-            <h1 className="text-3xl font-bold mb-6 text-white">Join Video Call</h1>;
-            <p className="text-zion-slate-light mb-8">Room ID: {roomId}</p>;
-            <Button
-              onClick={handleJoinCall} 
-
               disabled={isJoining}
               size="lg"
               className="bg-zion-purple hover:bg-zion-purple-light">;
               {isJoining ? "Connecting..." : "Join Call"}
+<<<<<<< HEAD
             </Button>
           </div>
         ) : (
@@ -252,6 +235,8 @@ export default function VideoCall() {;
               participants={participants}
               onLeave={handleLeaveCall}
             />
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {/* This button is just for demo/testing purposes */}
             <div className="flex justify-center mt-4">
               <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
@@ -260,6 +245,7 @@ export default function VideoCall() {;
             </div>
           </div>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
       </main>
       <Footer />
@@ -278,6 +264,9 @@ export default function VideoCall() {;
   );
 }
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       id: 'user - 1',
       name: 'You',
       isVideoEnabled: true,
@@ -365,6 +354,7 @@ export default function VideoCall() {;
       <Footer />;
     </>);
 }
+<<<<<<< HEAD
 
 =======
 ;
@@ -376,3 +366,6 @@ export default function VideoCall() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

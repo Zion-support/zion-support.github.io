@@ -2,6 +2,7 @@ import React from 'react';
 'use client';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import * as React from 'react';
 import * as CheckboxPrimitive from '@radix - ui / react - checkbox';
@@ -81,3 +82,46 @@ export { Checkbox }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import * as React from 'react';
+import * as CheckboxPrimitive from '@radix - ui / react - checkbox';
+import {Check} from 'lucide-react';
+    ref={ref}
+    className={cn(
+      'peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground'
+      className
+    )}
+    {...props}>;
+    <CheckboxPrimitive&& CheckboxPrimitive.Indicator
+      className={cn('flex items-center justify-center text-current')}>;
+      <Check className='h-3 w-3' />;
+    </CheckboxPrimitive && CheckboxPrimitive.Indicator>;
+  </CheckboxPrimitive && CheckboxPrimitive.Root>;
+));
+=======
+;
+import {cn} from '@/lib / utils';
+;
+const Checkbox = React.forward_ref<;
+  React.ElementRef < typeof CheckboxPrimitive.Root>,
+  React.ComponentPropsWithoutRef < typeof CheckboxPrimitive.Root>;
+></typeof>(({ class_name, ...props }, ref) => (
+  <CheckboxPrimitive.Root;
+    ref={ref}
+    className={cn (
+      'peer h - 4 w - 4 shrink - 0 rounded - sm border border - primary ring - offset - background focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 data-[state = checked]:bg - primary data-[state = checked]:text - primary - foreground',
+      class_name)}
+    {...props}
+  >;
+    <CheckboxPrimitive.Indicator;
+      className={cn ('flex items - center justify - center text - current')}
+    >;
+      <Check className='h - 3 w - 3' />;
+    </CheckboxPrimitive.Indicator>;
+  </CheckboxPrimitive.Root>));
+Checkbox.display_name = CheckboxPrimitive.Root.display_name;
+;
+export { Checkbox }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

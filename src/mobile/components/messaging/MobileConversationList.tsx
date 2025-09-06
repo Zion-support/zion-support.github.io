@@ -1,9 +1,54 @@
+=======
+
+import React from "react",
+import { Card } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Search } from 'lucide-react'
+import { Input } from "@/components/ui/input",
+import { cn } from "@/lib/utils",
+interface Conversation {
+  id: string,
+  name: string,
+  avatar?: string,
+  lastMessage: string,
+  timestamp: string,
+  unreadCount: number,
+  isTyping?: boolean
+import React from "react",;
+import { Card } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Search } from 'lucide-react';
+import { Input } from "@/components/ui/input",;
+import { cn } from "@/lib/utils",;
+interface Conversation {;
+  id: string,;
+  name: string,;
+  avatar?: string,;
+  lastMessage: string,;
+  timestamp: string,;
+  unreadCount: number,;
+  isTyping?: boolean;
+}
+;
+interface MobileConversationListProps {;
+  conversations: Conversation[],;
+  activeConversation?: string,;
+  onSelectConversation: (id: string) => void;
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function MobileConversationList({
+<<<<<<< HEAD
   conversations
   activeConversation
   conversations,
   activeConversation,
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   onSelectConversation
 }: MobileConversationListProps) {
   return (
@@ -17,6 +62,7 @@ export function MobileConversationList({
           />
         </div>
       </div>
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -154,10 +200,16 @@ function MobileConversationList() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
+<<<<<<< HEAD
               <div className='flex-1 min-w-0'>
                 <div className='flex justify-between items-baseline'>
                   <h3 className='font-medium truncate'>{conversation.name}</h3>
@@ -223,10 +275,21 @@ function MobileConversationList() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  </p>
+                  {conversation.unreadCount > 0 && (
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   )}
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
             <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>
           </div>
         ))}
@@ -291,3 +354,8 @@ function MobileConversationList() {
     </div>);
 }
 ;
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

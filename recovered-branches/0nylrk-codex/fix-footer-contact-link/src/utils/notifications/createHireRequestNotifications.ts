@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { createNotification  } from './createNotification';
@@ -6,6 +7,9 @@ import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {createNotification} from './createNotification';
 import {HireRequestNotificationParams} from './types';
 /**
@@ -18,13 +22,18 @@ export async function createHireRequestNotifications({;
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 /**
  * Creates a hire request notification for admin and talent
  */
 export async function createHireRequestNotifications({
+<<<<<<< HEAD
   talentId;
   adminId;
   requesterName;
@@ -34,6 +43,8 @@ export async function createHireRequestNotifications({
   const projectInfo = projectType 
     ? `${projectType} project` 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     : "project";
   const summaryText = projectSummary
     ? `: "${projectSummary}"`
@@ -62,14 +73,18 @@ export async function createHireRequestNotifications({
       actionText: 'Review Request'
     });
     return {
-
-      success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
-      talentNotification,
-
       adminNotification
+<<<<<<< HEAD
   talentId,
   adminId,
   requesterName,
+=======
+=======
+  talentId,
+  adminId,
+  requesterName,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   requesterEmail, 
   projectType,
   projectSummary,
@@ -113,6 +128,9 @@ export async function createHireRequestNotifications({
       talentNotification,
       adminNotification
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { createNotification } from './createNotification',;
 import { HireRequestNotificationParams } from './types',;
 /**;
@@ -161,15 +179,17 @@ export async function createHireRequestNotifications({;
       talentNotification;
       adminNotification;
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }
   return {
-
-    success: talentNotification && talentNotification.success,
-
     talentNotification
 =======
 import {create_notification} from './create_notification';

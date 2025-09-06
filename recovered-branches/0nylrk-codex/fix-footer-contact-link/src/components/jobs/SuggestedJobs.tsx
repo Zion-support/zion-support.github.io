@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useAuth} from "@/hooks/useAuth";
 import {Loader2} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
@@ -110,12 +111,15 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   if (isLoading) {;
     return (
       <div className="flex items-center justify-center p-6">;
         <Loader2 className="w-6 h-6 animate-spin text-primary" />;
       </div>;
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -206,48 +210,20 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 onDecline={handleDecline} 
               />;
 
+=======
+  }
+  return (
+    <div className="space-y-6">;
+      {/* New Matches Section */}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             ))}
           </div>;
         </div>;
       )}
-
-
-      {/* Previously Viewed Section */}
-      {viewedMatches && viewedMatches.length > 0 && (;
-        <div className="space-y-4">;
-          <div className="flex items-center justify-between">;
-            <h3 className="text-lg font-medium">Previously Viewed</h3>;
-          </div>;
-
-          <div className="grid gap-4 md:grid-cols-2">;
-            {viewedMatches && viewedMatches.map(match => (;
-              <JobMatchesCard
-                key={match && match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline} 
-              />;
-
             ))}
           </div>;
         </div>;
       )}
-
-
-      {/* Applied Jobs Section */}
-      {appliedMatches && appliedMatches.length > 0 && (;
-        <div className="space-y-4">;
-          <div className="flex items-center justify-between">;
-            <h3 className="text-lg font-medium">Applied Jobs</h3>;
-          </div>;
-
-          <div className="grid gap-4 md:grid-cols-2">;
-            {appliedMatches && appliedMatches.map(match => (;
-              <JobMatchesCard
-                key={match && match.id} 
-                match={match} 
-                onApply={handleApply} 
-
                 onDecline={handleDecline}
                 showApplied={true}
               />;
@@ -259,11 +235,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-
-    </div>;
-  );
-}
-
 =======
 import { use_auth } from '@/hooks / use_auth';
 import { Loader2 } from './lucide-react';
@@ -371,9 +342,12 @@ if ( {) {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

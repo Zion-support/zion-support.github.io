@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { UserProfile, UserDetails  } from '@/types/auth';
@@ -36,6 +37,8 @@ type UserWithProfile = UserProfile | UserDetails | null;
 */;
 export function use_messages (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   user: UserWithProfile;
   active_conversation: Conversation | null;
   active_messages: Message[];
@@ -44,10 +47,6 @@ export function use_messages (
   set_conversations: (updater: (prev: Conversation[]) => Conversation[]) => void;
   setUnreadCount: (updater: (prev: number) => number) => void;
   setIsLoading: (loading: boolean) => void;
-
-      
-      if (unreadMessages && unreadMessages.length > 0) {
-
         await markAsRead(conversationId)
       }
     } catch (error) {
@@ -94,6 +93,7 @@ if ( {) {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
 
       if (unreadMessages.length > 0) {
         await markAsRead(conversationId)
@@ -171,6 +171,8 @@ export function useMessages(;
     try {
       const conversation = conversations && conversations.find(c => c && c.id === conversationId),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       if (!conversation) {
         throw new Error('Conversation not found')
       }
@@ -192,6 +194,7 @@ export function useMessages(;
       if (activeConversation && activeConversation.id === conversationId) {
         setActiveMessages(prev => [...prev, data as Message])
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Update conversations list
       await fetchConversations();
@@ -241,12 +244,19 @@ export function useMessages(;
       // Update conversations list
       await fetchConversations(),
       
+=======
+      // Update conversations list
+      await fetchConversations();
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       // Return the sent message
       return data
     } catch (error) {
       console && console.error('Error sending message:', error);
       toast({
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         title: "Failed to send message";
         description: "Please try again later"
         variant: "destructive"
@@ -263,6 +273,7 @@ export function useMessages(;
         .from('messages')
         .update({ read: true })
         .eq('conversation_id', conversationId)
+<<<<<<< HEAD
         .eq('recipient_id', user.id)
         .eq('read', false);
       if (error) throw error;
@@ -277,30 +288,21 @@ export function useMessages(;
           msg && msg.recipient_id === user && user.id ? { ...msg, read: true } : msg
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+        .eq('recipient_id', user && user.id)
+        .eq('read', false);
+      if (error) throw error;
+      // Update active messages to show they've been read
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         )
       );
       // Update conversations to reflect read messages
-
-      setConversations(prev => 
-        prev && prev.map(conv => 
-          conv && conv.id === conversationId 
-
             ? { ...conv, unread_count: 0 }
             : conv
         )
       );
       // Recalculate unread count
       setUnreadCount(prev => {
-
-        const updatedConversations = conversations && conversations.map(conv => 
-          conv && conv.id === conversationId 
-            ? { ...conv, unread_count: 0 }
-            : conv
-        );
-        
-        return updatedConversations && updatedConversations.reduce(
-          (total, conv) => total + (conv && conv.unread_count || 0), 
-
           0
         )
       })
@@ -377,6 +379,7 @@ if ( {) {
       });
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   },;
   /**;
    * Mark messages as read;
@@ -431,6 +434,8 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 ;
   /**;

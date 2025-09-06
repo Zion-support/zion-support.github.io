@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
 import { quoteRequestService  } from '@/services/quoteRequestService';
@@ -32,12 +33,15 @@ export const useAdminQuotes = () => {;
 
     queryFn: () => quoteRequestService && quoteRequestService.getAll(),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     enabled: true});
   // Filter quotes based on selected filters
   const filteredQuotes = allQuotes && allQuotes.filter((quote) => {
     // Status filter
     if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
       return false
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -68,6 +72,8 @@ export const useAdminQuotes = () => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -77,6 +83,7 @@ export const useAdminQuotes = () => {;
       return false
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 
@@ -85,6 +92,8 @@ export const useAdminQuotes = () => {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Search filter
     if (searchQuery) {
       const query = searchQuery && searchQuery.toLowerCase();
@@ -112,6 +121,7 @@ export const useAdminQuotes = () => {;
         return false
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     return true
   });
@@ -165,18 +175,23 @@ export const useAdminQuotes = () => {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return true
-  }),
-
+  });
   // Update quote status mutation
   const updateStatusMutation = useMutation({
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService.updateStatus(id, status),
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     onSuccess: () => {
       toast({
         title: "Status updated"
         description: "The quote request status has been updated"
+<<<<<<< HEAD
       }),
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
     }
@@ -185,12 +200,16 @@ export const useAdminQuotes = () => {;
         title: "Error";
         description: "Failed to update status: " + error && error.message,
 
+=======
+      });
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         variant: "destructive"
       })
     }
   });
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
+<<<<<<< HEAD
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>
       quoteRequestService.toggleArchive(id, isArchived);
     },
@@ -221,10 +240,13 @@ export const useAdminQuotes = () => {;
         title: "Error";
         description: "Failed to update quote: " + error && error.message,
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         variant: "destructive"
       })
     }
   });
+<<<<<<< HEAD
     },
     onError: (error: Error) => {
       toast({
@@ -235,6 +257,8 @@ export const useAdminQuotes = () => {;
     }
   }),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Delete mutation
   const deleteMutation = useMutation({
     mutationFn: (id: string) => quoteRequestService && quoteRequestService.delete(id);
@@ -249,6 +273,7 @@ export const useAdminQuotes = () => {;
     };
 =======
       });
+<<<<<<< HEAD
 
 
     };
@@ -267,6 +292,8 @@ export const useAdminQuotes = () => {;
         title: "Error";
         description: "Failed to delete quote: " + error && error.message,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         variant: "destructive"
       })
     }
@@ -281,6 +308,7 @@ export const useAdminQuotes = () => {;
     setArchiveFilter;
     searchQuery;
     setSearchQuery;
+<<<<<<< HEAD
 <<<<<<< HEAD
     dateRange;
     setDateRange
@@ -398,6 +426,8 @@ export const useAdminQuotes = () => {;
     deleteQuote: (id: string) => deleteMutation && deleteMutation.mutate(id)}
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
     date_range;
     setDateRange,

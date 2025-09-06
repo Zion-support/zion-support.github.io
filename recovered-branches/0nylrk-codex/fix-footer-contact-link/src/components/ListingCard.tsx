@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {cn} from "@/lib/utils";
@@ -22,6 +23,8 @@ import { Link } from './react-router-dom';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ListingCardProps {
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id?: string;
   title: string,;
   description: string,;
@@ -30,31 +33,13 @@ interface ListingCardProps {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   tags?: string[];
   author?: string;
-
-
-export function ListingCard(): any ({ ;
-  id;
-  title, ;
-  description, ;
-  image, ;
-  category, ;
-  tags, ;
-  author, ;
-  authorImage, ;
-  className;
-  profileType = 'service';
-}: ListingCardProps) {;
-  // Generate a profile ID based on the listing data;
-  // In a real app, this would be a proper ID from the database;
-  const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
-
-
   return (
     <Link
       to={`/profile/${profileId}`}
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Badge } from "@/components/ui/badge",
 import { Link } from "react-router-dom",
@@ -118,15 +103,9 @@ export function ListingCard({;
       to={`/profile/${profileId}`}
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer",
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         className
-
-      )}>;
-      {image && (;
-        <div className="h-48 w-full overflow-hidden">;
-          <img
-            src={image} 
-            alt={title} 
-
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />;
         </div>;
@@ -135,22 +114,12 @@ export function ListingCard({;
         <div className="mb-2">;
           <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">;
             {category}
-
-          </Badge>;
-        </div>;
-        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
-        <p className="text-zion-slate mb-4 flex-grow">{description}</p>;
-
-        {tags && tags.length > 0 && (;
-          <div className="flex flex-wrap gap-2 mb-4">;
-            {tags && tags.map((tag, i) => (;
-              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
-
                 {tag}
               </Badge>;
             ))}
           </div>;
         )}
+<<<<<<< HEAD
         
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
@@ -167,16 +136,12 @@ export function ListingCard({;
             ) : (;
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             )}
             <span className="text-sm text-zion-slate-light">{author}</span>;
           </div>;
         )}
-
-      </div>;
-    </Link>;
-  );
-}
-
 =======
   author_image?: string;
   class_name?: string;

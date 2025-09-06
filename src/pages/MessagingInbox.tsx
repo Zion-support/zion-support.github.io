@@ -1,10 +1,12 @@
+
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react';
-import { use_messaging } from '@/context / MessagingContext';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import { ConversationsList, ConversationDetailView } from '@/components / messaging';
-import { useIsMobile } from '@/hooks / use - mobile';
+import { useMessaging } from '@/context/MessagingContext';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { ConversationsList, ConversationDetailView } from '@/components/messaging';
+import { useIsMobile } from '@/hooks/use-mobile';
 import { toast } from 'sonner';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
@@ -36,6 +38,12 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+import { Button } from '@/components/ui/button';
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
+import { useRouter } from 'next/router'; // Changed from react-router-dom
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useEffect, useState } from 'react',
 import { MessageSquare, Video } from 'lucide-react'
 import { useMessaging } from '@/context/MessagingContext',
@@ -45,8 +53,10 @@ import { useIsMobile } from '@/hooks/use-mobile',
 import { toast } from 'sonner',
 import { Button } from '@/components/ui/button',
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { useRouter } from 'next/router', // Changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -69,11 +79,16 @@ export default function MessagingInbox() {
 
     markAsRead;
     fetchConversations;
-    isLoading
-  } = useMessaging();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function MessagingInbox() {
 
-  const isMobile = useIsMobile();
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+    isLoading
+  } = useMessaging(),
+  const isMobile = useIsMobile(),
   const router = useRouter(), // Changed from navigate
+<<<<<<< HEAD
   const [activeCall, setActiveCall] = useState<string | null>(null);
   useEffect((,) => {
   const { 
@@ -104,34 +119,16 @@ export default function MessagingInbox() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Fetch conversations when component mounts
     const loadData = async () => {
-import { Button } from '@/components / ui / button';
-import { LoadingSpinner } from '@/components / ui / enhanced - loading - states';
-import { use_router } from 'next / router'; // Changed from react-router-dom;
-import {logErrorToProduction} from '@/utils / production_logger';
-export default /**
- * MessagingInbox - Function description
- */
-function MessagingInbox() {
-  const {
-    conversations,
-    active_conversation,
-    setActiveConversation,
-    markAsRead;
-    fetch_conversations;
-    is_loading;
-  } = use_messaging ();
-  const is_mobile = useIsMobile ();
-  const router = use_router (), // Changed from navigate;
-  const [active_call, setActiveCall] = useState < string | null>(null);
-;
-  useEffect ((, ) => {
-    // Fetch conversations when component mounts;
-    const load_data = async () => {
       try {
         await fetchConversations()
       } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         logErrorToProduction('Failed to load conversations:', { data: error })
         toast.error("Failed to load messages. Please try again.")
@@ -161,16 +158,27 @@ function MessagingInbox() {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+        logErrorToProduction('Failed to load conversations:', { data: error })
+        toast.error("Failed to load messages. Please try again.")
+      }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     },
     
     loadData()
   }, [fetchConversations]),
   
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const startVideoCall = () => {
     if (!activeConversation) {
       toast.error("Please select a conversation first"),
       return
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     const roomId = `msg-${activeConversation.id}`;
     setActiveCall(roomId);
@@ -195,26 +203,37 @@ function MessagingInbox() {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     
     // Show toast notification
     toast.success("Starting video call", {
       description: "Initializing video call connection..."
+<<<<<<< HEAD
 <<<<<<< HEAD
     });
     
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
   };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }),
     
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
   },
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
@@ -226,6 +245,7 @@ function MessagingInbox() {
             </h1>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -234,9 +254,15 @@ function MessagingInbox() {
 
 
             
+=======
+=======
+            
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             {activeConversation && (
               <Button 
                 onClick={startVideoCall}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
               >
                 <Video className="h-4 w-4" />
@@ -244,12 +270,18 @@ function MessagingInbox() {
               </Button>
             )}
           </div>
+<<<<<<< HEAD
           
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
               {/* Conversations List */}
@@ -259,6 +291,7 @@ function MessagingInbox() {
                 </div>
               ) : (
                 <ConversationsList
+<<<<<<< HEAD
 <<<<<<< HEAD
                   conversations = {conversations,}
                   activeConversation = {activeConversation,}
@@ -271,6 +304,9 @@ function MessagingInbox() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext',;
@@ -331,18 +367,17 @@ export default function MessagingInbox() {;
               Messages;
             </h1>;
             {activeConversation && (;
-              <Button
-                onClick = {startVideoCall,}
-                className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">;
+              <Button;
+                onClick={startVideoCall}
+                className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light";
+              >;
                 <Video className="h-4 w-4" />;
                 Start Call;
               </Button>;
             )}
-
           </div>;
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">;
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>;
-
               {/* Conversations List */}
               {isLoading ? (;
                 <div className="flex-1 flex items-center justify-center p-8">;
@@ -356,8 +391,8 @@ export default function MessagingInbox() {;
                   markAsRead={markAsRead}
                 />;
               )}
-
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -365,6 +400,11 @@ export default function MessagingInbox() {;
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               {/* Conversation Detail */}
               <ConversationDetailView />
             </div>
@@ -374,6 +414,7 @@ export default function MessagingInbox() {;
         {isMobile && <div className="h-16"></div>}
       </div>
     </ProtectedRoute>
+<<<<<<< HEAD
 );
 }
 loadData () ;
@@ -513,3 +554,8 @@ return (<ProtectedRoute> <div className="min - h-screen bg - zion - blue" > <div
   )
 }
 ;
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

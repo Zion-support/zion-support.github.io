@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -51,12 +52,15 @@ interface EmptyStateProps {;
 
 export function EmptyState(): any ({;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   icon;
   title;
   description;
   action;
   secondaryAction;
   className}: EmptyStateProps) {;
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -91,13 +95,18 @@ export function EmptyState({
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   className}: EmptyStateProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div
 
       className={cn(
         "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
 
+<<<<<<< HEAD
         "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50",
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         className
 <<<<<<< HEAD
       )}
@@ -161,6 +170,7 @@ export function EmptyState({;
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {icon}
+<<<<<<< HEAD
 
       </div>;
       <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>;
@@ -181,12 +191,15 @@ export function EmptyState({;
             <Button
               size="lg" 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               className="bg-zion-purple hover:bg-zion-purple-light"
               onClick={action && action.onClick}>;
               {action && action.text}
             </Button>;
           );
         )}
+<<<<<<< HEAD
 
 
             <Button 
@@ -211,6 +224,8 @@ export function EmptyState({;
               variant="outline"
             <Button 
               variant="outline" 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               size="lg"
               className="border-zion-blue-light hover:bg-zion-blue-light"
               onClick={secondaryAction && secondaryAction.onClick}>;
@@ -218,12 +233,6 @@ export function EmptyState({;
             </Button>;
           );
         )}
-
-      </div>;
-    </div>;
-  );
-}
-
 =======
 import React from './react';
 import { cn } from '@/lib / utils';

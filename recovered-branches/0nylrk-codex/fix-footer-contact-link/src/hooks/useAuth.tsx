@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {AuthContext} from "@/context/auth/AuthContext";
@@ -88,6 +89,8 @@ import type { UserDetails as AuthUserDetails } from "@/types / auth";
 // Define types for our context;
 export interface UserDetails {
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id?: string;
   name?: string;
   email?: string;
@@ -97,6 +100,7 @@ export interface UserDetails {
   headline?: string;
   profile_complete?: boolean;
   role?: string;
+<<<<<<< HEAD
 
 
 
@@ -516,6 +520,12 @@ if ( {) {
       console.warn ("No wallet detected");
       return;
 
+=======
+      permissions: ["billing_access", "admin_access", "team_management"];
+      companyId: "company-123";
+    });
+    return { error: null }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
     return { error: null }
   };
@@ -526,168 +536,68 @@ if ( {) {
     setUser({ ;
       id: "google-user-id", ;
       email: "google@example && example.com", ;
-=======
-    }),;
-    return { error: null }
-  },;
-  const resetPassword = async (email: string) => {;
-    // Mock implementation;
-    // // // console.log("Password reset requested for:", email),;
-    return { error: null }
-  },;
-  const updateProfile = async (data: Partial<UserDetails>) => {;
-    // Mock implementation;
-    // // // console.log("Profile update requested with:", data),;
-    if (user) {;
-      setUser({ ...user, ...data });
-    }
-    return { error: null }
-  },;
-  const loginWithGoogle = async () => {;
-    // // // console.log("Google login requested"),;
-    // Mock implementation;
-    setUser({;
-      id: "google-user-id",;
-      email: "google@example.com",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       displayName: "Google User",;
       name: "Google User",;
       profileComplete: true;
     });
+  };
 
-  },;
   const loginWithFacebook = async () => {;
-    // // // console.log("Facebook login requested"),;
+    console && console.log("Facebook login requested");
     // Mock implementation;
-    setUser({;
-      id: "facebook-user-id",;
-      email: "facebook@example.com",;
-      displayName: "Facebook User",;
+    setUser({ ;
+      id: "facebook-user-id", ;
+      email: "facebook@example && example.com", ;
+      displayName: "Facebook User", ;
       name: "Facebook User",;
       profileComplete: true;
     });
-  },;
+  };
+
   const loginWithTwitter = async () => {;
-    // // // console.log("Twitter login requested"),;
+    console && console.log("Twitter login requested");
     // Mock implementation;
     setUser({;
       id: "twitter-user-id",;
-      email: "twitter@example.com",;
-
+      email: "twitter@example && example.com",;
       displayName: "Twitter User",;
       name: "Twitter User",;
       profileComplete: true;
     });
+  };
 
-      const accounts = await ethereum.request ({ method: 'eth_requestAccounts' }),
-      const address = accounts[0];
-      await ethereum.request ({
-        method: 'personal_sign',
-        params: [address, address];
-      });
-      set_user ({
-        id: address,
-        display_name: address,
-        profile_complete: true;
-      });
-
+  const loginWithWeb3 = async () => {;
+    console && console.log("Web3 login requested");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    const ethereum = (window as any).ethereum;
+    if (!ethereum) {;
+      console && console.warn("No wallet detected");
+      return;
+    }
     } catch (err) {
       console.error ('Web3 login failed', err);
     }
   }
-
-=======
-  },;
-  const loginWithWeb3 = async () => {;
-    // // // console.log("Web3 login requested"),;
-    const ethereum = (window as any).ethereum,;
-    if (!ethereum) {;
-      console.warn("No wallet detected"),;
-      return;
-    }
-
-    try {;
-      const accounts = await ethereum && ethereum.request({ method: 'eth_requestAccounts' }),;
-      const address = accounts[0];
-      await ethereum && ethereum.request({;
-        method: 'personal_sign',;
-        params: [address, address];
-      });
-      setUser({;
-        id: address,;
-        displayName: address,;
-        profileComplete: true;
-      });
-    } catch (err) {;
-      console && console.error('Web3 login failed', err);
-    }
-  };
-
-  // Check for existing session on mount;
-  useEffect(() => {;
-    // Mock loading state and then set a null user to simulate no session;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsLoading(true);
     setTimeout(() => {;
       setUser(null);
       setIsLoading(false);
     }, 100);
   }, []);
-
-
-  const value = {;
-    user;
-    isAuthenticated: !!user,;
-
     isLoading;
     signIn;
     signOut;
     signUp;
-
-    // Add aliases for compatibility;
-    login: signIn,;
-    logout: signOut,;
-    signup: signUp,;
-
     resetPassword;
     updateProfile;
     loginWithGoogle;
     loginWithFacebook;
     loginWithTwitter;
-
-;
-  // Check for existing session on mount;
-  useEffect (() => {
-    // Mock loading state and then set a null user to simulate no session;
-    setIsLoading (true);
-    set_timeout (() => {
-      set_user (null);
-      setIsLoading (false);
-    }, 100);
-  }, []);
-;
-  const value = {
-    user;
-    is_authenticated: !!user,
-    is_loading;
-    sign_in;
-    sign_out;
-    sign_up;
-    // Add aliases for compatibility;
-    login: sign_in,
-    logout: sign_out,
-    signup: sign_up,
-    reset_password;
-    update_profile;
-    loginWithGoogle;
-    loginWithFacebook;
-    loginWithTwitter;
-    loginWithWeb3;
-
   }
 ;
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
+<<<<<<< HEAD
 
     loginWithWeb3;
   };
@@ -701,6 +611,8 @@ export function useAuth(): any (): AuthContextType {;
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
 <<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

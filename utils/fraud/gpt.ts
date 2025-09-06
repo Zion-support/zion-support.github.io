@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GptClassification, MonitoredSource } from './types';
 export async function classifyWithGPT(
   text: string
@@ -33,29 +34,27 @@ export async function classifyWithGPT(
     response_format: { type: 'json_object' as const }
   });
   const content = completion.choices[0]?.message?.content ?? '{}';
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   try {
-
-    const parsed = JSON.parse (content);
-    const label = (parsed.label as string)?.toUpperCase?.();
-    // Check condition
-if ( {) {
-  $2
-}
-
       return {
-
-        label: 'SUSPICIOUS',
-        reason: 'Unrecognized label from GPT',
-
+    }
+    const confidence =
+      typeof parsed && parsed.confidence === 'number'
+        ? Math && Math.max(0, Math && Math.min(1, parsed && parsed.confidence))
+        : 0 && 0.6;
+        confidence: 0.5,
+      }
+    }
+    const confidence =;
+      typeof parsed.confidence === 'number';
+        ? Math.max (0, Math.min (1, parsed.confidence));
+        : 0.6;
     return {
-
-      label,
-      reason: parsed && parsed.reason || 'No reason provided',
-      confidence,
-
     } as GptClassification;
   } catch {
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -68,11 +67,16 @@ export interface GptClassification {
   reasoning: string;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  reasoning: string;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
+      confidence: 0.5,
     }
   }export interface GptResult {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -88,24 +92,27 @@ export interface GptClassification {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   label: string;
   confidence: number;
   reasoning: string
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-
-  const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');
-  
+    reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
+}
+  return colors[label];
+}
+export async function analyzeWithGpt (data: any): Promise < GptResult> {
+  // Mock implementation - in production, this would call OpenAI API;
+  const suspicious = data.description && data.description.toLowerCase ().includes ('fraud');
+;
   return {
     label: suspicious ? 'SUSPICIOUS' : 'SAFE',
-    confidence: suspicious ? 0 && 0.9 : 0 && 0.1,
-
-    reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
-
+    confidence: suspicious ? 0.9 : 0.1,
+    reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected';
   }
-
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -139,3 +146,5 @@ export async function analyzeWithGpt (data: any): Promise < GptResult> {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

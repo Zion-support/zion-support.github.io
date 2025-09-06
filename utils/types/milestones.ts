@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
 export type ProjectParticipantRole = 'client' | 'talent';
 export type ProjectParticipants = {
@@ -11,14 +12,16 @@ export type ProjectParticipants = {;
   clientUserId: string;
   talentUserId: string;
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export type Project = {  id: string;
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   title: string;
   description?: string;
   due_date: string;
   amount_usd: number;
   status: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
+<<<<<<< HEAD
 
   updatedAt: string
 
@@ -50,17 +53,16 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   name: string;
   url: string;
   type: string;
   size: number;
-
-  uploaded_at: string,
-
 }
-<<<<<<< HEAD
 export interface CreateMilestoneRequest {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export interface CreateMilestoneRequest {;
@@ -74,12 +76,12 @@ export interface CreateMilestoneRequest {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   title: string;
   description?: string;
-
-  attachments?: MilestoneAttachment[]
-
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface UpdateMilestoneRequest {
 
@@ -100,26 +102,17 @@ export interface UpdateMilestoneRequest {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface UpdateMilestoneRequest {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   title?: string;
   description?: string;
-  dueDate?: string;
-  amountUsd?: number;
+  due_date?: string;
+  amount_usd?: number;
   status?: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
-
-=======
-
-
-
-
-=======
-
-export function isOverdue(milestone: Milestone): boolean {
-  if (!milestone.dueDate || milestone.status === 'COMPLETED' || milestone.status === 'PAID') {
-    return false;
-  }
-  return new Date(milestone.dueDate) < new Date();
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -255,3 +248,5 @@ export function createMilestoneFile(
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

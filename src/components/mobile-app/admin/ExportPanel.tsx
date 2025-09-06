@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -20,6 +21,16 @@ export const ExportPanel: React.FC < ExportPanelProps> = ({ platform, metadata }
   const handle_export = (format: 'json' | 'csv', ) =>: any {
     try {
 <<<<<<< HEAD
+=======
+interface ExportPanelProps {
+
+  platform: AppPlatform
+  metadata: AppMetadataValues
+}
+export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },) => {
+  const handleExport = (format: 'json' | 'csv',) => {
+    try {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       let content: string
       let fileName: string
       if (format === 'json') {
@@ -65,6 +76,7 @@ if ( {) {
 }        file_name = `zion - app - metadata-${platform}-${metadata.version}.csv`;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
+<<<<<<< HEAD
 
 interface ExportPanelProps {;
   platform: AppPlatform,;
@@ -152,6 +164,19 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
       document.body.remove_child (link),
       URL.revokeObjectURL (url),
       toast.success (`Exported ${format.toUpperCase ()} file successfully`);
+=======
+      // Create download link
+      const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' })
+      const url = URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = url
+      link.download = fileName
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+      URL.revokeObjectURL(url)
+      toast.success(`Exported ${format.toUpperCase()} file successfully`)
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } catch (error) {
       logErrorToProduction('Export failed:', { data: error })
       toast.error(`Failed to export ${format.toUpperCase()} file`)
@@ -163,6 +188,9 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
   }
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle className="text-lg">Export & Analytics</CardTitle>
@@ -197,6 +225,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 }
   );
@@ -228,12 +257,14 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
               </Button>;
               <Button variant="outline" on_click={() => handle_export ('csv')} className="flex - 1">;
                 <Download className="mr - 2 h - 4 w - 4" />;
+=======
+import { toast } from "sonner",
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
-                CSV;
-              </Button>;
-            </div>;
-          </div>;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
           <div className="border - t border - zion - purple / 20 pt - 4">;
             <h4 className="font - medium mb - 2">Installation Analytics</h4>;
             <p className="text - sm text - gray - 400 mb - 3">;
@@ -253,3 +284,6 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
     </Card>);
 },
 ;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

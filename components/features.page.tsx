@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
 import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
@@ -27,9 +28,43 @@ import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function FeaturesPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
-
-
+    <EnhancedLayout>;
+      <h1 className='text-2xl font-semibold'>Features</h1>;
+      <div className='mt-6 grid md:grid-cols-3 gap-6'>;
+        <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;
+          <Globe2 className='h-6 w-6 text-indigo-500' />;
+          <div className='mt-3 text-lg font-semibold'>Global Hiring</div>;
+          <p className='mt-1 text-sm opacity-80'>;
+            Source across timezones and markets with vetted profiles.;
+          </p>;
+        <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;
+          <Bot className='h-6 w-6 text-indigo-500' />;
+          <div className='mt-3 text-lg font-semibold'>AI Matching</div>;
+          <p className='mt-1 text-sm opacity-80'>;
+            Instantly surface best-fit candidates for your role.;
+          </p>;
+        </div>;
+        <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;
+          <MonitorSmartphone className='h-6 w-6 text-indigo-500' />;
+          <div className='mt-3 text-lg font-semibold'>Mobile Milestones</div>;
+          <p className='mt-1 text-sm opacity-80'>;
+            Track deliverables and approvals anywhere.;
+          </p>        </div>;
+      </div>;
+    </EnhancedLayout>;
+  );
+}        <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">;
+          <MonitorSmartphone className="h-6 w-6 text-indigo-500" />;
+          <div className="mt-3 text-lg font-semibold">Mobile Milestones</div>;
+          <p className="mt-1 text-sm opacity-80">Track deliverables and approvals anywhere.</p>;
+      </div>;
+    </EnhancedLayout>;
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
@@ -70,6 +105,7 @@ function FeaturesPage() {
     </EnhancedLayout>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 }        <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
           <MonitorSmartphone className="h-6 w-6 text-indigo-500" />
@@ -86,3 +122,5 @@ function FeaturesPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,5 +1,42 @@
+} from "@/components/ui/dropdown-menu"; import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge"
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes"
+import {formatDate} from "@/utils/dateUtils"
+interface QuotesTableProps {
+import React from "react",
+import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
+import { 
+  Table,
+  TableBody, 
+  TableCell, 
+  TableHead, 
+  TableHeader, 
+  TableRow 
+} from "@/components/ui/table",
+import { Button } from "@/components/ui/button",
+import { 
+  DropdownMenu,
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu",
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
+import { formatDate } from "@/utils/dateUtils",
+interface QuotesTableProps {
+  quotes: QuoteRequest[],
+  isArchived?: boolean,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  isLoading: boolean,
+  updateStatus: (id: string, status: QuoteStatus) => void,
+  toggleArchive: (id: string, isArchived: boolean) => void,
+  deleteQuote: (id: string) => void,
+  onViewDetails: (quote: QuoteRequest) => void
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -7,6 +44,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   quotes
   isArchived = false
   isLoading
@@ -14,25 +53,34 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   toggleArchive
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   quotes,
   isArchived = false,
   isLoading,
   updateStatus,
   toggleArchive,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   deleteQuote,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onViewDetails
-},) => {
+}) => {
   return (
     <div className="overflow-x-auto">
       <Table>
@@ -64,90 +112,19 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
             </TableRow>
           ) : (
             quotes.map(quote => (
+<<<<<<< HEAD
               <TableRow
                 key = {quote.id,}
               <TableRow 
                 key={quote.id}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 className="border-zion-blue-light hover:bg-zion-blue"
               >
                 <TableCell className="text-white">
                   {quote.talent_name |'Unknown Talent'}
                 </TableCell>
                 <TableCell className="text-white">
-  quotes;
-  is_archived = false;
-import React from './react';
-import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import {
-  Table;
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow;
-} from '@/components / ui / table'; import { Button  } from '@/components / ui / button';
-import {
-  DropdownMenu;
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger;
-} from '@/components / ui / dropdown - menu'; import { QuoteStatusBadge  } from '@/components / quotes / QuoteStatusBadge';
-import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
-import { format_date } from '@/utils / date_utils';
-interface QuotesTableProps {
-  quotes: QuoteRequest[],
-  is_archived?: boolean;
-  is_loading: boolean,
-  update_status: (id: string, status: QuoteStatus, ) => void,
-  toggle_archive: (id: string, is_archived: boolean, ) => void,
-  delete_quote: (id: string, ) => void,
-  onViewDetails: (quote: QuoteRequest, ) => void;
-}
-export const QuotesTable: React.FC < QuotesTableProps> = ({
-  quotes;
-  is_archived = false;
-  is_loading;
-  update_status;
-  toggle_archive;
-  delete_quote,
-  onViewDetails;
-}, ) => {
-  return (
-    <div className="overflow - x-auto">;
-      <Table>;
-        <TableHeader>;
-          <TableRow className="border - zion - blue - light hover:bg - zion - blue">;
-            <TableHead className="text - zion - slate - light">Talent</TableHead>;
-            <TableHead className="text - zion - slate - light">Requester</TableHead>;
-            <TableHead className="text - zion - slate - light">Project</TableHead>;
-            <TableHead className="text - zion - slate - light">Budget</TableHead>;
-            <TableHead className="text - zion - slate - light">Date</TableHead>;
-            <TableHead className="text - zion - slate - light">Status</TableHead>;
-            <TableHead className="text - zion - slate - light">Actions</TableHead>;
-          </TableRow>;
-        </TableHeader>;
-        <TableBody>;
-          {is_loading ? (
-            <TableRow>;
-              <TableCell col_span={7} className="text - center py - 10 text - zion - slate - light">;
-                Loading quote requests...;
-              </TableCell>;
-            </TableRow>) : quotes.length === 0 ? (
-            <TableRow>;
-              <TableCell col_span={7} className="text - center py - 10 text - zion - slate - light">;
-                {is_archived;
-                  ? "No archived quote requests found.";
-                  : "No quote requests found."}
-              </TableCell>;
-            </TableRow>) : (
-            quotes.map (quote => (
-              <TableRow;
-                key = {quote.id, }
-                className="border - zion - blue - light hover:bg - zion - blue";
-              >;
-                <TableCell className="text - white">;
-                  {quote.talent_name || 'Unknown Talent'}
-                </TableCell>;
-                <TableCell className="text - white">;
                   {quote.requester_name}
                 </TableCell>
                 <TableCell className="text-white">
@@ -172,6 +149,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                 </TableCell>
                 <TableCell>
                   <div className="flex items-center gap-2">
+<<<<<<< HEAD
                     <Button
                       variant="ghost"
                       size="icon"
@@ -180,10 +158,13 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                       variant="ghost" 
                       size="icon" 
                       onClick={() => onViewDetails(quote)}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     >
                       <Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
                     </Button>
+<<<<<<< HEAD
                     
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -191,39 +172,23 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     {isArchived ? (
                       <>
                         <Button
                           variant="ghost"
                           size="icon"
-                          onClick = {(,) => toggleArchive(quote.id, false),}
+                          onClick={() => toggleArchive(quote.id, false)}
                         >
                           <Archive className="h-4 w-4" />
                           <span className="sr-only">Unarchive</span>
                         </Button>
                         <Button
                           variant="ghost"
-
-
-  quotes;
-  isArchived = false;
-import React from "react";
-import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import { ;
-  Table;
-  TableBody, ;
-  TableCell, ;
-  TableHead, ;
-  TableHeader, ;
-  TableRow ;
-} from "@/components/ui/table";import { Button } from "@/components/ui/button";
-import { ;
-  DropdownMenu;
-  DropdownMenuContent, ;
-  DropdownMenuItem, ;
-  DropdownMenuTrigger ;
-} from "@/components/ui/dropdown-menu";import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-import {formatDate} from "@/utils/dateUtils";
                           size="icon"
                           className="text-red-500"
                           onClick={() => {
@@ -264,6 +229,7 @@ import {formatDate} from "@/utils/dateUtils";
                             <Archive className="h-4 w-4 mr-2" />
                             Archive
                           </DropdownMenuItem>
+<<<<<<< HEAD
                           <DropdownMenuItem
                             onClick = {() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
@@ -282,6 +248,10 @@ import {formatDate} from "@/utils/dateUtils";
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                             className="text-red-500"
                           >
                             <Trash2 className="h-4 w-4 mr-2" />
@@ -289,6 +259,7 @@ import {formatDate} from "@/utils/dateUtils";
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
+<<<<<<< HEAD
 import React from "react",;
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
 import {;
@@ -481,12 +452,18 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 '"
 =======
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     )}
-                  </div>;
-                </TableCell>;
-              </TableRow>;
-            ));
+                  </div>
+                </TableCell>
+              </TableRow>
+            ))
           )}
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -495,11 +472,15 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 '";
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         </TableBody>;
       </Table>;
     </div>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -609,3 +590,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
     </div>);
 }
 '";
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

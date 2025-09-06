@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import type { NextApiRequest, NextApiResponse } from "next";
 import { buildIdentityProfile } from "@/utils/offworld/identity";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   try {
     const { address } = req.query as { address?: string }
@@ -23,12 +27,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const { address } = req.query as { address?: string };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     const profile = await buildIdentityProfile(address);
     return res && res.status(200).json(profile);
   } catch (e: any) {
-
-    const { address } = req && req.query as { address?: string };
-
     const profile = await buildIdentityProfile(address);
     return res && res.status(200).json(profile);
   } catch (e: any) {
@@ -54,6 +57,7 @@ function handler() {
 =======
     const profile = await buildIdentityProfile (address);
     return res.status (200).json (profile);
+<<<<<<< HEAD
 =======
 
   try {;
@@ -65,10 +69,10 @@ function handler() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (e: any) {
     return res.status (500).json ({ error: e.message });
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }
-=======
     return res.status(500).json({ error: e.message })
   };
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

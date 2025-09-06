@@ -1,25 +1,26 @@
+<<<<<<< HEAD
 // Global type declarations for DOM types
+=======
+// Global type declarations for DOM types;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 declare global {
   interface Window {
     performance: Performance;
   }
+<<<<<<< HEAD
   // Define Performance interface if not available
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   interface Performance {
     getEntriesByType (type: string): PerformanceEntry[];
     now (): number;
   }
-
-  // Define PerformanceEntry interface if not available;
-
   interface PerformanceEntry {
     name: string;
     entry_type: string;
     start_time: number;
     duration: number;
   }
-
-  // Define HTML element types if not available;
-
   interface Element {
     tag_name: string;
     attributes: NamedNodeMap;
@@ -43,19 +44,12 @@ declare global {
     href: string;
     target: string;
   }
-
-  // Define MessageEvent if not available;
-  interface MessageEvent < T = any> extends Event {
-
     data: T;
     origin: string;
     lastEventId: string;
     source: MessageEventSource | null;
     ports: ReadonlyArray < MessagePort>;
   }
-
-  // Define RequestInit if not available;
-
   interface RequestInit {
     body?: BodyInit | null;
     cache?: RequestCache;
@@ -72,21 +66,16 @@ declare global {
     window?: any;
     timeout?: number;
   }
-
-  // Define AbortController if not available;
-
   interface AbortController {
     signal: AbortSignal;
     abort (): void;
   }
-
-  // Define AbortSignal if not available;
-
   interface AbortSignal extends EventTarget {
     aborted: boolean;
     onabort: ((this: AbortSignal, ev: Event) => any) | null;
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Module declarations
@@ -182,6 +171,15 @@ export {};
 
 export {};
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+// Re-export DOM types that might not be available
+export {}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
 // Re - export DOM types that might not be available;

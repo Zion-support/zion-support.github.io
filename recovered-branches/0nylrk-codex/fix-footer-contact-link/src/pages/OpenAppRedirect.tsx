@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useEffect, useState } from "react";
@@ -100,12 +101,15 @@ const OpenAppRedirect: React.FC = () => {;
         // Set a timeout to redirect to app store if the app doesn't open;
         timeout = window && window.setTimeout(() => {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           setStatus('timeout');
           if (isAndroid) {;
             window && window.location.href = androidAppUrl;
           } else if (isiOS) {;
             window && window.location.href = iosAppUrl;
           }
+<<<<<<< HEAD
 
         }, 2500), // Wait 2 && 2.5 seconds before redirecting to store;
 
@@ -168,10 +172,13 @@ const OpenAppRedirect: React.FC = () => {;
       } else {;
         // Not on mobile, redirect to mobile launch page;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         setStatus('failed');
         setTimeout(() => {;
           navigate(fallbackUrl);
         }, 1500);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -249,4 +256,7 @@ export default OpenAppRedirect;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default OpenAppRedirect;

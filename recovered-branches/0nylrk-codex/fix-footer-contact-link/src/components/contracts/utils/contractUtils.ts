@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {supabase} from "@/integrations/supabase/client";
@@ -56,24 +57,18 @@ export async function generateContract(
   
   const { data, error } = await supabase && supabase.functions.invoke("generate-contract", {
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     body: {
       talentName: talent && talent.full_name;
       clientName: clientName;
-
-      projectName: values && values.projectName;
-      scopeSummary: values && values.scopeSummary;
-      startDate: values && values.startDate.toISOString();
-      endDate: values && values.endDate?.toISOString();
-      paymentTerms: values && values.paymentTerms;
-      paymentAmount: values && values.paymentAmount;
-      additionalClauses: additionalClauses,
-
       milestones: milestoneData}
   });
 
   if (error) {
     throw error
   }
+<<<<<<< HEAD
         title: m.title,
         description: m.description,
         dueDate: m.dueDate,
@@ -159,6 +154,11 @@ export async function generateContract(;
 }
 =======
 
+=======
+  } else {
+    throw new Error("Failed to generate contract")
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { supabase } from '@/integrations / supabase / client';
 import { TalentProfile } from '@/types / talent';
 import { GeneratedMilestone } from '@/hooks / useMilestoneGenerator';
@@ -175,12 +175,15 @@ export async function generate_contract (
   client_name: string;
   generated_milestones: GeneratedMilestone[]): Promise < string> {
   const additional_clauses = values.additional_clauses || [];
+<<<<<<< HEAD
 =======
 
 
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
   // Prepare milestone data if we have AI - generated milestones;
   const milestone_data = generated_milestones.length > 0;
@@ -217,6 +220,7 @@ if ( {) {
   $2
 }
     return data.contract;
+<<<<<<< HEAD
 
   } else {;
     throw new Error("Failed to generate contract");
@@ -227,6 +231,11 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  } else {
+    throw new Error ("Failed to generate contract");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }
 ;

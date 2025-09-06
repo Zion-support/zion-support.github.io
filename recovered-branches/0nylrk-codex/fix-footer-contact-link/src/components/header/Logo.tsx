@@ -1,13 +1,8 @@
-
-import React from "react";
-import { Link } from "react-router-dom";
-import { useWhitelabel } from "@/context/WhitelabelContext";
-interface LogoProps {;
-
   customLogo?: string;
   customColor?: string
 }
 
+<<<<<<< HEAD
 
 export function Logo(): any ({ customLogo, customColor }: LogoProps) {;
   const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel();
@@ -53,12 +48,16 @@ export function Logo({ customLogo, customColor }: LogoProps) {
   
   if (logoToUse) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  if (logoToUse) {;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <Link to="/" className="flex items-center">;
         <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" />;
       </Link>;
     );
   }
+<<<<<<< HEAD
   
   return (
     <Link to="/" className="flex items-center">
@@ -79,6 +78,25 @@ export function Logo({ customLogo, customColor }: LogoProps) {
 }
   )
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  return (
+    <Link to="/" className="flex items-center">;
+      <div
+        className="text-2xl font-bold"
+        style={colorToUse ? { color: colorToUse } : {}}>;
+        {isWhitelabel ? brandName : "Zion"}
+        <span className="text-zion-cyan">AI</span>;
+      </div>;
+    </Link>;
+  );
+=======
+import React from './react';
+import { Link  } from './react-router-dom';
+import { use_whitelabel  } from '@/context / WhitelabelContext';
+interface LogoProps {
+  custom_logo?: string;
+  custom_color?: string;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 export /**
  * Logo - Function description

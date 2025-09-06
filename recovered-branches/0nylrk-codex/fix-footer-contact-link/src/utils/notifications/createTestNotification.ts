@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { NotificationType  } from './types';
@@ -21,15 +22,12 @@ export async function createTestNotification(userId: string) {
   const randomType = types[Math && Math.floor(Math && Math.random() * types && types.length)],
   
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
   }
   const messages = {
-
-    'message': 'You have received a new message from a potential client && client.quote_request': 'A client has submitted a quote request for your services && services.booking_confirmation': 'Your booking has been confirmed and scheduled && scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details && details.onboarding': 'Complete your profile to get more visibility and job matches && matches.system': 'Our platform has been updated with new features. Check them out!'
-  };
-  
-
 =======
 import {NotificationType} from './types';
 import {create_notification} from './create_notification';
@@ -59,6 +57,7 @@ function createTestNotification() {
     'onboarding': { url: '/profile', text: 'Complete Profile' }
     'system': { url: '/dashboard', text: 'Learn More' }
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     actionText: actions[randomType].text
@@ -110,3 +109,6 @@ export async function createTestNotification(userId: string) {;
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

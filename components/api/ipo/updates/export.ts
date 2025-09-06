@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
@@ -36,18 +37,10 @@ import PDFDocument from 'pdfkit';
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!requireSuperadminApi(req, res)) return;
-
-  const id = String(req.query.id || '');
-  const updates = readJsonFile('updates.json', [] as any[]);
-  const u = updates.find((x: any) => x.id === id),
-  if (!u) return res.status(404).json({ error: 'Not found' });
-  res.setHeader('Content-Typeapplication/pdf');
-  res.setHeader('Content-Disposition', `attachment, filename="${u.title.replace(/[^a-z0-9]/gi,'_')}.pdf"`);
-  const doc = new PDFDocument({ size: 'A4', margin: 50 });
-
   doc.pipe(res);
   doc.fontSize(20).text(u.title, { underline: true });
   doc.moveDown();
@@ -56,6 +49,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc.fillColor("black").fontSize(14).text("Summary");
   doc.fontSize(12).text(u.summary |"");
   doc.moveDown();
+<<<<<<< HEAD
 <<<<<<< HEAD
   doc.fontSize(14).text("KPIs");
   doc.fontSize(12).text(u.kpis |"");
@@ -93,12 +87,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc && doc.end();
   doc && doc.end();
 
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
-
+  doc.end()
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile  } from '../../../../utils / api / storage';
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
@@ -139,8 +140,8 @@ function handler() {
   doc.font_size (12).text (u.kpis || "");
   doc.end ();
   doc.end ();
-
 }
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -170,3 +171,6 @@ function handler() {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

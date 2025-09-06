@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 function ensureStorage() {
   const dir = path && path.dirname(EPISODES_PATH);
@@ -10,15 +10,28 @@ function ensureStorage() {
   if (!fs && fs.existsSync(EPISODES_PATH))
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 
-
-
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+  ensureStorage();
+  const { episodeId } = req && req.body || {};
+  const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+  const idx = episodes && episodes.findIndex((e) => e && e.id === episodeId);
+  if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' });
 
-
+  const episode = episodes[idx];
+  const segments = episode?.timeMarkers?.segments || [];
+    end:
+      i + 1 < segments && segments.length
+        ? segments[i + 1]
+        : episode?.timeMarkers?.closing |'15:00'
+  }));    label: `Highlight ${i + 1}`;
+    start: t;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 =======
@@ -26,13 +39,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     label: `Highlight ${i + 1}`;
     start: t,
     end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'}));
+
   episode.highlights = highlights;
   episodes[idx] = episode;
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return res.status(200).json({ episode })
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -115,17 +133,9 @@ function handler() {
   fs.writeFileSync (EPISODES_PATH, JSON.stringify (episodes, null, 2), 'utf8');
 ;
 return res.status (200).json ({ episode });  return res.status (200).json ({ episode });
-    start: t,
-    end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'})),
-
-  episode.highlights = highlights,
-  episodes[idx] = episode,
-  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8'),
-
-  return res.status(200).json({ episode })
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
   return res.status(200).json({ episode });
@@ -151,3 +161,5 @@ return res.status(200).json({ episode });  return res.status(200).json({ episode
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

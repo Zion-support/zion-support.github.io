@@ -1,38 +1,37 @@
-import { useState, useMemo } from 'react';
-import {;
-  onsiteServicePricing,;
-  CountryPricing,;
-} from '@/data/onsiteServicePricing';
-import { Input } from '@/components/ui/input';
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,;
-} from '@/components/ui/table';
-import { Globe, Search, ArrowUpDown } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-export function ITServicePricingTable() {;
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortConfig, setSortConfig] = useState<{;
-    key: keyof CountryPricing;
-    direction: 'ascending' | 'descending';
-  }>({;
-    key: 'country',;
-    direction: 'ascending',;
-  });
+import { useState, useMemo } from "react",
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
+import { Input } from "@/components/ui/input",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Globe, Search, ArrowUpDown } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+export function ITServicePricingTable() {
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [sortConfig, setSortConfig] = useState<{
+    key: keyof CountryPricing,
+    direction: "ascending" | "descending"
+  }>({
+    key: "country",
+    direction: "ascending"}),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing],
     
+=======
+  const sortedData = useMemo(() => {
+    let filteredData = [...onsiteServicePricing],
+    
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     // Filter by search query
     if (searchQuery) {
       filteredData = filteredData.filter(item => 
         item.country.toLowerCase().includes(searchQuery.toLowerCase())
       )
+<<<<<<< HEAD
 =======
   const sortedData = useMemo(() => {;
     let filteredData = [...onsiteServicePricing];
@@ -107,12 +106,21 @@ export function ITServicePricingTable() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    }
+    // Sort data
+    filteredData.sort((a, b) => {
+      if (a[sortConfig.key] < b[sortConfig.key]) {
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
           <Input
+<<<<<<< HEAD
             placeholder='Search by country...'
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
@@ -134,9 +142,15 @@ export function ITServicePricingTable() {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <Table>
-          <TableHeader className='bg-zion-blue'>
+          <TableHeader className="bg-zion-blue">
             <TableRow>
+<<<<<<< HEAD
               <TableHead className='text-zion-cyan font-medium'>
                 <Button
                   variant='ghost'
@@ -149,11 +163,17 @@ export function ITServicePricingTable() {;
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
                 >
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <span>Country</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
               </TableHead>
 =======
+<<<<<<< HEAD
 
                   <span>Country</span>
                   <ArrowUpDown className="h-4 w-4" />
@@ -167,6 +187,10 @@ export function ITServicePricingTable() {;
                   className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
                 >
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <span>Price Per Incident</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
@@ -175,6 +199,7 @@ export function ITServicePricingTable() {;
           </TableHeader>
           <TableBody className="bg-zion-blue-dark">
             {sortedData.length > 0 ? (
+<<<<<<< HEAD
 
               sortedData.map((item) => (
                 <TableRow key={item.country} className="border-b border-zion-blue-light hover:bg-zion-blue/50">
@@ -184,6 +209,11 @@ export function ITServicePricingTable() {;
                   </TableCell>
                   <TableCell className="text-right font-medium text-white">${item.pricePerIncident.toFixed(2)}</TableCell>
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 </TableRow>
               ))
             ) : (
@@ -192,12 +222,16 @@ export function ITServicePricingTable() {;
                   No countries match your search
                 </TableCell>
               </TableRow>
+<<<<<<< HEAD
 
       </div>;
     </div>;
   );
 };
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { Input } from "@/components/ui/input",;
@@ -280,7 +314,10 @@ export function ITServicePricingTable() {;
               </TableHead>;
             </TableRow>;
           </TableHeader>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <TableBody className="bg-zion-blue-dark">;
             {sortedData.length > 0 ? (;
               sortedData.map((item) => (;
@@ -290,26 +327,37 @@ export function ITServicePricingTable() {;
                     <span className="text-white">{item.country}</span>;
                   </TableCell>;
                   <TableCell className="text-right font-medium text-white">${item.pricePerIncident.toFixed(2)}</TableCell>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 </TableRow>;
               ));
             ) : (;
               <TableRow>;
+<<<<<<< HEAD
 
                 <TableCell colSpan={2} className="text-center py-10 text-zion-slate-light">;
 
+=======
+                <TableCell colSpan={2} className="text-center py-10 text-zion-slate-light">;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   No countries match your search;
                 </TableCell>;
               </TableRow>;
             )}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </TableBody>;
         </Table>;
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 
 
 
@@ -342,3 +390,9 @@ export function ITServicePricingTable() {;
 }
 ;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

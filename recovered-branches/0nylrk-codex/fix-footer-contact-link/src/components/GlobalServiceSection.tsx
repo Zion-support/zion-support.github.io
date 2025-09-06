@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,9 +51,15 @@ const services = [
     title: "Equipment Rentals"
     description: "Flexible rental options for temporary projects and scaling requirements"
     icon: <Truck className="h-10 w-10" />}]
+=======
+  {
+    title: "Networking"
+    description: "Connectivity solutions including switches, routers, and network security devices";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 export function GlobalServiceSection() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <section className="py-20 bg-zion-blue" id="global-services">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -175,13 +182,16 @@ function GlobalServiceSection() {
         <div className="flex justify - center mt - 12">;
           <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px - 8">;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             Get Your Free Commercial Proposal;
           </Button>;
         </div>;
       </div>;
-
+=======
     </section>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 ;
@@ -195,3 +205,6 @@ function GlobalServiceSection() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

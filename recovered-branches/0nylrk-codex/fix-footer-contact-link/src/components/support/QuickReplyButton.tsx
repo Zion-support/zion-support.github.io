@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -90,3 +91,32 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  return (
+    <Button
+
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { cn  } from '@/lib / utils';
+interface QuickReplyButtonProps {
+  text: string;
+  on_click: () => void;
+}
+export /**
+ * QuickReplyButton - Function description
+ */
+function QuickReplyButton() {
+  return (
+    <Button;
+      variant="outline";
+      size="sm";
+      className={cn (
+        "border - zion - purple / 30 hover: bg - zion - purple hover:text - white",
+        "transition - colors duration - 200",
+      )}
+      on_click={on_click}
+    >;
+      {text}
+    </Button>);
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

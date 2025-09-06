@@ -5,6 +5,7 @@
   exist so that isolated compilation of individual files (e.g., in CI or code;
   review bots) will not fail when full React type declarations are not;
 <<<<<<< HEAD
+<<<<<<< HEAD
   present.  They purposefully model just enough surface-area used throughout;
   the code-base.  If you have `@types/react` available in `node_modules`;
 =======
@@ -145,3 +146,10 @@ declare namespace React {;
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  TypeScript will prefer those and ignore this file, because paths declared in;
+  `type_roots` are merged with normal type resolution.;
+*/;
+  }
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

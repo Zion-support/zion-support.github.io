@@ -1,5 +1,6 @@
 import { GetServerSideProps } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
@@ -23,12 +24,17 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+  };      permanent: true}}
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default function ApiDocsRedirect() {;
   return null;
 }
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -43,6 +49,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
 export default function ApiDocsRedirect() {
   return null;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       destination: '/developers / docs',
       permanent: true,
     },
@@ -53,6 +61,7 @@ export default /**
  * ApiDocsRedirect - Function description
  */
 function ApiDocsRedirect() {
+<<<<<<< HEAD
 =======
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
@@ -77,3 +86,5 @@ export const getServerSideProps: GetServerSideProps = async () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

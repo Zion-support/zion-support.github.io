@@ -1,6 +1,10 @@
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { ArrowLeft } from 'lucide-react'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {  Breadcrumb
   BreadcrumbList
   BreadcrumbItem
@@ -9,6 +13,7 @@ import {  Breadcrumb
 } from '@/components/ui/breadcrumb'
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import { getBreadcrumbsForPath } from '@/utils/routeUtils'
+<<<<<<< HEAD
 export default function CaseStudy() {
   const router = useRouter()
   const slug = router.query.slug as string
@@ -34,45 +39,29 @@ export default function CaseStudy() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default function CaseStudy() {
   const router = useRouter()
   const slug = router.query.slug as string
   const study = CASE_STUDIES.find((s,) => s.slug === slug)
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`)
-import { ArrowLeft } from 'lucide-react';
-import {  Breadcrumb,;
-  BreadcrumbList,;
-  BreadcrumbItem,;
-  BreadcrumbLink,;
-  BreadcrumbSeparator,;
-} from '@/components/ui/breadcrumb';
-import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
-import { getBreadcrumbsForPath } from '@/utils/routeUtils';
-
-
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator} from '@/components/ui/breadcrumb',
-
-import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
-import { getBreadcrumbsForPath } from '@/utils/routeUtils';
-export default function CaseStudy() {;
-  const router = useRouter(),;
-  const slug = router && router.query.slug as string,;
-  const study = CASE_STUDIES && CASE_STUDIES.find((s,) => s && s.slug === slug),;
-  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`),;
-
-
-  const router = useRouter();
-  const slug = router.query.slug as string,
-  const study = CASE_STUDIES.find((s) => s.slug === slug),
-  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`),
 
   if (!study) {
     return (
+      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>        Case study not found.import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
+export default function CaseStudy() {
+  const router = useRouter()
+  const slug = router.query.slug as string
+  const study = CASE_STUDIES.find((s) => s.slug === slug)
+  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`)
+  if (!study) {
+    return (
+      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
+=======
+=======
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -82,25 +71,16 @@ export default function CaseStudy() {;
     return (
 
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         Case study not found.
       </div>
     )
-      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>        Case study not found && found.import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
-import { getBreadcrumbsForPath } from '@/utils/routeUtils';
-export default function CaseStudy() {;
-  const router = useRouter();
-  const slug = router && router.query.slug as string;
-  const study = CASE_STUDIES && CASE_STUDIES.find((s) => s && s.slug === slug);
-  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);
-
-  if (!study) {;
-    return (
-      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">;
-        Case study not found.;
-      </div>;
-    );
   }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <>
       <SEO title={study.title} description={study.excerpt} />
@@ -112,11 +92,19 @@ export default function CaseStudy() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    <>
+      <SEO title={study.title} description={study.excerpt} />
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
           <Breadcrumb className="mb-4 text-sm text-muted-foreground">
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -125,12 +113,18 @@ export default function CaseStudy() {;
 
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <Link href="/">Home</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
+<<<<<<< HEAD
                   <Link href='/case-studies'>Case Studies</Link>                </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
@@ -143,10 +137,16 @@ export default function CaseStudy() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
+<<<<<<< HEAD
                 <BreadcrumbLink asChild aria-current='page'>                <BreadcrumbLink asChild aria-current="page">
                 <BreadcrumbLink asChild aria-current="page">
 <<<<<<< HEAD
@@ -155,6 +155,11 @@ export default function CaseStudy() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <span>{study.title}</span>
                 </BreadcrumbLink>
               </BreadcrumbItem>
@@ -165,6 +170,7 @@ export default function CaseStudy() {;
             className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
             asChild
           >
+<<<<<<< HEAD
             <Link href='/case-studies'>
               <ArrowLeft className='mr-2 h-4 w-4' /> Back to Case Studies            </Link>            variant="outline"
             className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
@@ -181,10 +187,16 @@ export default function CaseStudy() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </Button>
           <img
             src={study.companyLogo}
             alt={`${study.company} logo`}
+<<<<<<< HEAD
             className='h-12 mb-4'
             loading='lazy'
             className="h-12 mb-4"
@@ -195,10 +207,16 @@ export default function CaseStudy() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           />
           <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
           <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
           {study.pdf && (
+<<<<<<< HEAD
             <Button variant='secondary' className='mb-6' asChild>
               <a href={study.pdf} target='_blank' rel='noopener noreferrer'>                Download PDF          />
           <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
@@ -218,12 +236,18 @@ export default function CaseStudy() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </Button>
           )}
           <div
             className="prose prose-invert"
             dangerouslySetInnerHTML={{ __html: study.content }}
           />
+<<<<<<< HEAD
 <<<<<<< HEAD
           <p className='mt-8 text-white font-semibold'>            — {study.author}, {study.role}            className="prose prose-invert"
             dangerouslySetInnerHTML={{ __html: study.content }}
@@ -274,12 +298,18 @@ export default function CaseStudy() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+          <p className="mt-8 text-white font-semibold">
+            — {study.author}, {study.role}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </p>;
         </div>;
       </div>;
     </>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
@@ -423,3 +453,9 @@ if ( {) {
     </>);
 }
 ;
+=======
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

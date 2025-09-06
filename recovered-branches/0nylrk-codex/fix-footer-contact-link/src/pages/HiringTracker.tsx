@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import {useState} from "react";
 import {useParams} from "react-router-dom";
@@ -76,9 +77,12 @@ export default function HiringTracker() {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
-
 =======
+  const [activeTab, setActiveTab] = useState<string>("kanban");
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+  return (
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -148,6 +152,8 @@ export default function HiringTracker() {;
 ;
 =======
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { useState } from './react';
 import { use_params } from './react-router-dom';
 import { AppHeader } from '@/layout / AppHeader';
@@ -164,6 +170,7 @@ import { Briefcase } from './lucide-react';
 function HiringTrackerContent() {
   const { job_id } = use_params () as { job_id?: string }
   const [active_tab, setActiveTab] = useState < string>("kanban");
+<<<<<<< HEAD
 =======
 
 
@@ -178,6 +185,8 @@ export default function HiringTracker() {
   )
 }
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
 <<<<<<< HEAD
 =======

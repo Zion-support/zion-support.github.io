@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export type FilterType =
@@ -18,10 +19,13 @@ export type FilterType =;
   | "system";
 ;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface NotificationFilterProps {
   filter: FilterType;
   onFilterChange: (filter: FilterType) => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -111,6 +115,8 @@ interface NotificationFilterProps {;
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export const NotificationFilter: React.FC < NotificationFilterProps> = ({
   filter,
   onFilterChange,
@@ -142,5 +148,8 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({
     </div>);
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -18,12 +19,15 @@ export function AppHeader() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useState} from 'react';
 import {use_messaging} from '@/context / MessagingContext';
 import {MainNavigation} from './MainNavigation';
 import {Logo} from '@/components / header / Logo';
 import {ModeToggle} from '@/components / ModeToggle';
 import {Menu, X} from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {MobileMenu} from '@/components/header/MobileMenu';
 import {useIsMobile} from '@/hooks/use-mobile';
@@ -34,28 +38,14 @@ export function AppHeader() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isMobile = useIsMobile();
-
-import {MobileMenu} from '@/components / header / MobileMenu';
-import {useIsMobile} from '@/hooks / use - mobile';
-import {MobileBottomNav} from '@/components / header / MobileBottomNav';
-export /**
- * AppHeader - Function description
- */
-function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState (false);
-  const is_mobile = useIsMobile ();
-;
-  // Try to access the messaging context, but provide a fallback value if it's not available;
-  let unread_count = 0;
-  try {
-    const { unread_count: count } = use_messaging (),
-    unread_count = count;
-
   } catch (error) {
     console.warn ('Messaging context not available');
+<<<<<<< HEAD
 =======
   } catch (error) {
     console.warn('Messaging context not available')
@@ -92,30 +82,11 @@ export function AppHeader() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
   
   return (
-
-
-  // Try to access the messaging context, but provide a fallback value if it's not available;
-  let unreadCount = 0;
-  try {;
-    const { unreadCount: count } = useMessaging(),;
-    unreadCount = count;
-  } catch (error) {;
-    console && console.warn('Messaging context not available');
-  }
-
-  return (
-    <>;
-      <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md">;
-        <div className="container flex h-16 items-center px-4 sm:px-6">;
-          <Logo />;
-          <div className="ml-6 flex-1 hidden md:block">;
-            <MainNavigation unreadCount={unreadCount} />;
-          </div>;
-
-
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">;
             <button
@@ -130,6 +101,7 @@ export function AppHeader() {;
               ) : (;
                 <Menu className="block h-6 w-6" aria-hidden="true" />;
               )}
+<<<<<<< HEAD
 
             </button>;
           </div>;
@@ -155,13 +127,11 @@ export function AppHeader() {;
         </div>
       )}
 
+=======
+      )}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-
-    </>;
-  );
-}
-
 =======
     <>;
       <header className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur - md">;

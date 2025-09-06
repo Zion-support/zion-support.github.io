@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Resume } from "@/types/resume";
@@ -10,6 +11,8 @@ import { Resume  } from '@/types / resume';
 export interface StepProps {
   id: string;
   label: string
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,6 +26,7 @@ export interface NavigationButtonsProps {;
 export interface NavigationButtonsProps {
   on_back?: () => void;
   on_next?: () => void;
+<<<<<<< HEAD
 =======
 
 import { Resume } from "@/types/resume",
@@ -52,12 +56,15 @@ export interface NavigationButtonsProps {;
   next_label?: string;
   is_loading?: boolean;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 export interface ResumeProgressProps {
   resume: Resume | null;
   progress: number
 }
 export interface CreateResumeFormProps {
+<<<<<<< HEAD
 
   onCreateResume: (title: string) => Promise < void>;
   on_cancel: () => void;
@@ -153,3 +160,5 @@ export interface EmptyResumeProps {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

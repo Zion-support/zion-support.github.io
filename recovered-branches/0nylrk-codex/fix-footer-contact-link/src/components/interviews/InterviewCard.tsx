@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -137,59 +138,12 @@ interface InterviewCardProps {;
 
 export function InterviewCard(): any ({ interview, onRefresh }: InterviewCardProps) {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { user } = useAuth();
   const { respondToInterview, cancelInterview } = useInterviews();
   const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
-
-import React, { useState } from './react';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { Interview } from '@/types / interview';
-import { use_auth } from '@/hooks / use_auth';
-import { use_interviews } from '@/hooks / use_interviews';
-import { format, formatDistanceToNow, is_past, parseISO } from './date - fns';
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from '@/components / ui / alert - dialog';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components / ui / dialog';
-import { Clock, ExternalLink, MessageSquare, Video, X } from './lucide-react';
-import { toast } from '@/components / ui / use - toast';
-import { InterviewResponseForm } from './InterviewResponseForm';
-interface InterviewCardProps {
-  interview: Interview,
-  on_refresh: () => Promise < void>;
-}
-export /**
- * InterviewCard - Function description
- */
-function InterviewCard() {
-  const { user } = use_auth ();
-  const { respondToInterview, cancel_interview } = use_interviews ();
-  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState (false);
-  const [is_loading, setIsLoading] = useState (false);
-;
-  const is_client = user?.id === interview.client_id;
-  const is_talent = user?.id === interview.talent_id;
-;
-  // Format interview date and time;
-  const interview_date = parseISO (interview.scheduled_date);
-  const formatted_date = format (interview_date, 'EEEE, MMMM d');
-  const formatted_time = format (interview_date, 'h: mm a'),
-  // Calculate when interview ends;
-  const end_time = new Date (interview_date);
-  end_time.set_minutes (end_time.get_minutes () + interview.duration_minutes);
-  const formattedEndTime = format (end_time, 'h: mm a'),
-  const isInterviewPending = interview.status === 'requested';
-  const isInterviewConfirmed = interview.status === 'confirmed';
-  const isInterviewLive = isInterviewConfirmed && !is_past (interview_date) && is_past (new Date (interview_date.get_time () - 5 * 60000)), // 5 minutes before;
-  const isInterviewPast = is_past (interview_date);
-;
-  const getRelativeTime = () =>: any {
-    if () {) {
-  $2
-}
-      return `Took place ${formatDistanceToNow (interview_date)} ago`;
 
     } else {
       return `Starts in ${formatDistanceToNow (interview_date)}`;
@@ -198,6 +152,7 @@ function InterviewCard() {
   },
 =======
   }
+<<<<<<< HEAD
 
 
 
@@ -344,6 +299,31 @@ function InterviewCard() {
         return isInterviewLive ? ;
           <Badge className="bg-green-500 animate-pulse">Live Now</Badge> : ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      });
+      setIsResponseDialogOpen (false);
+      await on_refresh ();
+    } else {
+      });
+    }
+    setIsLoading (false);
+  }
+;
+  const handleCancelInterview = async () => {
+    setIsLoading (true);
+    const success = await cancel_interview (interview.id);
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: "Interview cancelled",
+        description: "The interview has been cancelled successfully.";
+      });
+      await on_refresh ();
+    } else {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Badge className="bg-green-600">Confirmed</Badge>;
       case 'declined':;
         return <Badge variant="destructive">Declined</Badge>;
@@ -356,22 +336,8 @@ function InterviewCard() {
       default:;
         return <Badge>{interview && interview.status}</Badge>;
     }
-
-  };
-
-  const getOtherPartyName = () => {;
-    if (isClient) {;
-      return interview && interview.talent_name || 'Talent';
-    } else {;
-      return interview && interview.client_name || 'Client';
-
     }
-
-  },
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
 
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
@@ -382,6 +348,7 @@ function InterviewCard() {
         <CardTitle className="text-lg">{interview && interview.title}</CardTitle>;
         <p className="text-sm text-muted-foreground">;
           with {getOtherPartyName()}
+<<<<<<< HEAD
 
         </p>;
       </CardHeader>;
@@ -564,23 +531,28 @@ if ( {) {
                 <AlertDialogHeader>;
                   <AlertDialogTitle > Cancel Interview Request</AlertDialogTitle>;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <AlertDialogDescription>;
                     Are you sure you want to cancel this interview request? This action cannot be undone.;
                   </AlertDialogDescription>;
                 </AlertDialogHeader>;
                 <AlertDialogFooter>;
-
+                    disabled={isLoading}
+                    className="bg-destructive text-destructive-foreground hover:bg-destructive/90">;
+=======
                   <AlertDialogCancel > Go Back</AlertDialogCancel>;
                   <AlertDialogAction;
                     on_click={handleCancelInterview}
                     disabled={is_loading}
                     className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";
                   >;
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     Cancel Interview;
                   </AlertDialogAction>;
                 </AlertDialogFooter>;
               </AlertDialogContent>;
+<<<<<<< HEAD
 
 
 
@@ -598,6 +570,8 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           {/* For talents with pending requests */}
           {isTalent && isInterviewPending && (;
             <div className="grid grid-cols-2 gap-2">;
@@ -609,23 +583,11 @@ if ( {) {
               </Button>;
             </div>;
           )}
-
-            </AlertDialog>)}
-          {/* For talents with pending requests */}
-          {is_talent && isInterviewPending && (
-            <div className="grid grid - cols - 2 gap - 2">;
-              <Button on_click={() => setIsResponseDialogOpen (true)} disabled={is_loading}>;
-                Respond;
-              </Button>;
-              <Button variant="outline" on_click={() => handleRespondToInterview ('declined')} disabled={is_loading}>;
-                Decline;
-              </Button>;
-            </div>)}
-
           {/* For confirmed interviews */}
           {isInterviewConfirmed && !isInterviewPast && (
             <>;
               {interview.meeting_link ? (
+<<<<<<< HEAD
 
 
           {/* For confirmed interviews */}
@@ -703,24 +665,32 @@ if ( {) {
                   <AlertDialogHeader>;
                     <AlertDialogTitle > Cancel Confirmed Interview</AlertDialogTitle>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                  {isInterviewLive ? 'Join Now' : 'Join Meeting'}
+                </Button>;
+              )}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     <AlertDialogDescription>;
                       Are you sure you want to cancel this interview? This action cannot be undone and the other party will be notified.;
                     </AlertDialogDescription>;
                   </AlertDialogHeader>;
                   <AlertDialogFooter>;
-
+                      disabled={isLoading}
+                      className="bg-destructive text-destructive-foreground hover:bg-destructive/90">;
+=======
                     <AlertDialogCancel > Go Back</AlertDialogCancel>;
                     <AlertDialogAction;
                       on_click={handleCancelInterview}
                       disabled={is_loading}
                       className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";
                     >;
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       Cancel Interview;
                     </AlertDialogAction>;
                   </AlertDialogFooter>;
                 </AlertDialogContent>;
               </AlertDialog>;
+<<<<<<< HEAD
 
         </div>;
       </CardFooter>;
@@ -733,10 +703,14 @@ if ( {) {
           </DialogHeader>
           <InterviewResponseForm
           <InterviewResponseForm 
+=======
+          <InterviewResponseForm
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             interview={interview}
             onConfirm={() => handleRespondToInterview('confirmed')}
             onClose={() => setIsResponseDialogOpen(false)}
             isLoading={isLoading}
+<<<<<<< HEAD
           />
         </DialogContent>
       </Dialog>
@@ -750,6 +724,9 @@ if ( {) {
   );
 }
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </>)}
         </div>;
       </CardFooter>;
@@ -769,6 +746,10 @@ if ( {) {
       </Dialog>;
     </Card>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

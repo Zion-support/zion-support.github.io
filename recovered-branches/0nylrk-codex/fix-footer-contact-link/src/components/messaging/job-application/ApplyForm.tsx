@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -89,6 +90,8 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { createConversation } = useMessaging();
   const { applyToJob } = useJobApplications();
 <<<<<<< HEAD
@@ -108,6 +111,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const [activeTab, setActiveTab] = useState<string>("message");
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
+<<<<<<< HEAD
   ),
   const [proposalLink, setProposalLink] = useState(''),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -309,11 +313,17 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       await createConversation(;
         job && job.client_id;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      });
+      return;
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         fullMessage;
         'job';
         job && job.id;
         contextData;
       );
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Call onApplySuccess to update job status in the UI
       if (onApplySuccess) {
@@ -411,30 +421,12 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
     } finally {;
       setIsSubmitting(false);
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
   }
-=======
-    }
-
-  },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
-
-    <>;
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
-        <TabsList className="w-full mb-4 bg-zion-blue-dark/30">;
-          <TabsTrigger value="message" className="flex-1">;
-            Message;
-          </TabsTrigger>;
-          <TabsTrigger value="resume" className="flex-1">;
-            Resume;
-          </TabsTrigger>;
-        </TabsList>;
-
-        <TabsContent value="message">;
-
           <MessageTab
 =======
 import React, { useState } from 'react';
@@ -572,30 +564,19 @@ if ( {) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
           <MessageTab 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             message={message}
             set_message={set_message}
             proposal_link={proposal_link}
             setProposalLink={setProposalLink}
-
-          />;
-        </TabsContent>;
-
-        <TabsContent value="resume">;
-          <ResumeTab
-            onResumeSelected={handleResumeSelected}
-            selectedResumeId={selectedResumeId} 
-          />;
-        </TabsContent>;
-      </Tabs>;
-
-      <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">;
-
         <Button
           type="button"
           variant="outline"
@@ -616,6 +597,7 @@ if ( {) {
           ) : (;
             'Submit Application';
           )}
+<<<<<<< HEAD
         </Button>
       </div>
     </>
@@ -627,6 +609,9 @@ if ( {) {
   );
 }
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           />;
         </TabsContent>;
         <TabsContent value="resume">;
@@ -661,6 +646,10 @@ if ( {) {
       </div>;
     </>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Download, FileText, Mail, BarChart3 } from "lucide-react";
@@ -39,11 +40,14 @@ function BillingHeader() {
             <Link to="/dashboard / client / analytics">;
               <BarChart3 className="h - 4 w - 4" />;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               Analytics;
             </Link>;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
       <p className="text - muted - foreground">;
         Manage your subscription, view invoice history, and update payment;
@@ -130,3 +134,6 @@ export function BillingHeader() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

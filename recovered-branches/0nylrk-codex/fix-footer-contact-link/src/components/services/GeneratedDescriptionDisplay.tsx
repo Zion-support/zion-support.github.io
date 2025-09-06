@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from "react";
@@ -160,6 +161,12 @@ export function GeneratedDescriptionDisplay({;
             variant="outline" 
             size="sm" 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  const { toast } = useToast();
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedDescription, setEditedDescription] = useState(description);
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white";
           >;
@@ -173,6 +180,7 @@ export function GeneratedDescriptionDisplay({;
                 <Pencil className="h-4 w-4 mr-1" />;
                 Edit;
               </>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -197,6 +205,8 @@ import { Check, Pencil  } from './lucide-react';
 interface GeneratedDescriptionDisplayProps {
   description: string;
   on_save: (edited_description: string) => void;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 export /**
  * GeneratedDescriptionDisplay - Function description
@@ -235,16 +245,10 @@ function GeneratedDescriptionDisplay() {
                 <Pencil className="h - 4 w - 4 mr - 1" />;
                 Edit;
               </>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </Button>;
         </CardTitle>;
       </CardHeader>;
       <CardContent>;
-
-      </CardContent>;
-      {isEditing && (;
-        <CardFooter>;
-
           <Button
             onClick={handleSave}
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white">;
@@ -252,12 +256,6 @@ function GeneratedDescriptionDisplay() {
           </Button>;
         </CardFooter>;
       )}
-
-    </Card>;
-  );
-}
-
-=======
         {is_editing ? (
           <Textarea;
             value={edited_description}
@@ -279,4 +277,3 @@ function GeneratedDescriptionDisplay() {
         </CardFooter>)}
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

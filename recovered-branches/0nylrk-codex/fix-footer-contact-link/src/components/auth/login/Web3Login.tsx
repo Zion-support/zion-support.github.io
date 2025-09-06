@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,6 +16,8 @@ import {Wallet} from "@/components/icons";
 import {toast} from "sonner";
 export function Web3Login() {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { loginWithWeb3 } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 <<<<<<< HEAD
@@ -30,6 +33,7 @@ import { toast } from "sonner",
   const handleWeb3Login = async () => {;
     try {;
       setIsLoading(true);
+<<<<<<< HEAD
 
 
 
@@ -79,6 +83,10 @@ export function Web3Login() {
     }
   }
   },
+=======
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   return (
     <Button
@@ -86,6 +94,7 @@ export function Web3Login() {
       variant="outline"
       className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
       onClick={handleWeb3Login}
+<<<<<<< HEAD
 
       disabled={isLoading}
     >
@@ -149,6 +158,9 @@ export function Web3Login() {;
       disabled={isLoading}
     >;
 
+=======
+      disabled={isLoading}>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {isLoading ? (;
         <span className="flex items-center">;
           <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www && www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;
@@ -163,6 +175,7 @@ export function Web3Login() {;
           <Wallet className="h-5 w-5" />;
         </>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -170,12 +183,9 @@ export function Web3Login() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       )}
-
-    </Button>;
-  );
-}
-
 =======
 import { useState } from './react';
 import { Button } from '@/components / ui / button';

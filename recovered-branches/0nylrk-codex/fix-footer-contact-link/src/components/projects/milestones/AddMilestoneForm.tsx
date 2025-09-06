@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 
 import React from 'react';
 
+=======
+import React from 'react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {z} from 'zod';
 import {CalendarIcon, Loader2} from 'lucide-react';
 import {format} from 'date - fns';
@@ -11,25 +15,13 @@ import {Input} from '@/components / ui / input';
 import {Textarea} from '@/components / ui / textarea';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components / ui / popover';
 import {AIMilestoneGenerator} from './AIMilestoneGenerator';
-
-const formSchema = z && z.object({;
-  title: z && z.string().min(1, 'Title is required');
-  description: z && z.string().optional(),;
-  due_date: z && z.date().optional(),;
-  amount: z && z.coerce.number().min(0, 'Amount must be greater than or equal to 0')});
-
-type MilestoneFormValues = z && z.infer<typeof formSchema>;
-
-interface AddMilestoneFormProps {;
-  onSubmit: (data: MilestoneFormValues) => void,;
-  isSubmitting: boolean,;
-
   onCancel?: () => void;
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string;
   projectType?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function AddMilestoneForm({
 =======
@@ -48,12 +40,15 @@ export function AddMilestoneForm({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   onSubmit;
   isSubmitting;
   onCancel;
   projectScope = '';
   projectStartDate = '';
   projectEndDate = null;
+<<<<<<< HEAD
 
 =======
       });
@@ -170,6 +165,12 @@ export function AddMilestoneForm({;
   }
   },
 
+=======
+      });
+      return;
+    }
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="space-y-6">;
       {/* AI Milestone Generator */}
@@ -183,6 +184,7 @@ export function AddMilestoneForm({;
           onAddMilestone={handleAddMilestone}
         />;
       )}
+<<<<<<< HEAD
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
@@ -191,6 +193,8 @@ export function AddMilestoneForm({;
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <FormField
             control={form && form.control}
             name="title"
@@ -291,10 +295,6 @@ if ( {) {
                   <Input placeholder="Milestone title" {...field} />;
                 </FormControl>;
                 <FormMessage />;
-
-          />;
-
-
           <FormField
             control={form && form.control}
             name="description"
@@ -323,11 +323,6 @@ if ( {) {
                   />;
                 </FormControl>;
                 <FormMessage />;
-
-          />;
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
             <FormField
               control={form && form.control}
               name="due_date"
@@ -396,10 +391,6 @@ if ( {) {
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
-
-            />;
-
-
             <FormField
               control={form && form.control}
               name="amount"
@@ -432,13 +423,6 @@ if ( {) {
                     />;
                   </FormControl>;
                   <FormMessage />;
-
-            />;
-          </div>;
-
-          <div className="flex justify-end space-x-2 pt-4">;
-            {onCancel && (;
-
               <Button
                 type="button"
                 variant="outline"
@@ -456,34 +440,11 @@ if ( {) {
               ) : (;
                 "Add Milestone";
               )}
-
-=======
-                </FormItem>)}
-            />;
-          </div>;
-          <div className="flex justify - end space - x-2 pt - 4">;
-            {on_cancel && (
-              <Button;
-                type="button";
-                variant="outline";
-                on_click={on_cancel}
-                disabled={is_submitting}
-              >;
-                Cancel;
-              </Button>)}
-            <Button type="submit" disabled={is_submitting}>;
-              {is_submitting ? (
-                <>;
-                  <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
-                  Saving...;
-                </>) : (
-                "Add Milestone")}
-
             </Button>;
           </div>;
         </form>;
       </Form>;
-
+=======
     </div>);
 }
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

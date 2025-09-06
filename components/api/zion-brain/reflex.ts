@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {
@@ -22,10 +23,14 @@ function isAuthorized(req: NextApiRequest): boolean {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' });
+
   if (req && req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
+<<<<<<< HEAD
 <<<<<<< HEAD
     return res.status(200).json({ metrics: state.metrics |{} });  }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -39,6 +44,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 
   if (req && req.method === 'POST') {
@@ -50,10 +57,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
       state && state.metrics = metrics;
       state && state.lastTriggers = triggers;
       writeState(state);
-
-      const latencyMs = Date && Date.now() - started;
-
-
       appendLog({
         module: 'reflex'
         type: 'metrics'
@@ -69,6 +72,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
         status: 'error'
         payload: { error: e?.message |'unknown' }
       });
+<<<<<<< HEAD
 
       return res && res.status(500).json({ error: 'Reflex failure' });    }
   }
@@ -107,6 +111,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   append_log,
   evaluate_reflexes,
   read_state,
@@ -189,6 +196,7 @@ return res.status (405).json ({ error: 'Method not allowed' });
       return res.status (500).json ({ error: 'Reflex failure' });
   }
   return res.status (405).json ({ error: 'Method not allowed' });
+<<<<<<< HEAD
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -213,3 +221,5 @@ return res.status (405).json ({ error: 'Method not allowed' });
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
 import { Routes, Route  } from 'react-router-dom';
 import './App.css',
@@ -117,6 +118,11 @@ import { Toaster as SonnerToaster } from "./components/ui/sonner",
 
 const App = () => {;
 
+=======
+import { Toaster } from "./components/ui/toaster";
+
+import { Toaster, as, SonnerToaster } from "./components/ui/sonner";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <WhitelabelProvider>;
       <ThemeProvider defaultTheme="dark">;
@@ -162,6 +168,7 @@ const Signup = React.lazy(() => import("./pages/Signup"));
 const ITOnsiteServicesPage = React.lazy(
   () => import("./pages/ITOnsiteServicesPage"),
 );
+<<<<<<< HEAD
 const OpenAppRedirect = React.lazy(() => import("./pages/OpenAppRedirect"));
 const ContactPage = React.lazy(() => import("./pages/Contact"));
   DeveloperRoutes
@@ -294,6 +301,38 @@ const App = () => {;
             {baseRoutes.map(({ path, element }) => (;
               <Route key={path} path={path} element={element} />;
             ))}
+=======
+const OpenAppRedirect = React.lazy (() => import ("./pages / OpenAppRedirect"));
+const ContactPage = React.lazy (() => import ("./pages / Contact"));
+;
+const base_routes = [;
+  { path: "/", element: <Home /> },
+  { path: "/match", element: <AIMatcherPage /> },
+  { path: "/login", element: <Login /> },
+  { path: "/signup", element: <Signup /> },
+  { path: "/talent", element: <TalentDirectory /> },
+  { path: "/talents", element: <TalentsPage /> },
+  { path: "/services", element: <ServicesPage /> },
+  { path: "/it - onsite - services", element: <ITOnsiteServicesPage /> },
+  { path: "/categories", element: <Categories /> },
+  { path: "/equipment", element: <EquipmentPage /> },
+  { path: "/analytics", element: <Analytics /> },
+  { path: "/mobile - launch", element: <MobileLaunchPage /> },
+  { path: "/open - app", element: <OpenAppRedirect /> },
+  { path: "/community", element: <CommunityPage /> },
+  { path: "/contact", element: <ContactPage /> },
+];
+;
+const App = () =>: any {
+  return (
+    <WhitelabelProvider>;
+      <ThemeProvider default_theme="dark">;
+        <Suspense fallback={<div className="p - 4 text - center">Loading...</div>}>;
+          <Routes>;
+            {base_routes.map (({ path, element }) => (
+              <Route key={path} path={path} element={element} />))}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <Route path="/auth/*" element={<AuthRoutes />} />;
             <Route path="/dashboard/*" element={<DashboardRoutes />} />;
             <Route path="/marketplace/*" element={<MarketplaceRoutes />} />;
@@ -308,6 +347,7 @@ const App = () => {;
           </Routes>;
         </Suspense>;
         <Toaster />;
+<<<<<<< HEAD
         <SonnerToaster position="top-right" />;
       </ThemeProvider>;
     </WhitelabelProvider>;
@@ -318,3 +358,5 @@ const App = () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default App;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from 'react';
 import * as ToggleGroupPrimitive from '@radix-ui/react-toggle-group';
 import {type, VariantProps} from 'class-variance-authority';
@@ -55,6 +56,10 @@ const ToggleGroup = React && React.forwardRef<;
 ></typeof>(({ className, variant, size, children, ...props }, ref) => (;
   <ToggleGroupPrimitive&& ToggleGroupPrimitive.Root
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import React from 'react';
+import * as React from 'react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     ref={ref}
     className={cn('flex items-center justify-center gap-1', className)}
     {...props}>;
@@ -63,6 +68,7 @@ const ToggleGroup = React && React.forwardRef<;
     </ToggleGroupContext && ToggleGroupContext.Provider>;
   </ToggleGroupPrimitive && ToggleGroupPrimitive.Root>;
 ));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -106,10 +112,13 @@ const ToggleGroupItem = React && React.forwardRef<;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {children}
     </ToggleGroupPrimitive && ToggleGroupPrimitive.Item>;
   );
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -131,6 +140,8 @@ export { ToggleGroup, ToggleGroupItem }
 ;
 =======
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import * as ToggleGroupPrimitive from '@radix - ui / react - toggle - group';
 import {type, VariantProps} from 'class - variance - authority';
@@ -180,9 +191,12 @@ ToggleGroupItem.display_name = ToggleGroupPrimitive.Item.display_name;
 export { ToggleGroup, ToggleGroupItem }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 ];
 export default function ServicesPage() {return (; <Layout; title = "Our Services - Zion Tech Group"; description = "Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses."; keywords = "services, AI services, IT services, micro SaaS, technology solutions, business automation">; <div className = "min-h-screen bg-gray-50">; {/* Hero Section */}; {/* Header */}; <div className = "flex items-center mb-6">; <div className = {`w-16 h-16 bg-${service.color}-100 rounded-lg flex items-center justify-center mr-4`}>; <service.icon className = {`w-8 h-8 text-${service.color}-600`} />; </div>; <div>; <h3 className = "text-2xl font-semibold text-gray-900">{service.title}</h3>; <p className = "text-gray-500">{service.category}</p>; </div>; </div>; {/* Description */}; <p className = "text-gray-600 mb-6">{service.description}</p>; {/* Services List */}; <div className = "mb-6">; <h4 className = "text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>, <ul className = "space-y-2">, {service.services.map((item, idx) = > (; <li key = {idx} className = "flex items-center text-sm text-gray-600">; <CheckCircle className = {`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />; {item}; {/* CTA */}; <Link; href = {service.href}; Explore {service.title}; <ArrowRight className = "w-4 h-4 ml-2" />; </Link>, </div>, </motion.div>))}; </div>; </div>; </section>; {/* Why Choose Us */};        {/* Why Choose Us */}
@@ -12,6 +13,9 @@ export default function ServicesPage() {; return (; <Layout; title = "Our Servic
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+];
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
   };
 ],
@@ -59,7 +63,8 @@ export default function ServicesPage() {,
         </section>,
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Why Choose Us */};
-
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 }
 ];
 ;
@@ -70,6 +75,7 @@ function ServicesPage() { return ( <Layout; title = "Our Services - Zion Tech Gr
 ;        {/* Why Choose Us */}
         {/* Why Choose Us */}
 ;
+<<<<<<< HEAD
 
 =======
 
@@ -124,3 +130,6 @@ export default function ServicesPage() {,;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Why Choose Us */};
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -15,6 +16,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
   {
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     name: 'Autonomous DevOps Platform',
     description: 'Self - managing DevOps automation platform',
     category: 'Cloud & FinOps',
@@ -645,15 +648,19 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Cybersecurity',
     pricing: '$599 / month',
     features: [;
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       'Identity verification',
       'Access control',
       'Threat detection',
       'Performance monitoring',
     ],
+<<<<<<< HEAD
 
   },;
 <<<<<<< HEAD
@@ -1622,3 +1629,5 @@ export const advancedITInfrastructureExpansion2025V2 = [;
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

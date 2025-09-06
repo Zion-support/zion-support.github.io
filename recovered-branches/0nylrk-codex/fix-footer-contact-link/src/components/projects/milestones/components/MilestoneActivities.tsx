@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 import React from 'react';
+=======
+import React from './react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface MilestoneActivitiesProps {
 <<<<<<< HEAD
   projectId: string
@@ -12,6 +16,7 @@ export /**
 function MilestoneActivities() {
   return <div > Activity will be shown here</div>;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -38,3 +43,5 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

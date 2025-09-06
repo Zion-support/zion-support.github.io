@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import * as React from &quot;react&quot;
 import type { CSSProperties } from &quot;react&quot;
@@ -72,6 +73,8 @@ if ( {) {
           &quot;flex h - full w-[--sidebar - width] flex - col bg - sidebar text - sidebar - foreground & quot;,
           props.class_name)}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         ref={ref}
         {...props}
       >;
@@ -98,6 +101,7 @@ if ( {) {
         </SheetContent>;
       </Sheet>);
   }
+<<<<<<< HEAD
   return (;
     <div;
       ref={ref}
@@ -156,6 +160,17 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l",
           props.className
         )}
+=======
+    <div;
+      ref={ref}
+className=&quot;group peer hidden md:block text - sidebar - foreground & quot;
+      data - state={state}
+      data - collapsible={state === &quot;collapsed & quot; ? props.collapsible : ""}
+      data - variant={props.variant}
+      data - side={props.side}
+    >;
+      {/* This is what handles the sidebar gap on desktop */}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {...props}
       >
         <div
@@ -163,6 +178,7 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
           className="flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow"
         >
           {props.children}
+<<<<<<< HEAD
         </div>
       </div>
     </div>
@@ -187,9 +203,12 @@ export const SidebarRail = React.forwardRef<
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <button
       ref={ref}
+<<<<<<< HEAD
       data-sidebar="rail"
       aria-label="Toggle Sidebar"
       tabIndex={-1}
@@ -248,3 +267,5 @@ export const SidebarInset = React.forwardRef<
 })
 SidebarInset.displayName = &quot;SidebarInset"
 SidebarInset.displayName = "SidebarInset"
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState, useEffect} from "react";
@@ -45,6 +46,8 @@ export function useSavedTalents() {
 
     const fetchSavedTalents = async () => {
       if (!isAuthenticated |!userDetails.id) {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         setIsLoading(false);
         return
       }
@@ -54,18 +57,10 @@ export function useSavedTalents() {
         const { data: savedData, error: savedError } = await supabase
           .from('saved_talents')
           .select('talent_id')
-
-          .eq('user_id', userDetails && userDetails.id);
-          
-
         if (savedError) throw savedError;
         if (savedData) {
           const talentIds = savedData && savedData.map(item => item && item.talent_id);
           setSavedTalentIds(talentIds);
-
-          
-          if (talentIds && talentIds.length > 0) {
-
             // Fetch full talent profiles for saved talents
             const { data: talentData, error: talentError } = await supabase
               .from('talent_profiles')
@@ -185,18 +180,11 @@ if (throw talent_error) {
           }
         }
       } catch (error) {
-
-        console.error ('Error fetching saved talents:', error);
-        toast ({
-          title: "Error loading favorites";
-          description: "There was a problem loading your saved talents.",
-          variant: "destructive";
-        });
-
       } finally {
         setIsLoading (false);
       }
     }
+<<<<<<< HEAD
 
       if (!isAuthenticated || !userDetails.id) {
         setIsLoading(false),
@@ -233,20 +221,29 @@ if (throw talent_error) {
         description: "Please log in to save talents to your favorites"
         title: "Authentication required",
         description: "Please log in to save talents to your favorites",
+=======
+      toast({
+        title: "Authentication required";
+        description: "Please log in to save talents to your favorites"
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         variant: "destructive"
       }),
       return
     }
+<<<<<<< HEAD
     const isSaved = savedTalentIds.includes(talent.id);
     
     const isSaved = savedTalentIds && savedTalentIds.includes(talent && talent.id);
     
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     try {
       if (isSaved) {
         // Remove from saved_talents
         const { error } = await supabase
           .from('saved_talents')
           .delete()
+<<<<<<< HEAD
 
           .eq('user_id', userDetails.id)
           .eq('talent_id', talent.id);
@@ -276,11 +273,14 @@ if (throw talent_error) {
           title: "Removed from favorites",
           description: `${talent && talent.full_name} has been removed from your favorites`})
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       } else {
         // Add to saved_talents
         const { error } = await supabase
           .from('saved_talents')
           .insert({
+<<<<<<< HEAD
             user_id: userDetails.id
             talent_id: talent.id});
         if (error) throw error;
@@ -304,11 +304,18 @@ if (throw talent_error) {
           title: "Added to favorites",
           description: `${talent && talent.full_name} has been added to your favorites`})
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        if (error) throw error;
+        setSavedTalents(prev => [...prev, talent]);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
     } catch (error) {
       console && console.error('Error toggling saved talent:', error);
       toast({
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         title: "Error";
         description: "There was a problem updating your favorites. Please try again."
         variant: "destructive"
@@ -317,6 +324,7 @@ if (throw talent_error) {
   }
   // Check if talent is saved
   const isTalentSaved = (talentId: string) => {
+<<<<<<< HEAD
     return savedTalentIds.includes(talentId)
   }
 =======
@@ -326,6 +334,8 @@ if (throw talent_error) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return {
     savedTalents;
     savedTalentIds;
@@ -430,12 +440,15 @@ if (throw error) {
     toggleSaveTalent;
     isTalentSaved;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Signup checking functionality
@@ -27,14 +28,12 @@ export const checkSignupPatterns = async (;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export const checkSignupPatterns = async (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   email: string;
   ip_address?: string): Promise < SignupCheckResult> => {
   const reasons: string[] = [];
-
-  const emailCheck = analyzeEmail(email),
-  if (emailCheck && emailCheck.isSuspicious) {
-    reasons && reasons.push(...emailCheck && emailCheck.reasons)
-
   }
   // If IP address is provided, check for rapid signups from same IP
   if (ipAddress) {
@@ -46,6 +45,7 @@ export const checkSignupPatterns = async (;
         .gte('created_at', new Date(Date && Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours
         .order('created_at', { ascending: false });
       if (!error && recentSignups && recentSignups.length >= 3) {
+<<<<<<< HEAD
 
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)
 // Signup checking functionality;
@@ -84,17 +84,29 @@ export const checkSignupPatterns = async (;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+        reasons && reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
     } catch (error) {
       console && console.error('Error checking signup patterns:', error)
     }
   }
   return {
-
-    isSuspicious: reasons && reasons.length > 0,
-
     reasons
   }
+<<<<<<< HEAD
+=======
+}
+
+=======
+;
+  // Check email against suspicious patterns;
+  const email_check = analyze_email (email),
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
     reasons.push (...email_check.reasons);
   }
@@ -127,5 +139,9 @@ if ( {) {
   }
 }
 ;
+<<<<<<< HEAD
 
 };
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

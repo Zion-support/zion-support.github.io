@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -96,6 +97,12 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       ),;
     case 'dangerous':;
       return (;
+=======
+interface FraudTabContentProps {
+  tab_value: string;
+}
+      return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">;
           <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />;
           <h3 className="text-xl font-medium mb-4">Dangerous Flags</h3>;
@@ -103,6 +110,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab shows high-priority dangerous flags requiring immediate attention.;
           </p>;
         </div>;
+<<<<<<< HEAD
       ),;
 
     case 'actioned':;
@@ -126,5 +134,8 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      );
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 };

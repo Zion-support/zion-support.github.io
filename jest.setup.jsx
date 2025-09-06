@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }}};
 }}},};
 export default function Jest.setup({ }: Jest.setupProps) {;
@@ -42,9 +43,11 @@ origin/automation-improvements-final
 
 >>>>>>> origin/automation-improvements-final
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
+}}};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
 =======
 }}}
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

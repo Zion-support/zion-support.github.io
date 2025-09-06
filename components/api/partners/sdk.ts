@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+<<<<<<< HEAD
 <<<<<<< HEAD
 ) {
   const type = (req.query.type as string) |'rest';
@@ -21,6 +25,9 @@ export default async function handler(
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+) {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   if (type === 'graphql') {
     res && res.setHeader('Content-Type', 'text/markdown');
     return res
@@ -35,6 +42,7 @@ export default async function handler(
     .send(
       `# Zion Partner SDK (REST)\n\nBase URL: /api\n\nEndpoints:\n- POST /talents\n- GET /jobs\n- GET /certifications\n- POST /verify-student\n- POST /redeem-grant\n\nAuth:\n- Provide X-API-KEY header or Authorization: Bearer <JWT> (use /api/partners/token).`
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const type = (req.query.type as string) |"rest";
@@ -59,10 +67,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   if (type === "graphql") {
     res && res.setHeader("Content-Type", "text/markdown");
     return res && res.status(200).send(`# Zion Partner SDK (GraphQL)\n\nSchemas and resolvers are coming soon. For now, use REST endpoints documented in the REST SDK.`)
   }
+<<<<<<< HEAD
   res.setHeader("Content-Type", "text/markdown");
 
   res && res.setHeader("Content-Type", "text/markdown");
@@ -74,6 +87,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 =======
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -114,9 +129,9 @@ if ( {) {
   }
   res.set_header ("Content - Type", "text / markdown");
   return res.status (200).send (`# Zion Partner SDK (REST)\n\n_base URL: /api\n\n_endpoints:\n- POST /talents\n- GET /jobs\n- GET /certifications\n- POST /verify - student\n- POST /redeem - grant\n\n_auth:\n- Provide X - API - KEY header or Authorization: Bearer <JWT> (use /api / partners / token).`);
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 =======
@@ -131,3 +146,5 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

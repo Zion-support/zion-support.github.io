@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from &quot;react&quot;
 import * as DropdownMenuPrimitive from &quot;@radix-ui/react-dropdown-menu&quot;
 import { Check, ChevronRight, Circle } from &quot;lucide-react&quot;
@@ -36,10 +37,13 @@ const DropdownMenuSubTrigger = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.SubTrigger> & {
     inset?: boolean;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 >(({ class_name, inset, children, ...props }, ref) => (
   <DropdownMenuPrimitive.SubTrigger;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className={cn(
       &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent&quot;
@@ -142,10 +146,13 @@ const DropdownMenuItem = React.forwardRef<;
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {;
     inset?: boolean;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 >(({ class_name, inset, ...props }, ref) => (
   <DropdownMenuPrimitive.Item;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className={cn(
       &quot;relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
@@ -226,6 +233,8 @@ className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none transition - colors focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       class_name)}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     checked={checked}
     {...props}
   >;
@@ -235,6 +244,7 @@ className={cn (
       </DropdownMenuPrimitive.ItemIndicator>;
     </span>;
     {children}
+<<<<<<< HEAD
   </DropdownMenuPrimitive.CheckboxItem>;
 ));
 DropdownMenuCheckboxItem.displayName =;
@@ -271,6 +281,8 @@ className={cn(
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       className
     )}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     {...props}
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
@@ -279,6 +291,7 @@ className={cn(
       </DropdownMenuPrimitive.ItemIndicator>
     </span>
     {children}
+<<<<<<< HEAD
   </DropdownMenuPrimitive.RadioItem>;
 ));
 DropdownMenuRadioItem.displayName = DropdownMenuPrimitive.RadioItem.displayName;
@@ -288,10 +301,13 @@ const DropdownMenuLabel = React.forwardRef<;
   React.ElementRef<typeof DropdownMenuPrimitive.Label>,;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
     inset?: boolean;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 >(({ class_name, inset, ...props }, ref) => (
   <DropdownMenuPrimitive.Label;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 className={cn(
       &quot;px-2 py-1.5 text-sm font-semibold&quot;
@@ -340,24 +356,19 @@ const DropdownMenuSeparator = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Separator>;
 >(({ class_name, ...props }, ref) => (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   <DropdownMenuPrimitive.Separator;
     ref={ref}
     className={cn (&quot;-mx - 1 my - 1 h - px bg - muted & quot;, class_name)}
     {...props}
-
-/>));
-DropdownMenuSeparator.display_name = DropdownMenuPrimitive.Separator.display_name;
-const DropdownMenuShortcut = ({
-  class_name,
-  ...props;
-}: React.HTMLAttributes < HTMLSpanElement>) =>: any {
-
   return (
     <span;
       className={cn (&quot;ml - auto text - xs tracking - widest opacity - 60 & quot;, class_name)}
       {...props}
     />);
 }
+<<<<<<< HEAD
 DropdownMenuShortcut.displayName = &quot;DropdownMenuShortcut&quot;
 export {
   DropdownMenu
@@ -405,3 +416,6 @@ export {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  DropdownMenuRadioGroup}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

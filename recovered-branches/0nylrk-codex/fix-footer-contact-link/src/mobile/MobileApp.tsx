@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -128,18 +129,13 @@ function MobileApp() {
             is_authenticated ? <MobileHome /> : <Navigate to="/onboarding" />;
           }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         />;
         <Route path="/browse" element={<MobileBrowse />} />;
         <Route path="/projects" element={<MobileProjects />} />;
         <Route path="/inbox" element={<MobileMessages />} />;
         <Route path="/resume" element={<MobileResumeBuilder />} />;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
         <Route path="/post - job" element={<MobileJobPost />} />;
         <Route path="/profile" element={<div > Profile page</div>} />;

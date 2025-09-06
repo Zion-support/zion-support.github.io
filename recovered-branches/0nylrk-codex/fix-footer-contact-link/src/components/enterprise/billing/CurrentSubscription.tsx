@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -260,17 +261,16 @@ function CurrentSubscription() {
             <div className="text - xs text - muted - foreground">;
               You're saving $4, 797.60 per year with annual billing.;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    }
+  }
+
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </div>;
           </div>;
         </div>;
       </CardContent>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
       <CardFooter className="flex justify - between">;
         <Button variant="outline">Change Plan</Button>;

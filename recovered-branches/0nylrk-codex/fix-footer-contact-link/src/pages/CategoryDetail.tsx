@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useParams, Link} from "react-router-dom";
@@ -196,10 +197,13 @@ export default function CategoryDetail() {
         createdAt: new Date().toISOString()
         rating: Math.floor(Math.random() * 5) + 1
         reviewCount: Math.floor(Math.random() * 100)
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }));
     setListings(listingsToShow);
     setIsLoading(false);
   }, [slug]);
+<<<<<<< HEAD
         },
         images: [`/placeholder.svg`],
         createdAt: new Date().toISOString(),
@@ -368,6 +372,9 @@ export default function CategoryDetail() {;
           serviceType: listing && listing.category,;
           specificItem: {;
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { use_params, Link } from './react-router-dom';
 import { Header } from '@/components / header / Header';
 import { Footer } from '@/components / Footer';
@@ -520,6 +527,7 @@ if ( {) {
             title: listing.title,
             category: listing.category,
             image: listing.images?.[0];
+<<<<<<< HEAD
 
 =======
             id: listing.id,;
@@ -532,10 +540,14 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           }
         }
       });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   },
@@ -572,6 +584,9 @@ if ( {) {
             <div className="flex justify - center mb - 6">;
               <div className="text - zion - cyan p - 4 bg - zion - blue - dark rounded - full">;
 
+=======
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {category.icon}
               </div>;
             </div>;
@@ -580,6 +595,7 @@ if ( {) {
             </GradientHeading>;
             <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">;
               {category.description}
+<<<<<<< HEAD
             </p>
           </div>
           {isLoading ? (
@@ -596,9 +612,12 @@ if ( {) {
                   listing={listing}
                   onRequestQuote={handleRequestQuote}
                 />
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               ))}
             </div>
           )}
+<<<<<<< HEAD
         </div>
       </div>
       <Footer />
@@ -612,6 +631,9 @@ if ( {) {
   );
 }
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </p>;
           </div>;
           {is_loading ? (
@@ -631,6 +653,10 @@ if ( {) {
       <Footer />;
     </>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

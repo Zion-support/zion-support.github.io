@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
@@ -77,21 +78,18 @@ import {;
   FormDescription,;
   FormMessage,;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-
-import {;
-  Popover,;
-  PopoverContent,;
-  PopoverTrigger,;
-
 } from "@/components/ui/popover";
 
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -100,18 +98,17 @@ interface ProjectDetailsFieldsProps {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   form: UseFormReturn<ContractFormValues>;
 }
-
-
-export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
-
   return (
     <>;
       <FormField
         control={form && form.control}
         name="projectName"
         render={({ field }) => (
+<<<<<<< HEAD
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
@@ -131,6 +128,17 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          <FormItem>;
+            <FormLabel > Project Name</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            <FormControl>;
+              <Input placeholder="AI Website Development" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+      <FormField
+        control={form && form.control}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         name="scopeSummary"
         render={({ field }) => (;
           <FormItem>;
@@ -139,7 +147,7 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
               <Textarea
                 placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
-
+=======
           </FormItem>)}
       />;
       <FormField;
@@ -152,7 +160,7 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
               <Textarea;
                 placeholder="Describe the project scope, deliverables, and expectations...";
                 className="min - h-[120px]";
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {...field}
               />;
             </FormControl>;
@@ -160,6 +168,7 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
               Be specific about what is included and any limitations;
             </FormDescription>;
             <FormMessage />;
+<<<<<<< HEAD
 
                 {...field}
               />
@@ -178,6 +187,8 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <FormField
           control={form && form.control}
           name="startDate"
@@ -212,6 +223,7 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
               <FormMessage />;
             </FormItem>;
           )}
+<<<<<<< HEAD
         />
         <FormField
         />;
@@ -223,6 +235,10 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        <FormField
+          control={form && form.control}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           name="endDate"
           render={({ field }) => (;
             <FormItem className="flex flex-col">;
@@ -245,6 +261,7 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
                 <PopoverContent className="w-auto p-0" align="start">;
                   <Calendar
                     mode="single"
+<<<<<<< HEAD
 <<<<<<< HEAD
                     selected={field.value |undefined}
                     onSelect={field.onChange}
@@ -336,6 +353,8 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
                     disabled={(date) => date < form.get_values ("start_date")}
                     initial_focus;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   />;
                 </PopoverContent>;
               </Popover>;
@@ -343,19 +362,18 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
                 Leave empty if the end date is flexible;
               </FormDescription>;
               <FormMessage />;
-
-
-
-=======
-
+          )}
         />;
       </div>;
     </>;
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   );
 =======
             </FormItem>)}

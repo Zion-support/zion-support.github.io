@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from "react";
@@ -39,11 +40,14 @@ import {ShieldAlert} from "lucide-react";
 interface RaiseDisputeButtonProps {;
   projectId: string,;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   milestoneId?: string;
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   className?: string;
 }
+<<<<<<< HEAD
 
   milestoneId
   variant = "outline"
@@ -213,10 +217,13 @@ function RaiseDisputeButton() {
           <DialogHeader>;
             <DialogTitle > Raise a Dispute</DialogTitle>;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <DialogDescription>;
               Please provide details about the issue you're experiencing with this project.;
             </DialogDescription>;
           </DialogHeader>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <DisputeForm;
 =======
@@ -229,18 +236,13 @@ function RaiseDisputeButton() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          <DisputeForm
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
             onCancel={() => setIsDialogOpen(false)}
-
-          />;
-        </DialogContent>;
-      </Dialog>;
-    </>;
-  );
-}
-
 =======
           <DisputeForm;
             project_id={project_id}

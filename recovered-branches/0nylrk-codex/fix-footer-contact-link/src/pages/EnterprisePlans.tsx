@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -133,6 +134,8 @@ function EnterprisePlans() {
       <Header />;
       <main className="min - h-screen bg - background">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <EnterpriseHero />;
         <EnterprisePricingTable />;
         <EnterpriseFeatures />;
@@ -141,6 +144,7 @@ function EnterprisePlans() {
         <EnterpriseCTA />;
       </main>;
       <Footer />;
+<<<<<<< HEAD
     </>;
   );
 }
@@ -151,3 +155,9 @@ function EnterprisePlans() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

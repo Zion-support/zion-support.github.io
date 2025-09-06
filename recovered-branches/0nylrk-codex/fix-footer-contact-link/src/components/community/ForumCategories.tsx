@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Link} from "react-router-dom";
@@ -188,6 +189,8 @@ const categories: ForumCategoryInfo[] = [;
 const iconMap = {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import { Link } from './react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
 import { use_auth } from '@/hooks / use_auth';
@@ -237,24 +240,8 @@ const icon_map = {
   MessageSquare;
   Code;
   FileText;
-
-  Megaphone;
-};
-
-export const ForumCategories = () => {;
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-
-  const visibleCategories = categories && categories.filter(;
-    category => !category && category.adminOnly || isAdmin;
-
   );
   return (
-
-    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">;
-      {visibleCategories && visibleCategories.map((category) => {;
-        const Icon = iconMap[category && category.icon as keyof typeof iconMap],;
-
         return (
           <Link key={category && category.id} to={`/community/category/${category && category.id}`}>;
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">;
@@ -271,11 +258,16 @@ export const ForumCategories = () => {;
           </Link>;
         );
       })}
+<<<<<<< HEAD
 
     </div>;
   );
 };
 <<<<<<< HEAD
+=======
+export default ForumCategories;
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 
 

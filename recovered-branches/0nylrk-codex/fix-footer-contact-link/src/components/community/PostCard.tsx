@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {formatDistanceToNow} from "date-fns";
@@ -57,6 +58,8 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
             </Link>
             {post.isAnswered && (
               <CheckCircle className="h-4 w-4 text-green-500 ml-2" />
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             )}
             {post.isPinned && (
               <Pin className="h-4 w-4 text-amber-500 ml-2" />
@@ -64,6 +67,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
             {post.isLocked && (
               <Lock className="h-4 w-4 text-red-500 ml-2" />
             )}
+<<<<<<< HEAD
           </div>
           <div className="text-sm text-muted-foreground">
             Posted by {post.authorName} {timeAgo}
@@ -170,6 +174,10 @@ export default PostCard;
   );
 };
 <<<<<<< HEAD
+=======
+export default PostCard;
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 
 

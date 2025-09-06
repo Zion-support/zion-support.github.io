@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,11 +21,14 @@ import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 interface VideoCallRoomProps {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   room?: string;
   token?: string;
   serverUrl?: string;
   onDisconnect?: () => void;
   className?: string;
+<<<<<<< HEAD
 =======
 
 
@@ -100,6 +104,10 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
 ;
 =======
 
+=======
+}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -130,6 +138,7 @@ function VideoCallRoom() {
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 
 =======
 
@@ -137,3 +146,6 @@ function VideoCallRoom() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

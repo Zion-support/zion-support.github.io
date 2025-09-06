@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -65,6 +66,8 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       } else {;
         // Convert object to CSV format;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
         const values = [;
           metadata && metadata.appTitle;
@@ -73,6 +76,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           metadata && metadata.version;
           metadata && metadata.platform;
         ];
+<<<<<<< HEAD
 
 
       let content: string,
@@ -326,45 +330,23 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
   const track_analytics = () =>: any {
     console.log ("Tracking app installation analytics...");
     toast.success ("Analytics tracking enabled");
+=======
+    } catch (error) {
+      console.error ("Export failed:", error);
+      toast.error (`Failed to export ${format.toUpperCase ()} file`);
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
-;
-  return (
-    <Card className="bg - zion - blue border - zion - purple / 30">;
-      <CardHeader>;
-        <CardTitle className="text - lg">Export & Analytics</CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <div className="space - y-4">;
-          <div>;
-            <h4 className="font - medium mb - 2">Export Metadata</h4>;
-            <p className="text - sm text - gray - 400 mb - 3">;
-              Export your app metadata for submission to app stores;
-            </p>;
-            <div className="flex flex - col sm:flex - row gap - 2">;
-              <Button variant="outline" on_click={() => handle_export ('json')} className="flex - 1">;
-                <Download className="mr - 2 h - 4 w - 4" />;
-                JSON;
-              </Button>;
-              <Button variant="outline" on_click={() => handle_export ('csv')} className="flex - 1">;
-                <Download className="mr - 2 h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 CSV;
               </Button>;
             </div>;
           </div>;
-
-          <div className="border - t border - zion - purple / 20 pt - 4">;
-            <h4 className="font - medium mb - 2">Installation Analytics</h4>;
-            <p className="text - sm text - gray - 400 mb - 3">;
-              Track how many users click "Install" from web;
-            </p>;
-            <Button on_click={track_analytics} className="w - full">;
-
               Enable Analytics;
             </Button>;
           </div>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </Card>;
   );
@@ -376,3 +358,10 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+=======
+    </Card>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

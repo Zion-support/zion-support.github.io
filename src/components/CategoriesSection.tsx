@@ -1,3 +1,31 @@
+
+        ...cat
+import { GradientHeading } from "./GradientHeading"
+import Link from "next/link"
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
+import { cn } from "@/lib/utils"
+import { useTranslation } from "react-i18next"
+
+=======
+import { GradientHeading } from "./GradientHeading",
+import Link from "next/link",
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
+import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
+import { cn } from "@/lib/utils",
+import { useTranslation } from "react-i18next",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// This is the type definition copied from Categories.tsx for consistency.
+// Ideally, this would be in a shared types file.
+interface CategoryType {
+  id: string,
+  name: string,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  iconName?: string, // Example field if categories have icons
+  itemCount?: number, // Example field for number of items in a category
+  // Add a 'link' property if your API provides it, or construct it.
+  link?: string
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
   {
     title: "Comprehensive Services"
@@ -6,11 +34,16 @@
   {
     title: "Services Comparison"
     link: "/services - comparison"
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
 // Default static categories with translation keys
+<<<<<<< HEAD
 
 const getDefaultCategories = (t: any,) => [
 const getDefaultCategories = (t: any) => [
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   {
     id: "services"
     name: t('categories.services')
@@ -18,6 +51,7 @@ const getDefaultCategories = (t: any) => [
     iconName: "Briefcase", // Corresponds to lucide icon name
     link: "/services"
     color: "from-purple-500 to-indigo-600", // Keep color for styling
+<<<<<<< HEAD
   }
   },
 <<<<<<< HEAD
@@ -26,6 +60,11 @@ const getDefaultCategories = (t: any) => [
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   {
     id: "talents"
     name: t('categories.talents')
@@ -41,6 +80,7 @@ const getDefaultCategories = (t: any) => [
     link: "/equipment"
     color: "from-amber-500 to-orange-600"}
   {
+<<<<<<< HEAD
     id: "innovation"
     name: t('categories.innovation')
     description: t('categories.innovation_desc')
@@ -54,9 +94,12 @@ const getDefaultCategories = (t: any) => [
     link: "/innovation",
     color: "from-emerald-500 to-green-600"}],
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 // Helper to get icon component from name
-const getIcon = (iconName?: string,) => {
+const getIcon = (iconName?: string) => {
   switch (iconName) {
+<<<<<<< HEAD
     case "Briefcase": return <Briefcase className="w-10 h-10" />
     case "Users": return <Users className="w-10 h-10" />
     case "HardDrive": return <HardDrive className="w-10 h-10" />
@@ -206,6 +249,11 @@ export function CategoriesSection({
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
     ? fetchedCategories.map(cat => ({
@@ -217,6 +265,7 @@ export function CategoriesSection({
         // Assign a default color or implement logic to assign colors
         color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
+<<<<<<< HEAD
 <<<<<<< HEAD
         ...cat
         title: cat.name
@@ -231,8 +280,12 @@ export function CategoriesSection({
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         title: cat.name,
         icon: getIcon(cat.iconName)})),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
@@ -245,6 +298,7 @@ export function CategoriesSection({
           </p>
           <p className="text-zion-slate-light text-md">
             {t('home.no_categories_support')}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </p>
         </div>
@@ -420,10 +474,14 @@ export function CategoriesSection(): any ({;
             {t('home && home.no_categories_support')}
 
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </p>;
         </div>;
       </section>;
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -441,17 +499,24 @@ export function CategoriesSection(): any ({;
 
   }
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
-    <section className={cn("py-20 bg-zion-blue", className)} style={style}>;
-      <div className="container mx-auto px-4">;
-        {showTitle && (;
-          <div className="text-center mb-16">;
-            <GradientHeading>{t('home && home.categories_title')}</GradientHeading>;
-            <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">;
-              {t('home && home.categories_subtitle')}
-            </p>;
-          </div>;
+    <section className={cn("py-20 bg-zion-blue", className)} style={style}>
+      <div className="container mx-auto px-4">
+        {showTitle && (
+          <div className="text-center mb-16">
+            <GradientHeading>{t('home.categories_title')}</GradientHeading>
+            <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
+              {t('home.categories_subtitle')}
+            </p>
+          </div>
         )}
+<<<<<<< HEAD
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {displayCategories.map((category,) => (
             <Link
@@ -466,10 +531,13 @@ export function CategoriesSection(): any ({;
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <Link
               key={category.id}
               href={category.link || '#'}
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             >
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
@@ -483,6 +551,7 @@ export function CategoriesSection(): any ({;
               </div>
             </Link>
           ))}
+<<<<<<< HEAD
         </div>
         </div>;
 <<<<<<< HEAD
@@ -491,10 +560,16 @@ export function CategoriesSection(): any ({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {/* Special services section with translations */}
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
           <div className="flex flex-wrap justify-center gap-4">
+<<<<<<< HEAD
             {getSpecialServices(t).map((service,) => (
               <Link
                 key = {service.title,}
@@ -523,12 +598,18 @@ export function CategoriesSection(): any ({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <div className="mt-12 flex justify-center">
           <Link
             href="/categories/all"
             className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
           >
             {t('home.view_all_categories')}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </Link>
         </div>
@@ -570,6 +651,8 @@ const defaultCategories = getDefaultCategories (t);
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: cat.id;"
 title: cat.name,  //Map name to title description: cat.description |"No description available."
 icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {
@@ -596,191 +679,14 @@ icon: getIcon (cat.iconName)
   t ('home.view all categories')
 }</Link> </div> </div> </section>)
 }'"}
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
-          {displayCategories && displayCategories.map((category,) => (;
-            <Link
-              key = {category && category.id,}
-              href = {category && category.link || '#',}
-              className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan">;
-              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">;
-                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category && category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
-                  <div className="text-white">;
-                    {category && category.icon}
-                  </div>;
-                </div>;
-                <h3 className="text-white text-xl font-bold mb-2">{category && category.title}</h3>;
-                <p className="text-zion-slate-light">{category && category.description}</p>;
-              </div>;
-            </Link>;
-          ))}
-        </div>;
-
-        {/* Special services section with translations */}
-        <div className="mt-8">;
-          <h3 className="text-center text-xl font-bold text-white mb-6">{t('home && home.featured_services')}</h3>;
-          <div className="flex flex-wrap justify-center gap-4">;
-            {getSpecialServices(t).map((service,) => (;
-              <Link
-                key = {service && service.title,}
-                href = {service && service.link,}
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300">;
-                {service && service.title}
-              </Link>            ))}
-          </div>;
-        </div>;
-
-        <div className="mt-12 flex justify-center">;
-          <Link
-            href="/categories/all"
-            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors">;
-            {t('home && home.view_all_categories')}
+=======
           </Link>;
         </div>;
       </div>;
     </section>;
   );
-
-
-
-export /**
- * CategoriesSection - Function description
- */
-function CategoriesSection() {
-  const { t } = use_translation ();
-  const default_categories = getDefaultCategories (t);
-  // Use fetched_categories if provided, otherwise fallback to default_categories;
-  const display_categories = fetched_categories && fetched_categories.length > 0;
-    ? fetched_categories.map (cat => ({
-        id: cat.id,
-        title: cat.name, // Map name to title;
-        description: cat.description || "No description available.",
-        icon: get_icon (cat.icon_name), // Get icon component;
-        link: cat.link || `/category/${cat.id}`, // Construct link if not provided;
-        // Assign a default color or implement logic to assign colors;
-        color: default_categories.find (dc => dc.id === cat.id)?.color || "from - gray - 500 to - gray - 600"}));
-    : default_categories.map (cat => ({
-        ...cat;
-        title: cat.name,
-        icon: get_icon (cat.icon_name)})),
-  // If fetched_categories is an empty array, and we want to show nothing:;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <section className={cn ("py - 20 bg - zion - blue text - center", class_name)} style={style}>;
-        <div className="container mx - auto px - 4">;
-          <h2 className="text - 3xl font - semibold text - white mb - 4">{t ('home.no_categories_title')}</h2>;
-          <p className="text - zion - slate - light text - lg mb - 2">;
-            {t ('home.no_categories_desc')}
-          </p>;
-          <p className="text - zion - slate - light text - md">;
-            {t ('home.no_categories_support')}
-          </p>;
-        </div>;
-      </section>);
-  }
-  return (
-    <section className={cn ("py - 20 bg - zion - blue", class_name)} style={style}>;
-      <div className="container mx - auto px - 4">;
-        {show_title && (
-          <div className="text - center mb - 16">;
-            <GradientHeading>{t ('home.categories_title')}</GradientHeading>;
-            <p className="text - zion - slate - light text - lg mt - 4 max - w-2xl mx - auto">;
-              {t ('home.categories_subtitle')}
-            </p>;
-          </div>)}
-        <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
-          {display_categories.map ((category, ) => (
-            <Link;
-              key = {category.id, }
-              href = {category.link || '#', }
-              className="group block rounded - lg focus:outline - none focus:ring - 2 focus:ring - zion - cyan";
-            >;
-              <div className="rounded - lg overflow - hidden h - full border border - zion - blue - light bg - zion - blue - dark p - 6 transition - all duration - 300 group - hover:border - zion - purple / 50 group - focus:border - zion - purple / 50 hover:translate - y-[-5px] group - hover:shadow - lg">;
-                <div className={`rounded - full w - 16 h - 16 bg - gradient - to - br ${category.color} flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300`}>;
-                  <div className="text - white">;
-                    {category.icon}
-                  </div>;
-                </div>;
-                <h3 className="text - white text - xl font - bold mb - 2">{category.title}</h3>;
-                <p className="text - zion - slate - light">{category.description}</p>;
-              </div>;
-            </Link>))}
-        </div>;
-        {/* Special services section with translations */}
-        <div className="mt - 8">;
-          <h3 className="text - center text - xl font - bold text - white mb - 6">{t ('home.featured_services')}</h3>;
-          <div className="flex flex - wrap justify - center gap - 4">;
-            {getSpecialServices (t).map ((service, ) => (
-              <Link;
-                key = {service.title, }
-                href = {service.link, }
-                className="px - 6 py - 3 bg - zion - blue - light hover:bg - zion - blue - dark border border - zion - purple / 20 hover:border - zion - purple / 50 rounded - full text - zion - cyan transition - all duration - 300";
-              >;
-                {service.title}
-              </Link>            ))}
-          </div>;
-        </div>;
-        <div className="mt - 12 flex justify - center">;
-          <Link;
-            href="/categories / all";
-            className="text - zion - cyan border - b border - zion - cyan hover:border - zion - cyan - dark transition - colors";
-          >;
-            {t ('home.view_all_categories')}
-          </Link>;
-        </div>;
-      </div>;
-    </section>);
-  switch (icon_name) {
-}
-const getSpecialServices = (t: any) =>: any [ {
-  title: t ('categories.it onsite services');
-link: "/it - onsite - services";
-}];
-interface CategoriesSectionProps {
-  show_title?: boolean;
-class_name?: string;
-style?: React.CSSProperties;
-categories?: CategoryType[], //Accept categories as a prop;
-}export /**
- * CategoriesSection - Function description
- */
-function CategoriesSection() {
-  const {
-  t;
-}= use_translation ();
-const default_categories = getDefaultCategories (t);
-//Use fetched_categories if provided, otherwise fallback to default_categories const display_categories = fetched_categories && fetched_categories.length > 0 ? fetched_categories.map (cat => ({
-  id: cat.id;";
-title: cat.name,  //Map name to title description: cat.description || "No description available.";
-icon: get_icon (cat.icon_name), //Get icon component link: cat.link || `/category/$ {
-  cat.id ";
-}`, //Construct link if not provided //Assign a default color or implement logic to assign colors color: default_categories.find (dc => dc.id === cat.id) ?.color || "from - gray - 500 to - gray - 600";
-}) ) : default_categories.map (cat => ({
-  ...cat;
-title: cat.name;
-icon: get_icon (cat.icon_name);
-}) );
-//If fetched_categories is an empty array, and we want to show nothing: // Check condition
-if ( {) {
-  $2
-}
-}> <div className="container mx - auto px - 4" > <h2 className="text - 3xl font - semibold text - white mb - 4" > {';
-  t ('home.no categories title') ";
-}</h2> <p className="text - zion - slate - light text - lg mb - 2" > {';
-  t ('home.no categories desc') ";
-}</p> <p className="text - zion - slate - light text - md" > {';
-  t ('home.no categories support');
-}return (</p> </div>);
-}</div> </Link>) );
-}</div> > {
-  service.title;
-}</Link>) ) ";
-}</div> </div> <div className="mt - 12 flex justify - center" > <Link href="/categories / all" className="text - zion - cyan border - b border - zion - cyan hover:border - zion - cyan - dark transition - colors" > {';
-  t ('home.view all categories');
-}</Link> </div> </div> </section>);
-}'"}
 }
 ;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

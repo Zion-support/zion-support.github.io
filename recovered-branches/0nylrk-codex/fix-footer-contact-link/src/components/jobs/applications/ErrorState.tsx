@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card";
@@ -29,6 +30,8 @@ interface ErrorStateProps {;
 
 export function ErrorState(): any ({ error }: ErrorStateProps) {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Card className="border-red-200">;
       <CardContent className="p-6 text-center">;
@@ -58,6 +61,7 @@ function ErrorState() {
       </CardContent>;
     </Card>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 }
 =======
   return (
@@ -96,3 +100,6 @@ export function ErrorState({ error }: ErrorStateProps) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

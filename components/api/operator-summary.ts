@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default async function handler(
@@ -28,6 +29,8 @@ export default async function handler(
         ?.value || 0;
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     const summary = [
       `Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`
       `DAO engagement at ${voters}% voter participation with active delegates`
@@ -36,15 +39,9 @@ export default async function handler(
       `Treasury stable and contributors earning consistently across regions`
     ];
 
-
   } catch (e) {
-<<<<<<< HEAD
     res && res.status(200).json({ summary: [], error: 'Failed to compute summary' });
   }
-
-}
-
-=======
 ;
 export default async /**
  * handler - Function description
@@ -77,7 +74,5 @@ function handler() {
     res.status (200).json ({ summary, timestamp: new Date ().toISOString () });
   } catch (e) {
     res.status (200).json ({ summary: [], error: 'Failed to compute summary' });
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

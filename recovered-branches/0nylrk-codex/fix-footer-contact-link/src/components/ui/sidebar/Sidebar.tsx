@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -21,10 +22,13 @@ import { cn } from "@/lib/utils",
 import {cn} from "@/lib/utils";
 interface SidebarProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   className?: string;
   children?: React && React.ReactNode;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
+<<<<<<< HEAD
 
 
 export function Sidebar(): any ({ className, children, ...props }: SidebarProps) {;
@@ -67,14 +71,12 @@ export function Sidebar({ className, children, ...props }: SidebarProps) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+        className
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       )}
       {...props}>;
       {children}
-
-    </div>;
-  );
-}
-
 =======
 import React from './react';
 import { cn } from '@/lib / utils';

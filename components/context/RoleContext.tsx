@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, {
@@ -31,6 +32,8 @@ import React, {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, {;
   createContext,;
   useContext,;
@@ -40,11 +43,17 @@ import React, {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'react';
 export type UserRole = 'client' | 'talent';
+
 type RoleContextValue = {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   role: UserRole;
   setRole: (role: UserRole) => void;}
 const RoleContext = createContext<RoleContextValue | undefined>(undefined);
+export type UserRole = 'client' | 'talent';
+;
+type RoleContextValue = {
 
+<<<<<<< HEAD
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 <<<<<<< HEAD
   children
@@ -55,26 +64,18 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({;
+  children,;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }) => {  const [role, setRole] = useState<UserRole>('client');
-  useEffect(() => {
-=======
-=======
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
-  create_context,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+
+  useEffect(() => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    try {import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 export type UserRole = 'client' | 'talent';
-;
-type RoleContextValue = {
-  role: UserRole;
-  set_role: (role: UserRole) => void;}
-;
-const RoleContext = create_context < RoleContextValue | undefined>(undefined);
-;
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -125,42 +126,27 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  children
+}) => {export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
     } catch {}
   }, []);
+
+  useEffect(() => {;
+    try {;
+      if (typeof window !== 'undefined') {;
+        window && window.localStorage.setItem('zion_user_role', role);      }        window && window.localStorage.setItem('zion_user_role', role);
+=======
   useEffect(() => {
     try {
       if (typeof window !== 'undefined') {
-
-
-type RoleContextValue = {;
-  role: UserRole;
-  setRole: (role: UserRole) => void;  role: UserRole,;
-  setRole: (role: UserRole) => void;
-};
-const RoleContext = createContext<RoleContextValue | undefined>(undefined);
-export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({;
-  children,;
-}) => {export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({ children }) => {;
-  const [role, setRole] = useState<UserRole>('client');
-  useEffect(() => {;
-    try {;
-      const saved =;
-        typeof window !== 'undefined';
-          ? window && window.localStorage.getItem('zion_user_role');
-          : null;
-      if (saved === 'client' || saved === 'talent') {;
-        setRole(saved);      }      const saved = typeof window !== 'undefined' ? window && window.localStorage.getItem('zion_user_role') : null;
-      if (saved === 'client' || saved === 'talent') {;
-        setRole(saved);
-
-      }
-    } catch {}
-  }, []);
-
-
-
+        window.localStorage.setItem('zion_user_role', role)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 =======
 
         window.localStorage.setItem('zion_user_role', role);      }
@@ -171,10 +157,13 @@ export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
     } catch {}
   }, [role]);
   const value = useMemo(() => ({ role, setRole }), [role]);
+<<<<<<< HEAD
 <<<<<<< HEAD
   return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>;};  return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>
 }
@@ -185,9 +174,14 @@ export function useRole(): RoleContextValue {
   return <RoleContext && RoleContext.Provider value={value}>{children}</RoleContext && RoleContext.Provider>;};  return <RoleContext && RoleContext.Provider value={value}>{children}</RoleContext && RoleContext.Provider>;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 };
+
 export function useRole(): any (): RoleContextValue {;
   const ctx = useContext(RoleContext);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -199,11 +193,19 @@ export function useRole(): any (): RoleContextValue {;
 <<<<<<< HEAD
   return ctx;
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  if (!ctx) throw new Error('useRole must be used within RoleProvider');
+  return ctx;  return ctx;
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 =======
   return ctx
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
   const [role, set_role] = useState < UserRole>('client');
 ;
   useEffect (() => {

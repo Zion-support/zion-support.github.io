@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   FormField
   FormItem
@@ -79,12 +80,13 @@ interface PersonalInfoFieldsProps {;
 
 export function PersonalInfoFields(): any ({ control }: PersonalInfoFieldsProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
       <FormField
         control={control}
         name="fullName"
-
 export /**
  * PersonalInfoFields - Function description
  */
@@ -97,11 +99,11 @@ function PersonalInfoFields() {
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Full Name</FormLabel>;
-
             <FormControl>;
               <Input placeholder="John Doe" {...field} />;
             </FormControl>;
             <FormMessage />;
+<<<<<<< HEAD
 
         render={({ field }) => (
           <FormItem>
@@ -122,13 +124,14 @@ function PersonalInfoFields() {
       />;
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <FormField
         control={control}
         name="title"
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Professional Title</FormLabel>;
-=======
           </FormItem>)}
       />;
       <FormField;
@@ -137,15 +140,10 @@ function PersonalInfoFields() {
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Professional Title</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <FormControl>;
               <Input placeholder="Senior Software Engineer" {...field} />;
             </FormControl>;
             <FormMessage />;
-
-      />;
-
-
       <FormField
         control={control}
         name="email"
@@ -158,10 +156,6 @@ function PersonalInfoFields() {
             <FormMessage />;
           </FormItem>;
         )}
-
-      />;
-
-
       <FormField
         control={control}
         name="phone"
@@ -169,7 +163,15 @@ function PersonalInfoFields() {
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Phone</FormLabel>;
+<<<<<<< HEAD
 =======
+=======
+          </FormItem>)}
+      />;
+      <FormField;
+        control={control}
+        name="email";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         render={({ field }) => (
 <<<<<<< HEAD
           <FormItem>
@@ -201,6 +203,7 @@ function PersonalInfoFields() {
         control={control}
         name="email";
         render={({ field }) => (
+<<<<<<< HEAD
           <FormItem>
             <FormLabel>Phone</FormLabel>
             <FormControl>
@@ -221,3 +224,15 @@ function PersonalInfoFields() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          <FormItem>;
+            <FormLabel > Phone</FormLabel>;
+            <FormControl>;
+              <Input placeholder="+1 234 567 8900" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>)}
+      />;
+    </div>);
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

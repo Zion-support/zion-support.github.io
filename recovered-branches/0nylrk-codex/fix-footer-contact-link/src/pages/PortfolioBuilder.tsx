@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -122,6 +123,8 @@ export default function PortfolioBuilder() {;
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import {useState} from 'react';
 import {AppHeader} from '@/layout / AppHeader';

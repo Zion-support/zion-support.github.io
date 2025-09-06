@@ -1,5 +1,6 @@
 // Stub pricing analytics utility - placeholder for missing functionality;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const trackPricingRequest = async (data: any) => {
   // Placeholder implementation;
   return { success: true }
@@ -9,6 +10,8 @@ export const trackPricingRequest = async (data: any) => {
 },
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export const getPricingMetrics = async () => {
   // Placeholder implementation;
   return { metrics: {}, success: true }
@@ -16,9 +19,8 @@ export const getPricingMetrics = async () => {
 <<<<<<< HEAD
 =======
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const trackPricingRequest = async (data: any) => {;
@@ -46,6 +48,13 @@ export const getPricingMetrics = async () => {;
 };
 =======
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const trackPricingRequest = async (data: any) => {;
+  // Placeholder implementation;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

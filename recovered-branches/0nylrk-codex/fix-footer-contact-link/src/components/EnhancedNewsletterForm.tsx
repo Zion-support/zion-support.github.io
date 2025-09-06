@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import React from 'react';
@@ -6,6 +7,8 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { useState } from "react";
 import { Mail } from "lucide-react";
 export function EnhancedNewsletterForm() {;
@@ -24,15 +27,11 @@ import { Mail } from "lucide-react",
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setIsSubmitting(true);
-
-
-    // Simulate API call;
-    setTimeout(() => {;
-
       setIsSubmitting(false);
       (setIsSubmitted(true), setEmail(""));
     }, 1000);
   }
+<<<<<<< HEAD
 =======
 
 
@@ -130,26 +129,19 @@ function EnhancedNewsletterForm() {
         <div>;
           <h4 className="text - lg font - bold text - white">Stay Updated</h4>;
           <p className="text - zion - slate - light text - sm">;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
             Get exclusive offers, trending AI news, and early access to best;
             deals;
           </p>;
         </div>;
       </div>;
-
-        <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
-
           <Input
             type="email"
             placeholder="Enter your email"
             className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
             value={email}
-
-
-      <div className="mt-4 flex items-center text-xs text-zion-slate-light">;
-        <div className="flex -space-x-1 mr-2">;
-          {[...Array(3)].map((_, i) => (;
-
             <div
               key={i}
               className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">;
@@ -161,7 +153,6 @@ function EnhancedNewsletterForm() {
       </div>;
     </div>;
   );
-=======
       {is_submitted ? (
         <div className="text - center p - 4 rounded - lg bg - zion - purple / 20 border border - zion - purple / 40">;
           <p className="text - white font - medium">Thank you for subscribing!</p>;
@@ -204,8 +195,8 @@ function EnhancedNewsletterForm() {
         <span > Join 10, 000+ tech professionals who already subscribe</span>;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+<<<<<<< HEAD
 =======
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
             required
@@ -313,3 +304,5 @@ export function EnhancedNewsletterForm() {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

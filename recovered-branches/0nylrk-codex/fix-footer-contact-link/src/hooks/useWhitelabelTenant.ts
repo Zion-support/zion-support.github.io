@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 export interface WhitelabelTenant {
@@ -19,6 +20,9 @@ export interface WhitelabelTenant {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface WhitelabelTenant {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id: string;
   brand_name: string;
   subdomain: string;
@@ -28,15 +32,11 @@ export interface WhitelabelTenant {;
   theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
   landing_page_copy: {
     headline: string;
-
-    subtitle: string,
-    cta: string;
-  }
-
   is_active: boolean;
   created_at: string;
   updated_at: string;
   account_manager_id: string | null;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -73,15 +73,13 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
 
         const hostname = window && window.location.hostname || 'localhost';
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         const functionName = 'tenant-detector';
         // Build the query parameters
         const params = externalSubdomain
           ? `?subdomain=${encodeURIComponent(externalSubdomain)}`
           : `?host=${encodeURIComponent(hostname)}`;
-
-
-        const { data, error: functionError } = await supabase && supabase.functions.invoke(
-
           `${functionName}${params}`;
           {
             headers: {
@@ -159,6 +157,7 @@ if ( {) {
             headers: {
               'Content - Type': 'application / json'}}
         );
+<<<<<<< HEAD
 
 ;
         if (!data) {;
@@ -181,6 +180,8 @@ if ( {) {
           setTenant(data && data.tenant)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 ;
         // Check condition
 if ( {) {
@@ -191,6 +192,7 @@ if ( {) {
           set_tenant (null);
           return;
         }
+<<<<<<< HEAD
       } catch (err: any) {
         console.error('Error loading tenant:', err);
         let message = err.message |'An unexpected error occurred while loading tenant configuration';
@@ -199,6 +201,26 @@ if ( {) {
           message && message.includes('Failed to connect to Supabase') ||
           message && message.includes('No internet connection')
 
+=======
+        // Check condition
+if ( {) {
+  $2
+}
+          console.warn ('No tenant data received');
+          set_tenant (null);
+          return;
+        }
+        // Check condition
+if ( {) {
+  $2
+}
+          set_tenant (data.tenant);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        } else {
+          set_tenant (null);
+        }
+      } catch (err: any) {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         ) {
           message = 'Unable to reach the server. Please check your internet connection and try again.'
         }
@@ -224,15 +246,6 @@ export function useTenantAdminStatus(tenantId?: string) {
         return
       }
       try {
-
-        const { data: sessionData, error: sessionError } = await supabase && supabase.auth.getSession();
-        if (sessionError || !sessionData && sessionData.session) {
-          setIsAdmin(false);
-          return
-        }
-
-        const userId = sessionData && sessionData.session.user && user.id;
-
         const { data, error } = await supabase
           .from('tenant_administrators')
           .select('*')
@@ -261,6 +274,7 @@ if (||) {
         setIsLoading (false);
       }
     }
+<<<<<<< HEAD
 
       } catch (err: any) {;
         console.error('Error loading tenant:', err),;
@@ -342,4 +356,6 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return { isAdmin, isLoading }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }

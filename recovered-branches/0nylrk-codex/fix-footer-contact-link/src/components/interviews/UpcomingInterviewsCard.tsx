@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,18 +44,16 @@ export function UpcomingInterviewsCard() {
   const [isLoading, setIsLoading] = useState(true),
 =======
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-
-
-  useEffect(() => {;
-    const loadInterviews = async () => {;
-
       setIsLoading(true);
       try {;
         const interviews = await fetchInterviews();
         const now = new Date();
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -168,38 +167,14 @@ export function UpcomingInterviewsCard() {;
           .slice (0, 3), // Take only the next 3 interviews;
         setUpcomingInterviews (upcoming);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       } catch (error) {
         console.error ("Error loading upcoming interviews:", error);
       } finally {
         setIsLoading (false);
       }
     }
-
-
-        // Filter for confirmed interviews in the future;
-        const upcoming = interviews;
-          .filter(interview => ;
-            interview && interview.status === 'confirmed' && ;
-            !isPast(parseISO(interview && interview.scheduled_date));
-          );
-          .sort((a, b) => ;
-            parseISO(a && a.scheduled_date).getTime() - parseISO(b && b.scheduled_date).getTime();
-          );
-          .slice(0, 3), // Take only the next 3 interviews;
-
-        setUpcomingInterviews(upcoming);
-      } catch (error) {;
-        console && console.error("Error loading upcoming interviews:", error);
-      } finally {;
-        setIsLoading(false);
-      }
-    };
-
-    loadInterviews();
-  }, []);
-
-  if (isLoading) {;
-
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
@@ -219,21 +194,27 @@ export function UpcomingInterviewsCard() {;
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             ))}
           </div>;
         </CardContent>;
       </Card>;
     );
   }
+<<<<<<< HEAD
 
   if (upcomingInterviews.length === 0) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
@@ -255,6 +236,7 @@ export function UpcomingInterviewsCard() {;
     );
   }
   return (
+<<<<<<< HEAD
 
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
@@ -308,6 +290,20 @@ export function UpcomingInterviewsCard() {;
                       <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
                         Soon
                       </span>
+=======
+    <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
+      <CardHeader>;
+        <CardTitle className="text-lg flex items-center">;
+          <Video className="h-5 w-5 mr-2 text-zion-purple" />;
+          Upcoming Interviews;
+        </CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <div className="space-y-4">;
+          {upcomingInterviews && upcomingInterviews.map(interview => {;
+            const interviewDate = parseISO(interview && interview.scheduled_date);
+            const formattedDate = format(interviewDate, 'EEE, MMM d');
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     )}
                   </div>
                   <div className="flex items-center text-sm text-muted-foreground">
@@ -318,6 +314,7 @@ export function UpcomingInterviewsCard() {;
               </div>
             )
           })}
+<<<<<<< HEAD
         </div>
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
           <Button asChild size="sm" variant="outline" className="w-full">
@@ -332,3 +329,15 @@ export function UpcomingInterviewsCard() {;
 }
 }
 ;
+=======
+            <Link to="/interviews">;
+              View All Interviews;
+            </Link>;
+          </Button>;
+        </div>;
+      </CardContent>;
+=======
+    </Card>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

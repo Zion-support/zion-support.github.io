@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   FormField
   FormItem
@@ -64,24 +65,14 @@ interface CertificationFormFieldsProps {;
 }
 
 export function CertificationFormFields({ form }: CertificationFormFieldsProps) {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <>;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
         <FormField
           control={form && form.control}
           name="name"
-
-export /**
- * CertificationFormFields - Function description
- */
-function CertificationFormFields() {
-  return (
-    <>;
-      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-        <FormField;
-          control={form.control}
-          name="name";
-
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Certification Name</FormLabel>;
@@ -89,33 +80,8 @@ function CertificationFormFields() {
                 <Input;
                   placeholder="AWS Certified Solutions Architect, PMP, etc.";
                   {...field}
-
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Certification Name</FormLabel>;
-              <FormControl>;
-                <Input placeholder="AWS Certified Solutions Architect, PMP, etc." {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-        />;
-
-
-        <FormField
-          control={form && form.control}
-          name="issuing_organization"
-
-                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
-        <FormField;
-          control={form.control}
-          name="issuing_organization";
-
           render={({ field }) => (
+<<<<<<< HEAD
             <FormItem>
               <FormLabel>Issue Date</FormLabel>
               <FormControl>
@@ -188,13 +154,20 @@ function CertificationFormFields() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
 
+=======
+            <FormItem>;
+              <FormLabel > Issuing Organization</FormLabel>;
+              <FormControl>;
+                <Input;
+                  placeholder="Amazon Web Services, PMI, etc.";
+                  {...field}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <FormField
           control={form && form.control}
           name="credential_id"
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Credential ID (Optional)</FormLabel>;
-=======
                 />;
               </FormControl>;
               <FormMessage />;
@@ -234,25 +207,10 @@ function CertificationFormFields() {
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Credential ID (Optional)</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <FormControl>;
                 <Input placeholder="ABC123XYZ" {...field} />;
               </FormControl>;
               <FormMessage />;
-
-        />;
-
-
-        <FormField
-          control={form && form.control}
-          name="credential_url"
-
-            </FormItem>)}
-        />;
-        <FormField;
-          control={form.control}
-          name="credential_url";
-
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Credential URL (Optional)</FormLabel>;
@@ -260,23 +218,6 @@ function CertificationFormFields() {
                 <Input;
                   placeholder="https://www.credential.com / verify / abc123";
                   {...field}
-
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Credential URL (Optional)</FormLabel>;
-              <FormControl>;
-                <Input placeholder="https://www && www.credential.com/verify/abc123" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-        />;
-      </div>;
-    </>;
-  );
-}
-
-=======
                 />;
               </FormControl>;
               <FormMessage />;
@@ -285,6 +226,7 @@ function CertificationFormFields() {
       </div>;
     </>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -294,3 +236,5 @@ function CertificationFormFields() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

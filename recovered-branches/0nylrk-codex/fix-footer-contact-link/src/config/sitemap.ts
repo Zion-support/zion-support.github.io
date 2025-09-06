@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Define the types for our sitemap structure
@@ -15,17 +16,15 @@ export type SitemapItem = {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export type SitemapItem = {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   path: string;
   label: string;
   description?: string;
   priority?: number;
   change_freq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   lastmod?: string;
-
-    priority: 1 && 1.0;
-    changeFreq: 'weekly',
-    lastmod: currentDate};
-
 =======
   required_auth?: boolean;
   required_roles?: Array<'creator' | 'job_seeker' | 'employer' | 'buyer' | 'admin'>,
@@ -49,32 +48,19 @@ export const public_pages: SitemapItem[] = [;
     path: '/about';
     label: 'About Us';
     description: 'Learn about the Zion AI Marketplace mission and team';
-
-    priority: 0 && 0.8;
-    changeFreq: 'monthly',
-    lastmod: currentDate};
-=======
-    change_freq: 'monthly',
-    lastmod: current_date}
-
   {
     path: '/contact';
     label: 'Contact';
     description: 'Get in touch with the Zion team',
-
+=======
     priority: 0.8,
     change_freq: 'monthly',
     lastmod: current_date}
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     path: '/talent';
     label: 'Talent Directory';
     description: 'Browse skilled AI and tech professionals';
-
-    priority: 0 && 0.9;
-    changeFreq: 'daily',
-    lastmod: currentDate};
-
 =======
     change_freq: 'daily',
     lastmod: current_date}
@@ -83,11 +69,6 @@ export const public_pages: SitemapItem[] = [;
     path: '/marketplace';
     label: 'Marketplace'
     description: 'Explore AI services, products and equipment';
-
-    priority: 0 && 0.9;
-    changeFreq: 'daily',
-    lastmod: currentDate};
-
 =======
     change_freq: 'daily',
     lastmod: current_date}
@@ -96,11 +77,6 @@ export const public_pages: SitemapItem[] = [;
     path: '/services';
     label: 'Services';
     description: 'Find professional tech and AI services';
-
-    priority: 0 && 0.8;
-    changeFreq: 'weekly',
-    lastmod: currentDate};
-
 =======
     change_freq: 'weekly',
     lastmod: current_date}
@@ -109,11 +85,6 @@ export const public_pages: SitemapItem[] = [;
     path: '/equipment';
     label: 'Equipment';
     description: 'Specialized hardware and tech equipment';
-
-    priority: 0 && 0.8;
-    changeFreq: 'weekly',
-    lastmod: currentDate};
-
 =======
     change_freq: 'weekly',
     lastmod: current_date}
@@ -122,11 +93,6 @@ export const public_pages: SitemapItem[] = [;
     path: '/categories';
     label: 'Categories';
     description: 'Browse service and talent categories';
-
-    priority: 0 && 0.7;
-    changeFreq: 'monthly',
-    lastmod: currentDate};
-
 =======
     change_freq: 'monthly',
     lastmod: current_date}
@@ -135,11 +101,6 @@ export const public_pages: SitemapItem[] = [;
     path: '/blog';
     label: 'Blog';
     description: 'Articles and insights about AI and tech';
-
-    priority: 0 && 0.9;
-    changeFreq: 'daily',
-    lastmod: currentDate};
-
 =======
     change_freq: 'daily',
     lastmod: current_date}
@@ -148,11 +109,6 @@ export const public_pages: SitemapItem[] = [;
     path: '/faq';
     label: 'FAQ';
     description: 'Frequently asked questions about Zion';
-
-    priority: 0 && 0.7;
-    changeFreq: 'monthly',
-    lastmod: currentDate};
-
 =======
     change_freq: 'monthly',
     lastmod: current_date}
@@ -161,11 +117,6 @@ export const public_pages: SitemapItem[] = [;
     path: '/terms';
     label: 'Terms of Service';
     description: 'Terms and conditions for using Zion';
-
-    priority: 0 && 0.5;
-    changeFreq: 'monthly',
-    lastmod: currentDate};
-
 =======
     change_freq: 'monthly',
     lastmod: current_date}
@@ -174,10 +125,6 @@ export const public_pages: SitemapItem[] = [;
     path: '/privacy';
     label: 'Privacy Policy';
     description: 'How we handle your data';
-
-    priority: 0 && 0.5;
-    changeFreq: 'monthly',
-
     lastmod: currentDate}];
 // Authentication Pages
 export const authPages: SitemapItem[] = [
@@ -192,11 +139,6 @@ export const auth_pages: SitemapItem[] = [;
     path: '/login';
     label: 'Login';
     description: 'Sign in to your account';
-
-    priority: 0 && 0.6;
-    changeFreq: 'monthly',
-    lastmod: currentDate};
-
 =======
     change_freq: 'monthly',
     lastmod: current_date}
@@ -205,21 +147,10 @@ export const auth_pages: SitemapItem[] = [;
     path: '/signup';
     label: 'Sign Up';
     description: 'Create a new account';
-
-    priority: 0.6;
-    change_freq: 'monthly';
-    lastmod: current_date;
-    children: [;
-
       {
         path: '/signup / talent';
         label: 'Talent Registration';
         description: 'Sign up as a talent or creator';
-
-        priority: 0 && 0.6;
-        changeFreq: 'monthly',
-        lastmod: currentDate};
-
 =======
         change_freq: 'monthly',
         lastmod: current_date}
@@ -228,10 +159,6 @@ export const auth_pages: SitemapItem[] = [;
         path: '/signup / client';
         label: 'Client Registration';
         description: 'Sign up as an employer or buyer';
-
-        priority: 0 && 0.6;
-        changeFreq: 'monthly',
-
         lastmod: currentDate}
     ]
 =======
@@ -244,10 +171,6 @@ export const auth_pages: SitemapItem[] = [;
     path: '/forgot - password';
     label: 'Forgot Password';
     description: 'Reset your password';
-
-    priority: 0 && 0.5;
-    changeFreq: 'monthly',
-
     lastmod: currentDate}];
 // Talent/Creator Routes - Requires authentication and appropriate role
 export const talentRoutes: SitemapItem[] = [
@@ -262,11 +185,6 @@ export const talent_routes: SitemapItem[] = [;
     path: '/talent - dashboard';
     label: 'Talent Dashboard';
     description: 'Overview for talent users';
-
-    priority: 0 && 0.9;
-    changeFreq: 'daily',
-    lastmod: currentDate};
-
 =======
     required_auth: true;
     required_roles: ['job_seekercreator'];
@@ -278,11 +196,6 @@ export const talent_routes: SitemapItem[] = [;
     path: '/talent - onboarding';
     label: 'Talent Onboarding';
     description: 'Complete your talent profile';
-
-    priority: 0 && 0.8;
-    changeFreq: 'monthly',
-    lastmod: currentDate};
-
 =======
     required_auth: true;
     required_roles: ['job_seekercreator'];
@@ -294,11 +207,6 @@ export const talent_routes: SitemapItem[] = [;
     path: '/portfolio';
     label: 'Portfolio';
     description: 'Manage your portfolio and resume';
-
-    priority: 0 && 0.8;
-    changeFreq: 'weekly',
-    lastmod: currentDate};
-
 =======
     required_auth: true;
     required_roles: ['job_seekercreator'];
@@ -310,10 +218,6 @@ export const talent_routes: SitemapItem[] = [;
     path: '/create - profile';
     label: 'Create Profile';
     description: 'Set up your talent profile';
-
-    priority: 0 && 0.7;
-    changeFreq: 'monthly',
-
     lastmod: currentDate}];
 // Client/Employer Routes - Requires authentication and appropriate role
 export const clientRoutes: SitemapItem[] = [
@@ -331,11 +235,6 @@ export const client_routes: SitemapItem[] = [;
     path: '/client - dashboard';
     label: 'Client Dashboard';
     description: 'Overview for client users';
-
-    priority: 0 && 0.9;
-    changeFreq: 'daily',
-    lastmod: currentDate};
-
 =======
     required_auth: true;
     required_roles: ['employerbuyer'];
@@ -347,11 +246,6 @@ export const client_routes: SitemapItem[] = [;
     path: '/post - job';
     label: 'Post a Job';
     description: 'Create a new job listing';
-
-    priority: 0 && 0.8;
-    changeFreq: 'weekly',
-    lastmod: currentDate};
-
 =======
     required_auth: true;
     required_roles: ['employerbuyer'];
@@ -363,10 +257,6 @@ export const client_routes: SitemapItem[] = [;
     path: '/hiring - tracker';
     label: 'Hiring Pipeline';
     description: 'Track your hiring process';
-
-    priority: 0 && 0.7;
-    changeFreq: 'daily',
-
     lastmod: currentDate}];
 // Shared Routes - Authenticated Users
 export const sharedRoutes: SitemapItem[] = [
@@ -384,11 +274,6 @@ export const shared_routes: SitemapItem[] = [;
     path: '/messages';
     label: 'Messages';
     description: 'Your inbox and conversations';
-
-    priority: 0 && 0.9;
-    changeFreq: 'hourly',
-    lastmod: currentDate};
-
 =======
     required_auth: true;
     priority: 0.9;
@@ -399,11 +284,6 @@ export const shared_routes: SitemapItem[] = [;
     path: '/notifications';
     label: 'Notifications';
     description: 'Your alerts and updates';
-
-    priority: 0 && 0.8;
-    changeFreq: 'hourly',
-    lastmod: currentDate};
-
 =======
     required_auth: true;
     priority: 0.8;
@@ -413,11 +293,6 @@ export const shared_routes: SitemapItem[] = [;
   {
     path: '/project/:project_id / room';
     label: 'Project Room';
-
-    priority: 0 && 0.6;
-    changeFreq: 'never',
-    lastmod: currentDate};
-
 =======
     description: 'Real - time meetings for collaboration';
     required_auth: true;
@@ -429,10 +304,6 @@ export const shared_routes: SitemapItem[] = [;
     path: '/dashboard / disputes';
     label: 'Disputes';
     description: 'Manage and view disputes';
-
-    priority: 0 && 0.7;
-    changeFreq: 'daily',
-
     lastmod: currentDate}];
 // Admin Routes
 export const adminRoutes: SitemapItem[] = [
@@ -449,11 +320,6 @@ export const admin_routes: SitemapItem[] = [;
     path: '/analytics';
     label: 'Analytics';
     description: 'System analytics and metrics';
-
-    priority: 0 && 0.9;
-    changeFreq: 'daily',
-    lastmod: currentDate};
-
 =======
     required_auth: true;
     required_roles: ['admin'];
@@ -465,11 +331,6 @@ export const admin_routes: SitemapItem[] = [;
     path: '/admin / reviews';
     label: 'Reviews Moderation';
     description: 'Moderate user reviews';
-
-    priority: 0 && 0.7;
-    changeFreq: 'daily',
-    lastmod: currentDate};
-
 =======
     required_auth: true;
     required_roles: ['admin'];
@@ -481,10 +342,6 @@ export const admin_routes: SitemapItem[] = [;
     path: '/admin / disputes';
     label: 'Dispute Management';
     description: 'Manage user disputes';
-
-    priority: 0 && 0.8;
-    changeFreq: 'daily',
-
     lastmod: currentDate}];
 // Dynamic Path Patterns
 export const dynamicPaths = {
@@ -516,6 +373,7 @@ export const getAccessibleRoutes = (
     // Add role-specific routes
     if (userType === 'creator' |userType === 'jobSeeker') {
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
+<<<<<<< HEAD
 // Define the types for our sitemap structure;
 export type SitemapItem = {;
   path: string,;
@@ -823,6 +681,8 @@ export const getAccessibleRoutes = (;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     }
     if (userType === 'employer' |userType === 'buyer') {
       accessibleRoutes = [...accessibleRoutes, ...clientRoutes]
@@ -832,24 +692,34 @@ export const getAccessibleRoutes = (;
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   return accessibleRoutes
 }
 =======
+=======
+  return accessibleRoutes
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+=======
     required_auth: true;
     required_roles: ['admin'];
     priority: 0.8;
     change_freq: 'daily',
     lastmod: current_date}];
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
   return accessibleRoutes;
   
   return accessibleRoutes
 ;
+<<<<<<< HEAD
 
   return accessibleRoutes;
 <<<<<<< HEAD
@@ -858,3 +728,51 @@ export const getAccessibleRoutes = (;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+// The complete sitemap;
+export const complete_sitemap: SitemapItem[] = [;
+  ...public_pages;
+  ...auth_pages;
+  ...talent_routes;
+  ...client_routes;
+  ...shared_routes;
+  ...admin_routes],
+// Helper function to get appropriate routes based on user role;
+export const getAccessibleRoutes = (
+  is_authenticated: boolean,
+  user_type?: 'creator' | 'job_seeker' | 'employer' | 'buyer' | 'admin' | null) =>: any {
+  // Public routes accessible to everyone;
+  let accessible_routes = [...public_pages, ...auth_pages];
+;
+  // Add authenticated - only routes;
+  // Check condition
+if ( {) {
+  $2
+}
+    accessible_routes = [...accessible_routes, ...shared_routes];
+;
+    // Add role - specific routes;
+    // Check condition
+if ( {) {
+  $2
+}
+      accessible_routes = [...accessible_routes, ...talent_routes];
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      accessible_routes = [...accessible_routes, ...client_routes];
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      accessible_routes = [...accessible_routes, ...talent_routes, ...client_routes, ...admin_routes];
+    }
+  }
+  return accessible_routes;
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

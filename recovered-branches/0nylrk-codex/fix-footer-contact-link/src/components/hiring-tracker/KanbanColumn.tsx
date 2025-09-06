@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Droppable} from "react-beautiful-dnd";
@@ -52,10 +53,13 @@ export function KanbanColumn(): any ({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function KanbanColumn({;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   id;
   title;
   description;
   applications;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function KanbanColumn({
   id,
@@ -82,6 +86,8 @@ export function KanbanColumn({
   const getBadgeVariant = (columnId: string) => {;
     switch (columnId) {;
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import { Droppable } from './react - beautiful - dnd';
 import { JobApplication } from '@/types / jobs';
@@ -111,6 +117,7 @@ function KanbanColumn() {
       case "hired":;
         return "success";
 
+<<<<<<< HEAD
       case "new": return "secondary",
       case "shortlisted":
         return "outline",
@@ -240,6 +247,21 @@ export function KanbanColumn({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  return (
+    <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>;
+      <CardHeader className="pb-2">;
+        <div className="flex justify-between items-center">;
+          <CardTitle className="text-base">{title}</CardTitle>;
+          <Badge variant={getBadgeVariant(id) as any}>{count}</Badge>;
+        </div>;
+        <p className="text-xs text-muted-foreground">{description}</p>;
+      </CardHeader>;
+      <CardContent className="flex-grow p-3 overflow-y-auto">;
+        <Droppable droppableId={id}>;
+          {(provided) => (;
+            <div
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   key={application.id}
 =======
               ref={provided && provided.innerRef}
@@ -251,6 +273,7 @@ export function KanbanColumn({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   application={application}
                   index={index}
+<<<<<<< HEAD
 
                 />
               ))}
@@ -262,9 +285,12 @@ export function KanbanColumn({;
                     Drag candidates here
                   </p>
                 </div>
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               )}
             </div>
           )}
+<<<<<<< HEAD
         </Droppable>
       </CardContent>
     </Card>
@@ -276,6 +302,9 @@ export function KanbanColumn({;
   );
 }
 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 />))}
               {provided.placeholder}
               {applications.length === 0 && (
@@ -289,6 +318,10 @@ export function KanbanColumn({;
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 
 =======
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

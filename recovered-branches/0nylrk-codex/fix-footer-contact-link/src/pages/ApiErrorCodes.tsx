@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -710,14 +711,33 @@ export function ApiErrorCodes() {;
         <CodeBlock code={rateLimitExample} language="json" showLineNumbers={true} />;
         <h2 > Rate Limits</h2>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  "error": "validation_error";
+  "message": "The request was invalid";
+  "details": [;
+    {;
+      "field": "title";
+    }
+  ];
+}`;
+  const rateLimitExample = `{
+=======
+
+  const rateLimitExample = `{;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  "error": "rate_limit_exceeded";
+  "message": "Rate limit exceeded. Try again in 30 seconds";
+  "retry_after": 30;
+}`;
+    }
+  ];
+  return (
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <p>;
           To ensure fair usage and protect the API from abuse, we enforce rate limits on all endpoints.;
           The limits are based on the number of requests per minute per API key.;
         </p>;
-
-;
-
-
+}
 export default ApiErrorCodes;
 
 =======

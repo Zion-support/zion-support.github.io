@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from "react";
@@ -83,3 +84,17 @@ function useAuthState() {
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
+=======
+  return {
+=======
+
+  return {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    user;
+    set_user;
+    is_loading;
+    setIsLoading;
+    setOnboardingStep;
+  }
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

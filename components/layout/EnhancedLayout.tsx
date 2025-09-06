@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react',
 import EnhancedNavigation from './EnhancedNavigation',
 import EnhancedFooter from './EnhancedFooter',
@@ -57,6 +58,8 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }, []);
 
   return (
@@ -75,6 +78,7 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
       </header>;
       <main id='main' className='flex-1 container mx-auto px-4 py-6'>;
         {children}
+<<<<<<< HEAD
       </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>
       <footer>
         <EnhancedFooter />
@@ -122,29 +126,20 @@ export type EnhancedLayoutProps = {
 =======
 
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>;
       <footer>;
         <EnhancedFooter />;
       </footer>;
     </div>;
   );
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 }
   );
-=======
-
-
-  );
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-=======
   );
 }
-
     <div className="min - h-screen flex flex - col">;
         <EnhancedNavigation />;
         <LanguageSwitchPrompt />;
@@ -159,6 +154,7 @@ export type EnhancedLayoutProps = {
 }
 }
   );
+<<<<<<< HEAD
 }
 
 =======
@@ -166,3 +162,5 @@ export type EnhancedLayoutProps = {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

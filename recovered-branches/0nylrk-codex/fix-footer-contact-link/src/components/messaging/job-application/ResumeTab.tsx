@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react',
 import React from "react";
@@ -50,29 +51,16 @@ import { Button  } from '@/components / ui / button';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface ResumeTabProps {
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   selectedResumeId?: string | null;
   onSelectResume?: (resume_id: string) => void;
   onResumeSelected?: (resume: ResumeOption) => void;
-
-export function ResumeTab(): any ({;
-  selectedResumeId,;
-  onSelectResume,;
-  onResumeSelected,;
-  onApply,;
-  isSubmitting = false,;
-}: ResumeTabProps) {;
-  const handleResumeSelected = (resume: ResumeOption) => {;
-    if (onResumeSelected) {;
-      onResumeSelected(resume);
-    }
-
-    if (onSelectResume) {;
-      onSelectResume(resume && resume.id);
-
     }
   }
 
   return (
+<<<<<<< HEAD
     <div className="space-y-4">
       <ResumeSelector onResumeSelected={handleResumeSelected} />
       
@@ -125,6 +113,12 @@ export function ResumeTab(): any ({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          )}
+        </div>;
+      )}
+    </div>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   );
 =======
   on_apply?: () => Promise < void>;

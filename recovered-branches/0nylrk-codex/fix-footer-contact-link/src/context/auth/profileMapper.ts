@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { UserProfile } from "@/types/auth";
 import type { UserProfile } from "@/types/auth",
@@ -22,6 +23,16 @@ export interface SupabaseUser {
 export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile {
   return {;
     id: user.id;
+=======
+import type { UserProfile } from "@/types / auth";
+// We cannot rely on the Supabase SDK types here because the project;
+// declares `@supabase / supabase - js` as an untyped external module. Define;
+// a minimal user shape that includes only the properties we actually use;
+// in this file.;
+export interface SupabaseUser {
+  return {
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     email: user.email || "";
     display_name: profile.display_name || "";
     user_type: (profile.user_type as "creator" | "job_seeker" | "employer" | "buyer" | "admin" | null) || null;
@@ -93,6 +104,7 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
     role: profile.user_type // Map user_type to role for backward compatibility;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 ;
@@ -104,3 +116,6 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

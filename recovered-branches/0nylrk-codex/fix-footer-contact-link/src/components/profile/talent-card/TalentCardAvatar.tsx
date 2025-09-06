@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -107,6 +108,13 @@ export function TalentCardAvatar(): any ({ profilePicture, fullName }: TalentCar
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
+=======
+import React from './react';
+import { Avatar, AvatarImage, AvatarFallback  } from '@/components / ui / avatar';
+interface TalentCardAvatarProps {
+  profile_picture?: string;
+  full_name: string;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 export /**
  * TalentCardAvatar - Function description
@@ -122,9 +130,12 @@ function TalentCardAvatar() {
   }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

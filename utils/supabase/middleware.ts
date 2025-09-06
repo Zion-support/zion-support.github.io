@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {const { pathname } = request.nextUrl;
@@ -63,3 +64,5 @@ export const config = {
 ;
 export const config = {;
   matcher: ['/dashboard/dashboard/']};
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

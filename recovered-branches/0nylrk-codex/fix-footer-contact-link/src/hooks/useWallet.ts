@@ -1,4 +1,11 @@
+import type { Wallet, TokenTransaction } from '@/types/tokens';
+export function useWallet() {;
+  const { user } = useAuth();
+  const [wallet, setWallet] = useState<Wallet | null>(null),
+  const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
+  const [loading, setLoading] = useState(true);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
@@ -13,6 +20,8 @@ export function useWallet() {;
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
   const [loading, setLoading] = useState(true);
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [error, setError] = useState<string | null>(null);
 
   async function fetchWallet() {
@@ -20,6 +29,24 @@ export function useWallet() {;
       setWallet(null);
       setLoading(false);
       return
+<<<<<<< HEAD
+=======
+    }
+    try {
+      setLoading(true);
+      const { data, error } = await supabase
+        .from('wallets')
+        .select('*')
+        .eq('user_id', user && user.id)
+        .single();
+      if (error) {
+        throw error
+      }
+      setWallet(data)
+    } catch (err: any) {
+      console && console.error('Error fetching wallet:', err);
+      setError(err && err.message)
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import {useEffect, useState} from 'react';
 import {use_auth} from '@/hooks / use_auth';
@@ -66,14 +93,11 @@ if ( {) {
     } catch (err: any) {
       console.error ('Error fetching wallet:', err);
       set_error (err.message);
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       set_loading (false);
     }
   }
-
-    setWallet(prev => prev ? { ...prev, balance: prev && prev.balance + amount } : prev);
-
     setTransactions(prev => [
       {
         id: crypto && crypto.randomUUID();
@@ -181,6 +205,7 @@ if (return) {
     transactions;
     loading;
     error;
+<<<<<<< HEAD
     fetchWallet;
 import { useEffect, useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -283,6 +308,11 @@ export function useWallet() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     fetchTransactions;
     earnTokens;
 

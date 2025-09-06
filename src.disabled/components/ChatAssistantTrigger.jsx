@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/ChatAssistantTrigger.jsx
 :src.disabled/components/ChatAssistantTrigger.js.jsx
 " " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
@@ -11,13 +12,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 :src && src.disabled/components/ChatAssistantTrigger && ChatAssistantTrigger.js.jsx
 
-" " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
-
-
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+" " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
 =======
 :src.disabled/components/ChatAssistantTrigger.js.jsx
 " " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React,{ createContext,useContext,useState } from';react' const MessagingProvider({ children }) { const [messages,setMessages] = useState([]) const sendMessage = (content) => { const newMessage = { "id": Date.now().toString(),content,"timestamp": new: Date(),"isRead": 'fals',e} setMessages("prev": '=> [...prev',newMessage])} const markAsRead = (id) => { setMessages(prev => prev.map(msg => msg.id === id ? { ...msg,"isRead": 'true'} : msg))} const unreadCount = messages.filter(msg => !msg.isRead).length return (<MessagingContext.Provider value = { { messages,unreadCount,sendMessage,markAsRead}}> {children} </MessagingContext.Provider>)} export function useMessaging() { const context = useContext(MessagingContext) if (context === null) { throw new Error('';"useMessaging": must be used within a MessagingProvider')} return context}'';'
 <<<<<<< HEAD
@@ -17,3 +18,9 @@ import React,{ createContext,useContext,useState } from';react' const MessagingP
 </MessagingContext>'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import React,{ createContext,useContext,useState } from';react' const MessagingProvider({ children }) { const [messages,setMessages] = useState([]) const sendMessage = (content) => { const newMessage = { "id": Date && Date.now().toString(),content,"timestamp": new: Date(),"isRead": 'fals',e} setMessages("prev": '=> [...prev',newMessage])} const markAsRead = (id) => { setMessages(prev => prev && prev.map(msg => msg && msg.id === id ? { ...msg,"isRead": 'true'} : msg))} const unreadCount = messages && messages.filter(msg => !msg && msg.isRead).length return (<MessagingContext && MessagingContext.Provider value = { { messages,unreadCount,sendMessage,markAsRead}}> {children} </MessagingContext && MessagingContext.Provider>)} export function useMessaging() { const context = useContext(MessagingContext) if (context === null) { throw new Error('';"useMessaging": must be used within a MessagingProvider')} return context}'';'
+=======
+</MessagingContext>'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

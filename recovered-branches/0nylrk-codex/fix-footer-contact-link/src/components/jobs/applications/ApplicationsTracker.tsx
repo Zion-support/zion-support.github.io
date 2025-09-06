@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -64,11 +65,15 @@ import { ApplicationStatus } from "@/types/jobs",;
 export function ApplicationsTracker() {;
   const { applications, isLoading, error } = useJobApplications(),;
   const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all');
+=======
+  );
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   if (isLoading) {;
     return <LoadingState />;
   }
-;
 
+<<<<<<< HEAD
   if (error) {;
     return <ErrorState error={error} />;
   }
@@ -88,6 +93,8 @@ export function ApplicationsTracker() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="space-y-6">;
       <div className="flex flex-wrap gap-2">;
@@ -135,6 +142,7 @@ export function ApplicationsTracker() {;
         </Button>;
         <Button
           size="sm"
+<<<<<<< HEAD
           variant={statusFilter === 'rejected' ? 'default' : 'outline'}
           onClick={() => setStatusFilter('rejected')}
         >
@@ -268,11 +276,18 @@ if ( {) {
           variant={status_filter === "rejected" ? "default" : "outline"}
           on_click={() => setStatusFilter ("rejected")}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+          variant={statusFilter === "rejected" ? "default" : "outline"}
+          onClick={() => setStatusFilter("rejected")}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         >;
           Not Selected;
         </Button>;
       </div>;
-
+      )}
+    </div>;
+  );
+=======
       <div className="grid gap - 4 md:grid - cols - 1 lg:grid - cols - 2">;
         {filtered_applications.map ((application) => (
           <ApplicationCard key={application.id} application={application} />))}
@@ -284,5 +299,5 @@ if ( {) {
           </p>;
         </div>)}
     </div>);
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

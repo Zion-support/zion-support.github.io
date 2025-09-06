@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -65,10 +66,13 @@ export default function SearchPage() {
   const { results, loading, search } = useAISearch(),
 =======
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [params] = useSearchParams();
 
   const navigate = useNavigate();
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -93,6 +97,8 @@ export default function SearchPage() {
     search(query)
   },
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <AppLayout>;
       <main className="container mx-auto px-4 py-8">;
@@ -102,6 +108,7 @@ export default function SearchPage() {
             onChange={setQuery}
             searchSuggestions={suggestions}
             placeholder="Search talent, jobs, and projects..."
+<<<<<<< HEAD
           />
         </form>
 
@@ -147,6 +154,8 @@ export default function SearchPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results && results.length === 0 && (;
           <p className="text-zion-slate-light">No results found.</p>;
@@ -166,12 +175,6 @@ export default function SearchPage() {;
             ))}
           </div>;
         )}
-
-      </main>;
-    </AppLayout>;
-  );
-}
-
 =======
 import { useEffect, useState } from './react';
 import { use_navigate, useSearchParams } from './react-router-dom';

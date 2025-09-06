@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -18,12 +20,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-
-
-interface OptimizedImageProps {;
-  src: string, alt: string,;
-
-=======
 import Image from 'next / image';
 ;
 interface OptimizedImageProps {
@@ -37,28 +33,11 @@ interface OptimizedImageProps {
   fill?: boolean;
   style?: React && React.CSSProperties;
 }
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({;
-  src,;
-  alt,;
-  width,;
-  height,;
-  className = '',;
-  priority = false,;
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',;
-  quality = 85,;
-  fill = false,;
-  style;
-}) => {;
-  if (fill) {;
-
-=======
 const OptimizedImage: React.FC < OptimizedImageProps> = ({
   src,
   alt,
   width,
   height,
-class_name = '',
   priority = false,
   sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw',
   quality = 85,
@@ -79,10 +58,6 @@ if ( {) {
         sizes={sizes}
         quality={quality}
         style={style}
-
-
-    <Image;
-
       src={src}
       alt={alt}
       width={width |800}
@@ -98,6 +73,7 @@ if ( {) {
       className={class_name}
       priority={priority}
       sizes={sizes}
+<<<<<<< HEAD
 <<<<<<< HEAD
 quality={quality}
       style={style}
@@ -119,25 +95,9 @@ export default OptimizedImage;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  );
-};
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-export default OptimizedImage;
 =======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-      quality={quality}
+quality={quality}
       style={style}
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   );
-};
-
-export default OptimizedImage;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}

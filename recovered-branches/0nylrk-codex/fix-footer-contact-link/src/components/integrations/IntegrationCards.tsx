@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -137,6 +138,12 @@ export function IntegrationCard({;
   href;
   onConnect}: IntegrationCardProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  status?: "connected" | "disconnected" | "pending";
+  href?: string;
+  onConnect?: () => void;
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Card className="overflow-hidden">;
       <CardHeader className="pb-2">;
@@ -178,17 +185,21 @@ export function IntegrationCard({;
             <ArrowRight className="ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5" />;
           </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         )}
       </CardFooter>;
     </Card>;
   );
 }
+<<<<<<< HEAD
 
 export function IntegrationCards() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -207,6 +218,11 @@ export function IntegrationCards() {
   );
 }
 
+=======
+  return (
+    <div className="grid md:grid-cols-3 gap-6">;
+      {/* Integration cards would go here */}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 =======
 import React from './react';
 import { Button } from '@/components / ui / button';
@@ -274,6 +290,7 @@ function IntegrationCards() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
 }
@@ -281,3 +298,5 @@ function IntegrationCards() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

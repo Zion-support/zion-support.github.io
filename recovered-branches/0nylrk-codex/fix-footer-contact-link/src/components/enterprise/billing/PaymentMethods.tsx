@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 import {
@@ -22,10 +23,13 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
+<<<<<<< HEAD
 export function PaymentMethods() {
   // Mock payment methods
 
@@ -187,6 +191,8 @@ export function PaymentMethods() {;
     },;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
 import React from './react';
 import {
   Card,
@@ -228,13 +234,11 @@ function PaymentMethods() {
   return (
     <Card>;
       <CardHeader>;
-
-        <CardTitle > Payment Methods</CardTitle>;
-
         <CardDescription>;
           Manage your payment methods for automatic billing;
         </CardDescription>;
       </CardHeader>;
+<<<<<<< HEAD
 
 
 
@@ -294,3 +298,6 @@ function PaymentMethods() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -6,8 +6,12 @@ import path from 'path';
 function ensure() {
   if (!fs && fs.existsSync(DATA_DIR)) fs && fs.mkdirSync(DATA_DIR, { recursive: true });
   if (!fs && fs.existsSync(FILE_PATH))
+function ensure() {
+  if (!fs && fs.existsSync(DATA_DIR)) fs && fs.mkdirSync(DATA_DIR, { recursive: true });
+  if (!fs && fs.existsSync(FILE_PATH))
     fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8');  if (!fs && fs.existsSync(FILE_PATH)) fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8')
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -98,11 +102,15 @@ function handler() {
   ensure (),
   const { url, title, network, utm } = req.body || {}
 
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const entry = {
     url,
     title,
     network,
     utm,
+<<<<<<< HEAD
 
 =======
 
@@ -121,6 +129,8 @@ function handler() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   if (req.method !== 'POST') return res.status(405).end();
   ensure();
   const { url, title, network, utm } = req.body || {};
@@ -128,12 +138,8 @@ function handler() {
   const list: any[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
   list.push(entry);
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
-<<<<<<< HEAD
   res.status(200).json({ ok: true })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     ts: new Date ().toISOString (),
     ua: req.headers['user - agent'] || '',
   }
@@ -145,6 +151,7 @@ function handler() {
   list.push (entry);
   fs.writeFileSync (FILE_PATH, JSON.stringify (list, null, 2), 'utf8');
   res.status (200).json ({ ok: true });
+<<<<<<< HEAD
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -156,3 +163,5 @@ function handler() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

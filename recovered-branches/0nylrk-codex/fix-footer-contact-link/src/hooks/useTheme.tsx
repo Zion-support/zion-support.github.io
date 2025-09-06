@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react';
 import React from 'react',
@@ -13,6 +14,9 @@ export const useTheme = () => {
   return {
     theme: "dark"
     setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
+=======
+import React from 'react';
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 }
 
@@ -34,9 +38,12 @@ export const use_theme = () =>: any {
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 
     theme: "dark",
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
