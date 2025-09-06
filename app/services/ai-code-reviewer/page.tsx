@@ -1,4 +1,3 @@
-
 export const metadata = {
   title: 'AI Code Reviewer | Zion Tech Group',
   description: 'Automated code review with AI-powered analysis, security scanning, and performance optimization suggestions.',

@@ -1,4 +1,3 @@
-
 export const metadata = {
   title: 'AI Customer Insights | Zion Tech Group',
   description:
@@ -229,7 +228,33 @@ export default function AICustomerInsightsPage() {
         </div>
       </div>
 
-      <CTA />
+      <div className="text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          Ready to Unlock Customer Insights?
+        </h2>
+        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          Start your free trial today and discover the power of AI-driven customer
+          analytics. Analyze your first 1,000 customers for free.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-teal-600 text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 hover:text-white transition-colors"
+          >
+            Email Us
+          </a>
+        </div>
+        <div className="mt-4 text-sm text-gray-500">
+          <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+          <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
+        </div>
+      </div>
     </div>
   );
 }
@@ -364,38 +389,6 @@ function UseCaseCard({
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
-
-function CTA() {
-  return (
-    <div className="bg-gradient-to-r from-teal-50 to-blue-50 border border-teal-200 rounded-xl p-8 text-center">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Unlock Customer Insights?
-      </h3>
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Start your free trial today and discover the power of AI-driven customer
-        analytics. Analyze your first 1,000 customers for free.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-teal-600 text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-teal-600 hover:text-white transition-colors"
-        >
-          Email Us
-        </a>
-      </div>
-      <div className="mt-4 text-sm text-gray-500">
-        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-        <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
-      </div>
     </div>
   );
 }
